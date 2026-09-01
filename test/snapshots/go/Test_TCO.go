@@ -36,9 +36,9 @@ func Get_Test_TCO_act() gopurs_runtime.Value {
 			// TAST (Let): __local_var_0_0 shape=App(Var) bindingType=Any
 			__local_var_0_0 := gopurs_runtime.Apply(Get_Bench_opaque(), gopurs_runtime.Int(100000))
 			_ = __local_var_0_0
-			dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
-			_ = dummy_1_1
-			return gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_TCO_deepTailRec(dummy_1_1.IntVal, 0)))
+			__local_var_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
+			_ = __local_var_1_1
+			return gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_TCO_deepTailRec(__local_var_1_1.IntVal, 0))).StrVal())
 		})
 	})
 	return cache_Test_TCO_act
@@ -65,7 +65,7 @@ deepTailRec:
 		}
 		{
 			v_0_loop = (v_0) - (1)
-			v1_1_loop = (v1_1) + (gopurs_runtime.Apply2(Get_Data_EuclideanRing_intMod(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(3)).IntVal)
+			v1_1_loop = (v1_1) + ((v_0) % (3))
 			continue deepTailRec
 			__t0 = gopurs_runtime.Value{}.IntVal
 		}

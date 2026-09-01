@@ -46,9 +46,9 @@ func Get_Test_Records_act() gopurs_runtime.Value {
 			// TAST (Let): __local_var_0_0 shape=App(Var) bindingType=Any
 			__local_var_0_0 := gopurs_runtime.Apply(Get_Bench_opaque(), gopurs_runtime.Int(10000))
 			_ = __local_var_0_0
-			dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
-			_ = dummy_1_1
-			return gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(Call_Test_Records_updateRec(dummy_1_1.IntVal, Get_Test_Records_initial()), "b"), "d"), "f").IntVal))
+			__local_var_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
+			_ = __local_var_1_1
+			return gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(Call_Test_Records_updateRec(__local_var_1_1.IntVal, Get_Test_Records_initial()), "b"), "d"), "f")).StrVal())
 		})
 	})
 	return cache_Test_Records_act
@@ -75,7 +75,7 @@ updateRec:
 		}
 		{
 			v_0_loop = (v_0) - (1)
-			v1_1_loop = gopurs_runtime.RecordUpdate2(v1_1, "a", gopurs_runtime.Int((gopurs_runtime.RecordGet(v1_1, "a").IntVal)+(1)), "b", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(v1_1, "b"), "c", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "c").IntVal)+(2)), "d", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e").IntVal)+(3)), "f", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "f").IntVal)+(gopurs_runtime.Apply2(Get_Data_EuclideanRing_intMod(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(5)).IntVal)))))
+			v1_1_loop = gopurs_runtime.RecordUpdate2(v1_1, "a", gopurs_runtime.Int((gopurs_runtime.RecordGet(v1_1, "a").IntVal)+(1)), "b", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(v1_1, "b"), "c", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "c").IntVal)+(2)), "d", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e").IntVal)+(3)), "f", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "f").IntVal)+((v_0)%(5))))))
 			continue updateRec
 			__t0 = gopurs_runtime.Value{}
 		}

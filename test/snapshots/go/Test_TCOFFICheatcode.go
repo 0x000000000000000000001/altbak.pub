@@ -24,9 +24,9 @@ func Get_Test_TCOFFICheatcode_act() gopurs_runtime.Value {
 			// TAST (Let): __local_var_0_0 shape=App(Var) bindingType=Any
 			__local_var_0_0 := gopurs_runtime.Apply(Get_Bench_opaque(), gopurs_runtime.Int(100000))
 			_ = __local_var_0_0
-			dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
-			_ = dummy_1_1
-			return gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(gopurs_runtime.Apply(Get_Test_TCOFFICheatcode_runTCOFFICheatcode(), gopurs_runtime.Int(dummy_1_1.IntVal)).IntVal))
+			__local_var_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
+			_ = __local_var_1_1
+			return gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Apply(Get_Test_TCOFFICheatcode_runTCOFFICheatcode(), gopurs_runtime.Int(__local_var_1_1.IntVal))).StrVal())
 		})
 	})
 	return cache_Test_TCOFFICheatcode_act

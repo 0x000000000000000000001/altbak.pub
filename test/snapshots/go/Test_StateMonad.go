@@ -132,9 +132,9 @@ func Get_Test_StateMonad_act() gopurs_runtime.Value {
 			// TAST (Let): __local_var_0_0 shape=App(Var) bindingType=Any
 			__local_var_0_0 := gopurs_runtime.Apply(Get_Bench_opaque(), gopurs_runtime.Int(20))
 			_ = __local_var_0_0
-			dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
-			_ = dummy_1_1
-			return gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_StateMonad_runManyTimes(dummy_1_1.IntVal, 0)))
+			__local_var_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
+			_ = __local_var_1_1
+			return gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_StateMonad_runManyTimes(__local_var_1_1.IntVal, 0))).StrVal())
 		})
 	})
 	return cache_Test_StateMonad_act

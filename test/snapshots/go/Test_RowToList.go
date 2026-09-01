@@ -97,9 +97,9 @@ func Get_Test_RowToList_act() gopurs_runtime.Value {
 			// TAST (Let): __local_var_0_0 shape=App(Var) bindingType=Any
 			__local_var_0_0 := gopurs_runtime.Apply(Get_Bench_opaque(), gopurs_runtime.Int(10000))
 			_ = __local_var_0_0
-			_dollar___unused_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
-			_ = _dollar___unused_1_1
-			return gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(5))
+			__local_var_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
+			_ = __local_var_1_1
+			return gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(5)).StrVal())
 		})
 	})
 	return cache_Test_RowToList_act

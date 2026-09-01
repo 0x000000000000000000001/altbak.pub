@@ -29,6 +29,18 @@ func Get_Test_LazyEvaluation_force() gopurs_runtime.Value {
 	return cache_Test_LazyEvaluation_force
 }
 
+var cache_Test_LazyEvaluation_force__819661500 gopurs_runtime.Value
+var once_Test_LazyEvaluation_force__819661500 sync.Once
+
+func Get_Test_LazyEvaluation_force__819661500() gopurs_runtime.Value {
+	once_Test_LazyEvaluation_force__819661500.Do(func() {
+		cache_Test_LazyEvaluation_force__819661500 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+			return gopurs_runtime.Int(Call_Test_LazyEvaluation_force__819661500(v_0_box))
+		})
+	})
+	return cache_Test_LazyEvaluation_force__819661500
+}
+
 var cache_Test_LazyEvaluation_describe gopurs_runtime.Value
 var once_Test_LazyEvaluation_describe sync.Once
 
@@ -49,6 +61,18 @@ func Get_Test_LazyEvaluation_go__defer() gopurs_runtime.Value {
 		})
 	})
 	return cache_Test_LazyEvaluation_go__defer
+}
+
+var cache_Test_LazyEvaluation_defer__3628429125 gopurs_runtime.Value
+var once_Test_LazyEvaluation_defer__3628429125 sync.Once
+
+func Get_Test_LazyEvaluation_defer__3628429125() gopurs_runtime.Value {
+	once_Test_LazyEvaluation_defer__3628429125.Do(func() {
+		cache_Test_LazyEvaluation_defer__3628429125 = gopurs_runtime.Func(func(__eta_norm_0_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+			return Call_Test_LazyEvaluation_defer__3628429125(__eta_norm_0_0_box)
+		})
+	})
+	return cache_Test_LazyEvaluation_defer__3628429125
 }
 
 var cache_Test_LazyEvaluation_buildThunks gopurs_runtime.Value
@@ -84,9 +108,9 @@ func Get_Test_LazyEvaluation_act() gopurs_runtime.Value {
 			// TAST (Let): __local_var_0_0 shape=App(Var) bindingType=Any
 			__local_var_0_0 := gopurs_runtime.Apply(Get_Bench_opaque(), gopurs_runtime.Int(1000))
 			_ = __local_var_0_0
-			dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
-			_ = dummy_1_1
-			return gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_LazyEvaluation_runManyTimes(dummy_1_1.IntVal, 0)))
+			__local_var_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
+			_ = __local_var_1_1
+			return gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_LazyEvaluation_runManyTimes(__local_var_1_1.IntVal, 0))).StrVal())
 		})
 	})
 	return cache_Test_LazyEvaluation_act
@@ -104,10 +128,34 @@ func Call_Test_LazyEvaluation_force(v_0_loop gopurs_runtime.Value) gopurs_runtim
 	return gopurs_runtime.Apply(v_0, Get_Data_Unit_unit())
 }
 
+func Call_Test_LazyEvaluation_force__819661500(v_0_loop gopurs_runtime.Value) int64 {
+force__819661500:
+	for {
+		if false {
+			continue force__819661500
+		}
+		var v_0 gopurs_runtime.Value = v_0_loop
+		_ = v_0
+		return gopurs_runtime.Apply(v_0, Get_Data_Unit_unit()).IntVal
+	}
+}
+
 func Call_Test_LazyEvaluation_go__defer(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 	var x_0 gopurs_runtime.Value = x_0_loop
 	_ = x_0
 	return x_0
+}
+
+func Call_Test_LazyEvaluation_defer__3628429125(__eta_norm_0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+defer__3628429125:
+	for {
+		if false {
+			continue defer__3628429125
+		}
+		var __eta_norm_0_0 gopurs_runtime.Value = __eta_norm_0_0_loop
+		_ = __eta_norm_0_0
+		return __eta_norm_0_0
+	}
 }
 
 func Call_Test_LazyEvaluation_buildThunks(v_0_loop int64, v1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
