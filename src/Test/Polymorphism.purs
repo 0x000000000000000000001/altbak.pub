@@ -14,10 +14,6 @@ instance intMonoidish :: Monoidish Int where
   mempty_ = 1
   mappend_ x y = x + y
 
--- In PureScript, this polymorphic function receives a hidden "dict" argument.
--- Inside the loop, it forces dynamic property lookups on this dictionary 
--- for `mappend_` and `mempty_`.
--- This will run 10 million times, causing 20 million dictionary lookups.
 polyLoop :: forall a. Monoidish a => Int -> a -> a
 polyLoop n_init acc_init = go n_init acc_init
   where

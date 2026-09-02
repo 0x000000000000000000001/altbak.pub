@@ -140,7 +140,7 @@ var sieve = function (v) {
     };
     if (v instanceof Cons) {
         return new Cons(v.value0, sieve(filter(function (x) {
-            return Data_EuclideanRing.mod(Data_EuclideanRing.euclideanRingInt)(x)(v.value0) !== 0;
+            return !(Data_EuclideanRing.mod(Data_EuclideanRing.euclideanRingInt)(x)(v.value0) === 0);
         })(v.value1)));
     };
     throw new Error("Failed pattern match at Test.Primes (line 40, column 1 - line 40, column 30): " + [ v.constructor.name ]);

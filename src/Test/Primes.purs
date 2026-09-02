@@ -39,7 +39,7 @@ reverse lst = go lst Nil
 -- Strict, non-tail-recursive Sieve
 sieve :: List Int -> List Int
 sieve Nil = Nil
-sieve (Cons p xs) = Cons p (sieve (filter (\x -> x `mod` p /= 0) xs))
+sieve (Cons p xs) = Cons p (sieve (filter (\x -> not (x `mod` p == 0)) xs))
 
 sumList :: List Int -> Int
 sumList lst = go lst 0

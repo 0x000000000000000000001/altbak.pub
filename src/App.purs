@@ -11,30 +11,30 @@ import Test.TCO as TCO
 import Test.Records as Records
 import Test.Ackermann as Ackermann
 import Test.Church as Church
-import Test.Primes as Primes
 import Test.RBTree as RBTree
 import Test.Polymorphism as Polymorphism
 import Test.StateMonad as StateMonad
 import Test.LazyEvaluation as LazyEvaluation
 import Test.ArrayOps as ArrayOps
 import Test.RowToList as RowToList
+import Test.Primes as Primes
 
 warmup :: Effect Unit
 warmup = do
-  void AstTree.act
-  void Fib.act
-  void ListOps.act
-  void TCO.act
-  void Records.act
-  void Ackermann.act
-  void Church.act
-  void Primes.act
-  void RBTree.act
-  void Polymorphism.act
-  void StateMonad.act
-  void LazyEvaluation.act
-  void ArrayOps.act
-  void RowToList.act
+  void AstTree.act -- 1
+  void Fib.act -- 2
+  void ListOps.act -- 3
+  void TCO.act -- 4
+  void Records.act -- 5
+  void Ackermann.act -- 6
+  void Church.act -- 7
+  void Primes.act -- 8
+  void RBTree.act -- 9
+  void Polymorphism.act -- 10
+  void StateMonad.act -- 11
+  void LazyEvaluation.act -- 12
+  void ArrayOps.act -- 13
+  void RowToList.act -- 14
 
 main :: Effect Unit
 main = do
