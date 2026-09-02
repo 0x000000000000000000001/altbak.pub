@@ -1,0 +1,4424 @@
+================================
+    Running pure backends...    
+================================
+
+Building...
+=== JS V8 ===
+Global warm-up in progress (this may take a moment)...
+
+Global warm-up complete. Starting benchmarks...
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+2.21 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+1.83 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+45.29 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+191.96 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+74.96 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+67.33 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+1335.46 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+87.63 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+90210.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+11783.42 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+72.13 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+15300.83 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+14.71 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+0.46 μs
+
+
+==================================================
+
+Total exec time: 119.19 ms
+
+
+Building...
+=== ES failed ===
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-scheme-test
+
+Downloading dependencies...
+Cloning https://github.com/purescm/purescript-core.git
+Building...
+[  5 of 203] Compiling Type.Proxy
+[  2 of 203] Compiling Type.Data.Row
+[  3 of 203] Compiling Unsafe.Coerce
+[  1 of 203] Compiling Type.Data.RowList
+[  4 of 203] Compiling Type.Equality
+[  6 of 203] Compiling Test.Implicit
+[  7 of 203] Compiling Record.Unsafe
+[  8 of 203] Compiling Spago.Generated.BuildInfo
+[  9 of 203] Compiling Partial
+[ 10 of 203] Compiling Data.Void
+[ 11 of 203] Compiling Data.Unit
+[ 12 of 203] Compiling Data.Traversable.Accum
+[ 13 of 203] Compiling Data.NaturalTransformation
+[ 14 of 203] Compiling Data.Boolean
+[ 15 of 203] Compiling Control.Semigroupoid
+[ 17 of 203] Compiling Data.Symbol
+[ 16 of 203] Compiling Safe.Coerce
+[ 18 of 203] Compiling Control.Lazy
+[ 19 of 203] Compiling Data.Function.Uncurried
+[ 20 of 203] Compiling Partial.Unsafe
+[ 21 of 203] Compiling Data.Exists
+[ 22 of 203] Compiling Control.Category
+[ 23 of 203] Compiling Data.Semigroup
+[ 24 of 203] Compiling Data.Semiring
+[ 25 of 203] Compiling Data.HeytingAlgebra
+[ 26 of 203] Compiling Data.Show
+[ 27 of 203] Compiling Data.Ring
+[ 28 of 203] Compiling Data.Generic.Rep
+[ 29 of 203] Compiling Data.BooleanAlgebra
+[ 30 of 203] Compiling Data.Eq
+[ 31 of 203] Compiling Data.CommutativeRing
+[ 32 of 203] Compiling Data.EuclideanRing
+[ 33 of 203] Compiling Data.Ordering
+[ 34 of 203] Compiling Data.Ord
+[ 35 of 203] Compiling Data.DivisionRing
+[ 36 of 203] Compiling Data.Field
+[ 37 of 203] Compiling Data.Function
+[ 38 of 203] Compiling Data.Reflectable
+[ 39 of 203] Compiling Data.Bounded
+[ 40 of 203] Compiling Data.Monoid
+[ 41 of 203] Compiling Data.Functor
+[ 42 of 203] Compiling Data.Monoid.Generic
+[ 44 of 203] Compiling Control.Alt
+[ 43 of 203] Compiling Control.Extend
+[ 45 of 203] Compiling Control.Apply
+[ 46 of 203] Compiling Data.Bounded.Generic
+[ 47 of 203] Compiling Control.Plus
+[ 48 of 203] Compiling Control.Comonad
+[ 49 of 203] Compiling Control.Applicative
+[ 50 of 203] Compiling Control.Alternative
+[ 51 of 203] Compiling Control.Bind
+[ 52 of 203] Compiling Control.Monad
+[ 53 of 203] Compiling Prelude
+[ 54 of 203] Compiling Control.MonadPlus
+[ 56 of 203] Compiling Data.Monoid.Dual
+[ 55 of 203] Compiling Data.Monoid.Conj
+[ 57 of 203] Compiling Data.Ord.Generic
+[ 58 of 203] Compiling Data.Eq.Generic
+[ 59 of 203] Compiling Data.Traversable.Accum.Internal
+[ 60 of 203] Compiling Data.Semiring.Generic
+[ 61 of 203] Compiling Data.Semigroup.Generic
+[ 62 of 203] Compiling Effect
+[ 63 of 203] Compiling Data.Semigroup.Last
+[ 64 of 203] Compiling Data.Monoid.Disj
+[ 65 of 203] Compiling Data.Monoid.Endo
+[ 66 of 203] Compiling Data.Semigroup.First
+[ 67 of 203] Compiling Data.Monoid.Multiplicative
+[ 68 of 203] Compiling Data.Show.Generic
+[ 69 of 203] Compiling Data.Ring.Generic
+[ 71 of 203] Compiling Data.Monoid.Additive
+[ 72 of 203] Compiling Effect.Ref
+[ 70 of 203] Compiling Data.HeytingAlgebra.Generic
+[ 74 of 203] Compiling Effect.Class
+[ 73 of 203] Compiling Effect.Unsafe
+[ 75 of 203] Compiling Effect.Uncurried
+[ 76 of 203] Compiling Effect.Console
+[ 77 of 203] Compiling Test.Main
+[ 79 of 203] Compiling Bench
+[ 78 of 203] Compiling Effect.Class.Console
+[ 80 of 203] Compiling Data.Newtype
+[ 81 of 203] Compiling Test.LazyEvaluationFFICheatcode
+[ 82 of 203] Compiling Test.RecordsFFI
+[ 83 of 203] Compiling Test.TCOFFICheatcode
+[ 84 of 203] Compiling Test.Primes
+[ 85 of 203] Compiling Test.FibFFICheatcode
+[ 86 of 203] Compiling Test.PrimesFFICheatcode
+[ 87 of 203] Compiling Test.TCO
+[ 88 of 203] Compiling Test.StateMonadFFI
+[ 89 of 203] Compiling Test.RowToListFFICheatcode
+[ 91 of 203] Compiling Test.RowToList
+[ 90 of 203] Compiling Test.RBTreeFFICheatcode
+[ 92 of 203] Compiling Test.AckermannFFICheatcode
+[ 93 of 203] Compiling Test.RowToListFFI
+[ 94 of 203] Compiling Test.PolymorphismFFI
+[ 95 of 203] Compiling Test.PolymorphismFFICheatcode
+[ 96 of 203] Compiling Test.ListOpsFFICheatcode
+[ 97 of 203] Compiling Test.RBTree
+[ 98 of 203] Compiling Test.ListOps
+[ 99 of 203] Compiling Test.ChurchFFICheatcode
+[100 of 203] Compiling Test.BenchCheck
+[101 of 203] Compiling Test.RBTreeFFI
+[103 of 203] Compiling Test.LazyEvaluationFFI
+[104 of 203] Compiling Test.Polymorphism
+[102 of 203] Compiling Test.Records
+[107 of 203] Compiling Test.ChurchFFI
+[106 of 203] Compiling Test.Fib
+[105 of 203] Compiling Test.LazyEvaluation
+[108 of 203] Compiling Test.AstTreeFFI
+[109 of 203] Compiling Test.AstTreeFFICheatcode
+[111 of 203] Compiling Test.RecordsFFICheatcode
+[110 of 203] Compiling Test.ArrayOpsFFICheatcode
+[112 of 203] Compiling Test.Church
+[113 of 203] Compiling Test.ListOpsFFI
+[115 of 203] Compiling Test.StateMonad
+[116 of 203] Compiling Test.StateMonadFFICheatcode
+[114 of 203] Compiling Test.FibFFI
+[117 of 203] Compiling Test.TCOFFI
+[118 of 203] Compiling Test.ArrayOpsFFI
+[120 of 203] Compiling Test.AckermannFFI
+[119 of 203] Compiling Test.AstTree
+[122 of 203] Compiling Test.PrimesFFI
+[121 of 203] Compiling Test.Ackermann
+[124 of 203] Compiling Data.Profunctor
+[125 of 203] Compiling Data.Ord.Down
+[123 of 203] Compiling Data.Ord.Min
+[126 of 203] Compiling Data.Monoid.Alternate
+[128 of 203] Compiling Data.Ord.Max
+[127 of 203] Compiling Data.Functor.App
+[129 of 203] Compiling AppFFICheatcode
+[130 of 203] Compiling AppFFI
+[131 of 203] Compiling Data.Profunctor.Closed
+[132 of 203] Compiling Data.Functor.Invariant
+[133 of 203] Compiling Data.Functor.Compose
+[134 of 203] Compiling Data.Profunctor.Join
+[135 of 203] Compiling Data.Identity
+[137 of 203] Compiling Data.Tuple
+[138 of 203] Compiling Data.Const
+[136 of 203] Compiling Data.Maybe
+[139 of 203] Compiling Data.Profunctor.Split
+[140 of 203] Compiling Data.Functor.Contravariant
+[141 of 203] Compiling Data.Comparison
+[143 of 203] Compiling Data.Op
+[142 of 203] Compiling Data.Predicate
+[144 of 203] Compiling Data.Equivalence
+[145 of 203] Compiling Data.Maybe.First
+[147 of 203] Compiling Data.Maybe.Last
+[146 of 203] Compiling Data.Either
+[148 of 203] Compiling Data.Divide
+[150 of 203] Compiling Data.Profunctor.Costrong
+[151 of 203] Compiling Data.Profunctor.Strong
+[152 of 203] Compiling Data.Distributive
+[149 of 203] Compiling Data.Tuple.Nested
+[153 of 203] Compiling Data.Divisible
+[154 of 203] Compiling Data.Decide
+[156 of 203] Compiling Data.Profunctor.Cochoice
+[157 of 203] Compiling Data.Profunctor.Choice
+[159 of 203] Compiling Data.Either.Inject
+[158 of 203] Compiling Data.Bifunctor
+[155 of 203] Compiling Data.Either.Nested
+[160 of 203] Compiling Data.Functor.Product
+[161 of 203] Compiling Data.Functor.Coproduct
+[164 of 203] Compiling Data.Functor.Costar
+[163 of 203] Compiling Control.Biapply
+[162 of 203] Compiling Control.Monad.Rec.Class
+[165 of 203] Compiling Data.Profunctor.Star
+[166 of 203] Compiling Data.Decidable
+[167 of 203] Compiling Control.Biapplicative
+[168 of 203] Compiling Data.Bifunctor.Join
+[169 of 203] Compiling Data.Functor.Clown
+[170 of 203] Compiling Data.Functor.Flip
+[171 of 203] Compiling Data.Functor.Product2
+[172 of 203] Compiling Data.Functor.Joker
+[173 of 203] Compiling Data.FunctorWithIndex
+[174 of 203] Compiling Data.Functor.Coproduct.Inject
+[175 of 203] Compiling Data.Functor.Product.Nested
+[176 of 203] Compiling Data.Foldable
+[177 of 203] Compiling Data.Functor.Coproduct.Nested
+[178 of 203] Compiling Control.Monad.ST.Internal
+[179 of 203] Compiling Control.Monad.ST.Ref
+[181 of 203] Compiling Control.Monad.ST
+[180 of 203] Compiling Control.Monad.ST.Uncurried
+[182 of 203] Compiling Control.Monad.ST.Global
+[183 of 203] Compiling Control.Monad.ST.Class
+[184 of 203] Compiling Data.Array.ST
+[186 of 203] Compiling Data.Array.ST.Partial
+[185 of 203] Compiling Data.Array.ST.Iterator
+[187 of 203] Compiling Data.Traversable
+[188 of 203] Compiling Data.Semigroup.Foldable
+[190 of 203] Compiling Data.Bifoldable
+[189 of 203] Compiling Data.FoldableWithIndex
+[192 of 203] Compiling Data.Semigroup.Traversable
+[191 of 203] Compiling Data.Bitraversable
+[193 of 203] Compiling Data.Unfoldable1
+[194 of 203] Compiling Data.TraversableWithIndex
+[195 of 203] Compiling Data.Unfoldable
+[196 of 203] Compiling Data.Array.NonEmpty.Internal
+[197 of 203] Compiling Data.NonEmpty
+[198 of 203] Compiling Data.Array
+[199 of 203] Compiling Test.ArrayOps
+[200 of 203] Compiling Data.Array.Partial
+[201 of 203] Compiling Data.Array.NonEmpty
+[202 of 203] Compiling App
+[203 of 203] Compiling Main
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Created run/bak/scm/output_bin/main
+=== Scheme ===
+Global warm-up in progress (this may take a moment)...
+
+Global warm-up complete. Starting benchmarks...
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+0.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+0.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+6.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+286.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+175.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+16.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+236.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+34.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+23574.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+17761.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+2.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+2978.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+7.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+0.0 μs
+
+
+==================================================
+
+Total exec time: 45.075 ms
+
+
+Building...
+=== Erlang BEAM ===
+Global warm-up in progress (this may take a moment)...
+
+Global warm-up complete. Starting benchmarks...
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+0.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+0.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+35.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+1391.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+401.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+24.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+487.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+148.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+16743.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+58285.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+20.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+9228.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+28.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+0.00 μs
+
+
+==================================================
+
+Total exec time: 86.79 ms
+
+
+=== Rebuilding phpurs backend ===
+
+> phpurs@0.1.0 build
+> spago build && spago bundle --module Main --platform node --outfile bin/phpurs.js --bundle-type app
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: phpurs
+
+Downloading dependencies...
+Building...
+[1 of 2] Compiling Phpurs.CodeGen
+[WARNING 1/1 UnusedName] src/Phpurs/CodeGen.purs:743:29
+
+  743                              useVarsOuter = Array.nub (map (\mapped -> if Array.elem mapped recVars then "&" <> mapped else mapped) mappedFvs)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name useVarsOuter was introduced but not used.
+  in value declaration translate
+
+[ERROR 1/1 NoInstanceFound] src/Phpurs/CodeGen.purs:69:1
+
+  69  translateOperator2 :: BackendOperator2 -> PhpExpr -> PhpExpr -> PhpExpr
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A case expression could not be determined to cover all inputs.
+  The following additional cases are required to cover all inputs:
+    (OpIntNum OpMod)    _ _
+    (OpNumberNum OpMod) _ _
+  Alternatively, add a Partial constraint to the type of the enclosing value.
+  while checking that type Partial => t0
+    is at least as general as type PhpExpr
+  while checking that expression case $42 $43 $44 of
+                                   OpArrayIndex arr ix -> (PhpArrayIndex arr) ix
+                                   OpBooleanAnd l r -> ((...) l) r
+                                   OpBooleanOr l r -> ((...) l) r
+                                   (OpBooleanOrd OpEq) l r -> ((...) l) r
+                                   (OpBooleanOrd OpNotEq) l r -> ((...) l) r
+                                   (OpBooleanOrd OpGt) l r -> ((...) l) r
+                                   (OpBooleanOrd OpGte) l r -> ((...) l) r
+                                   (OpBooleanOrd OpLt) l r -> ((...) l) r
+                                   (OpBooleanOrd OpLte) l r -> ((...) l) r
+                                   (OpCharOrd OpEq) l r -> ((...) l) r
+                                   (OpCharOrd OpNotEq) l r -> ((...) l) r
+                                   (OpCharOrd OpGt) l r -> ((...) l) r
+                                   (OpCharOrd OpGte) l r -> ((...) l) r
+                                   (OpCharOrd OpLt) l r -> ((...) l) r
+                                   (OpCharOrd OpLte) l r -> ((...) l) r
+                                   OpIntBitAnd l r -> ((...) l) r
+                                   OpIntBitOr l r -> ((...) l) r
+                                   OpIntBitShiftLeft l r -> ((...) l) r
+                                   OpIntBitShiftRight l r -> ((...) l) r
+                                   OpIntBitXor l r -> ((...) l) r
+                                   OpIntBitZeroFillShiftRight l r -> ((...) l) r
+                                   (OpIntNum OpAdd) l r -> ((...) l) r
+                                   (OpIntNum OpSubtract) l r -> ((...) l) r
+                                   (OpIntNum OpMultiply) l r -> ((...) l) r
+                                   (OpIntNum OpDivide) l r -> ((...) l) r
+                                   (OpIntOrd OpEq) l r -> ((...) l) r
+                                   (OpIntOrd OpNotEq) l r -> ((...) l) r
+                                   (OpIntOrd OpGt) l r -> ((...) l) r
+                                   (OpIntOrd OpGte) l r -> ((...) l) r
+                                   (OpIntOrd OpLt) l r -> ((...) l) r
+                                   (OpIntOrd OpLte) l r -> ((...) l) r
+                                   (OpNumberNum OpAdd) l r -> ((...) l) r
+                                   (OpNumberNum OpSubtract) l r -> ((...) l) r
+                                   (OpNumberNum OpMultiply) l r -> ((...) l) r
+                                   (OpNumberNum OpDivide) l r -> ((...) l) r
+                                   (OpNumberOrd OpEq) l r -> ((...) l) r
+                                   (OpNumberOrd OpNotEq) l r -> ((...) l) r
+                                   (OpNumberOrd OpGt) l r -> ((...) l) r
+                                   (OpNumberOrd OpGte) l r -> ((...) l) r
+                                   (OpNumberOrd OpLt) l r -> ((...) l) r
+                                   (OpNumberOrd OpLte) l r -> ((...) l) r
+                                   OpStringAppend l r -> ((...) l) r
+                                   (OpStringOrd OpEq) l r -> ((...) l) r
+                                   (OpStringOrd OpNotEq) l r -> ((...) l) r
+                                   (OpStringOrd OpGt) l r -> ((...) l) r
+                                   (OpStringOrd OpGte) l r -> ((...) l) r
+                                   (OpStringOrd OpLt) l r -> ((...) l) r
+                                   (OpStringOrd OpLte) l r -> ((...) l) r
+    has type PhpExpr
+  in value declaration translateOperator2
+  where t0 is an unknown type
+
+           Src   Lib   All
+Warnings     1     0     1
+Errors       1     0     1
+
+✘ Failed to build.
+
+=== PHP failed ===
+
+=== Rebuilding gopurs backend ===
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: gopurs
+
+Downloading dependencies...
+Building...
+[1 of 1] Compiling Main
+[WARNING 1/2 DuplicateImport] src/Main.purs:15:1
+
+  15  import Effect.Console as Console
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Effect.Console as Console
+
+[WARNING 2/2 DuplicateImport] src/Main.purs:46:1
+
+  46  import Effect.Unsafe (unsafePerformEffect)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Effect.Unsafe (unsafePerformEffect)
+
+           Src   Lib   All
+Warnings     2     0     2
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: gopurs
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Bundling...
+
+  bin/gopurs.js  1.5mb ⚠️
+
+⚡ Done in 41ms
+
+✓ Bundle succeeded.
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-go-test
+
+Downloading dependencies...
+Building...
+[  2 of 300] Compiling Type.Proxy
+[  4 of 300] Compiling Unsafe.Coerce
+[  3 of 300] Compiling Spago.Generated.BuildInfo
+[  5 of 300] Compiling Test.Implicit
+[  1 of 300] Compiling Type.Equality
+[  6 of 300] Compiling Record.Unsafe
+[  7 of 300] Compiling Data.Int.Bits
+[  8 of 300] Compiling Data.NaturalTransformation
+[  9 of 300] Compiling Data.String.Unsafe
+[ 11 of 300] Compiling Partial
+[ 10 of 300] Compiling Data.Unit
+[ 12 of 300] Compiling Data.Void
+[ 13 of 300] Compiling Data.Traversable.Accum
+[ 14 of 300] Compiling Data.Boolean
+[ 15 of 300] Compiling Control.Semigroupoid
+[ 16 of 300] Compiling Data.Function.Uncurried
+[ 18 of 300] Compiling Safe.Coerce
+[ 17 of 300] Compiling Data.Symbol
+[ 19 of 300] Compiling Partial.Unsafe
+[ 20 of 300] Compiling Control.Lazy
+[ 21 of 300] Compiling Data.Exists
+[ 22 of 300] Compiling Control.Category
+[ 23 of 300] Compiling Data.HeytingAlgebra
+[ 24 of 300] Compiling Data.Semigroup
+[ 25 of 300] Compiling Data.Semiring
+[ 26 of 300] Compiling Data.Show
+[ 27 of 300] Compiling Data.Ring
+[ 28 of 300] Compiling Data.Generic.Rep
+[ 29 of 300] Compiling Data.BooleanAlgebra
+[ 30 of 300] Compiling Data.Eq
+[ 31 of 300] Compiling Data.CommutativeRing
+[ 32 of 300] Compiling Data.Ordering
+[ 33 of 300] Compiling Data.EuclideanRing
+[ 34 of 300] Compiling Data.Ord
+[ 35 of 300] Compiling Data.DivisionRing
+[ 36 of 300] Compiling Data.Field
+[ 37 of 300] Compiling Data.Reflectable
+[ 39 of 300] Compiling Data.Bounded
+[ 38 of 300] Compiling Data.Function
+[ 40 of 300] Compiling Data.Monoid
+[ 41 of 300] Compiling Data.Functor
+[ 43 of 300] Compiling Control.Alt
+[ 42 of 300] Compiling Control.Extend
+[ 44 of 300] Compiling Control.Apply
+[ 45 of 300] Compiling Data.Bounded.Generic
+[ 46 of 300] Compiling Data.Monoid.Generic
+[ 47 of 300] Compiling Control.Plus
+[ 48 of 300] Compiling Control.Comonad
+[ 49 of 300] Compiling Control.Applicative
+[ 51 of 300] Compiling Control.Alternative
+[ 50 of 300] Compiling Control.Bind
+[ 52 of 300] Compiling Control.Monad
+[ 53 of 300] Compiling Prelude
+[ 54 of 300] Compiling Control.MonadPlus
+[ 56 of 300] Compiling Data.Monoid.Additive
+[ 55 of 300] Compiling Data.HeytingAlgebra.Generic
+[ 57 of 300] Compiling Data.Ord.Generic
+[ 58 of 300] Compiling Data.Show.Generic
+[ 59 of 300] Compiling Data.Semigroup.Generic
+[ 60 of 300] Compiling Data.Monoid.Dual
+[ 61 of 300] Compiling Data.Semiring.Generic
+[ 62 of 300] Compiling Data.Monoid.Multiplicative
+[ 63 of 300] Compiling Data.Eq.Generic
+[ 64 of 300] Compiling Data.Traversable.Accum.Internal
+[ 65 of 300] Compiling Data.Semigroup.Last
+[ 67 of 300] Compiling Control.Monad.Cont.Class
+[ 66 of 300] Compiling Control.Monad.Reader.Class
+[ 68 of 300] Compiling Effect
+[ 69 of 300] Compiling Data.Monoid.Conj
+[ 71 of 300] Compiling Data.Monoid.Disj
+[ 73 of 300] Compiling Control.Monad.Trans.Class
+[ 72 of 300] Compiling Data.Monoid.Endo
+[ 70 of 300] Compiling Control.Monad.Gen.Class
+[ 74 of 300] Compiling Data.Ring.Generic
+[ 78 of 300] Compiling Effect.Console
+[ 77 of 300] Compiling Effect.Class
+[ 80 of 300] Compiling Effect.Unsafe
+[ 79 of 300] Compiling Effect.Ref
+[ 76 of 300] Compiling Data.Semigroup.First
+[ 81 of 300] Compiling Test.Main
+[ 82 of 300] Compiling Effect.Uncurried
+[ 75 of 300] Compiling Data.Number.Format
+[ 83 of 300] Compiling Effect.Class.Console
+[ 84 of 300] Compiling Bench
+[ 85 of 300] Compiling Data.Newtype
+[ 86 of 300] Compiling Test.ListOpsFFICheatcode
+[ 87 of 300] Compiling Test.ListOps
+[ 88 of 300] Compiling Test.Records
+[ 89 of 300] Compiling Test.PolymorphismFFI
+[ 90 of 300] Compiling Test.PrimesFFICheatcode
+[ 91 of 300] Compiling Test.RowToList
+[ 92 of 300] Compiling Test.AckermannFFICheatcode
+[ 93 of 300] Compiling Test.ArrayOpsFFICheatcode
+[ 94 of 300] Compiling Test.Church
+[ 95 of 300] Compiling Test.LazyEvaluationFFI
+[ 96 of 300] Compiling Test.ArrayOpsFFI
+[ 97 of 300] Compiling Test.StateMonadFFICheatcode
+[ 98 of 300] Compiling Test.ChurchFFICheatcode
+[ 99 of 300] Compiling Test.Primes
+[101 of 300] Compiling Test.Polymorphism
+[102 of 300] Compiling Test.RecordsFFI
+[100 of 300] Compiling Test.TCO
+[103 of 300] Compiling Test.ListOpsFFI
+[104 of 300] Compiling Test.AckermannFFI
+[106 of 300] Compiling Test.RBTreeFFICheatcode
+[105 of 300] Compiling Test.RBTreeFFI
+[107 of 300] Compiling Test.RowToListFFI
+[109 of 300] Compiling Test.Ackermann
+[110 of 300] Compiling Test.RowToListFFICheatcode
+[108 of 300] Compiling Test.ChurchFFI
+[111 of 300] Compiling Test.LazyEvaluationFFICheatcode
+[112 of 300] Compiling Test.LazyEvaluation
+[114 of 300] Compiling Test.FibFFICheatcode
+[115 of 300] Compiling Test.AstTreeFFICheatcode
+[116 of 300] Compiling Test.TCOFFI
+[117 of 300] Compiling Test.RBTree
+[113 of 300] Compiling Test.StateMonad
+[118 of 300] Compiling Test.FibFFI
+[119 of 300] Compiling Test.PolymorphismFFICheatcode
+[120 of 300] Compiling Test.BenchCheck
+[121 of 300] Compiling Test.Fib
+[122 of 300] Compiling Test.AstTree
+[123 of 300] Compiling Test.StateMonadFFI
+[124 of 300] Compiling Test.TCOFFICheatcode
+[126 of 300] Compiling Test.AstTreeFFI
+[127 of 300] Compiling Test.RecordsFFICheatcode
+[128 of 300] Compiling Data.String.Pattern
+[125 of 300] Compiling Test.PrimesFFI
+[129 of 300] Compiling Data.Ord.Down
+[130 of 300] Compiling Data.Monoid.Alternate
+[131 of 300] Compiling Data.Ord.Min
+[132 of 300] Compiling Data.Functor.App
+[133 of 300] Compiling Data.Profunctor
+[134 of 300] Compiling Data.Time.Duration
+[135 of 300] Compiling Data.Ord.Max
+[136 of 300] Compiling AppFFICheatcode
+[137 of 300] Compiling AppFFI
+[138 of 300] Compiling Data.String.Common
+[139 of 300] Compiling Data.Functor.Invariant
+[140 of 300] Compiling Data.Profunctor.Closed
+[141 of 300] Compiling Data.Functor.Compose
+[142 of 300] Compiling Data.Profunctor.Join
+[143 of 300] Compiling Data.Profunctor.Split
+[144 of 300] Compiling Data.Maybe
+[145 of 300] Compiling Data.Identity
+[147 of 300] Compiling Data.Const
+[146 of 300] Compiling Data.Tuple
+[148 of 300] Compiling Data.Functor.Contravariant
+[149 of 300] Compiling Data.Comparison
+[150 of 300] Compiling Data.Op
+[151 of 300] Compiling Data.Predicate
+[152 of 300] Compiling Data.Equivalence
+[153 of 300] Compiling Data.Either
+[154 of 300] Compiling Data.String.CodeUnits
+[155 of 300] Compiling Data.Maybe.Last
+[156 of 300] Compiling Data.Maybe.First
+[157 of 300] Compiling Data.Number
+[158 of 300] Compiling Data.Number.Approximate
+[159 of 300] Compiling Data.Int
+[160 of 300] Compiling Data.Divide
+[161 of 300] Compiling Data.Profunctor.Strong
+[162 of 300] Compiling Control.Monad.Writer.Class
+[164 of 300] Compiling Control.Monad.State.Class
+[165 of 300] Compiling Data.Profunctor.Costrong
+[163 of 300] Compiling Data.Tuple.Nested
+[166 of 300] Compiling Data.Distributive
+[167 of 300] Compiling Data.Divisible
+[169 of 300] Compiling Data.Decide
+[168 of 300] Compiling Data.Bifunctor
+[170 of 300] Compiling Data.Profunctor.Cochoice
+[171 of 300] Compiling Data.Either.Inject
+[172 of 300] Compiling Data.Profunctor.Choice
+[173 of 300] Compiling Effect.Exception
+[174 of 300] Compiling Data.Either.Nested
+[175 of 300] Compiling Effect.Exception.Unsafe
+[176 of 300] Compiling Control.Monad.Error.Class
+[177 of 300] Compiling Control.Biapply
+[178 of 300] Compiling Data.Profunctor.Star
+[180 of 300] Compiling Data.Functor.Costar
+[181 of 300] Compiling Data.Functor.Product
+[182 of 300] Compiling Data.Functor.Coproduct
+[179 of 300] Compiling Control.Monad.Rec.Class
+[183 of 300] Compiling Data.Decidable
+[184 of 300] Compiling Control.Biapplicative
+[185 of 300] Compiling Data.Functor.Flip
+[187 of 300] Compiling Data.Functor.Product2
+[188 of 300] Compiling Data.Functor.Joker
+[186 of 300] Compiling Data.Functor.Clown
+[189 of 300] Compiling Data.Bifunctor.Join
+[190 of 300] Compiling Data.Functor.Coproduct.Nested
+[191 of 300] Compiling Data.Functor.Coproduct.Inject
+[192 of 300] Compiling Data.FunctorWithIndex
+[193 of 300] Compiling Data.Functor.Product.Nested
+[194 of 300] Compiling Data.Foldable
+[195 of 300] Compiling Control.Monad.ST.Internal
+[196 of 300] Compiling Control.Monad.ST.Ref
+[197 of 300] Compiling Control.Monad.ST.Uncurried
+[198 of 300] Compiling Control.Monad.ST
+[199 of 300] Compiling Control.Monad.ST.Global
+[200 of 300] Compiling Control.Monad.ST.Class
+[201 of 300] Compiling Control.Monad.Writer.Trans
+[202 of 300] Compiling Control.Monad.Except.Trans
+[203 of 300] Compiling Control.Monad.RWS.Trans
+[204 of 300] Compiling Control.Monad.State.Trans
+[206 of 300] Compiling Control.Monad.Maybe.Trans
+[205 of 300] Compiling Control.Monad.Cont.Trans
+[207 of 300] Compiling Control.Monad.Reader.Trans
+[208 of 300] Compiling Data.Array.ST
+[209 of 300] Compiling Data.Array.ST.Iterator
+[210 of 300] Compiling Data.Array.ST.Partial
+[211 of 300] Compiling Control.Monad.Cont
+[212 of 300] Compiling Control.Monad.Reader
+[213 of 300] Compiling Control.Monad.State
+[214 of 300] Compiling Control.Monad.Except
+[215 of 300] Compiling Control.Parallel.Class
+[216 of 300] Compiling Control.Monad.Writer
+[217 of 300] Compiling Control.Monad.RWS
+[218 of 300] Compiling Data.Bifoldable
+[219 of 300] Compiling Data.FoldableWithIndex
+[220 of 300] Compiling Data.Traversable
+[221 of 300] Compiling Data.Semigroup.Foldable
+[222 of 300] Compiling Data.Bitraversable
+[223 of 300] Compiling Data.Semigroup.Traversable
+[224 of 300] Compiling Control.Parallel
+[225 of 300] Compiling Control.Monad.Identity.Trans
+[226 of 300] Compiling Effect.Aff
+[227 of 300] Compiling Data.Unfoldable1
+[228 of 300] Compiling Control.Comonad.Trans.Class
+[229 of 300] Compiling Data.TraversableWithIndex
+[230 of 300] Compiling Control.Comonad.Store.Trans
+[231 of 300] Compiling Control.Comonad.Traced.Trans
+[232 of 300] Compiling Data.Unfoldable
+[234 of 300] Compiling Control.Monad.Gen
+[233 of 300] Compiling Data.Enum
+[235 of 300] Compiling Data.NonEmpty
+[236 of 300] Compiling Data.Array.NonEmpty.Internal
+[237 of 300] Compiling Data.Lazy
+[238 of 300] Compiling Data.Time.Duration.Gen
+[239 of 300] Compiling Control.Comonad.Env.Trans
+[240 of 300] Compiling Effect.Aff.Compat
+[241 of 300] Compiling Data.Array
+[242 of 300] Compiling Control.Comonad.Store.Class
+[243 of 300] Compiling Data.Time.Component
+[244 of 300] Compiling Data.Char
+[245 of 300] Compiling Data.Date.Component
+[246 of 300] Compiling Data.Enum.Generic
+[247 of 300] Compiling Control.Monad.List.Trans
+[248 of 300] Compiling Data.Char.Gen
+[249 of 300] Compiling Data.Enum.Gen
+[250 of 300] Compiling Data.List.Types
+[252 of 300] Compiling Data.List.Lazy.Types
+[251 of 300] Compiling Control.Monad.Gen.Common
+[253 of 300] Compiling Control.Comonad.Store
+[254 of 300] Compiling Control.Comonad.Env.Class
+[255 of 300] Compiling Data.String.Gen
+[256 of 300] Compiling Data.Time
+[257 of 300] Compiling Data.Time.Component.Gen
+[258 of 300] Compiling Control.Comonad.Env
+[259 of 300] Compiling Control.Comonad.Traced.Class
+[261 of 300] Compiling Data.Date.Component.Gen
+[260 of 300] Compiling Data.Date
+[262 of 300] Compiling Data.Time.Gen
+[263 of 300] Compiling Control.Comonad.Traced
+[264 of 300] Compiling Data.String.CodePoints
+[267 of 300] Compiling Test.ArrayOps
+[266 of 300] Compiling Data.Array.Partial
+[265 of 300] Compiling Data.Array.NonEmpty
+[268 of 300] Compiling Data.Date.Gen
+[269 of 300] Compiling Data.DateTime
+[270 of 300] Compiling App
+[271 of 300] Compiling Data.List.Internal
+[272 of 300] Compiling Effect.Aff.Class
+[273 of 300] Compiling Main
+[275 of 300] Compiling Data.DateTime.Gen
+[274 of 300] Compiling Data.DateTime.Instant
+[276 of 300] Compiling Effect.Now
+[277 of 300] Compiling Data.String
+[279 of 300] Compiling Data.List.Lazy
+[278 of 300] Compiling Data.List
+[280 of 300] Compiling Data.String.CaseInsensitive
+[281 of 300] Compiling Data.String.Regex.Flags
+[282 of 300] Compiling Data.String.NonEmpty.Internal
+[283 of 300] Compiling Data.String.NonEmpty.CodePoints
+[285 of 300] Compiling Data.String.Regex
+[284 of 300] Compiling Data.String.NonEmpty.CodeUnits
+[286 of 300] Compiling Data.String.Regex.Unsafe
+[287 of 300] Compiling Data.String.NonEmpty
+[288 of 300] Compiling Data.String.NonEmpty.CaseInsensitive
+[289 of 300] Compiling Data.List.ZipList
+[290 of 300] Compiling Data.List.Lazy.NonEmpty
+[293 of 300] Compiling Data.List.Partial
+[291 of 300] Compiling Data.List.NonEmpty
+[292 of 300] Compiling Data.Map.Internal
+[294 of 300] Compiling Data.Set
+[296 of 300] Compiling Data.Map
+[295 of 300] Compiling Data.Set.NonEmpty
+[298 of 300] Compiling Data.Map.Gen
+[297 of 300] Compiling Data.Interval.Duration
+[299 of 300] Compiling Data.Interval
+[300 of 300] Compiling Data.Interval.Duration.Iso
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [TypeVar2] ],
+    value1: TypeVar2 { value0: 'a' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ Int2 {} ], value1: TypeVar2 { value0: 'm' } }
+}
+{ msg: 'LetRec val type for go', valType: TypeVar2 { value0: 'l' } }
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'b' } }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'b' } }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'b' } }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'b' } }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'b' } }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'b' } }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'b' } }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [$$Array2] ],
+    value1: $$Array2 { value0: [$$Array2] }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [ADT2] ],
+    value1: ADT2 {
+      value0: 'Test.ListOps.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Test.ListOps.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [ADT2] ],
+    value1: ADT2 {
+      value0: 'Test.ListOps.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Test.ListOps.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [TypeVar2] ],
+    value1: TypeVar2 { value0: 'a' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [TypeVar2] ],
+    value1: TypeVar2 { value0: 'a' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2], Int2 {} ], value1: Int2 {} }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Test.Primes.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [ADT2] ],
+    value1: ADT2 {
+      value0: 'Test.Primes.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Test.Primes.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Test.Primes.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Test.Primes.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Test.Primes.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2], Int2 {} ], value1: Int2 {} }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [ADT2] ],
+    value1: ADT2 {
+      value0: 'Test.Primes.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [ADT2] ],
+    value1: TypeVar2 { value0: 'a' }
+  }
+}
+{
+  msg: 'LetRec val type for loop',
+  valType: Func2 {
+    value0: [ [TypeVar2], [TypeApp3] ],
+    value1: TypeApp3 { value0: [TypeVar2], value1: [Array] }
+  }
+}
+{
+  msg: 'LetRec val type for loop',
+  valType: Func2 {
+    value0: [ [TypeVar2], [TypeApp3] ],
+    value1: TypeApp3 { value0: [TypeVar2], value1: [Array] }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: TypeApp3 { value0: [TypeVar2], value1: [Array] }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: TypeApp3 { value0: [TypeVar2], value1: [Array] }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [TypeVar2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ Int2 {}, [TypeVar2] ], value1: Int2 {} }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ Int2 {}, [TypeVar2] ], value1: Int2 {} }
+}
+{
+  msg: 'LetRec val type for adj',
+  valType: Func2 {
+    value0: [ Int2 {}, [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for spin',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'a' } }
+}
+{
+  msg: 'LetRec val type for chunkedRevMap',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for reverseUnrolledMap',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2], $$Boolean2 {} ],
+    value1: $$Boolean2 {}
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2], $$Boolean2 {} ],
+    value1: $$Boolean2 {}
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2], $$Boolean2 {} ],
+    value1: $$Boolean2 {}
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2], $$Boolean2 {} ],
+    value1: $$Boolean2 {}
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2], $$Boolean2 {} ],
+    value1: $$Boolean2 {}
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Ordering.Ordering',
+      value1: [Array],
+      value2: []
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2], $$Boolean2 {} ],
+    value1: $$Boolean2 {}
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Ordering.Ordering',
+      value1: [Array],
+      value2: []
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for up',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Internal.Set',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for down',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: Record2 { value0: [Row2] }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'b' } }
+}
+{
+  msg: 'LetRec val type for merge',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for mergePairs',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for mergeAll',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for sequences',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for descending',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for ascending',
+  valType: Func2 {
+    value0: [ [TypeVar2], [Func2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], Int2 {}, [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, Int2 {}, Int2 {}, [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2], $$Boolean2 {} ],
+    value1: $$Boolean2 {}
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2], $$Boolean2 {} ],
+    value1: $$Boolean2 {}
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'r' } }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Map.Internal.Map',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ $$String2 {}, [ADT2] ], value1: $$String2 {} }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: $$Boolean2 {} }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Map.Internal.Map',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Map.Internal.MapIter',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Map.Internal.MapIter',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2], [ADT2] ], value1: $$Boolean2 {} }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Ordering.Ordering',
+      value1: [Array],
+      value2: []
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2], [ADT2] ], value1: $$Boolean2 {} }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Map.Internal.Map',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Map.Internal.Map',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Map.Internal.Map',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Map.Internal.Map',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'm' } }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: ADT2 {
+    value0: 'Data.Function.Uncurried.Fn2',
+    value1: [ 'Data', 'Function', 'Uncurried', 'Fn2' ],
+    value2: [ [TypeVar2], [ADT2], [TypeVar2] ]
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: ADT2 {
+    value0: 'Data.Function.Uncurried.Fn2',
+    value1: [ 'Data', 'Function', 'Uncurried', 'Fn2' ],
+    value2: [ [ADT2], [TypeVar2], [TypeVar2] ]
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'm' } }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: ADT2 {
+    value0: 'Data.Function.Uncurried.Fn2',
+    value1: [ 'Data', 'Function', 'Uncurried', 'Fn2' ],
+    value2: [ [TypeVar2], [ADT2], [TypeVar2] ]
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: ADT2 {
+    value0: 'Data.Function.Uncurried.Fn2',
+    value1: [ 'Data', 'Function', 'Uncurried', 'Fn2' ],
+    value2: [ [ADT2], [TypeVar2], [TypeVar2] ]
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: ADT2 {
+    value0: 'Data.Function.Uncurried.Fn2',
+    value1: [ 'Data', 'Function', 'Uncurried', 'Fn2' ],
+    value2: [ [ADT2], [TypeVar2], [TypeVar2] ]
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: TypeApp3 { value0: [TypeVar2], value1: [Array] }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: TypeApp3 { value0: [TypeVar2], value1: [Array] }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: ADT2 {
+    value0: 'Data.Function.Uncurried.Fn2',
+    value1: [ 'Data', 'Function', 'Uncurried', 'Fn2' ],
+    value2: [ [ADT2], [TypeVar2], [TypeVar2] ]
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'm' } }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Map.Internal.Map',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Map.Internal.Map',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Map.Internal.Map',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: $$Boolean2 {} }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: $$Boolean2 {} }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: $$Boolean2 {} }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: ADT2 {
+    value0: 'Data.Function.Uncurried.Fn2',
+    value1: [ 'Data', 'Function', 'Uncurried', 'Fn2' ],
+    value2: [ [ADT2], [TypeVar2], [TypeVar2] ]
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: ADT2 {
+    value0: 'Data.Function.Uncurried.Fn2',
+    value1: [ 'Data', 'Function', 'Uncurried', 'Fn2' ],
+    value2: [ [ADT2], [TypeVar2], [TypeVar2] ]
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: ADT2 {
+    value0: 'Data.Function.Uncurried.Fn2',
+    value1: [ 'Data', 'Function', 'Uncurried', 'Fn2' ],
+    value2: [ [ADT2], [TypeVar2], [TypeVar2] ]
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: $$Boolean2 {} }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: ADT2 {
+    value0: 'Data.Function.Uncurried.Fn2',
+    value1: [ 'Data', 'Function', 'Uncurried', 'Fn2' ],
+    value2: [ [ADT2], [TypeVar2], [TypeVar2] ]
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: ADT2 {
+    value0: 'Data.Function.Uncurried.Fn2',
+    value1: [ 'Data', 'Function', 'Uncurried', 'Fn2' ],
+    value2: [ [ADT2], [TypeVar2], [TypeVar2] ]
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: ADT2 {
+    value0: 'Data.Function.Uncurried.Fn2',
+    value1: [ 'Data', 'Function', 'Uncurried', 'Fn2' ],
+    value2: [ [ADT2], [TypeVar2], [TypeVar2] ]
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: ADT2 {
+    value0: 'Data.Function.Uncurried.Fn2',
+    value1: [ 'Data', 'Function', 'Uncurried', 'Fn2' ],
+    value2: [ [ADT2], [TypeVar2], [TypeVar2] ]
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: ADT2 {
+    value0: 'Data.Function.Uncurried.Fn2',
+    value1: [ 'Data', 'Function', 'Uncurried', 'Fn2' ],
+    value2: [ [ADT2], [TypeVar2], [TypeVar2] ]
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: ADT2 {
+    value0: 'Data.Function.Uncurried.Fn2',
+    value1: [ 'Data', 'Function', 'Uncurried', 'Fn2' ],
+    value2: [ [ADT2], [TypeVar2], [TypeVar2] ]
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Map.Internal.Map',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Types.List',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2], [ADT2] ], value1: $$Boolean2 {} }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Ordering.Ordering',
+      value1: [Array],
+      value2: []
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2], [ADT2] ],
+    value1: TypeVar2 { value0: 'b' }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [Func2], [TypeVar2] ],
+    value1: ADT2 { value0: 'Data.Lazy.Lazy', value1: [Array], value2: [Array] }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [Func2], [TypeVar2] ],
+    value1: ADT2 { value0: 'Data.Lazy.Lazy', value1: [Array], value2: [Array] }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'b' } }
+}
+{ msg: 'LetRec val type for go', valType: TypeVar2 { value0: 'l' } }
+{
+  msg: 'LetRec val type for goStep',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Lazy.Types.Step',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], [ADT2] ],
+    value1: ADT2 { value0: 'Data.Lazy.Lazy', value1: [Array], value2: [Array] }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Lazy.Types.Step',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{ msg: 'LetRec val type for go', valType: TypeVar2 { value0: 'l' } }
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2], Int2 {} ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: TypeVar2 { value0: 'b' } }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.Maybe.Maybe',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Lazy.Types.Step',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [ADT2] ],
+    value1: ADT2 { value0: 'Data.Lazy.Lazy', value1: [Array], value2: [Array] }
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ Int2 {}, [ADT2] ],
+    value1: ADT2 {
+      value0: 'Data.List.Lazy.Types.Step',
+      value1: [Array],
+      value2: [Array]
+    }
+  }
+}
+{ msg: 'LetRec val type for go', valType: TypeVar2 { value0: 'l' } }
+{
+  msg: 'LetRec val type for go',
+  valType: ADT2 {
+    value0: 'Data.Function.Uncurried.Fn2',
+    value1: [ 'Data', 'Function', 'Uncurried', 'Fn2' ],
+    value2: [ [ADT2], [TypeVar2], [TypeVar2] ]
+  }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 { value0: [ [ADT2] ], value1: $$Boolean2 {} }
+}
+{
+  msg: 'LetRec val type for go',
+  valType: Func2 {
+    value0: [ [TypeVar2] ],
+    value1: ADT2 { value0: 'Effect.Aff.Aff', value1: [Array], value2: [Array] }
+  }
+}
+=== Go ===
+Global warm-up in progress (this may take a moment)...
+
+Global warm-up complete. Starting benchmarks...
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+0.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+0.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+17.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+41.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+710.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+18.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+1781.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+168.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+24156.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+2502.75 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+50.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+18748.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+15.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+0.00 μs
+
+
+==================================================
+
+Total exec time: 48.21 ms
+
+
+=== Rebuilding purust backend ===
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: purust
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: purust
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Bundling...
+
+  bin/purust.js  1.1mb ⚠️
+
+⚡ Done in 37ms
+
+✓ Bundle succeeded.
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-rust-test
+
+Downloading dependencies...
+Building...
+[  3 of 300] Compiling Type.Proxy
+[  1 of 300] Compiling Unsafe.Coerce
+[  2 of 300] Compiling Test.Implicit
+[  4 of 300] Compiling Type.Equality
+[  6 of 300] Compiling Record.Unsafe
+[  5 of 300] Compiling Spago.Generated.BuildInfo
+[  7 of 300] Compiling Partial
+[  8 of 300] Compiling Data.Unit
+[  9 of 300] Compiling Data.Void
+[ 10 of 300] Compiling Data.Traversable.Accum
+[ 11 of 300] Compiling Data.NaturalTransformation
+[ 12 of 300] Compiling Data.Int.Bits
+[ 13 of 300] Compiling Data.String.Unsafe
+[ 14 of 300] Compiling Data.Boolean
+[ 15 of 300] Compiling Control.Semigroupoid
+[ 16 of 300] Compiling Data.Function.Uncurried
+[ 17 of 300] Compiling Control.Lazy
+[ 18 of 300] Compiling Data.Symbol
+[ 19 of 300] Compiling Safe.Coerce
+[ 20 of 300] Compiling Partial.Unsafe
+[ 21 of 300] Compiling Data.Exists
+[ 22 of 300] Compiling Control.Category
+[ 23 of 300] Compiling Data.HeytingAlgebra
+[ 24 of 300] Compiling Data.Semigroup
+[ 25 of 300] Compiling Data.Semiring
+[ 26 of 300] Compiling Data.Show
+[ 27 of 300] Compiling Data.Ring
+[ 28 of 300] Compiling Data.Generic.Rep
+[ 29 of 300] Compiling Data.BooleanAlgebra
+[ 30 of 300] Compiling Data.Eq
+[ 31 of 300] Compiling Data.CommutativeRing
+[ 32 of 300] Compiling Data.Ordering
+[ 33 of 300] Compiling Data.EuclideanRing
+[ 34 of 300] Compiling Data.Ord
+[ 35 of 300] Compiling Data.DivisionRing
+[ 36 of 300] Compiling Data.Field
+[ 38 of 300] Compiling Data.Bounded
+[ 37 of 300] Compiling Data.Function
+[ 39 of 300] Compiling Data.Reflectable
+[ 40 of 300] Compiling Data.Monoid
+[ 41 of 300] Compiling Data.Functor
+[ 42 of 300] Compiling Control.Alt
+[ 44 of 300] Compiling Control.Extend
+[ 43 of 300] Compiling Control.Apply
+[ 45 of 300] Compiling Data.Bounded.Generic
+[ 46 of 300] Compiling Data.Monoid.Generic
+[ 47 of 300] Compiling Control.Plus
+[ 48 of 300] Compiling Control.Comonad
+[ 49 of 300] Compiling Control.Applicative
+[ 50 of 300] Compiling Control.Alternative
+[ 51 of 300] Compiling Control.Bind
+[ 52 of 300] Compiling Control.Monad
+[ 53 of 300] Compiling Control.MonadPlus
+[ 54 of 300] Compiling Prelude
+[ 55 of 300] Compiling Data.Monoid.Disj
+[ 56 of 300] Compiling Data.Eq.Generic
+[ 57 of 300] Compiling Data.Show.Generic
+[ 58 of 300] Compiling Control.Monad.Trans.Class
+[ 59 of 300] Compiling Data.Monoid.Multiplicative
+[ 61 of 300] Compiling Control.Monad.Cont.Class
+[ 60 of 300] Compiling Data.Ord.Generic
+[ 62 of 300] Compiling Data.Monoid.Conj
+[ 63 of 300] Compiling Data.Monoid.Dual
+[ 64 of 300] Compiling Control.Monad.Gen.Class
+[ 65 of 300] Compiling Data.HeytingAlgebra.Generic
+[ 66 of 300] Compiling Data.Monoid.Endo
+[ 67 of 300] Compiling Effect
+[ 68 of 300] Compiling Data.Monoid.Additive
+[ 69 of 300] Compiling Data.Semigroup.Generic
+[ 70 of 300] Compiling Data.Number.Format
+[ 71 of 300] Compiling Data.Ring.Generic
+[ 72 of 300] Compiling Data.Semigroup.Last
+[ 73 of 300] Compiling Data.Semigroup.First
+[ 77 of 300] Compiling Test.Main
+[ 75 of 300] Compiling Data.Traversable.Accum.Internal
+[ 79 of 300] Compiling Effect.Unsafe
+[ 76 of 300] Compiling Data.Semiring.Generic
+[ 78 of 300] Compiling Effect.Uncurried
+[ 74 of 300] Compiling Control.Monad.Reader.Class
+[ 80 of 300] Compiling Effect.Ref
+[ 81 of 300] Compiling Effect.Console
+[ 82 of 300] Compiling Effect.Class
+[ 83 of 300] Compiling Data.Newtype
+[ 84 of 300] Compiling Effect.Class.Console
+[ 85 of 300] Compiling Bench
+[ 86 of 300] Compiling Data.Ord.Max
+[ 87 of 300] Compiling Data.Time.Duration
+[ 89 of 300] Compiling Data.String.Pattern
+[ 88 of 300] Compiling Data.Functor.App
+[ 90 of 300] Compiling Data.Profunctor
+[ 91 of 300] Compiling Data.Ord.Down
+[ 93 of 300] Compiling Data.Ord.Min
+[ 92 of 300] Compiling Data.Monoid.Alternate
+[ 94 of 300] Compiling Test.StateMonad
+[ 97 of 300] Compiling Test.ArrayOpsFFI
+[ 96 of 300] Compiling Test.PolymorphismFFI
+[ 95 of 300] Compiling Test.RowToListFFI
+[ 98 of 300] Compiling Test.StateMonadFFI
+[ 99 of 300] Compiling Test.Records
+[100 of 300] Compiling Test.FibFFI
+[101 of 300] Compiling Test.AckermannFFICheatcode
+[102 of 300] Compiling Test.AstTree
+[104 of 300] Compiling Test.PrimesFFI
+[105 of 300] Compiling Test.AckermannFFI
+[107 of 300] Compiling Test.RecordsFFI
+[103 of 300] Compiling Test.TCO
+[109 of 300] Compiling Test.Ackermann
+[110 of 300] Compiling Test.LazyEvaluationFFI
+[111 of 300] Compiling Test.BenchCheck
+[108 of 300] Compiling Test.Primes
+[112 of 300] Compiling Test.AstTreeFFI
+[113 of 300] Compiling Test.ListOps
+[114 of 300] Compiling Test.PrimesFFICheatcode
+[115 of 300] Compiling Test.StateMonadFFICheatcode
+[117 of 300] Compiling Test.RBTreeFFICheatcode
+[106 of 300] Compiling Test.FibFFICheatcode
+[116 of 300] Compiling Test.ChurchFFICheatcode
+[119 of 300] Compiling Test.RecordsFFICheatcode
+[118 of 300] Compiling Test.AstTreeFFICheatcode
+[120 of 300] Compiling Test.RowToList
+[121 of 300] Compiling Test.TCOFFI
+[122 of 300] Compiling Test.PolymorphismFFICheatcode
+[123 of 300] Compiling Test.RowToListFFICheatcode
+[125 of 300] Compiling Test.Fib
+[124 of 300] Compiling Test.LazyEvaluation
+[126 of 300] Compiling Test.RBTreeFFI
+[127 of 300] Compiling Test.TCOFFICheatcode
+[128 of 300] Compiling Test.LazyEvaluationFFICheatcode
+[129 of 300] Compiling Test.Polymorphism
+[130 of 300] Compiling Test.ListOpsFFI
+[132 of 300] Compiling Test.RBTree
+[131 of 300] Compiling Test.Church
+[133 of 300] Compiling Test.ArrayOpsFFICheatcode
+[134 of 300] Compiling Test.ListOpsFFICheatcode
+[135 of 300] Compiling Test.ChurchFFI
+[137 of 300] Compiling Data.String.Common
+[136 of 300] Compiling Data.Profunctor.Closed
+[138 of 300] Compiling Data.Functor.Compose
+[139 of 300] Compiling Data.Functor.Invariant
+[140 of 300] Compiling AppFFICheatcode
+[141 of 300] Compiling AppFFI
+[143 of 300] Compiling Data.Identity
+[142 of 300] Compiling Data.Tuple
+[145 of 300] Compiling Data.Const
+[144 of 300] Compiling Data.Profunctor.Split
+[146 of 300] Compiling Data.Profunctor.Join
+[147 of 300] Compiling Data.Maybe
+[148 of 300] Compiling Data.Functor.Contravariant
+[149 of 300] Compiling Data.Op
+[150 of 300] Compiling Data.Comparison
+[151 of 300] Compiling Data.Predicate
+[152 of 300] Compiling Data.Equivalence
+[153 of 300] Compiling Data.Either
+[154 of 300] Compiling Data.Number
+[156 of 300] Compiling Data.Maybe.Last
+[157 of 300] Compiling Data.Maybe.First
+[155 of 300] Compiling Data.String.CodeUnits
+[159 of 300] Compiling Data.Number.Approximate
+[158 of 300] Compiling Data.Int
+[160 of 300] Compiling Data.Divide
+[161 of 300] Compiling Data.Distributive
+[162 of 300] Compiling Data.Profunctor.Strong
+[163 of 300] Compiling Data.Tuple.Nested
+[164 of 300] Compiling Control.Monad.State.Class
+[165 of 300] Compiling Control.Monad.Writer.Class
+[166 of 300] Compiling Data.Profunctor.Costrong
+[167 of 300] Compiling Data.Divisible
+[168 of 300] Compiling Data.Decide
+[169 of 300] Compiling Data.Bifunctor
+[170 of 300] Compiling Data.Profunctor.Cochoice
+[171 of 300] Compiling Effect.Exception
+[172 of 300] Compiling Data.Either.Inject
+[174 of 300] Compiling Data.Profunctor.Choice
+[173 of 300] Compiling Data.Either.Nested
+[175 of 300] Compiling Effect.Exception.Unsafe
+[176 of 300] Compiling Control.Monad.Error.Class
+[177 of 300] Compiling Control.Monad.Rec.Class
+[178 of 300] Compiling Data.Functor.Coproduct
+[179 of 300] Compiling Data.Profunctor.Star
+[180 of 300] Compiling Data.Functor.Costar
+[181 of 300] Compiling Control.Biapply
+[182 of 300] Compiling Data.Functor.Product
+[183 of 300] Compiling Data.Decidable
+[184 of 300] Compiling Control.Biapplicative
+[186 of 300] Compiling Data.Functor.Product2
+[185 of 300] Compiling Data.Bifunctor.Join
+[188 of 300] Compiling Data.Functor.Joker
+[187 of 300] Compiling Data.Functor.Clown
+[189 of 300] Compiling Data.Functor.Flip
+[191 of 300] Compiling Data.Functor.Coproduct.Inject
+[190 of 300] Compiling Data.Functor.Coproduct.Nested
+[192 of 300] Compiling Data.Functor.Product.Nested
+[193 of 300] Compiling Data.Foldable
+[194 of 300] Compiling Data.FunctorWithIndex
+[195 of 300] Compiling Control.Monad.ST.Internal
+[196 of 300] Compiling Control.Monad.ST.Ref
+[197 of 300] Compiling Control.Monad.ST.Uncurried
+[198 of 300] Compiling Control.Monad.ST
+[199 of 300] Compiling Control.Monad.ST.Global
+[200 of 300] Compiling Control.Monad.ST.Class
+[201 of 300] Compiling Control.Monad.State.Trans
+[202 of 300] Compiling Control.Monad.Except.Trans
+[203 of 300] Compiling Control.Monad.Cont.Trans
+[204 of 300] Compiling Control.Monad.Maybe.Trans
+[205 of 300] Compiling Control.Monad.RWS.Trans
+[206 of 300] Compiling Control.Monad.Reader.Trans
+[207 of 300] Compiling Control.Monad.Writer.Trans
+[208 of 300] Compiling Data.Array.ST
+[209 of 300] Compiling Data.Array.ST.Partial
+[210 of 300] Compiling Data.Array.ST.Iterator
+[211 of 300] Compiling Control.Monad.Cont
+[212 of 300] Compiling Control.Monad.Reader
+[213 of 300] Compiling Control.Monad.State
+[214 of 300] Compiling Control.Monad.Except
+[215 of 300] Compiling Control.Monad.Writer
+[216 of 300] Compiling Control.Parallel.Class
+[217 of 300] Compiling Control.Monad.RWS
+[218 of 300] Compiling Data.FoldableWithIndex
+[219 of 300] Compiling Data.Traversable
+[220 of 300] Compiling Data.Semigroup.Foldable
+[221 of 300] Compiling Data.Bifoldable
+[222 of 300] Compiling Data.Semigroup.Traversable
+[223 of 300] Compiling Data.Bitraversable
+[224 of 300] Compiling Control.Parallel
+[225 of 300] Compiling Control.Monad.Identity.Trans
+[226 of 300] Compiling Effect.Aff
+[227 of 300] Compiling Data.Unfoldable1
+[228 of 300] Compiling Data.TraversableWithIndex
+[229 of 300] Compiling Control.Comonad.Trans.Class
+[230 of 300] Compiling Control.Comonad.Traced.Trans
+[231 of 300] Compiling Control.Comonad.Store.Trans
+[232 of 300] Compiling Data.Unfoldable
+[233 of 300] Compiling Control.Monad.Gen
+[234 of 300] Compiling Data.Enum
+[235 of 300] Compiling Data.Lazy
+[236 of 300] Compiling Data.Array.NonEmpty.Internal
+[237 of 300] Compiling Data.NonEmpty
+[238 of 300] Compiling Control.Comonad.Env.Trans
+[239 of 300] Compiling Data.Time.Duration.Gen
+[240 of 300] Compiling Effect.Aff.Compat
+[241 of 300] Compiling Data.Array
+[242 of 300] Compiling Control.Comonad.Store.Class
+[243 of 300] Compiling Data.Char
+[244 of 300] Compiling Data.Time.Component
+[245 of 300] Compiling Data.Enum.Generic
+[246 of 300] Compiling Data.Date.Component
+[247 of 300] Compiling Control.Monad.List.Trans
+[248 of 300] Compiling Control.Monad.Gen.Common
+[249 of 300] Compiling Data.Enum.Gen
+[250 of 300] Compiling Data.List.Types
+[251 of 300] Compiling Data.List.Lazy.Types
+[252 of 300] Compiling Control.Comonad.Store
+[253 of 300] Compiling Data.Char.Gen
+[254 of 300] Compiling Control.Comonad.Env.Class
+[255 of 300] Compiling Data.String.Gen
+[256 of 300] Compiling Data.Time.Component.Gen
+[257 of 300] Compiling Data.Time
+[258 of 300] Compiling Control.Comonad.Env
+[259 of 300] Compiling Control.Comonad.Traced.Class
+[261 of 300] Compiling Data.Date.Component.Gen
+[260 of 300] Compiling Data.Date
+[262 of 300] Compiling Control.Comonad.Traced
+[263 of 300] Compiling Data.Time.Gen
+[264 of 300] Compiling Data.String.CodePoints
+[266 of 300] Compiling Test.ArrayOps
+[267 of 300] Compiling Data.Array.Partial
+[265 of 300] Compiling Data.Array.NonEmpty
+[268 of 300] Compiling App
+[269 of 300] Compiling Data.DateTime
+[270 of 300] Compiling Data.Date.Gen
+[271 of 300] Compiling Effect.Aff.Class
+[272 of 300] Compiling Main
+[273 of 300] Compiling Data.List.Internal
+[274 of 300] Compiling Data.DateTime.Gen
+[275 of 300] Compiling Data.DateTime.Instant
+[276 of 300] Compiling Data.String
+[277 of 300] Compiling Data.String.NonEmpty.Internal
+[279 of 300] Compiling Data.String.CaseInsensitive
+[278 of 300] Compiling Data.String.Regex.Flags
+[280 of 300] Compiling Effect.Now
+[282 of 300] Compiling Data.List.Lazy
+[281 of 300] Compiling Data.List
+[283 of 300] Compiling Data.String.NonEmpty.CodePoints
+[285 of 300] Compiling Data.String.Regex
+[284 of 300] Compiling Data.String.NonEmpty.CodeUnits
+[286 of 300] Compiling Data.String.Regex.Unsafe
+[287 of 300] Compiling Data.String.NonEmpty
+[288 of 300] Compiling Data.String.NonEmpty.CaseInsensitive
+[290 of 300] Compiling Data.List.ZipList
+[289 of 300] Compiling Data.List.Lazy.NonEmpty
+[291 of 300] Compiling Data.List.Partial
+[292 of 300] Compiling Data.List.NonEmpty
+[293 of 300] Compiling Data.Map.Internal
+[294 of 300] Compiling Data.Set
+[295 of 300] Compiling Data.Map
+[296 of 300] Compiling Data.Set.NonEmpty
+[298 of 300] Compiling Data.Map.Gen
+[297 of 300] Compiling Data.Interval.Duration
+[299 of 300] Compiling Data.Interval
+[300 of 300] Compiling Data.Interval.Duration.Iso
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+=== Rust ===
+error[E0618]: expected function, found `purust_core::Value`
+  --> Purs_Control_Semigroupoid/src/lib.rs:35:428
+   |
+35 | ...et _f = (/* Typed crate::UnknownType <- crate::UnknownType : App(Accessor(Local(...))) */((dictSemigroupoid).compose.clone())(/* Typed crate::UnknownType <- crate::UnknownType : Local(...) */g, /* Typed crate::UnknownType <- crate::UnknownType : Local(...) */f)).clone(); move |mut _a0: crate::UnknownType, mut _a1: crate::UnknownType| -> crate::UnknownType { _f(_a0, _a1) } ...
+   |       --                                                                                                                                                                                                                                                                                                                                                                   ^^----------
+   |       |                                                                                                                                                                                                                                                                                                                                                                    |
+   |       `_f` has type `purust_core::Value`                                                                                                                                                                                                                                                                                                                                   call expression requires function
+
+For more information about this error, try `rustc --explain E0618`.
+error: could not compile `Purs_Control_Semigroupoid` (lib) due to 1 previous error
+error[E0599]: no method named `unwrap_class` found for struct `Rc<Purs_Type_Proxy::Proxy>` in the current scope
+   --> Purs_Data_HeytingAlgebra/src/lib.rs:138:163
+    |
+138 | ...(Purs_Type_Proxy::Proxy::Proxy)).unwrap_class::<std::rc::Rc<Purs_Type_Proxy::Proxy>>().clone()
+    |                                     ^^^^^^^^^^^^ method not found in `Rc<Purs_Type_Proxy::Proxy>`
+
+error[E0599]: no method named `unwrap_class` found for struct `Rc<Purs_Type_Proxy::Proxy>` in the current scope
+  --> Purs_Data_Semiring/src/lib.rs:86:163
+   |
+86 | ...w(Purs_Type_Proxy::Proxy::Proxy)).unwrap_class::<std::rc::Rc<Purs_Type_Proxy::Proxy>>().clone()
+   |                                      ^^^^^^^^^^^^ method not found in `Rc<Purs_Type_Proxy::Proxy>`
+
+error[E0599]: no method named `unwrap_class` found for struct `Rc<Purs_Type_Proxy::Proxy>` in the current scope
+   --> Purs_Data_HeytingAlgebra/src/lib.rs:142:163
+    |
+142 | ...(Purs_Type_Proxy::Proxy::Proxy)).unwrap_class::<std::rc::Rc<Purs_Type_Proxy::Proxy>>().clone()
+    |                                     ^^^^^^^^^^^^ method not found in `Rc<Purs_Type_Proxy::Proxy>`
+
+error[E0599]: no method named `unwrap_class` found for struct `Rc<Purs_Type_Proxy::Proxy>` in the current scope
+  --> Purs_Data_Semiring/src/lib.rs:90:163
+   |
+90 | ...w(Purs_Type_Proxy::Proxy::Proxy)).unwrap_class::<std::rc::Rc<Purs_Type_Proxy::Proxy>>().clone()
+   |                                      ^^^^^^^^^^^^ method not found in `Rc<Purs_Type_Proxy::Proxy>`
+
+error[E0599]: no method named `unwrap_class` found for struct `Rc<Purs_Type_Proxy::Proxy>` in the current scope
+   --> Purs_Data_HeytingAlgebra/src/lib.rs:146:163
+    |
+146 | ...(Purs_Type_Proxy::Proxy::Proxy)).unwrap_class::<std::rc::Rc<Purs_Type_Proxy::Proxy>>().clone()
+    |                                     ^^^^^^^^^^^^ method not found in `Rc<Purs_Type_Proxy::Proxy>`
+
+error[E0599]: no method named `unwrap_class` found for struct `Rc<Purs_Type_Proxy::Proxy>` in the current scope
+  --> Purs_Data_Semiring/src/lib.rs:91:608
+   |
+91 | ...w(Purs_Type_Proxy::Proxy::Proxy)).unwrap_class::<std::rc::Rc<Purs_Type_Proxy::Proxy>>().clone())), zero: crate::Value::Class(std:...
+   |                                      ^^^^^^^^^^^^ method not found in `Rc<Purs_Type_Proxy::Proxy>`
+
+error[E0599]: no method named `unwrap_class` found for struct `Rc<Purs_Type_Proxy::Proxy>` in the current scope
+  --> Purs_Data_Semiring/src/lib.rs:91:874
+   |
+91 | ...w(Purs_Type_Proxy::Proxy::Proxy)).unwrap_class::<std::rc::Rc<Purs_Type_Proxy::Proxy>>().clone())) })
+   |                                      ^^^^^^^^^^^^ method not found in `Rc<Purs_Type_Proxy::Proxy>`
+
+error[E0599]: no method named `unwrap_class` found for struct `Rc<Purs_Type_Proxy::Proxy>` in the current scope
+   --> Purs_Data_HeytingAlgebra/src/lib.rs:147:607
+    |
+147 | ...(Purs_Type_Proxy::Proxy::Proxy)).unwrap_class::<std::rc::Rc<Purs_Type_Proxy::Proxy>>().clone())), not: purust_core::Func1::Share...
+    |                                     ^^^^^^^^^^^^ method not found in `Rc<Purs_Type_Proxy::Proxy>`
+
+error[E0599]: no method named `unwrap_class` found for struct `Rc<Purs_Type_Proxy::Proxy>` in the current scope
+   --> Purs_Data_HeytingAlgebra/src/lib.rs:149:163
+    |
+149 | ...(Purs_Type_Proxy::Proxy::Proxy)).unwrap_class::<std::rc::Rc<Purs_Type_Proxy::Proxy>>().clone()
+    |                                     ^^^^^^^^^^^^ method not found in `Rc<Purs_Type_Proxy::Proxy>`
+
+error[E0599]: no method named `unwrap_class` found for struct `Rc<Purs_Type_Proxy::Proxy>` in the current scope
+   --> Purs_Data_HeytingAlgebra/src/lib.rs:150:472
+    |
+150 | ...(Purs_Type_Proxy::Proxy::Proxy)).unwrap_class::<std::rc::Rc<Purs_Type_Proxy::Proxy>>().clone())) })
+    |                                     ^^^^^^^^^^^^ method not found in `Rc<Purs_Type_Proxy::Proxy>`
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `Purs_Data_Semiring` (lib) due to 4 previous errors
+error: could not compile `Purs_Data_HeytingAlgebra` (lib) due to 6 previous errors
+=== Rust (purust) failed ===
+
+=== Rebuilding sharpurs backend ===
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: sharpurs
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: sharpurs
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Bundling...
+
+  bin/sharpurs.js  942.8kb
+
+⚡ Done in 36ms
+
+✓ Bundle succeeded.
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-cs-test
+
+Downloading dependencies...
+Building...
+[  3 of 300] Compiling Type.Proxy
+[  2 of 300] Compiling Type.Equality
+[  1 of 300] Compiling Unsafe.Coerce
+[  4 of 300] Compiling Test.Implicit
+[  5 of 300] Compiling Spago.Generated.BuildInfo
+[  6 of 300] Compiling Record.Unsafe
+[  7 of 300] Compiling Data.String.Unsafe
+[  8 of 300] Compiling Partial
+[  9 of 300] Compiling Data.Traversable.Accum
+[ 10 of 300] Compiling Data.Unit
+[ 11 of 300] Compiling Data.Void
+[ 12 of 300] Compiling Data.Int.Bits
+[ 13 of 300] Compiling Data.NaturalTransformation
+[ 14 of 300] Compiling Data.Boolean
+[ 15 of 300] Compiling Control.Semigroupoid
+[ 16 of 300] Compiling Data.Function.Uncurried
+[ 17 of 300] Compiling Control.Lazy
+[ 18 of 300] Compiling Partial.Unsafe
+[ 19 of 300] Compiling Safe.Coerce
+[ 20 of 300] Compiling Data.Symbol
+[ 21 of 300] Compiling Data.Exists
+[ 22 of 300] Compiling Control.Category
+[ 23 of 300] Compiling Data.Semiring
+[ 24 of 300] Compiling Data.Semigroup
+[ 25 of 300] Compiling Data.HeytingAlgebra
+[ 26 of 300] Compiling Data.Show
+[ 27 of 300] Compiling Data.Ring
+[ 29 of 300] Compiling Data.BooleanAlgebra
+[ 28 of 300] Compiling Data.Eq
+[ 30 of 300] Compiling Data.Generic.Rep
+[ 31 of 300] Compiling Data.CommutativeRing
+[ 32 of 300] Compiling Data.Ordering
+[ 33 of 300] Compiling Data.EuclideanRing
+[ 34 of 300] Compiling Data.Ord
+[ 35 of 300] Compiling Data.DivisionRing
+[ 36 of 300] Compiling Data.Field
+[ 38 of 300] Compiling Data.Bounded
+[ 39 of 300] Compiling Data.Reflectable
+[ 37 of 300] Compiling Data.Function
+[ 40 of 300] Compiling Data.Monoid
+[ 41 of 300] Compiling Data.Functor
+[ 43 of 300] Compiling Control.Alt
+[ 44 of 300] Compiling Control.Extend
+[ 42 of 300] Compiling Control.Apply
+[ 45 of 300] Compiling Data.Monoid.Generic
+[ 46 of 300] Compiling Data.Bounded.Generic
+[ 47 of 300] Compiling Control.Plus
+[ 48 of 300] Compiling Control.Comonad
+[ 49 of 300] Compiling Control.Applicative
+[ 50 of 300] Compiling Control.Alternative
+[ 51 of 300] Compiling Control.Bind
+[ 52 of 300] Compiling Control.Monad
+[ 53 of 300] Compiling Prelude
+[ 54 of 300] Compiling Control.MonadPlus
+[ 55 of 300] Compiling Data.Number.Format
+[ 56 of 300] Compiling Data.Semiring.Generic
+[ 57 of 300] Compiling Data.Monoid.Additive
+[ 59 of 300] Compiling Data.Monoid.Multiplicative
+[ 60 of 300] Compiling Data.Semigroup.Generic
+[ 58 of 300] Compiling Data.HeytingAlgebra.Generic
+[ 61 of 300] Compiling Data.Show.Generic
+[ 62 of 300] Compiling Data.Ord.Generic
+[ 64 of 300] Compiling Data.Semigroup.Last
+[ 63 of 300] Compiling Data.Eq.Generic
+[ 65 of 300] Compiling Data.Traversable.Accum.Internal
+[ 66 of 300] Compiling Control.Monad.Cont.Class
+[ 67 of 300] Compiling Control.Monad.Gen.Class
+[ 68 of 300] Compiling Data.Ring.Generic
+[ 69 of 300] Compiling Control.Monad.Reader.Class
+[ 70 of 300] Compiling Data.Monoid.Dual
+[ 71 of 300] Compiling Data.Monoid.Conj
+[ 73 of 300] Compiling Control.Monad.Trans.Class
+[ 74 of 300] Compiling Data.Monoid.Disj
+[ 76 of 300] Compiling Effect
+[ 72 of 300] Compiling Data.Monoid.Endo
+[ 75 of 300] Compiling Data.Semigroup.First
+[ 77 of 300] Compiling Effect.Uncurried
+[ 79 of 300] Compiling Test.Main
+[ 80 of 300] Compiling Effect.Unsafe
+[ 78 of 300] Compiling Effect.Console
+[ 81 of 300] Compiling Effect.Class
+[ 82 of 300] Compiling Effect.Ref
+[ 83 of 300] Compiling Data.Newtype
+[ 84 of 300] Compiling Bench
+[ 85 of 300] Compiling Effect.Class.Console
+[ 86 of 300] Compiling Test.PolymorphismFFI
+[ 87 of 300] Compiling Test.TCOFFICheatcode
+[ 88 of 300] Compiling Test.TCO
+[ 89 of 300] Compiling Test.ChurchFFI
+[ 90 of 300] Compiling Test.AstTree
+[ 91 of 300] Compiling Test.PrimesFFICheatcode
+[ 92 of 300] Compiling Test.StateMonadFFI
+[ 93 of 300] Compiling Test.RBTreeFFICheatcode
+[ 95 of 300] Compiling Test.Polymorphism
+[ 94 of 300] Compiling Test.RowToList
+[ 96 of 300] Compiling Test.AstTreeFFICheatcode
+[ 97 of 300] Compiling Test.Fib
+[ 99 of 300] Compiling Test.RecordsFFI
+[ 98 of 300] Compiling Test.RBTree
+[102 of 300] Compiling Test.ListOpsFFICheatcode
+[100 of 300] Compiling Test.RowToListFFI
+[101 of 300] Compiling Test.LazyEvaluationFFICheatcode
+[103 of 300] Compiling Test.Church
+[104 of 300] Compiling Test.FibFFI
+[105 of 300] Compiling Test.TCOFFI
+[107 of 300] Compiling Test.RowToListFFICheatcode
+[108 of 300] Compiling Test.BenchCheck
+[109 of 300] Compiling Test.LazyEvaluationFFI
+[106 of 300] Compiling Test.RBTreeFFI
+[110 of 300] Compiling Test.AstTreeFFI
+[111 of 300] Compiling Test.ArrayOpsFFI
+[112 of 300] Compiling Test.PrimesFFI
+[113 of 300] Compiling Test.AckermannFFI
+[115 of 300] Compiling Test.ChurchFFICheatcode
+[116 of 300] Compiling Test.Ackermann
+[117 of 300] Compiling Test.RecordsFFICheatcode
+[118 of 300] Compiling Test.StateMonad
+[114 of 300] Compiling Test.ArrayOpsFFICheatcode
+[119 of 300] Compiling Test.StateMonadFFICheatcode
+[122 of 300] Compiling Test.ListOps
+[123 of 300] Compiling Test.FibFFICheatcode
+[120 of 300] Compiling Test.LazyEvaluation
+[121 of 300] Compiling Test.Records
+[124 of 300] Compiling Test.Primes
+[125 of 300] Compiling Test.AckermannFFICheatcode
+[126 of 300] Compiling Test.PolymorphismFFICheatcode
+[127 of 300] Compiling Data.Ord.Max
+[129 of 300] Compiling Test.ListOpsFFI
+[128 of 300] Compiling Data.Time.Duration
+[130 of 300] Compiling Data.Profunctor
+[131 of 300] Compiling Data.Ord.Min
+[132 of 300] Compiling Data.Ord.Down
+[133 of 300] Compiling Data.Monoid.Alternate
+[134 of 300] Compiling Data.String.Pattern
+[135 of 300] Compiling Data.Functor.App
+[136 of 300] Compiling AppFFI
+[137 of 300] Compiling AppFFICheatcode
+[138 of 300] Compiling Data.String.Common
+[139 of 300] Compiling Data.Profunctor.Closed
+[140 of 300] Compiling Data.Functor.Invariant
+[141 of 300] Compiling Data.Functor.Compose
+[142 of 300] Compiling Data.Const
+[143 of 300] Compiling Data.Identity
+[144 of 300] Compiling Data.Maybe
+[145 of 300] Compiling Data.Profunctor.Join
+[146 of 300] Compiling Data.Tuple
+[147 of 300] Compiling Data.Profunctor.Split
+[148 of 300] Compiling Data.Functor.Contravariant
+[149 of 300] Compiling Data.Comparison
+[150 of 300] Compiling Data.Predicate
+[151 of 300] Compiling Data.Op
+[152 of 300] Compiling Data.Number
+[154 of 300] Compiling Data.Maybe.First
+[153 of 300] Compiling Data.String.CodeUnits
+[156 of 300] Compiling Data.Maybe.Last
+[155 of 300] Compiling Data.Either
+[157 of 300] Compiling Data.Equivalence
+[158 of 300] Compiling Data.Number.Approximate
+[159 of 300] Compiling Data.Int
+[160 of 300] Compiling Data.Divide
+[161 of 300] Compiling Control.Monad.State.Class
+[163 of 300] Compiling Data.Distributive
+[165 of 300] Compiling Data.Profunctor.Strong
+[164 of 300] Compiling Control.Monad.Writer.Class
+[166 of 300] Compiling Data.Profunctor.Costrong
+[162 of 300] Compiling Data.Tuple.Nested
+[167 of 300] Compiling Data.Divisible
+[168 of 300] Compiling Data.Either.Inject
+[169 of 300] Compiling Effect.Exception
+[171 of 300] Compiling Data.Profunctor.Cochoice
+[173 of 300] Compiling Data.Decide
+[174 of 300] Compiling Data.Profunctor.Choice
+[172 of 300] Compiling Data.Bifunctor
+[170 of 300] Compiling Data.Either.Nested
+[175 of 300] Compiling Effect.Exception.Unsafe
+[176 of 300] Compiling Control.Monad.Error.Class
+[178 of 300] Compiling Data.Functor.Product
+[177 of 300] Compiling Control.Biapply
+[179 of 300] Compiling Data.Functor.Coproduct
+[180 of 300] Compiling Data.Profunctor.Star
+[181 of 300] Compiling Data.Functor.Costar
+[182 of 300] Compiling Control.Monad.Rec.Class
+[183 of 300] Compiling Data.Decidable
+[184 of 300] Compiling Control.Biapplicative
+[185 of 300] Compiling Data.Functor.Flip
+[186 of 300] Compiling Data.Bifunctor.Join
+[189 of 300] Compiling Data.Functor.Product2
+[188 of 300] Compiling Data.Functor.Clown
+[187 of 300] Compiling Data.Functor.Joker
+[190 of 300] Compiling Data.Functor.Coproduct.Inject
+[192 of 300] Compiling Data.FunctorWithIndex
+[191 of 300] Compiling Data.Functor.Coproduct.Nested
+[193 of 300] Compiling Data.Functor.Product.Nested
+[194 of 300] Compiling Data.Foldable
+[195 of 300] Compiling Control.Monad.ST.Internal
+[197 of 300] Compiling Control.Monad.ST.Ref
+[196 of 300] Compiling Control.Monad.ST.Uncurried
+[198 of 300] Compiling Control.Monad.ST
+[199 of 300] Compiling Control.Monad.ST.Global
+[200 of 300] Compiling Control.Monad.ST.Class
+[201 of 300] Compiling Control.Monad.Cont.Trans
+[203 of 300] Compiling Control.Monad.Writer.Trans
+[202 of 300] Compiling Control.Monad.Reader.Trans
+[204 of 300] Compiling Control.Monad.Maybe.Trans
+[205 of 300] Compiling Control.Monad.State.Trans
+[206 of 300] Compiling Control.Monad.RWS.Trans
+[207 of 300] Compiling Control.Monad.Except.Trans
+[208 of 300] Compiling Data.Array.ST
+[209 of 300] Compiling Data.Array.ST.Partial
+[210 of 300] Compiling Data.Array.ST.Iterator
+[211 of 300] Compiling Control.Monad.Cont
+[212 of 300] Compiling Control.Monad.Reader
+[213 of 300] Compiling Control.Monad.State
+[214 of 300] Compiling Control.Monad.Writer
+[215 of 300] Compiling Control.Parallel.Class
+[216 of 300] Compiling Control.Monad.Except
+[217 of 300] Compiling Control.Monad.RWS
+[218 of 300] Compiling Data.Bifoldable
+[219 of 300] Compiling Data.Traversable
+[220 of 300] Compiling Data.FoldableWithIndex
+[221 of 300] Compiling Data.Semigroup.Foldable
+[222 of 300] Compiling Data.Semigroup.Traversable
+[224 of 300] Compiling Control.Monad.Identity.Trans
+[223 of 300] Compiling Control.Parallel
+[225 of 300] Compiling Data.Bitraversable
+[226 of 300] Compiling Data.Unfoldable1
+[227 of 300] Compiling Effect.Aff
+[228 of 300] Compiling Data.TraversableWithIndex
+[229 of 300] Compiling Control.Comonad.Trans.Class
+[230 of 300] Compiling Control.Comonad.Store.Trans
+[231 of 300] Compiling Control.Comonad.Traced.Trans
+[232 of 300] Compiling Data.Unfoldable
+[233 of 300] Compiling Control.Monad.Gen
+[234 of 300] Compiling Data.Enum
+[235 of 300] Compiling Data.Time.Duration.Gen
+[236 of 300] Compiling Data.NonEmpty
+[237 of 300] Compiling Control.Comonad.Env.Trans
+[238 of 300] Compiling Data.Array.NonEmpty.Internal
+[239 of 300] Compiling Data.Lazy
+[240 of 300] Compiling Effect.Aff.Compat
+[241 of 300] Compiling Data.Array
+[242 of 300] Compiling Data.Time.Component
+[243 of 300] Compiling Data.Char
+[244 of 300] Compiling Data.Enum.Generic
+[245 of 300] Compiling Data.Date.Component
+[246 of 300] Compiling Control.Comonad.Store.Class
+[248 of 300] Compiling Data.Enum.Gen
+[247 of 300] Compiling Control.Monad.List.Trans
+[249 of 300] Compiling Control.Monad.Gen.Common
+[250 of 300] Compiling Data.List.Types
+[251 of 300] Compiling Data.Char.Gen
+[252 of 300] Compiling Data.List.Lazy.Types
+[253 of 300] Compiling Control.Comonad.Store
+[254 of 300] Compiling Data.Time
+[255 of 300] Compiling Data.Time.Component.Gen
+[256 of 300] Compiling Data.String.Gen
+[257 of 300] Compiling Control.Comonad.Env.Class
+[259 of 300] Compiling Data.Date.Component.Gen
+[258 of 300] Compiling Data.Date
+[260 of 300] Compiling Control.Comonad.Env
+[261 of 300] Compiling Data.Time.Gen
+[262 of 300] Compiling Control.Comonad.Traced.Class
+[263 of 300] Compiling Control.Comonad.Traced
+[265 of 300] Compiling Data.Date.Gen
+[264 of 300] Compiling Data.DateTime
+[267 of 300] Compiling Data.Array.Partial
+[266 of 300] Compiling Data.String.CodePoints
+[268 of 300] Compiling Test.ArrayOps
+[269 of 300] Compiling Data.Array.NonEmpty
+[270 of 300] Compiling App
+[271 of 300] Compiling Data.DateTime.Gen
+[272 of 300] Compiling Data.DateTime.Instant
+[273 of 300] Compiling Data.List.Internal
+[274 of 300] Compiling Effect.Aff.Class
+[275 of 300] Compiling Main
+[276 of 300] Compiling Effect.Now
+[277 of 300] Compiling Data.List
+[278 of 300] Compiling Data.List.Lazy
+[279 of 300] Compiling Data.String
+[280 of 300] Compiling Data.String.NonEmpty.Internal
+[281 of 300] Compiling Data.String.CaseInsensitive
+[282 of 300] Compiling Data.String.Regex.Flags
+[283 of 300] Compiling Data.String.NonEmpty.CodeUnits
+[285 of 300] Compiling Data.String.Regex
+[284 of 300] Compiling Data.String.NonEmpty.CodePoints
+[286 of 300] Compiling Data.String.Regex.Unsafe
+[287 of 300] Compiling Data.String.NonEmpty
+[288 of 300] Compiling Data.String.NonEmpty.CaseInsensitive
+[290 of 300] Compiling Data.List.Partial
+[289 of 300] Compiling Data.List.NonEmpty
+[291 of 300] Compiling Data.Map.Internal
+[293 of 300] Compiling Data.List.ZipList
+[292 of 300] Compiling Data.List.Lazy.NonEmpty
+[294 of 300] Compiling Data.Set
+[295 of 300] Compiling Data.Map
+[296 of 300] Compiling Data.Set.NonEmpty
+[298 of 300] Compiling Data.Map.Gen
+[297 of 300] Compiling Data.Interval.Duration
+[300 of 300] Compiling Data.Interval
+[299 of 300] Compiling Data.Interval.Duration.Iso
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Compiling with backend "../sharpurs/sharpurs/bin/sharpurs"
+
+✓ Backend build succeeded.
+
+=== F#/C# ===
+Global warm-up in progress (this may take a moment)...
+
+Global warm-up complete. Starting benchmarks...
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+103.71 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+88.96 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+2098.17 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+92118.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+21344.25 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+5042.79 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+72003.96 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+10932.13 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+2624972.17 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+10282023.79 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+3040.83 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+1288360.75 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+801.67 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+7.25 μs
+
+
+==================================================
+
+Total exec time: 14402.94 ms
+

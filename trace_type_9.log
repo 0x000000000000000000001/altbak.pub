@@ -1,0 +1,943 @@
+================================
+    Running pure backends...    
+================================
+
+Building...
+=== JS V8 ===
+Global warm-up in progress (this may take a moment)...
+
+Global warm-up complete. Starting benchmarks...
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+2.25 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+1.92 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+48.58 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+187.58 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+73.21 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+72.42 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+1438.04 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+104.29 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+89960.38 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+11595.71 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+71.54 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+15171.13 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+16.37 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+0.38 μs
+
+
+==================================================
+
+Total exec time: 118.74 ms
+
+
+Building...
+=== ES failed ===
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-scheme-test
+
+Downloading dependencies...
+Cloning https://github.com/purescm/purescript-core.git
+Building...
+[  3 of 203] Compiling Unsafe.Coerce
+[  4 of 203] Compiling Type.Data.RowList
+[  2 of 203] Compiling Type.Proxy
+[  5 of 203] Compiling Type.Data.Row
+[  1 of 203] Compiling Type.Equality
+[  6 of 203] Compiling Test.Implicit
+[  7 of 203] Compiling Spago.Generated.BuildInfo
+[  8 of 203] Compiling Partial
+[  9 of 203] Compiling Record.Unsafe
+[ 10 of 203] Compiling Data.Unit
+[ 11 of 203] Compiling Data.Traversable.Accum
+[ 12 of 203] Compiling Data.Void
+[ 13 of 203] Compiling Data.NaturalTransformation
+[ 14 of 203] Compiling Data.Boolean
+[ 15 of 203] Compiling Control.Semigroupoid
+[ 16 of 203] Compiling Data.Symbol
+[ 18 of 203] Compiling Partial.Unsafe
+[ 19 of 203] Compiling Data.Exists
+[ 17 of 203] Compiling Data.Function.Uncurried
+[ 20 of 203] Compiling Safe.Coerce
+[ 21 of 203] Compiling Control.Lazy
+[ 22 of 203] Compiling Control.Category
+[ 23 of 203] Compiling Data.HeytingAlgebra
+[ 24 of 203] Compiling Data.Semiring
+[ 25 of 203] Compiling Data.Semigroup
+[ 26 of 203] Compiling Data.Show
+[ 27 of 203] Compiling Data.Ring
+[ 28 of 203] Compiling Data.Generic.Rep
+[ 30 of 203] Compiling Data.BooleanAlgebra
+[ 29 of 203] Compiling Data.Eq
+[ 31 of 203] Compiling Data.CommutativeRing
+[ 33 of 203] Compiling Data.EuclideanRing
+[ 32 of 203] Compiling Data.Ordering
+[ 34 of 203] Compiling Data.Ord
+[ 35 of 203] Compiling Data.DivisionRing
+[ 36 of 203] Compiling Data.Field
+[ 37 of 203] Compiling Data.Bounded
+[ 38 of 203] Compiling Data.Monoid
+[ 39 of 203] Compiling Data.Function
+[ 40 of 203] Compiling Data.Reflectable
+[ 41 of 203] Compiling Data.Functor
+[ 44 of 203] Compiling Control.Alt
+[ 42 of 203] Compiling Control.Extend
+[ 43 of 203] Compiling Control.Apply
+[ 45 of 203] Compiling Data.Monoid.Generic
+[ 46 of 203] Compiling Data.Bounded.Generic
+[ 47 of 203] Compiling Control.Plus
+[ 48 of 203] Compiling Control.Comonad
+[ 49 of 203] Compiling Control.Applicative
+[ 50 of 203] Compiling Control.Alternative
+[ 51 of 203] Compiling Control.Bind
+[ 52 of 203] Compiling Control.Monad
+[ 54 of 203] Compiling Control.MonadPlus
+[ 53 of 203] Compiling Prelude
+[ 55 of 203] Compiling Data.Monoid.Multiplicative
+[ 56 of 203] Compiling Data.Monoid.Endo
+[ 57 of 203] Compiling Data.Traversable.Accum.Internal
+[ 58 of 203] Compiling Data.Monoid.Additive
+[ 59 of 203] Compiling Data.Show.Generic
+[ 61 of 203] Compiling Data.Eq.Generic
+[ 62 of 203] Compiling Data.Semiring.Generic
+[ 63 of 203] Compiling Data.Monoid.Disj
+[ 60 of 203] Compiling Data.Semigroup.Generic
+[ 64 of 203] Compiling Data.Semigroup.First
+[ 66 of 203] Compiling Effect
+[ 67 of 203] Compiling Data.Monoid.Dual
+[ 65 of 203] Compiling Data.HeytingAlgebra.Generic
+[ 68 of 203] Compiling Data.Monoid.Conj
+[ 70 of 203] Compiling Data.Ord.Generic
+[ 69 of 203] Compiling Data.Semigroup.Last
+[ 71 of 203] Compiling Data.Ring.Generic
+[ 72 of 203] Compiling Test.Main
+[ 75 of 203] Compiling Effect.Unsafe
+[ 74 of 203] Compiling Effect.Ref
+[ 73 of 203] Compiling Effect.Console
+[ 76 of 203] Compiling Effect.Class
+[ 77 of 203] Compiling Effect.Uncurried
+[ 78 of 203] Compiling Effect.Class.Console
+[ 79 of 203] Compiling Bench
+[ 80 of 203] Compiling Data.Newtype
+[ 81 of 203] Compiling Test.TCOFFI
+[ 82 of 203] Compiling Test.StateMonadFFICheatcode
+[ 83 of 203] Compiling Test.StateMonadFFI
+[ 84 of 203] Compiling Test.PolymorphismFFICheatcode
+[ 85 of 203] Compiling Test.AckermannFFICheatcode
+[ 87 of 203] Compiling Test.AckermannFFI
+[ 88 of 203] Compiling Test.RBTree
+[ 86 of 203] Compiling Test.RowToListFFICheatcode
+[ 89 of 203] Compiling Test.Church
+[ 90 of 203] Compiling Test.PolymorphismFFI
+[ 91 of 203] Compiling Test.AstTree
+[ 92 of 203] Compiling Test.ArrayOpsFFI
+[ 93 of 203] Compiling Test.PrimesFFI
+[ 94 of 203] Compiling Test.LazyEvaluationFFI
+[ 95 of 203] Compiling Test.RBTreeFFI
+[ 96 of 203] Compiling Test.RowToList
+[ 97 of 203] Compiling Test.AstTreeFFICheatcode
+[ 98 of 203] Compiling Test.BenchCheck
+[ 99 of 203] Compiling Test.RecordsFFICheatcode
+[100 of 203] Compiling Test.PrimesFFICheatcode
+[101 of 203] Compiling Test.Records
+[102 of 203] Compiling Test.Primes
+[104 of 203] Compiling Test.ListOps
+[103 of 203] Compiling Test.ListOpsFFI
+[106 of 203] Compiling Test.TCOFFICheatcode
+[105 of 203] Compiling Test.TCO
+[107 of 203] Compiling Test.ChurchFFICheatcode
+[109 of 203] Compiling Test.Fib
+[108 of 203] Compiling Test.StateMonad
+[110 of 203] Compiling Test.AstTreeFFI
+[111 of 203] Compiling Test.FibFFI
+[112 of 203] Compiling Test.Polymorphism
+[114 of 203] Compiling Test.ChurchFFI
+[113 of 203] Compiling Test.ListOpsFFICheatcode
+[115 of 203] Compiling Test.ArrayOpsFFICheatcode
+[117 of 203] Compiling Test.LazyEvaluationFFICheatcode
+[118 of 203] Compiling Test.Ackermann
+[116 of 203] Compiling Test.RBTreeFFICheatcode
+[119 of 203] Compiling Test.RowToListFFI
+[120 of 203] Compiling Test.RecordsFFI
+[122 of 203] Compiling Test.FibFFICheatcode
+[121 of 203] Compiling Test.LazyEvaluation
+[123 of 203] Compiling Data.Profunctor
+[124 of 203] Compiling Data.Monoid.Alternate
+[125 of 203] Compiling Data.Ord.Down
+[126 of 203] Compiling Data.Ord.Max
+[127 of 203] Compiling Data.Ord.Min
+[128 of 203] Compiling Data.Functor.App
+[129 of 203] Compiling AppFFI
+[130 of 203] Compiling AppFFICheatcode
+[131 of 203] Compiling Data.Profunctor.Closed
+[132 of 203] Compiling Data.Functor.Invariant
+[133 of 203] Compiling Data.Functor.Compose
+[134 of 203] Compiling Data.Maybe
+[135 of 203] Compiling Data.Tuple
+[136 of 203] Compiling Data.Const
+[137 of 203] Compiling Data.Profunctor.Join
+[139 of 203] Compiling Data.Identity
+[138 of 203] Compiling Data.Profunctor.Split
+[140 of 203] Compiling Data.Functor.Contravariant
+[141 of 203] Compiling Data.Predicate
+[143 of 203] Compiling Data.Op
+[142 of 203] Compiling Data.Comparison
+[144 of 203] Compiling Data.Equivalence
+[145 of 203] Compiling Data.Maybe.First
+[146 of 203] Compiling Data.Maybe.Last
+[147 of 203] Compiling Data.Either
+[148 of 203] Compiling Data.Distributive
+[149 of 203] Compiling Data.Profunctor.Strong
+[150 of 203] Compiling Data.Profunctor.Costrong
+[151 of 203] Compiling Data.Divide
+[152 of 203] Compiling Data.Tuple.Nested
+[153 of 203] Compiling Data.Divisible
+[154 of 203] Compiling Data.Decide
+[155 of 203] Compiling Data.Bifunctor
+[156 of 203] Compiling Data.Either.Inject
+[158 of 203] Compiling Data.Profunctor.Cochoice
+[159 of 203] Compiling Data.Profunctor.Choice
+[157 of 203] Compiling Data.Either.Nested
+[160 of 203] Compiling Control.Biapply
+[161 of 203] Compiling Data.Functor.Coproduct
+[162 of 203] Compiling Data.Functor.Product
+[163 of 203] Compiling Control.Monad.Rec.Class
+[164 of 203] Compiling Data.Functor.Costar
+[165 of 203] Compiling Data.Profunctor.Star
+[166 of 203] Compiling Data.Decidable
+[167 of 203] Compiling Control.Biapplicative
+[168 of 203] Compiling Data.Functor.Product2
+[169 of 203] Compiling Data.Functor.Joker
+[170 of 203] Compiling Data.Functor.Clown
+[171 of 203] Compiling Data.Bifunctor.Join
+[172 of 203] Compiling Data.Functor.Flip
+[173 of 203] Compiling Data.Functor.Coproduct.Nested
+[175 of 203] Compiling Data.Functor.Coproduct.Inject
+[176 of 203] Compiling Data.FunctorWithIndex
+[174 of 203] Compiling Data.Functor.Product.Nested
+[177 of 203] Compiling Data.Foldable
+[178 of 203] Compiling Control.Monad.ST.Internal
+[179 of 203] Compiling Control.Monad.ST
+[180 of 203] Compiling Control.Monad.ST.Ref
+[181 of 203] Compiling Control.Monad.ST.Uncurried
+[182 of 203] Compiling Control.Monad.ST.Global
+[183 of 203] Compiling Control.Monad.ST.Class
+[184 of 203] Compiling Data.Array.ST
+[185 of 203] Compiling Data.Array.ST.Partial
+[186 of 203] Compiling Data.Array.ST.Iterator
+[187 of 203] Compiling Data.Bifoldable
+[188 of 203] Compiling Data.Traversable
+[189 of 203] Compiling Data.FoldableWithIndex
+[190 of 203] Compiling Data.Semigroup.Foldable
+[191 of 203] Compiling Data.Semigroup.Traversable
+[192 of 203] Compiling Data.Bitraversable
+[193 of 203] Compiling Data.Unfoldable1
+[194 of 203] Compiling Data.TraversableWithIndex
+[195 of 203] Compiling Data.Unfoldable
+[196 of 203] Compiling Data.Array.NonEmpty.Internal
+[197 of 203] Compiling Data.NonEmpty
+[198 of 203] Compiling Data.Array
+[199 of 203] Compiling Data.Array.Partial
+[201 of 203] Compiling Test.ArrayOps
+[200 of 203] Compiling Data.Array.NonEmpty
+[202 of 203] Compiling App
+[203 of 203] Compiling Main
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Created run/bak/scm/output_bin/main
+=== Scheme ===
+Global warm-up in progress (this may take a moment)...
+
+Global warm-up complete. Starting benchmarks...
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+0.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+0.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+7.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+282.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+174.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+16.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+232.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+34.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+23648.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+18379.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+2.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+2984.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+8.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+0.0 μs
+
+
+==================================================
+
+Total exec time: 45.76600000000001 ms
+
+
+Building...
+=== Erlang BEAM ===
+Global warm-up in progress (this may take a moment)...
+
+Global warm-up complete. Starting benchmarks...
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+0.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+0.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+35.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+1463.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+415.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+22.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+489.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+148.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+17027.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+62229.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+21.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+9405.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+29.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+0.00 μs
+
+
+==================================================
+
+Total exec time: 91.28 ms
+
+
+=== Rebuilding phpurs backend ===
+
+> phpurs@0.1.0 build
+> spago build && spago bundle --module Main --platform node --outfile bin/phpurs.js --bundle-type app
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: phpurs
+
+Downloading dependencies...
+Building...
+[ERROR 1/1 ErrorParsingModule] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Substitute.purs:1:1
+
+  1  import Effect.Unsafe (unsafePerformEffect)
+     ^^^^^^
+
+  Unable to parse module:
+  Unexpected token 'import'
+
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     1     1
+
+✘ Failed to build.
+
+=== PHP failed ===
+
+=== Rebuilding gopurs backend ===
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: gopurs
+
+Downloading dependencies...
+Building...
+[ERROR 1/1 ErrorParsingModule] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Substitute.purs:1:1
+
+  1  import Effect.Unsafe (unsafePerformEffect)
+     ^^^^^^
+
+  Unable to parse module:
+  Unexpected token 'import'
+
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     1     1
+
+✘ Failed to build.
+
+=== Go (gopurs) failed ===
+
+=== Rebuilding purust backend ===
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: purust
+
+Downloading dependencies...
+Building...
+[ERROR 1/1 ErrorParsingModule] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Substitute.purs:1:1
+
+  1  import Effect.Unsafe (unsafePerformEffect)
+     ^^^^^^
+
+  Unable to parse module:
+  Unexpected token 'import'
+
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     1     1
+
+✘ Failed to build.
+
+=== Rust (purust) failed ===
+
+=== Rebuilding sharpurs backend ===
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: sharpurs
+
+Downloading dependencies...
+Building...
+[ERROR 1/1 ErrorParsingModule] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Substitute.purs:1:1
+
+  1  import Effect.Unsafe (unsafePerformEffect)
+     ^^^^^^
+
+  Unable to parse module:
+  Unexpected token 'import'
+
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     1     1
+
+✘ Failed to build.
+
+=== F#/C# failed ===

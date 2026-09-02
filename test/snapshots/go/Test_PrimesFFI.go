@@ -22,7 +22,7 @@ func Get_Test_PrimesFFI_act() gopurs_runtime.Value {
 	once_Test_PrimesFFI_act.Do(func() {
 		cache_Test_PrimesFFI_act = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			// TAST (Let): __local_var_0_0 shape=App(Var) bindingType=Any
-			__local_var_0_0 := gopurs_runtime.Apply(Get_Bench_opaque(), gopurs_runtime.Int(500))
+			__local_var_0_0 := gopurs_runtime.Apply(Get_Bench_opaque(), gopurs_runtime.Int(int64(500)))
 			_ = __local_var_0_0
 			__local_var_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
 			_ = __local_var_1_1

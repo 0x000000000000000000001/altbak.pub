@@ -1,0 +1,3434 @@
+================================
+    Running pure backends...    
+================================
+
+Building...
+=== JS V8 ===
+Global warm-up in progress (this may take a moment)...
+
+Global warm-up complete. Starting benchmarks...
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+2.29 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+2.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+47.63 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+195.71 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+76.04 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+70.71 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+1232.08 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+113.08 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+90473.92 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+11876.42 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+71.29 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+15605.96 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+13.75 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+0.42 μs
+
+
+==================================================
+
+Total exec time: 119.78 ms
+
+
+Building...
+=== ES failed ===
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-scheme-test
+
+Downloading dependencies...
+Cloning https://github.com/purescm/purescript-core.git
+Building...
+[  5 of 203] Compiling Type.Data.RowList
+[  4 of 203] Compiling Unsafe.Coerce
+[  1 of 203] Compiling Type.Proxy
+[  3 of 203] Compiling Type.Data.Row
+[  2 of 203] Compiling Type.Equality
+[  6 of 203] Compiling Test.Implicit
+[  7 of 203] Compiling Partial
+[  8 of 203] Compiling Record.Unsafe
+[ 10 of 203] Compiling Data.Void
+[  9 of 203] Compiling Spago.Generated.BuildInfo
+[ 11 of 203] Compiling Data.Unit
+[ 12 of 203] Compiling Data.Traversable.Accum
+[ 13 of 203] Compiling Data.NaturalTransformation
+[ 14 of 203] Compiling Data.Boolean
+[ 15 of 203] Compiling Control.Semigroupoid
+[ 16 of 203] Compiling Data.Symbol
+[ 17 of 203] Compiling Control.Lazy
+[ 19 of 203] Compiling Partial.Unsafe
+[ 18 of 203] Compiling Data.Function.Uncurried
+[ 21 of 203] Compiling Data.Exists
+[ 20 of 203] Compiling Safe.Coerce
+[ 22 of 203] Compiling Data.Semigroup
+[ 23 of 203] Compiling Data.HeytingAlgebra
+[ 24 of 203] Compiling Data.Semiring
+[ 25 of 203] Compiling Control.Category
+[ 26 of 203] Compiling Data.Show
+[ 27 of 203] Compiling Data.Ring
+[ 28 of 203] Compiling Data.Generic.Rep
+[ 30 of 203] Compiling Data.BooleanAlgebra
+[ 29 of 203] Compiling Data.Eq
+[ 31 of 203] Compiling Data.CommutativeRing
+[ 32 of 203] Compiling Data.Ordering
+[ 33 of 203] Compiling Data.EuclideanRing
+[ 34 of 203] Compiling Data.Ord
+[ 35 of 203] Compiling Data.DivisionRing
+[ 36 of 203] Compiling Data.Field
+[ 37 of 203] Compiling Data.Function
+[ 39 of 203] Compiling Data.Bounded
+[ 38 of 203] Compiling Data.Reflectable
+[ 40 of 203] Compiling Data.Monoid
+[ 41 of 203] Compiling Data.Functor
+[ 44 of 203] Compiling Control.Alt
+[ 43 of 203] Compiling Control.Extend
+[ 42 of 203] Compiling Control.Apply
+[ 45 of 203] Compiling Data.Monoid.Generic
+[ 46 of 203] Compiling Data.Bounded.Generic
+[ 47 of 203] Compiling Control.Plus
+[ 48 of 203] Compiling Control.Comonad
+[ 49 of 203] Compiling Control.Applicative
+[ 50 of 203] Compiling Control.Alternative
+[ 51 of 203] Compiling Control.Bind
+[ 52 of 203] Compiling Control.Monad
+[ 53 of 203] Compiling Prelude
+[ 54 of 203] Compiling Control.MonadPlus
+[ 56 of 203] Compiling Data.Semigroup.Last
+[ 55 of 203] Compiling Data.Ring.Generic
+[ 57 of 203] Compiling Data.Show.Generic
+[ 58 of 203] Compiling Data.HeytingAlgebra.Generic
+[ 59 of 203] Compiling Data.Semiring.Generic
+[ 60 of 203] Compiling Data.Eq.Generic
+[ 61 of 203] Compiling Data.Semigroup.Generic
+[ 62 of 203] Compiling Data.Monoid.Disj
+[ 63 of 203] Compiling Data.Monoid.Multiplicative
+[ 64 of 203] Compiling Data.Monoid.Dual
+[ 65 of 203] Compiling Data.Monoid.Endo
+[ 66 of 203] Compiling Data.Monoid.Additive
+[ 67 of 203] Compiling Data.Ord.Generic
+[ 68 of 203] Compiling Effect
+[ 69 of 203] Compiling Data.Semigroup.First
+[ 70 of 203] Compiling Data.Traversable.Accum.Internal
+[ 71 of 203] Compiling Data.Monoid.Conj
+[ 72 of 203] Compiling Effect.Ref
+[ 73 of 203] Compiling Effect.Uncurried
+[ 74 of 203] Compiling Effect.Console
+[ 75 of 203] Compiling Effect.Class
+[ 76 of 203] Compiling Test.Main
+[ 77 of 203] Compiling Effect.Unsafe
+[ 78 of 203] Compiling Effect.Class.Console
+[ 79 of 203] Compiling Bench
+[ 80 of 203] Compiling Data.Newtype
+[ 81 of 203] Compiling Test.Ackermann
+[ 82 of 203] Compiling Test.ListOpsFFI
+[ 83 of 203] Compiling Test.RecordsFFICheatcode
+[ 84 of 203] Compiling Test.AckermannFFI
+[ 85 of 203] Compiling Test.PolymorphismFFI
+[ 87 of 203] Compiling Test.FibFFICheatcode
+[ 86 of 203] Compiling Test.LazyEvaluation
+[ 90 of 203] Compiling Test.ChurchFFICheatcode
+[ 88 of 203] Compiling Test.RBTree
+[ 89 of 203] Compiling Test.Primes
+[ 91 of 203] Compiling Test.BenchCheck
+[ 92 of 203] Compiling Test.AckermannFFICheatcode
+[ 93 of 203] Compiling Test.Fib
+[ 94 of 203] Compiling Test.RowToListFFICheatcode
+[ 96 of 203] Compiling Test.LazyEvaluationFFI
+[ 97 of 203] Compiling Test.Polymorphism
+[ 95 of 203] Compiling Test.FibFFI
+[ 99 of 203] Compiling Test.RowToList
+[100 of 203] Compiling Test.PolymorphismFFICheatcode
+[ 98 of 203] Compiling Test.ListOps
+[101 of 203] Compiling Test.RecordsFFI
+[103 of 203] Compiling Test.PrimesFFI
+[102 of 203] Compiling Test.StateMonad
+[104 of 203] Compiling Test.StateMonadFFICheatcode
+[105 of 203] Compiling Test.ArrayOpsFFICheatcode
+[106 of 203] Compiling Test.StateMonadFFI
+[108 of 203] Compiling Test.AstTree
+[109 of 203] Compiling Test.ChurchFFI
+[107 of 203] Compiling Test.RBTreeFFI
+[111 of 203] Compiling Test.AstTreeFFI
+[113 of 203] Compiling Test.ArrayOpsFFI
+[110 of 203] Compiling Test.ListOpsFFICheatcode
+[112 of 203] Compiling Test.AstTreeFFICheatcode
+[114 of 203] Compiling Test.RBTreeFFICheatcode
+[115 of 203] Compiling Test.TCOFFI
+[116 of 203] Compiling Test.RowToListFFI
+[117 of 203] Compiling Test.Records
+[118 of 203] Compiling Test.Church
+[119 of 203] Compiling Test.TCOFFICheatcode
+[120 of 203] Compiling Test.PrimesFFICheatcode
+[121 of 203] Compiling Test.LazyEvaluationFFICheatcode
+[122 of 203] Compiling Test.TCO
+[124 of 203] Compiling Data.Ord.Max
+[123 of 203] Compiling Data.Functor.App
+[125 of 203] Compiling Data.Ord.Min
+[126 of 203] Compiling Data.Ord.Down
+[127 of 203] Compiling Data.Profunctor
+[128 of 203] Compiling Data.Monoid.Alternate
+[129 of 203] Compiling AppFFI
+[130 of 203] Compiling AppFFICheatcode
+[131 of 203] Compiling Data.Profunctor.Closed
+[132 of 203] Compiling Data.Functor.Invariant
+[133 of 203] Compiling Data.Functor.Compose
+[134 of 203] Compiling Data.Const
+[136 of 203] Compiling Data.Identity
+[135 of 203] Compiling Data.Maybe
+[137 of 203] Compiling Data.Tuple
+[138 of 203] Compiling Data.Profunctor.Split
+[139 of 203] Compiling Data.Profunctor.Join
+[140 of 203] Compiling Data.Functor.Contravariant
+[141 of 203] Compiling Data.Op
+[142 of 203] Compiling Data.Predicate
+[143 of 203] Compiling Data.Comparison
+[144 of 203] Compiling Data.Equivalence
+[145 of 203] Compiling Data.Maybe.Last
+[147 of 203] Compiling Data.Maybe.First
+[146 of 203] Compiling Data.Either
+[148 of 203] Compiling Data.Divide
+[149 of 203] Compiling Data.Profunctor.Costrong
+[152 of 203] Compiling Data.Profunctor.Strong
+[151 of 203] Compiling Data.Distributive
+[150 of 203] Compiling Data.Tuple.Nested
+[153 of 203] Compiling Data.Divisible
+[154 of 203] Compiling Data.Bifunctor
+[156 of 203] Compiling Data.Decide
+[157 of 203] Compiling Data.Profunctor.Cochoice
+[158 of 203] Compiling Data.Profunctor.Choice
+[159 of 203] Compiling Data.Either.Inject
+[155 of 203] Compiling Data.Either.Nested
+[160 of 203] Compiling Control.Monad.Rec.Class
+[161 of 203] Compiling Control.Biapply
+[164 of 203] Compiling Data.Functor.Costar
+[163 of 203] Compiling Data.Functor.Coproduct
+[162 of 203] Compiling Data.Functor.Product
+[165 of 203] Compiling Data.Profunctor.Star
+[166 of 203] Compiling Data.Decidable
+[167 of 203] Compiling Control.Biapplicative
+[168 of 203] Compiling Data.Functor.Flip
+[169 of 203] Compiling Data.Functor.Joker
+[170 of 203] Compiling Data.Functor.Product2
+[171 of 203] Compiling Data.Functor.Clown
+[172 of 203] Compiling Data.Bifunctor.Join
+[173 of 203] Compiling Data.Functor.Coproduct.Inject
+[174 of 203] Compiling Data.Functor.Coproduct.Nested
+[175 of 203] Compiling Data.Functor.Product.Nested
+[176 of 203] Compiling Data.Foldable
+[177 of 203] Compiling Data.FunctorWithIndex
+[178 of 203] Compiling Control.Monad.ST.Internal
+[179 of 203] Compiling Control.Monad.ST.Ref
+[181 of 203] Compiling Control.Monad.ST
+[180 of 203] Compiling Control.Monad.ST.Uncurried
+[182 of 203] Compiling Control.Monad.ST.Global
+[183 of 203] Compiling Control.Monad.ST.Class
+[184 of 203] Compiling Data.Array.ST
+[186 of 203] Compiling Data.Array.ST.Partial
+[185 of 203] Compiling Data.Array.ST.Iterator
+[187 of 203] Compiling Data.FoldableWithIndex
+[188 of 203] Compiling Data.Bifoldable
+[189 of 203] Compiling Data.Traversable
+[190 of 203] Compiling Data.Semigroup.Foldable
+[191 of 203] Compiling Data.Semigroup.Traversable
+[192 of 203] Compiling Data.Bitraversable
+[193 of 203] Compiling Data.Unfoldable1
+[194 of 203] Compiling Data.TraversableWithIndex
+[195 of 203] Compiling Data.Unfoldable
+[196 of 203] Compiling Data.Array.NonEmpty.Internal
+[197 of 203] Compiling Data.NonEmpty
+[198 of 203] Compiling Data.Array
+[200 of 203] Compiling Test.ArrayOps
+[201 of 203] Compiling Data.Array.Partial
+[199 of 203] Compiling Data.Array.NonEmpty
+[202 of 203] Compiling App
+[203 of 203] Compiling Main
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Created run/bak/scm/output_bin/main
+=== Scheme ===
+Global warm-up in progress (this may take a moment)...
+
+Global warm-up complete. Starting benchmarks...
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+0.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+0.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+6.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+287.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+179.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+17.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+238.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+35.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+23495.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+19345.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+2.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+2985.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+8.0 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+0.0 μs
+
+
+==================================================
+
+Total exec time: 46.59700000000001 ms
+
+
+Building...
+=== Erlang BEAM ===
+Global warm-up in progress (this may take a moment)...
+
+Global warm-up complete. Starting benchmarks...
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+0.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+0.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+35.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+1368.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+410.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+23.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+487.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+144.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+16921.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+61184.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+21.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+9302.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+27.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+0.00 μs
+
+
+==================================================
+
+Total exec time: 89.92 ms
+
+
+=== Rebuilding phpurs backend ===
+
+> phpurs@0.1.0 build
+> spago build && spago bundle --module Main --platform node --outfile bin/phpurs.js --bundle-type app
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: phpurs
+
+Downloading dependencies...
+Building...
+[1 of 4] Compiling PureScript.Backend.Optimizer.Monomorphize
+[3 of 4] Compiling TestInfer
+[2 of 4] Compiling Phpurs.CodeGen
+[WARNING 1/20 UnusedExplicitImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:31:1
+
+  31  import Data.Maybe (Maybe(..), fromMaybe, maybe, isJust)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Maybe contains the following unused references:
+    isJust
+  It could be replaced with:
+    import Data.Maybe (Maybe(..), fromMaybe, maybe)
+
+[WARNING 2/20 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:32:1
+
+  32  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  The import of Debug is redundant
+
+[WARNING 3/20 DuplicateImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:36:1
+
+  36  import Data.String as String
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.String as String
+
+[WARNING 4/20 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:38:1
+
+  38  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  The import of Debug is redundant
+
+[WARNING 5/20 DuplicateImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:38:1
+
+  38  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Debug (trace)
+
+[WARNING 6/20 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:43:1
+
+  43  import Node.Encoding (Encoding(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Node.Encoding is redundant
+
+[WARNING 7/20 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:44:1
+
+  44  import Effect.Unsafe (unsafePerformEffect)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Effect.Unsafe is redundant
+
+[WARNING 8/20 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:45:1
+
+  45  import Effect.Console as Console
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Console as Console is redundant
+
+[WARNING 9/20 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:297:30
+
+  297                  s1 = foldl (\acc (Tuple paramType arg) ->
+                                    ^^^
+
+  Name acc was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 10/20 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:297:51
+
+  297                  s1 = foldl (\acc (Tuple paramType arg) ->
+                                                         ^^^
+
+  Name arg was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 11/20 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:518:11
+
+  518    goGuard subst (Unconditional e) = Unconditional (substituteVars subst e)
+                 ^^^^^
+
+  Name subst was shadowed.
+  in value declaration substituteVars
+
+[WARNING 12/20 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:519:11
+
+  519    goGuard subst (Guarded guards) = Guarded (map (\(Guard e1 e2) -> Guard (substituteVars subst e1) (substituteVars subst e2)) guards)
+                 ^^^^^
+
+  Name subst was shadowed.
+  in value declaration substituteVars
+
+[WARNING 13/20 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:856:14
+
+  856            go expr = case expr of
+                    ^^^^
+
+  Name expr was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 14/20 UnusedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:857:28
+
+  857              ExprApp annApp f arg ->
+                                  ^
+
+  Name f was introduced but not used.
+  in value declaration monomorphizeExpr
+
+[WARNING 15/20 UnusedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:857:30
+
+  857              ExprApp annApp f arg ->
+                                    ^^^
+
+  Name arg was introduced but not used.
+  in value declaration monomorphizeExpr
+
+[WARNING 16/20 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:881:61
+
+  881                            s1 = foldl (\acc (Tuple paramType arg) ->
+                                                                   ^^^
+
+  Name arg was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 17/20 UnusedImport] ../../purescript-backend-optimizer/src/TestInfer.purs:5:1
+
+  5  import Data.Map as Map
+     ^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.Map as Map is redundant
+
+[WARNING 18/20 UnusedImport] ../../purescript-backend-optimizer/src/TestInfer.purs:6:1
+
+  6  import Data.Set as Set
+     ^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.Set as Set is redundant
+
+[WARNING 19/20 UnusedImport] ../../purescript-backend-optimizer/src/TestInfer.purs:8:1
+
+  8  import Data.Tuple (Tuple(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.Tuple is redundant
+
+[WARNING 20/20 UnusedName] src/Phpurs/CodeGen.purs:743:29
+
+  743                              useVarsOuter = Array.nub (map (\mapped -> if Array.elem mapped recVars then "&" <> mapped else mapped) mappedFvs)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name useVarsOuter was introduced but not used.
+  in value declaration translate
+
+[ERROR 1/1 NoInstanceFound] src/Phpurs/CodeGen.purs:69:1
+
+  69  translateOperator2 :: BackendOperator2 -> PhpExpr -> PhpExpr -> PhpExpr
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A case expression could not be determined to cover all inputs.
+  The following additional cases are required to cover all inputs:
+    (OpIntNum OpMod)    _ _
+    (OpNumberNum OpMod) _ _
+  Alternatively, add a Partial constraint to the type of the enclosing value.
+  while checking that type Partial => t0
+    is at least as general as type PhpExpr
+  while checking that expression case $42 $43 $44 of
+                                   OpArrayIndex arr ix -> (PhpArrayIndex arr) ix
+                                   OpBooleanAnd l r -> ((...) l) r
+                                   OpBooleanOr l r -> ((...) l) r
+                                   (OpBooleanOrd OpEq) l r -> ((...) l) r
+                                   (OpBooleanOrd OpNotEq) l r -> ((...) l) r
+                                   (OpBooleanOrd OpGt) l r -> ((...) l) r
+                                   (OpBooleanOrd OpGte) l r -> ((...) l) r
+                                   (OpBooleanOrd OpLt) l r -> ((...) l) r
+                                   (OpBooleanOrd OpLte) l r -> ((...) l) r
+                                   (OpCharOrd OpEq) l r -> ((...) l) r
+                                   (OpCharOrd OpNotEq) l r -> ((...) l) r
+                                   (OpCharOrd OpGt) l r -> ((...) l) r
+                                   (OpCharOrd OpGte) l r -> ((...) l) r
+                                   (OpCharOrd OpLt) l r -> ((...) l) r
+                                   (OpCharOrd OpLte) l r -> ((...) l) r
+                                   OpIntBitAnd l r -> ((...) l) r
+                                   OpIntBitOr l r -> ((...) l) r
+                                   OpIntBitShiftLeft l r -> ((...) l) r
+                                   OpIntBitShiftRight l r -> ((...) l) r
+                                   OpIntBitXor l r -> ((...) l) r
+                                   OpIntBitZeroFillShiftRight l r -> ((...) l) r
+                                   (OpIntNum OpAdd) l r -> ((...) l) r
+                                   (OpIntNum OpSubtract) l r -> ((...) l) r
+                                   (OpIntNum OpMultiply) l r -> ((...) l) r
+                                   (OpIntNum OpDivide) l r -> ((...) l) r
+                                   (OpIntOrd OpEq) l r -> ((...) l) r
+                                   (OpIntOrd OpNotEq) l r -> ((...) l) r
+                                   (OpIntOrd OpGt) l r -> ((...) l) r
+                                   (OpIntOrd OpGte) l r -> ((...) l) r
+                                   (OpIntOrd OpLt) l r -> ((...) l) r
+                                   (OpIntOrd OpLte) l r -> ((...) l) r
+                                   (OpNumberNum OpAdd) l r -> ((...) l) r
+                                   (OpNumberNum OpSubtract) l r -> ((...) l) r
+                                   (OpNumberNum OpMultiply) l r -> ((...) l) r
+                                   (OpNumberNum OpDivide) l r -> ((...) l) r
+                                   (OpNumberOrd OpEq) l r -> ((...) l) r
+                                   (OpNumberOrd OpNotEq) l r -> ((...) l) r
+                                   (OpNumberOrd OpGt) l r -> ((...) l) r
+                                   (OpNumberOrd OpGte) l r -> ((...) l) r
+                                   (OpNumberOrd OpLt) l r -> ((...) l) r
+                                   (OpNumberOrd OpLte) l r -> ((...) l) r
+                                   OpStringAppend l r -> ((...) l) r
+                                   (OpStringOrd OpEq) l r -> ((...) l) r
+                                   (OpStringOrd OpNotEq) l r -> ((...) l) r
+                                   (OpStringOrd OpGt) l r -> ((...) l) r
+                                   (OpStringOrd OpGte) l r -> ((...) l) r
+                                   (OpStringOrd OpLt) l r -> ((...) l) r
+                                   (OpStringOrd OpLte) l r -> ((...) l) r
+    has type PhpExpr
+  in value declaration translateOperator2
+  where t0 is an unknown type
+
+           Src   Lib   All
+Warnings     1    19    20
+Errors       1     0     1
+
+✘ Failed to build.
+
+=== PHP failed ===
+
+=== Rebuilding gopurs backend ===
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: gopurs
+
+Downloading dependencies...
+Building...
+[1 of 5] Compiling Spago.Generated.BuildInfo
+[2 of 5] Compiling TestInfer
+[3 of 5] Compiling PureScript.Backend.Optimizer.Monomorphize
+[4 of 5] Compiling Gopurs.CodeGen
+[WARNING 1/132 UnusedExplicitImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:31:1
+
+  31  import Data.Maybe (Maybe(..), fromMaybe, maybe, isJust)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Maybe contains the following unused references:
+    isJust
+  It could be replaced with:
+    import Data.Maybe (Maybe(..), fromMaybe, maybe)
+
+[WARNING 2/132 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:32:1
+
+  32  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  The import of Debug is redundant
+
+[WARNING 3/132 DuplicateImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:36:1
+
+  36  import Data.String as String
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.String as String
+
+[WARNING 4/132 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:38:1
+
+  38  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  The import of Debug is redundant
+
+[WARNING 5/132 DuplicateImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:38:1
+
+  38  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Debug (trace)
+
+[WARNING 6/132 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:43:1
+
+  43  import Node.Encoding (Encoding(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Node.Encoding is redundant
+
+[WARNING 7/132 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:44:1
+
+  44  import Effect.Unsafe (unsafePerformEffect)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Effect.Unsafe is redundant
+
+[WARNING 8/132 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:45:1
+
+  45  import Effect.Console as Console
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Console as Console is redundant
+
+[WARNING 9/132 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:297:30
+
+  297                  s1 = foldl (\acc (Tuple paramType arg) ->
+                                    ^^^
+
+  Name acc was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 10/132 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:297:51
+
+  297                  s1 = foldl (\acc (Tuple paramType arg) ->
+                                                         ^^^
+
+  Name arg was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 11/132 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:518:11
+
+  518    goGuard subst (Unconditional e) = Unconditional (substituteVars subst e)
+                 ^^^^^
+
+  Name subst was shadowed.
+  in value declaration substituteVars
+
+[WARNING 12/132 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:519:11
+
+  519    goGuard subst (Guarded guards) = Guarded (map (\(Guard e1 e2) -> Guard (substituteVars subst e1) (substituteVars subst e2)) guards)
+                 ^^^^^
+
+  Name subst was shadowed.
+  in value declaration substituteVars
+
+[WARNING 13/132 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:856:14
+
+  856            go expr = case expr of
+                    ^^^^
+
+  Name expr was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 14/132 UnusedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:857:28
+
+  857              ExprApp annApp f arg ->
+                                  ^
+
+  Name f was introduced but not used.
+  in value declaration monomorphizeExpr
+
+[WARNING 15/132 UnusedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:857:30
+
+  857              ExprApp annApp f arg ->
+                                    ^^^
+
+  Name arg was introduced but not used.
+  in value declaration monomorphizeExpr
+
+[WARNING 16/132 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:881:61
+
+  881                            s1 = foldl (\acc (Tuple paramType arg) ->
+                                                                   ^^^
+
+  Name arg was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 17/132 UnusedImport] ../../purescript-backend-optimizer/src/TestInfer.purs:5:1
+
+  5  import Data.Map as Map
+     ^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.Map as Map is redundant
+
+[WARNING 18/132 UnusedImport] ../../purescript-backend-optimizer/src/TestInfer.purs:6:1
+
+  6  import Data.Set as Set
+     ^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.Set as Set is redundant
+
+[WARNING 19/132 UnusedImport] ../../purescript-backend-optimizer/src/TestInfer.purs:8:1
+
+  8  import Data.Tuple (Tuple(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.Tuple is redundant
+
+[WARNING 20/132 UnusedFFIImplementations] src/Gopurs/CodeGen.purs:1:1
+
+        v
+     1  module Gopurs.CodeGen where
+     2  
+     3  import Prelude
+        ...
+  3191            "var " <> exportName <> " = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value { panic(\"FFI not implemented: " <> pursName <> "\"); return gopurs_runtime.Value{} })"
+  3192          Just d ->
+  3193            "var " <> exportName <> " = " <> generateWrapperFunc dataDecls d mbTast
+                                                                                        ^
+
+  The following definitions in the foreign module for module Gopurs.CodeGen are unused:
+    gopursTrace
+
+[WARNING 21/132 UnusedExplicitImport] src/Gopurs/CodeGen.purs:4:1
+
+  4  import PureScript.Backend.Optimizer.Syntax (BackendSyntax(Var, Local, Lit, App, Abs, UncurriedApp, UncurriedAbs, UncurriedEffectApp, UncurriedEffectAbs, Accessor, Update, CtorSaturated, CtorDef, LetRec, Let, EffectBind, EffectPure, EffectDefer, Branch, PrimOp, PrimEffect, PrimUndefined, Fail, Typed), BackendAccessor(..), Pair(..), Level(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorOrd(..), BackendOperatorNum(..), BackendEffect(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Syntax contains the following unused references:
+    Level
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Syntax (BackendAccessor(..), BackendEffect(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorNum(..), BackendOperatorOrd(..), BackendSyntax(PrimEffect, PrimOp, Fail, Branch, UncurriedAbs, Abs, CtorSaturated, CtorDef, Update, Accessor, LetRec, Let, EffectDefer, EffectPure, EffectBind, UncurriedEffectAbs, UncurriedEffectApp, Var, Local, Typed, UncurriedApp, App, Lit), Pair(..))
+
+[WARNING 22/132 UnusedDctorExplicitImport] src/Gopurs/CodeGen.purs:4:1
+
+  4  import PureScript.Backend.Optimizer.Syntax (BackendSyntax(Var, Local, Lit, App, Abs, UncurriedApp, UncurriedAbs, UncurriedEffectApp, UncurriedEffectAbs, Accessor, Update, CtorSaturated, CtorDef, LetRec, Let, EffectBind, EffectPure, EffectDefer, Branch, PrimOp, PrimEffect, PrimUndefined, Fail, Typed), BackendAccessor(..), Pair(..), Level(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorOrd(..), BackendOperatorNum(..), BackendEffect(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of type BackendSyntax from module PureScript.Backend.Optimizer.Syntax includes the following unused data constructors:
+    PrimUndefined
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Syntax (BackendAccessor(..), BackendEffect(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorNum(..), BackendOperatorOrd(..), BackendSyntax(PrimEffect, PrimOp, Fail, Branch, UncurriedAbs, Abs, CtorSaturated, CtorDef, Update, Accessor, LetRec, Let, EffectDefer, EffectPure, EffectBind, UncurriedEffectAbs, UncurriedEffectApp, Var, Local, Typed, UncurriedApp, App, Lit), Pair(..))
+
+[WARNING 23/132 UnusedImport] src/Gopurs/CodeGen.purs:6:1
+
+  6  import PureScript.Backend.Optimizer.Semantics (NeutralExpr(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of PureScript.Backend.Optimizer.Semantics is redundant
+
+[WARNING 24/132 UnusedExplicitImport] src/Gopurs/CodeGen.purs:7:1
+
+  7  import PureScript.Backend.Optimizer.Convert (BackendModule, BackendBindingGroup)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Convert contains the following unused references:
+    BackendBindingGroup
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Convert (BackendModule)
+
+[WARNING 25/132 UnusedExplicitImport] src/Gopurs/CodeGen.purs:10:1
+
+  10  import Data.Maybe (Maybe(..), fromMaybe, isJust)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Maybe contains the following unused references:
+    isJust
+  It could be replaced with:
+    import Data.Maybe (Maybe(..), fromMaybe)
+
+[WARNING 26/132 UnusedExplicitImport] src/Gopurs/CodeGen.purs:12:1
+
+  12  import PureScript.Backend.Optimizer.CoreFn (Ann(..), Bind(..), Binder(..), Binding(..), CaseAlternative(..), CaseGuard(..), Comment, ConstructorType(..), DataConstructor, DataDecl, Expr(..), ExprType(..), Guard(..), Ident(..), Import(..), Literal(..), Meta(..), Module(..), ModuleName(..), Prop(..), ProperName(..), Qualified(..), ReExport, exprAnn, findProp, propKey, propValue, qualifiedModuleName, unQualified)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.CoreFn contains the following unused references:
+    Ann
+    Bind
+    Binder
+    Binding
+    CaseAlternative
+    CaseGuard
+    Comment
+    ConstructorType
+    DataConstructor
+    Expr
+    Guard
+    Import
+    Meta
+    Module
+    ProperName
+    ReExport
+    exprAnn
+    findProp
+    propKey
+    propValue
+    qualifiedModuleName
+    unQualified
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.CoreFn (DataDecl, ExprType(..), Ident(..), Literal(..), ModuleName(..), Prop(..), Qualified(..))
+
+[WARNING 27/132 UnusedImport] src/Gopurs/CodeGen.purs:14:1
+
+  14  import Data.Array.NonEmpty as NonEmptyArray
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.Array.NonEmpty as NonEmptyArray is redundant
+
+[WARNING 28/132 UnusedExplicitImport] src/Gopurs/CodeGen.purs:15:1
+
+  15  import Data.Array.NonEmpty (NonEmptyArray, fromArray, toArray)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Array.NonEmpty contains the following unused references:
+    NonEmptyArray
+  It could be replaced with:
+    import Data.Array.NonEmpty (fromArray, toArray)
+
+[WARNING 29/132 UnusedImport] src/Gopurs/CodeGen.purs:20:1
+
+  20  import Partial.Unsafe (unsafePartial)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Partial.Unsafe is redundant
+
+[WARNING 30/132 DuplicateImport] src/Gopurs/CodeGen.purs:29:1
+
+  29  import Data.Set as Set
+      ^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.Set as Set
+
+[WARNING 31/132 UnusedImport] src/Gopurs/CodeGen.purs:36:1
+
+  36  import PureScript.Backend.Optimizer.Substitute (unify, substituteExprType, mapTcoExprTypes, substituteAst)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of PureScript.Backend.Optimizer.Substitute is redundant
+
+[WARNING 32/132 UnusedExplicitImport] src/Gopurs/CodeGen.purs:37:1
+
+  37  import Gopurs.GoAst (GoFile, GoDecl, GoExpr(..), GoType(..), goTypeToStr, sanitizeName, goRecordStructName)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Gopurs.GoAst contains the following unused references:
+    GoFile
+    goRecordStructName
+  It could be replaced with:
+    import Gopurs.GoAst (GoDecl, GoExpr(..), GoType(..), goTypeToStr, sanitizeName)
+
+[WARNING 33/132 UnusedExplicitImport] src/Gopurs/CodeGen.purs:41:1
+
+  41  import PureScript.Backend.Optimizer.Codegen.Tco (TcoExpr(..), tcoAnalysisOf)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Codegen.Tco contains the following unused references:
+    tcoAnalysisOf
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Codegen.Tco (TcoExpr(..))
+
+[WARNING 34/132 UnusedExplicitImport] src/Gopurs/CodeGen.purs:42:1
+
+  42  import PureScript.Backend.Optimizer.FreeVars (freeVars, localId, paramTypes)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.FreeVars contains the following unused references:
+    paramTypes
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.FreeVars (freeVars, localId)
+
+[WARNING 35/132 UnusedImport] src/Gopurs/CodeGen.purs:43:1
+
+  43  import Node.Path as Path
+      ^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Node.Path as Path is redundant
+
+[WARNING 36/132 UnusedImport] src/Gopurs/CodeGen.purs:44:1
+
+  44  import Node.FS.Sync as FS
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Node.FS.Sync as FS is redundant
+
+[WARNING 37/132 DuplicateSelectiveImport] src/Gopurs/CodeGen.purs:45:1
+
+  45  import Data.Tuple (Tuple(..), fst)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  There is an existing import of Data.Tuple, consider merging the import lists
+
+[WARNING 38/132 DuplicateSelectiveImport] src/Gopurs/CodeGen.purs:48:1
+
+  48  import Data.Maybe (fromMaybe)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  There is an existing import of Data.Maybe, consider merging the import lists
+
+[WARNING 39/132 OverlappingPattern] src/Gopurs/CodeGen.purs:55:1
+
+  55  coerceGoExpr :: String -> GoExpr -> GoType -> GoType -> GoExpr
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A case expression contains unreachable cases:
+  modNameStr expr srcT@TypeStructPointer b1 f1 s1 a1 destT@TypeStructPointer b2 f2 s2 a2
+  in binding group coerceGoExpr
+
+[WARNING 40/132 UserDefinedWarning] src/Gopurs/CodeGen.purs:55:1
+
+  55  coerceGoExpr :: String -> GoExpr -> GoType -> GoType -> GoExpr
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group coerceGoExpr
+
+[WARNING 41/132 UnusedName] src/Gopurs/CodeGen.purs:56:14
+
+  56  coerceGoExpr modNameStr expr from to | from == to = expr
+                   ^^^^^^^^^^
+
+  Name modNameStr was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 42/132 UnusedName] src/Gopurs/CodeGen.purs:57:14
+
+  57  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) | b1 == b2 && s1 == s2 && a1 == a2 = expr
+                   ^^^^^^^^^^
+
+  Name modNameStr was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 43/132 UnusedName] src/Gopurs/CodeGen.purs:57:30
+
+  57  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) | b1 == b2 && s1 == s2 && a1 == a2 = expr
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name srcT was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 44/132 UnusedName] src/Gopurs/CodeGen.purs:57:57
+
+  57  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) | b1 == b2 && s1 == s2 && a1 == a2 = expr
+                                                              ^^
+
+  Name f1 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 45/132 UnusedName] src/Gopurs/CodeGen.purs:57:67
+
+  57  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) | b1 == b2 && s1 == s2 && a1 == a2 = expr
+                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name destT was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 46/132 UnusedName] src/Gopurs/CodeGen.purs:57:95
+
+  57  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) | b1 == b2 && s1 == s2 && a1 == a2 = expr
+                                                                                                    ^^
+
+  Name f2 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 47/132 UnusedName] src/Gopurs/CodeGen.purs:59:57
+
+  59  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) | b1 == b2 =
+                                                              ^^
+
+  Name f1 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 48/132 UnusedName] src/Gopurs/CodeGen.purs:59:63
+
+  59  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) | b1 == b2 =
+                                                                    ^^
+
+  Name a1 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 49/132 UnusedName] src/Gopurs/CodeGen.purs:59:95
+
+  59  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) | b1 == b2 =
+                                                                                                    ^^
+
+  Name f2 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 50/132 UnusedName] src/Gopurs/CodeGen.purs:59:101
+
+  59  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) | b1 == b2 =
+                                                                                                          ^^
+
+  Name a2 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 51/132 UnusedName] src/Gopurs/CodeGen.purs:69:14
+
+  69  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) = Debug.trace ("MISMATCH B1 B2: " <> b1 <> " vs " <> b2 <> " from " <> goTypeToStr srcT <> " to " <> goTypeToStr destT) \_ ->
+                   ^^^^^^^^^^
+
+  Name modNameStr was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 52/132 UnusedName] src/Gopurs/CodeGen.purs:69:57
+
+  69  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) = Debug.trace ("MISMATCH B1 B2: " <> b1 <> " vs " <> b2 <> " from " <> goTypeToStr srcT <> " to " <> goTypeToStr destT) \_ ->
+                                                              ^^
+
+  Name f1 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 53/132 UnusedName] src/Gopurs/CodeGen.purs:69:60
+
+  69  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) = Debug.trace ("MISMATCH B1 B2: " <> b1 <> " vs " <> b2 <> " from " <> goTypeToStr srcT <> " to " <> goTypeToStr destT) \_ ->
+                                                                 ^^
+
+  Name s1 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 54/132 UnusedName] src/Gopurs/CodeGen.purs:69:63
+
+  69  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) = Debug.trace ("MISMATCH B1 B2: " <> b1 <> " vs " <> b2 <> " from " <> goTypeToStr srcT <> " to " <> goTypeToStr destT) \_ ->
+                                                                    ^^
+
+  Name a1 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 55/132 UnusedName] src/Gopurs/CodeGen.purs:69:95
+
+  69  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) = Debug.trace ("MISMATCH B1 B2: " <> b1 <> " vs " <> b2 <> " from " <> goTypeToStr srcT <> " to " <> goTypeToStr destT) \_ ->
+                                                                                                    ^^
+
+  Name f2 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 56/132 UnusedName] src/Gopurs/CodeGen.purs:69:98
+
+  69  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) = Debug.trace ("MISMATCH B1 B2: " <> b1 <> " vs " <> b2 <> " from " <> goTypeToStr srcT <> " to " <> goTypeToStr destT) \_ ->
+                                                                                                       ^^
+
+  Name s2 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 57/132 UnusedName] src/Gopurs/CodeGen.purs:69:101
+
+  69  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) = Debug.trace ("MISMATCH B1 B2: " <> b1 <> " vs " <> b2 <> " from " <> goTypeToStr srcT <> " to " <> goTypeToStr destT) \_ ->
+                                                                                                          ^^
+
+  Name a2 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 58/132 UnusedName] src/Gopurs/CodeGen.purs:72:57
+
+  72  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) | b1 == b2 =
+                                                              ^^
+
+  Name f1 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 59/132 UnusedName] src/Gopurs/CodeGen.purs:72:63
+
+  72  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) | b1 == b2 =
+                                                                    ^^
+
+  Name a1 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 60/132 UnusedName] src/Gopurs/CodeGen.purs:72:95
+
+  72  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) | b1 == b2 =
+                                                                                                    ^^
+
+  Name f2 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 61/132 UnusedName] src/Gopurs/CodeGen.purs:72:101
+
+  72  coerceGoExpr modNameStr expr srcT@(TypeStructPointer b1 f1 s1 a1) destT@(TypeStructPointer b2 f2 s2 a2) | b1 == b2 =
+                                                                                                          ^^
+
+  Name a2 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 62/132 UnusedName] src/Gopurs/CodeGen.purs:100:14
+
+  100  coerceGoExpr modNameStr expr from TypeValue = boxGoExpr expr from
+                    ^^^^^^^^^^
+
+  Name modNameStr was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 63/132 UnusedName] src/Gopurs/CodeGen.purs:101:14
+
+  101  coerceGoExpr modNameStr expr TypeValue to = unboxGoExpr expr TypeValue to
+                    ^^^^^^^^^^
+
+  Name modNameStr was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 64/132 UnusedName] src/Gopurs/CodeGen.purs:102:14
+
+  102  coerceGoExpr modNameStr expr from to = unboxGoExpr (boxGoExpr expr from) TypeValue to
+                    ^^^^^^^^^^
+
+  Name modNameStr was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 65/132 UnusedName] src/Gopurs/CodeGen.purs:136:5
+
+  136      cleanType = String.replaceAll (Pattern " ") (Replacement "_") typeStrSafe6
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name cleanType was introduced but not used.
+  in value declaration mangleType
+
+[WARNING 66/132 UnusedName] src/Gopurs/CodeGen.purs:148:18
+
+  148  exprTypeToGoType ptrPaths enumAdts elided modNameStr (Record _) = TypeValue
+                        ^^^^^^^^
+
+  Name ptrPaths was introduced but not used.
+  in value declaration exprTypeToGoType
+
+[WARNING 67/132 UnusedName] src/Gopurs/CodeGen.purs:148:27
+
+  148  exprTypeToGoType ptrPaths enumAdts elided modNameStr (Record _) = TypeValue
+                                 ^^^^^^^^
+
+  Name enumAdts was introduced but not used.
+  in value declaration exprTypeToGoType
+
+[WARNING 68/132 UnusedName] src/Gopurs/CodeGen.purs:148:36
+
+  148  exprTypeToGoType ptrPaths enumAdts elided modNameStr (Record _) = TypeValue
+                                          ^^^^^^
+
+  Name elided was introduced but not used.
+  in value declaration exprTypeToGoType
+
+[WARNING 69/132 UnusedName] src/Gopurs/CodeGen.purs:148:43
+
+  148  exprTypeToGoType ptrPaths enumAdts elided modNameStr (Record _) = TypeValue
+                                                 ^^^^^^^^^^
+
+  Name modNameStr was introduced but not used.
+  in value declaration exprTypeToGoType
+
+[WARNING 70/132 UnusedName] src/Gopurs/CodeGen.purs:184:35
+
+  184  exprTypeToGoType _ _ _ _ (TypeVar v) = TypeValue
+                                         ^
+
+  Name v was introduced but not used.
+  in value declaration exprTypeToGoType
+
+[WARNING 71/132 UnusedName] src/Gopurs/CodeGen.purs:252:26
+
+  252  instantiateGenericGoType env t = t
+                                ^^^
+
+  Name env was introduced but not used.
+  in value declaration instantiateGenericGoType
+
+[WARNING 72/132 UserDefinedWarning] src/Gopurs/CodeGen.purs:254:1
+
+  254  unboxGoExpr :: GoExpr -> GoType -> GoType -> GoExpr
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group unboxGoExpr
+
+[WARNING 73/132 UnusedName] src/Gopurs/CodeGen.purs:332:21
+
+  332  extractUncurriedAbs tcoExpr@(TcoExpr _ syntax) = case syntax of
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name tcoExpr was introduced but not used.
+  in value declaration extractUncurriedAbs
+
+[WARNING 74/132 UnusedName] src/Gopurs/CodeGen.purs:409:79
+
+  409  translate enumAdts enumCtors pointerAdtPaths pointerAdtNodes pointerAdtLeaves adtTypes elidedCtors ctorTypes globalTypes rawInstantiations classDeclsMap classDeclsFields importsArray mod =
+                                                                                     ^^^^^^^^
+
+  Name adtTypes was introduced but not used.
+  in value declaration translate
+
+[WARNING 75/132 UnusedName] src/Gopurs/CodeGen.purs:409:122
+
+  409  translate enumAdts enumCtors pointerAdtPaths pointerAdtNodes pointerAdtLeaves adtTypes elidedCtors ctorTypes globalTypes rawInstantiations classDeclsMap classDeclsFields importsArray mod =
+                                                                                                                                ^^^^^^^^^^^^^^^^^
+
+  Name rawInstantiations was introduced but not used.
+  in value declaration translate
+
+[WARNING 76/132 UnusedName] src/Gopurs/CodeGen.purs:409:140
+
+  409  translate enumAdts enumCtors pointerAdtPaths pointerAdtNodes pointerAdtLeaves adtTypes elidedCtors ctorTypes globalTypes rawInstantiations classDeclsMap classDeclsFields importsArray mod =
+                                                                                                                                                  ^^^^^^^^^^^^^
+
+  Name classDeclsMap was introduced but not used.
+  in value declaration translate
+
+[WARNING 77/132 UnusedName] src/Gopurs/CodeGen.purs:418:5
+
+           v
+  418      isSafeType t =
+  419        let
+  420          check m = m == "" || m == modNameStrOrig || Set.member m flatImportsSet || m == "Prim" || String.indexOf (Pattern "Prim.") m == Just 0
+       ...
+  443          checkSafe _ = true
+  444        in
+  445          checkSafe t
+                         ^
+
+  Name isSafeType was introduced but not used.
+  in value declaration translate
+
+[WARNING 78/132 ShadowedName] src/Gopurs/CodeGen.purs:422:26
+
+  422          checkSafe (ADT _ parts args) =
+                                ^^^^^
+
+  Name parts was shadowed.
+  in value declaration translate
+
+[WARNING 79/132 UnusedName] src/Gopurs/CodeGen.purs:504:21
+
+  504                      nameStr = unwrap id
+                           ^^^^^^^^^^^^^^^^^^^
+
+  Name nameStr was introduced but not used.
+  in value declaration translate
+
+[WARNING 80/132 ShadowedName] src/Gopurs/CodeGen.purs:516:5
+
+  516      getExprType (TcoExpr _ (Typed ty _)) = ty
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name getExprType was shadowed.
+  in value declaration translate
+
+[WARNING 81/132 ShadowedName] src/Gopurs/CodeGen.purs:517:5
+
+  517      getExprType _ = Any -- fallback
+           ^^^^^^^^^^^^^^^^^^^
+
+  Name getExprType was shadowed.
+  in value declaration translate
+
+[WARNING 82/132 UnusedName] src/Gopurs/CodeGen.purs:520:5
+
+  520      setTcoExprType ty (TcoExpr a (Typed _ inner)) = TcoExpr a (Typed ty inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name setTcoExprType was introduced but not used.
+  in value declaration translate
+
+[WARNING 83/132 UnusedName] src/Gopurs/CodeGen.purs:521:5
+
+  521      setTcoExprType _ expr = expr
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name setTcoExprType was introduced but not used.
+  in value declaration translate
+
+[WARNING 84/132 UnusedName] src/Gopurs/CodeGen.purs:530:28
+
+  530                Just { args, body } ->
+                                  ^^^^
+
+  Name body was introduced but not used.
+  in value declaration translate
+
+[WARNING 85/132 UnusedName] src/Gopurs/CodeGen.purs:577:43
+
+  577                  processBindingGroup binds isRec =
+                                                 ^^^^^
+
+  Name isRec was introduced but not used.
+  in value declaration translate
+
+[WARNING 86/132 UnusedName] src/Gopurs/CodeGen.purs:584:27
+
+  584                            loopCtxs = map (\fn -> { ident: fn.ident, params: fn.args, loopParams: map (\p -> p <> "_loop") fn.args, goTypes: [], fRet: TypeValue }) fns
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name loopCtxs was introduced but not used.
+  in value declaration translate
+
+[WARNING 87/132 UnusedName] src/Gopurs/CodeGen.purs:603:35
+
+  603                                    loopParams = map (\(Tuple idStr _) -> idStr <> "_loop") paramsWithTypes
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name loopParams was introduced but not used.
+  in value declaration translate
+
+[WARNING 88/132 UnusedName] src/Gopurs/CodeGen.purs:609:44
+
+  609                                      Just { fRet, fArgs } | arity < Array.length fArgs -> TypeValue
+                                                  ^^^^
+
+  Name fRet was introduced but not used.
+  in value declaration translate
+
+[WARNING 89/132 UnusedName] src/Gopurs/CodeGen.purs:701:42
+
+  701                      TypeStructPointer b1 f1 s1 a1, TypeStructPointer b2 f2 s2 a2 | b1 == b2 ->
+                                                ^^
+
+  Name f1 was introduced but not used.
+  in value declaration translate
+
+[WARNING 90/132 UnusedName] src/Gopurs/CodeGen.purs:701:73
+
+  701                      TypeStructPointer b1 f1 s1 a1, TypeStructPointer b2 f2 s2 a2 | b1 == b2 ->
+                                                                               ^^
+
+  Name f2 was introduced but not used.
+  in value declaration translate
+
+[WARNING 91/132 ShadowedName] src/Gopurs/CodeGen.purs:708:29
+
+  708                              parts = String.split (Pattern ".") k
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name parts was shadowed.
+  in value declaration translate
+
+[WARNING 92/132 UnusedName] src/Gopurs/CodeGen.purs:709:29
+
+  709                              pkgNameStr = String.replaceAll (Pattern ".") (Replacement "_") (unwrap mod.name)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name pkgNameStr was introduced but not used.
+  in value declaration translate
+
+[WARNING 93/132 UnusedName] src/Gopurs/CodeGen.purs:855:7
+
+  855    Let ident lvl val body -> "Let(" <> printTcoExprShape body <> ")"
+             ^^^^^
+
+  Name ident was introduced but not used.
+  in value declaration printTcoExprShape
+
+[WARNING 94/132 UnusedName] src/Gopurs/CodeGen.purs:855:13
+
+  855    Let ident lvl val body -> "Let(" <> printTcoExprShape body <> ")"
+                   ^^^
+
+  Name lvl was introduced but not used.
+  in value declaration printTcoExprShape
+
+[WARNING 95/132 UnusedName] src/Gopurs/CodeGen.purs:855:17
+
+  855    Let ident lvl val body -> "Let(" <> printTcoExprShape body <> ")"
+                       ^^^
+
+  Name val was introduced but not used.
+  in value declaration printTcoExprShape
+
+[WARNING 96/132 UnusedName] src/Gopurs/CodeGen.purs:856:7
+
+  856    Abs ident body -> "Abs(" <> printTcoExprShape body <> ")"
+             ^^^^^
+
+  Name ident was introduced but not used.
+  in value declaration printTcoExprShape
+
+[WARNING 97/132 UnusedName] src/Gopurs/CodeGen.purs:857:10
+
+  857    App fn arg -> "App(" <> printTcoExprShape fn <> ")"
+                ^^^
+
+  Name arg was introduced but not used.
+  in value declaration printTcoExprShape
+
+[WARNING 98/132 UnusedName] src/Gopurs/CodeGen.purs:870:19
+
+  870    UncurriedApp fn args -> "UncurriedApp(" <> printTcoExprShape fn <> ")"
+                         ^^^^
+
+  Name args was introduced but not used.
+  in value declaration printTcoExprShape
+
+[WARNING 99/132 UnusedName] src/Gopurs/CodeGen.purs:871:25
+
+  871    UncurriedEffectApp fn args -> "UncurriedEffectApp(" <> printTcoExprShape fn <> ")"
+                               ^^^^
+
+  Name args was introduced but not used.
+  in value declaration printTcoExprShape
+
+[WARNING 100/132 UserDefinedWarning] src/Gopurs/CodeGen.purs:953:1
+
+  953  translateExprImpl__ :: Ref { decls :: Array GoDecl, rawDecls :: Array String, elidedCtors :: Set.Set String, ctorTypes :: Map String { vars :: Array String, fields :: Array ExprType }, pointerAdtPaths :: Map String { ctorName :: String, arity :: Int }, pointerAdtNodes :: Set String, pointerAdtLeaves :: Map String { nodeBaseStruct :: String, nodeCtor :: String }, enumAdts :: Set.Set String, enumCtors :: Set.Set String, globalTypes :: Map.Map String ExprType, classDeclsFields :: Map String { vars :: Array String, fields :: Array { name :: String, "type" :: ExprType } }, globalId :: Int } -> Int -> String -> Array String -> Map String { fullName :: String, fArgs :: Array GoType, fRet :: GoType, arity :: Int } -> Map String { name :: String, goType :: GoType } -> Maybe String -> Array { ident :: String, params :: Array String, loopParams :: Array String, goTypes :: Array GoType, fRet :: GoType } -> Boolean -> Boolean -> Maybe ExprType -> Int -> TcoExpr -> { stmts :: StmtTree, expr :: GoExpr, exprType :: GoType, nextId :: Int }
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group translateExprImpl__, translateExprImpl_
+
+[WARNING 101/132 UserDefinedWarning] src/Gopurs/CodeGen.purs:953:1
+
+  953  translateExprImpl__ :: Ref { decls :: Array GoDecl, rawDecls :: Array String, elidedCtors :: Set.Set String, ctorTypes :: Map String { vars :: Array String, fields :: Array ExprType }, pointerAdtPaths :: Map String { ctorName :: String, arity :: Int }, pointerAdtNodes :: Set String, pointerAdtLeaves :: Map String { nodeBaseStruct :: String, nodeCtor :: String }, enumAdts :: Set.Set String, enumCtors :: Set.Set String, globalTypes :: Map.Map String ExprType, classDeclsFields :: Map String { vars :: Array String, fields :: Array { name :: String, "type" :: ExprType } }, globalId :: Int } -> Int -> String -> Array String -> Map String { fullName :: String, fArgs :: Array GoType, fRet :: GoType, arity :: Int } -> Map String { name :: String, goType :: GoType } -> Maybe String -> Array { ident :: String, params :: Array String, loopParams :: Array String, goTypes :: Array GoType, fRet :: GoType } -> Boolean -> Boolean -> Maybe ExprType -> Int -> TcoExpr -> { stmts :: StmtTree, expr :: GoExpr, exprType :: GoType, nextId :: Int }
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group translateExprImpl__, translateExprImpl_
+
+[WARNING 102/132 UnusedName] src/Gopurs/CodeGen.purs:977:91
+
+  977                  Lit (LitRecord props), TypeStructPointer baseStructName fullName fullPath tArgs ->
+                                                                                                 ^^^^^
+
+  Name tArgs was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 103/132 ShadowedName] src/Gopurs/CodeGen.purs:983:31
+
+  983                            ADT fullName _ tArgs ->
+                                     ^^^^^^^^
+
+  Name fullName was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 104/132 ShadowedName] src/Gopurs/CodeGen.purs:983:42
+
+  983                            ADT fullName _ tArgs ->
+                                                ^^^^^
+
+  Name tArgs was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 105/132 ShadowedName] src/Gopurs/CodeGen.purs:1111:15
+
+                      v
+  1111                expr =
+  1112                  if n == 0.0 && 1.0 / n < 0.0 then GoCall (GoSelector (GoVar "gopurs_runtime") "NegativeZero") []
+  1113                  else if nStr == "Infinity" then GoCall (GoSelector (GoVar "math") "Inf") [ GoInt 1 ]
+  1114                  else if nStr == "-Infinity" then GoCall (GoSelector (GoVar "math") "Inf") [ GoInt (-1) ]
+  1115                  else if nStr == "NaN" then GoCall (GoSelector (GoVar "math") "NaN") []
+  1116                  else GoRaw nStr
+                                      ^
+
+  Name expr was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 106/132 ShadowedName] src/Gopurs/CodeGen.purs:1159:50
+
+  1159                      boxedExprs = Array.zipWith (\expr ty -> boxGoExpr expr ty) accXs.exprs accXs.exprTypes
+                                                         ^^^^
+
+  Name expr was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 107/132 UnusedName] src/Gopurs/CodeGen.purs:1216:15
+
+  1216                typeArgs = Array.concatMap extractTypeApp flatArgsSpine
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name typeArgs was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 108/132 UnusedName] src/Gopurs/CodeGen.purs:1225:34
+
+  1225                    Var (Qualified mbMod (Ident name)) ->
+                                         ^^^^^
+
+  Name mbMod was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 109/132 UnusedName] src/Gopurs/CodeGen.purs:1484:50
+
+  1484                                    TypeFunc fArgs fRet | Array.length fArgs == Array.length flatArgs ->
+                                                         ^^^^
+
+  Name fRet was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 110/132 UnusedName] src/Gopurs/CodeGen.purs:1771:40
+
+  1771                          Var (Qualified mbMod (Ident name)) ->
+                                               ^^^^^
+
+  Name mbMod was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 111/132 UnusedName] src/Gopurs/CodeGen.purs:2003:55
+
+  2003                      funcExpr = Array.foldr (\(Tuple p goT) acc -> GoCall (GoSelector (GoVar "gopurs_runtime") "Func") [ GoRaw ("func(" <> p <> "_loop_val gopurs_runtime.Value) gopurs_runtime.Value {\nreturn " <> printGoExpr acc <> "\n}") ]) nativeCallExpr paramsWithTypes
+                                                              ^^^
+
+  Name goT was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 112/132 UnusedName] src/Gopurs/CodeGen.purs:2072:21
+
+  2072                      combinedLoopCtx = loopCtxs <> loopCtx
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name combinedLoopCtx was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 113/132 UnusedName] src/Gopurs/CodeGen.purs:2080:29
+
+  2080                              goType = boundInfo.goType
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name goType was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 114/132 UnusedName] src/Gopurs/CodeGen.purs:2090:29
+
+  2090                              loopParams = map (\(Tuple idStr _) -> idStr <> "_loop") paramsWithTypes
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name loopParams was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 115/132 UnusedName] src/Gopurs/CodeGen.purs:2099:63
+
+  2099                              funcExpr = Array.foldr (\(Tuple p goT) accExpr -> GoCall (GoSelector (GoVar "gopurs_runtime") "Func") [ GoRaw ("func(" <> p <> "_loop_val gopurs_runtime.Value) gopurs_runtime.Value {\nreturn " <> printGoExpr accExpr <> "\n}") ]) (boxGoExpr nativeCallExpr trueFRet) paramsWithTypes
+                                                                      ^^^
+
+  Name goT was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 116/132 UnusedName] src/Gopurs/CodeGen.purs:2117:51
+
+  2117                        ( \acc (Tuple (Tuple (Ident ident) val) alloc) ->
+                                                          ^^^^^
+
+  Name ident was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 117/132 ShadowedName] src/Gopurs/CodeGen.purs:2291:21
+
+  2291                  ADT fullName _ tArgs ->
+                            ^^^^^^^^
+
+  Name fullName was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 118/132 UnusedName] src/Gopurs/CodeGen.purs:2299:25
+
+  2299                  TypeApp fn arg ->
+                                ^^
+
+  Name fn was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 119/132 UnusedName] src/Gopurs/CodeGen.purs:2299:28
+
+  2299                  TypeApp fn arg ->
+                                   ^^^
+
+  Name arg was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 120/132 UnusedName] src/Gopurs/CodeGen.purs:2305:34
+
+  2305                        Tuple (ADT fnName _ tArgs) allArgs ->
+                                         ^^^^^^
+
+  Name fnName was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 121/132 UnusedName] src/Gopurs/CodeGen.purs:2317:23
+
+                              v
+  2317                        expectedExprType = case Array.index fields' i of
+  2318                          Just ty -> ty
+  2319                          Nothing -> Any
+                                             ^
+
+  Name expectedExprType was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 122/132 ShadowedName] src/Gopurs/CodeGen.purs:2411:21
+
+  2411                  ADT fullName _ tArgs ->
+                            ^^^^^^^^
+
+  Name fullName was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 123/132 ShadowedName] src/Gopurs/CodeGen.purs:2466:21
+
+  2466                  ADT fullName _ tArgs ->
+                            ^^^^^^^^
+
+  Name fullName was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 124/132 ShadowedName] src/Gopurs/CodeGen.purs:2475:24
+
+  2475                    Just ctorInfo -> map (const TypeValue) ctorInfo.vars
+                               ^^^^^^^^
+
+  Name ctorInfo was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 125/132 ShadowedName] src/Gopurs/CodeGen.purs:2483:26
+
+  2483                      Just expr -> { expr: boxGoExpr expr (fromMaybe TypeValue (map (exprTypeToGoType (unsafePerformEffect (Ref.read helpersRef)).pointerAdtPaths (unsafePerformEffect (Ref.read helpersRef)).enumAdts (unsafePerformEffect (Ref.read helpersRef)).elidedCtors modNameStr) (Array.index fields 0))), exprType: TypeValue }
+                                 ^^^^
+
+  Name expr was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 126/132 UnusedName] src/Gopurs/CodeGen.purs:2923:10
+
+  2923        ( \i (Tuple fK fT) ->
+                 ^
+
+  Name i was introduced but not used.
+  in value declaration wrapReturn
+
+[WARNING 127/132 UnusedName] src/Gopurs/CodeGen.purs:2948:16
+
+  2948              ( \i (Tuple fK fT) ->
+                       ^
+
+  Name i was introduced but not used.
+  in value declaration wrapReturn
+
+[WARNING 128/132 UnusedName] src/Gopurs/CodeGen.purs:3020:19
+
+  3020    ConstrainedType constraints body -> "(ConstrainedType " <> printExprType body <> ")"
+                          ^^^^^^^^^^^
+
+  Name constraints was introduced but not used.
+  in value declaration printExprType
+
+[WARNING 129/132 UnusedName] src/Gopurs/CodeGen.purs:3021:7
+
+  3021    ADT fullName path args -> "(ADT " <> show path <> " [" <> String.joinWith ", " (map printExprType args) <> "])"
+              ^^^^^^^^
+
+  Name fullName was introduced but not used.
+  in value declaration printExprType
+
+[WARNING 130/132 UnusedName] src/Gopurs/CodeGen.purs:3043:14
+
+  3043          Just r -> retStr == "any" || retStr == "interface{}" || retStr == "gopurs_runtime.Value"
+                     ^
+
+  Name r was introduced but not used.
+  in value declaration isStandardPursFunc
+
+[WARNING 131/132 UnusedName] src/Gopurs/CodeGen.purs:3072:11
+
+                  v
+  3072            substituteGeneric t =
+  3073              let
+  3074                s = printTypeNode t
+  3075                res = Array.foldl (\acc tp -> String.replaceAll (Pattern ("\\b" <> tp <> "\\b")) (Replacement "gopurs_runtime.Value") acc) s d.typeParams
+  3076              in
+  3077                TUnknown res
+                                 ^
+
+  Name substituteGeneric was introduced but not used.
+  in value declaration generateWrapperFunc
+
+[WARNING 132/132 UnusedName] src/Gopurs/CodeGen.purs:3079:11
+
+  3079            newLines = []
+                  ^^^^^^^^^^^^^
+
+  Name newLines was introduced but not used.
+  in value declaration generateWrapperFunc
+
+[ERROR 1/1 ErrorParsingModule] src/Main.purs:147:7
+
+  147        ) Map.empty finalModulesWithClassDecls
+             ^
+
+  Unable to parse module:
+  Unexpected token ')'
+
+           Src   Lib   All
+Warnings   113    19   132
+Errors       1     0     1
+
+✘ Failed to build.
+
+=== Go (gopurs) failed ===
+
+=== Rebuilding purust backend ===
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: purust
+
+Downloading dependencies...
+Building...
+[1 of 2] Compiling TestInfer
+[2 of 2] Compiling PureScript.Backend.Optimizer.Monomorphize
+[WARNING 1/19 UnusedExplicitImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:31:1
+
+  31  import Data.Maybe (Maybe(..), fromMaybe, maybe, isJust)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Maybe contains the following unused references:
+    isJust
+  It could be replaced with:
+    import Data.Maybe (Maybe(..), fromMaybe, maybe)
+
+[WARNING 2/19 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:32:1
+
+  32  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  The import of Debug is redundant
+
+[WARNING 3/19 DuplicateImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:36:1
+
+  36  import Data.String as String
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.String as String
+
+[WARNING 4/19 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:38:1
+
+  38  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  The import of Debug is redundant
+
+[WARNING 5/19 DuplicateImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:38:1
+
+  38  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Debug (trace)
+
+[WARNING 6/19 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:43:1
+
+  43  import Node.Encoding (Encoding(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Node.Encoding is redundant
+
+[WARNING 7/19 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:44:1
+
+  44  import Effect.Unsafe (unsafePerformEffect)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Effect.Unsafe is redundant
+
+[WARNING 8/19 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:45:1
+
+  45  import Effect.Console as Console
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Console as Console is redundant
+
+[WARNING 9/19 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:297:30
+
+  297                  s1 = foldl (\acc (Tuple paramType arg) ->
+                                    ^^^
+
+  Name acc was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 10/19 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:297:51
+
+  297                  s1 = foldl (\acc (Tuple paramType arg) ->
+                                                         ^^^
+
+  Name arg was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 11/19 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:518:11
+
+  518    goGuard subst (Unconditional e) = Unconditional (substituteVars subst e)
+                 ^^^^^
+
+  Name subst was shadowed.
+  in value declaration substituteVars
+
+[WARNING 12/19 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:519:11
+
+  519    goGuard subst (Guarded guards) = Guarded (map (\(Guard e1 e2) -> Guard (substituteVars subst e1) (substituteVars subst e2)) guards)
+                 ^^^^^
+
+  Name subst was shadowed.
+  in value declaration substituteVars
+
+[WARNING 13/19 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:856:14
+
+  856            go expr = case expr of
+                    ^^^^
+
+  Name expr was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 14/19 UnusedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:857:28
+
+  857              ExprApp annApp f arg ->
+                                  ^
+
+  Name f was introduced but not used.
+  in value declaration monomorphizeExpr
+
+[WARNING 15/19 UnusedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:857:30
+
+  857              ExprApp annApp f arg ->
+                                    ^^^
+
+  Name arg was introduced but not used.
+  in value declaration monomorphizeExpr
+
+[WARNING 16/19 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:881:61
+
+  881                            s1 = foldl (\acc (Tuple paramType arg) ->
+                                                                   ^^^
+
+  Name arg was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 17/19 UnusedImport] ../../purescript-backend-optimizer/src/TestInfer.purs:5:1
+
+  5  import Data.Map as Map
+     ^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.Map as Map is redundant
+
+[WARNING 18/19 UnusedImport] ../../purescript-backend-optimizer/src/TestInfer.purs:6:1
+
+  6  import Data.Set as Set
+     ^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.Set as Set is redundant
+
+[WARNING 19/19 UnusedImport] ../../purescript-backend-optimizer/src/TestInfer.purs:8:1
+
+  8  import Data.Tuple (Tuple(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.Tuple is redundant
+
+           Src   Lib   All
+Warnings     0    19    19
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: purust
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Bundling...
+
+  bin/purust.js  1.1mb ⚠️
+
+⚡ Done in 40ms
+
+✓ Bundle succeeded.
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-rust-test
+
+Downloading dependencies...
+Building...
+[  2 of 300] Compiling Type.Proxy
+[  1 of 300] Compiling Type.Equality
+[  3 of 300] Compiling Test.Implicit
+[  4 of 300] Compiling Unsafe.Coerce
+[  5 of 300] Compiling Spago.Generated.BuildInfo
+[  6 of 300] Compiling Data.String.Unsafe
+[  7 of 300] Compiling Partial
+[  9 of 300] Compiling Record.Unsafe
+[  8 of 300] Compiling Data.Void
+[ 10 of 300] Compiling Data.NaturalTransformation
+[ 11 of 300] Compiling Data.Unit
+[ 12 of 300] Compiling Data.Traversable.Accum
+[ 13 of 300] Compiling Data.Int.Bits
+[ 14 of 300] Compiling Data.Boolean
+[ 15 of 300] Compiling Control.Semigroupoid
+[ 16 of 300] Compiling Data.Symbol
+[ 18 of 300] Compiling Control.Lazy
+[ 17 of 300] Compiling Data.Function.Uncurried
+[ 19 of 300] Compiling Partial.Unsafe
+[ 21 of 300] Compiling Safe.Coerce
+[ 20 of 300] Compiling Data.Exists
+[ 22 of 300] Compiling Data.Semiring
+[ 23 of 300] Compiling Data.HeytingAlgebra
+[ 24 of 300] Compiling Control.Category
+[ 25 of 300] Compiling Data.Semigroup
+[ 26 of 300] Compiling Data.Show
+[ 27 of 300] Compiling Data.Ring
+[ 28 of 300] Compiling Data.Generic.Rep
+[ 30 of 300] Compiling Data.BooleanAlgebra
+[ 29 of 300] Compiling Data.Eq
+[ 31 of 300] Compiling Data.CommutativeRing
+[ 32 of 300] Compiling Data.Ordering
+[ 33 of 300] Compiling Data.EuclideanRing
+[ 34 of 300] Compiling Data.Ord
+[ 35 of 300] Compiling Data.DivisionRing
+[ 36 of 300] Compiling Data.Field
+[ 37 of 300] Compiling Data.Monoid
+[ 38 of 300] Compiling Data.Function
+[ 39 of 300] Compiling Data.Reflectable
+[ 40 of 300] Compiling Data.Bounded
+[ 41 of 300] Compiling Data.Functor
+[ 44 of 300] Compiling Control.Alt
+[ 43 of 300] Compiling Control.Extend
+[ 42 of 300] Compiling Control.Apply
+[ 45 of 300] Compiling Data.Monoid.Generic
+[ 46 of 300] Compiling Data.Bounded.Generic
+[ 47 of 300] Compiling Control.Plus
+[ 48 of 300] Compiling Control.Comonad
+[ 49 of 300] Compiling Control.Applicative
+[ 50 of 300] Compiling Control.Alternative
+[ 51 of 300] Compiling Control.Bind
+[ 52 of 300] Compiling Control.Monad
+[ 53 of 300] Compiling Control.MonadPlus
+[ 54 of 300] Compiling Prelude
+[ 55 of 300] Compiling Data.Number.Format
+[ 56 of 300] Compiling Data.Semigroup.Generic
+[ 57 of 300] Compiling Data.Monoid.Multiplicative
+[ 58 of 300] Compiling Control.Monad.Gen.Class
+[ 59 of 300] Compiling Data.Semigroup.Last
+[ 60 of 300] Compiling Data.Traversable.Accum.Internal
+[ 61 of 300] Compiling Data.Eq.Generic
+[ 63 of 300] Compiling Data.Monoid.Dual
+[ 62 of 300] Compiling Data.Semiring.Generic
+[ 64 of 300] Compiling Control.Monad.Trans.Class
+[ 65 of 300] Compiling Effect
+[ 66 of 300] Compiling Data.Monoid.Disj
+[ 67 of 300] Compiling Data.Semigroup.First
+[ 68 of 300] Compiling Data.Monoid.Additive
+[ 69 of 300] Compiling Data.Ord.Generic
+[ 71 of 300] Compiling Data.Monoid.Endo
+[ 70 of 300] Compiling Control.Monad.Cont.Class
+[ 72 of 300] Compiling Data.HeytingAlgebra.Generic
+[ 73 of 300] Compiling Data.Show.Generic
+[ 74 of 300] Compiling Data.Monoid.Conj
+[ 75 of 300] Compiling Data.Ring.Generic
+[ 77 of 300] Compiling Effect.Unsafe
+[ 76 of 300] Compiling Control.Monad.Reader.Class
+[ 79 of 300] Compiling Effect.Console
+[ 78 of 300] Compiling Test.Main
+[ 81 of 300] Compiling Effect.Class
+[ 82 of 300] Compiling Effect.Ref
+[ 80 of 300] Compiling Effect.Uncurried
+[ 83 of 300] Compiling Effect.Class.Console
+[ 84 of 300] Compiling Bench
+[ 85 of 300] Compiling Data.Newtype
+[ 86 of 300] Compiling Test.LazyEvaluationFFI
+[ 87 of 300] Compiling Test.Records
+[ 88 of 300] Compiling Test.StateMonadFFICheatcode
+[ 89 of 300] Compiling Test.RecordsFFI
+[ 90 of 300] Compiling Test.RBTreeFFICheatcode
+[ 91 of 300] Compiling Test.RowToListFFI
+[ 92 of 300] Compiling Test.FibFFICheatcode
+[ 94 of 300] Compiling Test.PolymorphismFFICheatcode
+[ 95 of 300] Compiling Test.AstTreeFFI
+[ 96 of 300] Compiling Test.TCOFFICheatcode
+[ 93 of 300] Compiling Test.StateMonad
+[ 97 of 300] Compiling Test.Primes
+[ 98 of 300] Compiling Test.ArrayOpsFFI
+[ 99 of 300] Compiling Test.LazyEvaluation
+[102 of 300] Compiling Test.RBTreeFFI
+[101 of 300] Compiling Test.RowToList
+[106 of 300] Compiling Test.ListOpsFFICheatcode
+[104 of 300] Compiling Test.TCOFFI
+[105 of 300] Compiling Test.ChurchFFICheatcode
+[103 of 300] Compiling Test.FibFFI
+[107 of 300] Compiling Test.RBTree
+[108 of 300] Compiling Test.ListOpsFFI
+[100 of 300] Compiling Test.PolymorphismFFI
+[109 of 300] Compiling Test.AckermannFFICheatcode
+[110 of 300] Compiling Test.StateMonadFFI
+[112 of 300] Compiling Test.BenchCheck
+[113 of 300] Compiling Test.ListOps
+[111 of 300] Compiling Test.Fib
+[114 of 300] Compiling Test.ChurchFFI
+[115 of 300] Compiling Test.RecordsFFICheatcode
+[116 of 300] Compiling Test.TCO
+[117 of 300] Compiling Test.AckermannFFI
+[118 of 300] Compiling Test.RowToListFFICheatcode
+[120 of 300] Compiling Test.Polymorphism
+[122 of 300] Compiling Test.LazyEvaluationFFICheatcode
+[121 of 300] Compiling Test.PrimesFFICheatcode
+[119 of 300] Compiling Test.ArrayOpsFFICheatcode
+[124 of 300] Compiling Test.PrimesFFI
+[123 of 300] Compiling Test.AstTree
+[125 of 300] Compiling Test.Ackermann
+[126 of 300] Compiling Test.AstTreeFFICheatcode
+[127 of 300] Compiling Data.Ord.Max
+[128 of 300] Compiling Data.Ord.Down
+[129 of 300] Compiling Data.Functor.App
+[130 of 300] Compiling Data.Time.Duration
+[132 of 300] Compiling Data.Ord.Min
+[131 of 300] Compiling Data.Profunctor
+[133 of 300] Compiling Data.Monoid.Alternate
+[134 of 300] Compiling Test.Church
+[135 of 300] Compiling Data.String.Pattern
+[136 of 300] Compiling AppFFI
+[137 of 300] Compiling AppFFICheatcode
+[138 of 300] Compiling Data.Profunctor.Closed
+[139 of 300] Compiling Data.String.Common
+[140 of 300] Compiling Data.Functor.Invariant
+[141 of 300] Compiling Data.Functor.Compose
+[142 of 300] Compiling Data.Profunctor.Split
+[143 of 300] Compiling Data.Identity
+[145 of 300] Compiling Data.Const
+[144 of 300] Compiling Data.Tuple
+[146 of 300] Compiling Data.Profunctor.Join
+[147 of 300] Compiling Data.Maybe
+[148 of 300] Compiling Data.Functor.Contravariant
+[149 of 300] Compiling Data.Op
+[151 of 300] Compiling Data.Predicate
+[150 of 300] Compiling Data.Comparison
+[152 of 300] Compiling Data.Equivalence
+[154 of 300] Compiling Data.Maybe.Last
+[153 of 300] Compiling Data.Either
+[155 of 300] Compiling Data.Maybe.First
+[156 of 300] Compiling Data.String.CodeUnits
+[157 of 300] Compiling Data.Number
+[158 of 300] Compiling Data.Number.Approximate
+[159 of 300] Compiling Data.Int
+[160 of 300] Compiling Data.Divide
+[161 of 300] Compiling Data.Profunctor.Costrong
+[163 of 300] Compiling Control.Monad.Writer.Class
+[162 of 300] Compiling Data.Tuple.Nested
+[164 of 300] Compiling Control.Monad.State.Class
+[165 of 300] Compiling Data.Profunctor.Strong
+[166 of 300] Compiling Data.Distributive
+[167 of 300] Compiling Data.Divisible
+[168 of 300] Compiling Data.Decide
+[169 of 300] Compiling Data.Bifunctor
+[170 of 300] Compiling Effect.Exception
+[172 of 300] Compiling Data.Profunctor.Cochoice
+[171 of 300] Compiling Data.Either.Nested
+[173 of 300] Compiling Data.Profunctor.Choice
+[174 of 300] Compiling Data.Either.Inject
+[176 of 300] Compiling Effect.Exception.Unsafe
+[175 of 300] Compiling Control.Monad.Error.Class
+[178 of 300] Compiling Control.Biapply
+[177 of 300] Compiling Control.Monad.Rec.Class
+[179 of 300] Compiling Data.Functor.Product
+[180 of 300] Compiling Data.Profunctor.Star
+[181 of 300] Compiling Data.Functor.Coproduct
+[182 of 300] Compiling Data.Functor.Costar
+[183 of 300] Compiling Data.Decidable
+[184 of 300] Compiling Control.Biapplicative
+[185 of 300] Compiling Data.Functor.Product2
+[186 of 300] Compiling Data.Functor.Clown
+[187 of 300] Compiling Data.Functor.Flip
+[188 of 300] Compiling Data.Functor.Joker
+[189 of 300] Compiling Data.Bifunctor.Join
+[190 of 300] Compiling Data.Functor.Product.Nested
+[191 of 300] Compiling Data.Functor.Coproduct.Inject
+[192 of 300] Compiling Data.FunctorWithIndex
+[193 of 300] Compiling Data.Foldable
+[194 of 300] Compiling Data.Functor.Coproduct.Nested
+[195 of 300] Compiling Control.Monad.ST.Internal
+[197 of 300] Compiling Control.Monad.ST
+[196 of 300] Compiling Control.Monad.ST.Uncurried
+[198 of 300] Compiling Control.Monad.ST.Ref
+[199 of 300] Compiling Control.Monad.ST.Global
+[200 of 300] Compiling Control.Monad.ST.Class
+[201 of 300] Compiling Control.Monad.Writer.Trans
+[202 of 300] Compiling Control.Monad.Except.Trans
+[203 of 300] Compiling Control.Monad.Reader.Trans
+[204 of 300] Compiling Control.Monad.RWS.Trans
+[205 of 300] Compiling Control.Monad.State.Trans
+[206 of 300] Compiling Control.Monad.Maybe.Trans
+[207 of 300] Compiling Control.Monad.Cont.Trans
+[208 of 300] Compiling Data.Array.ST
+[209 of 300] Compiling Data.Array.ST.Iterator
+[210 of 300] Compiling Data.Array.ST.Partial
+[211 of 300] Compiling Control.Monad.Cont
+[212 of 300] Compiling Control.Monad.Reader
+[214 of 300] Compiling Control.Monad.Writer
+[213 of 300] Compiling Control.Monad.State
+[216 of 300] Compiling Control.Parallel.Class
+[215 of 300] Compiling Control.Monad.Except
+[217 of 300] Compiling Control.Monad.RWS
+[218 of 300] Compiling Data.FoldableWithIndex
+[220 of 300] Compiling Data.Traversable
+[219 of 300] Compiling Data.Bifoldable
+[221 of 300] Compiling Data.Semigroup.Foldable
+[222 of 300] Compiling Data.Bitraversable
+[223 of 300] Compiling Control.Parallel
+[224 of 300] Compiling Data.Semigroup.Traversable
+[225 of 300] Compiling Control.Monad.Identity.Trans
+[226 of 300] Compiling Effect.Aff
+[227 of 300] Compiling Data.Unfoldable1
+[228 of 300] Compiling Control.Comonad.Trans.Class
+[229 of 300] Compiling Control.Comonad.Traced.Trans
+[230 of 300] Compiling Control.Comonad.Store.Trans
+[231 of 300] Compiling Data.TraversableWithIndex
+[232 of 300] Compiling Data.Unfoldable
+[233 of 300] Compiling Control.Monad.Gen
+[234 of 300] Compiling Data.Enum
+[235 of 300] Compiling Data.Time.Duration.Gen
+[236 of 300] Compiling Data.NonEmpty
+[237 of 300] Compiling Control.Comonad.Env.Trans
+[238 of 300] Compiling Data.Array.NonEmpty.Internal
+[239 of 300] Compiling Effect.Aff.Compat
+[240 of 300] Compiling Data.Lazy
+[241 of 300] Compiling Data.Array
+[242 of 300] Compiling Data.Date.Component
+[243 of 300] Compiling Data.Char
+[244 of 300] Compiling Data.Time.Component
+[245 of 300] Compiling Data.Enum.Generic
+[246 of 300] Compiling Control.Comonad.Store.Class
+[247 of 300] Compiling Control.Monad.List.Trans
+[248 of 300] Compiling Data.Enum.Gen
+[249 of 300] Compiling Data.List.Lazy.Types
+[250 of 300] Compiling Data.Char.Gen
+[251 of 300] Compiling Data.List.Types
+[252 of 300] Compiling Control.Monad.Gen.Common
+[253 of 300] Compiling Control.Comonad.Store
+[254 of 300] Compiling Data.Time.Component.Gen
+[255 of 300] Compiling Data.Time
+[256 of 300] Compiling Control.Comonad.Env.Class
+[257 of 300] Compiling Data.String.Gen
+[258 of 300] Compiling Control.Comonad.Env
+[259 of 300] Compiling Data.Date.Component.Gen
+[260 of 300] Compiling Data.Date
+[261 of 300] Compiling Control.Comonad.Traced.Class
+[262 of 300] Compiling Data.Time.Gen
+[263 of 300] Compiling Control.Comonad.Traced
+[265 of 300] Compiling Data.Date.Gen
+[264 of 300] Compiling Data.DateTime
+[267 of 300] Compiling Data.Array.Partial
+[266 of 300] Compiling Data.String.CodePoints
+[269 of 300] Compiling Test.ArrayOps
+[268 of 300] Compiling Data.Array.NonEmpty
+[270 of 300] Compiling App
+[271 of 300] Compiling Data.DateTime.Instant
+[272 of 300] Compiling Effect.Aff.Class
+[273 of 300] Compiling Data.DateTime.Gen
+[274 of 300] Compiling Data.List.Internal
+[275 of 300] Compiling Main
+[276 of 300] Compiling Effect.Now
+[278 of 300] Compiling Data.List.Lazy
+[277 of 300] Compiling Data.List
+[279 of 300] Compiling Data.String
+[280 of 300] Compiling Data.String.NonEmpty.Internal
+[281 of 300] Compiling Data.String.CaseInsensitive
+[282 of 300] Compiling Data.String.Regex.Flags
+[283 of 300] Compiling Data.String.NonEmpty.CodePoints
+[284 of 300] Compiling Data.String.Regex
+[285 of 300] Compiling Data.String.NonEmpty.CodeUnits
+[286 of 300] Compiling Data.String.Regex.Unsafe
+[287 of 300] Compiling Data.String.NonEmpty
+[288 of 300] Compiling Data.String.NonEmpty.CaseInsensitive
+[290 of 300] Compiling Data.List.ZipList
+[289 of 300] Compiling Data.List.Lazy.NonEmpty
+[293 of 300] Compiling Data.List.Partial
+[292 of 300] Compiling Data.List.NonEmpty
+[291 of 300] Compiling Data.Map.Internal
+[294 of 300] Compiling Data.Set
+[296 of 300] Compiling Data.Map
+[295 of 300] Compiling Data.Set.NonEmpty
+[298 of 300] Compiling Data.Map.Gen
+[297 of 300] Compiling Data.Interval.Duration
+[300 of 300] Compiling Data.Interval
+[299 of 300] Compiling Data.Interval.Duration.Iso
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+=== Rust ===
+error[E0618]: expected function, found `purust_core::Value`
+  --> Purs_Control_Semigroupoid/src/lib.rs:35:428
+   |
+35 | ...et _f = (/* Typed crate::UnknownType <- crate::UnknownType : App(Accessor(Local(...))) */((dictSemigroupoid).compose.clone())(/* Typed crate::UnknownType <- crate::UnknownType : Local(...) */g, /* Typed crate::UnknownType <- crate::UnknownType : Local(...) */f)).clone(); move |mut _a0: crate::UnknownType, mut _a1: crate::UnknownType| -> crate::UnknownType { _f(_a0, _a1) } ...
+   |       --                                                                                                                                                                                                                                                                                                                                                                   ^^----------
+   |       |                                                                                                                                                                                                                                                                                                                                                                    |
+   |       `_f` has type `purust_core::Value`                                                                                                                                                                                                                                                                                                                                   call expression requires function
+
+For more information about this error, try `rustc --explain E0618`.
+error: could not compile `Purs_Control_Semigroupoid` (lib) due to 1 previous error
+=== Rust (purust) failed ===
+
+=== Rebuilding sharpurs backend ===
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: sharpurs
+
+Downloading dependencies...
+Building...
+[1 of 2] Compiling TestInfer
+[2 of 2] Compiling PureScript.Backend.Optimizer.Monomorphize
+[WARNING 1/19 UnusedExplicitImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:31:1
+
+  31  import Data.Maybe (Maybe(..), fromMaybe, maybe, isJust)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Maybe contains the following unused references:
+    isJust
+  It could be replaced with:
+    import Data.Maybe (Maybe(..), fromMaybe, maybe)
+
+[WARNING 2/19 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:32:1
+
+  32  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  The import of Debug is redundant
+
+[WARNING 3/19 DuplicateImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:36:1
+
+  36  import Data.String as String
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.String as String
+
+[WARNING 4/19 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:38:1
+
+  38  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  The import of Debug is redundant
+
+[WARNING 5/19 DuplicateImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:38:1
+
+  38  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Debug (trace)
+
+[WARNING 6/19 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:43:1
+
+  43  import Node.Encoding (Encoding(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Node.Encoding is redundant
+
+[WARNING 7/19 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:44:1
+
+  44  import Effect.Unsafe (unsafePerformEffect)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Effect.Unsafe is redundant
+
+[WARNING 8/19 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:45:1
+
+  45  import Effect.Console as Console
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Console as Console is redundant
+
+[WARNING 9/19 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:297:30
+
+  297                  s1 = foldl (\acc (Tuple paramType arg) ->
+                                    ^^^
+
+  Name acc was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 10/19 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:297:51
+
+  297                  s1 = foldl (\acc (Tuple paramType arg) ->
+                                                         ^^^
+
+  Name arg was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 11/19 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:518:11
+
+  518    goGuard subst (Unconditional e) = Unconditional (substituteVars subst e)
+                 ^^^^^
+
+  Name subst was shadowed.
+  in value declaration substituteVars
+
+[WARNING 12/19 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:519:11
+
+  519    goGuard subst (Guarded guards) = Guarded (map (\(Guard e1 e2) -> Guard (substituteVars subst e1) (substituteVars subst e2)) guards)
+                 ^^^^^
+
+  Name subst was shadowed.
+  in value declaration substituteVars
+
+[WARNING 13/19 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:856:14
+
+  856            go expr = case expr of
+                    ^^^^
+
+  Name expr was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 14/19 UnusedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:857:28
+
+  857              ExprApp annApp f arg ->
+                                  ^
+
+  Name f was introduced but not used.
+  in value declaration monomorphizeExpr
+
+[WARNING 15/19 UnusedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:857:30
+
+  857              ExprApp annApp f arg ->
+                                    ^^^
+
+  Name arg was introduced but not used.
+  in value declaration monomorphizeExpr
+
+[WARNING 16/19 ShadowedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:881:61
+
+  881                            s1 = foldl (\acc (Tuple paramType arg) ->
+                                                                   ^^^
+
+  Name arg was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 17/19 UnusedImport] ../../purescript-backend-optimizer/src/TestInfer.purs:5:1
+
+  5  import Data.Map as Map
+     ^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.Map as Map is redundant
+
+[WARNING 18/19 UnusedImport] ../../purescript-backend-optimizer/src/TestInfer.purs:6:1
+
+  6  import Data.Set as Set
+     ^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.Set as Set is redundant
+
+[WARNING 19/19 UnusedImport] ../../purescript-backend-optimizer/src/TestInfer.purs:8:1
+
+  8  import Data.Tuple (Tuple(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.Tuple is redundant
+
+           Src   Lib   All
+Warnings     0    19    19
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: sharpurs
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Bundling...
+
+  bin/sharpurs.js  942.8kb
+
+⚡ Done in 35ms
+
+✓ Bundle succeeded.
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-cs-test
+
+Downloading dependencies...
+Building...
+[  2 of 300] Compiling Type.Proxy
+[  1 of 300] Compiling Unsafe.Coerce
+[  3 of 300] Compiling Type.Equality
+[  4 of 300] Compiling Spago.Generated.BuildInfo
+[  5 of 300] Compiling Test.Implicit
+[  6 of 300] Compiling Data.Void
+[  7 of 300] Compiling Data.Unit
+[  8 of 300] Compiling Partial
+[  9 of 300] Compiling Data.Traversable.Accum
+[ 10 of 300] Compiling Record.Unsafe
+[ 11 of 300] Compiling Data.NaturalTransformation
+[ 12 of 300] Compiling Data.Int.Bits
+[ 13 of 300] Compiling Control.Semigroupoid
+[ 14 of 300] Compiling Data.Boolean
+[ 15 of 300] Compiling Data.String.Unsafe
+[ 16 of 300] Compiling Control.Lazy
+[ 18 of 300] Compiling Partial.Unsafe
+[ 17 of 300] Compiling Data.Function.Uncurried
+[ 19 of 300] Compiling Safe.Coerce
+[ 20 of 300] Compiling Data.Exists
+[ 21 of 300] Compiling Control.Category
+[ 22 of 300] Compiling Data.Symbol
+[ 23 of 300] Compiling Data.HeytingAlgebra
+[ 24 of 300] Compiling Data.Semigroup
+[ 25 of 300] Compiling Data.Semiring
+[ 26 of 300] Compiling Data.Show
+[ 27 of 300] Compiling Data.Ring
+[ 28 of 300] Compiling Data.BooleanAlgebra
+[ 29 of 300] Compiling Data.Eq
+[ 30 of 300] Compiling Data.Generic.Rep
+[ 31 of 300] Compiling Data.CommutativeRing
+[ 32 of 300] Compiling Data.Ordering
+[ 33 of 300] Compiling Data.EuclideanRing
+[ 34 of 300] Compiling Data.Ord
+[ 35 of 300] Compiling Data.DivisionRing
+[ 36 of 300] Compiling Data.Field
+[ 37 of 300] Compiling Data.Monoid
+[ 38 of 300] Compiling Data.Bounded
+[ 39 of 300] Compiling Data.Function
+[ 40 of 300] Compiling Data.Reflectable
+[ 41 of 300] Compiling Data.Functor
+[ 43 of 300] Compiling Data.Monoid.Generic
+[ 42 of 300] Compiling Control.Extend
+[ 44 of 300] Compiling Control.Alt
+[ 45 of 300] Compiling Control.Apply
+[ 46 of 300] Compiling Data.Bounded.Generic
+[ 47 of 300] Compiling Control.Plus
+[ 48 of 300] Compiling Control.Comonad
+[ 49 of 300] Compiling Control.Applicative
+[ 50 of 300] Compiling Control.Bind
+[ 51 of 300] Compiling Control.Alternative
+[ 52 of 300] Compiling Control.Monad
+[ 53 of 300] Compiling Control.MonadPlus
+[ 54 of 300] Compiling Prelude
+[ 55 of 300] Compiling Data.Semigroup.First
+[ 56 of 300] Compiling Data.Monoid.Endo
+[ 57 of 300] Compiling Control.Monad.Trans.Class
+[ 58 of 300] Compiling Data.Monoid.Dual
+[ 59 of 300] Compiling Effect
+[ 60 of 300] Compiling Control.Monad.Cont.Class
+[ 61 of 300] Compiling Data.Ord.Generic
+[ 63 of 300] Compiling Data.Semigroup.Generic
+[ 62 of 300] Compiling Data.HeytingAlgebra.Generic
+[ 64 of 300] Compiling Control.Monad.Gen.Class
+[ 65 of 300] Compiling Data.Monoid.Disj
+[ 67 of 300] Compiling Data.Monoid.Additive
+[ 66 of 300] Compiling Control.Monad.Reader.Class
+[ 68 of 300] Compiling Data.Eq.Generic
+[ 69 of 300] Compiling Data.Monoid.Conj
+[ 71 of 300] Compiling Data.Show.Generic
+[ 72 of 300] Compiling Data.Ring.Generic
+[ 70 of 300] Compiling Data.Monoid.Multiplicative
+[ 74 of 300] Compiling Data.Semigroup.Last
+[ 75 of 300] Compiling Data.Number.Format
+[ 77 of 300] Compiling Effect.Ref
+[ 79 of 300] Compiling Effect.Class
+[ 78 of 300] Compiling Effect.Console
+[ 80 of 300] Compiling Effect.Unsafe
+[ 81 of 300] Compiling Effect.Uncurried
+[ 76 of 300] Compiling Data.Traversable.Accum.Internal
+[ 82 of 300] Compiling Test.Main
+[ 73 of 300] Compiling Data.Semiring.Generic
+[ 83 of 300] Compiling Data.Newtype
+[ 84 of 300] Compiling Bench
+[ 85 of 300] Compiling Effect.Class.Console
+[ 88 of 300] Compiling Test.TCOFFICheatcode
+[ 87 of 300] Compiling Test.PolymorphismFFI
+[ 86 of 300] Compiling Test.RBTreeFFICheatcode
+[ 89 of 300] Compiling Test.ListOpsFFI
+[ 90 of 300] Compiling Test.TCOFFI
+[ 92 of 300] Compiling Test.RowToListFFI
+[ 91 of 300] Compiling Test.RecordsFFI
+[ 94 of 300] Compiling Test.AstTreeFFI
+[ 93 of 300] Compiling Test.Primes
+[ 96 of 300] Compiling Test.ChurchFFICheatcode
+[ 95 of 300] Compiling Test.Fib
+[ 97 of 300] Compiling Test.AckermannFFI
+[ 98 of 300] Compiling Test.ArrayOpsFFICheatcode
+[ 99 of 300] Compiling Test.PrimesFFI
+[100 of 300] Compiling Test.ListOpsFFICheatcode
+[101 of 300] Compiling Test.Church
+[102 of 300] Compiling Test.ChurchFFI
+[103 of 300] Compiling Test.AckermannFFICheatcode
+[105 of 300] Compiling Test.PrimesFFICheatcode
+[104 of 300] Compiling Test.RowToList
+[106 of 300] Compiling Test.FibFFICheatcode
+[107 of 300] Compiling Test.RowToListFFICheatcode
+[108 of 300] Compiling Test.RBTreeFFI
+[109 of 300] Compiling Test.ListOps
+[110 of 300] Compiling Test.AstTreeFFICheatcode
+[112 of 300] Compiling Test.StateMonadFFI
+[113 of 300] Compiling Test.AstTree
+[115 of 300] Compiling Test.ArrayOpsFFI
+[114 of 300] Compiling Test.LazyEvaluationFFI
+[111 of 300] Compiling Test.StateMonadFFICheatcode
+[117 of 300] Compiling Test.PolymorphismFFICheatcode
+[116 of 300] Compiling Test.TCO
+[118 of 300] Compiling Test.Ackermann
+[119 of 300] Compiling Test.FibFFI
+[120 of 300] Compiling Test.LazyEvaluationFFICheatcode
+[122 of 300] Compiling Test.Polymorphism
+[123 of 300] Compiling Test.RecordsFFICheatcode
+[121 of 300] Compiling Test.RBTree
+[124 of 300] Compiling Test.StateMonad
+[125 of 300] Compiling Test.LazyEvaluation
+[126 of 300] Compiling Test.Records
+[127 of 300] Compiling Data.Profunctor
+[128 of 300] Compiling Data.Monoid.Alternate
+[130 of 300] Compiling Data.Time.Duration
+[132 of 300] Compiling Data.Functor.App
+[131 of 300] Compiling Data.Ord.Down
+[133 of 300] Compiling Data.String.Pattern
+[134 of 300] Compiling Data.Ord.Max
+[129 of 300] Compiling Data.Ord.Min
+[135 of 300] Compiling Test.BenchCheck
+[136 of 300] Compiling AppFFICheatcode
+[137 of 300] Compiling AppFFI
+[138 of 300] Compiling Data.String.Common
+[139 of 300] Compiling Data.Profunctor.Closed
+[140 of 300] Compiling Data.Functor.Invariant
+[141 of 300] Compiling Data.Functor.Compose
+[142 of 300] Compiling Data.Tuple
+[144 of 300] Compiling Data.Const
+[143 of 300] Compiling Data.Maybe
+[146 of 300] Compiling Data.Profunctor.Join
+[145 of 300] Compiling Data.Identity
+[147 of 300] Compiling Data.Profunctor.Split
+[148 of 300] Compiling Data.Functor.Contravariant
+[149 of 300] Compiling Data.Op
+[150 of 300] Compiling Data.Predicate
+[151 of 300] Compiling Data.Comparison
+[152 of 300] Compiling Data.Either
+[153 of 300] Compiling Data.String.CodeUnits
+[154 of 300] Compiling Data.Maybe.First
+[156 of 300] Compiling Data.Maybe.Last
+[155 of 300] Compiling Data.Number
+[157 of 300] Compiling Data.Equivalence
+[158 of 300] Compiling Data.Number.Approximate
+[159 of 300] Compiling Data.Int
+[160 of 300] Compiling Control.Monad.State.Class
+[161 of 300] Compiling Control.Monad.Writer.Class
+[163 of 300] Compiling Data.Profunctor.Costrong
+[162 of 300] Compiling Data.Profunctor.Strong
+[165 of 300] Compiling Data.Distributive
+[164 of 300] Compiling Data.Tuple.Nested
+[166 of 300] Compiling Data.Divide
+[167 of 300] Compiling Data.Divisible
+[169 of 300] Compiling Data.Decide
+[168 of 300] Compiling Data.Bifunctor
+[171 of 300] Compiling Data.Either.Inject
+[172 of 300] Compiling Effect.Exception
+[170 of 300] Compiling Data.Either.Nested
+[173 of 300] Compiling Data.Profunctor.Choice
+[174 of 300] Compiling Data.Profunctor.Cochoice
+[176 of 300] Compiling Effect.Exception.Unsafe
+[175 of 300] Compiling Control.Monad.Error.Class
+[177 of 300] Compiling Data.Profunctor.Star
+[178 of 300] Compiling Data.Functor.Coproduct
+[179 of 300] Compiling Control.Monad.Rec.Class
+[180 of 300] Compiling Data.Functor.Costar
+[181 of 300] Compiling Control.Biapply
+[182 of 300] Compiling Data.Functor.Product
+[183 of 300] Compiling Data.Decidable
+[184 of 300] Compiling Control.Biapplicative
+[185 of 300] Compiling Data.Functor.Product2
+[186 of 300] Compiling Data.Functor.Flip
+[187 of 300] Compiling Data.Functor.Clown
+[188 of 300] Compiling Data.Bifunctor.Join
+[189 of 300] Compiling Data.Functor.Joker
+[190 of 300] Compiling Data.Functor.Coproduct.Nested
+[191 of 300] Compiling Data.Functor.Coproduct.Inject
+[193 of 300] Compiling Data.Functor.Product.Nested
+[192 of 300] Compiling Data.Foldable
+[194 of 300] Compiling Data.FunctorWithIndex
+[195 of 300] Compiling Control.Monad.ST.Internal
+[197 of 300] Compiling Control.Monad.ST.Ref
+[196 of 300] Compiling Control.Monad.ST
+[198 of 300] Compiling Control.Monad.ST.Uncurried
+[199 of 300] Compiling Control.Monad.ST.Global
+[200 of 300] Compiling Control.Monad.ST.Class
+[201 of 300] Compiling Control.Monad.Maybe.Trans
+[202 of 300] Compiling Control.Monad.Except.Trans
+[203 of 300] Compiling Control.Monad.Cont.Trans
+[204 of 300] Compiling Control.Monad.RWS.Trans
+[206 of 300] Compiling Control.Monad.State.Trans
+[207 of 300] Compiling Control.Monad.Reader.Trans
+[205 of 300] Compiling Control.Monad.Writer.Trans
+[208 of 300] Compiling Data.Array.ST
+[209 of 300] Compiling Data.Array.ST.Partial
+[210 of 300] Compiling Data.Array.ST.Iterator
+[211 of 300] Compiling Control.Monad.Cont
+[212 of 300] Compiling Control.Monad.Reader
+[213 of 300] Compiling Control.Monad.Except
+[214 of 300] Compiling Control.Monad.State
+[216 of 300] Compiling Control.Parallel.Class
+[215 of 300] Compiling Control.Monad.Writer
+[217 of 300] Compiling Data.Traversable
+[218 of 300] Compiling Data.FoldableWithIndex
+[219 of 300] Compiling Data.Bifoldable
+[220 of 300] Compiling Data.Semigroup.Foldable
+[221 of 300] Compiling Control.Monad.RWS
+[222 of 300] Compiling Data.Semigroup.Traversable
+[223 of 300] Compiling Data.Bitraversable
+[224 of 300] Compiling Control.Parallel
+[225 of 300] Compiling Control.Monad.Identity.Trans
+[226 of 300] Compiling Effect.Aff
+[227 of 300] Compiling Data.Unfoldable1
+[228 of 300] Compiling Data.TraversableWithIndex
+[229 of 300] Compiling Control.Comonad.Trans.Class
+[230 of 300] Compiling Control.Comonad.Store.Trans
+[231 of 300] Compiling Control.Comonad.Traced.Trans
+[232 of 300] Compiling Data.Unfoldable
+[234 of 300] Compiling Control.Monad.Gen
+[233 of 300] Compiling Data.Enum
+[235 of 300] Compiling Data.Lazy
+[236 of 300] Compiling Control.Comonad.Env.Trans
+[237 of 300] Compiling Data.NonEmpty
+[238 of 300] Compiling Data.Time.Duration.Gen
+[239 of 300] Compiling Data.Array.NonEmpty.Internal
+[240 of 300] Compiling Effect.Aff.Compat
+[241 of 300] Compiling Data.Array
+[242 of 300] Compiling Data.Char
+[243 of 300] Compiling Data.Date.Component
+[244 of 300] Compiling Data.Enum.Generic
+[245 of 300] Compiling Data.Time.Component
+[246 of 300] Compiling Control.Comonad.Store.Class
+[248 of 300] Compiling Data.Char.Gen
+[247 of 300] Compiling Control.Monad.List.Trans
+[249 of 300] Compiling Data.Enum.Gen
+[250 of 300] Compiling Control.Monad.Gen.Common
+[251 of 300] Compiling Data.List.Lazy.Types
+[252 of 300] Compiling Data.List.Types
+[253 of 300] Compiling Control.Comonad.Store
+[254 of 300] Compiling Data.String.Gen
+[255 of 300] Compiling Control.Comonad.Env.Class
+[256 of 300] Compiling Data.Time
+[257 of 300] Compiling Data.Time.Component.Gen
+[258 of 300] Compiling Data.Date.Component.Gen
+[259 of 300] Compiling Data.Date
+[260 of 300] Compiling Control.Comonad.Env
+[261 of 300] Compiling Control.Comonad.Traced.Class
+[262 of 300] Compiling Data.Time.Gen
+[263 of 300] Compiling Control.Comonad.Traced
+[264 of 300] Compiling Data.Date.Gen
+[265 of 300] Compiling Data.DateTime
+[267 of 300] Compiling Test.ArrayOps
+[266 of 300] Compiling Data.String.CodePoints
+[269 of 300] Compiling Data.Array.Partial
+[268 of 300] Compiling Data.Array.NonEmpty
+[270 of 300] Compiling App
+[271 of 300] Compiling Data.DateTime.Gen
+[272 of 300] Compiling Data.DateTime.Instant
+[273 of 300] Compiling Data.List.Internal
+[274 of 300] Compiling Effect.Aff.Class
+[275 of 300] Compiling Effect.Now
+[276 of 300] Compiling Main
+[278 of 300] Compiling Data.List.Lazy
+[277 of 300] Compiling Data.List
+[279 of 300] Compiling Data.String
+[280 of 300] Compiling Data.String.CaseInsensitive
+[281 of 300] Compiling Data.String.Regex.Flags
+[282 of 300] Compiling Data.String.NonEmpty.Internal
+[283 of 300] Compiling Data.String.NonEmpty.CodeUnits
+[284 of 300] Compiling Data.String.Regex
+[285 of 300] Compiling Data.String.NonEmpty.CodePoints
+[286 of 300] Compiling Data.String.Regex.Unsafe
+[287 of 300] Compiling Data.String.NonEmpty
+[288 of 300] Compiling Data.String.NonEmpty.CaseInsensitive
+[290 of 300] Compiling Data.List.Partial
+[289 of 300] Compiling Data.List.NonEmpty
+[291 of 300] Compiling Data.Map.Internal
+[293 of 300] Compiling Data.List.ZipList
+[292 of 300] Compiling Data.List.Lazy.NonEmpty
+[294 of 300] Compiling Data.Set
+[295 of 300] Compiling Data.Map
+[296 of 300] Compiling Data.Set.NonEmpty
+[298 of 300] Compiling Data.Map.Gen
+[297 of 300] Compiling Data.Interval.Duration
+[299 of 300] Compiling Data.Interval
+[300 of 300] Compiling Data.Interval.Duration.Iso
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Compiling with backend "../sharpurs/sharpurs/bin/sharpurs"
+
+✓ Backend build succeeded.
+
+=== F#/C# ===
+Global warm-up in progress (this may take a moment)...
+
+Global warm-up complete. Starting benchmarks...
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+98.38 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+92.17 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+2206.63 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+97289.63 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+21729.29 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+5045.92 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+72784.46 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+11672.63 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+2633092.33 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+10394323.71 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+3016.62 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+1272196.92 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+775.79 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+7.42 μs
+
+
+==================================================
+
+Total exec time: 14514.33 ms
+

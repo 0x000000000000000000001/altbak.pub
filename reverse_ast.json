@@ -1,0 +1,703 @@
+{
+  "annotation": {
+    "meta": null,
+    "sourceSpan": {
+      "end": [
+        33,
+        38
+      ],
+      "start": [
+        33,
+        1
+      ]
+    },
+    "type": null
+  },
+  "bindType": "NonRec",
+  "expression": {
+    "annotation": {
+      "meta": null,
+      "sourceSpan": {
+        "end": [
+          33,
+          38
+        ],
+        "start": [
+          33,
+          1
+        ]
+      },
+      "type": 11
+    },
+    "argument": "lst",
+    "body": {
+      "annotation": {
+        "meta": {
+          "metaType": "IsWhere"
+        },
+        "sourceSpan": {
+          "end": [
+            34,
+            25
+          ],
+          "start": [
+            34,
+            15
+          ]
+        },
+        "type": 12
+      },
+      "binds": [
+        {
+          "bindType": "Rec",
+          "binds": [
+            {
+              "annotation": {
+                "meta": null,
+                "sourceSpan": {
+                  "end": [
+                    36,
+                    19
+                  ],
+                  "start": [
+                    36,
+                    3
+                  ]
+                },
+                "type": null
+              },
+              "expression": {
+                "annotation": {
+                  "meta": null,
+                  "sourceSpan": {
+                    "end": [
+                      36,
+                      19
+                    ],
+                    "start": [
+                      36,
+                      3
+                    ]
+                  },
+                  "type": 13
+                },
+                "argument": "v",
+                "body": {
+                  "annotation": {
+                    "meta": null,
+                    "sourceSpan": {
+                      "end": [
+                        36,
+                        19
+                      ],
+                      "start": [
+                        36,
+                        3
+                      ]
+                    },
+                    "type": 11
+                  },
+                  "argument": "v1",
+                  "body": {
+                    "annotation": {
+                      "meta": null,
+                      "sourceSpan": {
+                        "end": [
+                          36,
+                          19
+                        ],
+                        "start": [
+                          36,
+                          3
+                        ]
+                      },
+                      "type": 12
+                    },
+                    "caseAlternatives": [
+                      {
+                        "binders": [
+                          {
+                            "annotation": {
+                              "meta": {
+                                "constructorType": "SumType",
+                                "identifiers": [],
+                                "metaType": "IsConstructor"
+                              },
+                              "sourceSpan": {
+                                "end": [
+                                  36,
+                                  9
+                                ],
+                                "start": [
+                                  36,
+                                  6
+                                ]
+                              },
+                              "type": null
+                            },
+                            "binderType": "ConstructorBinder",
+                            "binders": [],
+                            "constructorName": {
+                              "identifier": "Nil",
+                              "moduleName": [
+                                "Test",
+                                "Primes"
+                              ]
+                            },
+                            "name": {
+                              "identifier": "Nil",
+                              "moduleName": [
+                                "Test",
+                                "Primes"
+                              ]
+                            },
+                            "typeName": {
+                              "identifier": "List",
+                              "moduleName": [
+                                "Test",
+                                "Primes"
+                              ]
+                            }
+                          },
+                          {
+                            "annotation": {
+                              "meta": null,
+                              "sourceSpan": {
+                                "end": [
+                                  36,
+                                  13
+                                ],
+                                "start": [
+                                  36,
+                                  10
+                                ]
+                              },
+                              "type": null
+                            },
+                            "binderType": "VarBinder",
+                            "identifier": "acc"
+                          }
+                        ],
+                        "expression": {
+                          "annotation": {
+                            "meta": null,
+                            "sourceSpan": {
+                              "end": [
+                                36,
+                                19
+                              ],
+                              "start": [
+                                36,
+                                16
+                              ]
+                            },
+                            "type": 12
+                          },
+                          "type": "Var",
+                          "value": {
+                            "identifier": "acc",
+                            "sourcePos": [
+                              36,
+                              10
+                            ]
+                          }
+                        },
+                        "isGuarded": false
+                      },
+                      {
+                        "binders": [
+                          {
+                            "annotation": {
+                              "meta": {
+                                "constructorType": "SumType",
+                                "identifiers": [
+                                  "value0",
+                                  "value1"
+                                ],
+                                "metaType": "IsConstructor"
+                              },
+                              "sourceSpan": {
+                                "end": [
+                                  37,
+                                  16
+                                ],
+                                "start": [
+                                  37,
+                                  7
+                                ]
+                              },
+                              "type": null
+                            },
+                            "binderType": "ConstructorBinder",
+                            "binders": [
+                              {
+                                "annotation": {
+                                  "meta": null,
+                                  "sourceSpan": {
+                                    "end": [
+                                      37,
+                                      13
+                                    ],
+                                    "start": [
+                                      37,
+                                      12
+                                    ]
+                                  },
+                                  "type": null
+                                },
+                                "binderType": "VarBinder",
+                                "identifier": "x"
+                              },
+                              {
+                                "annotation": {
+                                  "meta": null,
+                                  "sourceSpan": {
+                                    "end": [
+                                      37,
+                                      16
+                                    ],
+                                    "start": [
+                                      37,
+                                      14
+                                    ]
+                                  },
+                                  "type": null
+                                },
+                                "binderType": "VarBinder",
+                                "identifier": "xs"
+                              }
+                            ],
+                            "constructorName": {
+                              "identifier": "Cons",
+                              "moduleName": [
+                                "Test",
+                                "Primes"
+                              ]
+                            },
+                            "name": {
+                              "identifier": "Cons",
+                              "moduleName": [
+                                "Test",
+                                "Primes"
+                              ]
+                            },
+                            "typeName": {
+                              "identifier": "List",
+                              "moduleName": [
+                                "Test",
+                                "Primes"
+                              ]
+                            }
+                          },
+                          {
+                            "annotation": {
+                              "meta": null,
+                              "sourceSpan": {
+                                "end": [
+                                  37,
+                                  21
+                                ],
+                                "start": [
+                                  37,
+                                  18
+                                ]
+                              },
+                              "type": null
+                            },
+                            "binderType": "VarBinder",
+                            "identifier": "acc"
+                          }
+                        ],
+                        "expression": {
+                          "abstraction": {
+                            "abstraction": {
+                              "annotation": {
+                                "meta": null,
+                                "sourceSpan": {
+                                  "end": [
+                                    37,
+                                    26
+                                  ],
+                                  "start": [
+                                    37,
+                                    24
+                                  ]
+                                },
+                                "type": 13
+                              },
+                              "type": "Var",
+                              "value": {
+                                "identifier": "go",
+                                "sourcePos": [
+                                  36,
+                                  3
+                                ]
+                              }
+                            },
+                            "annotation": {
+                              "meta": null,
+                              "sourceSpan": {
+                                "end": [
+                                  37,
+                                  29
+                                ],
+                                "start": [
+                                  37,
+                                  24
+                                ]
+                              },
+                              "type": 11
+                            },
+                            "argument": {
+                              "annotation": {
+                                "meta": null,
+                                "sourceSpan": {
+                                  "end": [
+                                    37,
+                                    29
+                                  ],
+                                  "start": [
+                                    37,
+                                    27
+                                  ]
+                                },
+                                "type": 12
+                              },
+                              "type": "Var",
+                              "value": {
+                                "identifier": "xs",
+                                "sourcePos": [
+                                  37,
+                                  14
+                                ]
+                              }
+                            },
+                            "type": "App"
+                          },
+                          "annotation": {
+                            "meta": null,
+                            "sourceSpan": {
+                              "end": [
+                                37,
+                                42
+                              ],
+                              "start": [
+                                37,
+                                24
+                              ]
+                            },
+                            "type": 12
+                          },
+                          "argument": {
+                            "abstraction": {
+                              "abstraction": {
+                                "annotation": {
+                                  "meta": null,
+                                  "sourceSpan": {
+                                    "end": [
+                                      37,
+                                      37
+                                    ],
+                                    "start": [
+                                      37,
+                                      31
+                                    ]
+                                  },
+                                  "type": null
+                                },
+                                "expression": {
+                                  "annotation": {
+                                    "meta": {
+                                      "constructorType": "SumType",
+                                      "identifiers": [
+                                        "value0",
+                                        "value1"
+                                      ],
+                                      "metaType": "IsConstructor"
+                                    },
+                                    "sourceSpan": {
+                                      "end": [
+                                        37,
+                                        35
+                                      ],
+                                      "start": [
+                                        37,
+                                        31
+                                      ]
+                                    },
+                                    "type": 14
+                                  },
+                                  "type": "Var",
+                                  "value": {
+                                    "identifier": "Cons",
+                                    "moduleName": [
+                                      "Test",
+                                      "Primes"
+                                    ]
+                                  }
+                                },
+                                "type": "TypeApp",
+                                "typeArgument": 8
+                              },
+                              "annotation": {
+                                "meta": null,
+                                "sourceSpan": {
+                                  "end": [
+                                    37,
+                                    37
+                                  ],
+                                  "start": [
+                                    37,
+                                    31
+                                  ]
+                                },
+                                "type": 11
+                              },
+                              "argument": {
+                                "annotation": {
+                                  "meta": null,
+                                  "sourceSpan": {
+                                    "end": [
+                                      37,
+                                      37
+                                    ],
+                                    "start": [
+                                      37,
+                                      36
+                                    ]
+                                  },
+                                  "type": 8
+                                },
+                                "type": "Var",
+                                "value": {
+                                  "identifier": "x",
+                                  "sourcePos": [
+                                    37,
+                                    12
+                                  ]
+                                }
+                              },
+                              "type": "App"
+                            },
+                            "annotation": {
+                              "meta": null,
+                              "sourceSpan": {
+                                "end": [
+                                  37,
+                                  41
+                                ],
+                                "start": [
+                                  37,
+                                  31
+                                ]
+                              },
+                              "type": 12
+                            },
+                            "argument": {
+                              "annotation": {
+                                "meta": null,
+                                "sourceSpan": {
+                                  "end": [
+                                    37,
+                                    41
+                                  ],
+                                  "start": [
+                                    37,
+                                    38
+                                  ]
+                                },
+                                "type": 12
+                              },
+                              "type": "Var",
+                              "value": {
+                                "identifier": "acc",
+                                "sourcePos": [
+                                  37,
+                                  18
+                                ]
+                              }
+                            },
+                            "type": "App"
+                          },
+                          "type": "App"
+                        },
+                        "isGuarded": false
+                      }
+                    ],
+                    "caseExpressions": [
+                      {
+                        "annotation": {
+                          "meta": null,
+                          "sourceSpan": {
+                            "end": [
+                              36,
+                              19
+                            ],
+                            "start": [
+                              36,
+                              3
+                            ]
+                          },
+                          "type": null
+                        },
+                        "type": "Var",
+                        "value": {
+                          "identifier": "v",
+                          "sourcePos": [
+                            0,
+                            0
+                          ]
+                        }
+                      },
+                      {
+                        "annotation": {
+                          "meta": null,
+                          "sourceSpan": {
+                            "end": [
+                              36,
+                              19
+                            ],
+                            "start": [
+                              36,
+                              3
+                            ]
+                          },
+                          "type": null
+                        },
+                        "type": "Var",
+                        "value": {
+                          "identifier": "v1",
+                          "sourcePos": [
+                            0,
+                            0
+                          ]
+                        }
+                      }
+                    ],
+                    "type": "Case"
+                  },
+                  "type": "Abs"
+                },
+                "type": "Abs"
+              },
+              "identifier": "go"
+            }
+          ]
+        }
+      ],
+      "expression": {
+        "abstraction": {
+          "abstraction": {
+            "annotation": {
+              "meta": null,
+              "sourceSpan": {
+                "end": [
+                  34,
+                  17
+                ],
+                "start": [
+                  34,
+                  15
+                ]
+              },
+              "type": 13
+            },
+            "type": "Var",
+            "value": {
+              "identifier": "go",
+              "sourcePos": [
+                36,
+                3
+              ]
+            }
+          },
+          "annotation": {
+            "meta": null,
+            "sourceSpan": {
+              "end": [
+                34,
+                21
+              ],
+              "start": [
+                34,
+                15
+              ]
+            },
+            "type": 11
+          },
+          "argument": {
+            "annotation": {
+              "meta": null,
+              "sourceSpan": {
+                "end": [
+                  34,
+                  21
+                ],
+                "start": [
+                  34,
+                  18
+                ]
+              },
+              "type": 12
+            },
+            "type": "Var",
+            "value": {
+              "identifier": "lst",
+              "sourcePos": [
+                34,
+                1
+              ]
+            }
+          },
+          "type": "App"
+        },
+        "annotation": {
+          "meta": null,
+          "sourceSpan": {
+            "end": [
+              34,
+              25
+            ],
+            "start": [
+              34,
+              15
+            ]
+          },
+          "type": 12
+        },
+        "argument": {
+          "annotation": {
+            "meta": {
+              "constructorType": "SumType",
+              "identifiers": [],
+              "metaType": "IsConstructor"
+            },
+            "sourceSpan": {
+              "end": [
+                34,
+                25
+              ],
+              "start": [
+                34,
+                22
+              ]
+            },
+            "type": 12
+          },
+          "type": "Var",
+          "value": {
+            "identifier": "Nil",
+            "moduleName": [
+              "Test",
+              "Primes"
+            ]
+          }
+        },
+        "type": "App"
+      },
+      "type": "Let"
+    },
+    "type": "Abs"
+  },
+  "identifier": "reverse"
+}
