@@ -1,8 +1,4 @@
 module Main where
-
-import Prelude
-import Effect (Effect)
-import App as App
-
-main :: Effect Unit
-main = App.main
+import Data.List (List(..))
+test :: List Int
+test = Cons 1 Nil
