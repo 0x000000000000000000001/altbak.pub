@@ -4,6 +4,7 @@ package:
     - arrays
     - console
     - effect
+    - lists
     - prelude
 workspace:
   packageSet:
