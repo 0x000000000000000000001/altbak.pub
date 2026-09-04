@@ -75,6 +75,16 @@ elif [ "$MODE" == "fficc" ]; then
 fi
 
 echo 'Building...'
+spago fetch >/dev/null
+find -L .spago -name "*.ss" | while read -r ss_file; do
+  js_file="${ss_file%.ss}.js"
+  if [ ! -f "$js_file" ]; then
+    purs_file="${ss_file%.ss}.purs"
+    if [ -f "$purs_file" ]; then
+      grep -oE 'foreign import [^:]+' "$purs_file" | awk '{print "export const "$3" = () => {};"}' > "$js_file"
+    fi
+  fi
+done
 spago build >/dev/null
 PATH="$(pwd)/bin/scm:$PATH" purescm build >/dev/null
 mkdir -p run/bak/scm/output_bin
