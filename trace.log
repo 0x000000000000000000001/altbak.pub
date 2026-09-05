@@ -1,0 +1,28 @@
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-go-test
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+=== Go ===
+--------------------------------------------------
+
+(Test)
+
+TCStateT
+
+(Output & Warm-up)
+
+42
+
+(Execution time - best of 10)
+
+0.00 μs
+

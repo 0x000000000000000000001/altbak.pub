@@ -1,0 +1,1297 @@
+{
+  "annotation": {
+    "meta": null,
+    "sourceSpan": {
+      "end": [
+        78,
+        60
+      ],
+      "start": [
+        76,
+        1
+      ]
+    },
+    "type": 230
+  },
+  "expression": {
+    "annotation": {
+      "meta": null,
+      "sourceSpan": {
+        "end": [
+          78,
+          60
+        ],
+        "start": [
+          76,
+          1
+        ]
+      },
+      "type": 231
+    },
+    "argument": "dictMonad",
+    "body": {
+      "annotation": {
+        "meta": null,
+        "sourceSpan": {
+          "end": [
+            0,
+            0
+          ],
+          "start": [
+            0,
+            0
+          ]
+        },
+        "type": null
+      },
+      "binds": [
+        {
+          "annotation": {
+            "meta": null,
+            "sourceSpan": {
+              "end": [
+                0,
+                0
+              ],
+              "start": [
+                0,
+                0
+              ]
+            },
+            "type": null
+          },
+          "bindType": "NonRec",
+          "expression": {
+            "abstraction": {
+              "annotation": {
+                "meta": null,
+                "sourceSpan": {
+                  "end": [
+                    78,
+                    60
+                  ],
+                  "start": [
+                    78,
+                    5
+                  ]
+                },
+                "type": null
+              },
+              "expression": {
+                "annotation": {
+                  "meta": null,
+                  "sourceSpan": {
+                    "end": [
+                      0,
+                      0
+                    ],
+                    "start": [
+                      0,
+                      0
+                    ]
+                  },
+                  "type": null
+                },
+                "type": "Var",
+                "value": {
+                  "identifier": "dictMonad",
+                  "sourcePos": [
+                    0,
+                    0
+                  ]
+                }
+              },
+              "fieldName": "Bind1",
+              "type": "Accessor"
+            },
+            "annotation": {
+              "meta": {
+                "metaType": "IsSyntheticApp"
+              },
+              "sourceSpan": {
+                "end": [
+                  78,
+                  60
+                ],
+                "start": [
+                  78,
+                  5
+                ]
+              },
+              "type": 91
+            },
+            "argument": {
+              "annotation": {
+                "meta": null,
+                "sourceSpan": {
+                  "end": [
+                    0,
+                    0
+                  ],
+                  "start": [
+                    0,
+                    0
+                  ]
+                },
+                "type": null
+              },
+              "type": "Var",
+              "value": {
+                "identifier": "undefined",
+                "moduleName": [
+                  "Prim"
+                ]
+              }
+            },
+            "type": "App"
+          },
+          "identifier": "Bind1"
+        }
+      ],
+      "expression": {
+        "abstraction": {
+          "annotation": {
+            "meta": null,
+            "sourceSpan": {
+              "end": [
+                78,
+                60
+              ],
+              "start": [
+                76,
+                1
+              ]
+            },
+            "type": 232
+          },
+          "expression": {
+            "annotation": {
+              "meta": {
+                "metaType": "IsNewtype"
+              },
+              "sourceSpan": {
+                "end": [
+                  78,
+                  60
+                ],
+                "start": [
+                  76,
+                  1
+                ]
+              },
+              "type": 240
+            },
+            "type": "Var",
+            "value": {
+              "identifier": "Bind$Dict",
+              "moduleName": [
+                "Control",
+                "Bind"
+              ]
+            }
+          },
+          "type": "TypeApp",
+          "typeArgument": 2
+        },
+        "annotation": {
+          "meta": null,
+          "sourceSpan": {
+            "end": [
+              78,
+              60
+            ],
+            "start": [
+              76,
+              1
+            ]
+          },
+          "type": 221
+        },
+        "argument": {
+          "annotation": {
+            "meta": null,
+            "sourceSpan": {
+              "end": [
+                78,
+                60
+              ],
+              "start": [
+                76,
+                1
+              ]
+            },
+            "type": 233
+          },
+          "type": "Literal",
+          "value": {
+            "literalType": "ObjectLiteral",
+            "value": [
+              [
+                "bind",
+                {
+                  "annotation": {
+                    "meta": null,
+                    "sourceSpan": {
+                      "end": [
+                        78,
+                        60
+                      ],
+                      "start": [
+                        76,
+                        1
+                      ]
+                    },
+                    "type": 236
+                  },
+                  "argument": "v",
+                  "body": {
+                    "annotation": {
+                      "meta": null,
+                      "sourceSpan": {
+                        "end": [
+                          78,
+                          60
+                        ],
+                        "start": [
+                          76,
+                          1
+                        ]
+                      },
+                      "type": 247
+                    },
+                    "argument": "f",
+                    "body": {
+                      "annotation": {
+                        "meta": null,
+                        "sourceSpan": {
+                          "end": [
+                            78,
+                            60
+                          ],
+                          "start": [
+                            76,
+                            1
+                          ]
+                        },
+                        "type": 174
+                      },
+                      "caseAlternatives": [
+                        {
+                          "binders": [
+                            {
+                              "annotation": {
+                                "meta": {
+                                  "metaType": "IsNewtype"
+                                },
+                                "sourceSpan": {
+                                  "end": [
+                                    77,
+                                    17
+                                  ],
+                                  "start": [
+                                    77,
+                                    9
+                                  ]
+                                },
+                                "type": 175
+                              },
+                              "binderType": "ConstructorBinder",
+                              "binders": [
+                                {
+                                  "annotation": {
+                                    "meta": null,
+                                    "sourceSpan": {
+                                      "end": [
+                                        77,
+                                        17
+                                      ],
+                                      "start": [
+                                        77,
+                                        16
+                                      ]
+                                    },
+                                    "type": 11
+                                  },
+                                  "binderType": "VarBinder",
+                                  "identifier": "x"
+                                }
+                              ],
+                              "constructorName": {
+                                "identifier": "StateT",
+                                "moduleName": [
+                                  "Control",
+                                  "Monad",
+                                  "State",
+                                  "Trans"
+                                ]
+                              },
+                              "name": {
+                                "identifier": "StateT",
+                                "moduleName": [
+                                  "Control",
+                                  "Monad",
+                                  "State",
+                                  "Trans"
+                                ]
+                              },
+                              "typeName": {
+                                "identifier": "StateT",
+                                "moduleName": [
+                                  "Control",
+                                  "Monad",
+                                  "State",
+                                  "Trans"
+                                ]
+                              }
+                            },
+                            {
+                              "annotation": {
+                                "meta": null,
+                                "sourceSpan": {
+                                  "end": [
+                                    77,
+                                    20
+                                  ],
+                                  "start": [
+                                    77,
+                                    19
+                                  ]
+                                },
+                                "type": 248
+                              },
+                              "binderType": "VarBinder",
+                              "identifier": "f1"
+                            }
+                          ],
+                          "expression": {
+                            "abstraction": {
+                              "annotation": {
+                                "meta": null,
+                                "sourceSpan": {
+                                  "end": [
+                                    78,
+                                    60
+                                  ],
+                                  "start": [
+                                    77,
+                                    23
+                                  ]
+                                },
+                                "type": 176
+                              },
+                              "expression": {
+                                "annotation": {
+                                  "meta": null,
+                                  "sourceSpan": {
+                                    "end": [
+                                      78,
+                                      60
+                                    ],
+                                    "start": [
+                                      77,
+                                      23
+                                    ]
+                                  },
+                                  "type": 15
+                                },
+                                "expression": {
+                                  "annotation": {
+                                    "meta": null,
+                                    "sourceSpan": {
+                                      "end": [
+                                        78,
+                                        60
+                                      ],
+                                      "start": [
+                                        77,
+                                        23
+                                      ]
+                                    },
+                                    "type": 16
+                                  },
+                                  "expression": {
+                                    "annotation": {
+                                      "meta": {
+                                        "metaType": "IsNewtype"
+                                      },
+                                      "sourceSpan": {
+                                        "end": [
+                                          77,
+                                          29
+                                        ],
+                                        "start": [
+                                          77,
+                                          23
+                                        ]
+                                      },
+                                      "type": 0
+                                    },
+                                    "type": "Var",
+                                    "value": {
+                                      "identifier": "StateT",
+                                      "moduleName": [
+                                        "Control",
+                                        "Monad",
+                                        "State",
+                                        "Trans"
+                                      ]
+                                    }
+                                  },
+                                  "type": "TypeApp",
+                                  "typeArgument": 3
+                                },
+                                "type": "TypeApp",
+                                "typeArgument": 5
+                              },
+                              "type": "TypeApp",
+                              "typeArgument": 36
+                            },
+                            "annotation": {
+                              "meta": null,
+                              "sourceSpan": {
+                                "end": [
+                                  78,
+                                  60
+                                ],
+                                "start": [
+                                  77,
+                                  23
+                                ]
+                              },
+                              "type": 174
+                            },
+                            "argument": {
+                              "annotation": {
+                                "meta": null,
+                                "sourceSpan": {
+                                  "end": [
+                                    78,
+                                    60
+                                  ],
+                                  "start": [
+                                    77,
+                                    30
+                                  ]
+                                },
+                                "type": 174
+                              },
+                              "argument": "s",
+                              "body": {
+                                "abstraction": {
+                                  "abstraction": {
+                                    "abstraction": {
+                                      "annotation": {
+                                        "meta": null,
+                                        "sourceSpan": {
+                                          "end": [
+                                            78,
+                                            60
+                                          ],
+                                          "start": [
+                                            78,
+                                            5
+                                          ]
+                                        },
+                                        "type": 253
+                                      },
+                                      "expression": {
+                                        "annotation": {
+                                          "meta": null,
+                                          "sourceSpan": {
+                                            "end": [
+                                              78,
+                                              60
+                                            ],
+                                            "start": [
+                                              78,
+                                              5
+                                            ]
+                                          },
+                                          "type": 254
+                                        },
+                                        "expression": {
+                                          "annotation": {
+                                            "meta": null,
+                                            "sourceSpan": {
+                                              "end": [
+                                                78,
+                                                60
+                                              ],
+                                              "start": [
+                                                78,
+                                                5
+                                              ]
+                                            },
+                                            "type": 102
+                                          },
+                                          "expression": {
+                                            "annotation": {
+                                              "meta": {
+                                                "metaType": "IsForeign"
+                                              },
+                                              "sourceSpan": {
+                                                "end": [
+                                                  78,
+                                                  12
+                                                ],
+                                                "start": [
+                                                  78,
+                                                  9
+                                                ]
+                                              },
+                                              "type": 103
+                                            },
+                                            "type": "Var",
+                                            "value": {
+                                              "identifier": "bind",
+                                              "moduleName": [
+                                                "Control",
+                                                "Bind"
+                                              ]
+                                            }
+                                          },
+                                          "type": "TypeApp",
+                                          "typeArgument": 5
+                                        },
+                                        "type": "TypeApp",
+                                        "typeArgument": 6
+                                      },
+                                      "type": "TypeApp",
+                                      "typeArgument": 124
+                                    },
+                                    "annotation": {
+                                      "meta": null,
+                                      "sourceSpan": {
+                                        "end": [
+                                          78,
+                                          60
+                                        ],
+                                        "start": [
+                                          78,
+                                          5
+                                        ]
+                                      },
+                                      "type": 252
+                                    },
+                                    "argument": {
+                                      "annotation": {
+                                        "meta": null,
+                                        "sourceSpan": {
+                                          "end": [
+                                            0,
+                                            0
+                                          ],
+                                          "start": [
+                                            0,
+                                            0
+                                          ]
+                                        },
+                                        "type": null
+                                      },
+                                      "type": "Var",
+                                      "value": {
+                                        "identifier": "Bind1",
+                                        "sourcePos": [
+                                          0,
+                                          0
+                                        ]
+                                      }
+                                    },
+                                    "type": "App"
+                                  },
+                                  "annotation": {
+                                    "meta": null,
+                                    "sourceSpan": {
+                                      "end": [
+                                        78,
+                                        60
+                                      ],
+                                      "start": [
+                                        78,
+                                        5
+                                      ]
+                                    },
+                                    "type": 250
+                                  },
+                                  "argument": {
+                                    "abstraction": {
+                                      "annotation": {
+                                        "meta": null,
+                                        "sourceSpan": {
+                                          "end": [
+                                            78,
+                                            6
+                                          ],
+                                          "start": [
+                                            78,
+                                            5
+                                          ]
+                                        },
+                                        "type": 2
+                                      },
+                                      "type": "Var",
+                                      "value": {
+                                        "identifier": "x",
+                                        "sourcePos": [
+                                          77,
+                                          16
+                                        ]
+                                      }
+                                    },
+                                    "annotation": {
+                                      "meta": null,
+                                      "sourceSpan": {
+                                        "end": [
+                                          78,
+                                          8
+                                        ],
+                                        "start": [
+                                          78,
+                                          5
+                                        ]
+                                      },
+                                      "type": 4
+                                    },
+                                    "argument": {
+                                      "annotation": {
+                                        "meta": null,
+                                        "sourceSpan": {
+                                          "end": [
+                                            78,
+                                            8
+                                          ],
+                                          "start": [
+                                            78,
+                                            7
+                                          ]
+                                        },
+                                        "type": 3
+                                      },
+                                      "type": "Var",
+                                      "value": {
+                                        "identifier": "s",
+                                        "sourcePos": [
+                                          77,
+                                          31
+                                        ]
+                                      }
+                                    },
+                                    "type": "App"
+                                  },
+                                  "type": "App"
+                                },
+                                "annotation": {
+                                  "meta": null,
+                                  "sourceSpan": {
+                                    "end": [
+                                      78,
+                                      60
+                                    ],
+                                    "start": [
+                                      78,
+                                      5
+                                    ]
+                                  },
+                                  "type": 162
+                                },
+                                "argument": {
+                                  "annotation": {
+                                    "meta": null,
+                                    "sourceSpan": {
+                                      "end": [
+                                        78,
+                                        60
+                                      ],
+                                      "start": [
+                                        78,
+                                        13
+                                      ]
+                                    },
+                                    "type": 251
+                                  },
+                                  "argument": "v1",
+                                  "body": {
+                                    "annotation": {
+                                      "meta": null,
+                                      "sourceSpan": {
+                                        "end": [
+                                          78,
+                                          60
+                                        ],
+                                        "start": [
+                                          78,
+                                          13
+                                        ]
+                                      },
+                                      "type": 162
+                                    },
+                                    "caseAlternatives": [
+                                      {
+                                        "binders": [
+                                          {
+                                            "annotation": {
+                                              "meta": {
+                                                "constructorType": "ProductType",
+                                                "identifiers": [
+                                                  "value0",
+                                                  "value1"
+                                                ],
+                                                "metaType": "IsConstructor"
+                                              },
+                                              "sourceSpan": {
+                                                "end": [
+                                                  78,
+                                                  25
+                                                ],
+                                                "start": [
+                                                  78,
+                                                  15
+                                                ]
+                                              },
+                                              "type": 258
+                                            },
+                                            "binderType": "ConstructorBinder",
+                                            "binders": [
+                                              {
+                                                "annotation": {
+                                                  "meta": null,
+                                                  "sourceSpan": {
+                                                    "end": [
+                                                      78,
+                                                      22
+                                                    ],
+                                                    "start": [
+                                                      78,
+                                                      21
+                                                    ]
+                                                  },
+                                                  "type": 12
+                                                },
+                                                "binderType": "VarBinder",
+                                                "identifier": "v2"
+                                              },
+                                              {
+                                                "annotation": {
+                                                  "meta": null,
+                                                  "sourceSpan": {
+                                                    "end": [
+                                                      78,
+                                                      25
+                                                    ],
+                                                    "start": [
+                                                      78,
+                                                      23
+                                                    ]
+                                                  },
+                                                  "type": 12
+                                                },
+                                                "binderType": "VarBinder",
+                                                "identifier": "s'"
+                                              }
+                                            ],
+                                            "constructorName": {
+                                              "identifier": "Tuple",
+                                              "moduleName": [
+                                                "Data",
+                                                "Tuple"
+                                              ]
+                                            },
+                                            "name": {
+                                              "identifier": "Tuple",
+                                              "moduleName": [
+                                                "Data",
+                                                "Tuple"
+                                              ]
+                                            },
+                                            "typeName": {
+                                              "identifier": "Tuple",
+                                              "moduleName": [
+                                                "Data",
+                                                "Tuple"
+                                              ]
+                                            }
+                                          }
+                                        ],
+                                        "expression": {
+                                          "annotation": {
+                                            "meta": null,
+                                            "sourceSpan": {
+                                              "end": [
+                                                78,
+                                                60
+                                              ],
+                                              "start": [
+                                                78,
+                                                30
+                                              ]
+                                            },
+                                            "type": 162
+                                          },
+                                          "binds": [
+                                            {
+                                              "annotation": {
+                                                "meta": null,
+                                                "sourceSpan": {
+                                                  "end": [
+                                                    78,
+                                                    60
+                                                  ],
+                                                  "start": [
+                                                    76,
+                                                    1
+                                                  ]
+                                                },
+                                                "type": 174
+                                              },
+                                              "bindType": "NonRec",
+                                              "expression": {
+                                                "abstraction": {
+                                                  "annotation": {
+                                                    "meta": null,
+                                                    "sourceSpan": {
+                                                      "end": [
+                                                        78,
+                                                        36
+                                                      ],
+                                                      "start": [
+                                                        78,
+                                                        35
+                                                      ]
+                                                    },
+                                                    "type": 237
+                                                  },
+                                                  "type": "Var",
+                                                  "value": {
+                                                    "identifier": "f1",
+                                                    "sourcePos": [
+                                                      77,
+                                                      19
+                                                    ]
+                                                  }
+                                                },
+                                                "annotation": {
+                                                  "meta": null,
+                                                  "sourceSpan": {
+                                                    "end": [
+                                                      78,
+                                                      38
+                                                    ],
+                                                    "start": [
+                                                      78,
+                                                      35
+                                                    ]
+                                                  },
+                                                  "type": 174
+                                                },
+                                                "argument": {
+                                                  "annotation": {
+                                                    "meta": null,
+                                                    "sourceSpan": {
+                                                      "end": [
+                                                        78,
+                                                        38
+                                                      ],
+                                                      "start": [
+                                                        78,
+                                                        37
+                                                      ]
+                                                    },
+                                                    "type": 7
+                                                  },
+                                                  "type": "Var",
+                                                  "value": {
+                                                    "identifier": "v2",
+                                                    "sourcePos": [
+                                                      78,
+                                                      21
+                                                    ]
+                                                  }
+                                                },
+                                                "type": "App"
+                                              },
+                                              "identifier": "v3"
+                                            }
+                                          ],
+                                          "expression": {
+                                            "annotation": {
+                                              "meta": null,
+                                              "sourceSpan": {
+                                                "end": [
+                                                  78,
+                                                  60
+                                                ],
+                                                "start": [
+                                                  78,
+                                                  30
+                                                ]
+                                              },
+                                              "type": null
+                                            },
+                                            "caseAlternatives": [
+                                              {
+                                                "binders": [
+                                                  {
+                                                    "annotation": {
+                                                      "meta": {
+                                                        "metaType": "IsNewtype"
+                                                      },
+                                                      "sourceSpan": {
+                                                        "end": [
+                                                          78,
+                                                          51
+                                                        ],
+                                                        "start": [
+                                                          78,
+                                                          42
+                                                        ]
+                                                      },
+                                                      "type": 259
+                                                    },
+                                                    "binderType": "ConstructorBinder",
+                                                    "binders": [
+                                                      {
+                                                        "annotation": {
+                                                          "meta": null,
+                                                          "sourceSpan": {
+                                                            "end": [
+                                                              78,
+                                                              51
+                                                            ],
+                                                            "start": [
+                                                              78,
+                                                              49
+                                                            ]
+                                                          },
+                                                          "type": 11
+                                                        },
+                                                        "binderType": "VarBinder",
+                                                        "identifier": "st"
+                                                      }
+                                                    ],
+                                                    "constructorName": {
+                                                      "identifier": "StateT",
+                                                      "moduleName": [
+                                                        "Control",
+                                                        "Monad",
+                                                        "State",
+                                                        "Trans"
+                                                      ]
+                                                    },
+                                                    "name": {
+                                                      "identifier": "StateT",
+                                                      "moduleName": [
+                                                        "Control",
+                                                        "Monad",
+                                                        "State",
+                                                        "Trans"
+                                                      ]
+                                                    },
+                                                    "typeName": {
+                                                      "identifier": "StateT",
+                                                      "moduleName": [
+                                                        "Control",
+                                                        "Monad",
+                                                        "State",
+                                                        "Trans"
+                                                      ]
+                                                    }
+                                                  }
+                                                ],
+                                                "expression": {
+                                                  "abstraction": {
+                                                    "annotation": {
+                                                      "meta": null,
+                                                      "sourceSpan": {
+                                                        "end": [
+                                                          78,
+                                                          57
+                                                        ],
+                                                        "start": [
+                                                          78,
+                                                          55
+                                                        ]
+                                                      },
+                                                      "type": 174
+                                                    },
+                                                    "type": "Var",
+                                                    "value": {
+                                                      "identifier": "st",
+                                                      "sourcePos": [
+                                                        78,
+                                                        49
+                                                      ]
+                                                    }
+                                                  },
+                                                  "annotation": {
+                                                    "meta": null,
+                                                    "sourceSpan": {
+                                                      "end": [
+                                                        78,
+                                                        60
+                                                      ],
+                                                      "start": [
+                                                        78,
+                                                        55
+                                                      ]
+                                                    },
+                                                    "type": 162
+                                                  },
+                                                  "argument": {
+                                                    "annotation": {
+                                                      "meta": null,
+                                                      "sourceSpan": {
+                                                        "end": [
+                                                          78,
+                                                          60
+                                                        ],
+                                                        "start": [
+                                                          78,
+                                                          58
+                                                        ]
+                                                      },
+                                                      "type": 3
+                                                    },
+                                                    "type": "Var",
+                                                    "value": {
+                                                      "identifier": "s'",
+                                                      "sourcePos": [
+                                                        78,
+                                                        23
+                                                      ]
+                                                    }
+                                                  },
+                                                  "type": "App"
+                                                },
+                                                "isGuarded": false
+                                              }
+                                            ],
+                                            "caseExpressions": [
+                                              {
+                                                "annotation": {
+                                                  "meta": null,
+                                                  "sourceSpan": {
+                                                    "end": [
+                                                      78,
+                                                      60
+                                                    ],
+                                                    "start": [
+                                                      76,
+                                                      1
+                                                    ]
+                                                  },
+                                                  "type": 174
+                                                },
+                                                "type": "Var",
+                                                "value": {
+                                                  "identifier": "v3",
+                                                  "sourcePos": [
+                                                    0,
+                                                    0
+                                                  ]
+                                                }
+                                              }
+                                            ],
+                                            "type": "Case"
+                                          },
+                                          "type": "Let"
+                                        },
+                                        "isGuarded": false
+                                      }
+                                    ],
+                                    "caseExpressions": [
+                                      {
+                                        "annotation": {
+                                          "meta": null,
+                                          "sourceSpan": {
+                                            "end": [
+                                              0,
+                                              0
+                                            ],
+                                            "start": [
+                                              0,
+                                              0
+                                            ]
+                                          },
+                                          "type": 6
+                                        },
+                                        "type": "Var",
+                                        "value": {
+                                          "identifier": "v1",
+                                          "sourcePos": [
+                                            0,
+                                            0
+                                          ]
+                                        }
+                                      }
+                                    ],
+                                    "type": "Case"
+                                  },
+                                  "type": "Abs"
+                                },
+                                "type": "App"
+                              },
+                              "type": "Abs"
+                            },
+                            "type": "App"
+                          },
+                          "isGuarded": false
+                        }
+                      ],
+                      "caseExpressions": [
+                        {
+                          "annotation": {
+                            "meta": null,
+                            "sourceSpan": {
+                              "end": [
+                                78,
+                                60
+                              ],
+                              "start": [
+                                77,
+                                3
+                              ]
+                            },
+                            "type": 2
+                          },
+                          "type": "Var",
+                          "value": {
+                            "identifier": "v",
+                            "sourcePos": [
+                              0,
+                              0
+                            ]
+                          }
+                        },
+                        {
+                          "annotation": {
+                            "meta": null,
+                            "sourceSpan": {
+                              "end": [
+                                78,
+                                60
+                              ],
+                              "start": [
+                                77,
+                                3
+                              ]
+                            },
+                            "type": 237
+                          },
+                          "type": "Var",
+                          "value": {
+                            "identifier": "f",
+                            "sourcePos": [
+                              77,
+                              19
+                            ]
+                          }
+                        }
+                      ],
+                      "type": "Case"
+                    },
+                    "type": "Abs"
+                  },
+                  "type": "Abs"
+                }
+              ],
+              [
+                "Apply0",
+                {
+                  "annotation": {
+                    "meta": null,
+                    "sourceSpan": {
+                      "end": [
+                        78,
+                        60
+                      ],
+                      "start": [
+                        76,
+                        1
+                      ]
+                    },
+                    "type": 238
+                  },
+                  "argument": "$__unused",
+                  "body": {
+                    "abstraction": {
+                      "annotation": {
+                        "meta": null,
+                        "sourceSpan": {
+                          "end": [
+                            0,
+                            0
+                          ],
+                          "start": [
+                            0,
+                            0
+                          ]
+                        },
+                        "type": null
+                      },
+                      "type": "Var",
+                      "value": {
+                        "identifier": "applyStateT",
+                        "moduleName": [
+                          "Control",
+                          "Monad",
+                          "State",
+                          "Trans"
+                        ]
+                      }
+                    },
+                    "annotation": {
+                      "meta": {
+                        "metaType": "IsSyntheticApp"
+                      },
+                      "sourceSpan": {
+                        "end": [
+                          78,
+                          60
+                        ],
+                        "start": [
+                          76,
+                          1
+                        ]
+                      },
+                      "type": 239
+                    },
+                    "argument": {
+                      "annotation": {
+                        "meta": null,
+                        "sourceSpan": {
+                          "end": [
+                            0,
+                            0
+                          ],
+                          "start": [
+                            0,
+                            0
+                          ]
+                        },
+                        "type": null
+                      },
+                      "type": "Var",
+                      "value": {
+                        "identifier": "dictMonad",
+                        "sourcePos": [
+                          0,
+                          0
+                        ]
+                      }
+                    },
+                    "type": "App"
+                  },
+                  "type": "Abs"
+                }
+              ]
+            ]
+          }
+        },
+        "type": "App"
+      },
+      "type": "Let"
+    },
+    "type": "Abs"
+  },
+  "identifier": "bindStateT"
+}
