@@ -1,0 +1,185 @@
+4349-                            "end": [
+4350-                              80,
+4351-                              54
+4352-                            ],
+4353-                            "start": [
+4354-                              80,
+4355-                              1
+4356-                            ]
+4357-                          },
+4358-                          "type": 149
+4359-                        },
+4360-                        "argument": "$__unused",
+4361-                        "body": {
+4362-                          "abstraction": {
+4363-                            "annotation": {
+4364-                              "meta": null,
+4365-                              "sourceSpan": {
+4366-                                "end": [
+4367-                                  0,
+4368-                                  0
+4369-                                ],
+4370-                                "start": [
+4371-                                  0,
+4372-                                  0
+4373-                                ]
+4374-                              },
+4375-                              "type": null
+4376-                            },
+4377-                            "type": "Var",
+4378-                            "value": {
+4379:                              "identifier": "bindStateT",
+4380-                              "moduleName": [
+4381-                                "Control",
+4382-                                "Monad",
+4383-                                "State",
+4384-                                "Trans"
+4385-                              ]
+4386-                            }
+4387-                          },
+4388-                          "annotation": {
+4389-                            "meta": {
+4390-                              "metaType": "IsSyntheticApp"
+4391-                            },
+4392-                            "sourceSpan": {
+4393-                              "end": [
+4394-                                80,
+4395-                                54
+4396-                              ],
+4397-                              "start": [
+4398-                                80,
+4399-                                1
+4400-                              ]
+4401-                            },
+4402-                            "type": 150
+4403-                          },
+4404-                          "argument": {
+4405-                            "annotation": {
+4406-                              "meta": null,
+4407-                              "sourceSpan": {
+4408-                                "end": [
+4409-                                  0,
+--
+5581-                                  "start": [
+5582-                                    0,
+5583-                                    0
+5584-                                  ]
+5585-                                },
+5586-                                "type": null
+5587-                              },
+5588-                              "type": "Var",
+5589-                              "value": {
+5590-                                "identifier": "dictMonad",
+5591-                                "sourcePos": [
+5592-                                  0,
+5593-                                  0
+5594-                                ]
+5595-                              }
+5596-                            },
+5597-                            "type": "App"
+5598-                          },
+5599-                          "type": "Abs"
+5600-                        }
+5601-                      ]
+5602-                    ]
+5603-                  }
+5604-                },
+5605-                "type": "App"
+5606-              },
+5607-              "type": "Let"
+5608-            },
+5609-            "type": "Abs"
+5610-          },
+5611:          "identifier": "bindStateT"
+5612-        },
+5613-        {
+5614-          "annotation": {
+5615-            "meta": null,
+5616-            "sourceSpan": {
+5617-              "end": [
+5618-                63,
+5619-                13
+5620-              ],
+5621-              "start": [
+5622-                62,
+5623-                1
+5624-              ]
+5625-            },
+5626-            "type": null
+5627-          },
+5628-          "expression": {
+5629-            "annotation": {
+5630-              "meta": null,
+5631-              "sourceSpan": {
+5632-                "end": [
+5633-                  63,
+5634-                  13
+5635-                ],
+5636-                "start": [
+5637-                  62,
+5638-                  1
+5639-                ]
+5640-              },
+5641-              "type": 170
+--
+21852-                      },
+21853-                      "type": "Abs"
+21854-                    }
+21855-                  ]
+21856-                ]
+21857-              }
+21858-            },
+21859-            "type": "App"
+21860-          },
+21861-          "type": "Let"
+21862-        },
+21863-        "type": "Abs"
+21864-      },
+21865-      "identifier": "monadPlusStateT"
+21866-    }
+21867-  ],
+21868-  "exports": [
+21869-    "StateT",
+21870-    "runStateT",
+21871-    "evalStateT",
+21872-    "execStateT",
+21873-    "mapStateT",
+21874-    "withStateT",
+21875-    "newtypeStateT",
+21876-    "functorStateT",
+21877-    "applyStateT",
+21878-    "applicativeStateT",
+21879-    "altStateT",
+21880-    "plusStateT",
+21881-    "alternativeStateT",
+21882:    "bindStateT",
+21883-    "monadStateT",
+21884-    "monadRecStateT",
+21885-    "monadPlusStateT",
+21886-    "monadTransStateT",
+21887-    "lazyStateT",
+21888-    "monadEffectState",
+21889-    "monadContStateT",
+21890-    "monadThrowStateT",
+21891-    "monadErrorStateT",
+21892-    "monadAskStateT",
+21893-    "monadReaderStateT",
+21894-    "monadStateStateT",
+21895-    "monadTellStateT",
+21896-    "monadWriterStateT",
+21897-    "semigroupStateT",
+21898-    "monoidStateT",
+21899-    "monadSTStateT"
+21900-  ],
+21901-  "foreign": [],
+21902-  "foreignAnnotations": {},
+21903-  "imports": [
+21904-    {
+21905-      "annotation": {
+21906-        "meta": null,
+21907-        "sourceSpan": {
+21908-          "end": [
+21909-            147,
+21910-            27
+21911-          ],
+21912-          "start": [
