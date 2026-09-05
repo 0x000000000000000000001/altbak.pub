@@ -47,7 +47,7 @@ List Processing (900 elements):
 
 (Execution time - best of 10)
 
-8.00 μs
+7.00 μs
 
 --------------------------------------------------
 
@@ -89,7 +89,7 @@ Ackermann (3, 4):
 
 (Execution time - best of 10)
 
-18.00 μs
+15.00 μs
 
 --------------------------------------------------
 
@@ -103,7 +103,7 @@ Church Numerals (100k Closure Applications):
 
 (Execution time - best of 10)
 
-1682.00 μs
+1583.00 μs
 
 --------------------------------------------------
 
@@ -117,7 +117,7 @@ Prime Sieve (sum primes up to 500):
 
 (Execution time - best of 10)
 
-68.00 μs
+63.00 μs
 
 --------------------------------------------------
 
@@ -131,7 +131,7 @@ Red-Black Tree (100k Worst-Case Insertions):
 
 (Execution time - best of 10)
 
-21871.00 μs
+21371.00 μs
 
 --------------------------------------------------
 
@@ -145,7 +145,7 @@ Polymorphism (10M Type Class Dict Lookups):
 
 (Execution time - best of 10)
 
-2327.00 μs
+2217.00 μs
 
 --------------------------------------------------
 
@@ -159,7 +159,7 @@ State Monad (1.2k Binds, 60 Stack Depth):
 
 (Execution time - best of 10)
 
-141.00 μs
+108.00 μs
 
 --------------------------------------------------
 
@@ -173,7 +173,7 @@ Lazy Evaluation (1M Thunks Forced, 1k Depth):
 
 (Execution time - best of 10)
 
-15364.00 μs
+15155.00 μs
 
 --------------------------------------------------
 
@@ -187,7 +187,7 @@ Array Processing (900 elements):
 
 (Execution time - best of 10)
 
-14.75 μs
+13.00 μs
 
 --------------------------------------------------
 
@@ -206,4 +206,4 @@ RowToList (Keys Count):
 
 ==================================================
 
-Total exec time: 41.53 ms
+Total exec time: 40.57 ms
