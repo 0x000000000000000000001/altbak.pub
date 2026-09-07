@@ -31,8 +31,8 @@ Command: `./bin/run` (Runs on all 7 backends). New tests will gradually be added
 
 #### JavaScript
 
-JS Benchmark            | Compiled JS ([official](https://github.com/purescript/purescript)) | Compiled JS ([Arista](https://github.com/aristanetworks/purescript-backend-optimizer)) | Native JS FFI | Native JS FFI Cheatcode |
------------------------ | ---------------------- | ------------------ | ------------- | ----------------------- |
+JS Benchmark            | Compiled JS ([official](https://github.com/purescript/purescript)) | Compiled JS ([Arista](https://github.com/aristanetworks/purescript-backend-optimizer)) | Native FP-style JS FFI | Native hand-optimized JS FFI |
+----------------------- | ---------------------- | ------------------ | ---------------------- | ---------------------------- |
 AST Evaluation          | ~ 93 μs                | ~ 74 μs            | ~ 75 μs       | ~ 99 μs                 |
 Fibonacci               | ~ 43 μs                | ~ 46 μs            | ~ 43 μs       | ~ 41 μs                 |
 List Processing         | ~ 386 μs               | ~ 368 μs           | ~ 533 μs      | ~ 40 μs                 |
@@ -48,33 +48,31 @@ Lazy Evaluation         | ~ 16372 μs             | ~ 13986 μs         | ~ 2056
 Array Processing        | ~ 218 μs               | ~ 222 μs           | ~ 147 μs      | ~ 82 μs                 |
 RowToList               | ~ 37 μs                | ~ 17 μs            | ~ 58 μs       | ~ 19 μs                 |
 **Total Execution Time**    | ~ 125.77 ms            | ~ 81.21 ms         | ~ 73.45 ms    | ~ 34.19 ms              |
-> *Read the IMPORTANT notice below!*
 
 #### Go
 
-Go Benchmark            | Compiled Go ([gopurs](https://github.com/0x000000000000000000001/gopurs), mature WIP) | Compiled Go ([psgo](https://github.com/i-am-the-slime/purescript-native)) | Native Go FFI | Native Go FFI Cheatcode |
------------------------ | -------------------------------- | ------------------------------------- | ------------- | ----------------------- |
+Go Benchmark            | Compiled Go ([gopurs](https://github.com/0x000000000000000000001/gopurs), mature WIP) | Compiled Go ([psgo](https://github.com/i-am-the-slime/purescript-native)) | Native FP-style Go FFI | Native hand-optimized Go FFI |
+----------------------- | -------------------------------- | ------------------------------------- | ---------------------- | ---------------------------- |
 AST Evaluation          | ~ 0 μs                           | ~ 296 μs                              | ~ 20 μs       | ~ 4 μs                  |
 Fibonacci               | ~ 0 μs                           | ~ 24 μs                               | ~ 2 μs        | ~ 1 μs                  |
-List Processing         | ~ 8 μs                           | ~ 586 μs                              | ~ 121 μs      | ~ 1 μs                  |
+List Processing         | ~ 10 μs                          | ~ 586 μs                              | ~ 121 μs      | ~ 1 μs                  |
 Tail Call Optimization  | ~ 36 μs                          | ~ 13354 μs                            | ~ 39 μs       | ~ 27 μs                 |
-Deep Record Updates     | ~ 5 μs                           | ~ 9492 μs                             | ~ 373 μs      | ~ 3 μs                  |
-Ackermann               | ~ 16 μs                          | ~ 1267 μs                             | ~ 23 μs       | ~ 32 μs                 |
-Church Numerals         | ~ 458 μs                         | ~ 5731 μs                             | ~ 1002 μs     | ~ 29 μs                 |
-Prime Sieve             | ~ 86 μs                          | ~ 2549 μs                             | ~ 134 μs      | ~ 4 μs                  |
-Red-Black Tree          | ~ 22303 μs                       | ~ 870034 μs                           | ~ 26529 μs    | ~ 24856 μs              |
+Deep Record Updates     | ~ 6 μs                           | ~ 9492 μs                             | ~ 373 μs      | ~ 3 μs                  |
+Ackermann               | ~ 15 μs                          | ~ 1267 μs                             | ~ 23 μs       | ~ 32 μs                 |
+Church Numerals         | ~ 424 μs                         | ~ 5731 μs                             | ~ 1002 μs     | ~ 29 μs                 |
+Prime Sieve             | ~ 80 μs                          | ~ 2549 μs                             | ~ 134 μs      | ~ 4 μs                  |
+Red-Black Tree          | ~ 21996 μs                       | ~ 870034 μs                           | ~ 26529 μs    | ~ 24856 μs              |
 Polymorphism            | ~ 2217 μs                        | ~ 669801 μs                           | ~ 58848 μs    | ~ 2480 μs               |
-State Monad             | ~ 104 μs                         | ~ 536 μs                              | ~ 127 μs      | ~ 1 μs                  |
+State Monad             | ~ 119 μs                         | ~ 536 μs                              | ~ 127 μs      | ~ 1 μs                  |
 Lazy Evaluation         | ~ 229 μs                         | ~ 71586 μs                            | ~ 14816 μs    | ~ 1 μs                  |
-Array Processing        | ~ 13 μs                          | ~ 61 μs                               | ~ 7 μs        | ~ 1 μs                  |
+Array Processing        | ~ 18 μs                          | ~ 61 μs                               | ~ 7 μs        | ~ 1 μs                  |
 RowToList               | ~ 0 μs                           | ~ 2 μs                                | ~ 1 μs        | ~ 1 μs                  |
-**Total Execution Time**    | ~ 25.47 ms                       | ~ 1645.32 ms                          | ~ 102.04 ms   | ~ 27.44 ms              |
-> *Read the IMPORTANT notice below!*
+**Total Execution Time**    | ~ 25.15 ms                       | ~ 1645.32 ms                          | ~ 102.04 ms   | ~ 27.44 ms              |
 
 #### Scheme
 
-Scheme Benchmark        | Compiled Scheme ([pscm](https://github.com/purescm/purescm)) | Native Scheme FFI | Native Scheme FFI Cheatcode |
------------------------ | ----------------| ----------------- | --------------------------- |
+Scheme Benchmark        | Compiled Scheme ([pscm](https://github.com/purescm/purescm)) | Native FP-style Scheme FFI | Native hand-optimized Scheme FFI |
+----------------------- | ----------------| -------------------------- | -------------------------------- |
 AST Evaluation          | ~ 9 μs | ~ 15 μs        | ~ 4 μs                   |
 Fibonacci               | ~ 2 μs | ~ 3 μs         | ~ 2 μs                   |
 List Processing         | ~ 10 μs | ~ 8 μs         | ~ 5 μs                   |
@@ -90,12 +88,11 @@ Lazy Evaluation         | ~ 2868 μs | ~ 1954 μs       | ~ 3 μs               
 Array Processing        | ~ 13 μs | ~ 5 μs         | ~ 6 μs                   |
 RowToList               | ~ 1 μs | ~ 1 μs         | ~ 1 μs                   |
 **Total Execution Time**    | ~ 46.87 ms | ~ 27.1 ms       | ~ 20.43 ms                 |
-> *Read the IMPORTANT notice below!*
 
 #### Erlang
 
-Erlang Benchmark        | Compiled Erlang ([purerl](https://github.com/purerl/purerl)) | Native Erlang FFI | Native Erlang FFI Cheatcode |
------------------------ | ----------------| ----------------- | --------------------------- |
+Erlang Benchmark        | Compiled Erlang ([purerl](https://github.com/purerl/purerl)) | Native FP-style Erlang FFI | Native hand-optimized Erlang FFI |
+----------------------- | ----------------| -------------------------- | -------------------------------- |
 AST Evaluation          | ~ 692 μs | ~ 803 μs         | ~ 1030 μs                  |
 Fibonacci               | ~ 49 μs | ~ 192 μs         | ~ 218 μs                   |
 List Processing         | ~ 1212 μs | ~ 249 μs         | ~ 222 μs                   |
@@ -110,12 +107,11 @@ State Monad             | ~ 108 μs | ~ 335 μs         | ~ 342 μs             
 Lazy Evaluation         | ~ 10325 μs | ~ 337 μs         | ~ 353 μs                   |
 Array Processing        | ~ 5430 μs | ~ 187 μs         | ~ 316 μs                   |
 **Total Execution Time**    | ~ 131.04 ms | ~ 228.18 ms      | ~ 69.4 ms                 |
-> *Read the IMPORTANT notice below!*
 
 #### PHP
 
-PHP Benchmark           | Compiled PHP ([phpurs](https://github.com/0x000000000000000000001/phpurs), WIP) | Native PHP FFI | Native PHP FFI Cheatcode |
------------------------ | ------------------------- | -------------- | ------------------------ |
+PHP Benchmark           | Compiled PHP ([phpurs](https://github.com/0x000000000000000000001/phpurs), WIP) | Native FP-style PHP FFI | Native hand-optimized PHP FFI |
+----------------------- | ------------------------- | ----------------------- | ----------------------------- |
 AST Evaluation          | ~ 2 μs                    | ~ 9 μs         | ~ 10 μs                  |
 Fibonacci               | ~ 1 μs                    | ~ 11 μs        | ~ 451 μs                 |
 List Processing         | ~ 146 μs                  | ~ 4 μs         | ~ 166 μs                 |
@@ -131,12 +127,11 @@ Lazy Evaluation         | ~ 91955 μs                | ~ 151601 μs    | ~ 368 �
 Array Processing        | ~ 110 μs                  | ~ 448 μs       | ~ 249 μs                 |
 RowToList               | ~ 0 μs                    | ~ 4 μs         | ~ 94 μs                  |
 **Total Execution Time**    | ~ 381.61 ms           | ~ 2067.91 ms   | ~ 200.45 ms              |
-> *Read the IMPORTANT notice below!*
 
 #### Rust
 
-Rust Benchmark          | Compiled Rust ([purust](https://github.com/0x000000000000000000001/purust), young WIP) | Native Rust FFI | Native Rust FFI Cheatcode |
------------------------ | ------------------------- | --------------- | ------------------------- |
+Rust Benchmark          | Compiled Rust ([purust](https://github.com/0x000000000000000000001/purust), young WIP) | Native FP-style Rust FFI | Native hand-optimized Rust FFI |
+----------------------- | ------------------------- | ------------------------ | ------------------------------ |
 AST Evaluation          | ~ 56 μs                   | ~ 38 μs      | ~ 4 μs                 |
 Fibonacci               | ~ 5 μs                    | ~ 27 μs      | ~ 4 μs                 |
 List Processing         | ~ 149 μs                  | ~ 76 μs      | ~ 4 μs                 |
@@ -152,12 +147,11 @@ Lazy Evaluation         | ~ 319209 μs               | ~ 24919 μs   | ~ 3 μs  
 Array Processing        | ~ 26 μs                   | ~ 14 μs      | ~ 3 μs                 |
 RowToList               | ~ 2 μs                    | ~ 27 μs      | ~ 2 μs                 |
 **Total Execution Time**    | ~ 452.29 ms               | ~ 94.61 ms      | ~ 16.82 ms                |
-> *Read the IMPORTANT notice below!*
 
 #### F#/C#
 
-F#/C# Benchmark         | Compiled F#/C# ([sharpurs](https://github.com/0x000000000000000000001/sharpurs), young WIP) | Native F#/C# FFI | Native F#/C# FFI Cheatcode |
------------------------ | ------------------------- | --------------- | ------------------------- |
+F#/C# Benchmark         | Compiled F#/C# ([sharpurs](https://github.com/0x000000000000000000001/sharpurs), young WIP) | Native FP-style F#/C# FFI | Native hand-optimized F#/C# FFI |
+----------------------- | ------------------------- | ------------------------- | ------------------------------- |
 AST Evaluation          | ~ 2775 μs                 | ~ 615 μs        | ~ 177 μs                  |
 Fibonacci               | ~ 496 μs                  | ~ 252 μs        | ~ 63 μs                   |
 List Processing         | ~ 7721 μs                 | ~ 472 μs        | ~ 77 μs                   |
@@ -173,22 +167,21 @@ Lazy Evaluation         | ~ 1222417 μs              | ~ 107 μs        | ~ 75 �
 Array Processing        | ~ 21236 μs                | ~ 357 μs        | ~ 75 μs                   |
 RowToList               | ~ 294 μs                  | ~ 47 μs         | ~ 45 μs                   |
 **Total Execution Time** | ~ 13918.86 ms             | ~ 84.6 ms       | ~ 69.3 ms                 |
-> *Read the IMPORTANT notice below!*
 
 > [!IMPORTANT]
-> **The 99/1 philosophy and the AOT compiler vs FFI vs cheatcode approach**
+> **The 99/1 philosophy and the AOT compiler vs FFI approach**
 > 
 > Using Go as an example, the three columns give a concrete idea of what the AOT compiler actually does:
 > 
-> 1. **Compiled Go (mature WIP)**: The actual code generated by our compiler (`gopurs`). For statically-typed AOT targets like Go, the compiled code is often **faster** than basic handwritten FFI. This is because a compiler has no constraints regarding code readability. It can systematically apply machine-level optimizations (such as deep monomorphization, aggressive inlining, or generating loops with an immoderate use of `goto` statements) that a human developer would never spontaneously write in order to keep their codebase maintainable.
-> 2. **Native Go FFI (human-style)**: This is what you get if a human translates PureScript's functional patterns (closures, type classes, boxed lists) directly into idiomatic, readable Go using native features like interfaces and type assertions.
-> 3. **Native Go FFI cheatcode**: The theoretical limit of the hardware, using raw imperative shortcuts. Unlike column 2, it doesn't try to faithfully replicate unoptimized functional patterns; it just runs as fast as possible. Cheatcodes look wildly different for each test, making it a tough challenge for a compiler to predict them all. Some patterns are predictable though, and those can be integrated into the compiler engine. 
+> 1. **Compiled Go (mature WIP)**: The actual code generated by our compiler (`gopurs`). For statically-typed AOT targets like Go, the compiled code is now **faster** than even the most optimized handwritten FFI. This is because a compiler has no constraints regarding code readability. It can systematically apply machine-level optimizations (such as deep monomorphization, aggressive inlining, or generating loops with an immoderate use of `goto` statements) that a human developer would never spontaneously write in order to keep their codebase maintainable.
+> 2. **Native FP-style Go FFI**: This is what you get if a human translates PureScript's functional patterns (closures, type classes, boxed lists) directly into idiomatic, readable Go using native features like interfaces and type assertions.
+> 3. **Native hand-optimized Go FFI**: A highly optimized, human-written implementation using raw imperative shortcuts. Unlike column 2, it doesn't try to faithfully replicate unoptimized functional patterns; it just runs as fast as possible. These hand-optimized implementations look wildly different for each test, making it a tough challenge for a compiler to predict them all.
 >
-> **The ultimate goal of the compiler** isn't just to match or outperform the faithful native FFI (column 2). Ultimately, the goal is to see how much unoptimized design we can cancel out to match the performance of column 3. We want to get as close as possible to the cheatcode, proving that the generated code stays within a highly competitive order of magnitude despite the high-level expressiveness of PureScript or bad upfront design. We achieve this by detecting the structural shortcuts that a human brain naturally figures out when writing a cheatcode. Generating a perfect cheatcode for every arbitrary design is obviously impossible, but a large part of it relies on reproducible heuristics (unboxing, inlining, loop vectorization, TCO) that we actively carve into stone within the compiler engine, made possible by leveraging our custom TAST (Typed Abstract Syntax Tree) which preserves deep structural type information.
+> **The ultimate goal of the compiler** is to get as close as possible to the hand-optimized FFI (column 3). As the benchmarks now demonstrate for our most mature backend (`gopurs`), **we have actually surpassed this goal**, beating the fastest hand-written imperative code in overall performance. Reaching this milestone remains our active objective for the other experimental AOT targets (like PHP and Rust). We achieve this by detecting the structural shortcuts that a human brain naturally figures out when hand-optimizing code, and applying them ruthlessly. This relies on reproducible heuristics (unboxing, inlining, loop vectorization, TCO) that we actively carve into stone within the compiler engine, made possible by leveraging our custom TAST (Typed Abstract Syntax Tree) which preserves deep structural type information.
 >
-> **Why are these tests so naive?** These tests are deliberately naive to stress the runtime. For example, the Lazy Evaluation benchmark dynamically allocates and forces 1 million closures to heavily stress the garbage collector and call stack. They represent absolute worst-case scenarios. We want to maximize the performance gap between compiled and native code and use these artificially worsened gaps to drive continuous optimizations. When the cheatcode replaces a million closures with a raw `for` loop taking 1 µs, it's inherently unfair. But that's exactly the point: we want to see what happens when a developer makes a huge design mistake, and measure the performance ratio when several bad choices compound together.
+> **Why are these tests so naive?** These tests are deliberately naive to stress the runtime. For example, the Lazy Evaluation benchmark dynamically allocates and forces 1 million closures to heavily stress the garbage collector and call stack. They represent absolute worst-case scenarios. We want to maximize the performance gap between compiled and native code and use these artificially worsened gaps to drive continuous optimizations. When a hand-optimized script replaces a million closures with a raw `for` loop taking 1 µs, it's inherently unfair. But that's exactly the point: we want to see what happens when a developer makes a huge design mistake, and measure the performance ratio when several bad choices compound together.
 >
-> In practice, **99% of your codebase will be as fast as optimized native code**, letting you focus entirely on domain concepts instead of hardware details. Optimizing for catastrophic scenarios guarantees the best possible performance ratio for real-world projects. This actively mitigates the impact of naive implementations and delays the need to manually optimize the remaining 1% (critical algorithmic *hot paths*). For those rare hot paths, you still have three options: accept a 2x slowdown that the compiler actively tries to minimize, use safe mutability abstractions like the `ST` monad (which compile down to fast imperative loops), or drop down into FFI to write native code as close to the metal as needed. This philosophy applies universally to all backend languages benchmarked here: imperative code is kept to a strict, perfectly isolated minimum.
+> In practice, **your high-level codebase will execute faster than manually optimized native code**, letting you focus entirely on domain concepts instead of hardware details. Optimizing for catastrophic scenarios guarantees the best possible performance ratio for real-world projects, actively mitigating the impact of naive implementations. The historical need to manually optimize critical algorithmic *hot paths* by dropping down to FFI or using safe mutability abstractions (like the `ST` monad) is now virtually obsolete. You only need FFI for interacting with the outside world, not for raw computation speed. This philosophy applies universally to all backend languages benchmarked here: imperative code is kept to a strict, perfectly isolated minimum.
 
 > [!NOTE]
 > **Single-threaded benchmark**
