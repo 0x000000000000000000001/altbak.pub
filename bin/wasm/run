@@ -1,0 +1,115 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+WORK="$ROOT/run/bak/wasm"
+BACKEND="${PURS_WASM_ROOT:-$ROOT/../purescript-backend-wasm}"
+CLEAN=0
+TEST_NAME=""
+
+usage() {
+  echo "Usage: $0 [-c|--clean] [--test NAME]"
+  echo "Runs the core PureScript benchmarks with purs-wasm on Node (Wasm GC)."
+  echo "PURS_WASM_ROOT overrides the sibling purescript-backend-wasm checkout."
+  echo "PURS_WASM_PURS overrides the standard PureScript compiler executable."
+}
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -c|--clean) CLEAN=1; shift ;;
+    --test)
+      if [[ $# -lt 2 ]]; then usage >&2; exit 1; fi
+      TEST_NAME="$2"
+      case "$TEST_NAME" in
+        AstTree|Fib|ListOps|TCO|Records|Ackermann|Church|Primes|RBTree|Polymorphism|StateMonad|LazyEvaluation|ArrayOps|RowToList) ;;
+        *) echo "WASM: unsupported core test '$TEST_NAME'." >&2; exit 1 ;;
+      esac
+      shift 2
+      ;;
+    --x|--ffi|--fficc)
+      echo "WASM: skipping $1 (only compiled core tests are supported)."
+      exit 0
+      ;;
+    -h|--help) usage; exit 0 ;;
+    *) echo "Unknown option: $1" >&2; usage >&2; exit 1 ;;
+  esac
+done
+
+for tool in node spago; do
+  command -v "$tool" >/dev/null || { echo "WASM: missing $tool." >&2; exit 1; }
+done
+node -e 'if (Number(process.versions.node.split(".")[0]) < 22) { console.error("WASM requires Node.js 22 or newer (Wasm GC)."); process.exit(1); }'
+# The npm .bin/purs in this workspace can point at a custom compiler emitting
+# typed CoreFn (TypeApp), which purs-wasm cannot decode. Prefer npm's stock binary.
+PURS_BIN="${PURS_WASM_PURS:-$ROOT/run/bak/js/node_modules/purescript/purs.bin}"
+if [[ -z "${PURS_WASM_PURS:-}" && ! -x "$PURS_BIN" ]]; then
+  PURS_BIN="$(command -v purs || true)"
+else
+  PURS_BIN="$(command -v "$PURS_BIN" || true)"
+fi
+if [[ -z "$PURS_BIN" ]]; then
+  echo "WASM: no PureScript compiler found; set PURS_WASM_PURS to a standard purs 0.15.16 executable." >&2
+  exit 1
+fi
+PURS_BIN="$(cd "$(dirname "$PURS_BIN")" && pwd)/$(basename "$PURS_BIN")"
+PURS_VERSION="$("$PURS_BIN" --version)"
+if [[ ! "$PURS_VERSION" =~ ^0\.15\.16([[:space:]]|$) ]]; then
+  echo "WASM: expected standard purs 0.15.16; found $PURS_VERSION. Set PURS_WASM_PURS to select it." >&2
+  exit 1
+fi
+if [[ ! -f "$BACKEND/purs-wasm/index.js" ]]; then
+  echo "WASM: no backend CLI at $BACKEND/purs-wasm/index.js; set PURS_WASM_ROOT to a built checkout." >&2
+  exit 1
+fi
+BACKEND="$(cd "$BACKEND" && pwd)"
+
+# Keep a separate Spago workspace: other runners' root symlinks and artifacts
+# may point at native package forks or an incompatible compiler version.
+if [[ "$CLEAN" == 1 ]]; then rm -rf "$WORK"; fi
+mkdir -p "$WORK" "$ROOT/var/benchmark"
+mkdir -p "$WORK/bin"
+ln -sf "$PURS_BIN" "$WORK/bin/purs"
+export PATH="$WORK/bin:$PATH"
+rm -rf "$WORK/src"
+mkdir -p "$WORK/src/Test"
+cp "$ROOT/bin/wasm/spago.yaml" "$WORK/spago.yaml"
+cp "$ROOT/src/Bench.purs" "$ROOT/src/Bench.js" "$ROOT/src/App.purs" "$WORK/src/"
+for name in AstTree Fib ListOps TCO Records Ackermann Church Primes RBTree Polymorphism StateMonad LazyEvaluation ArrayOps RowToList; do
+  cp "$ROOT/src/Test/$name.purs" "$WORK/src/Test/"
+done
+
+ENTRY_POINT=App
+RESULT_NAME=wasm
+if [[ -n "$TEST_NAME" ]]; then
+  ENTRY_POINT=AppWasm
+  RESULT_NAME="wasm_$TEST_NAME"
+  cat > "$WORK/src/AppWasm.purs" <<EOF
+module AppWasm where
+import Prelude
+import Effect (Effect)
+import Bench (runBench)
+import Test.$TEST_NAME as Selected
+
+main :: Effect Unit
+main = void (runBench Selected.describe Selected.act)
+EOF
+fi
+
+cd "$WORK"
+echo "Building CoreFn for WASM ($PURS_VERSION)..."
+if ! spago build > corefn-build.log 2>&1; then
+  cat corefn-build.log >&2
+  exit 1
+fi
+echo "Building WASM..."
+if ! node "$BACKEND/purs-wasm/index.js" build -I output -O output-wasm -e "$ENTRY_POINT" -E --platform node > wasm-build.log 2>&1; then
+  cat wasm-build.log >&2
+  exit 1
+fi
+
+# Reject any silent JS fallback for an algorithm or library operation. Only
+# timing, formatting, logging and the original opaque input barrier may cross.
+node "$ROOT/bin/wasm/check-imports.mjs" output-wasm/index.wasm
+echo "=== WASM GC / Node $(node --version) (purs-wasm) ==="
+node output-wasm/index.mjs | tee "$WORK/result.tmp"
+mv "$WORK/result.tmp" "$ROOT/var/benchmark/${RESULT_NAME}_time.txt"

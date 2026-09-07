@@ -44,6 +44,9 @@ if [ "$MODE" == "test" ]; then
   
   echo ""
   ./bin/es/run $CLEAN --test "$TEST_NAME" || echo "=== ES failed ==="
+
+  echo ""
+  ./bin/wasm/run $CLEAN --test "$TEST_NAME" || echo "=== WASM failed ==="
   
   echo ""
   ./bin/php/run $CLEAN --test "$TEST_NAME" || echo "=== PHP failed ==="
@@ -114,6 +117,9 @@ else
   
   echo ""
   ./bin/es/run $CLEAN || echo "=== ES failed ==="
+
+  echo ""
+  ./bin/wasm/run $CLEAN || echo "=== WASM failed ==="
   
   echo ""
   ./bin/scm/run $CLEAN || echo "=== Scheme failed ==="

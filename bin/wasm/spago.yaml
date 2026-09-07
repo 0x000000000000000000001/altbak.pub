@@ -1,0 +1,10 @@
+package:
+  name: ps-wasm-test
+  dependencies:
+    - arrays
+    - console
+    - effect
+    - prelude
+workspace:
+  packageSet:
+    registry: 77.7.0
