@@ -1,0 +1,555 @@
+=== Rebuilding purust backend ===
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: purust
+
+Downloading dependencies...
+Building...
+[1 of 1] Compiling Spago.Generated.BuildInfo
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: purust
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Bundling...
+
+  bin/purust.js  1.1mb ⚠️
+
+⚡ Done in 35ms
+
+✓ Bundle succeeded.
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-rust-test
+
+Downloading dependencies...
+Refreshing the Registry Index...
+Building...
+[  1 of 301] Compiling Unsafe.Coerce
+[  3 of 301] Compiling Type.Equality
+[  4 of 301] Compiling Record.Unsafe
+[  2 of 301] Compiling Type.Proxy
+[  5 of 301] Compiling Spago.Generated.BuildInfo
+[  6 of 301] Compiling Data.Int.Bits
+[  7 of 301] Compiling Data.Unit
+[  8 of 301] Compiling Data.Void
+[  9 of 301] Compiling Partial
+[ 10 of 301] Compiling Data.Traversable.Accum
+[ 11 of 301] Compiling Data.String.Unsafe
+[ 12 of 301] Compiling Data.Boolean
+[ 13 of 301] Compiling Control.Semigroupoid
+[ 14 of 301] Compiling Data.NaturalTransformation
+[ 15 of 301] Compiling Data.Symbol
+[ 16 of 301] Compiling Data.Function.Uncurried
+[ 18 of 301] Compiling Partial.Unsafe
+[ 17 of 301] Compiling Control.Lazy
+[ 20 of 301] Compiling Control.Category
+[ 21 of 301] Compiling Safe.Coerce
+[ 19 of 301] Compiling Data.Exists
+[ 22 of 301] Compiling Data.HeytingAlgebra
+[ 23 of 301] Compiling Data.Semiring
+[ 24 of 301] Compiling Data.Semigroup
+[ 25 of 301] Compiling Data.Show
+[ 26 of 301] Compiling Data.Ring
+[ 27 of 301] Compiling Data.Generic.Rep
+[ 29 of 301] Compiling Data.BooleanAlgebra
+[ 28 of 301] Compiling Data.Eq
+[ 30 of 301] Compiling Data.CommutativeRing
+[ 31 of 301] Compiling Data.EuclideanRing
+[ 32 of 301] Compiling Data.Ordering
+[ 33 of 301] Compiling Data.Ord
+[ 34 of 301] Compiling Data.DivisionRing
+[ 35 of 301] Compiling Data.Field
+[ 39 of 301] Compiling Data.Bounded
+[ 38 of 301] Compiling Data.Reflectable
+[ 36 of 301] Compiling Data.Function
+[ 37 of 301] Compiling Data.Monoid
+[ 40 of 301] Compiling Data.Functor
+[ 41 of 301] Compiling Control.Alt
+[ 42 of 301] Compiling Control.Extend
+[ 43 of 301] Compiling Data.Bounded.Generic
+[ 44 of 301] Compiling Control.Apply
+[ 45 of 301] Compiling Data.Monoid.Generic
+[ 46 of 301] Compiling Control.Plus
+[ 47 of 301] Compiling Control.Comonad
+[ 48 of 301] Compiling Control.Applicative
+[ 49 of 301] Compiling Control.Alternative
+[ 50 of 301] Compiling Control.Bind
+[ 51 of 301] Compiling Control.Monad
+[ 53 of 301] Compiling Control.MonadPlus
+[ 52 of 301] Compiling Prelude
+[ 54 of 301] Compiling Data.Ring.Generic
+[ 56 of 301] Compiling Data.Monoid.Endo
+[ 55 of 301] Compiling Data.Monoid.Dual
+[ 57 of 301] Compiling Data.Semigroup.Generic
+[ 59 of 301] Compiling Data.Monoid.Disj
+[ 58 of 301] Compiling Data.Traversable.Accum.Internal
+[ 60 of 301] Compiling Control.Monad.Cont.Class
+[ 61 of 301] Compiling Data.Semiring.Generic
+[ 62 of 301] Compiling Control.Monad.Reader.Class
+[ 63 of 301] Compiling Control.Monad.Trans.Class
+[ 65 of 301] Compiling Data.Monoid.Conj
+[ 64 of 301] Compiling Data.Number.Format
+[ 66 of 301] Compiling Data.Monoid.Additive
+[ 67 of 301] Compiling Data.Semigroup.Last
+[ 68 of 301] Compiling Data.Semigroup.First
+[ 69 of 301] Compiling Effect
+[ 70 of 301] Compiling Data.Eq.Generic
+[ 72 of 301] Compiling Data.HeytingAlgebra.Generic
+[ 73 of 301] Compiling Data.Show.Generic
+[ 74 of 301] Compiling Control.Monad.Gen.Class
+[ 71 of 301] Compiling Data.Ord.Generic
+[ 75 of 301] Compiling Data.Monoid.Multiplicative
+[ 77 of 301] Compiling Test.Main
+[ 76 of 301] Compiling Effect.Console
+[ 78 of 301] Compiling Effect.Uncurried
+[ 79 of 301] Compiling Effect.Class
+[ 80 of 301] Compiling Effect.Ref
+[ 81 of 301] Compiling Effect.Unsafe
+[ 82 of 301] Compiling Bench
+[ 84 of 301] Compiling Test.TC
+[ 83 of 301] Compiling Effect.Class.Console
+[ 85 of 301] Compiling Data.Newtype
+[ 87 of 301] Compiling Data.Ord.Max
+[ 86 of 301] Compiling Data.Functor.App
+[ 88 of 301] Compiling Data.Ord.Min
+[ 89 of 301] Compiling Data.Ord.Down
+[ 91 of 301] Compiling Data.String.Pattern
+[ 90 of 301] Compiling Data.Profunctor
+[ 92 of 301] Compiling Data.Monoid.Alternate
+[ 93 of 301] Compiling Data.Time.Duration
+[ 94 of 301] Compiling Test.RecordsFFICheatcode
+[ 95 of 301] Compiling Test.AstTree
+[ 96 of 301] Compiling Test.RBTree
+[ 97 of 301] Compiling Test.RecordsFFI
+[ 98 of 301] Compiling Test.ListOpsFFICheatcode
+[100 of 301] Compiling Test.StateMonad
+[101 of 301] Compiling Test.TCOFFICheatcode
+[ 99 of 301] Compiling Test.StateMonadFFI
+[102 of 301] Compiling Test.Fib
+[103 of 301] Compiling Test.PolymorphismFFI
+[105 of 301] Compiling Test.Primes
+[104 of 301] Compiling Test.AstTreeFFI
+[106 of 301] Compiling Test.ChurchFFI
+[107 of 301] Compiling Test.ArrayOpsFFICheatcode
+[109 of 301] Compiling Test.AckermannFFI
+[108 of 301] Compiling Test.RBTreeFFICheatcode
+[110 of 301] Compiling Test.LazyEvaluation
+[111 of 301] Compiling Test.StateMonadFFICheatcode
+[112 of 301] Compiling Test.AstTreeFFICheatcode
+[113 of 301] Compiling Test.RowToListFFICheatcode
+[114 of 301] Compiling Test.RowToList
+[115 of 301] Compiling Test.RowToListFFI
+[116 of 301] Compiling Test.ChurchFFICheatcode
+[117 of 301] Compiling Test.Ackermann
+[118 of 301] Compiling Test.FibFFICheatcode
+[119 of 301] Compiling Test.TCO
+[120 of 301] Compiling Test.LazyEvaluationFFICheatcode
+[121 of 301] Compiling Test.LazyEvaluationFFI
+[122 of 301] Compiling Test.TCOFFI
+[123 of 301] Compiling Test.Polymorphism
+[124 of 301] Compiling Test.ListOps
+[125 of 301] Compiling Test.ArrayOpsFFI
+[126 of 301] Compiling Test.Church
+[127 of 301] Compiling Test.PolymorphismFFICheatcode
+[128 of 301] Compiling Test.PrimesFFICheatcode
+[129 of 301] Compiling Test.RBTreeFFI
+[130 of 301] Compiling Test.PrimesFFI
+[131 of 301] Compiling Test.Records
+[135 of 301] Compiling Data.String.Common
+[133 of 301] Compiling Test.FibFFI
+[134 of 301] Compiling Test.AckermannFFICheatcode
+[137 of 301] Compiling Data.Functor.Invariant
+[136 of 301] Compiling Data.Profunctor.Closed
+[138 of 301] Compiling Data.Functor.Compose
+[132 of 301] Compiling Test.ListOpsFFI
+[139 of 301] Compiling AppFFICheatcode
+[140 of 301] Compiling AppFFI
+[141 of 301] Compiling Data.Const
+[142 of 301] Compiling Data.Tuple
+[144 of 301] Compiling Data.Identity
+[143 of 301] Compiling Data.Maybe
+[146 of 301] Compiling Data.Profunctor.Join
+[145 of 301] Compiling Data.Profunctor.Split
+[147 of 301] Compiling AppJavaFFI
+[148 of 301] Compiling Data.Functor.Contravariant
+[149 of 301] Compiling Data.Comparison
+[150 of 301] Compiling Data.Op
+[151 of 301] Compiling Data.Predicate
+[152 of 301] Compiling AppJavaFFICheatcode
+[153 of 301] Compiling Data.Equivalence
+[155 of 301] Compiling Data.Number
+[154 of 301] Compiling Data.Either
+[156 of 301] Compiling Data.Maybe.First
+[157 of 301] Compiling Data.Maybe.Last
+[158 of 301] Compiling Data.String.CodeUnits
+[160 of 301] Compiling Data.Number.Approximate
+[159 of 301] Compiling Data.Int
+[161 of 301] Compiling Data.Divide
+[163 of 301] Compiling Data.Profunctor.Strong
+[162 of 301] Compiling Control.Monad.State.Class
+[164 of 301] Compiling Control.Monad.Writer.Class
+[166 of 301] Compiling Data.Distributive
+[165 of 301] Compiling Data.Tuple.Nested
+[167 of 301] Compiling Data.Profunctor.Costrong
+[168 of 301] Compiling Data.Divisible
+[169 of 301] Compiling Data.Decide
+[170 of 301] Compiling Data.Bifunctor
+[171 of 301] Compiling Data.Profunctor.Choice
+[173 of 301] Compiling Data.Either.Inject
+[172 of 301] Compiling Data.Either.Nested
+[174 of 301] Compiling Data.Profunctor.Cochoice
+[175 of 301] Compiling Effect.Exception
+[176 of 301] Compiling Effect.Exception.Unsafe
+[177 of 301] Compiling Control.Monad.Error.Class
+[178 of 301] Compiling Data.Functor.Product
+[179 of 301] Compiling Control.Biapply
+[181 of 301] Compiling Data.Profunctor.Star
+[182 of 301] Compiling Data.Functor.Costar
+[180 of 301] Compiling Control.Monad.Rec.Class
+[183 of 301] Compiling Data.Functor.Coproduct
+[184 of 301] Compiling Data.Decidable
+[185 of 301] Compiling Control.Biapplicative
+[186 of 301] Compiling Data.Functor.Joker
+[187 of 301] Compiling Data.Functor.Clown
+[188 of 301] Compiling Data.Functor.Product2
+[189 of 301] Compiling Data.Functor.Flip
+[190 of 301] Compiling Data.Bifunctor.Join
+[191 of 301] Compiling Data.Functor.Product.Nested
+[192 of 301] Compiling Data.Functor.Coproduct.Inject
+[193 of 301] Compiling Data.FunctorWithIndex
+[194 of 301] Compiling Data.Functor.Coproduct.Nested
+[195 of 301] Compiling Data.Foldable
+[196 of 301] Compiling Control.Monad.ST.Internal
+[197 of 301] Compiling Control.Monad.ST
+[198 of 301] Compiling Control.Monad.ST.Ref
+[199 of 301] Compiling Control.Monad.ST.Uncurried
+[200 of 301] Compiling Control.Monad.ST.Global
+[201 of 301] Compiling Control.Monad.ST.Class
+[202 of 301] Compiling Control.Monad.State.Trans
+[203 of 301] Compiling Control.Monad.RWS.Trans
+[204 of 301] Compiling Control.Monad.Maybe.Trans
+[205 of 301] Compiling Control.Monad.Except.Trans
+[206 of 301] Compiling Control.Monad.Reader.Trans
+[208 of 301] Compiling Control.Monad.Writer.Trans
+[207 of 301] Compiling Control.Monad.Cont.Trans
+[209 of 301] Compiling Data.Array.ST
+[210 of 301] Compiling Data.Array.ST.Partial
+[211 of 301] Compiling Data.Array.ST.Iterator
+[212 of 301] Compiling Control.Monad.Cont
+[213 of 301] Compiling Control.Monad.Reader
+[214 of 301] Compiling Control.Monad.State
+[215 of 301] Compiling Control.Monad.Except
+[217 of 301] Compiling Control.Parallel.Class
+[216 of 301] Compiling Control.Monad.Writer
+[218 of 301] Compiling Control.Monad.RWS
+[219 of 301] Compiling Data.Semigroup.Foldable
+[220 of 301] Compiling Data.Bifoldable
+[222 of 301] Compiling Data.Traversable
+[221 of 301] Compiling Data.FoldableWithIndex
+[223 of 301] Compiling Data.Semigroup.Traversable
+[224 of 301] Compiling Data.Bitraversable
+[225 of 301] Compiling Control.Monad.Identity.Trans
+[226 of 301] Compiling Control.Parallel
+[227 of 301] Compiling Effect.Aff
+[228 of 301] Compiling Data.Unfoldable1
+[229 of 301] Compiling Control.Comonad.Trans.Class
+[230 of 301] Compiling Data.TraversableWithIndex
+[231 of 301] Compiling Control.Comonad.Store.Trans
+[232 of 301] Compiling Control.Comonad.Traced.Trans
+[233 of 301] Compiling Data.Unfoldable
+[235 of 301] Compiling Control.Monad.Gen
+[234 of 301] Compiling Data.Enum
+[236 of 301] Compiling Data.Time.Duration.Gen
+[237 of 301] Compiling Data.NonEmpty
+[238 of 301] Compiling Data.Lazy
+[240 of 301] Compiling Data.Array.NonEmpty.Internal
+[239 of 301] Compiling Control.Comonad.Env.Trans
+[241 of 301] Compiling Effect.Aff.Compat
+[242 of 301] Compiling Data.Array
+[243 of 301] Compiling Data.Enum.Generic
+[244 of 301] Compiling Data.Time.Component
+[246 of 301] Compiling Data.Char
+[245 of 301] Compiling Data.Date.Component
+[247 of 301] Compiling Control.Comonad.Store.Class
+[248 of 301] Compiling Control.Monad.List.Trans
+[249 of 301] Compiling Data.Enum.Gen
+[250 of 301] Compiling Data.Char.Gen
+[251 of 301] Compiling Control.Monad.Gen.Common
+[252 of 301] Compiling Data.List.Lazy.Types
+[253 of 301] Compiling Data.List.Types
+[254 of 301] Compiling Control.Comonad.Store
+[255 of 301] Compiling Control.Comonad.Env.Class
+[256 of 301] Compiling Data.String.Gen
+[257 of 301] Compiling Data.Time.Component.Gen
+[258 of 301] Compiling Data.Time
+[259 of 301] Compiling Control.Comonad.Env
+[260 of 301] Compiling Control.Comonad.Traced.Class
+[261 of 301] Compiling Data.Date.Component.Gen
+[262 of 301] Compiling Data.Date
+[263 of 301] Compiling Control.Comonad.Traced
+[264 of 301] Compiling Data.Time.Gen
+[265 of 301] Compiling Data.Date.Gen
+[266 of 301] Compiling Data.DateTime
+[267 of 301] Compiling Data.Array.Partial
+[269 of 301] Compiling Data.String.CodePoints
+[268 of 301] Compiling Data.Array.NonEmpty
+[270 of 301] Compiling Test.ArrayOps
+[271 of 301] Compiling App
+[272 of 301] Compiling Data.List.Internal
+[273 of 301] Compiling Effect.Aff.Class
+[275 of 301] Compiling Data.DateTime.Gen
+[274 of 301] Compiling Data.DateTime.Instant
+[276 of 301] Compiling Effect.Now
+[277 of 301] Compiling Data.String
+[278 of 301] Compiling Data.String.CaseInsensitive
+[279 of 301] Compiling Data.String.Regex.Flags
+[280 of 301] Compiling Data.String.NonEmpty.Internal
+[281 of 301] Compiling Data.List
+[282 of 301] Compiling Data.List.Lazy
+[283 of 301] Compiling Data.String.Regex
+[284 of 301] Compiling Data.String.NonEmpty.CodePoints
+[285 of 301] Compiling Data.String.NonEmpty.CodeUnits
+[286 of 301] Compiling Data.String.Regex.Unsafe
+[287 of 301] Compiling Data.String.NonEmpty
+[288 of 301] Compiling Data.String.NonEmpty.CaseInsensitive
+[289 of 301] Compiling Data.List.ZipList
+[290 of 301] Compiling Data.List.Lazy.NonEmpty
+[292 of 301] Compiling Main
+[293 of 301] Compiling Data.List.Partial
+[294 of 301] Compiling Data.List.NonEmpty
+[291 of 301] Compiling Data.Map.Internal
+[295 of 301] Compiling Data.Set
+[297 of 301] Compiling Data.Map
+[296 of 301] Compiling Data.Set.NonEmpty
+[299 of 301] Compiling Data.Map.Gen
+[298 of 301] Compiling Data.Interval.Duration
+[300 of 301] Compiling Data.Interval
+[301 of 301] Compiling Data.Interval.Duration.Iso
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+=== Rust ===
+Global warm-up in progress (this may take a moment)...
+
+Global warm-up complete. Starting benchmarks...
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+1.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+1.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+29.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+38.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+989.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+19.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+5339.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+188.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+40852.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+1.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+72.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+72650.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+14.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+0.00 μs
+
+
+==================================================
+
+Total exec time: 120.19 ms
+

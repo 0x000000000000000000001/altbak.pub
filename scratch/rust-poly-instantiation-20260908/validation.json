@@ -1,0 +1,20 @@
+{
+  "base_heads": {
+    "pbo_worktree": "67ba2151e3717b27a13e95c25d3b25c8bdc645cc",
+    "purust": "a177a890984989dd409ec4d78094a5c89fdc29b1",
+    "altbak_worktree": "18c77c0e0d13ce3b8f9a30846bb1d76152f0176f"
+  },
+  "sha256": {
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Test_Polymorphism/src/lib.rs": "c735c9a2a704cb8984bd915d50ef9b7a7e5ff99bbe3244385360b87db474edd5",
+    "/Users/0x1/Documents/htdocs/purust/purust/bin/purust.js": "13a14f49d6672902a1cd237d81fc6cfbef005e661ccb3dbdc7e0c12685bf4fac",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Convert.purs": "e2ea2632c157529fc53bac8402beee649af373912c4958e9d47d48e8d5444203",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Semantics.purs": "8f3cbab53704dd1edd1ac281f478e839a6d0541ab6bcdff4fdc2a08b3934b5ee",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/CoreFn/TypeInstantiation.purs": "c8c8b499394f2a88c53c7bfbe8c3fa4dbf1a411a35fede279ca121024da5131d"
+  },
+  "native_accumulator": true,
+  "generic_accumulator_preserved": true,
+  "arm64_kernel_add_without_loop": true,
+  "codegen_tests_passed": 14,
+  "tast_tests_passed": 3,
+  "runner_outputs_checked_per_process": 14
+}

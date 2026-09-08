@@ -1,0 +1,731 @@
+
+> purust@0.1.0 build
+> spago build && spago bundle --module Main --platform node --outfile bin/purust.js --bundle-type app
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: purust
+
+Downloading dependencies...
+Building...
+[1 of 6] Compiling Spago.Generated.BuildInfo
+[2 of 6] Compiling PureScript.Backend.Optimizer.Convert
+[3 of 6] Compiling PureScript.Backend.Optimizer.Tracer.Printer
+[4 of 6] Compiling PureScript.Backend.Optimizer.Builder
+[5 of 6] Compiling Purust.CodeGen
+[6 of 6] Compiling Main
+[WARNING 1/82 UnusedImport] ../../purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Builder.purs:19:1
+
+  19  import Data.Newtype (unwrap)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.Newtype is redundant
+
+[WARNING 2/82 UnusedImport] ../../purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Builder.purs:20:1
+
+  20  import Effect.Aff (Aff, attempt)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Effect.Aff is redundant
+
+[WARNING 3/82 UnusedImport] ../../purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Builder.purs:21:1
+
+  21  import Effect.Console as Console
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Console as Console is redundant
+
+[WARNING 4/82 UnusedImport] ../../purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Builder.purs:22:1
+
+  22  import Effect.Class (liftEffect)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Effect.Class is redundant
+
+[WARNING 5/82 UnusedExplicitImport] ../../purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Builder.purs:28:1
+
+  28  import PureScript.Backend.Optimizer.CoreFn (Ann, Ident, Module(..), ModuleName, Qualified, importName)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.CoreFn contains the following unused references:
+    ModuleName
+    importName
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.CoreFn (Ann, Ident, Module(..), Qualified)
+
+[WARNING 6/82 UnusedExplicitImport] ../../purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Builder.purs:32:1
+
+  32  import PureScript.Backend.Optimizer.Cache (writePurmetaSync, clearPurmetaCache, logMemory)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Cache contains the following unused references:
+    logMemory
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Cache (clearPurmetaCache, writePurmetaSync)
+
+[WARNING 7/82 UnusedExplicitImport] ../../purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Convert.purs:67:1
+
+  67  import Data.Maybe (Maybe(..), fromMaybe, maybe, isJust)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Maybe contains the following unused references:
+    isJust
+  It could be replaced with:
+    import Data.Maybe (Maybe(..), fromMaybe, maybe)
+
+[WARNING 8/82 UnusedImport] ../../purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Convert.purs:68:1
+
+  68  import Debug as Debug
+      ^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Debug as Debug is redundant
+
+[WARNING 9/82 UnusedImport] ../../purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Convert.purs:69:1
+
+  69  import Prelude (unit)
+      ^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Prelude is redundant
+
+[WARNING 10/82 DuplicateSelectiveImport] ../../purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Convert.purs:69:1
+
+  69  import Prelude (unit)
+      ^^^^^^^^^^^^^^^^^^^^^
+
+  There is an existing import of Prelude, consider merging the import lists
+
+[WARNING 11/82 UnusedImport] ../../purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Convert.purs:78:1
+
+  78  import Data.String.Pattern as Data.String.Pattern
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.String.Pattern as Data.String.Pattern is redundant
+
+[WARNING 12/82 UnusedImport] ../../purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Convert.purs:82:1
+
+  82  import Effect.Console as Console
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Console as Console is redundant
+
+[WARNING 13/82 UnusedDctorExplicitImport] ../../purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Convert.purs:90:1
+
+  90  import PureScript.Backend.Optimizer.Syntax (BackendAccessor(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorOrd(..), BackendSyntax(Var, Local, Lit, App, Abs, UncurriedApp, UncurriedAbs, UncurriedEffectApp, UncurriedEffectAbs, Accessor, Update, CtorSaturated, CtorDef, LetRec, Let, EffectBind, EffectPure, EffectDefer, Branch, PrimOp, PrimEffect, PrimUndefined, Fail, Typed), Level(..), Pair(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of type BackendSyntax from module PureScript.Backend.Optimizer.Syntax includes the following unused data constructors:
+    UncurriedEffectApp
+    UncurriedEffectAbs
+    CtorSaturated
+    EffectBind
+    EffectPure
+    EffectDefer
+    PrimEffect
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Syntax (BackendAccessor(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorOrd(..), BackendSyntax(UncurriedAbs, Local, Branch, PrimOp, Lit, Let, Fail, Accessor, UncurriedApp, Typed, LetRec, App, Abs, Update, CtorDef, Var, PrimUndefined), Level(..), Pair(..))
+
+[WARNING 14/82 DuplicateImport] ../../purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Convert.purs:94:1
+
+  94  import Effect.Unsafe (unsafePerformEffect)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Effect.Unsafe (unsafePerformEffect)
+
+[WARNING 15/82 UnusedName] ../../purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Convert.purs:259:29
+
+  259    NonRec binding@(Binding _ ident _) -> do
+                                   ^^^^^
+
+  Name ident was introduced but not used.
+  in value declaration toBackendTopLevelBindingGroup
+
+[WARNING 16/82 UnusedName] ../../purescript-backend-optimizer-purust/src/PureScript/Backend/Optimizer/Convert.purs:288:25
+
+  288    let BackendAnalysis { size } = analysisOf backendExpr
+                               ^^^^
+
+  Name size was introduced but not used.
+  in value declaration toTopLevelBackendBinding
+
+[WARNING 17/82 UnusedExplicitImport] src/Main.purs:6:1
+
+  6  import Effect.Aff (Aff, launchAff_)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Effect.Aff contains the following unused references:
+    Aff
+  It could be replaced with:
+    import Effect.Aff (launchAff_)
+
+[WARNING 18/82 UnusedImport] src/Main.purs:15:1
+
+  15  import PureScript.Backend.Optimizer.Directives.Defaults (defaultDirectives)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of PureScript.Backend.Optimizer.Directives.Defaults is redundant
+
+[WARNING 19/82 UnusedExplicitImport] src/Main.purs:17:1
+
+  17  import PureScript.Backend.Optimizer.App (coreFnModulesFromOutput, checkCache, writeCache, loadDirectives)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.App contains the following unused references:
+    checkCache
+    writeCache
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.App (coreFnModulesFromOutput, loadDirectives)
+
+[WARNING 20/82 UnusedExplicitImport] src/Main.purs:18:1
+
+  18  import Purust.CodeGen (codegenModuleWithValueEnums, codegenPrelude, sanitizeIdent, getArity, extractAllArgTypes, extractFinalRetType, codegenExprTypeWithValueEnums)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Purust.CodeGen contains the following unused references:
+    getArity
+  It could be replaced with:
+    import Purust.CodeGen (codegenExprTypeWithValueEnums, codegenModuleWithValueEnums, codegenPrelude, extractAllArgTypes, extractFinalRetType, sanitizeIdent)
+
+[WARNING 21/82 UnusedExplicitImport] src/Main.purs:21:1
+
+  21  import PureScript.Backend.Optimizer.CoreFn (Module(..), Bind(..), Binding(..), Expr(..), Ident(..), ExprType(..), Ann(..), ModuleName(..), Import(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.CoreFn contains the following unused references:
+    ModuleName
+    Import
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.CoreFn (Ann(..), Bind(..), Binding(..), Expr(..), ExprType(..), Ident(..), Module(..))
+
+[WARNING 22/82 DuplicateImport] src/Main.purs:24:1
+
+  24  import Data.Set as Set
+      ^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.Set as Set
+
+[WARNING 23/82 DuplicateImport] src/Main.purs:25:1
+
+  25  import Data.Array as Array
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.Array as Array
+
+[WARNING 24/82 UserDefinedWarning] src/Main.purs:40:1
+
+  40  main :: Effect Unit
+      ^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in value declaration main
+
+[WARNING 25/82 UserDefinedWarning] src/Main.purs:40:1
+
+  40  main :: Effect Unit
+      ^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in value declaration main
+
+[WARNING 26/82 UnusedName] src/Main.purs:144:7
+
+  144    let globalTypes = buildGlobalTypes finalModules
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name globalTypes was introduced but not used.
+  in value declaration main
+
+[WARNING 27/82 UnusedName] src/Main.purs:159:32
+
+  159      , onSkipModule: \_ (Module coreFnMod) -> do
+                                      ^^^^^^^^^
+
+  Name coreFnMod was introduced but not used.
+  in value declaration main
+
+[WARNING 28/82 ShadowedName] src/Main.purs:175:28
+
+  175              getArity (Func args t) = Array.length args + getArity t
+                                  ^^^^
+
+  Name args was shadowed.
+  in value declaration main
+
+[WARNING 29/82 ShadowedName] src/Main.purs:181:21
+
+  181                      args = Array.mapWithIndex (\i argTy -> "mut a" <> show i <> ": " <> codegenExprTypeWithValueEnums globalValueEnums modName true argTy) argTypes
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name args was shadowed.
+  in value declaration main
+
+[WARNING 30/82 UnusedName] src/Main.purs:294:51
+
+  294      _ <- foldl (\eff (Tuple k { code: v, imports: imp }) -> eff *> do
+                                                         ^^^
+
+  Name imp was introduced but not used.
+  in value declaration main
+
+[WARNING 31/82 UnusedExplicitImport] src/Purust/CodeGen.purs:6:1
+
+  6  import PureScript.Backend.Optimizer.Syntax (BackendSyntax(..), BackendAccessor(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorNum(..), BackendOperatorOrd(..), Pair(..), Level(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Syntax contains the following unused references:
+    Level
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Syntax (BackendAccessor(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorNum(..), BackendOperatorOrd(..), BackendSyntax(..), Pair(..))
+
+[WARNING 32/82 DuplicateImport] src/Purust/CodeGen.purs:9:1
+
+  9  import Debug as Debug
+     ^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Debug as Debug
+
+[WARNING 33/82 UnusedImport] src/Purust/CodeGen.purs:10:1
+
+  10  import Effect (Effect)
+      ^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Effect is redundant
+
+[WARNING 34/82 UnusedExplicitImport] src/Purust/CodeGen.purs:13:1
+
+  13  import PureScript.Backend.Optimizer.Semantics (NeutralExpr(..), DataTypeMeta, CtorMeta)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Semantics contains the following unused references:
+    DataTypeMeta
+    CtorMeta
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Semantics (NeutralExpr(..))
+
+[WARNING 35/82 UnusedExplicitImport] src/Purust/CodeGen.purs:16:1
+
+  16  import PureScript.Backend.Optimizer.CoreFn (Ann, ClassDecl, Expr(..), ExprType(..), Ident(..), Literal(..), Module(..), ModuleName(..), ProperName(..), Prop(..), Qualified(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.CoreFn contains the following unused references:
+    Expr
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.CoreFn (Ann, ClassDecl, ExprType(..), Ident(..), Literal(..), Module(..), ModuleName(..), Prop(..), ProperName(..), Qualified(..))
+
+[WARNING 36/82 DuplicateImport] src/Purust/CodeGen.purs:18:1
+
+  18  import Debug as Debug
+      ^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Debug as Debug
+
+[WARNING 37/82 DuplicateImport] src/Purust/CodeGen.purs:18:1
+
+  18  import Debug as Debug
+      ^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Debug as Debug
+
+[WARNING 38/82 UnusedImport] src/Purust/CodeGen.purs:28:1
+
+  28  import Data.Map (Map)
+      ^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.Map is redundant
+
+[WARNING 39/82 DuplicateSelectiveImport] src/Purust/CodeGen.purs:31:1
+
+  31  import Data.Maybe (Maybe(..), fromMaybe)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  There is an existing import of Data.Maybe, consider merging the import lists
+
+[WARNING 40/82 DuplicateImport] src/Purust/CodeGen.purs:34:1
+
+  34  import Effect.Console (log)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Effect.Console (log)
+
+[WARNING 41/82 DuplicateImport] src/Purust/CodeGen.purs:35:1
+
+  35  import Effect.Unsafe (unsafePerformEffect)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Effect.Unsafe (unsafePerformEffect)
+
+[WARNING 42/82 UnusedDeclaration] src/Purust/CodeGen.purs:302:1
+
+       v
+  302  debugUnwrap name t = 
+  303    let unwrapped = unwrapType t
+  304    in unwrapped
+                    ^
+
+  Declaration debugUnwrap was not used, and is not exported.
+
+[WARNING 43/82 UnusedName] src/Purust/CodeGen.purs:302:13
+
+  302  debugUnwrap name t = 
+                   ^^^^
+
+  Name name was introduced but not used.
+  in value declaration debugUnwrap
+
+[WARNING 44/82 UnusedName] src/Purust/CodeGen.purs:311:20
+
+  311  printType (TypeVar n) = "TypeVar"
+                          ^
+
+  Name n was introduced but not used.
+  in value declaration printType
+
+[WARNING 45/82 UnusedName] src/Purust/CodeGen.purs:321:53
+
+  321  codegenExprTypeWithValueEnums valueEnums currentMod isRet ty = case unwrapType ty of
+                                                           ^^^^^
+
+  Name isRet was introduced but not used.
+  in value declaration codegenExprTypeWithValueEnums
+
+[WARNING 46/82 UserDefinedWarning] src/Purust/CodeGen.purs:348:1
+
+  348  boxUnbox :: ValueEnums -> String -> ExprType -> ExprType -> String -> String
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group boxUnbox
+
+[WARNING 47/82 UnusedName] src/Purust/CodeGen.purs:365:16
+
+  365                 actArgTypes = map (codegenExprTypeWithValueEnums valueEnums currentMod false) actArgs
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name actArgTypes was introduced but not used.
+  in value declaration boxUnbox
+
+[WARNING 48/82 OverlappingPattern] src/Purust/CodeGen.purs:493:1
+
+  493  codegenBindingGroup :: ValueEnums -> ModuleName -> String -> Set.Set String -> Set.Set String -> Map.Map String ExprType -> Map.Map String (Array (Tuple String ExprType)) -> BackendBindingGroup Ident NeutralExpr -> { code :: String, arities :: Map.Map String ExprType }
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A case expression contains unreachable cases:
+  _
+  in value declaration codegenBindingGroup
+
+[WARNING 49/82 OverlappingPattern] src/Purust/CodeGen.purs:493:1
+
+  493  codegenBindingGroup :: ValueEnums -> ModuleName -> String -> Set.Set String -> Set.Set String -> Map.Map String ExprType -> Map.Map String (Array (Tuple String ExprType)) -> BackendBindingGroup Ident NeutralExpr -> { code :: String, arities :: Map.Map String ExprType }
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A case expression contains unreachable cases:
+  _
+  in value declaration codegenBindingGroup
+
+[WARNING 50/82 OverlappingPattern] src/Purust/CodeGen.purs:493:1
+
+  493  codegenBindingGroup :: ValueEnums -> ModuleName -> String -> Set.Set String -> Set.Set String -> Map.Map String ExprType -> Map.Map String (Array (Tuple String ExprType)) -> BackendBindingGroup Ident NeutralExpr -> { code :: String, arities :: Map.Map String ExprType }
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A case expression contains unreachable cases:
+  _
+  in value declaration codegenBindingGroup
+
+[WARNING 51/82 UnusedName] src/Purust/CodeGen.purs:494:32
+
+  494  codegenBindingGroup valueEnums modName modNameStr allZeroArity allMacroBindings aritiesMap globalClassFields group = unsafePerformEffect do
+                                      ^^^^^^^
+
+  Name modName was introduced but not used.
+  in value declaration codegenBindingGroup
+
+[WARNING 52/82 UnusedName] src/Purust/CodeGen.purs:532:15
+
+                     v
+  532                isMatchingAbs = case extracted of
+  533                  Just _ -> true
+  534                  Nothing -> false
+                                      ^
+
+  Name isMatchingAbs was introduced but not used.
+  in value declaration codegenBindingGroup
+
+[WARNING 53/82 UnusedName] src/Purust/CodeGen.purs:552:39
+
+  552                         shapeTypeToAST currentTy (NeutralExpr (Typed ty _)) = ty
+                                             ^^^^^^^^^
+
+  Name currentTy was introduced but not used.
+  in value declaration codegenBindingGroup
+
+[WARNING 54/82 UserDefinedWarning] src/Purust/CodeGen.purs:655:1
+
+  655  genApp :: ValueEnums -> String -> Set.Set String -> Set.Set String -> Maybe { name :: String, params :: Array String } -> Map.Map String ExprType -> Map.Map String (Array (Tuple String ExprType)) -> Map.Map String ExprType -> Set.Set String -> ExprType -> NeutralExpr -> Array NeutralExpr -> String
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group genApp, genAbs, codegenExpr_
+
+[WARNING 55/82 UserDefinedWarning] src/Purust/CodeGen.purs:655:1
+
+  655  genApp :: ValueEnums -> String -> Set.Set String -> Set.Set String -> Maybe { name :: String, params :: Array String } -> Map.Map String ExprType -> Map.Map String (Array (Tuple String ExprType)) -> Map.Map String ExprType -> Set.Set String -> ExprType -> NeutralExpr -> Array NeutralExpr -> String
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group genApp, genAbs, codegenExpr_
+
+[WARNING 56/82 UserDefinedWarning] src/Purust/CodeGen.purs:655:1
+
+  655  genApp :: ValueEnums -> String -> Set.Set String -> Set.Set String -> Maybe { name :: String, params :: Array String } -> Map.Map String ExprType -> Map.Map String (Array (Tuple String ExprType)) -> Map.Map String ExprType -> Set.Set String -> ExprType -> NeutralExpr -> Array NeutralExpr -> String
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group genApp, genAbs, codegenExpr_
+
+[WARNING 57/82 UserDefinedWarning] src/Purust/CodeGen.purs:655:1
+
+  655  genApp :: ValueEnums -> String -> Set.Set String -> Set.Set String -> Maybe { name :: String, params :: Array String } -> Map.Map String ExprType -> Map.Map String (Array (Tuple String ExprType)) -> Map.Map String ExprType -> Set.Set String -> ExprType -> NeutralExpr -> Array NeutralExpr -> String
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group genApp, genAbs, codegenExpr_
+
+[WARNING 58/82 UserDefinedWarning] src/Purust/CodeGen.purs:655:1
+
+  655  genApp :: ValueEnums -> String -> Set.Set String -> Set.Set String -> Maybe { name :: String, params :: Array String } -> Map.Map String ExprType -> Map.Map String (Array (Tuple String ExprType)) -> Map.Map String ExprType -> Set.Set String -> ExprType -> NeutralExpr -> Array NeutralExpr -> String
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group genApp, genAbs, codegenExpr_
+
+[WARNING 59/82 UnusedName] src/Purust/CodeGen.purs:689:76
+
+  689                                innerArgs = evalArgs <> Array.mapWithIndex (\i eta -> eta <> ".clone()") etaArgs
+                                                                                  ^
+
+  Name i was introduced but not used.
+  in value declaration genApp
+
+[WARNING 60/82 UnusedName] src/Purust/CodeGen.purs:756:33
+
+  756                     Just { name: ln, params: lp } ->
+                                       ^^
+
+  Name ln was introduced but not used.
+  in value declaration genApp
+
+[WARNING 61/82 ShadowedName] src/Purust/CodeGen.purs:817:38
+
+  817                                       expectedArgTys = extractAllArgTypes fnTy
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name expectedArgTys was shadowed.
+  in value declaration genApp
+
+[WARNING 62/82 UnusedName] src/Purust/CodeGen.purs:821:83
+
+  821                                       innerArgs = evalArgs <> Array.mapWithIndex (\i eta -> eta <> ".clone()") etaArgs
+                                                                                         ^
+
+  Name i was introduced but not used.
+  in value declaration genApp
+
+[WARNING 63/82 UnusedName] src/Purust/CodeGen.purs:846:60
+
+  846  genAbs valueEnums currentMod allZeroArity allMacroBindings mbLoop aritiesMap globalClassFields bound alive paramsArr fnTy body =
+                                                                  ^^^^^^
+
+  Name mbLoop was introduced but not used.
+  in value declaration genAbs
+
+[WARNING 64/82 UnusedName] src/Purust/CodeGen.purs:873:46
+
+  873          argsCodeArr = Array.mapWithIndex (\i p -> "mut _a" <> show i <> ": " <> codegenExprTypeWithValueEnums valueEnums currentMod false (fromMaybe Any (Array.index expectedArgTys i))) paramsArr
+                                                    ^
+
+  Name p was introduced but not used.
+  in value declaration genAbs
+
+[WARNING 65/82 ShadowedName] src/Purust/CodeGen.purs:882:21
+
+  882                  let newBound = Set.insert p st.bound
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name newBound was shadowed.
+  in value declaration genAbs
+
+[WARNING 66/82 UnusedDeclaration] src/Purust/CodeGen.purs:962:1
+
+       v
+  962  codegenExpr valueEnums currentMod allZeroArity allMacroBindings mbLoop aritiesMap globalClassFields bound alive expr =
+  963    codegenExpr_ valueEnums currentMod allZeroArity allMacroBindings mbLoop aritiesMap globalClassFields bound alive false expr
+                                                                                                                                   ^
+
+  Declaration codegenExpr was not used, and is not exported.
+
+[WARNING 67/82 OverlappingPattern] src/Purust/CodeGen.purs:977:1
+
+  977  codegenExpr_ :: ValueEnums -> String -> Set.Set String -> Set.Set String -> Maybe { name :: String, params :: Array String } -> Map.Map String ExprType -> Map.Map String (Array (Tuple String ExprType)) -> Map.Map String ExprType -> Set.Set String -> Boolean -> NeutralExpr -> String
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A case expression contains unreachable cases:
+  _
+  in binding group genApp, genAbs, codegenExpr_
+
+[WARNING 68/82 OverlappingPattern] src/Purust/CodeGen.purs:977:1
+
+  977  codegenExpr_ :: ValueEnums -> String -> Set.Set String -> Set.Set String -> Maybe { name :: String, params :: Array String } -> Map.Map String ExprType -> Map.Map String (Array (Tuple String ExprType)) -> Map.Map String ExprType -> Set.Set String -> Boolean -> NeutralExpr -> String
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A case expression contains unreachable cases:
+  _
+  in binding group genApp, genAbs, codegenExpr_
+
+[WARNING 69/82 UnusedName] src/Purust/CodeGen.purs:1014:17
+
+  1014    Syn.TypeApp a ty ->
+                        ^^
+
+  Name ty was introduced but not used.
+  in value declaration codegenExpr_
+
+[WARNING 70/82 UnusedName] src/Purust/CodeGen.purs:1202:26
+
+  1202        OpIsTag (Qualified mbMod (Ident ctorName)) -> 
+                                 ^^^^^
+
+  Name mbMod was introduced but not used.
+  in value declaration codegenExpr_
+
+[WARNING 71/82 UnusedName] src/Purust/CodeGen.purs:1297:15
+
+  1297            ADT className fqn _ ->
+                      ^^^^^^^^^
+
+  Name className was introduced but not used.
+  in value declaration codegenExpr_
+
+[WARNING 72/82 UnusedName] src/Purust/CodeGen.purs:1297:25
+
+  1297            ADT className fqn _ ->
+                                ^^^
+
+  Name fqn was introduced but not used.
+  in value declaration codegenExpr_
+
+[WARNING 73/82 ShadowedName] src/Purust/CodeGen.purs:1372:41
+
+  1372          stripEffectDefer e@(NeutralExpr syn) = case syn of
+                                                ^^^
+
+  Name syn was shadowed.
+  in value declaration codegenExpr_
+
+[WARNING 74/82 ShadowedName] src/Purust/CodeGen.purs:1384:37
+
+  1384          isUncurriedApp (NeutralExpr syn) = case syn of
+                                            ^^^
+
+  Name syn was shadowed.
+  in value declaration codegenExpr_
+
+[WARNING 75/82 UnusedName] src/Purust/CodeGen.purs:1559:11
+
+  1559        let enumPrefix = if currentMod == tyNameStr then "crate::" else "Purs_" <> currentMod <> "::" 
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name enumPrefix was introduced but not used.
+  in value declaration codegenExpr_
+
+[WARNING 76/82 ShadowedName] src/Purust/CodeGen.purs:1619:20
+
+  1619                     mbLoop = Just { name: sanitizeIdent n, params: dedupedParams }
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name mbLoop was shadowed.
+  in value declaration codegenExpr_
+
+[WARNING 77/82 UnusedName] src/Purust/CodeGen.purs:1680:18
+
+  1680    Accessor inner prop -> "Accessor(" <> printAST inner <> ")"
+                         ^^^^
+
+  Name prop was introduced but not used.
+  in value declaration printAST
+
+[WARNING 78/82 OverlappingPattern] src/Purust/CodeGen.purs:1756:1
+
+  1756  inferTypeExpr :: String -> Map.Map String ExprType -> Map.Map String (Array (Tuple String ExprType)) -> Map.Map String ExprType -> NeutralExpr -> ExprType
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A case expression contains unreachable cases:
+  _
+  in binding group inferTypeExpr
+
+[WARNING 79/82 UserDefinedWarning] src/Purust/CodeGen.purs:1756:1
+
+  1756  inferTypeExpr :: String -> Map.Map String ExprType -> Map.Map String (Array (Tuple String ExprType)) -> Map.Map String ExprType -> NeutralExpr -> ExprType
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group inferTypeExpr
+
+[WARNING 80/82 UserDefinedWarning] src/Purust/CodeGen.purs:1756:1
+
+  1756  inferTypeExpr :: String -> Map.Map String ExprType -> Map.Map String (Array (Tuple String ExprType)) -> Map.Map String ExprType -> NeutralExpr -> ExprType
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group inferTypeExpr
+
+[WARNING 81/82 UnusedName] src/Purust/CodeGen.purs:1808:25
+
+  1808    UncurriedEffectApp fn args -> 
+                                ^^^^
+
+  Name args was introduced but not used.
+  in value declaration inferTypeExpr
+
+[WARNING 82/82 UnusedName] src/Purust/CodeGen.purs:1847:25
+
+  1847    CtorDef _ (ProperName tyNameStr) (Ident ctorName) _ -> fromMaybe Any (Map.lookup (currentMod <> "_" <> sanitizeIdent ctorName) aritiesMap)
+                                ^^^^^^^^^
+
+  Name tyNameStr was introduced but not used.
+  in value declaration inferTypeExpr
+
+           Src   Lib   All
+Warnings    66    16    82
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: purust
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Bundling...
+
+  bin/purust.js  1.1mb ⚠️
+
+⚡ Done in 38ms
+
+✓ Bundle succeeded.
+

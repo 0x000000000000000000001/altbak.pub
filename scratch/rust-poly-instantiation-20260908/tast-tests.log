@@ -1,0 +1,18 @@
+
+> purust@0.1.0 test:tast
+> node --test tests/tast/*.mjs
+
+TAST enum eligibility: nullary constructors, phantom parameters, payloads and nested Color checked.
+✔ tests/tast/nullary-enums.mjs (94.808166ms)
+TAST instantiation: native Int/Number loops, two quantifiers, partial application and generic dictionaries checked across modules.
+✔ tests/tast/type-instantiation.mjs (11188.827833ms)
+Global enum layouts: cross-module construction, Value, FFI, stubs, Unit and persistence checked.
+✔ tests/tast/value-enums-interop.mjs (923.268167ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11194.626667

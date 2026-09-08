@@ -1,0 +1,9 @@
+/before-binary
+/build/
+/tast/
+/rust/
+/*.purmeta
+/.purmeta/
+/originals/
+/decoded-tast.json
+/pbo-trace.json

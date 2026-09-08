@@ -1,0 +1,25 @@
+1 before: 160.096 ms; 14 outputs checked
+1 after: 115.237 ms; 14 outputs checked
+2 after: 115.773 ms; 14 outputs checked
+2 before: 160.538 ms; 14 outputs checked
+3 before: 159.799 ms; 14 outputs checked
+3 after: 116.415 ms; 14 outputs checked
+4 after: 118.971 ms; 14 outputs checked
+4 before: 165.092 ms; 14 outputs checked
+5 before: 163.357 ms; 14 outputs checked
+5 after: 117.704 ms; 14 outputs checked
+AST Evaluation: 1.0 -> 1.0
+Fibonacci: 1.0 -> 1.0
+List Processing (900 elements): 24.0 -> 27.0
+Tail Call Optimization (100k calls): 34.0 -> 35.0
+Deep Record Updates (10k iterations): 940.0 -> 944.0
+Ackermann (3, 4): 18.0 -> 17.0
+Church Numerals (100k Closure Applications): 11130.0 -> 4928.0
+Prime Sieve (sum primes up to 500): 172.0 -> 180.0
+Red-Black Tree (100k Worst-Case Insertions): 40992.0 -> 40462.0
+Polymorphism (10M Type Class Dict Lookups): 37358.0 -> 1.0
+State Monad (1.2k Binds, 60 Stack Depth): 65.0 -> 65.0
+Lazy Evaluation (1M Thunks Forced, 1k Depth): 70283.0 -> 69732.0
+Array Processing (900 elements): 14.0 -> 13.0
+RowToList (Keys Count): 1.0 -> 1.0
+Total: {'before': 161033.0, 'after': 116407.0}

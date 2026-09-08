@@ -1,0 +1,1 @@
+Generated i64 accumulator, generic fallback, no loop conversions; actual arm64 kernel reduces to addition.

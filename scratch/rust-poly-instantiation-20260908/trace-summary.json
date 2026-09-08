@@ -1,0 +1,329 @@
+{
+  "polyLoop": [
+    {
+      "stage": 0,
+      "typeApplications": [
+        {
+          "tag": "Int"
+        },
+        {
+          "tag": "TypeVar",
+          "value0": "a"
+        },
+        {
+          "tag": "TypeVar",
+          "value0": "a"
+        }
+      ],
+      "recursiveFunctionTypes": [
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "Int"
+            },
+            {
+              "tag": "TypeVar",
+              "value0": "a"
+            }
+          ],
+          "value1": {
+            "tag": "TypeVar",
+            "value0": "a"
+          }
+        },
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "TypeVar",
+              "value0": "a"
+            }
+          ],
+          "value1": {
+            "tag": "TypeVar",
+            "value0": "a"
+          }
+        }
+      ]
+    },
+    {
+      "stage": 1,
+      "typeApplications": [],
+      "recursiveFunctionTypes": [
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "Int"
+            },
+            {
+              "tag": "TypeVar",
+              "value0": "a"
+            }
+          ],
+          "value1": {
+            "tag": "TypeVar",
+            "value0": "a"
+          }
+        },
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "TypeVar",
+              "value0": "a"
+            }
+          ],
+          "value1": {
+            "tag": "TypeVar",
+            "value0": "a"
+          }
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "typeApplications": [],
+      "recursiveFunctionTypes": [
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "Int"
+            },
+            {
+              "tag": "TypeVar",
+              "value0": "a"
+            }
+          ],
+          "value1": {
+            "tag": "TypeVar",
+            "value0": "a"
+          }
+        },
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "TypeVar",
+              "value0": "a"
+            }
+          ],
+          "value1": {
+            "tag": "TypeVar",
+            "value0": "a"
+          }
+        }
+      ]
+    }
+  ],
+  "numberLoop": [
+    {
+      "stage": 0,
+      "typeApplications": [
+        {
+          "tag": "$$Number"
+        }
+      ],
+      "recursiveFunctionTypes": []
+    },
+    {
+      "stage": 1,
+      "typeApplications": [],
+      "recursiveFunctionTypes": [
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "Int"
+            },
+            {
+              "tag": "$$Number"
+            }
+          ],
+          "value1": {
+            "tag": "$$Number"
+          }
+        },
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "$$Number"
+            }
+          ],
+          "value1": {
+            "tag": "$$Number"
+          }
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "typeApplications": [],
+      "recursiveFunctionTypes": [
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "Int"
+            },
+            {
+              "tag": "$$Number"
+            }
+          ],
+          "value1": {
+            "tag": "$$Number"
+          }
+        },
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "$$Number"
+            }
+          ],
+          "value1": {
+            "tag": "$$Number"
+          }
+        }
+      ]
+    },
+    {
+      "stage": 3,
+      "typeApplications": [],
+      "recursiveFunctionTypes": [
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "Int"
+            },
+            {
+              "tag": "$$Number"
+            }
+          ],
+          "value1": {
+            "tag": "$$Number"
+          }
+        },
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "$$Number"
+            }
+          ],
+          "value1": {
+            "tag": "$$Number"
+          }
+        }
+      ]
+    }
+  ],
+  "intLoop": [
+    {
+      "stage": 0,
+      "typeApplications": [
+        {
+          "tag": "Int"
+        }
+      ],
+      "recursiveFunctionTypes": []
+    },
+    {
+      "stage": 1,
+      "typeApplications": [],
+      "recursiveFunctionTypes": [
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "Int"
+            },
+            {
+              "tag": "Int"
+            }
+          ],
+          "value1": {
+            "tag": "Int"
+          }
+        },
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "Int"
+            }
+          ],
+          "value1": {
+            "tag": "Int"
+          }
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "typeApplications": [],
+      "recursiveFunctionTypes": [
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "Int"
+            },
+            {
+              "tag": "Int"
+            }
+          ],
+          "value1": {
+            "tag": "Int"
+          }
+        },
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "Int"
+            }
+          ],
+          "value1": {
+            "tag": "Int"
+          }
+        }
+      ]
+    },
+    {
+      "stage": 3,
+      "typeApplications": [],
+      "recursiveFunctionTypes": [
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "Int"
+            },
+            {
+              "tag": "Int"
+            }
+          ],
+          "value1": {
+            "tag": "Int"
+          }
+        },
+        {
+          "tag": "Func",
+          "value0": [
+            {
+              "tag": "Int"
+            }
+          ],
+          "value1": {
+            "tag": "Int"
+          }
+        }
+      ]
+    }
+  ]
+}
