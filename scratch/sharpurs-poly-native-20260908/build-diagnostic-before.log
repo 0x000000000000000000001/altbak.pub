@@ -1,0 +1,11 @@
+  Determining projects to restore...
+  Restored /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-poly-native-20260908/diagnostic-before/FFI.CSharp.csproj (in 25 ms).
+  Restored /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-poly-native-20260908/diagnostic-before/Program.fsproj (in 91 ms).
+  FFI.CSharp -> /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-poly-native-20260908/diagnostic-before/bin/csharp/net8.0/FFI.CSharp.dll
+  Program -> /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-poly-native-20260908/diagnostic-before/bin/Release/net8.0/Program.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:11.29

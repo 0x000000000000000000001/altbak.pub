@@ -1,0 +1,572 @@
+{
+  "module": "Test.Polymorphism",
+  "recursive": false,
+  "ident": "act",
+  "expression": {
+    "$tag": "Syntax$Typed",
+    "value0": {
+      "$tag": "CoreFn$ADT",
+      "value0": "Effect.Effect",
+      "value1": [
+        "Effect",
+        "Effect"
+      ],
+      "value2": [
+        {
+          "$tag": "CoreFn$String"
+        }
+      ]
+    },
+    "value1": {
+      "$tag": "Syntax$Typed",
+      "value0": {
+        "$tag": "CoreFn$ADT",
+        "value0": "Effect.Effect",
+        "value1": [
+          "Effect",
+          "Effect"
+        ],
+        "value2": [
+          {
+            "$tag": "CoreFn$TypeVar",
+            "value0": "b"
+          }
+        ]
+      },
+      "value1": {
+        "$tag": "Syntax$App",
+        "value0": {
+          "$tag": "Syntax$Var",
+          "value0": {
+            "$tag": "CoreFn$Qualified",
+            "value0": {
+              "$tag": "DataMaybe$Just",
+              "value0": "Effect"
+            },
+            "value1": "bindE"
+          }
+        },
+        "value1": [
+          {
+            "$tag": "Syntax$Typed",
+            "value0": {
+              "$tag": "CoreFn$ADT",
+              "value0": "Effect.Effect",
+              "value1": [
+                "Effect",
+                "Effect"
+              ],
+              "value2": [
+                {
+                  "$tag": "CoreFn$Int"
+                }
+              ]
+            },
+            "value1": {
+              "$tag": "Syntax$Typed",
+              "value0": {
+                "$tag": "CoreFn$ADT",
+                "value0": "Effect.Effect",
+                "value1": [
+                  "Effect",
+                  "Effect"
+                ],
+                "value2": [
+                  {
+                    "$tag": "CoreFn$Int"
+                  }
+                ]
+              },
+              "value1": {
+                "$tag": "Syntax$App",
+                "value0": {
+                  "$tag": "Syntax$TypeApp",
+                  "value0": {
+                    "$tag": "Syntax$Var",
+                    "value0": {
+                      "$tag": "CoreFn$Qualified",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "Bench"
+                      },
+                      "value1": "opaque"
+                    }
+                  },
+                  "value1": {
+                    "$tag": "CoreFn$Int"
+                  }
+                },
+                "value1": [
+                  {
+                    "$tag": "Syntax$Typed",
+                    "value0": {
+                      "$tag": "CoreFn$Int"
+                    },
+                    "value1": {
+                      "$tag": "Syntax$Lit",
+                      "value0": {
+                        "$tag": "CoreFn$LitInt",
+                        "value0": 10000000
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "$tag": "Syntax$Typed",
+            "value0": {
+              "$tag": "CoreFn$Func",
+              "value0": [
+                {
+                  "$tag": "CoreFn$Int"
+                }
+              ],
+              "value1": {
+                "$tag": "CoreFn$ADT",
+                "value0": "Effect.Effect",
+                "value1": [
+                  "Effect",
+                  "Effect"
+                ],
+                "value2": [
+                  {
+                    "$tag": "CoreFn$String"
+                  }
+                ]
+              }
+            },
+            "value1": {
+              "$tag": "Syntax$Abs",
+              "value0": [
+                {
+                  "$tag": "DataTuple$Tuple",
+                  "value0": {
+                    "$tag": "DataMaybe$Just",
+                    "value0": "dummy"
+                  },
+                  "value1": 0
+                }
+              ],
+              "value1": {
+                "$tag": "Syntax$Typed",
+                "value0": {
+                  "$tag": "CoreFn$ADT",
+                  "value0": "Effect.Effect",
+                  "value1": [
+                    "Effect",
+                    "Effect"
+                  ],
+                  "value2": [
+                    {
+                      "$tag": "CoreFn$String"
+                    }
+                  ]
+                },
+                "value1": {
+                  "$tag": "Syntax$Typed",
+                  "value0": {
+                    "$tag": "CoreFn$ADT",
+                    "value0": "Effect.Effect",
+                    "value1": [
+                      "Effect",
+                      "Effect"
+                    ],
+                    "value2": [
+                      {
+                        "$tag": "CoreFn$TypeVar",
+                        "value0": "a"
+                      }
+                    ]
+                  },
+                  "value1": {
+                    "$tag": "Syntax$App",
+                    "value0": {
+                      "$tag": "Syntax$Var",
+                      "value0": {
+                        "$tag": "CoreFn$Qualified",
+                        "value0": {
+                          "$tag": "DataMaybe$Just",
+                          "value0": "Effect"
+                        },
+                        "value1": "pureE"
+                      }
+                    },
+                    "value1": [
+                      {
+                        "$tag": "Syntax$Typed",
+                        "value0": {
+                          "$tag": "CoreFn$String"
+                        },
+                        "value1": {
+                          "$tag": "Syntax$Typed",
+                          "value0": {
+                            "$tag": "CoreFn$String"
+                          },
+                          "value1": {
+                            "$tag": "Syntax$App",
+                            "value0": {
+                              "$tag": "Syntax$Var",
+                              "value0": {
+                                "$tag": "CoreFn$Qualified",
+                                "value0": {
+                                  "$tag": "DataMaybe$Just",
+                                  "value0": "Data.Show"
+                                },
+                                "value1": "showIntImpl"
+                              }
+                            },
+                            "value1": [
+                              {
+                                "$tag": "Syntax$Typed",
+                                "value0": {
+                                  "$tag": "CoreFn$Int"
+                                },
+                                "value1": {
+                                  "$tag": "Syntax$Typed",
+                                  "value0": {
+                                    "$tag": "CoreFn$Int"
+                                  },
+                                  "value1": {
+                                    "$tag": "Syntax$LetRec",
+                                    "value0": 1,
+                                    "value1": [
+                                      {
+                                        "$tag": "DataTuple$Tuple",
+                                        "value0": "go",
+                                        "value1": {
+                                          "$tag": "Syntax$Typed",
+                                          "value0": {
+                                            "$tag": "CoreFn$Func",
+                                            "value0": [
+                                              {
+                                                "$tag": "CoreFn$Int"
+                                              },
+                                              {
+                                                "$tag": "CoreFn$Int"
+                                              }
+                                            ],
+                                            "value1": {
+                                              "$tag": "CoreFn$Int"
+                                            }
+                                          },
+                                          "value1": {
+                                            "$tag": "Syntax$Abs",
+                                            "value0": [
+                                              {
+                                                "$tag": "DataTuple$Tuple",
+                                                "value0": {
+                                                  "$tag": "DataMaybe$Just",
+                                                  "value0": "v"
+                                                },
+                                                "value1": 2
+                                              }
+                                            ],
+                                            "value1": {
+                                              "$tag": "Syntax$Typed",
+                                              "value0": {
+                                                "$tag": "CoreFn$Func",
+                                                "value0": [
+                                                  {
+                                                    "$tag": "CoreFn$Int"
+                                                  }
+                                                ],
+                                                "value1": {
+                                                  "$tag": "CoreFn$Int"
+                                                }
+                                              },
+                                              "value1": {
+                                                "$tag": "Syntax$Abs",
+                                                "value0": [
+                                                  {
+                                                    "$tag": "DataTuple$Tuple",
+                                                    "value0": {
+                                                      "$tag": "DataMaybe$Just",
+                                                      "value0": "v1"
+                                                    },
+                                                    "value1": 3
+                                                  }
+                                                ],
+                                                "value1": {
+                                                  "$tag": "Syntax$Typed",
+                                                  "value0": {
+                                                    "$tag": "CoreFn$Int"
+                                                  },
+                                                  "value1": {
+                                                    "$tag": "Syntax$Branch",
+                                                    "value0": [
+                                                      {
+                                                        "$tag": "Syntax$Pair",
+                                                        "value0": {
+                                                          "$tag": "Syntax$PrimOp",
+                                                          "value0": {
+                                                            "$tag": "Syntax$Op2",
+                                                            "value0": {
+                                                              "$tag": "Syntax$OpIntOrd",
+                                                              "value0": {
+                                                                "$tag": "Syntax$OpEq"
+                                                              }
+                                                            },
+                                                            "value1": {
+                                                              "$tag": "Syntax$Typed",
+                                                              "value0": {
+                                                                "$tag": "CoreFn$Int"
+                                                              },
+                                                              "value1": {
+                                                                "$tag": "Syntax$Local",
+                                                                "value0": {
+                                                                  "$tag": "DataMaybe$Just",
+                                                                  "value0": "v"
+                                                                },
+                                                                "value1": 2
+                                                              }
+                                                            },
+                                                            "value2": {
+                                                              "$tag": "Syntax$Lit",
+                                                              "value0": {
+                                                                "$tag": "CoreFn$LitInt",
+                                                                "value0": 0
+                                                              }
+                                                            }
+                                                          }
+                                                        },
+                                                        "value1": {
+                                                          "$tag": "Syntax$Typed",
+                                                          "value0": {
+                                                            "$tag": "CoreFn$Int"
+                                                          },
+                                                          "value1": {
+                                                            "$tag": "Syntax$Typed",
+                                                            "value0": {
+                                                              "$tag": "CoreFn$Int"
+                                                            },
+                                                            "value1": {
+                                                              "$tag": "Syntax$Local",
+                                                              "value0": {
+                                                                "$tag": "DataMaybe$Just",
+                                                                "value0": "v1"
+                                                              },
+                                                              "value1": 3
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    ],
+                                                    "value1": {
+                                                      "$tag": "Syntax$Typed",
+                                                      "value0": {
+                                                        "$tag": "CoreFn$Int"
+                                                      },
+                                                      "value1": {
+                                                        "$tag": "Syntax$Typed",
+                                                        "value0": {
+                                                          "$tag": "CoreFn$Int"
+                                                        },
+                                                        "value1": {
+                                                          "$tag": "Syntax$App",
+                                                          "value0": {
+                                                            "$tag": "Syntax$Local",
+                                                            "value0": {
+                                                              "$tag": "DataMaybe$Just",
+                                                              "value0": "go"
+                                                            },
+                                                            "value1": 1
+                                                          },
+                                                          "value1": [
+                                                            {
+                                                              "$tag": "Syntax$Typed",
+                                                              "value0": {
+                                                                "$tag": "CoreFn$Int"
+                                                              },
+                                                              "value1": {
+                                                                "$tag": "Syntax$Typed",
+                                                                "value0": {
+                                                                  "$tag": "CoreFn$Int"
+                                                                },
+                                                                "value1": {
+                                                                  "$tag": "Syntax$PrimOp",
+                                                                  "value0": {
+                                                                    "$tag": "Syntax$Op2",
+                                                                    "value0": {
+                                                                      "$tag": "Syntax$OpIntNum",
+                                                                      "value0": {
+                                                                        "$tag": "Syntax$OpSubtract"
+                                                                      }
+                                                                    },
+                                                                    "value1": {
+                                                                      "$tag": "Syntax$Typed",
+                                                                      "value0": {
+                                                                        "$tag": "CoreFn$Int"
+                                                                      },
+                                                                      "value1": {
+                                                                        "$tag": "Syntax$Local",
+                                                                        "value0": {
+                                                                          "$tag": "DataMaybe$Just",
+                                                                          "value0": "v"
+                                                                        },
+                                                                        "value1": 2
+                                                                      }
+                                                                    },
+                                                                    "value2": {
+                                                                      "$tag": "Syntax$Typed",
+                                                                      "value0": {
+                                                                        "$tag": "CoreFn$Int"
+                                                                      },
+                                                                      "value1": {
+                                                                        "$tag": "Syntax$Lit",
+                                                                        "value0": {
+                                                                          "$tag": "CoreFn$LitInt",
+                                                                          "value0": 1
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
+                                                            {
+                                                              "$tag": "Syntax$Typed",
+                                                              "value0": {
+                                                                "$tag": "CoreFn$Int"
+                                                              },
+                                                              "value1": {
+                                                                "$tag": "Syntax$Typed",
+                                                                "value0": {
+                                                                  "$tag": "CoreFn$Int"
+                                                                },
+                                                                "value1": {
+                                                                  "$tag": "Syntax$Typed",
+                                                                  "value0": {
+                                                                    "$tag": "CoreFn$Int"
+                                                                  },
+                                                                  "value1": {
+                                                                    "$tag": "Syntax$PrimOp",
+                                                                    "value0": {
+                                                                      "$tag": "Syntax$Op2",
+                                                                      "value0": {
+                                                                        "$tag": "Syntax$OpIntNum",
+                                                                        "value0": {
+                                                                          "$tag": "Syntax$OpAdd"
+                                                                        }
+                                                                      },
+                                                                      "value1": {
+                                                                        "$tag": "Syntax$Local",
+                                                                        "value0": {
+                                                                          "$tag": "DataMaybe$Just",
+                                                                          "value0": "v1"
+                                                                        },
+                                                                        "value1": 3
+                                                                      },
+                                                                      "value2": {
+                                                                        "$tag": "Syntax$Lit",
+                                                                        "value0": {
+                                                                          "$tag": "CoreFn$LitInt",
+                                                                          "value0": 1
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "value2": {
+                                      "$tag": "Syntax$Typed",
+                                      "value0": {
+                                        "$tag": "CoreFn$Int"
+                                      },
+                                      "value1": {
+                                        "$tag": "Syntax$Typed",
+                                        "value0": {
+                                          "$tag": "CoreFn$Int"
+                                        },
+                                        "value1": {
+                                          "$tag": "Syntax$Typed",
+                                          "value0": {
+                                            "$tag": "CoreFn$Int"
+                                          },
+                                          "value1": {
+                                            "$tag": "Syntax$App",
+                                            "value0": {
+                                              "$tag": "Syntax$Local",
+                                              "value0": {
+                                                "$tag": "DataMaybe$Just",
+                                                "value0": "go"
+                                              },
+                                              "value1": 1
+                                            },
+                                            "value1": [
+                                              {
+                                                "$tag": "Syntax$Typed",
+                                                "value0": {
+                                                  "$tag": "CoreFn$Int"
+                                                },
+                                                "value1": {
+                                                  "$tag": "Syntax$Typed",
+                                                  "value0": {
+                                                    "$tag": "CoreFn$Int"
+                                                  },
+                                                  "value1": {
+                                                    "$tag": "Syntax$Local",
+                                                    "value0": {
+                                                      "$tag": "DataMaybe$Just",
+                                                      "value0": "dummy"
+                                                    },
+                                                    "value1": 0
+                                                  }
+                                                }
+                                              },
+                                              {
+                                                "$tag": "Syntax$Typed",
+                                                "value0": {
+                                                  "$tag": "CoreFn$Int"
+                                                },
+                                                "value1": {
+                                                  "$tag": "Syntax$Typed",
+                                                  "value0": {
+                                                    "$tag": "CoreFn$Int"
+                                                  },
+                                                  "value1": {
+                                                    "$tag": "Syntax$Lit",
+                                                    "value0": {
+                                                      "$tag": "CoreFn$LitInt",
+                                                      "value0": 0
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

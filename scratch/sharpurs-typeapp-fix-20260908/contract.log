@@ -1,0 +1,5 @@
+identity: PASS; body = ['TypeVar(a)']; expected only TypeVar(a)
+useInt: PASS; body = ['Int', 'Int']; expected only Int
+useString: PASS; body = ['String', 'String']; expected only String
+generic: PASS; body = ['TypeVar(b)', 'TypeVar(b)']; expected only TypeVar(b)
+Desired type contract: 4/4 bindings pass.

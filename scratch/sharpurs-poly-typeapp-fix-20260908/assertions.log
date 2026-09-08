@@ -1,0 +1,3 @@
+Verified: generic dictionary accesses retained; specialized act has one local recursive loop, Int addition of 1, no dictionary access.
+Verified: inlined go carries [Int, Int] -> Int and no residual type variable.
+Verified: the opaque FFI keeps its explicit @Int; the generic loop keeps its dictionary accesses.

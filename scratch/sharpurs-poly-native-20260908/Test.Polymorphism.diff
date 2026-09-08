@@ -1,0 +1,8 @@
+--- before/Test.Polymorphism.fs
++++ after/Test.Polymorphism.fs
+@@ -22,4 +22,4 @@
+ 
+ let Test_Polymorphism_describe  = (sharpurs_apply (box ((box Effect_Console_log))) (box ((box "Polymorphism (10M Type Class Dict Lookups):"))))
+ 
+-let Test_Polymorphism_act  = (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Control_Bind_bind))) (box ((box Effect_bindEffect)))))) (box ((sharpurs_apply (box ((box Bench_opaque))) (box ((box 10000000))))))))) (box ((box (fun (dummy: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box Control_Applicative_pure))) (box ((box Effect_applicativeEffect)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Show_show))) (box ((box Data_Show_showInt)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Test_Polymorphism_polyLoop))) (box ((box Test_Polymorphism_intMonoidish)))))) (box ((box dummy)))))) (box ((box 0)))))))))))))))
++let Test_Polymorphism_act  = (sharpurs_apply (box ((sharpurs_apply (box (Effect_bindE)) (box ((sharpurs_apply (box (Bench_opaque)) (box ((box (10000000)))))))))) (box ((box (fun (sharpurs_o_0: obj) -> (sharpurs_apply (box (Effect_pureE)) (box ((sharpurs_apply (box (Data_Show_showIntImpl)) (box ((let rec sharpurs_int_kernel (sharpurs_i_2: int) (sharpurs_i_3: int) : int = (if (sharpurs_i_2 = (0)) then sharpurs_i_3 else (sharpurs_int_kernel (sharpurs_i_2 - (1)) (sharpurs_i_3 + (1)))) in box (sharpurs_int_kernel (unbox<int> sharpurs_o_0) (0))))))))))))))

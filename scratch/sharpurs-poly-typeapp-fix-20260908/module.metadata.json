@@ -1,0 +1,44 @@
+{
+  "module": "Test.Polymorphism",
+  "classDecls": [
+    {
+      "name": "Monoidish",
+      "vars": [
+        "a"
+      ],
+      "superclasses": [],
+      "methods": [
+        {
+          "$tag": "DataTuple$Tuple",
+          "value0": "mempty_",
+          "value1": {
+            "$tag": "CoreFn$TypeVar",
+            "value0": "a"
+          }
+        },
+        {
+          "$tag": "DataTuple$Tuple",
+          "value0": "mappend_",
+          "value1": {
+            "$tag": "CoreFn$Func",
+            "value0": [
+              {
+                "$tag": "CoreFn$TypeVar",
+                "value0": "a"
+              },
+              {
+                "$tag": "CoreFn$TypeVar",
+                "value0": "a"
+              }
+            ],
+            "value1": {
+              "$tag": "CoreFn$TypeVar",
+              "value0": "a"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "dataDecls": []
+}

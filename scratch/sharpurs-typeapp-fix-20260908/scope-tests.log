@@ -1,0 +1,23 @@
+
+> test:typeapp
+> node test/typeapp.mjs /Users/0x1/Documents/htdocs/sharpurs/sharpurs/output
+
+PASS independent instantiations leave the shared generic AST unchanged
+PASS an inner ForAll shadows the instantiated variable in all its annotations
+PASS successive @b @String arguments cannot capture the caller's free b
+PASS alpha-renaming also updates annotations bound by the remaining quantifier
+PASS fresh binders avoid names occurring only in nested expression annotations
+PASS nested TypeApp arguments specialize while the reference's own ForAll stays generic
+PASS substitution is simultaneous rather than recursively replacing inserted variables
+PASS substitution preserves an inner quantifier that shadows its key
+PASS capture avoidance preserves free variables and renames bound occurrences
+PASS records retain field order, open row tails, arrays, and ADT arguments
+PASS constraints and higher-kinded type applications substitute structurally
+PASS closed row tails and opaque primitive types are preserved
+PASS expressions without an explicit quantifier cannot guess an instantiation
+PASS an unconsumable external TypeApp cannot be erased by the runtime spine fallback
+PASS a TypeApp after a value argument cannot instantiate the initial function scope
+PASS unapplied and partially applied external quantifiers keep the lexical body pending
+PASS InlineNever retains type arguments when it returns an opaque external reference
+PASS curried and uncurried fallback calls preserve residual type applications
+TypeApp scope regression tests: 18 passed, 0 failed (/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output)

@@ -1,0 +1,7 @@
+Captured optimized Test.Polymorphism.mempty_
+Captured optimized Test.Polymorphism.mappend_
+Captured optimized Test.Polymorphism.polyLoop
+Captured optimized Test.Polymorphism.intMonoidish
+Captured optimized Test.Polymorphism.describe
+Captured optimized Test.Polymorphism.act
+Optimized 301 modules; no code generation, no benchmark execution

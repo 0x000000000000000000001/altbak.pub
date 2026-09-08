@@ -1,0 +1,162 @@
+{
+  "inputCall": {
+    "typeArgument": "Int",
+    "dictionary": "Test.Polymorphism.intMonoidish",
+    "annotation": "ConstrainedType([Tuple([Test, Polymorphism, Monoidish], [Int])], [Int, Int] -> Int)"
+  },
+  "act": {
+    "recursive": false,
+    "nodes": {
+      "CoreFn$ADT": 7,
+      "CoreFn$Func": 3,
+      "CoreFn$Int": 32,
+      "CoreFn$LitInt": 5,
+      "CoreFn$Qualified": 4,
+      "CoreFn$String": 5,
+      "CoreFn$TypeVar": 2,
+      "DataMaybe$Just": 14,
+      "DataTuple$Tuple": 4,
+      "Syntax$Abs": 3,
+      "Syntax$App": 6,
+      "Syntax$Branch": 1,
+      "Syntax$LetRec": 1,
+      "Syntax$Lit": 5,
+      "Syntax$Local": 7,
+      "Syntax$Op2": 3,
+      "Syntax$OpAdd": 1,
+      "Syntax$OpEq": 1,
+      "Syntax$OpIntNum": 2,
+      "Syntax$OpIntOrd": 1,
+      "Syntax$OpSubtract": 1,
+      "Syntax$Pair": 1,
+      "Syntax$PrimOp": 3,
+      "Syntax$TypeApp": 1,
+      "Syntax$Typed": 34,
+      "Syntax$Var": 4
+    },
+    "references": [
+      "Bench.opaque",
+      "Data.Show.showIntImpl",
+      "Effect.bindE",
+      "Effect.pureE"
+    ]
+  },
+  "describe": {
+    "recursive": false,
+    "nodes": {
+      "CoreFn$ADT": 2,
+      "CoreFn$LitString": 1,
+      "CoreFn$Qualified": 1,
+      "CoreFn$String": 1,
+      "CoreFn$Unit": 2,
+      "DataMaybe$Just": 1,
+      "Syntax$App": 1,
+      "Syntax$Lit": 1,
+      "Syntax$Typed": 3,
+      "Syntax$Var": 1
+    },
+    "references": [
+      "Effect.Console.log"
+    ]
+  },
+  "intMonoidish": {
+    "recursive": false,
+    "nodes": {
+      "CoreFn$ADT": 2,
+      "CoreFn$Any": 1,
+      "CoreFn$Func": 3,
+      "CoreFn$Int": 14,
+      "CoreFn$LitInt": 1,
+      "CoreFn$LitRecord": 1,
+      "CoreFn$Prop": 2,
+      "CoreFn$Record": 1,
+      "CoreFn$Row": 1,
+      "DataMaybe$Just": 5,
+      "DataTuple$Tuple": 4,
+      "Syntax$Abs": 2,
+      "Syntax$Lit": 2,
+      "Syntax$Local": 2,
+      "Syntax$Op2": 1,
+      "Syntax$OpAdd": 1,
+      "Syntax$OpIntNum": 1,
+      "Syntax$PrimOp": 1,
+      "Syntax$Typed": 8
+    },
+    "references": []
+  },
+  "mappend_": {
+    "recursive": false,
+    "nodes": {
+      "CoreFn$ConstrainedType": 1,
+      "CoreFn$ForAll": 1,
+      "CoreFn$Func": 2,
+      "CoreFn$TypeVar": 7,
+      "DataMaybe$Just": 2,
+      "DataTuple$Tuple": 2,
+      "Syntax$Abs": 1,
+      "Syntax$Accessor": 1,
+      "Syntax$GetProp": 1,
+      "Syntax$Local": 1,
+      "Syntax$Typed": 2
+    },
+    "references": []
+  },
+  "mempty_": {
+    "recursive": false,
+    "nodes": {
+      "CoreFn$ConstrainedType": 1,
+      "CoreFn$ForAll": 1,
+      "CoreFn$TypeVar": 3,
+      "DataMaybe$Just": 2,
+      "DataTuple$Tuple": 2,
+      "Syntax$Abs": 1,
+      "Syntax$Accessor": 1,
+      "Syntax$GetProp": 1,
+      "Syntax$Local": 1,
+      "Syntax$Typed": 2
+    },
+    "references": []
+  },
+  "polyLoop": {
+    "recursive": false,
+    "nodes": {
+      "CoreFn$ConstrainedType": 2,
+      "CoreFn$ForAll": 1,
+      "CoreFn$Func": 6,
+      "CoreFn$Int": 10,
+      "CoreFn$LitInt": 2,
+      "CoreFn$TypeVar": 29,
+      "DataMaybe$Just": 15,
+      "DataTuple$Tuple": 8,
+      "Syntax$Abs": 5,
+      "Syntax$Accessor": 2,
+      "Syntax$App": 3,
+      "Syntax$Branch": 1,
+      "Syntax$GetProp": 2,
+      "Syntax$LetRec": 1,
+      "Syntax$Lit": 2,
+      "Syntax$Local": 10,
+      "Syntax$Op2": 2,
+      "Syntax$OpEq": 1,
+      "Syntax$OpIntNum": 1,
+      "Syntax$OpIntOrd": 1,
+      "Syntax$OpSubtract": 1,
+      "Syntax$Pair": 1,
+      "Syntax$PrimOp": 2,
+      "Syntax$Typed": 27
+    },
+    "references": []
+  },
+  "inlinedGo": {
+    "recursiveLevel": 1,
+    "parameterLevels": [
+      2,
+      3
+    ],
+    "signature": "[Int, Int] -> Int",
+    "entry": "go dummy 0",
+    "body": "if n == 0 then acc else go (n - 1) (acc + 1)",
+    "dictionaryAccesses": 0,
+    "residualTypeVariables": {}
+  }
+}

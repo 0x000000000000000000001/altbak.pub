@@ -1,0 +1,70 @@
+{
+  "observations": {
+    "identity": {
+      "inputSignature": "forall a. [TypeVar(a)] -> TypeVar(a)",
+      "inputTypeArguments": [],
+      "optimizedSignatures": [
+        "forall a. [TypeVar(a)] -> TypeVar(a)",
+        "[TypeVar(a)] -> TypeVar(a)"
+      ],
+      "optimizedBodyAnnotations": [
+        "TypeVar(a)"
+      ],
+      "expectedBodyType": "TypeVar(a)",
+      "valueShape": "one parameter, returned unchanged",
+      "typeContractPassed": true
+    },
+    "useInt": {
+      "inputSignature": "[Int] -> Int",
+      "inputTypeArguments": [
+        "Int"
+      ],
+      "optimizedSignatures": [
+        "[Int] -> Int"
+      ],
+      "optimizedBodyAnnotations": [
+        "Int",
+        "Int"
+      ],
+      "expectedBodyType": "Int",
+      "valueShape": "one parameter, returned unchanged",
+      "typeContractPassed": true
+    },
+    "useString": {
+      "inputSignature": "[String] -> String",
+      "inputTypeArguments": [
+        "String"
+      ],
+      "optimizedSignatures": [
+        "[String] -> String"
+      ],
+      "optimizedBodyAnnotations": [
+        "String",
+        "String"
+      ],
+      "expectedBodyType": "String",
+      "valueShape": "one parameter, returned unchanged",
+      "typeContractPassed": true
+    },
+    "generic": {
+      "inputSignature": "forall b. [TypeVar(b)] -> TypeVar(b)",
+      "inputTypeArguments": [
+        "TypeVar(b)"
+      ],
+      "optimizedSignatures": [
+        "forall b. [TypeVar(b)] -> TypeVar(b)",
+        "[TypeVar(b)] -> TypeVar(b)"
+      ],
+      "optimizedBodyAnnotations": [
+        "TypeVar(b)",
+        "TypeVar(b)"
+      ],
+      "expectedBodyType": "TypeVar(b)",
+      "valueShape": "one parameter, returned unchanged",
+      "typeContractPassed": true
+    }
+  },
+  "typeContractPassed": true,
+  "failingBindings": [],
+  "inputAndValueShapeChecksPassed": true
+}

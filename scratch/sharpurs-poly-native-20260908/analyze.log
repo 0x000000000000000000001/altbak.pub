@@ -1,0 +1,11 @@
+Validated 10 App.main logs (14 outputs each) and 6 diagnostic logs (60 measurements + 18 local warmups).
+before: official total median 875.35 ms [854.56, 886.40], Polymorphism 577.58467 ms
+  diagnostic: median of best 603.64150 ms, median of medians 636.68637 ms
+  allocations/action 1440000424–1440000424 bytes; GC across 30 samples {'gc0': 5166, 'gc1': 0, 'gc2': 0}
+after: official total median 296.39 ms [292.20, 307.77], Polymorphism 2.22158 ms
+  diagnostic: median of best 2.22750 ms, median of medians 2.34581 ms
+  allocations/action 112–112 bytes; GC across 30 samples {'gc0': 0, 'gc1': 0, 'gc2': 0}
+Official Total: -66.14%, 2.95× speedup
+Official Polymorphism: -99.62%, 259.99× speedup
+README historical compiled F#/C#: 13918.86 ms total, 9689415.0 µs Polymorphism
+Wrote /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-poly-native-20260908/comparison.json

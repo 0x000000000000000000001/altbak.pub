@@ -1,0 +1,17 @@
+{"label": "official-before-1", "wallSeconds": 14.683272125, "totalMs": 863.58}
+{"label": "official-after-1", "wallSeconds": 5.223995917000002, "totalMs": 294.1}
+{"label": "official-after-2", "wallSeconds": 5.25414975, "totalMs": 292.2}
+{"label": "official-before-2", "wallSeconds": 14.688537375, "totalMs": 875.35}
+{"label": "official-before-3", "wallSeconds": 14.435330624999999, "totalMs": 854.56}
+{"label": "official-after-3", "wallSeconds": 5.322853957999996, "totalMs": 298.73}
+{"label": "official-after-4", "wallSeconds": 5.460715750000006, "totalMs": 307.77}
+{"label": "official-before-4", "wallSeconds": 14.673133041, "totalMs": 878.38}
+{"label": "official-before-5", "wallSeconds": 14.835510374999998, "totalMs": 886.4}
+{"label": "official-after-5", "wallSeconds": 5.284555584000003, "totalMs": 296.39}
+{"label": "diagnostic-before-1", "wallSeconds": 10.784103083000005, "bestUs": 580553.292, "gc0": 1722, "gc1": 0, "gc2": 0, "kind": "summary", "maxAllocatedBytes": 1440000424, "medianUs": 585285.729, "minAllocatedBytes": 1440000424, "output": "10000000"}
+{"label": "diagnostic-after-1", "wallSeconds": 1.3860009169999898, "bestUs": 2227.5, "gc0": 0, "gc1": 0, "gc2": 0, "kind": "summary", "maxAllocatedBytes": 112, "medianUs": 2345.813, "minAllocatedBytes": 112, "output": "10000000"}
+{"label": "diagnostic-after-2", "wallSeconds": 1.3701907089999992, "bestUs": 2220.833, "gc0": 0, "gc1": 0, "gc2": 0, "kind": "summary", "maxAllocatedBytes": 112, "medianUs": 2229.1040000000003, "minAllocatedBytes": 112, "output": "10000000"}
+{"label": "diagnostic-before-2", "wallSeconds": 11.321838415999991, "bestUs": 603641.5, "gc0": 1722, "gc1": 0, "gc2": 0, "kind": "summary", "maxAllocatedBytes": 1440000424, "medianUs": 643898.1045, "minAllocatedBytes": 1440000424, "output": "10000000"}
+{"label": "diagnostic-before-3", "wallSeconds": 11.563984166999987, "bestUs": 625904.791, "gc0": 1722, "gc1": 0, "gc2": 0, "kind": "summary", "maxAllocatedBytes": 1440000424, "medianUs": 636686.375, "minAllocatedBytes": 1440000424, "output": "10000000"}
+{"label": "diagnostic-after-3", "wallSeconds": 1.4851146249999942, "bestUs": 2239.625, "gc0": 0, "gc1": 0, "gc2": 0, "kind": "summary", "maxAllocatedBytes": 112, "medianUs": 2350.0415000000003, "minAllocatedBytes": 112, "output": "10000000"}
+Complete: ten official runs, six diagnostics, generated sources unchanged during measurements.

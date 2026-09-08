@@ -1,0 +1,78 @@
+{
+  "module": "TypeAppFixture",
+  "recursive": false,
+  "ident": "generic",
+  "expression": {
+    "$tag": "Syntax$Typed",
+    "value0": {
+      "$tag": "CoreFn$ForAll",
+      "value0": [
+        "b"
+      ],
+      "value1": {
+        "$tag": "CoreFn$Func",
+        "value0": [
+          {
+            "$tag": "CoreFn$TypeVar",
+            "value0": "b"
+          }
+        ],
+        "value1": {
+          "$tag": "CoreFn$TypeVar",
+          "value0": "b"
+        }
+      }
+    },
+    "value1": {
+      "$tag": "Syntax$Typed",
+      "value0": {
+        "$tag": "CoreFn$Func",
+        "value0": [
+          {
+            "$tag": "CoreFn$TypeVar",
+            "value0": "b"
+          }
+        ],
+        "value1": {
+          "$tag": "CoreFn$TypeVar",
+          "value0": "b"
+        }
+      },
+      "value1": {
+        "$tag": "Syntax$Abs",
+        "value0": [
+          {
+            "$tag": "DataTuple$Tuple",
+            "value0": {
+              "$tag": "DataMaybe$Just",
+              "value0": "value"
+            },
+            "value1": 0
+          }
+        ],
+        "value1": {
+          "$tag": "Syntax$Typed",
+          "value0": {
+            "$tag": "CoreFn$TypeVar",
+            "value0": "b"
+          },
+          "value1": {
+            "$tag": "Syntax$Typed",
+            "value0": {
+              "$tag": "CoreFn$TypeVar",
+              "value0": "b"
+            },
+            "value1": {
+              "$tag": "Syntax$Local",
+              "value0": {
+                "$tag": "DataMaybe$Just",
+                "value0": "value"
+              },
+              "value1": 0
+            }
+          }
+        }
+      }
+    }
+  }
+}

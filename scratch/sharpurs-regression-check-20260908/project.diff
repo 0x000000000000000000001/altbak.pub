@@ -1,0 +1,11 @@
+--- reference/Program.fsproj
++++ current/Program.fsproj
+@@ -147,6 +147,8 @@
+     <Compile Include="Test.TCOFFICheatcode.fs" />
+     <Compile Include="AppFFI.fs" />
+     <Compile Include="AppFFICheatcode.fs" />
++    <Compile Include="AppJavaFFI.fs" />
++    <Compile Include="AppJavaFFICheatcode.fs" />
+     <Compile Include="Control.Biapply.fs" />
+     <Compile Include="Control.Biapplicative.fs" />
+     <Compile Include="Control.Monad.Cont.Class.fs" />

@@ -1,0 +1,11 @@
+  Determining projects to restore...
+  Restored /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-regression-check-20260908/reference/FFI.CSharp.csproj (in 28 ms).
+  Restored /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-regression-check-20260908/reference/Program.fsproj (in 549 ms).
+  FFI.CSharp -> /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-regression-check-20260908/reference/bin/csharp/net8.0/FFI.CSharp.dll
+  Program -> /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-regression-check-20260908/reference/bin/Release/net8.0/Program.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:11.93

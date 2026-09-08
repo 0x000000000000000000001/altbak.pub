@@ -1,0 +1,182 @@
+[
+  {
+    "label": "reference-1",
+    "variant": "reference",
+    "startedUtc": "2026-09-08T14:19:58.185829+00:00",
+    "wallSeconds": 14.972329083,
+    "assemblySha256": "c8ba36ca8a5fd1dbd171f94ae1e1ada4ba25763dfbbee7d8bafb4aca6867d602",
+    "loadBefore": [
+      4.0458984375,
+      6.33203125,
+      6.69091796875
+    ],
+    "loadAfter": [
+      4.23828125,
+      6.26513671875,
+      6.66015625
+    ],
+    "totalMs": 892.85
+  },
+  {
+    "label": "current-1",
+    "variant": "current",
+    "startedUtc": "2026-09-08T14:20:13.162099+00:00",
+    "wallSeconds": 14.896259624999999,
+    "assemblySha256": "0eced1ebccf24102b63382dfb96a2b7f548e077fa69c6160a3f58dd0a44e9617",
+    "loadBefore": [
+      4.23828125,
+      6.26513671875,
+      6.66015625
+    ],
+    "loadAfter": [
+      4.0986328125,
+      6.13623046875,
+      6.607421875
+    ],
+    "totalMs": 886.37
+  },
+  {
+    "label": "current-2",
+    "variant": "current",
+    "startedUtc": "2026-09-08T14:20:28.062212+00:00",
+    "wallSeconds": 15.225378875,
+    "assemblySha256": "0eced1ebccf24102b63382dfb96a2b7f548e077fa69c6160a3f58dd0a44e9617",
+    "loadBefore": [
+      4.0986328125,
+      6.13623046875,
+      6.607421875
+    ],
+    "loadAfter": [
+      3.75634765625,
+      5.96484375,
+      6.53759765625
+    ],
+    "totalMs": 915.2
+  },
+  {
+    "label": "reference-2",
+    "variant": "reference",
+    "startedUtc": "2026-09-08T14:20:43.290512+00:00",
+    "wallSeconds": 15.077070042000003,
+    "assemblySha256": "c8ba36ca8a5fd1dbd171f94ae1e1ada4ba25763dfbbee7d8bafb4aca6867d602",
+    "loadBefore": [
+      3.75634765625,
+      5.96484375,
+      6.53759765625
+    ],
+    "loadAfter": [
+      3.6005859375,
+      5.81982421875,
+      6.47509765625
+    ],
+    "totalMs": 907.38
+  },
+  {
+    "label": "reference-3",
+    "variant": "reference",
+    "startedUtc": "2026-09-08T14:20:58.370885+00:00",
+    "wallSeconds": 15.362807916999998,
+    "assemblySha256": "c8ba36ca8a5fd1dbd171f94ae1e1ada4ba25763dfbbee7d8bafb4aca6867d602",
+    "loadBefore": [
+      3.6005859375,
+      5.81982421875,
+      6.47509765625
+    ],
+    "loadAfter": [
+      3.39306640625,
+      5.66455078125,
+      6.40771484375
+    ],
+    "totalMs": 899.29
+  },
+  {
+    "label": "current-3",
+    "variant": "current",
+    "startedUtc": "2026-09-08T14:21:13.736609+00:00",
+    "wallSeconds": 14.744684957999993,
+    "assemblySha256": "0eced1ebccf24102b63382dfb96a2b7f548e077fa69c6160a3f58dd0a44e9617",
+    "loadBefore": [
+      3.39306640625,
+      5.66455078125,
+      6.40771484375
+    ],
+    "loadAfter": [
+      3.853515625,
+      5.64892578125,
+      6.388671875
+    ],
+    "totalMs": 874.47
+  },
+  {
+    "label": "current-4",
+    "variant": "current",
+    "startedUtc": "2026-09-08T14:21:28.484384+00:00",
+    "wallSeconds": 15.872883541999997,
+    "assemblySha256": "0eced1ebccf24102b63382dfb96a2b7f548e077fa69c6160a3f58dd0a44e9617",
+    "loadBefore": [
+      3.853515625,
+      5.64892578125,
+      6.388671875
+    ],
+    "loadAfter": [
+      3.75634765625,
+      5.53564453125,
+      6.33447265625
+    ],
+    "totalMs": 936.54
+  },
+  {
+    "label": "reference-4",
+    "variant": "reference",
+    "startedUtc": "2026-09-08T14:21:44.360770+00:00",
+    "wallSeconds": 15.186043708,
+    "assemblySha256": "c8ba36ca8a5fd1dbd171f94ae1e1ada4ba25763dfbbee7d8bafb4aca6867d602",
+    "loadBefore": [
+      3.75634765625,
+      5.53564453125,
+      6.33447265625
+    ],
+    "loadAfter": [
+      3.72900390625,
+      5.44287109375,
+      6.287109375
+    ],
+    "totalMs": 905.57
+  },
+  {
+    "label": "reference-5",
+    "variant": "reference",
+    "startedUtc": "2026-09-08T14:21:59.549704+00:00",
+    "wallSeconds": 15.228030125000004,
+    "assemblySha256": "c8ba36ca8a5fd1dbd171f94ae1e1ada4ba25763dfbbee7d8bafb4aca6867d602",
+    "loadBefore": [
+      3.72900390625,
+      5.44287109375,
+      6.287109375
+    ],
+    "loadAfter": [
+      3.9365234375,
+      5.40380859375,
+      6.2578125
+    ],
+    "totalMs": 900.7
+  },
+  {
+    "label": "current-5",
+    "variant": "current",
+    "startedUtc": "2026-09-08T14:22:14.780484+00:00",
+    "wallSeconds": 15.514006332999998,
+    "assemblySha256": "0eced1ebccf24102b63382dfb96a2b7f548e077fa69c6160a3f58dd0a44e9617",
+    "loadBefore": [
+      3.9365234375,
+      5.40380859375,
+      6.2578125
+    ],
+    "loadAfter": [
+      6.93798828125,
+      5.94970703125,
+      6.4345703125
+    ],
+    "totalMs": 927.27
+  }
+]

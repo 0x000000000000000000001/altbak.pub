@@ -1,0 +1,63 @@
+Typed ForAll([a], ConstrainedType([Tuple([Test, Polymorphism, Monoidish], [TypeVar(a)])], [Int, TypeVar(a)] -> TypeVar(a)))
+  Typed ConstrainedType([Tuple([Test, Polymorphism, Monoidish], [TypeVar(a)])], [Int, TypeVar(a)] -> TypeVar(a))
+    Abs [Tuple(dictMonoidish, 0)]
+      Typed [Int, TypeVar(a)] -> TypeVar(a)
+        Abs [Tuple(n_init, 1)]
+          Typed [TypeVar(a)] -> TypeVar(a)
+            Abs [Tuple(acc_init, 2)]
+              Typed TypeVar(a)
+                LetRec
+                  3
+                  Tuple
+                    go
+                    Typed [Int, TypeVar(a)] -> TypeVar(a)
+                      Abs [Tuple(v, 4)]
+                        Typed [TypeVar(a)] -> TypeVar(a)
+                          Abs [Tuple(v1, 5)]
+                            Typed TypeVar(a)
+                              Branch
+                                Pair
+                                  PrimOp
+                                    OpIntOrd(OpEq)
+                                      Typed Int
+                                        Local(v, 4)
+                                      Lit(LitInt(0))
+                                  Typed TypeVar(a)
+                                    Typed TypeVar(a)
+                                      Local(v1, 5)
+                                Typed TypeVar(a)
+                                  Typed TypeVar(a)
+                                    App
+                                      Local(go, 3)
+                                      Typed Int
+                                        Typed Int
+                                          PrimOp
+                                            OpIntNum(OpSubtract)
+                                              Typed Int
+                                                Local(v, 4)
+                                              Typed Int
+                                                Lit(LitInt(1))
+                                      Typed TypeVar(a)
+                                        Typed TypeVar(a)
+                                          App
+                                            Accessor
+                                              Local(dictMonoidish, 0)
+                                              GetProp
+                                                mappend_
+                                            Typed TypeVar(a)
+                                              Typed TypeVar(a)
+                                                Local(v1, 5)
+                                            Typed TypeVar(a)
+                                              Typed TypeVar(a)
+                                                Accessor
+                                                  Local(dictMonoidish, 0)
+                                                  GetProp
+                                                    mempty_
+                  Typed TypeVar(a)
+                    Typed TypeVar(a)
+                      App
+                        Local(go, 3)
+                        Typed Int
+                          Local(n_init, 1)
+                        Typed TypeVar(a)
+                          Local(acc_init, 2)

@@ -1,0 +1,22 @@
+{
+  "sourceSha256": {
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/src/Main.purs": "15b024f16c387a02b5e24f81c203065a8cc64e2ffc5b10e51e1636e4d4ead402",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/src/Sharpurs/IntKernel.purs": "12e73bff3e66afc65ec8e894185b01c938f009e0a8e29530c435c516107cf3f5",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/src/Sharpurs/IntKernel/CodeGen.purs": "75ec424b5fabd35929be2c879a074699f9edf981607cfe62c699d984db828189",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/src/Sharpurs/Optimized.purs": "0f0d8c24398df254ec195249c63e81410c65aa5cea3bd60837e2746591516539",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/src/Sharpurs/CodeGen.purs": "fba348c16b25fa23ba95353a0691c6de214d6b030711a4f456b749dd6c0f73d6",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/tests/local-int-kernel.mjs": "cef66f533beadf863b128401f28acaa4f39665c74274b28c27ba1075a0b99d1c",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/bin/sharpurs.js": "72a6f7baa5883191959f80819a77c82c2f79bb3bdf56e5d58fcc7fcac966a469",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/src/Test/Polymorphism.purs": "5ef8557d40f7a3c16cbcf829a3697583e0e92fdb409b0cbaf06152d56d6f4cd0",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/output/Test.Polymorphism/corefn.json": "4365e9d7dc42c4d5c8f8ff6088bb648e2ae216557b95d138e0e44d179bd78999",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs": "1ee1ea8b440e6025ef671854b0d707bd9a7a91d30d77e9458900a1fca89d0188",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Semantics.purs": "b463c333201bb7bfba30209d2da1ac5fd698dea5f9d1ff325ecc382842cbb5f9",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/TypeSubstitution.purs": "01f25309a9e93ef3e2a15aa0b7a85867ca995cb59bf02ad7084329c18cd51767"
+  },
+  "revisions": {
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs": "d2697d2ff512a3ef7dab28c3d6576d05a48c1c0a",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs": "08d656f32d8558e28cf961da0a59ee507809c93f",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-sharpurs": "67ba2151e3717b27a13e95c25d3b25c8bdc645cc"
+  },
+  "note": "Source hashes identify the uncommitted changes as well as the recorded revisions."
+}

@@ -1,0 +1,579 @@
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: sharpurs
+
+Downloading dependencies...
+Building...
+[ 1 of 19] Compiling PureScript.Backend.Optimizer.Semantics
+[ 2 of 19] Compiling Sharpurs.IntKernel
+[ 4 of 19] Compiling PureScript.Backend.Optimizer.Directives
+[ 3 of 19] Compiling PureScript.Backend.Optimizer.Semantics.Foreign
+[ 6 of 19] Compiling PureScript.Backend.Optimizer.Reachability
+[ 7 of 19] Compiling PureScript.Backend.Optimizer.Cache
+[ 5 of 19] Compiling PureScript.Backend.Optimizer.Codegen.Tco
+[ 8 of 19] Compiling PureScript.Backend.Optimizer.App
+[ 9 of 19] Compiling Sharpurs.IntKernel.CodeGen
+[10 of 19] Compiling PureScript.Backend.Optimizer.FreeVars
+[11 of 19] Compiling PureScript.Backend.Optimizer.Substitute
+[12 of 19] Compiling PureScript.Backend.Optimizer.Convert
+[14 of 19] Compiling TestInfer
+[13 of 19] Compiling PureScript.Backend.Optimizer.Monomorphize
+[15 of 19] Compiling PureScript.Backend.Optimizer.Builder
+[16 of 19] Compiling Sharpurs.CodeGen
+[17 of 19] Compiling PureScript.Backend.Optimizer.Tracer.Printer
+[18 of 19] Compiling Main
+[19 of 19] Compiling Test.Main
+[WARNING 1/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/App.purs:34:1
+
+  34  import Node.Path as Path
+      ^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Node.Path as Path is redundant
+
+[WARNING 2/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Builder.purs:19:1
+
+  19  import Data.Newtype (unwrap)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.Newtype is redundant
+
+[WARNING 3/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Builder.purs:20:1
+
+  20  import Effect.Aff (Aff, attempt)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Effect.Aff is redundant
+
+[WARNING 4/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Builder.purs:21:1
+
+  21  import Effect.Console as Console
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Console as Console is redundant
+
+[WARNING 5/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Builder.purs:22:1
+
+  22  import Effect.Class (liftEffect)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Effect.Class is redundant
+
+[WARNING 6/66 UnusedExplicitImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Builder.purs:28:1
+
+  28  import PureScript.Backend.Optimizer.CoreFn (Ann, Ident, Module(..), ModuleName, Qualified, importName)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.CoreFn contains the following unused references:
+    ModuleName
+    importName
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.CoreFn (Ann, Ident, Module(..), Qualified)
+
+[WARNING 7/66 UnusedExplicitImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Builder.purs:32:1
+
+  32  import PureScript.Backend.Optimizer.Cache (writePurmetaSync, clearPurmetaCache, logMemory)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Cache contains the following unused references:
+    logMemory
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Cache (clearPurmetaCache, writePurmetaSync)
+
+[WARNING 8/66 UnusedExplicitImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:67:1
+
+  67  import Data.Maybe (Maybe(..), fromMaybe, maybe, isJust)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Maybe contains the following unused references:
+    isJust
+  It could be replaced with:
+    import Data.Maybe (Maybe(..), fromMaybe, maybe)
+
+[WARNING 9/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:68:1
+
+  68  import Debug as Debug
+      ^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Debug as Debug is redundant
+
+[WARNING 10/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:69:1
+
+  69  import Prelude (unit)
+      ^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Prelude is redundant
+
+[WARNING 11/66 DuplicateSelectiveImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:69:1
+
+  69  import Prelude (unit)
+      ^^^^^^^^^^^^^^^^^^^^^
+
+  There is an existing import of Prelude, consider merging the import lists
+
+[WARNING 12/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:78:1
+
+  78  import Data.String.Pattern as Data.String.Pattern
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.String.Pattern as Data.String.Pattern is redundant
+
+[WARNING 13/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:82:1
+
+  82  import Effect.Console as Console
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Console as Console is redundant
+
+[WARNING 14/66 UnusedDctorExplicitImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:90:1
+
+  90  import PureScript.Backend.Optimizer.Syntax (BackendAccessor(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorOrd(..), BackendSyntax(Var, Local, Lit, App, Abs, UncurriedApp, UncurriedAbs, UncurriedEffectApp, UncurriedEffectAbs, Accessor, Update, CtorSaturated, CtorDef, LetRec, Let, EffectBind, EffectPure, EffectDefer, Branch, PrimOp, PrimEffect, PrimUndefined, Fail, Typed), Level(..), Pair(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of type BackendSyntax from module PureScript.Backend.Optimizer.Syntax includes the following unused data constructors:
+    UncurriedEffectApp
+    UncurriedEffectAbs
+    CtorSaturated
+    EffectBind
+    EffectPure
+    EffectDefer
+    PrimEffect
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Syntax (BackendAccessor(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorOrd(..), BackendSyntax(UncurriedAbs, Local, Branch, PrimOp, Lit, Let, Fail, Accessor, UncurriedApp, Typed, LetRec, App, Abs, Update, CtorDef, Var, PrimUndefined), Level(..), Pair(..))
+
+[WARNING 15/66 DuplicateImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:94:1
+
+  94  import Effect.Unsafe (unsafePerformEffect)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Effect.Unsafe (unsafePerformEffect)
+
+[WARNING 16/66 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:259:29
+
+  259    NonRec binding@(Binding _ ident _) -> do
+                                   ^^^^^
+
+  Name ident was introduced but not used.
+  in value declaration toBackendTopLevelBindingGroup
+
+[WARNING 17/66 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:288:25
+
+  288    let BackendAnalysis { size } = analysisOf backendExpr
+                               ^^^^
+
+  Name size was introduced but not used.
+  in value declaration toTopLevelBackendBinding
+
+[WARNING 18/66 OverlappingPattern] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/FreeVars.purs:52:1
+
+  52  freeVars :: TcoExpr -> Set String
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A case expression contains unreachable cases:
+  (TypeApp a _)
+  in binding group freeVars
+
+[WARNING 19/66 OverlappingPattern] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/FreeVars.purs:120:1
+
+  120  paramTypes :: TcoExpr -> Map String ExprType
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A case expression contains unreachable cases:
+  (TypeApp f _)
+  in binding group paramTypes
+
+[WARNING 20/66 UnusedExplicitImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:31:1
+
+  31  import Data.Maybe (Maybe(..), fromMaybe, maybe, isJust)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Maybe contains the following unused references:
+    isJust
+  It could be replaced with:
+    import Data.Maybe (Maybe(..), fromMaybe, maybe)
+
+[WARNING 21/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:32:1
+
+  32  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  The import of Debug is redundant
+
+[WARNING 22/66 DuplicateImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:36:1
+
+  36  import Data.String as String
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.String as String
+
+[WARNING 23/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:38:1
+
+  38  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  The import of Debug is redundant
+
+[WARNING 24/66 DuplicateImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:38:1
+
+  38  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Debug (trace)
+
+[WARNING 25/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:43:1
+
+  43  import Node.Encoding (Encoding(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Node.Encoding is redundant
+
+[WARNING 26/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:44:1
+
+  44  import Effect.Unsafe (unsafePerformEffect)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Effect.Unsafe is redundant
+
+[WARNING 27/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:45:1
+
+  45  import Effect.Console as Console
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Console as Console is redundant
+
+[WARNING 28/66 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:244:27
+
+  244               printTy (ADT name _ args') = "ADT " <> name <> " [" <> String.joinWith ", " (map printTy args') <> "]"
+                                 ^^^^
+
+  Name name was shadowed.
+  in value declaration collectExpr
+
+[WARNING 29/66 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:258:31
+
+  258                   s1 = foldl (\acc (Tuple paramType arg) ->
+                                     ^^^
+
+  Name acc was shadowed.
+  in value declaration collectExpr
+
+[WARNING 30/66 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:332:30
+
+  332                  s1 = foldl (\acc (Tuple paramType arg) ->
+                                    ^^^
+
+  Name acc was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 31/66 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:332:51
+
+  332                  s1 = foldl (\acc (Tuple paramType arg) ->
+                                                         ^^^
+
+  Name arg was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 32/66 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:344:47
+
+  344                             printTy (TypeApp c args') = "TypeApp (" <> printTy c <> ") [" <> String.joinWith ", " (map printTy args') <> "]"
+                                                     ^^^^^
+
+  Name args' was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 33/66 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:346:42
+
+  346                             printTy (Func args' ret') = "Func [" <> String.joinWith ", " (map printTy args') <> "] (" <> printTy ret' <> ")"
+                                                ^^^^^
+
+  Name args' was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 34/66 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:347:48
+
+  347                             printTy (ADT name _ args') = "ADT " <> name <> " [" <> String.joinWith ", " (map printTy args') <> "]"
+                                                      ^^^^^
+
+  Name args' was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 35/66 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:447:15
+
+  447                oldType = case ann of Ann a -> fromMaybe Any a.type
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name oldType was introduced but not used.
+  in value declaration rewriteExpr
+
+[WARNING 36/66 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:449:15
+
+  449                newType = case newAnn of Ann a -> fromMaybe Any a.type
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name newType was introduced but not used.
+  in value declaration rewriteExpr
+
+[WARNING 37/66 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:542:9
+
+  542          isGo = name == "go" || name == "$go"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name isGo was introduced but not used.
+  in value declaration rewriteExpr
+
+[WARNING 38/66 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:543:9
+
+               v
+  543          showHasVars = case _ of
+  544            Just t -> show (hasTypeVariables t)
+  545            Nothing -> "Nothing"
+                                    ^
+
+  Name showHasVars was introduced but not used.
+  in value declaration rewriteExpr
+
+[WARNING 39/66 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:597:11
+
+  597    goGuard subst (Unconditional e) = Unconditional (substituteVars subst e)
+                 ^^^^^
+
+  Name subst was shadowed.
+  in value declaration substituteVars
+
+[WARNING 40/66 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:598:11
+
+  598    goGuard subst (Guarded guards) = Guarded (map (\(Guard e1 e2) -> Guard (substituteVars subst e1) (substituteVars subst e2)) guards)
+                 ^^^^^
+
+  Name subst was shadowed.
+  in value declaration substituteVars
+
+[WARNING 41/66 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:794:3
+
+  794    expr | isAppOrTypeApp expr ->
+         ^^^^
+
+  Name expr was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 42/66 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:873:25
+
+  873            injectType ty expr =
+                               ^^^^
+
+  Name expr was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 43/66 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:952:14
+
+  952            go expr = case expr of
+                    ^^^^
+
+  Name expr was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 44/66 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:953:28
+
+  953              ExprApp annApp f arg ->
+                                  ^
+
+  Name f was introduced but not used.
+  in value declaration monomorphizeExpr
+
+[WARNING 45/66 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:953:30
+
+  953              ExprApp annApp f arg ->
+                                    ^^^
+
+  Name arg was introduced but not used.
+  in value declaration monomorphizeExpr
+
+[WARNING 46/66 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:979:61
+
+  979                            s1 = foldl (\acc (Tuple paramType arg) ->
+                                                                   ^^^
+
+  Name arg was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 47/66 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:1205:33
+
+  1205                                  printMap m = "{" <> String.joinWith ", " (map (\(Tuple k v) -> k <> ": " <> show (hasTypeVariables v)) (Map.toUnfoldable m :: Array (Tuple String ExprType))) <> "}"
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name printMap was introduced but not used.
+  in value declaration transitiveCollect
+
+[WARNING 48/66 UnusedExplicitImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Semantics.purs:74:1
+
+  74  import PureScript.Backend.Optimizer.Analysis (class HasAnalysis, BackendAnalysis(..), Capture(..), Complexity(..), ResultTerm(..), Usage(..), analysisOf, bound, bump, complex, resultOf, updated, withResult, withRewrite)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Analysis contains the following unused references:
+    resultOf
+    withResult
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Analysis (class HasAnalysis, BackendAnalysis(..), Capture(..), Complexity(..), ResultTerm(..), Usage(..), analysisOf, bound, bump, complex, updated, withRewrite)
+
+[WARNING 49/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/TestInfer.purs:5:1
+
+  5  import Data.Map as Map
+     ^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.Map as Map is redundant
+
+[WARNING 50/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/TestInfer.purs:6:1
+
+  6  import Data.Set as Set
+     ^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.Set as Set is redundant
+
+[WARNING 51/66 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/TestInfer.purs:8:1
+
+  8  import Data.Tuple (Tuple(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.Tuple is redundant
+
+[WARNING 52/66 UnusedImport] src/Main.purs:9:1
+
+  9  import Effect.Class.Console as Console
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Class.Console as Console is redundant
+
+[WARNING 53/66 UnusedImport] src/Main.purs:20:1
+
+  20  import Data.List (List(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.List is redundant
+
+[WARNING 54/66 UnusedExplicitImport] src/Main.purs:21:1
+
+  21  import PureScript.Backend.Optimizer.App (coreFnModulesFromOutput, parseCLIArgs, checkCache, writeCache, loadDirectives)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.App contains the following unused references:
+    checkCache
+    writeCache
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.App (coreFnModulesFromOutput, loadDirectives, parseCLIArgs)
+
+[WARNING 55/66 UnusedImport] src/Main.purs:31:1
+
+  31  import Data.String (joinWith)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.String is redundant
+
+[WARNING 56/66 UnusedName] src/Main.purs:96:7
+
+  96    let cacheVersion = "1.0.0"
+            ^^^^^^^^^^^^^^^^^^^^^^
+
+  Name cacheVersion was introduced but not used.
+  in value declaration main
+
+[WARNING 57/66 UnusedName] src/Main.purs:110:13
+
+  110          let modNameStr = unwrap coreFnMod.name
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name modNameStr was introduced but not used.
+  in value declaration main
+
+[WARNING 58/66 UnusedImport] src/Sharpurs/CodeGen.purs:9:1
+
+  9  import Data.String.CodeUnits as CU
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.String.CodeUnits as CU is redundant
+
+[WARNING 59/66 UnusedImport] src/Sharpurs/CodeGen.purs:13:1
+
+  13  import Data.Set as Set
+      ^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.Set as Set is redundant
+
+[WARNING 60/66 UnusedImport] src/Sharpurs/CodeGen.purs:14:1
+
+  14  import Data.Set (Set)
+      ^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.Set is redundant
+
+[WARNING 61/66 DuplicateImport] src/Sharpurs/CodeGen.purs:18:1
+
+  18  import Data.Maybe (Maybe(..), fromMaybe)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.Maybe (Maybe(..), fromMaybe)
+
+[WARNING 62/66 ShadowedName] src/Sharpurs/CodeGen.purs:40:5
+
+  40      translateDataDecl decl = FsDeclData (modPrefix <> "_" <> sanitizeName decl.name) (map translateDataCtor decl.constructors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name translateDataDecl was shadowed.
+  in value declaration translateModuleWithKernels
+
+[WARNING 63/66 ShadowedName] src/Sharpurs/CodeGen.purs:94:16
+
+  94      expandBind adtCtors currentMod (Binding _ (Ident name) val) =
+                     ^^^^^^^^
+
+  Name adtCtors was shadowed.
+  in value declaration translateBind
+
+[WARNING 64/66 ShadowedName] src/Sharpurs/CodeGen.purs:94:25
+
+  94      expandBind adtCtors currentMod (Binding _ (Ident name) val) =
+                              ^^^^^^^^^^
+
+  Name currentMod was shadowed.
+  in value declaration translateBind
+
+[WARNING 65/66 ShadowedName] src/Sharpurs/CodeGen.purs:230:17
+
+  230    ExprTypeApp _ expr _ -> translateExpr adtCtors localEnv currentMod expr
+                       ^^^^
+
+  Name expr was shadowed.
+  in value declaration translateExpr
+
+[WARNING 66/66 ShadowedName] src/Sharpurs/CodeGen.purs:263:60
+
+  263              recStrs = Array.concat (Array.mapWithIndex (\i b -> makeLocalRec b i) bindings)
+                                                                  ^
+
+  Name b was shadowed.
+  in value declaration translateExpr
+
+           Src   Lib   All
+Warnings    15    51    66
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: sharpurs
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Bundling...
+
+  bin/sharpurs.js  976.5kb
+
+⚡ Done in 27ms
+
+✓ Bundle succeeded.
+

@@ -1,0 +1,11 @@
+reference-1: 892.85 ms (wall 14.97s)
+current-1: 886.37 ms (wall 14.90s)
+current-2: 915.20 ms (wall 15.23s)
+reference-2: 907.38 ms (wall 15.08s)
+reference-3: 899.29 ms (wall 15.36s)
+current-3: 874.47 ms (wall 14.74s)
+current-4: 936.54 ms (wall 15.87s)
+reference-4: 905.57 ms (wall 15.19s)
+reference-5: 900.70 ms (wall 15.23s)
+current-5: 927.27 ms (wall 15.51s)
+Complete: ten original App.main runs; generated working sources unchanged.

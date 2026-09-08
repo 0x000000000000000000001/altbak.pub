@@ -1,0 +1,7 @@
+Typed ForAll([a], ConstrainedType([Tuple([Test, Polymorphism, Monoidish], [TypeVar(a)])], [TypeVar(a), TypeVar(a)] -> TypeVar(a)))
+  Abs [Tuple(dict, 0)]
+    Typed [TypeVar(a), TypeVar(a)] -> TypeVar(a)
+      Accessor
+        Local(dict, 0)
+        GetProp
+          mappend_

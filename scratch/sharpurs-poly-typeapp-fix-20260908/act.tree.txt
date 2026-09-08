@@ -1,0 +1,73 @@
+Typed ADT(Effect.Effect, [Effect, Effect], [String])
+  Typed ADT(Effect.Effect, [Effect, Effect], [TypeVar(b)])
+    App
+      Var(Effect.bindE)
+      Typed ADT(Effect.Effect, [Effect, Effect], [Int])
+        Typed ADT(Effect.Effect, [Effect, Effect], [Int])
+          App
+            TypeApp
+              Var(Bench.opaque)
+              Int
+            Typed Int
+              Lit(LitInt(10000000))
+      Typed [Int] -> ADT(Effect.Effect, [Effect, Effect], [String])
+        Abs [Tuple(dummy, 0)]
+          Typed ADT(Effect.Effect, [Effect, Effect], [String])
+            Typed ADT(Effect.Effect, [Effect, Effect], [TypeVar(a)])
+              App
+                Var(Effect.pureE)
+                Typed String
+                  Typed String
+                    App
+                      Var(Data.Show.showIntImpl)
+                      Typed Int
+                        Typed Int
+                          LetRec
+                            1
+                            Tuple
+                              go
+                              Typed [Int, Int] -> Int
+                                Abs [Tuple(v, 2)]
+                                  Typed [Int] -> Int
+                                    Abs [Tuple(v1, 3)]
+                                      Typed Int
+                                        Branch
+                                          Pair
+                                            PrimOp
+                                              OpIntOrd(OpEq)
+                                                Typed Int
+                                                  Local(v, 2)
+                                                Lit(LitInt(0))
+                                            Typed Int
+                                              Typed Int
+                                                Local(v1, 3)
+                                          Typed Int
+                                            Typed Int
+                                              App
+                                                Local(go, 1)
+                                                Typed Int
+                                                  Typed Int
+                                                    PrimOp
+                                                      OpIntNum(OpSubtract)
+                                                        Typed Int
+                                                          Local(v, 2)
+                                                        Typed Int
+                                                          Lit(LitInt(1))
+                                                Typed Int
+                                                  Typed Int
+                                                    Typed Int
+                                                      PrimOp
+                                                        OpIntNum(OpAdd)
+                                                          Local(v1, 3)
+                                                          Lit(LitInt(1))
+                            Typed Int
+                              Typed Int
+                                Typed Int
+                                  App
+                                    Local(go, 1)
+                                    Typed Int
+                                      Typed Int
+                                        Local(dummy, 0)
+                                    Typed Int
+                                      Typed Int
+                                        Lit(LitInt(0))

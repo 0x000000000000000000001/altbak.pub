@@ -1,0 +1,44 @@
+{
+  "node": "v24.8.0",
+  "optimizedModules": 301,
+  "capturedBindings": [
+    "mempty_",
+    "mappend_",
+    "polyLoop",
+    "intMonoidish",
+    "describe",
+    "act"
+  ],
+  "currentKernelAcceptance": {
+    "mempty_": false,
+    "mappend_": false,
+    "polyLoop": false,
+    "intMonoidish": false,
+    "describe": false,
+    "act": false
+  },
+  "generatedUnchanged": true,
+  "generatedFilesChecked": 355,
+  "commits": {
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs": "d2697d2ff512a3ef7dab28c3d6576d05a48c1c0a",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs": "08d656f32d8558e28cf961da0a59ee507809c93f",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-sharpurs": "67ba2151e3717b27a13e95c25d3b25c8bdc645cc"
+  },
+  "sha256": {
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/output/Test.Polymorphism/corefn.json": "4365e9d7dc42c4d5c8f8ff6088bb648e2ae216557b95d138e0e44d179bd78999",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/src/Main.purs": "15b024f16c387a02b5e24f81c203065a8cc64e2ffc5b10e51e1636e4d4ead402",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/src/Sharpurs/IntKernel.purs": "bb70ba8fa04a4defc1686619982c4a359dcd04eff0cce503ec31170b0777be6b",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/Sharpurs.IntKernel/index.js": "42722c58e6d460dd8ef72a3c7f451b7b3783153b4b17d006a4d6e6c9c0c9b128",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.Builder/index.js": "93a6f2d2510593cb61af4ebb7f19fc7dcfac70786c479d9b6885e684a02436b1",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.App/index.js": "2049755aba26b48856f654cc78af8509e414362c01dc80229b2db5cd26335339",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.Convert/index.js": "f179f163f4be521a471634cc94651bd9c9713074faaf496a9d60c15934cb7f6e",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.Semantics/index.js": "b997d07130710070f781384f7a37d0767da7a6a9f42c7a7260b0e2c1ee11c363",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.TypeSubstitution/index.js": "8afa915cd2bfe7b5c761b72437ce7a2fecdea6db74d0b18eaa208ab4598198ff",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.Syntax/index.js": "bf0c65d744b979746fc3f312e587a38e1b1df164db21fd28a27c78abcf56563d",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.Semantics.Foreign/index.js": "48014fbfd1c5297cf3b4314157ec321c50801f84d00e4d024935ef48b3e7572c",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs": "1ee1ea8b440e6025ef671854b0d707bd9a7a91d30d77e9458900a1fca89d0188",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Semantics.purs": "b463c333201bb7bfba30209d2da1ac5fd698dea5f9d1ff325ecc382842cbb5f9",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/TypeSubstitution.purs": "01f25309a9e93ef3e2a15aa0b7a85867ca995cb59bf02ad7084329c18cd51767",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-sharpurs/test/typeapp.mjs": "6bd0bf69bb2c96465b6772678b2f350e0f0fa82ba59014b39a385490f6b337cf"
+  }
+}

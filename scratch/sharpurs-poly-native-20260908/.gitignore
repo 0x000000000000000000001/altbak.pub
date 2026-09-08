@@ -1,0 +1,5 @@
+before/
+after/
+diagnostic-before/
+diagnostic-after/
+__pycache__/

@@ -1,0 +1,10 @@
+Validated 10 fresh-process logs: 14 outputs each; historical outputs match.
+reference: median 900.70 ms, range 892.85–907.38 ms
+current: median 915.20 ms, range 874.47–936.54 ms
+Current total delta: +1.61%
+Polymorphism: 595.17213 → 609.25825 ms (+2.37%)
+RBTree: 224.61546 → 226.39121 ms (+0.79%)
+Lazy: 71.66671 → 70.86613 ms (-1.12%)
+TCO: 0.04946 → 0.05200 ms (+5.14%)
+Official README total: 13918.86 ms; current 15.21× faster
+Wrote /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-regression-check-20260908/comparison.json
