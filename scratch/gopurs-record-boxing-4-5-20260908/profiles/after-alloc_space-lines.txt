@@ -1,4 +1,9 @@
-Total: 8.79MB
-ROUTINE ======================== gopurs/output/gopurs_runtime.RecordDict2 in gopurs/output/gopurs_runtime/runtime.go
-    1.89MB     1.89MB (flat, cum) 21.53% of Total
- Error: could not find file gopurs/output/gopurs_runtime/runtime.go on path /Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-record-boxing-4-5-20260908
+Total: 9214944B
+ROUTINE ======================== gopurs/output/gopurs_runtime.RecordDict2 in gopurs_runtime/runtime.go
+  5792000B   5792000B (flat, cum) 62.85% of Total
+  5792000B   5792000B    206:func RecordDict2(k0, k1 string, v0, v1 Value) Value { return Value{Type: TypeRecord2, UnsafePtr: unsafe.Pointer(&RecordData2{k0, k1, v0, v1})} }
+         .          .    207:
+         .          .    208:type RecordData3 struct { K0, K1, K2 string; V0, V1, V2 Value }
+         .          .    209:func RecordDict3(k0, k1, k2 string, v0, v1, v2 Value) Value { return Value{Type: TypeRecord3, UnsafePtr: unsafe.Pointer(&RecordData3{k0, k1, k2, v0, v1, v2})} }
+         .          .    210:
+         .          .    211:type RecordData4 struct { K0, K1, K2, K3 string; V0, V1, V2, V3 Value }

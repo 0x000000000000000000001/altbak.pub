@@ -28,7 +28,8 @@ def main():
         for metric in ["alloc_space", "alloc_objects"]:
             common = ["go", "tool", "pprof", "-sample_index=" + metric,
                       "-base=" + str(profile) + ".before", "-focus=Test_StateMonad",
-                      "-trim_path=gopurs/output", "-source_path=" + str(ROOT / "generated" / variant / "output")]
+                      "-trim_path=gopurs/output", "-source_path=" + str(ROOT / "generated" / variant / "output"),
+                      "-nodefraction=0", "-unit=B" if metric == "alloc_space" else "-unit=count"]
             for name, option in [("top", "-top"), ("lines", "-list=RecordDict")]:
                 text = subprocess.check_output(common + [option, "-nodecount=40", str(binary), str(profile)], env=ENV, cwd=ROOT, stderr=subprocess.STDOUT, text=True)
                 (dest / (variant + "-" + metric + "-" + name + ".txt")).write_text(text)
