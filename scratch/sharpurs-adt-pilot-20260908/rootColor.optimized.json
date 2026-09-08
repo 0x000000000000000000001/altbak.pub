@@ -1,0 +1,215 @@
+{
+  "module": "AdtPilot",
+  "recursive": false,
+  "ident": "rootColor",
+  "expression": {
+    "$tag": "Syntax$Typed",
+    "value0": {
+      "$tag": "CoreFn$Func",
+      "value0": [
+        {
+          "$tag": "CoreFn$ADT",
+          "value0": "AdtPilot.Tree",
+          "value1": [
+            "AdtPilot",
+            "Tree"
+          ],
+          "value2": []
+        }
+      ],
+      "value1": {
+        "$tag": "CoreFn$ADT",
+        "value0": "AdtPilot.Color",
+        "value1": [
+          "AdtPilot",
+          "Color"
+        ],
+        "value2": []
+      }
+    },
+    "value1": {
+      "$tag": "Syntax$Abs",
+      "value0": [
+        {
+          "$tag": "DataTuple$Tuple",
+          "value0": {
+            "$tag": "DataMaybe$Just",
+            "value0": "v"
+          },
+          "value1": 0
+        }
+      ],
+      "value1": {
+        "$tag": "Syntax$Typed",
+        "value0": {
+          "$tag": "CoreFn$ADT",
+          "value0": "AdtPilot.Color",
+          "value1": [
+            "AdtPilot",
+            "Color"
+          ],
+          "value2": []
+        },
+        "value1": {
+          "$tag": "Syntax$Branch",
+          "value0": [
+            {
+              "$tag": "Syntax$Pair",
+              "value0": {
+                "$tag": "Syntax$PrimOp",
+                "value0": {
+                  "$tag": "Syntax$Op1",
+                  "value0": {
+                    "$tag": "Syntax$OpIsTag",
+                    "value0": {
+                      "$tag": "CoreFn$Qualified",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "AdtPilot"
+                      },
+                      "value1": "E"
+                    }
+                  },
+                  "value1": {
+                    "$tag": "Syntax$Typed",
+                    "value0": {
+                      "$tag": "CoreFn$ADT",
+                      "value0": "AdtPilot.Tree",
+                      "value1": [
+                        "AdtPilot",
+                        "Tree"
+                      ],
+                      "value2": []
+                    },
+                    "value1": {
+                      "$tag": "Syntax$Local",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "v"
+                      },
+                      "value1": 0
+                    }
+                  }
+                }
+              },
+              "value1": {
+                "$tag": "Syntax$Typed",
+                "value0": {
+                  "$tag": "CoreFn$ADT",
+                  "value0": "AdtPilot.Color",
+                  "value1": [
+                    "AdtPilot",
+                    "Color"
+                  ],
+                  "value2": []
+                },
+                "value1": {
+                  "$tag": "Syntax$CtorSaturated",
+                  "value0": {
+                    "$tag": "CoreFn$Qualified",
+                    "value0": {
+                      "$tag": "DataMaybe$Just",
+                      "value0": "AdtPilot"
+                    },
+                    "value1": "B"
+                  },
+                  "value1": {
+                    "$tag": "CoreFn$SumType"
+                  },
+                  "value2": "Color",
+                  "value3": "B",
+                  "value4": []
+                }
+              }
+            },
+            {
+              "$tag": "Syntax$Pair",
+              "value0": {
+                "$tag": "Syntax$PrimOp",
+                "value0": {
+                  "$tag": "Syntax$Op1",
+                  "value0": {
+                    "$tag": "Syntax$OpIsTag",
+                    "value0": {
+                      "$tag": "CoreFn$Qualified",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "AdtPilot"
+                      },
+                      "value1": "T"
+                    }
+                  },
+                  "value1": {
+                    "$tag": "Syntax$Typed",
+                    "value0": {
+                      "$tag": "CoreFn$ADT",
+                      "value0": "AdtPilot.Tree",
+                      "value1": [
+                        "AdtPilot",
+                        "Tree"
+                      ],
+                      "value2": []
+                    },
+                    "value1": {
+                      "$tag": "Syntax$Local",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "v"
+                      },
+                      "value1": 0
+                    }
+                  }
+                }
+              },
+              "value1": {
+                "$tag": "Syntax$Typed",
+                "value0": {
+                  "$tag": "CoreFn$ADT",
+                  "value0": "AdtPilot.Color",
+                  "value1": [
+                    "AdtPilot",
+                    "Color"
+                  ],
+                  "value2": []
+                },
+                "value1": {
+                  "$tag": "Syntax$Accessor",
+                  "value0": {
+                    "$tag": "Syntax$Local",
+                    "value0": {
+                      "$tag": "DataMaybe$Just",
+                      "value0": "v"
+                    },
+                    "value1": 0
+                  },
+                  "value1": {
+                    "$tag": "Syntax$GetCtorField",
+                    "value0": {
+                      "$tag": "CoreFn$Qualified",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "AdtPilot"
+                      },
+                      "value1": "T"
+                    },
+                    "value1": {
+                      "$tag": "CoreFn$SumType"
+                    },
+                    "value2": "Tree",
+                    "value3": "T",
+                    "value4": "value0",
+                    "value5": 0
+                  }
+                }
+              }
+            }
+          ],
+          "value1": {
+            "$tag": "Syntax$Fail",
+            "value0": "Failed pattern match"
+          }
+        }
+      }
+    }
+  }
+}

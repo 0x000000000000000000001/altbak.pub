@@ -1,0 +1,1070 @@
+
+> sharpurs@0.1.0 build
+> spago build && spago bundle --module Main --platform node --outfile bin/sharpurs.js --bundle-type app
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: sharpurs
+
+Downloading dependencies...
+Building...
+[  1 of 422] Compiling Unsafe.Coerce
+[  2 of 422] Compiling Type.Proxy
+[  3 of 422] Compiling Type.Row
+[  5 of 422] Compiling Type.Function
+[  6 of 422] Compiling Sharpurs.FfiSupport
+[  7 of 422] Compiling Spago.Generated.BuildInfo
+[  8 of 422] Compiling Record.Unsafe
+[  9 of 422] Compiling PureScript.Backend.Optimizer.Directives.Defaults
+[  4 of 422] Compiling Type.Equality
+[ 10 of 422] Compiling Partial
+[ 11 of 422] Compiling Data.String.Unsafe
+[ 12 of 422] Compiling Data.Void
+[ 13 of 422] Compiling Data.Unit
+[ 14 of 422] Compiling Data.Traversable.Accum
+[ 15 of 422] Compiling Data.Int.Bits
+[ 16 of 422] Compiling Data.NaturalTransformation
+[ 18 of 422] Compiling Data.Boolean
+[ 19 of 422] Compiling Data.ArrayBuffer.Types
+[ 17 of 422] Compiling Control.Semigroupoid
+[ 21 of 422] Compiling Control.Lazy
+[ 20 of 422] Compiling Data.Function.Uncurried
+[ 22 of 422] Compiling Partial.Unsafe
+[ 23 of 422] Compiling Type.Data.Boolean
+[ 24 of 422] Compiling Data.Symbol
+[ 25 of 422] Compiling Safe.Coerce
+[ 26 of 422] Compiling Data.Exists
+[ 27 of 422] Compiling Control.Category
+[ 28 of 422] Compiling Data.HeytingAlgebra
+[ 29 of 422] Compiling Data.Semigroup
+[ 30 of 422] Compiling Data.Semiring
+[ 31 of 422] Compiling Record.Unsafe.Union
+[ 32 of 422] Compiling Data.Show
+[ 33 of 422] Compiling Data.Ring
+[ 34 of 422] Compiling Data.Generic.Rep
+[ 35 of 422] Compiling Data.BooleanAlgebra
+[ 36 of 422] Compiling Data.Eq
+[ 37 of 422] Compiling Data.CommutativeRing
+[ 38 of 422] Compiling Data.Ordering
+[ 39 of 422] Compiling Data.EuclideanRing
+[ 40 of 422] Compiling Type.Data.Ordering
+[ 41 of 422] Compiling Data.Ord
+[ 42 of 422] Compiling Data.DivisionRing
+[ 43 of 422] Compiling Type.Data.Symbol
+[ 44 of 422] Compiling Data.Field
+[ 45 of 422] Compiling Type.RowList
+[ 47 of 422] Compiling Type.Prelude
+[ 46 of 422] Compiling Type.Row.Homogeneous
+[ 49 of 422] Compiling Data.Monoid
+[ 48 of 422] Compiling Data.Function
+[ 50 of 422] Compiling Data.Reflectable
+[ 51 of 422] Compiling Data.Bounded
+[ 52 of 422] Compiling Data.Functor
+[ 53 of 422] Compiling Data.Monoid.Generic
+[ 56 of 422] Compiling Control.Alt
+[ 55 of 422] Compiling Control.Extend
+[ 54 of 422] Compiling Control.Apply
+[ 57 of 422] Compiling Data.Bounded.Generic
+[ 58 of 422] Compiling Control.Plus
+[ 59 of 422] Compiling Control.Comonad
+[ 60 of 422] Compiling Control.Applicative
+[ 62 of 422] Compiling Control.Alternative
+[ 61 of 422] Compiling Control.Bind
+[ 63 of 422] Compiling Control.Monad
+[ 64 of 422] Compiling Prelude
+[ 65 of 422] Compiling Control.MonadPlus
+[ 66 of 422] Compiling Node.Buffer.Types
+[ 67 of 422] Compiling Effect
+[ 68 of 422] Compiling Control.Monad.Gen.Class
+[ 69 of 422] Compiling Data.Monoid.Additive
+[ 70 of 422] Compiling Data.Semigroup.Generic
+[ 71 of 422] Compiling Data.Monoid.Conj
+[ 72 of 422] Compiling Data.Ring.Generic
+[ 73 of 422] Compiling Data.Monoid.Endo
+[ 74 of 422] Compiling Data.HeytingAlgebra.Generic
+[ 75 of 422] Compiling Data.Monoid.Multiplicative
+[ 77 of 422] Compiling Data.Semigroup.First
+[ 78 of 422] Compiling Data.Show.Generic
+[ 79 of 422] Compiling Data.Ord.Generic
+[ 76 of 422] Compiling Record
+[ 80 of 422] Compiling Data.Monoid.Dual
+[ 81 of 422] Compiling Node.Encoding
+[ 82 of 422] Compiling Data.Monoid.Disj
+[ 83 of 422] Compiling Data.Traversable.Accum.Internal
+[ 84 of 422] Compiling Record.Builder
+[ 85 of 422] Compiling Control.Monad.Reader.Class
+[ 86 of 422] Compiling Control.Monad.Cont.Class
+[ 87 of 422] Compiling Data.Semiring.Generic
+[ 89 of 422] Compiling Data.Number.Format
+[ 88 of 422] Compiling Data.Semigroup.Last
+[ 91 of 422] Compiling Data.Eq.Generic
+[ 93 of 422] Compiling Debug
+[ 92 of 422] Compiling Control.Monad.Trans.Class
+[ 94 of 422] Compiling Effect.Console
+[ 90 of 422] Compiling Node.FS.Constants
+[ 95 of 422] Compiling Node.Path
+[ 96 of 422] Compiling Effect.Unsafe
+[ 97 of 422] Compiling Effect.Uncurried
+[ 98 of 422] Compiling Node.Buffer.Constants
+[ 99 of 422] Compiling Effect.Ref
+[100 of 422] Compiling Effect.Class
+[101 of 422] Compiling Data.Yoneda
+[102 of 422] Compiling Data.Newtype
+[103 of 422] Compiling Effect.Class.Console
+[104 of 422] Compiling PureScript.Backend.Optimizer.Debug
+[105 of 422] Compiling Node.FS
+[106 of 422] Compiling Data.String.Pattern
+[107 of 422] Compiling Data.Ord.Min
+[108 of 422] Compiling Data.Ord.Max
+[109 of 422] Compiling Data.Profunctor
+[110 of 422] Compiling Data.Time.Duration
+[111 of 422] Compiling Data.Monoid.Alternate
+[112 of 422] Compiling Data.Posix
+[113 of 422] Compiling Data.Ord.Down
+[114 of 422] Compiling Data.Functor.App
+[115 of 422] Compiling Data.Profunctor.Closed
+[116 of 422] Compiling Data.Lens.Internal.Exchange
+[117 of 422] Compiling Data.String.Common
+[119 of 422] Compiling Data.Lens.Internal.Grating
+[118 of 422] Compiling Data.Lens.Internal.Zipping
+[120 of 422] Compiling Data.Functor.Invariant
+[121 of 422] Compiling Data.Functor.Compose
+[122 of 422] Compiling Data.Maybe
+[123 of 422] Compiling Data.Const
+[124 of 422] Compiling Data.Identity
+[126 of 422] Compiling Data.Profunctor.Join
+[125 of 422] Compiling Data.Profunctor.Split
+[127 of 422] Compiling Data.Tuple
+[128 of 422] Compiling Data.Functor.Contravariant
+[129 of 422] Compiling Data.Op
+[130 of 422] Compiling Data.Predicate
+[131 of 422] Compiling Data.Comparison
+[132 of 422] Compiling Data.Equivalence
+[133 of 422] Compiling Data.Posix.Signal
+[134 of 422] Compiling Data.Either
+[135 of 422] Compiling Data.Nullable
+[136 of 422] Compiling Data.String.CodeUnits
+[137 of 422] Compiling Data.Number
+[138 of 422] Compiling Node.Platform
+[140 of 422] Compiling Data.Maybe.Last
+[139 of 422] Compiling Data.Maybe.First
+[142 of 422] Compiling Data.Number.Approximate
+[141 of 422] Compiling Data.Int
+[144 of 422] Compiling PureScript.Backend.Optimizer.FfiSupport
+[143 of 422] Compiling Node.Symbol
+[145 of 422] Compiling Node.Buffer.Immutable
+[146 of 422] Compiling Data.Divide
+[147 of 422] Compiling Data.Profunctor.Strong
+[149 of 422] Compiling Control.Monad.State.Class
+[150 of 422] Compiling Dodo.Internal
+[151 of 422] Compiling Data.Profunctor.Costrong
+[152 of 422] Compiling Data.Distributive
+[148 of 422] Compiling Data.Tuple.Nested
+[153 of 422] Compiling Data.Lens.Internal.Focusing
+[154 of 422] Compiling Control.Monad.Writer.Class
+[155 of 422] Compiling Node.Buffer.Class
+[156 of 422] Compiling Data.Lens.Internal.Shop
+[157 of 422] Compiling Data.Divisible
+[159 of 422] Compiling Effect.Exception
+[160 of 422] Compiling Data.Decide
+[158 of 422] Compiling Node.EventEmitter
+[161 of 422] Compiling Data.Bifunctor
+[162 of 422] Compiling Data.Profunctor.Cochoice
+[163 of 422] Compiling Data.Either.Nested
+[164 of 422] Compiling Data.Profunctor.Choice
+[165 of 422] Compiling Node.Buffer
+[166 of 422] Compiling Data.Either.Inject
+[167 of 422] Compiling Effect.Exception.Unsafe
+[168 of 422] Compiling Control.Monad.Error.Class
+[169 of 422] Compiling Data.Functor.Coproduct
+[170 of 422] Compiling Data.Profunctor.Star
+[172 of 422] Compiling Data.Functor.Product
+[171 of 422] Compiling Control.Biapply
+[173 of 422] Compiling Data.Lens.Internal.Re
+[174 of 422] Compiling Control.Monad.Rec.Class
+[175 of 422] Compiling Data.Functor.Costar
+[176 of 422] Compiling Data.Lens.Internal.Market
+[177 of 422] Compiling Data.Decidable
+[178 of 422] Compiling Control.Biapplicative
+[179 of 422] Compiling Node.EventEmitter.UtilTypes
+[180 of 422] Compiling Data.Lens.Internal.Stall
+[181 of 422] Compiling Data.Functor.Clown
+[182 of 422] Compiling Data.Functor.Product2
+[183 of 422] Compiling Data.Bifunctor.Join
+[185 of 422] Compiling Data.Functor.Flip
+[184 of 422] Compiling Node.Stream
+[186 of 422] Compiling Data.Functor.Coproduct.Inject
+[187 of 422] Compiling Data.Functor.Coproduct.Nested
+[188 of 422] Compiling Data.Foldable
+[189 of 422] Compiling Data.FunctorWithIndex
+[190 of 422] Compiling Data.Functor.Joker
+[191 of 422] Compiling Data.Functor.Product.Nested
+[192 of 422] Compiling Data.Lens.Internal.Wander
+[193 of 422] Compiling Data.Lens.Internal.Forget
+[194 of 422] Compiling Data.Lens.Internal.Indexed
+[195 of 422] Compiling Control.Monad.ST.Internal
+[196 of 422] Compiling Control.Monad.ST.Ref
+[198 of 422] Compiling Control.Monad.ST
+[197 of 422] Compiling Control.Monad.ST.Uncurried
+[199 of 422] Compiling TestST
+[200 of 422] Compiling Control.Monad.ST.Global
+[201 of 422] Compiling Node.Buffer.ST
+[202 of 422] Compiling Control.Monad.ST.Class
+[203 of 422] Compiling Foreign.Object.ST
+[204 of 422] Compiling Control.Monad.RWS.Trans
+[205 of 422] Compiling Control.Monad.Except.Trans
+[207 of 422] Compiling Control.Monad.Maybe.Trans
+[206 of 422] Compiling Control.Monad.Writer.Trans
+[208 of 422] Compiling Control.Monad.Reader.Trans
+[209 of 422] Compiling Control.Monad.State.Trans
+[210 of 422] Compiling Control.Monad.Cont.Trans
+[211 of 422] Compiling Node.FS.Stream
+[212 of 422] Compiling Data.Array.ST
+[213 of 422] Compiling Data.Array.ST.Partial
+[214 of 422] Compiling Data.Array.ST.Iterator
+[215 of 422] Compiling Control.Monad.Cont
+[216 of 422] Compiling Control.Monad.Reader
+[217 of 422] Compiling Control.Monad.Except
+[219 of 422] Compiling Control.Parallel.Class
+[218 of 422] Compiling Control.Monad.Writer
+[220 of 422] Compiling Control.Monad.State
+[222 of 422] Compiling Data.Bifoldable
+[221 of 422] Compiling Data.Semigroup.Foldable
+[223 of 422] Compiling Data.Traversable
+[224 of 422] Compiling Data.FoldableWithIndex
+[225 of 422] Compiling Control.Monad.RWS
+[226 of 422] Compiling Data.Semigroup.Traversable
+[227 of 422] Compiling Data.Bitraversable
+[228 of 422] Compiling Data.Lens.Internal.Tagged
+[229 of 422] Compiling Control.Parallel
+[230 of 422] Compiling Control.Monad.Identity.Trans
+[231 of 422] Compiling Effect.Aff
+[232 of 422] Compiling Data.Coyoneda
+[233 of 422] Compiling Data.Unfoldable1
+[234 of 422] Compiling Control.Comonad.Trans.Class
+[235 of 422] Compiling Data.TraversableWithIndex
+[237 of 422] Compiling Control.Comonad.Traced.Trans
+[236 of 422] Compiling Control.Comonad.Store.Trans
+[238 of 422] Compiling Data.Unfoldable
+[239 of 422] Compiling Data.Lens.Internal.Bazaar
+[241 of 422] Compiling Control.Monad.Gen
+[240 of 422] Compiling Data.Enum
+[242 of 422] Compiling Data.Lens.Types
+[243 of 422] Compiling Data.Lens.Prism
+[244 of 422] Compiling Data.Lens.Getter
+[246 of 422] Compiling Data.Lens.Iso
+[245 of 422] Compiling Data.Lens.Setter
+[247 of 422] Compiling Data.Lens.AffineTraversal
+[248 of 422] Compiling Data.Lens.Zoom
+[249 of 422] Compiling Data.Lens.Grate
+[250 of 422] Compiling Data.Lens.Lens
+[251 of 422] Compiling Data.Time.Duration.Gen
+[252 of 422] Compiling Effect.Aff.Compat
+[253 of 422] Compiling Data.Array.NonEmpty.Internal
+[254 of 422] Compiling Data.NonEmpty
+[255 of 422] Compiling Data.Lazy
+[256 of 422] Compiling Control.Comonad.Env.Trans
+[257 of 422] Compiling Data.Lens.Lens.Unit
+[258 of 422] Compiling Data.Lens.Lens.Tuple
+[259 of 422] Compiling Data.Lens.Lens.Void
+[260 of 422] Compiling Data.Lens.Prism.Either
+[261 of 422] Compiling Data.Lens.Prism.Maybe
+[262 of 422] Compiling Data.Lens.Iso.Newtype
+[263 of 422] Compiling Data.Lens.Common
+[264 of 422] Compiling Data.Lens.Lens.Product
+[265 of 422] Compiling Data.Lens.Prism.Coproduct
+[266 of 422] Compiling Data.Array
+[267 of 422] Compiling Data.Lens.Indexed
+[268 of 422] Compiling Data.Enum.Generic
+[269 of 422] Compiling Data.Char
+[270 of 422] Compiling Data.Time.Component
+[271 of 422] Compiling Data.Lens.Traversal
+[272 of 422] Compiling Data.Date.Component
+[273 of 422] Compiling Control.Comonad.Store.Class
+[274 of 422] Compiling Control.Monad.List.Trans
+[275 of 422] Compiling Data.Enum.Gen
+[276 of 422] Compiling Data.Char.Gen
+[277 of 422] Compiling Data.List.Types
+[278 of 422] Compiling Control.Monad.Gen.Common
+[279 of 422] Compiling Data.List.Lazy.Types
+[280 of 422] Compiling Control.Comonad.Store
+[281 of 422] Compiling Control.Comonad.Env.Class
+[282 of 422] Compiling Data.String.Gen
+[283 of 422] Compiling Data.Time.Component.Gen
+[284 of 422] Compiling Data.Time
+[285 of 422] Compiling Control.Comonad.Env
+[286 of 422] Compiling Control.Comonad.Traced.Class
+[288 of 422] Compiling Data.Date.Component.Gen
+[287 of 422] Compiling Data.Date
+[289 of 422] Compiling Control.Comonad.Traced
+[290 of 422] Compiling Data.Time.Gen
+[292 of 422] Compiling Data.Array.Partial
+[291 of 422] Compiling Data.String.CodePoints
+[295 of 422] Compiling Sharpurs.FsAst
+[294 of 422] Compiling Foreign.Object
+[293 of 422] Compiling Data.Array.NonEmpty
+[296 of 422] Compiling Data.Date.Gen
+[297 of 422] Compiling Data.DateTime
+[298 of 422] Compiling Effect.Aff.Class
+[299 of 422] Compiling Data.List.Internal
+[300 of 422] Compiling Data.DateTime.Gen
+[301 of 422] Compiling Data.DateTime.Instant
+[302 of 422] Compiling Node.Stream.Aff
+[303 of 422] Compiling Data.String
+[304 of 422] Compiling Data.String.Regex.Flags
+[305 of 422] Compiling Data.String.NonEmpty.Internal
+[306 of 422] Compiling Sharpurs.Printer
+[307 of 422] Compiling Data.String.CaseInsensitive
+[308 of 422] Compiling Node.FS.Perms
+[309 of 422] Compiling Data.List.Lazy
+[310 of 422] Compiling Data.List
+[311 of 422] Compiling Foreign.Object.Unsafe
+[312 of 422] Compiling Data.Argonaut.Core
+[313 of 422] Compiling Foreign.Object.ST.Unsafe
+[314 of 422] Compiling Data.String.NonEmpty.CodePoints
+[315 of 422] Compiling Data.String.Regex
+[316 of 422] Compiling Data.String.NonEmpty.CodeUnits
+[318 of 422] Compiling PureScript.Backend.Optimizer.Utils
+[317 of 422] Compiling PureScript.CST.Types
+[319 of 422] Compiling Data.Argonaut.Decode.Error
+[320 of 422] Compiling Data.Argonaut.Parser
+[321 of 422] Compiling Data.Argonaut.Gen
+[322 of 422] Compiling Data.String.Regex.Unsafe
+[323 of 422] Compiling Data.String.NonEmpty
+[324 of 422] Compiling Data.String.NonEmpty.CaseInsensitive
+[325 of 422] Compiling Data.Argonaut.Decode.Parser
+[327 of 422] Compiling PureScript.CST.Print
+[326 of 422] Compiling PureScript.CST.Range.TokenList
+[328 of 422] Compiling Data.List.ZipList
+[329 of 422] Compiling Data.List.Lazy.NonEmpty
+[330 of 422] Compiling PureScript.CST.Errors
+[331 of 422] Compiling PureScript.CST.Layout
+[332 of 422] Compiling Foreign.Object.Gen
+[333 of 422] Compiling Data.CatQueue
+[334 of 422] Compiling Data.Lens.Fold
+[337 of 422] Compiling Data.List.Partial
+[338 of 422] Compiling Dodo.Internal.Buffer
+[336 of 422] Compiling Data.Map.Internal
+[335 of 422] Compiling Data.List.NonEmpty
+[339 of 422] Compiling Dodo
+[340 of 422] Compiling PureScript.CST.Range
+[341 of 422] Compiling Data.CatList
+[342 of 422] Compiling Foreign
+[343 of 422] Compiling Ansi.Codes
+[345 of 422] Compiling Data.Lens
+[344 of 422] Compiling Data.Lens.Fold.Partial
+[346 of 422] Compiling Data.Argonaut.Prisms
+[347 of 422] Compiling Data.Argonaut.Traversals
+[348 of 422] Compiling Data.Lens.Record
+[349 of 422] Compiling Control.Monad.Free
+[350 of 422] Compiling Foreign.Keys
+[351 of 422] Compiling Data.JSDate
+[353 of 422] Compiling Foreign.Index
+[352 of 422] Compiling Node.Process
+[354 of 422] Compiling Dodo.Common
+[355 of 422] Compiling Dodo.Box
+[356 of 422] Compiling Node.FS.Stats
+[357 of 422] Compiling PureScript.CST.TokenStream
+[359 of 422] Compiling Node.FS.Sync
+[358 of 422] Compiling Node.FS.Async
+[360 of 422] Compiling Control.Comonad.Cofree
+[361 of 422] Compiling Control.Monad.Trampoline
+[362 of 422] Compiling Control.Monad.Free.Class
+[363 of 422] Compiling PureScript.CST.Traversal
+[365 of 422] Compiling PureScript.CST.Parser.Monad
+[364 of 422] Compiling PureScript.CST.Lexer
+[366 of 422] Compiling Node.FS.Aff
+[367 of 422] Compiling Control.Comonad.Cofree.Class
+[369 of 422] Compiling Ansi.Output
+[368 of 422] Compiling Dodo.Ansi
+[370 of 422] Compiling Data.Set
+[371 of 422] Compiling Data.Map
+[373 of 422] Compiling Data.Set.NonEmpty
+[372 of 422] Compiling PureScript.CST.Parser
+[374 of 422] Compiling Data.Argonaut.Encode.Encoders
+[375 of 422] Compiling Data.Map.Gen
+[377 of 422] Compiling Data.Lens.Index
+[376 of 422] Compiling Data.Argonaut.Decode.Decoders
+[378 of 422] Compiling PureScript.CST.ModuleGraph
+[379 of 422] Compiling PureScript.Backend.Optimizer.CoreFn
+[380 of 422] Compiling Data.Interval.Duration
+[381 of 422] Compiling Data.Interval.Duration.Iso
+[382 of 422] Compiling Data.Interval
+[383 of 422] Compiling Data.Argonaut.Encode.Class
+[384 of 422] Compiling Data.Lens.At
+[385 of 422] Compiling Data.Argonaut.Encode.Combinators
+[386 of 422] Compiling Data.Argonaut.Decode.Class
+[387 of 422] Compiling Data.Argonaut.Encode
+[388 of 422] Compiling Data.Argonaut.Decode.Combinators
+[389 of 422] Compiling Data.Argonaut.Decode
+[390 of 422] Compiling Data.Argonaut.JCursor
+[391 of 422] Compiling PureScript.Backend.Optimizer.Syntax
+[392 of 422] Compiling Sharpurs.AdtLayout
+[393 of 422] Compiling PureScript.Backend.Optimizer.TypeSubstitution
+[394 of 422] Compiling PureScript.Backend.Optimizer.CoreFn.Sort
+[395 of 422] Compiling Data.Argonaut
+[396 of 422] Compiling Data.Argonaut.JCursor.Gen
+[397 of 422] Compiling PureScript.Backend.Optimizer.CoreFn.TypeTable
+[399 of 422] Compiling PureScript.CST
+[398 of 422] Compiling PureScript.Backend.Optimizer.Analysis
+[400 of 422] Compiling PureScript.Backend.Optimizer.CoreFn.Json
+[401 of 422] Compiling PureScript.Backend.Optimizer.Semantics
+[402 of 422] Compiling PureScript.Backend.Optimizer.Directives
+[403 of 422] Compiling Sharpurs.IntKernel
+[404 of 422] Compiling PureScript.Backend.Optimizer.Cache
+[406 of 422] Compiling PureScript.Backend.Optimizer.Reachability
+[405 of 422] Compiling PureScript.Backend.Optimizer.Codegen.Tco
+[407 of 422] Compiling PureScript.Backend.Optimizer.Semantics.Foreign
+[408 of 422] Compiling PureScript.Backend.Optimizer.App
+[409 of 422] Compiling Sharpurs.IntKernel.CodeGen
+[410 of 422] Compiling Sharpurs.Optimized
+[411 of 422] Compiling PureScript.Backend.Optimizer.FreeVars
+[412 of 422] Compiling PureScript.Backend.Optimizer.Substitute
+[413 of 422] Compiling PureScript.Backend.Optimizer.Convert
+[414 of 422] Compiling TestInfer
+[415 of 422] Compiling PureScript.Backend.Optimizer.Monomorphize
+[416 of 422] Compiling PureScript.Backend.Optimizer.Builder
+[417 of 422] Compiling Sharpurs.AdtKernel
+[418 of 422] Compiling PureScript.Backend.Optimizer.Tracer.Printer
+[419 of 422] Compiling Sharpurs.CodeGen
+[420 of 422] Compiling Test.Main
+[421 of 422] Compiling Main
+[422 of 422] Compiling Sharpurs.AdtInterop
+[WARNING 1/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/App.purs:34:1
+
+  34  import Node.Path as Path
+      ^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Node.Path as Path is redundant
+
+[WARNING 2/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Builder.purs:19:1
+
+  19  import Data.Newtype (unwrap)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.Newtype is redundant
+
+[WARNING 3/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Builder.purs:20:1
+
+  20  import Effect.Aff (Aff, attempt)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Effect.Aff is redundant
+
+[WARNING 4/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Builder.purs:21:1
+
+  21  import Effect.Console as Console
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Console as Console is redundant
+
+[WARNING 5/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Builder.purs:22:1
+
+  22  import Effect.Class (liftEffect)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Effect.Class is redundant
+
+[WARNING 6/74 UnusedExplicitImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Builder.purs:28:1
+
+  28  import PureScript.Backend.Optimizer.CoreFn (Ann, Ident, Module(..), ModuleName, Qualified, importName)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.CoreFn contains the following unused references:
+    ModuleName
+    importName
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.CoreFn (Ann, Ident, Module(..), Qualified)
+
+[WARNING 7/74 UnusedExplicitImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Builder.purs:32:1
+
+  32  import PureScript.Backend.Optimizer.Cache (writePurmetaSync, clearPurmetaCache, logMemory)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Cache contains the following unused references:
+    logMemory
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Cache (clearPurmetaCache, writePurmetaSync)
+
+[WARNING 8/74 UnusedExplicitImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:67:1
+
+  67  import Data.Maybe (Maybe(..), fromMaybe, maybe, isJust)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Maybe contains the following unused references:
+    isJust
+  It could be replaced with:
+    import Data.Maybe (Maybe(..), fromMaybe, maybe)
+
+[WARNING 9/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:68:1
+
+  68  import Debug as Debug
+      ^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Debug as Debug is redundant
+
+[WARNING 10/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:69:1
+
+  69  import Prelude (unit)
+      ^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Prelude is redundant
+
+[WARNING 11/74 DuplicateSelectiveImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:69:1
+
+  69  import Prelude (unit)
+      ^^^^^^^^^^^^^^^^^^^^^
+
+  There is an existing import of Prelude, consider merging the import lists
+
+[WARNING 12/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:78:1
+
+  78  import Data.String.Pattern as Data.String.Pattern
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.String.Pattern as Data.String.Pattern is redundant
+
+[WARNING 13/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:82:1
+
+  82  import Effect.Console as Console
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Console as Console is redundant
+
+[WARNING 14/74 UnusedDctorExplicitImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:90:1
+
+  90  import PureScript.Backend.Optimizer.Syntax (BackendAccessor(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorOrd(..), BackendSyntax(Var, Local, Lit, App, Abs, UncurriedApp, UncurriedAbs, UncurriedEffectApp, UncurriedEffectAbs, Accessor, Update, CtorSaturated, CtorDef, LetRec, Let, EffectBind, EffectPure, EffectDefer, Branch, PrimOp, PrimEffect, PrimUndefined, Fail, Typed), Level(..), Pair(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of type BackendSyntax from module PureScript.Backend.Optimizer.Syntax includes the following unused data constructors:
+    UncurriedEffectApp
+    UncurriedEffectAbs
+    CtorSaturated
+    EffectBind
+    EffectPure
+    EffectDefer
+    PrimEffect
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Syntax (BackendAccessor(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorOrd(..), BackendSyntax(UncurriedAbs, Local, Branch, PrimOp, Lit, Let, Fail, Accessor, UncurriedApp, Typed, LetRec, App, Abs, Update, CtorDef, Var, PrimUndefined), Level(..), Pair(..))
+
+[WARNING 15/74 DuplicateImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:94:1
+
+  94  import Effect.Unsafe (unsafePerformEffect)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Effect.Unsafe (unsafePerformEffect)
+
+[WARNING 16/74 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:259:29
+
+  259    NonRec binding@(Binding _ ident _) -> do
+                                   ^^^^^
+
+  Name ident was introduced but not used.
+  in value declaration toBackendTopLevelBindingGroup
+
+[WARNING 17/74 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Convert.purs:288:25
+
+  288    let BackendAnalysis { size } = analysisOf backendExpr
+                               ^^^^
+
+  Name size was introduced but not used.
+  in value declaration toTopLevelBackendBinding
+
+[WARNING 18/74 UnusedExplicitImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/CoreFn/Json.purs:31:1
+
+  31  import Data.Traversable (traverse, sequence)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Traversable contains the following unused references:
+    sequence
+  It could be replaced with:
+    import Data.Traversable (traverse)
+
+[WARNING 19/74 UnusedDctorImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/CoreFn/Json.purs:38:1
+
+  38  import PureScript.Backend.Optimizer.CoreFn (Ann(..), Bind(..), Binder(..), Binding(..), CaseAlternative(..), CaseGuard(..), ClassDecl, Comment(..), ConstructorType(..), DataConstructor, DataDecl, Expr(..), ExprType(..), Guard(..), Ident(..), Import(..), Literal(..), Meta(..), Module(..), ModuleName(..), Prop(..), ProperName(..), Qualified(..), ReExport(..), SourcePos, SourceSpan, emptySpan)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of type ExprType from module PureScript.Backend.Optimizer.CoreFn includes data constructors but only the type is used
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.CoreFn (Ann(..), Bind(..), Binder(..), Binding(..), CaseAlternative(..), CaseGuard(..), ClassDecl, Comment(..), ConstructorType(..), DataConstructor, DataDecl, Expr(..), ExprType, Guard(..), Ident(..), Import(..), Literal(..), Meta(..), Module(..), ModuleName(..), Prop(..), ProperName(..), Qualified(..), ReExport(..), SourcePos, SourceSpan, emptySpan)
+
+[WARNING 20/74 UnusedDeclaration] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/CoreFn/Json.purs:132:1
+
+       v
+  132  decodeFieldRef j = do
+  133    o <- decodeJObject j
+  134    label <- getField decodeString o "label"
+  135    typeId <- getField decodeInt o "type"
+  136    pure { label, typeId }
+                              ^
+
+  Declaration decodeFieldRef was not used, and is not exported.
+
+[WARNING 21/74 UnusedDeclaration] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/CoreFn/Json.purs:141:1
+
+       v
+  141  decodeConstraintRef j = do
+  142    o <- decodeJObject j
+  143    fqn <- getField (decodeArray decodeString) o "fqn"
+  144    args <- getField (decodeArray decodeInt) o "args"
+  145    pure { fqn, args }
+                          ^
+
+  Declaration decodeConstraintRef was not used, and is not exported.
+
+[WARNING 22/74 UnusedDeclaration] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/CoreFn/Json.purs:147:1
+
+       v
+  147  decodeField tt j = do
+  148    o <- decodeJObject j
+  149    l <- getField decodeString o "label"
+  150    tId <- getField decodeInt o "type"
+  151    t <- note (TypeMismatch "FieldType") (Array.index tt tId)
+  152    pure (Tuple l t)
+                        ^
+
+  Declaration decodeField was not used, and is not exported.
+
+[WARNING 23/74 UnusedExplicitImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/CoreFn/TypeTable.purs:6:1
+
+  6  import Data.Argonaut (Json, JsonDecodeError(..), caseJson, decodeJson, isNull)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Argonaut contains the following unused references:
+    decodeJson
+  It could be replaced with:
+    import Data.Argonaut (Json, JsonDecodeError(..), caseJson, isNull)
+
+[WARNING 24/74 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/CoreFn/TypeTable.purs:111:18
+
+  111              Left err -> pure $ Just (Left (TypeMismatch "ExprType"))
+                        ^^^
+
+  Name err was introduced but not used.
+  in value declaration decodeTypeTableST
+
+[WARNING 25/74 OverlappingPattern] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/FreeVars.purs:52:1
+
+  52  freeVars :: TcoExpr -> Set String
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A case expression contains unreachable cases:
+  (TypeApp a _)
+  in binding group freeVars
+
+[WARNING 26/74 OverlappingPattern] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/FreeVars.purs:120:1
+
+  120  paramTypes :: TcoExpr -> Map String ExprType
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A case expression contains unreachable cases:
+  (TypeApp f _)
+  in binding group paramTypes
+
+[WARNING 27/74 UnusedExplicitImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:31:1
+
+  31  import Data.Maybe (Maybe(..), fromMaybe, maybe, isJust)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Maybe contains the following unused references:
+    isJust
+  It could be replaced with:
+    import Data.Maybe (Maybe(..), fromMaybe, maybe)
+
+[WARNING 28/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:32:1
+
+  32  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  The import of Debug is redundant
+
+[WARNING 29/74 DuplicateImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:36:1
+
+  36  import Data.String as String
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.String as String
+
+[WARNING 30/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:38:1
+
+  38  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  The import of Debug is redundant
+
+[WARNING 31/74 DuplicateImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:38:1
+
+  38  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Debug (trace)
+
+[WARNING 32/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:43:1
+
+  43  import Node.Encoding (Encoding(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Node.Encoding is redundant
+
+[WARNING 33/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:44:1
+
+  44  import Effect.Unsafe (unsafePerformEffect)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Effect.Unsafe is redundant
+
+[WARNING 34/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:45:1
+
+  45  import Effect.Console as Console
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Console as Console is redundant
+
+[WARNING 35/74 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:244:27
+
+  244               printTy (ADT name _ args') = "ADT " <> name <> " [" <> String.joinWith ", " (map printTy args') <> "]"
+                                 ^^^^
+
+  Name name was shadowed.
+  in value declaration collectExpr
+
+[WARNING 36/74 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:258:31
+
+  258                   s1 = foldl (\acc (Tuple paramType arg) ->
+                                     ^^^
+
+  Name acc was shadowed.
+  in value declaration collectExpr
+
+[WARNING 37/74 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:332:30
+
+  332                  s1 = foldl (\acc (Tuple paramType arg) ->
+                                    ^^^
+
+  Name acc was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 38/74 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:332:51
+
+  332                  s1 = foldl (\acc (Tuple paramType arg) ->
+                                                         ^^^
+
+  Name arg was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 39/74 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:344:47
+
+  344                             printTy (TypeApp c args') = "TypeApp (" <> printTy c <> ") [" <> String.joinWith ", " (map printTy args') <> "]"
+                                                     ^^^^^
+
+  Name args' was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 40/74 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:346:42
+
+  346                             printTy (Func args' ret') = "Func [" <> String.joinWith ", " (map printTy args') <> "] (" <> printTy ret' <> ")"
+                                                ^^^^^
+
+  Name args' was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 41/74 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:347:48
+
+  347                             printTy (ADT name _ args') = "ADT " <> name <> " [" <> String.joinWith ", " (map printTy args') <> "]"
+                                                      ^^^^^
+
+  Name args' was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 42/74 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:447:15
+
+  447                oldType = case ann of Ann a -> fromMaybe Any a.type
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name oldType was introduced but not used.
+  in value declaration rewriteExpr
+
+[WARNING 43/74 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:449:15
+
+  449                newType = case newAnn of Ann a -> fromMaybe Any a.type
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name newType was introduced but not used.
+  in value declaration rewriteExpr
+
+[WARNING 44/74 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:542:9
+
+  542          isGo = name == "go" || name == "$go"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name isGo was introduced but not used.
+  in value declaration rewriteExpr
+
+[WARNING 45/74 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:543:9
+
+               v
+  543          showHasVars = case _ of
+  544            Just t -> show (hasTypeVariables t)
+  545            Nothing -> "Nothing"
+                                    ^
+
+  Name showHasVars was introduced but not used.
+  in value declaration rewriteExpr
+
+[WARNING 46/74 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:597:11
+
+  597    goGuard subst (Unconditional e) = Unconditional (substituteVars subst e)
+                 ^^^^^
+
+  Name subst was shadowed.
+  in value declaration substituteVars
+
+[WARNING 47/74 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:598:11
+
+  598    goGuard subst (Guarded guards) = Guarded (map (\(Guard e1 e2) -> Guard (substituteVars subst e1) (substituteVars subst e2)) guards)
+                 ^^^^^
+
+  Name subst was shadowed.
+  in value declaration substituteVars
+
+[WARNING 48/74 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:794:3
+
+  794    expr | isAppOrTypeApp expr ->
+         ^^^^
+
+  Name expr was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 49/74 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:873:25
+
+  873            injectType ty expr =
+                               ^^^^
+
+  Name expr was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 50/74 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:952:14
+
+  952            go expr = case expr of
+                    ^^^^
+
+  Name expr was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 51/74 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:953:28
+
+  953              ExprApp annApp f arg ->
+                                  ^
+
+  Name f was introduced but not used.
+  in value declaration monomorphizeExpr
+
+[WARNING 52/74 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:953:30
+
+  953              ExprApp annApp f arg ->
+                                    ^^^
+
+  Name arg was introduced but not used.
+  in value declaration monomorphizeExpr
+
+[WARNING 53/74 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:979:61
+
+  979                            s1 = foldl (\acc (Tuple paramType arg) ->
+                                                                   ^^^
+
+  Name arg was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 54/74 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:1205:33
+
+  1205                                  printMap m = "{" <> String.joinWith ", " (map (\(Tuple k v) -> k <> ": " <> show (hasTypeVariables v)) (Map.toUnfoldable m :: Array (Tuple String ExprType))) <> "}"
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name printMap was introduced but not used.
+  in value declaration transitiveCollect
+
+[WARNING 55/74 UnusedExplicitImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Semantics.purs:74:1
+
+  74  import PureScript.Backend.Optimizer.Analysis (class HasAnalysis, BackendAnalysis(..), Capture(..), Complexity(..), ResultTerm(..), Usage(..), analysisOf, bound, bump, complex, resultOf, updated, withResult, withRewrite)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Analysis contains the following unused references:
+    resultOf
+    withResult
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Analysis (class HasAnalysis, BackendAnalysis(..), Capture(..), Complexity(..), ResultTerm(..), Usage(..), analysisOf, bound, bump, complex, updated, withRewrite)
+
+[WARNING 56/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/TestInfer.purs:5:1
+
+  5  import Data.Map as Map
+     ^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.Map as Map is redundant
+
+[WARNING 57/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/TestInfer.purs:6:1
+
+  6  import Data.Set as Set
+     ^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.Set as Set is redundant
+
+[WARNING 58/74 UnusedImport] ../../purescript-backend-optimizer-sharpurs/src/TestInfer.purs:8:1
+
+  8  import Data.Tuple (Tuple(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.Tuple is redundant
+
+[WARNING 59/74 UnusedImport] src/Main.purs:9:1
+
+  9  import Effect.Class.Console as Console
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Class.Console as Console is redundant
+
+[WARNING 60/74 UnusedImport] src/Main.purs:21:1
+
+  21  import Data.List (List(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.List is redundant
+
+[WARNING 61/74 UnusedExplicitImport] src/Main.purs:22:1
+
+  22  import PureScript.Backend.Optimizer.App (coreFnModulesFromOutput, parseCLIArgs, checkCache, writeCache, loadDirectives)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.App contains the following unused references:
+    checkCache
+    writeCache
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.App (coreFnModulesFromOutput, loadDirectives, parseCLIArgs)
+
+[WARNING 62/74 UnusedImport] src/Main.purs:33:1
+
+  33  import Data.String (joinWith)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.String is redundant
+
+[WARNING 63/74 UnusedName] src/Main.purs:98:7
+
+  98    let cacheVersion = "1.0.0"
+            ^^^^^^^^^^^^^^^^^^^^^^
+
+  Name cacheVersion was introduced but not used.
+  in value declaration main
+
+[WARNING 64/74 UnusedName] src/Main.purs:113:13
+
+  113          let modNameStr = unwrap coreFnMod.name
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name modNameStr was introduced but not used.
+  in value declaration main
+
+[WARNING 65/74 ShadowedName] src/Main.purs:138:17
+
+  138              let wrappers = appendFfiWrappers modNameStr requiredForeigns content
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name wrappers was shadowed.
+  in value declaration main
+
+[WARNING 66/74 ShadowedName] src/Sharpurs/AdtKernel.purs:169:9
+
+  169      let publicName = sanitizeName (String.replaceAll (Pattern ".") (Replacement "_") layout.moduleName <> "_" <> unwrap name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name publicName was shadowed.
+  in value declaration fromModule
+
+[WARNING 67/74 UnusedImport] src/Sharpurs/CodeGen.purs:9:1
+
+  9  import Data.String.CodeUnits as CU
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.String.CodeUnits as CU is redundant
+
+[WARNING 68/74 DuplicateImport] src/Sharpurs/CodeGen.purs:18:1
+
+  18  import Data.Maybe (Maybe(..), fromMaybe)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.Maybe (Maybe(..), fromMaybe)
+
+[WARNING 69/74 ShadowedName] src/Sharpurs/CodeGen.purs:68:5
+
+  68      translateDataDecl decl = FsDeclData (modPrefix <> "_" <> sanitizeName decl.name) (map translateDataCtor decl.constructors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name translateDataDecl was shadowed.
+  in value declaration translateModuleUsing
+
+[WARNING 70/74 ShadowedName] src/Sharpurs/CodeGen.purs:140:16
+
+  140      expandBind adtCtors currentMod (Binding _ (Ident name) val) =
+                      ^^^^^^^^
+
+  Name adtCtors was shadowed.
+  in value declaration translateBindUsing
+
+[WARNING 71/74 ShadowedName] src/Sharpurs/CodeGen.purs:140:25
+
+  140      expandBind adtCtors currentMod (Binding _ (Ident name) val) =
+                               ^^^^^^^^^^
+
+  Name currentMod was shadowed.
+  in value declaration translateBindUsing
+
+[WARNING 72/74 ShadowedName] src/Sharpurs/CodeGen.purs:288:17
+
+  288    ExprTypeApp _ expr _ -> translateExpr adtCtors localEnv currentMod expr
+                       ^^^^
+
+  Name expr was shadowed.
+  in value declaration translateExpr
+
+[WARNING 73/74 ShadowedName] src/Sharpurs/CodeGen.purs:321:60
+
+  321              recStrs = Array.concat (Array.mapWithIndex (\i b -> makeLocalRec b i) bindings)
+                                                                  ^
+
+  Name b was shadowed.
+  in value declaration translateExpr
+
+[WARNING 74/74 UnusedName] src/Sharpurs/Printer.purs:11:23
+
+  11  printModule (FsModule name decls) =
+                            ^^^^
+
+  Name name was introduced but not used.
+  in value declaration printModule
+
+           Src   Lib   All
+Warnings    16    58    74
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: sharpurs
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Bundling...
+
+  bin/sharpurs.js  1.0mb ⚠️
+
+⚡ Done in 30ms
+
+✓ Bundle succeeded.
+

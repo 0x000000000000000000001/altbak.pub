@@ -1,0 +1,6 @@
+
+> sharpurs@0.1.0 test:local-kernel
+> node tests/local-int-kernel.mjs
+
+local-int-kernel runtime: 43 checks passed
+local-int-kernel converter: 68 checks passed

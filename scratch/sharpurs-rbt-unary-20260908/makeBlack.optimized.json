@@ -1,0 +1,344 @@
+{
+  "module": "Test.RBTree",
+  "recursive": false,
+  "ident": "makeBlack",
+  "expression": {
+    "$tag": "Syntax$Typed",
+    "value0": {
+      "$tag": "CoreFn$Func",
+      "value0": [
+        {
+          "$tag": "CoreFn$ADT",
+          "value0": "Test.RBTree.Tree",
+          "value1": [
+            "Test",
+            "RBTree",
+            "Tree"
+          ],
+          "value2": []
+        }
+      ],
+      "value1": {
+        "$tag": "CoreFn$ADT",
+        "value0": "Test.RBTree.Tree",
+        "value1": [
+          "Test",
+          "RBTree",
+          "Tree"
+        ],
+        "value2": []
+      }
+    },
+    "value1": {
+      "$tag": "Syntax$Abs",
+      "value0": [
+        {
+          "$tag": "DataTuple$Tuple",
+          "value0": {
+            "$tag": "DataMaybe$Just",
+            "value0": "v"
+          },
+          "value1": 0
+        }
+      ],
+      "value1": {
+        "$tag": "Syntax$Typed",
+        "value0": {
+          "$tag": "CoreFn$ADT",
+          "value0": "Test.RBTree.Tree",
+          "value1": [
+            "Test",
+            "RBTree",
+            "Tree"
+          ],
+          "value2": []
+        },
+        "value1": {
+          "$tag": "Syntax$Branch",
+          "value0": [
+            {
+              "$tag": "Syntax$Pair",
+              "value0": {
+                "$tag": "Syntax$PrimOp",
+                "value0": {
+                  "$tag": "Syntax$Op1",
+                  "value0": {
+                    "$tag": "Syntax$OpIsTag",
+                    "value0": {
+                      "$tag": "CoreFn$Qualified",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "Test.RBTree"
+                      },
+                      "value1": "T"
+                    }
+                  },
+                  "value1": {
+                    "$tag": "Syntax$Typed",
+                    "value0": {
+                      "$tag": "CoreFn$ADT",
+                      "value0": "Test.RBTree.Tree",
+                      "value1": [
+                        "Test",
+                        "RBTree",
+                        "Tree"
+                      ],
+                      "value2": []
+                    },
+                    "value1": {
+                      "$tag": "Syntax$Local",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "v"
+                      },
+                      "value1": 0
+                    }
+                  }
+                }
+              },
+              "value1": {
+                "$tag": "Syntax$Typed",
+                "value0": {
+                  "$tag": "CoreFn$ADT",
+                  "value0": "Test.RBTree.Tree",
+                  "value1": [
+                    "Test",
+                    "RBTree",
+                    "Tree"
+                  ],
+                  "value2": []
+                },
+                "value1": {
+                  "$tag": "Syntax$Typed",
+                  "value0": {
+                    "$tag": "CoreFn$ADT",
+                    "value0": "Test.RBTree.Tree",
+                    "value1": [
+                      "Test",
+                      "RBTree",
+                      "Tree"
+                    ],
+                    "value2": []
+                  },
+                  "value1": {
+                    "$tag": "Syntax$CtorSaturated",
+                    "value0": {
+                      "$tag": "CoreFn$Qualified",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "Test.RBTree"
+                      },
+                      "value1": "T"
+                    },
+                    "value1": {
+                      "$tag": "CoreFn$SumType"
+                    },
+                    "value2": "Tree",
+                    "value3": "T",
+                    "value4": [
+                      {
+                        "$tag": "DataTuple$Tuple",
+                        "value0": "value0",
+                        "value1": {
+                          "$tag": "Syntax$CtorSaturated",
+                          "value0": {
+                            "$tag": "CoreFn$Qualified",
+                            "value0": {
+                              "$tag": "DataMaybe$Just",
+                              "value0": "Test.RBTree"
+                            },
+                            "value1": "B"
+                          },
+                          "value1": {
+                            "$tag": "CoreFn$SumType"
+                          },
+                          "value2": "Color",
+                          "value3": "B",
+                          "value4": []
+                        }
+                      },
+                      {
+                        "$tag": "DataTuple$Tuple",
+                        "value0": "value1",
+                        "value1": {
+                          "$tag": "Syntax$Accessor",
+                          "value0": {
+                            "$tag": "Syntax$Local",
+                            "value0": {
+                              "$tag": "DataMaybe$Just",
+                              "value0": "v"
+                            },
+                            "value1": 0
+                          },
+                          "value1": {
+                            "$tag": "Syntax$GetCtorField",
+                            "value0": {
+                              "$tag": "CoreFn$Qualified",
+                              "value0": {
+                                "$tag": "DataMaybe$Just",
+                                "value0": "Test.RBTree"
+                              },
+                              "value1": "T"
+                            },
+                            "value1": {
+                              "$tag": "CoreFn$SumType"
+                            },
+                            "value2": "Tree",
+                            "value3": "T",
+                            "value4": "value1",
+                            "value5": 1
+                          }
+                        }
+                      },
+                      {
+                        "$tag": "DataTuple$Tuple",
+                        "value0": "value2",
+                        "value1": {
+                          "$tag": "Syntax$Accessor",
+                          "value0": {
+                            "$tag": "Syntax$Local",
+                            "value0": {
+                              "$tag": "DataMaybe$Just",
+                              "value0": "v"
+                            },
+                            "value1": 0
+                          },
+                          "value1": {
+                            "$tag": "Syntax$GetCtorField",
+                            "value0": {
+                              "$tag": "CoreFn$Qualified",
+                              "value0": {
+                                "$tag": "DataMaybe$Just",
+                                "value0": "Test.RBTree"
+                              },
+                              "value1": "T"
+                            },
+                            "value1": {
+                              "$tag": "CoreFn$SumType"
+                            },
+                            "value2": "Tree",
+                            "value3": "T",
+                            "value4": "value2",
+                            "value5": 2
+                          }
+                        }
+                      },
+                      {
+                        "$tag": "DataTuple$Tuple",
+                        "value0": "value3",
+                        "value1": {
+                          "$tag": "Syntax$Accessor",
+                          "value0": {
+                            "$tag": "Syntax$Local",
+                            "value0": {
+                              "$tag": "DataMaybe$Just",
+                              "value0": "v"
+                            },
+                            "value1": 0
+                          },
+                          "value1": {
+                            "$tag": "Syntax$GetCtorField",
+                            "value0": {
+                              "$tag": "CoreFn$Qualified",
+                              "value0": {
+                                "$tag": "DataMaybe$Just",
+                                "value0": "Test.RBTree"
+                              },
+                              "value1": "T"
+                            },
+                            "value1": {
+                              "$tag": "CoreFn$SumType"
+                            },
+                            "value2": "Tree",
+                            "value3": "T",
+                            "value4": "value3",
+                            "value5": 3
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "$tag": "Syntax$Pair",
+              "value0": {
+                "$tag": "Syntax$PrimOp",
+                "value0": {
+                  "$tag": "Syntax$Op1",
+                  "value0": {
+                    "$tag": "Syntax$OpIsTag",
+                    "value0": {
+                      "$tag": "CoreFn$Qualified",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "Test.RBTree"
+                      },
+                      "value1": "E"
+                    }
+                  },
+                  "value1": {
+                    "$tag": "Syntax$Typed",
+                    "value0": {
+                      "$tag": "CoreFn$ADT",
+                      "value0": "Test.RBTree.Tree",
+                      "value1": [
+                        "Test",
+                        "RBTree",
+                        "Tree"
+                      ],
+                      "value2": []
+                    },
+                    "value1": {
+                      "$tag": "Syntax$Local",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "v"
+                      },
+                      "value1": 0
+                    }
+                  }
+                }
+              },
+              "value1": {
+                "$tag": "Syntax$Typed",
+                "value0": {
+                  "$tag": "CoreFn$ADT",
+                  "value0": "Test.RBTree.Tree",
+                  "value1": [
+                    "Test",
+                    "RBTree",
+                    "Tree"
+                  ],
+                  "value2": []
+                },
+                "value1": {
+                  "$tag": "Syntax$CtorSaturated",
+                  "value0": {
+                    "$tag": "CoreFn$Qualified",
+                    "value0": {
+                      "$tag": "DataMaybe$Just",
+                      "value0": "Test.RBTree"
+                    },
+                    "value1": "E"
+                  },
+                  "value1": {
+                    "$tag": "CoreFn$SumType"
+                  },
+                  "value2": "Tree",
+                  "value3": "E",
+                  "value4": []
+                }
+              }
+            }
+          ],
+          "value1": {
+            "$tag": "Syntax$Fail",
+            "value0": "Failed pattern match"
+          }
+        }
+      }
+    }
+  }
+}

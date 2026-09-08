@@ -1,0 +1,66 @@
+{
+  "module": "AdtPilot",
+  "recursive": false,
+  "ident": "T",
+  "expression": {
+    "$tag": "Syntax$Typed",
+    "value0": {
+      "$tag": "CoreFn$Func",
+      "value0": [
+        {
+          "$tag": "CoreFn$ADT",
+          "value0": "AdtPilot.Color",
+          "value1": [
+            "AdtPilot",
+            "Color"
+          ],
+          "value2": []
+        },
+        {
+          "$tag": "CoreFn$ADT",
+          "value0": "AdtPilot.Tree",
+          "value1": [
+            "AdtPilot",
+            "Tree"
+          ],
+          "value2": []
+        },
+        {
+          "$tag": "CoreFn$Int"
+        },
+        {
+          "$tag": "CoreFn$ADT",
+          "value0": "AdtPilot.Tree",
+          "value1": [
+            "AdtPilot",
+            "Tree"
+          ],
+          "value2": []
+        }
+      ],
+      "value1": {
+        "$tag": "CoreFn$ADT",
+        "value0": "AdtPilot.Tree",
+        "value1": [
+          "AdtPilot",
+          "Tree"
+        ],
+        "value2": []
+      }
+    },
+    "value1": {
+      "$tag": "Syntax$CtorDef",
+      "value0": {
+        "$tag": "CoreFn$SumType"
+      },
+      "value1": "Tree",
+      "value2": "T",
+      "value3": [
+        "value0",
+        "value1",
+        "value2",
+        "value3"
+      ]
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "module": "AdtPilot",
+  "recursive": false,
+  "ident": "singletonWith",
+  "expression": {
+    "$tag": "Syntax$Typed",
+    "value0": {
+      "$tag": "CoreFn$Func",
+      "value0": [
+        {
+          "$tag": "CoreFn$ADT",
+          "value0": "AdtPilot.Color",
+          "value1": [
+            "AdtPilot",
+            "Color"
+          ],
+          "value2": []
+        },
+        {
+          "$tag": "CoreFn$Int"
+        }
+      ],
+      "value1": {
+        "$tag": "CoreFn$ADT",
+        "value0": "AdtPilot.Tree",
+        "value1": [
+          "AdtPilot",
+          "Tree"
+        ],
+        "value2": []
+      }
+    },
+    "value1": {
+      "$tag": "Syntax$Abs",
+      "value0": [
+        {
+          "$tag": "DataTuple$Tuple",
+          "value0": {
+            "$tag": "DataMaybe$Just",
+            "value0": "color"
+          },
+          "value1": 0
+        }
+      ],
+      "value1": {
+        "$tag": "Syntax$Typed",
+        "value0": {
+          "$tag": "CoreFn$Func",
+          "value0": [
+            {
+              "$tag": "CoreFn$Int"
+            }
+          ],
+          "value1": {
+            "$tag": "CoreFn$ADT",
+            "value0": "AdtPilot.Tree",
+            "value1": [
+              "AdtPilot",
+              "Tree"
+            ],
+            "value2": []
+          }
+        },
+        "value1": {
+          "$tag": "Syntax$Abs",
+          "value0": [
+            {
+              "$tag": "DataTuple$Tuple",
+              "value0": {
+                "$tag": "DataMaybe$Just",
+                "value0": "value"
+              },
+              "value1": 1
+            }
+          ],
+          "value1": {
+            "$tag": "Syntax$Typed",
+            "value0": {
+              "$tag": "CoreFn$ADT",
+              "value0": "AdtPilot.Tree",
+              "value1": [
+                "AdtPilot",
+                "Tree"
+              ],
+              "value2": []
+            },
+            "value1": {
+              "$tag": "Syntax$Typed",
+              "value0": {
+                "$tag": "CoreFn$ADT",
+                "value0": "AdtPilot.Tree",
+                "value1": [
+                  "AdtPilot",
+                  "Tree"
+                ],
+                "value2": []
+              },
+              "value1": {
+                "$tag": "Syntax$CtorSaturated",
+                "value0": {
+                  "$tag": "CoreFn$Qualified",
+                  "value0": {
+                    "$tag": "DataMaybe$Just",
+                    "value0": "AdtPilot"
+                  },
+                  "value1": "T"
+                },
+                "value1": {
+                  "$tag": "CoreFn$SumType"
+                },
+                "value2": "Tree",
+                "value3": "T",
+                "value4": [
+                  {
+                    "$tag": "DataTuple$Tuple",
+                    "value0": "value0",
+                    "value1": {
+                      "$tag": "Syntax$Local",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "color"
+                      },
+                      "value1": 0
+                    }
+                  },
+                  {
+                    "$tag": "DataTuple$Tuple",
+                    "value0": "value1",
+                    "value1": {
+                      "$tag": "Syntax$CtorSaturated",
+                      "value0": {
+                        "$tag": "CoreFn$Qualified",
+                        "value0": {
+                          "$tag": "DataMaybe$Just",
+                          "value0": "AdtPilot"
+                        },
+                        "value1": "E"
+                      },
+                      "value1": {
+                        "$tag": "CoreFn$SumType"
+                      },
+                      "value2": "Tree",
+                      "value3": "E",
+                      "value4": []
+                    }
+                  },
+                  {
+                    "$tag": "DataTuple$Tuple",
+                    "value0": "value2",
+                    "value1": {
+                      "$tag": "Syntax$Local",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "value"
+                      },
+                      "value1": 1
+                    }
+                  },
+                  {
+                    "$tag": "DataTuple$Tuple",
+                    "value0": "value3",
+                    "value1": {
+                      "$tag": "Syntax$CtorSaturated",
+                      "value0": {
+                        "$tag": "CoreFn$Qualified",
+                        "value0": {
+                          "$tag": "DataMaybe$Just",
+                          "value0": "AdtPilot"
+                        },
+                        "value1": "E"
+                      },
+                      "value1": {
+                        "$tag": "CoreFn$SumType"
+                      },
+                      "value2": "Tree",
+                      "value3": "E",
+                      "value4": []
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

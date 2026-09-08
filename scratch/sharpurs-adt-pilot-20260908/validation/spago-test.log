@@ -1,0 +1,20 @@
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: sharpurs
+
+Downloading dependencies...
+Building...
+[1 of 2] Compiling Sharpurs.AdtLayout
+[2 of 2] Compiling Sharpurs.AdtKernel
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Running tests for package: sharpurs
+IntKernel: 43 assertions passed
+IntKernel routing: 6 assertions passed
+
+✓ Test succeeded for package "sharpurs".
+

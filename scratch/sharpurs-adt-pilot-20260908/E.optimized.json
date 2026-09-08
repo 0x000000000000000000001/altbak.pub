@@ -1,0 +1,26 @@
+{
+  "module": "AdtPilot",
+  "recursive": false,
+  "ident": "E",
+  "expression": {
+    "$tag": "Syntax$Typed",
+    "value0": {
+      "$tag": "CoreFn$ADT",
+      "value0": "AdtPilot.Tree",
+      "value1": [
+        "AdtPilot",
+        "Tree"
+      ],
+      "value2": []
+    },
+    "value1": {
+      "$tag": "Syntax$CtorDef",
+      "value0": {
+        "$tag": "CoreFn$SumType"
+      },
+      "value1": "Tree",
+      "value2": "E",
+      "value3": []
+    }
+  }
+}

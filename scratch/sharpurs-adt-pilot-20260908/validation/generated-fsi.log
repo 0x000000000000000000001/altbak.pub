@@ -1,0 +1,53 @@
+
+Microsoft (R) F# Interactive version 12.8.403.0 for F# 8.0
+Copyright (c) Microsoft Corporation. All Rights Reserved.
+
+For help type #help;;
+
+[Loading /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-adt-pilot-20260908/AdtPilot.generated.fs]
+module FSI_0001.AdtPilotGenerated
+type AdtPilot_Color =
+  | AdtPilot_Rusd_Ctor
+  | AdtPilot_Busd_Ctor
+and AdtPilot_Tree =
+  | AdtPilot_Eusd_Ctor
+  | AdtPilot_Tusd_Ctor of AdtPilot_Color * AdtPilot_Tree * int * AdtPilot_Tree
+val AdtPilot_R_adt_native: AdtPilot_Color
+val AdtPilot_R: obj
+val AdtPilot_B_adt_native: AdtPilot_Color
+val AdtPilot_B: obj
+val AdtPilot_E_adt_native: AdtPilot_Tree
+val AdtPilot_E: obj
+val AdtPilot_T_adt_native:
+  sharpurs_adt_local_0: AdtPilot_Color ->
+    sharpurs_adt_local_1: AdtPilot_Tree ->
+    sharpurs_adt_local_2: int ->
+    sharpurs_adt_local_3: AdtPilot_Tree -> AdtPilot_Tree
+val AdtPilot_T: obj
+val AdtPilot_singletonWith_adt_native:
+  sharpurs_adt_local_0: AdtPilot_Color ->
+    sharpurs_adt_local_1: int -> AdtPilot_Tree
+val AdtPilot_singletonWith: obj
+val AdtPilot_singleton_adt_native: AdtPilot_Tree
+val AdtPilot_singleton: obj
+val AdtPilot_rootValue_adt_native: sharpurs_adt_local_0: AdtPilot_Tree -> int
+val AdtPilot_rootValue: obj
+val AdtPilot_rootColor_adt_native:
+  sharpurs_adt_local_0: AdtPilot_Tree -> AdtPilot_Color
+val AdtPilot_rootColor: obj
+val AdtPilot_max_adt_native:
+  sharpurs_adt_local_0: int -> sharpurs_adt_local_1: int -> int
+val AdtPilot_max: obj
+val AdtPilot_leftChild_adt_native:
+  sharpurs_adt_local_0: AdtPilot_Tree -> AdtPilot_Tree
+val AdtPilot_leftChild: obj
+val AdtPilot_isRed_adt_native: sharpurs_adt_local_0: AdtPilot_Color -> bool
+val AdtPilot_isRed: obj
+val AdtPilot_empty_adt_native: AdtPilot_Tree
+val AdtPilot_empty: obj
+val AdtPilot_depth_adt_native: sharpurs_adt_local_0: AdtPilot_Tree -> int
+val AdtPilot_depth: obj
+val AdtPilot_asymmetric_adt_native: AdtPilot_Tree
+val AdtPilot_asymmetric: obj
+
+> 

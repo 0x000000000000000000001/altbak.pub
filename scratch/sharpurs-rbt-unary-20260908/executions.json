@@ -1,0 +1,386 @@
+[
+  {
+    "label": "official-before-1",
+    "kind": "official",
+    "variant": "before",
+    "startedUtc": "2026-09-08T15:58:11.503175+00:00",
+    "wallSeconds": 5.3071832500000005,
+    "loadBefore": [
+      5.70556640625,
+      7.26416015625,
+      7.091796875
+    ],
+    "loadAfter": [
+      5.40869140625,
+      7.1767578125,
+      7.0615234375
+    ],
+    "assemblySha256": "4537c8bbeb218cc9a0b674beb6ee3a68687dcdb923856409544b005558564fb3",
+    "summary": {
+      "totalMs": 297.09
+    }
+  },
+  {
+    "label": "official-after-1",
+    "kind": "official",
+    "variant": "after",
+    "startedUtc": "2026-09-08T15:58:16.813151+00:00",
+    "wallSeconds": 5.082400833,
+    "loadBefore": [
+      5.40869140625,
+      7.1767578125,
+      7.0615234375
+    ],
+    "loadAfter": [
+      5.45556640625,
+      7.15673828125,
+      7.05517578125
+    ],
+    "assemblySha256": "081d9836076a639bfcdc958816cdc88618cf999b2b2e869a9f6b3347b408b83f",
+    "summary": {
+      "totalMs": 285.64
+    }
+  },
+  {
+    "label": "official-after-2",
+    "kind": "official",
+    "variant": "after",
+    "startedUtc": "2026-09-08T15:58:21.898301+00:00",
+    "wallSeconds": 5.110965084,
+    "loadBefore": [
+      5.45556640625,
+      7.15673828125,
+      7.05517578125
+    ],
+    "loadAfter": [
+      5.2587890625,
+      7.08740234375,
+      7.03125
+    ],
+    "assemblySha256": "081d9836076a639bfcdc958816cdc88618cf999b2b2e869a9f6b3347b408b83f",
+    "summary": {
+      "totalMs": 285.77
+    }
+  },
+  {
+    "label": "official-before-2",
+    "kind": "official",
+    "variant": "before",
+    "startedUtc": "2026-09-08T15:58:27.011863+00:00",
+    "wallSeconds": 5.295210374999998,
+    "loadBefore": [
+      5.2587890625,
+      7.08740234375,
+      7.03125
+    ],
+    "loadAfter": [
+      4.91748046875,
+      6.986328125,
+      6.99560546875
+    ],
+    "assemblySha256": "4537c8bbeb218cc9a0b674beb6ee3a68687dcdb923856409544b005558564fb3",
+    "summary": {
+      "totalMs": 295.98
+    }
+  },
+  {
+    "label": "official-before-3",
+    "kind": "official",
+    "variant": "before",
+    "startedUtc": "2026-09-08T15:58:32.309670+00:00",
+    "wallSeconds": 5.242250708,
+    "loadBefore": [
+      4.91748046875,
+      6.986328125,
+      6.99560546875
+    ],
+    "loadAfter": [
+      4.603515625,
+      6.88671875,
+      6.96044921875
+    ],
+    "assemblySha256": "4537c8bbeb218cc9a0b674beb6ee3a68687dcdb923856409544b005558564fb3",
+    "summary": {
+      "totalMs": 295.0
+    }
+  },
+  {
+    "label": "official-after-3",
+    "kind": "official",
+    "variant": "after",
+    "startedUtc": "2026-09-08T15:58:37.554557+00:00",
+    "wallSeconds": 4.985950917,
+    "loadBefore": [
+      4.603515625,
+      6.88671875,
+      6.96044921875
+    ],
+    "loadAfter": [
+      4.63525390625,
+      6.85498046875,
+      6.94873046875
+    ],
+    "assemblySha256": "081d9836076a639bfcdc958816cdc88618cf999b2b2e869a9f6b3347b408b83f",
+    "summary": {
+      "totalMs": 271.95
+    }
+  },
+  {
+    "label": "official-after-4",
+    "kind": "official",
+    "variant": "after",
+    "startedUtc": "2026-09-08T15:58:42.543132+00:00",
+    "wallSeconds": 5.120299250000002,
+    "loadBefore": [
+      4.63525390625,
+      6.85498046875,
+      6.94873046875
+    ],
+    "loadAfter": [
+      4.423828125,
+      6.77392578125,
+      6.91943359375
+    ],
+    "assemblySha256": "081d9836076a639bfcdc958816cdc88618cf999b2b2e869a9f6b3347b408b83f",
+    "summary": {
+      "totalMs": 286.49
+    }
+  },
+  {
+    "label": "official-before-4",
+    "kind": "official",
+    "variant": "before",
+    "startedUtc": "2026-09-08T15:58:47.666252+00:00",
+    "wallSeconds": 5.3313503749999995,
+    "loadBefore": [
+      4.423828125,
+      6.77392578125,
+      6.91943359375
+    ],
+    "loadAfter": [
+      4.3095703125,
+      6.7109375,
+      6.89599609375
+    ],
+    "assemblySha256": "4537c8bbeb218cc9a0b674beb6ee3a68687dcdb923856409544b005558564fb3",
+    "summary": {
+      "totalMs": 299.11
+    }
+  },
+  {
+    "label": "official-before-5",
+    "kind": "official",
+    "variant": "before",
+    "startedUtc": "2026-09-08T15:58:53.000287+00:00",
+    "wallSeconds": 5.254116584000002,
+    "loadBefore": [
+      4.3095703125,
+      6.7109375,
+      6.89599609375
+    ],
+    "loadAfter": [
+      4.04443359375,
+      6.61572265625,
+      6.861328125
+    ],
+    "assemblySha256": "4537c8bbeb218cc9a0b674beb6ee3a68687dcdb923856409544b005558564fb3",
+    "summary": {
+      "totalMs": 292.06
+    }
+  },
+  {
+    "label": "official-after-5",
+    "kind": "official",
+    "variant": "after",
+    "startedUtc": "2026-09-08T15:58:58.257112+00:00",
+    "wallSeconds": 5.148089709000004,
+    "loadBefore": [
+      4.04443359375,
+      6.61572265625,
+      6.861328125
+    ],
+    "loadAfter": [
+      3.80029296875,
+      6.5224609375,
+      6.82666015625
+    ],
+    "assemblySha256": "081d9836076a639bfcdc958816cdc88618cf999b2b2e869a9f6b3347b408b83f",
+    "summary": {
+      "totalMs": 285.14
+    }
+  },
+  {
+    "label": "diagnostic-before-1",
+    "kind": "diagnostic",
+    "variant": "before",
+    "startedUtc": "2026-09-08T15:59:03.408030+00:00",
+    "wallSeconds": 4.209720125000004,
+    "loadBefore": [
+      3.80029296875,
+      6.5224609375,
+      6.82666015625
+    ],
+    "loadAfter": [
+      3.89599609375,
+      6.4970703125,
+      6.81591796875
+    ],
+    "assemblySha256": "4a5ff3a1c272cb4fab6c958648a816a2c66890cb2845394a4fea4c70bcd85135",
+    "summary": {
+      "bestUs": 212378.25,
+      "gc0": 890,
+      "gc1": 17,
+      "gc2": 6,
+      "kind": "summary",
+      "maxAllocatedBytes": 740071312,
+      "medianUs": 217562.0205,
+      "minAllocatedBytes": 740059800,
+      "output": "22"
+    }
+  },
+  {
+    "label": "diagnostic-after-1",
+    "kind": "diagnostic",
+    "variant": "after",
+    "startedUtc": "2026-09-08T15:59:07.620740+00:00",
+    "wallSeconds": 4.096874042000003,
+    "loadBefore": [
+      3.89599609375,
+      6.4970703125,
+      6.81591796875
+    ],
+    "loadAfter": [
+      3.6640625,
+      6.40576171875,
+      6.78173828125
+    ],
+    "assemblySha256": "c2d9a40f80d0c92726107018471fc9c595acb67b04197aa36f24398299f94910",
+    "summary": {
+      "bestUs": 204964.375,
+      "gc0": 984,
+      "gc1": 12,
+      "gc2": 4,
+      "kind": "summary",
+      "maxAllocatedBytes": 820107424,
+      "medianUs": 212239.646,
+      "minAllocatedBytes": 820090144,
+      "output": "22"
+    }
+  },
+  {
+    "label": "diagnostic-after-2",
+    "kind": "diagnostic",
+    "variant": "after",
+    "startedUtc": "2026-09-08T15:59:11.721024+00:00",
+    "wallSeconds": 4.306604292000003,
+    "loadBefore": [
+      3.6640625,
+      6.40576171875,
+      6.78173828125
+    ],
+    "loadAfter": [
+      3.61083984375,
+      6.34912109375,
+      6.75927734375
+    ],
+    "assemblySha256": "c2d9a40f80d0c92726107018471fc9c595acb67b04197aa36f24398299f94910",
+    "summary": {
+      "bestUs": 222021.875,
+      "gc0": 984,
+      "gc1": 12,
+      "gc2": 4,
+      "kind": "summary",
+      "maxAllocatedBytes": 820107408,
+      "medianUs": 223474.854,
+      "minAllocatedBytes": 820090144,
+      "output": "22"
+    }
+  },
+  {
+    "label": "diagnostic-before-2",
+    "kind": "diagnostic",
+    "variant": "before",
+    "startedUtc": "2026-09-08T15:59:16.030881+00:00",
+    "wallSeconds": 4.2197405,
+    "loadBefore": [
+      3.61083984375,
+      6.34912109375,
+      6.75927734375
+    ],
+    "loadAfter": [
+      3.6416015625,
+      6.31005859375,
+      6.74267578125
+    ],
+    "assemblySha256": "4a5ff3a1c272cb4fab6c958648a816a2c66890cb2845394a4fea4c70bcd85135",
+    "summary": {
+      "bestUs": 214802.25,
+      "gc0": 890,
+      "gc1": 17,
+      "gc2": 6,
+      "kind": "summary",
+      "maxAllocatedBytes": 740071336,
+      "medianUs": 219049.0625,
+      "minAllocatedBytes": 740065552,
+      "output": "22"
+    }
+  },
+  {
+    "label": "diagnostic-before-3",
+    "kind": "diagnostic",
+    "variant": "before",
+    "startedUtc": "2026-09-08T15:59:20.253927+00:00",
+    "wallSeconds": 4.266316415999995,
+    "loadBefore": [
+      3.6416015625,
+      6.31005859375,
+      6.74267578125
+    ],
+    "loadAfter": [
+      3.58984375,
+      6.2548828125,
+      6.720703125
+    ],
+    "assemblySha256": "4a5ff3a1c272cb4fab6c958648a816a2c66890cb2845394a4fea4c70bcd85135",
+    "summary": {
+      "bestUs": 213230.125,
+      "gc0": 890,
+      "gc1": 17,
+      "gc2": 6,
+      "kind": "summary",
+      "maxAllocatedBytes": 740077056,
+      "medianUs": 224540.64549999998,
+      "minAllocatedBytes": 740065552,
+      "output": "22"
+    }
+  },
+  {
+    "label": "diagnostic-after-3",
+    "kind": "diagnostic",
+    "variant": "after",
+    "startedUtc": "2026-09-08T15:59:24.523004+00:00",
+    "wallSeconds": 4.055960291999995,
+    "loadBefore": [
+      3.58984375,
+      6.2548828125,
+      6.720703125
+    ],
+    "loadAfter": [
+      3.58984375,
+      6.2548828125,
+      6.720703125
+    ],
+    "assemblySha256": "c2d9a40f80d0c92726107018471fc9c595acb67b04197aa36f24398299f94910",
+    "summary": {
+      "bestUs": 203845.333,
+      "gc0": 984,
+      "gc1": 12,
+      "gc2": 4,
+      "kind": "summary",
+      "maxAllocatedBytes": 820107416,
+      "medianUs": 207503.3125,
+      "minAllocatedBytes": 820090144,
+      "output": "22"
+    }
+  }
+]

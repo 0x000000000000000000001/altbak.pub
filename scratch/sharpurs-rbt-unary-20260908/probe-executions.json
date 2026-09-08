@@ -1,0 +1,44 @@
+[
+  {
+    "label": "probe-official-before-1",
+    "kind": "official",
+    "variant": "before",
+    "startedUtc": "2026-09-08T15:57:50.661118+00:00",
+    "wallSeconds": 5.33300275,
+    "loadBefore": [
+      6.9453125,
+      7.59423828125,
+      7.20166015625
+    ],
+    "loadAfter": [
+      6.46875,
+      7.484375,
+      7.1650390625
+    ],
+    "assemblySha256": "4537c8bbeb218cc9a0b674beb6ee3a68687dcdb923856409544b005558564fb3",
+    "summary": {
+      "totalMs": 300.26
+    }
+  },
+  {
+    "label": "probe-official-after-1",
+    "kind": "official",
+    "variant": "after",
+    "startedUtc": "2026-09-08T15:57:55.997167+00:00",
+    "wallSeconds": 5.126493583,
+    "loadBefore": [
+      6.46875,
+      7.484375,
+      7.1650390625
+    ],
+    "loadAfter": [
+      6.11083984375,
+      7.39306640625,
+      7.134765625
+    ],
+    "assemblySha256": "081d9836076a639bfcdc958816cdc88618cf999b2b2e869a9f6b3347b408b83f",
+    "summary": {
+      "totalMs": 285.72
+    }
+  }
+]

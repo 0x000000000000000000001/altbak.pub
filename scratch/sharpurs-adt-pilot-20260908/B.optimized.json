@@ -1,0 +1,26 @@
+{
+  "module": "AdtPilot",
+  "recursive": false,
+  "ident": "B",
+  "expression": {
+    "$tag": "Syntax$Typed",
+    "value0": {
+      "$tag": "CoreFn$ADT",
+      "value0": "AdtPilot.Color",
+      "value1": [
+        "AdtPilot",
+        "Color"
+      ],
+      "value2": []
+    },
+    "value1": {
+      "$tag": "Syntax$CtorDef",
+      "value0": {
+        "$tag": "CoreFn$SumType"
+      },
+      "value1": "Color",
+      "value2": "B",
+      "value3": []
+    }
+  }
+}

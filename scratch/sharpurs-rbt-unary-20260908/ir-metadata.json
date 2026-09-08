@@ -1,0 +1,55 @@
+{
+  "node": "v24.8.0",
+  "optimizedModules": 301,
+  "capturedBindings": [
+    "R",
+    "B",
+    "E",
+    "T",
+    "max",
+    "makeBlack",
+    "describe",
+    "depth",
+    "balance",
+    "ins",
+    "insert",
+    "buildTree",
+    "act"
+  ],
+  "currentKernelAcceptance": {
+    "R": false,
+    "B": false,
+    "E": false,
+    "T": false,
+    "max": false,
+    "makeBlack": false,
+    "describe": false,
+    "depth": false,
+    "balance": false,
+    "ins": false,
+    "insert": false,
+    "buildTree": false,
+    "act": false
+  },
+  "generatedUnchanged": true,
+  "generatedFilesChecked": 355,
+  "commits": {
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs": "6e93e739cf936d455907cd3ffead00ab720583bb",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs": "b2b8f4783b35715ebcb5935729cb48479b8badef",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-sharpurs": "b007229ca3f4476bf597114cc4e42183fd922989"
+  },
+  "sha256": {
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/src/Test/RBTree.purs": "515f07e9319d309cdf72e5be129ea4742b996e19f2ae4b07ba31bf6f4f12da55",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.CoreFn/index.js": "2bf57dc36ab1d3d8d85555680652e467b3265ecd4aecfde115dec4ee1ea6e61f",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/sharp/output/Test.RBTree/corefn.json": "a640bd63dcfbc7612b5ac25684db0a455ca0a8f18bbc640521043688fad58163",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/src/Main.purs": "15b024f16c387a02b5e24f81c203065a8cc64e2ffc5b10e51e1636e4d4ead402",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/src/Sharpurs/IntKernel.purs": "12e73bff3e66afc65ec8e894185b01c938f009e0a8e29530c435c516107cf3f5",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/Sharpurs.IntKernel/index.js": "5c0627017c4e3b070fddeeeb49a321c816f111ce5b27c198e160ff9a6e583401",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.Builder/index.js": "93a6f2d2510593cb61af4ebb7f19fc7dcfac70786c479d9b6885e684a02436b1",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.App/index.js": "2049755aba26b48856f654cc78af8509e414362c01dc80229b2db5cd26335339",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.Convert/index.js": "f179f163f4be521a471634cc94651bd9c9713074faaf496a9d60c15934cb7f6e",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.Semantics/index.js": "b997d07130710070f781384f7a37d0767da7a6a9f42c7a7260b0e2c1ee11c363",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.Syntax/index.js": "bf0c65d744b979746fc3f312e587a38e1b1df164db21fd28a27c78abcf56563d",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.Semantics.Foreign/index.js": "48014fbfd1c5297cf3b4314157ec321c50801f84d00e4d024935ef48b3e7572c"
+  }
+}

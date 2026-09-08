@@ -1,0 +1,2738 @@
+{
+  "validation": {
+    "passed": true,
+    "official_processes_per_variant": 5,
+    "official_tests_per_process": 14,
+    "official_outputs_and_order_match_both_historical_logs": true,
+    "official_sum_tolerance_ms": 0.02,
+    "diagnostic_processes_per_variant": 3,
+    "diagnostic_global_warmups_per_process": 3,
+    "diagnostic_local_warmups_per_process": 3,
+    "diagnostic_samples_per_process": 10,
+    "diagnostic_outputs_all_equal_22": true,
+    "diagnostic_summaries_recomputed": true,
+    "diagnostic_metadata_equal_except_pid": true,
+    "diagnostic_server_gc": false,
+    "diagnostic_forced_gc": false
+  },
+  "method": {
+    "official": "True App.main: best of 10 per test in each fresh process, median across 5 processes.",
+    "diagnostic": "True Test.RBTree.act after 3 App.warmup and 3 local warmups; 10 actions per fresh process, 3 processes per variant.",
+    "diagnostic_time_statistics": "Report median of each process's best time, and median of each process's median time separately.",
+    "allocations": "Bytes per action on current worker thread; GC collections process-wide; validation and serialization outside measured snapshots.",
+    "deltas": "after minus before; negative percentage means faster. Speedup is before divided by after.",
+    "caution": "Descriptive statistics only. Per-test medians need not sum to median total; approximate README historical data is context, not a simultaneous control."
+  },
+  "official": {
+    "runs": {
+      "before": [
+        {
+          "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/official-before-1.log",
+          "total_ms": 297.09,
+          "sum_of_test_times_ms": 297.08831,
+          "rounding_difference_ms": 0.0016899999999964166,
+          "tests": [
+            {
+              "name": "AST Evaluation",
+              "output": "7",
+              "best_of_10_us": 83.75
+            },
+            {
+              "name": "Fibonacci",
+              "output": "55",
+              "best_of_10_us": 6.04
+            },
+            {
+              "name": "List Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 374.42
+            },
+            {
+              "name": "Tail Call Optimization (100k calls)",
+              "output": "100000",
+              "best_of_10_us": 50.88
+            },
+            {
+              "name": "Deep Record Updates (10k iterations)",
+              "output": "20000",
+              "best_of_10_us": 3112.29
+            },
+            {
+              "name": "Ackermann (3, 4)",
+              "output": "125",
+              "best_of_10_us": 342.13
+            },
+            {
+              "name": "Church Numerals (100k Closure Applications)",
+              "output": "100000",
+              "best_of_10_us": 3569.75
+            },
+            {
+              "name": "Prime Sieve (sum primes up to 500)",
+              "output": "21536",
+              "best_of_10_us": 1825.46
+            },
+            {
+              "name": "Red-Black Tree (100k Worst-Case Insertions)",
+              "output": "22",
+              "best_of_10_us": 217978.42
+            },
+            {
+              "name": "Polymorphism (10M Type Class Dict Lookups)",
+              "output": "10000000",
+              "best_of_10_us": 2227.96
+            },
+            {
+              "name": "State Monad (1.2k Binds, 60 Stack Depth)",
+              "output": "1200",
+              "best_of_10_us": 185.58
+            },
+            {
+              "name": "Lazy Evaluation (1M Thunks Forced, 1k Depth)",
+              "output": "1000000",
+              "best_of_10_us": 67275.92
+            },
+            {
+              "name": "Array Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 55.0
+            },
+            {
+              "name": "RowToList (Keys Count)",
+              "output": "5",
+              "best_of_10_us": 0.71
+            }
+          ]
+        },
+        {
+          "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/official-before-2.log",
+          "total_ms": 295.98,
+          "sum_of_test_times_ms": 295.98188999999996,
+          "rounding_difference_ms": -0.0018899999999462125,
+          "tests": [
+            {
+              "name": "AST Evaluation",
+              "output": "7",
+              "best_of_10_us": 71.29
+            },
+            {
+              "name": "Fibonacci",
+              "output": "55",
+              "best_of_10_us": 5.92
+            },
+            {
+              "name": "List Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 392.5
+            },
+            {
+              "name": "Tail Call Optimization (100k calls)",
+              "output": "100000",
+              "best_of_10_us": 50.96
+            },
+            {
+              "name": "Deep Record Updates (10k iterations)",
+              "output": "20000",
+              "best_of_10_us": 3212.92
+            },
+            {
+              "name": "Ackermann (3, 4)",
+              "output": "125",
+              "best_of_10_us": 336.92
+            },
+            {
+              "name": "Church Numerals (100k Closure Applications)",
+              "output": "100000",
+              "best_of_10_us": 3660.75
+            },
+            {
+              "name": "Prime Sieve (sum primes up to 500)",
+              "output": "21536",
+              "best_of_10_us": 1810.79
+            },
+            {
+              "name": "Red-Black Tree (100k Worst-Case Insertions)",
+              "output": "22",
+              "best_of_10_us": 215551.46
+            },
+            {
+              "name": "Polymorphism (10M Type Class Dict Lookups)",
+              "output": "10000000",
+              "best_of_10_us": 2221.5
+            },
+            {
+              "name": "State Monad (1.2k Binds, 60 Stack Depth)",
+              "output": "1200",
+              "best_of_10_us": 210.46
+            },
+            {
+              "name": "Lazy Evaluation (1M Thunks Forced, 1k Depth)",
+              "output": "1000000",
+              "best_of_10_us": 68402.17
+            },
+            {
+              "name": "Array Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 53.42
+            },
+            {
+              "name": "RowToList (Keys Count)",
+              "output": "5",
+              "best_of_10_us": 0.83
+            }
+          ]
+        },
+        {
+          "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/official-before-3.log",
+          "total_ms": 295.0,
+          "sum_of_test_times_ms": 295.0015,
+          "rounding_difference_ms": -0.0015000000000213731,
+          "tests": [
+            {
+              "name": "AST Evaluation",
+              "output": "7",
+              "best_of_10_us": 73.13
+            },
+            {
+              "name": "Fibonacci",
+              "output": "55",
+              "best_of_10_us": 5.29
+            },
+            {
+              "name": "List Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 367.83
+            },
+            {
+              "name": "Tail Call Optimization (100k calls)",
+              "output": "100000",
+              "best_of_10_us": 49.04
+            },
+            {
+              "name": "Deep Record Updates (10k iterations)",
+              "output": "20000",
+              "best_of_10_us": 2978.83
+            },
+            {
+              "name": "Ackermann (3, 4)",
+              "output": "125",
+              "best_of_10_us": 308.71
+            },
+            {
+              "name": "Church Numerals (100k Closure Applications)",
+              "output": "100000",
+              "best_of_10_us": 3150.42
+            },
+            {
+              "name": "Prime Sieve (sum primes up to 500)",
+              "output": "21536",
+              "best_of_10_us": 1567.75
+            },
+            {
+              "name": "Red-Black Tree (100k Worst-Case Insertions)",
+              "output": "22",
+              "best_of_10_us": 215607.25
+            },
+            {
+              "name": "Polymorphism (10M Type Class Dict Lookups)",
+              "output": "10000000",
+              "best_of_10_us": 2221.04
+            },
+            {
+              "name": "State Monad (1.2k Binds, 60 Stack Depth)",
+              "output": "1200",
+              "best_of_10_us": 183.75
+            },
+            {
+              "name": "Lazy Evaluation (1M Thunks Forced, 1k Depth)",
+              "output": "1000000",
+              "best_of_10_us": 68439.21
+            },
+            {
+              "name": "Array Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 48.58
+            },
+            {
+              "name": "RowToList (Keys Count)",
+              "output": "5",
+              "best_of_10_us": 0.67
+            }
+          ]
+        },
+        {
+          "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/official-before-4.log",
+          "total_ms": 299.11,
+          "sum_of_test_times_ms": 299.11038,
+          "rounding_difference_ms": -0.00038000000000693035,
+          "tests": [
+            {
+              "name": "AST Evaluation",
+              "output": "7",
+              "best_of_10_us": 83.21
+            },
+            {
+              "name": "Fibonacci",
+              "output": "55",
+              "best_of_10_us": 6.04
+            },
+            {
+              "name": "List Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 400.21
+            },
+            {
+              "name": "Tail Call Optimization (100k calls)",
+              "output": "100000",
+              "best_of_10_us": 51.67
+            },
+            {
+              "name": "Deep Record Updates (10k iterations)",
+              "output": "20000",
+              "best_of_10_us": 3247.75
+            },
+            {
+              "name": "Ackermann (3, 4)",
+              "output": "125",
+              "best_of_10_us": 371.54
+            },
+            {
+              "name": "Church Numerals (100k Closure Applications)",
+              "output": "100000",
+              "best_of_10_us": 3610.25
+            },
+            {
+              "name": "Prime Sieve (sum primes up to 500)",
+              "output": "21536",
+              "best_of_10_us": 1847.67
+            },
+            {
+              "name": "Red-Black Tree (100k Worst-Case Insertions)",
+              "output": "22",
+              "best_of_10_us": 218917.5
+            },
+            {
+              "name": "Polymorphism (10M Type Class Dict Lookups)",
+              "output": "10000000",
+              "best_of_10_us": 2221.33
+            },
+            {
+              "name": "State Monad (1.2k Binds, 60 Stack Depth)",
+              "output": "1200",
+              "best_of_10_us": 175.46
+            },
+            {
+              "name": "Lazy Evaluation (1M Thunks Forced, 1k Depth)",
+              "output": "1000000",
+              "best_of_10_us": 68125.75
+            },
+            {
+              "name": "Array Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 51.29
+            },
+            {
+              "name": "RowToList (Keys Count)",
+              "output": "5",
+              "best_of_10_us": 0.71
+            }
+          ]
+        },
+        {
+          "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/official-before-5.log",
+          "total_ms": 292.06,
+          "sum_of_test_times_ms": 292.05631,
+          "rounding_difference_ms": 0.0036900000000059663,
+          "tests": [
+            {
+              "name": "AST Evaluation",
+              "output": "7",
+              "best_of_10_us": 73.96
+            },
+            {
+              "name": "Fibonacci",
+              "output": "55",
+              "best_of_10_us": 6.17
+            },
+            {
+              "name": "List Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 390.58
+            },
+            {
+              "name": "Tail Call Optimization (100k calls)",
+              "output": "100000",
+              "best_of_10_us": 51.04
+            },
+            {
+              "name": "Deep Record Updates (10k iterations)",
+              "output": "20000",
+              "best_of_10_us": 3246.88
+            },
+            {
+              "name": "Ackermann (3, 4)",
+              "output": "125",
+              "best_of_10_us": 371.88
+            },
+            {
+              "name": "Church Numerals (100k Closure Applications)",
+              "output": "100000",
+              "best_of_10_us": 3660.25
+            },
+            {
+              "name": "Prime Sieve (sum primes up to 500)",
+              "output": "21536",
+              "best_of_10_us": 1689.17
+            },
+            {
+              "name": "Red-Black Tree (100k Worst-Case Insertions)",
+              "output": "22",
+              "best_of_10_us": 210708.71
+            },
+            {
+              "name": "Polymorphism (10M Type Class Dict Lookups)",
+              "output": "10000000",
+              "best_of_10_us": 2279.79
+            },
+            {
+              "name": "State Monad (1.2k Binds, 60 Stack Depth)",
+              "output": "1200",
+              "best_of_10_us": 189.21
+            },
+            {
+              "name": "Lazy Evaluation (1M Thunks Forced, 1k Depth)",
+              "output": "1000000",
+              "best_of_10_us": 69330.92
+            },
+            {
+              "name": "Array Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 57.08
+            },
+            {
+              "name": "RowToList (Keys Count)",
+              "output": "5",
+              "best_of_10_us": 0.67
+            }
+          ]
+        }
+      ],
+      "after": [
+        {
+          "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/official-after-1.log",
+          "total_ms": 285.64,
+          "sum_of_test_times_ms": 285.6438,
+          "rounding_difference_ms": -0.00380000000001246,
+          "tests": [
+            {
+              "name": "AST Evaluation",
+              "output": "7",
+              "best_of_10_us": 77.46
+            },
+            {
+              "name": "Fibonacci",
+              "output": "55",
+              "best_of_10_us": 5.17
+            },
+            {
+              "name": "List Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 367.33
+            },
+            {
+              "name": "Tail Call Optimization (100k calls)",
+              "output": "100000",
+              "best_of_10_us": 50.79
+            },
+            {
+              "name": "Deep Record Updates (10k iterations)",
+              "output": "20000",
+              "best_of_10_us": 2952.79
+            },
+            {
+              "name": "Ackermann (3, 4)",
+              "output": "125",
+              "best_of_10_us": 313.96
+            },
+            {
+              "name": "Church Numerals (100k Closure Applications)",
+              "output": "100000",
+              "best_of_10_us": 3137.29
+            },
+            {
+              "name": "Prime Sieve (sum primes up to 500)",
+              "output": "21536",
+              "best_of_10_us": 1589.67
+            },
+            {
+              "name": "Red-Black Tree (100k Worst-Case Insertions)",
+              "output": "22",
+              "best_of_10_us": 207185.29
+            },
+            {
+              "name": "Polymorphism (10M Type Class Dict Lookups)",
+              "output": "10000000",
+              "best_of_10_us": 2221.42
+            },
+            {
+              "name": "State Monad (1.2k Binds, 60 Stack Depth)",
+              "output": "1200",
+              "best_of_10_us": 179.21
+            },
+            {
+              "name": "Lazy Evaluation (1M Thunks Forced, 1k Depth)",
+              "output": "1000000",
+              "best_of_10_us": 67510.42
+            },
+            {
+              "name": "Array Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 52.21
+            },
+            {
+              "name": "RowToList (Keys Count)",
+              "output": "5",
+              "best_of_10_us": 0.79
+            }
+          ]
+        },
+        {
+          "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/official-after-2.log",
+          "total_ms": 285.77,
+          "sum_of_test_times_ms": 285.77237,
+          "rounding_difference_ms": -0.0023700000000417276,
+          "tests": [
+            {
+              "name": "AST Evaluation",
+              "output": "7",
+              "best_of_10_us": 73.63
+            },
+            {
+              "name": "Fibonacci",
+              "output": "55",
+              "best_of_10_us": 5.38
+            },
+            {
+              "name": "List Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 364.5
+            },
+            {
+              "name": "Tail Call Optimization (100k calls)",
+              "output": "100000",
+              "best_of_10_us": 49.33
+            },
+            {
+              "name": "Deep Record Updates (10k iterations)",
+              "output": "20000",
+              "best_of_10_us": 2756.38
+            },
+            {
+              "name": "Ackermann (3, 4)",
+              "output": "125",
+              "best_of_10_us": 289.13
+            },
+            {
+              "name": "Church Numerals (100k Closure Applications)",
+              "output": "100000",
+              "best_of_10_us": 3182.92
+            },
+            {
+              "name": "Prime Sieve (sum primes up to 500)",
+              "output": "21536",
+              "best_of_10_us": 1605.54
+            },
+            {
+              "name": "Red-Black Tree (100k Worst-Case Insertions)",
+              "output": "22",
+              "best_of_10_us": 206647.21
+            },
+            {
+              "name": "Polymorphism (10M Type Class Dict Lookups)",
+              "output": "10000000",
+              "best_of_10_us": 2221.42
+            },
+            {
+              "name": "State Monad (1.2k Binds, 60 Stack Depth)",
+              "output": "1200",
+              "best_of_10_us": 176.96
+            },
+            {
+              "name": "Lazy Evaluation (1M Thunks Forced, 1k Depth)",
+              "output": "1000000",
+              "best_of_10_us": 68348.67
+            },
+            {
+              "name": "Array Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 50.67
+            },
+            {
+              "name": "RowToList (Keys Count)",
+              "output": "5",
+              "best_of_10_us": 0.63
+            }
+          ]
+        },
+        {
+          "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/official-after-3.log",
+          "total_ms": 271.95,
+          "sum_of_test_times_ms": 271.94858999999997,
+          "rounding_difference_ms": 0.0014100000000212276,
+          "tests": [
+            {
+              "name": "AST Evaluation",
+              "output": "7",
+              "best_of_10_us": 77.92
+            },
+            {
+              "name": "Fibonacci",
+              "output": "55",
+              "best_of_10_us": 7.04
+            },
+            {
+              "name": "List Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 382.83
+            },
+            {
+              "name": "Tail Call Optimization (100k calls)",
+              "output": "100000",
+              "best_of_10_us": 49.58
+            },
+            {
+              "name": "Deep Record Updates (10k iterations)",
+              "output": "20000",
+              "best_of_10_us": 2937.71
+            },
+            {
+              "name": "Ackermann (3, 4)",
+              "output": "125",
+              "best_of_10_us": 299.46
+            },
+            {
+              "name": "Church Numerals (100k Closure Applications)",
+              "output": "100000",
+              "best_of_10_us": 2997.21
+            },
+            {
+              "name": "Prime Sieve (sum primes up to 500)",
+              "output": "21536",
+              "best_of_10_us": 1574.75
+            },
+            {
+              "name": "Red-Black Tree (100k Worst-Case Insertions)",
+              "output": "22",
+              "best_of_10_us": 194769.58
+            },
+            {
+              "name": "Polymorphism (10M Type Class Dict Lookups)",
+              "output": "10000000",
+              "best_of_10_us": 2221.54
+            },
+            {
+              "name": "State Monad (1.2k Binds, 60 Stack Depth)",
+              "output": "1200",
+              "best_of_10_us": 175.88
+            },
+            {
+              "name": "Lazy Evaluation (1M Thunks Forced, 1k Depth)",
+              "output": "1000000",
+              "best_of_10_us": 66404.42
+            },
+            {
+              "name": "Array Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 50.0
+            },
+            {
+              "name": "RowToList (Keys Count)",
+              "output": "5",
+              "best_of_10_us": 0.67
+            }
+          ]
+        },
+        {
+          "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/official-after-4.log",
+          "total_ms": 286.49,
+          "sum_of_test_times_ms": 286.49321999999995,
+          "rounding_difference_ms": -0.003219999999942047,
+          "tests": [
+            {
+              "name": "AST Evaluation",
+              "output": "7",
+              "best_of_10_us": 78.63
+            },
+            {
+              "name": "Fibonacci",
+              "output": "55",
+              "best_of_10_us": 5.33
+            },
+            {
+              "name": "List Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 391.13
+            },
+            {
+              "name": "Tail Call Optimization (100k calls)",
+              "output": "100000",
+              "best_of_10_us": 49.71
+            },
+            {
+              "name": "Deep Record Updates (10k iterations)",
+              "output": "20000",
+              "best_of_10_us": 2911.08
+            },
+            {
+              "name": "Ackermann (3, 4)",
+              "output": "125",
+              "best_of_10_us": 313.83
+            },
+            {
+              "name": "Church Numerals (100k Closure Applications)",
+              "output": "100000",
+              "best_of_10_us": 3006.42
+            },
+            {
+              "name": "Prime Sieve (sum primes up to 500)",
+              "output": "21536",
+              "best_of_10_us": 1691.88
+            },
+            {
+              "name": "Red-Black Tree (100k Worst-Case Insertions)",
+              "output": "22",
+              "best_of_10_us": 206694.71
+            },
+            {
+              "name": "Polymorphism (10M Type Class Dict Lookups)",
+              "output": "10000000",
+              "best_of_10_us": 2230.08
+            },
+            {
+              "name": "State Monad (1.2k Binds, 60 Stack Depth)",
+              "output": "1200",
+              "best_of_10_us": 179.08
+            },
+            {
+              "name": "Lazy Evaluation (1M Thunks Forced, 1k Depth)",
+              "output": "1000000",
+              "best_of_10_us": 68886.92
+            },
+            {
+              "name": "Array Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 53.75
+            },
+            {
+              "name": "RowToList (Keys Count)",
+              "output": "5",
+              "best_of_10_us": 0.67
+            }
+          ]
+        },
+        {
+          "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/official-after-5.log",
+          "total_ms": 285.14,
+          "sum_of_test_times_ms": 285.14178000000004,
+          "rounding_difference_ms": -0.0017800000000534055,
+          "tests": [
+            {
+              "name": "AST Evaluation",
+              "output": "7",
+              "best_of_10_us": 71.13
+            },
+            {
+              "name": "Fibonacci",
+              "output": "55",
+              "best_of_10_us": 5.21
+            },
+            {
+              "name": "List Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 364.79
+            },
+            {
+              "name": "Tail Call Optimization (100k calls)",
+              "output": "100000",
+              "best_of_10_us": 49.38
+            },
+            {
+              "name": "Deep Record Updates (10k iterations)",
+              "output": "20000",
+              "best_of_10_us": 2905.13
+            },
+            {
+              "name": "Ackermann (3, 4)",
+              "output": "125",
+              "best_of_10_us": 307.88
+            },
+            {
+              "name": "Church Numerals (100k Closure Applications)",
+              "output": "100000",
+              "best_of_10_us": 3152.29
+            },
+            {
+              "name": "Prime Sieve (sum primes up to 500)",
+              "output": "21536",
+              "best_of_10_us": 1599.63
+            },
+            {
+              "name": "Red-Black Tree (100k Worst-Case Insertions)",
+              "output": "22",
+              "best_of_10_us": 204647.38
+            },
+            {
+              "name": "Polymorphism (10M Type Class Dict Lookups)",
+              "output": "10000000",
+              "best_of_10_us": 2223.42
+            },
+            {
+              "name": "State Monad (1.2k Binds, 60 Stack Depth)",
+              "output": "1200",
+              "best_of_10_us": 182.83
+            },
+            {
+              "name": "Lazy Evaluation (1M Thunks Forced, 1k Depth)",
+              "output": "1000000",
+              "best_of_10_us": 69578.75
+            },
+            {
+              "name": "Array Processing (900 elements)",
+              "output": "202950",
+              "best_of_10_us": 53.25
+            },
+            {
+              "name": "RowToList (Keys Count)",
+              "output": "5",
+              "best_of_10_us": 0.71
+            }
+          ]
+        }
+      ]
+    },
+    "summaries": {
+      "before": {
+        "total_ms": {
+          "n": 5,
+          "values": [
+            297.09,
+            295.98,
+            295.0,
+            299.11,
+            292.06
+          ],
+          "median": 295.98,
+          "min": 292.06,
+          "max": 299.11
+        },
+        "tests_us": {
+          "AST Evaluation": {
+            "n": 5,
+            "values": [
+              83.75,
+              71.29,
+              73.13,
+              83.21,
+              73.96
+            ],
+            "median": 73.96,
+            "min": 71.29,
+            "max": 83.75
+          },
+          "Fibonacci": {
+            "n": 5,
+            "values": [
+              6.04,
+              5.92,
+              5.29,
+              6.04,
+              6.17
+            ],
+            "median": 6.04,
+            "min": 5.29,
+            "max": 6.17
+          },
+          "List Processing (900 elements)": {
+            "n": 5,
+            "values": [
+              374.42,
+              392.5,
+              367.83,
+              400.21,
+              390.58
+            ],
+            "median": 390.58,
+            "min": 367.83,
+            "max": 400.21
+          },
+          "Tail Call Optimization (100k calls)": {
+            "n": 5,
+            "values": [
+              50.88,
+              50.96,
+              49.04,
+              51.67,
+              51.04
+            ],
+            "median": 50.96,
+            "min": 49.04,
+            "max": 51.67
+          },
+          "Deep Record Updates (10k iterations)": {
+            "n": 5,
+            "values": [
+              3112.29,
+              3212.92,
+              2978.83,
+              3247.75,
+              3246.88
+            ],
+            "median": 3212.92,
+            "min": 2978.83,
+            "max": 3247.75
+          },
+          "Ackermann (3, 4)": {
+            "n": 5,
+            "values": [
+              342.13,
+              336.92,
+              308.71,
+              371.54,
+              371.88
+            ],
+            "median": 342.13,
+            "min": 308.71,
+            "max": 371.88
+          },
+          "Church Numerals (100k Closure Applications)": {
+            "n": 5,
+            "values": [
+              3569.75,
+              3660.75,
+              3150.42,
+              3610.25,
+              3660.25
+            ],
+            "median": 3610.25,
+            "min": 3150.42,
+            "max": 3660.75
+          },
+          "Prime Sieve (sum primes up to 500)": {
+            "n": 5,
+            "values": [
+              1825.46,
+              1810.79,
+              1567.75,
+              1847.67,
+              1689.17
+            ],
+            "median": 1810.79,
+            "min": 1567.75,
+            "max": 1847.67
+          },
+          "Red-Black Tree (100k Worst-Case Insertions)": {
+            "n": 5,
+            "values": [
+              217978.42,
+              215551.46,
+              215607.25,
+              218917.5,
+              210708.71
+            ],
+            "median": 215607.25,
+            "min": 210708.71,
+            "max": 218917.5
+          },
+          "Polymorphism (10M Type Class Dict Lookups)": {
+            "n": 5,
+            "values": [
+              2227.96,
+              2221.5,
+              2221.04,
+              2221.33,
+              2279.79
+            ],
+            "median": 2221.5,
+            "min": 2221.04,
+            "max": 2279.79
+          },
+          "State Monad (1.2k Binds, 60 Stack Depth)": {
+            "n": 5,
+            "values": [
+              185.58,
+              210.46,
+              183.75,
+              175.46,
+              189.21
+            ],
+            "median": 185.58,
+            "min": 175.46,
+            "max": 210.46
+          },
+          "Lazy Evaluation (1M Thunks Forced, 1k Depth)": {
+            "n": 5,
+            "values": [
+              67275.92,
+              68402.17,
+              68439.21,
+              68125.75,
+              69330.92
+            ],
+            "median": 68402.17,
+            "min": 67275.92,
+            "max": 69330.92
+          },
+          "Array Processing (900 elements)": {
+            "n": 5,
+            "values": [
+              55.0,
+              53.42,
+              48.58,
+              51.29,
+              57.08
+            ],
+            "median": 53.42,
+            "min": 48.58,
+            "max": 57.08
+          },
+          "RowToList (Keys Count)": {
+            "n": 5,
+            "values": [
+              0.71,
+              0.83,
+              0.67,
+              0.71,
+              0.67
+            ],
+            "median": 0.71,
+            "min": 0.67,
+            "max": 0.83
+          }
+        }
+      },
+      "after": {
+        "total_ms": {
+          "n": 5,
+          "values": [
+            285.64,
+            285.77,
+            271.95,
+            286.49,
+            285.14
+          ],
+          "median": 285.64,
+          "min": 271.95,
+          "max": 286.49
+        },
+        "tests_us": {
+          "AST Evaluation": {
+            "n": 5,
+            "values": [
+              77.46,
+              73.63,
+              77.92,
+              78.63,
+              71.13
+            ],
+            "median": 77.46,
+            "min": 71.13,
+            "max": 78.63
+          },
+          "Fibonacci": {
+            "n": 5,
+            "values": [
+              5.17,
+              5.38,
+              7.04,
+              5.33,
+              5.21
+            ],
+            "median": 5.33,
+            "min": 5.17,
+            "max": 7.04
+          },
+          "List Processing (900 elements)": {
+            "n": 5,
+            "values": [
+              367.33,
+              364.5,
+              382.83,
+              391.13,
+              364.79
+            ],
+            "median": 367.33,
+            "min": 364.5,
+            "max": 391.13
+          },
+          "Tail Call Optimization (100k calls)": {
+            "n": 5,
+            "values": [
+              50.79,
+              49.33,
+              49.58,
+              49.71,
+              49.38
+            ],
+            "median": 49.58,
+            "min": 49.33,
+            "max": 50.79
+          },
+          "Deep Record Updates (10k iterations)": {
+            "n": 5,
+            "values": [
+              2952.79,
+              2756.38,
+              2937.71,
+              2911.08,
+              2905.13
+            ],
+            "median": 2911.08,
+            "min": 2756.38,
+            "max": 2952.79
+          },
+          "Ackermann (3, 4)": {
+            "n": 5,
+            "values": [
+              313.96,
+              289.13,
+              299.46,
+              313.83,
+              307.88
+            ],
+            "median": 307.88,
+            "min": 289.13,
+            "max": 313.96
+          },
+          "Church Numerals (100k Closure Applications)": {
+            "n": 5,
+            "values": [
+              3137.29,
+              3182.92,
+              2997.21,
+              3006.42,
+              3152.29
+            ],
+            "median": 3137.29,
+            "min": 2997.21,
+            "max": 3182.92
+          },
+          "Prime Sieve (sum primes up to 500)": {
+            "n": 5,
+            "values": [
+              1589.67,
+              1605.54,
+              1574.75,
+              1691.88,
+              1599.63
+            ],
+            "median": 1599.63,
+            "min": 1574.75,
+            "max": 1691.88
+          },
+          "Red-Black Tree (100k Worst-Case Insertions)": {
+            "n": 5,
+            "values": [
+              207185.29,
+              206647.21,
+              194769.58,
+              206694.71,
+              204647.38
+            ],
+            "median": 206647.21,
+            "min": 194769.58,
+            "max": 207185.29
+          },
+          "Polymorphism (10M Type Class Dict Lookups)": {
+            "n": 5,
+            "values": [
+              2221.42,
+              2221.42,
+              2221.54,
+              2230.08,
+              2223.42
+            ],
+            "median": 2221.54,
+            "min": 2221.42,
+            "max": 2230.08
+          },
+          "State Monad (1.2k Binds, 60 Stack Depth)": {
+            "n": 5,
+            "values": [
+              179.21,
+              176.96,
+              175.88,
+              179.08,
+              182.83
+            ],
+            "median": 179.08,
+            "min": 175.88,
+            "max": 182.83
+          },
+          "Lazy Evaluation (1M Thunks Forced, 1k Depth)": {
+            "n": 5,
+            "values": [
+              67510.42,
+              68348.67,
+              66404.42,
+              68886.92,
+              69578.75
+            ],
+            "median": 68348.67,
+            "min": 66404.42,
+            "max": 69578.75
+          },
+          "Array Processing (900 elements)": {
+            "n": 5,
+            "values": [
+              52.21,
+              50.67,
+              50.0,
+              53.75,
+              53.25
+            ],
+            "median": 52.21,
+            "min": 50.0,
+            "max": 53.75
+          },
+          "RowToList (Keys Count)": {
+            "n": 5,
+            "values": [
+              0.79,
+              0.63,
+              0.67,
+              0.67,
+              0.71
+            ],
+            "median": 0.67,
+            "min": 0.63,
+            "max": 0.79
+          }
+        }
+      }
+    },
+    "changes": {
+      "total_ms": {
+        "before": 295.98,
+        "after": 285.64,
+        "difference": -10.340000000000032,
+        "difference_percent": -3.493479289141166,
+        "reduction_percent": 3.493479289141166,
+        "speedup_factor": 1.0361994118470803
+      },
+      "tests_us": {
+        "AST Evaluation": {
+          "before": 73.96,
+          "after": 77.46,
+          "difference": 3.5,
+          "difference_percent": 4.732287723093553,
+          "reduction_percent": -4.732287723093553,
+          "speedup_factor": 0.9548153885876581
+        },
+        "Fibonacci": {
+          "before": 6.04,
+          "after": 5.33,
+          "difference": -0.71,
+          "difference_percent": -11.754966887417218,
+          "reduction_percent": 11.754966887417218,
+          "speedup_factor": 1.1332082551594747
+        },
+        "List Processing (900 elements)": {
+          "before": 390.58,
+          "after": 367.33,
+          "difference": -23.25,
+          "difference_percent": -5.952685749398334,
+          "reduction_percent": 5.952685749398334,
+          "speedup_factor": 1.06329458525032
+        },
+        "Tail Call Optimization (100k calls)": {
+          "before": 50.96,
+          "after": 49.58,
+          "difference": -1.3800000000000026,
+          "difference_percent": -2.7080062794348603,
+          "reduction_percent": 2.7080062794348603,
+          "speedup_factor": 1.027833803953207
+        },
+        "Deep Record Updates (10k iterations)": {
+          "before": 3212.92,
+          "after": 2911.08,
+          "difference": -301.84000000000015,
+          "difference_percent": -9.394569425942755,
+          "reduction_percent": 9.394569425942755,
+          "speedup_factor": 1.1036866042843207
+        },
+        "Ackermann (3, 4)": {
+          "before": 342.13,
+          "after": 307.88,
+          "difference": -34.25,
+          "difference_percent": -10.010814602636419,
+          "reduction_percent": 10.010814602636419,
+          "speedup_factor": 1.1112446407691308
+        },
+        "Church Numerals (100k Closure Applications)": {
+          "before": 3610.25,
+          "after": 3137.29,
+          "difference": -472.96000000000004,
+          "difference_percent": -13.100477806246102,
+          "reduction_percent": 13.100477806246102,
+          "speedup_factor": 1.1507543134361184
+        },
+        "Prime Sieve (sum primes up to 500)": {
+          "before": 1810.79,
+          "after": 1599.63,
+          "difference": -211.15999999999985,
+          "difference_percent": -11.661208643741116,
+          "reduction_percent": 11.661208643741116,
+          "speedup_factor": 1.1320055262779516
+        },
+        "Red-Black Tree (100k Worst-Case Insertions)": {
+          "before": 215607.25,
+          "after": 206647.21,
+          "difference": -8960.040000000008,
+          "difference_percent": -4.155722963861375,
+          "reduction_percent": 4.155722963861375,
+          "speedup_factor": 1.0433591143088745
+        },
+        "Polymorphism (10M Type Class Dict Lookups)": {
+          "before": 2221.5,
+          "after": 2221.54,
+          "difference": 0.03999999999996362,
+          "difference_percent": 0.0018005851901925496,
+          "reduction_percent": -0.0018005851901925496,
+          "speedup_factor": 0.999981994472303
+        },
+        "State Monad (1.2k Binds, 60 Stack Depth)": {
+          "before": 185.58,
+          "after": 179.08,
+          "difference": -6.5,
+          "difference_percent": -3.5025326004957447,
+          "reduction_percent": 3.5025326004957447,
+          "speedup_factor": 1.0362966272057181
+        },
+        "Lazy Evaluation (1M Thunks Forced, 1k Depth)": {
+          "before": 68402.17,
+          "after": 68348.67,
+          "difference": -53.5,
+          "difference_percent": -0.07821389292181902,
+          "reduction_percent": 0.07821389292181902,
+          "speedup_factor": 1.0007827511493639
+        },
+        "Array Processing (900 elements)": {
+          "before": 53.42,
+          "after": 52.21,
+          "difference": -1.2100000000000009,
+          "difference_percent": -2.265069262448527,
+          "reduction_percent": 2.265069262448527,
+          "speedup_factor": 1.023175636851178
+        },
+        "RowToList (Keys Count)": {
+          "before": 0.71,
+          "after": 0.67,
+          "difference": -0.039999999999999925,
+          "difference_percent": -5.633802816901401,
+          "reduction_percent": 5.633802816901401,
+          "speedup_factor": 1.0597014925373134
+        }
+      }
+    }
+  },
+  "diagnostic": {
+    "runs": {
+      "before": [
+        {
+          "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/diagnostic-before-1.jsonl",
+          "metadata": {
+            "action": "Test.RBTree.act",
+            "allocationScope": "current worker thread",
+            "architecture": "Arm64",
+            "forcedGc": false,
+            "gcLatency": "Interactive",
+            "gcScope": "process",
+            "globalWarmups": 3,
+            "input": 100000,
+            "kind": "metadata",
+            "measurements": 10,
+            "os": "Darwin 25.1.0 Darwin Kernel Version 25.1.0: Mon Oct 20 19:34:05 PDT 2025; root:xnu-12377.41.6~2/RELEASE_ARM64_T6041",
+            "pid": 87091,
+            "runtime": ".NET 8.0.29",
+            "serverGc": false,
+            "stackSizeBytes": 1073741824,
+            "stopwatchFrequency": 1000000000,
+            "tieredCompilationOverride": null,
+            "tieredPgoOverride": null,
+            "warmups": 3
+          },
+          "warmups": [
+            {
+              "iteration": 1,
+              "kind": "warmup",
+              "output": "22"
+            },
+            {
+              "iteration": 2,
+              "kind": "warmup",
+              "output": "22"
+            },
+            {
+              "iteration": 3,
+              "kind": "warmup",
+              "output": "22"
+            }
+          ],
+          "measurements": [
+            {
+              "allocatedBytes": 740059800,
+              "elapsedUs": 223647.75,
+              "gc0": 89,
+              "gc1": 3,
+              "gc2": 1,
+              "iteration": 1,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740065552,
+              "elapsedUs": 216767.334,
+              "gc0": 90,
+              "gc1": 2,
+              "gc2": 1,
+              "iteration": 2,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740065552,
+              "elapsedUs": 213315.375,
+              "gc0": 88,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 3,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740065704,
+              "elapsedUs": 216783.583,
+              "gc0": 90,
+              "gc1": 2,
+              "gc2": 1,
+              "iteration": 4,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740065552,
+              "elapsedUs": 215203.208,
+              "gc0": 88,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 5,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740071312,
+              "elapsedUs": 218340.458,
+              "gc0": 90,
+              "gc1": 2,
+              "gc2": 1,
+              "iteration": 6,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740059800,
+              "elapsedUs": 212378.25,
+              "gc0": 88,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 7,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740065560,
+              "elapsedUs": 220628.209,
+              "gc0": 90,
+              "gc1": 2,
+              "gc2": 1,
+              "iteration": 8,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740059800,
+              "elapsedUs": 219041.209,
+              "gc0": 88,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 9,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740065552,
+              "elapsedUs": 219908.625,
+              "gc0": 89,
+              "gc1": 2,
+              "gc2": 1,
+              "iteration": 10,
+              "kind": "measurement",
+              "output": "22"
+            }
+          ],
+          "summary": {
+            "bestUs": 212378.25,
+            "gc0": 890,
+            "gc1": 17,
+            "gc2": 6,
+            "kind": "summary",
+            "maxAllocatedBytes": 740071312,
+            "medianUs": 217562.0205,
+            "minAllocatedBytes": 740059800,
+            "output": "22"
+          }
+        },
+        {
+          "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/diagnostic-before-2.jsonl",
+          "metadata": {
+            "action": "Test.RBTree.act",
+            "allocationScope": "current worker thread",
+            "architecture": "Arm64",
+            "forcedGc": false,
+            "gcLatency": "Interactive",
+            "gcScope": "process",
+            "globalWarmups": 3,
+            "input": 100000,
+            "kind": "metadata",
+            "measurements": 10,
+            "os": "Darwin 25.1.0 Darwin Kernel Version 25.1.0: Mon Oct 20 19:34:05 PDT 2025; root:xnu-12377.41.6~2/RELEASE_ARM64_T6041",
+            "pid": 87137,
+            "runtime": ".NET 8.0.29",
+            "serverGc": false,
+            "stackSizeBytes": 1073741824,
+            "stopwatchFrequency": 1000000000,
+            "tieredCompilationOverride": null,
+            "tieredPgoOverride": null,
+            "warmups": 3
+          },
+          "warmups": [
+            {
+              "iteration": 1,
+              "kind": "warmup",
+              "output": "22"
+            },
+            {
+              "iteration": 2,
+              "kind": "warmup",
+              "output": "22"
+            },
+            {
+              "iteration": 3,
+              "kind": "warmup",
+              "output": "22"
+            }
+          ],
+          "measurements": [
+            {
+              "allocatedBytes": 740071312,
+              "elapsedUs": 219110.375,
+              "gc0": 89,
+              "gc1": 3,
+              "gc2": 1,
+              "iteration": 1,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740071328,
+              "elapsedUs": 218987.75,
+              "gc0": 90,
+              "gc1": 2,
+              "gc2": 1,
+              "iteration": 2,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740065552,
+              "elapsedUs": 217730.375,
+              "gc0": 88,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 3,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740071312,
+              "elapsedUs": 221898.792,
+              "gc0": 90,
+              "gc1": 2,
+              "gc2": 1,
+              "iteration": 4,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740065552,
+              "elapsedUs": 214802.25,
+              "gc0": 88,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 5,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740071312,
+              "elapsedUs": 217583.667,
+              "gc0": 90,
+              "gc1": 2,
+              "gc2": 1,
+              "iteration": 6,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740065552,
+              "elapsedUs": 217554.25,
+              "gc0": 88,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 7,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740071336,
+              "elapsedUs": 225646.917,
+              "gc0": 90,
+              "gc1": 2,
+              "gc2": 1,
+              "iteration": 8,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740065552,
+              "elapsedUs": 219398.959,
+              "gc0": 88,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 9,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740071304,
+              "elapsedUs": 229888.542,
+              "gc0": 89,
+              "gc1": 2,
+              "gc2": 1,
+              "iteration": 10,
+              "kind": "measurement",
+              "output": "22"
+            }
+          ],
+          "summary": {
+            "bestUs": 214802.25,
+            "gc0": 890,
+            "gc1": 17,
+            "gc2": 6,
+            "kind": "summary",
+            "maxAllocatedBytes": 740071336,
+            "medianUs": 219049.0625,
+            "minAllocatedBytes": 740065552,
+            "output": "22"
+          }
+        },
+        {
+          "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/diagnostic-before-3.jsonl",
+          "metadata": {
+            "action": "Test.RBTree.act",
+            "allocationScope": "current worker thread",
+            "architecture": "Arm64",
+            "forcedGc": false,
+            "gcLatency": "Interactive",
+            "gcScope": "process",
+            "globalWarmups": 3,
+            "input": 100000,
+            "kind": "metadata",
+            "measurements": 10,
+            "os": "Darwin 25.1.0 Darwin Kernel Version 25.1.0: Mon Oct 20 19:34:05 PDT 2025; root:xnu-12377.41.6~2/RELEASE_ARM64_T6041",
+            "pid": 87143,
+            "runtime": ".NET 8.0.29",
+            "serverGc": false,
+            "stackSizeBytes": 1073741824,
+            "stopwatchFrequency": 1000000000,
+            "tieredCompilationOverride": null,
+            "tieredPgoOverride": null,
+            "warmups": 3
+          },
+          "warmups": [
+            {
+              "iteration": 1,
+              "kind": "warmup",
+              "output": "22"
+            },
+            {
+              "iteration": 2,
+              "kind": "warmup",
+              "output": "22"
+            },
+            {
+              "iteration": 3,
+              "kind": "warmup",
+              "output": "22"
+            }
+          ],
+          "measurements": [
+            {
+              "allocatedBytes": 740077056,
+              "elapsedUs": 224617.666,
+              "gc0": 89,
+              "gc1": 3,
+              "gc2": 1,
+              "iteration": 1,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740071304,
+              "elapsedUs": 222247.167,
+              "gc0": 90,
+              "gc1": 2,
+              "gc2": 1,
+              "iteration": 2,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740065552,
+              "elapsedUs": 225627,
+              "gc0": 88,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 3,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740071344,
+              "elapsedUs": 226422.334,
+              "gc0": 90,
+              "gc1": 2,
+              "gc2": 1,
+              "iteration": 4,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740065552,
+              "elapsedUs": 222848.417,
+              "gc0": 88,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 5,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740065560,
+              "elapsedUs": 224463.625,
+              "gc0": 90,
+              "gc1": 2,
+              "gc2": 1,
+              "iteration": 6,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740065552,
+              "elapsedUs": 225877.791,
+              "gc0": 88,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 7,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740071320,
+              "elapsedUs": 222651.958,
+              "gc0": 90,
+              "gc1": 2,
+              "gc2": 1,
+              "iteration": 8,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740065552,
+              "elapsedUs": 213230.125,
+              "gc0": 88,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 9,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 740065552,
+              "elapsedUs": 226989.958,
+              "gc0": 89,
+              "gc1": 2,
+              "gc2": 1,
+              "iteration": 10,
+              "kind": "measurement",
+              "output": "22"
+            }
+          ],
+          "summary": {
+            "bestUs": 213230.125,
+            "gc0": 890,
+            "gc1": 17,
+            "gc2": 6,
+            "kind": "summary",
+            "maxAllocatedBytes": 740077056,
+            "medianUs": 224540.64549999998,
+            "minAllocatedBytes": 740065552,
+            "output": "22"
+          }
+        }
+      ],
+      "after": [
+        {
+          "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/diagnostic-after-1.jsonl",
+          "metadata": {
+            "action": "Test.RBTree.act",
+            "allocationScope": "current worker thread",
+            "architecture": "Arm64",
+            "forcedGc": false,
+            "gcLatency": "Interactive",
+            "gcScope": "process",
+            "globalWarmups": 3,
+            "input": 100000,
+            "kind": "metadata",
+            "measurements": 10,
+            "os": "Darwin 25.1.0 Darwin Kernel Version 25.1.0: Mon Oct 20 19:34:05 PDT 2025; root:xnu-12377.41.6~2/RELEASE_ARM64_T6041",
+            "pid": 87103,
+            "runtime": ".NET 8.0.29",
+            "serverGc": false,
+            "stackSizeBytes": 1073741824,
+            "stopwatchFrequency": 1000000000,
+            "tieredCompilationOverride": null,
+            "tieredPgoOverride": null,
+            "warmups": 3
+          },
+          "warmups": [
+            {
+              "iteration": 1,
+              "kind": "warmup",
+              "output": "22"
+            },
+            {
+              "iteration": 2,
+              "kind": "warmup",
+              "output": "22"
+            },
+            {
+              "iteration": 3,
+              "kind": "warmup",
+              "output": "22"
+            }
+          ],
+          "measurements": [
+            {
+              "allocatedBytes": 820095896,
+              "elapsedUs": 212125.125,
+              "gc0": 98,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 1,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820090144,
+              "elapsedUs": 207811.291,
+              "gc0": 98,
+              "gc1": 0,
+              "gc2": 0,
+              "iteration": 2,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820107400,
+              "elapsedUs": 218134.417,
+              "gc0": 99,
+              "gc1": 3,
+              "gc2": 1,
+              "iteration": 3,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820095896,
+              "elapsedUs": 212354.167,
+              "gc0": 99,
+              "gc1": 1,
+              "gc2": 1,
+              "iteration": 4,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820090144,
+              "elapsedUs": 216977.125,
+              "gc0": 98,
+              "gc1": 0,
+              "gc2": 0,
+              "iteration": 5,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820107416,
+              "elapsedUs": 214197.583,
+              "gc0": 99,
+              "gc1": 3,
+              "gc2": 1,
+              "iteration": 6,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820095896,
+              "elapsedUs": 207826.583,
+              "gc0": 98,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 7,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820090144,
+              "elapsedUs": 210140.542,
+              "gc0": 98,
+              "gc1": 0,
+              "gc2": 0,
+              "iteration": 8,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820107424,
+              "elapsedUs": 218352.541,
+              "gc0": 99,
+              "gc1": 3,
+              "gc2": 1,
+              "iteration": 9,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820090144,
+              "elapsedUs": 204964.375,
+              "gc0": 98,
+              "gc1": 0,
+              "gc2": 0,
+              "iteration": 10,
+              "kind": "measurement",
+              "output": "22"
+            }
+          ],
+          "summary": {
+            "bestUs": 204964.375,
+            "gc0": 984,
+            "gc1": 12,
+            "gc2": 4,
+            "kind": "summary",
+            "maxAllocatedBytes": 820107424,
+            "medianUs": 212239.646,
+            "minAllocatedBytes": 820090144,
+            "output": "22"
+          }
+        },
+        {
+          "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/diagnostic-after-2.jsonl",
+          "metadata": {
+            "action": "Test.RBTree.act",
+            "allocationScope": "current worker thread",
+            "architecture": "Arm64",
+            "forcedGc": false,
+            "gcLatency": "Interactive",
+            "gcScope": "process",
+            "globalWarmups": 3,
+            "input": 100000,
+            "kind": "metadata",
+            "measurements": 10,
+            "os": "Darwin 25.1.0 Darwin Kernel Version 25.1.0: Mon Oct 20 19:34:05 PDT 2025; root:xnu-12377.41.6~2/RELEASE_ARM64_T6041",
+            "pid": 87117,
+            "runtime": ".NET 8.0.29",
+            "serverGc": false,
+            "stackSizeBytes": 1073741824,
+            "stopwatchFrequency": 1000000000,
+            "tieredCompilationOverride": null,
+            "tieredPgoOverride": null,
+            "warmups": 3
+          },
+          "warmups": [
+            {
+              "iteration": 1,
+              "kind": "warmup",
+              "output": "22"
+            },
+            {
+              "iteration": 2,
+              "kind": "warmup",
+              "output": "22"
+            },
+            {
+              "iteration": 3,
+              "kind": "warmup",
+              "output": "22"
+            }
+          ],
+          "measurements": [
+            {
+              "allocatedBytes": 820095896,
+              "elapsedUs": 223446.583,
+              "gc0": 98,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 1,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820090144,
+              "elapsedUs": 222176.542,
+              "gc0": 98,
+              "gc1": 0,
+              "gc2": 0,
+              "iteration": 2,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820101648,
+              "elapsedUs": 223503.125,
+              "gc0": 99,
+              "gc1": 3,
+              "gc2": 1,
+              "iteration": 3,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820095896,
+              "elapsedUs": 223964.291,
+              "gc0": 99,
+              "gc1": 1,
+              "gc2": 1,
+              "iteration": 4,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820090144,
+              "elapsedUs": 222084.667,
+              "gc0": 98,
+              "gc1": 0,
+              "gc2": 0,
+              "iteration": 5,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820107408,
+              "elapsedUs": 224332.625,
+              "gc0": 99,
+              "gc1": 3,
+              "gc2": 1,
+              "iteration": 6,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820095896,
+              "elapsedUs": 224472.5,
+              "gc0": 98,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 7,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820090144,
+              "elapsedUs": 222021.875,
+              "gc0": 98,
+              "gc1": 0,
+              "gc2": 0,
+              "iteration": 8,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820101648,
+              "elapsedUs": 227381.292,
+              "gc0": 99,
+              "gc1": 3,
+              "gc2": 1,
+              "iteration": 9,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820090144,
+              "elapsedUs": 222215.666,
+              "gc0": 98,
+              "gc1": 0,
+              "gc2": 0,
+              "iteration": 10,
+              "kind": "measurement",
+              "output": "22"
+            }
+          ],
+          "summary": {
+            "bestUs": 222021.875,
+            "gc0": 984,
+            "gc1": 12,
+            "gc2": 4,
+            "kind": "summary",
+            "maxAllocatedBytes": 820107408,
+            "medianUs": 223474.854,
+            "minAllocatedBytes": 820090144,
+            "output": "22"
+          }
+        },
+        {
+          "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/diagnostic-after-3.jsonl",
+          "metadata": {
+            "action": "Test.RBTree.act",
+            "allocationScope": "current worker thread",
+            "architecture": "Arm64",
+            "forcedGc": false,
+            "gcLatency": "Interactive",
+            "gcScope": "process",
+            "globalWarmups": 3,
+            "input": 100000,
+            "kind": "metadata",
+            "measurements": 10,
+            "os": "Darwin 25.1.0 Darwin Kernel Version 25.1.0: Mon Oct 20 19:34:05 PDT 2025; root:xnu-12377.41.6~2/RELEASE_ARM64_T6041",
+            "pid": 87163,
+            "runtime": ".NET 8.0.29",
+            "serverGc": false,
+            "stackSizeBytes": 1073741824,
+            "stopwatchFrequency": 1000000000,
+            "tieredCompilationOverride": null,
+            "tieredPgoOverride": null,
+            "warmups": 3
+          },
+          "warmups": [
+            {
+              "iteration": 1,
+              "kind": "warmup",
+              "output": "22"
+            },
+            {
+              "iteration": 2,
+              "kind": "warmup",
+              "output": "22"
+            },
+            {
+              "iteration": 3,
+              "kind": "warmup",
+              "output": "22"
+            }
+          ],
+          "measurements": [
+            {
+              "allocatedBytes": 820095896,
+              "elapsedUs": 207444.917,
+              "gc0": 98,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 1,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820090144,
+              "elapsedUs": 206635.042,
+              "gc0": 98,
+              "gc1": 0,
+              "gc2": 0,
+              "iteration": 2,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820107408,
+              "elapsedUs": 207953.708,
+              "gc0": 99,
+              "gc1": 3,
+              "gc2": 1,
+              "iteration": 3,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820095896,
+              "elapsedUs": 207465,
+              "gc0": 99,
+              "gc1": 1,
+              "gc2": 1,
+              "iteration": 4,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820090144,
+              "elapsedUs": 204362.542,
+              "gc0": 98,
+              "gc1": 0,
+              "gc2": 0,
+              "iteration": 5,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820101664,
+              "elapsedUs": 207541.625,
+              "gc0": 99,
+              "gc1": 3,
+              "gc2": 1,
+              "iteration": 6,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820095896,
+              "elapsedUs": 208037.084,
+              "gc0": 98,
+              "gc1": 1,
+              "gc2": 0,
+              "iteration": 7,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820090144,
+              "elapsedUs": 208319.542,
+              "gc0": 98,
+              "gc1": 0,
+              "gc2": 0,
+              "iteration": 8,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820107416,
+              "elapsedUs": 215039.792,
+              "gc0": 99,
+              "gc1": 3,
+              "gc2": 1,
+              "iteration": 9,
+              "kind": "measurement",
+              "output": "22"
+            },
+            {
+              "allocatedBytes": 820090144,
+              "elapsedUs": 203845.333,
+              "gc0": 98,
+              "gc1": 0,
+              "gc2": 0,
+              "iteration": 10,
+              "kind": "measurement",
+              "output": "22"
+            }
+          ],
+          "summary": {
+            "bestUs": 203845.333,
+            "gc0": 984,
+            "gc1": 12,
+            "gc2": 4,
+            "kind": "summary",
+            "maxAllocatedBytes": 820107416,
+            "medianUs": 207503.3125,
+            "minAllocatedBytes": 820090144,
+            "output": "22"
+          }
+        }
+      ]
+    },
+    "summaries": {
+      "before": {
+        "processes": 3,
+        "sample_count": 30,
+        "process_best_us": {
+          "n": 3,
+          "values": [
+            212378.25,
+            214802.25,
+            213230.125
+          ],
+          "median": 213230.125,
+          "min": 212378.25,
+          "max": 214802.25
+        },
+        "process_median_us": {
+          "n": 3,
+          "values": [
+            217562.0205,
+            219049.0625,
+            224540.64549999998
+          ],
+          "median": 219049.0625,
+          "min": 217562.0205,
+          "max": 224540.64549999998
+        },
+        "all_samples_us": {
+          "n": 30,
+          "values": [
+            223647.75,
+            216767.334,
+            213315.375,
+            216783.583,
+            215203.208,
+            218340.458,
+            212378.25,
+            220628.209,
+            219041.209,
+            219908.625,
+            219110.375,
+            218987.75,
+            217730.375,
+            221898.792,
+            214802.25,
+            217583.667,
+            217554.25,
+            225646.917,
+            219398.959,
+            229888.542,
+            224617.666,
+            222247.167,
+            225627,
+            226422.334,
+            222848.417,
+            224463.625,
+            225877.791,
+            222651.958,
+            213230.125,
+            226989.958
+          ],
+          "median": 219653.79200000002,
+          "min": 212378.25,
+          "max": 229888.542
+        },
+        "allocation_bytes_per_action": {
+          "n": 30,
+          "values": [
+            740059800,
+            740065552,
+            740065552,
+            740065704,
+            740065552,
+            740071312,
+            740059800,
+            740065560,
+            740059800,
+            740065552,
+            740071312,
+            740071328,
+            740065552,
+            740071312,
+            740065552,
+            740071312,
+            740065552,
+            740071336,
+            740065552,
+            740071304,
+            740077056,
+            740071304,
+            740065552,
+            740071344,
+            740065552,
+            740065560,
+            740065552,
+            740071320,
+            740065552,
+            740065552
+          ],
+          "median": 740065552.0,
+          "min": 740059800,
+          "max": 740077056
+        },
+        "allocation_bytes_process_ranges": [
+          {
+            "min": 740059800,
+            "max": 740071312
+          },
+          {
+            "min": 740065552,
+            "max": 740071336
+          },
+          {
+            "min": 740065552,
+            "max": 740077056
+          }
+        ],
+        "gc_totals_across_30_samples": {
+          "gc0": 2670,
+          "gc1": 51,
+          "gc2": 18
+        }
+      },
+      "after": {
+        "processes": 3,
+        "sample_count": 30,
+        "process_best_us": {
+          "n": 3,
+          "values": [
+            204964.375,
+            222021.875,
+            203845.333
+          ],
+          "median": 204964.375,
+          "min": 203845.333,
+          "max": 222021.875
+        },
+        "process_median_us": {
+          "n": 3,
+          "values": [
+            212239.646,
+            223474.854,
+            207503.3125
+          ],
+          "median": 212239.646,
+          "min": 207503.3125,
+          "max": 223474.854
+        },
+        "all_samples_us": {
+          "n": 30,
+          "values": [
+            212125.125,
+            207811.291,
+            218134.417,
+            212354.167,
+            216977.125,
+            214197.583,
+            207826.583,
+            210140.542,
+            218352.541,
+            204964.375,
+            223446.583,
+            222176.542,
+            223503.125,
+            223964.291,
+            222084.667,
+            224332.625,
+            224472.5,
+            222021.875,
+            227381.292,
+            222215.666,
+            207444.917,
+            206635.042,
+            207953.708,
+            207465,
+            204362.542,
+            207541.625,
+            208037.084,
+            208319.542,
+            215039.792,
+            203845.333
+          ],
+          "median": 213275.875,
+          "min": 203845.333,
+          "max": 227381.292
+        },
+        "allocation_bytes_per_action": {
+          "n": 30,
+          "values": [
+            820095896,
+            820090144,
+            820107400,
+            820095896,
+            820090144,
+            820107416,
+            820095896,
+            820090144,
+            820107424,
+            820090144,
+            820095896,
+            820090144,
+            820101648,
+            820095896,
+            820090144,
+            820107408,
+            820095896,
+            820090144,
+            820101648,
+            820090144,
+            820095896,
+            820090144,
+            820107408,
+            820095896,
+            820090144,
+            820101664,
+            820095896,
+            820090144,
+            820107416,
+            820090144
+          ],
+          "median": 820095896.0,
+          "min": 820090144,
+          "max": 820107424
+        },
+        "allocation_bytes_process_ranges": [
+          {
+            "min": 820090144,
+            "max": 820107424
+          },
+          {
+            "min": 820090144,
+            "max": 820107408
+          },
+          {
+            "min": 820090144,
+            "max": 820107416
+          }
+        ],
+        "gc_totals_across_30_samples": {
+          "gc0": 2952,
+          "gc1": 36,
+          "gc2": 12
+        }
+      }
+    },
+    "changes": {
+      "process_best_us": {
+        "before": 213230.125,
+        "after": 204964.375,
+        "difference": -8265.75,
+        "difference_percent": -3.8764456945283854,
+        "reduction_percent": 3.8764456945283854,
+        "speedup_factor": 1.0403277398816257
+      },
+      "process_median_us": {
+        "before": 219049.0625,
+        "after": 212239.646,
+        "difference": -6809.416499999992,
+        "difference_percent": -3.1086261782106384,
+        "reduction_percent": 3.1086261782106384,
+        "speedup_factor": 1.0320836216434321
+      },
+      "allocation_bytes_per_action": {
+        "before": 740065552.0,
+        "after": 820095896.0,
+        "difference": 80030344.0,
+        "difference_percent": 10.813953410440602,
+        "reduction_percent": -10.813953410440602,
+        "speedup_factor": 0.9024134319043099
+      }
+    }
+  },
+  "historical_local_runs": [
+    {
+      "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-tco-measure-20260908/official-after.log",
+      "total_ms": 853.12,
+      "sum_of_test_times_ms": 853.11585,
+      "rounding_difference_ms": 0.004149999999981446,
+      "tests": [
+        {
+          "name": "AST Evaluation",
+          "output": "7",
+          "best_of_10_us": 78.42
+        },
+        {
+          "name": "Fibonacci",
+          "output": "55",
+          "best_of_10_us": 5.54
+        },
+        {
+          "name": "List Processing (900 elements)",
+          "output": "202950",
+          "best_of_10_us": 381.63
+        },
+        {
+          "name": "Tail Call Optimization (100k calls)",
+          "output": "100000",
+          "best_of_10_us": 54.88
+        },
+        {
+          "name": "Deep Record Updates (10k iterations)",
+          "output": "20000",
+          "best_of_10_us": 2766.58
+        },
+        {
+          "name": "Ackermann (3, 4)",
+          "output": "125",
+          "best_of_10_us": 301.08
+        },
+        {
+          "name": "Church Numerals (100k Closure Applications)",
+          "output": "100000",
+          "best_of_10_us": 3035.5
+        },
+        {
+          "name": "Prime Sieve (sum primes up to 500)",
+          "output": "21536",
+          "best_of_10_us": 1593.54
+        },
+        {
+          "name": "Red-Black Tree (100k Worst-Case Insertions)",
+          "output": "22",
+          "best_of_10_us": 212694.17
+        },
+        {
+          "name": "Polymorphism (10M Type Class Dict Lookups)",
+          "output": "10000000",
+          "best_of_10_us": 563722.13
+        },
+        {
+          "name": "State Monad (1.2k Binds, 60 Stack Depth)",
+          "output": "1200",
+          "best_of_10_us": 186.96
+        },
+        {
+          "name": "Lazy Evaluation (1M Thunks Forced, 1k Depth)",
+          "output": "1000000",
+          "best_of_10_us": 68242.71
+        },
+        {
+          "name": "Array Processing (900 elements)",
+          "output": "202950",
+          "best_of_10_us": 52.04
+        },
+        {
+          "name": "RowToList (Keys Count)",
+          "output": "5",
+          "best_of_10_us": 0.67
+        }
+      ]
+    },
+    {
+      "log": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-tco-measure-20260908/isolated/official-after.log",
+      "total_ms": 884.92,
+      "sum_of_test_times_ms": 884.9171899999999,
+      "rounding_difference_ms": 0.002810000000067703,
+      "tests": [
+        {
+          "name": "AST Evaluation",
+          "output": "7",
+          "best_of_10_us": 75.42
+        },
+        {
+          "name": "Fibonacci",
+          "output": "55",
+          "best_of_10_us": 6.25
+        },
+        {
+          "name": "List Processing (900 elements)",
+          "output": "202950",
+          "best_of_10_us": 393.0
+        },
+        {
+          "name": "Tail Call Optimization (100k calls)",
+          "output": "100000",
+          "best_of_10_us": 55.75
+        },
+        {
+          "name": "Deep Record Updates (10k iterations)",
+          "output": "20000",
+          "best_of_10_us": 2962.92
+        },
+        {
+          "name": "Ackermann (3, 4)",
+          "output": "125",
+          "best_of_10_us": 309.38
+        },
+        {
+          "name": "Church Numerals (100k Closure Applications)",
+          "output": "100000",
+          "best_of_10_us": 3155.25
+        },
+        {
+          "name": "Prime Sieve (sum primes up to 500)",
+          "output": "21536",
+          "best_of_10_us": 1587.21
+        },
+        {
+          "name": "Red-Black Tree (100k Worst-Case Insertions)",
+          "output": "22",
+          "best_of_10_us": 215558.92
+        },
+        {
+          "name": "Polymorphism (10M Type Class Dict Lookups)",
+          "output": "10000000",
+          "best_of_10_us": 591373.04
+        },
+        {
+          "name": "State Monad (1.2k Binds, 60 Stack Depth)",
+          "output": "1200",
+          "best_of_10_us": 193.71
+        },
+        {
+          "name": "Lazy Evaluation (1M Thunks Forced, 1k Depth)",
+          "output": "1000000",
+          "best_of_10_us": 69197.71
+        },
+        {
+          "name": "Array Processing (900 elements)",
+          "output": "202950",
+          "best_of_10_us": 47.96
+        },
+        {
+          "name": "RowToList (Keys Count)",
+          "output": "5",
+          "best_of_10_us": 0.67
+        }
+      ]
+    }
+  ],
+  "official_readme_baseline": {
+    "source": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-unary-20260908/README.baseline.md",
+    "section": "F#/C#: Compiled F#/C# (sharpurs)",
+    "total_ms": 294.8,
+    "tests_us": {
+      "AST Evaluation": 80.0,
+      "Fibonacci": 7.0,
+      "List Processing (900 elements)": 395.0,
+      "Tail Call Optimization (100k calls)": 45.0,
+      "Deep Record Updates (10k iterations)": 3251.0,
+      "Ackermann (3, 4)": 381.0,
+      "Church Numerals (100k Closure Applications)": 3596.0,
+      "Prime Sieve (sum primes up to 500)": 1833.0,
+      "Red-Black Tree (100k Worst-Case Insertions)": 213760.0,
+      "Polymorphism (10M Type Class Dict Lookups)": 2222.0,
+      "State Monad (1.2k Binds, 60 Stack Depth)": 184.0,
+      "Lazy Evaluation (1M Thunks Forced, 1k Depth)": 68987.0,
+      "Array Processing (900 elements)": 56.0,
+      "RowToList (Keys Count)": 1.0
+    },
+    "note": "Official historical figures are approximate and are context, not a simultaneous control."
+  },
+  "after_vs_official_readme": {
+    "total_ms": {
+      "before": 294.8,
+      "after": 285.64,
+      "difference": -9.160000000000025,
+      "difference_percent": -3.1071913161465514,
+      "reduction_percent": 3.1071913161465514,
+      "speedup_factor": 1.0320683377678197
+    },
+    "rbtree_us": {
+      "before": 213760.0,
+      "after": 206647.21,
+      "difference": -7112.790000000008,
+      "difference_percent": -3.3274653817365274,
+      "reduction_percent": 3.3274653817365274,
+      "speedup_factor": 1.0344199662797287
+    }
+  }
+}

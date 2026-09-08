@@ -1,0 +1,6 @@
+
+> sharpurs@0.1.0 test:adt-unary
+> node tests/adt-unary.mjs
+
+adt-unary runtime: 63 checks passed
+adt-unary converter: 11 checks passed

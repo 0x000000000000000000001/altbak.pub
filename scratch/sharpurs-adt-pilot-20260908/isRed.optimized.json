@@ -1,0 +1,159 @@
+{
+  "module": "AdtPilot",
+  "recursive": false,
+  "ident": "isRed",
+  "expression": {
+    "$tag": "Syntax$Typed",
+    "value0": {
+      "$tag": "CoreFn$Func",
+      "value0": [
+        {
+          "$tag": "CoreFn$ADT",
+          "value0": "AdtPilot.Color",
+          "value1": [
+            "AdtPilot",
+            "Color"
+          ],
+          "value2": []
+        }
+      ],
+      "value1": {
+        "$tag": "CoreFn$Boolean"
+      }
+    },
+    "value1": {
+      "$tag": "Syntax$Abs",
+      "value0": [
+        {
+          "$tag": "DataTuple$Tuple",
+          "value0": {
+            "$tag": "DataMaybe$Just",
+            "value0": "v"
+          },
+          "value1": 0
+        }
+      ],
+      "value1": {
+        "$tag": "Syntax$Typed",
+        "value0": {
+          "$tag": "CoreFn$Boolean"
+        },
+        "value1": {
+          "$tag": "Syntax$Branch",
+          "value0": [
+            {
+              "$tag": "Syntax$Pair",
+              "value0": {
+                "$tag": "Syntax$PrimOp",
+                "value0": {
+                  "$tag": "Syntax$Op1",
+                  "value0": {
+                    "$tag": "Syntax$OpIsTag",
+                    "value0": {
+                      "$tag": "CoreFn$Qualified",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "AdtPilot"
+                      },
+                      "value1": "R"
+                    }
+                  },
+                  "value1": {
+                    "$tag": "Syntax$Typed",
+                    "value0": {
+                      "$tag": "CoreFn$ADT",
+                      "value0": "AdtPilot.Color",
+                      "value1": [
+                        "AdtPilot",
+                        "Color"
+                      ],
+                      "value2": []
+                    },
+                    "value1": {
+                      "$tag": "Syntax$Local",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "v"
+                      },
+                      "value1": 0
+                    }
+                  }
+                }
+              },
+              "value1": {
+                "$tag": "Syntax$Typed",
+                "value0": {
+                  "$tag": "CoreFn$Boolean"
+                },
+                "value1": {
+                  "$tag": "Syntax$Lit",
+                  "value0": {
+                    "$tag": "CoreFn$LitBoolean",
+                    "value0": true
+                  }
+                }
+              }
+            },
+            {
+              "$tag": "Syntax$Pair",
+              "value0": {
+                "$tag": "Syntax$PrimOp",
+                "value0": {
+                  "$tag": "Syntax$Op1",
+                  "value0": {
+                    "$tag": "Syntax$OpIsTag",
+                    "value0": {
+                      "$tag": "CoreFn$Qualified",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "AdtPilot"
+                      },
+                      "value1": "B"
+                    }
+                  },
+                  "value1": {
+                    "$tag": "Syntax$Typed",
+                    "value0": {
+                      "$tag": "CoreFn$ADT",
+                      "value0": "AdtPilot.Color",
+                      "value1": [
+                        "AdtPilot",
+                        "Color"
+                      ],
+                      "value2": []
+                    },
+                    "value1": {
+                      "$tag": "Syntax$Local",
+                      "value0": {
+                        "$tag": "DataMaybe$Just",
+                        "value0": "v"
+                      },
+                      "value1": 0
+                    }
+                  }
+                }
+              },
+              "value1": {
+                "$tag": "Syntax$Typed",
+                "value0": {
+                  "$tag": "CoreFn$Boolean"
+                },
+                "value1": {
+                  "$tag": "Syntax$Lit",
+                  "value0": {
+                    "$tag": "CoreFn$LitBoolean",
+                    "value0": false
+                  }
+                }
+              }
+            }
+          ],
+          "value1": {
+            "$tag": "Syntax$Fail",
+            "value0": "Failed pattern match"
+          }
+        }
+      }
+    }
+  }
+}

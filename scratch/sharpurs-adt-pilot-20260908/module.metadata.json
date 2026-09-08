@@ -1,0 +1,65 @@
+{
+  "module": "AdtPilot",
+  "classDecls": [],
+  "dataDecls": [
+    {
+      "name": "Color",
+      "vars": [],
+      "constructors": [
+        {
+          "name": "R",
+          "fields": []
+        },
+        {
+          "name": "B",
+          "fields": []
+        }
+      ]
+    },
+    {
+      "name": "Tree",
+      "vars": [],
+      "constructors": [
+        {
+          "name": "E",
+          "fields": []
+        },
+        {
+          "name": "T",
+          "fields": [
+            {
+              "$tag": "CoreFn$ADT",
+              "value0": "AdtPilot.Color",
+              "value1": [
+                "AdtPilot",
+                "Color"
+              ],
+              "value2": []
+            },
+            {
+              "$tag": "CoreFn$ADT",
+              "value0": "AdtPilot.Tree",
+              "value1": [
+                "AdtPilot",
+                "Tree"
+              ],
+              "value2": []
+            },
+            {
+              "$tag": "CoreFn$Int"
+            },
+            {
+              "$tag": "CoreFn$ADT",
+              "value0": "AdtPilot.Tree",
+              "value1": [
+                "AdtPilot",
+                "Tree"
+              ],
+              "value2": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{"action":"Test.RBTree.act","allocationScope":"current worker thread","architecture":"Arm64","forcedGc":false,"gcLatency":"Interactive","gcScope":"process","globalWarmups":3,"input":100000,"kind":"metadata","measurements":10,"os":"Darwin 25.1.0 Darwin Kernel Version 25.1.0: Mon Oct 20 19:34:05 PDT 2025; root:xnu-12377.41.6~2/RELEASE_ARM64_T6041","pid":87091,"runtime":".NET 8.0.29","serverGc":false,"stackSizeBytes":1073741824,"stopwatchFrequency":1000000000,"tieredCompilationOverride":null,"tieredPgoOverride":null,"warmups":3}
+{"iteration":1,"kind":"warmup","output":"22"}
+{"iteration":2,"kind":"warmup","output":"22"}
+{"iteration":3,"kind":"warmup","output":"22"}
+{"allocatedBytes":740059800,"elapsedUs":223647.75,"gc0":89,"gc1":3,"gc2":1,"iteration":1,"kind":"measurement","output":"22"}
+{"allocatedBytes":740065552,"elapsedUs":216767.334,"gc0":90,"gc1":2,"gc2":1,"iteration":2,"kind":"measurement","output":"22"}
+{"allocatedBytes":740065552,"elapsedUs":213315.375,"gc0":88,"gc1":1,"gc2":0,"iteration":3,"kind":"measurement","output":"22"}
+{"allocatedBytes":740065704,"elapsedUs":216783.583,"gc0":90,"gc1":2,"gc2":1,"iteration":4,"kind":"measurement","output":"22"}
+{"allocatedBytes":740065552,"elapsedUs":215203.208,"gc0":88,"gc1":1,"gc2":0,"iteration":5,"kind":"measurement","output":"22"}
+{"allocatedBytes":740071312,"elapsedUs":218340.458,"gc0":90,"gc1":2,"gc2":1,"iteration":6,"kind":"measurement","output":"22"}
+{"allocatedBytes":740059800,"elapsedUs":212378.25,"gc0":88,"gc1":1,"gc2":0,"iteration":7,"kind":"measurement","output":"22"}
+{"allocatedBytes":740065560,"elapsedUs":220628.209,"gc0":90,"gc1":2,"gc2":1,"iteration":8,"kind":"measurement","output":"22"}
+{"allocatedBytes":740059800,"elapsedUs":219041.209,"gc0":88,"gc1":1,"gc2":0,"iteration":9,"kind":"measurement","output":"22"}
+{"allocatedBytes":740065552,"elapsedUs":219908.625,"gc0":89,"gc1":2,"gc2":1,"iteration":10,"kind":"measurement","output":"22"}
+{"bestUs":212378.25,"gc0":890,"gc1":17,"gc2":6,"kind":"summary","maxAllocatedBytes":740071312,"medianUs":217562.0205,"minAllocatedBytes":740059800,"output":"22"}

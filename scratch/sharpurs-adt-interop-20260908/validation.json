@@ -1,0 +1,18 @@
+{
+  "unchangedGeneratedFiles": 355,
+  "defaultGenerationModules": 301,
+  "interopConverterChecks": 13,
+  "interopRuntimeChecks": 62,
+  "benchmarkMatchesLastMeasuredAfter": true,
+  "sourceHashesMatchExecutedTest": true,
+  "logsSha256": {
+    "adt-kernel.log": "2410a8adde55150b98cbbcc3dc1fb408b7a9661eecd7378a2f69f0ab79cbef36",
+    "build.log": "11ca0c7252d35d39d29f9bd50baea0d0b5de0a2ed005f22b6702b66892ec24fe",
+    "default-generation.log": "93a396e91d118fd959a7107d3d359cb30d30096471fb73413a7868ef1636dfb2",
+    "int.log": "99c6d9b40307b3a5f07d10ad6fa6b811942ab6f588fab5eafbb41025bfb90b94",
+    "interop.log": "2b7503934de85b78aa681b02e45b01e97c337690b6dcd38811705854af06afe3",
+    "local.log": "ef4d726a364dbd1e7d61b13e7168940d73895db09f834bff2bd863cebc16e1be",
+    "runtime.log": "34dbb542f02426157f2dcf8fdb90e14198b7711dffa47eb7fd56f69a50b59d66",
+    "spago-test.log": "df053a453588553a750236577988ed56596c2396db12bd3aa6abb01f715cfd8f"
+  }
+}

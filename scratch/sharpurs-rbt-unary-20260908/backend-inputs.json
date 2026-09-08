@@ -1,0 +1,15 @@
+{
+  "src/Main.purs": "d91fbc0c30a02164869f6cf6cecb3f0829fa4c7a40efdcba1d1e59a03b459ce0",
+  "src/Sharpurs/CodeGen.purs": "6c9e172d020e3176ee2e27d1265bc61cad320cc2f01ed5c4bf334c43f4769089",
+  "src/Sharpurs/AdtKernel.purs": "bd0de7cabe5000c78d459777525a0ee1ba1c04e8ab39df82365c0d1e64d90e8d",
+  "src/Sharpurs/AdtLayout.purs": "e91e4144782eb92cd6b97004f1eb8c6bad94ac6dcd9a0106e77b2cf0499df86e",
+  "src/Sharpurs/AdtInterop.purs": "c897c70e9e98873b9992c6f885bc24448d61753dae952d684db8ea7785d05feb",
+  "src/Sharpurs/IntKernel.purs": "12e73bff3e66afc65ec8e894185b01c938f009e0a8e29530c435c516107cf3f5",
+  "src/Sharpurs/Optimized.purs": "0f0d8c24398df254ec195249c63e81410c65aa5cea3bd60837e2746591516539",
+  "tests/adt-unary.mjs": "23b6baa338fb83b60f6de00ab4f1934f4c82d9af453cb9c6db7dfc9c811b6ffb",
+  "tests/adt-interop.mjs": "6a70f10b4e2c022f3b82bebe07714919de340bc559bb1dbe289eaef2fb23c6b6",
+  "tests/fixtures/AdtUnary.purs": "6ed3b1d5b7760c1a5e0e3da9a51d6a17137ac74ca9d305326285617af651f488",
+  "tests/fixtures/AdtConsumer.purs": "1224e4c20e95e457420ba79f6ffa2aef8e76bf74d1db37b7a8db5392d40dfad1",
+  "bin/sharpurs.js": "c5d395db6979bece2f3fac17c8420d2a28e6817943b9e7cc36738bf19c5db5ff",
+  "package.json": "169ba052ba015171bdf0fb86f15e1e7d7d7e07e5bf8f011efb3f36488275a132"
+}

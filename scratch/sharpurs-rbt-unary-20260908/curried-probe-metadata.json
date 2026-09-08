@@ -1,0 +1,73 @@
+{
+  "startedUtc": "2026-09-08T15:51:33.092943+00:00",
+  "sdk": "8.0.423",
+  "runtimes": [
+    "Microsoft.AspNetCore.App 8.0.29 [/Users/0x1/.dotnet/shared/Microsoft.AspNetCore.App]",
+    "Microsoft.NETCore.App 8.0.29 [/Users/0x1/.dotnet/shared/Microsoft.NETCore.App]"
+  ],
+  "runtimeConfigs": {
+    "before": {
+      "runtimeOptions": {
+        "tfm": "net8.0",
+        "framework": {
+          "name": "Microsoft.NETCore.App",
+          "version": "8.0.0"
+        },
+        "configProperties": {
+          "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
+          "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
+        }
+      }
+    },
+    "after": {
+      "runtimeOptions": {
+        "tfm": "net8.0",
+        "framework": {
+          "name": "Microsoft.NETCore.App",
+          "version": "8.0.0"
+        },
+        "configProperties": {
+          "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
+          "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
+        }
+      }
+    },
+    "diagnostic-before": {
+      "runtimeOptions": {
+        "tfm": "net8.0",
+        "framework": {
+          "name": "Microsoft.NETCore.App",
+          "version": "8.0.0"
+        },
+        "configProperties": {
+          "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
+          "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
+        }
+      }
+    },
+    "diagnostic-after": {
+      "runtimeOptions": {
+        "tfm": "net8.0",
+        "framework": {
+          "name": "Microsoft.NETCore.App",
+          "version": "8.0.0"
+        },
+        "configProperties": {
+          "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
+          "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
+        }
+      }
+    }
+  },
+  "environmentOverrides": {
+    "DOTNET_TieredCompilation": null,
+    "DOTNET_TieredPGO": null,
+    "DOTNET_gcServer": null,
+    "COMPlus_TieredCompilation": null,
+    "COMPlus_TieredPGO": null,
+    "COMPlus_gcServer": null
+  },
+  "probe": true,
+  "generatedSourcesUnchangedDuringMeasurements": true,
+  "finishedUtc": "2026-09-08T15:51:44.586893+00:00"
+}

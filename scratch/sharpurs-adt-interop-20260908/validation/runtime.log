@@ -1,0 +1,5 @@
+
+> sharpurs@0.1.0 test:runtime
+> node tests/runtime-apply.mjs
+
+runtime-apply: 21 checks passed

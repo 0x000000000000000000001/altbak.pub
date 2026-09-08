@@ -1,0 +1,19 @@
+{
+  "sourceHashes": {
+    "src/Sharpurs/AdtKernel.purs": "936c714f49b4ce7f6fcec7b686b5f4a4b6d3758ca37494e4ecf31d5e63a83114",
+    "src/Sharpurs/AdtLayout.purs": "e91e4144782eb92cd6b97004f1eb8c6bad94ac6dcd9a0106e77b2cf0499df86e",
+    "src/Sharpurs/AdtInterop.purs": "c897c70e9e98873b9992c6f885bc24448d61753dae952d684db8ea7785d05feb",
+    "src/Sharpurs/CodeGen.purs": "b565bc11c62ebc14a6672ec1f4b79099204179afd91547abd97117e2c5b20baa",
+    "tests/adt-interop.mjs": "6a70f10b4e2c022f3b82bebe07714919de340bc559bb1dbe289eaef2fb23c6b6",
+    "tests/fixtures/AdtPilot.purs": "835a8adefcf733302cbacb45125061c8e0fac01e3ec3bea43213c08d178bed01",
+    "tests/fixtures/AdtConsumer.purs": "1224e4c20e95e457420ba79f6ffa2aef8e76bf74d1db37b7a8db5392d40dfad1"
+  },
+  "generatedHashes": {
+    "producer": "91e80127e773d28c0d8dfed9e1ebac185823bd90df33fda75ddeaeb3b0723f84",
+    "consumer": "ea1e073df28fc5dcfb0815986c81b7fd2510304600a0fc9604eb8f93907127c8",
+    "full": "3919efce51ac3f6627fac407b85b04aa768a63885e67c989d15c6648d3ff02fb"
+  },
+  "purs": "0.15.16 [development build; commit: 59b80f2a183647c6d4e99f06b5658ff550f1cb68 DIRTY]",
+  "dotnet": "8.0.423",
+  "exitCode": 0
+}

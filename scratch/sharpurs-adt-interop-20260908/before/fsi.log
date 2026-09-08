@@ -1,0 +1,7 @@
+
+
+/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-interop-v9N6Ch/adt-interop.fsx(85,79): error FS0001: This expression was expected to have type
+    'AdtPilot_Color'    
+but here has type
+    'obj'    
+

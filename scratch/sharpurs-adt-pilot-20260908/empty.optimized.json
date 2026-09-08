@@ -1,0 +1,34 @@
+{
+  "module": "AdtPilot",
+  "recursive": false,
+  "ident": "empty",
+  "expression": {
+    "$tag": "Syntax$Typed",
+    "value0": {
+      "$tag": "CoreFn$ADT",
+      "value0": "AdtPilot.Tree",
+      "value1": [
+        "AdtPilot",
+        "Tree"
+      ],
+      "value2": []
+    },
+    "value1": {
+      "$tag": "Syntax$CtorSaturated",
+      "value0": {
+        "$tag": "CoreFn$Qualified",
+        "value0": {
+          "$tag": "DataMaybe$Just",
+          "value0": "AdtPilot"
+        },
+        "value1": "E"
+      },
+      "value1": {
+        "$tag": "CoreFn$SumType"
+      },
+      "value2": "Tree",
+      "value3": "E",
+      "value4": []
+    }
+  }
+}
