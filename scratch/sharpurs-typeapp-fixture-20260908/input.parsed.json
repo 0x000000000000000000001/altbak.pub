@@ -1,0 +1,775 @@
+{
+  "module": "TypeAppFixture",
+  "classDecls": [],
+  "dataDecls": [],
+  "decls": [
+    {
+      "$tag": "CoreFn$NonRec",
+      "value0": {
+        "$tag": "CoreFn$Binding",
+        "value0": {
+          "span": {
+            "path": "<internal>",
+            "start": {
+              "line": 0,
+              "column": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 0
+            }
+          },
+          "meta": {
+            "$tag": "DataMaybe$Nothing"
+          },
+          "type": {
+            "$tag": "DataMaybe$Just",
+            "value0": {
+              "$tag": "CoreFn$ForAll",
+              "value0": [
+                "a"
+              ],
+              "value1": {
+                "$tag": "CoreFn$Func",
+                "value0": [
+                  {
+                    "$tag": "CoreFn$TypeVar",
+                    "value0": "a"
+                  }
+                ],
+                "value1": {
+                  "$tag": "CoreFn$TypeVar",
+                  "value0": "a"
+                }
+              }
+            }
+          }
+        },
+        "value1": "identity",
+        "value2": {
+          "$tag": "CoreFn$ExprAbs",
+          "value0": {
+            "span": {
+              "path": "<internal>",
+              "start": {
+                "line": 0,
+                "column": 0
+              },
+              "end": {
+                "line": 0,
+                "column": 0
+              }
+            },
+            "meta": {
+              "$tag": "DataMaybe$Nothing"
+            },
+            "type": {
+              "$tag": "DataMaybe$Just",
+              "value0": {
+                "$tag": "CoreFn$Func",
+                "value0": [
+                  {
+                    "$tag": "CoreFn$TypeVar",
+                    "value0": "a"
+                  }
+                ],
+                "value1": {
+                  "$tag": "CoreFn$TypeVar",
+                  "value0": "a"
+                }
+              }
+            }
+          },
+          "value1": "value",
+          "value2": {
+            "$tag": "CoreFn$ExprVar",
+            "value0": {
+              "span": {
+                "path": "<internal>",
+                "start": {
+                  "line": 0,
+                  "column": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 0
+                }
+              },
+              "meta": {
+                "$tag": "DataMaybe$Nothing"
+              },
+              "type": {
+                "$tag": "DataMaybe$Just",
+                "value0": {
+                  "$tag": "CoreFn$TypeVar",
+                  "value0": "a"
+                }
+              }
+            },
+            "value1": {
+              "$tag": "CoreFn$Qualified",
+              "value0": {
+                "$tag": "DataMaybe$Nothing"
+              },
+              "value1": "value"
+            }
+          }
+        }
+      }
+    },
+    {
+      "$tag": "CoreFn$NonRec",
+      "value0": {
+        "$tag": "CoreFn$Binding",
+        "value0": {
+          "span": {
+            "path": "<internal>",
+            "start": {
+              "line": 0,
+              "column": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 0
+            }
+          },
+          "meta": {
+            "$tag": "DataMaybe$Nothing"
+          },
+          "type": {
+            "$tag": "DataMaybe$Just",
+            "value0": {
+              "$tag": "CoreFn$Func",
+              "value0": [
+                {
+                  "$tag": "CoreFn$Int"
+                }
+              ],
+              "value1": {
+                "$tag": "CoreFn$Int"
+              }
+            }
+          }
+        },
+        "value1": "useInt",
+        "value2": {
+          "$tag": "CoreFn$ExprAbs",
+          "value0": {
+            "span": {
+              "path": "<internal>",
+              "start": {
+                "line": 0,
+                "column": 0
+              },
+              "end": {
+                "line": 0,
+                "column": 0
+              }
+            },
+            "meta": {
+              "$tag": "DataMaybe$Nothing"
+            },
+            "type": {
+              "$tag": "DataMaybe$Just",
+              "value0": {
+                "$tag": "CoreFn$Func",
+                "value0": [
+                  {
+                    "$tag": "CoreFn$Int"
+                  }
+                ],
+                "value1": {
+                  "$tag": "CoreFn$Int"
+                }
+              }
+            }
+          },
+          "value1": "value",
+          "value2": {
+            "$tag": "CoreFn$ExprApp",
+            "value0": {
+              "span": {
+                "path": "<internal>",
+                "start": {
+                  "line": 0,
+                  "column": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 0
+                }
+              },
+              "meta": {
+                "$tag": "DataMaybe$Nothing"
+              },
+              "type": {
+                "$tag": "DataMaybe$Just",
+                "value0": {
+                  "$tag": "CoreFn$Int"
+                }
+              }
+            },
+            "value1": {
+              "$tag": "CoreFn$ExprTypeApp",
+              "value0": {
+                "span": {
+                  "path": "<internal>",
+                  "start": {
+                    "line": 0,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "column": 0
+                  }
+                },
+                "meta": {
+                  "$tag": "DataMaybe$Nothing"
+                },
+                "type": {
+                  "$tag": "DataMaybe$Just",
+                  "value0": {
+                    "$tag": "CoreFn$Func",
+                    "value0": [
+                      {
+                        "$tag": "CoreFn$Int"
+                      }
+                    ],
+                    "value1": {
+                      "$tag": "CoreFn$Int"
+                    }
+                  }
+                }
+              },
+              "value1": {
+                "$tag": "CoreFn$ExprVar",
+                "value0": {
+                  "span": {
+                    "path": "<internal>",
+                    "start": {
+                      "line": 0,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 0
+                    }
+                  },
+                  "meta": {
+                    "$tag": "DataMaybe$Nothing"
+                  },
+                  "type": {
+                    "$tag": "DataMaybe$Just",
+                    "value0": {
+                      "$tag": "CoreFn$ForAll",
+                      "value0": [
+                        "a"
+                      ],
+                      "value1": {
+                        "$tag": "CoreFn$Func",
+                        "value0": [
+                          {
+                            "$tag": "CoreFn$TypeVar",
+                            "value0": "a"
+                          }
+                        ],
+                        "value1": {
+                          "$tag": "CoreFn$TypeVar",
+                          "value0": "a"
+                        }
+                      }
+                    }
+                  }
+                },
+                "value1": {
+                  "$tag": "CoreFn$Qualified",
+                  "value0": {
+                    "$tag": "DataMaybe$Just",
+                    "value0": "TypeAppFixture"
+                  },
+                  "value1": "identity"
+                }
+              },
+              "value2": {
+                "$tag": "CoreFn$Int"
+              }
+            },
+            "value2": {
+              "$tag": "CoreFn$ExprVar",
+              "value0": {
+                "span": {
+                  "path": "<internal>",
+                  "start": {
+                    "line": 0,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "column": 0
+                  }
+                },
+                "meta": {
+                  "$tag": "DataMaybe$Nothing"
+                },
+                "type": {
+                  "$tag": "DataMaybe$Just",
+                  "value0": {
+                    "$tag": "CoreFn$Int"
+                  }
+                }
+              },
+              "value1": {
+                "$tag": "CoreFn$Qualified",
+                "value0": {
+                  "$tag": "DataMaybe$Nothing"
+                },
+                "value1": "value"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "$tag": "CoreFn$NonRec",
+      "value0": {
+        "$tag": "CoreFn$Binding",
+        "value0": {
+          "span": {
+            "path": "<internal>",
+            "start": {
+              "line": 0,
+              "column": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 0
+            }
+          },
+          "meta": {
+            "$tag": "DataMaybe$Nothing"
+          },
+          "type": {
+            "$tag": "DataMaybe$Just",
+            "value0": {
+              "$tag": "CoreFn$Func",
+              "value0": [
+                {
+                  "$tag": "CoreFn$String"
+                }
+              ],
+              "value1": {
+                "$tag": "CoreFn$String"
+              }
+            }
+          }
+        },
+        "value1": "useString",
+        "value2": {
+          "$tag": "CoreFn$ExprAbs",
+          "value0": {
+            "span": {
+              "path": "<internal>",
+              "start": {
+                "line": 0,
+                "column": 0
+              },
+              "end": {
+                "line": 0,
+                "column": 0
+              }
+            },
+            "meta": {
+              "$tag": "DataMaybe$Nothing"
+            },
+            "type": {
+              "$tag": "DataMaybe$Just",
+              "value0": {
+                "$tag": "CoreFn$Func",
+                "value0": [
+                  {
+                    "$tag": "CoreFn$String"
+                  }
+                ],
+                "value1": {
+                  "$tag": "CoreFn$String"
+                }
+              }
+            }
+          },
+          "value1": "value",
+          "value2": {
+            "$tag": "CoreFn$ExprApp",
+            "value0": {
+              "span": {
+                "path": "<internal>",
+                "start": {
+                  "line": 0,
+                  "column": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 0
+                }
+              },
+              "meta": {
+                "$tag": "DataMaybe$Nothing"
+              },
+              "type": {
+                "$tag": "DataMaybe$Just",
+                "value0": {
+                  "$tag": "CoreFn$String"
+                }
+              }
+            },
+            "value1": {
+              "$tag": "CoreFn$ExprTypeApp",
+              "value0": {
+                "span": {
+                  "path": "<internal>",
+                  "start": {
+                    "line": 0,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "column": 0
+                  }
+                },
+                "meta": {
+                  "$tag": "DataMaybe$Nothing"
+                },
+                "type": {
+                  "$tag": "DataMaybe$Just",
+                  "value0": {
+                    "$tag": "CoreFn$Func",
+                    "value0": [
+                      {
+                        "$tag": "CoreFn$String"
+                      }
+                    ],
+                    "value1": {
+                      "$tag": "CoreFn$String"
+                    }
+                  }
+                }
+              },
+              "value1": {
+                "$tag": "CoreFn$ExprVar",
+                "value0": {
+                  "span": {
+                    "path": "<internal>",
+                    "start": {
+                      "line": 0,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 0
+                    }
+                  },
+                  "meta": {
+                    "$tag": "DataMaybe$Nothing"
+                  },
+                  "type": {
+                    "$tag": "DataMaybe$Just",
+                    "value0": {
+                      "$tag": "CoreFn$ForAll",
+                      "value0": [
+                        "a"
+                      ],
+                      "value1": {
+                        "$tag": "CoreFn$Func",
+                        "value0": [
+                          {
+                            "$tag": "CoreFn$TypeVar",
+                            "value0": "a"
+                          }
+                        ],
+                        "value1": {
+                          "$tag": "CoreFn$TypeVar",
+                          "value0": "a"
+                        }
+                      }
+                    }
+                  }
+                },
+                "value1": {
+                  "$tag": "CoreFn$Qualified",
+                  "value0": {
+                    "$tag": "DataMaybe$Just",
+                    "value0": "TypeAppFixture"
+                  },
+                  "value1": "identity"
+                }
+              },
+              "value2": {
+                "$tag": "CoreFn$String"
+              }
+            },
+            "value2": {
+              "$tag": "CoreFn$ExprVar",
+              "value0": {
+                "span": {
+                  "path": "<internal>",
+                  "start": {
+                    "line": 0,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "column": 0
+                  }
+                },
+                "meta": {
+                  "$tag": "DataMaybe$Nothing"
+                },
+                "type": {
+                  "$tag": "DataMaybe$Just",
+                  "value0": {
+                    "$tag": "CoreFn$String"
+                  }
+                }
+              },
+              "value1": {
+                "$tag": "CoreFn$Qualified",
+                "value0": {
+                  "$tag": "DataMaybe$Nothing"
+                },
+                "value1": "value"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "$tag": "CoreFn$NonRec",
+      "value0": {
+        "$tag": "CoreFn$Binding",
+        "value0": {
+          "span": {
+            "path": "<internal>",
+            "start": {
+              "line": 0,
+              "column": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 0
+            }
+          },
+          "meta": {
+            "$tag": "DataMaybe$Nothing"
+          },
+          "type": {
+            "$tag": "DataMaybe$Just",
+            "value0": {
+              "$tag": "CoreFn$ForAll",
+              "value0": [
+                "b"
+              ],
+              "value1": {
+                "$tag": "CoreFn$Func",
+                "value0": [
+                  {
+                    "$tag": "CoreFn$TypeVar",
+                    "value0": "b"
+                  }
+                ],
+                "value1": {
+                  "$tag": "CoreFn$TypeVar",
+                  "value0": "b"
+                }
+              }
+            }
+          }
+        },
+        "value1": "generic",
+        "value2": {
+          "$tag": "CoreFn$ExprAbs",
+          "value0": {
+            "span": {
+              "path": "<internal>",
+              "start": {
+                "line": 0,
+                "column": 0
+              },
+              "end": {
+                "line": 0,
+                "column": 0
+              }
+            },
+            "meta": {
+              "$tag": "DataMaybe$Nothing"
+            },
+            "type": {
+              "$tag": "DataMaybe$Just",
+              "value0": {
+                "$tag": "CoreFn$Func",
+                "value0": [
+                  {
+                    "$tag": "CoreFn$TypeVar",
+                    "value0": "b"
+                  }
+                ],
+                "value1": {
+                  "$tag": "CoreFn$TypeVar",
+                  "value0": "b"
+                }
+              }
+            }
+          },
+          "value1": "value",
+          "value2": {
+            "$tag": "CoreFn$ExprApp",
+            "value0": {
+              "span": {
+                "path": "<internal>",
+                "start": {
+                  "line": 0,
+                  "column": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 0
+                }
+              },
+              "meta": {
+                "$tag": "DataMaybe$Nothing"
+              },
+              "type": {
+                "$tag": "DataMaybe$Just",
+                "value0": {
+                  "$tag": "CoreFn$TypeVar",
+                  "value0": "b"
+                }
+              }
+            },
+            "value1": {
+              "$tag": "CoreFn$ExprTypeApp",
+              "value0": {
+                "span": {
+                  "path": "<internal>",
+                  "start": {
+                    "line": 0,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "column": 0
+                  }
+                },
+                "meta": {
+                  "$tag": "DataMaybe$Nothing"
+                },
+                "type": {
+                  "$tag": "DataMaybe$Just",
+                  "value0": {
+                    "$tag": "CoreFn$Func",
+                    "value0": [
+                      {
+                        "$tag": "CoreFn$TypeVar",
+                        "value0": "b"
+                      }
+                    ],
+                    "value1": {
+                      "$tag": "CoreFn$TypeVar",
+                      "value0": "b"
+                    }
+                  }
+                }
+              },
+              "value1": {
+                "$tag": "CoreFn$ExprVar",
+                "value0": {
+                  "span": {
+                    "path": "<internal>",
+                    "start": {
+                      "line": 0,
+                      "column": 0
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 0
+                    }
+                  },
+                  "meta": {
+                    "$tag": "DataMaybe$Nothing"
+                  },
+                  "type": {
+                    "$tag": "DataMaybe$Just",
+                    "value0": {
+                      "$tag": "CoreFn$ForAll",
+                      "value0": [
+                        "a"
+                      ],
+                      "value1": {
+                        "$tag": "CoreFn$Func",
+                        "value0": [
+                          {
+                            "$tag": "CoreFn$TypeVar",
+                            "value0": "a"
+                          }
+                        ],
+                        "value1": {
+                          "$tag": "CoreFn$TypeVar",
+                          "value0": "a"
+                        }
+                      }
+                    }
+                  }
+                },
+                "value1": {
+                  "$tag": "CoreFn$Qualified",
+                  "value0": {
+                    "$tag": "DataMaybe$Just",
+                    "value0": "TypeAppFixture"
+                  },
+                  "value1": "identity"
+                }
+              },
+              "value2": {
+                "$tag": "CoreFn$TypeVar",
+                "value0": "b"
+              }
+            },
+            "value2": {
+              "$tag": "CoreFn$ExprVar",
+              "value0": {
+                "span": {
+                  "path": "<internal>",
+                  "start": {
+                    "line": 0,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 0,
+                    "column": 0
+                  }
+                },
+                "meta": {
+                  "$tag": "DataMaybe$Nothing"
+                },
+                "type": {
+                  "$tag": "DataMaybe$Just",
+                  "value0": {
+                    "$tag": "CoreFn$TypeVar",
+                    "value0": "b"
+                  }
+                }
+              },
+              "value1": {
+                "$tag": "CoreFn$Qualified",
+                "value0": {
+                  "$tag": "DataMaybe$Nothing"
+                },
+                "value1": "value"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

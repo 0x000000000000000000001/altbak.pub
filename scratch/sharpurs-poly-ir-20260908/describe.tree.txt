@@ -1,0 +1,7 @@
+Typed ADT(Effect.Effect, [Effect, Effect], [Unit])
+  Typed ADT(Effect.Effect, [Effect, Effect], [Unit])
+    Typed ADT(Effect.Effect, [Effect, Effect], [Unit])
+      App
+        Var(Effect.Console.log)
+        Typed String
+          Lit(LitString(Polymorphism (10M Type Class Dict Lookups):))

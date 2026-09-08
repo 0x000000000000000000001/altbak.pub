@@ -1,0 +1,2 @@
+Verified: generic dictionary accesses retained; specialized act has one local recursive loop, Int addition of 1, no dictionary access.
+Verified: inlined go still carries [Int, TypeVar(a)] -> TypeVar(a) annotations.

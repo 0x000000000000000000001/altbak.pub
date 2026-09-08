@@ -1,0 +1,4 @@
+Typed ADT(Test.Polymorphism.Monoidish, [Test, Polymorphism, Monoidish], [Int])
+  Typed ADT(Test.Polymorphism.Monoidish, [Test, Polymorphism, Monoidish], [Int])
+    Typed Record(Row([Tuple(mempty_, Int), Tuple(mappend_, [Int, Int] -> Int)], Any))
+      Lit(LitRecord([Prop(mempty_, Typed(Int, Lit(LitInt(1)))), Prop(mappend_, Typed([Int, Int] -> Int, Abs([Tuple(x, 0)], Typed([Int] -> Int, Abs([Tuple(y, 1)], Typed(Int, Typed(Int, PrimOp(Op2(OpIntNum(OpAdd), Local(x, 0), Local(y, 1))))))))))]))

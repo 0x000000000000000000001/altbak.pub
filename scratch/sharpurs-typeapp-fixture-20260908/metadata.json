@@ -1,0 +1,53 @@
+{
+  "node": "v24.8.0",
+  "optimizedModules": 1,
+  "capturedBindings": [
+    "identity",
+    "useInt",
+    "useString",
+    "generic"
+  ],
+  "currentKernelAcceptance": {
+    "identity": false,
+    "useInt": false,
+    "useString": false,
+    "generic": false
+  },
+  "generatedUnchanged": true,
+  "generatedFilesChecked": 353,
+  "commits": {
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs": "d051343e6d025f0f0379c3a1cba524a22fcec9e3",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs": "08d656f32d8558e28cf961da0a59ee507809c93f",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-sharpurs": "67ba2151e3717b27a13e95c25d3b25c8bdc645cc"
+  },
+  "sha256": {
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-typeapp-fixture-20260908/TypeAppFixture.purs": "94d2a573a428f978ae56c0abd6059a3201977360c8d04814c2e6c0b46481c40c",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.CoreFn/index.js": "09f299e32a75ffc1caa61da7450a1bc7232b0fb4e58c77246739343cf77f3964",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-typeapp-fixture-20260908/output/TypeAppFixture/corefn.json": "2fc42fe4889dcf04e25744f79e136b30b8798585726b32429591e09b5df8055b",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/src/Main.purs": "15b024f16c387a02b5e24f81c203065a8cc64e2ffc5b10e51e1636e4d4ead402",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/src/Sharpurs/IntKernel.purs": "bb70ba8fa04a4defc1686619982c4a359dcd04eff0cce503ec31170b0777be6b",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/Sharpurs.IntKernel/index.js": "d09f07339e14413ca5b9936d0b5e49c52f2b6b7ef72f4cf619556baf171a8029",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.Builder/index.js": "c3452e2af475f749210739a45ef671ba16bf6004533edb16f1f8de65ff01cd66",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.App/index.js": "5f3aa05bc6fcf82703fe5a1ff7a92fc628a8163783c291400154868bc3428246",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.Convert/index.js": "effc310625ba2dacf197f63864fbf38f8c866098402e02fd371f2653a3bb0208",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.Semantics/index.js": "2a92acaf31c98649b02d280726703b746a4099dfc6d15c9a375697f1b801a602",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.Syntax/index.js": "96dd7c94110b87e2d006645ed6877b3e0233cc8480d152f3218f163226e99a4c",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output/PureScript.Backend.Optimizer.Semantics.Foreign/index.js": "c32d1c140296015dc7acc5eb869708661c7d8717958710459a757c4de5f8e781"
+  },
+  "compiler": {
+    "path": "/Users/0x1/Documents/htdocs/purescript/.stack-work/dist/aarch64-osx/ghc-9.8.4/build/purs/purs",
+    "version": "0.15.16 [development build; commit: 59b80f2a183647c6d4e99f06b5658ff550f1cb68 DIRTY]",
+    "sha256": "a9162efcb4256de3e1564c6ab766b0a2638795c711e21865fd477135c8f4020b",
+    "gitCommit": "65010ea6512741ef38b3027c6f25d82511c648cd"
+  },
+  "validation": {
+    "typeContractExitCode": 1,
+    "expectedCurrentRegressionExitCode": 0,
+    "failingBindings": [
+      "useInt",
+      "useString",
+      "generic"
+    ],
+    "correctedOptimizer": false
+  }
+}
