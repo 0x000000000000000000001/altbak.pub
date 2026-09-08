@@ -1,0 +1,2592 @@
+{
+  "ok": true,
+  "before_root": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-record-boxing-4-5-20260908/generated/before/output",
+  "after_root": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-record-boxing-4-5-20260908/generated/after/output",
+  "normalization": "gopurs_runtime.RecordDictN(k0,...,kN-1,v0,...,vN-1), N=0..5 -\u003e RecordDict([]string{keys}, []gopurs_runtime.Value{values})",
+  "ignored": [
+    "comments",
+    "source positions and formatting",
+    "bench_test.go and *_bench_test.go"
+  ],
+  "before_go_files": 386,
+  "after_go_files": 386,
+  "files_compared": 386,
+  "excluded_before": [],
+  "excluded_after": [],
+  "only_before": [],
+  "only_after": [],
+  "before_helpers_common_files": {
+    "RecordDict": 287,
+    "RecordDict0": 0,
+    "RecordDict1": 6,
+    "RecordDict2": 24,
+    "RecordDict3": 1,
+    "RecordDict4": 0,
+    "RecordDict5": 0
+  },
+  "after_helpers_common_files": {
+    "RecordDict": 18,
+    "RecordDict0": 20,
+    "RecordDict1": 46,
+    "RecordDict2": 190,
+    "RecordDict3": 22,
+    "RecordDict4": 12,
+    "RecordDict5": 10
+  },
+  "raw_changed_files": [
+    {
+      "path": "purescript/Control_Alt.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Alternative.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Applicative.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Apply.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Biapplicative.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Biapply.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Bind.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Category.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Comonad.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Comonad_Env_Class.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 2,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Comonad_Store_Class.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 1,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Comonad_Traced_Class.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Comonad_Trans_Class.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Extend.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Lazy.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Monad.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_MonadPlus.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Monad_Cont_Class.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Monad_Error_Class.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 2,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Monad_List_Trans.go",
+      "before_helpers": {
+        "RecordDict": 3,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 2,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 5,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Monad_Reader_Class.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 2,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Monad_Rec_Class.go",
+      "before_helpers": {
+        "RecordDict": 5,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 1,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 4,
+        "RecordDict3": 3,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Monad_ST_Class.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Monad_ST_Internal.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Monad_State_Class.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Monad_Trans_Class.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Monad_Writer_Class.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 1,
+        "RecordDict4": 1,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Parallel_Class.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 1,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Plus.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Control_Semigroupoid.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Array.go",
+      "before_helpers": {
+        "RecordDict": 11,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 2,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 13,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Array_NonEmpty.go",
+      "before_helpers": {
+        "RecordDict": 7,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 8,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Array_ST_Iterator.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Bifoldable.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 1,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Bifunctor.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Bitraversable.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 1,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_BooleanAlgebra.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 2,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Bounded.go",
+      "before_helpers": {
+        "RecordDict": 4,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 2,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 2,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Bounded_Generic.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 2,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_CommutativeRing.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 2,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Decidable.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 1,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Decide.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Distributive.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 1,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Divide.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Divisible.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_DivisionRing.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Either_Inject.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Enum.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 1,
+        "RecordDict4": 0,
+        "RecordDict5": 1
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Enum_Generic.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 1,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Eq.go",
+      "before_helpers": {
+        "RecordDict": 3,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 3,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Eq_Generic.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_EuclideanRing.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 1,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Field.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Foldable.go",
+      "before_helpers": {
+        "RecordDict": 9,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 8,
+        "RecordDict3": 1,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_FoldableWithIndex.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 2,
+        "RecordDict3": 0,
+        "RecordDict4": 1,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Functor.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_FunctorWithIndex.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Functor_Contravariant.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Functor_Coproduct_Inject.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Functor_Invariant.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Generic_Rep.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_HeytingAlgebra.go",
+      "before_helpers": {
+        "RecordDict": 8,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 6,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Interval_Duration_Iso.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_List.go",
+      "before_helpers": {
+        "RecordDict": 8,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 3,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 11,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_List_Internal.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 2,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_List_Lazy.go",
+      "before_helpers": {
+        "RecordDict": 6,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 2,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 8,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_List_Lazy_NonEmpty.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_List_Lazy_Types.go",
+      "before_helpers": {
+        "RecordDict": 4,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 4,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_List_NonEmpty.go",
+      "before_helpers": {
+        "RecordDict": 6,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 6,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_List_Types.go",
+      "before_helpers": {
+        "RecordDict": 8,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 8,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Map_Internal.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 8,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 9,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Monoid.go",
+      "before_helpers": {
+        "RecordDict": 3,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 1,
+        "RecordDict1": 0,
+        "RecordDict2": 2,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Monoid_Generic.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Newtype.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Ord.go",
+      "before_helpers": {
+        "RecordDict": 3,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 3,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Ord_Generic.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Profunctor.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Profunctor_Choice.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 1,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Profunctor_Closed.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Profunctor_Cochoice.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 1,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Profunctor_Costrong.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 1,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Profunctor_Strong.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 1,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Reflectable.go",
+      "before_helpers": {
+        "RecordDict": 7,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 5,
+        "RecordDict1": 2,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Ring.go",
+      "before_helpers": {
+        "RecordDict": 3,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 1,
+        "RecordDict1": 0,
+        "RecordDict2": 2,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Ring_Generic.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Semigroup.go",
+      "before_helpers": {
+        "RecordDict": 3,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 1,
+        "RecordDict1": 2,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Semigroup_Foldable.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 1,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Semigroup_Generic.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Semigroup_Traversable.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 1,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Semiring.go",
+      "before_helpers": {
+        "RecordDict": 6,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 4,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 2,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Semiring_Generic.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 1,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Show.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 2,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Show_Generic.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 2,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_String_CodePoints.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 3,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_String_CodeUnits.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 2,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_String_NonEmpty_CodePoints.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 2,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_String_NonEmpty_CodeUnits.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 2,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_String_NonEmpty_Internal.go",
+      "before_helpers": {
+        "RecordDict": 7,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 6,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Symbol.go",
+      "before_helpers": {
+        "RecordDict": 2,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 2,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Time_Duration.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Traversable.go",
+      "before_helpers": {
+        "RecordDict": 7,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 6,
+        "RecordDict3": 0,
+        "RecordDict4": 1,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_TraversableWithIndex.go",
+      "before_helpers": {
+        "RecordDict": 7,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 6,
+        "RecordDict3": 0,
+        "RecordDict4": 1,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Traversable_Accum_Internal.go",
+      "before_helpers": {
+        "RecordDict": 6,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 6,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Unfoldable.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Data_Unfoldable1.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Effect_Aff.go",
+      "before_helpers": {
+        "RecordDict": 14,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 5,
+        "RecordDict4": 0,
+        "RecordDict5": 9
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Effect_Aff_Class.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Effect_Class.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Effect_Ref.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Spago_Generated_BuildInfo.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Test_Polymorphism.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Test_Records.go",
+      "before_helpers": {
+        "RecordDict": 6,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 6,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Test_RowToList.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Test_StateMonad.go",
+      "before_helpers": {
+        "RecordDict": 9,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 9,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Test_TC.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 1,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    },
+    {
+      "path": "purescript/Type_Equality.go",
+      "before_helpers": {
+        "RecordDict": 1,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 0,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "after_helpers": {
+        "RecordDict": 0,
+        "RecordDict0": 0,
+        "RecordDict1": 0,
+        "RecordDict2": 1,
+        "RecordDict3": 0,
+        "RecordDict4": 0,
+        "RecordDict5": 0
+      },
+      "normalized_equal": true
+    }
+  ],
+  "unexpected_changed_files": [],
+  "errors": []
+}

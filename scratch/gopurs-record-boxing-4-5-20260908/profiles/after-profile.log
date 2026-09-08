@@ -1,0 +1,4 @@
+=== RUN   TestAllocationProfile
+ALLOC StateMonad iterations=20 result=1200 bytes=8096016 allocs=120401 gcs=0 bytes/op=404800.80 allocs/op=6020.05
+--- PASS: TestAllocationProfile (0.43s)
+PASS

@@ -1,0 +1,538 @@
+package purescript
+
+import (
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
+	unsafe "unsafe"
+)
+
+var cache_Data_String_Regex_Flags_eqArray gopurs_runtime.Value
+var once_Data_String_Regex_Flags_eqArray sync.Once
+func Get_Data_String_Regex_Flags_eqArray() gopurs_runtime.Value {
+	once_Data_String_Regex_Flags_eqArray.Do(func() {
+		cache_Data_String_Regex_Flags_eqArray = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(Rebox_Data_String_Regex_Flags_131790935_3790796878((&Constructor_Data_Eq_Eq[[]string]{1, gopurs_runtime.Apply(Get_Data_Eq_eqArrayImpl(), Get_Data_Eq_eqStringImpl())})))}
+	})
+	return cache_Data_String_Regex_Flags_eqArray
+}
+
+var cache_Data_String_Regex_Flags_RegexFlags gopurs_runtime.Value
+var once_Data_String_Regex_Flags_RegexFlags sync.Once
+func Get_Data_String_Regex_Flags_RegexFlags() gopurs_runtime.Value {
+	once_Data_String_Regex_Flags_RegexFlags.Do(func() {
+		cache_Data_String_Regex_Flags_RegexFlags = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Data_String_Regex_Flags_RegexFlags(x_0_box)
+})
+	})
+	return cache_Data_String_Regex_Flags_RegexFlags
+}
+
+var cache_Data_String_Regex_Flags_unicode gopurs_runtime.Value
+var once_Data_String_Regex_Flags_unicode sync.Once
+func Get_Data_String_Regex_Flags_unicode() gopurs_runtime.Value {
+	once_Data_String_Regex_Flags_unicode.Do(func() {
+		cache_Data_String_Regex_Flags_unicode = func() gopurs_runtime.Value {
+				orig := struct{
+	dotAll bool
+	global bool
+	ignoreCase bool
+	multiline bool
+	sticky bool
+	unicode bool
+}{false, false, false, false, false, true}
+				_ = orig
+				return gopurs_runtime.RecordDict([]string{"dotAll", "global", "ignoreCase", "multiline", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Bool(orig.dotAll), gopurs_runtime.Bool(orig.global), gopurs_runtime.Bool(orig.ignoreCase), gopurs_runtime.Bool(orig.multiline), gopurs_runtime.Bool(orig.sticky), gopurs_runtime.Bool(orig.unicode)})
+				}()
+	})
+	return cache_Data_String_Regex_Flags_unicode
+}
+
+var cache_Data_String_Regex_Flags_sticky gopurs_runtime.Value
+var once_Data_String_Regex_Flags_sticky sync.Once
+func Get_Data_String_Regex_Flags_sticky() gopurs_runtime.Value {
+	once_Data_String_Regex_Flags_sticky.Do(func() {
+		cache_Data_String_Regex_Flags_sticky = func() gopurs_runtime.Value {
+				orig := struct{
+	dotAll bool
+	global bool
+	ignoreCase bool
+	multiline bool
+	sticky bool
+	unicode bool
+}{false, false, false, false, true, false}
+				_ = orig
+				return gopurs_runtime.RecordDict([]string{"dotAll", "global", "ignoreCase", "multiline", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Bool(orig.dotAll), gopurs_runtime.Bool(orig.global), gopurs_runtime.Bool(orig.ignoreCase), gopurs_runtime.Bool(orig.multiline), gopurs_runtime.Bool(orig.sticky), gopurs_runtime.Bool(orig.unicode)})
+				}()
+	})
+	return cache_Data_String_Regex_Flags_sticky
+}
+
+var cache_Data_String_Regex_Flags_showRegexFlags gopurs_runtime.Value
+var once_Data_String_Regex_Flags_showRegexFlags sync.Once
+func Get_Data_String_Regex_Flags_showRegexFlags() gopurs_runtime.Value {
+	once_Data_String_Regex_Flags_showRegexFlags.Do(func() {
+		cache_Data_String_Regex_Flags_showRegexFlags = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer((&Constructor_Data_Show_Show[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+if (gopurs_runtime.RecordGet(v_0, "global").IntVal) != (0) {
+__t1 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{Get_Data_Unit_unit()}).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{}).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
+}
+end_branch_1:
+var __t2 gopurs_runtime.Value
+{
+if (gopurs_runtime.RecordGet(v_0, "ignoreCase").IntVal) != (0) {
+__t2 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{Get_Data_Unit_unit()}).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{}).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
+}
+end_branch_2:
+var __t3 gopurs_runtime.Value
+{
+if (gopurs_runtime.RecordGet(v_0, "multiline").IntVal) != (0) {
+__t3 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{Get_Data_Unit_unit()}).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{}).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
+}
+end_branch_3:
+var __t4 gopurs_runtime.Value
+{
+if (gopurs_runtime.RecordGet(v_0, "dotAll").IntVal) != (0) {
+__t4 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{Get_Data_Unit_unit()}).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{}).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
+}
+end_branch_4:
+var __t5 gopurs_runtime.Value
+{
+if (gopurs_runtime.RecordGet(v_0, "sticky").IntVal) != (0) {
+__t5 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{Get_Data_Unit_unit()}).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
+goto end_branch_5
+} else {
+
+}
+}
+{
+__t5 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{}).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
+}
+end_branch_5:
+var __t6 gopurs_runtime.Value
+{
+if (gopurs_runtime.RecordGet(v_0, "unicode").IntVal) != (0) {
+__t6 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{Get_Data_Unit_unit()}).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
+goto end_branch_6
+} else {
+
+}
+}
+{
+__t6 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{}).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
+}
+end_branch_6:
+// TAST (Let): usedFlags_1_0 shape=App(Var) bindingType=(Array String)
+usedFlags_1_0 := func() []string {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Array([]gopurs_runtime.Value{}), func() gopurs_runtime.Value {
+arr_val_arrayMap9 := __t1
+_ = arr_val_arrayMap9
+arr_go_arrayMap9 := (*[]gopurs_runtime.Value)(arr_val_arrayMap9.UnsafePtr)
+_ = arr_go_arrayMap9
+res_go_arrayMap9 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap9))
+_ = res_go_arrayMap9
+for i_arrayMap9, v_arrayMap9 := range *arr_go_arrayMap9 {
+res_go_arrayMap9[i_arrayMap9] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("global")
+}), v_arrayMap9)
+}
+return gopurs_runtime.Array(res_go_arrayMap9)
+}()), func() gopurs_runtime.Value {
+arr_val_arrayMap8 := __t2
+_ = arr_val_arrayMap8
+arr_go_arrayMap8 := (*[]gopurs_runtime.Value)(arr_val_arrayMap8.UnsafePtr)
+_ = arr_go_arrayMap8
+res_go_arrayMap8 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap8))
+_ = res_go_arrayMap8
+for i_arrayMap8, v_arrayMap8 := range *arr_go_arrayMap8 {
+res_go_arrayMap8[i_arrayMap8] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("ignoreCase")
+}), v_arrayMap8)
+}
+return gopurs_runtime.Array(res_go_arrayMap8)
+}()), func() gopurs_runtime.Value {
+arr_val_arrayMap7 := __t3
+_ = arr_val_arrayMap7
+arr_go_arrayMap7 := (*[]gopurs_runtime.Value)(arr_val_arrayMap7.UnsafePtr)
+_ = arr_go_arrayMap7
+res_go_arrayMap7 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap7))
+_ = res_go_arrayMap7
+for i_arrayMap7, v_arrayMap7 := range *arr_go_arrayMap7 {
+res_go_arrayMap7[i_arrayMap7] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("multiline")
+}), v_arrayMap7)
+}
+return gopurs_runtime.Array(res_go_arrayMap7)
+}()), func() gopurs_runtime.Value {
+arr_val_arrayMap6 := __t4
+_ = arr_val_arrayMap6
+arr_go_arrayMap6 := (*[]gopurs_runtime.Value)(arr_val_arrayMap6.UnsafePtr)
+_ = arr_go_arrayMap6
+res_go_arrayMap6 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap6))
+_ = res_go_arrayMap6
+for i_arrayMap6, v_arrayMap6 := range *arr_go_arrayMap6 {
+res_go_arrayMap6[i_arrayMap6] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("dotAll")
+}), v_arrayMap6)
+}
+return gopurs_runtime.Array(res_go_arrayMap6)
+}()), func() gopurs_runtime.Value {
+arr_val_arrayMap5 := __t5
+_ = arr_val_arrayMap5
+arr_go_arrayMap5 := (*[]gopurs_runtime.Value)(arr_val_arrayMap5.UnsafePtr)
+_ = arr_go_arrayMap5
+res_go_arrayMap5 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap5))
+_ = res_go_arrayMap5
+for i_arrayMap5, v_arrayMap5 := range *arr_go_arrayMap5 {
+res_go_arrayMap5[i_arrayMap5] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("sticky")
+}), v_arrayMap5)
+}
+return gopurs_runtime.Array(res_go_arrayMap5)
+}()), func() gopurs_runtime.Value {
+arr_val_arrayMap4 := __t6
+_ = arr_val_arrayMap4
+arr_go_arrayMap4 := (*[]gopurs_runtime.Value)(arr_val_arrayMap4.UnsafePtr)
+_ = arr_go_arrayMap4
+res_go_arrayMap4 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap4))
+_ = res_go_arrayMap4
+for i_arrayMap4, v_arrayMap4 := range *arr_go_arrayMap4 {
+res_go_arrayMap4[i_arrayMap4] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("unicode")
+}), v_arrayMap4)
+}
+return gopurs_runtime.Array(res_go_arrayMap4)
+}()).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()).UnsafePtr)
+					unboxed := make([]string, len(arr))
+					for i, v := range arr { unboxed[i] = v.StrVal() }
+					return unboxed
+				}()
+_ = usedFlags_1_0
+var __t7 string
+{
+if (gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq[[]string]](Get_Data_String_Regex_Flags_eqArray()).V0), func() gopurs_runtime.Value {
+					arr := usedFlags_1_0
+					boxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
+					return gopurs_runtime.Array(boxed)
+				}(), gopurs_runtime.Array([]gopurs_runtime.Value{})).IntVal) != (0) {
+__t7 = "noFlags"
+goto end_branch_7
+} else {
+
+}
+}
+{
+__t7 = (("(") + (gopurs_runtime.Apply2(Get_Data_String_Common_joinWith(), gopurs_runtime.Str(" <> "), func() gopurs_runtime.Value {
+					arr := usedFlags_1_0
+					boxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
+					return gopurs_runtime.Array(boxed)
+				}()).StrVal())) + (")")
+}
+end_branch_7:
+return gopurs_runtime.Str(__t7)
+})}))}
+	})
+	return cache_Data_String_Regex_Flags_showRegexFlags
+}
+
+var cache_Data_String_Regex_Flags_semigroupRegexFlags gopurs_runtime.Value
+var once_Data_String_Regex_Flags_semigroupRegexFlags sync.Once
+func Get_Data_String_Regex_Flags_semigroupRegexFlags() gopurs_runtime.Value {
+	once_Data_String_Regex_Flags_semigroupRegexFlags.Do(func() {
+		cache_Data_String_Regex_Flags_semigroupRegexFlags = gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer((&Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]{1, gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+				orig := struct{
+	dotAll bool
+	global bool
+	ignoreCase bool
+	multiline bool
+	sticky bool
+	unicode bool
+}{((gopurs_runtime.RecordGet(v_0, "dotAll").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_1, "dotAll").IntVal) != (0)), ((gopurs_runtime.RecordGet(v_0, "global").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_1, "global").IntVal) != (0)), ((gopurs_runtime.RecordGet(v_0, "ignoreCase").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_1, "ignoreCase").IntVal) != (0)), ((gopurs_runtime.RecordGet(v_0, "multiline").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_1, "multiline").IntVal) != (0)), ((gopurs_runtime.RecordGet(v_0, "sticky").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_1, "sticky").IntVal) != (0)), ((gopurs_runtime.RecordGet(v_0, "unicode").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_1, "unicode").IntVal) != (0))}
+				_ = orig
+				return gopurs_runtime.RecordDict([]string{"dotAll", "global", "ignoreCase", "multiline", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Bool(orig.dotAll), gopurs_runtime.Bool(orig.global), gopurs_runtime.Bool(orig.ignoreCase), gopurs_runtime.Bool(orig.multiline), gopurs_runtime.Bool(orig.sticky), gopurs_runtime.Bool(orig.unicode)})
+				}()
+})}))}
+	})
+	return cache_Data_String_Regex_Flags_semigroupRegexFlags
+}
+
+var cache_Data_String_Regex_Flags_noFlags gopurs_runtime.Value
+var once_Data_String_Regex_Flags_noFlags sync.Once
+func Get_Data_String_Regex_Flags_noFlags() gopurs_runtime.Value {
+	once_Data_String_Regex_Flags_noFlags.Do(func() {
+		cache_Data_String_Regex_Flags_noFlags = func() gopurs_runtime.Value {
+				orig := struct{
+	dotAll bool
+	global bool
+	ignoreCase bool
+	multiline bool
+	sticky bool
+	unicode bool
+}{false, false, false, false, false, false}
+				_ = orig
+				return gopurs_runtime.RecordDict([]string{"dotAll", "global", "ignoreCase", "multiline", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Bool(orig.dotAll), gopurs_runtime.Bool(orig.global), gopurs_runtime.Bool(orig.ignoreCase), gopurs_runtime.Bool(orig.multiline), gopurs_runtime.Bool(orig.sticky), gopurs_runtime.Bool(orig.unicode)})
+				}()
+	})
+	return cache_Data_String_Regex_Flags_noFlags
+}
+
+var cache_Data_String_Regex_Flags_newtypeRegexFlags gopurs_runtime.Value
+var once_Data_String_Regex_Flags_newtypeRegexFlags sync.Once
+func Get_Data_String_Regex_Flags_newtypeRegexFlags() gopurs_runtime.Value {
+	once_Data_String_Regex_Flags_newtypeRegexFlags.Do(func() {
+		cache_Data_String_Regex_Flags_newtypeRegexFlags = gopurs_runtime.Value{Type: 9, IntVal: 3322196858, UnsafePtr: unsafe.Pointer(Rebox_Data_String_Regex_Flags_3235834119_385277032((&Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, struct{
+	dotAll bool
+	global bool
+	ignoreCase bool
+	multiline bool
+	sticky bool
+	unicode bool
+}]{1, gopurs_runtime.Func(func(_dollar___unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{}
+})})))}
+	})
+	return cache_Data_String_Regex_Flags_newtypeRegexFlags
+}
+
+var cache_Data_String_Regex_Flags_multiline gopurs_runtime.Value
+var once_Data_String_Regex_Flags_multiline sync.Once
+func Get_Data_String_Regex_Flags_multiline() gopurs_runtime.Value {
+	once_Data_String_Regex_Flags_multiline.Do(func() {
+		cache_Data_String_Regex_Flags_multiline = func() gopurs_runtime.Value {
+				orig := struct{
+	dotAll bool
+	global bool
+	ignoreCase bool
+	multiline bool
+	sticky bool
+	unicode bool
+}{false, false, false, true, false, false}
+				_ = orig
+				return gopurs_runtime.RecordDict([]string{"dotAll", "global", "ignoreCase", "multiline", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Bool(orig.dotAll), gopurs_runtime.Bool(orig.global), gopurs_runtime.Bool(orig.ignoreCase), gopurs_runtime.Bool(orig.multiline), gopurs_runtime.Bool(orig.sticky), gopurs_runtime.Bool(orig.unicode)})
+				}()
+	})
+	return cache_Data_String_Regex_Flags_multiline
+}
+
+var cache_Data_String_Regex_Flags_monoidRegexFlags gopurs_runtime.Value
+var once_Data_String_Regex_Flags_monoidRegexFlags sync.Once
+func Get_Data_String_Regex_Flags_monoidRegexFlags() gopurs_runtime.Value {
+	once_Data_String_Regex_Flags_monoidRegexFlags.Do(func() {
+		cache_Data_String_Regex_Flags_monoidRegexFlags = gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer((&Constructor_Data_Monoid_Monoid[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(_dollar___unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]](Get_Data_String_Regex_Flags_semigroupRegexFlags()))}
+}), Get_Data_String_Regex_Flags_noFlags()}))}
+	})
+	return cache_Data_String_Regex_Flags_monoidRegexFlags
+}
+
+var cache_Data_String_Regex_Flags_ignoreCase gopurs_runtime.Value
+var once_Data_String_Regex_Flags_ignoreCase sync.Once
+func Get_Data_String_Regex_Flags_ignoreCase() gopurs_runtime.Value {
+	once_Data_String_Regex_Flags_ignoreCase.Do(func() {
+		cache_Data_String_Regex_Flags_ignoreCase = func() gopurs_runtime.Value {
+				orig := struct{
+	dotAll bool
+	global bool
+	ignoreCase bool
+	multiline bool
+	sticky bool
+	unicode bool
+}{false, false, true, false, false, false}
+				_ = orig
+				return gopurs_runtime.RecordDict([]string{"dotAll", "global", "ignoreCase", "multiline", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Bool(orig.dotAll), gopurs_runtime.Bool(orig.global), gopurs_runtime.Bool(orig.ignoreCase), gopurs_runtime.Bool(orig.multiline), gopurs_runtime.Bool(orig.sticky), gopurs_runtime.Bool(orig.unicode)})
+				}()
+	})
+	return cache_Data_String_Regex_Flags_ignoreCase
+}
+
+var cache_Data_String_Regex_Flags_global gopurs_runtime.Value
+var once_Data_String_Regex_Flags_global sync.Once
+func Get_Data_String_Regex_Flags_global() gopurs_runtime.Value {
+	once_Data_String_Regex_Flags_global.Do(func() {
+		cache_Data_String_Regex_Flags_global = func() gopurs_runtime.Value {
+				orig := struct{
+	dotAll bool
+	global bool
+	ignoreCase bool
+	multiline bool
+	sticky bool
+	unicode bool
+}{false, true, false, false, false, false}
+				_ = orig
+				return gopurs_runtime.RecordDict([]string{"dotAll", "global", "ignoreCase", "multiline", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Bool(orig.dotAll), gopurs_runtime.Bool(orig.global), gopurs_runtime.Bool(orig.ignoreCase), gopurs_runtime.Bool(orig.multiline), gopurs_runtime.Bool(orig.sticky), gopurs_runtime.Bool(orig.unicode)})
+				}()
+	})
+	return cache_Data_String_Regex_Flags_global
+}
+
+var cache_Data_String_Regex_Flags_eqRegexFlags gopurs_runtime.Value
+var once_Data_String_Regex_Flags_eqRegexFlags sync.Once
+func Get_Data_String_Regex_Flags_eqRegexFlags() gopurs_runtime.Value {
+	once_Data_String_Regex_Flags_eqRegexFlags.Do(func() {
+		cache_Data_String_Regex_Flags_eqRegexFlags = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer((&Constructor_Data_Eq_Eq[gopurs_runtime.Value]{1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply4(Get_Data_Eq_eqRowCons(), gopurs_runtime.Apply4(Get_Data_Eq_eqRowCons(), gopurs_runtime.Apply4(Get_Data_Eq_eqRowCons(), gopurs_runtime.Apply4(Get_Data_Eq_eqRowCons(), gopurs_runtime.Apply4(Get_Data_Eq_eqRowCons(), gopurs_runtime.Apply4(Get_Data_Eq_eqRowCons(), Get_Data_Eq_eqRowNil(), gopurs_runtime.Value{}, gopurs_runtime.RecordDict1("reflectSymbol", gopurs_runtime.Func(func(_dollar___unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("unicode")
+})), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(Rebox_Data_String_Regex_Flags_2737952170_3790796878(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq[bool]](Get_Data_Eq_eqBoolean())))}), gopurs_runtime.Value{}, gopurs_runtime.RecordDict1("reflectSymbol", gopurs_runtime.Func(func(_dollar___unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("sticky")
+})), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(Rebox_Data_String_Regex_Flags_2737952170_3790796878(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq[bool]](Get_Data_Eq_eqBoolean())))}), gopurs_runtime.Value{}, gopurs_runtime.RecordDict1("reflectSymbol", gopurs_runtime.Func(func(_dollar___unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("multiline")
+})), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(Rebox_Data_String_Regex_Flags_2737952170_3790796878(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq[bool]](Get_Data_Eq_eqBoolean())))}), gopurs_runtime.Value{}, gopurs_runtime.RecordDict1("reflectSymbol", gopurs_runtime.Func(func(_dollar___unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("ignoreCase")
+})), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(Rebox_Data_String_Regex_Flags_2737952170_3790796878(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq[bool]](Get_Data_Eq_eqBoolean())))}), gopurs_runtime.Value{}, gopurs_runtime.RecordDict1("reflectSymbol", gopurs_runtime.Func(func(_dollar___unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("global")
+})), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(Rebox_Data_String_Regex_Flags_2737952170_3790796878(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq[bool]](Get_Data_Eq_eqBoolean())))}), gopurs_runtime.Value{}, gopurs_runtime.RecordDict1("reflectSymbol", gopurs_runtime.Func(func(_dollar___unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("dotAll")
+})), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(Rebox_Data_String_Regex_Flags_2737952170_3790796878(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq[bool]](Get_Data_Eq_eqBoolean())))}), "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})}))}
+	})
+	return cache_Data_String_Regex_Flags_eqRegexFlags
+}
+
+var cache_Data_String_Regex_Flags_dotAll gopurs_runtime.Value
+var once_Data_String_Regex_Flags_dotAll sync.Once
+func Get_Data_String_Regex_Flags_dotAll() gopurs_runtime.Value {
+	once_Data_String_Regex_Flags_dotAll.Do(func() {
+		cache_Data_String_Regex_Flags_dotAll = func() gopurs_runtime.Value {
+				orig := struct{
+	dotAll bool
+	global bool
+	ignoreCase bool
+	multiline bool
+	sticky bool
+	unicode bool
+}{true, false, false, false, false, false}
+				_ = orig
+				return gopurs_runtime.RecordDict([]string{"dotAll", "global", "ignoreCase", "multiline", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Bool(orig.dotAll), gopurs_runtime.Bool(orig.global), gopurs_runtime.Bool(orig.ignoreCase), gopurs_runtime.Bool(orig.multiline), gopurs_runtime.Bool(orig.sticky), gopurs_runtime.Bool(orig.unicode)})
+				}()
+	})
+	return cache_Data_String_Regex_Flags_dotAll
+}
+
+func Call_Data_String_Regex_Flags_RegexFlags(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0
+}
+
+func Rebox_Data_String_Regex_Flags_131790935_3790796878(in *Constructor_Data_Eq_Eq[[]string]) *Constructor_Data_Eq_Eq[gopurs_runtime.Value] {
+	if in == nil { return nil }
+	out := &Constructor_Data_Eq_Eq[gopurs_runtime.Value]{}
+		out.V0 = in.V0
+	return out
+}
+
+func Rebox_Data_String_Regex_Flags_2737952170_3790796878(in *Constructor_Data_Eq_Eq[bool]) *Constructor_Data_Eq_Eq[gopurs_runtime.Value] {
+	if in == nil { return nil }
+	out := &Constructor_Data_Eq_Eq[gopurs_runtime.Value]{}
+		out.V0 = in.V0
+	return out
+}
+
+func Rebox_Data_String_Regex_Flags_3235834119_385277032(in *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, struct{
+	dotAll bool
+	global bool
+	ignoreCase bool
+	multiline bool
+	sticky bool
+	unicode bool
+}]) *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] {
+	if in == nil { return nil }
+	out := &Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]{}
+		out.V0 = in.V0
+	return out
+}
+
+

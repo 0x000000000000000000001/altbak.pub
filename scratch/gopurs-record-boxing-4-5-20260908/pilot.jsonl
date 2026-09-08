@@ -1,0 +1,2 @@
+{"kind": "core", "variant": "before", "pair": 1, "test": "n20", "iterations": 1732, "benchtime": "200ms", "ns_per_op": 122664.0, "bytes_per_op": 578560.0, "allocs_per_op": 13260.0, "recorded_utc": "2026-09-08T11:53:49.215437+00:00"}
+{"kind": "core", "variant": "after", "pair": 1, "test": "n20", "iterations": 2529, "benchtime": "200ms", "ns_per_op": 80883.0, "bytes_per_op": 404802.0, "allocs_per_op": 6020.0, "recorded_utc": "2026-09-08T11:53:49.437148+00:00"}

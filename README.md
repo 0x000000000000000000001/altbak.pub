@@ -133,21 +133,21 @@ RowToList               | ~ 0 μs                    | ~ 4 μs         | ~ 94 μ
 
 Rust Benchmark          | Compiled Rust ([purust](https://github.com/0x000000000000000000001/purust), young WIP) | Native FP-style Rust FFI | Native hand-optimized Rust FFI |
 ----------------------- | ------------------------- | ------------------------ | ------------------------------ |
-AST Evaluation          | ~ 56 μs                   | ~ 38 μs      | ~ 4 μs                 |
-Fibonacci               | ~ 5 μs                    | ~ 27 μs      | ~ 4 μs                 |
-List Processing         | ~ 149 μs                  | ~ 76 μs      | ~ 4 μs                 |
-Tail Call Optimization  | ~ 296 μs                  | ~ 114 μs     | ~ 47 μs                |
-Deep Record Updates     | ~ 1467 μs                 | ~ 272 μs     | ~ 7 μs                 |
-Ackermann               | ~ 65 μs                   | ~ 38 μs      | ~ 29 μs                |
-Church Numerals         | ~ 24331 μs                | ~ 598 μs     | ~ 3 μs                 |
-Prime Sieve             | ~ 385 μs                  | ~ 221 μs     | ~ 4 μs                 |
-Red-Black Tree          | ~ 67125 μs                | ~ 59784 μs   | ~ 16700 μs             |
-Polymorphism            | ~ 38663 μs                | ~ 8342 μs    | ~ 4 μs                 |
-State Monad             | ~ 514 μs                  | ~ 145 μs     | ~ 3 μs                 |
-Lazy Evaluation         | ~ 319209 μs               | ~ 24919 μs   | ~ 3 μs                 |
-Array Processing        | ~ 26 μs                   | ~ 14 μs      | ~ 3 μs                 |
-RowToList               | ~ 2 μs                    | ~ 27 μs      | ~ 2 μs                 |
-**Total Execution Time**    | ~ 452.29 ms               | ~ 94.61 ms      | ~ 16.82 ms                |
+AST Evaluation          | ~ 1 μs                    | ~ 38 μs      | ~ 4 μs                 |
+Fibonacci               | ~ 1 μs                    | ~ 27 μs      | ~ 4 μs                 |
+List Processing         | ~ 30 μs                   | ~ 76 μs      | ~ 4 μs                 |
+Tail Call Optimization  | ~ 39 μs                   | ~ 114 μs     | ~ 47 μs                |
+Deep Record Updates     | ~ 1028 μs                 | ~ 272 μs     | ~ 7 μs                 |
+Ackermann               | ~ 20 μs                   | ~ 38 μs      | ~ 29 μs                |
+Church Numerals         | ~ 11792 μs                | ~ 598 μs     | ~ 3 μs                 |
+Prime Sieve             | ~ 234 μs                  | ~ 221 μs     | ~ 4 μs                 |
+Red-Black Tree          | ~ 62425 μs                | ~ 59784 μs   | ~ 16700 μs             |
+Polymorphism            | ~ 38940 μs                | ~ 8342 μs    | ~ 4 μs                 |
+State Monad             | ~ 74 μs                   | ~ 145 μs     | ~ 3 μs                 |
+Lazy Evaluation         | ~ 76344 μs                | ~ 24919 μs   | ~ 3 μs                 |
+Array Processing        | ~ 15 μs                   | ~ 14 μs      | ~ 3 μs                 |
+RowToList               | ~ 1 μs                    | ~ 27 μs      | ~ 2 μs                 |
+**Total Execution Time**| ~ 190.94 ms               | ~ 94.61 ms      | ~ 16.82 ms                |
 
 #### F#/C#
 

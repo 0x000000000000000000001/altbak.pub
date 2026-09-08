@@ -1,0 +1,10 @@
+Total: 12749056B
+ROUTINE ======================== gopurs/output/gopurs_runtime.RecordDict in gopurs_runtime/runtime.go
+  3475200B   3475200B (flat, cum) 27.26% of Total
+         .          .    194:func RecordDict(keys []string, vals []Value) Value {
+  3475200B   3475200B    195:	r := &RecordData{keys, vals}
+         .          .    196:	return Value{Type: TypeRecordData, UnsafePtr: unsafe.Pointer(r)}
+         .          .    197:}
+         .          .    198:
+         .          .    199:type RecordData0 struct{}
+         .          .    200:func RecordDict0() Value { return Value{Type: TypeRecord0, UnsafePtr: unsafe.Pointer(&RecordData0{})} }

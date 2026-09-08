@@ -1,0 +1,22 @@
+--- current-compiler
++++ native-compact-boxing-disabled
+@@ -30058,18 +30058,7 @@
+         var keysStr = joinWith(", ")(map38(function(k) {
+           return '"' + (k + '"');
+         })(keys4));
+-        var boxedRecord = (function() {
+-          var v32 = length(v2.value0);
+-          if (v32 === 0) {
+-            return "gopurs_runtime.RecordDict0()";
+-          }
+-          ;
+-          if (v32 <= 5) {
+-            return "gopurs_runtime.RecordDict" + (show13(v32) + ("(" + (keysStr + (", " + (valsStr + ")")))));
+-          }
+-          ;
+-          return "gopurs_runtime.RecordDict([]string{" + (keysStr + ("}, []gopurs_runtime.Value{" + (valsStr + "})")));
+-        })();
++        var boxedRecord = "gopurs_runtime.RecordDict([]string{" + (keysStr + ("}, []gopurs_runtime.Value{" + (valsStr + "})")));
+         return new GoRaw("func() gopurs_runtime.Value {\n				orig := " + (printGoExpr(v1) + ("\n				_ = orig\n				return " + (boxedRecord + "\n				}()"))));
+       }
+       ;

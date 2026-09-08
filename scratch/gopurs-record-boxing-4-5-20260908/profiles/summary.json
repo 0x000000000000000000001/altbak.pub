@@ -1,0 +1,20 @@
+{
+  "before": {
+    "iterations": 20.0,
+    "result": 1200.0,
+    "bytes": 11571216.0,
+    "allocs": 265201.0,
+    "gcs": 0.0,
+    "bytes_per_op": 578560.8,
+    "allocs_per_op": 13260.05
+  },
+  "after": {
+    "iterations": 20.0,
+    "result": 1200.0,
+    "bytes": 8096016.0,
+    "allocs": 120401.0,
+    "gcs": 0.0,
+    "bytes_per_op": 404800.8,
+    "allocs_per_op": 6020.05
+  }
+}

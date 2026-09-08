@@ -1,0 +1,6 @@
+goos: darwin
+goarch: arm64
+pkg: gopurs/output/purescript
+cpu: Apple M4 Pro
+BenchmarkStateMonad/n20-14         	   14719	     83433 ns/op	  404800 B/op	    6020 allocs/op
+PASS

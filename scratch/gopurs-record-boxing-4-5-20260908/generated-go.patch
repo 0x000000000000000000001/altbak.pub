@@ -1,0 +1,2641 @@
+--- before/purescript/Control_Alt.go
++++ after/purescript/Control_Alt.go
+@@ -84,7 +84,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Alt_Alt[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Functor0", "alt"}, []gopurs_runtime.Value{orig.Functor0, orig.alt})
++				return gopurs_runtime.RecordDict2("Functor0", "alt", orig.Functor0, orig.alt)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Alternative.go
++++ after/purescript/Control_Alternative.go
+@@ -108,7 +108,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Alternative_Alternative[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Applicative0", "Plus1"}, []gopurs_runtime.Value{orig.Applicative0, orig.Plus1})
++				return gopurs_runtime.RecordDict2("Applicative0", "Plus1", orig.Applicative0, orig.Plus1)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Applicative.go
++++ after/purescript/Control_Applicative.go
+@@ -326,7 +326,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Apply0", "pure"}, []gopurs_runtime.Value{orig.Apply0, orig.pure})
++				return gopurs_runtime.RecordDict2("Apply0", "pure", orig.Apply0, orig.pure)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Apply.go
++++ after/purescript/Control_Apply.go
+@@ -242,7 +242,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Functor0", "apply"}, []gopurs_runtime.Value{orig.Functor0, orig.apply})
++				return gopurs_runtime.RecordDict2("Functor0", "apply", orig.Functor0, orig.apply)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Biapplicative.go
++++ after/purescript/Control_Biapplicative.go
+@@ -84,7 +84,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Biapplicative_Biapplicative[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Biapply0", "bipure"}, []gopurs_runtime.Value{orig.Biapply0, orig.bipure})
++				return gopurs_runtime.RecordDict2("Biapply0", "bipure", orig.Biapply0, orig.bipure)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Biapply.go
++++ after/purescript/Control_Biapply.go
+@@ -133,7 +133,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Biapply_Biapply[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Bifunctor0", "biapply"}, []gopurs_runtime.Value{orig.Bifunctor0, orig.biapply})
++				return gopurs_runtime.RecordDict2("Bifunctor0", "biapply", orig.Bifunctor0, orig.biapply)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Bind.go
++++ after/purescript/Control_Bind.go
+@@ -804,7 +804,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Apply0", "bind"}, []gopurs_runtime.Value{orig.Apply0, orig.bind})
++				return gopurs_runtime.RecordDict2("Apply0", "bind", orig.Apply0, orig.bind)
+ 				}())
+ }
+ 
+@@ -818,7 +818,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Discard[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"discard"}, []gopurs_runtime.Value{orig.discard})
++				return gopurs_runtime.RecordDict1("discard", orig.discard)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Category.go
++++ after/purescript/Control_Category.go
+@@ -95,7 +95,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Category_Category[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Semigroupoid0", "identity"}, []gopurs_runtime.Value{orig.Semigroupoid0, orig.identity})
++				return gopurs_runtime.RecordDict2("Semigroupoid0", "identity", orig.Semigroupoid0, orig.identity)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Comonad.go
++++ after/purescript/Control_Comonad.go
+@@ -73,7 +73,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Comonad[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Extend0", "extract"}, []gopurs_runtime.Value{orig.Extend0, orig.extract})
++				return gopurs_runtime.RecordDict2("Extend0", "extract", orig.Extend0, orig.extract)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Comonad_Env_Class.go
++++ after/purescript/Control_Comonad_Env_Class.go
+@@ -241,7 +241,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Env_Class_ComonadAsk[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Comonad0", "ask"}, []gopurs_runtime.Value{orig.Comonad0, orig.ask})
++				return gopurs_runtime.RecordDict2("Comonad0", "ask", orig.Comonad0, orig.ask)
+ 				}())
+ }
+ 
+@@ -257,7 +257,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Env_Class_ComonadEnv[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"ComonadAsk0", "local"}, []gopurs_runtime.Value{orig.ComonadAsk0, orig.local})
++				return gopurs_runtime.RecordDict2("ComonadAsk0", "local", orig.ComonadAsk0, orig.local)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Comonad_Store_Class.go
++++ after/purescript/Control_Comonad_Store_Class.go
+@@ -177,7 +177,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Comonad0", "peek", "pos"}, []gopurs_runtime.Value{orig.Comonad0, orig.peek, orig.pos})
++				return gopurs_runtime.RecordDict3("Comonad0", "peek", "pos", orig.Comonad0, orig.peek, orig.pos)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Comonad_Traced_Class.go
++++ after/purescript/Control_Comonad_Traced_Class.go
+@@ -205,7 +205,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Traced_Class_ComonadTraced[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Comonad0", "track"}, []gopurs_runtime.Value{orig.Comonad0, orig.track})
++				return gopurs_runtime.RecordDict2("Comonad0", "track", orig.Comonad0, orig.track)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Comonad_Trans_Class.go
++++ after/purescript/Control_Comonad_Trans_Class.go
+@@ -77,7 +77,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Trans_Class_ComonadTrans[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"lower"}, []gopurs_runtime.Value{orig.lower})
++				return gopurs_runtime.RecordDict1("lower", orig.lower)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Extend.go
++++ after/purescript/Control_Extend.go
+@@ -148,7 +148,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Functor0", "extend"}, []gopurs_runtime.Value{orig.Functor0, orig.extend})
++				return gopurs_runtime.RecordDict2("Functor0", "extend", orig.Functor0, orig.extend)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Lazy.go
++++ after/purescript/Control_Lazy.go
+@@ -99,7 +99,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"defer"}, []gopurs_runtime.Value{orig.go__defer})
++				return gopurs_runtime.RecordDict1("defer", orig.go__defer)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Monad.go
++++ after/purescript/Control_Monad.go
+@@ -145,7 +145,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Monad[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Applicative0", "Bind1"}, []gopurs_runtime.Value{orig.Applicative0, orig.Bind1})
++				return gopurs_runtime.RecordDict2("Applicative0", "Bind1", orig.Applicative0, orig.Bind1)
+ 				}())
+ }
+ 
+--- before/purescript/Control_MonadPlus.go
++++ after/purescript/Control_MonadPlus.go
+@@ -75,7 +75,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_MonadPlus_MonadPlus[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Alternative1", "Monad0"}, []gopurs_runtime.Value{orig.Alternative1, orig.Monad0})
++				return gopurs_runtime.RecordDict2("Alternative1", "Monad0", orig.Alternative1, orig.Monad0)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Monad_Cont_Class.go
++++ after/purescript/Control_Monad_Cont_Class.go
+@@ -73,7 +73,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Cont_Class_MonadCont[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Monad0", "callCC"}, []gopurs_runtime.Value{orig.Monad0, orig.callCC})
++				return gopurs_runtime.RecordDict2("Monad0", "callCC", orig.Monad0, orig.callCC)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Monad_Error_Class.go
++++ after/purescript/Control_Monad_Error_Class.go
+@@ -313,7 +313,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Error_Class_MonadThrow[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Monad0", "throwError"}, []gopurs_runtime.Value{orig.Monad0, orig.throwError})
++				return gopurs_runtime.RecordDict2("Monad0", "throwError", orig.Monad0, orig.throwError)
+ 				}())
+ }
+ 
+@@ -329,7 +329,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Error_Class_MonadError[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"MonadThrow0", "catchError"}, []gopurs_runtime.Value{orig.MonadThrow0, orig.catchError})
++				return gopurs_runtime.RecordDict2("MonadThrow0", "catchError", orig.MonadThrow0, orig.catchError)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Monad_List_Trans.go
++++ after/purescript/Control_Monad_List_Trans.go
+@@ -1492,7 +1492,7 @@
+ 	b gopurs_runtime.Value
+ }{a_6, b_7}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"a", "b"}, []gopurs_runtime.Value{orig.a, orig.b})
++				return gopurs_runtime.RecordDict2("a", "b", orig.a, orig.b)
+ 				}())
+ })
+ }
+@@ -1579,7 +1579,7 @@
+ 	b gopurs_runtime.Value
+ }{a_6, b_7}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"a", "b"}, []gopurs_runtime.Value{orig.a, orig.b})
++				return gopurs_runtime.RecordDict2("a", "b", orig.a, orig.b)
+ 				}())
+ })
+ }
+@@ -6244,7 +6244,7 @@
+ 		out.V0 = func() gopurs_runtime.Value {
+ 				orig := in.V0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"a", "b"}, []gopurs_runtime.Value{orig.a, orig.b})
++				return gopurs_runtime.RecordDict2("a", "b", orig.a, orig.b)
+ 				}()
+ 	return out
+ }
+--- before/purescript/Control_Monad_Reader_Class.go
++++ after/purescript/Control_Monad_Reader_Class.go
+@@ -163,7 +163,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Reader_Class_MonadAsk[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Monad0", "ask"}, []gopurs_runtime.Value{orig.Monad0, orig.ask})
++				return gopurs_runtime.RecordDict2("Monad0", "ask", orig.Monad0, orig.ask)
+ 				}())
+ }
+ 
+@@ -179,7 +179,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"MonadAsk0", "local"}, []gopurs_runtime.Value{orig.MonadAsk0, orig.local})
++				return gopurs_runtime.RecordDict2("MonadAsk0", "local", orig.MonadAsk0, orig.local)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Monad_Rec_Class.go
++++ after/purescript/Control_Monad_Rec_Class.go
+@@ -685,7 +685,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Rec_Class_MonadRec[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Monad0", "tailRecM"}, []gopurs_runtime.Value{orig.Monad0, orig.tailRecM})
++				return gopurs_runtime.RecordDict2("Monad0", "tailRecM", orig.Monad0, orig.tailRecM)
+ 				}())
+ }
+ 
+@@ -712,7 +712,7 @@
+ 	b gopurs_runtime.Value
+ }{a_2, b_3}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"a", "b"}, []gopurs_runtime.Value{orig.a, orig.b})
++				return gopurs_runtime.RecordDict2("a", "b", orig.a, orig.b)
+ 				}())
+ }
+ 
+@@ -736,7 +736,7 @@
+ 	c gopurs_runtime.Value
+ }{a_2, b_3, c_4}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"a", "b", "c"}, []gopurs_runtime.Value{orig.a, orig.b, orig.c})
++				return gopurs_runtime.RecordDict3("a", "b", "c", orig.a, orig.b, orig.c)
+ 				}())
+ }
+ 
+@@ -1060,7 +1060,7 @@
+ 		out.V0 = func() gopurs_runtime.Value {
+ 				orig := in.V0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"a", "b", "c"}, []gopurs_runtime.Value{orig.a, orig.b, orig.c})
++				return gopurs_runtime.RecordDict3("a", "b", "c", orig.a, orig.b, orig.c)
+ 				}()
+ 	return out
+ }
+@@ -1097,7 +1097,7 @@
+ 		out.V0 = func() gopurs_runtime.Value {
+ 				orig := in.V0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"a", "b"}, []gopurs_runtime.Value{orig.a, orig.b})
++				return gopurs_runtime.RecordDict2("a", "b", orig.a, orig.b)
+ 				}()
+ 	return out
+ }
+--- before/purescript/Control_Monad_ST_Class.go
++++ after/purescript/Control_Monad_ST_Class.go
+@@ -95,7 +95,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_ST_Class_MonadST[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Monad0", "liftST"}, []gopurs_runtime.Value{orig.Monad0, orig.liftST})
++				return gopurs_runtime.RecordDict2("Monad0", "liftST", orig.Monad0, orig.liftST)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Monad_ST_Internal.go
++++ after/purescript/Control_Monad_ST_Internal.go
+@@ -225,7 +225,7 @@
+ 	value gopurs_runtime.Value
+ }{s_prime__2_0, s_prime__2_0}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"state", "value"}, []gopurs_runtime.Value{orig.state, orig.value})
++				return gopurs_runtime.RecordDict2("state", "value", orig.state, orig.value)
+ 				}()
+ }))
+ }
+--- before/purescript/Control_Monad_State_Class.go
++++ after/purescript/Control_Monad_State_Class.go
+@@ -128,7 +128,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_State_Class_MonadState[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Monad0", "state"}, []gopurs_runtime.Value{orig.Monad0, orig.state})
++				return gopurs_runtime.RecordDict2("Monad0", "state", orig.Monad0, orig.state)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Monad_Trans_Class.go
++++ after/purescript/Control_Monad_Trans_Class.go
+@@ -66,7 +66,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Trans_Class_MonadTrans[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"lift"}, []gopurs_runtime.Value{orig.lift})
++				return gopurs_runtime.RecordDict1("lift", orig.lift)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Monad_Writer_Class.go
++++ after/purescript/Control_Monad_Writer_Class.go
+@@ -178,7 +178,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Writer_Class_MonadTell[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Monad1", "Semigroup0", "tell"}, []gopurs_runtime.Value{orig.Monad1, orig.Semigroup0, orig.tell})
++				return gopurs_runtime.RecordDict3("Monad1", "Semigroup0", "tell", orig.Monad1, orig.Semigroup0, orig.tell)
+ 				}())
+ }
+ 
+@@ -198,7 +198,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Writer_Class_MonadWriter[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"MonadTell1", "Monoid0", "listen", "pass"}, []gopurs_runtime.Value{orig.MonadTell1, orig.Monoid0, orig.listen, orig.pass})
++				return gopurs_runtime.RecordDict4("MonadTell1", "Monoid0", "listen", "pass", orig.MonadTell1, orig.Monoid0, orig.listen, orig.pass)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Parallel_Class.go
++++ after/purescript/Control_Parallel_Class.go
+@@ -263,7 +263,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Apply0", "Apply1", "parallel", "sequential"}, []gopurs_runtime.Value{orig.Apply0, orig.Apply1, orig.parallel, orig.sequential})
++				return gopurs_runtime.RecordDict4("Apply0", "Apply1", "parallel", "sequential", orig.Apply0, orig.Apply1, orig.parallel, orig.sequential)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Plus.go
++++ after/purescript/Control_Plus.go
+@@ -98,7 +98,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Plus_Plus[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Alt0", "empty"}, []gopurs_runtime.Value{orig.Alt0, orig.empty})
++				return gopurs_runtime.RecordDict2("Alt0", "empty", orig.Alt0, orig.empty)
+ 				}())
+ }
+ 
+--- before/purescript/Control_Semigroupoid.go
++++ after/purescript/Control_Semigroupoid.go
+@@ -1089,7 +1089,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Control_Semigroupoid_Semigroupoid[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"compose"}, []gopurs_runtime.Value{orig.compose})
++				return gopurs_runtime.RecordDict1("compose", orig.compose)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Array.go
++++ after/purescript/Data_Array.go
+@@ -344,7 +344,7 @@
+ 					return unboxed
+ 				}())
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"after", "before"}, []gopurs_runtime.Value{gopurs_runtime.Array(orig.after), gopurs_runtime.Array(orig.before)})
++				return gopurs_runtime.RecordDict2("after", "before", gopurs_runtime.Array(orig.after), gopurs_runtime.Array(orig.before))
+ 				}()
+ })
+ 	})
+@@ -450,7 +450,7 @@
+ 					return unboxed
+ 				}())
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"no", "yes"}, []gopurs_runtime.Value{gopurs_runtime.Array(orig.no), gopurs_runtime.Array(orig.yes)})
++				return gopurs_runtime.RecordDict2("no", "yes", gopurs_runtime.Array(orig.no), gopurs_runtime.Array(orig.yes))
+ 				}()
+ })
+ 	})
+@@ -1010,7 +1010,7 @@
+ 					return unboxed
+ 				}())
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"init", "rest"}, []gopurs_runtime.Value{gopurs_runtime.Array(orig.go__init), gopurs_runtime.Array(orig.rest)})
++				return gopurs_runtime.RecordDict2("init", "rest", gopurs_runtime.Array(orig.go__init), gopurs_runtime.Array(orig.rest))
+ 				}()
+ })
+ 	})
+@@ -1531,7 +1531,7 @@
+ 	go__init bool
+ }{mempty_2_1, true}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{orig.acc, gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", orig.acc, gopurs_runtime.Bool(orig.go__init))
+ 				}()
+ _ = res_go_foldlArray4
+ arr_go_foldlArray4 := (*[]gopurs_runtime.Value)(arr_val_foldlArray4.UnsafePtr)
+@@ -1563,7 +1563,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := __t2
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{orig.acc, gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", orig.acc, gopurs_runtime.Bool(orig.go__init))
+ 				}()
+ }), res_go_foldlArray4, v_foldlArray4)
+ }
+@@ -2148,7 +2148,7 @@
+ 	go__init bool
+ }{mempty_2_1, true}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{orig.acc, gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", orig.acc, gopurs_runtime.Bool(orig.go__init))
+ 				}()
+ _ = res_go_foldlArray4
+ arr_go_foldlArray4 := (*[]gopurs_runtime.Value)(arr_val_foldlArray4.UnsafePtr)
+@@ -2180,7 +2180,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := __t2
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{orig.acc, gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", orig.acc, gopurs_runtime.Bool(orig.go__init))
+ 				}()
+ }), res_go_foldlArray4, v_foldlArray4)
+ }
+@@ -2329,7 +2329,7 @@
+ 					return unboxed
+ 				}(), (__local_var_1_0).V0}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"init", "last"}, []gopurs_runtime.Value{gopurs_runtime.Array(orig.go__init), orig.last})
++				return gopurs_runtime.RecordDict2("init", "last", gopurs_runtime.Array(orig.go__init), orig.last)
+ 				}(), true}
+ 				if _v.V1 {
+ 					return gopurs_runtime.Box(&Constructor_Data_Maybe_Just[gopurs_runtime.Value]{V0: _v.V0})
+@@ -3061,7 +3061,7 @@
+ 	b gopurs_runtime.Value
+ }{b_5, gopurs_runtime.Int(int64(0))}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"a", "b"}, []gopurs_runtime.Value{orig.a, orig.b})
++				return gopurs_runtime.RecordDict2("a", "b", orig.a, orig.b)
+ 				}())
+ })
+ }
+@@ -4272,7 +4272,7 @@
+ 		out.V0 = func() gopurs_runtime.Value {
+ 				orig := in.V0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"a", "b"}, []gopurs_runtime.Value{orig.a, gopurs_runtime.Int(orig.b)})
++				return gopurs_runtime.RecordDict2("a", "b", orig.a, gopurs_runtime.Int(orig.b))
+ 				}()
+ 	return out
+ }
+@@ -4286,7 +4286,7 @@
+ 		out.V0 = func() gopurs_runtime.Value {
+ 				orig := in.V0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"head", "tail"}, []gopurs_runtime.Value{orig.head, gopurs_runtime.Array(orig.tail)})
++				return gopurs_runtime.RecordDict2("head", "tail", orig.head, gopurs_runtime.Array(orig.tail))
+ 				}()
+ 	return out
+ }
+--- before/purescript/Data_Array_NonEmpty.go
++++ after/purescript/Data_Array_NonEmpty.go
+@@ -319,7 +319,7 @@
+ 					return unboxed
+ 				}())
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"after", "before"}, []gopurs_runtime.Value{gopurs_runtime.Array(orig.after), gopurs_runtime.Array(orig.before)})
++				return gopurs_runtime.RecordDict2("after", "before", gopurs_runtime.Array(orig.after), gopurs_runtime.Array(orig.before))
+ 				}()
+ })
+ 	})
+@@ -880,7 +880,7 @@
+ 					return unboxed
+ 				}())
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"head", "tail"}, []gopurs_runtime.Value{orig.head, gopurs_runtime.Array(orig.tail)})
++				return gopurs_runtime.RecordDict2("head", "tail", orig.head, gopurs_runtime.Array(orig.tail))
+ 				}()
+ })
+ 	})
+@@ -916,7 +916,7 @@
+ 					return unboxed
+ 				}())
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"init", "last"}, []gopurs_runtime.Value{gopurs_runtime.Array(orig.go__init), orig.last})
++				return gopurs_runtime.RecordDict2("init", "last", gopurs_runtime.Array(orig.go__init), orig.last)
+ 				}()
+ })
+ 	})
+@@ -1385,7 +1385,7 @@
+ 					return unboxed
+ 				}())
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"no", "yes"}, []gopurs_runtime.Value{gopurs_runtime.Array(orig.no), gopurs_runtime.Array(orig.yes)})
++				return gopurs_runtime.RecordDict2("no", "yes", gopurs_runtime.Array(orig.no), gopurs_runtime.Array(orig.yes))
+ 				}()
+ })
+ 	})
+@@ -1421,7 +1421,7 @@
+ 					return unboxed
+ 				}())
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"init", "rest"}, []gopurs_runtime.Value{gopurs_runtime.Array(orig.go__init), gopurs_runtime.Array(orig.rest)})
++				return gopurs_runtime.RecordDict2("init", "rest", gopurs_runtime.Array(orig.go__init), gopurs_runtime.Array(orig.rest))
+ 				}()
+ })
+ 	})
+@@ -2845,7 +2845,7 @@
+ 					return unboxed
+ 				}())
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"head", "tail"}, []gopurs_runtime.Value{orig.head, gopurs_runtime.Array(orig.tail)})
++				return gopurs_runtime.RecordDict2("head", "tail", orig.head, gopurs_runtime.Array(orig.tail))
+ 				}()
+ _ = __local_var_1_0
+ return (&Constructor_Data_NonEmpty_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(__local_var_1_0, "head"), gopurs_runtime.RecordGet(__local_var_1_0, "tail")})
+@@ -4031,7 +4031,7 @@
+ 		out.V0 = func() gopurs_runtime.Value {
+ 				orig := in.V0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"head", "tail"}, []gopurs_runtime.Value{orig.head, gopurs_runtime.Array(orig.tail)})
++				return gopurs_runtime.RecordDict2("head", "tail", orig.head, gopurs_runtime.Array(orig.tail))
+ 				}()
+ 	return out
+ }
+--- before/purescript/Data_Array_ST_Iterator.go
++++ after/purescript/Data_Array_ST_Iterator.go
+@@ -186,7 +186,7 @@
+ 	value gopurs_runtime.Value
+ }{s_prime__4_3, s_prime__4_3}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"state", "value"}, []gopurs_runtime.Value{orig.state, orig.value})
++				return gopurs_runtime.RecordDict2("state", "value", orig.state, orig.value)
+ 				}()
+ }), __local_var_1_0), gopurs_runtime.Value{})
+ _ = _dollar___unused_3_2
+--- before/purescript/Data_Bifoldable.go
++++ after/purescript/Data_Bifoldable.go
+@@ -454,7 +454,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Bifoldable_Bifoldable[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"bifoldMap", "bifoldl", "bifoldr"}, []gopurs_runtime.Value{orig.bifoldMap, orig.bifoldl, orig.bifoldr})
++				return gopurs_runtime.RecordDict3("bifoldMap", "bifoldl", "bifoldr", orig.bifoldMap, orig.bifoldl, orig.bifoldr)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Bifunctor.go
++++ after/purescript/Data_Bifunctor.go
+@@ -186,7 +186,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Bifunctor_Bifunctor[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"bimap"}, []gopurs_runtime.Value{orig.bimap})
++				return gopurs_runtime.RecordDict1("bimap", orig.bimap)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Bitraversable.go
++++ after/purescript/Data_Bitraversable.go
+@@ -366,7 +366,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Bitraversable_Bitraversable[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Bifoldable1", "Bifunctor0", "bisequence", "bitraverse"}, []gopurs_runtime.Value{orig.Bifoldable1, orig.Bifunctor0, orig.bisequence, orig.bitraverse})
++				return gopurs_runtime.RecordDict4("Bifoldable1", "Bifunctor0", "bisequence", "bitraverse", orig.Bifoldable1, orig.Bifunctor0, orig.bisequence, orig.bitraverse)
+ 				}())
+ }
+ 
+--- before/purescript/Data_BooleanAlgebra.go
++++ after/purescript/Data_BooleanAlgebra.go
+@@ -188,7 +188,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_BooleanAlgebra_BooleanAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"HeytingAlgebraRecord0"}, []gopurs_runtime.Value{orig.HeytingAlgebraRecord0})
++				return gopurs_runtime.RecordDict1("HeytingAlgebraRecord0", orig.HeytingAlgebraRecord0)
+ 				}())
+ }
+ 
+@@ -202,7 +202,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_BooleanAlgebra_BooleanAlgebra[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"HeytingAlgebra0"}, []gopurs_runtime.Value{orig.HeytingAlgebra0})
++				return gopurs_runtime.RecordDict1("HeytingAlgebra0", orig.HeytingAlgebra0)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Bounded.go
++++ after/purescript/Data_Bounded.go
+@@ -134,7 +134,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}()
+ }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+ return func() gopurs_runtime.Value {
+@@ -142,7 +142,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}()
+ })}))}
+ 	})
+@@ -337,7 +337,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"OrdRecord0", "bottomRecord", "topRecord"}, []gopurs_runtime.Value{orig.OrdRecord0, orig.bottomRecord, orig.topRecord})
++				return gopurs_runtime.RecordDict3("OrdRecord0", "bottomRecord", "topRecord", orig.OrdRecord0, orig.bottomRecord, orig.topRecord)
+ 				}())
+ }
+ 
+@@ -355,7 +355,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_Bounded[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Ord0", "bottom", "top"}, []gopurs_runtime.Value{orig.Ord0, orig.bottom, orig.top})
++				return gopurs_runtime.RecordDict3("Ord0", "bottom", "top", orig.Ord0, orig.bottom, orig.top)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Bounded_Generic.go
++++ after/purescript/Data_Bounded_Generic.go
+@@ -244,7 +244,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_Generic_GenericTop[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"genericTop'"}, []gopurs_runtime.Value{orig.genericTop_prime_})
++				return gopurs_runtime.RecordDict1("genericTop'", orig.genericTop_prime_)
+ 				}())
+ }
+ 
+@@ -258,7 +258,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_Generic_GenericBottom[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"genericBottom'"}, []gopurs_runtime.Value{orig.genericBottom_prime_})
++				return gopurs_runtime.RecordDict1("genericBottom'", orig.genericBottom_prime_)
+ 				}())
+ }
+ 
+--- before/purescript/Data_CommutativeRing.go
++++ after/purescript/Data_CommutativeRing.go
+@@ -207,7 +207,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_CommutativeRing_CommutativeRingRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"RingRecord0"}, []gopurs_runtime.Value{orig.RingRecord0})
++				return gopurs_runtime.RecordDict1("RingRecord0", orig.RingRecord0)
+ 				}())
+ }
+ 
+@@ -221,7 +221,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_CommutativeRing_CommutativeRing[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Ring0"}, []gopurs_runtime.Value{orig.Ring0})
++				return gopurs_runtime.RecordDict1("Ring0", orig.Ring0)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Decidable.go
++++ after/purescript/Data_Decidable.go
+@@ -228,7 +228,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Decidable_Decidable[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Decide0", "Divisible1", "lose"}, []gopurs_runtime.Value{orig.Decide0, orig.Divisible1, orig.lose})
++				return gopurs_runtime.RecordDict3("Decide0", "Divisible1", "lose", orig.Decide0, orig.Divisible1, orig.lose)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Decide.go
++++ after/purescript/Data_Decide.go
+@@ -311,7 +311,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Decide_Decide[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Divide0", "choose"}, []gopurs_runtime.Value{orig.Divide0, orig.choose})
++				return gopurs_runtime.RecordDict2("Divide0", "choose", orig.Divide0, orig.choose)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Distributive.go
++++ after/purescript/Data_Distributive.go
+@@ -211,7 +211,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Functor0", "collect", "distribute"}, []gopurs_runtime.Value{orig.Functor0, orig.collect, orig.distribute})
++				return gopurs_runtime.RecordDict3("Functor0", "collect", "distribute", orig.Functor0, orig.collect, orig.distribute)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Divide.go
++++ after/purescript/Data_Divide.go
+@@ -193,7 +193,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Divide_Divide[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Contravariant0", "divide"}, []gopurs_runtime.Value{orig.Contravariant0, orig.divide})
++				return gopurs_runtime.RecordDict2("Contravariant0", "divide", orig.Contravariant0, orig.divide)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Divisible.go
++++ after/purescript/Data_Divisible.go
+@@ -123,7 +123,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Divisible_Divisible[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Divide0", "conquer"}, []gopurs_runtime.Value{orig.Divide0, orig.conquer})
++				return gopurs_runtime.RecordDict2("Divide0", "conquer", orig.Divide0, orig.conquer)
+ 				}())
+ }
+ 
+--- before/purescript/Data_DivisionRing.go
++++ after/purescript/Data_DivisionRing.go
+@@ -108,7 +108,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_DivisionRing_DivisionRing[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Ring0", "recip"}, []gopurs_runtime.Value{orig.Ring0, orig.recip})
++				return gopurs_runtime.RecordDict2("Ring0", "recip", orig.Ring0, orig.recip)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Either_Inject.go
++++ after/purescript/Data_Either_Inject.go
+@@ -142,7 +142,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Either_Inject_Inject[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"inj", "prj"}, []gopurs_runtime.Value{orig.inj, orig.prj})
++				return gopurs_runtime.RecordDict2("inj", "prj", orig.inj, orig.prj)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Enum.go
++++ after/purescript/Data_Enum.go
+@@ -1254,7 +1254,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Enum_Enum[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Ord0", "pred", "succ"}, []gopurs_runtime.Value{orig.Ord0, orig.pred, orig.succ})
++				return gopurs_runtime.RecordDict3("Ord0", "pred", "succ", orig.Ord0, orig.pred, orig.succ)
+ 				}())
+ }
+ 
+@@ -1362,7 +1362,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Enum_BoundedEnum[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Bounded0", "Enum1", "cardinality", "fromEnum", "toEnum"}, []gopurs_runtime.Value{orig.Bounded0, orig.Enum1, orig.cardinality, orig.fromEnum, orig.toEnum})
++				return gopurs_runtime.RecordDict5("Bounded0", "Enum1", "cardinality", "fromEnum", "toEnum", orig.Bounded0, orig.Enum1, orig.cardinality, orig.fromEnum, orig.toEnum)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Enum_Generic.go
++++ after/purescript/Data_Enum_Generic.go
+@@ -402,7 +402,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Enum_Generic_GenericEnum[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"genericPred'", "genericSucc'"}, []gopurs_runtime.Value{orig.genericPred_prime_, orig.genericSucc_prime_})
++				return gopurs_runtime.RecordDict2("genericPred'", "genericSucc'", orig.genericPred_prime_, orig.genericSucc_prime_)
+ 				}())
+ }
+ 
+@@ -420,7 +420,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Enum_Generic_GenericBoundedEnum[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"genericCardinality'", "genericFromEnum'", "genericToEnum'"}, []gopurs_runtime.Value{orig.genericCardinality_prime_, orig.genericFromEnum_prime_, orig.genericToEnum_prime_})
++				return gopurs_runtime.RecordDict3("genericCardinality'", "genericFromEnum'", "genericToEnum'", orig.genericCardinality_prime_, orig.genericFromEnum_prime_, orig.genericToEnum_prime_)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Eq.go
++++ after/purescript/Data_Eq.go
+@@ -530,7 +530,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_EqRecord[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"eqRecord"}, []gopurs_runtime.Value{orig.eqRecord})
++				return gopurs_runtime.RecordDict1("eqRecord", orig.eqRecord)
+ 				}())
+ }
+ 
+@@ -544,7 +544,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"eq"}, []gopurs_runtime.Value{orig.eq})
++				return gopurs_runtime.RecordDict1("eq", orig.eq)
+ 				}())
+ }
+ 
+@@ -558,7 +558,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq1[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"eq1"}, []gopurs_runtime.Value{orig.eq1})
++				return gopurs_runtime.RecordDict1("eq1", orig.eq1)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Eq_Generic.go
++++ after/purescript/Data_Eq_Generic.go
+@@ -143,7 +143,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Generic_GenericEq[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"genericEq'"}, []gopurs_runtime.Value{orig.genericEq_prime_})
++				return gopurs_runtime.RecordDict1("genericEq'", orig.genericEq_prime_)
+ 				}())
+ }
+ 
+--- before/purescript/Data_EuclideanRing.go
++++ after/purescript/Data_EuclideanRing.go
+@@ -190,7 +190,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"CommutativeRing0", "degree", "div", "mod"}, []gopurs_runtime.Value{orig.CommutativeRing0, orig.degree, orig.div, orig.mod})
++				return gopurs_runtime.RecordDict4("CommutativeRing0", "degree", "div", "mod", orig.CommutativeRing0, orig.degree, orig.div, orig.mod)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Field.go
++++ after/purescript/Data_Field.go
+@@ -73,7 +73,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Field_Field[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"DivisionRing1", "EuclideanRing0"}, []gopurs_runtime.Value{orig.DivisionRing1, orig.EuclideanRing0})
++				return gopurs_runtime.RecordDict2("DivisionRing1", "EuclideanRing0", orig.DivisionRing1, orig.EuclideanRing0)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Foldable.go
++++ after/purescript/Data_Foldable.go
+@@ -1493,7 +1493,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"foldMap", "foldl", "foldr"}, []gopurs_runtime.Value{orig.foldMap, orig.foldl, orig.foldr})
++				return gopurs_runtime.RecordDict3("foldMap", "foldl", "foldr", orig.foldMap, orig.foldl, orig.foldr)
+ 				}())
+ }
+ 
+@@ -1585,7 +1585,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := __t3
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"elem", "pos"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(orig.elem)}, gopurs_runtime.Int(orig.pos)})
++				return gopurs_runtime.RecordDict2("elem", "pos", gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(orig.elem)}, gopurs_runtime.Int(orig.pos))
+ 				}()
+ }), func() gopurs_runtime.Value {
+ 				orig := struct{
+@@ -1599,7 +1599,7 @@
+ 				return gopurs_runtime.Box(&Constructor_Data_Maybe_Nothing[gopurs_runtime.Value]{})
+ 			}()), int64(0)}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"elem", "pos"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(orig.elem)}, gopurs_runtime.Int(orig.pos)})
++				return gopurs_runtime.RecordDict2("elem", "pos", gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(orig.elem)}, gopurs_runtime.Int(orig.pos))
+ 				}())
+ _ = __local_var_2_0
+ return func() struct{V0 gopurs_runtime.Value; V1 bool} {
+@@ -1770,7 +1770,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := __t3
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"elem", "pos"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(orig.elem)}, gopurs_runtime.Int(orig.pos)})
++				return gopurs_runtime.RecordDict2("elem", "pos", gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(orig.elem)}, gopurs_runtime.Int(orig.pos))
+ 				}()
+ }), func() gopurs_runtime.Value {
+ 				orig := struct{
+@@ -1784,7 +1784,7 @@
+ 				return gopurs_runtime.Box(&Constructor_Data_Maybe_Nothing[gopurs_runtime.Value]{})
+ 			}()), int64(0)}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"elem", "pos"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(orig.elem)}, gopurs_runtime.Int(orig.pos)})
++				return gopurs_runtime.RecordDict2("elem", "pos", gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(orig.elem)}, gopurs_runtime.Int(orig.pos))
+ 				}())
+ _ = __local_var_2_0
+ return func() struct{V0 gopurs_runtime.Value; V1 bool} {
+@@ -1836,7 +1836,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := __t2
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{orig.acc, gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", orig.acc, gopurs_runtime.Bool(orig.go__init))
+ 				}()
+ }), func() gopurs_runtime.Value {
+ 				orig := struct{
+@@ -1844,7 +1844,7 @@
+ 	go__init bool
+ }{mempty_3_1, true}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{orig.acc, gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", orig.acc, gopurs_runtime.Bool(orig.go__init))
+ 				}(), xs_5), "acc")
+ })
+ }
+@@ -1905,7 +1905,7 @@
+ b_3_loop = func() gopurs_runtime.Value {
+ 				orig := __t1
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{gopurs_runtime.Str(orig.acc), gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Str(orig.acc), gopurs_runtime.Bool(orig.go__init))
+ 				}()
+ v_4_loop = (v_4).V1
+ continue go__go_2_0_0
+@@ -1933,7 +1933,7 @@
+ 	go__init bool
+ }{"", true}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{gopurs_runtime.Str(orig.acc), gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Str(orig.acc), gopurs_runtime.Bool(orig.go__init))
+ 				}(), Rebox_Data_Foldable_128126966_849153993(Rebox_Data_Foldable_849153993_128126966(gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](__eta_norm_0_1)))), "acc").StrVal())
+ }
+ }
+--- before/purescript/Data_FoldableWithIndex.go
++++ after/purescript/Data_FoldableWithIndex.go
+@@ -1251,7 +1251,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_FoldableWithIndex_FoldableWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex"}, []gopurs_runtime.Value{orig.Foldable0, orig.foldMapWithIndex, orig.foldlWithIndex, orig.foldrWithIndex})
++				return gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", orig.Foldable0, orig.foldMapWithIndex, orig.foldlWithIndex, orig.foldrWithIndex)
+ 				}())
+ }
+ 
+@@ -2079,7 +2079,7 @@
+ 		out.V0 = func() gopurs_runtime.Value {
+ 				orig := in.V0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"index", "value"}, []gopurs_runtime.Value{orig.index, orig.value})
++				return gopurs_runtime.RecordDict2("index", "value", orig.index, orig.value)
+ 				}()
+ 	return out
+ }
+--- before/purescript/Data_Functor.go
++++ after/purescript/Data_Functor.go
+@@ -612,7 +612,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"map"}, []gopurs_runtime.Value{orig.go__map})
++				return gopurs_runtime.RecordDict1("map", orig.go__map)
+ 				}())
+ }
+ 
+--- before/purescript/Data_FunctorWithIndex.go
++++ after/purescript/Data_FunctorWithIndex.go
+@@ -549,7 +549,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Functor0", "mapWithIndex"}, []gopurs_runtime.Value{orig.Functor0, orig.mapWithIndex})
++				return gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", orig.Functor0, orig.mapWithIndex)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Functor_Contravariant.go
++++ after/purescript/Data_Functor_Contravariant.go
+@@ -110,7 +110,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Contravariant_Contravariant[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"cmap"}, []gopurs_runtime.Value{orig.cmap})
++				return gopurs_runtime.RecordDict1("cmap", orig.cmap)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Functor_Coproduct_Inject.go
++++ after/purescript/Data_Functor_Coproduct_Inject.go
+@@ -150,7 +150,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Coproduct_Inject_Inject[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"inj", "prj"}, []gopurs_runtime.Value{orig.inj, orig.prj})
++				return gopurs_runtime.RecordDict2("inj", "prj", orig.inj, orig.prj)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Functor_Invariant.go
++++ after/purescript/Data_Functor_Invariant.go
+@@ -176,7 +176,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Invariant_Invariant[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"imap"}, []gopurs_runtime.Value{orig.imap})
++				return gopurs_runtime.RecordDict1("imap", orig.imap)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Generic_Rep.go
++++ after/purescript/Data_Generic_Rep.go
+@@ -268,7 +268,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"from", "to"}, []gopurs_runtime.Value{orig.from, orig.to})
++				return gopurs_runtime.RecordDict2("from", "to", orig.from, orig.to)
+ 				}())
+ }
+ 
+--- before/purescript/Data_HeytingAlgebra.go
++++ after/purescript/Data_HeytingAlgebra.go
+@@ -193,7 +193,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}()
+ }), gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+ return func() gopurs_runtime.Value {
+@@ -201,7 +201,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}()
+ }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+ return func() gopurs_runtime.Value {
+@@ -209,7 +209,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}()
+ }), gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+ return func() gopurs_runtime.Value {
+@@ -217,7 +217,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}()
+ }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+ return func() gopurs_runtime.Value {
+@@ -225,7 +225,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}()
+ }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+ return func() gopurs_runtime.Value {
+@@ -233,7 +233,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}()
+ })}))}
+ 	})
+--- before/purescript/Data_Interval_Duration_Iso.go
++++ after/purescript/Data_Interval_Duration_Iso.go
+@@ -1998,7 +1998,7 @@
+ 	asMap *Constructor_Data_Map_Internal_Node[uint32, float64]
+ }{Call_local_Data_Interval_Duration_Iso_go__952457181_2_5_5((*Constructor_Data_List_Types_Cons[*Constructor_Data_Tuple_Tuple[uint32, float64]])(nil), Rebox_Data_Interval_Duration_Iso_849153993_2442833393(gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Apply(Get_Data_Map_Internal_toUnfoldable__994050345(), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(Rebox_Data_Interval_Duration_Iso_261879545_2487766124(v_0))})))), v_0}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"asList", "asMap"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Rebox_Data_Interval_Duration_Iso_2442833393_849153993(orig.asList))}, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(Rebox_Data_Interval_Duration_Iso_261879545_2487766124(orig.asMap))}})
++				return gopurs_runtime.RecordDict2("asList", "asMap", gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Rebox_Data_Interval_Duration_Iso_2442833393_849153993(orig.asList))}, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(Rebox_Data_Interval_Duration_Iso_261879545_2487766124(orig.asMap))})
+ 				}()))
+ }
+ 
+--- before/purescript/Data_List.go
++++ after/purescript/Data_List.go
+@@ -138,7 +138,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_List_span(v_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](v1_1_box))
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"init", "rest"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.go__init)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.rest)}})
++				return gopurs_runtime.RecordDict2("init", "rest", gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.go__init)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.rest)})
+ 				}()
+ })
+ 	})
+@@ -524,7 +524,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_List_partition(p_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](xs_1_box))
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"no", "yes"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.no)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.yes)}})
++				return gopurs_runtime.RecordDict2("no", "yes", gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.no)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.yes)})
+ 				}()
+ })
+ 	})
+@@ -2417,7 +2417,7 @@
+ 	last gopurs_runtime.Value
+ }{Call_local_Data_List_go__go_3_5_16((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(nil), (__local_var_2_4).V0.revInit), (__local_var_2_4).V0.last}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"init", "last"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.go__init)}, orig.last})
++				return gopurs_runtime.RecordDict2("init", "last", gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.go__init)}, orig.last)
+ 				}(), true}
+ 				if _v.V1 {
+ 					return gopurs_runtime.Box(&Constructor_Data_Maybe_Just[gopurs_runtime.Value]{V0: _v.V0})
+@@ -2918,7 +2918,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := __t0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"no", "yes"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.no)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.yes)}})
++				return gopurs_runtime.RecordDict2("no", "yes", gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.no)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.yes)})
+ 				}()
+ }), func() gopurs_runtime.Value {
+ 				orig := struct{
+@@ -2926,7 +2926,7 @@
+ 	yes *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]
+ }{(*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(nil), (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(nil)}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"no", "yes"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.no)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.yes)}})
++				return gopurs_runtime.RecordDict2("no", "yes", gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.no)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.yes)})
+ 				}(), gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(xs_1)})
+ 					_ = orig
+ 					clone := struct{
+@@ -6011,7 +6011,7 @@
+ 		out.V0 = func() gopurs_runtime.Value {
+ 				orig := in.V0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"head", "tail"}, []gopurs_runtime.Value{orig.head, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.tail)}})
++				return gopurs_runtime.RecordDict2("head", "tail", orig.head, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.tail)})
+ 				}()
+ 	return out
+ }
+@@ -6089,7 +6089,7 @@
+ 		out.V0 = func() gopurs_runtime.Value {
+ 				orig := in.V0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"last", "revInit"}, []gopurs_runtime.Value{orig.last, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.revInit)}})
++				return gopurs_runtime.RecordDict2("last", "revInit", orig.last, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.revInit)})
+ 				}()
+ 	return out
+ }
+@@ -6125,7 +6125,7 @@
+ 		out.V0 = func() gopurs_runtime.Value {
+ 				orig := in.V0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"a", "b"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.a)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.b)}})
++				return gopurs_runtime.RecordDict2("a", "b", gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.a)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.b)})
+ 				}()
+ 	return out
+ }
+--- before/purescript/Data_List_Internal.go
++++ after/purescript/Data_List_Internal.go
+@@ -160,7 +160,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_List_Internal_insertAndLookupBy(comp_0_box, k_1_box, orig_2_box)
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"found", "result"}, []gopurs_runtime.Value{gopurs_runtime.Bool(orig.found), orig.result})
++				return gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(orig.found), orig.result)
+ 				}()
+ })
+ 	})
+@@ -640,7 +640,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_local_Data_List_Internal_down_4_8_1(gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](v_5_loop_val), v1_6_loop_val)
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"found", "result"}, []gopurs_runtime.Value{gopurs_runtime.Bool(orig.found), orig.result})
++				return gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(orig.found), orig.result)
+ 				}()
+ })
+ })
+--- before/purescript/Data_List_Lazy.go
++++ after/purescript/Data_List_Lazy.go
+@@ -194,7 +194,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_List_Lazy_span(p_0_box, xs_1_box)
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"init", "rest"}, []gopurs_runtime.Value{orig.go__init, orig.rest})
++				return gopurs_runtime.RecordDict2("init", "rest", orig.go__init, orig.rest)
+ 				}()
+ })
+ 	})
+@@ -308,7 +308,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_List_Lazy_partition(f_0_box, xs_1_box)
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"no", "yes"}, []gopurs_runtime.Value{orig.no, orig.yes})
++				return gopurs_runtime.RecordDict2("no", "yes", orig.no, orig.yes)
+ 				}()
+ })
+ 	})
+@@ -2698,7 +2698,7 @@
+ b_3_loop = func() gopurs_runtime.Value {
+ 				orig := __t2
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"no", "yes"}, []gopurs_runtime.Value{orig.no, orig.yes})
++				return gopurs_runtime.RecordDict2("no", "yes", orig.no, orig.yes)
+ 				}()
+ xs_4_loop = (v_5_1).V1
+ continue go__go_2_0_12
+@@ -2782,7 +2782,7 @@
+ 	yes gopurs_runtime.Value
+ }{Get_Data_List_Lazy_Types_nil(), Get_Data_List_Lazy_Types_nil()}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"no", "yes"}, []gopurs_runtime.Value{orig.no, orig.yes})
++				return gopurs_runtime.RecordDict2("no", "yes", orig.no, orig.yes)
+ 				}(), Call_local_Data_List_Lazy_go__go_3_4_13(Get_Data_List_Lazy_Types_nil(), xs_1))
+ 					_ = orig
+ 					clone := struct{
+@@ -5377,7 +5377,7 @@
+ 		out.V0 = func() gopurs_runtime.Value {
+ 				orig := in.V0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"head", "tail"}, []gopurs_runtime.Value{orig.head, orig.tail})
++				return gopurs_runtime.RecordDict2("head", "tail", orig.head, orig.tail)
+ 				}()
+ 	return out
+ }
+@@ -5391,7 +5391,7 @@
+ 		out.V0 = func() gopurs_runtime.Value {
+ 				orig := in.V0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"a", "b"}, []gopurs_runtime.Value{orig.a, orig.b})
++				return gopurs_runtime.RecordDict2("a", "b", orig.a, orig.b)
+ 				}()
+ 	return out
+ }
+--- before/purescript/Data_List_Lazy_NonEmpty.go
++++ after/purescript/Data_List_Lazy_NonEmpty.go
+@@ -14,7 +14,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_List_Lazy_NonEmpty_uncons(v_0_box)
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"head", "tail"}, []gopurs_runtime.Value{orig.head, orig.tail})
++				return gopurs_runtime.RecordDict2("head", "tail", orig.head, orig.tail)
+ 				}()
+ })
+ 	})
+--- before/purescript/Data_List_Lazy_Types.go
++++ after/purescript/Data_List_Lazy_Types.go
+@@ -928,7 +928,7 @@
+ return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer((&Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]{1, __local_var_11_7, __local_var_9_5}))}
+ }))}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "val"}, []gopurs_runtime.Value{orig.acc, orig.val})
++				return gopurs_runtime.RecordDict2("acc", "val", orig.acc, orig.val)
+ 				}()
+ xs_6_loop = (v_7_3).V1
+ continue go__go_4_2_15
+@@ -1009,7 +1009,7 @@
+ 	val gopurs_runtime.Value
+ }{Get_Data_List_Lazy_Types_nil(), Get_Data_List_Lazy_Types_nil()}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "val"}, []gopurs_runtime.Value{orig.acc, orig.val})
++				return gopurs_runtime.RecordDict2("acc", "val", orig.acc, orig.val)
+ 				}(), Call_local_Data_List_Lazy_Types_go__go_5_10_16(Get_Data_List_Lazy_Types_nil(), (v_2_0).V1)), "val")
+ _ = __local_var_5_9
+ __t14 = gopurs_runtime.Apply(Get_Data_Lazy_go__defer(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+@@ -1088,7 +1088,7 @@
+ return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer((&Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]{1, __local_var_10_5, __local_var_9_4}))}
+ }))}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "val"}, []gopurs_runtime.Value{orig.acc, orig.val})
++				return gopurs_runtime.RecordDict2("acc", "val", orig.acc, orig.val)
+ 				}()
+ xs_6_loop = (v_7_2).V1
+ continue go__go_4_1_17
+@@ -1168,7 +1168,7 @@
+ 	val gopurs_runtime.Value
+ }{Get_Data_List_Lazy_Types_nil(), Get_Data_List_Lazy_Types_nil()}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "val"}, []gopurs_runtime.Value{orig.acc, orig.val})
++				return gopurs_runtime.RecordDict2("acc", "val", orig.acc, orig.val)
+ 				}(), Call_local_Data_List_Lazy_Types_go__go_5_7_18(Get_Data_List_Lazy_Types_nil(), __local_var_2_0)), "val")}))}
+ }))
+ })}))}
+--- before/purescript/Data_List_NonEmpty.go
++++ after/purescript/Data_List_NonEmpty.go
+@@ -107,7 +107,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_List_NonEmpty_unsnoc(gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], gopurs_runtime.Value]](v_0_box))
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"init", "last"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.go__init)}, orig.last})
++				return gopurs_runtime.RecordDict2("init", "last", gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.go__init)}, orig.last)
+ 				}()
+ })
+ 	})
+@@ -144,7 +144,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_List_NonEmpty_uncons(gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], gopurs_runtime.Value]](v_0_box))
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"head", "tail"}, []gopurs_runtime.Value{orig.head, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.tail)}})
++				return gopurs_runtime.RecordDict2("head", "tail", orig.head, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.tail)})
+ 				}()
+ })
+ 	})
+@@ -339,7 +339,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_List_NonEmpty_partition(x_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], gopurs_runtime.Value]](v_1_box))
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"no", "yes"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.no)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.yes)}})
++				return gopurs_runtime.RecordDict2("no", "yes", gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.no)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.yes)})
+ 				}()
+ })
+ 	})
+@@ -354,7 +354,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_List_NonEmpty_span(x_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], gopurs_runtime.Value]](v_1_box))
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"init", "rest"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.go__init)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.rest)}})
++				return gopurs_runtime.RecordDict2("init", "rest", gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.go__init)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.rest)})
+ 				}()
+ })
+ 	})
+@@ -1475,7 +1475,7 @@
+ 					return clone
+ 				}()
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"no", "yes"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.no)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.yes)}})
++				return gopurs_runtime.RecordDict2("no", "yes", gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.no)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.yes)})
+ 				}()
+ 					_ = orig
+ 					clone := struct{
+@@ -1516,7 +1516,7 @@
+ 					return clone
+ 				}()
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"init", "rest"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.go__init)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.rest)}})
++				return gopurs_runtime.RecordDict2("init", "rest", gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.go__init)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.rest)})
+ 				}()
+ 					_ = orig
+ 					clone := struct{
+--- before/purescript/Data_List_Types.go
++++ after/purescript/Data_List_Types.go
+@@ -2070,7 +2070,7 @@
+ 	val *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]
+ }{(&Constructor_Data_List_Types_Cons[gopurs_runtime.Value]{1, (v_4).V0, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.RecordGet(b_3, "acc"))}), (&Constructor_Data_List_Types_Cons[gopurs_runtime.Value]{1, gopurs_runtime.Apply(f_0, gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(Rebox_Data_List_Types_3123684004_1293498952((&Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], gopurs_runtime.Value]{1, (v_4).V0, gopurs_runtime.RecordGet(b_3, "acc")})))}), gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.RecordGet(b_3, "val"))})}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "val"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.acc)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.val)}})
++				return gopurs_runtime.RecordDict2("acc", "val", gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.acc)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.val)})
+ 				}()
+ v_4_loop = (v_4).V1
+ continue go__go_2_0_33
+@@ -2142,7 +2142,7 @@
+ 	val *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]
+ }{(*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(nil), (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(nil)}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "val"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.acc)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.val)}})
++				return gopurs_runtime.RecordDict2("acc", "val", gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.acc)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.val)})
+ 				}(), Call_local_Data_List_Types_go__go_3_2_34((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(nil), gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]]((*Constructor_Data_NonEmpty_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1))), "val")})))}
+ })})))}
+ 	})
+@@ -2198,7 +2198,7 @@
+ 	val *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]
+ }{(&Constructor_Data_List_Types_Cons[gopurs_runtime.Value]{1, (v_4).V0, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.RecordGet(b_3, "acc"))}), (&Constructor_Data_List_Types_Cons[gopurs_runtime.Value]{1, gopurs_runtime.Apply(v_0, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((&Constructor_Data_List_Types_Cons[gopurs_runtime.Value]{1, (v_4).V0, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.RecordGet(b_3, "acc"))}))}), gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.RecordGet(b_3, "val"))})}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "val"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.acc)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.val)}})
++				return gopurs_runtime.RecordDict2("acc", "val", gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.acc)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.val)})
+ 				}()
+ v_4_loop = (v_4).V1
+ continue go__go_2_2_35
+@@ -2270,7 +2270,7 @@
+ 	val *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]
+ }{(*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(nil), (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(nil)}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "val"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.acc)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.val)}})
++				return gopurs_runtime.RecordDict2("acc", "val", gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.acc)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(orig.val)})
+ 				}(), Call_local_Data_List_Types_go__go_3_4_36((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(nil), (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v1_1.UnsafePtr).V1)), "val"))})
+ goto end_branch_6
+ } else {
+@@ -4091,7 +4091,7 @@
+ b_4_loop = func() gopurs_runtime.Value {
+ 				orig := __t2
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{gopurs_runtime.Str(orig.acc), gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Str(orig.acc), gopurs_runtime.Bool(orig.go__init))
+ 				}()
+ v_5_loop = (v_5).V1
+ continue go__go_3_1_21
+@@ -4119,7 +4119,7 @@
+ 	go__init bool
+ }{"", true}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{gopurs_runtime.Str(orig.acc), gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Str(orig.acc), gopurs_runtime.Bool(orig.go__init))
+ 				}(), gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Apply(Call_Data_List_Types_listMap(show_1_0), gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](v_2))}))), "acc").StrVal())) + (" : Nil)")
+ }
+ end_branch_5:
+@@ -4194,7 +4194,7 @@
+ b_4_loop = func() gopurs_runtime.Value {
+ 				orig := __t4
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{gopurs_runtime.Str(orig.acc), gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Str(orig.acc), gopurs_runtime.Bool(orig.go__init))
+ 				}()
+ v_5_loop = (v_5).V1
+ continue go__go_3_3_22
+@@ -4222,7 +4222,7 @@
+ 	go__init bool
+ }{"", true}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{gopurs_runtime.Str(orig.acc), gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Str(orig.acc), gopurs_runtime.Bool(orig.go__init))
+ 				}(), gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Apply(Call_Data_List_Types_listMap(show_1_1), gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](v_2))}))), "acc").StrVal())) + (" : Nil)")
+ }
+ end_branch_7:
+--- before/purescript/Data_Map_Internal.go
++++ after/purescript/Data_Map_Internal.go
+@@ -6761,7 +6761,7 @@
+ 		out.V0 = func() gopurs_runtime.Value {
+ 				orig := in.V0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"key", "value"}, []gopurs_runtime.Value{orig.key, orig.value})
++				return gopurs_runtime.RecordDict2("key", "value", orig.key, orig.value)
+ 				}()
+ 	return out
+ }
+--- before/purescript/Data_Monoid.go
++++ after/purescript/Data_Monoid.go
+@@ -99,7 +99,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}()
+ })}))}
+ 	})
+@@ -279,7 +279,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_MonoidRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"SemigroupRecord0", "memptyRecord"}, []gopurs_runtime.Value{orig.SemigroupRecord0, orig.memptyRecord})
++				return gopurs_runtime.RecordDict2("SemigroupRecord0", "memptyRecord", orig.SemigroupRecord0, orig.memptyRecord)
+ 				}())
+ }
+ 
+@@ -295,7 +295,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Semigroup0", "mempty"}, []gopurs_runtime.Value{orig.Semigroup0, orig.mempty})
++				return gopurs_runtime.RecordDict2("Semigroup0", "mempty", orig.Semigroup0, orig.mempty)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Monoid_Generic.go
++++ after/purescript/Data_Monoid_Generic.go
+@@ -119,7 +119,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Generic_GenericMonoid[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"genericMempty'"}, []gopurs_runtime.Value{orig.genericMempty_prime_})
++				return gopurs_runtime.RecordDict1("genericMempty'", orig.genericMempty_prime_)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Newtype.go
++++ after/purescript/Data_Newtype.go
+@@ -533,7 +533,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Coercible0"}, []gopurs_runtime.Value{orig.Coercible0})
++				return gopurs_runtime.RecordDict1("Coercible0", orig.Coercible0)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Ord.go
++++ after/purescript/Data_Ord.go
+@@ -1063,7 +1063,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_OrdRecord[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"EqRecord0", "compareRecord"}, []gopurs_runtime.Value{orig.EqRecord0, orig.compareRecord})
++				return gopurs_runtime.RecordDict2("EqRecord0", "compareRecord", orig.EqRecord0, orig.compareRecord)
+ 				}())
+ }
+ 
+@@ -1079,7 +1079,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Eq0", "compare"}, []gopurs_runtime.Value{orig.Eq0, orig.compare})
++				return gopurs_runtime.RecordDict2("Eq0", "compare", orig.Eq0, orig.compare)
+ 				}())
+ }
+ 
+@@ -1095,7 +1095,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord1[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Eq10", "compare1"}, []gopurs_runtime.Value{orig.Eq10, orig.compare1})
++				return gopurs_runtime.RecordDict2("Eq10", "compare1", orig.Eq10, orig.compare1)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Ord_Generic.go
++++ after/purescript/Data_Ord_Generic.go
+@@ -143,7 +143,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Generic_GenericOrd[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"genericCompare'"}, []gopurs_runtime.Value{orig.genericCompare_prime_})
++				return gopurs_runtime.RecordDict1("genericCompare'", orig.genericCompare_prime_)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Profunctor.go
++++ after/purescript/Data_Profunctor.go
+@@ -168,7 +168,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Profunctor[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"dimap"}, []gopurs_runtime.Value{orig.dimap})
++				return gopurs_runtime.RecordDict1("dimap", orig.dimap)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Profunctor_Choice.go
++++ after/purescript/Data_Profunctor_Choice.go
+@@ -162,7 +162,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Choice_Choice[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Profunctor0", "left", "right"}, []gopurs_runtime.Value{orig.Profunctor0, orig.left, orig.right})
++				return gopurs_runtime.RecordDict3("Profunctor0", "left", "right", orig.Profunctor0, orig.left, orig.right)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Profunctor_Closed.go
++++ after/purescript/Data_Profunctor_Closed.go
+@@ -84,7 +84,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Closed_Closed[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Profunctor0", "closed"}, []gopurs_runtime.Value{orig.Profunctor0, orig.closed})
++				return gopurs_runtime.RecordDict2("Profunctor0", "closed", orig.Profunctor0, orig.closed)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Profunctor_Cochoice.go
++++ after/purescript/Data_Profunctor_Cochoice.go
+@@ -91,7 +91,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Cochoice_Cochoice[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Profunctor0", "unleft", "unright"}, []gopurs_runtime.Value{orig.Profunctor0, orig.unleft, orig.unright})
++				return gopurs_runtime.RecordDict3("Profunctor0", "unleft", "unright", orig.Profunctor0, orig.unleft, orig.unright)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Profunctor_Costrong.go
++++ after/purescript/Data_Profunctor_Costrong.go
+@@ -91,7 +91,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Costrong_Costrong[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Profunctor0", "unfirst", "unsecond"}, []gopurs_runtime.Value{orig.Profunctor0, orig.unfirst, orig.unsecond})
++				return gopurs_runtime.RecordDict3("Profunctor0", "unfirst", "unsecond", orig.Profunctor0, orig.unfirst, orig.unsecond)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Profunctor_Strong.go
++++ after/purescript/Data_Profunctor_Strong.go
+@@ -129,7 +129,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Strong_Strong[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Profunctor0", "first", "second"}, []gopurs_runtime.Value{orig.Profunctor0, orig.first, orig.second})
++				return gopurs_runtime.RecordDict3("Profunctor0", "first", "second", orig.Profunctor0, orig.first, orig.second)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Reflectable.go
++++ after/purescript/Data_Reflectable.go
+@@ -57,7 +57,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}().IntVal)), UnsafePtr: nil}
+ 	})
+ 	return cache_Data_Reflectable_reifiableString
+@@ -72,7 +72,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}().IntVal)), UnsafePtr: nil}
+ 	})
+ 	return cache_Data_Reflectable_reifiableOrdering
+@@ -87,7 +87,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}().IntVal)), UnsafePtr: nil}
+ 	})
+ 	return cache_Data_Reflectable_reifiableInt
+@@ -102,7 +102,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}().IntVal)), UnsafePtr: nil}
+ 	})
+ 	return cache_Data_Reflectable_reifiableBoolean
+@@ -175,7 +175,7 @@
+ return uint32(func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}().IntVal)
+ }
+ 
+@@ -189,7 +189,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Reflectable_Reflectable[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"reflectType"}, []gopurs_runtime.Value{orig.reflectType})
++				return gopurs_runtime.RecordDict1("reflectType", orig.reflectType)
+ 				}())
+ }
+ 
+@@ -209,7 +209,7 @@
+ return s_1
+ })}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"reflectType"}, []gopurs_runtime.Value{orig.reflectType})
++				return gopurs_runtime.RecordDict1("reflectType", orig.reflectType)
+ 				}(), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})
+ }
+ 
+--- before/purescript/Data_Ring.go
++++ after/purescript/Data_Ring.go
+@@ -167,7 +167,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}()
+ })}))}
+ 	})
+@@ -333,7 +333,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_RingRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"SemiringRecord0", "subRecord"}, []gopurs_runtime.Value{orig.SemiringRecord0, orig.subRecord})
++				return gopurs_runtime.RecordDict2("SemiringRecord0", "subRecord", orig.SemiringRecord0, orig.subRecord)
+ 				}())
+ }
+ 
+@@ -349,7 +349,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Semiring0", "sub"}, []gopurs_runtime.Value{orig.Semiring0, orig.sub})
++				return gopurs_runtime.RecordDict2("Semiring0", "sub", orig.Semiring0, orig.sub)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Ring_Generic.go
++++ after/purescript/Data_Ring_Generic.go
+@@ -121,7 +121,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Generic_GenericRing[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"genericSub'"}, []gopurs_runtime.Value{orig.genericSub_prime_})
++				return gopurs_runtime.RecordDict1("genericSub'", orig.genericSub_prime_)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Semigroup.go
++++ after/purescript/Data_Semigroup.go
+@@ -89,7 +89,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}()
+ })}))}
+ 	})
+@@ -261,7 +261,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_SemigroupRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"appendRecord"}, []gopurs_runtime.Value{orig.appendRecord})
++				return gopurs_runtime.RecordDict1("appendRecord", orig.appendRecord)
+ 				}())
+ }
+ 
+@@ -275,7 +275,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"append"}, []gopurs_runtime.Value{orig.go__append})
++				return gopurs_runtime.RecordDict1("append", orig.go__append)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Semigroup_Foldable.go
++++ after/purescript/Data_Semigroup_Foldable.go
+@@ -504,7 +504,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Foldable0", "foldMap1", "foldl1", "foldr1"}, []gopurs_runtime.Value{orig.Foldable0, orig.foldMap1, orig.foldl1, orig.foldr1})
++				return gopurs_runtime.RecordDict4("Foldable0", "foldMap1", "foldl1", "foldr1", orig.Foldable0, orig.foldMap1, orig.foldl1, orig.foldr1)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Semigroup_Generic.go
++++ after/purescript/Data_Semigroup_Generic.go
+@@ -132,7 +132,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Generic_GenericSemigroup[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"genericAppend'"}, []gopurs_runtime.Value{orig.genericAppend_prime_})
++				return gopurs_runtime.RecordDict1("genericAppend'", orig.genericAppend_prime_)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Semigroup_Traversable.go
++++ after/purescript/Data_Semigroup_Traversable.go
+@@ -227,7 +227,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Traversable_Traversable1[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Foldable10", "Traversable1", "sequence1", "traverse1"}, []gopurs_runtime.Value{orig.Foldable10, orig.Traversable1, orig.sequence1, orig.traverse1})
++				return gopurs_runtime.RecordDict4("Foldable10", "Traversable1", "sequence1", "traverse1", orig.Foldable10, orig.Traversable1, orig.sequence1, orig.traverse1)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Semiring.go
++++ after/purescript/Data_Semiring.go
+@@ -129,7 +129,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}()
+ }), gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+ return func() gopurs_runtime.Value {
+@@ -137,7 +137,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}()
+ }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+ return func() gopurs_runtime.Value {
+@@ -145,7 +145,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}()
+ }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+ return func() gopurs_runtime.Value {
+@@ -153,7 +153,7 @@
+ 
+ }{}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{}, []gopurs_runtime.Value{})
++				return gopurs_runtime.RecordDict0()
+ 				}()
+ })}))}
+ 	})
+@@ -407,7 +407,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"addRecord", "mulRecord", "oneRecord", "zeroRecord"}, []gopurs_runtime.Value{orig.addRecord, orig.mulRecord, orig.oneRecord, orig.zeroRecord})
++				return gopurs_runtime.RecordDict4("addRecord", "mulRecord", "oneRecord", "zeroRecord", orig.addRecord, orig.mulRecord, orig.oneRecord, orig.zeroRecord)
+ 				}())
+ }
+ 
+@@ -427,7 +427,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"add", "mul", "one", "zero"}, []gopurs_runtime.Value{orig.add, orig.mul, orig.one, orig.zero})
++				return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", orig.add, orig.mul, orig.one, orig.zero)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Semiring_Generic.go
++++ after/purescript/Data_Semiring_Generic.go
+@@ -210,7 +210,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Generic_GenericSemiring[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"genericAdd'", "genericMul'", "genericOne'", "genericZero'"}, []gopurs_runtime.Value{orig.genericAdd_prime_, orig.genericMul_prime_, orig.genericOne_prime_, orig.genericZero_prime_})
++				return gopurs_runtime.RecordDict4("genericAdd'", "genericMul'", "genericOne'", "genericZero'", orig.genericAdd_prime_, orig.genericMul_prime_, orig.genericOne_prime_, orig.genericZero_prime_)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Show.go
++++ after/purescript/Data_Show.go
+@@ -361,7 +361,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Show_ShowRecordFields[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"showRecordFields"}, []gopurs_runtime.Value{orig.showRecordFields})
++				return gopurs_runtime.RecordDict1("showRecordFields", orig.showRecordFields)
+ 				}())
+ }
+ 
+@@ -375,7 +375,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"show"}, []gopurs_runtime.Value{orig.show})
++				return gopurs_runtime.RecordDict1("show", orig.show)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Show_Generic.go
++++ after/purescript/Data_Show_Generic.go
+@@ -209,7 +209,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Generic_GenericShowArgs[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"genericShowArgs"}, []gopurs_runtime.Value{orig.genericShowArgs})
++				return gopurs_runtime.RecordDict1("genericShowArgs", orig.genericShowArgs)
+ 				}())
+ }
+ 
+@@ -223,7 +223,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Generic_GenericShow[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"genericShow'"}, []gopurs_runtime.Value{orig.genericShow_prime_})
++				return gopurs_runtime.RecordDict1("genericShow'", orig.genericShow_prime_)
+ 				}())
+ }
+ 
+--- before/purescript/Data_String_CodePoints.go
++++ after/purescript/Data_String_CodePoints.go
+@@ -279,7 +279,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_String_CodePoints_splitAt(i_0_box.IntVal, s_1_box.StrVal())
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"after", "before"}, []gopurs_runtime.Value{gopurs_runtime.Str(orig.after), gopurs_runtime.Str(orig.before)})
++				return gopurs_runtime.RecordDict2("after", "before", gopurs_runtime.Str(orig.after), gopurs_runtime.Str(orig.before))
+ 				}()
+ })
+ 	})
+@@ -1310,7 +1310,7 @@
+ 		out.V0 = func() gopurs_runtime.Value {
+ 				orig := in.V0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"head", "tail"}, []gopurs_runtime.Value{gopurs_runtime.Int(orig.head), gopurs_runtime.Str(orig.tail)})
++				return gopurs_runtime.RecordDict2("head", "tail", gopurs_runtime.Int(orig.head), gopurs_runtime.Str(orig.tail))
+ 				}()
+ 	return out
+ }
+--- before/purescript/Data_String_CodeUnits.go
++++ after/purescript/Data_String_CodeUnits.go
+@@ -538,7 +538,7 @@
+ 		out.V0 = func() gopurs_runtime.Value {
+ 				orig := in.V0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"head", "tail"}, []gopurs_runtime.Value{gopurs_runtime.Str(orig.head), gopurs_runtime.Str(orig.tail)})
++				return gopurs_runtime.RecordDict2("head", "tail", gopurs_runtime.Str(orig.head), gopurs_runtime.Str(orig.tail))
+ 				}()
+ 	return out
+ }
+--- before/purescript/Data_String_NonEmpty_CodePoints.go
++++ after/purescript/Data_String_NonEmpty_CodePoints.go
+@@ -176,7 +176,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_String_NonEmpty_CodePoints_splitAt(i_0_box.IntVal, nes_1_box.StrVal())
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"after", "before"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Rebox_Data_String_NonEmpty_CodePoints_742090555_3094389156(orig.after))}, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Rebox_Data_String_NonEmpty_CodePoints_742090555_3094389156(orig.before))}})
++				return gopurs_runtime.RecordDict2("after", "before", gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Rebox_Data_String_NonEmpty_CodePoints_742090555_3094389156(orig.after))}, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Rebox_Data_String_NonEmpty_CodePoints_742090555_3094389156(orig.before))})
+ 				}()
+ })
+ 	})
+@@ -240,7 +240,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_String_NonEmpty_CodePoints_uncons(nes_0_box.StrVal())
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"head", "tail"}, []gopurs_runtime.Value{gopurs_runtime.Int(orig.head), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Rebox_Data_String_NonEmpty_CodePoints_742090555_3094389156(orig.tail))}})
++				return gopurs_runtime.RecordDict2("head", "tail", gopurs_runtime.Int(orig.head), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Rebox_Data_String_NonEmpty_CodePoints_742090555_3094389156(orig.tail))})
+ 				}()
+ })
+ 	})
+--- before/purescript/Data_String_NonEmpty_CodeUnits.go
++++ after/purescript/Data_String_NonEmpty_CodeUnits.go
+@@ -174,7 +174,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_String_NonEmpty_CodeUnits_splitAt(i_0_box.IntVal, nes_1_box.StrVal())
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"after", "before"}, []gopurs_runtime.Value{gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Rebox_Data_String_NonEmpty_CodeUnits_742090555_3094389156(orig.after))}, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Rebox_Data_String_NonEmpty_CodeUnits_742090555_3094389156(orig.before))}})
++				return gopurs_runtime.RecordDict2("after", "before", gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Rebox_Data_String_NonEmpty_CodeUnits_742090555_3094389156(orig.after))}, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Rebox_Data_String_NonEmpty_CodeUnits_742090555_3094389156(orig.before))})
+ 				}()
+ })
+ 	})
+@@ -272,7 +272,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_String_NonEmpty_CodeUnits_uncons(nes_0_box.StrVal())
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"head", "tail"}, []gopurs_runtime.Value{gopurs_runtime.Str(orig.head), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Rebox_Data_String_NonEmpty_CodeUnits_742090555_3094389156(orig.tail))}})
++				return gopurs_runtime.RecordDict2("head", "tail", gopurs_runtime.Str(orig.head), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Rebox_Data_String_NonEmpty_CodeUnits_742090555_3094389156(orig.tail))})
+ 				}()
+ })
+ 	})
+--- before/purescript/Data_String_NonEmpty_Internal.go
++++ after/purescript/Data_String_NonEmpty_Internal.go
+@@ -489,7 +489,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_String_NonEmpty_Internal_MakeNonEmpty[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"nes"}, []gopurs_runtime.Value{orig.nes})
++				return gopurs_runtime.RecordDict1("nes", orig.nes)
+ 				}())
+ }
+ 
+@@ -660,7 +660,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := __t1
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{orig.acc, gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", orig.acc, gopurs_runtime.Bool(orig.go__init))
+ 				}()
+ }), func() gopurs_runtime.Value {
+ 				orig := struct{
+@@ -668,7 +668,7 @@
+ 	go__init bool
+ }{gopurs_runtime.Str(""), true}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{orig.acc, gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", orig.acc, gopurs_runtime.Bool(orig.go__init))
+ 				}(), x_3), "acc")
+ })
+ }
+@@ -706,7 +706,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := __t0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{orig.acc, gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", orig.acc, gopurs_runtime.Bool(orig.go__init))
+ 				}()
+ }), func() gopurs_runtime.Value {
+ 				orig := struct{
+@@ -714,7 +714,7 @@
+ 	go__init bool
+ }{gopurs_runtime.Str(""), true}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{orig.acc, gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", orig.acc, gopurs_runtime.Bool(orig.go__init))
+ 				}(), x_2), "acc").StrVal()
+ }
+ 
+@@ -751,7 +751,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := __t1
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{orig.acc, gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", orig.acc, gopurs_runtime.Bool(orig.go__init))
+ 				}()
+ }), func() gopurs_runtime.Value {
+ 				orig := struct{
+@@ -759,7 +759,7 @@
+ 	go__init bool
+ }{gopurs_runtime.Str(""), true}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"acc", "init"}, []gopurs_runtime.Value{orig.acc, gopurs_runtime.Bool(orig.go__init)})
++				return gopurs_runtime.RecordDict2("acc", "init", orig.acc, gopurs_runtime.Bool(orig.go__init))
+ 				}(), x_3), "acc")
+ })
+ }
+--- before/purescript/Data_Symbol.go
++++ after/purescript/Data_Symbol.go
+@@ -77,7 +77,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Symbol_IsSymbol[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"reflectSymbol"}, []gopurs_runtime.Value{orig.reflectSymbol})
++				return gopurs_runtime.RecordDict1("reflectSymbol", orig.reflectSymbol)
+ 				}())
+ }
+ 
+@@ -95,7 +95,7 @@
+ return gopurs_runtime.Str(s_0)
+ })}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"reflectSymbol"}, []gopurs_runtime.Value{orig.reflectSymbol})
++				return gopurs_runtime.RecordDict1("reflectSymbol", orig.reflectSymbol)
+ 				}(), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})
+ }
+ 
+--- before/purescript/Data_Time_Duration.go
++++ after/purescript/Data_Time_Duration.go
+@@ -604,7 +604,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"fromDuration", "toDuration"}, []gopurs_runtime.Value{orig.fromDuration, orig.toDuration})
++				return gopurs_runtime.RecordDict2("fromDuration", "toDuration", orig.fromDuration, orig.toDuration)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Traversable.go
++++ after/purescript/Data_Traversable.go
+@@ -688,7 +688,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_Traversable_mapAccumR(gopurs_runtime.CoerceToStruct[Constructor_Data_Traversable_Traversable[gopurs_runtime.Value]](dictTraversable_0_box), f_1_box, s0_2_box, xs_3_box)
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ })
+ 	})
+@@ -714,7 +714,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_Traversable_mapAccumL(gopurs_runtime.CoerceToStruct[Constructor_Data_Traversable_Traversable[gopurs_runtime.Value]](dictTraversable_0_box), f_1_box, s0_2_box, xs_3_box)
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ })
+ 	})
+@@ -783,7 +783,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Traversable_Traversable[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Foldable1", "Functor0", "sequence", "traverse"}, []gopurs_runtime.Value{orig.Foldable1, orig.Functor0, orig.sequence, orig.traverse})
++				return gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", orig.Foldable1, orig.Functor0, orig.sequence, orig.traverse)
+ 				}())
+ }
+ 
+@@ -1202,7 +1202,7 @@
+ 					return clone
+ 				}()
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ }), xs_3, s0_2)
+ 					_ = orig
+@@ -1235,7 +1235,7 @@
+ 	value gopurs_runtime.Value
+ }{b_prime__6_0, b_prime__6_0}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ }), b0_2, xs_3).value
+ }
+@@ -1273,7 +1273,7 @@
+ 					return clone
+ 				}()
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ }), xs_3, s0_2)
+ 					_ = orig
+@@ -1306,7 +1306,7 @@
+ 	value gopurs_runtime.Value
+ }{b_prime__6_0, b_prime__6_0}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ }), b0_2, xs_3).value
+ }
+--- before/purescript/Data_TraversableWithIndex.go
++++ after/purescript/Data_TraversableWithIndex.go
+@@ -509,7 +509,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_TraversableWithIndex_mapAccumRWithIndex(gopurs_runtime.CoerceToStruct[Constructor_Data_TraversableWithIndex_TraversableWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]](dictTraversableWithIndex_0_box), f_1_box, s0_2_box, xs_3_box)
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ })
+ 	})
+@@ -535,7 +535,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Data_TraversableWithIndex_mapAccumLWithIndex(gopurs_runtime.CoerceToStruct[Constructor_Data_TraversableWithIndex_TraversableWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]](dictTraversableWithIndex_0_box), f_1_box, s0_2_box, xs_3_box)
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ })
+ 	})
+@@ -604,7 +604,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_TraversableWithIndex_TraversableWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"FoldableWithIndex1", "FunctorWithIndex0", "Traversable2", "traverseWithIndex"}, []gopurs_runtime.Value{orig.FoldableWithIndex1, orig.FunctorWithIndex0, orig.Traversable2, orig.traverseWithIndex})
++				return gopurs_runtime.RecordDict4("FoldableWithIndex1", "FunctorWithIndex0", "Traversable2", "traverseWithIndex", orig.FoldableWithIndex1, orig.FunctorWithIndex0, orig.Traversable2, orig.traverseWithIndex)
+ 				}())
+ }
+ 
+@@ -970,7 +970,7 @@
+ 					return clone
+ 				}()
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ }), xs_3, s0_2)
+ 					_ = orig
+@@ -1003,7 +1003,7 @@
+ 	value gopurs_runtime.Value
+ }{b_prime__7_0, b_prime__7_0}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ }), b0_2, xs_3).value
+ }
+@@ -1041,7 +1041,7 @@
+ 					return clone
+ 				}()
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ }), xs_3, s0_2)
+ 					_ = orig
+@@ -1074,7 +1074,7 @@
+ 	value gopurs_runtime.Value
+ }{b_prime__7_0, b_prime__7_0}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ }), b0_2, xs_3).value
+ }
+--- before/purescript/Data_Traversable_Accum_Internal.go
++++ after/purescript/Data_Traversable_Accum_Internal.go
+@@ -77,7 +77,7 @@
+ 	value gopurs_runtime.Value
+ }{v_3_0.accum, gopurs_runtime.Apply(f_0, v_3_0.value)}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ })}))}
+ 	})
+@@ -111,7 +111,7 @@
+ 	value gopurs_runtime.Value
+ }{v_3_0.accum, gopurs_runtime.Apply(f_0, v_3_0.value)}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ })}))}
+ 	})
+@@ -163,7 +163,7 @@
+ 	value gopurs_runtime.Value
+ }{v1_4_1.accum, gopurs_runtime.Apply(v1_4_1.value, v_3_0.value)}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ })}))}
+ 	})
+@@ -215,7 +215,7 @@
+ 	value gopurs_runtime.Value
+ }{v1_4_1.accum, gopurs_runtime.Apply(v_3_0.value, v1_4_1.value)}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ })}))}
+ 	})
+@@ -235,7 +235,7 @@
+ 	value gopurs_runtime.Value
+ }{s_1, a_0}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ })}))}
+ 	})
+@@ -255,7 +255,7 @@
+ 	value gopurs_runtime.Value
+ }{s_1, a_0}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"accum", "value"}, []gopurs_runtime.Value{orig.accum, orig.value})
++				return gopurs_runtime.RecordDict2("accum", "value", orig.accum, orig.value)
+ 				}()
+ })}))}
+ 	})
+--- before/purescript/Data_Unfoldable.go
++++ after/purescript/Data_Unfoldable.go
+@@ -207,7 +207,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Unfoldable_Unfoldable[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Unfoldable10", "unfoldr"}, []gopurs_runtime.Value{orig.Unfoldable10, orig.unfoldr})
++				return gopurs_runtime.RecordDict2("Unfoldable10", "unfoldr", orig.Unfoldable10, orig.unfoldr)
+ 				}())
+ }
+ 
+--- before/purescript/Data_Unfoldable1.go
++++ after/purescript/Data_Unfoldable1.go
+@@ -163,7 +163,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Data_Unfoldable1_Unfoldable1[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"unfoldr1"}, []gopurs_runtime.Value{orig.unfoldr1})
++				return gopurs_runtime.RecordDict1("unfoldr1", orig.unfoldr1)
+ 				}())
+ }
+ 
+--- before/purescript/Effect_Aff.go
++++ after/purescript/Effect_Aff.go
+@@ -67,7 +67,7 @@
+ 					return clone
+ 				}())
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"isSuspended", "join", "kill", "onComplete", "run"}, []gopurs_runtime.Value{orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run})
++				return gopurs_runtime.RecordDict5("isSuspended", "join", "kill", "onComplete", "run", orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run)
+ 				}()
+ })
+ 	})
+@@ -534,7 +534,7 @@
+ 					return clone
+ 				}()
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"isSuspended", "join", "kill", "onComplete", "run"}, []gopurs_runtime.Value{orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run})
++				return gopurs_runtime.RecordDict5("isSuspended", "join", "kill", "onComplete", "run", orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run)
+ 				}()
+ })})))}
+ 	})
+@@ -636,7 +636,7 @@
+ 					return clone
+ 				}()
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"isSuspended", "join", "kill", "onComplete", "run"}, []gopurs_runtime.Value{orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run})
++				return gopurs_runtime.RecordDict5("isSuspended", "join", "kill", "onComplete", "run", orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run)
+ 				}()
+ })})))}
+ 	})
+@@ -687,7 +687,7 @@
+ 					return clone
+ 				}()
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"isSuspended", "join", "kill", "onComplete", "run"}, []gopurs_runtime.Value{orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run})
++				return gopurs_runtime.RecordDict5("isSuspended", "join", "kill", "onComplete", "run", orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run)
+ 				}()
+ })})))}
+ 	})
+@@ -1100,7 +1100,7 @@
+ 	run gopurs_runtime.Value
+ }{gopurs_runtime.Apply(Get_Effect_Aff__isSuspendedFiber(), nf_2_1), gopurs_runtime.Apply(Get_Effect_Aff__joinFiber(), nf_2_1), gopurs_runtime.Apply(Get_Effect_Aff__killFiber(), nf_2_1), gopurs_runtime.Apply(Get_Effect_Aff__onCompleteFiber(), nf_2_1), gopurs_runtime.Apply(Get_Effect_Aff__runFiber(), nf_2_1)}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"isSuspended", "join", "kill", "onComplete", "run"}, []gopurs_runtime.Value{orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run})
++				return gopurs_runtime.RecordDict5("isSuspended", "join", "kill", "onComplete", "run", orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run)
+ 				}()
+ })
+ }
+@@ -1216,7 +1216,7 @@
+ return completed_1
+ })}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"completed", "failed", "killed"}, []gopurs_runtime.Value{orig.completed, orig.failed, orig.killed})
++				return gopurs_runtime.RecordDict3("completed", "failed", "killed", orig.completed, orig.failed, orig.killed)
+ 				}())
+ }
+ 
+@@ -1249,7 +1249,7 @@
+ return gopurs_runtime.Apply(v_1, e_2)
+ })}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"completed", "failed", "killed"}, []gopurs_runtime.Value{orig.completed, orig.failed, orig.killed})
++				return gopurs_runtime.RecordDict3("completed", "failed", "killed", orig.completed, orig.failed, orig.killed)
+ 				}(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+ return aff_0
+ }))
+@@ -1273,7 +1273,7 @@
+ return fin_0
+ })}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"completed", "failed", "killed"}, []gopurs_runtime.Value{orig.completed, orig.failed, orig.killed})
++				return gopurs_runtime.RecordDict3("completed", "failed", "killed", orig.completed, orig.failed, orig.killed)
+ 				}(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+ return a_1
+ }))
+@@ -1298,7 +1298,7 @@
+ return __local_var_1_0
+ })}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"completed", "failed", "killed"}, []gopurs_runtime.Value{orig.completed, orig.failed, orig.killed})
++				return gopurs_runtime.RecordDict3("completed", "failed", "killed", orig.completed, orig.failed, orig.killed)
+ 				}(), Get_Effect_Aff__pure())
+ }
+ 
+@@ -1397,7 +1397,7 @@
+ return gopurs_runtime.Apply(Get_Effect_Aff__pure(), func() gopurs_runtime.Value {
+ 				orig := __local_var_2_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"isSuspended", "join", "kill", "onComplete", "run"}, []gopurs_runtime.Value{orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run})
++				return gopurs_runtime.RecordDict5("isSuspended", "join", "kill", "onComplete", "run", orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run)
+ 				}())
+ }))
+ }))
+@@ -1481,7 +1481,7 @@
+ 					orig := func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"isSuspended", "join", "kill", "onComplete", "run"}, []gopurs_runtime.Value{orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run})
++				return gopurs_runtime.RecordDict5("isSuspended", "join", "kill", "onComplete", "run", orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run)
+ 				}()
+ 					_ = orig
+ 					clone := struct{
+@@ -1526,7 +1526,7 @@
+ return gopurs_runtime.RecordDict2("fiber", "supervisor", func() gopurs_runtime.Value {
+ 				orig := __local_var_4_3
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"isSuspended", "join", "kill", "onComplete", "run"}, []gopurs_runtime.Value{orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run})
++				return gopurs_runtime.RecordDict5("isSuspended", "join", "kill", "onComplete", "run", orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run)
+ 				}(), gopurs_runtime.RecordGet(sup_3_2, "supervisor"))
+ })), func() gopurs_runtime.Value {
+ 				orig := struct{
+@@ -1587,7 +1587,7 @@
+ }))}))
+ })}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"completed", "failed", "killed"}, []gopurs_runtime.Value{orig.completed, orig.failed, orig.killed})
++				return gopurs_runtime.RecordDict3("completed", "failed", "killed", orig.completed, orig.failed, orig.killed)
+ 				}(), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+ return Call_Effect_Aff_joinFiber(func() struct{
+ 	isSuspended gopurs_runtime.Value
+@@ -1621,7 +1621,7 @@
+ 					return clone
+ 				}()
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"isSuspended", "join", "kill", "onComplete", "run"}, []gopurs_runtime.Value{orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run})
++				return gopurs_runtime.RecordDict5("isSuspended", "join", "kill", "onComplete", "run", orig.isSuspended, orig.join, orig.kill, orig.onComplete, orig.run)
+ 				}()
+ 					_ = orig
+ 					clone := struct{
+--- before/purescript/Effect_Aff_Class.go
++++ after/purescript/Effect_Aff_Class.go
+@@ -226,7 +226,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Effect_Aff_Class_MonadAff[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"MonadEffect0", "liftAff"}, []gopurs_runtime.Value{orig.MonadEffect0, orig.liftAff})
++				return gopurs_runtime.RecordDict2("MonadEffect0", "liftAff", orig.MonadEffect0, orig.liftAff)
+ 				}())
+ }
+ 
+--- before/purescript/Effect_Class.go
++++ after/purescript/Effect_Class.go
+@@ -106,7 +106,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Effect_Class_MonadEffect[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Monad0", "liftEffect"}, []gopurs_runtime.Value{orig.Monad0, orig.liftEffect})
++				return gopurs_runtime.RecordDict2("Monad0", "liftEffect", orig.Monad0, orig.liftEffect)
+ 				}())
+ }
+ 
+--- before/purescript/Effect_Ref.go
++++ after/purescript/Effect_Ref.go
+@@ -68,7 +68,7 @@
+ 	value gopurs_runtime.Value
+ }{s_prime__2_0, s_prime__2_0}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"state", "value"}, []gopurs_runtime.Value{orig.state, orig.value})
++				return gopurs_runtime.RecordDict2("state", "value", orig.state, orig.value)
+ 				}()
+ }))
+ }
+--- before/purescript/Spago_Generated_BuildInfo.go
++++ after/purescript/Spago_Generated_BuildInfo.go
+@@ -32,7 +32,7 @@
+ 	ps_minus_go_minus_test string
+ }{"0.0.0"}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"ps-go-test"}, []gopurs_runtime.Value{gopurs_runtime.Str(orig.ps_minus_go_minus_test)})
++				return gopurs_runtime.RecordDict1("ps-go-test", gopurs_runtime.Str(orig.ps_minus_go_minus_test))
+ 				}()
+ 	})
+ 	return cache_Spago_Generated_BuildInfo_packages
+--- before/purescript/Test_Polymorphism.go
++++ after/purescript/Test_Polymorphism.go
+@@ -228,7 +228,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Test_Polymorphism_Monoidish[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"mappend_", "mempty_"}, []gopurs_runtime.Value{orig.mappend_, orig.mempty_})
++				return gopurs_runtime.RecordDict2("mappend_", "mempty_", orig.mappend_, orig.mempty_)
+ 				}())
+ }
+ 
+--- before/purescript/Test_Records.go
++++ after/purescript/Test_Records.go
+@@ -70,15 +70,15 @@
+ 					return clone
+ 				}())
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"a", "b"}, []gopurs_runtime.Value{gopurs_runtime.Int(orig.a), func() gopurs_runtime.Value {
++				return gopurs_runtime.RecordDict2("a", "b", gopurs_runtime.Int(orig.a), func() gopurs_runtime.Value {
+ 				orig := orig.b
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"c", "d"}, []gopurs_runtime.Value{gopurs_runtime.Int(orig.c), func() gopurs_runtime.Value {
++				return gopurs_runtime.RecordDict2("c", "d", gopurs_runtime.Int(orig.c), func() gopurs_runtime.Value {
+ 				orig := orig.d
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"e", "f"}, []gopurs_runtime.Value{gopurs_runtime.Int(orig.e), gopurs_runtime.Int(orig.f)})
+-				}()})
+-				}()})
++				return gopurs_runtime.RecordDict2("e", "f", gopurs_runtime.Int(orig.e), gopurs_runtime.Int(orig.f))
++				}())
++				}())
+ 				}()
+ })
+ 	})
+@@ -110,15 +110,15 @@
+ 	f int64
+ }{int64(0), int64(0)}}}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"a", "b"}, []gopurs_runtime.Value{gopurs_runtime.Int(orig.a), func() gopurs_runtime.Value {
++				return gopurs_runtime.RecordDict2("a", "b", gopurs_runtime.Int(orig.a), func() gopurs_runtime.Value {
+ 				orig := orig.b
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"c", "d"}, []gopurs_runtime.Value{gopurs_runtime.Int(orig.c), func() gopurs_runtime.Value {
++				return gopurs_runtime.RecordDict2("c", "d", gopurs_runtime.Int(orig.c), func() gopurs_runtime.Value {
+ 				orig := orig.d
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"e", "f"}, []gopurs_runtime.Value{gopurs_runtime.Int(orig.e), gopurs_runtime.Int(orig.f)})
+-				}()})
+-				}()})
++				return gopurs_runtime.RecordDict2("e", "f", gopurs_runtime.Int(orig.e), gopurs_runtime.Int(orig.f))
++				}())
++				}())
+ 				}()
+ 	})
+ 	return cache_Test_Records_initial
+--- before/purescript/Test_RowToList.go
++++ after/purescript/Test_RowToList.go
+@@ -135,7 +135,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Test_RowToList_RecordKeys[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"keysImpl"}, []gopurs_runtime.Value{orig.keysImpl})
++				return gopurs_runtime.RecordDict1("keysImpl", orig.keysImpl)
+ 				}())
+ }
+ 
+--- before/purescript/Test_StateMonad.go
++++ after/purescript/Test_StateMonad.go
+@@ -24,7 +24,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Test_StateMonad_runState(v_0_box, s_1_box)
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{orig.state, orig.val})
++				return gopurs_runtime.RecordDict2("state", "val", orig.state, orig.val)
+ 				}()
+ })
+ 	})
+@@ -39,7 +39,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Test_StateMonad_put(s_0_box, v_1_box)
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{orig.state, orig.val})
++				return gopurs_runtime.RecordDict2("state", "val", orig.state, orig.val)
+ 				}()
+ })
+ 	})
+@@ -54,7 +54,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Test_StateMonad_pureState(a_0_box, s_1_box)
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{orig.state, orig.val})
++				return gopurs_runtime.RecordDict2("state", "val", orig.state, orig.val)
+ 				}()
+ })
+ 	})
+@@ -69,7 +69,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Test_StateMonad_get(s_0_box)
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{orig.state, orig.val})
++				return gopurs_runtime.RecordDict2("state", "val", orig.state, orig.val)
+ 				}()
+ })
+ 	})
+@@ -93,7 +93,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Test_StateMonad_bindState(v_0_box, g_1_box, s_2_box)
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{orig.state, orig.val})
++				return gopurs_runtime.RecordDict2("state", "val", orig.state, orig.val)
+ 				}()
+ })
+ 	})
+@@ -108,7 +108,7 @@
+ return func() gopurs_runtime.Value {
+ 				orig := Call_Test_StateMonad_modify(f_0_box, s_1_box)
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{orig.state, orig.val})
++				return gopurs_runtime.RecordDict2("state", "val", orig.state, orig.val)
+ 				}()
+ })
+ 	})
+@@ -295,7 +295,7 @@
+ 	val gopurs_runtime.Value
+ }{s_1, Get_Data_Unit_unit()}
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{orig.state, orig.val})
++				return gopurs_runtime.RecordDict2("state", "val", orig.state, orig.val)
+ 				}()
+ })
+ goto end_branch_1
+@@ -331,7 +331,7 @@
+ 					return clone
+ 				}()
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{gopurs_runtime.Int(orig.state), orig.val})
++				return gopurs_runtime.RecordDict2("state", "val", gopurs_runtime.Int(orig.state), orig.val)
+ 				}()
+ 					_ = orig
+ 					clone := struct{
+@@ -343,7 +343,7 @@
+ 					return clone
+ 				}()
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{orig.state, orig.val})
++				return gopurs_runtime.RecordDict2("state", "val", orig.state, orig.val)
+ 				}()
+ })
+ }
+--- before/purescript/Test_TC.go
++++ after/purescript/Test_TC.go
+@@ -108,7 +108,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Test_TC_MyClass[gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"myMethod"}, []gopurs_runtime.Value{orig.myMethod})
++				return gopurs_runtime.RecordDict1("myMethod", orig.myMethod)
+ 				}())
+ }
+ 
+--- before/purescript/Type_Equality.go
++++ after/purescript/Type_Equality.go
+@@ -130,7 +130,7 @@
+ return gopurs_runtime.CoerceToStruct[Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]](func() gopurs_runtime.Value {
+ 				orig := x_0
+ 				_ = orig
+-				return gopurs_runtime.RecordDict([]string{"Coercible0", "proof"}, []gopurs_runtime.Value{orig.Coercible0, orig.proof})
++				return gopurs_runtime.RecordDict2("Coercible0", "proof", orig.Coercible0, orig.proof)
+ 				}())
+ }
+ 

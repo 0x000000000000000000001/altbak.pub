@@ -1,0 +1,16 @@
+{
+  "AstTree": "7",
+  "Fib": "55",
+  "ListOps": "202950",
+  "TCO": "100000",
+  "Records": "20000",
+  "Ackermann": "125",
+  "Church": "100000",
+  "Primes": "21536",
+  "RBTree": "22",
+  "Polymorphism": "10000000",
+  "StateMonad": "1200",
+  "LazyEvaluation": "1000000",
+  "ArrayOps": "202950",
+  "RowToList": "5"
+}

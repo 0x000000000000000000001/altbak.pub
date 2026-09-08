@@ -1,0 +1,23 @@
+File: before-bench
+Type: alloc_objects
+Time: 2026-09-08 13:59:20 CEST
+Active filters:
+   focus=Test_StateMonad
+Showing nodes accounting for 265200, 99.30% of 267057 total
+      flat  flat%   sum%        cum   cum%
+     72400 27.11% 27.11%      72400 27.11%  gopurs/output/gopurs_runtime.RecordDict (inline)
+     48000 17.97% 45.08%     264400 99.01%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1 (inline)
+     48000 17.97% 63.06%     263200 98.56%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1.1.1 (inline)
+     48000 17.97% 81.03%      72000 26.96%  gopurs/output/purescript.Get_Test_StateMonad_modify.func1.1.1 (inline)
+     24000  8.99% 90.02%     264800 99.15%  gopurs/output/gopurs_runtime.Apply
+     24000  8.99% 99.01%      48000 17.97%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications
+       800   0.3% 99.30%       1200  0.45%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func1.1 (inline)
+         0     0% 99.30%      72000 26.96%  gopurs/output/gopurs_runtime.Apply.func1
+         0     0% 99.30%       1200  0.45%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func1
+         0     0% 99.30%     264400 99.01%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3
+         0     0% 99.30%     263200 98.56%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1.1 (inline)
+         0     0% 99.30%     262000 98.11%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1.1.1.1 (inline)
+         0     0% 99.30%      92800 34.75%  gopurs/output/purescript.Call_Test_StateMonad_runManyTimes
+         0     0% 99.30%      72000 26.96%  gopurs/output/purescript.Get_Test_StateMonad_modify.func1.1
+         0     0% 99.30%      92000 34.45%  gopurs/output/purescript.TestAllocationProfile
+         0     0% 99.30%      91600 34.30%  testing.tRunner

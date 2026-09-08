@@ -1,0 +1,18 @@
+=== RUN   TestResults
+RESULT core n20 1200
+RESULT act AstTree "7"
+RESULT act Fib "55"
+RESULT act ListOps "202950"
+RESULT act TCO "100000"
+RESULT act Records "20000"
+RESULT act Ackermann "125"
+RESULT act Church "100000"
+RESULT act Primes "21536"
+RESULT act RBTree "22"
+RESULT act Polymorphism "10000000"
+RESULT act StateMonad "1200"
+RESULT act LazyEvaluation "1000000"
+RESULT act ArrayOps "202950"
+RESULT act RowToList "5"
+--- PASS: TestResults (0.16s)
+PASS
