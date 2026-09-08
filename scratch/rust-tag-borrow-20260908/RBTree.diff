@@ -1,0 +1,109 @@
+--- RBTree-before.rs
++++ RBTree-after.rs
+@@ -85,7 +85,7 @@
+ 
+ pub fn Test_RBTree_makeBlack(mut purs_local_0: std::rc::Rc<crate::Tree>) -> std::rc::Rc<crate::Tree> {
+     // AST: Typed(Typed(Abs(..., Typed(Branch(...)))))
+-/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Branch(...) */if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_0.clone()).as_ref(), crate::Tree::T(..)) {
++/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Branch(...) */if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_0).as_ref(), crate::Tree::T(..)) {
+         /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(std::rc::Rc::new(crate::Color::B), { if let crate::Tree::T(_, ref f, ..) = (purs_local_0.clone()).as_ref() { f.clone() } else { unreachable!() } }, { if let crate::Tree::T(_, _, ref f, ..) = (purs_local_0.clone()).as_ref() { f.clone() } else { unreachable!() } }, { if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_0).as_ref() { f.clone() } else { unreachable!() } }))
+     } else if /* OpIsTag Debug: Test_RBTree_E -> Other */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_0).as_ref(), crate::Tree::E) {
+         /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::E)
+@@ -102,9 +102,9 @@
+ pub fn Test_RBTree_depth(mut purs_local_0: std::rc::Rc<crate::Tree>) -> i64 {
+     // AST: Typed(Typed(Abs(..., Typed(Branch(...)))))
+     loop {
+-        break /* Typed i64 <- i64 : Branch(...) */if /* OpIsTag Debug: Test_RBTree_E -> Other */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_0.clone()).as_ref(), crate::Tree::E) {
++        break /* Typed i64 <- i64 : Branch(...) */if /* OpIsTag Debug: Test_RBTree_E -> Other */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_0).as_ref(), crate::Tree::E) {
+         /* Typed i64 <- i64 : Lit */0
+-    } else if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_0.clone()).as_ref(), crate::Tree::T(..)) {
++    } else if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_0).as_ref(), crate::Tree::T(..)) {
+         /* Typed i64 <- i64 : PrimOp(...) */(1 + {
+     let mut purs_local_1 = Test_RBTree_depth(/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Accessor(Local(...)) */{ if let crate::Tree::T(_, ref f, ..) = (purs_local_0.clone()).as_ref() { f.clone() } else { unreachable!() } });
+     /* Typed i64 <- i64 : Let(...) */{
+@@ -124,8 +124,8 @@
+ 
+ pub fn Test_RBTree_balance(mut purs_local_0: std::rc::Rc<crate::Color>, mut purs_local_1: std::rc::Rc<crate::Tree>, mut purs_local_2: i64, mut purs_local_3: std::rc::Rc<crate::Tree>) -> std::rc::Rc<crate::Tree> {
+     // AST: Typed(Typed(Abs(..., Typed(Abs(..., Typed(Abs(..., Typed(Abs(..., Typed(Branch(...)))))))))))
+-/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Branch(...) */if /* OpIsTag Debug: Test_RBTree_B -> Other */ matches!((/* Typed std::rc::Rc<crate::Color> <- std::rc::Rc<crate::Color> : Local(...) */purs_local_0.clone()).as_ref(), crate::Color::B) {
+-        if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1.clone()).as_ref(), crate::Tree::T(..)) {
++/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Branch(...) */if /* OpIsTag Debug: Test_RBTree_B -> Other */ matches!((/* Typed std::rc::Rc<crate::Color> <- std::rc::Rc<crate::Color> : Local(...) */purs_local_0).as_ref(), crate::Color::B) {
++        if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_1.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R) {
+         if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, ref f, ..) = (purs_local_1.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_1.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R) {
+@@ -175,7 +175,7 @@
+ }
+ }
+ }
+-    } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3.clone()).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R)) {
++    } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R)) {
+         if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R) {
+         {
+@@ -291,7 +291,7 @@
+ }
+ }
+     }
+-    } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3.clone()).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R)) {
++    } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R)) {
+         if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R) {
+         {
+@@ -431,7 +431,7 @@
+ }
+ }
+ }
+-    } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3.clone()).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R)) {
++    } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R)) {
+         if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R) {
+         {
+@@ -547,7 +547,7 @@
+ }
+ }
+     }
+-    } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3.clone()).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R)) {
++    } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R)) {
+         if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R) {
+         {
+@@ -663,7 +663,7 @@
+ }
+ }
+     }
+-    } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3.clone()).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R)) {
++    } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R)) {
+         if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R) {
+         {
+@@ -779,7 +779,7 @@
+ }
+ }
+     }
+-    } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3.clone()).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R)) {
++    } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R)) {
+         if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3.clone()).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Color::R) {
+         {
+@@ -915,9 +915,9 @@
+ pub fn Test_RBTree_ins(mut purs_local_0: i64, mut purs_local_1: std::rc::Rc<crate::Tree>) -> std::rc::Rc<crate::Tree> {
+     // AST: Typed(Typed(Abs(..., Typed(Abs(..., Typed(Branch(...)))))))
+     loop {
+-        break /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Branch(...) */if /* OpIsTag Debug: Test_RBTree_E -> Other */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1.clone()).as_ref(), crate::Tree::E) {
++        break /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Branch(...) */if /* OpIsTag Debug: Test_RBTree_E -> Other */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1).as_ref(), crate::Tree::E) {
+         /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(std::rc::Rc::new(crate::Color::R), std::rc::Rc::new(crate::Tree::E), /* Typed i64 <- i64 : Local(...) */purs_local_0, std::rc::Rc::new(crate::Tree::E)))
+-    } else if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1.clone()).as_ref(), crate::Tree::T(..)) {
++    } else if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1).as_ref(), crate::Tree::T(..)) {
+         /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Branch(...) */if /* Typed bool <- bool : PrimOp(...) */(/* Typed i64 <- i64 : Local(...) */purs_local_0.clone() < /* Typed i64 <- i64 : Accessor(Local(...)) */{ if let crate::Tree::T(_, _, ref f, ..) = (purs_local_1.clone()).as_ref() { f.clone() } else { unreachable!() } }) {
+         /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree_balance(/* Typed std::rc::Rc<crate::Color> <- std::rc::Rc<crate::Color> : Accessor(Local(...)) */{ if let crate::Tree::T(ref f, ..) = (purs_local_1.clone()).as_ref() { f.clone() } else { unreachable!() } }, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree_ins(/* Typed i64 <- i64 : Local(...) */purs_local_0, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Accessor(Local(...)) */{ if let crate::Tree::T(_, ref f, ..) = (purs_local_1.clone()).as_ref() { f.clone() } else { unreachable!() } }), /* Typed i64 <- i64 : Accessor(Local(...)) */{ if let crate::Tree::T(_, _, ref f, ..) = (purs_local_1.clone()).as_ref() { f.clone() } else { unreachable!() } }, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Accessor(Local(...)) */{ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } })
+     } else {
+@@ -937,7 +937,7 @@
+     // AST: Typed(Typed(Abs(..., Typed(Abs(..., Typed(Let(...)))))))
+ /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Let(...) */{
+     let mut purs_local_2 = Test_RBTree_ins(/* Typed i64 <- i64 : Local(...) */purs_local_0, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1);
+-    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Branch(...) */if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((purs_local_2.clone()).as_ref(), crate::Tree::T(..)) {
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Branch(...) */if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((purs_local_2).as_ref(), crate::Tree::T(..)) {
+         /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(std::rc::Rc::new(crate::Color::B), { if let crate::Tree::T(_, ref f, ..) = (purs_local_2.clone()).as_ref() { f.clone() } else { unreachable!() } }, { if let crate::Tree::T(_, _, ref f, ..) = (purs_local_2.clone()).as_ref() { f.clone() } else { unreachable!() } }, { if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_2).as_ref() { f.clone() } else { unreachable!() } }))
+     } else if /* OpIsTag Debug: Test_RBTree_E -> Other */ matches!((purs_local_2).as_ref(), crate::Tree::E) {
+         /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::E)

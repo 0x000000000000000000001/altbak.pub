@@ -1,0 +1,18 @@
+After run 1
+After run 2
+After run 3
+AST Evaluation: 1.0 -> 1.0 (+0.0%)
+Fibonacci: 1.0 -> 1.0 (+0.0%)
+List Processing (900 elements): 24.0 -> 23.0 (-4.2%)
+Tail Call Optimization (100k calls): 34.0 -> 35.0 (+2.9%)
+Deep Record Updates (10k iterations): 956.0 -> 985.0 (+3.0%)
+Ackermann (3, 4): 17.0 -> 17.0 (+0.0%)
+Church Numerals (100k Closure Applications): 10835.0 -> 10907.0 (+0.7%)
+Prime Sieve (sum primes up to 500): 186.0 -> 175.0 (-5.9%)
+Red-Black Tree (100k Worst-Case Insertions): 54426.0 -> 45978.0 (-15.5%)
+Polymorphism (10M Type Class Dict Lookups): 36755.0 -> 37054.0 (+0.8%)
+State Monad (1.2k Binds, 60 Stack Depth): 63.0 -> 63.0 (+0.0%)
+Lazy Evaluation (1M Thunks Forced, 1k Depth): 67668.0 -> 67999.0 (+0.5%)
+Array Processing (900 elements): 13.0 -> 13.0 (+0.0%)
+RowToList (Keys Count): 1.0 -> 1.0 (+0.0%)
+total_us 170980.0 -> 163252.0 (-4.5%)

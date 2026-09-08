@@ -1,0 +1,40 @@
+FUNCTION FieldBorrows_fromCall args: 3 extracted: Just
+FUNCTION FieldBorrows_nested args: 2 extracted: Just
+FUNCTION FieldBorrows_converted args: 2 extracted: Just
+FUNCTION FieldBorrows_scalar args: 2 extracted: Just
+FUNCTION FieldBorrows_wrapped args: 2 extracted: Just
+FUNCTION FieldBorrows_direct args: 2 extracted: Just
+Field reads preserve shared children, persistent parents, conversions and single evaluation.
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: direct: extracting a field must borrow its local parent
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/field-borrows.mjs:133:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'purs_local_0.clone()',
+  expected: /\b(?:purs_local_\d+|tree)\.clone\(\)/,
+  operator: 'doesNotMatch',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/codegen/field-borrows.mjs (559.433083ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 562.919
+
+✖ failing tests:
+
+test at tests/codegen/field-borrows.mjs:1:1
+✖ tests/codegen/field-borrows.mjs (559.433083ms)
+  'test failed'

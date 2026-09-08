@@ -1,0 +1,24 @@
+FUNCTION FieldBorrows_fromCall args: 3 extracted: Just
+FUNCTION FieldBorrows_nested args: 2 extracted: Just
+FUNCTION FieldBorrows_converted args: 2 extracted: Just
+FUNCTION FieldBorrows_scalar args: 2 extracted: Just
+FUNCTION FieldBorrows_wrapped args: 2 extracted: Just
+FUNCTION FieldBorrows_direct args: 2 extracted: Just
+Field reads preserve shared children, persistent parents, conversions and single evaluation.
+✔ tests/codegen/field-borrows.mjs (541.794667ms)
+FUNCTION TagBorrows_fromPassingCall args: 3 extracted: Just
+FUNCTION TagBorrows_fromCall args: 1 extracted: Just
+FUNCTION TagBorrows_twice args: 2 extracted: Just
+FUNCTION TagBorrows_converted args: 2 extracted: Just
+FUNCTION TagBorrows_wrapped args: 2 extracted: Just
+FUNCTION TagBorrows_direct args: 2 extracted: Just
+Tag tests preserve shared parents, branches, conversions and single evaluation.
+✔ tests/codegen/tag-borrows.mjs (800.161666ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 805.890375
