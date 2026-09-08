@@ -173,23 +173,25 @@ RowToList               | ~ 294 μs                  | ~ 47 μs         | ~ 45 �
 
 Java Benchmark          | Compiled Java ([javapurs](https://github.com/0x000000000000000000001/javapurs), young WIP) | Native FP-style Java FFI | Native hand-optimized Java FFI |
 ----------------------- | ------------------------- | ------------------------ | ------------------------------ |
-AST Evaluation          | ~ 57 μs                   | ~ 69 μs                  | ~ 4.4 μs                       |
-Fibonacci               | ~ 6 μs                    | ~ 2.5 μs                 | ~ 1.9 μs                       |
-List Processing         | ~ 414 μs                  | ~ 65 μs                  | ~ 6.4 μs                       |
-Tail Call Optimization  | ~ 838 μs                  | ~ 43 μs                  | ~ 42 μs                        |
-Deep Record Updates     | ~ 1513 μs                 | ~ 132 μs                 | ~ 18 μs                        |
-Ackermann               | ~ 69 μs                   | ~ 10 μs                  | ~ 7.5 μs                       |
-Church Numerals         | ~ 415 μs                  | ~ 435 μs                 | ~ 1.8 μs                       |
-Prime Sieve             | ~ 563 μs                  | ~ 61 μs                  | ~ 8.9 μs                       |
-Red-Black Tree          | ~ 25841 μs                | ~ 12278 μs               | ~ 12384 μs                     |
-Polymorphism            | ~ 83430 μs                | ~ 148 μs                 | ~ 1.7 μs                       |
-State Monad             | ~ 89 μs                   | ~ 40 μs                  | ~ 6.5 μs                       |
-Lazy Evaluation         | ~ 15411 μs                | ~ 5168 μs                | ~ 1.5 μs                       |
-Array Processing        | ~ 72 μs                   | ~ 41 μs                  | ~ 7.1 μs                       |
-RowToList               | ~ 2 μs                    | ~ 2.2 μs                 | ~ 1.3 μs                       |
-**Total Execution Time**| ~ 128.72 ms               | ~ 18.50 ms               | ~ 12.49 ms                     |
+AST Evaluation          | ~ 53.79 μs                | ~ 69 μs                  | ~ 4.4 μs                       |
+Fibonacci               | ~ 5.17 μs                 | ~ 2.5 μs                 | ~ 1.9 μs                       |
+List Processing         | ~ 165.25 μs               | ~ 65 μs                  | ~ 6.4 μs                       |
+Tail Call Optimization  | ~ 44.00 μs                | ~ 43 μs                  | ~ 42 μs                        |
+Deep Record Updates     | ~ 1024.46 μs              | ~ 132 μs                 | ~ 18 μs                        |
+Ackermann               | ~ 17.33 μs                | ~ 10 μs                  | ~ 7.5 μs                       |
+Church Numerals         | ~ 433.83 μs               | ~ 435 μs                 | ~ 1.8 μs                       |
+Prime Sieve             | ~ 182.50 μs               | ~ 61 μs                  | ~ 8.9 μs                       |
+Red-Black Tree          | ~ 19857.96 μs             | ~ 12278 μs               | ~ 12384 μs                     |
+Polymorphism            | ~ 4882.38 μs              | ~ 148 μs                 | ~ 1.7 μs                       |
+State Monad             | ~ 97.67 μs                | ~ 40 μs                  | ~ 6.5 μs                       |
+Lazy Evaluation         | ~ 5109.21 μs              | ~ 5168 μs                | ~ 1.5 μs                       |
+Array Processing        | ~ 58.50 μs                | ~ 41 μs                  | ~ 7.1 μs                       |
+RowToList               | ~ 1.71 μs                 | ~ 2.2 μs                 | ~ 1.3 μs                       |
+**Total Execution Time**| ~ 31.93 ms                | ~ 18.50 ms               | ~ 12.49 ms                     |
 
-Native Java measurements (2026-09-08, OpenJDK 26.0.2, macOS arm64): median of five fresh JVMs, with three full-suite warm-ups followed by three warm-ups and the best of ten samples per test. All 28 native results match the compiled suite; volatile input/result barriers are included in the native timings. Totals sum the unrounded row medians. Reproduce in the `edge-javapurs` worktree with `bin/java/benchmark-native --runs 5`; raw logs and `results.json` are saved in `run/bak/java/native-bench/`. The compiled column retains the recorded baseline.
+Compiled Java measurements (run supplied on 2026-09-08): one benchmark run after global warm-up, reporting the best of ten samples per test. Previous recorded compiled total: 128.72 ms.
+
+Native Java measurements (2026-09-08, OpenJDK 26.0.2, macOS arm64): median of five fresh JVMs, with three full-suite warm-ups followed by three warm-ups and the best of ten samples per test. All 28 native results match the compiled suite; volatile input/result barriers are included in the native timings. Totals sum the unrounded row medians. Reproduce in the `edge-javapurs` worktree with `bin/java/benchmark-native --runs 5`; raw logs and `results.json` are saved in `run/bak/java/native-bench/`.
 
 > [!IMPORTANT]
 > **The 99/1 philosophy and the AOT compiler vs FFI approach**
