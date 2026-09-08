@@ -83,13 +83,20 @@ echo 'Building...'
 spago build
 
 # Generate Rust code
-../purust/purust/bin/purust --main ${ENTRY_POINT} --source output --out output/purust_output > /tmp/purust.log 2> /tmp/purust_trace.log || echo "PURUST FAILED" || exit 1
+LOG_DIR="$PWD/run/bak/rust/logs"
+mkdir -p "$LOG_DIR"
+if ! ../purust/purust/bin/purust --main "$ENTRY_POINT" --source output --out output/purust_output > "$LOG_DIR/purust.log" 2> "$LOG_DIR/purust_trace.log"; then
+    cat "$LOG_DIR/purust_trace.log" >&2
+    echo "PURUST FAILED (logs: $LOG_DIR)" >&2
+    exit 1
+fi
 
 echo "=== Rust ==="
-if [ -d "output/purust_output" ]; then
+if [ -f "output/purust_output/Cargo.toml" ] && [ -f "output/purust_output/src/main.rs" ]; then
     cd output/purust_output
     cargo run -q --release
     cd ../..
 else
-    echo "No output/purust_output generated."
+    echo "No Rust project generated in output/purust_output." >&2
+    exit 1
 fi
