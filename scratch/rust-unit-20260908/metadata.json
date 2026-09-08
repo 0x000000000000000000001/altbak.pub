@@ -1,0 +1,9 @@
+{
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "method": "Three serial processes before/after; median of per-benchmark best-of-ten; 14 outputs checked each run; mimalloc, release opt-level=1",
+  "sha256_after": {
+    "Purs_Data_Unit": "1880ff2e5f171af56013d1a6ea9e6c543846659c6fb89c1356fc8d85a5c07a0e",
+    "Purs_Test_LazyEvaluation": "78936e6d12859316d9739fd2283cb67fb9b93bd3106fcce6a6d499421a4a6abe",
+    "purust_core": "c07f725997ab2595892d371003cf3722cca849b784d38437f3706165382e77f3"
+  }
+}

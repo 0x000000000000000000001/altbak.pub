@@ -1,0 +1,36 @@
+BUILD generated-o1
+BUILD color-copy-o1
+BUILD borrow-tests-o1
+BUILD color-borrow-o1
+BUILD compact-balance-o1
+BUILD color-compact-o1
+MEASURE 0 generated-o1
+MEASURE 0 color-copy-o1
+MEASURE 0 borrow-tests-o1
+MEASURE 0 color-borrow-o1
+MEASURE 0 compact-balance-o1
+MEASURE 0 color-compact-o1
+MEASURE 1 color-copy-o1
+MEASURE 1 borrow-tests-o1
+MEASURE 1 color-borrow-o1
+MEASURE 1 compact-balance-o1
+MEASURE 1 color-compact-o1
+MEASURE 1 generated-o1
+MEASURE 2 borrow-tests-o1
+MEASURE 2 color-borrow-o1
+MEASURE 2 compact-balance-o1
+MEASURE 2 color-compact-o1
+MEASURE 2 generated-o1
+MEASURE 2 color-copy-o1
+{
+  "generated_sha256": "60616a63e65f281c0a481476a2db856f18fd8f61485a9163e2344210178a77ca",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "method": "100000 descending insertions + depth + drop; mimalloc; 3 interleaved processes per variant, 1 warm-up + 5 timed runs each; Instant; correctness/persistence outside timing",
+  "allocations": {}
+}
+generated-o1 min 54217.58 median 55927.75 max 57285.71
+color-copy-o1 min 45422.58 median 46493.21 max 48048.46
+borrow-tests-o1 min 47119.21 median 47641.62 max 48096.5
+color-borrow-o1 min 40158.29 median 41348.79 max 47198.5
+compact-balance-o1 min 48131.75 median 48813.83 max 52454.58
+color-compact-o1 min 42002.71 median 42546.17 max 43754.83

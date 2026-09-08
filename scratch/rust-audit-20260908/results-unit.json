@@ -1,0 +1,40 @@
+{
+  "generated_sha256": "dc12651db8283b5eb9de7441580f9fc330b3ec4a06885f3e2d342acae02beb8e",
+  "method": "opt-level=1, existing compiled runtime, mimalloc; 3 interleaved processes, 1 warm-up + 3 timed runs each; 1000 chains of depth1000; all values/assertions checked",
+  "results": {
+    "lazy-generated": {
+      "n": 9,
+      "min_us": 228443.75,
+      "median_us": 235337.291,
+      "max_us": 255381.5,
+      "samples_us": [
+        228443.75,
+        228446.042,
+        255381.5,
+        232914.625,
+        232993.041,
+        236423.958,
+        239125.875,
+        235337.291,
+        239171.375
+      ]
+    },
+    "lazy-cached-unit": {
+      "n": 9,
+      "min_us": 84091.583,
+      "median_us": 85204.25,
+      "max_us": 123696.5,
+      "samples_us": [
+        84667.792,
+        85761.375,
+        85913.333,
+        84608.125,
+        85204.25,
+        123696.5,
+        84091.583,
+        84936.792,
+        85270.167
+      ]
+    }
+  }
+}

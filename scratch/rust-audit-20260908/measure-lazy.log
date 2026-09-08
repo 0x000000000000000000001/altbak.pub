@@ -1,0 +1,46 @@
+MEASURE 0 lazy-generated
+MEASURE 0 lazy-one-thunk
+MEASURE 1 lazy-one-thunk
+MEASURE 1 lazy-generated
+MEASURE 2 lazy-generated
+MEASURE 2 lazy-one-thunk
+{
+  "generated_sha256": "dc12651db8283b5eb9de7441580f9fc330b3ec4a06885f3e2d342acae02beb8e",
+  "method": "opt-level=1, existing compiled runtime, mimalloc; 3 interleaved processes, 1 warm-up + 3 timed runs each; 1000 chains of depth1000; all values/assertions checked",
+  "results": {
+    "lazy-generated": {
+      "n": 9,
+      "min_us": 224362.417,
+      "median_us": 230251.792,
+      "max_us": 231938.292,
+      "samples_us": [
+        229385.083,
+        224362.417,
+        225205.333,
+        230671.5,
+        231798.25,
+        229672.959,
+        231938.292,
+        230251.792,
+        231492.791
+      ]
+    },
+    "lazy-one-thunk": {
+      "n": 9,
+      "min_us": 298228.417,
+      "median_us": 300578.958,
+      "max_us": 303907.791,
+      "samples_us": [
+        298877.916,
+        303907.791,
+        300567.375,
+        300578.958,
+        298228.417,
+        303421.792,
+        298823.292,
+        303468.083,
+        301527.208
+      ]
+    }
+  }
+}

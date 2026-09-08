@@ -1,0 +1,114 @@
+{
+  "AST Evaluation:": {
+    "best_of_ten_us": [
+      3.0,
+      4.0,
+      4.0
+    ],
+    "median_us": 4.0
+  },
+  "Fibonacci:": {
+    "best_of_ten_us": [
+      3.0,
+      2.0,
+      2.0
+    ],
+    "median_us": 2.0
+  },
+  "List Processing (900 elements):": {
+    "best_of_ten_us": [
+      31.0,
+      29.0,
+      30.0
+    ],
+    "median_us": 30.0
+  },
+  "Tail Call Optimization (100k calls):": {
+    "best_of_ten_us": [
+      40.0,
+      40.0,
+      41.0
+    ],
+    "median_us": 40.0
+  },
+  "Deep Record Updates (10k iterations):": {
+    "best_of_ten_us": [
+      951.0,
+      983.0,
+      1003.0
+    ],
+    "median_us": 983.0
+  },
+  "Ackermann (3, 4):": {
+    "best_of_ten_us": [
+      19.0,
+      21.0,
+      21.0
+    ],
+    "median_us": 21.0
+  },
+  "Church Numerals (100k Closure Applications):": {
+    "best_of_ten_us": [
+      11819.0,
+      11718.0,
+      11723.0
+    ],
+    "median_us": 11723.0
+  },
+  "Prime Sieve (sum primes up to 500):": {
+    "best_of_ten_us": [
+      210.0,
+      211.0,
+      206.0
+    ],
+    "median_us": 210.0
+  },
+  "Red-Black Tree (100k Worst-Case Insertions):": {
+    "best_of_ten_us": [
+      61729.0,
+      61515.0,
+      62018.0
+    ],
+    "median_us": 61729.0
+  },
+  "Polymorphism (10M Type Class Dict Lookups):": {
+    "best_of_ten_us": [
+      42605.0,
+      42564.0,
+      42747.0
+    ],
+    "median_us": 42605.0
+  },
+  "State Monad (1.2k Binds, 60 Stack Depth):": {
+    "best_of_ten_us": [
+      411.0,
+      395.0,
+      401.0
+    ],
+    "median_us": 401.0
+  },
+  "Lazy Evaluation (1M Thunks Forced, 1k Depth):": {
+    "best_of_ten_us": [
+      228816.0,
+      236040.0,
+      233546.0
+    ],
+    "median_us": 233546.0
+  },
+  "Array Processing (900 elements):": {
+    "best_of_ten_us": [
+      16.0,
+      17.0,
+      16.0
+    ],
+    "median_us": 16.0
+  },
+  "RowToList (Keys Count):": {
+    "best_of_ten_us": [
+      2.0,
+      2.0,
+      2.0
+    ],
+    "median_us": 2.0
+  }
+}

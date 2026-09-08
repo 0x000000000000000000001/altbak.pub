@@ -1,0 +1,12 @@
+{
+  "lazy-generated": {
+    "allocations": 6004000,
+    "requested_bytes": 6582504000,
+    "allocations_at_least_6408_bytes": 1001000
+  },
+  "lazy-cached-unit": {
+    "allocations": 5003000,
+    "requested_bytes": 160088000,
+    "allocations_at_least_6408_bytes": 0
+  }
+}
