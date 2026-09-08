@@ -1,0 +1,89 @@
+[
+  {
+    "case": "Polymorphism",
+    "baseline": {
+      "bestUs": 10766089.334,
+      "caseName": "Polymorphism",
+      "gc0": 1115,
+      "gc1": 0,
+      "gc2": 0,
+      "kind": "summary",
+      "maxAllocatedBytes": 31840022952,
+      "medianUs": 11118265.333,
+      "minAllocatedBytes": 31840022952,
+      "output": "10000000"
+    },
+    "direct_call": {
+      "bestUs": 570463.5,
+      "caseName": "Polymorphism",
+      "gc0": 51,
+      "gc1": 0,
+      "gc2": 0,
+      "kind": "summary",
+      "maxAllocatedBytes": 1440000424,
+      "medianUs": 581918.292,
+      "minAllocatedBytes": 1440000424,
+      "output": "10000000"
+    },
+    "median_speedup": 19.106231039391353,
+    "allocation_reduction_percent": 95.47738886315862
+  },
+  {
+    "case": "RBTree",
+    "baseline": {
+      "bestUs": 2558767.958,
+      "caseName": "RBTree",
+      "gc0": 277,
+      "gc1": 90,
+      "gc2": 1,
+      "kind": "summary",
+      "maxAllocatedBytes": 7926872248,
+      "medianUs": 2613527.209,
+      "minAllocatedBytes": 7926750776,
+      "output": "22"
+    },
+    "direct_call": {
+      "bestUs": 215910.667,
+      "caseName": "RBTree",
+      "gc0": 26,
+      "gc1": 12,
+      "gc2": 0,
+      "kind": "summary",
+      "maxAllocatedBytes": 740059800,
+      "medianUs": 217760.584,
+      "minAllocatedBytes": 740059800,
+      "output": "22"
+    },
+    "median_speedup": 12.001837802749462,
+    "allocation_reduction_percent": 90.66391160540374
+  },
+  {
+    "case": "LazyEvaluation",
+    "baseline": {
+      "bestUs": 969034.584,
+      "caseName": "LazyEvaluation",
+      "gc0": 102,
+      "gc1": 14,
+      "gc2": 0,
+      "kind": "summary",
+      "maxAllocatedBytes": 2907684312,
+      "medianUs": 985999.167,
+      "minAllocatedBytes": 2907673432,
+      "output": "1000000"
+    },
+    "direct_call": {
+      "bestUs": 52904.291,
+      "caseName": "LazyEvaluation",
+      "gc0": 6,
+      "gc1": 0,
+      "gc2": 0,
+      "kind": "summary",
+      "maxAllocatedBytes": 168596552,
+      "medianUs": 53460,
+      "minAllocatedBytes": 168596552,
+      "output": "1000000"
+    },
+    "median_speedup": 18.44368063973064,
+    "allocation_reduction_percent": 94.20168993916558
+  }
+]

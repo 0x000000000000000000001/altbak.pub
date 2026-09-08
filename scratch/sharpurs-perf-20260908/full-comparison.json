@@ -1,0 +1,154 @@
+{
+  "baseline": {
+    "total_ms": 13766.97,
+    "cases": [
+      {
+        "case": "AST Evaluation:",
+        "output": "7",
+        "ms": 0.09967000000000001
+      },
+      {
+        "case": "Fibonacci:",
+        "output": "55",
+        "ms": 0.08358
+      },
+      {
+        "case": "List Processing (900 elements):",
+        "output": "202950",
+        "ms": 2.20892
+      },
+      {
+        "case": "Tail Call Optimization (100k calls):",
+        "output": "100000",
+        "ms": 93.46388
+      },
+      {
+        "case": "Deep Record Updates (10k iterations):",
+        "output": "20000",
+        "ms": 21.204669999999997
+      },
+      {
+        "case": "Ackermann (3, 4):",
+        "output": "125",
+        "ms": 4.704
+      },
+      {
+        "case": "Church Numerals (100k Closure Applications):",
+        "output": "100000",
+        "ms": 70.18608
+      },
+      {
+        "case": "Prime Sieve (sum primes up to 500):",
+        "output": "21536",
+        "ms": 8.31946
+      },
+      {
+        "case": "Red-Black Tree (100k Worst-Case Insertions):",
+        "output": "22",
+        "ms": 2489.2313799999997
+      },
+      {
+        "case": "Polymorphism (10M Type Class Dict Lookups):",
+        "output": "10000000",
+        "ms": 9853.61908
+      },
+      {
+        "case": "State Monad (1.2k Binds, 60 Stack Depth):",
+        "output": "1200",
+        "ms": 2.92525
+      },
+      {
+        "case": "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+        "output": "1000000",
+        "ms": 1220.14871
+      },
+      {
+        "case": "Array Processing (900 elements):",
+        "output": "202950",
+        "ms": 0.773
+      },
+      {
+        "case": "RowToList (Keys Count):",
+        "output": "5",
+        "ms": 0.00708
+      }
+    ]
+  },
+  "direct_call": {
+    "total_ms": 849.81,
+    "cases": [
+      {
+        "case": "AST Evaluation:",
+        "output": "7",
+        "ms": 0.09608
+      },
+      {
+        "case": "Fibonacci:",
+        "output": "55",
+        "ms": 0.0055
+      },
+      {
+        "case": "List Processing (900 elements):",
+        "output": "202950",
+        "ms": 0.35558
+      },
+      {
+        "case": "Tail Call Optimization (100k calls):",
+        "output": "100000",
+        "ms": 5.22608
+      },
+      {
+        "case": "Deep Record Updates (10k iterations):",
+        "output": "20000",
+        "ms": 2.91233
+      },
+      {
+        "case": "Ackermann (3, 4):",
+        "output": "125",
+        "ms": 0.29404
+      },
+      {
+        "case": "Church Numerals (100k Closure Applications):",
+        "output": "100000",
+        "ms": 2.88875
+      },
+      {
+        "case": "Prime Sieve (sum primes up to 500):",
+        "output": "21536",
+        "ms": 1.60629
+      },
+      {
+        "case": "Red-Black Tree (100k Worst-Case Insertions):",
+        "output": "22",
+        "ms": 222.49633
+      },
+      {
+        "case": "Polymorphism (10M Type Class Dict Lookups):",
+        "output": "10000000",
+        "ms": 561.15783
+      },
+      {
+        "case": "State Monad (1.2k Binds, 60 Stack Depth):",
+        "output": "1200",
+        "ms": 0.17579
+      },
+      {
+        "case": "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+        "output": "1000000",
+        "ms": 52.54888
+      },
+      {
+        "case": "Array Processing (900 elements):",
+        "output": "202950",
+        "ms": 0.04879
+      },
+      {
+        "case": "RowToList (Keys Count):",
+        "output": "5",
+        "ms": 0.00058
+      }
+    ]
+  },
+  "all_14_displayed_outputs_match": true,
+  "speedup": 16.200056483213896
+}

@@ -1,0 +1,33 @@
+diff --git a/package.json b/package.json
+index a13a2d2..3afab35 100644
+--- a/package.json
++++ b/package.json
+@@ -8,6 +8,7 @@
+   },
+   "scripts": {
+     "build": "spago build && spago bundle --module Main --platform node --outfile bin/sharpurs.js --bundle-type app",
++    "test:runtime": "node tests/runtime-apply.mjs",
+     "prepare": "npm run build"
+   },
+   "dependencies": {
+diff --git a/src/Main.purs b/src/Main.purs
+index 8045e0a..bb91522 100644
+--- a/src/Main.purs
++++ b/src/Main.purs
+@@ -43,8 +43,14 @@ let semiringInt = 0
+ 
+ let sharpurs_apply (func: obj) (arg: obj) : obj =
+     if isNull func then failwith "sharpurs_apply: func is null!"
+-    let method = func.GetType().GetMethods() |> Array.find (fun m -> m.Name = "Invoke" && m.GetParameters().Length = 1)
+-    method.Invoke(func, [| arg |])
++    match func with
++    | :? (obj -> obj) as invoke ->
++        try invoke arg
++        // Keep the exception boundary of MethodInfo.Invoke for callers and FFI.
++        with ex -> raise (System.Reflection.TargetInvocationException(ex))
++    | _ ->
++        let method = func.GetType().GetMethods() |> Array.find (fun m -> m.Name = "Invoke" && m.GetParameters().Length = 1)
++        method.Invoke(func, [| arg |])
+ """
+ 
+ fsHeader :: String

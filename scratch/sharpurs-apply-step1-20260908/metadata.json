@@ -1,0 +1,17 @@
+{
+  "sha256": {
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/src/Main.purs": "c7637548534e0c4e6d3c1466cd4e67af4f9275724e98f479415f375b350c9513",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/package.json": "8626bb7a2eadf3b00357f6eeffd94acb1dde389d6614118cbc5e23eddc8d20b5",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/tests/runtime-apply.mjs": "ca3f511af1ebffd56db8f1b15652a99905a9ba581d49a9b2a4acdbd0f5ff0981",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/tests/runtime-apply.fsx": "17ba08de7d9d59f65df76627795c5033b233b756cf0d53b83c2cd2a985ce932e",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/output/Main/Sharpurs_Prelude.fs": "afa34867196469530596ea9fd130a8e7a4d69ae6a0eb259c8615473547a2fa16",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/output/Main/bin/Release/net8.0/Program.dll": "15092eb629a65e97de2e1fc6cc8d4ca8a8fd646a80276925e75e7ad86c1e8e8e",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/src/App.purs": "7825fa4d2cba832d1d0850779947b209cd9db9a5ebd1c6f788577eabf427e446",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/src/Bench.purs": "1053c71f2ee821ee7c85d24d963361b292bfeaf3a63b773cc6b85b8c3aa9751a"
+  },
+  "commits": {
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs": "78e356904b4cbc3b9644323677c8cc4ae6c7de3a",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs": "09de7b31f11dc2256b56eab1b1c2646637a32765",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-sharpurs": "67ba2151e3717b27a13e95c25d3b25c8bdc645cc"
+  }
+}

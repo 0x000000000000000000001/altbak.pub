@@ -1,0 +1,3 @@
+{"caseName":"Polymorphism","direct":100000027,"output":"10000000","reflected":0}
+{"caseName":"RBTree","direct":23639803,"output":"22","reflected":100001}
+{"caseName":"LazyEvaluation","direct":9010005,"output":"1000000","reflected":1001}

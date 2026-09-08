@@ -1,0 +1,82 @@
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: sharpurs
+
+Downloading dependencies...
+Building...
+[1 of 2] Compiling Spago.Generated.BuildInfo
+[2 of 2] Compiling Main
+[WARNING 1/6 UnusedImport] src/Main.purs:9:1
+
+  9  import Effect.Class.Console as Console
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Class.Console as Console is redundant
+
+[WARNING 2/6 UnusedImport] src/Main.purs:20:1
+
+  20  import Data.List (List(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.List is redundant
+
+[WARNING 3/6 UnusedExplicitImport] src/Main.purs:21:1
+
+  21  import PureScript.Backend.Optimizer.App (coreFnModulesFromOutput, parseCLIArgs, checkCache, writeCache, loadDirectives)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.App contains the following unused references:
+    checkCache
+    writeCache
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.App (coreFnModulesFromOutput, loadDirectives, parseCLIArgs)
+
+[WARNING 4/6 UnusedImport] src/Main.purs:31:1
+
+  31  import Data.String (joinWith)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.String is redundant
+
+[WARNING 5/6 UnusedName] src/Main.purs:87:7
+
+  87    let cacheVersion = "1.0.0"
+            ^^^^^^^^^^^^^^^^^^^^^^
+
+  Name cacheVersion was introduced but not used.
+  in value declaration main
+
+[WARNING 6/6 UnusedName] src/Main.purs:101:13
+
+  101          let modNameStr = unwrap coreFnMod.name
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name modNameStr was introduced but not used.
+  in value declaration main
+
+           Src   Lib   All
+Warnings     6     0     6
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: sharpurs
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Bundling...
+
+  bin/sharpurs.js  948.0kb
+
+⚡ Done in 26ms
+
+✓ Bundle succeeded.
+

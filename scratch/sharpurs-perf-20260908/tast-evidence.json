@@ -1,0 +1,3019 @@
+{
+  "Test.TCO": {
+    "classDecls": [],
+    "dataDecls": [],
+    "typeTable": [
+      {
+        "args": [
+          1
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "type": "Unit"
+      },
+      {
+        "args": [
+          3
+        ],
+        "ret": 0,
+        "type": "Func"
+      },
+      {
+        "type": "String"
+      },
+      {
+        "args": [
+          5,
+          5
+        ],
+        "ret": 5,
+        "type": "Func"
+      },
+      {
+        "type": "Int"
+      },
+      {
+        "args": [
+          5
+        ],
+        "ret": 5,
+        "type": "Func"
+      },
+      {
+        "body": 4,
+        "constraints": [
+          {
+            "args": [
+              5
+            ],
+            "fqn": [
+              "Data",
+              "Ring",
+              "Ring"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 9,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 11,
+        "constraints": [
+          {
+            "args": [
+              10
+            ],
+            "fqn": [
+              "Data",
+              "Ring",
+              "Ring"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "name": "a",
+        "type": "TypeVar"
+      },
+      {
+        "args": [
+          10,
+          10
+        ],
+        "ret": 10,
+        "type": "Func"
+      },
+      {
+        "args": [
+          5
+        ],
+        "fqn": [
+          "Data",
+          "Ring",
+          "Ring"
+        ],
+        "type": "Adt"
+      },
+      {
+        "body": 4,
+        "constraints": [
+          {
+            "args": [
+              5
+            ],
+            "fqn": [
+              "Data",
+              "Semiring",
+              "Semiring"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 15,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 11,
+        "constraints": [
+          {
+            "args": [
+              10
+            ],
+            "fqn": [
+              "Data",
+              "Semiring",
+              "Semiring"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          5
+        ],
+        "fqn": [
+          "Data",
+          "Semiring",
+          "Semiring"
+        ],
+        "type": "Adt"
+      },
+      {
+        "body": 4,
+        "constraints": [
+          {
+            "args": [
+              5
+            ],
+            "fqn": [
+              "Data",
+              "EuclideanRing",
+              "EuclideanRing"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 19,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 11,
+        "constraints": [
+          {
+            "args": [
+              10
+            ],
+            "fqn": [
+              "Data",
+              "EuclideanRing",
+              "EuclideanRing"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          5
+        ],
+        "fqn": [
+          "Data",
+          "EuclideanRing",
+          "EuclideanRing"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          3
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          23
+        ],
+        "ret": 21,
+        "type": "Func"
+      },
+      {
+        "args": [
+          5
+        ],
+        "ret": 21,
+        "type": "Func"
+      },
+      {
+        "args": [
+          25,
+          23
+        ],
+        "ret": 21,
+        "type": "Func"
+      },
+      {
+        "args": [
+          5
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "body": 24,
+        "constraints": [
+          {
+            "args": [
+              27
+            ],
+            "fqn": [
+              "Control",
+              "Bind",
+              "Bind"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "body": 29,
+        "type": "ForAll",
+        "vars": [
+          "b"
+        ]
+      },
+      {
+        "body": 30,
+        "constraints": [
+          {
+            "args": [
+              27
+            ],
+            "fqn": [
+              "Control",
+              "Bind",
+              "Bind"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          25,
+          31
+        ],
+        "ret": 32,
+        "type": "Func"
+      },
+      {
+        "args": [
+          5
+        ],
+        "ret": 32,
+        "type": "Func"
+      },
+      {
+        "args": [
+          33
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "name": "b",
+        "type": "TypeVar"
+      },
+      {
+        "body": 35,
+        "type": "ForAll",
+        "vars": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "body": 36,
+        "constraints": [
+          {
+            "args": [
+              27
+            ],
+            "fqn": [
+              "Control",
+              "Bind",
+              "Bind"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          37,
+          38
+        ],
+        "ret": 32,
+        "type": "Func"
+      },
+      {
+        "args": [
+          10
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          10
+        ],
+        "ret": 32,
+        "type": "Func"
+      },
+      {
+        "body": 40,
+        "type": "ForAll",
+        "vars": [
+          "m",
+          "a",
+          "b"
+        ]
+      },
+      {
+        "body": 42,
+        "constraints": [
+          {
+            "args": [
+              41
+            ],
+            "fqn": [
+              "Control",
+              "Bind",
+              "Bind"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "name": "m",
+        "type": "TypeVar"
+      },
+      {
+        "args": [
+          43,
+          44
+        ],
+        "ret": 45,
+        "type": "Func"
+      },
+      {
+        "args": [
+          10
+        ],
+        "constructor": 41,
+        "type": "TypeApp"
+      },
+      {
+        "args": [
+          10
+        ],
+        "ret": 45,
+        "type": "Func"
+      },
+      {
+        "args": [
+          33
+        ],
+        "constructor": 41,
+        "type": "TypeApp"
+      },
+      {
+        "args": [
+          27
+        ],
+        "fqn": [
+          "Control",
+          "Bind",
+          "Bind"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          5
+        ],
+        "ret": 25,
+        "type": "Func"
+      },
+      {
+        "body": 49,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "args": [
+          10
+        ],
+        "ret": 37,
+        "type": "Func"
+      },
+      {
+        "args": [
+          3
+        ],
+        "ret": 21,
+        "type": "Func"
+      },
+      {
+        "body": 50,
+        "constraints": [
+          {
+            "args": [
+              27
+            ],
+            "fqn": [
+              "Control",
+              "Applicative",
+              "Applicative"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 53,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 49,
+        "constraints": [
+          {
+            "args": [
+              27
+            ],
+            "fqn": [
+              "Control",
+              "Applicative",
+              "Applicative"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 55,
+        "type": "ForAll",
+        "vars": [
+          "f",
+          "a"
+        ]
+      },
+      {
+        "body": 57,
+        "constraints": [
+          {
+            "args": [
+              56
+            ],
+            "fqn": [
+              "Control",
+              "Applicative",
+              "Applicative"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "name": "f",
+        "type": "TypeVar"
+      },
+      {
+        "args": [
+          10
+        ],
+        "ret": 58,
+        "type": "Func"
+      },
+      {
+        "args": [
+          10
+        ],
+        "constructor": 56,
+        "type": "TypeApp"
+      },
+      {
+        "args": [
+          27
+        ],
+        "fqn": [
+          "Control",
+          "Applicative",
+          "Applicative"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          5
+        ],
+        "ret": 3,
+        "type": "Func"
+      },
+      {
+        "body": 60,
+        "constraints": [
+          {
+            "args": [
+              5
+            ],
+            "fqn": [
+              "Data",
+              "Show",
+              "Show"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 63,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 64,
+        "constraints": [
+          {
+            "args": [
+              10
+            ],
+            "fqn": [
+              "Data",
+              "Show",
+              "Show"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          10
+        ],
+        "ret": 3,
+        "type": "Func"
+      },
+      {
+        "args": [
+          5
+        ],
+        "fqn": [
+          "Data",
+          "Show",
+          "Show"
+        ],
+        "type": "Adt"
+      }
+    ],
+    "typeAppCount": 10,
+    "typeAppExample": [
+      {
+        "annotation": {
+          "meta": null,
+          "sourceSpan": {
+            "end": [
+              13,
+              39
+            ],
+            "start": [
+              13,
+              34
+            ]
+          },
+          "type": 7
+        },
+        "expression": {
+          "annotation": {
+            "meta": {
+              "metaType": "IsForeign"
+            },
+            "sourceSpan": {
+              "end": [
+                13,
+                37
+              ],
+              "start": [
+                13,
+                36
+              ]
+            },
+            "type": 8
+          },
+          "type": "Var",
+          "value": {
+            "identifier": "sub",
+            "moduleName": [
+              "Data",
+              "Ring"
+            ]
+          }
+        },
+        "type": "TypeApp",
+        "typeArgument": 5
+      }
+    ]
+  },
+  "Test.Polymorphism": {
+    "classDecls": [
+      {
+        "methods": [
+          {
+            "name": "mempty_",
+            "type": 4
+          },
+          {
+            "name": "mappend_",
+            "type": 5
+          }
+        ],
+        "name": "Monoidish",
+        "superclasses": [],
+        "vars": [
+          "a"
+        ]
+      }
+    ],
+    "dataDecls": [],
+    "typeTable": [
+      {
+        "body": 1,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "args": [
+          2
+        ],
+        "ret": 7,
+        "type": "Func"
+      },
+      {
+        "row": 3,
+        "type": "Record"
+      },
+      {
+        "fields": [
+          {
+            "label": "mempty_",
+            "type": 4
+          },
+          {
+            "label": "mappend_",
+            "type": 5
+          }
+        ],
+        "tail": 6,
+        "type": "Row"
+      },
+      {
+        "name": "a",
+        "type": "TypeVar"
+      },
+      {
+        "args": [
+          4,
+          4
+        ],
+        "ret": 4,
+        "type": "Func"
+      },
+      {
+        "type": "Any"
+      },
+      {
+        "args": [
+          4
+        ],
+        "fqn": [
+          "Test",
+          "Polymorphism",
+          "Monoidish"
+        ],
+        "type": "Adt"
+      },
+      {
+        "body": 9,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 4,
+        "constraints": [
+          {
+            "args": [
+              4
+            ],
+            "fqn": [
+              "Test",
+              "Polymorphism",
+              "Monoidish"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 11,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 5,
+        "constraints": [
+          {
+            "args": [
+              4
+            ],
+            "fqn": [
+              "Test",
+              "Polymorphism",
+              "Monoidish"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 13,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 14,
+        "constraints": [
+          {
+            "args": [
+              4
+            ],
+            "fqn": [
+              "Test",
+              "Polymorphism",
+              "Monoidish"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          15,
+          4
+        ],
+        "ret": 4,
+        "type": "Func"
+      },
+      {
+        "type": "Int"
+      },
+      {
+        "args": [
+          4
+        ],
+        "ret": 4,
+        "type": "Func"
+      },
+      {
+        "args": [
+          15
+        ],
+        "ret": 15,
+        "type": "Func"
+      },
+      {
+        "args": [
+          15,
+          15
+        ],
+        "ret": 15,
+        "type": "Func"
+      },
+      {
+        "body": 18,
+        "constraints": [
+          {
+            "args": [
+              15
+            ],
+            "fqn": [
+              "Data",
+              "Ring",
+              "Ring"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 21,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 5,
+        "constraints": [
+          {
+            "args": [
+              4
+            ],
+            "fqn": [
+              "Data",
+              "Ring",
+              "Ring"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          15
+        ],
+        "fqn": [
+          "Data",
+          "Ring",
+          "Ring"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          15
+        ],
+        "fqn": [
+          "Test",
+          "Polymorphism",
+          "Monoidish"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          25
+        ],
+        "ret": 23,
+        "type": "Func"
+      },
+      {
+        "row": 26,
+        "type": "Record"
+      },
+      {
+        "fields": [
+          {
+            "label": "mempty_",
+            "type": 15
+          },
+          {
+            "label": "mappend_",
+            "type": 18
+          }
+        ],
+        "tail": 6,
+        "type": "Row"
+      },
+      {
+        "body": 18,
+        "constraints": [
+          {
+            "args": [
+              15
+            ],
+            "fqn": [
+              "Data",
+              "Semiring",
+              "Semiring"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 29,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 5,
+        "constraints": [
+          {
+            "args": [
+              4
+            ],
+            "fqn": [
+              "Data",
+              "Semiring",
+              "Semiring"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          15
+        ],
+        "fqn": [
+          "Data",
+          "Semiring",
+          "Semiring"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          32
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "type": "Unit"
+      },
+      {
+        "args": [
+          34
+        ],
+        "ret": 31,
+        "type": "Func"
+      },
+      {
+        "type": "String"
+      },
+      {
+        "args": [
+          34
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          37
+        ],
+        "ret": 35,
+        "type": "Func"
+      },
+      {
+        "args": [
+          15
+        ],
+        "ret": 35,
+        "type": "Func"
+      },
+      {
+        "args": [
+          39,
+          37
+        ],
+        "ret": 35,
+        "type": "Func"
+      },
+      {
+        "args": [
+          15
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "body": 38,
+        "constraints": [
+          {
+            "args": [
+              41
+            ],
+            "fqn": [
+              "Control",
+              "Bind",
+              "Bind"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "body": 43,
+        "type": "ForAll",
+        "vars": [
+          "b"
+        ]
+      },
+      {
+        "body": 44,
+        "constraints": [
+          {
+            "args": [
+              41
+            ],
+            "fqn": [
+              "Control",
+              "Bind",
+              "Bind"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          39,
+          45
+        ],
+        "ret": 46,
+        "type": "Func"
+      },
+      {
+        "args": [
+          15
+        ],
+        "ret": 46,
+        "type": "Func"
+      },
+      {
+        "args": [
+          47
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "name": "b",
+        "type": "TypeVar"
+      },
+      {
+        "body": 49,
+        "type": "ForAll",
+        "vars": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "body": 50,
+        "constraints": [
+          {
+            "args": [
+              41
+            ],
+            "fqn": [
+              "Control",
+              "Bind",
+              "Bind"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          51,
+          52
+        ],
+        "ret": 46,
+        "type": "Func"
+      },
+      {
+        "args": [
+          4
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          4
+        ],
+        "ret": 46,
+        "type": "Func"
+      },
+      {
+        "body": 54,
+        "type": "ForAll",
+        "vars": [
+          "m",
+          "a",
+          "b"
+        ]
+      },
+      {
+        "body": 56,
+        "constraints": [
+          {
+            "args": [
+              55
+            ],
+            "fqn": [
+              "Control",
+              "Bind",
+              "Bind"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "name": "m",
+        "type": "TypeVar"
+      },
+      {
+        "args": [
+          57,
+          58
+        ],
+        "ret": 59,
+        "type": "Func"
+      },
+      {
+        "args": [
+          4
+        ],
+        "constructor": 55,
+        "type": "TypeApp"
+      },
+      {
+        "args": [
+          4
+        ],
+        "ret": 59,
+        "type": "Func"
+      },
+      {
+        "args": [
+          47
+        ],
+        "constructor": 55,
+        "type": "TypeApp"
+      },
+      {
+        "args": [
+          41
+        ],
+        "fqn": [
+          "Control",
+          "Bind",
+          "Bind"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          15
+        ],
+        "ret": 39,
+        "type": "Func"
+      },
+      {
+        "body": 63,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "args": [
+          4
+        ],
+        "ret": 51,
+        "type": "Func"
+      },
+      {
+        "args": [
+          34
+        ],
+        "ret": 35,
+        "type": "Func"
+      },
+      {
+        "body": 64,
+        "constraints": [
+          {
+            "args": [
+              41
+            ],
+            "fqn": [
+              "Control",
+              "Applicative",
+              "Applicative"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 67,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 63,
+        "constraints": [
+          {
+            "args": [
+              41
+            ],
+            "fqn": [
+              "Control",
+              "Applicative",
+              "Applicative"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 69,
+        "type": "ForAll",
+        "vars": [
+          "f",
+          "a"
+        ]
+      },
+      {
+        "body": 71,
+        "constraints": [
+          {
+            "args": [
+              70
+            ],
+            "fqn": [
+              "Control",
+              "Applicative",
+              "Applicative"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "name": "f",
+        "type": "TypeVar"
+      },
+      {
+        "args": [
+          4
+        ],
+        "ret": 72,
+        "type": "Func"
+      },
+      {
+        "args": [
+          4
+        ],
+        "constructor": 70,
+        "type": "TypeApp"
+      },
+      {
+        "args": [
+          41
+        ],
+        "fqn": [
+          "Control",
+          "Applicative",
+          "Applicative"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          15
+        ],
+        "ret": 34,
+        "type": "Func"
+      },
+      {
+        "body": 74,
+        "constraints": [
+          {
+            "args": [
+              15
+            ],
+            "fqn": [
+              "Data",
+              "Show",
+              "Show"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 77,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 78,
+        "constraints": [
+          {
+            "args": [
+              4
+            ],
+            "fqn": [
+              "Data",
+              "Show",
+              "Show"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          4
+        ],
+        "ret": 34,
+        "type": "Func"
+      },
+      {
+        "args": [
+          15
+        ],
+        "fqn": [
+          "Data",
+          "Show",
+          "Show"
+        ],
+        "type": "Adt"
+      },
+      {
+        "body": 18,
+        "constraints": [
+          {
+            "args": [
+              15
+            ],
+            "fqn": [
+              "Test",
+              "Polymorphism",
+              "Monoidish"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      }
+    ],
+    "typeAppCount": 13,
+    "typeAppExample": [
+      {
+        "annotation": {
+          "meta": null,
+          "sourceSpan": {
+            "end": [
+              21,
+              23
+            ],
+            "start": [
+              21,
+              18
+            ]
+          },
+          "type": 19
+        },
+        "expression": {
+          "annotation": {
+            "meta": {
+              "metaType": "IsForeign"
+            },
+            "sourceSpan": {
+              "end": [
+                21,
+                21
+              ],
+              "start": [
+                21,
+                20
+              ]
+            },
+            "type": 20
+          },
+          "type": "Var",
+          "value": {
+            "identifier": "sub",
+            "moduleName": [
+              "Data",
+              "Ring"
+            ]
+          }
+        },
+        "type": "TypeApp",
+        "typeArgument": 15
+      }
+    ]
+  },
+  "Test.RBTree": {
+    "classDecls": [],
+    "dataDecls": [
+      {
+        "constructors": [
+          {
+            "constructorName": "R",
+            "fieldTypes": [],
+            "fields": [],
+            "name": "R"
+          },
+          {
+            "constructorName": "B",
+            "fieldTypes": [],
+            "fields": [],
+            "name": "B"
+          }
+        ],
+        "name": "Color",
+        "typeName": "Color",
+        "typeVars": [],
+        "vars": []
+      },
+      {
+        "constructors": [
+          {
+            "constructorName": "E",
+            "fieldTypes": [],
+            "fields": [],
+            "name": "E"
+          },
+          {
+            "constructorName": "T",
+            "fieldTypes": [
+              0,
+              1,
+              3,
+              1
+            ],
+            "fields": [
+              0,
+              1,
+              3,
+              1
+            ],
+            "name": "T"
+          }
+        ],
+        "name": "Tree",
+        "typeName": "Tree",
+        "typeVars": [],
+        "vars": []
+      }
+    ],
+    "typeTable": [
+      {
+        "args": [],
+        "fqn": [
+          "Test",
+          "RBTree",
+          "Color"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [],
+        "fqn": [
+          "Test",
+          "RBTree",
+          "Tree"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          0,
+          1,
+          3,
+          1
+        ],
+        "ret": 1,
+        "type": "Func"
+      },
+      {
+        "type": "Int"
+      },
+      {
+        "args": [
+          3,
+          3
+        ],
+        "ret": 3,
+        "type": "Func"
+      },
+      {
+        "args": [
+          3
+        ],
+        "ret": 3,
+        "type": "Func"
+      },
+      {
+        "type": "Boolean"
+      },
+      {
+        "args": [
+          3
+        ],
+        "ret": 6,
+        "type": "Func"
+      },
+      {
+        "args": [
+          3,
+          3
+        ],
+        "ret": 6,
+        "type": "Func"
+      },
+      {
+        "body": 8,
+        "constraints": [
+          {
+            "args": [
+              3
+            ],
+            "fqn": [
+              "Data",
+              "Ord",
+              "Ord"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 11,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 13,
+        "constraints": [
+          {
+            "args": [
+              12
+            ],
+            "fqn": [
+              "Data",
+              "Ord",
+              "Ord"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "name": "a",
+        "type": "TypeVar"
+      },
+      {
+        "args": [
+          12,
+          12
+        ],
+        "ret": 6,
+        "type": "Func"
+      },
+      {
+        "args": [
+          3
+        ],
+        "fqn": [
+          "Data",
+          "Ord",
+          "Ord"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          1
+        ],
+        "ret": 1,
+        "type": "Func"
+      },
+      {
+        "args": [
+          3,
+          1
+        ],
+        "ret": 1,
+        "type": "Func"
+      },
+      {
+        "args": [
+          1,
+          3,
+          1
+        ],
+        "ret": 1,
+        "type": "Func"
+      },
+      {
+        "args": [
+          19
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "type": "Unit"
+      },
+      {
+        "args": [
+          21
+        ],
+        "ret": 18,
+        "type": "Func"
+      },
+      {
+        "type": "String"
+      },
+      {
+        "args": [
+          1
+        ],
+        "ret": 3,
+        "type": "Func"
+      },
+      {
+        "body": 4,
+        "constraints": [
+          {
+            "args": [
+              3
+            ],
+            "fqn": [
+              "Data",
+              "Semiring",
+              "Semiring"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 25,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 26,
+        "constraints": [
+          {
+            "args": [
+              12
+            ],
+            "fqn": [
+              "Data",
+              "Semiring",
+              "Semiring"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          12,
+          12
+        ],
+        "ret": 12,
+        "type": "Func"
+      },
+      {
+        "args": [
+          3
+        ],
+        "fqn": [
+          "Data",
+          "Semiring",
+          "Semiring"
+        ],
+        "type": "Adt"
+      },
+      {
+        "body": 4,
+        "constraints": [
+          {
+            "args": [
+              3
+            ],
+            "fqn": [
+              "Data",
+              "Ring",
+              "Ring"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 30,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 26,
+        "constraints": [
+          {
+            "args": [
+              12
+            ],
+            "fqn": [
+              "Data",
+              "Ring",
+              "Ring"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          3
+        ],
+        "fqn": [
+          "Data",
+          "Ring",
+          "Ring"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          21
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          34
+        ],
+        "ret": 32,
+        "type": "Func"
+      },
+      {
+        "args": [
+          3
+        ],
+        "ret": 32,
+        "type": "Func"
+      },
+      {
+        "args": [
+          36,
+          34
+        ],
+        "ret": 32,
+        "type": "Func"
+      },
+      {
+        "args": [
+          3
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "body": 35,
+        "constraints": [
+          {
+            "args": [
+              38
+            ],
+            "fqn": [
+              "Control",
+              "Bind",
+              "Bind"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "body": 40,
+        "type": "ForAll",
+        "vars": [
+          "b"
+        ]
+      },
+      {
+        "body": 41,
+        "constraints": [
+          {
+            "args": [
+              38
+            ],
+            "fqn": [
+              "Control",
+              "Bind",
+              "Bind"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          36,
+          42
+        ],
+        "ret": 43,
+        "type": "Func"
+      },
+      {
+        "args": [
+          3
+        ],
+        "ret": 43,
+        "type": "Func"
+      },
+      {
+        "args": [
+          44
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "name": "b",
+        "type": "TypeVar"
+      },
+      {
+        "body": 46,
+        "type": "ForAll",
+        "vars": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "body": 47,
+        "constraints": [
+          {
+            "args": [
+              38
+            ],
+            "fqn": [
+              "Control",
+              "Bind",
+              "Bind"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          48,
+          49
+        ],
+        "ret": 43,
+        "type": "Func"
+      },
+      {
+        "args": [
+          12
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          12
+        ],
+        "ret": 43,
+        "type": "Func"
+      },
+      {
+        "body": 51,
+        "type": "ForAll",
+        "vars": [
+          "m",
+          "a",
+          "b"
+        ]
+      },
+      {
+        "body": 53,
+        "constraints": [
+          {
+            "args": [
+              52
+            ],
+            "fqn": [
+              "Control",
+              "Bind",
+              "Bind"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "name": "m",
+        "type": "TypeVar"
+      },
+      {
+        "args": [
+          54,
+          55
+        ],
+        "ret": 56,
+        "type": "Func"
+      },
+      {
+        "args": [
+          12
+        ],
+        "constructor": 52,
+        "type": "TypeApp"
+      },
+      {
+        "args": [
+          12
+        ],
+        "ret": 56,
+        "type": "Func"
+      },
+      {
+        "args": [
+          44
+        ],
+        "constructor": 52,
+        "type": "TypeApp"
+      },
+      {
+        "args": [
+          38
+        ],
+        "fqn": [
+          "Control",
+          "Bind",
+          "Bind"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          3
+        ],
+        "ret": 36,
+        "type": "Func"
+      },
+      {
+        "body": 60,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "args": [
+          12
+        ],
+        "ret": 48,
+        "type": "Func"
+      },
+      {
+        "args": [
+          21
+        ],
+        "ret": 32,
+        "type": "Func"
+      },
+      {
+        "body": 61,
+        "constraints": [
+          {
+            "args": [
+              38
+            ],
+            "fqn": [
+              "Control",
+              "Applicative",
+              "Applicative"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 64,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 60,
+        "constraints": [
+          {
+            "args": [
+              38
+            ],
+            "fqn": [
+              "Control",
+              "Applicative",
+              "Applicative"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 66,
+        "type": "ForAll",
+        "vars": [
+          "f",
+          "a"
+        ]
+      },
+      {
+        "body": 68,
+        "constraints": [
+          {
+            "args": [
+              67
+            ],
+            "fqn": [
+              "Control",
+              "Applicative",
+              "Applicative"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "name": "f",
+        "type": "TypeVar"
+      },
+      {
+        "args": [
+          12
+        ],
+        "ret": 69,
+        "type": "Func"
+      },
+      {
+        "args": [
+          12
+        ],
+        "constructor": 67,
+        "type": "TypeApp"
+      },
+      {
+        "args": [
+          38
+        ],
+        "fqn": [
+          "Control",
+          "Applicative",
+          "Applicative"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          3
+        ],
+        "ret": 21,
+        "type": "Func"
+      },
+      {
+        "body": 71,
+        "constraints": [
+          {
+            "args": [
+              3
+            ],
+            "fqn": [
+              "Data",
+              "Show",
+              "Show"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 74,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 75,
+        "constraints": [
+          {
+            "args": [
+              12
+            ],
+            "fqn": [
+              "Data",
+              "Show",
+              "Show"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          12
+        ],
+        "ret": 21,
+        "type": "Func"
+      },
+      {
+        "args": [
+          3
+        ],
+        "fqn": [
+          "Data",
+          "Show",
+          "Show"
+        ],
+        "type": "Adt"
+      }
+    ],
+    "typeAppCount": 12,
+    "typeAppExample": [
+      {
+        "annotation": {
+          "meta": null,
+          "sourceSpan": {
+            "end": [
+              48,
+              19
+            ],
+            "start": [
+              48,
+              14
+            ]
+          },
+          "type": 9
+        },
+        "expression": {
+          "annotation": {
+            "meta": {
+              "metaType": "IsForeign"
+            },
+            "sourceSpan": {
+              "end": [
+                48,
+                17
+              ],
+              "start": [
+                48,
+                16
+              ]
+            },
+            "type": 10
+          },
+          "type": "Var",
+          "value": {
+            "identifier": "greaterThan",
+            "moduleName": [
+              "Data",
+              "Ord"
+            ]
+          }
+        },
+        "type": "TypeApp",
+        "typeArgument": 3
+      }
+    ]
+  },
+  "Test.LazyEvaluation": {
+    "classDecls": [],
+    "dataDecls": [],
+    "typeTable": [
+      {
+        "body": 1,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "args": [
+          2,
+          3
+        ],
+        "ret": 4,
+        "type": "Func"
+      },
+      {
+        "args": [
+          3
+        ],
+        "ret": 4,
+        "type": "Func"
+      },
+      {
+        "type": "Unit"
+      },
+      {
+        "name": "a",
+        "type": "TypeVar"
+      },
+      {
+        "body": 6,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "args": [
+          2
+        ],
+        "ret": 4,
+        "type": "Func"
+      },
+      {
+        "args": [
+          3
+        ],
+        "ret": 8,
+        "type": "Func"
+      },
+      {
+        "type": "Any"
+      },
+      {
+        "args": [
+          3
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          11
+        ],
+        "ret": 9,
+        "type": "Func"
+      },
+      {
+        "type": "String"
+      },
+      {
+        "args": [
+          13,
+          14,
+          3
+        ],
+        "ret": 13,
+        "type": "Func"
+      },
+      {
+        "type": "Int"
+      },
+      {
+        "args": [
+          3
+        ],
+        "ret": 13,
+        "type": "Func"
+      },
+      {
+        "args": [
+          14,
+          3
+        ],
+        "ret": 13,
+        "type": "Func"
+      },
+      {
+        "args": [
+          13
+        ],
+        "ret": 13,
+        "type": "Func"
+      },
+      {
+        "args": [
+          13,
+          13
+        ],
+        "ret": 13,
+        "type": "Func"
+      },
+      {
+        "body": 17,
+        "constraints": [
+          {
+            "args": [
+              13
+            ],
+            "fqn": [
+              "Data",
+              "Ring",
+              "Ring"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 20,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 21,
+        "constraints": [
+          {
+            "args": [
+              4
+            ],
+            "fqn": [
+              "Data",
+              "Ring",
+              "Ring"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          4,
+          4
+        ],
+        "ret": 4,
+        "type": "Func"
+      },
+      {
+        "args": [
+          13
+        ],
+        "fqn": [
+          "Data",
+          "Ring",
+          "Ring"
+        ],
+        "type": "Adt"
+      },
+      {
+        "body": 17,
+        "constraints": [
+          {
+            "args": [
+              13
+            ],
+            "fqn": [
+              "Data",
+              "Semiring",
+              "Semiring"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 25,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 21,
+        "constraints": [
+          {
+            "args": [
+              4
+            ],
+            "fqn": [
+              "Data",
+              "Semiring",
+              "Semiring"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          13
+        ],
+        "fqn": [
+          "Data",
+          "Semiring",
+          "Semiring"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          14
+        ],
+        "ret": 13,
+        "type": "Func"
+      },
+      {
+        "args": [
+          11
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          30
+        ],
+        "ret": 28,
+        "type": "Func"
+      },
+      {
+        "args": [
+          13
+        ],
+        "ret": 28,
+        "type": "Func"
+      },
+      {
+        "args": [
+          32,
+          30
+        ],
+        "ret": 28,
+        "type": "Func"
+      },
+      {
+        "args": [
+          13
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "body": 31,
+        "constraints": [
+          {
+            "args": [
+              34
+            ],
+            "fqn": [
+              "Control",
+              "Bind",
+              "Bind"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "body": 36,
+        "type": "ForAll",
+        "vars": [
+          "b"
+        ]
+      },
+      {
+        "body": 37,
+        "constraints": [
+          {
+            "args": [
+              34
+            ],
+            "fqn": [
+              "Control",
+              "Bind",
+              "Bind"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          32,
+          38
+        ],
+        "ret": 39,
+        "type": "Func"
+      },
+      {
+        "args": [
+          13
+        ],
+        "ret": 39,
+        "type": "Func"
+      },
+      {
+        "args": [
+          40
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "name": "b",
+        "type": "TypeVar"
+      },
+      {
+        "body": 42,
+        "type": "ForAll",
+        "vars": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "body": 43,
+        "constraints": [
+          {
+            "args": [
+              34
+            ],
+            "fqn": [
+              "Control",
+              "Bind",
+              "Bind"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          44,
+          45
+        ],
+        "ret": 39,
+        "type": "Func"
+      },
+      {
+        "args": [
+          4
+        ],
+        "fqn": [
+          "Effect",
+          "Effect"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          4
+        ],
+        "ret": 39,
+        "type": "Func"
+      },
+      {
+        "body": 47,
+        "type": "ForAll",
+        "vars": [
+          "m",
+          "a",
+          "b"
+        ]
+      },
+      {
+        "body": 49,
+        "constraints": [
+          {
+            "args": [
+              48
+            ],
+            "fqn": [
+              "Control",
+              "Bind",
+              "Bind"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "name": "m",
+        "type": "TypeVar"
+      },
+      {
+        "args": [
+          50,
+          51
+        ],
+        "ret": 52,
+        "type": "Func"
+      },
+      {
+        "args": [
+          4
+        ],
+        "constructor": 48,
+        "type": "TypeApp"
+      },
+      {
+        "args": [
+          4
+        ],
+        "ret": 52,
+        "type": "Func"
+      },
+      {
+        "args": [
+          40
+        ],
+        "constructor": 48,
+        "type": "TypeApp"
+      },
+      {
+        "args": [
+          34
+        ],
+        "fqn": [
+          "Control",
+          "Bind",
+          "Bind"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          13
+        ],
+        "ret": 32,
+        "type": "Func"
+      },
+      {
+        "body": 56,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "args": [
+          4
+        ],
+        "ret": 44,
+        "type": "Func"
+      },
+      {
+        "args": [
+          11
+        ],
+        "ret": 28,
+        "type": "Func"
+      },
+      {
+        "body": 57,
+        "constraints": [
+          {
+            "args": [
+              34
+            ],
+            "fqn": [
+              "Control",
+              "Applicative",
+              "Applicative"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 60,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 56,
+        "constraints": [
+          {
+            "args": [
+              34
+            ],
+            "fqn": [
+              "Control",
+              "Applicative",
+              "Applicative"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 62,
+        "type": "ForAll",
+        "vars": [
+          "f",
+          "a"
+        ]
+      },
+      {
+        "body": 64,
+        "constraints": [
+          {
+            "args": [
+              63
+            ],
+            "fqn": [
+              "Control",
+              "Applicative",
+              "Applicative"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "name": "f",
+        "type": "TypeVar"
+      },
+      {
+        "args": [
+          4
+        ],
+        "ret": 65,
+        "type": "Func"
+      },
+      {
+        "args": [
+          4
+        ],
+        "constructor": 63,
+        "type": "TypeApp"
+      },
+      {
+        "args": [
+          34
+        ],
+        "fqn": [
+          "Control",
+          "Applicative",
+          "Applicative"
+        ],
+        "type": "Adt"
+      },
+      {
+        "args": [
+          13
+        ],
+        "ret": 11,
+        "type": "Func"
+      },
+      {
+        "body": 67,
+        "constraints": [
+          {
+            "args": [
+              13
+            ],
+            "fqn": [
+              "Data",
+              "Show",
+              "Show"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "body": 70,
+        "type": "ForAll",
+        "vars": [
+          "a"
+        ]
+      },
+      {
+        "body": 71,
+        "constraints": [
+          {
+            "args": [
+              4
+            ],
+            "fqn": [
+              "Data",
+              "Show",
+              "Show"
+            ]
+          }
+        ],
+        "type": "ConstrainedType"
+      },
+      {
+        "args": [
+          4
+        ],
+        "ret": 11,
+        "type": "Func"
+      },
+      {
+        "args": [
+          13
+        ],
+        "fqn": [
+          "Data",
+          "Show",
+          "Show"
+        ],
+        "type": "Adt"
+      }
+    ],
+    "typeAppCount": 15,
+    "typeAppExample": [
+      {
+        "annotation": {
+          "meta": null,
+          "sourceSpan": {
+            "end": [
+              22,
+              39
+            ],
+            "start": [
+              22,
+              34
+            ]
+          },
+          "type": 18
+        },
+        "expression": {
+          "annotation": {
+            "meta": {
+              "metaType": "IsForeign"
+            },
+            "sourceSpan": {
+              "end": [
+                22,
+                37
+              ],
+              "start": [
+                22,
+                36
+              ]
+            },
+            "type": 19
+          },
+          "type": "Var",
+          "value": {
+            "identifier": "sub",
+            "moduleName": [
+              "Data",
+              "Ring"
+            ]
+          }
+        },
+        "type": "TypeApp",
+        "typeArgument": 13
+      }
+    ]
+  }
+}
