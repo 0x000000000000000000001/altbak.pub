@@ -67,12 +67,32 @@ elif [ "$MODE" == "x" ]; then
   trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/Test/Parallelism.purs src/AppX.purs" EXIT
 fi
 
-export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
-
 if [ "$CLEAN" == "1" ]; then
   echo "=== Rebuilding phpurs backend ==="
-  (cd ../phpurs/phpurs && npm run build)
+  (
+    # The host tool is JavaScript. Pin its compiler independently of the
+    # caller's PATH and of the TAST compiler used for the PHP program below.
+    HOST_PURS="$PWD/run/bak/js/node_modules/purescript/purs.bin"
+    if [ ! -x "$HOST_PURS" ]; then
+      echo "Missing host compiler: $HOST_PURS" >&2
+      exit 1
+    fi
+    HOST_BIN=$(mktemp -d "${TMPDIR:-/tmp}/phpurs-host.XXXXXX")
+    trap 'rm -rf "$HOST_BIN"' EXIT
+    ln -s "$HOST_PURS" "$HOST_BIN/purs"
+    ln -s "$PWD/run/bak/js/node_modules/.bin/spago" "$HOST_BIN/spago"
+    cd ../phpurs/phpurs
+    export PATH="$HOST_BIN:$PWD/node_modules/.bin:$PATH"
+    echo "Host compiler: $HOST_PURS ($(purs --version))"
+    # Run the package's build steps directly: npm would prepend .bin entries
+    # again and could select another purs before the pinned host compiler.
+    spago build
+    spago bundle --module Main --platform node --outfile bin/phpurs.js --bundle-type app
+  )
 fi
+
+# Select the TAST compiler for the PureScript program emitted as PHP.
+export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
 
 echo 'Building...'
 spago build --backend-args "--main ${ENTRY_POINT}"
@@ -81,9 +101,10 @@ cp src/Test/Test.*.php output/ 2>/dev/null || true
 echo "=== PHP ==="
 if [ -f "output/${ENTRY_POINT}/main.mod.php" ]; then
     php bin/php/composer.phar update --no-plugins -d run/bak/php
-    mkdir -p /tmp/phpurs_opcache
+    OPCACHE_DIR="$PWD/run/bak/php/opcache"
+    mkdir -p "$OPCACHE_DIR"
     
-    php -d xdebug.mode=off -d opcache.enable_cli=1 -d opcache.file_cache=/tmp/phpurs_opcache -d opcache.jit_buffer_size=128M -d opcache.jit=1255 output/${ENTRY_POINT}/main.mod.php
+    php -d xdebug.mode=off -d opcache.enable_cli=1 -d "opcache.file_cache=$OPCACHE_DIR" -d opcache.jit_buffer_size=128M -d opcache.jit=1255 output/${ENTRY_POINT}/main.mod.php
 else
     echo "No output/${ENTRY_POINT}/main.mod.php generated."
 fi
