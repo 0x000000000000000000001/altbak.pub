@@ -1,0 +1,161 @@
+FUNCTION ValueEnums_reuse args: 1 extracted: Just
+FUNCTION ValueEnums_isRed args: 1 extracted: Just
+FUNCTION ValueEnums_color args: 1 extracted: Just
+FUNCTION ValueEnums_nodeConstructor args: 4 extracted: Nothing
+FUNCTION ValueEnums_node args: 4 extracted: Just
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: rustc: 
+
+error[E0277]: the trait bound `Color: Copy` is not satisfied
+   --> /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-value-enums-XsWb3n/value-enums.rs:377:18
+    |
+377 |     needs_copy::<Color>();
+    |                  ^^^^^ the trait `Copy` is not implemented for `Color`
+    |
+note: required by a bound in `needs_copy`
+   --> /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-value-enums-XsWb3n/value-enums.rs:376:22
+    |
+376 |     fn needs_copy<T: Copy>() {}
+    |                      ^^^^ required by this bound in `needs_copy`
+help: consider annotating `Color` with `#[derive(Copy)]`
+    |
+295 + #[derive(Copy)]
+296 | pub enum Color {
+    |
+
+error[E0308]: mismatched types
+   --> /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-value-enums-XsWb3n/value-enums.rs:378:28
+    |
+378 |     let _: fn() -> Color = ValueEnums_red;
+    |            -------------   ^^^^^^^^^^^^^^ expected fn pointer, found fn item
+    |            |
+    |            expected due to this
+    |
+    = note: expected fn pointer `fn() -> Color`
+                  found fn item `fn() -> Rc<Color> {ValueEnums_red}`
+
+error[E0308]: mismatched types
+   --> /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-value-enums-XsWb3n/value-enums.rs:379:36
+    |
+379 |     let _: fn(Rc<Tree>) -> Color = ValueEnums_color;
+    |            ---------------------   ^^^^^^^^^^^^^^^^ expected fn pointer, found fn item
+    |            |
+    |            expected due to this
+    |
+    = note: expected fn pointer `fn(Rc<_>) -> Color`
+                  found fn item `fn(Rc<_>) -> Rc<Color> {ValueEnums_color}`
+
+error[E0308]: mismatched types
+   --> /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-value-enums-XsWb3n/value-enums.rs:385:49
+    |
+385 |         assert!(matches!(ValueEnums_reuse(red), Color::R));
+    |                          ---------------------  ^^^^^^^^ expected `Rc<Color>`, found `Color`
+    |                          |
+    |                          this expression has type `Rc<Color>`
+    |
+    = note: expected struct `Rc<Color>`
+                 found enum `Color`
+help: consider dereferencing to access the inner value using the `Deref` trait
+    |
+385 |         assert!(matches!(*ValueEnums_reuse(red), Color::R));
+    |                          +
+
+error[E0308]: mismatched types
+   --> /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-value-enums-XsWb3n/value-enums.rs:397:53
+    |
+397 |     assert!(matches!(ValueEnums_color(old.clone()), Color::R));
+    |                      -----------------------------  ^^^^^^^^ expected `Rc<Color>`, found `Color`
+    |                      |
+    |                      this expression has type `Rc<Color>`
+    |
+    = note: expected struct `Rc<Color>`
+                 found enum `Color`
+help: consider dereferencing to access the inner value using the `Deref` trait
+    |
+397 |     assert!(matches!(*ValueEnums_color(old.clone()), Color::R));
+    |                      +
+
+error[E0308]: mismatched types
+   --> /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-value-enums-XsWb3n/value-enums.rs:398:55
+    |
+398 |     assert!(matches!(ValueEnums_color(other.clone()), Color::R));
+    |                      -------------------------------  ^^^^^^^^ expected `Rc<Color>`, found `Color`
+    |                      |
+    |                      this expression has type `Rc<Color>`
+    |
+    = note: expected struct `Rc<Color>`
+                 found enum `Color`
+help: consider dereferencing to access the inner value using the `Deref` trait
+    |
+398 |     assert!(matches!(*ValueEnums_color(other.clone()), Color::R));
+    |                      +
+
+error[E0308]: mismatched types
+   --> /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-value-enums-XsWb3n/value-enums.rs:400:29
+    |
+400 |     assert!(matches!(color, Color::R));
+    |                      -----  ^^^^^^^^ expected `Rc<Color>`, found `Color`
+    |                      |
+    |                      this expression has type `&Rc<Color>`
+    |
+    = note: expected struct `Rc<Color>`
+                 found enum `Color`
+help: consider dereferencing to access the inner value using the `Deref` trait
+    |
+400 |     assert!(matches!(&**color, Color::R));
+    |                      +++
+
+error[E0308]: mismatched types
+   --> /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-value-enums-XsWb3n/value-enums.rs:406:32
+    |
+406 |     assert!(matches!(survivor, Color::R));
+    |                      --------  ^^^^^^^^ expected `Rc<Color>`, found `Color`
+    |                      |
+    |                      this expression has type `Rc<Color>`
+    |
+    = note: expected struct `Rc<Color>`
+                 found enum `Color`
+help: consider dereferencing to access the inner value using the `Deref` trait
+    |
+406 |     assert!(matches!(*survivor, Color::R));
+    |                      +
+
+error: aborting due to 8 previous errors
+
+Some errors have detailed explanations: E0277, E0308.
+For more information about an error, try `rustc --explain E0277`.
+
+
+1 !== 0
+
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/value-enums.mjs:119:12
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/codegen/value-enums.mjs (152.362375ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 155.5275
+
+✖ failing tests:
+
+test at tests/codegen/value-enums.mjs:1:1
+✖ tests/codegen/value-enums.mjs (152.362375ms)
+  'test failed'

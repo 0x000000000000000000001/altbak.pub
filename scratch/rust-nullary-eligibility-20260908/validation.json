@@ -1,0 +1,25 @@
+{
+  "unchanged_rust_sources": 301,
+  "codegen_tests_passed": 13,
+  "tast_tests_passed": 1,
+  "clean_runner_outputs": [
+    "7",
+    "55",
+    "202950",
+    "100000",
+    "20000",
+    "125",
+    "100000",
+    "21536",
+    "22",
+    "10000000",
+    "1200",
+    "1000000",
+    "202950",
+    "5"
+  ],
+  "actual_rbtree_eligibility": {
+    "Color": true,
+    "Tree": false
+  }
+}

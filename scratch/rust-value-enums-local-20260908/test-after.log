@@ -1,0 +1,17 @@
+FUNCTION ValueEnums_capture args: 1 extracted: Just
+FUNCTION ValueEnums_apply args: 2 extracted: Just
+FUNCTION ValueEnums_reuse args: 1 extracted: Just
+FUNCTION ValueEnums_isRed args: 1 extracted: Just
+FUNCTION ValueEnums_color args: 1 extracted: Just
+FUNCTION ValueEnums_nodeConstructor args: 4 extracted: Nothing
+FUNCTION ValueEnums_node args: 4 extracted: Just
+Color: 1 byte(s); 1000 native iterations: 0 allocations; one tree node: 1 allocation
+✔ tests/codegen/value-enums.mjs (534.516375ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 538.103166

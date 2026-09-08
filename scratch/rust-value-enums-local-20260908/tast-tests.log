@@ -1,0 +1,14 @@
+
+> purust@0.1.0 test:tast
+> node --test tests/tast/*.mjs
+
+TAST enum eligibility: nullary constructors, phantom parameters, payloads and nested Color checked.
+✔ tests/tast/nullary-enums.mjs (164.584167ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 168.146959
