@@ -1,0 +1,14 @@
+[<AutoOpen>]
+module PureScript_Test_TCO
+
+open System
+open System.Collections.Generic
+
+let Test_TCO_describe  = (sharpurs_apply (box ((box Effect_Console_log))) (box ((box "Tail Call Optimization (100k calls):"))))
+
+let Test_TCO_deepTailRec : obj =
+    let rec sharpurs_int_kernel (sharpurs_i_0: int) (sharpurs_i_1: int) : int =
+        (if (sharpurs_i_0 = (0)) then sharpurs_i_1 else (sharpurs_int_kernel (sharpurs_i_0 - (1)) (sharpurs_i_1 + (sharpurs_int_mod sharpurs_i_0 (3)))))
+    box (fun (sharpurs_i_0: obj) -> box (fun (sharpurs_i_1: obj) -> box (sharpurs_int_kernel (unbox<int> sharpurs_i_0) (unbox<int> sharpurs_i_1))))
+
+let Test_TCO_act  = (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Control_Bind_bind))) (box ((box Effect_bindEffect)))))) (box ((sharpurs_apply (box ((box Bench_opaque))) (box ((box 100000))))))))) (box ((box (fun (dummy: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box Control_Applicative_pure))) (box ((box Effect_applicativeEffect)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Show_show))) (box ((box Data_Show_showInt)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Test_TCO_deepTailRec))) (box ((box dummy)))))) (box ((box 0)))))))))))))))

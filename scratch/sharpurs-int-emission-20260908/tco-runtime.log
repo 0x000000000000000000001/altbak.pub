@@ -1,0 +1,6 @@
+Test.TCO.act: "100000"
+zero iterations / negative accumulator: -7
+one million native iterations: 1000000
+partial application: 20
+reused partial application: 0
+Generated TCO: 5 checks passed; no timings collected.

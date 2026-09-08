@@ -1,0 +1,9 @@
+{
+  "backend_head": "84d1df4549565b477ea563b7a79ecdd319341c46",
+  "sha256": {
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/src/Sharpurs/IntKernel.purs": "bb70ba8fa04a4defc1686619982c4a359dcd04eff0cce503ec31170b0777be6b",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/test/Main.purs": "263ea4c17d4557af3a8aa1025b4d4669c8948f4181da7b511458687ed1321f43",
+    "/Users/0x1/Documents/htdocs/sharpurs/sharpurs/src/Main.purs": "c7637548534e0c4e6d3c1466cd4e67af4f9275724e98f479415f375b350c9513",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-tco-ir-20260908/deepTailRec.optimized.json": "8f761c6664b45905fcbdf6abbb0431e23c6a3f79eae3356b81d8f46a1674b4f3"
+  }
+}

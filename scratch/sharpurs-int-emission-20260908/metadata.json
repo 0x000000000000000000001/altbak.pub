@@ -1,0 +1,31 @@
+{
+  "generatedFsFilesCompared": 301,
+  "changedFsFiles": [
+    "Sharpurs_Prelude.fs",
+    "Test.TCO.fs"
+  ],
+  "acceptedBindings": [
+    "Test.TCO.deepTailRec"
+  ],
+  "correctness": {
+    "converter": 43,
+    "routing": 6,
+    "kernelRuntime": 695,
+    "applyRuntime": 21,
+    "generatedTco": 5
+  },
+  "benchmarkTimingsCollected": false,
+  "sha256": {
+    "sharpurs/sharpurs/src/Main.purs": "15b024f16c387a02b5e24f81c203065a8cc64e2ffc5b10e51e1636e4d4ead402",
+    "sharpurs/sharpurs/src/Sharpurs/CodeGen.purs": "60a3fd80e2c88bc5c9baee6ee36d962a944416b651ddb866e92d6b394c5a62c5",
+    "sharpurs/sharpurs/src/Sharpurs/IntKernel.purs": "bb70ba8fa04a4defc1686619982c4a359dcd04eff0cce503ec31170b0777be6b",
+    "sharpurs/sharpurs/src/Sharpurs/IntKernel/CodeGen.purs": "fca601b7782569e35c26e28dbc0554ad658370495b5d8f2d55e30d473700f7ea",
+    "sharpurs/sharpurs/test/Main.purs": "f2cfb28deac8ffa3ddfc931ac668f8e3cefa4822799d5b327e14ea8f62dd1b5a",
+    "sharpurs/sharpurs/tests/int-kernel.mjs": "8d8ca7bac2296d837d69189da4bacb179db32ef9b04e83aa9b05c5e5b586587f",
+    "sharpurs/sharpurs/tests/int-kernel.fsx": "f3cbdb2dfc72d3a6db80b2a396c597280e7d68affbc9a36b55d0186776821084",
+    "altbak.pub-sharpurs/output/Test.TCO/corefn.json": "4ab1bfd2241e5374aabee559d9e8c8e604ff1355193528c0436a3b6242cfe9c2",
+    "altbak.pub-sharpurs/output/Main/Test.TCO.fs": "9d9062d603f660583f9b57002147437d8b714892151e12c381e7de42ba284965",
+    "altbak.pub-sharpurs/output/Main/Sharpurs_Prelude.fs": "59f798ef96b6f0eb14856e27eb46290082790ad34ba1de11a046cf0f9456cd0e",
+    "altbak.pub-sharpurs/output/Main/bin/Release/net8.0/Program.dll": "e7aa16e61f90eedebb4d2e0cae7251b7a012a48b1a121128c278644981b3e2cb"
+  }
+}

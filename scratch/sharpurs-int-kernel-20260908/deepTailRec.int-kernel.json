@@ -1,0 +1,87 @@
+{
+  "name": {
+    "$tag": "Qualified",
+    "value0": {
+      "$tag": "Just",
+      "value0": "Test.TCO"
+    },
+    "value1": "deepTailRec"
+  },
+  "args": [
+    {
+      "name": {
+        "$tag": "Just",
+        "value0": "v"
+      },
+      "level": 0
+    },
+    {
+      "name": {
+        "$tag": "Just",
+        "value0": "v1"
+      },
+      "level": 1
+    }
+  ],
+  "body": {
+    "$tag": "IntIf",
+    "value0": {
+      "$tag": "IntEqual",
+      "value0": {
+        "$tag": "IntLocal",
+        "value0": 0
+      },
+      "value1": {
+        "$tag": "IntLiteral",
+        "value0": 0
+      }
+    },
+    "value1": {
+      "$tag": "IntLocal",
+      "value0": 1
+    },
+    "value2": {
+      "$tag": "IntTailCall",
+      "value0": [
+        {
+          "$tag": "IntBinary",
+          "value0": {
+            "$tag": "IntSubtract"
+          },
+          "value1": {
+            "$tag": "IntLocal",
+            "value0": 0
+          },
+          "value2": {
+            "$tag": "IntLiteral",
+            "value0": 1
+          }
+        },
+        {
+          "$tag": "IntBinary",
+          "value0": {
+            "$tag": "IntAdd"
+          },
+          "value1": {
+            "$tag": "IntLocal",
+            "value0": 1
+          },
+          "value2": {
+            "$tag": "IntBinary",
+            "value0": {
+              "$tag": "IntModulo"
+            },
+            "value1": {
+              "$tag": "IntLocal",
+              "value0": 0
+            },
+            "value2": {
+              "$tag": "IntLiteral",
+              "value0": 3
+            }
+          }
+        }
+      ]
+    }
+  }
+}

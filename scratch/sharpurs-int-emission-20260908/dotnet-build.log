@@ -1,0 +1,13 @@
+  Determining projects to restore...
+  Restored /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/output/Main/Program.fsproj (in 7.06 sec).
+  1 of 2 projects are up-to-date for restore.
+  FFI.CSharp -> /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/output/Main/bin/csharp/net8.0/FFI.CSharp.dll
+FSC : error FS0078: Unable to find the file '/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/output/Main/obj/FFI.CSharp/Release/net8.0/ref/FFI.CSharp.dll' in any of /Users/0x1/.dotnet/packs/Microsoft.NETCore.App.Ref/8.0.29/ref/net8.0 /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/sharp/output/Main /Users/0x1/.dotnet/sdk/8.0.423/FSharp/ [/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/output/Main/Program.fsproj]
+
+Build FAILED.
+
+FSC : error FS0078: Unable to find the file '/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/output/Main/obj/FFI.CSharp/Release/net8.0/ref/FFI.CSharp.dll' in any of /Users/0x1/.dotnet/packs/Microsoft.NETCore.App.Ref/8.0.29/ref/net8.0 /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/sharp/output/Main /Users/0x1/.dotnet/sdk/8.0.423/FSharp/ [/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/output/Main/Program.fsproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:08.36

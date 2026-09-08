@@ -1,0 +1,58 @@
+{
+  "module": "Test.TCO",
+  "binding": "deepTailRec",
+  "signature": "Int -> Int -> Int",
+  "recursive_group": true,
+  "node_counts": {
+    "CoreFn$Func": 3,
+    "CoreFn$Int": 22,
+    "CoreFn$LitInt": 3,
+    "CoreFn$Qualified": 1,
+    "DataMaybe$Just": 8,
+    "DataTuple$Tuple": 2,
+    "Syntax$Abs": 2,
+    "Syntax$App": 1,
+    "Syntax$Branch": 1,
+    "Syntax$Lit": 3,
+    "Syntax$Local": 5,
+    "Syntax$Op2": 4,
+    "Syntax$OpAdd": 1,
+    "Syntax$OpEq": 1,
+    "Syntax$OpIntNum": 3,
+    "Syntax$OpIntOrd": 1,
+    "Syntax$OpMod": 1,
+    "Syntax$OpSubtract": 1,
+    "Syntax$Pair": 1,
+    "Syntax$PrimOp": 4,
+    "Syntax$Typed": 17,
+    "Syntax$Var": 1
+  },
+  "qualified_references": [
+    {
+      "$tag": "CoreFn$Qualified",
+      "value0": {
+        "$tag": "DataMaybe$Just",
+        "value0": "Test.TCO"
+      },
+      "value1": "deepTailRec"
+    }
+  ],
+  "input_expression_type_apps": 3,
+  "optimized_expression_type_apps": 0,
+  "needed_expression_nodes": [
+    "Typed",
+    "Abs",
+    "Branch",
+    "PrimOp",
+    "App",
+    "Var",
+    "Local",
+    "Lit"
+  ],
+  "needed_primitives": [
+    "OpIntOrd OpEq",
+    "OpIntNum OpSubtract",
+    "OpIntNum OpAdd",
+    "OpIntNum OpMod"
+  ]
+}
