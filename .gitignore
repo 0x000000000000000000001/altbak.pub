@@ -1,4 +1,9 @@
 .DS_Store
+# Backend selection is local to each worktree; bin/<backend>/run recreates these links.
+/.spago
+/output
+/spago.yaml
+/spago.lock
 node_modules/
 bower_components/
 .pulp-cache/
