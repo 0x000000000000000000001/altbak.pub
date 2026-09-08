@@ -17,6 +17,7 @@ cachegrind.out*
 .psc-ide-port
 run/bak/*/output*/
 /java_output/
+/run/bak/java/native-bench/
 run/bak/*/spago/
 run/bak/*/.spago/
 *.gopurs-cache.json
