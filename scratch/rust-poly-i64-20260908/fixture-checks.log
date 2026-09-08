@@ -1,0 +1,2 @@
+60 assertions: Int, Number, both generic dictionary calls, zero iterations and varied initial values.
+Native accumulator assembly: one add, no loop branch (arm64).

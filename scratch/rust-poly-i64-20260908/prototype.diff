@@ -1,0 +1,28 @@
+--- before.rs
++++ prototype.rs
+@@ -138,14 +138,14 @@
+     let val_purs_local_2_rec_0 = {
+         let mut purs_local_2_rec_0 = purs_local_2_rec_0.clone();
+         let mut purs_local_2_rec_0 = purs_local_2_rec_0.clone();
+-        fn purs_local_2_rec_0_impl(mut purs_local_2_rec_0: crate::UnknownType, mut purs_local_3: i64, mut purs_local_4: crate::UnknownType) -> crate::UnknownType {
++        fn purs_local_2_rec_0_impl(mut purs_local_2_rec_0: crate::UnknownType, mut purs_local_3: i64, mut purs_local_4: i64) -> i64 {
+         loop {
+             break /* Typed crate::UnknownType <- crate::UnknownType : Branch(...) */if (/* Typed i64 <- i64 : Local(...) */purs_local_3.clone() == 0) {
+         /* Typed crate::UnknownType <- crate::UnknownType : Local(...) */purs_local_4.clone()
+     } else {
+         /* Typed crate::UnknownType <- crate::UnknownType : App(Local(...)) */{
+         let _tco_temp_0 = /* Typed i64 <- i64 : PrimOp(...) */(/* Typed i64 <- i64 : Local(...) */purs_local_3.clone() - /* Typed i64 <- i64 : Lit */1);
+-        let _tco_temp_1 = crate::mk_int(/* Typed crate::UnknownType <- i64 : PrimOp(...) */((purs_local_4.clone()).unwrap_int() + 1));
++        let _tco_temp_1 = (purs_local_4 + 1);
+         purs_local_3 = _tco_temp_0;
+         purs_local_4 = _tco_temp_1;
+         continue;
+@@ -155,7 +155,7 @@
+     }
+         crate::Value::Func2(purust_core::Func2::Shared(std::rc::Rc::new({ let _f = (purust_core::Func2::Shared(std::rc::Rc::new(move |mut purs_local_3: i64, mut purs_local_4: crate::UnknownType| -> crate::UnknownType {
+         let mut purs_local_2_rec_0 = purs_local_2_rec_0.clone();
+-        purs_local_2_rec_0_impl(purs_local_2_rec_0, purs_local_3, purs_local_4)
++        crate::mk_int(purs_local_2_rec_0_impl(purs_local_2_rec_0, purs_local_3, purs_local_4.unwrap_int()))
+     }))).clone(); move |mut _a0: crate::UnknownType, mut _a1: crate::UnknownType| -> crate::UnknownType { _f((_a0).unwrap_int(), _a1) } })))
+     };
+     if let crate::Value::Thunk(ref mut thunk) = purs_local_2_rec_0 {

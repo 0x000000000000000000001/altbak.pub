@@ -1,0 +1,495 @@
+Generating Rust code for PolyI64
+FUNCTION Control_Semigroupoid_composeFlipped args: 3 extracted: Just
+FUNCTION Control_Semigroupoid_compose args: 3 extracted: Nothing
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<purust_core::Func1<crate::UnknownType, crate::UnknownType>, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType> for compose
+Found FFI for Control.Semigroupoid at: Nothing
+Found FFI for Control.Semigroupoid at: Nothing
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, crate::UnknownType> for identity
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Control_Semigroupoid::Semigroupoid>> for Semigroupoid0
+FUNCTION Control_Category_identity args: 1 extracted: Just
+Found FFI for Control.Category at: Nothing
+Found FFI for Control.Category at: Nothing
+Found FFI for Data.Boolean at: Nothing
+Found FFI for Data.Boolean at: Nothing
+Found FFI for Type.Proxy at: Nothing
+Found FFI for Type.Proxy at: Nothing
+FUNCTION Data_Symbol_reflectSymbol args: 2 extracted: Nothing
+reifySymbol type: ForAll(Func)
+FUNCTION Data_Symbol_reifySymbol args: 2 extracted: Just
+Found FFI for Data.Symbol at: Nothing
+Found FFI for Data.Symbol at: Nothing
+genFallback unsafeCoerce args: ["mut a0: crate::UnknownType"]
+Found FFI for Data.Unit at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Unit.rs")
+Found FFI for Data.Unit at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Unit.rs")
+Found FFI for Record.Unsafe at: Nothing
+Found FFI for Record.Unsafe at: Nothing
+genFallback unsafeSet args: ["mut a0: String","mut a1: crate::UnknownType","mut a2: crate::UnknownType"]
+genFallback unsafeHas args: ["mut a0: String","mut a1: crate::UnknownType"]
+genFallback unsafeGet args: ["mut a0: String","mut a1: crate::UnknownType"]
+genFallback unsafeDelete args: ["mut a0: String","mut a1: crate::UnknownType"]
+FUNCTION Data_HeytingAlgebra_disj args: 3 extracted: Nothing
+FUNCTION Data_HeytingAlgebra_disjRecord args: 4 extracted: Nothing
+FUNCTION Data_HeytingAlgebra_ff args: 1 extracted: Just
+FUNCTION Data_HeytingAlgebra_ffRecord args: 3 extracted: Nothing
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy> for conj
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy> for disj
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy> for implies
+LITRECORD expStr=crate::UnknownType, actStr=Purs_Type_Proxy::Proxy for ff
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func1<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy> for not
+LITRECORD expStr=crate::UnknownType, actStr=Purs_Type_Proxy::Proxy for tt
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType> for conjRecord
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType> for disjRecord
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType> for ffRecord
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType> for impliesRecord
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType> for notRecord
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType> for ttRecord
+LITRECORD expStr=crate::UnknownType, actStr=() for ff
+LITRECORD expStr=crate::UnknownType, actStr=() for tt
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<(), (), ()> for implies
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<(), (), ()> for conj
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<(), (), ()> for disj
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func1<(), ()> for not
+FUNCTION Data_HeytingAlgebra_implies args: 3 extracted: Nothing
+FUNCTION Data_HeytingAlgebra_impliesRecord args: 4 extracted: Nothing
+FUNCTION Data_HeytingAlgebra_not args: 2 extracted: Nothing
+FUNCTION Data_HeytingAlgebra_notRecord args: 3 extracted: Nothing
+FUNCTION Data_HeytingAlgebra_tt args: 1 extracted: Just
+FUNCTION Data_HeytingAlgebra_ttRecord args: 3 extracted: Nothing
+LITRECORD expStr=crate::UnknownType, actStr=bool for ff
+LITRECORD expStr=crate::UnknownType, actStr=bool for tt
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<bool, bool, bool> for implies
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<bool, bool, bool> for conj
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<bool, bool, bool> for disj
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func1<bool, bool> for not
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType> for conjRecord
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType> for disjRecord
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType> for impliesRecord
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType> for ffRecord
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType> for notRecord
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType> for ttRecord
+FUNCTION Data_HeytingAlgebra_heytingAlgebraRecordCons args: 4 extracted: Just
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, crate::UnknownType> for ff
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, crate::UnknownType> for tt
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<purust_core::Func1<crate::UnknownType, crate::UnknownType>, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType> for implies
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<purust_core::Func1<crate::UnknownType, crate::UnknownType>, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType> for conj
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<purust_core::Func1<crate::UnknownType, crate::UnknownType>, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType> for disj
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType> for not
+FUNCTION Data_HeytingAlgebra_heytingAlgebraFunction args: 1 extracted: Just
+FUNCTION Data_HeytingAlgebra_conj args: 3 extracted: Nothing
+LITRECORD expStr=crate::UnknownType, actStr=crate::UnknownType for ff
+LITRECORD expStr=crate::UnknownType, actStr=crate::UnknownType for tt
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType> for conj
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType> for disj
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType> for implies
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func1<crate::UnknownType, crate::UnknownType> for not
+FUNCTION Data_HeytingAlgebra_heytingAlgebraRecord args: 2 extracted: Just
+FUNCTION Data_HeytingAlgebra_conjRecord args: 4 extracted: Nothing
+Found FFI for Data.HeytingAlgebra at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/HeytingAlgebra.rs")
+Found FFI for Data.HeytingAlgebra at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/HeytingAlgebra.rs")
+FUNCTION Data_Void_absurd args: 1 extracted: Just
+Found FFI for Data.Void at: Nothing
+Found FFI for Data.Void at: Nothing
+FUNCTION Data_Eq_notEq1 args: 4 extracted: Just
+FUNCTION Data_Eq_notEq args: 3 extracted: Just
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, bool> for eqRecord
+FUNCTION Data_Eq_eqRowCons args: 4 extracted: Just
+LITRECORD expStr=purust_core::Func3<std::rc::Rc<crate::Eq>, crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func3<std::rc::Rc<crate::Eq>, crate::UnknownType, crate::UnknownType, bool> for eq1
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool> for eq
+FUNCTION Data_Eq_eqArray args: 1 extracted: Just
+FUNCTION Data_Eq_eq args: 3 extracted: Nothing
+FUNCTION Data_Eq_eq1 args: 4 extracted: Nothing
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func2<bool, bool, bool> for eq
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func2<char, char, bool> for eq
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func2<i64, i64, bool> for eq
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func2<f64, f64, bool> for eq
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, bool> for eq
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool> for eq
+FUNCTION Data_Eq_eqRec args: 2 extracted: Just
+FUNCTION Data_Eq_eqRecord args: 4 extracted: Nothing
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, bool> for eqRecord
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func2<String, String, bool> for eq
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func2<(), (), bool> for eq
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func2<purust_core::Void, purust_core::Void, bool> for eq
+Found FFI for Data.Eq at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Eq.rs")
+Found FFI for Data.Eq at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Eq.rs")
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType> for appendRecord
+FUNCTION Data_Semigroup_semigroupRecordCons args: 4 extracted: Just
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<purust_core::Func1<crate::UnknownType, crate::UnknownType>, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType> for append
+FUNCTION Data_Semigroup_semigroupFn args: 1 extracted: Just
+FUNCTION Data_Semigroup_append args: 3 extracted: Nothing
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType> for append
+FUNCTION Data_Semigroup_semigroupRecord args: 2 extracted: Just
+FUNCTION Data_Semigroup_appendRecord args: 4 extracted: Nothing
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType> for append
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy> for append
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType> for appendRecord
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<String, String, String> for append
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<(), (), ()> for append
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<purust_core::Void, purust_core::Void, purust_core::Void> for append
+Found FFI for Data.Semigroup at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Semigroup.rs")
+Found FFI for Data.Semigroup at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Semigroup.rs")
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, crate::UnknownType, String>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, crate::UnknownType, String> for showRecordFields
+FUNCTION Data_Show_showRecordFieldsConsNil args: 2 extracted: Just
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, crate::UnknownType, String>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, crate::UnknownType, String> for showRecordFields
+FUNCTION Data_Show_showRecordFieldsCons args: 3 extracted: Just
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, String>, actStr=purust_core::Func1<crate::UnknownType, String> for show
+FUNCTION Data_Show_showArray args: 1 extracted: Just
+FUNCTION Data_Show_show args: 2 extracted: Nothing
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, String>, actStr=purust_core::Func1<bool, String> for show
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, String>, actStr=purust_core::Func1<char, String> for show
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, String>, actStr=purust_core::Func1<i64, String> for show
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, String>, actStr=purust_core::Func1<f64, String> for show
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, String>, actStr=purust_core::Func1<Purs_Type_Proxy::Proxy, String> for show
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, String>, actStr=purust_core::Func1<crate::UnknownType, String> for show
+FUNCTION Data_Show_showRecord args: 3 extracted: Just
+FUNCTION Data_Show_showRecordFields args: 3 extracted: Nothing
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, crate::UnknownType, String>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, crate::UnknownType, String> for showRecordFields
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, String>, actStr=purust_core::Func1<String, String> for show
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, String>, actStr=purust_core::Func1<(), String> for show
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, String>, actStr=purust_core::Func1<purust_core::Void, String> for show
+Found FFI for Data.Show at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Show.rs")
+Found FFI for Data.Show at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Show.rs")
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func2<crate::Ordering, crate::Ordering, bool> for eq
+FUNCTION Data_Ordering_invert args: 1 extracted: Just
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<crate::Ordering, crate::Ordering, crate::Ordering> for append
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, String>, actStr=purust_core::Func1<crate::Ordering, String> for show
+Found FFI for Data.Ordering at: Nothing
+Found FFI for Data.Ordering at: Nothing
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType> for addRecord
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType> for mulRecord
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType> for oneRecord
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType> for zeroRecord
+FUNCTION Data_Semiring_semiringRecordCons args: 4 extracted: Just
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<purust_core::Func1<crate::UnknownType, crate::UnknownType>, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType> for add
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, crate::UnknownType> for zero
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<purust_core::Func1<crate::UnknownType, crate::UnknownType>, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType> for mul
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, crate::UnknownType> for one
+FUNCTION Data_Semiring_semiringFn args: 1 extracted: Just
+FUNCTION Data_Semiring_add args: 3 extracted: Nothing
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType> for add
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType> for mul
+LITRECORD expStr=crate::UnknownType, actStr=crate::UnknownType for one
+LITRECORD expStr=crate::UnknownType, actStr=crate::UnknownType for zero
+FUNCTION Data_Semiring_semiringRecord args: 2 extracted: Just
+FUNCTION Data_Semiring_addRecord args: 4 extracted: Nothing
+FUNCTION Data_Semiring_mul args: 3 extracted: Nothing
+FUNCTION Data_Semiring_mulRecord args: 4 extracted: Nothing
+FUNCTION Data_Semiring_one args: 1 extracted: Just
+FUNCTION Data_Semiring_oneRecord args: 3 extracted: Nothing
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<i64, i64, i64> for add
+LITRECORD expStr=crate::UnknownType, actStr=i64 for zero
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<i64, i64, i64> for mul
+LITRECORD expStr=crate::UnknownType, actStr=i64 for one
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<f64, f64, f64> for add
+LITRECORD expStr=crate::UnknownType, actStr=f64 for zero
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<f64, f64, f64> for mul
+LITRECORD expStr=crate::UnknownType, actStr=f64 for one
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy> for add
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy> for mul
+LITRECORD expStr=crate::UnknownType, actStr=Purs_Type_Proxy::Proxy for one
+LITRECORD expStr=crate::UnknownType, actStr=Purs_Type_Proxy::Proxy for zero
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType> for addRecord
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType> for mulRecord
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType> for oneRecord
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType> for zeroRecord
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<(), (), ()> for add
+LITRECORD expStr=crate::UnknownType, actStr=() for zero
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<(), (), ()> for mul
+LITRECORD expStr=crate::UnknownType, actStr=() for one
+FUNCTION Data_Semiring_zero args: 1 extracted: Just
+FUNCTION Data_Semiring_zeroRecord args: 3 extracted: Nothing
+Found FFI for Data.Semiring at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Semiring.rs")
+Found FFI for Data.Semiring at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Semiring.rs")
+FUNCTION Data_Ring_negate args: 2 extracted: Just
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<purust_core::Func1<crate::UnknownType, crate::UnknownType>, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType> for sub
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semiring::Semiring>> for Semiring0
+FUNCTION Data_Ring_ringFn args: 1 extracted: Just
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<i64, i64, i64> for sub
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semiring::Semiring>> for Semiring0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<f64, f64, f64> for sub
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semiring::Semiring>> for Semiring0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy> for sub
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semiring::Semiring>> for Semiring0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType> for sub
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semiring::Semiring>> for Semiring0
+FUNCTION Data_Ring_ringRecord args: 2 extracted: Just
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType> for addRecord
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType> for mulRecord
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType> for oneRecord
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType> for zeroRecord
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType> for subRecord
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semiring::SemiringRecord>> for SemiringRecord0
+FUNCTION Data_Ring_ringRecordCons args: 4 extracted: Just
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, crate::UnknownType> for subRecord
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semiring::SemiringRecord>> for SemiringRecord0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<(), (), ()> for sub
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semiring::Semiring>> for Semiring0
+FUNCTION Data_Ring_sub args: 3 extracted: Nothing
+FUNCTION Data_Ring_subRecord args: 4 extracted: Nothing
+Found FFI for Data.Ring at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Ring.rs")
+Found FFI for Data.Ring at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Ring.rs")
+FUNCTION Data_Ord_abs args: 3 extracted: Just
+FUNCTION Data_Ord_between args: 4 extracted: Just
+FUNCTION Data_Ord_clamp args: 4 extracted: Just
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering> for compareRecord
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Eq::EqRecord>> for EqRecord0
+FUNCTION Data_Ord_ordRecordCons args: 4 extracted: Just
+LITRECORD expStr=purust_core::Func3<std::rc::Rc<crate::Ord>, crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering>, actStr=purust_core::Func3<std::rc::Rc<crate::Ord>, crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering> for compare1
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Eq::Eq1>> for Eq10
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool> for eq
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering> for compare
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Eq::Eq>> for Eq0
+FUNCTION Data_Ord_ordArray args: 1 extracted: Just
+FUNCTION Data_Ord_min args: 3 extracted: Just
+FUNCTION Data_Ord_max args: 3 extracted: Just
+FUNCTION Data_Ord_lessThanOrEq args: 3 extracted: Just
+FUNCTION Data_Ord_signum args: 3 extracted: Just
+FUNCTION Data_Ord_lessThan args: 3 extracted: Just
+FUNCTION Data_Ord_greaterThanOrEq args: 3 extracted: Just
+FUNCTION Data_Ord_greaterThan args: 3 extracted: Just
+FUNCTION Data_Ord_comparing args: 4 extracted: Just
+FUNCTION Data_Ord_compare args: 3 extracted: Nothing
+FUNCTION Data_Ord_compare1 args: 4 extracted: Nothing
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool> for eq
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering> for compare
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Eq::Eq>> for Eq0
+FUNCTION Data_Ord_ordRecord args: 2 extracted: Just
+FUNCTION Data_Ord_compareRecord args: 4 extracted: Nothing
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering>, actStr=purust_core::Func2<bool, bool, Purs_Data_Ordering::Ordering> for compare
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Eq::Eq>> for Eq0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering>, actStr=purust_core::Func2<char, char, Purs_Data_Ordering::Ordering> for compare
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Eq::Eq>> for Eq0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering>, actStr=purust_core::Func2<i64, i64, Purs_Data_Ordering::Ordering> for compare
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Eq::Eq>> for Eq0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering>, actStr=purust_core::Func2<f64, f64, Purs_Data_Ordering::Ordering> for compare
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Eq::Eq>> for Eq0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering>, actStr=purust_core::Func2<Purs_Data_Ordering::Ordering, Purs_Data_Ordering::Ordering, Purs_Data_Ordering::Ordering> for compare
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Eq::Eq>> for Eq0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, Purs_Data_Ordering::Ordering> for compare
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Eq::Eq>> for Eq0
+LITRECORD expStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering>, actStr=purust_core::Func3<Purs_Type_Proxy::Proxy, crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering> for compareRecord
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Eq::EqRecord>> for EqRecord0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering>, actStr=purust_core::Func2<String, String, Purs_Data_Ordering::Ordering> for compare
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Eq::Eq>> for Eq0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering>, actStr=purust_core::Func2<(), (), Purs_Data_Ordering::Ordering> for compare
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Eq::Eq>> for Eq0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering>, actStr=purust_core::Func2<purust_core::Void, purust_core::Void, Purs_Data_Ordering::Ordering> for compare
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Eq::Eq>> for Eq0
+Found FFI for Data.Ord at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Ord.rs")
+Found FFI for Data.Ord at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Ord.rs")
+FUNCTION Data_Function_apply args: 2 extracted: Just
+FUNCTION Data_Function_applyFlipped args: 2 extracted: Just
+FUNCTION Data_Function_applyN args: 3 extracted: Nothing
+FUNCTION Data_Function_const args: 2 extracted: Just
+FUNCTION Data_Function_flip args: 3 extracted: Just
+FUNCTION Data_Function_on args: 4 extracted: Just
+Found FFI for Data.Function at: Nothing
+Found FFI for Data.Function at: Nothing
+FUNCTION Data_Functor_flap args: 3 extracted: Just
+LITRECORD expStr=purust_core::Func2<purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType> for map
+LITRECORD expStr=purust_core::Func2<purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<purust_core::Func1<crate::UnknownType, crate::UnknownType>, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType> for map
+LITRECORD expStr=purust_core::Func2<purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<purust_core::Func1<crate::UnknownType, crate::UnknownType>, Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy> for map
+FUNCTION Data_Functor_voidRight args: 3 extracted: Nothing
+FUNCTION Data_Functor_voidLeft args: 3 extracted: Just
+FUNCTION Data_Functor_void args: 2 extracted: Nothing
+FUNCTION Data_Functor_mapFlipped args: 3 extracted: Just
+FUNCTION Data_Functor_map args: 3 extracted: Nothing
+Found FFI for Data.Functor at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Functor.rs")
+Found FFI for Data.Functor at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Functor.rs")
+FUNCTION Control_Apply_lift5 args: 7 extracted: Just
+FUNCTION Control_Apply_lift4 args: 6 extracted: Just
+FUNCTION Control_Apply_lift3 args: 5 extracted: Just
+FUNCTION Control_Apply_lift2 args: 4 extracted: Just
+FUNCTION Control_Apply_applySecond args: 3 extracted: Just
+FUNCTION Control_Apply_applyFirst args: 3 extracted: Just
+FUNCTION Control_Apply_apply args: 3 extracted: Nothing
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType> for apply
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Functor::Functor>> for Functor0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType> for apply
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Functor::Functor>> for Functor0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy> for apply
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Functor::Functor>> for Functor0
+Found FFI for Control.Apply at: Nothing
+Found FFI for Control.Apply at: Nothing
+genFallback arrayApply args: ["mut a0: crate::UnknownType","mut a1: crate::UnknownType"]
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func1<crate::UnknownType, crate::UnknownType> for pure
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Control_Apply::Apply>> for Apply0
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType> for pure
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Control_Apply::Apply>> for Apply0
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func1<crate::UnknownType, Purs_Type_Proxy::Proxy> for pure
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Control_Apply::Apply>> for Apply0
+FUNCTION Control_Applicative_liftA1 args: 3 extracted: Just
+FUNCTION Control_Applicative_when args: 3 extracted: Just
+FUNCTION Control_Applicative_unless args: 3 extracted: Just
+FUNCTION Control_Applicative_pure args: 2 extracted: Nothing
+Found FFI for Control.Applicative at: Nothing
+Found FFI for Control.Applicative at: Nothing
+FUNCTION Control_Bind_join args: 2 extracted: Just
+FUNCTION Control_Bind_ifM args: 4 extracted: Just
+LITRECORD expStr=purust_core::Func3<std::rc::Rc<crate::Bind>, crate::UnknownType, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType>, actStr=purust_core::Func3<std::rc::Rc<crate::Bind>, crate::UnknownType, purust_core::Func1<(), crate::UnknownType>, crate::UnknownType> for discard
+LITRECORD expStr=purust_core::Func3<std::rc::Rc<crate::Bind>, crate::UnknownType, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType>, actStr=purust_core::Func3<std::rc::Rc<crate::Bind>, crate::UnknownType, purust_core::Func1<Purs_Type_Proxy::Proxy, crate::UnknownType>, crate::UnknownType> for discard
+FUNCTION Control_Bind_composeKleisli args: 4 extracted: Just
+FUNCTION Control_Bind_composeKleisliFlipped args: 4 extracted: Just
+FUNCTION Control_Bind_bindFlipped args: 3 extracted: Just
+FUNCTION Control_Bind_bind args: 3 extracted: Nothing
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType>, actStr=purust_core::Func2<crate::UnknownType, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType> for bind
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Control_Apply::Apply>> for Apply0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType>, actStr=purust_core::Func3<purust_core::Func1<crate::UnknownType, crate::UnknownType>, purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType> for bind
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Control_Apply::Apply>> for Apply0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, purust_core::Func1<crate::UnknownType, Purs_Type_Proxy::Proxy>, Purs_Type_Proxy::Proxy> for bind
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Control_Apply::Apply>> for Apply0
+FUNCTION Control_Bind_discard args: 4 extracted: Nothing
+Found FFI for Control.Bind at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Control/Bind.rs")
+Found FFI for Control.Bind at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Control/Bind.rs")
+FUNCTION Control_Monad_ap args: 3 extracted: Just
+FUNCTION Control_Monad_liftM1 args: 3 extracted: Just
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Control_Applicative::Applicative>> for Applicative0
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Control_Bind::Bind>> for Bind1
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Control_Applicative::Applicative>> for Applicative0
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Control_Bind::Bind>> for Bind1
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Control_Applicative::Applicative>> for Applicative0
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Control_Bind::Bind>> for Bind1
+FUNCTION Control_Monad_unlessM args: 3 extracted: Just
+FUNCTION Control_Monad_whenM args: 3 extracted: Just
+Found FFI for Control.Monad at: Nothing
+Found FFI for Control.Monad at: Nothing
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_HeytingAlgebra::HeytingAlgebra>> for HeytingAlgebra0
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_HeytingAlgebra::HeytingAlgebra>> for HeytingAlgebra0
+FUNCTION Data_BooleanAlgebra_booleanAlgebraFn args: 1 extracted: Just
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_HeytingAlgebra::HeytingAlgebra>> for HeytingAlgebra0
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_HeytingAlgebra::HeytingAlgebra>> for HeytingAlgebra0
+FUNCTION Data_BooleanAlgebra_booleanAlgebraRecord args: 2 extracted: Just
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_HeytingAlgebra::HeytingAlgebraRecord>> for HeytingAlgebraRecord0
+FUNCTION Data_BooleanAlgebra_booleanAlgebraRecordCons args: 4 extracted: Just
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_HeytingAlgebra::HeytingAlgebraRecord>> for HeytingAlgebraRecord0
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_HeytingAlgebra::HeytingAlgebra>> for HeytingAlgebra0
+Found FFI for Data.BooleanAlgebra at: Nothing
+Found FFI for Data.BooleanAlgebra at: Nothing
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType> for topRecord
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType> for bottomRecord
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ord::OrdRecord>> for OrdRecord0
+FUNCTION Data_Bounded_boundedRecordCons args: 5 extracted: Just
+FUNCTION Data_Bounded_bottom args: 1 extracted: Just
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, bool> for eq
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, Purs_Data_Ordering::Ordering> for compare
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Eq::Eq>> for Eq0
+LITRECORD expStr=crate::UnknownType, actStr=crate::UnknownType for top
+LITRECORD expStr=crate::UnknownType, actStr=crate::UnknownType for bottom
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ord::Ord>> for Ord0
+FUNCTION Data_Bounded_boundedRecord args: 2 extracted: Just
+FUNCTION Data_Bounded_bottomRecord args: 3 extracted: Nothing
+LITRECORD expStr=crate::UnknownType, actStr=bool for top
+LITRECORD expStr=crate::UnknownType, actStr=bool for bottom
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ord::Ord>> for Ord0
+LITRECORD expStr=crate::UnknownType, actStr=char for top
+LITRECORD expStr=crate::UnknownType, actStr=char for bottom
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ord::Ord>> for Ord0
+LITRECORD expStr=crate::UnknownType, actStr=i64 for top
+LITRECORD expStr=crate::UnknownType, actStr=i64 for bottom
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ord::Ord>> for Ord0
+LITRECORD expStr=crate::UnknownType, actStr=f64 for top
+LITRECORD expStr=crate::UnknownType, actStr=f64 for bottom
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ord::Ord>> for Ord0
+LITRECORD expStr=crate::UnknownType, actStr=Purs_Data_Ordering::Ordering for top
+LITRECORD expStr=crate::UnknownType, actStr=Purs_Data_Ordering::Ordering for bottom
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ord::Ord>> for Ord0
+LITRECORD expStr=crate::UnknownType, actStr=Purs_Type_Proxy::Proxy for bottom
+LITRECORD expStr=crate::UnknownType, actStr=Purs_Type_Proxy::Proxy for top
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ord::Ord>> for Ord0
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType> for topRecord
+LITRECORD expStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType>, actStr=purust_core::Func2<Purs_Type_Proxy::Proxy, Purs_Type_Proxy::Proxy, crate::UnknownType> for bottomRecord
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ord::OrdRecord>> for OrdRecord0
+LITRECORD expStr=crate::UnknownType, actStr=() for top
+LITRECORD expStr=crate::UnknownType, actStr=() for bottom
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ord::Ord>> for Ord0
+FUNCTION Data_Bounded_top args: 1 extracted: Just
+FUNCTION Data_Bounded_topRecord args: 3 extracted: Nothing
+Found FFI for Data.Bounded at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Bounded.rs")
+Found FFI for Data.Bounded at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Bounded.rs")
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func3<purust_core::Func1<crate::UnknownType, crate::UnknownType>, purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType> for sub
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semiring::Semiring>> for Semiring0
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ring::Ring>> for Ring0
+FUNCTION Data_CommutativeRing_commutativeRingFn args: 1 extracted: Just
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ring::Ring>> for Ring0
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ring::Ring>> for Ring0
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ring::Ring>> for Ring0
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType> for sub
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semiring::Semiring>> for Semiring0
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ring::Ring>> for Ring0
+FUNCTION Data_CommutativeRing_commutativeRingRecord args: 2 extracted: Just
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ring::RingRecord>> for RingRecord0
+FUNCTION Data_CommutativeRing_commutativeRingRecordCons args: 4 extracted: Just
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ring::RingRecord>> for RingRecord0
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ring::Ring>> for Ring0
+Found FFI for Data.CommutativeRing at: Nothing
+Found FFI for Data.CommutativeRing at: Nothing
+FUNCTION Data_EuclideanRing_mod_kw args: 3 extracted: Nothing
+FUNCTION Data_EuclideanRing_gcd args: 4 extracted: Just
+FUNCTION Data_EuclideanRing_degree args: 2 extracted: Nothing
+FUNCTION Data_EuclideanRing_lcm args: 4 extracted: Just
+FUNCTION Data_EuclideanRing_div args: 3 extracted: Nothing
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, i64>, actStr=purust_core::Func1<i64, i64> for degree
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<i64, i64, i64> for div
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<i64, i64, i64> for mod
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_CommutativeRing::CommutativeRing>> for CommutativeRing0
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, i64>, actStr=purust_core::Func1<f64, i64> for degree
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<f64, f64, f64> for div
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<f64, f64, f64> for mod
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_CommutativeRing::CommutativeRing>> for CommutativeRing0
+Found FFI for Data.EuclideanRing at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/EuclideanRing.rs")
+Found FFI for Data.EuclideanRing at: (Just "/Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/EuclideanRing.rs")
+LITRECORD expStr=purust_core::Func1<crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func1<f64, f64> for recip
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Ring::Ring>> for Ring0
+FUNCTION Data_DivisionRing_leftDiv args: 3 extracted: Just
+FUNCTION Data_DivisionRing_rightDiv args: 3 extracted: Just
+FUNCTION Data_DivisionRing_recip args: 2 extracted: Nothing
+Found FFI for Data.DivisionRing at: Nothing
+Found FFI for Data.DivisionRing at: Nothing
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_EuclideanRing::EuclideanRing>> for EuclideanRing0
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_DivisionRing::DivisionRing>> for DivisionRing1
+FUNCTION Data_Field_field args: 2 extracted: Just
+Found FFI for Data.Field at: Nothing
+Found FFI for Data.Field at: Nothing
+FUNCTION Data_Monoid_guard args: 3 extracted: Just
+FUNCTION Data_Monoid_power args: 3 extracted: Nothing
+LITRECORD expStr=purust_core::Func1<Purs_Type_Proxy::Proxy, crate::UnknownType>, actStr=purust_core::Func1<Purs_Type_Proxy::Proxy, crate::UnknownType> for memptyRecord
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semigroup::SemigroupRecord>> for SemigroupRecord0
+FUNCTION Data_Monoid_monoidRecordCons args: 4 extracted: Just
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, crate::UnknownType> for mempty
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semigroup::Semigroup>> for Semigroup0
+FUNCTION Data_Monoid_monoidFn args: 1 extracted: Just
+FUNCTION Data_Monoid_mempty args: 1 extracted: Just
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType> for append
+LITRECORD expStr=crate::UnknownType, actStr=crate::UnknownType for mempty
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semigroup::Semigroup>> for Semigroup0
+FUNCTION Data_Monoid_monoidRecord args: 2 extracted: Just
+FUNCTION Data_Monoid_memptyRecord args: 2 extracted: Nothing
+LITRECORD expStr=crate::UnknownType, actStr=crate::UnknownType for mempty
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semigroup::Semigroup>> for Semigroup0
+LITRECORD expStr=crate::UnknownType, actStr=Purs_Data_Ordering::Ordering for mempty
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semigroup::Semigroup>> for Semigroup0
+LITRECORD expStr=purust_core::Func1<Purs_Type_Proxy::Proxy, crate::UnknownType>, actStr=purust_core::Func1<Purs_Type_Proxy::Proxy, crate::UnknownType> for memptyRecord
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semigroup::SemigroupRecord>> for SemigroupRecord0
+LITRECORD expStr=crate::UnknownType, actStr=String for mempty
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semigroup::Semigroup>> for Semigroup0
+LITRECORD expStr=crate::UnknownType, actStr=() for mempty
+LITRECORD expStr=crate::UnknownType, actStr=purust_core::Func1<crate::UnknownType, std::rc::Rc<Purs_Data_Semigroup::Semigroup>> for Semigroup0
+Found FFI for Data.Monoid at: Nothing
+Found FFI for Data.Monoid at: Nothing
+Found FFI for Data.NaturalTransformation at: Nothing
+Found FFI for Data.NaturalTransformation at: Nothing
+Found FFI for Prelude at: Nothing
+Found FFI for Prelude at: Nothing
+FUNCTION PolyI64_intLoop args: 2 extracted: Just
+LITRECORD expStr=crate::UnknownType, actStr=i64 for mempty_
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<i64, i64, i64> for mappend_
+FUNCTION PolyI64_numberLoop args: 2 extracted: Just
+FUNCTION PolyI64_polyLoop args: 3 extracted: Just
+FUNCTION PolyI64_mappend_ args: 3 extracted: Nothing
+FUNCTION PolyI64_mempty_ args: 1 extracted: Just
+LITRECORD expStr=crate::UnknownType, actStr=f64 for mempty_
+LITRECORD expStr=purust_core::Func2<crate::UnknownType, crate::UnknownType, crate::UnknownType>, actStr=purust_core::Func2<f64, f64, f64> for mappend_
+Found FFI for PolyI64 at: Nothing
+Found FFI for PolyI64 at: Nothing
+Successfully generated Rust code.
+

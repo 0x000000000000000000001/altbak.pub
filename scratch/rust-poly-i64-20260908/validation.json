@@ -1,0 +1,21 @@
+{
+  "heads": {
+    "altbak_worktree": "a1008b996618c5a9b9418f5164005898cd15c553",
+    "pbo_worktree": "67ba2151e3717b27a13e95c25d3b25c8bdc645cc",
+    "purust": "d6588c4b6d434b1d1152d68d8328ecc7ced4b78e"
+  },
+  "sha256": {
+    "generator": "710c62761d0b85b04a36fdf79a12e50c6d631b4f3aed5aae6eae70cb75916315",
+    "pbo_source": "a2d4f7007b7a81c3e2b94bc9c8fe0e284564f939cd28d1199befe596eba43772",
+    "pbo_compiled": "2a92acaf31c98649b02d280726703b746a4099dfc6d15c9a375697f1b801a602",
+    "core_rlib": "a91f00b4e09c4f8b67fa41aac1017d35c397a2f7941657062d09fcd27d07346a"
+  },
+  "generated_source_unchanged": true,
+  "fixture_assertions": 60,
+  "prototype_assertions_per_process": 18,
+  "trace_bindings": [
+    "polyLoop",
+    "intLoop",
+    "numberLoop"
+  ]
+}

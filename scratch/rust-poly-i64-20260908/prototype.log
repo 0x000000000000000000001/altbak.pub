@@ -1,0 +1,17 @@
+before: compiled
+native: compiled
+1 before: best 38457.750 us
+1 native: best 0.103 us
+2 native: best 0.103 us
+2 before: best 38433.375 us
+3 before: best 38427.667 us
+3 native: best 0.103 us
+4 native: best 0.102 us
+4 before: best 38445.292 us
+5 before: best 38383.583 us
+5 native: best 0.103 us
+6 native: best 0.103 us
+6 before: best 38357.042 us
+7 before: best 38520.500 us
+7 native: best 0.102 us
+{"before": 38433.375, "native": 0.1027431640625}
