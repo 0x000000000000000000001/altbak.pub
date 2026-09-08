@@ -1,0 +1,119 @@
+{
+  "historicalReadmeTcoUs": 184283,
+  "variants": {
+    "before": {
+      "runs": [
+        {
+          "process": 1,
+          "bestUs": 5487,
+          "medianUs": 5621.6875,
+          "gc": [
+            23,
+            0,
+            0
+          ]
+        },
+        {
+          "process": 2,
+          "bestUs": 5594.542,
+          "medianUs": 5649.7505,
+          "gc": [
+            23,
+            0,
+            0
+          ]
+        },
+        {
+          "process": 3,
+          "bestUs": 5563.5,
+          "medianUs": 5706.853999999999,
+          "gc": [
+            23,
+            0,
+            0
+          ]
+        }
+      ],
+      "medianBestUs": 5563.5,
+      "medianProcessMedianUs": 5649.7505,
+      "pooledMedianUs": 5638.7085,
+      "allocationBytesPerActionRange": [
+        19204552,
+        19204552
+      ],
+      "gcAcross30Measurements": [
+        69,
+        0,
+        0
+      ]
+    },
+    "after": {
+      "runs": [
+        {
+          "process": 1,
+          "bestUs": 49.666,
+          "medianUs": 50.8125,
+          "gc": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "process": 2,
+          "bestUs": 52.542,
+          "medianUs": 55.6665,
+          "gc": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "process": 3,
+          "bestUs": 48.875,
+          "medianUs": 49.187,
+          "gc": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "medianBestUs": 49.666,
+      "medianProcessMedianUs": 50.8125,
+      "pooledMedianUs": 52.9585,
+      "allocationBytesPerActionRange": [
+        160,
+        160
+      ],
+      "gcAcross30Measurements": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "speedupMedianBest": 112.01828212459229,
+  "speedupMedianProcessMedian": 111.18820172201723,
+  "officialPairs": [
+    {
+      "beforeTcoUs": 5596.83,
+      "afterTcoUs": 55.75,
+      "speedupTco": 100.39156950672646,
+      "tcoSavedMs": 5.54108,
+      "beforeTotalMs": 897.4,
+      "afterTotalMs": 884.92,
+      "afterDominantSharePercent": 99.0066525787642
+    },
+    {
+      "beforeTcoUs": 5645.75,
+      "afterTcoUs": 54.88,
+      "speedupTco": 102.87445335276968,
+      "tcoSavedMs": 5.59087,
+      "beforeTotalMs": 886.71,
+      "afterTotalMs": 853.12,
+      "afterDominantSharePercent": 99.00822979182294
+    }
+  ]
+}

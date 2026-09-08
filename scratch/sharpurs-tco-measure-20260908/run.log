@@ -1,0 +1,8 @@
+{"label": "before-1", "bestUs": 5487, "gc0": 23, "gc1": 0, "gc2": 0, "kind": "summary", "maxAllocatedBytes": 19204552, "medianUs": 5621.6875, "minAllocatedBytes": 19204552, "output": "100000"}
+{"label": "after-1", "bestUs": 49.666, "gc0": 0, "gc1": 0, "gc2": 0, "kind": "summary", "maxAllocatedBytes": 160, "medianUs": 50.8125, "minAllocatedBytes": 160, "output": "100000"}
+{"label": "after-2", "bestUs": 52.542, "gc0": 0, "gc1": 0, "gc2": 0, "kind": "summary", "maxAllocatedBytes": 160, "medianUs": 55.6665, "minAllocatedBytes": 160, "output": "100000"}
+{"label": "before-2", "bestUs": 5594.542, "gc0": 23, "gc1": 0, "gc2": 0, "kind": "summary", "maxAllocatedBytes": 19204552, "medianUs": 5649.7505, "minAllocatedBytes": 19204552, "output": "100000"}
+{"label": "before-3", "bestUs": 5563.5, "gc0": 23, "gc1": 0, "gc2": 0, "kind": "summary", "maxAllocatedBytes": 19204552, "medianUs": 5706.853999999999, "minAllocatedBytes": 19204552, "output": "100000"}
+{"label": "after-3", "bestUs": 48.875, "gc0": 0, "gc1": 0, "gc2": 0, "kind": "summary", "maxAllocatedBytes": 160, "medianUs": 49.187, "minAllocatedBytes": 160, "output": "100000"}
+official-before: completed in 14.93 s
+official-after: completed in 14.42 s

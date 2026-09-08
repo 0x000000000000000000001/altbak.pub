@@ -1,0 +1,18 @@
+{"action":"Test.TCO.act","allocationScope":"current worker thread","architecture":"Arm64","forcedGc":false,"gcLatency":"Interactive","gcScope":"process","input":100000,"kind":"metadata","measurements":10,"os":"Darwin 25.1.0 Darwin Kernel Version 25.1.0: Mon Oct 20 19:34:05 PDT 2025; root:xnu-12377.41.6~2/RELEASE_ARM64_T6041","pid":62027,"runtime":".NET 8.0.29","serverGc":false,"stackSizeBytes":1073741824,"stopwatchFrequency":1000000000,"tieredCompilationOverride":null,"tieredPgoOverride":null,"warmups":6}
+{"iteration":1,"kind":"warmup","output":"100000"}
+{"iteration":2,"kind":"warmup","output":"100000"}
+{"iteration":3,"kind":"warmup","output":"100000"}
+{"iteration":4,"kind":"warmup","output":"100000"}
+{"iteration":5,"kind":"warmup","output":"100000"}
+{"iteration":6,"kind":"warmup","output":"100000"}
+{"allocatedBytes":19204552,"elapsedUs":14611.083,"gc0":3,"gc1":0,"gc2":0,"iteration":1,"kind":"measurement","output":"100000"}
+{"allocatedBytes":19204552,"elapsedUs":14488.792,"gc0":2,"gc1":0,"gc2":0,"iteration":2,"kind":"measurement","output":"100000"}
+{"allocatedBytes":19204552,"elapsedUs":14615.792,"gc0":2,"gc1":0,"gc2":0,"iteration":3,"kind":"measurement","output":"100000"}
+{"allocatedBytes":19204552,"elapsedUs":14173.958,"gc0":2,"gc1":0,"gc2":0,"iteration":4,"kind":"measurement","output":"100000"}
+{"allocatedBytes":19204552,"elapsedUs":14437.75,"gc0":3,"gc1":0,"gc2":0,"iteration":5,"kind":"measurement","output":"100000"}
+{"allocatedBytes":19204552,"elapsedUs":14872.917,"gc0":2,"gc1":0,"gc2":0,"iteration":6,"kind":"measurement","output":"100000"}
+{"allocatedBytes":19204552,"elapsedUs":14879.958,"gc0":2,"gc1":0,"gc2":0,"iteration":7,"kind":"measurement","output":"100000"}
+{"allocatedBytes":19204552,"elapsedUs":14883.5,"gc0":3,"gc1":0,"gc2":0,"iteration":8,"kind":"measurement","output":"100000"}
+{"allocatedBytes":19204552,"elapsedUs":14898.667,"gc0":2,"gc1":0,"gc2":0,"iteration":9,"kind":"measurement","output":"100000"}
+{"allocatedBytes":19204552,"elapsedUs":14892.375,"gc0":2,"gc1":0,"gc2":0,"iteration":10,"kind":"measurement","output":"100000"}
+{"bestUs":14173.958,"gc0":23,"gc1":0,"gc2":0,"kind":"summary","maxAllocatedBytes":19204552,"medianUs":14744.3545,"minAllocatedBytes":19204552,"output":"100000"}

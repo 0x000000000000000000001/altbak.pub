@@ -1,0 +1,48 @@
+[
+  {
+    "label": "before-1",
+    "variant": "before",
+    "wallSeconds": 3.2038604580000003,
+    "assemblySha256": "ce4e9d89045de7fafa6ccb8cfee99b45d739218fa746f288ddae3adaaa93803c"
+  },
+  {
+    "label": "after-1",
+    "variant": "after",
+    "wallSeconds": 3.038136666,
+    "assemblySha256": "4c746b7a1ff808d92c630eaee88a5f5ad855428804c89bb4beca5729455fc107"
+  },
+  {
+    "label": "after-2",
+    "variant": "after",
+    "wallSeconds": 3.183417208,
+    "assemblySha256": "4c746b7a1ff808d92c630eaee88a5f5ad855428804c89bb4beca5729455fc107"
+  },
+  {
+    "label": "before-2",
+    "variant": "before",
+    "wallSeconds": 3.276928250000001,
+    "assemblySha256": "ce4e9d89045de7fafa6ccb8cfee99b45d739218fa746f288ddae3adaaa93803c"
+  },
+  {
+    "label": "before-3",
+    "variant": "before",
+    "wallSeconds": 3.256954208,
+    "assemblySha256": "ce4e9d89045de7fafa6ccb8cfee99b45d739218fa746f288ddae3adaaa93803c"
+  },
+  {
+    "label": "after-3",
+    "variant": "after",
+    "wallSeconds": 3.0506309579999993,
+    "assemblySha256": "4c746b7a1ff808d92c630eaee88a5f5ad855428804c89bb4beca5729455fc107"
+  },
+  {
+    "label": "official-before",
+    "variant": "before",
+    "wallSeconds": 14.929616500000002
+  },
+  {
+    "label": "official-after",
+    "variant": "after",
+    "wallSeconds": 14.422594583000006
+  }
+]

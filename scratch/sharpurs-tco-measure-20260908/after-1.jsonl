@@ -1,0 +1,15 @@
+{"action":"Test.TCO.act","allocationScope":"current worker thread","architecture":"Arm64","forcedGc":false,"gcLatency":"Interactive","gcScope":"process","globalWarmups":3,"input":100000,"kind":"metadata","measurements":10,"os":"Darwin 25.1.0 Darwin Kernel Version 25.1.0: Mon Oct 20 19:34:05 PDT 2025; root:xnu-12377.41.6~2/RELEASE_ARM64_T6041","pid":69359,"runtime":".NET 8.0.29","serverGc":false,"stackSizeBytes":1073741824,"stopwatchFrequency":1000000000,"tieredCompilationOverride":null,"tieredPgoOverride":null,"warmups":3}
+{"iteration":1,"kind":"warmup","output":"100000"}
+{"iteration":2,"kind":"warmup","output":"100000"}
+{"iteration":3,"kind":"warmup","output":"100000"}
+{"allocatedBytes":160,"elapsedUs":52.792,"gc0":0,"gc1":0,"gc2":0,"iteration":1,"kind":"measurement","output":"100000"}
+{"allocatedBytes":160,"elapsedUs":52.167,"gc0":0,"gc1":0,"gc2":0,"iteration":2,"kind":"measurement","output":"100000"}
+{"allocatedBytes":160,"elapsedUs":51.125,"gc0":0,"gc1":0,"gc2":0,"iteration":3,"kind":"measurement","output":"100000"}
+{"allocatedBytes":160,"elapsedUs":49.791,"gc0":0,"gc1":0,"gc2":0,"iteration":4,"kind":"measurement","output":"100000"}
+{"allocatedBytes":160,"elapsedUs":50.458,"gc0":0,"gc1":0,"gc2":0,"iteration":5,"kind":"measurement","output":"100000"}
+{"allocatedBytes":160,"elapsedUs":55.125,"gc0":0,"gc1":0,"gc2":0,"iteration":6,"kind":"measurement","output":"100000"}
+{"allocatedBytes":160,"elapsedUs":53.125,"gc0":0,"gc1":0,"gc2":0,"iteration":7,"kind":"measurement","output":"100000"}
+{"allocatedBytes":160,"elapsedUs":50.5,"gc0":0,"gc1":0,"gc2":0,"iteration":8,"kind":"measurement","output":"100000"}
+{"allocatedBytes":160,"elapsedUs":49.917,"gc0":0,"gc1":0,"gc2":0,"iteration":9,"kind":"measurement","output":"100000"}
+{"allocatedBytes":160,"elapsedUs":49.666,"gc0":0,"gc1":0,"gc2":0,"iteration":10,"kind":"measurement","output":"100000"}
+{"bestUs":49.666,"gc0":0,"gc1":0,"gc2":0,"kind":"summary","maxAllocatedBytes":160,"medianUs":50.8125,"minAllocatedBytes":160,"output":"100000"}

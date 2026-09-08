@@ -1,0 +1,48 @@
+[
+  {
+    "label": "before-1",
+    "variant": "before",
+    "wallSeconds": 0.29946637499999995,
+    "assemblySha256": "43adfc75718e14fc75b962c6681ebebb08fe284238c2e0bd4cdc0449ea0e4c3a"
+  },
+  {
+    "label": "after-1",
+    "variant": "after",
+    "wallSeconds": 0.055169915999999986,
+    "assemblySha256": "4c569655d6dedcd23adfcb0df57914829b99d31b1a10a5c139da05dd7820e718"
+  },
+  {
+    "label": "after-2",
+    "variant": "after",
+    "wallSeconds": 0.05389729200000004,
+    "assemblySha256": "4c569655d6dedcd23adfcb0df57914829b99d31b1a10a5c139da05dd7820e718"
+  },
+  {
+    "label": "before-2",
+    "variant": "before",
+    "wallSeconds": 0.294503667,
+    "assemblySha256": "43adfc75718e14fc75b962c6681ebebb08fe284238c2e0bd4cdc0449ea0e4c3a"
+  },
+  {
+    "label": "before-3",
+    "variant": "before",
+    "wallSeconds": 0.29033266700000004,
+    "assemblySha256": "43adfc75718e14fc75b962c6681ebebb08fe284238c2e0bd4cdc0449ea0e4c3a"
+  },
+  {
+    "label": "after-3",
+    "variant": "after",
+    "wallSeconds": 0.05482479099999993,
+    "assemblySha256": "4c569655d6dedcd23adfcb0df57914829b99d31b1a10a5c139da05dd7820e718"
+  },
+  {
+    "label": "official-before",
+    "variant": "before",
+    "wallSeconds": 15.199092125
+  },
+  {
+    "label": "official-after",
+    "variant": "after",
+    "wallSeconds": 15.016723875
+  }
+]

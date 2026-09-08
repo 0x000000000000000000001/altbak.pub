@@ -1,0 +1,39 @@
+{
+  "recordedUtc": "2026-09-08T12:30:36.736016+00:00",
+  "sdk": "8.0.423",
+  "productionGeneratedSourcesUnchanged": true,
+  "architecture": "Arm64",
+  "revisions": {
+    "altbak.pub-sharpurs": "26f9e1d4019844982bec9719cb2f63948b701fba",
+    "sharpurs/sharpurs": "08d656f32d8558e28cf961da0a59ee507809c93f",
+    "purescript-backend-optimizer-sharpurs": "67ba2151e3717b27a13e95c25d3b25c8bdc645cc"
+  },
+  "runtimeconfigs": {
+    "before": {
+      "runtimeOptions": {
+        "tfm": "net8.0",
+        "framework": {
+          "name": "Microsoft.NETCore.App",
+          "version": "8.0.0"
+        },
+        "configProperties": {
+          "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
+          "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
+        }
+      }
+    },
+    "after": {
+      "runtimeOptions": {
+        "tfm": "net8.0",
+        "framework": {
+          "name": "Microsoft.NETCore.App",
+          "version": "8.0.0"
+        },
+        "configProperties": {
+          "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
+          "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
+        }
+      }
+    }
+  }
+}
