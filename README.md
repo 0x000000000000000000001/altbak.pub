@@ -173,21 +173,21 @@ RowToList               | ~ 1 μs                    | ~ 47 μs         | ~ 45 �
 
 Java Benchmark          | Compiled Java ([javapurs](https://github.com/0x000000000000000000001/javapurs), young WIP) | Native FP-style Java FFI | Native hand-optimized Java FFI |
 ----------------------- | ------------------------- | ------------------------ | ------------------------------ |
-AST Evaluation          | ~ 53.79 μs                | ~ 69 μs                  | ~ 4.4 μs                       |
+AST Evaluation          | ~ 55.83 μs                | ~ 69 μs                  | ~ 4.4 μs                       |
 Fibonacci               | ~ 5.17 μs                 | ~ 2.5 μs                 | ~ 1.9 μs                       |
-List Processing         | ~ 165.25 μs               | ~ 65 μs                  | ~ 6.4 μs                       |
-Tail Call Optimization  | ~ 44.00 μs                | ~ 43 μs                  | ~ 42 μs                        |
-Deep Record Updates     | ~ 1024.46 μs              | ~ 132 μs                 | ~ 18 μs                        |
-Ackermann               | ~ 17.33 μs                | ~ 10 μs                  | ~ 7.5 μs                       |
-Church Numerals         | ~ 433.83 μs               | ~ 435 μs                 | ~ 1.8 μs                       |
-Prime Sieve             | ~ 182.50 μs               | ~ 61 μs                  | ~ 8.9 μs                       |
-Red-Black Tree          | ~ 19857.96 μs             | ~ 12278 μs               | ~ 12384 μs                     |
-Polymorphism            | ~ 4882.38 μs              | ~ 148 μs                 | ~ 1.7 μs                       |
-State Monad             | ~ 97.67 μs                | ~ 40 μs                  | ~ 6.5 μs                       |
-Lazy Evaluation         | ~ 5109.21 μs              | ~ 5168 μs                | ~ 1.5 μs                       |
-Array Processing        | ~ 58.50 μs                | ~ 41 μs                  | ~ 7.1 μs                       |
-RowToList               | ~ 1.71 μs                 | ~ 2.2 μs                 | ~ 1.3 μs                       |
-**Total Execution Time**| ~ 31.93 ms                | ~ 18.50 ms               | ~ 12.49 ms                     |
+List Processing         | ~ 168.54 μs               | ~ 65 μs                  | ~ 6.4 μs                       |
+Tail Call Optimization  | ~ 44.58 μs                | ~ 43 μs                  | ~ 42 μs                        |
+Deep Record Updates     | ~ 937.29 μs               | ~ 132 μs                 | ~ 18 μs                        |
+Ackermann               | ~ 19.04 μs                | ~ 10 μs                  | ~ 7.5 μs                       |
+Church Numerals         | ~ 419.38 μs               | ~ 435 μs                 | ~ 1.8 μs                       |
+Prime Sieve             | ~ 161.58 μs               | ~ 61 μs                  | ~ 8.9 μs                       |
+Red-Black Tree          | ~ 18657.75 μs             | ~ 12278 μs               | ~ 12384 μs                     |
+Polymorphism            | ~ 4971.79 μs              | ~ 148 μs                 | ~ 1.7 μs                       |
+State Monad             | ~ 91.13 μs                | ~ 40 μs                  | ~ 6.5 μs                       |
+Lazy Evaluation         | ~ 5824.71 μs              | ~ 5168 μs                | ~ 1.5 μs                       |
+Array Processing        | ~ 71.46 μs                | ~ 41 μs                  | ~ 7.1 μs                       |
+RowToList               | ~ 1.96 μs                 | ~ 2.2 μs                 | ~ 1.3 μs                       |
+**Total Execution Time**| ~ 31.43 ms                | ~ 18.50 ms               | ~ 12.49 ms                     |
 
 Compiled Java measurements (run supplied on 2026-09-08): one benchmark run after global warm-up, reporting the best of ten samples per test. Previous recorded compiled total: 128.72 ms.
 
