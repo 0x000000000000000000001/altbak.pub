@@ -1,0 +1,232 @@
+{
+  "before": {
+    "AST Evaluation:": {
+      "samples_us": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "median_us": 1.0
+    },
+    "Fibonacci:": {
+      "samples_us": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "median_us": 1.0
+    },
+    "List Processing (900 elements):": {
+      "samples_us": [
+        26.0,
+        22.0,
+        23.0
+      ],
+      "median_us": 23.0
+    },
+    "Tail Call Optimization (100k calls):": {
+      "samples_us": [
+        40.0,
+        34.0,
+        35.0
+      ],
+      "median_us": 35.0
+    },
+    "Deep Record Updates (10k iterations):": {
+      "samples_us": [
+        928.0,
+        955.0,
+        941.0
+      ],
+      "median_us": 941.0
+    },
+    "Ackermann (3, 4):": {
+      "samples_us": [
+        19.0,
+        19.0,
+        20.0
+      ],
+      "median_us": 19.0
+    },
+    "Church Numerals (100k Closure Applications):": {
+      "samples_us": [
+        11462.0,
+        10989.0,
+        11157.0
+      ],
+      "median_us": 11157.0
+    },
+    "Prime Sieve (sum primes up to 500):": {
+      "samples_us": [
+        178.0,
+        178.0,
+        172.0
+      ],
+      "median_us": 178.0
+    },
+    "Red-Black Tree (100k Worst-Case Insertions):": {
+      "samples_us": [
+        47509.0,
+        47817.0,
+        47218.0
+      ],
+      "median_us": 47509.0
+    },
+    "Polymorphism (10M Type Class Dict Lookups):": {
+      "samples_us": [
+        38203.0,
+        38261.0,
+        38245.0
+      ],
+      "median_us": 38245.0
+    },
+    "State Monad (1.2k Binds, 60 Stack Depth):": {
+      "samples_us": [
+        64.0,
+        72.0,
+        63.0
+      ],
+      "median_us": 64.0
+    },
+    "Lazy Evaluation (1M Thunks Forced, 1k Depth):": {
+      "samples_us": [
+        71837.0,
+        69378.0,
+        73757.0
+      ],
+      "median_us": 71837.0
+    },
+    "Array Processing (900 elements):": {
+      "samples_us": [
+        15.0,
+        14.0,
+        13.0
+      ],
+      "median_us": 14.0
+    },
+    "RowToList (Keys Count):": {
+      "samples_us": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "median_us": 1.0
+    },
+    "total_us": 170025.0
+  },
+  "after": {
+    "AST Evaluation:": {
+      "samples_us": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "median_us": 1.0
+    },
+    "Fibonacci:": {
+      "samples_us": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "median_us": 1.0
+    },
+    "List Processing (900 elements):": {
+      "samples_us": [
+        24.0,
+        25.0,
+        24.0
+      ],
+      "median_us": 24.0
+    },
+    "Tail Call Optimization (100k calls):": {
+      "samples_us": [
+        35.0,
+        40.0,
+        38.0
+      ],
+      "median_us": 38.0
+    },
+    "Deep Record Updates (10k iterations):": {
+      "samples_us": [
+        955.0,
+        954.0,
+        981.0
+      ],
+      "median_us": 955.0
+    },
+    "Ackermann (3, 4):": {
+      "samples_us": [
+        17.0,
+        17.0,
+        19.0
+      ],
+      "median_us": 17.0
+    },
+    "Church Numerals (100k Closure Applications):": {
+      "samples_us": [
+        11478.0,
+        11572.0,
+        11476.0
+      ],
+      "median_us": 11478.0
+    },
+    "Prime Sieve (sum primes up to 500):": {
+      "samples_us": [
+        198.0,
+        182.0,
+        180.0
+      ],
+      "median_us": 182.0
+    },
+    "Red-Black Tree (100k Worst-Case Insertions):": {
+      "samples_us": [
+        42687.0,
+        43233.0,
+        41685.0
+      ],
+      "median_us": 42687.0
+    },
+    "Polymorphism (10M Type Class Dict Lookups):": {
+      "samples_us": [
+        40151.0,
+        41100.0,
+        40261.0
+      ],
+      "median_us": 40261.0
+    },
+    "State Monad (1.2k Binds, 60 Stack Depth):": {
+      "samples_us": [
+        73.0,
+        71.0,
+        70.0
+      ],
+      "median_us": 71.0
+    },
+    "Lazy Evaluation (1M Thunks Forced, 1k Depth):": {
+      "samples_us": [
+        74395.0,
+        72790.0,
+        74673.0
+      ],
+      "median_us": 74395.0
+    },
+    "Array Processing (900 elements):": {
+      "samples_us": [
+        15.0,
+        15.0,
+        13.0
+      ],
+      "median_us": 15.0
+    },
+    "RowToList (Keys Count):": {
+      "samples_us": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "median_us": 1.0
+    },
+    "total_us": 170126.0
+  }
+}

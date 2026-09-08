@@ -1,0 +1,85 @@
+[
+  {
+    "module": "Data.Date.Component",
+    "name": "Weekday",
+    "constructors": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ]
+  },
+  {
+    "module": "Data.Date.Component",
+    "name": "Month",
+    "constructors": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ]
+  },
+  {
+    "module": "Data.Generic.Rep",
+    "name": "NoArguments",
+    "constructors": [
+      "NoArguments"
+    ]
+  },
+  {
+    "module": "Data.Int",
+    "name": "Parity",
+    "constructors": [
+      "Even",
+      "Odd"
+    ]
+  },
+  {
+    "module": "Data.Interval.Duration",
+    "name": "DurationComponent",
+    "constructors": [
+      "Second",
+      "Minute",
+      "Hour",
+      "Day",
+      "Week",
+      "Month",
+      "Year"
+    ]
+  },
+  {
+    "module": "Data.Ordering",
+    "name": "Ordering",
+    "constructors": [
+      "LT",
+      "GT",
+      "EQ"
+    ]
+  },
+  {
+    "module": "Test.RBTree",
+    "name": "Color",
+    "constructors": [
+      "R",
+      "B"
+    ]
+  },
+  {
+    "module": "Type.Proxy",
+    "name": "Proxy",
+    "constructors": [
+      "Proxy"
+    ]
+  }
+]

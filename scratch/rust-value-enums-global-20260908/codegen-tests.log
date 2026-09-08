@@ -1,0 +1,98 @@
+
+> purust@0.1.0 test:codegen
+> node --test tests/codegen/*.mjs
+
+FUNCTION Branches_adt args: 3 extracted: Just
+FUNCTION Branches_function args: 3 extracted: Just
+FUNCTION Branches_integer args: 3 extracted: Just
+Branches reconcile boxed values, primitives, functions and ADTs.
+✔ tests/codegen/branch-representations.mjs (1931.143041ms)
+Effect FFI: pure, bind and loops preserve deferral, order and replay.
+✔ tests/codegen/effect-ffi.mjs (3175.606375ms)
+FUNCTION ErasedAbs_partialBinders args: 1 extracted: Just
+FUNCTION ErasedAbs_unannotated args: 1 extracted: Just
+FUNCTION ErasedAbs_uncurried args: 1 extracted: Just
+FUNCTION ErasedAbs_binary args: 1 extracted: Just
+FUNCTION ErasedAbs_captured args: 1 extracted: Just
+Erased abstractions: captured, binary, uncurried and partial binder Rust checks passed.
+✔ tests/codegen/erased-abstractions.mjs (2181.867334ms)
+Erased FFI values: append, map, array comparison and unsafePartial Rust checks passed.
+✔ tests/codegen/ffi-erased-values.mjs (2903.673083ms)
+FUNCTION FieldBorrows_fromCall args: 3 extracted: Just
+FUNCTION FieldBorrows_nested args: 2 extracted: Just
+FUNCTION FieldBorrows_converted args: 2 extracted: Just
+FUNCTION FieldBorrows_scalar args: 2 extracted: Just
+FUNCTION FieldBorrows_wrapped args: 2 extracted: Just
+FUNCTION FieldBorrows_direct args: 2 extracted: Just
+Field reads preserve shared children, persistent parents, conversions and single evaluation.
+✔ tests/codegen/field-borrows.mjs (2657.470459ms)
+Local names: recursive groups, global references and effect shadowing checks passed.
+✔ tests/codegen/local-names.mjs (126.452875ms)
+FUNCTION Shadow_globalClosure args: 1 extracted: Just
+FUNCTION Shadow_globalCall args: 1 extracted: Just
+FUNCTION Shadow_qualifiedGlobal args: 1 extracted: Just
+FUNCTION Shadow_globalValue args: 1 extracted: Just
+FUNCTION Shadow_purs_local_1 args: 1 extracted: Just
+FUNCTION Shadow_captured args: 1 extracted: Just
+FUNCTION Shadow_differentType args: 1 extracted: Just
+FUNCTION Shadow_sameType args: 1 extracted: Just
+Lexical locals preserve values across name collisions and nested abstractions.
+✔ tests/codegen/local-shadowing.mjs (1200.15475ms)
+FUNCTION NestedTyped_retainTypeApplied args: 1 extracted: Just
+FUNCTION NestedTyped_typeArgument args: 1 extracted: Just
+FUNCTION NestedTyped_retain args: 1 extracted: Just
+FUNCTION NestedTyped_apply args: 3 extracted: Just
+Typed annotations and type applications: 4 generated Rust checks passed.
+✔ tests/codegen/nested-typed.mjs (923.849125ms)
+FUNCTION Modulo_numberMod args: 2 extracted: Just
+FUNCTION Modulo_intMod args: 2 extracted: Just
+Primitive modulo: 12 generated Rust checks passed.
+✔ tests/codegen/primitive-modulo.mjs (687.312292ms)
+FUNCTION PureEffect_integer args: 1 extracted: Just
+FUNCTION PureEffect_apply2 args: 3 extracted: Just
+FUNCTION PureEffect_apply1 args: 2 extracted: Just
+Pure effects preserve integers and functions without premature calls.
+✔ tests/codegen/pure-effect-values.mjs (2414.119709ms)
+FUNCTION TagBorrows_fromPassingCall args: 3 extracted: Just
+FUNCTION TagBorrows_fromCall args: 1 extracted: Just
+FUNCTION TagBorrows_twice args: 2 extracted: Just
+FUNCTION TagBorrows_converted args: 2 extracted: Just
+FUNCTION TagBorrows_wrapped args: 2 extracted: Just
+FUNCTION TagBorrows_direct args: 2 extracted: Just
+Tag tests preserve shared parents, branches, conversions and single evaluation.
+✔ tests/codegen/tag-borrows.mjs (1675.434209ms)
+FUNCTION TailCalls_swap args: 3 extracted: Just
+FUNCTION TailCalls_increment args: 1 extracted: Just
+Tail calls: local and global loops preserve Value/int conversions and argument swaps.
+✔ tests/codegen/tail-call-values.mjs (1444.595291ms)
+FUNCTION UnitValues_erased args: 2 extracted: Just
+FUNCTION UnitValues_integer args: 2 extracted: Just
+FUNCTION UnitValues_eraseCall args: 2 extracted: Just
+FUNCTION UnitValues_callErased args: 2 extracted: Just
+FUNCTION UnitValues_boundEffect args: 1 extracted: Just
+FUNCTION UnitValues_array args: 1 extracted: Just
+FUNCTION UnitValues_pure args: 1 extracted: Just
+FUNCTION UnitValues_restore args: 1 extracted: Just
+FUNCTION UnitValues_erase args: 1 extracted: Just
+FUNCTION UnitValues_identity args: 1 extracted: Just
+Unit construction x1000: allocations=0, requested_bytes=0, deallocations=0
+Unit passage x1000: allocations=0, requested_bytes=0, deallocations=0
+Minimal runtime: Value=24 bytes, Record_a=48 bytes
+✔ tests/codegen/unit-values.mjs (3669.906833ms)
+FUNCTION ValueEnums_capture args: 1 extracted: Just
+FUNCTION ValueEnums_apply args: 2 extracted: Just
+FUNCTION ValueEnums_reuse args: 1 extracted: Just
+FUNCTION ValueEnums_isRed args: 1 extracted: Just
+FUNCTION ValueEnums_color args: 1 extracted: Just
+FUNCTION ValueEnums_nodeConstructor args: 4 extracted: Nothing
+FUNCTION ValueEnums_node args: 4 extracted: Just
+Color: 1 byte(s); 1000 native iterations: 0 allocations; one tree node: 1 allocation
+✔ tests/codegen/value-enums.mjs (3302.846667ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3685.715041

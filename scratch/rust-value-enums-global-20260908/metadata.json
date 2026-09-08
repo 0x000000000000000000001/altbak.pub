@@ -1,0 +1,10 @@
+{
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "method": "Three serial processes before/after; median of per-benchmark best-of-ten; 14 outputs checked each run; mimalloc, release opt-level=1",
+  "sha256": {
+    "RBTree_before": "b01c51096732f3efb1cbd89d5cbd3fb26ff70eff0b796f8e8c125ff8232e3afe",
+    "RBTree_after": "fd013e09a0106f1574dacffa8b1021c8f7f024d452be2d550461ae1afa3d96cf",
+    "purust_before": "3b3a0f93448d4590af40a01e5a144ded3b731099e15a169fa6bcaea2bddd52eb",
+    "purust_after": "710c62761d0b85b04a36fdf79a12e50c6d631b4f3aed5aae6eae70cb75916315"
+  }
+}

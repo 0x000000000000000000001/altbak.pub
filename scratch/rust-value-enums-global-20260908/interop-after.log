@@ -1,0 +1,10 @@
+Global enum layouts: cross-module construction, Value, FFI, stubs, Unit and persistence checked.
+✔ tests/tast/value-enums-interop.mjs (912.43325ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 916.518792
