@@ -1,0 +1,25 @@
+File: audit
+Type: alloc_objects
+Time: 2026-09-08 11:12:22 CEST
+Showing nodes accounting for 15490, 99.11% of 15629 total
+Dropped 99 nodes (cum <= 78)
+Showing top 18 nodes out of 23
+      flat  flat%   sum%        cum   cum%
+      3620 23.16% 23.16%       3620 23.16%  gopurs/output/gopurs_runtime.RecordDict (inline)
+      2400 15.36% 38.52%      13220 84.59%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1 (inline)
+      2400 15.36% 53.87%      13160 84.20%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1.1.1 (inline)
+      2400 15.36% 69.23%       3600 23.03%  gopurs/output/purescript.Get_Test_StateMonad_modify.func1.1.1 (inline)
+      1432  9.16% 78.39%       1432  9.16%  runtime/pprof.allFrames
+      1200  7.68% 86.07%      13270 84.91%  gopurs/output/gopurs_runtime.Apply
+      1200  7.68% 93.75%       2400 15.36%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications
+       631  4.04% 97.79%       2339 14.97%  runtime/pprof.writeHeapProto
+       199  1.27% 99.06%        217  1.39%  runtime/pprof.(*profileBuilder).emitLocation
+         6 0.038% 99.10%       1673 10.70%  runtime/pprof.(*profileBuilder).appendLocsForStack
+         1 0.0064% 99.10%       6916 44.25%  main.main
+         1 0.0064% 99.11%       2340 14.97%  runtime/pprof.writeHeapInternal
+         0     0% 99.11%       3600 23.03%  gopurs/output/gopurs_runtime.Apply.func1
+         0     0% 99.11%      13220 84.59%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3
+         0     0% 99.11%      13160 84.20%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1.1 (inline)
+         0     0% 99.11%      13100 83.82%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1.1.1.1 (inline)
+         0     0% 99.11%       4640 29.69%  gopurs/output/purescript.Call_Test_StateMonad_runManyTimes
+         0     0% 99.11%       4610 29.50%  gopurs/output/purescript.Get_Test_StateMonad_act.func1.1

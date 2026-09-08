@@ -1,0 +1,1310 @@
+Total: 77.02MB
+ROUTINE ======================== gopurs/output/purescript.Call_Test_RBTree_balance in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_RBTree.go
+   72.75MB    72.75MB (flat, cum) 94.46% of Total
+         .          .    283:func Call_Test_RBTree_balance(v_0_loop uint32, v1_1_loop *Constructor_Test_RBTree_T, v2_2_loop int64, v3_3_loop *Constructor_Test_RBTree_T) *Constructor_Test_RBTree_T {
+         .          .    284:var v_0 uint32 = v_0_loop
+         .          .    285:_ = v_0
+         .          .    286:var v1_1 *Constructor_Test_RBTree_T = v1_1_loop
+         .          .    287:_ = v1_1
+         .          .    288:var v2_2 int64 = v2_2_loop
+         .          .    289:_ = v2_2
+         .          .    290:var v3_3 *Constructor_Test_RBTree_T = v3_3_loop
+         .          .    291:_ = v3_3
+         .          .    292:var __t308 *Constructor_Test_RBTree_T
+         .          .    293:{
+         .          .    294:if (v_0 == 1583507464) {
+         .          .    295:var __t307 *Constructor_Test_RBTree_T
+         .          .    296:{
+         .          .    297:if (v1_1 != nil) {
+         .          .    298:var __t265 *Constructor_Test_RBTree_T
+         .          .    299:{
+         .          .    300:var __t_tag_12 uint32 = (v1_1).V0
+         .          .    301:if (uint32(__t_tag_12) == 3668501016) {
+         .          .    302:var __t223 *Constructor_Test_RBTree_T
+         .          .    303:{
+         .          .    304:var __t_tag_17 *Constructor_Test_RBTree_T = (v1_1).V1
+         .          .    305:if (__t_tag_17 != nil) {
+         .          .    306:var __t126 *Constructor_Test_RBTree_T
+         .          .    307:{
+         .          .    308:var __t_tag_22 uint32 = ((v1_1).V1).V0
+         .          .    309:if (uint32(__t_tag_22) == 3668501016) {
+         .          .    310:// TAST (Let): __local_var_4_23 shape=Other bindingType=Any
+         .          .    311:__local_var_4_23 := ((v1_1).V1).V1
+         .          .    312:_ = __local_var_4_23
+         .          .    313:// TAST (Let): __local_var_5_24 shape=Other bindingType=Any
+         .          .    314:__local_var_5_24 := ((v1_1).V1).V3
+         .          .    315:_ = __local_var_5_24
+         .          .    316:// TAST (Let): __local_var_6_25 shape=Other bindingType=Any
+         .          .    317:__local_var_6_25 := (v1_1).V3
+         .          .    318:_ = __local_var_6_25
+         .          .    319:// TAST (Let): __local_var_7_26 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    320:__local_var_7_26 := v3_3
+         .          .    321:_ = __local_var_7_26
+         .          .    322:// TAST (Let): __local_var_8_27 shape=Other bindingType=Any
+         .          .    323:__local_var_8_27 := ((v1_1).V1).V2
+         .          .    324:_ = __local_var_8_27
+         .          .    325:// TAST (Let): __local_var_9_28 shape=Other bindingType=Any
+         .          .    326:__local_var_9_28 := (v1_1).V2
+         .          .    327:_ = __local_var_9_28
+         .          .    328:// TAST (Let): __local_var_10_29 shape=Other bindingType=Int
+         .          .    329:__local_var_10_29 := v2_2
+         .          .    330:_ = __local_var_10_29
+    9.15MB     9.15MB    331:__t126 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_23, __local_var_8_27, __local_var_5_24}), __local_var_9_28, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_25, __local_var_10_29, __local_var_7_26})})
+         .          .    332:goto end_branch_126
+         .          .    333:} else {
+         .          .    334:
+         .          .    335:}
+         .          .    336:}
+         .          .    337:{
+         .          .    338:var __t_tag_30 *Constructor_Test_RBTree_T = (v1_1).V3
+         .          .    339:if (__t_tag_30 != nil) {
+         .          .    340:var __t84 *Constructor_Test_RBTree_T
+         .          .    341:{
+         .          .    342:var __t_tag_35 uint32 = ((v1_1).V3).V0
+         .          .    343:if (uint32(__t_tag_35) == 3668501016) {
+         .          .    344:// TAST (Let): __local_var_4_36 shape=Other bindingType=Any
+         .          .    345:__local_var_4_36 := (v1_1).V1
+         .          .    346:_ = __local_var_4_36
+         .          .    347:// TAST (Let): __local_var_5_37 shape=Other bindingType=Any
+         .          .    348:__local_var_5_37 := ((v1_1).V3).V1
+         .          .    349:_ = __local_var_5_37
+         .          .    350:// TAST (Let): __local_var_6_38 shape=Other bindingType=Any
+         .          .    351:__local_var_6_38 := ((v1_1).V3).V3
+         .          .    352:_ = __local_var_6_38
+         .          .    353:// TAST (Let): __local_var_7_39 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    354:__local_var_7_39 := v3_3
+         .          .    355:_ = __local_var_7_39
+         .          .    356:// TAST (Let): __local_var_8_40 shape=Other bindingType=Any
+         .          .    357:__local_var_8_40 := (v1_1).V2
+         .          .    358:_ = __local_var_8_40
+         .          .    359:// TAST (Let): __local_var_9_41 shape=Other bindingType=Any
+         .          .    360:__local_var_9_41 := ((v1_1).V3).V2
+         .          .    361:_ = __local_var_9_41
+         .          .    362:// TAST (Let): __local_var_10_42 shape=Other bindingType=Int
+         .          .    363:__local_var_10_42 := v2_2
+         .          .    364:_ = __local_var_10_42
+         .          .    365:__t84 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_36, __local_var_8_40, __local_var_5_37}), __local_var_9_41, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_38, __local_var_10_42, __local_var_7_39})})
+         .          .    366:goto end_branch_84
+         .          .    367:} else {
+         .          .    368:
+         .          .    369:}
+         .          .    370:}
+         .          .    371:{
+         .          .    372:var __t_and_44 bool = false
+         .          .    373:if (v3_3 != nil) {
+         .          .    374:
+         .          .    375:var __t_tag_43 uint32 = (v3_3).V0
+         .          .    376:__t_and_44 = (uint32(__t_tag_43) == 3668501016)
+         .          .    377:}
+         .          .    378:if __t_and_44 {
+         .          .    379:var __t83 *Constructor_Test_RBTree_T
+         .          .    380:{
+         .          .    381:var __t_tag_49 *Constructor_Test_RBTree_T = (v3_3).V1
+         .          .    382:if (__t_tag_49 != nil) {
+         .          .    383:var __t72 *Constructor_Test_RBTree_T
+         .          .    384:{
+         .          .    385:var __t_tag_54 uint32 = ((v3_3).V1).V0
+         .          .    386:if (uint32(__t_tag_54) == 3668501016) {
+         .          .    387:// TAST (Let): __local_var_4_55 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    388:__local_var_4_55 := v1_1
+         .          .    389:_ = __local_var_4_55
+         .          .    390:// TAST (Let): __local_var_5_56 shape=Other bindingType=Any
+         .          .    391:__local_var_5_56 := ((v3_3).V1).V1
+         .          .    392:_ = __local_var_5_56
+         .          .    393:// TAST (Let): __local_var_6_57 shape=Other bindingType=Any
+         .          .    394:__local_var_6_57 := ((v3_3).V1).V3
+         .          .    395:_ = __local_var_6_57
+         .          .    396:// TAST (Let): __local_var_7_58 shape=Other bindingType=Any
+         .          .    397:__local_var_7_58 := (v3_3).V3
+         .          .    398:_ = __local_var_7_58
+         .          .    399:// TAST (Let): __local_var_8_59 shape=Other bindingType=Int
+         .          .    400:__local_var_8_59 := v2_2
+         .          .    401:_ = __local_var_8_59
+         .          .    402:// TAST (Let): __local_var_9_60 shape=Other bindingType=Any
+         .          .    403:__local_var_9_60 := ((v3_3).V1).V2
+         .          .    404:_ = __local_var_9_60
+         .          .    405:// TAST (Let): __local_var_10_61 shape=Other bindingType=Any
+         .          .    406:__local_var_10_61 := (v3_3).V2
+         .          .    407:_ = __local_var_10_61
+         .          .    408:__t72 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_55, __local_var_8_59, __local_var_5_56}), __local_var_9_60, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_57, __local_var_10_61, __local_var_7_58})})
+         .          .    409:goto end_branch_72
+         .          .    410:} else {
+         .          .    411:
+         .          .    412:}
+         .          .    413:}
+         .          .    414:{
+         .          .    415:var __t_tag_62 *Constructor_Test_RBTree_T = (v3_3).V3
+         .          .    416:var __t_and_64 bool = false
+         .          .    417:if (__t_tag_62 != nil) {
+         .          .    418:
+         .          .    419:var __t_tag_63 uint32 = ((v3_3).V3).V0
+         .          .    420:__t_and_64 = (uint32(__t_tag_63) == 3668501016)
+         .          .    421:}
+         .          .    422:if __t_and_64 {
+         .          .    423:// TAST (Let): __local_var_4_65 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    424:__local_var_4_65 := v1_1
+         .          .    425:_ = __local_var_4_65
+         .          .    426:// TAST (Let): __local_var_5_66 shape=Other bindingType=Any
+         .          .    427:__local_var_5_66 := (v3_3).V1
+         .          .    428:_ = __local_var_5_66
+         .          .    429:// TAST (Let): __local_var_6_67 shape=Other bindingType=Any
+         .          .    430:__local_var_6_67 := ((v3_3).V3).V1
+         .          .    431:_ = __local_var_6_67
+         .          .    432:// TAST (Let): __local_var_7_68 shape=Other bindingType=Any
+         .          .    433:__local_var_7_68 := ((v3_3).V3).V3
+         .          .    434:_ = __local_var_7_68
+         .          .    435:// TAST (Let): __local_var_8_69 shape=Other bindingType=Int
+         .          .    436:__local_var_8_69 := v2_2
+         .          .    437:_ = __local_var_8_69
+         .          .    438:// TAST (Let): __local_var_9_70 shape=Other bindingType=Any
+         .          .    439:__local_var_9_70 := (v3_3).V2
+         .          .    440:_ = __local_var_9_70
+         .          .    441:// TAST (Let): __local_var_10_71 shape=Other bindingType=Any
+         .          .    442:__local_var_10_71 := ((v3_3).V3).V2
+         .          .    443:_ = __local_var_10_71
+         .          .    444:__t72 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_65, __local_var_8_69, __local_var_5_66}), __local_var_9_70, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_67, __local_var_10_71, __local_var_7_68})})
+         .          .    445:goto end_branch_72
+         .          .    446:} else {
+         .          .    447:
+         .          .    448:}
+         .          .    449:}
+         .          .    450:{
+         .          .    451:// TAST (Let): __local_var_4_50 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    452:__local_var_4_50 := v1_1
+         .          .    453:_ = __local_var_4_50
+         .          .    454:// TAST (Let): __local_var_5_51 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    455:__local_var_5_51 := v3_3
+         .          .    456:_ = __local_var_5_51
+         .          .    457:// TAST (Let): __local_var_6_52 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .    458:__local_var_6_52 := v_0
+         .          .    459:_ = __local_var_6_52
+         .          .    460:// TAST (Let): __local_var_7_53 shape=Other bindingType=Int
+         .          .    461:__local_var_7_53 := v2_2
+         .          .    462:_ = __local_var_7_53
+         .          .    463:__t72 = (&Constructor_Test_RBTree_T{1, __local_var_6_52, __local_var_4_50, __local_var_7_53, __local_var_5_51})
+         .          .    464:}
+         .          .    465:end_branch_72:
+         .          .    466:__t83 = __t72
+         .          .    467:goto end_branch_83
+         .          .    468:} else {
+         .          .    469:
+         .          .    470:}
+         .          .    471:}
+         .          .    472:{
+         .          .    473:var __t_tag_73 *Constructor_Test_RBTree_T = (v3_3).V3
+         .          .    474:var __t_and_75 bool = false
+         .          .    475:if (__t_tag_73 != nil) {
+         .          .    476:
+         .          .    477:var __t_tag_74 uint32 = ((v3_3).V3).V0
+         .          .    478:__t_and_75 = (uint32(__t_tag_74) == 3668501016)
+         .          .    479:}
+         .          .    480:if __t_and_75 {
+         .          .    481:// TAST (Let): __local_var_4_76 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    482:__local_var_4_76 := v1_1
+         .          .    483:_ = __local_var_4_76
+         .          .    484:// TAST (Let): __local_var_5_77 shape=Other bindingType=Any
+         .          .    485:__local_var_5_77 := (v3_3).V1
+         .          .    486:_ = __local_var_5_77
+         .          .    487:// TAST (Let): __local_var_6_78 shape=Other bindingType=Any
+         .          .    488:__local_var_6_78 := ((v3_3).V3).V1
+         .          .    489:_ = __local_var_6_78
+         .          .    490:// TAST (Let): __local_var_7_79 shape=Other bindingType=Any
+         .          .    491:__local_var_7_79 := ((v3_3).V3).V3
+         .          .    492:_ = __local_var_7_79
+         .          .    493:// TAST (Let): __local_var_8_80 shape=Other bindingType=Int
+         .          .    494:__local_var_8_80 := v2_2
+         .          .    495:_ = __local_var_8_80
+         .          .    496:// TAST (Let): __local_var_9_81 shape=Other bindingType=Any
+         .          .    497:__local_var_9_81 := (v3_3).V2
+         .          .    498:_ = __local_var_9_81
+         .          .    499:// TAST (Let): __local_var_10_82 shape=Other bindingType=Any
+         .          .    500:__local_var_10_82 := ((v3_3).V3).V2
+         .          .    501:_ = __local_var_10_82
+         .          .    502:__t83 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_76, __local_var_8_80, __local_var_5_77}), __local_var_9_81, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_78, __local_var_10_82, __local_var_7_79})})
+         .          .    503:goto end_branch_83
+         .          .    504:} else {
+         .          .    505:
+         .          .    506:}
+         .          .    507:}
+         .          .    508:{
+         .          .    509:// TAST (Let): __local_var_4_45 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    510:__local_var_4_45 := v1_1
+         .          .    511:_ = __local_var_4_45
+         .          .    512:// TAST (Let): __local_var_5_46 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    513:__local_var_5_46 := v3_3
+         .          .    514:_ = __local_var_5_46
+         .          .    515:// TAST (Let): __local_var_6_47 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .    516:__local_var_6_47 := v_0
+         .          .    517:_ = __local_var_6_47
+         .          .    518:// TAST (Let): __local_var_7_48 shape=Other bindingType=Int
+         .          .    519:__local_var_7_48 := v2_2
+         .          .    520:_ = __local_var_7_48
+         .          .    521:__t83 = (&Constructor_Test_RBTree_T{1, __local_var_6_47, __local_var_4_45, __local_var_7_48, __local_var_5_46})
+         .          .    522:}
+         .          .    523:end_branch_83:
+         .          .    524:__t84 = __t83
+         .          .    525:goto end_branch_84
+         .          .    526:} else {
+         .          .    527:
+         .          .    528:}
+         .          .    529:}
+         .          .    530:{
+         .          .    531:// TAST (Let): __local_var_4_31 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    532:__local_var_4_31 := v1_1
+         .          .    533:_ = __local_var_4_31
+         .          .    534:// TAST (Let): __local_var_5_32 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    535:__local_var_5_32 := v3_3
+         .          .    536:_ = __local_var_5_32
+         .          .    537:// TAST (Let): __local_var_6_33 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .    538:__local_var_6_33 := v_0
+         .          .    539:_ = __local_var_6_33
+         .          .    540:// TAST (Let): __local_var_7_34 shape=Other bindingType=Int
+         .          .    541:__local_var_7_34 := v2_2
+         .          .    542:_ = __local_var_7_34
+   20.30MB    20.30MB    543:__t84 = (&Constructor_Test_RBTree_T{1, __local_var_6_33, __local_var_4_31, __local_var_7_34, __local_var_5_32})
+         .          .    544:}
+         .          .    545:end_branch_84:
+         .          .    546:__t126 = __t84
+         .          .    547:goto end_branch_126
+         .          .    548:} else {
+         .          .    549:
+         .          .    550:}
+         .          .    551:}
+         .          .    552:{
+         .          .    553:var __t_and_86 bool = false
+         .          .    554:if (v3_3 != nil) {
+         .          .    555:
+         .          .    556:var __t_tag_85 uint32 = (v3_3).V0
+         .          .    557:__t_and_86 = (uint32(__t_tag_85) == 3668501016)
+         .          .    558:}
+         .          .    559:if __t_and_86 {
+         .          .    560:var __t125 *Constructor_Test_RBTree_T
+         .          .    561:{
+         .          .    562:var __t_tag_91 *Constructor_Test_RBTree_T = (v3_3).V1
+         .          .    563:if (__t_tag_91 != nil) {
+         .          .    564:var __t114 *Constructor_Test_RBTree_T
+         .          .    565:{
+         .          .    566:var __t_tag_96 uint32 = ((v3_3).V1).V0
+         .          .    567:if (uint32(__t_tag_96) == 3668501016) {
+         .          .    568:// TAST (Let): __local_var_4_97 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    569:__local_var_4_97 := v1_1
+         .          .    570:_ = __local_var_4_97
+         .          .    571:// TAST (Let): __local_var_5_98 shape=Other bindingType=Any
+         .          .    572:__local_var_5_98 := ((v3_3).V1).V1
+         .          .    573:_ = __local_var_5_98
+         .          .    574:// TAST (Let): __local_var_6_99 shape=Other bindingType=Any
+         .          .    575:__local_var_6_99 := ((v3_3).V1).V3
+         .          .    576:_ = __local_var_6_99
+         .          .    577:// TAST (Let): __local_var_7_100 shape=Other bindingType=Any
+         .          .    578:__local_var_7_100 := (v3_3).V3
+         .          .    579:_ = __local_var_7_100
+         .          .    580:// TAST (Let): __local_var_8_101 shape=Other bindingType=Int
+         .          .    581:__local_var_8_101 := v2_2
+         .          .    582:_ = __local_var_8_101
+         .          .    583:// TAST (Let): __local_var_9_102 shape=Other bindingType=Any
+         .          .    584:__local_var_9_102 := ((v3_3).V1).V2
+         .          .    585:_ = __local_var_9_102
+         .          .    586:// TAST (Let): __local_var_10_103 shape=Other bindingType=Any
+         .          .    587:__local_var_10_103 := (v3_3).V2
+         .          .    588:_ = __local_var_10_103
+         .          .    589:__t114 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_97, __local_var_8_101, __local_var_5_98}), __local_var_9_102, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_99, __local_var_10_103, __local_var_7_100})})
+         .          .    590:goto end_branch_114
+         .          .    591:} else {
+         .          .    592:
+         .          .    593:}
+         .          .    594:}
+         .          .    595:{
+         .          .    596:var __t_tag_104 *Constructor_Test_RBTree_T = (v3_3).V3
+         .          .    597:var __t_and_106 bool = false
+         .          .    598:if (__t_tag_104 != nil) {
+         .          .    599:
+         .          .    600:var __t_tag_105 uint32 = ((v3_3).V3).V0
+         .          .    601:__t_and_106 = (uint32(__t_tag_105) == 3668501016)
+         .          .    602:}
+         .          .    603:if __t_and_106 {
+         .          .    604:// TAST (Let): __local_var_4_107 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    605:__local_var_4_107 := v1_1
+         .          .    606:_ = __local_var_4_107
+         .          .    607:// TAST (Let): __local_var_5_108 shape=Other bindingType=Any
+         .          .    608:__local_var_5_108 := (v3_3).V1
+         .          .    609:_ = __local_var_5_108
+         .          .    610:// TAST (Let): __local_var_6_109 shape=Other bindingType=Any
+         .          .    611:__local_var_6_109 := ((v3_3).V3).V1
+         .          .    612:_ = __local_var_6_109
+         .          .    613:// TAST (Let): __local_var_7_110 shape=Other bindingType=Any
+         .          .    614:__local_var_7_110 := ((v3_3).V3).V3
+         .          .    615:_ = __local_var_7_110
+         .          .    616:// TAST (Let): __local_var_8_111 shape=Other bindingType=Int
+         .          .    617:__local_var_8_111 := v2_2
+         .          .    618:_ = __local_var_8_111
+         .          .    619:// TAST (Let): __local_var_9_112 shape=Other bindingType=Any
+         .          .    620:__local_var_9_112 := (v3_3).V2
+         .          .    621:_ = __local_var_9_112
+         .          .    622:// TAST (Let): __local_var_10_113 shape=Other bindingType=Any
+         .          .    623:__local_var_10_113 := ((v3_3).V3).V2
+         .          .    624:_ = __local_var_10_113
+         .          .    625:__t114 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_107, __local_var_8_111, __local_var_5_108}), __local_var_9_112, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_109, __local_var_10_113, __local_var_7_110})})
+         .          .    626:goto end_branch_114
+         .          .    627:} else {
+         .          .    628:
+         .          .    629:}
+         .          .    630:}
+         .          .    631:{
+         .          .    632:// TAST (Let): __local_var_4_92 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    633:__local_var_4_92 := v1_1
+         .          .    634:_ = __local_var_4_92
+         .          .    635:// TAST (Let): __local_var_5_93 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    636:__local_var_5_93 := v3_3
+         .          .    637:_ = __local_var_5_93
+         .          .    638:// TAST (Let): __local_var_6_94 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .    639:__local_var_6_94 := v_0
+         .          .    640:_ = __local_var_6_94
+         .          .    641:// TAST (Let): __local_var_7_95 shape=Other bindingType=Int
+         .          .    642:__local_var_7_95 := v2_2
+         .          .    643:_ = __local_var_7_95
+         .          .    644:__t114 = (&Constructor_Test_RBTree_T{1, __local_var_6_94, __local_var_4_92, __local_var_7_95, __local_var_5_93})
+         .          .    645:}
+         .          .    646:end_branch_114:
+         .          .    647:__t125 = __t114
+         .          .    648:goto end_branch_125
+         .          .    649:} else {
+         .          .    650:
+         .          .    651:}
+         .          .    652:}
+         .          .    653:{
+         .          .    654:var __t_tag_115 *Constructor_Test_RBTree_T = (v3_3).V3
+         .          .    655:var __t_and_117 bool = false
+         .          .    656:if (__t_tag_115 != nil) {
+         .          .    657:
+         .          .    658:var __t_tag_116 uint32 = ((v3_3).V3).V0
+         .          .    659:__t_and_117 = (uint32(__t_tag_116) == 3668501016)
+         .          .    660:}
+         .          .    661:if __t_and_117 {
+         .          .    662:// TAST (Let): __local_var_4_118 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    663:__local_var_4_118 := v1_1
+         .          .    664:_ = __local_var_4_118
+         .          .    665:// TAST (Let): __local_var_5_119 shape=Other bindingType=Any
+         .          .    666:__local_var_5_119 := (v3_3).V1
+         .          .    667:_ = __local_var_5_119
+         .          .    668:// TAST (Let): __local_var_6_120 shape=Other bindingType=Any
+         .          .    669:__local_var_6_120 := ((v3_3).V3).V1
+         .          .    670:_ = __local_var_6_120
+         .          .    671:// TAST (Let): __local_var_7_121 shape=Other bindingType=Any
+         .          .    672:__local_var_7_121 := ((v3_3).V3).V3
+         .          .    673:_ = __local_var_7_121
+         .          .    674:// TAST (Let): __local_var_8_122 shape=Other bindingType=Int
+         .          .    675:__local_var_8_122 := v2_2
+         .          .    676:_ = __local_var_8_122
+         .          .    677:// TAST (Let): __local_var_9_123 shape=Other bindingType=Any
+         .          .    678:__local_var_9_123 := (v3_3).V2
+         .          .    679:_ = __local_var_9_123
+         .          .    680:// TAST (Let): __local_var_10_124 shape=Other bindingType=Any
+         .          .    681:__local_var_10_124 := ((v3_3).V3).V2
+         .          .    682:_ = __local_var_10_124
+         .          .    683:__t125 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_118, __local_var_8_122, __local_var_5_119}), __local_var_9_123, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_120, __local_var_10_124, __local_var_7_121})})
+         .          .    684:goto end_branch_125
+         .          .    685:} else {
+         .          .    686:
+         .          .    687:}
+         .          .    688:}
+         .          .    689:{
+         .          .    690:// TAST (Let): __local_var_4_87 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    691:__local_var_4_87 := v1_1
+         .          .    692:_ = __local_var_4_87
+         .          .    693:// TAST (Let): __local_var_5_88 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    694:__local_var_5_88 := v3_3
+         .          .    695:_ = __local_var_5_88
+         .          .    696:// TAST (Let): __local_var_6_89 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .    697:__local_var_6_89 := v_0
+         .          .    698:_ = __local_var_6_89
+         .          .    699:// TAST (Let): __local_var_7_90 shape=Other bindingType=Int
+         .          .    700:__local_var_7_90 := v2_2
+         .          .    701:_ = __local_var_7_90
+         .          .    702:__t125 = (&Constructor_Test_RBTree_T{1, __local_var_6_89, __local_var_4_87, __local_var_7_90, __local_var_5_88})
+         .          .    703:}
+         .          .    704:end_branch_125:
+         .          .    705:__t126 = __t125
+         .          .    706:goto end_branch_126
+         .          .    707:} else {
+         .          .    708:
+         .          .    709:}
+         .          .    710:}
+         .          .    711:{
+         .          .    712:// TAST (Let): __local_var_4_18 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    713:__local_var_4_18 := v1_1
+         .          .    714:_ = __local_var_4_18
+         .          .    715:// TAST (Let): __local_var_5_19 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    716:__local_var_5_19 := v3_3
+         .          .    717:_ = __local_var_5_19
+         .          .    718:// TAST (Let): __local_var_6_20 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .    719:__local_var_6_20 := v_0
+         .          .    720:_ = __local_var_6_20
+         .          .    721:// TAST (Let): __local_var_7_21 shape=Other bindingType=Int
+         .          .    722:__local_var_7_21 := v2_2
+         .          .    723:_ = __local_var_7_21
+         .          .    724:__t126 = (&Constructor_Test_RBTree_T{1, __local_var_6_20, __local_var_4_18, __local_var_7_21, __local_var_5_19})
+         .          .    725:}
+         .          .    726:end_branch_126:
+         .          .    727:__t223 = __t126
+         .          .    728:goto end_branch_223
+         .          .    729:} else {
+         .          .    730:
+         .          .    731:}
+         .          .    732:}
+         .          .    733:{
+         .          .    734:var __t_tag_127 *Constructor_Test_RBTree_T = (v1_1).V3
+         .          .    735:if (__t_tag_127 != nil) {
+         .          .    736:var __t181 *Constructor_Test_RBTree_T
+         .          .    737:{
+         .          .    738:var __t_tag_132 uint32 = ((v1_1).V3).V0
+         .          .    739:if (uint32(__t_tag_132) == 3668501016) {
+         .          .    740:// TAST (Let): __local_var_4_133 shape=Other bindingType=Any
+         .          .    741:__local_var_4_133 := (v1_1).V1
+         .          .    742:_ = __local_var_4_133
+         .          .    743:// TAST (Let): __local_var_5_134 shape=Other bindingType=Any
+         .          .    744:__local_var_5_134 := ((v1_1).V3).V1
+         .          .    745:_ = __local_var_5_134
+         .          .    746:// TAST (Let): __local_var_6_135 shape=Other bindingType=Any
+         .          .    747:__local_var_6_135 := ((v1_1).V3).V3
+         .          .    748:_ = __local_var_6_135
+         .          .    749:// TAST (Let): __local_var_7_136 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    750:__local_var_7_136 := v3_3
+         .          .    751:_ = __local_var_7_136
+         .          .    752:// TAST (Let): __local_var_8_137 shape=Other bindingType=Any
+         .          .    753:__local_var_8_137 := (v1_1).V2
+         .          .    754:_ = __local_var_8_137
+         .          .    755:// TAST (Let): __local_var_9_138 shape=Other bindingType=Any
+         .          .    756:__local_var_9_138 := ((v1_1).V3).V2
+         .          .    757:_ = __local_var_9_138
+         .          .    758:// TAST (Let): __local_var_10_139 shape=Other bindingType=Int
+         .          .    759:__local_var_10_139 := v2_2
+         .          .    760:_ = __local_var_10_139
+         .          .    761:__t181 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_133, __local_var_8_137, __local_var_5_134}), __local_var_9_138, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_135, __local_var_10_139, __local_var_7_136})})
+         .          .    762:goto end_branch_181
+         .          .    763:} else {
+         .          .    764:
+         .          .    765:}
+         .          .    766:}
+         .          .    767:{
+         .          .    768:var __t_and_141 bool = false
+         .          .    769:if (v3_3 != nil) {
+         .          .    770:
+         .          .    771:var __t_tag_140 uint32 = (v3_3).V0
+         .          .    772:__t_and_141 = (uint32(__t_tag_140) == 3668501016)
+         .          .    773:}
+         .          .    774:if __t_and_141 {
+         .          .    775:var __t180 *Constructor_Test_RBTree_T
+         .          .    776:{
+         .          .    777:var __t_tag_146 *Constructor_Test_RBTree_T = (v3_3).V1
+         .          .    778:if (__t_tag_146 != nil) {
+         .          .    779:var __t169 *Constructor_Test_RBTree_T
+         .          .    780:{
+         .          .    781:var __t_tag_151 uint32 = ((v3_3).V1).V0
+         .          .    782:if (uint32(__t_tag_151) == 3668501016) {
+         .          .    783:// TAST (Let): __local_var_4_152 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    784:__local_var_4_152 := v1_1
+         .          .    785:_ = __local_var_4_152
+         .          .    786:// TAST (Let): __local_var_5_153 shape=Other bindingType=Any
+         .          .    787:__local_var_5_153 := ((v3_3).V1).V1
+         .          .    788:_ = __local_var_5_153
+         .          .    789:// TAST (Let): __local_var_6_154 shape=Other bindingType=Any
+         .          .    790:__local_var_6_154 := ((v3_3).V1).V3
+         .          .    791:_ = __local_var_6_154
+         .          .    792:// TAST (Let): __local_var_7_155 shape=Other bindingType=Any
+         .          .    793:__local_var_7_155 := (v3_3).V3
+         .          .    794:_ = __local_var_7_155
+         .          .    795:// TAST (Let): __local_var_8_156 shape=Other bindingType=Int
+         .          .    796:__local_var_8_156 := v2_2
+         .          .    797:_ = __local_var_8_156
+         .          .    798:// TAST (Let): __local_var_9_157 shape=Other bindingType=Any
+         .          .    799:__local_var_9_157 := ((v3_3).V1).V2
+         .          .    800:_ = __local_var_9_157
+         .          .    801:// TAST (Let): __local_var_10_158 shape=Other bindingType=Any
+         .          .    802:__local_var_10_158 := (v3_3).V2
+         .          .    803:_ = __local_var_10_158
+         .          .    804:__t169 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_152, __local_var_8_156, __local_var_5_153}), __local_var_9_157, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_154, __local_var_10_158, __local_var_7_155})})
+         .          .    805:goto end_branch_169
+         .          .    806:} else {
+         .          .    807:
+         .          .    808:}
+         .          .    809:}
+         .          .    810:{
+         .          .    811:var __t_tag_159 *Constructor_Test_RBTree_T = (v3_3).V3
+         .          .    812:var __t_and_161 bool = false
+         .          .    813:if (__t_tag_159 != nil) {
+         .          .    814:
+         .          .    815:var __t_tag_160 uint32 = ((v3_3).V3).V0
+         .          .    816:__t_and_161 = (uint32(__t_tag_160) == 3668501016)
+         .          .    817:}
+         .          .    818:if __t_and_161 {
+         .          .    819:// TAST (Let): __local_var_4_162 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    820:__local_var_4_162 := v1_1
+         .          .    821:_ = __local_var_4_162
+         .          .    822:// TAST (Let): __local_var_5_163 shape=Other bindingType=Any
+         .          .    823:__local_var_5_163 := (v3_3).V1
+         .          .    824:_ = __local_var_5_163
+         .          .    825:// TAST (Let): __local_var_6_164 shape=Other bindingType=Any
+         .          .    826:__local_var_6_164 := ((v3_3).V3).V1
+         .          .    827:_ = __local_var_6_164
+         .          .    828:// TAST (Let): __local_var_7_165 shape=Other bindingType=Any
+         .          .    829:__local_var_7_165 := ((v3_3).V3).V3
+         .          .    830:_ = __local_var_7_165
+         .          .    831:// TAST (Let): __local_var_8_166 shape=Other bindingType=Int
+         .          .    832:__local_var_8_166 := v2_2
+         .          .    833:_ = __local_var_8_166
+         .          .    834:// TAST (Let): __local_var_9_167 shape=Other bindingType=Any
+         .          .    835:__local_var_9_167 := (v3_3).V2
+         .          .    836:_ = __local_var_9_167
+         .          .    837:// TAST (Let): __local_var_10_168 shape=Other bindingType=Any
+         .          .    838:__local_var_10_168 := ((v3_3).V3).V2
+         .          .    839:_ = __local_var_10_168
+         .          .    840:__t169 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_162, __local_var_8_166, __local_var_5_163}), __local_var_9_167, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_164, __local_var_10_168, __local_var_7_165})})
+         .          .    841:goto end_branch_169
+         .          .    842:} else {
+         .          .    843:
+         .          .    844:}
+         .          .    845:}
+         .          .    846:{
+         .          .    847:// TAST (Let): __local_var_4_147 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    848:__local_var_4_147 := v1_1
+         .          .    849:_ = __local_var_4_147
+         .          .    850:// TAST (Let): __local_var_5_148 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    851:__local_var_5_148 := v3_3
+         .          .    852:_ = __local_var_5_148
+         .          .    853:// TAST (Let): __local_var_6_149 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .    854:__local_var_6_149 := v_0
+         .          .    855:_ = __local_var_6_149
+         .          .    856:// TAST (Let): __local_var_7_150 shape=Other bindingType=Int
+         .          .    857:__local_var_7_150 := v2_2
+         .          .    858:_ = __local_var_7_150
+         .          .    859:__t169 = (&Constructor_Test_RBTree_T{1, __local_var_6_149, __local_var_4_147, __local_var_7_150, __local_var_5_148})
+         .          .    860:}
+         .          .    861:end_branch_169:
+         .          .    862:__t180 = __t169
+         .          .    863:goto end_branch_180
+         .          .    864:} else {
+         .          .    865:
+         .          .    866:}
+         .          .    867:}
+         .          .    868:{
+         .          .    869:var __t_tag_170 *Constructor_Test_RBTree_T = (v3_3).V3
+         .          .    870:var __t_and_172 bool = false
+         .          .    871:if (__t_tag_170 != nil) {
+         .          .    872:
+         .          .    873:var __t_tag_171 uint32 = ((v3_3).V3).V0
+         .          .    874:__t_and_172 = (uint32(__t_tag_171) == 3668501016)
+         .          .    875:}
+         .          .    876:if __t_and_172 {
+         .          .    877:// TAST (Let): __local_var_4_173 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    878:__local_var_4_173 := v1_1
+         .          .    879:_ = __local_var_4_173
+         .          .    880:// TAST (Let): __local_var_5_174 shape=Other bindingType=Any
+         .          .    881:__local_var_5_174 := (v3_3).V1
+         .          .    882:_ = __local_var_5_174
+         .          .    883:// TAST (Let): __local_var_6_175 shape=Other bindingType=Any
+         .          .    884:__local_var_6_175 := ((v3_3).V3).V1
+         .          .    885:_ = __local_var_6_175
+         .          .    886:// TAST (Let): __local_var_7_176 shape=Other bindingType=Any
+         .          .    887:__local_var_7_176 := ((v3_3).V3).V3
+         .          .    888:_ = __local_var_7_176
+         .          .    889:// TAST (Let): __local_var_8_177 shape=Other bindingType=Int
+         .          .    890:__local_var_8_177 := v2_2
+         .          .    891:_ = __local_var_8_177
+         .          .    892:// TAST (Let): __local_var_9_178 shape=Other bindingType=Any
+         .          .    893:__local_var_9_178 := (v3_3).V2
+         .          .    894:_ = __local_var_9_178
+         .          .    895:// TAST (Let): __local_var_10_179 shape=Other bindingType=Any
+         .          .    896:__local_var_10_179 := ((v3_3).V3).V2
+         .          .    897:_ = __local_var_10_179
+         .          .    898:__t180 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_173, __local_var_8_177, __local_var_5_174}), __local_var_9_178, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_175, __local_var_10_179, __local_var_7_176})})
+         .          .    899:goto end_branch_180
+         .          .    900:} else {
+         .          .    901:
+         .          .    902:}
+         .          .    903:}
+         .          .    904:{
+         .          .    905:// TAST (Let): __local_var_4_142 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    906:__local_var_4_142 := v1_1
+         .          .    907:_ = __local_var_4_142
+         .          .    908:// TAST (Let): __local_var_5_143 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    909:__local_var_5_143 := v3_3
+         .          .    910:_ = __local_var_5_143
+         .          .    911:// TAST (Let): __local_var_6_144 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .    912:__local_var_6_144 := v_0
+         .          .    913:_ = __local_var_6_144
+         .          .    914:// TAST (Let): __local_var_7_145 shape=Other bindingType=Int
+         .          .    915:__local_var_7_145 := v2_2
+         .          .    916:_ = __local_var_7_145
+         .          .    917:__t180 = (&Constructor_Test_RBTree_T{1, __local_var_6_144, __local_var_4_142, __local_var_7_145, __local_var_5_143})
+         .          .    918:}
+         .          .    919:end_branch_180:
+         .          .    920:__t181 = __t180
+         .          .    921:goto end_branch_181
+         .          .    922:} else {
+         .          .    923:
+         .          .    924:}
+         .          .    925:}
+         .          .    926:{
+         .          .    927:// TAST (Let): __local_var_4_128 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    928:__local_var_4_128 := v1_1
+         .          .    929:_ = __local_var_4_128
+         .          .    930:// TAST (Let): __local_var_5_129 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    931:__local_var_5_129 := v3_3
+         .          .    932:_ = __local_var_5_129
+         .          .    933:// TAST (Let): __local_var_6_130 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .    934:__local_var_6_130 := v_0
+         .          .    935:_ = __local_var_6_130
+         .          .    936:// TAST (Let): __local_var_7_131 shape=Other bindingType=Int
+         .          .    937:__local_var_7_131 := v2_2
+         .          .    938:_ = __local_var_7_131
+         .          .    939:__t181 = (&Constructor_Test_RBTree_T{1, __local_var_6_130, __local_var_4_128, __local_var_7_131, __local_var_5_129})
+         .          .    940:}
+         .          .    941:end_branch_181:
+         .          .    942:__t223 = __t181
+         .          .    943:goto end_branch_223
+         .          .    944:} else {
+         .          .    945:
+         .          .    946:}
+         .          .    947:}
+         .          .    948:{
+         .          .    949:var __t_and_183 bool = false
+         .          .    950:if (v3_3 != nil) {
+         .          .    951:
+         .          .    952:var __t_tag_182 uint32 = (v3_3).V0
+         .          .    953:__t_and_183 = (uint32(__t_tag_182) == 3668501016)
+         .          .    954:}
+         .          .    955:if __t_and_183 {
+         .          .    956:var __t222 *Constructor_Test_RBTree_T
+         .          .    957:{
+         .          .    958:var __t_tag_188 *Constructor_Test_RBTree_T = (v3_3).V1
+         .          .    959:if (__t_tag_188 != nil) {
+         .          .    960:var __t211 *Constructor_Test_RBTree_T
+         .          .    961:{
+         .          .    962:var __t_tag_193 uint32 = ((v3_3).V1).V0
+         .          .    963:if (uint32(__t_tag_193) == 3668501016) {
+         .          .    964:// TAST (Let): __local_var_4_194 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .    965:__local_var_4_194 := v1_1
+         .          .    966:_ = __local_var_4_194
+         .          .    967:// TAST (Let): __local_var_5_195 shape=Other bindingType=Any
+         .          .    968:__local_var_5_195 := ((v3_3).V1).V1
+         .          .    969:_ = __local_var_5_195
+         .          .    970:// TAST (Let): __local_var_6_196 shape=Other bindingType=Any
+         .          .    971:__local_var_6_196 := ((v3_3).V1).V3
+         .          .    972:_ = __local_var_6_196
+         .          .    973:// TAST (Let): __local_var_7_197 shape=Other bindingType=Any
+         .          .    974:__local_var_7_197 := (v3_3).V3
+         .          .    975:_ = __local_var_7_197
+         .          .    976:// TAST (Let): __local_var_8_198 shape=Other bindingType=Int
+         .          .    977:__local_var_8_198 := v2_2
+         .          .    978:_ = __local_var_8_198
+         .          .    979:// TAST (Let): __local_var_9_199 shape=Other bindingType=Any
+         .          .    980:__local_var_9_199 := ((v3_3).V1).V2
+         .          .    981:_ = __local_var_9_199
+         .          .    982:// TAST (Let): __local_var_10_200 shape=Other bindingType=Any
+         .          .    983:__local_var_10_200 := (v3_3).V2
+         .          .    984:_ = __local_var_10_200
+         .          .    985:__t211 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_194, __local_var_8_198, __local_var_5_195}), __local_var_9_199, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_196, __local_var_10_200, __local_var_7_197})})
+         .          .    986:goto end_branch_211
+         .          .    987:} else {
+         .          .    988:
+         .          .    989:}
+         .          .    990:}
+         .          .    991:{
+         .          .    992:var __t_tag_201 *Constructor_Test_RBTree_T = (v3_3).V3
+         .          .    993:var __t_and_203 bool = false
+         .          .    994:if (__t_tag_201 != nil) {
+         .          .    995:
+         .          .    996:var __t_tag_202 uint32 = ((v3_3).V3).V0
+         .          .    997:__t_and_203 = (uint32(__t_tag_202) == 3668501016)
+         .          .    998:}
+         .          .    999:if __t_and_203 {
+         .          .   1000:// TAST (Let): __local_var_4_204 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1001:__local_var_4_204 := v1_1
+         .          .   1002:_ = __local_var_4_204
+         .          .   1003:// TAST (Let): __local_var_5_205 shape=Other bindingType=Any
+         .          .   1004:__local_var_5_205 := (v3_3).V1
+         .          .   1005:_ = __local_var_5_205
+         .          .   1006:// TAST (Let): __local_var_6_206 shape=Other bindingType=Any
+         .          .   1007:__local_var_6_206 := ((v3_3).V3).V1
+         .          .   1008:_ = __local_var_6_206
+         .          .   1009:// TAST (Let): __local_var_7_207 shape=Other bindingType=Any
+         .          .   1010:__local_var_7_207 := ((v3_3).V3).V3
+         .          .   1011:_ = __local_var_7_207
+         .          .   1012:// TAST (Let): __local_var_8_208 shape=Other bindingType=Int
+         .          .   1013:__local_var_8_208 := v2_2
+         .          .   1014:_ = __local_var_8_208
+         .          .   1015:// TAST (Let): __local_var_9_209 shape=Other bindingType=Any
+         .          .   1016:__local_var_9_209 := (v3_3).V2
+         .          .   1017:_ = __local_var_9_209
+         .          .   1018:// TAST (Let): __local_var_10_210 shape=Other bindingType=Any
+         .          .   1019:__local_var_10_210 := ((v3_3).V3).V2
+         .          .   1020:_ = __local_var_10_210
+         .          .   1021:__t211 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_204, __local_var_8_208, __local_var_5_205}), __local_var_9_209, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_206, __local_var_10_210, __local_var_7_207})})
+         .          .   1022:goto end_branch_211
+         .          .   1023:} else {
+         .          .   1024:
+         .          .   1025:}
+         .          .   1026:}
+         .          .   1027:{
+         .          .   1028:// TAST (Let): __local_var_4_189 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1029:__local_var_4_189 := v1_1
+         .          .   1030:_ = __local_var_4_189
+         .          .   1031:// TAST (Let): __local_var_5_190 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1032:__local_var_5_190 := v3_3
+         .          .   1033:_ = __local_var_5_190
+         .          .   1034:// TAST (Let): __local_var_6_191 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .   1035:__local_var_6_191 := v_0
+         .          .   1036:_ = __local_var_6_191
+         .          .   1037:// TAST (Let): __local_var_7_192 shape=Other bindingType=Int
+         .          .   1038:__local_var_7_192 := v2_2
+         .          .   1039:_ = __local_var_7_192
+         .          .   1040:__t211 = (&Constructor_Test_RBTree_T{1, __local_var_6_191, __local_var_4_189, __local_var_7_192, __local_var_5_190})
+         .          .   1041:}
+         .          .   1042:end_branch_211:
+         .          .   1043:__t222 = __t211
+         .          .   1044:goto end_branch_222
+         .          .   1045:} else {
+         .          .   1046:
+         .          .   1047:}
+         .          .   1048:}
+         .          .   1049:{
+         .          .   1050:var __t_tag_212 *Constructor_Test_RBTree_T = (v3_3).V3
+         .          .   1051:var __t_and_214 bool = false
+         .          .   1052:if (__t_tag_212 != nil) {
+         .          .   1053:
+         .          .   1054:var __t_tag_213 uint32 = ((v3_3).V3).V0
+         .          .   1055:__t_and_214 = (uint32(__t_tag_213) == 3668501016)
+         .          .   1056:}
+         .          .   1057:if __t_and_214 {
+         .          .   1058:// TAST (Let): __local_var_4_215 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1059:__local_var_4_215 := v1_1
+         .          .   1060:_ = __local_var_4_215
+         .          .   1061:// TAST (Let): __local_var_5_216 shape=Other bindingType=Any
+         .          .   1062:__local_var_5_216 := (v3_3).V1
+         .          .   1063:_ = __local_var_5_216
+         .          .   1064:// TAST (Let): __local_var_6_217 shape=Other bindingType=Any
+         .          .   1065:__local_var_6_217 := ((v3_3).V3).V1
+         .          .   1066:_ = __local_var_6_217
+         .          .   1067:// TAST (Let): __local_var_7_218 shape=Other bindingType=Any
+         .          .   1068:__local_var_7_218 := ((v3_3).V3).V3
+         .          .   1069:_ = __local_var_7_218
+         .          .   1070:// TAST (Let): __local_var_8_219 shape=Other bindingType=Int
+         .          .   1071:__local_var_8_219 := v2_2
+         .          .   1072:_ = __local_var_8_219
+         .          .   1073:// TAST (Let): __local_var_9_220 shape=Other bindingType=Any
+         .          .   1074:__local_var_9_220 := (v3_3).V2
+         .          .   1075:_ = __local_var_9_220
+         .          .   1076:// TAST (Let): __local_var_10_221 shape=Other bindingType=Any
+         .          .   1077:__local_var_10_221 := ((v3_3).V3).V2
+         .          .   1078:_ = __local_var_10_221
+         .          .   1079:__t222 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_215, __local_var_8_219, __local_var_5_216}), __local_var_9_220, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_217, __local_var_10_221, __local_var_7_218})})
+         .          .   1080:goto end_branch_222
+         .          .   1081:} else {
+         .          .   1082:
+         .          .   1083:}
+         .          .   1084:}
+         .          .   1085:{
+         .          .   1086:// TAST (Let): __local_var_4_184 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1087:__local_var_4_184 := v1_1
+         .          .   1088:_ = __local_var_4_184
+         .          .   1089:// TAST (Let): __local_var_5_185 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1090:__local_var_5_185 := v3_3
+         .          .   1091:_ = __local_var_5_185
+         .          .   1092:// TAST (Let): __local_var_6_186 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .   1093:__local_var_6_186 := v_0
+         .          .   1094:_ = __local_var_6_186
+         .          .   1095:// TAST (Let): __local_var_7_187 shape=Other bindingType=Int
+         .          .   1096:__local_var_7_187 := v2_2
+         .          .   1097:_ = __local_var_7_187
+         .          .   1098:__t222 = (&Constructor_Test_RBTree_T{1, __local_var_6_186, __local_var_4_184, __local_var_7_187, __local_var_5_185})
+         .          .   1099:}
+         .          .   1100:end_branch_222:
+         .          .   1101:__t223 = __t222
+         .          .   1102:goto end_branch_223
+         .          .   1103:} else {
+         .          .   1104:
+         .          .   1105:}
+         .          .   1106:}
+         .          .   1107:{
+         .          .   1108:// TAST (Let): __local_var_4_13 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1109:__local_var_4_13 := v1_1
+         .          .   1110:_ = __local_var_4_13
+         .          .   1111:// TAST (Let): __local_var_5_14 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1112:__local_var_5_14 := v3_3
+         .          .   1113:_ = __local_var_5_14
+         .          .   1114:// TAST (Let): __local_var_6_15 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .   1115:__local_var_6_15 := v_0
+         .          .   1116:_ = __local_var_6_15
+         .          .   1117:// TAST (Let): __local_var_7_16 shape=Other bindingType=Int
+         .          .   1118:__local_var_7_16 := v2_2
+         .          .   1119:_ = __local_var_7_16
+    1.53MB     1.53MB   1120:__t223 = (&Constructor_Test_RBTree_T{1, __local_var_6_15, __local_var_4_13, __local_var_7_16, __local_var_5_14})
+         .          .   1121:}
+         .          .   1122:end_branch_223:
+         .          .   1123:__t265 = __t223
+         .          .   1124:goto end_branch_265
+         .          .   1125:} else {
+         .          .   1126:
+         .          .   1127:}
+         .          .   1128:}
+         .          .   1129:{
+         .          .   1130:var __t_and_225 bool = false
+         .          .   1131:if (v3_3 != nil) {
+         .          .   1132:
+         .          .   1133:var __t_tag_224 uint32 = (v3_3).V0
+         .          .   1134:__t_and_225 = (uint32(__t_tag_224) == 3668501016)
+         .          .   1135:}
+         .          .   1136:if __t_and_225 {
+         .          .   1137:var __t264 *Constructor_Test_RBTree_T
+         .          .   1138:{
+         .          .   1139:var __t_tag_230 *Constructor_Test_RBTree_T = (v3_3).V1
+         .          .   1140:if (__t_tag_230 != nil) {
+         .          .   1141:var __t253 *Constructor_Test_RBTree_T
+         .          .   1142:{
+         .          .   1143:var __t_tag_235 uint32 = ((v3_3).V1).V0
+         .          .   1144:if (uint32(__t_tag_235) == 3668501016) {
+         .          .   1145:// TAST (Let): __local_var_4_236 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1146:__local_var_4_236 := v1_1
+         .          .   1147:_ = __local_var_4_236
+         .          .   1148:// TAST (Let): __local_var_5_237 shape=Other bindingType=Any
+         .          .   1149:__local_var_5_237 := ((v3_3).V1).V1
+         .          .   1150:_ = __local_var_5_237
+         .          .   1151:// TAST (Let): __local_var_6_238 shape=Other bindingType=Any
+         .          .   1152:__local_var_6_238 := ((v3_3).V1).V3
+         .          .   1153:_ = __local_var_6_238
+         .          .   1154:// TAST (Let): __local_var_7_239 shape=Other bindingType=Any
+         .          .   1155:__local_var_7_239 := (v3_3).V3
+         .          .   1156:_ = __local_var_7_239
+         .          .   1157:// TAST (Let): __local_var_8_240 shape=Other bindingType=Int
+         .          .   1158:__local_var_8_240 := v2_2
+         .          .   1159:_ = __local_var_8_240
+         .          .   1160:// TAST (Let): __local_var_9_241 shape=Other bindingType=Any
+         .          .   1161:__local_var_9_241 := ((v3_3).V1).V2
+         .          .   1162:_ = __local_var_9_241
+         .          .   1163:// TAST (Let): __local_var_10_242 shape=Other bindingType=Any
+         .          .   1164:__local_var_10_242 := (v3_3).V2
+         .          .   1165:_ = __local_var_10_242
+         .          .   1166:__t253 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_236, __local_var_8_240, __local_var_5_237}), __local_var_9_241, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_238, __local_var_10_242, __local_var_7_239})})
+         .          .   1167:goto end_branch_253
+         .          .   1168:} else {
+         .          .   1169:
+         .          .   1170:}
+         .          .   1171:}
+         .          .   1172:{
+         .          .   1173:var __t_tag_243 *Constructor_Test_RBTree_T = (v3_3).V3
+         .          .   1174:var __t_and_245 bool = false
+         .          .   1175:if (__t_tag_243 != nil) {
+         .          .   1176:
+         .          .   1177:var __t_tag_244 uint32 = ((v3_3).V3).V0
+         .          .   1178:__t_and_245 = (uint32(__t_tag_244) == 3668501016)
+         .          .   1179:}
+         .          .   1180:if __t_and_245 {
+         .          .   1181:// TAST (Let): __local_var_4_246 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1182:__local_var_4_246 := v1_1
+         .          .   1183:_ = __local_var_4_246
+         .          .   1184:// TAST (Let): __local_var_5_247 shape=Other bindingType=Any
+         .          .   1185:__local_var_5_247 := (v3_3).V1
+         .          .   1186:_ = __local_var_5_247
+         .          .   1187:// TAST (Let): __local_var_6_248 shape=Other bindingType=Any
+         .          .   1188:__local_var_6_248 := ((v3_3).V3).V1
+         .          .   1189:_ = __local_var_6_248
+         .          .   1190:// TAST (Let): __local_var_7_249 shape=Other bindingType=Any
+         .          .   1191:__local_var_7_249 := ((v3_3).V3).V3
+         .          .   1192:_ = __local_var_7_249
+         .          .   1193:// TAST (Let): __local_var_8_250 shape=Other bindingType=Int
+         .          .   1194:__local_var_8_250 := v2_2
+         .          .   1195:_ = __local_var_8_250
+         .          .   1196:// TAST (Let): __local_var_9_251 shape=Other bindingType=Any
+         .          .   1197:__local_var_9_251 := (v3_3).V2
+         .          .   1198:_ = __local_var_9_251
+         .          .   1199:// TAST (Let): __local_var_10_252 shape=Other bindingType=Any
+         .          .   1200:__local_var_10_252 := ((v3_3).V3).V2
+         .          .   1201:_ = __local_var_10_252
+         .          .   1202:__t253 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_246, __local_var_8_250, __local_var_5_247}), __local_var_9_251, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_248, __local_var_10_252, __local_var_7_249})})
+         .          .   1203:goto end_branch_253
+         .          .   1204:} else {
+         .          .   1205:
+         .          .   1206:}
+         .          .   1207:}
+         .          .   1208:{
+         .          .   1209:// TAST (Let): __local_var_4_231 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1210:__local_var_4_231 := v1_1
+         .          .   1211:_ = __local_var_4_231
+         .          .   1212:// TAST (Let): __local_var_5_232 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1213:__local_var_5_232 := v3_3
+         .          .   1214:_ = __local_var_5_232
+         .          .   1215:// TAST (Let): __local_var_6_233 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .   1216:__local_var_6_233 := v_0
+         .          .   1217:_ = __local_var_6_233
+         .          .   1218:// TAST (Let): __local_var_7_234 shape=Other bindingType=Int
+         .          .   1219:__local_var_7_234 := v2_2
+         .          .   1220:_ = __local_var_7_234
+         .          .   1221:__t253 = (&Constructor_Test_RBTree_T{1, __local_var_6_233, __local_var_4_231, __local_var_7_234, __local_var_5_232})
+         .          .   1222:}
+         .          .   1223:end_branch_253:
+         .          .   1224:__t264 = __t253
+         .          .   1225:goto end_branch_264
+         .          .   1226:} else {
+         .          .   1227:
+         .          .   1228:}
+         .          .   1229:}
+         .          .   1230:{
+         .          .   1231:var __t_tag_254 *Constructor_Test_RBTree_T = (v3_3).V3
+         .          .   1232:var __t_and_256 bool = false
+         .          .   1233:if (__t_tag_254 != nil) {
+         .          .   1234:
+         .          .   1235:var __t_tag_255 uint32 = ((v3_3).V3).V0
+         .          .   1236:__t_and_256 = (uint32(__t_tag_255) == 3668501016)
+         .          .   1237:}
+         .          .   1238:if __t_and_256 {
+         .          .   1239:// TAST (Let): __local_var_4_257 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1240:__local_var_4_257 := v1_1
+         .          .   1241:_ = __local_var_4_257
+         .          .   1242:// TAST (Let): __local_var_5_258 shape=Other bindingType=Any
+         .          .   1243:__local_var_5_258 := (v3_3).V1
+         .          .   1244:_ = __local_var_5_258
+         .          .   1245:// TAST (Let): __local_var_6_259 shape=Other bindingType=Any
+         .          .   1246:__local_var_6_259 := ((v3_3).V3).V1
+         .          .   1247:_ = __local_var_6_259
+         .          .   1248:// TAST (Let): __local_var_7_260 shape=Other bindingType=Any
+         .          .   1249:__local_var_7_260 := ((v3_3).V3).V3
+         .          .   1250:_ = __local_var_7_260
+         .          .   1251:// TAST (Let): __local_var_8_261 shape=Other bindingType=Int
+         .          .   1252:__local_var_8_261 := v2_2
+         .          .   1253:_ = __local_var_8_261
+         .          .   1254:// TAST (Let): __local_var_9_262 shape=Other bindingType=Any
+         .          .   1255:__local_var_9_262 := (v3_3).V2
+         .          .   1256:_ = __local_var_9_262
+         .          .   1257:// TAST (Let): __local_var_10_263 shape=Other bindingType=Any
+         .          .   1258:__local_var_10_263 := ((v3_3).V3).V2
+         .          .   1259:_ = __local_var_10_263
+         .          .   1260:__t264 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_257, __local_var_8_261, __local_var_5_258}), __local_var_9_262, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_259, __local_var_10_263, __local_var_7_260})})
+         .          .   1261:goto end_branch_264
+         .          .   1262:} else {
+         .          .   1263:
+         .          .   1264:}
+         .          .   1265:}
+         .          .   1266:{
+         .          .   1267:// TAST (Let): __local_var_4_226 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1268:__local_var_4_226 := v1_1
+         .          .   1269:_ = __local_var_4_226
+         .          .   1270:// TAST (Let): __local_var_5_227 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1271:__local_var_5_227 := v3_3
+         .          .   1272:_ = __local_var_5_227
+         .          .   1273:// TAST (Let): __local_var_6_228 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .   1274:__local_var_6_228 := v_0
+         .          .   1275:_ = __local_var_6_228
+         .          .   1276:// TAST (Let): __local_var_7_229 shape=Other bindingType=Int
+         .          .   1277:__local_var_7_229 := v2_2
+         .          .   1278:_ = __local_var_7_229
+         .          .   1279:__t264 = (&Constructor_Test_RBTree_T{1, __local_var_6_228, __local_var_4_226, __local_var_7_229, __local_var_5_227})
+         .          .   1280:}
+         .          .   1281:end_branch_264:
+         .          .   1282:__t265 = __t264
+         .          .   1283:goto end_branch_265
+         .          .   1284:} else {
+         .          .   1285:
+         .          .   1286:}
+         .          .   1287:}
+         .          .   1288:{
+         .          .   1289:// TAST (Let): __local_var_4_8 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1290:__local_var_4_8 := v1_1
+         .          .   1291:_ = __local_var_4_8
+         .          .   1292:// TAST (Let): __local_var_5_9 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1293:__local_var_5_9 := v3_3
+         .          .   1294:_ = __local_var_5_9
+         .          .   1295:// TAST (Let): __local_var_6_10 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .   1296:__local_var_6_10 := v_0
+         .          .   1297:_ = __local_var_6_10
+         .          .   1298:// TAST (Let): __local_var_7_11 shape=Other bindingType=Int
+         .          .   1299:__local_var_7_11 := v2_2
+         .          .   1300:_ = __local_var_7_11
+   19.96MB    19.96MB   1301:__t265 = (&Constructor_Test_RBTree_T{1, __local_var_6_10, __local_var_4_8, __local_var_7_11, __local_var_5_9})
+         .          .   1302:}
+         .          .   1303:end_branch_265:
+         .          .   1304:__t307 = __t265
+         .          .   1305:goto end_branch_307
+         .          .   1306:} else {
+         .          .   1307:
+         .          .   1308:}
+         .          .   1309:}
+         .          .   1310:{
+         .          .   1311:var __t_and_267 bool = false
+         .          .   1312:if (v3_3 != nil) {
+         .          .   1313:
+         .          .   1314:var __t_tag_266 uint32 = (v3_3).V0
+         .          .   1315:__t_and_267 = (uint32(__t_tag_266) == 3668501016)
+         .          .   1316:}
+         .          .   1317:if __t_and_267 {
+         .          .   1318:var __t306 *Constructor_Test_RBTree_T
+         .          .   1319:{
+         .          .   1320:var __t_tag_272 *Constructor_Test_RBTree_T = (v3_3).V1
+         .          .   1321:if (__t_tag_272 != nil) {
+         .          .   1322:var __t295 *Constructor_Test_RBTree_T
+         .          .   1323:{
+         .          .   1324:var __t_tag_277 uint32 = ((v3_3).V1).V0
+         .          .   1325:if (uint32(__t_tag_277) == 3668501016) {
+         .          .   1326:// TAST (Let): __local_var_4_278 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1327:__local_var_4_278 := v1_1
+         .          .   1328:_ = __local_var_4_278
+         .          .   1329:// TAST (Let): __local_var_5_279 shape=Other bindingType=Any
+         .          .   1330:__local_var_5_279 := ((v3_3).V1).V1
+         .          .   1331:_ = __local_var_5_279
+         .          .   1332:// TAST (Let): __local_var_6_280 shape=Other bindingType=Any
+         .          .   1333:__local_var_6_280 := ((v3_3).V1).V3
+         .          .   1334:_ = __local_var_6_280
+         .          .   1335:// TAST (Let): __local_var_7_281 shape=Other bindingType=Any
+         .          .   1336:__local_var_7_281 := (v3_3).V3
+         .          .   1337:_ = __local_var_7_281
+         .          .   1338:// TAST (Let): __local_var_8_282 shape=Other bindingType=Int
+         .          .   1339:__local_var_8_282 := v2_2
+         .          .   1340:_ = __local_var_8_282
+         .          .   1341:// TAST (Let): __local_var_9_283 shape=Other bindingType=Any
+         .          .   1342:__local_var_9_283 := ((v3_3).V1).V2
+         .          .   1343:_ = __local_var_9_283
+         .          .   1344:// TAST (Let): __local_var_10_284 shape=Other bindingType=Any
+         .          .   1345:__local_var_10_284 := (v3_3).V2
+         .          .   1346:_ = __local_var_10_284
+         .          .   1347:__t295 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_278, __local_var_8_282, __local_var_5_279}), __local_var_9_283, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_280, __local_var_10_284, __local_var_7_281})})
+         .          .   1348:goto end_branch_295
+         .          .   1349:} else {
+         .          .   1350:
+         .          .   1351:}
+         .          .   1352:}
+         .          .   1353:{
+         .          .   1354:var __t_tag_285 *Constructor_Test_RBTree_T = (v3_3).V3
+         .          .   1355:var __t_and_287 bool = false
+         .          .   1356:if (__t_tag_285 != nil) {
+         .          .   1357:
+         .          .   1358:var __t_tag_286 uint32 = ((v3_3).V3).V0
+         .          .   1359:__t_and_287 = (uint32(__t_tag_286) == 3668501016)
+         .          .   1360:}
+         .          .   1361:if __t_and_287 {
+         .          .   1362:// TAST (Let): __local_var_4_288 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1363:__local_var_4_288 := v1_1
+         .          .   1364:_ = __local_var_4_288
+         .          .   1365:// TAST (Let): __local_var_5_289 shape=Other bindingType=Any
+         .          .   1366:__local_var_5_289 := (v3_3).V1
+         .          .   1367:_ = __local_var_5_289
+         .          .   1368:// TAST (Let): __local_var_6_290 shape=Other bindingType=Any
+         .          .   1369:__local_var_6_290 := ((v3_3).V3).V1
+         .          .   1370:_ = __local_var_6_290
+         .          .   1371:// TAST (Let): __local_var_7_291 shape=Other bindingType=Any
+         .          .   1372:__local_var_7_291 := ((v3_3).V3).V3
+         .          .   1373:_ = __local_var_7_291
+         .          .   1374:// TAST (Let): __local_var_8_292 shape=Other bindingType=Int
+         .          .   1375:__local_var_8_292 := v2_2
+         .          .   1376:_ = __local_var_8_292
+         .          .   1377:// TAST (Let): __local_var_9_293 shape=Other bindingType=Any
+         .          .   1378:__local_var_9_293 := (v3_3).V2
+         .          .   1379:_ = __local_var_9_293
+         .          .   1380:// TAST (Let): __local_var_10_294 shape=Other bindingType=Any
+         .          .   1381:__local_var_10_294 := ((v3_3).V3).V2
+         .          .   1382:_ = __local_var_10_294
+         .          .   1383:__t295 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_288, __local_var_8_292, __local_var_5_289}), __local_var_9_293, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_290, __local_var_10_294, __local_var_7_291})})
+         .          .   1384:goto end_branch_295
+         .          .   1385:} else {
+         .          .   1386:
+         .          .   1387:}
+         .          .   1388:}
+         .          .   1389:{
+         .          .   1390:// TAST (Let): __local_var_4_273 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1391:__local_var_4_273 := v1_1
+         .          .   1392:_ = __local_var_4_273
+         .          .   1393:// TAST (Let): __local_var_5_274 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1394:__local_var_5_274 := v3_3
+         .          .   1395:_ = __local_var_5_274
+         .          .   1396:// TAST (Let): __local_var_6_275 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .   1397:__local_var_6_275 := v_0
+         .          .   1398:_ = __local_var_6_275
+         .          .   1399:// TAST (Let): __local_var_7_276 shape=Other bindingType=Int
+         .          .   1400:__local_var_7_276 := v2_2
+         .          .   1401:_ = __local_var_7_276
+         .          .   1402:__t295 = (&Constructor_Test_RBTree_T{1, __local_var_6_275, __local_var_4_273, __local_var_7_276, __local_var_5_274})
+         .          .   1403:}
+         .          .   1404:end_branch_295:
+         .          .   1405:__t306 = __t295
+         .          .   1406:goto end_branch_306
+         .          .   1407:} else {
+         .          .   1408:
+         .          .   1409:}
+         .          .   1410:}
+         .          .   1411:{
+         .          .   1412:var __t_tag_296 *Constructor_Test_RBTree_T = (v3_3).V3
+         .          .   1413:var __t_and_298 bool = false
+         .          .   1414:if (__t_tag_296 != nil) {
+         .          .   1415:
+         .          .   1416:var __t_tag_297 uint32 = ((v3_3).V3).V0
+         .          .   1417:__t_and_298 = (uint32(__t_tag_297) == 3668501016)
+         .          .   1418:}
+         .          .   1419:if __t_and_298 {
+         .          .   1420:// TAST (Let): __local_var_4_299 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1421:__local_var_4_299 := v1_1
+         .          .   1422:_ = __local_var_4_299
+         .          .   1423:// TAST (Let): __local_var_5_300 shape=Other bindingType=Any
+         .          .   1424:__local_var_5_300 := (v3_3).V1
+         .          .   1425:_ = __local_var_5_300
+         .          .   1426:// TAST (Let): __local_var_6_301 shape=Other bindingType=Any
+         .          .   1427:__local_var_6_301 := ((v3_3).V3).V1
+         .          .   1428:_ = __local_var_6_301
+         .          .   1429:// TAST (Let): __local_var_7_302 shape=Other bindingType=Any
+         .          .   1430:__local_var_7_302 := ((v3_3).V3).V3
+         .          .   1431:_ = __local_var_7_302
+         .          .   1432:// TAST (Let): __local_var_8_303 shape=Other bindingType=Int
+         .          .   1433:__local_var_8_303 := v2_2
+         .          .   1434:_ = __local_var_8_303
+         .          .   1435:// TAST (Let): __local_var_9_304 shape=Other bindingType=Any
+         .          .   1436:__local_var_9_304 := (v3_3).V2
+         .          .   1437:_ = __local_var_9_304
+         .          .   1438:// TAST (Let): __local_var_10_305 shape=Other bindingType=Any
+         .          .   1439:__local_var_10_305 := ((v3_3).V3).V2
+         .          .   1440:_ = __local_var_10_305
+         .          .   1441:__t306 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_299, __local_var_8_303, __local_var_5_300}), __local_var_9_304, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_301, __local_var_10_305, __local_var_7_302})})
+         .          .   1442:goto end_branch_306
+         .          .   1443:} else {
+         .          .   1444:
+         .          .   1445:}
+         .          .   1446:}
+         .          .   1447:{
+         .          .   1448:// TAST (Let): __local_var_4_268 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1449:__local_var_4_268 := v1_1
+         .          .   1450:_ = __local_var_4_268
+         .          .   1451:// TAST (Let): __local_var_5_269 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1452:__local_var_5_269 := v3_3
+         .          .   1453:_ = __local_var_5_269
+         .          .   1454:// TAST (Let): __local_var_6_270 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .   1455:__local_var_6_270 := v_0
+         .          .   1456:_ = __local_var_6_270
+         .          .   1457:// TAST (Let): __local_var_7_271 shape=Other bindingType=Int
+         .          .   1458:__local_var_7_271 := v2_2
+         .          .   1459:_ = __local_var_7_271
+         .          .   1460:__t306 = (&Constructor_Test_RBTree_T{1, __local_var_6_270, __local_var_4_268, __local_var_7_271, __local_var_5_269})
+         .          .   1461:}
+         .          .   1462:end_branch_306:
+         .          .   1463:__t307 = __t306
+         .          .   1464:goto end_branch_307
+         .          .   1465:} else {
+         .          .   1466:
+         .          .   1467:}
+         .          .   1468:}
+         .          .   1469:{
+         .          .   1470:// TAST (Let): __local_var_4_4 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1471:__local_var_4_4 := v1_1
+         .          .   1472:_ = __local_var_4_4
+         .          .   1473:// TAST (Let): __local_var_5_5 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1474:__local_var_5_5 := v3_3
+         .          .   1475:_ = __local_var_5_5
+         .          .   1476:// TAST (Let): __local_var_6_6 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .   1477:__local_var_6_6 := v_0
+         .          .   1478:_ = __local_var_6_6
+         .          .   1479:// TAST (Let): __local_var_7_7 shape=Other bindingType=Int
+         .          .   1480:__local_var_7_7 := v2_2
+         .          .   1481:_ = __local_var_7_7
+         .          .   1482:__t307 = (&Constructor_Test_RBTree_T{1, __local_var_6_6, __local_var_4_4, __local_var_7_7, __local_var_5_5})
+         .          .   1483:}
+         .          .   1484:end_branch_307:
+         .          .   1485:__t308 = __t307
+         .          .   1486:goto end_branch_308
+         .          .   1487:} else {
+         .          .   1488:
+         .          .   1489:}
+         .          .   1490:}
+         .          .   1491:{
+         .          .   1492:// TAST (Let): __local_var_4_0 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1493:__local_var_4_0 := v1_1
+         .          .   1494:_ = __local_var_4_0
+         .          .   1495:// TAST (Let): __local_var_5_1 shape=Other bindingType=(ADT ["Test","RBTree","Tree"] [])
+         .          .   1496:__local_var_5_1 := v3_3
+         .          .   1497:_ = __local_var_5_1
+         .          .   1498:// TAST (Let): __local_var_6_2 shape=Other bindingType=(ADT ["Test","RBTree","Color"] [])
+         .          .   1499:__local_var_6_2 := v_0
+         .          .   1500:_ = __local_var_6_2
+         .          .   1501:// TAST (Let): __local_var_7_3 shape=Other bindingType=Int
+         .          .   1502:__local_var_7_3 := v2_2
+         .          .   1503:_ = __local_var_7_3
+   21.82MB    21.82MB   1504:__t308 = (&Constructor_Test_RBTree_T{1, __local_var_6_2, __local_var_4_0, __local_var_7_3, __local_var_5_1})
+         .          .   1505:}
+         .          .   1506:end_branch_308:
+         .          .   1507:return __t308
+         .          .   1508:}
+         .          .   1509:
+ROUTINE ======================== gopurs/output/purescript.Call_Test_RBTree_buildTree in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_RBTree.go
+         0    75.80MB (flat, cum) 98.42% of Total
+         .          .   1607:func Call_Test_RBTree_buildTree(v_0_loop int64, v1_1_loop *Constructor_Test_RBTree_T) *Constructor_Test_RBTree_T {
+         .          .   1608:buildTree:
+         .          .   1609:for {
+         .          .   1610:if false { continue buildTree }
+         .          .   1611:var v_0 int64 = v_0_loop
+         .          .   1612:_ = v_0
+         .          .   1613:var v1_1 *Constructor_Test_RBTree_T = v1_1_loop
+         .          .   1614:_ = v1_1
+         .          .   1615:var __t0 *Constructor_Test_RBTree_T
+         .          .   1616:{
+         .          .   1617:if (v_0) == (int64(0)) {
+         .          .   1618:__t0 = v1_1
+         .          .   1619:goto end_branch_0
+         .          .   1620:} else {
+         .          .   1621:
+         .          .   1622:}
+         .          .   1623:}
+         .          .   1624:{
+         .          .   1625:v_0_loop = (v_0) - (int64(1))
+         .    75.80MB   1626:v1_1_loop = Call_Test_RBTree_insert(v_0, v1_1)
+         .          .   1627:continue buildTree
+         .          .   1628:__t0 = func() *Constructor_Test_RBTree_T { panic("unreachable") }()
+         .          .   1629:}
+         .          .   1630:end_branch_0:
+         .          .   1631:return __t0
+ROUTINE ======================== gopurs/output/purescript.Call_Test_RBTree_ins in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_RBTree.go
+    3.05MB    78.86MB (flat, cum) 102.39% of Total
+         .          .   1510:func Call_Test_RBTree_ins(v_0_loop int64, v1_1_loop *Constructor_Test_RBTree_T) *Constructor_Test_RBTree_T {
+         .          .   1511:ins:
+         .          .   1512:for {
+         .          .   1513:if false { continue ins }
+         .          .   1514:var v_0 int64 = v_0_loop
+         .          .   1515:_ = v_0
+         .          .   1516:var v1_1 *Constructor_Test_RBTree_T = v1_1_loop
+         .          .   1517:_ = v1_1
+         .          .   1518:var __t2 *Constructor_Test_RBTree_T
+         .          .   1519:{
+         .          .   1520:if (v1_1 == nil) {
+    3.05MB     3.05MB   1521:__t2 = (&Constructor_Test_RBTree_T{1, 3668501016, (*Constructor_Test_RBTree_T)(nil), v_0, (*Constructor_Test_RBTree_T)(nil)})
+         .          .   1522:goto end_branch_2
+         .          .   1523:} else {
+         .          .   1524:
+         .          .   1525:}
+         .          .   1526:}
+         .          .   1527:{
+         .          .   1528:if (v1_1 != nil) {
+         .          .   1529:var __t1 *Constructor_Test_RBTree_T
+         .          .   1530:{
+         .          .   1531:if (v_0) < ((v1_1).V2) {
+         .    75.80MB   1532:__t1 = Call_Test_RBTree_balance((v1_1).V0, Call_Test_RBTree_ins(v_0, (v1_1).V1), (v1_1).V2, (v1_1).V3)
+         .          .   1533:goto end_branch_1
+         .          .   1534:} else {
+         .          .   1535:
+         .          .   1536:}
+         .          .   1537:}
+ROUTINE ======================== gopurs/output/purescript.Call_Test_RBTree_insert in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_RBTree.go
+      512B    75.80MB (flat, cum) 98.42% of Total
+         .          .   1569:func Call_Test_RBTree_insert(x_0_loop int64, s_1_loop *Constructor_Test_RBTree_T) *Constructor_Test_RBTree_T {
+         .          .   1570:var x_0 int64 = x_0_loop
+         .          .   1571:_ = x_0
+         .          .   1572:var s_1 *Constructor_Test_RBTree_T = s_1_loop
+         .          .   1573:_ = s_1
+         .          .   1574:// TAST (Let): __local_var_2_0 shape=App(Var) bindingType=Any
+         .    75.80MB   1575:__local_var_2_0 := Call_Test_RBTree_ins(x_0, s_1)
+         .          .   1576:_ = __local_var_2_0
+         .          .   1577:var __t2 *Constructor_Test_RBTree_T
+         .          .   1578:{
+         .          .   1579:if (__local_var_2_0 != nil) {
+         .          .   1580:var __reuse_1 *Constructor_Test_RBTree_T
+         .          .   1581:if ((__local_var_2_0) != (nil)) && (((__local_var_2_0).V0) == (1583507464)) {
+         .          .   1582:__reuse_1 = __local_var_2_0
+         .          .   1583:} else {
+      512B       512B   1584:__reuse_1 = (&Constructor_Test_RBTree_T{1, 1583507464, (__local_var_2_0).V1, (__local_var_2_0).V2, (__local_var_2_0).V3})
+         .          .   1585:}
+         .          .   1586:__t2 = __reuse_1
+         .          .   1587:goto end_branch_2
+         .          .   1588:} else {
+         .          .   1589:

@@ -1,0 +1,7 @@
+go version go1.27.0 darwin/arm64
+so version v0.3.0
+Apple clang version 17.0.0 (clang-1700.3.19.1)
+Target: arm64-apple-darwin25.1.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+f447b5c73c1170e8ee586a12ed6ae27f9f621905

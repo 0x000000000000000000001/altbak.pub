@@ -1,0 +1,30 @@
+--- copied-original
++++ without-roundtrip
+@@ -2,9 +2,7 @@
+ var n_0 int64 = n_0_loop
+ _ = n_0
+ return func() gopurs_runtime.Value {
+-arr_val_foldlArray0 := func() gopurs_runtime.Value {
+-					arr := func() []int64 {
+-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array(func() []gopurs_runtime.Value {
++arr_val_foldlArray0 := gopurs_runtime.Array(func() []gopurs_runtime.Value {
+ arr_val_filterImpl1 := gopurs_runtime.UncurriedApp2(ps.Get_Data_Array_rangeImpl(), gopurs_runtime.Int(int64(1)), gopurs_runtime.Int(n_0))
+ _ = arr_val_filterImpl1
+ _ = arr_val_filterImpl1
+@@ -22,15 +20,7 @@
+ }
+ }
+ return res_go_filterImpl1
+-}()).UnsafePtr)
+-					unboxed := make([]int64, len(arr))
+-					for i, v := range arr { unboxed[i] = v.IntVal }
+-					return unboxed
+-				}()
+-					boxed := make([]gopurs_runtime.Value, len(arr))
+-					for i, v := range arr { boxed[i] = gopurs_runtime.Int(v) }
+-					return gopurs_runtime.Array(boxed)
+-				}()
++}())
+ _ = arr_val_foldlArray0
+ res_go_foldlArray0 := gopurs_runtime.Int(int64(0))
+ _ = res_go_foldlArray0

@@ -1,0 +1,25 @@
+File: audit
+Type: alloc_objects
+Time: 2026-09-08 11:10:57 CEST
+Showing nodes accounting for 849, 97.03% of 875 total
+Dropped 62 nodes (cum <= 4)
+Showing top 18 nodes out of 45
+      flat  flat%   sum%        cum   cum%
+       469 53.60% 53.60%        469 53.60%  runtime/pprof.allFrames
+       178 20.34% 73.94%        199 22.74%  runtime/pprof.(*profileBuilder).emitLocation
+       122 13.94% 87.89%        835 95.43%  runtime/pprof.writeHeapProto
+        18  2.06% 89.94%         18  2.06%  runtime/pprof.(*profileBuilder).stringIndex (inline)
+        13  1.49% 91.43%         13  1.49%  runtime/pprof.(*protobuf).varint (inline)
+        10  1.14% 92.57%         13  1.49%  gopurs/output/purescript.Call_Test_ArrayOps_sumEvens.func1.func1.func1.func1 (inline)
+         8  0.91% 93.49%          8  0.91%  compress/flate.newHuffmanEncoder (inline)
+         8  0.91% 94.40%          8  0.91%  runtime/pprof.(*pcDeck).tryAdd
+         6  0.69% 95.09%          7   0.8%  runtime.mallocgc
+         6  0.69% 95.77%          9  1.03%  runtime/pprof.newProfileBuilder
+         4  0.46% 96.23%        680 77.71%  runtime/pprof.(*profileBuilder).appendLocsForStack
+         1  0.11% 96.34%         11  1.26%  compress/flate.(*compressor).init
+         1  0.11% 96.46%         12  1.37%  compress/flate.NewWriter (inline)
+         1  0.11% 96.57%          9  1.03%  compress/flate.newHuffmanBitWriter
+         1  0.11% 96.69%          4  0.46%  fmt.Sprintf
+         1  0.11% 96.80%         15  1.71%  gopurs/output/purescript.Call_Test_ArrayOps_sumEvens.func1.func1
+         1  0.11% 96.91%         14  1.60%  gopurs/output/purescript.Call_Test_ArrayOps_sumEvens.func1.func1.func1 (inline)
+         1  0.11% 97.03%          5  0.57%  gopurs/output/purescript.Data_Show_ShowIntImpl

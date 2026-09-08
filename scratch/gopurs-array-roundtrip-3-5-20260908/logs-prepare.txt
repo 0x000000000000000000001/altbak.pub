@@ -1,0 +1,9 @@
+Preparing: before-generation.log
+Preparing: after-generation.log
+Preparing: production-generation.log
+Preparing: before-bench-build.log
+Preparing: before-app-build.log
+Preparing: after-bench-build.log
+Preparing: after-app-build.log
+Preparing: production-app-build.log
+Ready; only generated change: ['purescript/Test_ArrayOps.go']

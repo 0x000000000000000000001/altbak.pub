@@ -1,0 +1,245 @@
+Total: 1.74MB
+ROUTINE ======================== gopurs/output/purescript.Call_Test_StateMonad_chainModifications in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_StateMonad.go
+   56.25kB   112.50kB (flat, cum)  6.32% of Total
+         .          .    282:func Call_Test_StateMonad_chainModifications(v_0_loop int64) gopurs_runtime.Value {
+         .          .    283:chainModifications:
+         .          .    284:for {
+         .          .    285:if false { continue chainModifications }
+         .          .    286:var v_0 int64 = v_0_loop
+         .          .    287:_ = v_0
+         .          .    288:var __t1 gopurs_runtime.Value
+         .          .    289:{
+         .          .    290:if (v_0) == (int64(0)) {
+         .          .    291:__t1 = gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    292:return func() gopurs_runtime.Value {
+         .          .    293:				orig := struct{
+         .          .    294:	state gopurs_runtime.Value
+         .          .    295:	val gopurs_runtime.Value
+         .          .    296:}{s_1, Get_Data_Unit_unit()}
+         .          .    297:				_ = orig
+         .          .    298:				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{orig.state, orig.val})
+         .          .    299:				}()
+         .          .    300:})
+         .          .    301:goto end_branch_1
+         .          .    302:} else {
+         .          .    303:
+         .          .    304:}
+         .          .    305:}
+         .          .    306:{
+         .          .    307:// TAST (Let): __local_var_1_0 shape=App(Var) bindingType=Any
+         .    56.25kB    308:__local_var_1_0 := gopurs_runtime.Apply(Get_Test_StateMonad_modify(), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    309:return gopurs_runtime.Int((x_1.IntVal) + (int64(1)))
+         .          .    310:}))
+         .          .    311:_ = __local_var_1_0
+   56.25kB    56.25kB    312:__t1 = gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    313:return func() gopurs_runtime.Value {
+         .          .    314:				orig := func() struct{
+         .          .    315:	state gopurs_runtime.Value
+         .          .    316:	val gopurs_runtime.Value
+         .          .    317:} {
+ROUTINE ======================== gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func1 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_StateMonad.go
+         0     2.50kB (flat, cum)  0.14% of Total
+         .          .    291:__t1 = gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    292:return func() gopurs_runtime.Value {
+         .          .    293:				orig := struct{
+         .          .    294:	state gopurs_runtime.Value
+         .          .    295:	val gopurs_runtime.Value
+         .          .    296:}{s_1, Get_Data_Unit_unit()}
+         .          .    297:				_ = orig
+         .          .    298:				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{orig.state, orig.val})
+         .     2.50kB    299:				}()
+         .          .    300:})
+         .          .    301:goto end_branch_1
+         .          .    302:} else {
+         .          .    303:
+         .          .    304:}
+ROUTINE ======================== gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func1.1 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_StateMonad.go
+    1.56kB     2.50kB (flat, cum)  0.14% of Total
+         .          .    292:return func() gopurs_runtime.Value {
+         .          .    293:				orig := struct{
+         .          .    294:	state gopurs_runtime.Value
+         .          .    295:	val gopurs_runtime.Value
+         .          .    296:}{s_1, Get_Data_Unit_unit()}
+         .          .    297:				_ = orig
+    1.56kB     2.50kB    298:				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{orig.state, orig.val})
+         .          .    299:				}()
+         .          .    300:})
+         .          .    301:goto end_branch_1
+         .          .    302:} else {
+         .          .    303:
+ROUTINE ======================== gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_StateMonad.go
+         0   563.12kB (flat, cum) 31.63% of Total
+         .          .    312:__t1 = gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    313:return func() gopurs_runtime.Value {
+         .          .    314:				orig := func() struct{
+         .          .    315:	state gopurs_runtime.Value
+         .          .    316:	val gopurs_runtime.Value
+         .          .    317:} {
+         .          .    318:					orig := func() gopurs_runtime.Value {
+         .          .    319:				orig := func() struct{
+         .          .    320:	state int64
+         .          .    321:	val gopurs_runtime.Value
+         .          .    322:} {
+         .          .    323:					orig := gopurs_runtime.Apply(Call_Test_StateMonad_chainModifications((v_0) - (int64(1))), gopurs_runtime.RecordGet(gopurs_runtime.Apply(__local_var_1_0, s_2), "state"))
+         .          .    324:					_ = orig
+         .          .    325:					clone := struct{
+         .          .    326:	state int64
+         .          .    327:	val gopurs_runtime.Value
+         .          .    328:}{}
+         .          .    329:					clone.state = gopurs_runtime.RecordGet(orig, "state").IntVal
+         .          .    330:					clone.val = gopurs_runtime.RecordGet(orig, "val")
+         .          .    331:					return clone
+         .          .    332:				}()
+         .          .    333:				_ = orig
+         .          .    334:				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{gopurs_runtime.Int(orig.state), orig.val})
+         .          .    335:				}()
+         .          .    336:					_ = orig
+         .          .    337:					clone := struct{
+         .          .    338:	state gopurs_runtime.Value
+         .          .    339:	val gopurs_runtime.Value
+         .          .    340:}{}
+         .          .    341:					clone.state = gopurs_runtime.RecordGet(orig, "state")
+         .          .    342:					clone.val = gopurs_runtime.RecordGet(orig, "val")
+         .          .    343:					return clone
+         .          .    344:				}()
+         .          .    345:				_ = orig
+         .          .    346:				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{orig.state, orig.val})
+         .   563.12kB    347:				}()
+         .          .    348:})
+         .          .    349:}
+         .          .    350:end_branch_1:
+         .          .    351:return __t1
+         .          .    352:}
+ROUTINE ======================== gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_StateMonad.go
+   93.75kB   710.62kB (flat, cum) 39.91% of Total
+         .          .    313:return func() gopurs_runtime.Value {
+         .          .    314:				orig := func() struct{
+         .          .    315:	state gopurs_runtime.Value
+         .          .    316:	val gopurs_runtime.Value
+         .          .    317:} {
+         .          .    318:					orig := func() gopurs_runtime.Value {
+         .          .    319:				orig := func() struct{
+         .          .    320:	state int64
+         .          .    321:	val gopurs_runtime.Value
+         .          .    322:} {
+         .          .    323:					orig := gopurs_runtime.Apply(Call_Test_StateMonad_chainModifications((v_0) - (int64(1))), gopurs_runtime.RecordGet(gopurs_runtime.Apply(__local_var_1_0, s_2), "state"))
+         .          .    324:					_ = orig
+         .          .    325:					clone := struct{
+         .          .    326:	state int64
+         .          .    327:	val gopurs_runtime.Value
+         .          .    328:}{}
+         .          .    329:					clone.state = gopurs_runtime.RecordGet(orig, "state").IntVal
+         .          .    330:					clone.val = gopurs_runtime.RecordGet(orig, "val")
+         .          .    331:					return clone
+         .          .    332:				}()
+         .          .    333:				_ = orig
+         .          .    334:				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{gopurs_runtime.Int(orig.state), orig.val})
+         .          .    335:				}()
+         .          .    336:					_ = orig
+         .          .    337:					clone := struct{
+         .          .    338:	state gopurs_runtime.Value
+         .          .    339:	val gopurs_runtime.Value
+         .          .    340:}{}
+         .          .    341:					clone.state = gopurs_runtime.RecordGet(orig, "state")
+         .          .    342:					clone.val = gopurs_runtime.RecordGet(orig, "val")
+         .          .    343:					return clone
+         .   560.62kB    344:				}()
+         .          .    345:				_ = orig
+   93.75kB      150kB    346:				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{orig.state, orig.val})
+         .          .    347:				}()
+         .          .    348:})
+         .          .    349:}
+         .          .    350:end_branch_1:
+         .          .    351:return __t1
+ROUTINE ======================== gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1.1 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_StateMonad.go
+         0   560.62kB (flat, cum) 31.49% of Total
+         .          .    314:				orig := func() struct{
+         .          .    315:	state gopurs_runtime.Value
+         .          .    316:	val gopurs_runtime.Value
+         .          .    317:} {
+         .          .    318:					orig := func() gopurs_runtime.Value {
+         .          .    319:				orig := func() struct{
+         .          .    320:	state int64
+         .          .    321:	val gopurs_runtime.Value
+         .          .    322:} {
+         .          .    323:					orig := gopurs_runtime.Apply(Call_Test_StateMonad_chainModifications((v_0) - (int64(1))), gopurs_runtime.RecordGet(gopurs_runtime.Apply(__local_var_1_0, s_2), "state"))
+         .          .    324:					_ = orig
+         .          .    325:					clone := struct{
+         .          .    326:	state int64
+         .          .    327:	val gopurs_runtime.Value
+         .          .    328:}{}
+         .          .    329:					clone.state = gopurs_runtime.RecordGet(orig, "state").IntVal
+         .          .    330:					clone.val = gopurs_runtime.RecordGet(orig, "val")
+         .          .    331:					return clone
+         .          .    332:				}()
+         .          .    333:				_ = orig
+         .          .    334:				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{gopurs_runtime.Int(orig.state), orig.val})
+         .   560.62kB    335:				}()
+         .          .    336:					_ = orig
+         .          .    337:					clone := struct{
+         .          .    338:	state gopurs_runtime.Value
+         .          .    339:	val gopurs_runtime.Value
+         .          .    340:}{}
+ROUTINE ======================== gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1.1.1 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_StateMonad.go
+   93.75kB   708.12kB (flat, cum) 39.77% of Total
+         .          .    318:					orig := func() gopurs_runtime.Value {
+         .          .    319:				orig := func() struct{
+         .          .    320:	state int64
+         .          .    321:	val gopurs_runtime.Value
+         .          .    322:} {
+         .          .    323:					orig := gopurs_runtime.Apply(Call_Test_StateMonad_chainModifications((v_0) - (int64(1))), gopurs_runtime.RecordGet(gopurs_runtime.Apply(__local_var_1_0, s_2), "state"))
+         .          .    324:					_ = orig
+         .          .    325:					clone := struct{
+         .          .    326:	state int64
+         .          .    327:	val gopurs_runtime.Value
+         .          .    328:}{}
+         .          .    329:					clone.state = gopurs_runtime.RecordGet(orig, "state").IntVal
+         .          .    330:					clone.val = gopurs_runtime.RecordGet(orig, "val")
+         .          .    331:					return clone
+         .   558.12kB    332:				}()
+         .          .    333:				_ = orig
+   93.75kB      150kB    334:				return gopurs_runtime.RecordDict([]string{"state", "val"}, []gopurs_runtime.Value{gopurs_runtime.Int(orig.state), orig.val})
+         .          .    335:				}()
+         .          .    336:					_ = orig
+         .          .    337:					clone := struct{
+         .          .    338:	state gopurs_runtime.Value
+         .          .    339:	val gopurs_runtime.Value
+ROUTINE ======================== gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1.1.1.1 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_StateMonad.go
+         0   558.12kB (flat, cum) 31.35% of Total
+         .          .    319:				orig := func() struct{
+         .          .    320:	state int64
+         .          .    321:	val gopurs_runtime.Value
+         .          .    322:} {
+         .   558.12kB    323:					orig := gopurs_runtime.Apply(Call_Test_StateMonad_chainModifications((v_0) - (int64(1))), gopurs_runtime.RecordGet(gopurs_runtime.Apply(__local_var_1_0, s_2), "state"))
+         .          .    324:					_ = orig
+         .          .    325:					clone := struct{
+         .          .    326:	state int64
+         .          .    327:	val gopurs_runtime.Value
+         .          .    328:}{}
+ROUTINE ======================== gopurs/output/purescript.Call_Test_StateMonad_runManyTimes in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_StateMonad.go
+         0   197.81kB (flat, cum) 11.11% of Total
+         .          .    355:func Call_Test_StateMonad_runManyTimes(v_0_loop int64, v1_1_loop int64) int64 {
+         .          .    356:runManyTimes:
+         .          .    357:for {
+         .          .    358:if false { continue runManyTimes }
+         .          .    359:var v_0 int64 = v_0_loop
+         .          .    360:_ = v_0
+         .          .    361:var v1_1 int64 = v1_1_loop
+         .          .    362:_ = v1_1
+         .          .    363:var __t0 int64
+         .          .    364:{
+         .          .    365:if (v_0) == (int64(0)) {
+         .          .    366:__t0 = v1_1
+         .          .    367:goto end_branch_0
+         .          .    368:} else {
+         .          .    369:
+         .          .    370:}
+         .          .    371:}
+         .          .    372:{
+         .          .    373:v_0_loop = (v_0) - (int64(1))
+         .   197.81kB    374:v1_1_loop = (v1_1) + (gopurs_runtime.RecordGet(gopurs_runtime.Apply(Call_Test_StateMonad_chainModifications(int64(60)), gopurs_runtime.Int(int64(0))), "state").IntVal)
+         .          .    375:continue runManyTimes
+         .          .    376:__t0 = func() int64 { panic("unreachable") }()
+         .          .    377:}
+         .          .    378:end_branch_0:
+         .          .    379:return __t0

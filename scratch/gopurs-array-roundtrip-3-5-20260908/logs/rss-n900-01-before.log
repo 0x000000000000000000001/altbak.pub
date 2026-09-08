@@ -1,0 +1,22 @@
+=== RUN   TestFixedRSS
+RSS workload n900 iterations=10000 result=202950
+--- PASS: TestFixedRSS (0.10s)
+PASS
+        0.10 real         0.10 user         0.00 sys
+            41320448  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                2721  page reclaims
+                   0  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                 111  signals received
+                   3  voluntary context switches
+                 730  involuntary context switches
+          2313919568  instructions retired
+           439119555  cycles elapsed
+            38732304  peak memory footprint

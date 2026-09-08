@@ -1,0 +1,33 @@
+File: audit
+Type: alloc_space
+Time: 2026-09-08 11:12:22 CEST
+Active filters:
+   focus=gopurs/output/
+Showing nodes accounting for 567.30kB, 100% of 567.30kB total
+Showing top 25 nodes out of 36
+      flat  flat%   sum%        cum   cum%
+  169.69kB 29.91% 29.91%   169.69kB 29.91%  gopurs/output/gopurs_runtime.RecordDict (inline)
+   93.75kB 16.53% 46.44%   563.12kB 99.26%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1 (inline)
+   93.75kB 16.53% 62.96%   560.62kB 98.82%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1.1.1 (inline)
+   93.75kB 16.53% 79.49%      150kB 26.44%  gopurs/output/purescript.Get_Test_StateMonad_modify.func1.1.1 (inline)
+   56.25kB  9.92% 89.40%   567.30kB   100%  gopurs/output/gopurs_runtime.Apply
+   56.25kB  9.92% 99.32%   112.50kB 19.83%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications
+    2.01kB  0.35% 99.67%     2.01kB  0.35%  sync.(*Pool).pinSlow
+    1.56kB  0.28% 99.95%     2.50kB  0.44%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func1.1 (inline)
+    0.17kB  0.03%   100%     0.17kB  0.03%  fmt.init.func1
+    0.04kB 0.0069%   100%     0.06kB 0.011%  gopurs/output/purescript.init.func3
+    0.03kB 0.0055%   100%     0.03kB 0.0055%  gopurs/output/gopurs_runtime.Str
+    0.02kB 0.0041%   100%     0.02kB 0.0041%  gopurs/output/purescript.Bench_Opaque
+    0.02kB 0.0028%   100%     0.02kB 0.0028%  fmt.(*buffer).write
+    0.02kB 0.0028%   100%     0.03kB 0.0055%  gopurs/output/gopurs_runtime.Box[go.shape.string]
+         0     0%   100%     0.02kB 0.0028%  fmt.(*fmt).fmtInteger
+         0     0%   100%     0.02kB 0.0028%  fmt.(*fmt).pad
+         0     0%   100%     0.02kB 0.0028%  fmt.(*pp).doPrintf
+         0     0%   100%     0.02kB 0.0028%  fmt.(*pp).fmtInteger
+         0     0%   100%     0.02kB 0.0028%  fmt.(*pp).printArg
+         0     0%   100%     2.20kB  0.39%  fmt.Sprintf
+         0     0%   100%     2.18kB  0.38%  fmt.newPrinter
+         0     0%   100%      150kB 26.44%  gopurs/output/gopurs_runtime.Apply.func1
+         0     0%   100%     2.50kB  0.44%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func1
+         0     0%   100%   563.12kB 99.26%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3
+         0     0%   100%   560.62kB 98.82%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1.1 (inline)

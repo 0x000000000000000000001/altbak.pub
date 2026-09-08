@@ -1,0 +1,29 @@
+File: audit
+Type: alloc_space
+Time: 2026-09-08 11:12:22 CEST
+Active filters:
+   focus=gopurs/output/
+Showing nodes accounting for 253.63kB, 100% of 253.63kB total
+      flat  flat%   sum%        cum   cum%
+  114.95kB 45.32% 45.32%   226.94kB 89.47%  gopurs/output/purescript.Call_Test_Primes_filter__3878167378.func1
+  111.98kB 44.15% 89.47%   111.98kB 44.15%  gopurs/output/purescript.Call_Test_Primes_filter__3878167378.func1.1
+   11.70kB  4.61% 94.09%    11.70kB  4.61%  gopurs/output/purescript.Get_Test_Primes_act.func1.1.4
+    8.91kB  3.51% 97.60%   235.84kB 92.99%  gopurs/output/purescript.Call_Test_Primes_filter__3878167378
+    3.71kB  1.46% 99.06%   239.55kB 94.45%  gopurs/output/purescript.Call_Test_Primes_sieve
+    2.01kB  0.79% 99.85%     2.01kB  0.79%  sync.(*Pool).pinSlow
+    0.17kB 0.068% 99.92%     0.17kB 0.068%  fmt.init.func1
+    0.06kB 0.025% 99.94%   253.63kB   100%  gopurs/output/purescript.Get_Test_Primes_act.func1.1
+    0.04kB 0.015%   100%     0.06kB 0.025%  gopurs/output/purescript.init.func3
+    0.03kB 0.012%   100%     0.03kB 0.012%  gopurs/output/gopurs_runtime.Str
+    0.02kB 0.0092%   100%     0.02kB 0.0092%  gopurs/output/purescript.Bench_Opaque
+    0.02kB 0.0062%   100%     2.20kB  0.87%  fmt.Sprintf
+    0.02kB 0.0062%   100%     0.03kB 0.012%  gopurs/output/gopurs_runtime.Box[go.shape.string]
+    0.02kB 0.0062%   100%     2.21kB  0.87%  gopurs/output/purescript.Data_Show_ShowIntImpl (inline)
+         0     0%   100%     2.18kB  0.86%  fmt.newPrinter
+         0     0%   100%   253.63kB   100%  gopurs/output/gopurs_runtime.Apply
+         0     0%   100%     2.24kB  0.88%  gopurs/output/purescript.init.func173
+         0     0%   100%   253.63kB   100%  main.main
+         0     0%   100%   253.63kB   100%  main.main.func1 (inline)
+         0     0%   100%   253.63kB   100%  runtime.main
+         0     0%   100%     2.18kB  0.86%  sync.(*Pool).Get
+         0     0%   100%     2.01kB  0.79%  sync.(*Pool).pin

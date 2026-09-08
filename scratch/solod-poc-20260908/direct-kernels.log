@@ -1,0 +1,3 @@
+so translate: /Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/original/kernels/kernels.go:6:12: labeled continue is not supported
+if false { continue fib }
+           ^here

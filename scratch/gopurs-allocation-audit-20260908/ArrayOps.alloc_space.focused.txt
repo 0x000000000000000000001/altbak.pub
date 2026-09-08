@@ -1,0 +1,33 @@
+File: audit
+Type: alloc_space
+Time: 2026-09-08 11:10:57 CEST
+Active filters:
+   focus=gopurs/output/
+Showing nodes accounting for 77.57kB, 100% of 77.57kB total
+Showing top 25 nodes out of 27
+      flat  flat%   sum%        cum   cum%
+   31.35kB 40.42% 40.42%    60.62kB 78.15%  gopurs/output/purescript.Call_Test_ArrayOps_sumEvens.func1.func1.func1.func1 (inline)
+   21.25kB 27.39% 67.81%    21.27kB 27.42%  gopurs/output/purescript.init.func74.1 (inline)
+   10.62kB 13.70% 81.51%    75.25kB 97.01%  gopurs/output/purescript.Call_Test_ArrayOps_sumEvens.func1.func1 (inline)
+       8kB 10.31% 91.82%        8kB 10.31%  gopurs/output/purescript.Data_Array_RangeImpl (inline)
+       4kB  5.16% 96.98%    64.62kB 83.31%  gopurs/output/purescript.Call_Test_ArrayOps_sumEvens.func1.func1.func1 (inline)
+    2.01kB  2.59% 99.57%     2.01kB  2.59%  sync.(*Pool).pinSlow
+    0.17kB  0.22% 99.79%     0.17kB  0.22%  fmt.init.func1
+    0.04kB  0.05% 99.84%     0.06kB 0.081%  gopurs/output/purescript.init.func3
+    0.03kB  0.04% 99.88%     0.03kB  0.04%  gopurs/output/gopurs_runtime.Str
+    0.02kB  0.03% 99.91%     0.02kB  0.03%  gopurs/output/gopurs_runtime.Array
+    0.02kB  0.03% 99.94%     0.02kB  0.03%  gopurs/output/purescript.Bench_Opaque
+    0.02kB  0.02%   100%     2.20kB  2.83%  fmt.Sprintf
+    0.02kB  0.02%   100%     0.03kB  0.04%  gopurs/output/gopurs_runtime.Box[go.shape.string]
+    0.02kB  0.02%   100%     2.21kB  2.85%  gopurs/output/purescript.Data_Show_ShowIntImpl (inline)
+         0     0%   100%     2.18kB  2.81%  fmt.newPrinter
+         0     0%   100%    77.57kB   100%  gopurs/output/gopurs_runtime.Apply
+         0     0%   100%    29.27kB 37.74%  gopurs/output/gopurs_runtime.UncurriedApp2
+         0     0%   100%    75.25kB 97.01%  gopurs/output/purescript.Call_Test_ArrayOps_sumEvens
+         0     0%   100%    75.25kB 97.01%  gopurs/output/purescript.Call_Test_ArrayOps_sumEvens.func1 (inline)
+         0     0%   100%    77.57kB   100%  gopurs/output/purescript.Get_Test_ArrayOps_act.func1.1
+         0     0%   100%     2.24kB  2.89%  gopurs/output/purescript.init.func173
+         0     0%   100%    29.27kB 37.74%  gopurs/output/purescript.init.func74
+         0     0%   100%    77.57kB   100%  main.main
+         0     0%   100%    77.57kB   100%  main.main.func1 (inline)
+         0     0%   100%    77.57kB   100%  runtime.main

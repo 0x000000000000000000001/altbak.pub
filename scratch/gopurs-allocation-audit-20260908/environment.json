@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-09-08T09:22:47.185686+00:00",
+  "go_version": "go version go1.27.0 darwin/arm64",
+  "cpu": "Apple M4 Pro",
+  "GOGC": 800,
+  "generated_go_files": 386,
+  "audit_binary_sha256": "24ed4f2f238650513749f92485ecade806cdaef7ccc30b867ada1aeb73eabdae",
+  "pprof_binary_sha256": "e18d1f702c1b069a60a7b61dd9a531e44c7489ee6b886ab3b08b9142b112a7d6"
+}

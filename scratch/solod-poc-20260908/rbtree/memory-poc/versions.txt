@@ -1,0 +1,2 @@
+go version go1.27.0 darwin/arm64
+f447b5c73c1170e8ee586a12ed6ae27f9f621905

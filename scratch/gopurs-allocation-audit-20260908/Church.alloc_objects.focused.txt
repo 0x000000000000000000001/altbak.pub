@@ -1,0 +1,33 @@
+File: audit
+Type: alloc_objects
+Time: 2026-09-08 11:12:23 CEST
+Active filters:
+   focus=gopurs/output/
+Showing nodes accounting for 168, 100% of 168 total
+Showing top 25 nodes out of 27
+      flat  flat%   sum%        cum   cum%
+       103 61.31% 61.31%        168   100%  gopurs/output/gopurs_runtime.Apply
+        50 29.76% 91.07%         50 29.76%  gopurs/output/purescript.Call_Test_Church_fromInt
+         2  1.19% 92.26%          2  1.19%  gopurs/output/gopurs_runtime.Str (inline)
+         2  1.19% 93.45%         42 25.00%  gopurs/output/purescript.Call_Test_Church_c100
+         2  1.19% 94.64%          3  1.79%  gopurs/output/purescript.init.func3
+         2  1.19% 95.83%          2  1.19%  sync.(*Pool).pinSlow
+         1   0.6% 96.43%          4  2.38%  fmt.Sprintf
+         1   0.6% 97.02%          1   0.6%  fmt.init.func1
+         1   0.6% 97.62%          2  1.19%  gopurs/output/gopurs_runtime.Box[go.shape.string]
+         1   0.6% 98.21%          1   0.6%  gopurs/output/purescript.Bench_Opaque (inline)
+         1   0.6% 98.81%         54 32.14%  gopurs/output/purescript.Call_Test_Church_c100k
+         1   0.6% 99.40%         43 25.60%  gopurs/output/purescript.Call_Test_Church_c10k
+         1   0.6%   100%          5  2.98%  gopurs/output/purescript.Data_Show_ShowIntImpl (inline)
+         0     0%   100%          3  1.79%  fmt.newPrinter
+         0     0%   100%        100 59.52%  gopurs/output/gopurs_runtime.Apply.func1
+         0     0%   100%        103 61.31%  gopurs/output/gopurs_runtime.Apply2
+         0     0%   100%        101 60.12%  gopurs/output/purescript.Call_Test_Church_c100.func1
+         0     0%   100%        103 61.31%  gopurs/output/purescript.Call_Test_Church_c100k.func1
+         0     0%   100%        102 60.71%  gopurs/output/purescript.Call_Test_Church_c10k.func1
+         0     0%   100%        100 59.52%  gopurs/output/purescript.Call_Test_Church_fromInt.func1
+         0     0%   100%        168   100%  gopurs/output/purescript.Get_Test_Church_act.func1.1
+         0     0%   100%          7  4.17%  gopurs/output/purescript.init.func173
+         0     0%   100%        168   100%  main.main
+         0     0%   100%        168   100%  main.main.func1 (inline)
+         0     0%   100%        168   100%  runtime.main

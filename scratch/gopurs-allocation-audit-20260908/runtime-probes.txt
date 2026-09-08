@@ -1,0 +1,8 @@
+=== RUN   TestSaturatedCallAllocations
+    runtime_test.go:35: Apply5 allocations/call=0; Apply6 allocations/call=5
+--- PASS: TestSaturatedCallAllocations (0.00s)
+=== RUN   TestValueToAnyFloatCompatibility
+    runtime_test.go:41: ValueToAny(Float(1.5)) panics: runtime error: invalid memory address or nil pointer dereference
+--- PASS: TestValueToAnyFloatCompatibility (0.00s)
+PASS
+ok  	allocationaudit	0.428s

@@ -1,0 +1,7 @@
+goos: darwin
+goarch: arm64
+pkg: gopurs/output/purescript
+cpu: Apple M4 Pro
+BenchmarkSumEvens/n900-14         	  120345	      9581 ns/op	   77056 B/op	      15 allocs/op
+BenchmarkSumEvens/n90000-14       	    1300	    959224 ns/op	 9259014 B/op	      29 allocs/op
+PASS

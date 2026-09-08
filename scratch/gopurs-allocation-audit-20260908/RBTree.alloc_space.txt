@@ -1,0 +1,23 @@
+File: audit
+Type: alloc_space
+Time: 2026-09-08 11:12:20 CEST
+Showing nodes accounting for 77948.99kB, 98.84% of 78866.22kB total
+Dropped 96 nodes (cum <= 394.33kB)
+      flat  flat%   sum%        cum   cum%
+74497.88kB 94.46% 94.46% 74497.88kB 94.46%  gopurs/output/purescript.Call_Test_RBTree_balance
+    3125kB  3.96% 98.42% 77622.88kB 98.42%  gopurs/output/purescript.Call_Test_RBTree_ins
+     264kB  0.33% 98.76%   474.62kB   0.6%  compress/flate.NewWriter (inline)
+      56kB 0.071% 98.83%  1234.82kB  1.57%  runtime/pprof.writeHeapInternal
+    5.59kB 0.0071% 98.84%  1178.82kB  1.49%  runtime/pprof.writeHeapProto
+    0.50kB 0.00063% 98.84% 77623.38kB 98.42%  gopurs/output/purescript.Call_Test_RBTree_insert
+    0.02kB 3e-05% 98.84% 78860.90kB   100%  main.main
+         0     0% 98.84%   474.62kB   0.6%  compress/gzip.(*Writer).Write
+         0     0% 98.84% 77625.68kB 98.43%  gopurs/output/gopurs_runtime.Apply
+         0     0% 98.84% 77623.38kB 98.42%  gopurs/output/purescript.Call_Test_RBTree_buildTree
+         0     0% 98.84% 77625.68kB 98.43%  gopurs/output/purescript.Get_Test_RBTree_act.func1.1
+         0     0% 98.84% 77625.68kB 98.43%  main.main.func1 (inline)
+         0     0% 98.84% 78860.90kB   100%  runtime.main
+         0     0% 98.84%  1234.82kB  1.57%  runtime/pprof.(*Profile).WriteTo
+         0     0% 98.84%   474.62kB   0.6%  runtime/pprof.(*profileBuilder).flush
+         0     0% 98.84%   488.25kB  0.62%  runtime/pprof.(*profileBuilder).pbSample
+         0     0% 98.84%  1234.82kB  1.57%  runtime/pprof.writeAlloc

@@ -1,0 +1,5 @@
+=== RUN   TestLastClosureRetention
+    runtime_test.go:44: heap baseline=383056 retained=17118912 released=346984; retained_delta=16735856 released_delta=-36072
+--- PASS: TestLastClosureRetention (0.00s)
+PASS
+ok  	allocationaudit	0.430s

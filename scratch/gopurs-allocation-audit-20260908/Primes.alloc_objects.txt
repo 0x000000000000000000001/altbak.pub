@@ -1,0 +1,23 @@
+File: audit
+Type: alloc_objects
+Time: 2026-09-08 11:12:22 CEST
+Showing nodes accounting for 15224, 99.52% of 15297 total
+Dropped 58 nodes (cum <= 76)
+      flat  flat%   sum%        cum   cum%
+      4968 32.48% 32.48%       9746 63.71%  gopurs/output/purescript.Call_Test_Primes_filter__3878167378.func1
+      4778 31.23% 63.71%       4778 31.23%  gopurs/output/purescript.Call_Test_Primes_filter__3878167378.func1.1
+      4236 27.69% 91.40%       4236 27.69%  runtime/pprof.allFrames
+       499  3.26% 94.67%        499  3.26%  gopurs/output/purescript.Get_Test_Primes_act.func1.1.4
+       285  1.86% 96.53%      10031 65.57%  gopurs/output/purescript.Call_Test_Primes_filter__3878167378
+       190  1.24% 97.77%      10221 66.82%  gopurs/output/purescript.Call_Test_Primes_sieve
+       181  1.18% 98.95%        201  1.31%  runtime/pprof.(*profileBuilder).emitLocation
+        74  0.48% 99.44%       4555 29.78%  runtime/pprof.writeHeapProto
+         7 0.046% 99.48%       4450 29.09%  runtime/pprof.(*profileBuilder).appendLocsForStack
+         4 0.026% 99.51%      10735 70.18%  gopurs/output/purescript.Get_Test_Primes_act.func1.1
+         1 0.0065% 99.52%      15297   100%  main.main
+         1 0.0065% 99.52%       4556 29.78%  runtime/pprof.writeHeapInternal
+         0     0% 99.52%      10735 70.18%  gopurs/output/gopurs_runtime.Apply
+         0     0% 99.52%      10735 70.18%  main.main.func1 (inline)
+         0     0% 99.52%      15297   100%  runtime.main
+         0     0% 99.52%       4556 29.78%  runtime/pprof.(*Profile).WriteTo
+         0     0% 99.52%       4556 29.78%  runtime/pprof.writeAlloc

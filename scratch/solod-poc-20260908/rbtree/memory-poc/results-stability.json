@@ -1,0 +1,2113 @@
+{
+  "status": "complete",
+  "metadata": {
+    "started_utc": "2026-09-08T08:49:26.717700+00:00",
+    "platform": "macOS-26.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "cpu_count": 14,
+    "python": "3.9.6 (default, Aug  8 2025, 19:06:38) \n[Clang 17.0.0 (clang-1700.3.19.1)]",
+    "toolchain_files": {
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/versions.txt": "go version go1.27.0 darwin/arm64\nf447b5c73c1170e8ee586a12ed6ae27f9f621905\n",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/versions.txt": "go version go1.27.0 darwin/arm64\nso version v0.3.0\nApple clang version 17.0.0 (clang-1700.3.19.1)\nTarget: arm64-apple-darwin25.1.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\nf447b5c73c1170e8ee586a12ed6ae27f9f621905\n"
+    },
+    "go_version": {
+      "returncode": 0,
+      "stdout": "go version go1.27.0 darwin/arm64\n",
+      "stderr": ""
+    },
+    "inherited_environment": {
+      "GOGC": null,
+      "GOMEMLIMIT": null,
+      "GOMAXPROCS": null,
+      "GODEBUG": null,
+      "GOEXPERIMENT": null,
+      "GOTOOLCHAIN": null,
+      "GOFLAGS": null,
+      "MallocNanoZone": "0"
+    },
+    "variants": {
+      "go-original-gogc100": {
+        "name": "go-original-gogc100",
+        "binary": "go-original",
+        "pool": false,
+        "cap_mib": 0,
+        "env": {
+          "GOGC": "100",
+          "GOMEMLIMIT": "off"
+        },
+        "effective_environment": {
+          "GOGC": "100",
+          "GOMEMLIMIT": "off",
+          "GOMAXPROCS": null,
+          "GODEBUG": null,
+          "GOEXPERIMENT": null,
+          "GOTOOLCHAIN": null,
+          "GOFLAGS": null,
+          "MallocNanoZone": "0"
+        }
+      },
+      "go-original-gogc800": {
+        "name": "go-original-gogc800",
+        "binary": "go-original",
+        "pool": false,
+        "cap_mib": 0,
+        "env": {
+          "GOGC": "800",
+          "GOMEMLIMIT": "off"
+        },
+        "effective_environment": {
+          "GOGC": "800",
+          "GOMEMLIMIT": "off",
+          "GOMAXPROCS": null,
+          "GODEBUG": null,
+          "GOEXPERIMENT": null,
+          "GOTOOLCHAIN": null,
+          "GOFLAGS": null,
+          "MallocNanoZone": "0"
+        }
+      },
+      "go-original-gogc800-limit64": {
+        "name": "go-original-gogc800-limit64",
+        "binary": "go-original",
+        "pool": false,
+        "cap_mib": 0,
+        "env": {
+          "GOGC": "800",
+          "GOMEMLIMIT": "64MiB"
+        },
+        "effective_environment": {
+          "GOGC": "800",
+          "GOMEMLIMIT": "64MiB",
+          "GOMAXPROCS": null,
+          "GODEBUG": null,
+          "GOEXPERIMENT": null,
+          "GOTOOLCHAIN": null,
+          "GOFLAGS": null,
+          "MallocNanoZone": "0"
+        }
+      },
+      "go-pool8-gogc800": {
+        "name": "go-pool8-gogc800",
+        "binary": "go-pool",
+        "pool": true,
+        "cap_mib": 8,
+        "env": {
+          "GOGC": "800",
+          "GOMEMLIMIT": "off"
+        },
+        "effective_environment": {
+          "GOGC": "800",
+          "GOMEMLIMIT": "off",
+          "GOMAXPROCS": null,
+          "GODEBUG": null,
+          "GOEXPERIMENT": null,
+          "GOTOOLCHAIN": null,
+          "GOFLAGS": null,
+          "MallocNanoZone": "0"
+        }
+      },
+      "go-pool16-gogc800": {
+        "name": "go-pool16-gogc800",
+        "binary": "go-pool",
+        "pool": true,
+        "cap_mib": 16,
+        "env": {
+          "GOGC": "800",
+          "GOMEMLIMIT": "off"
+        },
+        "effective_environment": {
+          "GOGC": "800",
+          "GOMEMLIMIT": "off",
+          "GOMAXPROCS": null,
+          "GODEBUG": null,
+          "GOEXPERIMENT": null,
+          "GOTOOLCHAIN": null,
+          "GOFLAGS": null,
+          "MallocNanoZone": "0"
+        }
+      },
+      "go-pool32-gogc800": {
+        "name": "go-pool32-gogc800",
+        "binary": "go-pool",
+        "pool": true,
+        "cap_mib": 32,
+        "env": {
+          "GOGC": "800",
+          "GOMEMLIMIT": "off"
+        },
+        "effective_environment": {
+          "GOGC": "800",
+          "GOMEMLIMIT": "off",
+          "GOMAXPROCS": null,
+          "GODEBUG": null,
+          "GOEXPERIMENT": null,
+          "GOTOOLCHAIN": null,
+          "GOFLAGS": null,
+          "MallocNanoZone": "0"
+        }
+      },
+      "go-pool96-gogc800": {
+        "name": "go-pool96-gogc800",
+        "binary": "go-pool",
+        "pool": true,
+        "cap_mib": 96,
+        "env": {
+          "GOGC": "800",
+          "GOMEMLIMIT": "off"
+        },
+        "effective_environment": {
+          "GOGC": "800",
+          "GOMEMLIMIT": "off",
+          "GOMAXPROCS": null,
+          "GODEBUG": null,
+          "GOEXPERIMENT": null,
+          "GOTOOLCHAIN": null,
+          "GOFLAGS": null,
+          "MallocNanoZone": "0"
+        }
+      },
+      "go-pool8-gogc100": {
+        "name": "go-pool8-gogc100",
+        "binary": "go-pool",
+        "pool": true,
+        "cap_mib": 8,
+        "env": {
+          "GOGC": "100",
+          "GOMEMLIMIT": "off"
+        },
+        "effective_environment": {
+          "GOGC": "100",
+          "GOMEMLIMIT": "off",
+          "GOMAXPROCS": null,
+          "GODEBUG": null,
+          "GOEXPERIMENT": null,
+          "GOTOOLCHAIN": null,
+          "GOFLAGS": null,
+          "MallocNanoZone": "0"
+        }
+      },
+      "go-pool16-gogc100": {
+        "name": "go-pool16-gogc100",
+        "binary": "go-pool",
+        "pool": true,
+        "cap_mib": 16,
+        "env": {
+          "GOGC": "100",
+          "GOMEMLIMIT": "off"
+        },
+        "effective_environment": {
+          "GOGC": "100",
+          "GOMEMLIMIT": "off",
+          "GOMAXPROCS": null,
+          "GODEBUG": null,
+          "GOEXPERIMENT": null,
+          "GOTOOLCHAIN": null,
+          "GOFLAGS": null,
+          "MallocNanoZone": "0"
+        }
+      },
+      "go-pool8-gogc800-limit64": {
+        "name": "go-pool8-gogc800-limit64",
+        "binary": "go-pool",
+        "pool": true,
+        "cap_mib": 8,
+        "env": {
+          "GOGC": "800",
+          "GOMEMLIMIT": "64MiB"
+        },
+        "effective_environment": {
+          "GOGC": "800",
+          "GOMEMLIMIT": "64MiB",
+          "GOMAXPROCS": null,
+          "GODEBUG": null,
+          "GOEXPERIMENT": null,
+          "GOTOOLCHAIN": null,
+          "GOFLAGS": null,
+          "MallocNanoZone": "0"
+        }
+      },
+      "go-pool16-gogc800-limit64": {
+        "name": "go-pool16-gogc800-limit64",
+        "binary": "go-pool",
+        "pool": true,
+        "cap_mib": 16,
+        "env": {
+          "GOGC": "800",
+          "GOMEMLIMIT": "64MiB"
+        },
+        "effective_environment": {
+          "GOGC": "800",
+          "GOMEMLIMIT": "64MiB",
+          "GOMAXPROCS": null,
+          "GODEBUG": null,
+          "GOEXPERIMENT": null,
+          "GOTOOLCHAIN": null,
+          "GOFLAGS": null,
+          "MallocNanoZone": "0"
+        }
+      }
+    },
+    "binaries": {
+      "go-original": {
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+        "size_bytes": 3818386,
+        "sha256": "26d90739875f6f0462839c1ffa543a3e6260e69e1ed33fa22175750550eaedf7"
+      },
+      "go-pool": {
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+        "size_bytes": 3901346,
+        "sha256": "e60a3108f0aa38119c2598ee933f3be265e1cee3a3138571ccf7adf409af9a87"
+      }
+    },
+    "benchmark_script_sha256": "bd5c9cd17f05e9a4f583439c74b71dd5b82e9dc5535451894ca5df91c4405ca1",
+    "binary_hashes_verified_after_run": true
+  },
+  "sequence_checks": [
+    {
+      "variant": "sequence-pool0-gogc100",
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+        "sequence",
+        "1",
+        "100000",
+        "0"
+      ],
+      "environment_overrides": {
+        "GOGC": "100",
+        "GOMEMLIMIT": "off"
+      },
+      "stdout": "{\"after_gc\":{\"heap_alloc_bytes\":346424,\"heap_inuse_bytes\":638976,\"heap_sys_bytes\":16056320,\"total_alloc_bytes\":159813336,\"mallocs\":4983291,\"num_gc\":65,\"next_gc_bytes\":4194304,\"gc_cpu_fraction\":0.08326718742660029},\"trees\":[{\"count\":100000,\"sum\":5000050000,\"depth\":22,\"black_height\":17,\"allocations\":2483948,\"pool_bytes\":0,\"fallback_allocations\":2483948},{\"count\":1000,\"sum\":500500,\"depth\":15,\"black_height\":10,\"allocations\":14904,\"pool_bytes\":0,\"fallback_allocations\":14904},{\"count\":0,\"sum\":0,\"depth\":0,\"black_height\":1,\"allocations\":0,\"pool_bytes\":0,\"fallback_allocations\":0},{\"count\":100000,\"sum\":5000050000,\"depth\":22,\"black_height\":17,\"allocations\":2483948,\"pool_bytes\":0,\"fallback_allocations\":2483948}]}\n",
+      "stderr": "",
+      "timing_excluded": true,
+      "result": {
+        "after_gc": {
+          "heap_alloc_bytes": 346424,
+          "heap_inuse_bytes": 638976,
+          "heap_sys_bytes": 16056320,
+          "total_alloc_bytes": 159813336,
+          "mallocs": 4983291,
+          "num_gc": 65,
+          "next_gc_bytes": 4194304,
+          "gc_cpu_fraction": 0.08326718742660029
+        },
+        "trees": [
+          {
+            "count": 100000,
+            "sum": 5000050000,
+            "depth": 22,
+            "black_height": 17,
+            "allocations": 2483948,
+            "pool_bytes": 0,
+            "fallback_allocations": 2483948
+          },
+          {
+            "count": 1000,
+            "sum": 500500,
+            "depth": 15,
+            "black_height": 10,
+            "allocations": 14904,
+            "pool_bytes": 0,
+            "fallback_allocations": 14904
+          },
+          {
+            "count": 0,
+            "sum": 0,
+            "depth": 0,
+            "black_height": 1,
+            "allocations": 0,
+            "pool_bytes": 0,
+            "fallback_allocations": 0
+          },
+          {
+            "count": 100000,
+            "sum": 5000050000,
+            "depth": 22,
+            "black_height": 17,
+            "allocations": 2483948,
+            "pool_bytes": 0,
+            "fallback_allocations": 2483948
+          }
+        ]
+      }
+    },
+    {
+      "variant": "sequence-pool1-gogc100",
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+        "sequence",
+        "1",
+        "100000",
+        "1"
+      ],
+      "environment_overrides": {
+        "GOGC": "100",
+        "GOMEMLIMIT": "off"
+      },
+      "stdout": "{\"after_gc\":{\"heap_alloc_bytes\":1389448,\"heap_inuse_bytes\":1753088,\"heap_sys_bytes\":16121856,\"total_alloc_bytes\":158282280,\"mallocs\":4902844,\"num_gc\":57,\"next_gc_bytes\":4194304,\"gc_cpu_fraction\":0.0725054698732139},\"trees\":[{\"count\":100000,\"sum\":5000050000,\"depth\":22,\"black_height\":17,\"allocations\":2483948,\"pool_bytes\":1048576,\"fallback_allocations\":2451180},{\"count\":1000,\"sum\":500500,\"depth\":15,\"black_height\":10,\"allocations\":14904,\"pool_bytes\":1048576,\"fallback_allocations\":0},{\"count\":0,\"sum\":0,\"depth\":0,\"black_height\":1,\"allocations\":0,\"pool_bytes\":1048576,\"fallback_allocations\":0},{\"count\":100000,\"sum\":5000050000,\"depth\":22,\"black_height\":17,\"allocations\":2483948,\"pool_bytes\":1048576,\"fallback_allocations\":2451180}]}\n",
+      "stderr": "",
+      "timing_excluded": true,
+      "result": {
+        "after_gc": {
+          "heap_alloc_bytes": 1389448,
+          "heap_inuse_bytes": 1753088,
+          "heap_sys_bytes": 16121856,
+          "total_alloc_bytes": 158282280,
+          "mallocs": 4902844,
+          "num_gc": 57,
+          "next_gc_bytes": 4194304,
+          "gc_cpu_fraction": 0.0725054698732139
+        },
+        "trees": [
+          {
+            "count": 100000,
+            "sum": 5000050000,
+            "depth": 22,
+            "black_height": 17,
+            "allocations": 2483948,
+            "pool_bytes": 1048576,
+            "fallback_allocations": 2451180
+          },
+          {
+            "count": 1000,
+            "sum": 500500,
+            "depth": 15,
+            "black_height": 10,
+            "allocations": 14904,
+            "pool_bytes": 1048576,
+            "fallback_allocations": 0
+          },
+          {
+            "count": 0,
+            "sum": 0,
+            "depth": 0,
+            "black_height": 1,
+            "allocations": 0,
+            "pool_bytes": 1048576,
+            "fallback_allocations": 0
+          },
+          {
+            "count": 100000,
+            "sum": 5000050000,
+            "depth": 22,
+            "black_height": 17,
+            "allocations": 2483948,
+            "pool_bytes": 1048576,
+            "fallback_allocations": 2451180
+          }
+        ]
+      }
+    },
+    {
+      "variant": "sequence-pool8-gogc100",
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+        "sequence",
+        "1",
+        "100000",
+        "8"
+      ],
+      "environment_overrides": {
+        "GOGC": "100",
+        "GOMEMLIMIT": "off"
+      },
+      "stdout": "{\"after_gc\":{\"heap_alloc_bytes\":8735064,\"heap_inuse_bytes\":9101312,\"heap_sys_bytes\":28639232,\"total_alloc_bytes\":150947888,\"mallocs\":4444109,\"num_gc\":21,\"next_gc_bytes\":17658410,\"gc_cpu_fraction\":0.04614940634340881},\"trees\":[{\"count\":100000,\"sum\":5000050000,\"depth\":22,\"black_height\":17,\"allocations\":2483948,\"pool_bytes\":8388608,\"fallback_allocations\":2221804},{\"count\":1000,\"sum\":500500,\"depth\":15,\"black_height\":10,\"allocations\":14904,\"pool_bytes\":8388608,\"fallback_allocations\":0},{\"count\":0,\"sum\":0,\"depth\":0,\"black_height\":1,\"allocations\":0,\"pool_bytes\":8388608,\"fallback_allocations\":0},{\"count\":100000,\"sum\":5000050000,\"depth\":22,\"black_height\":17,\"allocations\":2483948,\"pool_bytes\":8388608,\"fallback_allocations\":2221804}]}\n",
+      "stderr": "",
+      "timing_excluded": true,
+      "result": {
+        "after_gc": {
+          "heap_alloc_bytes": 8735064,
+          "heap_inuse_bytes": 9101312,
+          "heap_sys_bytes": 28639232,
+          "total_alloc_bytes": 150947888,
+          "mallocs": 4444109,
+          "num_gc": 21,
+          "next_gc_bytes": 17658410,
+          "gc_cpu_fraction": 0.04614940634340881
+        },
+        "trees": [
+          {
+            "count": 100000,
+            "sum": 5000050000,
+            "depth": 22,
+            "black_height": 17,
+            "allocations": 2483948,
+            "pool_bytes": 8388608,
+            "fallback_allocations": 2221804
+          },
+          {
+            "count": 1000,
+            "sum": 500500,
+            "depth": 15,
+            "black_height": 10,
+            "allocations": 14904,
+            "pool_bytes": 8388608,
+            "fallback_allocations": 0
+          },
+          {
+            "count": 0,
+            "sum": 0,
+            "depth": 0,
+            "black_height": 1,
+            "allocations": 0,
+            "pool_bytes": 8388608,
+            "fallback_allocations": 0
+          },
+          {
+            "count": 100000,
+            "sum": 5000050000,
+            "depth": 22,
+            "black_height": 17,
+            "allocations": 2483948,
+            "pool_bytes": 8388608,
+            "fallback_allocations": 2221804
+          }
+        ]
+      }
+    },
+    {
+      "variant": "sequence-pool24-gogc100",
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+        "sequence",
+        "1",
+        "100000",
+        "24"
+      ],
+      "environment_overrides": {
+        "GOGC": "100",
+        "GOMEMLIMIT": "off"
+      },
+      "stdout": "{\"after_gc\":{\"heap_alloc_bytes\":25512360,\"heap_inuse_bytes\":25886720,\"heap_sys_bytes\":62193664,\"total_alloc_bytes\":134170944,\"mallocs\":3395550,\"num_gc\":12,\"next_gc_bytes\":51212986,\"gc_cpu_fraction\":0.04017783671644228},\"trees\":[{\"count\":100000,\"sum\":5000050000,\"depth\":22,\"black_height\":17,\"allocations\":2483948,\"pool_bytes\":25165824,\"fallback_allocations\":1697516},{\"count\":1000,\"sum\":500500,\"depth\":15,\"black_height\":10,\"allocations\":14904,\"pool_bytes\":25165824,\"fallback_allocations\":0},{\"count\":0,\"sum\":0,\"depth\":0,\"black_height\":1,\"allocations\":0,\"pool_bytes\":25165824,\"fallback_allocations\":0},{\"count\":100000,\"sum\":5000050000,\"depth\":22,\"black_height\":17,\"allocations\":2483948,\"pool_bytes\":25165824,\"fallback_allocations\":1697516}]}\n",
+      "stderr": "",
+      "timing_excluded": true,
+      "result": {
+        "after_gc": {
+          "heap_alloc_bytes": 25512360,
+          "heap_inuse_bytes": 25886720,
+          "heap_sys_bytes": 62193664,
+          "total_alloc_bytes": 134170944,
+          "mallocs": 3395550,
+          "num_gc": 12,
+          "next_gc_bytes": 51212986,
+          "gc_cpu_fraction": 0.04017783671644228
+        },
+        "trees": [
+          {
+            "count": 100000,
+            "sum": 5000050000,
+            "depth": 22,
+            "black_height": 17,
+            "allocations": 2483948,
+            "pool_bytes": 25165824,
+            "fallback_allocations": 1697516
+          },
+          {
+            "count": 1000,
+            "sum": 500500,
+            "depth": 15,
+            "black_height": 10,
+            "allocations": 14904,
+            "pool_bytes": 25165824,
+            "fallback_allocations": 0
+          },
+          {
+            "count": 0,
+            "sum": 0,
+            "depth": 0,
+            "black_height": 1,
+            "allocations": 0,
+            "pool_bytes": 25165824,
+            "fallback_allocations": 0
+          },
+          {
+            "count": 100000,
+            "sum": 5000050000,
+            "depth": 22,
+            "black_height": 17,
+            "allocations": 2483948,
+            "pool_bytes": 25165824,
+            "fallback_allocations": 1697516
+          }
+        ]
+      }
+    },
+    {
+      "variant": "sequence-pool96-gogc100",
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+        "sequence",
+        "1",
+        "100000",
+        "96"
+      ],
+      "environment_overrides": {
+        "GOGC": "100",
+        "GOMEMLIMIT": "off"
+      },
+      "stdout": "{\"after_gc\":{\"heap_alloc_bytes\":80038856,\"heap_inuse_bytes\":80437248,\"heap_sys_bytes\":87392256,\"total_alloc_bytes\":80057184,\"mallocs\":568,\"num_gc\":9,\"next_gc_bytes\":160265978,\"gc_cpu_fraction\":0.05002998832828763},\"trees\":[{\"count\":100000,\"sum\":5000050000,\"depth\":22,\"black_height\":17,\"allocations\":2483948,\"pool_bytes\":79691776,\"fallback_allocations\":0},{\"count\":1000,\"sum\":500500,\"depth\":15,\"black_height\":10,\"allocations\":14904,\"pool_bytes\":79691776,\"fallback_allocations\":0},{\"count\":0,\"sum\":0,\"depth\":0,\"black_height\":1,\"allocations\":0,\"pool_bytes\":79691776,\"fallback_allocations\":0},{\"count\":100000,\"sum\":5000050000,\"depth\":22,\"black_height\":17,\"allocations\":2483948,\"pool_bytes\":79691776,\"fallback_allocations\":0}]}\n",
+      "stderr": "",
+      "timing_excluded": true,
+      "result": {
+        "after_gc": {
+          "heap_alloc_bytes": 80038856,
+          "heap_inuse_bytes": 80437248,
+          "heap_sys_bytes": 87392256,
+          "total_alloc_bytes": 80057184,
+          "mallocs": 568,
+          "num_gc": 9,
+          "next_gc_bytes": 160265978,
+          "gc_cpu_fraction": 0.05002998832828763
+        },
+        "trees": [
+          {
+            "count": 100000,
+            "sum": 5000050000,
+            "depth": 22,
+            "black_height": 17,
+            "allocations": 2483948,
+            "pool_bytes": 79691776,
+            "fallback_allocations": 0
+          },
+          {
+            "count": 1000,
+            "sum": 500500,
+            "depth": 15,
+            "black_height": 10,
+            "allocations": 14904,
+            "pool_bytes": 79691776,
+            "fallback_allocations": 0
+          },
+          {
+            "count": 0,
+            "sum": 0,
+            "depth": 0,
+            "black_height": 1,
+            "allocations": 0,
+            "pool_bytes": 79691776,
+            "fallback_allocations": 0
+          },
+          {
+            "count": 100000,
+            "sum": 5000050000,
+            "depth": 22,
+            "black_height": 17,
+            "allocations": 2483948,
+            "pool_bytes": 79691776,
+            "fallback_allocations": 0
+          }
+        ]
+      }
+    }
+  ],
+  "retention_checks": [
+    {
+      "variant": "go-original-gogc800",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory.py",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+        "stats",
+        "1",
+        "100000",
+        "0"
+      ],
+      "environment_overrides": {
+        "GOGC": "800",
+        "GOMEMLIMIT": "off"
+      },
+      "stdout": "{\"after\":{\"heap_alloc_bytes\":22148256,\"heap_inuse_bytes\":33071104,\"heap_sys_bytes\":41418752,\"total_alloc_bytes\":79827536,\"mallocs\":2484402,\"num_gc\":2,\"next_gc_bytes\":33554432,\"gc_cpu_fraction\":0.0196196261238111},\"after_gc\":{\"heap_alloc_bytes\":324064,\"heap_inuse_bytes\":679936,\"heap_sys_bytes\":41385984,\"total_alloc_bytes\":79827536,\"mallocs\":2484402,\"num_gc\":3,\"next_gc_bytes\":33554432,\"gc_cpu_fraction\":0.01608869851114695},\"allocated_bytes_during_batch\":79538184,\"allocations\":-1,\"before\":{\"heap_alloc_bytes\":289352,\"heap_inuse_bytes\":655360,\"heap_sys_bytes\":3932160,\"total_alloc_bytes\":289352,\"mallocs\":367,\"num_gc\":0,\"next_gc_bytes\":33554432,\"gc_cpu_fraction\":0},\"checksum\":22,\"collections_during_batch\":2,\"fallback_allocations\":-1,\"pool_bytes\":0}\n",
+      "stderr": "POC_RSS_BYTES: 40140800\n",
+      "timing_excluded": true,
+      "count": 1,
+      "result": {
+        "after": {
+          "heap_alloc_bytes": 22148256,
+          "heap_inuse_bytes": 33071104,
+          "heap_sys_bytes": 41418752,
+          "total_alloc_bytes": 79827536,
+          "mallocs": 2484402,
+          "num_gc": 2,
+          "next_gc_bytes": 33554432,
+          "gc_cpu_fraction": 0.0196196261238111
+        },
+        "after_gc": {
+          "heap_alloc_bytes": 324064,
+          "heap_inuse_bytes": 679936,
+          "heap_sys_bytes": 41385984,
+          "total_alloc_bytes": 79827536,
+          "mallocs": 2484402,
+          "num_gc": 3,
+          "next_gc_bytes": 33554432,
+          "gc_cpu_fraction": 0.01608869851114695
+        },
+        "allocated_bytes_during_batch": 79538184,
+        "allocations": -1,
+        "before": {
+          "heap_alloc_bytes": 289352,
+          "heap_inuse_bytes": 655360,
+          "heap_sys_bytes": 3932160,
+          "total_alloc_bytes": 289352,
+          "mallocs": 367,
+          "num_gc": 0,
+          "next_gc_bytes": 33554432,
+          "gc_cpu_fraction": 0
+        },
+        "checksum": 22,
+        "collections_during_batch": 2,
+        "fallback_allocations": -1,
+        "pool_bytes": 0
+      },
+      "rss_bytes": 40140800
+    },
+    {
+      "variant": "go-original-gogc800",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory.py",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+        "stats",
+        "10",
+        "100000",
+        "0"
+      ],
+      "environment_overrides": {
+        "GOGC": "800",
+        "GOMEMLIMIT": "off"
+      },
+      "stdout": "{\"after\":{\"heap_alloc_bytes\":20071792,\"heap_inuse_bytes\":38535168,\"heap_sys_bytes\":45481984,\"total_alloc_bytes\":795226208,\"mallocs\":24839963,\"num_gc\":26,\"next_gc_bytes\":33554432,\"gc_cpu_fraction\":0.016085649344865054},\"after_gc\":{\"heap_alloc_bytes\":345712,\"heap_inuse_bytes\":802816,\"heap_sys_bytes\":45449216,\"total_alloc_bytes\":795226208,\"mallocs\":24839963,\"num_gc\":27,\"next_gc_bytes\":33554432,\"gc_cpu_fraction\":0.015807265047251603},\"allocated_bytes_during_batch\":794936856,\"allocations\":-1,\"before\":{\"heap_alloc_bytes\":289352,\"heap_inuse_bytes\":745472,\"heap_sys_bytes\":3932160,\"total_alloc_bytes\":289352,\"mallocs\":367,\"num_gc\":0,\"next_gc_bytes\":33554432,\"gc_cpu_fraction\":0},\"checksum\":220,\"collections_during_batch\":26,\"fallback_allocations\":-1,\"pool_bytes\":0}\n",
+      "stderr": "POC_RSS_BYTES: 49446912\n",
+      "timing_excluded": true,
+      "count": 10,
+      "result": {
+        "after": {
+          "heap_alloc_bytes": 20071792,
+          "heap_inuse_bytes": 38535168,
+          "heap_sys_bytes": 45481984,
+          "total_alloc_bytes": 795226208,
+          "mallocs": 24839963,
+          "num_gc": 26,
+          "next_gc_bytes": 33554432,
+          "gc_cpu_fraction": 0.016085649344865054
+        },
+        "after_gc": {
+          "heap_alloc_bytes": 345712,
+          "heap_inuse_bytes": 802816,
+          "heap_sys_bytes": 45449216,
+          "total_alloc_bytes": 795226208,
+          "mallocs": 24839963,
+          "num_gc": 27,
+          "next_gc_bytes": 33554432,
+          "gc_cpu_fraction": 0.015807265047251603
+        },
+        "allocated_bytes_during_batch": 794936856,
+        "allocations": -1,
+        "before": {
+          "heap_alloc_bytes": 289352,
+          "heap_inuse_bytes": 745472,
+          "heap_sys_bytes": 3932160,
+          "total_alloc_bytes": 289352,
+          "mallocs": 367,
+          "num_gc": 0,
+          "next_gc_bytes": 33554432,
+          "gc_cpu_fraction": 0
+        },
+        "checksum": 220,
+        "collections_during_batch": 26,
+        "fallback_allocations": -1,
+        "pool_bytes": 0
+      },
+      "rss_bytes": 49446912
+    },
+    {
+      "variant": "go-original-gogc800",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory.py",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+        "stats",
+        "100",
+        "100000",
+        "0"
+      ],
+      "environment_overrides": {
+        "GOGC": "800",
+        "GOMEMLIMIT": "off"
+      },
+      "stdout": "{\"after\":{\"heap_alloc_bytes\":5661576,\"heap_inuse_bytes\":33284096,\"heap_sys_bytes\":45416448,\"total_alloc_bytes\":7949005048,\"mallocs\":248395326,\"num_gc\":267,\"next_gc_bytes\":39057784,\"gc_cpu_fraction\":0.014350018896300823},\"after_gc\":{\"heap_alloc_bytes\":354312,\"heap_inuse_bytes\":712704,\"heap_sys_bytes\":45383680,\"total_alloc_bytes\":7949005048,\"mallocs\":248395326,\"num_gc\":268,\"next_gc_bytes\":33554432,\"gc_cpu_fraction\":0.014348776413071753},\"allocated_bytes_during_batch\":7948715696,\"allocations\":-1,\"before\":{\"heap_alloc_bytes\":289352,\"heap_inuse_bytes\":655360,\"heap_sys_bytes\":3932160,\"total_alloc_bytes\":289352,\"mallocs\":367,\"num_gc\":0,\"next_gc_bytes\":33554432,\"gc_cpu_fraction\":0},\"checksum\":2200,\"collections_during_batch\":267,\"fallback_allocations\":-1,\"pool_bytes\":0}\n",
+      "stderr": "POC_RSS_BYTES: 49577984\n",
+      "timing_excluded": true,
+      "count": 100,
+      "result": {
+        "after": {
+          "heap_alloc_bytes": 5661576,
+          "heap_inuse_bytes": 33284096,
+          "heap_sys_bytes": 45416448,
+          "total_alloc_bytes": 7949005048,
+          "mallocs": 248395326,
+          "num_gc": 267,
+          "next_gc_bytes": 39057784,
+          "gc_cpu_fraction": 0.014350018896300823
+        },
+        "after_gc": {
+          "heap_alloc_bytes": 354312,
+          "heap_inuse_bytes": 712704,
+          "heap_sys_bytes": 45383680,
+          "total_alloc_bytes": 7949005048,
+          "mallocs": 248395326,
+          "num_gc": 268,
+          "next_gc_bytes": 33554432,
+          "gc_cpu_fraction": 0.014348776413071753
+        },
+        "allocated_bytes_during_batch": 7948715696,
+        "allocations": -1,
+        "before": {
+          "heap_alloc_bytes": 289352,
+          "heap_inuse_bytes": 655360,
+          "heap_sys_bytes": 3932160,
+          "total_alloc_bytes": 289352,
+          "mallocs": 367,
+          "num_gc": 0,
+          "next_gc_bytes": 33554432,
+          "gc_cpu_fraction": 0
+        },
+        "checksum": 2200,
+        "collections_during_batch": 267,
+        "fallback_allocations": -1,
+        "pool_bytes": 0
+      },
+      "rss_bytes": 49577984
+    },
+    {
+      "variant": "go-pool8-gogc200",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory.py",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+        "stats",
+        "1",
+        "100000",
+        "8"
+      ],
+      "environment_overrides": {
+        "GOGC": "200",
+        "GOMEMLIMIT": "off"
+      },
+      "stdout": "{\"after\":{\"heap_alloc_bytes\":26580088,\"heap_inuse_bytes\":32260096,\"heap_sys_bytes\":37126144,\"total_alloc_bytes\":79843616,\"mallocs\":2222288,\"num_gc\":4,\"next_gc_bytes\":35380860,\"gc_cpu_fraction\":0.02689660692812426},\"after_gc\":{\"heap_alloc_bytes\":8728696,\"heap_inuse_bytes\":9109504,\"heap_sys_bytes\":37093376,\"total_alloc_bytes\":79843616,\"mallocs\":2222288,\"num_gc\":5,\"next_gc_bytes\":26563772,\"gc_cpu_fraction\":0.024178695084168977},\"allocated_bytes_during_batch\":79554264,\"allocations\":2483948,\"before\":{\"heap_alloc_bytes\":289352,\"heap_inuse_bytes\":712704,\"heap_sys_bytes\":3932160,\"total_alloc_bytes\":289352,\"mallocs\":367,\"num_gc\":0,\"next_gc_bytes\":8388608,\"gc_cpu_fraction\":0},\"checksum\":22,\"collections_during_batch\":4,\"fallback_allocations\":2221804,\"pool_bytes\":8388608}\n",
+      "stderr": "POC_RSS_BYTES: 39387136\n",
+      "timing_excluded": true,
+      "count": 1,
+      "result": {
+        "after": {
+          "heap_alloc_bytes": 26580088,
+          "heap_inuse_bytes": 32260096,
+          "heap_sys_bytes": 37126144,
+          "total_alloc_bytes": 79843616,
+          "mallocs": 2222288,
+          "num_gc": 4,
+          "next_gc_bytes": 35380860,
+          "gc_cpu_fraction": 0.02689660692812426
+        },
+        "after_gc": {
+          "heap_alloc_bytes": 8728696,
+          "heap_inuse_bytes": 9109504,
+          "heap_sys_bytes": 37093376,
+          "total_alloc_bytes": 79843616,
+          "mallocs": 2222288,
+          "num_gc": 5,
+          "next_gc_bytes": 26563772,
+          "gc_cpu_fraction": 0.024178695084168977
+        },
+        "allocated_bytes_during_batch": 79554264,
+        "allocations": 2483948,
+        "before": {
+          "heap_alloc_bytes": 289352,
+          "heap_inuse_bytes": 712704,
+          "heap_sys_bytes": 3932160,
+          "total_alloc_bytes": 289352,
+          "mallocs": 367,
+          "num_gc": 0,
+          "next_gc_bytes": 8388608,
+          "gc_cpu_fraction": 0
+        },
+        "checksum": 22,
+        "collections_during_batch": 4,
+        "fallback_allocations": 2221804,
+        "pool_bytes": 8388608
+      },
+      "rss_bytes": 39387136
+    },
+    {
+      "variant": "go-pool8-gogc200",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory.py",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+        "stats",
+        "10",
+        "100000",
+        "8"
+      ],
+      "environment_overrides": {
+        "GOGC": "200",
+        "GOMEMLIMIT": "off"
+      },
+      "stdout": "{\"after\":{\"heap_alloc_bytes\":19149248,\"heap_inuse_bytes\":33529856,\"heap_sys_bytes\":41287680,\"total_alloc_bytes\":719728936,\"mallocs\":22218540,\"num_gc\":36,\"next_gc_bytes\":37837268,\"gc_cpu_fraction\":0.025268882822292896},\"after_gc\":{\"heap_alloc_bytes\":8734464,\"heap_inuse_bytes\":9093120,\"heap_sys_bytes\":41254912,\"total_alloc_bytes\":719728936,\"mallocs\":22218540,\"num_gc\":37,\"next_gc_bytes\":26581076,\"gc_cpu_fraction\":0.025226998124821952},\"allocated_bytes_during_batch\":719439584,\"allocations\":2483948,\"before\":{\"heap_alloc_bytes\":289352,\"heap_inuse_bytes\":655360,\"heap_sys_bytes\":3932160,\"total_alloc_bytes\":289352,\"mallocs\":367,\"num_gc\":0,\"next_gc_bytes\":8388608,\"gc_cpu_fraction\":0},\"checksum\":220,\"collections_during_batch\":36,\"fallback_allocations\":2221804,\"pool_bytes\":8388608}\n",
+      "stderr": "POC_RSS_BYTES: 44417024\n",
+      "timing_excluded": true,
+      "count": 10,
+      "result": {
+        "after": {
+          "heap_alloc_bytes": 19149248,
+          "heap_inuse_bytes": 33529856,
+          "heap_sys_bytes": 41287680,
+          "total_alloc_bytes": 719728936,
+          "mallocs": 22218540,
+          "num_gc": 36,
+          "next_gc_bytes": 37837268,
+          "gc_cpu_fraction": 0.025268882822292896
+        },
+        "after_gc": {
+          "heap_alloc_bytes": 8734464,
+          "heap_inuse_bytes": 9093120,
+          "heap_sys_bytes": 41254912,
+          "total_alloc_bytes": 719728936,
+          "mallocs": 22218540,
+          "num_gc": 37,
+          "next_gc_bytes": 26581076,
+          "gc_cpu_fraction": 0.025226998124821952
+        },
+        "allocated_bytes_during_batch": 719439584,
+        "allocations": 2483948,
+        "before": {
+          "heap_alloc_bytes": 289352,
+          "heap_inuse_bytes": 655360,
+          "heap_sys_bytes": 3932160,
+          "total_alloc_bytes": 289352,
+          "mallocs": 367,
+          "num_gc": 0,
+          "next_gc_bytes": 8388608,
+          "gc_cpu_fraction": 0
+        },
+        "checksum": 220,
+        "collections_during_batch": 36,
+        "fallback_allocations": 2221804,
+        "pool_bytes": 8388608
+      },
+      "rss_bytes": 44417024
+    },
+    {
+      "variant": "go-pool8-gogc200",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory.py",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+        "stats",
+        "100",
+        "100000",
+        "8"
+      ],
+      "environment_overrides": {
+        "GOGC": "200",
+        "GOMEMLIMIT": "off"
+      },
+      "stdout": "{\"after\":{\"heap_alloc_bytes\":22896120,\"heap_inuse_bytes\":32710656,\"heap_sys_bytes\":45449216,\"total_alloc_bytes\":7118534368,\"mallocs\":222180953,\"num_gc\":350,\"next_gc_bytes\":35830684,\"gc_cpu_fraction\":0.023223571790323357},\"after_gc\":{\"heap_alloc_bytes\":8744376,\"heap_inuse_bytes\":9117696,\"heap_sys_bytes\":45416448,\"total_alloc_bytes\":7118534368,\"mallocs\":222180953,\"num_gc\":351,\"next_gc_bytes\":26610812,\"gc_cpu_fraction\":0.023199143135842024},\"allocated_bytes_during_batch\":7118245016,\"allocations\":2483948,\"before\":{\"heap_alloc_bytes\":289352,\"heap_inuse_bytes\":745472,\"heap_sys_bytes\":8126464,\"total_alloc_bytes\":289352,\"mallocs\":367,\"num_gc\":0,\"next_gc_bytes\":8388608,\"gc_cpu_fraction\":0},\"checksum\":2200,\"collections_during_batch\":350,\"fallback_allocations\":2221804,\"pool_bytes\":8388608}\n",
+      "stderr": "POC_RSS_BYTES: 46071808\n",
+      "timing_excluded": true,
+      "count": 100,
+      "result": {
+        "after": {
+          "heap_alloc_bytes": 22896120,
+          "heap_inuse_bytes": 32710656,
+          "heap_sys_bytes": 45449216,
+          "total_alloc_bytes": 7118534368,
+          "mallocs": 222180953,
+          "num_gc": 350,
+          "next_gc_bytes": 35830684,
+          "gc_cpu_fraction": 0.023223571790323357
+        },
+        "after_gc": {
+          "heap_alloc_bytes": 8744376,
+          "heap_inuse_bytes": 9117696,
+          "heap_sys_bytes": 45416448,
+          "total_alloc_bytes": 7118534368,
+          "mallocs": 222180953,
+          "num_gc": 351,
+          "next_gc_bytes": 26610812,
+          "gc_cpu_fraction": 0.023199143135842024
+        },
+        "allocated_bytes_during_batch": 7118245016,
+        "allocations": 2483948,
+        "before": {
+          "heap_alloc_bytes": 289352,
+          "heap_inuse_bytes": 745472,
+          "heap_sys_bytes": 8126464,
+          "total_alloc_bytes": 289352,
+          "mallocs": 367,
+          "num_gc": 0,
+          "next_gc_bytes": 8388608,
+          "gc_cpu_fraction": 0
+        },
+        "checksum": 2200,
+        "collections_during_batch": 350,
+        "fallback_allocations": 2221804,
+        "pool_bytes": 8388608
+      },
+      "rss_bytes": 46071808
+    },
+    {
+      "variant": "go-pool96-gogc800",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory.py",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+        "stats",
+        "1",
+        "100000",
+        "96"
+      ],
+      "environment_overrides": {
+        "GOGC": "800",
+        "GOMEMLIMIT": "off"
+      },
+      "stdout": "{\"after\":{\"heap_alloc_bytes\":80023080,\"heap_inuse_bytes\":80494592,\"heap_sys_bytes\":87556096,\"total_alloc_bytes\":80040464,\"mallocs\":544,\"num_gc\":1,\"next_gc_bytes\":306504920,\"gc_cpu_fraction\":0.03143839667382078},\"after_gc\":{\"heap_alloc_bytes\":80022312,\"heap_inuse_bytes\":80486400,\"heap_sys_bytes\":87490560,\"total_alloc_bytes\":80040464,\"mallocs\":544,\"num_gc\":2,\"next_gc_bytes\":721710168,\"gc_cpu_fraction\":0.02705184908449629},\"allocated_bytes_during_batch\":79751112,\"allocations\":2483948,\"before\":{\"heap_alloc_bytes\":289352,\"heap_inuse_bytes\":745472,\"heap_sys_bytes\":8126464,\"total_alloc_bytes\":289352,\"mallocs\":367,\"num_gc\":0,\"next_gc_bytes\":33554432,\"gc_cpu_fraction\":0},\"checksum\":22,\"collections_during_batch\":1,\"fallback_allocations\":0,\"pool_bytes\":79691776}\n",
+      "stderr": "POC_RSS_BYTES: 86491136\n",
+      "timing_excluded": true,
+      "count": 1,
+      "result": {
+        "after": {
+          "heap_alloc_bytes": 80023080,
+          "heap_inuse_bytes": 80494592,
+          "heap_sys_bytes": 87556096,
+          "total_alloc_bytes": 80040464,
+          "mallocs": 544,
+          "num_gc": 1,
+          "next_gc_bytes": 306504920,
+          "gc_cpu_fraction": 0.03143839667382078
+        },
+        "after_gc": {
+          "heap_alloc_bytes": 80022312,
+          "heap_inuse_bytes": 80486400,
+          "heap_sys_bytes": 87490560,
+          "total_alloc_bytes": 80040464,
+          "mallocs": 544,
+          "num_gc": 2,
+          "next_gc_bytes": 721710168,
+          "gc_cpu_fraction": 0.02705184908449629
+        },
+        "allocated_bytes_during_batch": 79751112,
+        "allocations": 2483948,
+        "before": {
+          "heap_alloc_bytes": 289352,
+          "heap_inuse_bytes": 745472,
+          "heap_sys_bytes": 8126464,
+          "total_alloc_bytes": 289352,
+          "mallocs": 367,
+          "num_gc": 0,
+          "next_gc_bytes": 33554432,
+          "gc_cpu_fraction": 0
+        },
+        "checksum": 22,
+        "collections_during_batch": 1,
+        "fallback_allocations": 0,
+        "pool_bytes": 79691776
+      },
+      "rss_bytes": 86491136
+    },
+    {
+      "variant": "go-pool96-gogc800",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory.py",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+        "stats",
+        "10",
+        "100000",
+        "96"
+      ],
+      "environment_overrides": {
+        "GOGC": "800",
+        "GOMEMLIMIT": "off"
+      },
+      "stdout": "{\"after\":{\"heap_alloc_bytes\":80028400,\"heap_inuse_bytes\":80478208,\"heap_sys_bytes\":87523328,\"total_alloc_bytes\":80045784,\"mallocs\":550,\"num_gc\":1,\"next_gc_bytes\":306552800,\"gc_cpu_fraction\":0.034141361052105794},\"after_gc\":{\"heap_alloc_bytes\":80027744,\"heap_inuse_bytes\":80470016,\"heap_sys_bytes\":87457792,\"total_alloc_bytes\":80045896,\"mallocs\":551,\"num_gc\":2,\"next_gc_bytes\":721759568,\"gc_cpu_fraction\":0.003110939627278991},\"allocated_bytes_during_batch\":79756432,\"allocations\":2483948,\"before\":{\"heap_alloc_bytes\":289352,\"heap_inuse_bytes\":745472,\"heap_sys_bytes\":3932160,\"total_alloc_bytes\":289352,\"mallocs\":367,\"num_gc\":0,\"next_gc_bytes\":33554432,\"gc_cpu_fraction\":0},\"checksum\":220,\"collections_during_batch\":1,\"fallback_allocations\":0,\"pool_bytes\":79691776}\n",
+      "stderr": "POC_RSS_BYTES: 86638592\n",
+      "timing_excluded": true,
+      "count": 10,
+      "result": {
+        "after": {
+          "heap_alloc_bytes": 80028400,
+          "heap_inuse_bytes": 80478208,
+          "heap_sys_bytes": 87523328,
+          "total_alloc_bytes": 80045784,
+          "mallocs": 550,
+          "num_gc": 1,
+          "next_gc_bytes": 306552800,
+          "gc_cpu_fraction": 0.034141361052105794
+        },
+        "after_gc": {
+          "heap_alloc_bytes": 80027744,
+          "heap_inuse_bytes": 80470016,
+          "heap_sys_bytes": 87457792,
+          "total_alloc_bytes": 80045896,
+          "mallocs": 551,
+          "num_gc": 2,
+          "next_gc_bytes": 721759568,
+          "gc_cpu_fraction": 0.003110939627278991
+        },
+        "allocated_bytes_during_batch": 79756432,
+        "allocations": 2483948,
+        "before": {
+          "heap_alloc_bytes": 289352,
+          "heap_inuse_bytes": 745472,
+          "heap_sys_bytes": 3932160,
+          "total_alloc_bytes": 289352,
+          "mallocs": 367,
+          "num_gc": 0,
+          "next_gc_bytes": 33554432,
+          "gc_cpu_fraction": 0
+        },
+        "checksum": 220,
+        "collections_during_batch": 1,
+        "fallback_allocations": 0,
+        "pool_bytes": 79691776
+      },
+      "rss_bytes": 86638592
+    },
+    {
+      "variant": "go-pool96-gogc800",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory.py",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+        "stats",
+        "100",
+        "100000",
+        "96"
+      ],
+      "environment_overrides": {
+        "GOGC": "800",
+        "GOMEMLIMIT": "off"
+      },
+      "stdout": "{\"after\":{\"heap_alloc_bytes\":80017760,\"heap_inuse_bytes\":80420864,\"heap_sys_bytes\":87588864,\"total_alloc_bytes\":80035144,\"mallocs\":538,\"num_gc\":1,\"next_gc_bytes\":306457112,\"gc_cpu_fraction\":0.04306918340080565},\"after_gc\":{\"heap_alloc_bytes\":80027632,\"heap_inuse_bytes\":80412672,\"heap_sys_bytes\":87457792,\"total_alloc_bytes\":80045784,\"mallocs\":550,\"num_gc\":2,\"next_gc_bytes\":721758688,\"gc_cpu_fraction\":0.000371001825903008},\"allocated_bytes_during_batch\":79745792,\"allocations\":2483948,\"before\":{\"heap_alloc_bytes\":289352,\"heap_inuse_bytes\":655360,\"heap_sys_bytes\":3932160,\"total_alloc_bytes\":289352,\"mallocs\":367,\"num_gc\":0,\"next_gc_bytes\":33554432,\"gc_cpu_fraction\":0},\"checksum\":2200,\"collections_during_batch\":1,\"fallback_allocations\":0,\"pool_bytes\":79691776}\n",
+      "stderr": "POC_RSS_BYTES: 86540288\n",
+      "timing_excluded": true,
+      "count": 100,
+      "result": {
+        "after": {
+          "heap_alloc_bytes": 80017760,
+          "heap_inuse_bytes": 80420864,
+          "heap_sys_bytes": 87588864,
+          "total_alloc_bytes": 80035144,
+          "mallocs": 538,
+          "num_gc": 1,
+          "next_gc_bytes": 306457112,
+          "gc_cpu_fraction": 0.04306918340080565
+        },
+        "after_gc": {
+          "heap_alloc_bytes": 80027632,
+          "heap_inuse_bytes": 80412672,
+          "heap_sys_bytes": 87457792,
+          "total_alloc_bytes": 80045784,
+          "mallocs": 550,
+          "num_gc": 2,
+          "next_gc_bytes": 721758688,
+          "gc_cpu_fraction": 0.000371001825903008
+        },
+        "allocated_bytes_during_batch": 79745792,
+        "allocations": 2483948,
+        "before": {
+          "heap_alloc_bytes": 289352,
+          "heap_inuse_bytes": 655360,
+          "heap_sys_bytes": 3932160,
+          "total_alloc_bytes": 289352,
+          "mallocs": 367,
+          "num_gc": 0,
+          "next_gc_bytes": 33554432,
+          "gc_cpu_fraction": 0
+        },
+        "checksum": 2200,
+        "collections_during_batch": 1,
+        "fallback_allocations": 0,
+        "pool_bytes": 79691776
+      },
+      "rss_bytes": 86540288
+    }
+  ],
+  "retention_summary": {
+    "go-original-gogc800": {
+      "retained_heap_min_bytes": 324064,
+      "retained_heap_max_bytes": 354312,
+      "drift_bytes": 30248
+    },
+    "go-pool8-gogc200": {
+      "retained_heap_min_bytes": 8728696,
+      "retained_heap_max_bytes": 8744376,
+      "drift_bytes": 15680
+    },
+    "go-pool96-gogc800": {
+      "retained_heap_min_bytes": 80022312,
+      "retained_heap_max_bytes": 80027744,
+      "drift_bytes": 5432
+    }
+  },
+  "cold_start": {
+    "10000": {
+      "repetitions": 7,
+      "count": 1,
+      "samples": {
+        "go-original-gogc800": [
+          {
+            "variant": "go-original-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+              "bench",
+              "1",
+              "10000",
+              "0"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 5246417,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 1
+          },
+          {
+            "variant": "go-original-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+              "bench",
+              "1",
+              "10000",
+              "0"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 4883208,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 2
+          },
+          {
+            "variant": "go-original-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+              "bench",
+              "1",
+              "10000",
+              "0"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 5928875,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 3
+          },
+          {
+            "variant": "go-original-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+              "bench",
+              "1",
+              "10000",
+              "0"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 6069458,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 4
+          },
+          {
+            "variant": "go-original-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+              "bench",
+              "1",
+              "10000",
+              "0"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 4932417,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 5
+          },
+          {
+            "variant": "go-original-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+              "bench",
+              "1",
+              "10000",
+              "0"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 4994917,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 6
+          },
+          {
+            "variant": "go-original-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+              "bench",
+              "1",
+              "10000",
+              "0"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 4696791,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 7
+          }
+        ],
+        "go-pool8-gogc200": [
+          {
+            "variant": "go-pool8-gogc200",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "10000",
+              "8"
+            ],
+            "environment_overrides": {
+              "GOGC": "200",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 6709833,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 1
+          },
+          {
+            "variant": "go-pool8-gogc200",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "10000",
+              "8"
+            ],
+            "environment_overrides": {
+              "GOGC": "200",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 7781833,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 2
+          },
+          {
+            "variant": "go-pool8-gogc200",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "10000",
+              "8"
+            ],
+            "environment_overrides": {
+              "GOGC": "200",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 7282000,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 3
+          },
+          {
+            "variant": "go-pool8-gogc200",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "10000",
+              "8"
+            ],
+            "environment_overrides": {
+              "GOGC": "200",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 7288750,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 4
+          },
+          {
+            "variant": "go-pool8-gogc200",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "10000",
+              "8"
+            ],
+            "environment_overrides": {
+              "GOGC": "200",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 8052083,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 5
+          },
+          {
+            "variant": "go-pool8-gogc200",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "10000",
+              "8"
+            ],
+            "environment_overrides": {
+              "GOGC": "200",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 7900542,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 6
+          },
+          {
+            "variant": "go-pool8-gogc200",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "10000",
+              "8"
+            ],
+            "environment_overrides": {
+              "GOGC": "200",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 7321625,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 7
+          }
+        ],
+        "go-pool96-gogc800": [
+          {
+            "variant": "go-pool96-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "10000",
+              "96"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 4968750,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 1
+          },
+          {
+            "variant": "go-pool96-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "10000",
+              "96"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 4554041,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 2
+          },
+          {
+            "variant": "go-pool96-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "10000",
+              "96"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 5048500,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 3
+          },
+          {
+            "variant": "go-pool96-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "10000",
+              "96"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 4807583,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 4
+          },
+          {
+            "variant": "go-pool96-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "10000",
+              "96"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 5200125,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 5
+          },
+          {
+            "variant": "go-pool96-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "10000",
+              "96"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 5311208,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 6
+          },
+          {
+            "variant": "go-pool96-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "10000",
+              "96"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "18\n",
+            "stderr": "",
+            "elapsed_ns": 4903458,
+            "count": 1,
+            "n": 10000,
+            "checksum": 18,
+            "repetition": 7
+          }
+        ]
+      },
+      "summary": {
+        "go-original-gogc800": {
+          "median_elapsed_ns": 4994917,
+          "min_elapsed_ns": 4696791,
+          "max_elapsed_ns": 6069458
+        },
+        "go-pool8-gogc200": {
+          "median_elapsed_ns": 7321625,
+          "min_elapsed_ns": 6709833,
+          "max_elapsed_ns": 8052083
+        },
+        "go-pool96-gogc800": {
+          "median_elapsed_ns": 4968750,
+          "min_elapsed_ns": 4554041,
+          "max_elapsed_ns": 5311208
+        }
+      },
+      "includes_process_startup": true,
+      "arena_reused": false
+    },
+    "100000": {
+      "repetitions": 7,
+      "count": 1,
+      "samples": {
+        "go-original-gogc800": [
+          {
+            "variant": "go-original-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+              "bench",
+              "1",
+              "100000",
+              "0"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 28686042,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 1
+          },
+          {
+            "variant": "go-original-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+              "bench",
+              "1",
+              "100000",
+              "0"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 28283708,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 2
+          },
+          {
+            "variant": "go-original-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+              "bench",
+              "1",
+              "100000",
+              "0"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 28163625,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 3
+          },
+          {
+            "variant": "go-original-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+              "bench",
+              "1",
+              "100000",
+              "0"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 27460625,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 4
+          },
+          {
+            "variant": "go-original-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+              "bench",
+              "1",
+              "100000",
+              "0"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 27322333,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 5
+          },
+          {
+            "variant": "go-original-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+              "bench",
+              "1",
+              "100000",
+              "0"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 26774375,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 6
+          },
+          {
+            "variant": "go-original-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-original",
+              "bench",
+              "1",
+              "100000",
+              "0"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 26742375,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 7
+          }
+        ],
+        "go-pool8-gogc200": [
+          {
+            "variant": "go-pool8-gogc200",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "100000",
+              "8"
+            ],
+            "environment_overrides": {
+              "GOGC": "200",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 29076416,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 1
+          },
+          {
+            "variant": "go-pool8-gogc200",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "100000",
+              "8"
+            ],
+            "environment_overrides": {
+              "GOGC": "200",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 29061583,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 2
+          },
+          {
+            "variant": "go-pool8-gogc200",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "100000",
+              "8"
+            ],
+            "environment_overrides": {
+              "GOGC": "200",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 29180042,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 3
+          },
+          {
+            "variant": "go-pool8-gogc200",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "100000",
+              "8"
+            ],
+            "environment_overrides": {
+              "GOGC": "200",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 27757792,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 4
+          },
+          {
+            "variant": "go-pool8-gogc200",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "100000",
+              "8"
+            ],
+            "environment_overrides": {
+              "GOGC": "200",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 27220917,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 5
+          },
+          {
+            "variant": "go-pool8-gogc200",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "100000",
+              "8"
+            ],
+            "environment_overrides": {
+              "GOGC": "200",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 27351500,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 6
+          },
+          {
+            "variant": "go-pool8-gogc200",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "100000",
+              "8"
+            ],
+            "environment_overrides": {
+              "GOGC": "200",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 27891500,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 7
+          }
+        ],
+        "go-pool96-gogc800": [
+          {
+            "variant": "go-pool96-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "100000",
+              "96"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 21573916,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 1
+          },
+          {
+            "variant": "go-pool96-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "100000",
+              "96"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 21930542,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 2
+          },
+          {
+            "variant": "go-pool96-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "100000",
+              "96"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 21156208,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 3
+          },
+          {
+            "variant": "go-pool96-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "100000",
+              "96"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 20518625,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 4
+          },
+          {
+            "variant": "go-pool96-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "100000",
+              "96"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 20230334,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 5
+          },
+          {
+            "variant": "go-pool96-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "100000",
+              "96"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 20742792,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 6
+          },
+          {
+            "variant": "go-pool96-gogc800",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/memory-poc/bin/go-pool",
+              "bench",
+              "1",
+              "100000",
+              "96"
+            ],
+            "environment_overrides": {
+              "GOGC": "800",
+              "GOMEMLIMIT": "off"
+            },
+            "stdout": "22\n",
+            "stderr": "",
+            "elapsed_ns": 20632209,
+            "count": 1,
+            "n": 100000,
+            "checksum": 22,
+            "repetition": 7
+          }
+        ]
+      },
+      "summary": {
+        "go-original-gogc800": {
+          "median_elapsed_ns": 27460625,
+          "min_elapsed_ns": 26742375,
+          "max_elapsed_ns": 28686042
+        },
+        "go-pool8-gogc200": {
+          "median_elapsed_ns": 27891500,
+          "min_elapsed_ns": 27220917,
+          "max_elapsed_ns": 29180042
+        },
+        "go-pool96-gogc800": {
+          "median_elapsed_ns": 20742792,
+          "min_elapsed_ns": 20230334,
+          "max_elapsed_ns": 21930542
+        }
+      },
+      "includes_process_startup": true,
+      "arena_reused": false
+    }
+  },
+  "methodology": {
+    "note": "separate diagnostics; forced GC only after a batch and in validation",
+    "sizes_sequence": [
+      100000,
+      1000,
+      0,
+      100000
+    ],
+    "counts": [
+      1,
+      10,
+      100
+    ],
+    "rss": "fresh parent per diagnostic child; macOS bytes"
+  }
+}

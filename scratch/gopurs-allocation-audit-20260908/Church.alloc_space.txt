@@ -1,0 +1,25 @@
+File: audit
+Type: alloc_space
+Time: 2026-09-08 11:12:23 CEST
+Showing nodes accounting for 1071.61kB, 99.42% of 1077.82kB total
+Dropped 77 nodes (cum <= 5.39kB)
+Showing top 18 nodes out of 37
+      flat  flat%   sum%        cum   cum%
+     320kB 29.69% 29.69%      320kB 29.69%  compress/flate.(*fastGen).addBlock
+     264kB 24.49% 54.18%   474.62kB 44.04%  compress/flate.NewWriter (inline)
+  164.19kB 15.23% 69.42%   164.19kB 15.23%  runtime/pprof.allFrames
+     136kB 12.62% 82.03%      136kB 12.62%  compress/flate.newFastEnc (inline)
+      64kB  5.94% 87.97%   210.62kB 19.54%  compress/flate.(*compressor).init
+   36.48kB  3.39% 91.36%    50.27kB  4.66%  runtime/pprof.(*profileBuilder).emitLocation
+      28kB  2.60% 93.96%  1057.95kB 98.16%  runtime/pprof.writeHeapInternal
+   17.50kB  1.62% 95.58%    17.50kB  1.62%  runtime/pprof.(*protobuf).varint (inline)
+   10.88kB  1.01% 96.59%    10.88kB  1.01%  runtime/pprof.(*profileBuilder).stringIndex (inline)
+   10.50kB  0.97% 97.56%    10.52kB  0.98%  runtime.mallocgc
+    9.25kB  0.86% 98.42%     9.25kB  0.86%  compress/flate.newHuffmanEncoder (inline)
+    4.83kB  0.45% 98.87%     8.96kB  0.83%  gopurs/output/gopurs_runtime.Apply
+    3.59kB  0.33% 99.20%  1029.95kB 95.56%  runtime/pprof.writeHeapProto
+    1.38kB  0.13% 99.33%    10.62kB  0.99%  compress/flate.newHuffmanBitWriter
+    0.98kB 0.091% 99.42%   216.12kB 20.05%  runtime/pprof.(*profileBuilder).appendLocsForStack
+    0.02kB 0.0022% 99.42%  1067.30kB 99.02%  main.main
+         0     0% 99.42%      320kB 29.69%  compress/flate.(*Writer).Close (inline)
+         0     0% 99.42%      320kB 29.69%  compress/flate.(*compressor).close

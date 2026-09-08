@@ -1,0 +1,115 @@
+Total: 1.05MB
+ROUTINE ======================== gopurs/output/purescript.Call_Test_Church_c100 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_Church.go
+      128B     1.38kB (flat, cum)  0.13% of Total
+         .          .    269:func Call_Test_Church_c100(n_0_loop int64) gopurs_runtime.Value {
+         .          .    270:var n_0 int64 = n_0_loop
+         .          .    271:_ = n_0
+         .          .    272:// TAST (Let): __local_var_1_0 shape=App(Var) bindingType=Any
+         .       640B    273:__local_var_1_0 := Call_Test_Church_fromInt(n_0)
+         .          .    274:_ = __local_var_1_0
+         .          .    275:// TAST (Let): __local_var_2_1 shape=App(Var) bindingType=(Func [(Func [Int] Int), Int] Int)
+         .       640B    276:__local_var_2_1 := Call_Test_Church_fromInt(n_0)
+         .          .    277:_ = __local_var_2_1
+      128B       128B    278:return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    279:return gopurs_runtime.Int(gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), gopurs_runtime.Int(x_4.IntVal)).IntVal)
+         .          .    280:})
+         .          .    281:}
+         .          .    282:
+         .          .    283:func Call_Test_Church_c10k(n_0_loop int64) gopurs_runtime.Value {
+ROUTINE ======================== gopurs/output/purescript.Call_Test_Church_c100.func1 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_Church.go
+         0     4.73kB (flat, cum)  0.44% of Total
+         .          .    278:return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+         .     4.73kB    279:return gopurs_runtime.Int(gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), gopurs_runtime.Int(x_4.IntVal)).IntVal)
+         .          .    280:})
+         .          .    281:}
+         .          .    282:
+         .          .    283:func Call_Test_Church_c10k(n_0_loop int64) gopurs_runtime.Value {
+         .          .    284:var n_0 int64 = n_0_loop
+ROUTINE ======================== gopurs/output/purescript.Call_Test_Church_c100k in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_Church.go
+       64B     1.81kB (flat, cum)  0.17% of Total
+         .          .    297:func Call_Test_Church_c100k(n_0_loop int64) gopurs_runtime.Value {
+         .          .    298:var n_0 int64 = n_0_loop
+         .          .    299:_ = n_0
+         .          .    300:// TAST (Let): __local_var_1_0 shape=App(Var) bindingType=Any
+         .     1.44kB    301:__local_var_1_0 := Call_Test_Church_c10k(n_0)
+         .          .    302:_ = __local_var_1_0
+         .          .    303:// TAST (Let): __local_var_2_1 shape=App(Var) bindingType=(Func [(Func [Int] Int), Int] Int)
+         .       320B    304:__local_var_2_1 := Call_Test_Church_fromInt(n_0)
+         .          .    305:_ = __local_var_2_1
+       64B        64B    306:return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    307:return gopurs_runtime.Int(gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), gopurs_runtime.Int(x_4.IntVal)).IntVal)
+         .          .    308:})
+         .          .    309:}
+         .          .    310:
+         .          .    311:func Call_Test_Church_addC(m_0_loop gopurs_runtime.Value, n_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+ROUTINE ======================== gopurs/output/purescript.Call_Test_Church_c100k.func1 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_Church.go
+         0     4.83kB (flat, cum)  0.45% of Total
+         .          .    306:return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+         .     4.83kB    307:return gopurs_runtime.Int(gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), gopurs_runtime.Int(x_4.IntVal)).IntVal)
+         .          .    308:})
+         .          .    309:}
+         .          .    310:
+         .          .    311:func Call_Test_Church_addC(m_0_loop gopurs_runtime.Value, n_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    312:var m_0 gopurs_runtime.Value = m_0_loop
+ROUTINE ======================== gopurs/output/purescript.Call_Test_Church_c10k in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_Church.go
+       64B     1.44kB (flat, cum)  0.13% of Total
+         .          .    283:func Call_Test_Church_c10k(n_0_loop int64) gopurs_runtime.Value {
+         .          .    284:var n_0 int64 = n_0_loop
+         .          .    285:_ = n_0
+         .          .    286:// TAST (Let): __local_var_1_0 shape=App(Var) bindingType=Any
+         .       704B    287:__local_var_1_0 := Call_Test_Church_c100(n_0)
+         .          .    288:_ = __local_var_1_0
+         .          .    289:// TAST (Let): __local_var_2_1 shape=App(Var) bindingType=(Func [(Func [Int] Int), Int] Int)
+         .       704B    290:__local_var_2_1 := Call_Test_Church_c100(n_0)
+         .          .    291:_ = __local_var_2_1
+       64B        64B    292:return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    293:return gopurs_runtime.Int(gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), gopurs_runtime.Int(x_4.IntVal)).IntVal)
+         .          .    294:})
+         .          .    295:}
+         .          .    296:
+         .          .    297:func Call_Test_Church_c100k(n_0_loop int64) gopurs_runtime.Value {
+ROUTINE ======================== gopurs/output/purescript.Call_Test_Church_c10k.func1 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_Church.go
+         0     4.78kB (flat, cum)  0.44% of Total
+         .          .    292:return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+         .     4.78kB    293:return gopurs_runtime.Int(gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), gopurs_runtime.Int(x_4.IntVal)).IntVal)
+         .          .    294:})
+         .          .    295:}
+         .          .    296:
+         .          .    297:func Call_Test_Church_c100k(n_0_loop int64) gopurs_runtime.Value {
+         .          .    298:var n_0 int64 = n_0_loop
+ROUTINE ======================== gopurs/output/purescript.Call_Test_Church_fromInt in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_Church.go
+    1.56kB     2.97kB (flat, cum)  0.28% of Total
+         .          .    235:func Call_Test_Church_fromInt(v_0_loop int64) gopurs_runtime.Value {
+         .          .    236:fromInt:
+         .          .    237:for {
+         .          .    238:if false { continue fromInt }
+         .          .    239:var v_0 int64 = v_0_loop
+         .          .    240:_ = v_0
+         .          .    241:var __t1 gopurs_runtime.Value
+         .          .    242:{
+         .          .    243:if (v_0) == (int64(0)) {
+         .          .    244:__t1 = Get_Test_Church_zeroC()
+         .          .    245:goto end_branch_1
+         .          .    246:} else {
+         .          .    247:
+         .          .    248:}
+         .          .    249:}
+         .          .    250:{
+         .          .    251:// TAST (Let): __local_var_1_0 shape=App(Var) bindingType=Any
+         .     1.41kB    252:__local_var_1_0 := Call_Test_Church_fromInt((v_0) - (int64(1)))
+         .          .    253:_ = __local_var_1_0
+    1.56kB     1.56kB    254:__t1 = gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    255:return gopurs_runtime.Int(gopurs_runtime.Apply(f_2, gopurs_runtime.Int(gopurs_runtime.Apply2(__local_var_1_0, f_2, gopurs_runtime.Int(x_3.IntVal)).IntVal)).IntVal)
+         .          .    256:})
+         .          .    257:}
+         .          .    258:end_branch_1:
+         .          .    259:return __t1
+ROUTINE ======================== gopurs/output/purescript.Call_Test_Church_fromInt.func1 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_Church.go
+         0     4.69kB (flat, cum)  0.43% of Total
+         .          .    254:__t1 = gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+         .     4.69kB    255:return gopurs_runtime.Int(gopurs_runtime.Apply(f_2, gopurs_runtime.Int(gopurs_runtime.Apply2(__local_var_1_0, f_2, gopurs_runtime.Int(x_3.IntVal)).IntVal)).IntVal)
+         .          .    256:})
+         .          .    257:}
+         .          .    258:end_branch_1:
+         .          .    259:return __t1
+         .          .    260:}

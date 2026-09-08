@@ -1,0 +1,33 @@
+File: audit
+Type: alloc_objects
+Time: 2026-09-08 11:12:23 CEST
+Active filters:
+   focus=gopurs/output/
+Showing nodes accounting for 1364, 100% of 1364 total
+Showing top 25 nodes out of 27
+      flat  flat%   sum%        cum   cum%
+       900 65.98% 65.98%        900 65.98%  gopurs/output/purescript.Call_Test_ListOps_sumEvens.func1
+       450 32.99% 98.97%        450 32.99%  gopurs/output/purescript.Call_Test_ListOps_filterEvens.func1
+         2  0.15% 99.12%          2  0.15%  gopurs/output/gopurs_runtime.Str (inline)
+         2  0.15% 99.27%        452 33.14%  gopurs/output/purescript.Call_Test_ListOps_filterEvens
+         2  0.15% 99.41%       1354 99.27%  gopurs/output/purescript.Call_Test_ListOps_sumEvens
+         2  0.15% 99.56%          3  0.22%  gopurs/output/purescript.init.func3
+         2  0.15% 99.71%          2  0.15%  sync.(*Pool).pinSlow
+         1 0.073% 99.78%          1 0.073%  fmt.(*buffer).write (inline)
+         1 0.073% 99.85%          1 0.073%  fmt.init.func1
+         1 0.073% 99.93%          2  0.15%  gopurs/output/gopurs_runtime.Box[go.shape.string]
+         1 0.073%   100%          1 0.073%  gopurs/output/purescript.Bench_Opaque (inline)
+         0     0%   100%          1 0.073%  fmt.(*fmt).fmtInteger
+         0     0%   100%          1 0.073%  fmt.(*fmt).pad
+         0     0%   100%          1 0.073%  fmt.(*pp).doPrintf
+         0     0%   100%          1 0.073%  fmt.(*pp).fmtInteger
+         0     0%   100%          1 0.073%  fmt.(*pp).printArg
+         0     0%   100%          4  0.29%  fmt.Sprintf
+         0     0%   100%          3  0.22%  fmt.newPrinter
+         0     0%   100%       1364   100%  gopurs/output/gopurs_runtime.Apply
+         0     0%   100%          4  0.29%  gopurs/output/purescript.Data_Show_ShowIntImpl (inline)
+         0     0%   100%       1364   100%  gopurs/output/purescript.Get_Test_ListOps_act.func1.1
+         0     0%   100%          6  0.44%  gopurs/output/purescript.init.func173
+         0     0%   100%       1364   100%  main.main
+         0     0%   100%       1364   100%  main.main.func1 (inline)
+         0     0%   100%       1364   100%  runtime.main

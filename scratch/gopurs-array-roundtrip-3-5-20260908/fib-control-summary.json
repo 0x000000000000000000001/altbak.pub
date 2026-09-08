@@ -1,0 +1,164 @@
+{
+  "pair_count": 10,
+  "pairs": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "metrics": {
+    "ns_per_op": {
+      "before": {
+        "n": 10,
+        "median": 293.0,
+        "min": 291.8,
+        "max": 297.6,
+        "q1": 292.525,
+        "q3": 294.3,
+        "iqr": 1.775000000000034
+      },
+      "after": {
+        "n": 10,
+        "median": 301.85,
+        "min": 297.9,
+        "max": 306.7,
+        "q1": 300.02500000000003,
+        "q3": 305.025,
+        "iqr": 4.999999999999943
+      },
+      "paired_delta_after_minus_before": {
+        "n": 10,
+        "median": 9.299999999999983,
+        "min": 3.3999999999999773,
+        "max": 14.399999999999977,
+        "q1": 6.125000000000014,
+        "q3": 10.549999999999983,
+        "iqr": 4.424999999999969
+      },
+      "paired_ratio_after_over_before": {
+        "n": 10,
+        "median": 1.0315061174498985,
+        "min": 1.011482607227288,
+        "max": 1.0492981855528927,
+        "q1": 1.0208402774044407,
+        "q3": 1.0360401602855758,
+        "iqr": 0.015199882881135052
+      },
+      "paired_percent_change": {
+        "n": 10,
+        "median": 3.1506117449898507,
+        "min": 1.1482607227288,
+        "max": 4.929818555289267,
+        "q1": 2.084027740444072,
+        "q3": 3.604016028557588,
+        "iqr": 1.5199882881135158
+      },
+      "ratio_of_medians": 1.0302047781569967,
+      "ratio_undefined_pairs": []
+    },
+    "bytes_per_op": {
+      "before": {
+        "n": 10,
+        "median": 114.0,
+        "min": 114.0,
+        "max": 114.0,
+        "q1": 114.0,
+        "q3": 114.0,
+        "iqr": 0.0
+      },
+      "after": {
+        "n": 10,
+        "median": 114.0,
+        "min": 114.0,
+        "max": 114.0,
+        "q1": 114.0,
+        "q3": 114.0,
+        "iqr": 0.0
+      },
+      "paired_delta_after_minus_before": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "q1": 0.0,
+        "q3": 0.0,
+        "iqr": 0.0
+      },
+      "paired_ratio_after_over_before": {
+        "n": 10,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "q1": 1.0,
+        "q3": 1.0,
+        "iqr": 0.0
+      },
+      "paired_percent_change": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "q1": 0.0,
+        "q3": 0.0,
+        "iqr": 0.0
+      },
+      "ratio_of_medians": 1.0,
+      "ratio_undefined_pairs": []
+    },
+    "allocs_per_op": {
+      "before": {
+        "n": 10,
+        "median": 7.0,
+        "min": 7.0,
+        "max": 7.0,
+        "q1": 7.0,
+        "q3": 7.0,
+        "iqr": 0.0
+      },
+      "after": {
+        "n": 10,
+        "median": 7.0,
+        "min": 7.0,
+        "max": 7.0,
+        "q1": 7.0,
+        "q3": 7.0,
+        "iqr": 0.0
+      },
+      "paired_delta_after_minus_before": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "q1": 0.0,
+        "q3": 0.0,
+        "iqr": 0.0
+      },
+      "paired_ratio_after_over_before": {
+        "n": 10,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "q1": 1.0,
+        "q3": 1.0,
+        "iqr": 0.0
+      },
+      "paired_percent_change": {
+        "n": 10,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "q1": 0.0,
+        "q3": 0.0,
+        "iqr": 0.0
+      },
+      "ratio_of_medians": 1.0,
+      "ratio_undefined_pairs": []
+    }
+  }
+}

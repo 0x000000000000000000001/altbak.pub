@@ -1,0 +1,25 @@
+File: audit
+Type: alloc_objects
+Time: 2026-09-08 11:12:23 CEST
+Showing nodes accounting for 1539, 98.09% of 1569 total
+Dropped 73 nodes (cum <= 7)
+Showing top 18 nodes out of 41
+      flat  flat%   sum%        cum   cum%
+      1059 67.50% 67.50%       1059 67.50%  runtime/pprof.allFrames
+       199 12.68% 80.18%        217 13.83%  runtime/pprof.(*profileBuilder).emitLocation
+       103  6.56% 86.74%        168 10.71%  gopurs/output/gopurs_runtime.Apply
+        59  3.76% 90.50%       1380 87.95%  runtime/pprof.writeHeapProto
+        50  3.19% 93.69%         50  3.19%  gopurs/output/purescript.Call_Test_Church_fromInt
+        16  1.02% 94.71%         16  1.02%  runtime/pprof.(*profileBuilder).stringIndex (inline)
+        13  0.83% 95.54%         13  0.83%  runtime/pprof.(*protobuf).varint (inline)
+        12  0.76% 96.30%         14  0.89%  runtime.mallocgc
+         8  0.51% 96.81%          8  0.51%  compress/flate.newHuffmanEncoder (inline)
+         6  0.38% 97.20%       1288 82.09%  runtime/pprof.(*profileBuilder).appendLocsForStack
+         6  0.38% 97.58%          9  0.57%  runtime/pprof.newProfileBuilder
+         2  0.13% 97.71%         42  2.68%  gopurs/output/purescript.Call_Test_Church_c100
+         1 0.064% 97.77%         11   0.7%  compress/flate.(*compressor).init
+         1 0.064% 97.83%         12  0.76%  compress/flate.NewWriter (inline)
+         1 0.064% 97.90%          9  0.57%  compress/flate.newHuffmanBitWriter
+         1 0.064% 97.96%         54  3.44%  gopurs/output/purescript.Call_Test_Church_c100k
+         1 0.064% 98.02%         43  2.74%  gopurs/output/purescript.Call_Test_Church_c10k
+         1 0.064% 98.09%       1555 99.11%  main.main

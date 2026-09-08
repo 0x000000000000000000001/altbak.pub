@@ -1,0 +1,25 @@
+File: audit
+Type: alloc_space
+Time: 2026-09-08 11:12:22 CEST
+Showing nodes accounting for 1.71MB, 98.38% of 1.74MB total
+Dropped 72 nodes (cum <= 0.01MB)
+Showing top 18 nodes out of 50
+      flat  flat%   sum%        cum   cum%
+    0.31MB 17.97% 17.97%     0.31MB 17.97%  compress/flate.(*fastGen).addBlock
+    0.26MB 14.83% 32.80%     0.46MB 26.66%  compress/flate.NewWriter (inline)
+    0.22MB 12.44% 45.24%     0.22MB 12.44%  runtime/pprof.allFrames
+    0.17MB  9.53% 54.77%     0.17MB  9.53%  gopurs/output/gopurs_runtime.RecordDict (inline)
+    0.13MB  7.64% 62.41%     0.13MB  7.64%  compress/flate.newFastEnc (inline)
+    0.09MB  5.27% 67.68%     0.55MB 31.63%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1 (inline)
+    0.09MB  5.27% 72.94%     0.55MB 31.49%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1.1.1 (inline)
+    0.09MB  5.27% 78.21%     0.15MB  8.42%  gopurs/output/purescript.Get_Test_StateMonad_modify.func1.1.1 (inline)
+    0.06MB  3.59% 81.80%     0.21MB 11.83%  compress/flate.(*compressor).init
+    0.05MB  3.16% 84.96%     0.55MB 31.86%  gopurs/output/gopurs_runtime.Apply
+    0.05MB  3.16% 88.12%     0.11MB  6.32%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications
+    0.04MB  2.25% 90.37%     1.17MB 67.53%  runtime/pprof.writeHeapInternal
+    0.04MB  2.21% 92.58%     1.14MB 65.28%  runtime/pprof.writeHeapProto
+    0.04MB  2.05% 94.63%     0.05MB  2.82%  runtime/pprof.(*profileBuilder).emitLocation
+    0.02MB  1.26% 95.89%     0.02MB  1.26%  runtime/pprof.runtime_expandFinalInlineFrame
+    0.02MB  0.98% 96.87%     0.02MB  0.98%  runtime/pprof.(*protobuf).varint (inline)
+    0.02MB   0.9% 97.77%     0.02MB   0.9%  runtime/pprof.(*protobuf).string (inline)
+    0.01MB  0.61% 98.38%     0.01MB  0.61%  runtime/pprof.(*profileBuilder).stringIndex (inline)

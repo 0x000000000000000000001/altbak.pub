@@ -1,0 +1,114 @@
+[
+  {
+    "test": "AstTree",
+    "result": "7",
+    "samples": 3,
+    "ns_per_op": 695.5332725615315,
+    "bytes_per_op": 1808.4098450319052,
+    "allocs_per_op": 49.00072926162261
+  },
+  {
+    "test": "Fib",
+    "result": "55",
+    "samples": 3,
+    "ns_per_op": 442.44375,
+    "bytes_per_op": 114.1124,
+    "allocs_per_op": 7.0002
+  },
+  {
+    "test": "ListOps",
+    "result": "202950",
+    "samples": 3,
+    "ns_per_op": 9350.362675566681,
+    "bytes_per_op": 32594.489778890278,
+    "allocs_per_op": 1362.0043109442358
+  },
+  {
+    "test": "TCO",
+    "result": "100000",
+    "samples": 3,
+    "ns_per_op": 40482.71236420072,
+    "bytes_per_op": 129.16295913088464,
+    "allocs_per_op": 8.002069322296947
+  },
+  {
+    "test": "Records",
+    "result": "20000",
+    "samples": 3,
+    "ns_per_op": 5337.248628884827,
+    "bytes_per_op": 128.13698964046313,
+    "allocs_per_op": 8.000243753808654
+  },
+  {
+    "test": "Ackermann",
+    "result": "125",
+    "samples": 3,
+    "ns_per_op": 16850.991813602017,
+    "bytes_per_op": 115.63560033585223,
+    "allocs_per_op": 7.000419815281276
+  },
+  {
+    "test": "Church",
+    "result": "100000",
+    "samples": 3,
+    "ns_per_op": 475690.6091954023,
+    "bytes_per_op": 6940.919540229885,
+    "allocs_per_op": 165.02298850574712
+  },
+  {
+    "test": "Primes",
+    "result": "21536",
+    "samples": 3,
+    "ns_per_op": 79225.08424908425,
+    "bytes_per_op": 257492.7619047619,
+    "allocs_per_op": 10732.038461538461
+  },
+  {
+    "test": "RBTree",
+    "result": "22",
+    "samples": 3,
+    "ns_per_op": 23045208.333333332,
+    "bytes_per_op": 79488696,
+    "allocs_per_op": 2483959
+  },
+  {
+    "test": "Polymorphism",
+    "result": "10000000",
+    "samples": 3,
+    "ns_per_op": 2326802.0833333335,
+    "bytes_per_op": 222.44444444444446,
+    "allocs_per_op": 10.11111111111111
+  },
+  {
+    "test": "StateMonad",
+    "result": "1200",
+    "samples": 3,
+    "ns_per_op": 138838.50947368421,
+    "bytes_per_op": 578729.8526315789,
+    "allocs_per_op": 13268.067368421052
+  },
+  {
+    "test": "LazyEvaluation",
+    "result": "1000000",
+    "samples": 3,
+    "ns_per_op": 248671.27034883722,
+    "bytes_per_op": 134.53488372093022,
+    "allocs_per_op": 8.011627906976743
+  },
+  {
+    "test": "ArrayOps",
+    "result": "202950",
+    "samples": 3,
+    "ns_per_op": 10015.414492050006,
+    "bytes_per_op": 77189.68127199903,
+    "allocs_per_op": 23.009588542298822
+  },
+  {
+    "test": "RowToList",
+    "result": "5",
+    "samples": 3,
+    "ns_per_op": 61.34795,
+    "bytes_per_op": 112.1028,
+    "allocs_per_op": 6.0001
+  }
+]

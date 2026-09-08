@@ -1,0 +1,20 @@
+{
+  "compiled_original": {
+    "n": 7,
+    "ns": 9044.0,
+    "bytes": 77056,
+    "allocs": 15
+  },
+  "copied_original": {
+    "n": 7,
+    "ns": 9129.0,
+    "bytes": 77056,
+    "allocs": 15
+  },
+  "without_roundtrip": {
+    "n": 7,
+    "ns": 8398.0,
+    "bytes": 62080,
+    "allocs": 13
+  }
+}

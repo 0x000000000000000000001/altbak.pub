@@ -1,0 +1,15 @@
+File: audit
+Type: alloc_objects
+Time: 2026-09-08 11:12:20 CEST
+Showing nodes accounting for 2483949, 99.91% of 2486247 total
+Dropped 104 nodes (cum <= 12431)
+      flat  flat%   sum%        cum   cum%
+   2383932 95.88% 95.88%    2383932 95.88%  gopurs/output/purescript.Call_Test_RBTree_balance
+    100000  4.02% 99.91%    2483932 99.91%  gopurs/output/purescript.Call_Test_RBTree_ins
+        16 0.00064% 99.91%    2483948 99.91%  gopurs/output/purescript.Call_Test_RBTree_insert
+         1 4e-05% 99.91%    2486239   100%  main.main
+         0     0% 99.91%    2483958 99.91%  gopurs/output/gopurs_runtime.Apply
+         0     0% 99.91%    2483948 99.91%  gopurs/output/purescript.Call_Test_RBTree_buildTree
+         0     0% 99.91%    2483958 99.91%  gopurs/output/purescript.Get_Test_RBTree_act.func1.1
+         0     0% 99.91%    2483958 99.91%  main.main.func1 (inline)
+         0     0% 99.91%    2486239   100%  runtime.main

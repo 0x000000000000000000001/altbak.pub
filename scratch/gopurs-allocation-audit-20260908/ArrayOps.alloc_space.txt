@@ -1,0 +1,25 @@
+File: audit
+Type: alloc_space
+Time: 2026-09-08 11:10:57 CEST
+Showing nodes accounting for 1032.31kB, 99.34% of 1039.17kB total
+Dropped 57 nodes (cum <= 5.20kB)
+Showing top 18 nodes out of 50
+      flat  flat%   sum%        cum   cum%
+     320kB 30.79% 30.79%      320kB 30.79%  compress/flate.(*fastGen).addBlock
+     264kB 25.40% 56.20%   474.62kB 45.67%  compress/flate.NewWriter (inline)
+     136kB 13.09% 69.29%      136kB 13.09%  compress/flate.newFastEnc (inline)
+   65.78kB  6.33% 75.62%    65.78kB  6.33%  runtime/pprof.allFrames
+      64kB  6.16% 81.77%   210.62kB 20.27%  compress/flate.(*compressor).init
+   35.78kB  3.44% 85.22%    57.98kB  5.58%  runtime/pprof.(*profileBuilder).emitLocation
+   31.35kB  3.02% 88.24%    60.62kB  5.83%  gopurs/output/purescript.Call_Test_ArrayOps_sumEvens.func1.func1.func1.func1 (inline)
+   21.25kB  2.04% 90.28%    21.27kB  2.05%  gopurs/output/purescript.init.func74.1 (inline)
+   17.50kB  1.68% 91.96%    17.50kB  1.68%  runtime/pprof.(*protobuf).varint (inline)
+   17.29kB  1.66% 93.63%    17.29kB  1.66%  runtime/pprof.(*profileBuilder).stringIndex (inline)
+   10.62kB  1.02% 94.65%    75.25kB  7.24%  gopurs/output/purescript.Call_Test_ArrayOps_sumEvens.func1.func1
+    9.25kB  0.89% 95.54%     9.25kB  0.89%  compress/flate.newHuffmanEncoder (inline)
+       8kB  0.77% 96.31%        8kB  0.77%  gopurs/output/purescript.Data_Array_RangeImpl (inline)
+       8kB  0.77% 97.08%   955.99kB 92.00%  runtime/pprof.writeHeapInternal
+    7.53kB  0.72% 97.80%   947.99kB 91.23%  runtime/pprof.writeHeapProto
+    6.75kB  0.65% 98.45%     6.75kB  0.65%  runtime/pprof.(*protobuf).string (inline)
+    5.20kB   0.5% 98.95%     5.21kB   0.5%  runtime.mallocgc
+       4kB  0.38% 99.34%    64.62kB  6.22%  gopurs/output/purescript.Call_Test_ArrayOps_sumEvens.func1.func1.func1 (inline)

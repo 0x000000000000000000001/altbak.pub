@@ -1,0 +1,25 @@
+File: audit
+Type: alloc_objects
+Time: 2026-09-08 11:12:23 CEST
+Showing nodes accounting for 1975, 97.63% of 2023 total
+Dropped 84 nodes (cum <= 10)
+Showing top 18 nodes out of 23
+      flat  flat%   sum%        cum   cum%
+       900 44.49% 44.49%        900 44.49%  gopurs/output/purescript.Call_Test_ListOps_sumEvens.func1
+       450 22.24% 66.73%        450 22.24%  gopurs/output/purescript.Call_Test_ListOps_filterEvens.func1
+       352 17.40% 84.13%        352 17.40%  runtime/pprof.allFrames
+       179  8.85% 92.98%        198  9.79%  runtime/pprof.(*profileBuilder).emitLocation
+        53  2.62% 95.60%        645 31.88%  runtime/pprof.writeHeapProto
+        16  0.79% 96.39%         16  0.79%  runtime/pprof.(*profileBuilder).stringIndex (inline)
+        13  0.64% 97.03%         13  0.64%  runtime/pprof.(*protobuf).varint (inline)
+         4   0.2% 97.23%        560 27.68%  runtime/pprof.(*profileBuilder).appendLocsForStack
+         2 0.099% 97.33%        452 22.34%  gopurs/output/purescript.Call_Test_ListOps_filterEvens
+         2 0.099% 97.43%       1354 66.93%  gopurs/output/purescript.Call_Test_ListOps_sumEvens
+         1 0.049% 97.48%         11  0.54%  compress/flate.(*compressor).init
+         1 0.049% 97.53%         12  0.59%  compress/flate.NewWriter (inline)
+         1 0.049% 97.58%       2016 99.65%  main.main
+         1 0.049% 97.63%        646 31.93%  runtime/pprof.writeHeapInternal
+         0     0% 97.63%         12  0.59%  compress/gzip.(*Writer).Write
+         0     0% 97.63%       1364 67.42%  gopurs/output/gopurs_runtime.Apply
+         0     0% 97.63%       1364 67.42%  gopurs/output/purescript.Get_Test_ListOps_act.func1.1
+         0     0% 97.63%       1364 67.42%  main.main.func1 (inline)

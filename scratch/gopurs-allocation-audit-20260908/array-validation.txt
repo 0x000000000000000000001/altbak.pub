@@ -1,0 +1,4 @@
+=== RUN   TestArrayCounterfactual
+--- PASS: TestArrayCounterfactual (0.08s)
+PASS
+ok  	allocationaudit	0.516s

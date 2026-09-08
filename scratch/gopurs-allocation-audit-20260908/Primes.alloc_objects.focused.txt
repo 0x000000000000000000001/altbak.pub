@@ -1,0 +1,29 @@
+File: audit
+Type: alloc_objects
+Time: 2026-09-08 11:12:22 CEST
+Active filters:
+   focus=gopurs/output/
+Showing nodes accounting for 10735, 100% of 10735 total
+      flat  flat%   sum%        cum   cum%
+      4968 46.28% 46.28%       9746 90.79%  gopurs/output/purescript.Call_Test_Primes_filter__3878167378.func1
+      4778 44.51% 90.79%       4778 44.51%  gopurs/output/purescript.Call_Test_Primes_filter__3878167378.func1.1
+       499  4.65% 95.44%        499  4.65%  gopurs/output/purescript.Get_Test_Primes_act.func1.1.4
+       285  2.65% 98.09%      10031 93.44%  gopurs/output/purescript.Call_Test_Primes_filter__3878167378
+       190  1.77% 99.86%      10221 95.21%  gopurs/output/purescript.Call_Test_Primes_sieve
+         4 0.037% 99.90%      10735   100%  gopurs/output/purescript.Get_Test_Primes_act.func1.1
+         2 0.019% 99.92%          2 0.019%  gopurs/output/gopurs_runtime.Str
+         2 0.019% 99.93%          3 0.028%  gopurs/output/purescript.init.func3
+         2 0.019%   100%          2 0.019%  sync.(*Pool).pinSlow
+         1 0.0093%   100%          4 0.037%  fmt.Sprintf
+         1 0.0093%   100%          1 0.0093%  fmt.init.func1
+         1 0.0093%   100%          2 0.019%  gopurs/output/gopurs_runtime.Box[go.shape.string]
+         1 0.0093%   100%          1 0.0093%  gopurs/output/purescript.Bench_Opaque
+         1 0.0093%   100%          5 0.047%  gopurs/output/purescript.Data_Show_ShowIntImpl
+         0     0%   100%          3 0.028%  fmt.newPrinter
+         0     0%   100%      10735   100%  gopurs/output/gopurs_runtime.Apply
+         0     0%   100%          7 0.065%  gopurs/output/purescript.init.func173
+         0     0%   100%      10735   100%  main.main
+         0     0%   100%      10735   100%  main.main.func1 (inline)
+         0     0%   100%      10735   100%  runtime.main
+         0     0%   100%          3 0.028%  sync.(*Pool).Get
+         0     0%   100%          2 0.019%  sync.(*Pool).pin

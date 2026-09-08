@@ -1,0 +1,3 @@
+so translate: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/gopurs_runtime/runtime.go:853:1: multi-return must have exactly 2 values
+func ExtractVariant(variant interface{}) (string, interface{}, bool) {
+^here

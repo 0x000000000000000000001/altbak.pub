@@ -1,0 +1,25 @@
+File: audit
+Type: alloc_space
+Time: 2026-09-08 11:12:22 CEST
+Showing nodes accounting for 1910.16kB, 99.29% of 1923.82kB total
+Dropped 44 nodes (cum <= 9.62kB)
+Showing top 18 nodes out of 31
+      flat  flat%   sum%        cum   cum%
+  674.38kB 35.05% 35.05%   674.38kB 35.05%  runtime/pprof.allFrames
+     320kB 16.63% 51.69%      320kB 16.63%  compress/flate.(*fastGen).addBlock
+     264kB 13.72% 65.41%   474.62kB 24.67%  compress/flate.NewWriter (inline)
+     136kB  7.07% 72.48%      136kB  7.07%  compress/flate.newFastEnc (inline)
+     128kB  6.65% 79.13%  1669.79kB 86.80%  runtime/pprof.writeHeapInternal
+  114.95kB  5.98% 85.11%   226.94kB 11.80%  gopurs/output/purescript.Call_Test_Primes_filter__3878167378.func1
+  111.98kB  5.82% 90.93%   111.98kB  5.82%  gopurs/output/purescript.Call_Test_Primes_filter__3878167378.func1.1
+      64kB  3.33% 94.26%   210.62kB 10.95%  compress/flate.(*compressor).init
+   36.20kB  1.88% 96.14%    54.99kB  2.86%  runtime/pprof.(*profileBuilder).emitLocation
+   17.50kB  0.91% 97.05%    17.50kB  0.91%  runtime/pprof.(*protobuf).varint (inline)
+   11.70kB  0.61% 97.66%    11.70kB  0.61%  gopurs/output/purescript.Get_Test_Primes_act.func1.1.4
+   10.88kB  0.57% 98.22%    10.88kB  0.57%  runtime/pprof.(*profileBuilder).stringIndex (inline)
+    8.91kB  0.46% 98.68%   235.84kB 12.26%  gopurs/output/purescript.Call_Test_Primes_filter__3878167378
+    4.53kB  0.24% 98.92%  1541.79kB 80.14%  runtime/pprof.writeHeapProto
+    3.71kB  0.19% 99.11%   239.55kB 12.45%  gopurs/output/purescript.Call_Test_Primes_sieve
+    1.98kB   0.1% 99.22%   732.02kB 38.05%  runtime/pprof.(*profileBuilder).appendLocsForStack
+    1.38kB 0.071% 99.29%    10.62kB  0.55%  compress/flate.newHuffmanBitWriter
+    0.06kB 0.0032% 99.29%   253.63kB 13.18%  gopurs/output/purescript.Get_Test_Primes_act.func1.1

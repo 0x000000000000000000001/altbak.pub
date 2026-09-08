@@ -1,0 +1,238 @@
+Total: 959.48kB
+ROUTINE ======================== gopurs/output/purescript.Call_Test_ListOps_filterEvens in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_ListOps.go
+       32B    10.58kB (flat, cum)  1.10% of Total
+         .          .    350:func Call_Test_ListOps_filterEvens(lst_0_loop *Constructor_Test_ListOps_Cons[int64]) *Constructor_Test_ListOps_Cons[int64] {
+         .          .    351:var lst_0 *Constructor_Test_ListOps_Cons[int64] = lst_0_loop
+         .          .    352:_ = lst_0
+         .          .    353:var Call_local_Test_ListOps_go__717521980_1_0_2 func(*Constructor_Test_ListOps_Cons[int64], *Constructor_Test_ListOps_Cons[int64]) *Constructor_Test_ListOps_Cons[int64]
+         .          .    354:_ = Call_local_Test_ListOps_go__717521980_1_0_2
+         .          .    355:var go__717521980_1_0_2 gopurs_runtime.Value
+         .          .    356:_ = go__717521980_1_0_2
+         .          .    357:Call_local_Test_ListOps_go__717521980_1_0_2 = func(v_2_loop *Constructor_Test_ListOps_Cons[int64], v1_3_loop *Constructor_Test_ListOps_Cons[int64]) *Constructor_Test_ListOps_Cons[int64] {
+         .          .    358:go__717521980_1_0_2:
+         .          .    359:for {
+         .          .    360:if false { continue go__717521980_1_0_2 }
+         .          .    361:var v_2 *Constructor_Test_ListOps_Cons[int64] = v_2_loop
+         .          .    362:_ = v_2
+         .          .    363:var v1_3 *Constructor_Test_ListOps_Cons[int64] = v1_3_loop
+         .          .    364:_ = v1_3
+         .          .    365:var __t2 *Constructor_Test_ListOps_Cons[int64]
+         .          .    366:{
+         .          .    367:if (v_2 == nil) {
+         .          .    368:__t2 = v1_3
+         .          .    369:goto end_branch_2
+         .          .    370:} else {
+         .          .    371:
+         .          .    372:}
+         .          .    373:}
+         .          .    374:{
+         .          .    375:if (v_2 != nil) {
+         .          .    376:var __t1 *Constructor_Test_ListOps_Cons[int64]
+         .          .    377:{
+         .          .    378:if (((v_2).V0) % (int64(2))) == (int64(0)) {
+         .          .    379:v_2_loop = (v_2).V1
+         .          .    380:v1_3_loop = (&Constructor_Test_ListOps_Cons[int64]{1, (v_2).V0, v1_3})
+         .          .    381:continue go__717521980_1_0_2
+         .          .    382:__t1 = func() *Constructor_Test_ListOps_Cons[int64] { panic("unreachable") }()
+         .          .    383:goto end_branch_1
+         .          .    384:} else {
+         .          .    385:
+         .          .    386:}
+         .          .    387:}
+         .          .    388:{
+         .          .    389:v_2_loop = (v_2).V1
+         .          .    390:v1_3_loop = v1_3
+         .          .    391:continue go__717521980_1_0_2
+         .          .    392:__t1 = func() *Constructor_Test_ListOps_Cons[int64] { panic("unreachable") }()
+         .          .    393:}
+         .          .    394:end_branch_1:
+         .          .    395:__t2 = __t1
+         .          .    396:goto end_branch_2
+         .          .    397:} else {
+         .          .    398:
+         .          .    399:}
+         .          .    400:}
+         .          .    401:{
+         .          .    402:__t2 = func() *Constructor_Test_ListOps_Cons[int64] { panic("Failed pattern match") }()
+         .          .    403:}
+         .          .    404:end_branch_2:
+         .          .    405:return __t2
+         .          .    406:}
+         .          .    407:}
+       16B        16B    408:go__717521980_1_0_2 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    409:return gopurs_runtime.Func(func(v1_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    410:return gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(Rebox_Test_ListOps_2722731916_840821239(Call_local_Test_ListOps_go__717521980_1_0_2(gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[int64]](v_2_loop_val), gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[int64]](v1_3_loop_val))))}
+         .          .    411:})
+         .          .    412:})
+         .          .    413:var go__go_2_3_3 gopurs_runtime.Value
+         .          .    414:_ = go__go_2_3_3
+         .          .    415:// FALLBACK TCO: isLoop=false len=1
+       16B        16B    416:go__go_2_3_3 = gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    417:var __t7 *Constructor_Test_ListOps_Cons[int64]
+         .          .    418:{
+         .          .    419:var __t_tag_4 *Constructor_Test_ListOps_Cons[int64] = Rebox_Test_ListOps_840821239_2722731916(gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[gopurs_runtime.Value]](v_3))
+         .          .    420:if (__t_tag_4 == nil) {
+         .          .    421:__t7 = Rebox_Test_ListOps_840821239_2722731916(gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[gopurs_runtime.Value]](v1_4))
+         .          .    422:goto end_branch_7
+         .          .    423:} else {
+         .          .    424:
+         .          .    425:}
+         .          .    426:}
+         .          .    427:{
+         .          .    428:var __t_tag_5 *Constructor_Test_ListOps_Cons[int64] = Rebox_Test_ListOps_840821239_2722731916(gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[gopurs_runtime.Value]](v_3))
+         .          .    429:if (__t_tag_5 != nil) {
+         .          .    430:var __t6 *Constructor_Test_ListOps_Cons[int64]
+         .          .    431:{
+         .          .    432:if (((*Constructor_Test_ListOps_Cons[gopurs_runtime.Value])(v_3.UnsafePtr).V0.IntVal) % (int64(2))) == (int64(0)) {
+         .          .    433:__t6 = Call_local_Test_ListOps_go__717521980_1_0_2(Rebox_Test_ListOps_840821239_2722731916((*Constructor_Test_ListOps_Cons[gopurs_runtime.Value])(v_3.UnsafePtr).V1), (&Constructor_Test_ListOps_Cons[int64]{1, (*Constructor_Test_ListOps_Cons[gopurs_runtime.Value])(v_3.UnsafePtr).V0.IntVal, Rebox_Test_ListOps_840821239_2722731916(gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[gopurs_runtime.Value]](v1_4))}))
+         .          .    434:goto end_branch_6
+         .          .    435:} else {
+         .          .    436:
+         .          .    437:}
+         .          .    438:}
+         .          .    439:{
+         .          .    440:__t6 = Call_local_Test_ListOps_go__717521980_1_0_2(Rebox_Test_ListOps_840821239_2722731916((*Constructor_Test_ListOps_Cons[gopurs_runtime.Value])(v_3.UnsafePtr).V1), Rebox_Test_ListOps_840821239_2722731916(gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[gopurs_runtime.Value]](v1_4)))
+         .          .    441:}
+         .          .    442:end_branch_6:
+         .          .    443:__t7 = __t6
+         .          .    444:goto end_branch_7
+         .          .    445:} else {
+         .          .    446:
+         .          .    447:}
+         .          .    448:}
+         .          .    449:{
+         .          .    450:__t7 = func() *Constructor_Test_ListOps_Cons[int64] { panic("Failed pattern match") }()
+         .          .    451:}
+         .          .    452:end_branch_7:
+         .          .    453:return gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(Rebox_Test_ListOps_2722731916_840821239(__t7))}
+         .          .    454:})
+         .    10.55kB    455:return Call_local_Test_ListOps_go__717521980_1_0_2(lst_0, (*Constructor_Test_ListOps_Cons[int64])(nil))
+         .          .    456:}
+         .          .    457:
+         .          .    458:func Call_Test_ListOps_sumEvens(n_0_loop int64) int64 {
+         .          .    459:var n_0 int64 = n_0_loop
+         .          .    460:_ = n_0
+ROUTINE ======================== gopurs/output/purescript.Call_Test_ListOps_filterEvens.func1 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_ListOps.go
+   10.55kB    10.55kB (flat, cum)  1.10% of Total
+         .          .    357:Call_local_Test_ListOps_go__717521980_1_0_2 = func(v_2_loop *Constructor_Test_ListOps_Cons[int64], v1_3_loop *Constructor_Test_ListOps_Cons[int64]) *Constructor_Test_ListOps_Cons[int64] {
+         .          .    358:go__717521980_1_0_2:
+         .          .    359:for {
+         .          .    360:if false { continue go__717521980_1_0_2 }
+         .          .    361:var v_2 *Constructor_Test_ListOps_Cons[int64] = v_2_loop
+         .          .    362:_ = v_2
+         .          .    363:var v1_3 *Constructor_Test_ListOps_Cons[int64] = v1_3_loop
+         .          .    364:_ = v1_3
+         .          .    365:var __t2 *Constructor_Test_ListOps_Cons[int64]
+         .          .    366:{
+         .          .    367:if (v_2 == nil) {
+         .          .    368:__t2 = v1_3
+         .          .    369:goto end_branch_2
+         .          .    370:} else {
+         .          .    371:
+         .          .    372:}
+         .          .    373:}
+         .          .    374:{
+         .          .    375:if (v_2 != nil) {
+         .          .    376:var __t1 *Constructor_Test_ListOps_Cons[int64]
+         .          .    377:{
+         .          .    378:if (((v_2).V0) % (int64(2))) == (int64(0)) {
+         .          .    379:v_2_loop = (v_2).V1
+   10.55kB    10.55kB    380:v1_3_loop = (&Constructor_Test_ListOps_Cons[int64]{1, (v_2).V0, v1_3})
+         .          .    381:continue go__717521980_1_0_2
+         .          .    382:__t1 = func() *Constructor_Test_ListOps_Cons[int64] { panic("unreachable") }()
+         .          .    383:goto end_branch_1
+         .          .    384:} else {
+         .          .    385:
+ROUTINE ======================== gopurs/output/purescript.Call_Test_ListOps_sumEvens in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_ListOps.go
+       32B    31.70kB (flat, cum)  3.30% of Total
+         .          .    458:func Call_Test_ListOps_sumEvens(n_0_loop int64) int64 {
+         .          .    459:var n_0 int64 = n_0_loop
+         .          .    460:_ = n_0
+         .          .    461:var Call_local_Test_ListOps_go__1739844119_1_0_4 func(int64, *Constructor_Test_ListOps_Cons[int64]) *Constructor_Test_ListOps_Cons[int64]
+         .          .    462:_ = Call_local_Test_ListOps_go__1739844119_1_0_4
+         .          .    463:var go__1739844119_1_0_4 gopurs_runtime.Value
+         .          .    464:_ = go__1739844119_1_0_4
+         .          .    465:Call_local_Test_ListOps_go__1739844119_1_0_4 = func(curr_2_loop int64, acc_3_loop *Constructor_Test_ListOps_Cons[int64]) *Constructor_Test_ListOps_Cons[int64] {
+         .          .    466:go__1739844119_1_0_4:
+         .          .    467:for {
+         .          .    468:if false { continue go__1739844119_1_0_4 }
+         .          .    469:var curr_2 int64 = curr_2_loop
+         .          .    470:_ = curr_2
+         .          .    471:var acc_3 *Constructor_Test_ListOps_Cons[int64] = acc_3_loop
+         .          .    472:_ = acc_3
+         .          .    473:var __t1 *Constructor_Test_ListOps_Cons[int64]
+         .          .    474:{
+         .          .    475:if (curr_2) < (int64(1)) {
+         .          .    476:__t1 = acc_3
+         .          .    477:goto end_branch_1
+         .          .    478:} else {
+         .          .    479:
+         .          .    480:}
+         .          .    481:}
+         .          .    482:{
+         .          .    483:curr_2_loop = (curr_2) - (int64(1))
+         .          .    484:acc_3_loop = (&Constructor_Test_ListOps_Cons[int64]{1, curr_2, acc_3})
+         .          .    485:continue go__1739844119_1_0_4
+         .          .    486:__t1 = func() *Constructor_Test_ListOps_Cons[int64] { panic("unreachable") }()
+         .          .    487:}
+         .          .    488:end_branch_1:
+         .          .    489:return __t1
+         .          .    490:}
+         .          .    491:}
+       16B        16B    492:go__1739844119_1_0_4 = gopurs_runtime.Func(func(curr_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    493:return gopurs_runtime.Func(func(acc_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    494:return gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(Rebox_Test_ListOps_2722731916_840821239(Call_local_Test_ListOps_go__1739844119_1_0_4(curr_2_loop_val.IntVal, gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[int64]](acc_3_loop_val))))}
+         .          .    495:})
+         .          .    496:})
+         .          .    497:var go__go_2_2_5 gopurs_runtime.Value
+         .          .    498:_ = go__go_2_2_5
+         .          .    499:// FALLBACK TCO: isLoop=false len=1
+       16B        16B    500:go__go_2_2_5 = gopurs_runtime.Func2(func(curr_3 gopurs_runtime.Value, acc_4 gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    501:var __t3 *Constructor_Test_ListOps_Cons[int64]
+         .          .    502:{
+         .          .    503:if (curr_3.IntVal) < (int64(1)) {
+         .          .    504:__t3 = Rebox_Test_ListOps_840821239_2722731916(gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[gopurs_runtime.Value]](acc_4))
+         .          .    505:goto end_branch_3
+         .          .    506:} else {
+         .          .    507:
+         .          .    508:}
+         .          .    509:}
+         .          .    510:{
+         .          .    511:__t3 = Call_local_Test_ListOps_go__1739844119_1_0_4((curr_3.IntVal) - (int64(1)), (&Constructor_Test_ListOps_Cons[int64]{1, curr_3.IntVal, Rebox_Test_ListOps_840821239_2722731916(gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[gopurs_runtime.Value]](acc_4))}))
+         .          .    512:}
+         .          .    513:end_branch_3:
+         .          .    514:return gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(Rebox_Test_ListOps_2722731916_840821239(__t3))}
+         .          .    515:})
+         .    31.67kB    516:return Call_Test_ListOps_foldl__3865670492(Get_Data_Semiring_intAdd(), int64(0), Call_Test_ListOps_filterEvens(Call_local_Test_ListOps_go__1739844119_1_0_4(n_0, (*Constructor_Test_ListOps_Cons[int64])(nil))))
+         .          .    517:}
+         .          .    518:
+         .          .    519:func Rebox_Test_ListOps_2722731916_840821239(in *Constructor_Test_ListOps_Cons[int64]) *Constructor_Test_ListOps_Cons[gopurs_runtime.Value] {
+         .          .    520:	if in == nil { return nil }
+         .          .    521:	out := &Constructor_Test_ListOps_Cons[gopurs_runtime.Value]{}
+ROUTINE ======================== gopurs/output/purescript.Call_Test_ListOps_sumEvens.func1 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_ListOps.go
+   21.09kB    21.09kB (flat, cum)  2.20% of Total
+         .          .    465:Call_local_Test_ListOps_go__1739844119_1_0_4 = func(curr_2_loop int64, acc_3_loop *Constructor_Test_ListOps_Cons[int64]) *Constructor_Test_ListOps_Cons[int64] {
+         .          .    466:go__1739844119_1_0_4:
+         .          .    467:for {
+         .          .    468:if false { continue go__1739844119_1_0_4 }
+         .          .    469:var curr_2 int64 = curr_2_loop
+         .          .    470:_ = curr_2
+         .          .    471:var acc_3 *Constructor_Test_ListOps_Cons[int64] = acc_3_loop
+         .          .    472:_ = acc_3
+         .          .    473:var __t1 *Constructor_Test_ListOps_Cons[int64]
+         .          .    474:{
+         .          .    475:if (curr_2) < (int64(1)) {
+         .          .    476:__t1 = acc_3
+         .          .    477:goto end_branch_1
+         .          .    478:} else {
+         .          .    479:
+         .          .    480:}
+         .          .    481:}
+         .          .    482:{
+         .          .    483:curr_2_loop = (curr_2) - (int64(1))
+   21.09kB    21.09kB    484:acc_3_loop = (&Constructor_Test_ListOps_Cons[int64]{1, curr_2, acc_3})
+         .          .    485:continue go__1739844119_1_0_4
+         .          .    486:__t1 = func() *Constructor_Test_ListOps_Cons[int64] { panic("unreachable") }()
+         .          .    487:}
+         .          .    488:end_branch_1:
+         .          .    489:return __t1

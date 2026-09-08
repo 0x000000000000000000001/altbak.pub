@@ -1,0 +1,23 @@
+[
+  {
+    "source": "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_Fib.go",
+    "line": 44,
+    "symbol": "Call_Test_Fib_fib",
+    "source_sha256": "75ce3dbb4d6fc765d828aadb6671be2fc06f75c2c0c41abc99d204ee5e36b1fa",
+    "extracted_sha256": "e832fd9f484ec7ba5277afe954ea48e075dae81ffd52086a341e263ad120a632"
+  },
+  {
+    "source": "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_Ackermann.go",
+    "line": 44,
+    "symbol": "Call_Test_Ackermann_ackermann",
+    "source_sha256": "318c433d6c8678fc6f8fe24201850e59a67f2ef3d7350855343448be08aa9ed5",
+    "extracted_sha256": "768a7741ee25458a91b7946316dec84b05a09cbc43aa804361a87318a7b5eee0"
+  },
+  {
+    "source": "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_TCO.go",
+    "line": 44,
+    "symbol": "Call_Test_TCO_deepTailRec",
+    "source_sha256": "aab18c838d4125f1ef2c670190fc95d15d326128193d4bc552f4e2b2516c78ba",
+    "extracted_sha256": "a778deb2ea7635701fbaa3dceb519ff5db129961b5ebafa586c0018301eacbd0"
+  }
+]

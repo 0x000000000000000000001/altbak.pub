@@ -1,0 +1,3 @@
+so translate: /Users/0x1/Documents/htdocs/altbak.pub/scratch/solod-poc-20260908/rbtree/syntax/kernels/kernels.go:63:8: stack-allocated value escapes function frame
+return __t1
+       ^here

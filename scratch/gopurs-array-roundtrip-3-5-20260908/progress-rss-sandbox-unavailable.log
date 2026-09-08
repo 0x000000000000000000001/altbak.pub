@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-array-roundtrip-3-5-20260908/measure.py", line 117, in <module>
+    main()
+  File "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-array-roundtrip-3-5-20260908/measure.py", line 113, in main
+    rss(args.pairs)
+  File "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-array-roundtrip-3-5-20260908/measure.py", line 92, in rss
+    text = run(["/usr/bin/time", "-l", str(ROOT / "bin" / (variant + "-bench")),
+  File "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-array-roundtrip-3-5-20260908/measure.py", line 24, in run
+    raise RuntimeError(f"{label} failed ({result.returncode}); see raw log")
+RuntimeError: rss-n900-01-before failed (1); see raw log

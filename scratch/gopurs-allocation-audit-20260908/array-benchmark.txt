@@ -1,0 +1,27 @@
+goos: darwin
+goarch: arm64
+pkg: allocationaudit
+cpu: Apple M4 Pro
+BenchmarkArray/compiled_original-14         	   20103	      8996 ns/op	   77056 B/op	      15 allocs/op
+BenchmarkArray/compiled_original-14         	   19605	      9037 ns/op	   77056 B/op	      15 allocs/op
+BenchmarkArray/compiled_original-14         	   19621	      9516 ns/op	   77056 B/op	      15 allocs/op
+BenchmarkArray/compiled_original-14         	   19486	      9080 ns/op	   77056 B/op	      15 allocs/op
+BenchmarkArray/compiled_original-14         	   19172	      9114 ns/op	   77056 B/op	      15 allocs/op
+BenchmarkArray/compiled_original-14         	   19701	      9044 ns/op	   77056 B/op	      15 allocs/op
+BenchmarkArray/compiled_original-14         	   19696	      9040 ns/op	   77056 B/op	      15 allocs/op
+BenchmarkArray/copied_original-14           	   19676	      9131 ns/op	   77056 B/op	      15 allocs/op
+BenchmarkArray/copied_original-14           	   19713	      9063 ns/op	   77056 B/op	      15 allocs/op
+BenchmarkArray/copied_original-14           	   19465	      9129 ns/op	   77056 B/op	      15 allocs/op
+BenchmarkArray/copied_original-14           	   19462	      9112 ns/op	   77056 B/op	      15 allocs/op
+BenchmarkArray/copied_original-14           	   19543	      9229 ns/op	   77056 B/op	      15 allocs/op
+BenchmarkArray/copied_original-14           	   19515	      9139 ns/op	   77056 B/op	      15 allocs/op
+BenchmarkArray/copied_original-14           	   19555	      9114 ns/op	   77056 B/op	      15 allocs/op
+BenchmarkArray/without_roundtrip-14         	   21199	      8407 ns/op	   62080 B/op	      13 allocs/op
+BenchmarkArray/without_roundtrip-14         	   21248	      8398 ns/op	   62080 B/op	      13 allocs/op
+BenchmarkArray/without_roundtrip-14         	   21117	      8376 ns/op	   62080 B/op	      13 allocs/op
+BenchmarkArray/without_roundtrip-14         	   21075	      8370 ns/op	   62080 B/op	      13 allocs/op
+BenchmarkArray/without_roundtrip-14         	   21234	      8313 ns/op	   62080 B/op	      13 allocs/op
+BenchmarkArray/without_roundtrip-14         	   21343	      8430 ns/op	   62080 B/op	      13 allocs/op
+BenchmarkArray/without_roundtrip-14         	   21327	      8435 ns/op	   62080 B/op	      13 allocs/op
+PASS
+ok  	allocationaudit	5.995s

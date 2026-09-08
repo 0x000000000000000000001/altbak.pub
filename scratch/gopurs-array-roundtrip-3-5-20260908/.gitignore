@@ -1,0 +1,4 @@
+/compiler/
+/generated/
+/bin/
+__pycache__/

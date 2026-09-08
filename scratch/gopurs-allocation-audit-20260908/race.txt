@@ -1,0 +1,43 @@
+==================
+WARNING: DATA RACE
+Write at 0x000100c91b80 by goroutine 8:
+  gopurs/output/gopurs_runtime.forceEscape()
+      /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/gopurs_runtime/runtime.go:450 +0xf4
+  gopurs/output/gopurs_runtime.Func()
+      /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/gopurs_runtime/runtime.go:455 +0xe8
+  allocationaudit.TestConcurrentFunctionWrapping.func1()
+      /Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-allocation-audit-20260908/runtime_test.go:18 +0x9c
+  allocationaudit.TestConcurrentFunctionWrapping.gowrap1()
+      /Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-allocation-audit-20260908/runtime_test.go:21 +0x38
+
+Previous write at 0x000100c91b80 by goroutine 7:
+  gopurs/output/gopurs_runtime.forceEscape()
+      /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/gopurs_runtime/runtime.go:450 +0xf4
+  gopurs/output/gopurs_runtime.Func()
+      /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/gopurs_runtime/runtime.go:455 +0xe8
+  allocationaudit.TestConcurrentFunctionWrapping.func1()
+      /Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-allocation-audit-20260908/runtime_test.go:18 +0x9c
+  allocationaudit.TestConcurrentFunctionWrapping.gowrap1()
+      /Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-allocation-audit-20260908/runtime_test.go:21 +0x38
+
+Goroutine 8 (running) created at:
+  allocationaudit.TestConcurrentFunctionWrapping()
+      /Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-allocation-audit-20260908/runtime_test.go:14 +0x7c
+  testing.tRunner()
+      /opt/homebrew/Cellar/go/1.27.0/libexec/src/testing/testing.go:2193 +0x164
+  testing.(*T).Run.gowrap1()
+      /opt/homebrew/Cellar/go/1.27.0/libexec/src/testing/testing.go:2258 +0x34
+
+Goroutine 7 (finished) created at:
+  allocationaudit.TestConcurrentFunctionWrapping()
+      /Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-allocation-audit-20260908/runtime_test.go:14 +0x7c
+  testing.tRunner()
+      /opt/homebrew/Cellar/go/1.27.0/libexec/src/testing/testing.go:2193 +0x164
+  testing.(*T).Run.gowrap1()
+      /opt/homebrew/Cellar/go/1.27.0/libexec/src/testing/testing.go:2258 +0x34
+==================
+--- FAIL: TestConcurrentFunctionWrapping (0.00s)
+    testing.go:1865: race detected during execution of test
+FAIL
+exit status 1
+FAIL	allocationaudit	0.415s

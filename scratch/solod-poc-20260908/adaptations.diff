@@ -1,0 +1,60 @@
+--- extracted-generated-go
++++ solod-compatible-go
+@@ -1,7 +1,5 @@
+ func Call_Test_Fib_fib(v_0_loop int64) int64 {
+-fib:
+ for {
+-if false { continue fib }
+ var v_0 int64 = v_0_loop
+ _ = v_0
+ var __t0 int64
+@@ -30,9 +28,7 @@
+ }
+ 
+ func Call_Test_Ackermann_ackermann(v_0_loop int64, v1_1_loop int64) int64 {
+-ackermann:
+ for {
+-if false { continue ackermann }
+ var v_0 int64 = v_0_loop
+ _ = v_0
+ var v1_1 int64 = v1_1_loop
+@@ -50,8 +46,7 @@
+ if (v1_1) == (int64(0)) {
+ v_0_loop = (v_0) - (int64(1))
+ v1_1_loop = int64(1)
+-continue ackermann
+-__t0 = func() int64 { panic("unreachable") }()
++continue
+ goto end_branch_0
+ } else {
+ 
+@@ -60,8 +55,7 @@
+ {
+ v_0_loop = (v_0) - (int64(1))
+ v1_1_loop = Call_Test_Ackermann_ackermann(v_0, (v1_1) - (int64(1)))
+-continue ackermann
+-__t0 = func() int64 { panic("unreachable") }()
++continue
+ }
+ end_branch_0:
+ return __t0
+@@ -69,9 +63,7 @@
+ }
+ 
+ func Call_Test_TCO_deepTailRec(v_0_loop int64, v1_1_loop int64) int64 {
+-deepTailRec:
+ for {
+-if false { continue deepTailRec }
+ var v_0 int64 = v_0_loop
+ _ = v_0
+ var v1_1 int64 = v1_1_loop
+@@ -88,8 +80,7 @@
+ {
+ v_0_loop = (v_0) - (int64(1))
+ v1_1_loop = (v1_1) + ((v_0) % (int64(3)))
+-continue deepTailRec
+-__t0 = func() int64 { panic("unreachable") }()
++continue
+ }
+ end_branch_0:
+ return __t0

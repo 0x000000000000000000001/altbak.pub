@@ -1,0 +1,420 @@
+--- syntax-adapted-go
++++ arena-go-and-solod
+@@ -38,7 +38,7 @@
+ if ((v_0) != (nil)) && (((v_0).V0) == (1583507464)) {
+ __reuse_0 = v_0
+ } else {
+-__reuse_0 = (&Constructor_Test_RBTree_T{1, 1583507464, (v_0).V1, (v_0).V2, (v_0).V3})
++__reuse_0 = (AllocNode(1, 1583507464, (v_0).V1, (v_0).V2, (v_0).V3))
+ }
+ __t1 = __reuse_0
+ goto end_branch_1
+@@ -157,7 +157,7 @@
+ // TAST (Let): __local_var_10_29 shape=Other bindingType=Int
+ __local_var_10_29 := v2_2
+ _ = __local_var_10_29
+-__t126 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_23, __local_var_8_27, __local_var_5_24}), __local_var_9_28, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_25, __local_var_10_29, __local_var_7_26})})
++__t126 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_23, __local_var_8_27, __local_var_5_24)), __local_var_9_28, (AllocNode(1, 1583507464, __local_var_6_25, __local_var_10_29, __local_var_7_26))))
+ goto end_branch_126
+ } else {
+ 
+@@ -191,7 +191,7 @@
+ // TAST (Let): __local_var_10_42 shape=Other bindingType=Int
+ __local_var_10_42 := v2_2
+ _ = __local_var_10_42
+-__t84 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_36, __local_var_8_40, __local_var_5_37}), __local_var_9_41, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_38, __local_var_10_42, __local_var_7_39})})
++__t84 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_36, __local_var_8_40, __local_var_5_37)), __local_var_9_41, (AllocNode(1, 1583507464, __local_var_6_38, __local_var_10_42, __local_var_7_39))))
+ goto end_branch_84
+ } else {
+ 
+@@ -234,7 +234,7 @@
+ // TAST (Let): __local_var_10_61 shape=Other bindingType=Any
+ __local_var_10_61 := (v3_3).V2
+ _ = __local_var_10_61
+-__t72 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_55, __local_var_8_59, __local_var_5_56}), __local_var_9_60, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_57, __local_var_10_61, __local_var_7_58})})
++__t72 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_55, __local_var_8_59, __local_var_5_56)), __local_var_9_60, (AllocNode(1, 1583507464, __local_var_6_57, __local_var_10_61, __local_var_7_58))))
+ goto end_branch_72
+ } else {
+ 
+@@ -270,7 +270,7 @@
+ // TAST (Let): __local_var_10_71 shape=Other bindingType=Any
+ __local_var_10_71 := ((v3_3).V3).V2
+ _ = __local_var_10_71
+-__t72 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_65, __local_var_8_69, __local_var_5_66}), __local_var_9_70, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_67, __local_var_10_71, __local_var_7_68})})
++__t72 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_65, __local_var_8_69, __local_var_5_66)), __local_var_9_70, (AllocNode(1, 1583507464, __local_var_6_67, __local_var_10_71, __local_var_7_68))))
+ goto end_branch_72
+ } else {
+ 
+@@ -289,7 +289,7 @@
+ // TAST (Let): __local_var_7_53 shape=Other bindingType=Int
+ __local_var_7_53 := v2_2
+ _ = __local_var_7_53
+-__t72 = (&Constructor_Test_RBTree_T{1, __local_var_6_52, __local_var_4_50, __local_var_7_53, __local_var_5_51})
++__t72 = (AllocNode(1, __local_var_6_52, __local_var_4_50, __local_var_7_53, __local_var_5_51))
+ }
+ end_branch_72:
+ __t83 = __t72
+@@ -328,7 +328,7 @@
+ // TAST (Let): __local_var_10_82 shape=Other bindingType=Any
+ __local_var_10_82 := ((v3_3).V3).V2
+ _ = __local_var_10_82
+-__t83 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_76, __local_var_8_80, __local_var_5_77}), __local_var_9_81, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_78, __local_var_10_82, __local_var_7_79})})
++__t83 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_76, __local_var_8_80, __local_var_5_77)), __local_var_9_81, (AllocNode(1, 1583507464, __local_var_6_78, __local_var_10_82, __local_var_7_79))))
+ goto end_branch_83
+ } else {
+ 
+@@ -347,7 +347,7 @@
+ // TAST (Let): __local_var_7_48 shape=Other bindingType=Int
+ __local_var_7_48 := v2_2
+ _ = __local_var_7_48
+-__t83 = (&Constructor_Test_RBTree_T{1, __local_var_6_47, __local_var_4_45, __local_var_7_48, __local_var_5_46})
++__t83 = (AllocNode(1, __local_var_6_47, __local_var_4_45, __local_var_7_48, __local_var_5_46))
+ }
+ end_branch_83:
+ __t84 = __t83
+@@ -369,7 +369,7 @@
+ // TAST (Let): __local_var_7_34 shape=Other bindingType=Int
+ __local_var_7_34 := v2_2
+ _ = __local_var_7_34
+-__t84 = (&Constructor_Test_RBTree_T{1, __local_var_6_33, __local_var_4_31, __local_var_7_34, __local_var_5_32})
++__t84 = (AllocNode(1, __local_var_6_33, __local_var_4_31, __local_var_7_34, __local_var_5_32))
+ }
+ end_branch_84:
+ __t126 = __t84
+@@ -415,7 +415,7 @@
+ // TAST (Let): __local_var_10_103 shape=Other bindingType=Any
+ __local_var_10_103 := (v3_3).V2
+ _ = __local_var_10_103
+-__t114 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_97, __local_var_8_101, __local_var_5_98}), __local_var_9_102, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_99, __local_var_10_103, __local_var_7_100})})
++__t114 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_97, __local_var_8_101, __local_var_5_98)), __local_var_9_102, (AllocNode(1, 1583507464, __local_var_6_99, __local_var_10_103, __local_var_7_100))))
+ goto end_branch_114
+ } else {
+ 
+@@ -451,7 +451,7 @@
+ // TAST (Let): __local_var_10_113 shape=Other bindingType=Any
+ __local_var_10_113 := ((v3_3).V3).V2
+ _ = __local_var_10_113
+-__t114 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_107, __local_var_8_111, __local_var_5_108}), __local_var_9_112, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_109, __local_var_10_113, __local_var_7_110})})
++__t114 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_107, __local_var_8_111, __local_var_5_108)), __local_var_9_112, (AllocNode(1, 1583507464, __local_var_6_109, __local_var_10_113, __local_var_7_110))))
+ goto end_branch_114
+ } else {
+ 
+@@ -470,7 +470,7 @@
+ // TAST (Let): __local_var_7_95 shape=Other bindingType=Int
+ __local_var_7_95 := v2_2
+ _ = __local_var_7_95
+-__t114 = (&Constructor_Test_RBTree_T{1, __local_var_6_94, __local_var_4_92, __local_var_7_95, __local_var_5_93})
++__t114 = (AllocNode(1, __local_var_6_94, __local_var_4_92, __local_var_7_95, __local_var_5_93))
+ }
+ end_branch_114:
+ __t125 = __t114
+@@ -509,7 +509,7 @@
+ // TAST (Let): __local_var_10_124 shape=Other bindingType=Any
+ __local_var_10_124 := ((v3_3).V3).V2
+ _ = __local_var_10_124
+-__t125 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_118, __local_var_8_122, __local_var_5_119}), __local_var_9_123, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_120, __local_var_10_124, __local_var_7_121})})
++__t125 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_118, __local_var_8_122, __local_var_5_119)), __local_var_9_123, (AllocNode(1, 1583507464, __local_var_6_120, __local_var_10_124, __local_var_7_121))))
+ goto end_branch_125
+ } else {
+ 
+@@ -528,7 +528,7 @@
+ // TAST (Let): __local_var_7_90 shape=Other bindingType=Int
+ __local_var_7_90 := v2_2
+ _ = __local_var_7_90
+-__t125 = (&Constructor_Test_RBTree_T{1, __local_var_6_89, __local_var_4_87, __local_var_7_90, __local_var_5_88})
++__t125 = (AllocNode(1, __local_var_6_89, __local_var_4_87, __local_var_7_90, __local_var_5_88))
+ }
+ end_branch_125:
+ __t126 = __t125
+@@ -550,7 +550,7 @@
+ // TAST (Let): __local_var_7_21 shape=Other bindingType=Int
+ __local_var_7_21 := v2_2
+ _ = __local_var_7_21
+-__t126 = (&Constructor_Test_RBTree_T{1, __local_var_6_20, __local_var_4_18, __local_var_7_21, __local_var_5_19})
++__t126 = (AllocNode(1, __local_var_6_20, __local_var_4_18, __local_var_7_21, __local_var_5_19))
+ }
+ end_branch_126:
+ __t223 = __t126
+@@ -587,7 +587,7 @@
+ // TAST (Let): __local_var_10_139 shape=Other bindingType=Int
+ __local_var_10_139 := v2_2
+ _ = __local_var_10_139
+-__t181 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_133, __local_var_8_137, __local_var_5_134}), __local_var_9_138, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_135, __local_var_10_139, __local_var_7_136})})
++__t181 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_133, __local_var_8_137, __local_var_5_134)), __local_var_9_138, (AllocNode(1, 1583507464, __local_var_6_135, __local_var_10_139, __local_var_7_136))))
+ goto end_branch_181
+ } else {
+ 
+@@ -630,7 +630,7 @@
+ // TAST (Let): __local_var_10_158 shape=Other bindingType=Any
+ __local_var_10_158 := (v3_3).V2
+ _ = __local_var_10_158
+-__t169 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_152, __local_var_8_156, __local_var_5_153}), __local_var_9_157, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_154, __local_var_10_158, __local_var_7_155})})
++__t169 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_152, __local_var_8_156, __local_var_5_153)), __local_var_9_157, (AllocNode(1, 1583507464, __local_var_6_154, __local_var_10_158, __local_var_7_155))))
+ goto end_branch_169
+ } else {
+ 
+@@ -666,7 +666,7 @@
+ // TAST (Let): __local_var_10_168 shape=Other bindingType=Any
+ __local_var_10_168 := ((v3_3).V3).V2
+ _ = __local_var_10_168
+-__t169 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_162, __local_var_8_166, __local_var_5_163}), __local_var_9_167, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_164, __local_var_10_168, __local_var_7_165})})
++__t169 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_162, __local_var_8_166, __local_var_5_163)), __local_var_9_167, (AllocNode(1, 1583507464, __local_var_6_164, __local_var_10_168, __local_var_7_165))))
+ goto end_branch_169
+ } else {
+ 
+@@ -685,7 +685,7 @@
+ // TAST (Let): __local_var_7_150 shape=Other bindingType=Int
+ __local_var_7_150 := v2_2
+ _ = __local_var_7_150
+-__t169 = (&Constructor_Test_RBTree_T{1, __local_var_6_149, __local_var_4_147, __local_var_7_150, __local_var_5_148})
++__t169 = (AllocNode(1, __local_var_6_149, __local_var_4_147, __local_var_7_150, __local_var_5_148))
+ }
+ end_branch_169:
+ __t180 = __t169
+@@ -724,7 +724,7 @@
+ // TAST (Let): __local_var_10_179 shape=Other bindingType=Any
+ __local_var_10_179 := ((v3_3).V3).V2
+ _ = __local_var_10_179
+-__t180 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_173, __local_var_8_177, __local_var_5_174}), __local_var_9_178, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_175, __local_var_10_179, __local_var_7_176})})
++__t180 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_173, __local_var_8_177, __local_var_5_174)), __local_var_9_178, (AllocNode(1, 1583507464, __local_var_6_175, __local_var_10_179, __local_var_7_176))))
+ goto end_branch_180
+ } else {
+ 
+@@ -743,7 +743,7 @@
+ // TAST (Let): __local_var_7_145 shape=Other bindingType=Int
+ __local_var_7_145 := v2_2
+ _ = __local_var_7_145
+-__t180 = (&Constructor_Test_RBTree_T{1, __local_var_6_144, __local_var_4_142, __local_var_7_145, __local_var_5_143})
++__t180 = (AllocNode(1, __local_var_6_144, __local_var_4_142, __local_var_7_145, __local_var_5_143))
+ }
+ end_branch_180:
+ __t181 = __t180
+@@ -765,7 +765,7 @@
+ // TAST (Let): __local_var_7_131 shape=Other bindingType=Int
+ __local_var_7_131 := v2_2
+ _ = __local_var_7_131
+-__t181 = (&Constructor_Test_RBTree_T{1, __local_var_6_130, __local_var_4_128, __local_var_7_131, __local_var_5_129})
++__t181 = (AllocNode(1, __local_var_6_130, __local_var_4_128, __local_var_7_131, __local_var_5_129))
+ }
+ end_branch_181:
+ __t223 = __t181
+@@ -811,7 +811,7 @@
+ // TAST (Let): __local_var_10_200 shape=Other bindingType=Any
+ __local_var_10_200 := (v3_3).V2
+ _ = __local_var_10_200
+-__t211 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_194, __local_var_8_198, __local_var_5_195}), __local_var_9_199, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_196, __local_var_10_200, __local_var_7_197})})
++__t211 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_194, __local_var_8_198, __local_var_5_195)), __local_var_9_199, (AllocNode(1, 1583507464, __local_var_6_196, __local_var_10_200, __local_var_7_197))))
+ goto end_branch_211
+ } else {
+ 
+@@ -847,7 +847,7 @@
+ // TAST (Let): __local_var_10_210 shape=Other bindingType=Any
+ __local_var_10_210 := ((v3_3).V3).V2
+ _ = __local_var_10_210
+-__t211 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_204, __local_var_8_208, __local_var_5_205}), __local_var_9_209, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_206, __local_var_10_210, __local_var_7_207})})
++__t211 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_204, __local_var_8_208, __local_var_5_205)), __local_var_9_209, (AllocNode(1, 1583507464, __local_var_6_206, __local_var_10_210, __local_var_7_207))))
+ goto end_branch_211
+ } else {
+ 
+@@ -866,7 +866,7 @@
+ // TAST (Let): __local_var_7_192 shape=Other bindingType=Int
+ __local_var_7_192 := v2_2
+ _ = __local_var_7_192
+-__t211 = (&Constructor_Test_RBTree_T{1, __local_var_6_191, __local_var_4_189, __local_var_7_192, __local_var_5_190})
++__t211 = (AllocNode(1, __local_var_6_191, __local_var_4_189, __local_var_7_192, __local_var_5_190))
+ }
+ end_branch_211:
+ __t222 = __t211
+@@ -905,7 +905,7 @@
+ // TAST (Let): __local_var_10_221 shape=Other bindingType=Any
+ __local_var_10_221 := ((v3_3).V3).V2
+ _ = __local_var_10_221
+-__t222 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_215, __local_var_8_219, __local_var_5_216}), __local_var_9_220, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_217, __local_var_10_221, __local_var_7_218})})
++__t222 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_215, __local_var_8_219, __local_var_5_216)), __local_var_9_220, (AllocNode(1, 1583507464, __local_var_6_217, __local_var_10_221, __local_var_7_218))))
+ goto end_branch_222
+ } else {
+ 
+@@ -924,7 +924,7 @@
+ // TAST (Let): __local_var_7_187 shape=Other bindingType=Int
+ __local_var_7_187 := v2_2
+ _ = __local_var_7_187
+-__t222 = (&Constructor_Test_RBTree_T{1, __local_var_6_186, __local_var_4_184, __local_var_7_187, __local_var_5_185})
++__t222 = (AllocNode(1, __local_var_6_186, __local_var_4_184, __local_var_7_187, __local_var_5_185))
+ }
+ end_branch_222:
+ __t223 = __t222
+@@ -946,7 +946,7 @@
+ // TAST (Let): __local_var_7_16 shape=Other bindingType=Int
+ __local_var_7_16 := v2_2
+ _ = __local_var_7_16
+-__t223 = (&Constructor_Test_RBTree_T{1, __local_var_6_15, __local_var_4_13, __local_var_7_16, __local_var_5_14})
++__t223 = (AllocNode(1, __local_var_6_15, __local_var_4_13, __local_var_7_16, __local_var_5_14))
+ }
+ end_branch_223:
+ __t265 = __t223
+@@ -992,7 +992,7 @@
+ // TAST (Let): __local_var_10_242 shape=Other bindingType=Any
+ __local_var_10_242 := (v3_3).V2
+ _ = __local_var_10_242
+-__t253 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_236, __local_var_8_240, __local_var_5_237}), __local_var_9_241, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_238, __local_var_10_242, __local_var_7_239})})
++__t253 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_236, __local_var_8_240, __local_var_5_237)), __local_var_9_241, (AllocNode(1, 1583507464, __local_var_6_238, __local_var_10_242, __local_var_7_239))))
+ goto end_branch_253
+ } else {
+ 
+@@ -1028,7 +1028,7 @@
+ // TAST (Let): __local_var_10_252 shape=Other bindingType=Any
+ __local_var_10_252 := ((v3_3).V3).V2
+ _ = __local_var_10_252
+-__t253 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_246, __local_var_8_250, __local_var_5_247}), __local_var_9_251, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_248, __local_var_10_252, __local_var_7_249})})
++__t253 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_246, __local_var_8_250, __local_var_5_247)), __local_var_9_251, (AllocNode(1, 1583507464, __local_var_6_248, __local_var_10_252, __local_var_7_249))))
+ goto end_branch_253
+ } else {
+ 
+@@ -1047,7 +1047,7 @@
+ // TAST (Let): __local_var_7_234 shape=Other bindingType=Int
+ __local_var_7_234 := v2_2
+ _ = __local_var_7_234
+-__t253 = (&Constructor_Test_RBTree_T{1, __local_var_6_233, __local_var_4_231, __local_var_7_234, __local_var_5_232})
++__t253 = (AllocNode(1, __local_var_6_233, __local_var_4_231, __local_var_7_234, __local_var_5_232))
+ }
+ end_branch_253:
+ __t264 = __t253
+@@ -1086,7 +1086,7 @@
+ // TAST (Let): __local_var_10_263 shape=Other bindingType=Any
+ __local_var_10_263 := ((v3_3).V3).V2
+ _ = __local_var_10_263
+-__t264 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_257, __local_var_8_261, __local_var_5_258}), __local_var_9_262, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_259, __local_var_10_263, __local_var_7_260})})
++__t264 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_257, __local_var_8_261, __local_var_5_258)), __local_var_9_262, (AllocNode(1, 1583507464, __local_var_6_259, __local_var_10_263, __local_var_7_260))))
+ goto end_branch_264
+ } else {
+ 
+@@ -1105,7 +1105,7 @@
+ // TAST (Let): __local_var_7_229 shape=Other bindingType=Int
+ __local_var_7_229 := v2_2
+ _ = __local_var_7_229
+-__t264 = (&Constructor_Test_RBTree_T{1, __local_var_6_228, __local_var_4_226, __local_var_7_229, __local_var_5_227})
++__t264 = (AllocNode(1, __local_var_6_228, __local_var_4_226, __local_var_7_229, __local_var_5_227))
+ }
+ end_branch_264:
+ __t265 = __t264
+@@ -1127,7 +1127,7 @@
+ // TAST (Let): __local_var_7_11 shape=Other bindingType=Int
+ __local_var_7_11 := v2_2
+ _ = __local_var_7_11
+-__t265 = (&Constructor_Test_RBTree_T{1, __local_var_6_10, __local_var_4_8, __local_var_7_11, __local_var_5_9})
++__t265 = (AllocNode(1, __local_var_6_10, __local_var_4_8, __local_var_7_11, __local_var_5_9))
+ }
+ end_branch_265:
+ __t307 = __t265
+@@ -1173,7 +1173,7 @@
+ // TAST (Let): __local_var_10_284 shape=Other bindingType=Any
+ __local_var_10_284 := (v3_3).V2
+ _ = __local_var_10_284
+-__t295 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_278, __local_var_8_282, __local_var_5_279}), __local_var_9_283, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_280, __local_var_10_284, __local_var_7_281})})
++__t295 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_278, __local_var_8_282, __local_var_5_279)), __local_var_9_283, (AllocNode(1, 1583507464, __local_var_6_280, __local_var_10_284, __local_var_7_281))))
+ goto end_branch_295
+ } else {
+ 
+@@ -1209,7 +1209,7 @@
+ // TAST (Let): __local_var_10_294 shape=Other bindingType=Any
+ __local_var_10_294 := ((v3_3).V3).V2
+ _ = __local_var_10_294
+-__t295 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_288, __local_var_8_292, __local_var_5_289}), __local_var_9_293, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_290, __local_var_10_294, __local_var_7_291})})
++__t295 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_288, __local_var_8_292, __local_var_5_289)), __local_var_9_293, (AllocNode(1, 1583507464, __local_var_6_290, __local_var_10_294, __local_var_7_291))))
+ goto end_branch_295
+ } else {
+ 
+@@ -1228,7 +1228,7 @@
+ // TAST (Let): __local_var_7_276 shape=Other bindingType=Int
+ __local_var_7_276 := v2_2
+ _ = __local_var_7_276
+-__t295 = (&Constructor_Test_RBTree_T{1, __local_var_6_275, __local_var_4_273, __local_var_7_276, __local_var_5_274})
++__t295 = (AllocNode(1, __local_var_6_275, __local_var_4_273, __local_var_7_276, __local_var_5_274))
+ }
+ end_branch_295:
+ __t306 = __t295
+@@ -1267,7 +1267,7 @@
+ // TAST (Let): __local_var_10_305 shape=Other bindingType=Any
+ __local_var_10_305 := ((v3_3).V3).V2
+ _ = __local_var_10_305
+-__t306 = (&Constructor_Test_RBTree_T{1, 3668501016, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_4_299, __local_var_8_303, __local_var_5_300}), __local_var_9_304, (&Constructor_Test_RBTree_T{1, 1583507464, __local_var_6_301, __local_var_10_305, __local_var_7_302})})
++__t306 = (AllocNode(1, 3668501016, (AllocNode(1, 1583507464, __local_var_4_299, __local_var_8_303, __local_var_5_300)), __local_var_9_304, (AllocNode(1, 1583507464, __local_var_6_301, __local_var_10_305, __local_var_7_302))))
+ goto end_branch_306
+ } else {
+ 
+@@ -1286,7 +1286,7 @@
+ // TAST (Let): __local_var_7_271 shape=Other bindingType=Int
+ __local_var_7_271 := v2_2
+ _ = __local_var_7_271
+-__t306 = (&Constructor_Test_RBTree_T{1, __local_var_6_270, __local_var_4_268, __local_var_7_271, __local_var_5_269})
++__t306 = (AllocNode(1, __local_var_6_270, __local_var_4_268, __local_var_7_271, __local_var_5_269))
+ }
+ end_branch_306:
+ __t307 = __t306
+@@ -1308,7 +1308,7 @@
+ // TAST (Let): __local_var_7_7 shape=Other bindingType=Int
+ __local_var_7_7 := v2_2
+ _ = __local_var_7_7
+-__t307 = (&Constructor_Test_RBTree_T{1, __local_var_6_6, __local_var_4_4, __local_var_7_7, __local_var_5_5})
++__t307 = (AllocNode(1, __local_var_6_6, __local_var_4_4, __local_var_7_7, __local_var_5_5))
+ }
+ end_branch_307:
+ __t308 = __t307
+@@ -1330,7 +1330,7 @@
+ // TAST (Let): __local_var_7_3 shape=Other bindingType=Int
+ __local_var_7_3 := v2_2
+ _ = __local_var_7_3
+-__t308 = (&Constructor_Test_RBTree_T{1, __local_var_6_2, __local_var_4_0, __local_var_7_3, __local_var_5_1})
++__t308 = (AllocNode(1, __local_var_6_2, __local_var_4_0, __local_var_7_3, __local_var_5_1))
+ }
+ end_branch_308:
+ return __t308
+@@ -1345,7 +1345,7 @@
+ var __t2 *Constructor_Test_RBTree_T
+ {
+ if (v1_1 == nil) {
+-__t2 = (&Constructor_Test_RBTree_T{1, 3668501016, (*Constructor_Test_RBTree_T)(nil), v_0, (*Constructor_Test_RBTree_T)(nil)})
++__t2 = (AllocNode(1, 3668501016, (*Constructor_Test_RBTree_T)(nil), v_0, (*Constructor_Test_RBTree_T)(nil)))
+ goto end_branch_2
+ } else {
+ 
+@@ -1373,7 +1373,7 @@
+ }
+ }
+ {
+-__t0 = (&Constructor_Test_RBTree_T{1, (v1_1).V0, (v1_1).V1, (v1_1).V2, (v1_1).V3})
++__t0 = (AllocNode(1, (v1_1).V0, (v1_1).V1, (v1_1).V2, (v1_1).V3))
+ }
+ end_branch_0:
+ __t1 = __t0
+@@ -1408,7 +1408,7 @@
+ if ((__local_var_2_0) != (nil)) && (((__local_var_2_0).V0) == (1583507464)) {
+ __reuse_1 = __local_var_2_0
+ } else {
+-__reuse_1 = (&Constructor_Test_RBTree_T{1, 1583507464, (__local_var_2_0).V1, (__local_var_2_0).V2, (__local_var_2_0).V3})
++__reuse_1 = (AllocNode(1, 1583507464, (__local_var_2_0).V1, (__local_var_2_0).V2, (__local_var_2_0).V3))
+ }
+ __t2 = __reuse_1
+ goto end_branch_2
+@@ -1457,3 +1457,21 @@
+ }
+ 
+ 
++
++// The harness owns this fixed backing allocation for the process lifetime.
++// Reset only after the previous tree and its shared intermediate nodes are dead.
++var nodePool []Constructor_Test_RBTree_T
++var nodesUsed int
++func BeginArena(pool []Constructor_Test_RBTree_T) {
++    nodePool = pool
++    nodesUsed = 0
++}
++func ResetArena() { nodesUsed = 0 }
++func NodesUsed() int { return nodesUsed }
++func AllocNode(rc uint32, color uint32, left *Constructor_Test_RBTree_T, key int64, right *Constructor_Test_RBTree_T) *Constructor_Test_RBTree_T {
++    if nodesUsed >= len(nodePool) { panic("node arena exhausted") }
++    p := &nodePool[nodesUsed]
++    nodesUsed++
++    *p = Constructor_Test_RBTree_T{rc, color, left, key, right}
++    return p
++}

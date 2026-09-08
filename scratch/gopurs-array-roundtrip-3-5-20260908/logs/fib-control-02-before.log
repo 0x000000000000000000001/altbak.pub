@@ -1,0 +1,6 @@
+goos: darwin
+goarch: arm64
+pkg: gopurs/output/purescript
+cpu: Apple M4 Pro
+BenchmarkAct/Fib-14         	 3953052	       294.5 ns/op	     114 B/op	       7 allocs/op
+PASS

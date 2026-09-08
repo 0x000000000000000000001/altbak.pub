@@ -1,0 +1,25 @@
+File: audit
+Type: alloc_space
+Time: 2026-09-08 11:12:23 CEST
+Showing nodes accounting for 955.09kB, 99.54% of 959.48kB total
+Dropped 60 nodes (cum <= 4.80kB)
+Showing top 18 nodes out of 47
+      flat  flat%   sum%        cum   cum%
+     320kB 33.35% 33.35%      320kB 33.35%  compress/flate.(*fastGen).addBlock
+     264kB 27.51% 60.87%   474.62kB 49.47%  compress/flate.NewWriter (inline)
+     136kB 14.17% 75.04%      136kB 14.17%  compress/flate.newFastEnc (inline)
+      64kB  6.67% 81.71%   210.62kB 21.95%  compress/flate.(*compressor).init
+   50.48kB  5.26% 86.97%    50.48kB  5.26%  runtime/pprof.allFrames
+   35.23kB  3.67% 90.64%    52.02kB  5.42%  runtime/pprof.(*profileBuilder).emitLocation
+   21.09kB  2.20% 92.84%    21.09kB  2.20%  gopurs/output/purescript.Call_Test_ListOps_sumEvens.func1
+   17.50kB  1.82% 94.67%    17.50kB  1.82%  runtime/pprof.(*protobuf).varint (inline)
+   10.88kB  1.13% 95.80%    10.88kB  1.13%  runtime/pprof.(*profileBuilder).stringIndex (inline)
+   10.55kB  1.10% 96.90%    10.55kB  1.10%  gopurs/output/purescript.Call_Test_ListOps_filterEvens.func1
+    9.25kB  0.96% 97.86%     9.25kB  0.96%  compress/flate.newHuffmanEncoder (inline)
+       6kB  0.63% 98.49%   919.87kB 95.87%  runtime/pprof.writeHeapInternal
+    5.20kB  0.54% 99.03%     5.21kB  0.54%  runtime.mallocgc
+    3.22kB  0.34% 99.37%   913.87kB 95.25%  runtime/pprof.writeHeapProto
+    1.38kB  0.14% 99.51%    10.62kB  1.11%  compress/flate.newHuffmanBitWriter
+    0.23kB 0.024% 99.54%   103.41kB 10.78%  runtime/pprof.(*profileBuilder).appendLocsForStack
+    0.03kB 0.0033% 99.54%    10.58kB  1.10%  gopurs/output/purescript.Call_Test_ListOps_filterEvens
+    0.03kB 0.0033% 99.54%    31.70kB  3.30%  gopurs/output/purescript.Call_Test_ListOps_sumEvens

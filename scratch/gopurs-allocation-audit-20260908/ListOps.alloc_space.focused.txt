@@ -1,0 +1,33 @@
+File: audit
+Type: alloc_space
+Time: 2026-09-08 11:12:23 CEST
+Active filters:
+   focus=gopurs/output/
+Showing nodes accounting for 34.01kB, 100% of 34.01kB total
+Showing top 25 nodes out of 27
+      flat  flat%   sum%        cum   cum%
+   21.09kB 62.03% 62.03%    21.09kB 62.03%  gopurs/output/purescript.Call_Test_ListOps_sumEvens.func1
+   10.55kB 31.01% 93.04%    10.55kB 31.01%  gopurs/output/purescript.Call_Test_ListOps_filterEvens.func1
+    2.01kB  5.90% 98.94%     2.01kB  5.90%  sync.(*Pool).pinSlow
+    0.17kB  0.51% 99.45%     0.17kB  0.51%  fmt.init.func1
+    0.04kB  0.11% 99.56%     0.06kB  0.18%  gopurs/output/purescript.init.func3
+    0.03kB 0.092% 99.66%     0.03kB 0.092%  gopurs/output/gopurs_runtime.Str
+    0.03kB 0.092% 99.75%    10.58kB 31.10%  gopurs/output/purescript.Call_Test_ListOps_filterEvens
+    0.03kB 0.092% 99.84%    31.70kB 93.22%  gopurs/output/purescript.Call_Test_ListOps_sumEvens
+    0.02kB 0.069% 99.91%     0.02kB 0.069%  gopurs/output/purescript.Bench_Opaque
+    0.02kB 0.046%   100%     0.02kB 0.046%  fmt.(*buffer).write
+    0.02kB 0.046%   100%     0.03kB 0.092%  gopurs/output/gopurs_runtime.Box[go.shape.string]
+         0     0%   100%     0.02kB 0.046%  fmt.(*fmt).fmtInteger
+         0     0%   100%     0.02kB 0.046%  fmt.(*fmt).pad
+         0     0%   100%     0.02kB 0.046%  fmt.(*pp).doPrintf
+         0     0%   100%     0.02kB 0.046%  fmt.(*pp).fmtInteger
+         0     0%   100%     0.02kB 0.046%  fmt.(*pp).printArg
+         0     0%   100%     2.20kB  6.46%  fmt.Sprintf
+         0     0%   100%     2.18kB  6.41%  fmt.newPrinter
+         0     0%   100%    34.01kB   100%  gopurs/output/gopurs_runtime.Apply
+         0     0%   100%     2.20kB  6.46%  gopurs/output/purescript.Data_Show_ShowIntImpl (inline)
+         0     0%   100%    34.01kB   100%  gopurs/output/purescript.Get_Test_ListOps_act.func1.1
+         0     0%   100%     2.23kB  6.55%  gopurs/output/purescript.init.func173
+         0     0%   100%    34.01kB   100%  main.main
+         0     0%   100%    34.01kB   100%  main.main.func1 (inline)
+         0     0%   100%    34.01kB   100%  runtime.main

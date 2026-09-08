@@ -1,0 +1,8 @@
+Preparing: before-generation.log
+Preparing: after-generation.log
+Traceback (most recent call last):
+  File "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-array-roundtrip-3-5-20260908/prepare.py", line 125, in <module>
+    main()
+  File "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-array-roundtrip-3-5-20260908/prepare.py", line 104, in main
+    assert generated["after"] == hashes(OUTPUT, "**/*.go"), "Production generation differs"
+AssertionError: Production generation differs

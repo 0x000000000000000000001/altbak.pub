@@ -1,0 +1,76 @@
+--- generated-go
++++ syntax-adapted-go
+@@ -55,16 +55,14 @@
+ }
+ }
+ {
+-__t1 = func() *Constructor_Test_RBTree_T { panic("Failed pattern match") }()
++panic("Failed pattern match")
+ }
+ end_branch_1:
+ return __t1
+ }
+ 
+ func Call_Test_RBTree_depth(v_0_loop *Constructor_Test_RBTree_T) int64 {
+-depth:
+ for {
+-if false { continue depth }
+ var v_0 *Constructor_Test_RBTree_T = v_0_loop
+ _ = v_0
+ var __t3 int64
+@@ -104,7 +102,7 @@
+ }
+ }
+ {
+-__t3 = func() int64 { panic("Failed pattern match") }()
++panic("Failed pattern match")
+ }
+ end_branch_3:
+ return __t3
+@@ -1339,9 +1337,7 @@
+ }
+ 
+ func Call_Test_RBTree_ins(v_0_loop int64, v1_1_loop *Constructor_Test_RBTree_T) *Constructor_Test_RBTree_T {
+-ins:
+ for {
+-if false { continue ins }
+ var v_0 int64 = v_0_loop
+ _ = v_0
+ var v1_1 *Constructor_Test_RBTree_T = v1_1_loop
+@@ -1390,7 +1386,7 @@
+ }
+ }
+ {
+-__t2 = func() *Constructor_Test_RBTree_T { panic("Failed pattern match") }()
++panic("Failed pattern match")
+ }
+ end_branch_2:
+ return __t2
+@@ -1429,16 +1425,14 @@
+ }
+ }
+ {
+-__t2 = func() *Constructor_Test_RBTree_T { panic("Failed pattern match") }()
++panic("Failed pattern match")
+ }
+ end_branch_2:
+ return __t2
+ }
+ 
+ func Call_Test_RBTree_buildTree(v_0_loop int64, v1_1_loop *Constructor_Test_RBTree_T) *Constructor_Test_RBTree_T {
+-buildTree:
+ for {
+-if false { continue buildTree }
+ var v_0 int64 = v_0_loop
+ _ = v_0
+ var v1_1 *Constructor_Test_RBTree_T = v1_1_loop
+@@ -1455,8 +1449,7 @@
+ {
+ v_0_loop = (v_0) - (int64(1))
+ v1_1_loop = Call_Test_RBTree_insert(v_0, v1_1)
+-continue buildTree
+-__t0 = func() *Constructor_Test_RBTree_T { panic("unreachable") }()
++continue
+ }
+ end_branch_0:
+ return __t0

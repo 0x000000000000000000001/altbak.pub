@@ -1,0 +1,19 @@
+goos: darwin
+goarch: arm64
+pkg: gopurs/output/purescript
+cpu: Apple M4 Pro
+BenchmarkAct/AstTree-14         	  631069	       391.5 ns/op	    1808 B/op	      49 allocs/op
+BenchmarkAct/Fib-14             	  824210	       311.9 ns/op	     114 B/op	       7 allocs/op
+BenchmarkAct/ListOps-14         	   23767	      9813 ns/op	   32594 B/op	    1362 allocs/op
+BenchmarkAct/TCO-14             	    5575	     42658 ns/op	     128 B/op	       8 allocs/op
+BenchmarkAct/Records-14         	   43682	      5490 ns/op	     128 B/op	       8 allocs/op
+BenchmarkAct/Ackermann-14       	   13760	     17286 ns/op	     115 B/op	       7 allocs/op
+BenchmarkAct/Church-14          	     488	    487466 ns/op	    6928 B/op	     165 allocs/op
+BenchmarkAct/Primes-14          	    2980	     80917 ns/op	  257490 B/op	   10732 allocs/op
+BenchmarkAct/RBTree-14          	       8	  25153854 ns/op	79488726 B/op	 2483959 allocs/op
+BenchmarkAct/Polymorphism-14    	      94	   2536238 ns/op	     160 B/op	      10 allocs/op
+BenchmarkAct/StateMonad-14      	    1656	    144889 ns/op	  578729 B/op	   13268 allocs/op
+BenchmarkAct/LazyEvaluation-14  	     931	    262826 ns/op	     128 B/op	       8 allocs/op
+BenchmarkAct/ArrayOps-14        	   23054	     10308 ns/op	   77189 B/op	      23 allocs/op
+BenchmarkAct/RowToList-14       	 3307339	        69.88 ns/op	     112 B/op	       6 allocs/op
+PASS

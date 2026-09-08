@@ -1,0 +1,33 @@
+File: audit
+Type: alloc_space
+Time: 2026-09-08 11:12:23 CEST
+Active filters:
+   focus=gopurs/output/
+Showing nodes accounting for 8.96kB, 100% of 8.96kB total
+Showing top 25 nodes out of 27
+      flat  flat%   sum%        cum   cum%
+    4.83kB 53.88% 53.88%     8.96kB   100%  gopurs/output/gopurs_runtime.Apply
+    2.01kB 22.41% 76.29%     2.01kB 22.41%  sync.(*Pool).pinSlow
+    1.56kB 17.44% 93.72%     1.56kB 17.44%  gopurs/output/purescript.Call_Test_Church_fromInt
+    0.17kB  1.92% 95.64%     0.17kB  1.92%  fmt.init.func1
+    0.12kB  1.39% 97.04%     1.38kB 15.34%  gopurs/output/purescript.Call_Test_Church_c100
+    0.06kB   0.7% 97.73%     1.81kB 20.23%  gopurs/output/purescript.Call_Test_Church_c100k
+    0.06kB   0.7% 98.43%     1.44kB 16.04%  gopurs/output/purescript.Call_Test_Church_c10k
+    0.04kB  0.44% 98.87%     0.06kB   0.7%  gopurs/output/purescript.init.func3
+    0.03kB  0.35% 99.22%     0.03kB  0.35%  gopurs/output/gopurs_runtime.Str (inline)
+    0.02kB  0.26% 99.48%     0.02kB  0.26%  gopurs/output/purescript.Bench_Opaque (inline)
+    0.02kB  0.17% 99.65%     2.20kB 24.50%  fmt.Sprintf
+    0.02kB  0.17% 99.83%     0.03kB  0.35%  gopurs/output/gopurs_runtime.Box[go.shape.string]
+    0.02kB  0.17%   100%     2.21kB 24.67%  gopurs/output/purescript.Data_Show_ShowIntImpl (inline)
+         0     0%   100%     2.18kB 24.32%  fmt.newPrinter
+         0     0%   100%     4.69kB 52.31%  gopurs/output/gopurs_runtime.Apply.func1
+         0     0%   100%     4.83kB 53.88%  gopurs/output/gopurs_runtime.Apply2
+         0     0%   100%     4.73kB 52.83%  gopurs/output/purescript.Call_Test_Church_c100.func1
+         0     0%   100%     4.83kB 53.88%  gopurs/output/purescript.Call_Test_Church_c100k.func1
+         0     0%   100%     4.78kB 53.36%  gopurs/output/purescript.Call_Test_Church_c10k.func1
+         0     0%   100%     4.69kB 52.31%  gopurs/output/purescript.Call_Test_Church_fromInt.func1
+         0     0%   100%     8.96kB   100%  gopurs/output/purescript.Get_Test_Church_act.func1.1
+         0     0%   100%     2.24kB 25.02%  gopurs/output/purescript.init.func173
+         0     0%   100%     8.96kB   100%  main.main
+         0     0%   100%     8.96kB   100%  main.main.func1 (inline)
+         0     0%   100%     8.96kB   100%  runtime.main

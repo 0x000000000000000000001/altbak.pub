@@ -1,0 +1,167 @@
+Total: 1.01MB
+ROUTINE ======================== gopurs/output/purescript.Call_Test_ArrayOps_sumEvens in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_ArrayOps.go
+         0    75.25kB (flat, cum)  7.24% of Total
+         .          .    137:func Call_Test_ArrayOps_sumEvens(n_0_loop int64) int64 {
+         .          .    138:var n_0 int64 = n_0_loop
+         .          .    139:_ = n_0
+         .          .    140:return func() gopurs_runtime.Value {
+         .          .    141:arr_val_foldlArray0 := func() gopurs_runtime.Value {
+         .          .    142:					arr := func() []int64 {
+         .          .    143:					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array(func() []gopurs_runtime.Value {
+         .          .    144:arr_val_filterImpl1 := gopurs_runtime.UncurriedApp2(Get_Data_Array_rangeImpl(), gopurs_runtime.Int(int64(1)), gopurs_runtime.Int(n_0))
+         .          .    145:_ = arr_val_filterImpl1
+         .          .    146:_ = arr_val_filterImpl1
+         .          .    147:arr_go_filterImpl1 := (*[]gopurs_runtime.Value)(arr_val_filterImpl1.UnsafePtr)
+         .          .    148:_ = arr_go_filterImpl1
+         .          .    149:res_go_filterImpl1 := make([]gopurs_runtime.Value, 0)
+         .          .    150:_ = res_go_filterImpl1
+         .          .    151:for _, v_filterImpl1 := range *arr_go_filterImpl1 {
+         .          .    152:if gopurs_runtime.Apply(gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    153:return gopurs_runtime.Bool(((x_1.IntVal) % (int64(2))) == (int64(0)))
+         .          .    154:}), v_filterImpl1).BoolVal() {
+         .          .    155:res_go_filterImpl1 = append(res_go_filterImpl1, v_filterImpl1)
+         .          .    156:} else {
+         .          .    157:
+         .          .    158:}
+         .          .    159:}
+         .          .    160:return res_go_filterImpl1
+         .          .    161:}()).UnsafePtr)
+         .          .    162:					unboxed := make([]int64, len(arr))
+         .          .    163:					for i, v := range arr { unboxed[i] = v.IntVal }
+         .          .    164:					return unboxed
+         .          .    165:				}()
+         .          .    166:					boxed := make([]gopurs_runtime.Value, len(arr))
+         .          .    167:					for i, v := range arr { boxed[i] = gopurs_runtime.Int(v) }
+         .          .    168:					return gopurs_runtime.Array(boxed)
+         .          .    169:				}()
+         .          .    170:_ = arr_val_foldlArray0
+         .          .    171:res_go_foldlArray0 := gopurs_runtime.Int(int64(0))
+         .          .    172:_ = res_go_foldlArray0
+         .          .    173:arr_go_foldlArray0 := (*[]gopurs_runtime.Value)(arr_val_foldlArray0.UnsafePtr)
+         .          .    174:_ = arr_go_foldlArray0
+         .          .    175:for _, v_foldlArray0 := range *arr_go_foldlArray0 {
+         .          .    176:res_go_foldlArray0 = gopurs_runtime.Apply2(Get_Data_Semiring_intAdd(), res_go_foldlArray0, v_foldlArray0)
+         .          .    177:}
+         .          .    178:return res_go_foldlArray0
+         .    75.25kB    179:}().IntVal
+         .          .    180:}
+         .          .    181:
+         .          .    182:
+ROUTINE ======================== gopurs/output/purescript.Call_Test_ArrayOps_sumEvens.func1 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_ArrayOps.go
+         0    75.25kB (flat, cum)  7.24% of Total
+         .          .    140:return func() gopurs_runtime.Value {
+         .          .    141:arr_val_foldlArray0 := func() gopurs_runtime.Value {
+         .          .    142:					arr := func() []int64 {
+         .          .    143:					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array(func() []gopurs_runtime.Value {
+         .          .    144:arr_val_filterImpl1 := gopurs_runtime.UncurriedApp2(Get_Data_Array_rangeImpl(), gopurs_runtime.Int(int64(1)), gopurs_runtime.Int(n_0))
+         .          .    145:_ = arr_val_filterImpl1
+         .          .    146:_ = arr_val_filterImpl1
+         .          .    147:arr_go_filterImpl1 := (*[]gopurs_runtime.Value)(arr_val_filterImpl1.UnsafePtr)
+         .          .    148:_ = arr_go_filterImpl1
+         .          .    149:res_go_filterImpl1 := make([]gopurs_runtime.Value, 0)
+         .          .    150:_ = res_go_filterImpl1
+         .          .    151:for _, v_filterImpl1 := range *arr_go_filterImpl1 {
+         .          .    152:if gopurs_runtime.Apply(gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    153:return gopurs_runtime.Bool(((x_1.IntVal) % (int64(2))) == (int64(0)))
+         .          .    154:}), v_filterImpl1).BoolVal() {
+         .          .    155:res_go_filterImpl1 = append(res_go_filterImpl1, v_filterImpl1)
+         .          .    156:} else {
+         .          .    157:
+         .          .    158:}
+         .          .    159:}
+         .          .    160:return res_go_filterImpl1
+         .          .    161:}()).UnsafePtr)
+         .          .    162:					unboxed := make([]int64, len(arr))
+         .          .    163:					for i, v := range arr { unboxed[i] = v.IntVal }
+         .          .    164:					return unboxed
+         .          .    165:				}()
+         .          .    166:					boxed := make([]gopurs_runtime.Value, len(arr))
+         .          .    167:					for i, v := range arr { boxed[i] = gopurs_runtime.Int(v) }
+         .          .    168:					return gopurs_runtime.Array(boxed)
+         .    75.25kB    169:				}()
+         .          .    170:_ = arr_val_foldlArray0
+         .          .    171:res_go_foldlArray0 := gopurs_runtime.Int(int64(0))
+         .          .    172:_ = res_go_foldlArray0
+         .          .    173:arr_go_foldlArray0 := (*[]gopurs_runtime.Value)(arr_val_foldlArray0.UnsafePtr)
+         .          .    174:_ = arr_go_foldlArray0
+ROUTINE ======================== gopurs/output/purescript.Call_Test_ArrayOps_sumEvens.func1.func1 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_ArrayOps.go
+   10.62kB    75.25kB (flat, cum)  7.24% of Total
+         .          .    141:arr_val_foldlArray0 := func() gopurs_runtime.Value {
+         .          .    142:					arr := func() []int64 {
+         .          .    143:					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array(func() []gopurs_runtime.Value {
+         .          .    144:arr_val_filterImpl1 := gopurs_runtime.UncurriedApp2(Get_Data_Array_rangeImpl(), gopurs_runtime.Int(int64(1)), gopurs_runtime.Int(n_0))
+         .          .    145:_ = arr_val_filterImpl1
+         .          .    146:_ = arr_val_filterImpl1
+         .          .    147:arr_go_filterImpl1 := (*[]gopurs_runtime.Value)(arr_val_filterImpl1.UnsafePtr)
+         .          .    148:_ = arr_go_filterImpl1
+         .          .    149:res_go_filterImpl1 := make([]gopurs_runtime.Value, 0)
+         .          .    150:_ = res_go_filterImpl1
+         .          .    151:for _, v_filterImpl1 := range *arr_go_filterImpl1 {
+         .          .    152:if gopurs_runtime.Apply(gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    153:return gopurs_runtime.Bool(((x_1.IntVal) % (int64(2))) == (int64(0)))
+         .          .    154:}), v_filterImpl1).BoolVal() {
+         .          .    155:res_go_filterImpl1 = append(res_go_filterImpl1, v_filterImpl1)
+         .          .    156:} else {
+         .          .    157:
+         .          .    158:}
+         .          .    159:}
+         .          .    160:return res_go_filterImpl1
+         .          .    161:}()).UnsafePtr)
+         .          .    162:					unboxed := make([]int64, len(arr))
+         .          .    163:					for i, v := range arr { unboxed[i] = v.IntVal }
+         .          .    164:					return unboxed
+         .    64.62kB    165:				}()
+   10.62kB    10.62kB    166:					boxed := make([]gopurs_runtime.Value, len(arr))
+         .          .    167:					for i, v := range arr { boxed[i] = gopurs_runtime.Int(v) }
+         .          .    168:					return gopurs_runtime.Array(boxed)
+         .          .    169:				}()
+         .          .    170:_ = arr_val_foldlArray0
+         .          .    171:res_go_foldlArray0 := gopurs_runtime.Int(int64(0))
+ROUTINE ======================== gopurs/output/purescript.Call_Test_ArrayOps_sumEvens.func1.func1.func1 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_ArrayOps.go
+       4kB    64.62kB (flat, cum)  6.22% of Total
+         .          .    142:					arr := func() []int64 {
+         .          .    143:					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array(func() []gopurs_runtime.Value {
+         .          .    144:arr_val_filterImpl1 := gopurs_runtime.UncurriedApp2(Get_Data_Array_rangeImpl(), gopurs_runtime.Int(int64(1)), gopurs_runtime.Int(n_0))
+         .          .    145:_ = arr_val_filterImpl1
+         .          .    146:_ = arr_val_filterImpl1
+         .          .    147:arr_go_filterImpl1 := (*[]gopurs_runtime.Value)(arr_val_filterImpl1.UnsafePtr)
+         .          .    148:_ = arr_go_filterImpl1
+         .          .    149:res_go_filterImpl1 := make([]gopurs_runtime.Value, 0)
+         .          .    150:_ = res_go_filterImpl1
+         .          .    151:for _, v_filterImpl1 := range *arr_go_filterImpl1 {
+         .          .    152:if gopurs_runtime.Apply(gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    153:return gopurs_runtime.Bool(((x_1.IntVal) % (int64(2))) == (int64(0)))
+         .          .    154:}), v_filterImpl1).BoolVal() {
+         .          .    155:res_go_filterImpl1 = append(res_go_filterImpl1, v_filterImpl1)
+         .          .    156:} else {
+         .          .    157:
+         .          .    158:}
+         .          .    159:}
+         .          .    160:return res_go_filterImpl1
+         .    60.62kB    161:}()).UnsafePtr)
+       4kB        4kB    162:					unboxed := make([]int64, len(arr))
+         .          .    163:					for i, v := range arr { unboxed[i] = v.IntVal }
+         .          .    164:					return unboxed
+         .          .    165:				}()
+         .          .    166:					boxed := make([]gopurs_runtime.Value, len(arr))
+         .          .    167:					for i, v := range arr { boxed[i] = gopurs_runtime.Int(v) }
+ROUTINE ======================== gopurs/output/purescript.Call_Test_ArrayOps_sumEvens.func1.func1.func1.func1 in /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/purescript/Test_ArrayOps.go
+   31.35kB    60.62kB (flat, cum)  5.83% of Total
+         .          .    143:					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array(func() []gopurs_runtime.Value {
+         .    29.27kB    144:arr_val_filterImpl1 := gopurs_runtime.UncurriedApp2(Get_Data_Array_rangeImpl(), gopurs_runtime.Int(int64(1)), gopurs_runtime.Int(n_0))
+         .          .    145:_ = arr_val_filterImpl1
+         .          .    146:_ = arr_val_filterImpl1
+         .          .    147:arr_go_filterImpl1 := (*[]gopurs_runtime.Value)(arr_val_filterImpl1.UnsafePtr)
+         .          .    148:_ = arr_go_filterImpl1
+         .          .    149:res_go_filterImpl1 := make([]gopurs_runtime.Value, 0)
+         .          .    150:_ = res_go_filterImpl1
+         .          .    151:for _, v_filterImpl1 := range *arr_go_filterImpl1 {
+         .          .    152:if gopurs_runtime.Apply(gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+         .          .    153:return gopurs_runtime.Bool(((x_1.IntVal) % (int64(2))) == (int64(0)))
+         .          .    154:}), v_filterImpl1).BoolVal() {
+   31.35kB    31.35kB    155:res_go_filterImpl1 = append(res_go_filterImpl1, v_filterImpl1)
+         .          .    156:} else {
+         .          .    157:
+         .          .    158:}
+         .          .    159:}
+         .          .    160:return res_go_filterImpl1

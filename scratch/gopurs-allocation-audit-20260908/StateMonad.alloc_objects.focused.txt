@@ -1,0 +1,33 @@
+File: audit
+Type: alloc_objects
+Time: 2026-09-08 11:12:22 CEST
+Active filters:
+   focus=gopurs/output/
+Showing nodes accounting for 13270, 100% of 13270 total
+Showing top 25 nodes out of 36
+      flat  flat%   sum%        cum   cum%
+      3620 27.28% 27.28%       3620 27.28%  gopurs/output/gopurs_runtime.RecordDict (inline)
+      2400 18.09% 45.37%      13220 99.62%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1 (inline)
+      2400 18.09% 63.45%      13160 99.17%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1.1.1 (inline)
+      2400 18.09% 81.54%       3600 27.13%  gopurs/output/purescript.Get_Test_StateMonad_modify.func1.1.1 (inline)
+      1200  9.04% 90.58%      13270   100%  gopurs/output/gopurs_runtime.Apply
+      1200  9.04% 99.62%       2400 18.09%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications
+        40   0.3% 99.92%         60  0.45%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func1.1 (inline)
+         2 0.015% 99.94%          2 0.015%  gopurs/output/gopurs_runtime.Str
+         2 0.015%   100%          3 0.023%  gopurs/output/purescript.init.func3
+         2 0.015%   100%          2 0.015%  sync.(*Pool).pinSlow
+         1 0.0075%   100%          1 0.0075%  fmt.(*buffer).write
+         1 0.0075%   100%          1 0.0075%  fmt.init.func1
+         1 0.0075%   100%          2 0.015%  gopurs/output/gopurs_runtime.Box[go.shape.string]
+         1 0.0075%   100%          1 0.0075%  gopurs/output/purescript.Bench_Opaque
+         0     0%   100%          1 0.0075%  fmt.(*fmt).fmtInteger
+         0     0%   100%          1 0.0075%  fmt.(*fmt).pad
+         0     0%   100%          1 0.0075%  fmt.(*pp).doPrintf
+         0     0%   100%          1 0.0075%  fmt.(*pp).fmtInteger
+         0     0%   100%          1 0.0075%  fmt.(*pp).printArg
+         0     0%   100%          4  0.03%  fmt.Sprintf
+         0     0%   100%          3 0.023%  fmt.newPrinter
+         0     0%   100%       3600 27.13%  gopurs/output/gopurs_runtime.Apply.func1
+         0     0%   100%         60  0.45%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func1
+         0     0%   100%      13220 99.62%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3
+         0     0%   100%      13160 99.17%  gopurs/output/purescript.Call_Test_StateMonad_chainModifications.func3.1.1 (inline)
