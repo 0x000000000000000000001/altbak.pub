@@ -30,6 +30,7 @@ done
 
 if [ "$CLEAN" == "1" ]; then
   rm -rf run/bak/java/output/* run/bak/java/spago/*
+  rm -rf java_output
 fi
 mkdir -p run/bak/java/output run/bak/java/spago java_output
 rm -rf output .spago spago.yaml spago.lock
@@ -80,5 +81,6 @@ if [ -d "java_output" ] && [ -f "java_output/MainRun.java" ]; then
     java -Xss100M MainRun
     cd ..
 else
-    echo "No java_output/MainRun.java generated."
+    echo "No java_output/MainRun.java generated." >&2
+    exit 1
 fi
