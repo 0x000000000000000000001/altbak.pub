@@ -1,0 +1,4 @@
+Compared 1067 exact generated-before observations
+Generated ins: 525552 structure, invariants, persistence, ABI, evaluation and full-workload checks passed
+DIAGNOSTIC ill-typed Int: partial produced PureScript_Test_RBTree+Test_RBTree_ins@59-1; saturated chain ["System.Reflection.TargetInvocationException"; "System.InvalidCastException"]
+DIAGNOSTIC null tree: public chain ["System.Reflection.TargetInvocationException"; "System.NullReferenceException"]; bridge chain ["System.NullReferenceException"]

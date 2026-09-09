@@ -1,0 +1,16 @@
+
+
+/private/tmp/sharpurs-rbt-typed-probe-20260909/probe.fsx(49,69): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+
+VALIDATION 431389 assertions passed
+SAMPLE pair=0 variant=current ms=81.32270 depth=22
+SAMPLE pair=0 variant=typed-ins-balance ms=48.21760 depth=22
+SAMPLE pair=1 variant=typed-ins-balance ms=48.24620 depth=22
+SAMPLE pair=1 variant=current ms=81.86650 depth=22
+SAMPLE pair=2 variant=current ms=85.44510 depth=22
+SAMPLE pair=2 variant=typed-ins-balance ms=47.98680 depth=22
+SAMPLE pair=3 variant=typed-ins-balance ms=48.91970 depth=22
+SAMPLE pair=3 variant=current ms=81.23510 depth=22
+SAMPLE pair=4 variant=current ms=84.28980 depth=22
+SAMPLE pair=4 variant=typed-ins-balance ms=55.37490 depth=22
+MEDIAN current=81.86650 typed=48.24620 delta=-41.07%

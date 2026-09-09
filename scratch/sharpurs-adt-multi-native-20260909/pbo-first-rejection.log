@@ -1,0 +1,22 @@
+BIND R PASS 0
+BIND B PASS 0
+BIND E PASS 0
+BIND T PASS 4
+BIND makeBlack PASS 1
+BIND depth PASS 1
+LOWER FAIL PrimOp Op2 OpBooleanAnd $$Boolean
+LOWER FAIL PrimOp Op2 OpBooleanAnd $$Boolean
+LOWER FAIL Branch Array undefined ADT
+LOWER FAIL PrimOp Op2 OpBooleanAnd $$Boolean
+LOWER FAIL Branch Array undefined ADT
+LOWER FAIL Branch Array undefined ADT
+LOWER FAIL PrimOp Op2 OpBooleanAnd $$Boolean
+LOWER FAIL PrimOp Op2 OpBooleanAnd $$Boolean
+LOWER FAIL Branch Array undefined ADT
+LOWER FAIL PrimOp Op2 OpBooleanAnd $$Boolean
+LOWER FAIL Branch Array undefined ADT
+LOWER FAIL Branch Array undefined ADT
+BIND balance FAIL 4
+BIND ins FAIL 2
+BIND insert FAIL 2
+BIND buildTree FAIL 2

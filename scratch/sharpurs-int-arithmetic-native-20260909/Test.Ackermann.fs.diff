@@ -1,0 +1,11 @@
+--- before/Test.Ackermann.fs
++++ after/Test.Ackermann.fs
+@@ -6,7 +6,7 @@
+ 
+ let Test_Ackermann_describe  = (sharpurs_apply (box ((box Effect_Console_log))) (box ((box "Ackermann (3, 4):"))))
+ 
+-let rec Test_Ackermann_ackermann_tco (v: obj) (v1: obj) : obj = ((match (((unbox ((box v))), (unbox ((box v1))))) with | (LitInt 0 (), n) -> ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semiring_add))) (box ((box Data_Semiring_semiringInt)))))) (box ((box n)))))) (box ((box 1))))) | (m, LitInt 0 ()) -> ((Test_Ackermann_ackermann_tco ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ring_sub))) (box ((box Data_Ring_ringInt)))))) (box ((box m)))))) (box ((box 1))))) ((box 1)))) | (m, n) -> ((Test_Ackermann_ackermann_tco ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ring_sub))) (box ((box Data_Ring_ringInt)))))) (box ((box m)))))) (box ((box 1))))) ((Test_Ackermann_ackermann_tco ((box m)) ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ring_sub))) (box ((box Data_Ring_ringInt)))))) (box ((box n)))))) (box ((box 1)))))))))))
++let rec Test_Ackermann_ackermann_tco (v: obj) (v1: obj) : obj = ((match (((unbox ((box v))), (unbox ((box v1))))) with | (LitInt 0 (), n) -> ((box ((unbox<int> (box ((box n)))) + (unbox<int> (box ((box 1))))))) | (m, LitInt 0 ()) -> ((Test_Ackermann_ackermann_tco ((box ((unbox<int> (box ((box m)))) - (unbox<int> (box ((box 1))))))) ((box 1)))) | (m, n) -> ((Test_Ackermann_ackermann_tco ((box ((unbox<int> (box ((box m)))) - (unbox<int> (box ((box 1))))))) ((Test_Ackermann_ackermann_tco ((box m)) ((box ((unbox<int> (box ((box n)))) - (unbox<int> (box ((box 1)))))))))))))
+ and Test_Ackermann_ackermann = box (fun (v: obj) ->  (fun (v1: obj) -> Test_Ackermann_ackermann_tco v v1))
+ 
+ 

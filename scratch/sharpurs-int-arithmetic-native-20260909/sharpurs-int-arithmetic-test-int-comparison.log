@@ -1,0 +1,6 @@
+
+> sharpurs@0.1.0 test:int-comparison
+> node tests/int-comparison.mjs
+
+int-comparison runtime: 396 checks passed
+int-comparison converter: 32 checks passed

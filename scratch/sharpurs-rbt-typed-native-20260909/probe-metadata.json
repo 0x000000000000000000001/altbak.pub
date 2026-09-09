@@ -1,0 +1,78 @@
+{
+  "startedUtc": "2026-09-09T09:10:30.881495+00:00",
+  "probe": true,
+  "order": [
+    "before",
+    "after"
+  ],
+  "sdk": "8.0.423",
+  "runtimes": [
+    "Microsoft.AspNetCore.App 8.0.29 [/Users/0x1/.dotnet/shared/Microsoft.AspNetCore.App]",
+    "Microsoft.NETCore.App 8.0.29 [/Users/0x1/.dotnet/shared/Microsoft.NETCore.App]"
+  ],
+  "runtimeConfigs": {
+    "before": {
+      "runtimeOptions": {
+        "tfm": "net8.0",
+        "framework": {
+          "name": "Microsoft.NETCore.App",
+          "version": "8.0.0"
+        },
+        "configProperties": {
+          "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
+          "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
+        }
+      }
+    },
+    "after": {
+      "runtimeOptions": {
+        "tfm": "net8.0",
+        "framework": {
+          "name": "Microsoft.NETCore.App",
+          "version": "8.0.0"
+        },
+        "configProperties": {
+          "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
+          "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
+        }
+      }
+    }
+  },
+  "assemblies": {
+    "before": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-typed-native-20260909/before/bin/Release/net8.0/Program.dll",
+      "sha256": "ade6692509c4b145755b5500e84c119664f51d25afc8fa61298cbe493d1c380e"
+    },
+    "after": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-typed-native-20260909/after/bin/Release/net8.0/Program.dll",
+      "sha256": "2c02ebab44299f4d8cd91f663463df2accd713bcbf117edfd5e2888ce8d65801"
+    }
+  },
+  "inputsSha256": "a06f4838170225848584158bf9ce5e86e67e3b8543d7e303ffb4cbdf14ff9d03",
+  "buildManifestsSha256": {
+    "before": "4015cc38735a80194db95819360bbd95ce308e4322fc57f1210b66a62acf5b13",
+    "after": "63caa52ee00cf7f8bfcff981379ec1eff61a5884f59770fe104d13a22569efc1"
+  },
+  "historicalOutputSha256": "a3eabbe40e9ddb766059bc4e60e8cbde73ca2dae4a93acd2a2cac768fb60b542",
+  "officialReadme": {
+    "compiled_total_ms": 185.39,
+    "compiled_lazy_us": 71203.33,
+    "native_optimized_lazy_us": 75.0,
+    "compiled_rbtree_us": 100077.83,
+    "native_optimized_rbtree_us": 65156.0,
+    "source": "README.baseline.md",
+    "sha256": "b426ab9570200d8024fda4549142c10c3fcbc59c147fc9777f1d5b0233916a76",
+    "note": "Historical rounded figures, not a simultaneous control. Native optimized RBTree uses mutable SortedSet with ascending insertion and returns Count 100,000; compiled RBTree uses a persistent Okasaki tree with descending insertion and returns depth 22. Algorithms and results differ. Native Lazy also has a different workload/result (1,000 vs 1,000,000)."
+  },
+  "sourceGeneratedPath": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/sharp/output/Main",
+  "environmentOverrides": {
+    "DOTNET_TieredCompilation": null,
+    "DOTNET_TieredPGO": null,
+    "DOTNET_gcServer": null,
+    "COMPlus_TieredCompilation": null,
+    "COMPlus_TieredPGO": null,
+    "COMPlus_gcServer": null
+  },
+  "finishedUtc": "2026-09-09T09:10:36.216057+00:00",
+  "sourceManifestsUnchanged": true
+}

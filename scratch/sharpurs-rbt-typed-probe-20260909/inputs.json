@@ -1,0 +1,17 @@
+{
+  "files": {
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/sharp/output/Main/Test.RBTree.fs": "0604d6e874fbe04ad58866eafa70f7305991776c1cf7b5b63e6908d352121dbd",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/sharp/output/Main/bin/Release/net8.0/Program.dll": "01e3c579c7702aea36a44d996009a8c55d347e52b96c4f865af20e4f5963ecc8",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/sharp/output/Main/Sharpurs_Prelude.fs": "59f798ef96b6f0eb14856e27eb46290082790ad34ba1de11a046cf0f9456cd0e",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/sharp/output/Test.RBTree/corefn.json": "a640bd63dcfbc7612b5ac25684db0a455ca0a8f18bbc640521043688fad58163",
+    "/Users/0x1/Documents/htdocs/altbak.pub/README.md": "b426ab9570200d8024fda4549142c10c3fcbc59c147fc9777f1d5b0233916a76",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-typed-probe-20260909/probe-same-fsi.fsx": "307a0443c22aaffd406ec1a2ccee1c8f3545b8e594accff035c45e8635209de1",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-typed-probe-20260909/probe.log": "88aab43e5205e65ad3b10b398f62aa95c4399120b5d747de8a53add478ac669a",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-typed-probe-20260909/probe.fsx": "d24fe090755ad554830bc8155fa3841656886f110363237b360424793f764190",
+    "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-rbt-typed-probe-20260909/probe-same-fsi.log": "c29b69ac7a37b31a5996768856da2c896cdeeeafe26456118bfa25a171e41c2d"
+  },
+  "method": "3 warmups and 5 alternating pairs per variant inside one FSI process, two experiments; elapsed time, no allocation measurements",
+  "normal_sources_unchanged": true,
+  "fsi_baseline_is_exact_generated_body_ignoring_module_indentation": true,
+  "current_rbt_matches_measured_after": true
+}

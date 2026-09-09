@@ -1,0 +1,7 @@
+[<AutoOpen>]
+module PureScript_Main
+
+open System
+open System.Collections.Generic
+
+let Main_test  = (sharpurs_apply (box ((sharpurs_apply (box ((box ((fun (usd__arg1: obj) -> (fun (usd__arg2: obj) -> (box (Data_List_Types_Consusd_Ctor(usd__arg1, usd__arg2))))))))) (box ((box 1)))))) (box ((box Data_List_Types_Nilusd_Ctor))))

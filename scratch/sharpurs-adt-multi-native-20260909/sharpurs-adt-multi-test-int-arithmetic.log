@@ -1,0 +1,6 @@
+
+> sharpurs@0.1.0 test:int-arithmetic
+> node tests/int-arithmetic.mjs
+
+int-arithmetic runtime: 1648 checks passed
+int-arithmetic converter: 317 checks passed

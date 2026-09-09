@@ -1,0 +1,24 @@
+// Same four Okasaki rotations, same persistent DU and constructor layout.
+let Test_RBTree_balance_adt_native (color: Test_RBTree_Color) (left: Test_RBTree_Tree) (value: int) (right: Test_RBTree_Tree) : Test_RBTree_Tree =
+    match color, left, value, right with
+    | Test_RBTree_Busd_Ctor, Test_RBTree_Tusd_Ctor(Test_RBTree_Rusd_Ctor, Test_RBTree_Tusd_Ctor(Test_RBTree_Rusd_Ctor, a, x, b), y, c), z, d
+    | Test_RBTree_Busd_Ctor, Test_RBTree_Tusd_Ctor(Test_RBTree_Rusd_Ctor, a, x, Test_RBTree_Tusd_Ctor(Test_RBTree_Rusd_Ctor, b, y, c)), z, d
+    | Test_RBTree_Busd_Ctor, a, x, Test_RBTree_Tusd_Ctor(Test_RBTree_Rusd_Ctor, Test_RBTree_Tusd_Ctor(Test_RBTree_Rusd_Ctor, b, y, c), z, d)
+    | Test_RBTree_Busd_Ctor, a, x, Test_RBTree_Tusd_Ctor(Test_RBTree_Rusd_Ctor, b, y, Test_RBTree_Tusd_Ctor(Test_RBTree_Rusd_Ctor, c, z, d)) ->
+        Test_RBTree_Tusd_Ctor(Test_RBTree_Rusd_Ctor,
+            Test_RBTree_Tusd_Ctor(Test_RBTree_Busd_Ctor, a, x, b), y,
+            Test_RBTree_Tusd_Ctor(Test_RBTree_Busd_Ctor, c, z, d))
+    | color, a, x, b -> Test_RBTree_Tusd_Ctor(color, a, x, b)
+
+let Test_RBTree_balance_adt_native_apply color left value right =
+    try Test_RBTree_balance_adt_native color left value right
+    with ex -> raise (Reflection.TargetInvocationException(ex))
+
+let rec Test_RBTree_ins_adt_native (x: int) (tree: Test_RBTree_Tree) : Test_RBTree_Tree =
+    match tree with
+    | Test_RBTree_Eusd_Ctor -> Test_RBTree_Tusd_Ctor(Test_RBTree_Rusd_Ctor, Test_RBTree_Eusd_Ctor, x, Test_RBTree_Eusd_Ctor)
+    | Test_RBTree_Tusd_Ctor(color, a, y, b) ->
+        if x < y then Test_RBTree_balance_adt_native_apply color (Test_RBTree_ins_adt_native x a) y b
+        elif x > y then Test_RBTree_balance_adt_native_apply color a y (Test_RBTree_ins_adt_native x b)
+        else Test_RBTree_Tusd_Ctor(color, a, y, b)
+

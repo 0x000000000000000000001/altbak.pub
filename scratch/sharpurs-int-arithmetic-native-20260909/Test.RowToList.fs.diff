@@ -1,0 +1,11 @@
+--- before/Test.RowToList.fs
++++ after/Test.RowToList.fs
+@@ -10,7 +10,7 @@
+ 
+ let Test_RowToList_keysImpl  = (box (fun (dict: obj) -> (match ((unbox ((box dict)))) with | v -> ((Map.find "keysImpl" (unbox<Map<string, obj>> ((box v))))))))
+ 
+-let Test_RowToList_keysCons  = (box (fun (dictRecordKeys: obj) -> (sharpurs_apply (box ((box Test_RowToList_RecordKeysusd_Dict))) (box ((box ((Map.add "keysImpl" (box ((box (fun (v: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semiring_add))) (box ((box Data_Semiring_semiringInt)))))) (box ((box 1)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Test_RowToList_keysImpl))) (box ((box dictRecordKeys)))))) (box ((box Type_Proxy_Proxyusd_Ctor))))))))))) Map.empty))))))))
++let Test_RowToList_keysCons  = (box (fun (dictRecordKeys: obj) -> (sharpurs_apply (box ((box Test_RowToList_RecordKeysusd_Dict))) (box ((box ((Map.add "keysImpl" (box ((box (fun (v: obj) -> (box ((unbox<int> (box ((box 1)))) + (unbox<int> (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Test_RowToList_keysImpl))) (box ((box dictRecordKeys)))))) (box ((box Type_Proxy_Proxyusd_Ctor))))))))))))) Map.empty))))))))
+ 
+ let Test_RowToList_keysCons1  = (sharpurs_apply (box ((box Test_RowToList_keysCons))) (box ((sharpurs_apply (box ((box Test_RowToList_keysCons))) (box ((sharpurs_apply (box ((box Test_RowToList_keysCons))) (box ((sharpurs_apply (box ((box Test_RowToList_keysCons))) (box ((sharpurs_apply (box ((box Test_RowToList_keysCons))) (box ((box Test_RowToList_keysNil))))))))))))))))
+ 

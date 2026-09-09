@@ -1,0 +1,35 @@
+{
+  "source": "Normal compiler generation; declaration inventory and source diffs, no patched F#.",
+  "inputFiles": 355,
+  "changedFiles": 1,
+  "unchangedFiles": 354,
+  "newNativeFunctionDeclarations": 4,
+  "files": [
+    {
+      "file": "Test.RBTree.fs",
+      "beforeSha256": "0604d6e874fbe04ad58866eafa70f7305991776c1cf7b5b63e6908d352121dbd",
+      "afterSha256": "9f0ea6d1cad2c9658c11d3aefbd5a6d0154e28a21ad380b8622303347e5257b6",
+      "newNativeFunctionDeclarations": [
+        "Test_RBTree_balance_adt_native",
+        "Test_RBTree_buildTree_adt_native",
+        "Test_RBTree_ins_adt_native",
+        "Test_RBTree_insert_adt_native"
+      ],
+      "newNativeApplyDeclarations": [
+        "Test_RBTree_balance_adt_native_apply",
+        "Test_RBTree_buildTree_adt_native_apply",
+        "Test_RBTree_depth_adt_native_apply",
+        "Test_RBTree_ins_adt_native_apply",
+        "Test_RBTree_insert_adt_native_apply",
+        "Test_RBTree_makeBlack_adt_native_apply"
+      ],
+      "otherNewTopLevelDeclarations": [],
+      "removedTopLevelDeclarations": [
+        "Test_RBTree_balance_direct",
+        "Test_RBTree_balance_direct_apply",
+        "Test_RBTree_insert_direct",
+        "Test_RBTree_insert_direct_apply"
+      ]
+    }
+  ]
+}

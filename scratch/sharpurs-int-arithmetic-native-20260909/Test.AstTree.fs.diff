@@ -1,0 +1,18 @@
+--- before/Test.AstTree.fs
++++ after/Test.AstTree.fs
+@@ -18,13 +18,13 @@
+ 
+ let Test_AstTree_Sub  = (box ((fun (usd__arg1: obj) -> (fun (usd__arg2: obj) -> (box (Test_AstTree_Subusd_Ctor(usd__arg1, usd__arg2)))))))
+ 
+-let rec Test_AstTree_eval_tco (v: obj) : obj = ((match ((unbox ((box v)))) with | Test_AstTree_Valusd_Ctor(n) -> ((box n)) | Test_AstTree_Addusd_Ctor(a, b) -> ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semiring_add))) (box ((box Data_Semiring_semiringInt)))))) (box ((Test_AstTree_eval_tco ((box a)))))))) (box ((Test_AstTree_eval_tco ((box b))))))) | Test_AstTree_Mulusd_Ctor(a, b) -> ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semiring_mul))) (box ((box Data_Semiring_semiringInt)))))) (box ((Test_AstTree_eval_tco ((box a)))))))) (box ((Test_AstTree_eval_tco ((box b))))))) | Test_AstTree_Subusd_Ctor(a, b) -> ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ring_sub))) (box ((box Data_Ring_ringInt)))))) (box ((Test_AstTree_eval_tco ((box a)))))))) (box ((Test_AstTree_eval_tco ((box b)))))))))
++let rec Test_AstTree_eval_tco (v: obj) : obj = ((match ((unbox ((box v)))) with | Test_AstTree_Valusd_Ctor(n) -> ((box n)) | Test_AstTree_Addusd_Ctor(a, b) -> ((box ((unbox<int> (box ((Test_AstTree_eval_tco ((box a)))))) + (unbox<int> (box ((Test_AstTree_eval_tco ((box b))))))))) | Test_AstTree_Mulusd_Ctor(a, b) -> ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semiring_mul))) (box ((box Data_Semiring_semiringInt)))))) (box ((Test_AstTree_eval_tco ((box a)))))))) (box ((Test_AstTree_eval_tco ((box b))))))) | Test_AstTree_Subusd_Ctor(a, b) -> ((box ((unbox<int> (box ((Test_AstTree_eval_tco ((box a)))))) - (unbox<int> (box ((Test_AstTree_eval_tco ((box b)))))))))))
+ and Test_AstTree_eval = box (fun (v: obj) -> Test_AstTree_eval_tco v)
+ 
+ 
+ let Test_AstTree_describe  = (sharpurs_apply (box ((box Effect_Console_log))) (box ((box "AST Evaluation:"))))
+ 
+-let rec Test_AstTree_buildTree_tco (v: obj) : obj = ((match ((unbox ((box v)))) with | LitInt 0 () -> ((box (Test_AstTree_Valusd_Ctor((box 1))))) | n -> ((box (Test_AstTree_Addusd_Ctor((box (Test_AstTree_Mulusd_Ctor((box (Test_AstTree_Valusd_Ctor((box n)))), (Test_AstTree_buildTree_tco ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ring_sub))) (box ((box Data_Ring_ringInt)))))) (box ((box n)))))) (box ((box 1))))))))), (box (Test_AstTree_Subusd_Ctor((Test_AstTree_buildTree_tco ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ring_sub))) (box ((box Data_Ring_ringInt)))))) (box ((box n)))))) (box ((box 1)))))), (box (Test_AstTree_Valusd_Ctor((box 1)))))))))))))
++let rec Test_AstTree_buildTree_tco (v: obj) : obj = ((match ((unbox ((box v)))) with | LitInt 0 () -> ((box (Test_AstTree_Valusd_Ctor((box 1))))) | n -> ((box (Test_AstTree_Addusd_Ctor((box (Test_AstTree_Mulusd_Ctor((box (Test_AstTree_Valusd_Ctor((box n)))), (Test_AstTree_buildTree_tco ((box ((unbox<int> (box ((box n)))) - (unbox<int> (box ((box 1))))))))))), (box (Test_AstTree_Subusd_Ctor((Test_AstTree_buildTree_tco ((box ((unbox<int> (box ((box n)))) - (unbox<int> (box ((box 1)))))))), (box (Test_AstTree_Valusd_Ctor((box 1)))))))))))))
+ and Test_AstTree_buildTree = box (fun (v: obj) -> Test_AstTree_buildTree_tco v)
+ 
+ 

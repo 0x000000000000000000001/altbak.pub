@@ -1,0 +1,6 @@
+
+> sharpurs@0.1.0 test:direct-call
+> node tests/direct-call.mjs
+
+direct-call runtime: 130 checks passed
+direct-call converter: 67 checks passed

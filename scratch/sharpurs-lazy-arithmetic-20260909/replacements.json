@@ -1,0 +1,18 @@
+[
+  {
+    "function": "Data_Ring_sub",
+    "dictionary": "Data_Ring_ringInt",
+    "before": "(sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ring_sub))) (box ((box Data_Ring_ringInt)))))) (box ((box n)))))) (box ((box 1))))",
+    "after": "(box ((unbox<int> (box (box ((box n))))) - (unbox<int> (box (box ((box 1)))))))",
+    "left": "(box ((box n)))",
+    "right": "(box ((box 1)))"
+  },
+  {
+    "function": "Data_Semiring_add",
+    "dictionary": "Data_Semiring_semiringInt",
+    "before": "(sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semiring_add))) (box ((box Data_Semiring_semiringInt)))))) (box ((sharpurs_apply (box ((box Test_LazyEvaluation_force))) (box ((box acc))))))))) (box ((box 1))))",
+    "after": "(box ((unbox<int> (box (box ((sharpurs_apply (box ((box Test_LazyEvaluation_force))) (box ((box acc)))))))) + (unbox<int> (box (box ((box 1)))))))",
+    "left": "(box ((sharpurs_apply (box ((box Test_LazyEvaluation_force))) (box ((box acc))))))",
+    "right": "(box ((box 1)))"
+  }
+]

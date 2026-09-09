@@ -1,0 +1,45 @@
+{
+  "filesSha256": {
+    "VerifyBalance.fsx": "5bd6a999c40ec3387d55278c9a50573d49a561717c978eceffa66b6b5aa5f343",
+    "VerifyCodePoints.fsx": "5dbade521fbb0200763b8b296141115b06a01c4e9318f41dd196331feb1c6fe0",
+    "VerifyIns.fsx": "10c9d3b246f28277f1be5848974e4314a618bdb282e351b576b3366c6cc9dbb4",
+    "VerifyLazy.fsx": "20c1e613ed46fb70332595c302c6796afe8859cecefe683fe0d7c83af088d319",
+    "VerifyTree.fsx": "72ba2e1312873d7444bd116aedc7fb95c89074bf0ff1acb95b9468ad862a3679",
+    "validation-after-balance.log": "8790c5175a7d7fbb634bef8a97349d727f0d5a806093f9db39b8fa25e3315281",
+    "validation-after-codepoints.log": "245eeeaf14a8177907bce7083a4239a9ee4ad101c24085d0c7b34a2c8981ae7d",
+    "validation-after-ins.log": "a32ba0c8df43510212957d5612440a9a9a9637000065168d6926ed852127246b",
+    "validation-after-lazy.log": "51cef2091bdc27201831cdabc81a081872fb0fc1ca2914689403a6d1b7a93988",
+    "validation-after-tree.log": "d52d674440607c369ac68971eaf295947208a30b3a6e153bda994f5fd3afd92c",
+    "validation-before-balance.log": "20a2d5160695630e4a76b9d18182bdcdd69d969f2de36d1baf08ee5cad4ae2ba",
+    "validation-before-codepoints.log": "245eeeaf14a8177907bce7083a4239a9ee4ad101c24085d0c7b34a2c8981ae7d",
+    "validation-before-ins.log": "a2587f67ea17e37e40e8b2ec3bbafb64088f60bb5436e04a486ee83105446b15",
+    "validation-before-lazy.log": "51cef2091bdc27201831cdabc81a081872fb0fc1ca2914689403a6d1b7a93988",
+    "validation-before-tree.log": "d52d674440607c369ac68971eaf295947208a30b3a6e153bda994f5fd3afd92c",
+    "validation-oracle.before.json": "5ec8aa7c1a64673f7c18f8593cf57721e78b648b23920e1e801cce278dfc389e"
+  },
+  "runtime": "FSI --nologo --optimize+ --exec; --define:BASELINE selects before",
+  "comparison": "1067 exact observations emitted by before DLL and checked by after, including full 100000-node tree",
+  "checks": {
+    "ins": {
+      "before": 522281,
+      "after": 524959
+    },
+    "balance": {
+      "before": 138,
+      "after": 190
+    },
+    "tree": {
+      "before": 27087,
+      "after": 27087
+    },
+    "lazy": {
+      "before": 333,
+      "after": 333
+    },
+    "codepoints": {
+      "before": 165,
+      "after": 165
+    }
+  },
+  "limits": "Invalid typed FFI payloads are diagnostics, not acceptance criteria. No allocation or GC measurement."
+}

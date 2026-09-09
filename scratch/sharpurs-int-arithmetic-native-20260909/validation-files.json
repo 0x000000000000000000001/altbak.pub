@@ -1,0 +1,11 @@
+{
+  "int-arithmetic-validation/ArithmeticFallback.fs": "183b33d02945209585299c3f580f199857baf63e6bebaacb94a4ef5c91eccd91",
+  "int-arithmetic-validation/IntArithmetic.fs": "65d588b881da18614583c100a041e9013b5a21081947c60e15411568855cf27e",
+  "int-arithmetic-validation/IntArithmetic.js": "d3bfa995147f11813706729c5c69b544e2dfed05623dafc768c7317acb3afdbf",
+  "int-arithmetic-validation/IntArithmetic.purs": "1ae36040274786ad8dc8098bbfaec0695c3fbdccda450320c8289fe88497202c",
+  "int-arithmetic-validation/arithmetic.fsx": "a1b1a0db6a73149185890385aae43aec17c2ab3efff820063a36a007dfb0fb2f",
+  "int-arithmetic-validation/corefn.json": "2937bb8ce5f642ea6130c558a48c432fcc7d36ce718417038fe026d6e2e00c41",
+  "int-arithmetic-validation/index.js": "bf4b28f645cfc2644c3c4220b4ee33bb9cd77eb765ddb94383dad536ccf41b02",
+  "int-arithmetic-validation/oracle-cases.json": "67011eafe24e4bf7caca4617ddecf42a23910ad0ef6485864bea0b0600ee6037",
+  "int-arithmetic-validation/validation.log": "20c1ed8b6ac820949fb114d89f602484a5de657b5722ea7d11c48ec72170e731"
+}

@@ -1,0 +1,11 @@
+--- before/Data.List.Lazy.NonEmpty.fs
++++ after/Data.List.Lazy.NonEmpty.fs
+@@ -16,7 +16,7 @@
+ 
+ let Data_List_Lazy_NonEmpty_repeat  = (box (fun (x: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box Data_Function_apply))) (box ((box Data_List_Lazy_Types_NonEmptyList)))))) (box ((sharpurs_apply (box ((box Data_Lazy_defer))) (box ((box (fun (v: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box ((fun (usd__arg1: obj) -> (fun (usd__arg2: obj) -> (box (Data_NonEmpty_NonEmptyusd_Ctor(usd__arg1, usd__arg2))))))))) (box ((box x)))))) (box ((sharpurs_apply (box ((box Data_List_Lazy_repeat))) (box ((box x)))))))))))))))))
+ 
+-let Data_List_Lazy_NonEmpty_length  = (box (fun (v: obj) -> (match ((unbox ((box v)))) with | nel -> ((let v1 = (sharpurs_apply (box ((box Data_Lazy_force))) (box ((box nel)))) in (match ((unbox ((box v1)))) with | Data_NonEmpty_NonEmptyusd_Ctor(_, xs) -> ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semiring_add))) (box ((box Data_Semiring_semiringInt)))))) (box ((box 1)))))) (box ((sharpurs_apply (box ((box Data_List_Lazy_length))) (box ((box xs))))))))))))))
++let Data_List_Lazy_NonEmpty_length  = (box (fun (v: obj) -> (match ((unbox ((box v)))) with | nel -> ((let v1 = (sharpurs_apply (box ((box Data_Lazy_force))) (box ((box nel)))) in (match ((unbox ((box v1)))) with | Data_NonEmpty_NonEmptyusd_Ctor(_, xs) -> ((box ((unbox<int> (box ((box 1)))) + (unbox<int> (box ((sharpurs_apply (box ((box Data_List_Lazy_length))) (box ((box xs))))))))))))))))
+ 
+ let Data_List_Lazy_NonEmpty_last  = (box (fun (v: obj) -> (match ((unbox ((box v)))) with | nel -> ((let v1 = (sharpurs_apply (box ((box Data_Lazy_force))) (box ((box nel)))) in (match ((unbox ((box v1)))) with | Data_NonEmpty_NonEmptyusd_Ctor(x, xs) -> ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Maybe_fromMaybe))) (box ((box x)))))) (box ((sharpurs_apply (box ((box Data_List_Lazy_last))) (box ((box xs))))))))))))))
+ 

@@ -1,0 +1,6 @@
+
+> sharpurs@0.1.0 test:adt-kernel
+> node tests/adt-kernel.mjs
+
+adt-kernel runtime: 32 checks passed
+adt-kernel converter: 33 checks passed

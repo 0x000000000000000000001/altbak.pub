@@ -1,0 +1,26 @@
+{
+  "matchedRawSites": 166,
+  "matchedRawModules": 38,
+  "effectiveConvertedSites": 163,
+  "effectiveConvertedModules": 37,
+  "effectiveAdditions": 69,
+  "effectiveSubtractions": 94,
+  "alreadyNativeSites": [
+    {
+      "binding": "Test.TCO.deepTailRec",
+      "count": 2
+    },
+    {
+      "binding": "Test.RBTree.depth",
+      "count": 1
+    }
+  ],
+  "lazyConvertedBindings": {
+    "buildThunks": 2,
+    "runManyTimes": 2
+  },
+  "rbtreeConvertedBindings": {
+    "buildTree": 1
+  },
+  "source": "Inventory from int_arithmetic_recognizer agent, confirmed by root; generated before/after diffs retained in this audit."
+}

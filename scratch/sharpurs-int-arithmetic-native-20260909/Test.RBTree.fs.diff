@@ -1,0 +1,11 @@
+--- before/Test.RBTree.fs
++++ after/Test.RBTree.fs
+@@ -60,7 +60,7 @@
+ 
+ let Test_RBTree_insert = (box (fun (x: obj) -> (box (fun (s: obj) -> (Test_RBTree_insert_direct x s)))))
+ 
+-let rec Test_RBTree_buildTree_tco (v: obj) (v1: obj) : obj = ((match (((unbox ((box v))), (unbox ((box v1))))) with | (LitInt 0 (), acc) -> ((box acc)) | (n, acc) -> ((Test_RBTree_buildTree_tco ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ring_sub))) (box ((box Data_Ring_ringInt)))))) (box ((box n)))))) (box ((box 1))))) ((Test_RBTree_insert_direct_apply ((box ((box n)))) ((box ((box acc))))))))))
++let rec Test_RBTree_buildTree_tco (v: obj) (v1: obj) : obj = ((match (((unbox ((box v))), (unbox ((box v1))))) with | (LitInt 0 (), acc) -> ((box acc)) | (n, acc) -> ((Test_RBTree_buildTree_tco ((box ((unbox<int> (box ((box n)))) - (unbox<int> (box ((box 1))))))) ((Test_RBTree_insert_direct_apply ((box ((box n)))) ((box ((box acc))))))))))
+ and Test_RBTree_buildTree = box (fun (v: obj) ->  (fun (v1: obj) -> Test_RBTree_buildTree_tco v v1))
+ 
+ 

@@ -1,0 +1,4 @@
+Recorded 1067 exact generated-before observations
+Generated ins: 522281 structure, invariants, persistence, ABI, evaluation and full-workload checks passed
+DIAGNOSTIC ill-typed Int: partial produced Microsoft.FSharp.Core.OptimizedClosures+Invoke@3756[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]; saturated chain ["System.Reflection.TargetInvocationException"; "System.InvalidCastException"]
+DIAGNOSTIC null tree: public chain ["System.Reflection.TargetInvocationException"; "System.NullReferenceException"]; bridge chain ["System.NullReferenceException"]

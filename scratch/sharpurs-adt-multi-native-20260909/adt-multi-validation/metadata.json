@@ -1,0 +1,25 @@
+{
+  "sourceHashes": {
+    "src/Sharpurs/AdtKernel.purs": "abb8cffe9a9c852ad0212a9066fd4659a688095398b2787f8a5f15ea30d60883",
+    "src/Sharpurs/AdtLayout.purs": "e91e4144782eb92cd6b97004f1eb8c6bad94ac6dcd9a0106e77b2cf0499df86e",
+    "src/Sharpurs/CodeGen.purs": "ebc171e8dd1638f663df6d55fe36b340b51f4c484584d8b2cbf9e0a8597a4b07",
+    "tests/adt-multi.mjs": "503493a151dc2a8587c6dc445f38454a09e746f74378cc616c4d57f4076366f8",
+    "tests/fixtures/adt-multi/AdtMulti.purs": "487c3ce058fa7943f3d84f33961e61faf678be71164db3569b2618803200097e",
+    "tests/fixtures/adt-multi/AdtMultiConsumer.purs": "7087f9c5edacf1ef2db5e6bdb95eb55e08fb5c62dd6dee0a4856c05a0fe73cb2",
+    "tests/fixtures/adt-multi/AdtMultiConsumer.js": "768a308df18225a71c1e6a44d0ed8f1839c917a417f4a83b644cf4fbf0528a1c",
+    "tests/fixtures/adt-multi/AdtMultiExternal.purs": "229d9d53e0af27cd7ee4a4e39fd072a03ad98085d69932b3b16f2c64f3919c77"
+  },
+  "selected": [
+    "unused",
+    "score",
+    "shortAndSafe",
+    "shortOrSafe",
+    "nested",
+    "depth",
+    "assemble",
+    "choose",
+    "insert",
+    "shift",
+    "argumentNative"
+  ]
+}

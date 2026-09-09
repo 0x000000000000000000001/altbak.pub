@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "88toQjnRpbY=",
+  "success": true,
+  "projectFilePath": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-adt-multi-native-20260909/after/Program.fsproj",
+  "expectedPackageFiles": [
+    "/Users/0x1/.nuget/packages/fsharp.core/8.0.403/fsharp.core.8.0.403.nupkg.sha512"
+  ],
+  "logs": []
+}

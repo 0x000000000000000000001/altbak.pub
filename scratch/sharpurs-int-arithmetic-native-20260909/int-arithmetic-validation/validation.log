@@ -1,0 +1,57 @@
+$ /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/js/node_modules/.bin/purs compile /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-int-arithmetic-pybWjz/IntArithmetic.purs /Users/0x1/Documents/htdocs/sharpurs/sharpurs/.spago/p/prelude-6.0.2/src/**/*.purs --output /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-int-arithmetic-pybWjz/output --codegen corefn,js
+[ 2 of 51] Compiling Record.Unsafe
+[ 3 of 51] Compiling Data.Void
+[ 4 of 51] Compiling Data.Unit
+[ 1 of 51] Compiling Type.Proxy
+[ 5 of 51] Compiling Data.NaturalTransformation
+[ 6 of 51] Compiling Data.Boolean
+[ 7 of 51] Compiling Control.Semigroupoid
+[ 8 of 51] Compiling Data.Symbol
+[ 9 of 51] Compiling Control.Category
+[11 of 51] Compiling Data.HeytingAlgebra
+[10 of 51] Compiling Data.Semigroup
+[12 of 51] Compiling Data.Semiring
+[13 of 51] Compiling Data.Show
+[14 of 51] Compiling Data.Ring
+[15 of 51] Compiling Data.Generic.Rep
+[16 of 51] Compiling Data.BooleanAlgebra
+[17 of 51] Compiling Data.Eq
+[18 of 51] Compiling Data.CommutativeRing
+[19 of 51] Compiling Data.Ordering
+[20 of 51] Compiling Data.EuclideanRing
+[21 of 51] Compiling Data.Ord
+[22 of 51] Compiling Data.DivisionRing
+[23 of 51] Compiling Data.Field
+[24 of 51] Compiling Data.Monoid
+[25 of 51] Compiling Data.Bounded
+[26 of 51] Compiling Data.Reflectable
+[27 of 51] Compiling Data.Function
+[28 of 51] Compiling Data.Functor
+[29 of 51] Compiling Control.Apply
+[30 of 51] Compiling Data.Bounded.Generic
+[31 of 51] Compiling Data.Monoid.Generic
+[32 of 51] Compiling Control.Applicative
+[33 of 51] Compiling Control.Bind
+[34 of 51] Compiling Control.Monad
+[35 of 51] Compiling Prelude
+[36 of 51] Compiling Data.Monoid.Endo
+[37 of 51] Compiling Data.Semigroup.Last
+[39 of 51] Compiling Data.Monoid.Disj
+[38 of 51] Compiling IntArithmetic
+[40 of 51] Compiling Data.Semiring.Generic
+[41 of 51] Compiling Data.Monoid.Conj
+[42 of 51] Compiling Data.Monoid.Dual
+[43 of 51] Compiling Data.Show.Generic
+[44 of 51] Compiling Data.Ring.Generic
+[45 of 51] Compiling Data.Eq.Generic
+[46 of 51] Compiling Data.Semigroup.Generic
+[47 of 51] Compiling Data.HeytingAlgebra.Generic
+[48 of 51] Compiling Data.Ord.Generic
+[49 of 51] Compiling Data.Monoid.Additive
+[50 of 51] Compiling Data.Monoid.Multiplicative
+[51 of 51] Compiling Data.Semigroup.First
+
+$ /Users/0x1/.dotnet/dotnet fsi --nologo --optimize+ --exec arithmetic.fsx
+int-arithmetic runtime: 1648 checks passed
+
+int-arithmetic converter: 317 checks passed

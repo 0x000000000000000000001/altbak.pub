@@ -1,0 +1,598 @@
+{
+  "validation": {
+    "passed": true,
+    "official_processes_per_variant": 1,
+    "tests_per_process": 14,
+    "outputs_and_order_match_historical": true,
+    "sum_rounding_tolerance_ms": 0.02,
+    "provenance_verified": true
+  },
+  "method": {
+    "official": "Unmodified App.main entry point: best of 10 per test, 1 fresh processes per variant.",
+    "order": [
+      "before",
+      "after"
+    ],
+    "summary": "Median and full range of process-level best-of-10 measurements.",
+    "caution": "Descriptive statistics; per-test medians need not sum to total median. One-pair probe is not the final performance conclusion."
+  },
+  "runs": {
+    "before": [
+      {
+        "log": "probe-official-before-1.log",
+        "total_ms": 183.44,
+        "tests": [
+          {
+            "name": "AST Evaluation",
+            "output": "7",
+            "best_of_10_us": 74.83
+          },
+          {
+            "name": "Fibonacci",
+            "output": "55",
+            "best_of_10_us": 7.96
+          },
+          {
+            "name": "List Processing (900 elements)",
+            "output": "202950",
+            "best_of_10_us": 353.04
+          },
+          {
+            "name": "Tail Call Optimization (100k calls)",
+            "output": "100000",
+            "best_of_10_us": 50.75
+          },
+          {
+            "name": "Deep Record Updates (10k iterations)",
+            "output": "20000",
+            "best_of_10_us": 4307.79
+          },
+          {
+            "name": "Ackermann (3, 4)",
+            "output": "125",
+            "best_of_10_us": 479.25
+          },
+          {
+            "name": "Church Numerals (100k Closure Applications)",
+            "output": "100000",
+            "best_of_10_us": 4466.08
+          },
+          {
+            "name": "Prime Sieve (sum primes up to 500)",
+            "output": "21536",
+            "best_of_10_us": 1755.88
+          },
+          {
+            "name": "Red-Black Tree (100k Worst-Case Insertions)",
+            "output": "22",
+            "best_of_10_us": 96219.75
+          },
+          {
+            "name": "Polymorphism (10M Type Class Dict Lookups)",
+            "output": "10000000",
+            "best_of_10_us": 2282.54
+          },
+          {
+            "name": "State Monad (1.2k Binds, 60 Stack Depth)",
+            "output": "1200",
+            "best_of_10_us": 259.79
+          },
+          {
+            "name": "Lazy Evaluation (1M Thunks Forced, 1k Depth)",
+            "output": "1000000",
+            "best_of_10_us": 73128.08
+          },
+          {
+            "name": "Array Processing (900 elements)",
+            "output": "202950",
+            "best_of_10_us": 52.96
+          },
+          {
+            "name": "RowToList (Keys Count)",
+            "output": "5",
+            "best_of_10_us": 0.71
+          }
+        ]
+      }
+    ],
+    "after": [
+      {
+        "log": "probe-official-after-1.log",
+        "total_ms": 152.94,
+        "tests": [
+          {
+            "name": "AST Evaluation",
+            "output": "7",
+            "best_of_10_us": 82.13
+          },
+          {
+            "name": "Fibonacci",
+            "output": "55",
+            "best_of_10_us": 7.67
+          },
+          {
+            "name": "List Processing (900 elements)",
+            "output": "202950",
+            "best_of_10_us": 360.88
+          },
+          {
+            "name": "Tail Call Optimization (100k calls)",
+            "output": "100000",
+            "best_of_10_us": 55.21
+          },
+          {
+            "name": "Deep Record Updates (10k iterations)",
+            "output": "20000",
+            "best_of_10_us": 4237.63
+          },
+          {
+            "name": "Ackermann (3, 4)",
+            "output": "125",
+            "best_of_10_us": 471.42
+          },
+          {
+            "name": "Church Numerals (100k Closure Applications)",
+            "output": "100000",
+            "best_of_10_us": 4350.92
+          },
+          {
+            "name": "Prime Sieve (sum primes up to 500)",
+            "output": "21536",
+            "best_of_10_us": 1744.75
+          },
+          {
+            "name": "Red-Black Tree (100k Worst-Case Insertions)",
+            "output": "22",
+            "best_of_10_us": 99970.75
+          },
+          {
+            "name": "Polymorphism (10M Type Class Dict Lookups)",
+            "output": "10000000",
+            "best_of_10_us": 2223.54
+          },
+          {
+            "name": "State Monad (1.2k Binds, 60 Stack Depth)",
+            "output": "1200",
+            "best_of_10_us": 243.54
+          },
+          {
+            "name": "Lazy Evaluation (1M Thunks Forced, 1k Depth)",
+            "output": "1000000",
+            "best_of_10_us": 39128.88
+          },
+          {
+            "name": "Array Processing (900 elements)",
+            "output": "202950",
+            "best_of_10_us": 58.38
+          },
+          {
+            "name": "RowToList (Keys Count)",
+            "output": "5",
+            "best_of_10_us": 0.71
+          }
+        ]
+      }
+    ]
+  },
+  "summaries": {
+    "before": {
+      "total_ms": {
+        "n": 1,
+        "values": [
+          183.44
+        ],
+        "median": 183.44,
+        "min": 183.44,
+        "max": 183.44
+      },
+      "tests_us": {
+        "AST Evaluation": {
+          "n": 1,
+          "values": [
+            74.83
+          ],
+          "median": 74.83,
+          "min": 74.83,
+          "max": 74.83
+        },
+        "Fibonacci": {
+          "n": 1,
+          "values": [
+            7.96
+          ],
+          "median": 7.96,
+          "min": 7.96,
+          "max": 7.96
+        },
+        "List Processing (900 elements)": {
+          "n": 1,
+          "values": [
+            353.04
+          ],
+          "median": 353.04,
+          "min": 353.04,
+          "max": 353.04
+        },
+        "Tail Call Optimization (100k calls)": {
+          "n": 1,
+          "values": [
+            50.75
+          ],
+          "median": 50.75,
+          "min": 50.75,
+          "max": 50.75
+        },
+        "Deep Record Updates (10k iterations)": {
+          "n": 1,
+          "values": [
+            4307.79
+          ],
+          "median": 4307.79,
+          "min": 4307.79,
+          "max": 4307.79
+        },
+        "Ackermann (3, 4)": {
+          "n": 1,
+          "values": [
+            479.25
+          ],
+          "median": 479.25,
+          "min": 479.25,
+          "max": 479.25
+        },
+        "Church Numerals (100k Closure Applications)": {
+          "n": 1,
+          "values": [
+            4466.08
+          ],
+          "median": 4466.08,
+          "min": 4466.08,
+          "max": 4466.08
+        },
+        "Prime Sieve (sum primes up to 500)": {
+          "n": 1,
+          "values": [
+            1755.88
+          ],
+          "median": 1755.88,
+          "min": 1755.88,
+          "max": 1755.88
+        },
+        "Red-Black Tree (100k Worst-Case Insertions)": {
+          "n": 1,
+          "values": [
+            96219.75
+          ],
+          "median": 96219.75,
+          "min": 96219.75,
+          "max": 96219.75
+        },
+        "Polymorphism (10M Type Class Dict Lookups)": {
+          "n": 1,
+          "values": [
+            2282.54
+          ],
+          "median": 2282.54,
+          "min": 2282.54,
+          "max": 2282.54
+        },
+        "State Monad (1.2k Binds, 60 Stack Depth)": {
+          "n": 1,
+          "values": [
+            259.79
+          ],
+          "median": 259.79,
+          "min": 259.79,
+          "max": 259.79
+        },
+        "Lazy Evaluation (1M Thunks Forced, 1k Depth)": {
+          "n": 1,
+          "values": [
+            73128.08
+          ],
+          "median": 73128.08,
+          "min": 73128.08,
+          "max": 73128.08
+        },
+        "Array Processing (900 elements)": {
+          "n": 1,
+          "values": [
+            52.96
+          ],
+          "median": 52.96,
+          "min": 52.96,
+          "max": 52.96
+        },
+        "RowToList (Keys Count)": {
+          "n": 1,
+          "values": [
+            0.71
+          ],
+          "median": 0.71,
+          "min": 0.71,
+          "max": 0.71
+        }
+      }
+    },
+    "after": {
+      "total_ms": {
+        "n": 1,
+        "values": [
+          152.94
+        ],
+        "median": 152.94,
+        "min": 152.94,
+        "max": 152.94
+      },
+      "tests_us": {
+        "AST Evaluation": {
+          "n": 1,
+          "values": [
+            82.13
+          ],
+          "median": 82.13,
+          "min": 82.13,
+          "max": 82.13
+        },
+        "Fibonacci": {
+          "n": 1,
+          "values": [
+            7.67
+          ],
+          "median": 7.67,
+          "min": 7.67,
+          "max": 7.67
+        },
+        "List Processing (900 elements)": {
+          "n": 1,
+          "values": [
+            360.88
+          ],
+          "median": 360.88,
+          "min": 360.88,
+          "max": 360.88
+        },
+        "Tail Call Optimization (100k calls)": {
+          "n": 1,
+          "values": [
+            55.21
+          ],
+          "median": 55.21,
+          "min": 55.21,
+          "max": 55.21
+        },
+        "Deep Record Updates (10k iterations)": {
+          "n": 1,
+          "values": [
+            4237.63
+          ],
+          "median": 4237.63,
+          "min": 4237.63,
+          "max": 4237.63
+        },
+        "Ackermann (3, 4)": {
+          "n": 1,
+          "values": [
+            471.42
+          ],
+          "median": 471.42,
+          "min": 471.42,
+          "max": 471.42
+        },
+        "Church Numerals (100k Closure Applications)": {
+          "n": 1,
+          "values": [
+            4350.92
+          ],
+          "median": 4350.92,
+          "min": 4350.92,
+          "max": 4350.92
+        },
+        "Prime Sieve (sum primes up to 500)": {
+          "n": 1,
+          "values": [
+            1744.75
+          ],
+          "median": 1744.75,
+          "min": 1744.75,
+          "max": 1744.75
+        },
+        "Red-Black Tree (100k Worst-Case Insertions)": {
+          "n": 1,
+          "values": [
+            99970.75
+          ],
+          "median": 99970.75,
+          "min": 99970.75,
+          "max": 99970.75
+        },
+        "Polymorphism (10M Type Class Dict Lookups)": {
+          "n": 1,
+          "values": [
+            2223.54
+          ],
+          "median": 2223.54,
+          "min": 2223.54,
+          "max": 2223.54
+        },
+        "State Monad (1.2k Binds, 60 Stack Depth)": {
+          "n": 1,
+          "values": [
+            243.54
+          ],
+          "median": 243.54,
+          "min": 243.54,
+          "max": 243.54
+        },
+        "Lazy Evaluation (1M Thunks Forced, 1k Depth)": {
+          "n": 1,
+          "values": [
+            39128.88
+          ],
+          "median": 39128.88,
+          "min": 39128.88,
+          "max": 39128.88
+        },
+        "Array Processing (900 elements)": {
+          "n": 1,
+          "values": [
+            58.38
+          ],
+          "median": 58.38,
+          "min": 58.38,
+          "max": 58.38
+        },
+        "RowToList (Keys Count)": {
+          "n": 1,
+          "values": [
+            0.71
+          ],
+          "median": 0.71,
+          "min": 0.71,
+          "max": 0.71
+        }
+      }
+    }
+  },
+  "changes": {
+    "total_ms": {
+      "before": 183.44,
+      "after": 152.94,
+      "difference": -30.5,
+      "difference_percent": -16.626689925861314,
+      "speedup_factor": 1.1994246109585458
+    },
+    "tests_us": {
+      "AST Evaluation": {
+        "before": 74.83,
+        "after": 82.13,
+        "difference": 7.299999999999997,
+        "difference_percent": 9.75544567686757,
+        "speedup_factor": 0.911116522586144
+      },
+      "Fibonacci": {
+        "before": 7.96,
+        "after": 7.67,
+        "difference": -0.29000000000000004,
+        "difference_percent": -3.643216080402012,
+        "speedup_factor": 1.0378096479791394
+      },
+      "List Processing (900 elements)": {
+        "before": 353.04,
+        "after": 360.88,
+        "difference": 7.839999999999975,
+        "difference_percent": 2.2207115341037698,
+        "speedup_factor": 0.9782753269784971
+      },
+      "Tail Call Optimization (100k calls)": {
+        "before": 50.75,
+        "after": 55.21,
+        "difference": 4.460000000000001,
+        "difference_percent": 8.78817733990147,
+        "speedup_factor": 0.9192175330556058
+      },
+      "Deep Record Updates (10k iterations)": {
+        "before": 4307.79,
+        "after": 4237.63,
+        "difference": -70.15999999999985,
+        "difference_percent": -1.6286773496386742,
+        "speedup_factor": 1.0165564242276932
+      },
+      "Ackermann (3, 4)": {
+        "before": 479.25,
+        "after": 471.42,
+        "difference": -7.829999999999984,
+        "difference_percent": -1.6338028169014085,
+        "speedup_factor": 1.0166093928980526
+      },
+      "Church Numerals (100k Closure Applications)": {
+        "before": 4466.08,
+        "after": 4350.92,
+        "difference": -115.15999999999985,
+        "difference_percent": -2.5785476301364962,
+        "speedup_factor": 1.0264679653958242
+      },
+      "Prime Sieve (sum primes up to 500)": {
+        "before": 1755.88,
+        "after": 1744.75,
+        "difference": -11.13000000000011,
+        "difference_percent": -0.6338701961409732,
+        "speedup_factor": 1.0063791374122368
+      },
+      "Red-Black Tree (100k Worst-Case Insertions)": {
+        "before": 96219.75,
+        "after": 99970.75,
+        "difference": 3751.0,
+        "difference_percent": 3.898368058532675,
+        "speedup_factor": 0.9624790251148461
+      },
+      "Polymorphism (10M Type Class Dict Lookups)": {
+        "before": 2282.54,
+        "after": 2223.54,
+        "difference": -59.0,
+        "difference_percent": -2.584839696127994,
+        "speedup_factor": 1.0265342651807479
+      },
+      "State Monad (1.2k Binds, 60 Stack Depth)": {
+        "before": 259.79,
+        "after": 243.54,
+        "difference": -16.25000000000003,
+        "difference_percent": -6.255052157511843,
+        "speedup_factor": 1.066724152090006
+      },
+      "Lazy Evaluation (1M Thunks Forced, 1k Depth)": {
+        "before": 73128.08,
+        "after": 39128.88,
+        "difference": -33999.200000000004,
+        "difference_percent": -46.49267422308914,
+        "speedup_factor": 1.8689029688557406
+      },
+      "Array Processing (900 elements)": {
+        "before": 52.96,
+        "after": 58.38,
+        "difference": 5.420000000000002,
+        "difference_percent": 10.23413897280967,
+        "speedup_factor": 0.9071599862966769
+      },
+      "RowToList (Keys Count)": {
+        "before": 0.71,
+        "after": 0.71,
+        "difference": 0.0,
+        "difference_percent": 0.0,
+        "speedup_factor": 1.0
+      }
+    }
+  },
+  "official_readme_baseline": {
+    "compiled_total_ms": 185.39,
+    "compiled_lazy_us": 71203.33,
+    "native_optimized_lazy_us": 75.0,
+    "compiled_rbtree_us": 100077.83,
+    "source": "README.baseline.md",
+    "sha256": "7317993e8512d5d0cc4253383e87272f9d86ae9da446f45d44be3e097d3e7a3d",
+    "note": "Historical rounded figures, not a simultaneous control. Native optimized Lazy executes 1,000 increments and returns 1,000; compiled Lazy forces 1,000,000 thunks and returns 1,000,000. Native timing is not a directly comparable target."
+  },
+  "after_vs_official_readme": {
+    "total_ms": {
+      "before": 185.39,
+      "after": 152.94,
+      "difference": -32.44999999999999,
+      "difference_percent": -17.50364097308377,
+      "speedup_factor": 1.2121747090362234
+    },
+    "lazy_us": {
+      "before": 71203.33,
+      "after": 39128.88,
+      "difference": -32074.450000000004,
+      "difference_percent": -45.04627803222125,
+      "speedup_factor": 1.8197129588171195
+    },
+    "rbtree_us": {
+      "before": 100077.83,
+      "after": 99970.75,
+      "difference": -107.08000000000175,
+      "difference_percent": -0.1069967244493597,
+      "speedup_factor": 1.0010711133006405
+    }
+  }
+}

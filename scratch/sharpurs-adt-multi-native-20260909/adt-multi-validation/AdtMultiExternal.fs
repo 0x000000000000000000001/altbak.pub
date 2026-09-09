@@ -1,0 +1,3 @@
+let AdtMultiExternal_readZero  = (box (fun (value: obj) -> (sharpurs_apply (box ((box Partial_Unsafe_unsafePartial))) (box ((box (fun (usd__unused: obj) -> (sharpurs_apply (box ((box (fun (usd__unused: obj) -> (match ((unbox ((box value)))) with | LitInt 0 () -> ((box 0))))))) (box ((box Prim_undefined)))))))))))
+
+let AdtMultiExternal_offset  = (box (fun (value: obj) -> (box ((unbox<int> (box ((box value)))) + (unbox<int> (box ((box 1))))))))

@@ -1,0 +1,18 @@
+--- before/Test.Church.fs
++++ after/Test.Church.fs
+@@ -6,13 +6,13 @@
+ 
+ let Test_Church_zeroC  = (box (fun (v: obj) -> (box (fun (x: obj) -> (box x)))))
+ 
+-let Test_Church_toInt  = (box (fun (n: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box n))) (box ((box (fun (x: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semiring_add))) (box ((box Data_Semiring_semiringInt)))))) (box ((box x)))))) (box ((box 1))))))))))) (box ((box 0))))))
++let Test_Church_toInt  = (box (fun (n: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box n))) (box ((box (fun (x: obj) -> (box ((unbox<int> (box ((box x)))) + (unbox<int> (box ((box 1))))))))))))) (box ((box 0))))))
+ 
+ let Test_Church_succC  = (box (fun (n: obj) -> (box (fun (f: obj) -> (box (fun (x: obj) -> (sharpurs_apply (box ((box f))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box n))) (box ((box f)))))) (box ((box x)))))))))))))
+ 
+ let Test_Church_mulC  = (box (fun (m: obj) -> (box (fun (n: obj) -> (box (fun (f: obj) -> (box (fun (x: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box m))) (box ((sharpurs_apply (box ((box n))) (box ((box f))))))))) (box ((box x))))))))))))
+ 
+-let rec Test_Church_fromInt_tco (v: obj) : obj = ((match ((unbox ((box v)))) with | LitInt 0 () -> ((box Test_Church_zeroC)) | n -> ((sharpurs_apply (box ((box Test_Church_succC))) (box ((Test_Church_fromInt_tco ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ring_sub))) (box ((box Data_Ring_ringInt)))))) (box ((box n)))))) (box ((box 1))))))))))))
++let rec Test_Church_fromInt_tco (v: obj) : obj = ((match ((unbox ((box v)))) with | LitInt 0 () -> ((box Test_Church_zeroC)) | n -> ((sharpurs_apply (box ((box Test_Church_succC))) (box ((Test_Church_fromInt_tco ((box ((unbox<int> (box ((box n)))) - (unbox<int> (box ((box 1))))))))))))))
+ and Test_Church_fromInt = box (fun (v: obj) -> Test_Church_fromInt_tco v)
+ 
+ 

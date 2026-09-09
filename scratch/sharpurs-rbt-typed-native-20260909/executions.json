@@ -1,0 +1,232 @@
+[
+  {
+    "label": "official-before-1",
+    "variant": "before",
+    "startedUtc": "2026-09-09T09:10:49.177679+00:00",
+    "wallSeconds": 2.84796125,
+    "loadBefore": [
+      6.80029296875,
+      6.56591796875,
+      5.67626953125
+    ],
+    "loadAfter": [
+      6.33544921875,
+      6.47314453125,
+      5.6484375
+    ],
+    "assemblySha256": "ade6692509c4b145755b5500e84c119664f51d25afc8fa61298cbe493d1c380e",
+    "logSha256": "1d1a740cdf9b4c892550ed832be9c6c84c4eb53d9a927a864e3f8f3c4f593d74",
+    "summary": {
+      "total_ms": 138.63,
+      "lazy_ms": 36.39917,
+      "rbtree_ms": 89.44691999999999
+    }
+  },
+  {
+    "label": "official-after-1",
+    "variant": "after",
+    "startedUtc": "2026-09-09T09:10:52.107252+00:00",
+    "wallSeconds": 2.220561,
+    "loadBefore": [
+      6.33544921875,
+      6.47314453125,
+      5.6484375
+    ],
+    "loadAfter": [
+      6.33544921875,
+      6.47314453125,
+      5.6484375
+    ],
+    "assemblySha256": "2c02ebab44299f4d8cd91f663463df2accd713bcbf117edfd5e2888ce8d65801",
+    "logSha256": "dd69871104514c735a8d9dee9c144071f373bceeba65928c95061dcc618adbd4",
+    "summary": {
+      "total_ms": 102.21,
+      "lazy_ms": 35.16783,
+      "rbtree_ms": 52.917919999999995
+    }
+  },
+  {
+    "label": "official-after-2",
+    "variant": "after",
+    "startedUtc": "2026-09-09T09:10:54.410757+00:00",
+    "wallSeconds": 2.323037083,
+    "loadBefore": [
+      6.33544921875,
+      6.47314453125,
+      5.6484375
+    ],
+    "loadAfter": [
+      5.90771484375,
+      6.3818359375,
+      5.62109375
+    ],
+    "assemblySha256": "2c02ebab44299f4d8cd91f663463df2accd713bcbf117edfd5e2888ce8d65801",
+    "logSha256": "6087a848696dbe21686ebc3b80f304fda84315740d919599aecc1946c57459cb",
+    "summary": {
+      "total_ms": 102.92,
+      "lazy_ms": 35.83421,
+      "rbtree_ms": 53.14563
+    }
+  },
+  {
+    "label": "official-before-2",
+    "variant": "before",
+    "startedUtc": "2026-09-09T09:10:56.814591+00:00",
+    "wallSeconds": 2.9464979169999994,
+    "loadBefore": [
+      5.90771484375,
+      6.3818359375,
+      5.62109375
+    ],
+    "loadAfter": [
+      5.90771484375,
+      6.3818359375,
+      5.62109375
+    ],
+    "assemblySha256": "ade6692509c4b145755b5500e84c119664f51d25afc8fa61298cbe493d1c380e",
+    "logSha256": "62443d21c9ac74262c3ffd8f59c546eeb7205dc044757ed58dacbd205dc668fc",
+    "summary": {
+      "total_ms": 145.47,
+      "lazy_ms": 36.966629999999995,
+      "rbtree_ms": 95.63646
+    }
+  },
+  {
+    "label": "official-before-3",
+    "variant": "before",
+    "startedUtc": "2026-09-09T09:10:59.847896+00:00",
+    "wallSeconds": 2.866295000000001,
+    "loadBefore": [
+      5.90771484375,
+      6.3818359375,
+      5.62109375
+    ],
+    "loadAfter": [
+      5.5947265625,
+      6.30908203125,
+      5.599609375
+    ],
+    "assemblySha256": "ade6692509c4b145755b5500e84c119664f51d25afc8fa61298cbe493d1c380e",
+    "logSha256": "3091407236d53df4ea6955d9fd929224656cb20b566a10c39008aa93817901cf",
+    "summary": {
+      "total_ms": 136.95,
+      "lazy_ms": 36.16554,
+      "rbtree_ms": 91.45075
+    }
+  },
+  {
+    "label": "official-after-3",
+    "variant": "after",
+    "startedUtc": "2026-09-09T09:11:02.796077+00:00",
+    "wallSeconds": 2.361464333999999,
+    "loadBefore": [
+      5.5947265625,
+      6.30908203125,
+      5.599609375
+    ],
+    "loadAfter": [
+      5.5947265625,
+      6.30908203125,
+      5.599609375
+    ],
+    "assemblySha256": "2c02ebab44299f4d8cd91f663463df2accd713bcbf117edfd5e2888ce8d65801",
+    "logSha256": "22f123211157fa78fc2c6b7fdd4a365c0c9bd06e45ac8a09306b17f8218ebb50",
+    "summary": {
+      "total_ms": 99.31,
+      "lazy_ms": 34.43792,
+      "rbtree_ms": 50.572540000000004
+    }
+  },
+  {
+    "label": "official-after-4",
+    "variant": "after",
+    "startedUtc": "2026-09-09T09:11:05.243603+00:00",
+    "wallSeconds": 2.2077757499999997,
+    "loadBefore": [
+      5.5947265625,
+      6.30908203125,
+      5.599609375
+    ],
+    "loadAfter": [
+      5.466796875,
+      6.2705078125,
+      5.58984375
+    ],
+    "assemblySha256": "2c02ebab44299f4d8cd91f663463df2accd713bcbf117edfd5e2888ce8d65801",
+    "logSha256": "5c4f5eccac519fca35d59042f2a4a9a3050a18f46d8992097ff44fca31c6d607",
+    "summary": {
+      "total_ms": 102.11,
+      "lazy_ms": 35.58654,
+      "rbtree_ms": 52.599
+    }
+  },
+  {
+    "label": "official-before-4",
+    "variant": "before",
+    "startedUtc": "2026-09-09T09:11:07.531193+00:00",
+    "wallSeconds": 2.8711344170000004,
+    "loadBefore": [
+      5.466796875,
+      6.2705078125,
+      5.58984375
+    ],
+    "loadAfter": [
+      5.466796875,
+      6.2705078125,
+      5.58984375
+    ],
+    "assemblySha256": "ade6692509c4b145755b5500e84c119664f51d25afc8fa61298cbe493d1c380e",
+    "logSha256": "d2bf4de673b55c489db356b15d3d92275d4674d44c59ade51b0c4259a969499e",
+    "summary": {
+      "total_ms": 139.78,
+      "lazy_ms": 37.04542,
+      "rbtree_ms": 90.28363
+    }
+  },
+  {
+    "label": "official-before-5",
+    "variant": "before",
+    "startedUtc": "2026-09-09T09:11:10.486589+00:00",
+    "wallSeconds": 2.844001291999998,
+    "loadBefore": [
+      5.466796875,
+      6.2705078125,
+      5.58984375
+    ],
+    "loadAfter": [
+      5.26904296875,
+      6.2158203125,
+      5.57421875
+    ],
+    "assemblySha256": "ade6692509c4b145755b5500e84c119664f51d25afc8fa61298cbe493d1c380e",
+    "logSha256": "4f7ea452d90e89469c82e45b50f16190525c9f11892c1ad09cd14b75893fb0e9",
+    "summary": {
+      "total_ms": 139.75,
+      "lazy_ms": 37.30054,
+      "rbtree_ms": 90.1515
+    }
+  },
+  {
+    "label": "official-after-5",
+    "variant": "after",
+    "startedUtc": "2026-09-09T09:11:13.411616+00:00",
+    "wallSeconds": 2.173984292,
+    "loadBefore": [
+      5.26904296875,
+      6.2158203125,
+      5.57421875
+    ],
+    "loadAfter": [
+      5.26904296875,
+      6.2158203125,
+      5.57421875
+    ],
+    "assemblySha256": "2c02ebab44299f4d8cd91f663463df2accd713bcbf117edfd5e2888ce8d65801",
+    "logSha256": "33c9b0a8c6240fa2bcd2f44e1487ea0bff0f80709758ff514c3459854cf9d404",
+    "summary": {
+      "total_ms": 100.31,
+      "lazy_ms": 34.71083,
+      "rbtree_ms": 51.44096
+    }
+  }
+]

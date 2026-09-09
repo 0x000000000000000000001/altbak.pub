@@ -1,0 +1,10 @@
+{
+  "checkedUtc": "2026-09-09T09:37:06.180421+00:00",
+  "passed": true,
+  "beforeAfterNormalSourcesAndRuntimeIntact": true,
+  "finalBackendBundleAndSourcesIntact": true,
+  "validationFilesIntact": true,
+  "inputsSha256": "5d17643e656ee3288dcc719722bc14bc4fa4e38065b23b8fc6739f7bc9c798d2",
+  "comparisonSha256": "71a87ad77c6a947e88ccd380a5711c3acc4317354e76cfdfe5c7129235f84855",
+  "validationManifestSha256": "c2624e2cf0b244156ebcafc98cd2781711892a64ff6ac986ea95113e8aacd0f2"
+}

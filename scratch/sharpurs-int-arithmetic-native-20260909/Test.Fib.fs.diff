@@ -1,0 +1,11 @@
+--- before/Test.Fib.fs
++++ after/Test.Fib.fs
+@@ -4,7 +4,7 @@
+ open System
+ open System.Collections.Generic
+ 
+-let rec Test_Fib_fib_tco (v: obj) : obj = ((match ((unbox ((box v)))) with | LitInt 0 () -> ((box 0)) | LitInt 1 () -> ((box 1)) | n -> ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semiring_add))) (box ((box Data_Semiring_semiringInt)))))) (box ((Test_Fib_fib_tco ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ring_sub))) (box ((box Data_Ring_ringInt)))))) (box ((box n)))))) (box ((box 1))))))))))) (box ((Test_Fib_fib_tco ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ring_sub))) (box ((box Data_Ring_ringInt)))))) (box ((box n)))))) (box ((box 2))))))))))))
++let rec Test_Fib_fib_tco (v: obj) : obj = ((match ((unbox ((box v)))) with | LitInt 0 () -> ((box 0)) | LitInt 1 () -> ((box 1)) | n -> ((box ((unbox<int> (box ((Test_Fib_fib_tco ((box ((unbox<int> (box ((box n)))) - (unbox<int> (box ((box 1))))))))))) + (unbox<int> (box ((Test_Fib_fib_tco ((box ((unbox<int> (box ((box n)))) - (unbox<int> (box ((box 2))))))))))))))))
+ and Test_Fib_fib = box (fun (v: obj) -> Test_Fib_fib_tco v)
+ 
+ 

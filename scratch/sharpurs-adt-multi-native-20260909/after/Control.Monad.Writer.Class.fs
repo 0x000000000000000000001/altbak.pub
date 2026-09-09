@@ -1,0 +1,19 @@
+[<AutoOpen>]
+module PureScript_Control_Monad_Writer_Class
+
+open System
+open System.Collections.Generic
+
+let Control_Monad_Writer_Class_MonadTellusd_Dict  = (box (fun (x: obj) -> (box x)))
+
+let Control_Monad_Writer_Class_MonadWriterusd_Dict  = (box (fun (x: obj) -> (box x)))
+
+let Control_Monad_Writer_Class_tell  = (box (fun (dict: obj) -> (match ((unbox ((box dict)))) with | v -> ((Map.find "tell" (unbox<Map<string, obj>> ((box v))))))))
+
+let Control_Monad_Writer_Class_pass  = (box (fun (dict: obj) -> (match ((unbox ((box dict)))) with | v -> ((Map.find "pass" (unbox<Map<string, obj>> ((box v))))))))
+
+let Control_Monad_Writer_Class_listen  = (box (fun (dict: obj) -> (match ((unbox ((box dict)))) with | v -> ((Map.find "listen" (unbox<Map<string, obj>> ((box v))))))))
+
+let Control_Monad_Writer_Class_listens  = (box (fun (dictMonadWriter: obj) -> (let Monad1 = (sharpurs_apply (box ((Map.find "Monad1" (unbox<Map<string, obj>> ((sharpurs_apply (box ((Map.find "MonadTell1" (unbox<Map<string, obj>> ((box dictMonadWriter)))))) (box ((box Prim_undefined))))))))) (box ((box Prim_undefined)))) in let Bind1 = (sharpurs_apply (box ((Map.find "Bind1" (unbox<Map<string, obj>> ((box Monad1)))))) (box ((box Prim_undefined)))) in let pure_var = (sharpurs_apply (box ((box Control_Applicative_pure))) (box ((sharpurs_apply (box ((Map.find "Applicative0" (unbox<Map<string, obj>> ((box Monad1)))))) (box ((box Prim_undefined))))))) in (box (fun (f: obj) -> (box (fun (m: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Control_Bind_bind))) (box ((box Bind1)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Control_Monad_Writer_Class_listen))) (box ((box dictMonadWriter)))))) (box ((box m))))))))) (box ((box (fun (v: obj) -> (match ((unbox ((box v)))) with | Data_Tuple_Tupleusd_Ctor(a, w) -> ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Function_apply))) (box ((box pure_var)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box ((fun (usd__arg1: obj) -> (fun (usd__arg2: obj) -> (box (Data_Tuple_Tupleusd_Ctor(usd__arg1, usd__arg2))))))))) (box ((box a)))))) (box ((sharpurs_apply (box ((box f))) (box ((box w))))))))))))))))))))))))
+
+let Control_Monad_Writer_Class_censor  = (box (fun (dictMonadWriter: obj) -> (let Monad1 = (sharpurs_apply (box ((Map.find "Monad1" (unbox<Map<string, obj>> ((sharpurs_apply (box ((Map.find "MonadTell1" (unbox<Map<string, obj>> ((box dictMonadWriter)))))) (box ((box Prim_undefined))))))))) (box ((box Prim_undefined)))) in let Bind1 = (sharpurs_apply (box ((Map.find "Bind1" (unbox<Map<string, obj>> ((box Monad1)))))) (box ((box Prim_undefined)))) in let pure_var = (sharpurs_apply (box ((box Control_Applicative_pure))) (box ((sharpurs_apply (box ((Map.find "Applicative0" (unbox<Map<string, obj>> ((box Monad1)))))) (box ((box Prim_undefined))))))) in (box (fun (f: obj) -> (box (fun (m: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box Control_Monad_Writer_Class_pass))) (box ((box dictMonadWriter)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Control_Bind_bind))) (box ((box Bind1)))))) (box ((box m)))))) (box ((box (fun (a: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box Data_Function_apply))) (box ((box pure_var)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box ((fun (usd__arg1: obj) -> (fun (usd__arg2: obj) -> (box (Data_Tuple_Tupleusd_Ctor(usd__arg1, usd__arg2))))))))) (box ((box a)))))) (box ((box f))))))))))))))))))))))

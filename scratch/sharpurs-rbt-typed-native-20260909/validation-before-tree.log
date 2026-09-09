@@ -1,0 +1,8 @@
+empty: 0 insertions, final depth 0
+singleton: 1 insertions, final depth 1
+ascending: 64 insertions, final depth 7
+descending: 64 insertions, final depth 7
+alternating extremes: 64 insertions, final depth 7
+duplicates: 32 insertions, final depth 3
+signed limits: 7 insertions, final depth 3
+Real generated RBTree: 27087 invariant, depth, ABI and sharing checks passed

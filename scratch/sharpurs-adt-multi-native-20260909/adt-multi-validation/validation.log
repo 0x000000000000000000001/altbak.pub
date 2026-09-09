@@ -1,0 +1,129 @@
+$ /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/js/node_modules/.bin/purs compile /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/*.purs /Users/0x1/Documents/htdocs/sharpurs/sharpurs/.spago/p/prelude-6.0.2/src/**/*.purs /Users/0x1/Documents/htdocs/sharpurs/sharpurs/.spago/p/partial-4.0.0/src/**/*.purs --output /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/output --codegen corefn,js
+[ 1 of 55] Compiling Type.Proxy
+[ 2 of 55] Compiling Record.Unsafe
+[ 3 of 55] Compiling Partial
+[ 4 of 55] Compiling Data.Void
+[ 5 of 55] Compiling Data.Unit
+[ 6 of 55] Compiling Data.NaturalTransformation
+[ 7 of 55] Compiling Data.Boolean
+[ 8 of 55] Compiling Control.Semigroupoid
+[10 of 55] Compiling Partial.Unsafe
+[ 9 of 55] Compiling Data.Symbol
+[11 of 55] Compiling Control.Category
+[12 of 55] Compiling Data.HeytingAlgebra
+[13 of 55] Compiling Data.Semigroup
+[14 of 55] Compiling Data.Semiring
+[15 of 55] Compiling Data.Show
+[16 of 55] Compiling Data.Ring
+[17 of 55] Compiling Data.Generic.Rep
+[18 of 55] Compiling Data.BooleanAlgebra
+[19 of 55] Compiling Data.Eq
+[20 of 55] Compiling Data.CommutativeRing
+[21 of 55] Compiling Data.Ordering
+[22 of 55] Compiling Data.EuclideanRing
+[23 of 55] Compiling Data.Ord
+[24 of 55] Compiling Data.DivisionRing
+[25 of 55] Compiling Data.Field
+[26 of 55] Compiling Data.Bounded
+[27 of 55] Compiling Data.Monoid
+[29 of 55] Compiling Data.Reflectable
+[28 of 55] Compiling Data.Function
+[30 of 55] Compiling Data.Functor
+[31 of 55] Compiling Control.Apply
+[32 of 55] Compiling Data.Bounded.Generic
+[33 of 55] Compiling Data.Monoid.Generic
+[34 of 55] Compiling Control.Applicative
+[35 of 55] Compiling Control.Bind
+[36 of 55] Compiling Control.Monad
+[37 of 55] Compiling Prelude
+[38 of 55] Compiling Data.Semigroup.First
+[39 of 55] Compiling Data.Show.Generic
+[40 of 55] Compiling Data.Ring.Generic
+[41 of 55] Compiling Data.Semigroup.Generic
+[43 of 55] Compiling Data.Monoid.Disj
+[42 of 55] Compiling Data.HeytingAlgebra.Generic
+[44 of 55] Compiling Data.Monoid.Endo
+[45 of 55] Compiling Data.Eq.Generic
+[46 of 55] Compiling Data.Monoid.Additive
+[47 of 55] Compiling Data.Semiring.Generic
+[48 of 55] Compiling AdtMultiExternal
+[49 of 55] Compiling Data.Ord.Generic
+[50 of 55] Compiling Data.Semigroup.Last
+[51 of 55] Compiling Data.Monoid.Conj
+[52 of 55] Compiling Data.Monoid.Dual
+[54 of 55] Compiling AdtMulti
+[53 of 55] Compiling Data.Monoid.Multiplicative
+[55 of 55] Compiling AdtMultiConsumer
+
+$ /Users/0x1/.dotnet/dotnet fsi --nologo --optimize+ --exec adt-multi.fsx
+adt-multi runtime: 301 checks passed
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(45,218): warning FS0025: Incomplete pattern matches on this expression.
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(93,239): warning FS0025: Incomplete pattern matches on this expression. For example, the value 'AdtMulti_Tipusd_Ctor' may indicate a case not covered by the pattern(s).
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(101,233): warning FS0025: Incomplete pattern matches on this expression. For example, the value 'AdtMulti_Tipusd_Ctor' may indicate a case not covered by the pattern(s).
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(313,239): warning FS0025: Incomplete pattern matches on this expression. For example, the value 'AdtMulti_Tipusd_Ctor' may indicate a case not covered by the pattern(s).
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(321,233): warning FS0025: Incomplete pattern matches on this expression. For example, the value 'AdtMulti_Tipusd_Ctor' may indicate a case not covered by the pattern(s).
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(382,47): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(433,68): warning FS0025: Incomplete pattern matches on this expression.
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(434,67): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(440,66): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(524,239): warning FS0025: Incomplete pattern matches on this expression. For example, the value 'AdtMulti_Tipusd_Ctor' may indicate a case not covered by the pattern(s).
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(532,233): warning FS0025: Incomplete pattern matches on this expression. For example, the value 'AdtMulti_Tipusd_Ctor' may indicate a case not covered by the pattern(s).
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(732,239): warning FS0025: Incomplete pattern matches on this expression. For example, the value 'AdtMulti_Tipusd_Ctor' may indicate a case not covered by the pattern(s).
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(740,233): warning FS0025: Incomplete pattern matches on this expression. For example, the value 'AdtMulti_Tipusd_Ctor' may indicate a case not covered by the pattern(s).
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(801,47): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(852,68): warning FS0025: Incomplete pattern matches on this expression.
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(853,67): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-adt-multi-fwtzue/adt-multi.fsx(859,66): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+
+
+adt-multi converter: 93 checks passed

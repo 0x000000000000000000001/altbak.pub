@@ -1,0 +1,11 @@
+--- before/Test.LazyEvaluation.fs
++++ after/Test.LazyEvaluation.fs
+@@ -12,7 +12,7 @@
+ 
+ let Test_LazyEvaluation_defer  = (box Test_LazyEvaluation_Lazy)
+ 
+-let rec Test_LazyEvaluation_buildThunks_tco (v: obj) (v1: obj) : obj = ((match (((unbox ((box v))), (unbox ((box v1))))) with | (LitInt 0 (), acc) -> ((box acc)) | (n, acc) -> ((Test_LazyEvaluation_buildThunks_tco ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ring_sub))) (box ((box Data_Ring_ringInt)))))) (box ((box n)))))) (box ((box 1))))) ((sharpurs_apply (box ((box Test_LazyEvaluation_defer))) (box ((box (fun (v2: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semiring_add))) (box ((box Data_Semiring_semiringInt)))))) (box ((sharpurs_apply (box ((box Test_LazyEvaluation_force))) (box ((box acc))))))))) (box ((box 1))))))))))))))
++let rec Test_LazyEvaluation_buildThunks_tco (v: obj) (v1: obj) : obj = ((match (((unbox ((box v))), (unbox ((box v1))))) with | (LitInt 0 (), acc) -> ((box acc)) | (n, acc) -> ((Test_LazyEvaluation_buildThunks_tco ((box ((unbox<int> (box (box ((box n))))) - (unbox<int> (box (box ((box 1)))))))) ((sharpurs_apply (box ((box Test_LazyEvaluation_defer))) (box ((box (fun (v2: obj) -> (box ((unbox<int> (box (box ((sharpurs_apply (box ((box Test_LazyEvaluation_force))) (box ((box acc)))))))) + (unbox<int> (box (box ((box 1)))))))))))))))))
+ and Test_LazyEvaluation_buildThunks = box (fun (v: obj) ->  (fun (v1: obj) -> Test_LazyEvaluation_buildThunks_tco v v1))
+ 
+ 

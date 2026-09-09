@@ -1,0 +1,24 @@
+
+
+/private/tmp/sharpurs-rbt-typed-probe-20260909/probe-same-fsi.fsx(17,67): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+
+
+
+/private/tmp/sharpurs-rbt-typed-probe-20260909/probe-same-fsi.fsx(29,73): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+
+
+
+/private/tmp/sharpurs-rbt-typed-probe-20260909/probe-same-fsi.fsx(75,69): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+
+VALIDATION 431389 assertions passed
+SAMPLE pair=0 variant=current ms=78.79420 depth=22
+SAMPLE pair=0 variant=typed-ins-balance ms=45.72670 depth=22
+SAMPLE pair=1 variant=typed-ins-balance ms=44.69840 depth=22
+SAMPLE pair=1 variant=current ms=80.96300 depth=22
+SAMPLE pair=2 variant=current ms=76.93550 depth=22
+SAMPLE pair=2 variant=typed-ins-balance ms=44.97840 depth=22
+SAMPLE pair=3 variant=typed-ins-balance ms=66.17230 depth=22
+SAMPLE pair=3 variant=current ms=79.09640 depth=22
+SAMPLE pair=4 variant=current ms=84.03200 depth=22
+SAMPLE pair=4 variant=typed-ins-balance ms=45.42430 depth=22
+MEDIAN current=79.09640 typed=45.42430 delta=-42.57%

@@ -1,0 +1,48 @@
+[
+  {
+    "label": "probe-official-before-1",
+    "variant": "before",
+    "startedUtc": "2026-09-09T09:10:30.975313+00:00",
+    "wallSeconds": 2.9017807909999997,
+    "loadBefore": [
+      8.68994140625,
+      6.8828125,
+      5.7646484375
+    ],
+    "loadAfter": [
+      8.07373046875,
+      6.78466796875,
+      5.736328125
+    ],
+    "assemblySha256": "ade6692509c4b145755b5500e84c119664f51d25afc8fa61298cbe493d1c380e",
+    "logSha256": "eacde3b18c20b06e2ed9a22477579328dd410c0abda449ceb7e262bb0320ca19",
+    "summary": {
+      "total_ms": 145.52,
+      "lazy_ms": 37.57413,
+      "rbtree_ms": 95.78188
+    }
+  },
+  {
+    "label": "probe-official-after-1",
+    "variant": "after",
+    "startedUtc": "2026-09-09T09:10:33.960014+00:00",
+    "wallSeconds": 2.1760009590000005,
+    "loadBefore": [
+      8.07373046875,
+      6.78466796875,
+      5.736328125
+    ],
+    "loadAfter": [
+      8.07373046875,
+      6.78466796875,
+      5.736328125
+    ],
+    "assemblySha256": "2c02ebab44299f4d8cd91f663463df2accd713bcbf117edfd5e2888ce8d65801",
+    "logSha256": "9fa030d3a71308e2131090893ff305b4097f38d8686c91243934cb27b6ca42fe",
+    "summary": {
+      "total_ms": 102.97,
+      "lazy_ms": 36.36746,
+      "rbtree_ms": 52.98971
+    }
+  }
+]
