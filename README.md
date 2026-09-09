@@ -189,10 +189,6 @@ Array Processing        | ~ 66.13 μs                | ~ 41 μs                 
 RowToList               | ~ 1.67 μs                 | ~ 2.2 μs                 | ~ 1.3 μs                       |
 **Total Execution Time**| ~ 24.17 ms                | ~ 18.50 ms               | ~ 12.49 ms                     |
 
-Compiled Java measurements (run supplied on 2026-09-08): one benchmark run after global warm-up, reporting the best of ten samples per test. Previous recorded compiled total: 128.72 ms.
-
-Native Java measurements (2026-09-08, OpenJDK 26.0.2, macOS arm64): median of five fresh JVMs, with three full-suite warm-ups followed by three warm-ups and the best of ten samples per test. All 28 native results match the compiled suite; volatile input/result barriers are included in the native timings. Totals sum the unrounded row medians. Reproduce in the `edge-javapurs` worktree with `bin/java/benchmark-native --runs 5`; raw logs and `results.json` are saved in `run/bak/java/native-bench/`.
-
 > [!IMPORTANT]
 > **The 99/1 philosophy and the AOT compiler vs FFI approach**
 > 
