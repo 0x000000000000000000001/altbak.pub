@@ -9,64 +9,84 @@ const (
 
 type tree_cheatcode struct {
 	color_cheatcode color_cheatcode
-	left  *tree_cheatcode
-	value int
-	right *tree_cheatcode
+	left            *tree_cheatcode
+	value           int
+	right           *tree_cheatcode
 }
 
-var pool []tree_cheatcode
-var poolIdx int
-
-func alloc_cheatcode(c color_cheatcode, l *tree_cheatcode, v int, r *tree_cheatcode) *tree_cheatcode {
-	pool[poolIdx] = tree_cheatcode{color_cheatcode: c, left: l, value: v, right: r}
-	p := &pool[poolIdx]
-	poolIdx++
-	return p
+func isRed_cheatcode(t *tree_cheatcode) bool {
+	return t != nil && t.color_cheatcode == red_cheatcode
 }
 
-func balance_cheatcode(c color_cheatcode, a *tree_cheatcode, x int, b *tree_cheatcode) *tree_cheatcode {
-	if c == black_cheatcode {
-		if a != nil && a.color_cheatcode == red_cheatcode {
-			if a.left != nil && a.left.color_cheatcode == red_cheatcode {
-				return alloc_cheatcode(red_cheatcode, alloc_cheatcode(black_cheatcode, a.left.left, a.left.value, a.left.right), a.value, alloc_cheatcode(black_cheatcode, a.right, x, b))
-			}
-			if a.right != nil && a.right.color_cheatcode == red_cheatcode {
-				return alloc_cheatcode(red_cheatcode, alloc_cheatcode(black_cheatcode, a.left, a.value, a.right.left), a.right.value, alloc_cheatcode(black_cheatcode, a.right.right, x, b))
-			}
+// Apply the same Okasaki rotations, updating nodes owned by this tree.
+func balance_cheatcode(t *tree_cheatcode) *tree_cheatcode {
+	if t.color_cheatcode != black_cheatcode {
+		return t
+	}
+	left := t.left
+	right := t.right
+	if isRed_cheatcode(left) {
+		if isRed_cheatcode(left.left) {
+			t.left = left.right
+			left.right = t
+			left.left.color_cheatcode = black_cheatcode
+			left.color_cheatcode = red_cheatcode
+			return left
 		}
-		if b != nil && b.color_cheatcode == red_cheatcode {
-			if b.left != nil && b.left.color_cheatcode == red_cheatcode {
-				return alloc_cheatcode(red_cheatcode, alloc_cheatcode(black_cheatcode, a, x, b.left.left), b.left.value, alloc_cheatcode(black_cheatcode, b.left.right, b.value, b.right))
-			}
-			if b.right != nil && b.right.color_cheatcode == red_cheatcode {
-				return alloc_cheatcode(red_cheatcode, alloc_cheatcode(black_cheatcode, a, x, b.left), b.value, alloc_cheatcode(black_cheatcode, b.right.left, b.right.value, b.right.right))
-			}
+		if isRed_cheatcode(left.right) {
+			middle := left.right
+			left.right = middle.left
+			t.left = middle.right
+			middle.left = left
+			middle.right = t
+			left.color_cheatcode = black_cheatcode
+			middle.color_cheatcode = red_cheatcode
+			return middle
 		}
 	}
-	return alloc_cheatcode(c, a, x, b)
-}
-
-func ins_cheatcode(x int, t *tree_cheatcode) *tree_cheatcode {
-	if t == nil {
-		return alloc_cheatcode(red_cheatcode, nil, x, nil)
-	}
-	if x < t.value {
-		return balance_cheatcode(t.color_cheatcode, ins_cheatcode(x, t.left), t.value, t.right)
-	} else if x > t.value {
-		return balance_cheatcode(t.color_cheatcode, t.left, t.value, ins_cheatcode(x, t.right))
+	if isRed_cheatcode(right) {
+		if isRed_cheatcode(right.left) {
+			middle := right.left
+			t.right = middle.left
+			right.left = middle.right
+			middle.left = t
+			middle.right = right
+			right.color_cheatcode = black_cheatcode
+			middle.color_cheatcode = red_cheatcode
+			return middle
+		}
+		if isRed_cheatcode(right.right) {
+			t.right = right.left
+			right.left = t
+			right.right.color_cheatcode = black_cheatcode
+			right.color_cheatcode = red_cheatcode
+			return right
+		}
 	}
 	return t
 }
 
+func ins_cheatcode(x int, t *tree_cheatcode) *tree_cheatcode {
+	if t == nil {
+		return &tree_cheatcode{color_cheatcode: red_cheatcode, value: x}
+	}
+	if x < t.value {
+		t.left = ins_cheatcode(x, t.left)
+	} else if x > t.value {
+		t.right = ins_cheatcode(x, t.right)
+	} else {
+		return t
+	}
+	return balance_cheatcode(t)
+}
+
 func insert_cheatcode(x int, t *tree_cheatcode) *tree_cheatcode {
 	res := ins_cheatcode(x, t)
-	return alloc_cheatcode(black_cheatcode, res.left, res.value, res.right)
+	res.color_cheatcode = black_cheatcode
+	return res
 }
 
 func buildTree_cheatcode(n int, acc *tree_cheatcode) *tree_cheatcode {
-	pool = make([]tree_cheatcode, 10000000) 
-	poolIdx = 0
-
 	for i := n; i > 0; i-- {
 		acc = insert_cheatcode(i, acc)
 	}
@@ -86,6 +106,6 @@ func depth_cheatcode(t *tree_cheatcode) int {
 }
 
 func RunRBTreeFFICheatcode(limit int) int {
-	t := buildTree_cheatcode(int(limit), nil)
-	return (depth_cheatcode(t))
+	t := buildTree_cheatcode(limit, nil)
+	return depth_cheatcode(t)
 }

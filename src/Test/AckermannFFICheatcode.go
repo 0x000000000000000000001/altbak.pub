@@ -11,7 +11,6 @@ func ack_cheatcode(m, n int) int {
 	return ack_cheatcode(m-1, ack_cheatcode(m, n-1))
 }
 
-func RunAckermannFFICheatcode(limit int) int {
-	return (ack_cheatcode(3, 4))
+func RunAckermannFFICheatcode(m int) int {
+	return ack_cheatcode(m, 4)
 }
-

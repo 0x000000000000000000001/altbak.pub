@@ -88,7 +88,10 @@ echo 'Building...'
 spago build
 
 # Generate Go code
-../gopurs/gopurs/bin/gopurs --main ${ENTRY_POINT} || echo "GOPURS FAILED" || exit 1
+if ! ../gopurs/gopurs/bin/gopurs --main "$ENTRY_POINT"; then
+    echo "GOPURS FAILED" >&2
+    exit 1
+fi
 
 echo "=== Go ==="
 if [ -d "output/main" ]; then

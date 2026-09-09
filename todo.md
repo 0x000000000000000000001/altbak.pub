@@ -1,8 +1,26 @@
 # Audit des FFI — corrections et baby steps
 
-État au 8 septembre 2026. Cette liste vient d'un audit statique, sans exécution des benchmarks. Les résultats incorrects indiqués sont déduits des sources ; les reproductions restent à faire. Aucune des corrections ci-dessous n'a été réalisée par la création de ce fichier.
+État au 8 septembre 2026. Cette liste vient d'un audit statique, sans exécution des benchmarks. Les constats des 22 points décrivent les sources au moment de cet audit ; le suivi ci-dessous indique les modifications apportées depuis. Les reproductions et validations par exécution restent à faire.
 
 Périmètre : 224 implémentations natives des 14 benchmarks, dans les 8 langages JS, Go, PHP, Rust, Scheme, Erlang, F# et Java ; le fichier supplémentaire `src/Test/ArrayProcessingFFI.erl` ; les 8 FFI `src/Bench.*` ; les 5 FFI `srx/Test/FileOps/FileOps.*`. Soit 238 fichiers natifs, avec leurs wrappers et références PureScript, les lanceurs et le README. Les dépendances et copies générées dans `run/` ne constituent pas des sources supplémentaires à corriger séparément.
+
+## Suivi de la passe Go — modifications non validées par exécution
+
+Périmètre limité à Go à la demande de l'utilisateur. Aucune commande shell, compilation, mise en forme automatique, exécution de test ou de benchmark n'a été lancée pendant cette passe. Les cases cochées ici attestent uniquement d'une modification du code et de sa relecture statique.
+
+- [x] `src/Test/StateMonadFFI.go` : 20 chaînes indépendantes à la profondeur reçue, au lieu d'interpréter 60 comme le nombre de répétitions.
+- [x] `src/Test/StateMonadFFICheatcode.go` : 20 répétitions utilisant la profondeur reçue ; suppression des bornes qui ignoraient l'entrée.
+- [x] `src/Test/ChurchFFICheatcode.go` : calcul de la borne `n⁵` au lieu de `n × 10000`, avec boucle native sans closures conservée.
+- [x] `src/Test/AckermannFFI.go` et `AckermannFFICheatcode.go` : utilisation de l'entrée `m` dans `ack(m, 4)`.
+- [x] `src/Test/AckermannFFI.purs` et `AckermannFFICheatcode.purs` : adaptation minimale des wrappers partagés pour transmettre `Bench.opaque 3`. Les noyaux non Go restent inchangés ; leur lecture lors de l'audit a établi qu'ils ignorent cet argument.
+- [x] `src/Test/RBTreeFFICheatcode.go` : suppression du pool global et de l'arène locale introduite lors de la première correction. L'arbre utilise des pointeurs et une allocation Go ordinaire par nouvelle clé ; les mêmes rotations réutilisent les nœuds par mutation locale. Les insertions descendantes et le calcul de profondeur sont conservés.
+- [x] `src/Bench.go` : durée depuis une origine monotone et frontière `//go:noinline` sur la restitution de l'entrée opaque ; l'effet de cette frontière dans le code généré reste à vérifier.
+- [x] `bin/go/run` : arrêt explicite après un échec de gopurs, pour éviter de poursuivre avec une sortie potentiellement périmée.
+- [ ] Vérifier compilation, résultats sur plusieurs entrées, appels répétés et invariants de l'arbre après les rotations lorsque les exécutions seront autorisées. Aucun de ces contrôles n'a été lancé.
+- [ ] Traiter ultérieurement le protocole partagé : validation automatique des sorties, observation des résultats chronométrés et harmonisation de la chauffe. `Bench.purs` et les points d'entrée partagés n'ont pas été modifiés dans cette passe.
+- [ ] Confirmer le domaine numérique et les conventions de paramètres, puis mesurer l'effet des changements Go et le comparer aux baselines historiques. Les chiffres du README n'ont pas été modifiés par cette passe.
+
+Les autres FFI Go relues ne présentaient pas de défaut identifié dans le scénario audité et sont conservées, notamment les fusions, la scalarisation, la spécialisation et le résultat statique de RowToList. Les corrections des autres langages et les cases globales ci-dessous restent à traiter. Pour StateMonad, les wrappers partagés continuent à fournir une profondeur de 60 ; le code Go fixe les 20 répétitions pour conserver le scénario 20 × 60 sans modifier ces wrappers.
 
 ## Cadre à respecter : les colonnes du README
 
@@ -15,6 +33,8 @@ Les descriptions de `README.md`, section « The 99/1 philosophy and the AOT comp
 Le remplacement d'un million de closures par une boucle, cité explicitement dans le README, est conforme à la troisième colonne. Cette liberté vaut aussi pour le code compilé lorsqu'il sait réaliser la transformation. Les vérifications doivent préserver le sens des paramètres, le résultat et les effets observables dans le domaine du benchmark ; elles ne doivent pas forcer les versions optimisées à reconstruire les structures de la source.
 
 Les mentions « fusion », « spécialisation » ou « autre algorithme » ci-dessous documentent les techniques à l'intérieur des colonnes existantes. Elles ne créent pas de nouvelles colonnes et ne justifient pas l'exclusion d'une implémentation optimisée correcte.
+
+Précision demandée pour les FFI Go écrites à la main : conserver un code idiomatique, lisible et plausible pour un développeur Go, y compris dans la colonne hand-optimized. Les boucles, fusions et mutations locales restent adaptées ; RBTree utilise des allocations ordinaires et des pointeurs, sans arène ni pool d'allocation maison. Ce choix de référence humaine ne restreint pas les optimisations du compilateur et ne modifie pas les descriptions de colonnes du README.
 
 ## Méthode et ordre de travail
 
@@ -205,18 +225,19 @@ Constats : JS/PHP ordinaires insèrent `0..n-1`, ajoutent `n` recherches et somm
 - [ ] Vérifier l'ordre des clés et les invariants rouge-noir dans les implémentations qui utilisent cette structure. Pour toutes les variantes, comparer le résultat à la profondeur de référence sur de petites entrées, puis vérifier 22 à 100000, sans imposer les mêmes rotations ou un parcours final aux versions optimisées.
 - [ ] Si une implémentation n'est valable que pour les insertions descendantes du scénario, documenter ce périmètre plutôt que de la présenter comme un arbre général validé.
 
-## 14. RBTree : corriger les copies excessives et encadrer les arènes
+## 14. RBTree : corriger les copies excessives et simplifier l'allocation Go
 
 Fichiers : `src/Test/RBTreeFFI.rs`, `RBTreeFFICheatcode.go`, `RBTreeFFICheatcode.rs`, `RBTreeFFICheatcode.java`.
 
 - [ ] Sur une petite entrée Rust ordinaire, compter ou tracer les copies de sous-arbres provoquées par les `.clone()` de `Option<Box<Node>>` dans les rotations.
 - [ ] Choisir une représentation qui conserve le contrat et le partage attendu sans copie profonde supplémentaire ; vérifier les rotations et la sortie avant toute mesure.
-- [ ] Relever le nombre de nœuds réellement nécessaires aux arènes : Go réserve actuellement 10000000 nœuds et Rust une capacité de 5000000, à chaque appel.
-- [ ] Ajuster ou justifier ces réserves à partir de ces observations. Pour Go, vérifier la limite de capacité et le besoin d'état global ; ne pas laisser une borne fixe échouer silencieusement sur des entrées pourtant acceptées.
-- [ ] Vérifier l'initialisation et les appels répétés ; garder explicite si allocation et initialisation de l'arène sont incluses dans le chronométrage.
-- [ ] Conserver la mutation locale Java et les arènes comme optimisations possibles tant que les anciennes versions de l'arbre ne sont pas observables.
+- [x] Pour Go optimisé, remplacer le pool puis l'arène par des allocations ordinaires de nœuds, des pointeurs et des rotations en place. La relecture statique est faite ; la validation par exécution reste à faire.
+- [ ] Pour Go, vérifier chaque cas de rotation sur une petite entrée : ordre des clés, couleurs et profondeur comparée à la référence ; vérifier ensuite les insertions descendantes du scénario officiel.
+- [ ] Pour Go, vérifier les appels répétés avec des tailles différentes ; confirmer que chaque appel construit son propre arbre et inclut ses allocations dans le calcul chronométré.
+- [ ] Lors de la passe Rust, relever le nombre de nœuds réellement nécessaires face à la capacité réservée de 5000000, puis ajuster ou justifier cette réserve ; préciser le coût d'allocation et d'initialisation inclus dans la mesure.
+- [ ] Conserver la mutation locale Go et Java tant que les anciennes versions de l'arbre ne sont pas observables. L'examen des choix d'allocation des autres langages reste reporté à leurs passes respectives.
 
-Critère : les témoins ne sont pas ralentis par des copies accidentelles ; les arènes sont dimensionnées et mesurées explicitement. Aucune n'a été identifiée comme un cache de résultats préparé hors appel.
+Critère : les témoins ne sont pas ralentis par des copies accidentelles ; la version Go optimisée utilise une gestion mémoire ordinaire et maintenable, sans arène ni pool maison. Les coûts d'allocation des variantes sont inclus et documentés dans la mesure.
 
 ## 15. Polymorphism : corriger Erlang et respecter le rôle des deux FFI
 
@@ -322,4 +343,5 @@ Fichiers : `README.md`, commentaires et `describe` dans `src/Test/*`, scripts de
 - [ ] Les contre-exemples TCO, Records et Church passent et toutes les variantes calculent le bon résultat pour les paramètres convenus. Les sources FP-style traduisent les chaînes StateMonad/LazyEvaluation et la structure RBTree ; les variantes optimisées peuvent les supprimer ou les remplacer par un calcul équivalent.
 - [ ] Les suites supportent les appels répétés et les calculs chronométrés restent observables.
 - [ ] Toutes les optimisations équivalentes restent autorisées dans le compilé et le hand-optimized : RowToList constant, fusion des parcours, TCO, spécialisation fondée sur les types, mutation locale, formules et changements d'algorithme. Aucun contrôle n'impose de conserver les opérations source après optimisation.
+- [ ] Les FFI Go écrites à la main restent idiomatiques et maintenables ; RBTree utilise des allocations ordinaires sans arène ni pool maison, conformément au choix de référence demandé.
 - [ ] Les baselines et conclusions sont mises à jour à partir de mesures reproductibles, comparées à l'historique officiel du README.

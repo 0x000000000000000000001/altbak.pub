@@ -5,8 +5,10 @@ import (
 	"time"
 )
 
+var benchmarkEpoch = time.Now()
+
 func BenchNow() float64 {
-	return float64(time.Now().UnixNano()) / 1e3
+	return float64(time.Since(benchmarkEpoch).Nanoseconds()) / 1e3
 }
 
 func FormatNumber(n float64) string {
@@ -15,6 +17,12 @@ func FormatNumber(n float64) string {
 
 func Opaque(a interface{}) func() interface{} {
 	return func() interface{} {
-		return a
+		return opaqueValue(a)
 	}
+}
+
+// Keep benchmark inputs opaque to the Go compiler without constraining kernels.
+//go:noinline
+func opaqueValue(a interface{}) interface{} {
+	return a
 }

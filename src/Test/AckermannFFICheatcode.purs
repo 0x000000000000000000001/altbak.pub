@@ -12,5 +12,5 @@ describe = log "Ackermann FFICheatcode (3, 4):"
 
 act :: Effect String
 act = do
-  dummy <- Bench.opaque 0
-  pure (show ( runAckermannFFICheatcode dummy))
+  m <- Bench.opaque 3
+  pure (show (runAckermannFFICheatcode m))

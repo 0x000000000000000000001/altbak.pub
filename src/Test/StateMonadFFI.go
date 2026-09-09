@@ -53,14 +53,14 @@ func chainModifications(n int) State {
 	})
 }
 
-func runManyTimes_StateMonad(n int, acc int) int {
+func runManyTimes_StateMonad(n int, depth int, acc int) int {
 	if n == 0 {
 		return acc
 	}
-	return runManyTimes_StateMonad(n-1, acc+runState(chainModifications(60), 0).state)
+	return runManyTimes_StateMonad(n-1, depth, acc+runState(chainModifications(depth), 0).state)
 }
 
 func RunStateMonadFFI(limit int) int {
-	dummy := limit
-	return (runManyTimes_StateMonad(dummy, 0))
+	// The shared FFI wrapper supplies depth 60; the PureScript test uses 20 repetitions.
+	return runManyTimes_StateMonad(20, limit, 0)
 }
