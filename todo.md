@@ -1,241 +1,54 @@
-# Techniques d’optimisation par backend
+# Optimization techniques by backend
 
-Audit du **9 septembre 2026**. Cette matrice décrit les techniques effectivement intégrées aux compilateurs utilisés par altbak, leur couverture et leurs limites. Elle sert de liste de travail ; **ce n’est pas un classement de performances**. Les mesures de référence restent celles du [README](README.md).
+Audit dated **September 9, 2026**. This matrix describes the techniques actually integrated into the compilers used by altbak, their coverage, and their limitations. It serves as a work list; **it is not a performance ranking**. The reference measurements remain those in the [README](README.md).
 
-Les onze backends référencés par les runners sont inclus. **Nos cinq backends occupent les premières colonnes : sharpurs, purust, phpurs, gopurs et javapurs.** Les six autres suivent à droite : psgo, JS officiel, ES, purescm, purerl et Wasm, expérimental sur les 14 cas cœur. Les colonnes « Native FP-style » et « Native hand-optimized » du README sont des implémentations manuscrites : leurs raccourcis ne sont pas attribués aux compilateurs.
+All eleven backends referenced by the runners are included. **Our five backends occupy the first columns: sharpurs, purust, phpurs, gopurs, and javapurs.** The other six follow on the right: psgo, official JS, ES, purescm, purerl, and Wasm, which is experimental across the 14 core cases. The README's “Native FP-style” and “Native hand-optimized” columns are handwritten implementations: their shortcuts are not attributed to the compilers.
 
-## Lecture des pastilles
+## Rating legend
 
-- 🟢 **Complet dans la portée définie** : mécanisme intégré et exploité par le chemin de génération concerné. Cela ne certifie pas tous les programmes possibles.
-- 🟡 **Partiel** : restriction importante de types, de formes, de portée locale/intermodule, d’ABI ou de voie de génération. Les notes expliquent laquelle.
-- 🔴 **Manquant** : pas de mécanisme intégré correspondant dans le pipeline audité ; une primitive, un prototype ou un module non appelé ne suffit pas.
-- ⚪ **Gris — inutile / sans objet sous cette forme** : le besoin est déjà couvert par la représentation, la gestion des valeurs ou les appels terminaux natifs de la cible. Les cas gris sont explicités ci-dessous.
+- 🟢 **Complete within the defined scope**: the mechanism is integrated and used by the relevant code generation path. This does not certify every possible program.
+- 🟡 **Partial**: a significant restriction on types, expression shapes, local/intermodule scope, ABI, or code generation path. [Audit notes](optimization-audit.md#exact-scope-of-the-rows) explain the restriction.
+- 🔴 **Missing**: no corresponding mechanism is integrated into the audited pipeline; a primitive, prototype, or unused module is insufficient.
+- ⚪ **Gray — unnecessary / not applicable in this form**: the target's representation, value management, or native tail calls already cover the need. Gray cases are explained in the [audit notes](optimization-audit.md#exact-scope-of-the-rows).
 
-**🟢 (PBO) / 🟡 (PBO)** : le socle PBO fournit une transformation ou une analyse effectivement exploitée pour cette capacité, parfois complétée par le générateur cible. La mention ne signifie ni que PBO réalise tout seul la technique, ni que tous les backends la consomment avec la même couverture. Elle distingue cette contribution des passes propres au backend, du frontend PureScript et du runtime. Pour ES et purescm, elle désigne leur version du PBO, pas les extensions TAST de notre fork.
+**🟢 (PBO) / 🟡 (PBO)**: the shared PBO infrastructure provides a transformation or analysis actually used for this capability, sometimes complemented by the target code generator. The label means neither that PBO implements the entire technique on its own nor that all backends use it with the same coverage. It distinguishes this contribution from passes belonging to the backend, the PureScript frontend, or the runtime. For ES and purescm, it refers to their version of PBO, not our fork's TAST extensions.
 
-Une preuve conservatrice de pureté, d’arité ou de non-échappement est nécessaire à la correction ; elle n’est pas en soi un défaut. « Partiel » signale une limite de couverture utile à connaître. On ne calcule pas de pourcentage de maturité en additionnant ces cases : certaines lignes dépendent des mêmes passes et n’ont pas le même poids.
+A conservative proof of purity, arity, or non-escape is necessary for correctness; it is not inherently a shortcoming. “Partial” identifies a coverage limit worth knowing about. These cells should not be added up into a maturity percentage: some rows depend on the same passes and carry different weight.
 
-## Matrice
+## Matrix
 
-Les en-têtes renvoient aux preuves et limites de chaque backend. **JS** désigne le générateur officiel ; **ES** désigne `purs-backend-es` d’Arista. **Sharpurs émet du F#**, avec interopération C#, et non des corps PureScript traduits en C#.
+The headers link to each backend's evidence and limitations. **JS** refers to the official code generator; **ES** refers to Arista's `purs-backend-es`. **Sharpurs emits F#**, with C# interoperability, rather than translating PureScript function bodies into C#.
 
-| Technique | [sharpurs](#sharpurs) | [purust](#purust) | [phpurs](#phpurs) | [gopurs](#gopurs) | [javapurs](#javapurs) | [psgo](#psgo) | [JS](#js-officiel) | [ES](#es) | [purescm](#purescm) | [purerl](#purerl) | [Wasm](#wasm) |
+| Technique | [sharpurs](optimization-audit.md#sharpurs) | [purust](optimization-audit.md#purust) | [phpurs](optimization-audit.md#phpurs) | [gopurs](optimization-audit.md#gopurs) | [javapurs](optimization-audit.md#javapurs) | [psgo](optimization-audit.md#psgo) | [JS](optimization-audit.md#official-js) | [ES](optimization-audit.md#es) | [purescm](optimization-audit.md#purescm) | [purerl](optimization-audit.md#purerl) | [Wasm](optimization-audit.md#wasm) |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 01 · Évaluation partielle, β-réduction, simplification | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
-| 02 · Inlining automatique et élimination du code mort | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
-| 03 · Élimination des dictionnaires de classes connus | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 | 🟡 | 🟡 (PBO) | 🟡 (PBO) | 🟡 | 🟡 |
-| 04 · Exploitation du TAST pour choisir les représentations | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
-| 05 · Instanciation effective des types `TypeApp` | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
-| 06 · Monomorphisation par clonage des fonctions polymorphes | 🔴 | 🔴 | 🔴 | 🟡 (PBO) | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
-| 07 · Dé-curryfication automatique / wrapper-worker | 🟡 | 🟡 | 🟢 | 🟡 | 🟡 | 🔴 | 🔴 | 🟡 (PBO) | 🟡 (PBO) | 🟡 | 🟢 |
-| 08 · Opérations primitives émises directement | 🟡 (PBO) | 🟢 (PBO) | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
-| 09 · Paramètres et locaux numériques maintenus déboxés | 🟡 | 🟡 | ⚪ | 🟡 | 🟡 | 🔴 | ⚪ | ⚪ | ⚪ | ⚪ | 🟡 |
-| 10 · Champs d’ADT spécialisés selon leur type de contenu | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 |
-| 11 · Constructeurs nullaires partagés / enums sans allocation | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | 🟡 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 |
-| 12 · Records fermés : layout spécialisé et champs fixes | 🔴 | 🟡 | 🔴 | 🟡 | 🟡 | 🔴 | ⚪ | ⚪ | 🔴 | 🔴 | 🔴 |
-| 13 · Records : champs numériques déboxés dans ce layout | 🔴 | 🔴 | ⚪ | 🟡 | 🟡 | 🔴 | ⚪ | ⚪ | ⚪ | ⚪ | 🔴 |
-| 14 · Updates de records sans copie générique par clés | 🔴 | 🟡 | 🔴 | 🟡 | 🟡 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🟡 |
-| 15 · Auto-récursion terminale à pile bornée | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 | 🟢 (PBO) | ⚪ | ⚪ | 🟡 |
-| 16 · Récursion terminale mutuelle à pile bornée | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🟢 (PBO) | ⚪ | ⚪ | 🟡 |
-| 17 · Canonisation d’une récursion comptée en boucle d’induction | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
-| 18 · Aplatissement des `let` et de la glue `Effect` | 🟡 (PBO) | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
-| 19 · Partage limité d’expressions communes — CSE | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 |
-| 20 · Invariants de boucle : sortie du calcul / cache par invocation | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
-| 21 · Fusion dédiée d’un producteur de thunks avec son consommateur | 🔴 | 🔴 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
-| 22 · Spécialisation des fonctions d’ordre supérieur / closures | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🔴 | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🟡 |
-| 23 · Tableaux à stockage primitif sélectionné par le backend | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 |
-| 24 · Réutilisation de mémoire après preuve de propriété / unicité | 🔴 | 🟡 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
-| 25 · Effacement des enveloppes `newtype` | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 |
-| 26 · Construction saturée d’ADT sans chaîne de closures | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🔴 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 |
-| 27 · Élimination des cellules Ref / ST non échappantes | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🟡 (PBO) | 🔴 | 🔴 | 🔴 |
-| 28 · Emprunts évitant les clones / comptes de références explicites | ⚪ | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| Partial evaluation, β-reduction, simplification | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
+| Automatic inlining and dead code elimination | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
+| Elimination of known type class dictionaries | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 | 🟡 | 🟡 (PBO) | 🟡 (PBO) | 🟡 | 🟡 |
+| Using TAST to select representations | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| Effective `TypeApp` type instantiation | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| Monomorphization by cloning polymorphic functions | 🔴 | 🔴 | 🔴 | 🟡 (PBO) | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| Automatic uncurrying / wrapper-worker | 🟡 | 🟡 | 🟢 | 🟡 | 🟡 | 🔴 | 🔴 | 🟡 (PBO) | 🟡 (PBO) | 🟡 | 🟢 |
+| Direct emission of primitive operations | 🟡 (PBO) | 🟢 (PBO) | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
+| Keeping numeric parameters and locals unboxed | 🟡 | 🟡 | ⚪ | 🟡 | 🟡 | 🔴 | ⚪ | ⚪ | ⚪ | ⚪ | 🟡 |
+| ADT fields specialized by payload type | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 |
+| Shared nullary constructors / allocation-free enums | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | 🟡 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 |
+| Closed records: specialized layout and fixed fields | 🔴 | 🟡 | 🔴 | 🟡 | 🟡 | 🔴 | ⚪ | ⚪ | 🔴 | 🔴 | 🔴 |
+| Records: unboxed numeric fields in that layout | 🔴 | 🔴 | ⚪ | 🟡 | 🟡 | 🔴 | ⚪ | ⚪ | ⚪ | ⚪ | 🔴 |
+| Record updates without generic copying by key | 🔴 | 🟡 | 🔴 | 🟡 | 🟡 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🟡 |
+| Self-tail recursion with bounded stack usage | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 | 🟢 (PBO) | ⚪ | ⚪ | 🟡 |
+| Mutual tail recursion with bounded stack usage | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🟢 (PBO) | ⚪ | ⚪ | 🟡 |
+| Canonicalizing counted recursion into an induction loop | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| Flattening `let` bindings and `Effect` glue | 🟡 (PBO) | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
+| Limited common subexpression sharing — CSE | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 |
+| Loop invariants: hoisting / caching per invocation | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| Dedicated fusion of a thunk producer with its consumer | 🔴 | 🔴 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| Specialization of higher-order functions / closures | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🔴 | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🟡 |
+| Arrays with primitive storage selected by the backend | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 |
+| Memory reuse after proving ownership / uniqueness | 🔴 | 🟡 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| Erasure of `newtype` wrappers | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 |
+| Saturated ADT construction without closure chains | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🔴 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 |
+| Elimination of non-escaping Ref / ST cells | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🟡 (PBO) | 🔴 | 🔴 | 🔴 |
+| Borrowing to avoid explicit clones / reference counting | ⚪ | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| Scrutinee fusion / case-of-case | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🔴 | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🟡 |
 
-## Portée exacte des lignes
-
-- **01–03** : optimiser les valeurs et implémentations connues. Le vert 02 couvre les bindings/imports traités par l’optimiseur, pas une promesse de suppression de toute exportation inutilisée du programme. Le jaune 03 distingue ces réductions de l’élimination systématique de tous les dictionnaires utilisateur.
-- **04–06** : trois capacités différentes. Lire le TAST ne signifie pas exploiter chaque type ; substituer `forall a` à un appel ne signifie pas fabriquer une fonction autonome `f_Int`. La ligne 06 exige ce **clonage de fonctions**, au-delà des régions devenues monomorphes après inlining. Le module `Monomorphize.purs` présent dans un PBO non invoqué n’est pas crédité.
-- **07** : dé-curryfication **automatique** des fonctions ordinaires. Le support explicite de `FnN`/`EffectFnN` seul ne suffit pas ; les constructeurs sont séparés en 26. Un worker peut rester en `Object`, `obj` ou `Value` : voir 09.
-- **08–10** : un opérateur natif, un local primitif et un champ d’ADT primitif sont trois résultats distincts. Le gris 09 concerne les ABI qui passent déjà des scalaires natifs de leur langage, sans ajouter de boîte `Integer`/`Double`. Le stockage physique des nombres y relève du runtime. Le rouge 10 n’efface pas l’existence de classes, tuples ou records d’ADT : il signale l’absence de spécialisation des contenus par type.
-- **11** : singleton, littéral partagé ou tag immédiat. Une couverture limitée aux enums entièrement nullaires laisse la case jaune pour les ADT mixtes.
-- **12–14** : layout du record, type de ses champs et stratégie de mise à jour. Un layout à champs fixes ne garantit pas des contenus numériques déboxés. Les objets JS natifs ont déjà des propriétés nommées ; une passe qui remplacerait une Map artificielle par un record n’y est pas nécessaire, d’où le gris 12. Leur layout machine est décidé par V8. Le gris 13 applique la même distinction que 09 aux cibles à valeurs scalaires natives/taguées ; il ne veut pas dire que les records ou leur accès sont optimaux. Les `stdClass` PHP, listes d’associations Scheme et maps Erlang ont encore des alternatives de layout à explorer en 12.
-- **15–17** : TCO auto, TCO mutuel et reconnaissance d’un compteur sont séparés. Scheme et Erlang disposent d’appels terminaux natifs : pas besoin d’un trampoline backend ajouté, d’où le gris 15/16. Cela ne supprime pas le coût de leurs closures. Le jaune F# dépend des formes terminales émises puis de F#/.NET ; le jaune Wasm dépend de `return_call` et des représentations compatibles. La ligne 17 exige une transformation du motif récursif, pas seulement un `for` dans une FFI ou un intrinsèque de collection.
-- **19–21** : la CSE du frontend partage surtout des applications synthétiques de dictionnaires ; un cache d’invariant évite de refaire un calcul pendant une invocation ; la fusion de thunks évite de construire/forcer la chaîne. Ces trois techniques ne sont pas interchangeables. Ni un cache interne au compilateur, ni une constante globale initialisée une fois ne remplit la ligne 20.
-- **22** : couverture ciblée des HOF/closures, via valeurs connues et inlining, représentations spécialisées ou workers privés. Les mécanismes diffèrent selon la colonne et sont détaillés ci-dessous. Aucun jaune ne signifie défonctionnalisation générale de toutes les closures. La fusion de combinateurs CPS obtenue par inlining est comptée ici, pas comme la passe dédiée de thunks de la ligne 21.
-- **23** : `[]int64`, `int[]`, `Vec<i64>` ou équivalent choisi par le compilateur. Une optimisation spéculative de V8, un tableau PHP de zvals ou une FFI écrite à la main ne suffit pas. Wasm est jaune pour ses tableaux primitifs explicites ; son `Array Int` ordinaire n’est pas généralement spécialisé.
-- **24 / 27 / 28** : réutiliser un objet unique, supprimer une cellule locale et emprunter un champ au lieu de cloner une référence sont distincts. Le gris 28 concerne les cibles où le backend n’émet pas ces clones/comptes de références explicites. En PHP, la gestion des zvals appartient au moteur ; en Go, la présence d’un champ historique `Rc` ne prouve pas son utilisation.
-
-## Provenance et méthode
-
-Les scripts `bin/*/run`, les dépendances effectivement sélectionnées, les points d’entrée, les passes appelées, les branches génériques, les tests existants et des sorties déjà générées ont été confrontés. Aucun benchmark ni build complet n’a été lancé pour cette modification documentaire. Les tests cités attestent les cas que le projet vérifie ; ils n’ont pas été réexécutés pendant cet audit. Les sources et sorties ne constituent pas une preuve de gain chronométré.
-
-| Colonne | Version / révision inspectée | Chaîne identifiée |
-|---|---|---|
-| sharpurs | `7ebdd3f` | Fork purs TAST → noyaux PBO sélectionnés + génération générique depuis TAST → F# |
-| purust | `bf888346` | Fork purs TAST → PBO dédié → Purust → Rust |
-| phpurs | `be46bdfc` | Fork purs TAST → PBO dédié → Phpurs → PHP |
-| gopurs | `a2263644` ; renommage interne ultérieur `a100d62` | Fork purs TAST → PBO dédié → Gopurs → Go |
-| javapurs | `2164c48` | Fork purs TAST → PBO dédié → Javapurs → Java |
-| psgo | distribution `0.1.0` ; sources déclarées `355eb9b0`, identiques à `purescript-native/src` local `9829dddc` | purs du PATH, ici `0.15.15` → psgo → Go |
-| JS officiel | purs du PATH, ici `0.15.15` | CoreFn → optimiseur CoreImp → JS → Node |
-| ES | npm `purs-backend-es@1.4.3`, commit `5e764325` | CoreFn → PBO **de cette release** → JS → Node |
-| purescm | npm `1.12.0` et sources locales correspondantes ; PBO épinglé `54b82ac` | purs vanilla `0.15.15` → PBO de purescm → Scheme → Chez |
-| purerl | binaire `0.0.24`, sources locales `abe9d99b` et sortie portant cette version | purs vanilla `0.15.15` → optimiseur Erlang → BEAM |
-| Wasm | `b98778f0` | purs standard `0.15.16` + externs → MIR propre → WasmGC/Binaryen → Node |
-
-Les cinq PBO dédiés aux backends locaux ont été inspectés au commit `6e256c6a` ; le fork frontend au commit `65010ea`. **Ce PBO enrichi ne doit pas être attribué au paquet npm ES 1.4.3.** Sa source exacte a été identifiée grâce au `gitHead` des [métadonnées npm](https://registry.npmjs.org/purs-backend-es/1.4.3), puis lue au [commit publié](https://github.com/aristanetworks/purescript-backend-optimizer/tree/5e7643253ebc9db16f3c9ab702fa756bd3e41b80).
-
-La [distribution psgo](https://github.com/rowtype-yoga/psgo/tree/v0.1.0) renvoie aux sources `andyarvanitis/purescript-native`, branche `golang`, mais n’épingle pas son commit de construction : l’identité du binaire n’a pas été reproduite. Pour purescm/purerl, sources locales, versions des outils et sorties concordent sur les mécanismes décrits ; aucun rebuild de provenance bit à bit n’est revendiqué.
-
-Les liens locaux ci-dessous sont relatifs à ce dépôt dans le workspace `htdocs`. Les numéros de lignes peuvent bouger ; les noms des fonctions et des passes servent de repères. Les révisions ci-dessus figent l’état audité malgré les travaux concurrents. Aucune capacité n’est créditée seulement parce qu’elle apparaît dans un ancien scratch, un TODO ou une expérience non branchée.
-
-## Preuves communes du frontend et du PBO
-
-- **CSE limitée, ligne 19** : [Make.hs](../purescript/src/Language/PureScript/Make.hs), `optimizeCoreFn` puis sérialisation dans [Make/Actions.hs](../purescript/src/Language/PureScript/Make/Actions.hs). La [sélection officielle 0.15.15](https://github.com/purescript/purescript/blob/v0.15.15/src/Language/PureScript/CoreFn/CSE.hs#L369) cible les `IsSyntheticApp` simples : dictionnaires, superclasses, `IsSymbol`. Ce n’est pas une CSE générale de tous les calculs arithmétiques. Wasm possède en plus son partage `SShared` et ses CAFs.
-- **PBO, lignes 01–03, 18, 22, 25** : [Builder](../purescript-backend-optimizer-javapurs/src/PureScript/Backend/Optimizer/Builder.purs), `buildModules` → `toBackendModule` ; [Convert](../purescript-backend-optimizer-javapurs/src/PureScript/Backend/Optimizer/Convert.purs), sélection des bindings utilisés et `IsNewtype` ; [Semantics](../purescript-backend-optimizer-javapurs/src/PureScript/Backend/Optimizer/Semantics.purs), évaluation, inlining, `shouldUnpackCtor`, `shouldUnpackRecord`, flottement des lets. L’élimination d’un agrégat connu est réelle mais ne constitue pas une analyse d’unicité générale.
-- **TypeApp, ligne 05** : dans ce même `Semantics`, `evalTypeApp` et `instantiateNeutralType` substituent les types sous `ForAll`, et `evalExternFromImpl` consomme effectivement l’instanciation avant les arguments de valeurs. [Tests TypeApp](../purescript-backend-optimizer-javapurs/test/typeapp.mjs). Ignorer le TypeApp **résiduel** dans le dernier générateur ne signifie donc pas que tout le pipeline l’a ignoré.
-- **Opérations et effets, lignes 08 et 18** : [Semantics/Foreign](../purescript-backend-optimizer-javapurs/src/PureScript/Backend/Optimizer/Semantics/Foreign.purs) reconnaît notamment `intAdd`, `intMul`, `bindE` et `pureE`, puis construit `PrimOp` / `EffectBind` / `EffectPure`. Le générateur cible émet ensuite les opérateurs et instructions : la contribution est partagée, d’où `(PBO)`.
-- **TCO, ligne 15 pour Phpurs/Gopurs/Javapurs, 15–16 pour ES** : [Codegen/Tco](../purescript-backend-optimizer-javapurs/src/PureScript/Backend/Optimizer/Codegen/Tco.purs) analyse les appels terminaux et les rôles de boucle ; les générateurs cités consomment cette analyse. L’émission des boucles ou du dispatcher reste propre au backend. Purust et Sharpurs utilisent leurs propres chemins pour cette capacité.
-- **Construction saturée, ligne 26** : `evalApp` dans `Semantics` transforme un `NeutCtorDef` entièrement appliqué en `NeutData`, puis la réémission produit `CtorSaturated`. Les générateurs consomment cette forme ; Sharpurs le fait dans ses noyaux, avec une autre voie pour les déclarations génériques.
-- **Attributions à distinguer** : la ligne 04 décrit les choix de représentation des générateurs à partir du TAST produit par le frontend ; la CSE de la ligne 19 vient aussi du frontend. Elles ne reçoivent pas `(PBO)` pour le seul transport de ces informations. En ligne 07, `shouldUncurryAbs` est désactivée dans le PBO local audité (`Nothing`) : les workers de nos cinq backends sont leurs propres mécanismes. La monomorphisation 06 de Gopurs appelle en revanche réellement le monomorphiseur PBO, comme détaillé plus bas.
-- Les points d’entrée cités par backend déterminent si ce résultat est effectivement émis. Sharpurs n’en consomme qu’une partie ; les paquets ES/purescm historiques ont leurs propres versions du PBO.
-
-## sharpurs
-
-- **01–05, 18** : [Main](../sharpurs/sharpurs/src/Main.purs) et [CodeGen](../sharpurs/sharpurs/src/Sharpurs/CodeGen.purs) choisissent les noyaux ADT/Thunk/Int et des enveloppes [Optimized](../sharpurs/sharpurs/src/Sharpurs/Optimized.purs). La voie générale parcourt encore **les déclarations TAST originales**, et pas toutes les déclarations PBO optimisées. La simple présence de `buildModules` ne donne donc pas des verts partout.
-- **07–10** : [DirectCall](../sharpurs/sharpurs/src/Sharpurs/DirectCall.purs) admet des NonRec monomorphes et des appels qualifiés exactement saturés ; workers/wrappers `obj` persistent. [IntKernel](../sharpurs/sharpurs/src/Sharpurs/IntKernel.purs), [IntArithmetic](../sharpurs/sharpurs/src/Sharpurs/IntArithmetic.purs) et [AdtLayout](../sharpurs/sharpurs/src/Sharpurs/AdtLayout.purs) créent les voies natives Int/Bool/ADT fermés admis. Les champs externes ou polymorphes peuvent faire refuser le noyau ; le fallback est une DU à champs `obj`.
-- **11, 26** : cas de DU sans payload et valeurs natives partagées ; construction saturée directement en DU ou factory native enregistrée. La représentation machine et le partage final des nullaires relèvent aussi de F#.
-- **12–14, 23–24** : records en `Map<string,obj>`, updates par `Map.add`, tableaux génériques boxed. Le partage structurel de `Map` n’est pas un layout de record fermé ni une analyse de propriété Sharpurs.
-- **15–17** : groupes `let rec … and …`, entrées `_tco` et appels directs saturés préparent les appels terminaux pour F#/.NET. Sharpurs n’émet pas un trampoline/dispatcher général garantissant lui-même l’absence de croissance de pile, ni une boucle comptée. Voir la [sortie TCO](../altbak.pub-sharpurs/run/bak/sharp/output/Main/Test.TCO.fs).
-- **20–22, 25** : [ThunkKernel](../sharpurs/sharpurs/src/Sharpurs/ThunkKernel.purs) est intégré, y compris dans le bundle et la [sortie LazyEvaluation](../altbak.pub-sharpurs/run/bak/sharp/output/Main/Test.LazyEvaluation.fs). Il spécialise des régions privées `unit -> int` et retire des helpers `defer`/`force` reconnus. **La chaîne de closures du calcul reste construite et le worker est rappelé à chaque tour** : jaune 22, rouge 20/21. Le newtype n’ajoute pas une classe enveloppe, mais son constructeur identité et ses appels boxed restent sur la voie générique : jaune 25.
-- **27** : `Main` filtre volontairement les sémantiques étrangères Effect/ST. Pas d’élimination générale de cellules locales dans les noyaux.
-- Le module expérimental `AdtInterop` n’est pas importé par `Main` : ses capacités de test ne sont pas attribuées au pipeline normal.
-
-## purust
-
-- **01–05, 18, 25** : [Main](../purust/purust/src/Main.purs) passe réellement `backendMod` au générateur. [Tests TypeApp](../purust/purust/tests/tast/type-instantiation.mjs) vérifient l’émission de boucles `i64`/`f64` après instanciation et le repli `UnknownType`. Il n’y a pas de passe générale de clones par instanciation : le jaune 05 ne donne pas un jaune 06.
-- **07–10, 22, 26** : [CodeGen](../purust/purust/src/Purust/CodeGen.purs), appels directs aux globals d’arité connue, partielles et surapplications, paramètres/retours primitifs, champs issus de `dataDecls`, classes de types en structs. Les ADT récursifs utilisent `Rc` et les variables de type restent génériques. `FuncN::Static` / `Shared` distingue fonctions sans capture et closures partagées. Ni `FuncN`, ni la monomorphisation ultérieure des génériques Rust ne constitue le clone PureScript de la ligne 06.
-- **11** : [DataLayout](../purust/purust/src/Purust/DataLayout.purs) rend les enums entièrement nullaires `Copy`. [ShareNullaries](../purust/purust/src/Purust/ShareNullaries.purs) partage des nullaires dans des constructions strictes locales et s’arrête aux frontières de portée/appel ; pas de singleton global universel des nullaires mixtes.
-- **12–14** : structs de records par ensemble de labels, mais champs **`Option<UnknownType>`**. Getters/setters font un dispatch de forme. L’update utilise `PerceusPtr::make_mut` : modification si unique, copie de struct sinon. Layout structuré partiel, mais pas encore de champs numériques de record unboxés.
-- **15–17, 20–21** : un seul `mbLoop`, appels au même nom → temporaires, `continue`, `loop`. Pas de dispatcher mutuel, de canonisation d’un compteur, de cache invariant ou de passe dédiée de fusion de thunks. L’évaluation partielle peut néanmoins éliminer des combinateurs connus, ligne 22.
-- **23** : `LitArray` convertit les éléments vers `Any`, puis `mk_array(vec![…])`. Ce n’est pas un `Vec<i64>` déduit de `Array Int`.
-- **24** : [OwnedFields](../purust/purust/src/Purust/OwnedFields.purs), [ReturnCells](../purust/purust/src/Purust/ReturnCells.purs), workers de retour, `Rc::get_mut` et fallback partagé sont réellement câblés. Le [runtime PerceusPtr](../purust/purust/tests/runtime/perceus_ptr/src/lib.rs), bien que rangé sous `tests/`, est une dépendance du code produit. La [sortie RBTree](../altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Test_RBTree/src/lib.rs) appelle `balance__purust_reuse` sur le chemin unique. La couverture est limitée aux extractions/retours reconnus.
-- **27–28** : pas de scalarisation générale de cellules Ref. En revanche, les [tests d’emprunts de fonctions](../purust/purust/tests/codegen/function-borrows.mjs) et les chemins d’emprunt de champs/tags couvrent un mécanisme actif qui évite certains clones/incréments de références. Emprunter n’autorise pas à modifier une valeur partagée.
-
-## phpurs
-
-- **01–05, 18, 25** : [Main](../phpurs/phpurs/src/Main.purs) appelle effectivement le PBO dédié. Les annotations TAST deviennent signatures/champs scalaires PHP et preuves des régions privées ; elles ne transforment pas les zvals en champs machine bruts.
-- **07** : [Printer](../phpurs/phpurs/src/Phpurs/Printer.purs), branche `PhpCall` utilisant `allArities`, émet de vrais appels de fonctions PHP, y compris qualifiés par namespace, avec gestion de la surapplication. Le simple nom d’AST `PhpDirectCall` n’était pas à lui seul cette preuve.
-- **08, 10–11, 26** : [CodeGen](../phpurs/phpurs/src/Phpurs/CodeGen.purs), mapping scalaire, classes issues de `dataDecls`, `CtorSaturated` en `new`. Les bindings nullaires sont partagés, mais un `CtorSaturated` générique peut encore allouer. [EnumRegions](../phpurs/phpurs/src/Phpurs/EnumRegions.purs) et [NullableConstructors](../phpurs/phpurs/src/Phpurs/NullableConstructors.purs) réduisent enums/feuilles nullaires dans des régions privées prouvées, en conservant la représentation publique. Le jaune 08 reflète les mappings reconnus, pas une certification de toute l’arithmétique Int32.
-- **12, 14, 23** : les records résiduels restent des `stdClass` avec clone générique, les tableaux des tableaux PHP de zvals. La [sortie Records](../altbak.pub-phpurs/run/bak/php/output/Test.Records/index.php) garde les clones imbriqués. Aucun layout de record fermé ni stockage numérique compact de tableau n’est choisi.
-- **15–17** : `CodeGen` exige un seul binding récursif, en local comme au top-level ; réaffectations puis `goto`. Pas de TCO mutuel ni de passe de boucle comptée.
-- **21–22** : [PartialBindings](../phpurs/phpurs/src/Phpurs/PartialBindings.purs), [ThunkFusion](../phpurs/phpurs/src/Phpurs/ThunkFusion.purs) et [CompactLoops](../phpurs/phpurs/src/Phpurs/CompactLoops.purs) sont branchés. Chaînes immédiatement consommées et closures locales scalaires peuvent devenir workers/objets callables privés compacts ; les closures publiques et les cas de provenance inconnue restent inchangés. Ce n’est pas une défonctionnalisation générale.
-- **02, 24** : [TailInline](../phpurs/phpurs/src/Phpurs/TailInline.purs) et [CopyCleanup](../phpurs/phpurs/src/Phpurs/CopyCleanup.purs) sont également branchés. Nettoyer copies/temporaires ou préserver une affectation TCO simultanée n’est pas une analyse d’unicité permettant de muter les ADT.
-- **20, 27** : la [sortie LazyEvaluation](../altbak.pub-phpurs/run/bak/php/output/Test.LazyEvaluation/index.php) recalcule son worker fusionné à chaque tour. Le cache Church essayé en scratch n’est pas intégré. Les primitives ST reconnues par PBO restent `TODO_PrimEffect` si elles atteignent le générateur : aucune scalarisation de cellule n’est branchée.
-
-## gopurs
-
-- **01–06, 22** : [Main](../gopurs/gopurs/src/Main.purs), `monomorphizeModules` avant `buildModules` ; [Monomorphization](../gopurs/gopurs/src/Gopurs/Monomorphization.purs) et [monomorphiseur PBO](../purescript-backend-optimizer-gopurs/src/PureScript/Backend/Optimizer/Monomorphize.purs). Il y a bien collecte transitive, clones et réécriture des appels, avec types/dictionnaires/arguments statiques. Les foreigns, instanciations insuffisamment concrètes et certains locaux récursifs restent génériques. [ClassMetadata](../gopurs/gopurs/src/Gopurs/ClassMetadata.purs) consomme aussi `classDecls`.
-- **07–14, 23, 26** : [CodeGen](../gopurs/gopurs/src/Gopurs/CodeGen.purs), workers `Call_Module_name`, arités 1–10, `exprTypeToGoType`, champs et updates structurés, `CtorSaturated`, intrinsèques map/filter/foldl ; [Printer](../gopurs/gopurs/src/Gopurs/Printer.purs), copies des structs par valeur et conversions de slices. Le repli `Value` et les bridges `[]Value ↔ []int64` empêchent de promettre du natif de bout en bout. Le runtime [Value](../gopurs/gopurs/src/Gopurs/Runtime.purs) stocke déjà les bits des scalaires dans `IntVal`, sans boîte individuelle systématique.
-- **10–11, 25** : [AdtMetadata](../gopurs/gopurs/src/Gopurs/AdtMetadata.purs) sélectionne les enums entièrement nullaires et les ADT à un constructeur avec payload pour la représentation pointeur ; [ConstructorMetadata](../gopurs/gopurs/src/Gopurs/ConstructorMetadata.purs) identifie les enveloppes transparentes. Les sommes plus générales et les types non représentés conservent des chemins `Value`.
-- **12–14** : les records ont de vrais champs natifs dans les cas reconnus. La politique `isClosedRowTail` accepte aussi `Just Any` ; elle n’est pas équivalente à la preuve stricte d’une rangée fermée utilisée par Javapurs.
-- **15–17** : `isSelfRecursiveLoop` exige un groupe top-level de taille 1. En local, le `currentLoopCtx` transmis ne contient que la fonction courante, malgré les noms `mutRecBinds` et `combinedLoopCtx`. Le code émet `for {}`/`continue`, sans dispatcher mutuel ni passe de canonisation d’un compteur.
-- **21–24** : [ThunkFusion](../gopurs/gopurs/src/Gopurs/ThunkFusion.purs), `optimizeThunkProducers`, remplace un producteur récursif de thunks Int immédiatement consommé par un worker strict, sous preuves d’opérations totales. `normalizeFreshIntArrayRoundtrip` réutilise un buffer de filtre fraîchement créé ; ce jaune 24 **ne signifie pas mutation d’ADT unique**. `constructorReuse` retourne un objet déjà égal, sans le modifier. Aucun test de `Rc` n’autorise actuellement une mutation d’ADT générée.
-- **20, 27** : pas de cache invariant de programme dans le pipeline. `PrimEffect` conserve une cellule indirecte pour RefNew/Read/Write ; l’échappement éventuellement optimisé ensuite par Go ne constitue pas une passe Gopurs.
-
-## javapurs
-
-- **01–05, 18, 22, 25** : [Main](../javapurs/javapurs/src/Main.purs) consomme le PBO dédié. Les réductions par valeurs connues, dictionnaires et HOF inlinables viennent de ce socle. Le jaune 22 décrit cette spécialisation structurelle ; il n’y a pas de représentation générale de closures numériques ni de défonctionnalisation Java. Aucun appel au monomorphiseur de clones, donc rouge 06.
-- **07** : [DirectCalls](../javapurs/javapurs/src/Javapurs/DirectCalls.purs) conserve le wrapper curryfié et crée un worker statique utilisé pour des lambdas consécutives d’arité 2–32, globals non récursifs du même module déclarés plus tôt. Les workers prennent encore des `Object`. Les partielles, fonctions locales/inconnues et frontières d’initialisation conservent leur chemin compatible. [Tests](../javapurs/javapurs/test/direct-calls.mjs).
-- **08–10, 15** : [CodeGen](../javapurs/javapurs/src/Javapurs/CodeGen.purs), primitives et TCO ; [IntLoops](../javapurs/javapurs/src/Javapurs/IntLoops.purs), compteurs dont la représentation Int est prouvée → `int`. Les signatures et champs d’ADT ordinaires restent `Object`. [Printer](../javapurs/javapurs/src/Javapurs/Printer.purs) émet le `continue` direct et garde `TcoLoop` pour les frontières de méthode/closure nécessitant ce repli ; ce n’est pas un TCO mutuel général.
-- **11, 26** : classes de constructeurs, construction saturée `new Ctor(args)` et partage des nullaires via holder. [Tests nullaires](../javapurs/javapurs/test/nullary-constructors.mjs). Il s’agit de classes Java, pas d’un bénéfice de Valhalla ou d’ADT automatiquement émis en Java records scellés.
-- **12–14** : [RecordShapes](../javapurs/javapurs/src/Javapurs/RecordShapes.purs), [RecordTypes](../javapurs/javapurs/src/Javapurs/RecordTypes.purs), [RecordPrinter](../javapurs/javapurs/src/Javapurs/RecordPrinter.purs). Rangées fermées prouvées → classe `AbstractMap` à champs fixes ; `Int` → `int`, record imbriqué → référence Map, autres contenus → `Object`. Accès/copie spécialisés, replis Map pour valeurs inconnues/FFI et formes trop larges. Pas de typage natif de tous les champs ni de monomorphisation intermodule générale. [Tests records](../javapurs/javapurs/test/typed-records.mjs).
-- **17** : [CountedLoops](../javapurs/javapurs/src/Javapurs/CountedLoops.purs) reconnaît un décompte Int de 1 vers 0, dont le corps utilise seulement des primitives admises ; le domaine négatif garde le chemin de repli. Ce n’est pas une transformation de toute récursion terminale en `for`. [Tests](../javapurs/javapurs/test/counted-loops.mjs).
-- **20** : [LoopInvariants](../javapurs/javapurs/src/Javapurs/LoopInvariants.purs) et [PureInvariants](../javapurs/javapurs/src/Javapurs/PureInvariants.purs) mettent en cache les appels fermés, profondément purs et de résultat Int, au premier usage réussi pendant une invocation. Pas de partage entre branches/occurrences, pas de cache global, pas d’anticipation d’effet/exception. [Tests](../javapurs/javapurs/test/loop-invariants.mjs).
-- **21, 23–24, 27** : pas de passe dédiée de fusion de producteurs de thunks ; arrays en `Object[]`, pas d’ownership permettant de recycler les nœuds d’ADT, pas d’élimination backend des cellules Ref/ST. Les éventuelles suppressions d’allocations par HotSpot sont une couche distincte.
-
-## psgo
-
-- Le [runner](bin/psgo/run) appelle le binaire du PATH. Le code pertinent est bien [purescript-native/CodeGen/IL](../purescript-native/src/CodeGen/IL.hs) ; ce n’est pas Gopurs sous un autre nom.
-- **01–03, 08, 18** : [Optimizer](../purescript-native/src/CodeGen/IL/Optimizer.hs) et [Inliner](../purescript-native/src/CodeGen/IL/Optimizer/Inliner.hs) : réductions locales, opérateurs/dictionnaires standards reconnus, IIFE, composition et code inutile. [MagicDo](../purescript-native/src/CodeGen/IL/Optimizer/MagicDo.hs) traite les bind/pure/discard reconnus ; cela ne valide pas toutes ses autres branches.
-- **27** : une ancienne passe `inlineST` existe et est appelée, mais `isSTFunc` attend `Indexer(StringLiteral, Var)` alors que `qualifiedToIL` émet `Indexer(Var, Var)` pour les fonctions qualifiées. Aucune conversion intermédiaire correspondante n’a été trouvée. **Elle n’est donc pas créditée au pipeline actuel**. Le cas illustre pourquoi la présence d’une passe, même appelée, ne suffit pas sans vérifier les formes qu’elle reçoit.
-- **04–07, 09–14, 23** : les paramètres et variables restent `Any`, les ADT/records sont des `Dict`, les arrays sont génériques : [Printer](../purescript-native/src/CodeGen/IL/Printer.hs). `Fn0…Fn10`/EffFn explicites sont dé-curryfiés, mais les fonctions ordinaires et même leurs constructeurs saturés passent encore par `Apply` ; d’où les rouges 07 et 26.
-- **11** : les constantes globales utilisent `Once`, ce qui partage aussi certains objets nullaires ; il n’y a pas d’enums primitifs.
-- **15–17** : [TCO](../purescript-native/src/CodeGen/IL/Optimizer/TCO.hs) transforme les seuls appels au nom de la fonction elle-même. La boucle garde une fonction de pas et des valeurs `Any`. Pas de groupe mutuel ni de canonisation du compteur.
-- **20–24** : l’inlining de composition ne constitue pas une fusion de producteur Lazy ni une spécialisation par callback avec worker. Pas de cache d’invariant, de tableaux primitifs sélectionnés par type, ni de réutilisation destructive prouvée. **25** : applications et motifs newtype sont effacés dans `IL.hs`.
-
-## JS officiel
-
-- [Runner JS](bin/js/run), purs standard `0.15.15` trouvé dans le PATH. [Optimiseur CoreImp](../purescript/src/Language/PureScript/CoreImp/Optimizer.hs) : inlining local, eta, IIFE, suppression de thunks, opérateurs standards, code mort local et MagicDo. Les fichiers du fork local conservent ces mécanismes ; leurs ajouts TAST ne sont pas crédités au générateur JS standard.
-- **03, 07–08, 22** : opérateurs/dictionnaires connus optimisés, mais les fonctions ordinaires gardent des appels unaires curryfiés. Pas de worker automatique général ni de spécialisation HOF comparable aux noyaux des autres colonnes. Les wrappers d’API FnN sont un cas explicite séparé.
-- **10–14, 25–26** : [CodeGen/JS 0.15.15](https://github.com/purescript/purescript/blob/v0.15.15/src/Language/PureScript/CodeGen/JS.hs), propriétés natives, constructeurs nommés, `.value` partagé pour les nullaires, `new` direct si saturé, newtypes effacés. `ObjectUpdate` avec liste de champs connue devient un nouvel objet construit explicitement ; sinon boucle de copie par clés. Pas de tableau primitif ou layout de payload d’ADT choisi depuis le TAST.
-- **15–16** : [TCO 0.15.15](https://github.com/purescript/purescript/blob/v0.15.15/src/Language/PureScript/CoreImp/Optimizer/TCO.hs), self-calls et certaines dépendances de fonctions imbriquées en position terminale. Le cas mutuel est jaune pour cette portée locale ; pas de dispatcher général des groupes top-level distincts comme celui d’ES.
-- **18, 27** : [MagicDo](../purescript/src/Language/PureScript/CoreImp/Optimizer/MagicDo.hs), séquences Effect reconnues et STRefs confinées à un `run` abaissées en variables locales. Les refs qui échappent restent des objets.
-- Pas de passe dédiée de compteur récursif, de cache invariant, de fusion de producteur Lazy, ni d’unicité d’ADT. V8 peut ensuite optimiser le code machine, sans que cela fournisse ces passes dans le backend.
-
-## ES
-
-- Sources de **la release exacte 1.4.3** : [Semantics](https://github.com/aristanetworks/purescript-backend-optimizer/blob/5e7643253ebc9db16f3c9ab702fa756bd3e41b80/src/PureScript/Backend/Optimizer/Semantics.purs), [Convert ES](https://github.com/aristanetworks/purescript-backend-optimizer/blob/5e7643253ebc9db16f3c9ab702fa756bd3e41b80/backend-es/src/PureScript/Backend/Optimizer/Codegen/EcmaScript/Convert.purs). Cette version ne contient pas notre TAST/TypeApp/monomorphiseur.
-- **07, 22** : `shouldUncurryAbs` dé-curryfie automatiquement les lambdas **locales** utilisées à une seule arité complète. [Snapshot sans FnN](https://github.com/aristanetworks/purescript-backend-optimizer/blob/5e7643253ebc9db16f3c9ab702fa756bd3e41b80/backend-es/test/snapshots-out/Snapshot.UncurriedLocalAbs01.js). Les globals ordinaires restent curryfiés. La [fusion CPS](https://github.com/aristanetworks/purescript-backend-optimizer/blob/5e7643253ebc9db16f3c9ab702fa756bd3e41b80/backend-es/test/snapshots-out/Snapshot.Fusion01.js) obtenue par directives/inlining est réelle, avec des intermédiaires encore présents ; ce n’est pas une passe générale de fusion Lazy ni de toute chaîne map/filter/fold.
-- **11–14, 26** : constructeurs/produits et propriétés JS natives ; nullaires partagés. Les updates résiduels utilisent un spread générique : cette release ne conserve pas `copyFields` dans son `ExprUpdate`. Éliminer un update dont tout le record est déjà connu relève de 01, pas d’une voie dédiée de copie de record fermé en 14. Le moteur JS décide des layouts machine ; aucune sélection générale de typed array depuis `Array Int`.
-- **15–16** : `codegenTcoMutualLoopBindings` émet un dispatcher commun, un numéro de branche, des arguments partagés et les wrappers d’entrée. [Snapshot mutuel](https://github.com/aristanetworks/purescript-backend-optimizer/blob/5e7643253ebc9db16f3c9ab702fa756bd3e41b80/backend-es/test/snapshots-out/Snapshot.Tco04.js). C’est une capacité effectivement présente que Gopurs et Javapurs n’émettent pas actuellement.
-- **18, 27** : l’analyse commune `Codegen/Tco` du PBO fournit les comptes d’usages `total` et `readWrite`, exploités par le générateur ES. `canUnboxRef` exige que tous les usages soient read/write ; cellule locale → variable mutable, avec repli objet lorsque la ref échappe. [Snapshot ST](https://github.com/aristanetworks/purescript-backend-optimizer/blob/5e7643253ebc9db16f3c9ab702fa756bd3e41b80/backend-es/test/snapshots-out/Snapshot.STRun01.js). Déballer une cellule ne prouve pas un local machine Int statique.
-- **17, 20, 24** : des intrinsèques Effect/ST émettent des boucles mais ne canonisent pas les récursions comptées ; `floatLet` n’est pas une LICM ; pas d’ownership de valeurs immuables émis.
-
-## purescm
-
-- [Builder](../purescm/src/PureScript/Backend/Chez/Builder.purs) appelle son PBO et lit le CoreFn standard. [Convert](../purescm/src/PureScript/Backend/Chez/Convert.purs) et [Syntax](../purescm/src/PureScript/Backend/Chez/Syntax.purs) : applications globales ordinaires curryfiées, FnN explicites non curryfiées, let/letrec, chaînes d’effets et opérations `fx`/`fl` natives. Les HOF inlinables bénéficient du PBO ; pas de clones guidés par le TAST ni de worker global général.
-- **07** : le [PBO épinglé](../purescm/spago.yaml) au commit `54b82ac23143dd47bfafaf52dec81dd7ccf2b490` active `shouldUncurryAbs` pour les lambdas locales utilisées à une seule arité complète. `RewriteUncurry` produit les `UncurriedAbs` / `UncurriedApp` consommés par `Convert` ; [Syntax](../purescm/src/PureScript/Backend/Chez/Syntax.purs), `mkUncurriedFn` / `runUncurriedFn`, émet réellement une lambda et un appel à plusieurs arguments. La case est donc **🟡 (PBO)** ; les fonctions globales ordinaires restent curryfiées.
-- **10–11, 26** : ADT en `define-record-type`, accesseurs dédiés, nullaires en symboles cités, `List` en paires/listes Scheme ; construction saturée directe. La [sortie RBTree](run/bak/scm/output/Test.RBTree/lib.ss) confirme cette représentation. Les champs de record Scheme restent des valeurs génériques du langage, pas des layouts par instanciation du payload.
-- **12–14, 23** : records PureScript en listes d’associations ; [runtime](../purescm/lib/purescm/runtime.ss), `record-ref`/`record-remove`/`record-set`. Les arrays sont des flexvectors génériques. Ne pas confondre les `define-record-type` **des ADT** avec la représentation des **records PureScript**.
-- **15–17, 20–21, 24, 27** : les appels terminaux Scheme assurent la pile bornée ; pas de canonisation de compteur, cache invariant, fusion dédiée de thunks, réutilisation destructive par preuve d’unicité ou scalarisation de refs émise. `EffectRefNew` reste une boîte Scheme.
-
-## purerl
-
-- [CodeGen](../purerl/src/Language/PureScript/Erl/CodeGen.hs) et [Optimizer](../purerl/src/Language/PureScript/Erl/CodeGen/Optimizer.hs) : simplifications à point fixe, dictionnaires standards reconnus, MagicDo, suppression de fonctions inutilisées. **07** : `generateFunctionOverloads`, calcul d’arités, appels saturés globaux et wrappers ; certaines surcharges ne font toutefois qu’appeler la version curryfiée. La [sortie Polymorphism](run/bak/erl/output/Test.Polymorphism/test_polymorphism@ps.erl) montre ce repli.
-- Les `-spec` Erlang fournissent des informations de type, mais pas un layout natif par instanciation TAST. ADT → tuples tagués, nullaires → littéraux, newtypes effacés, constructeurs saturés directs. Records → maps, accès `maps:get`, update `EMapUpdate` ; ni record fermé spécialisé ni tableau numérique choisi par type.
-- **15–16, 18** : appels terminaux BEAM natifs ; [sortie TCO](run/bak/erl/output/Test.TCO/test_tCO@ps.erl) avec fonction directe `deepTailRec/2`. L’aplatissement MagicDo est limité aux formes reconnues.
-- **19–20** : la macro `?MEMOIZE` dans les sorties **ne prouve pas une mémoïsation active** : le runner `erlc` ne définit pas `PURERL_MEMOIZE`, et la macro est alors l’identité. [Memoize](../purerl/src/Language/PureScript/Erl/CodeGen/Optimizer/Memoize.hs) ajoute l’annotation ; cela ne fournit pas un cache d’invariant. La CSE amont limitée, elle, est réelle.
-- Pas de passe dédiée de boucle comptée, fusion de producteur de thunks, spécialisation HOF au-delà des inliners standards, tableaux primitifs, ownership d’ADT ou suppression de cellules ST non échappantes identifiée dans ce pipeline.
-
-## Wasm
-
-- [Runner](bin/wasm/run) : 14 cas cœur, Node ≥22, frontend standard **0.15.16**, contrôle des imports interdisant le remplacement des algorithmes par du JS. Ce backend utilise son **MIR propre**, pas notre PBO ni notre TAST. Il exploite néanmoins les externs et une inférence de représentations : les rouges 04/05 ne signifient pas « aucun type disponible ».
-- **01–03, 18, 22, 25** : [MiddleEnd](../purescript-backend-wasm/compiler/src/PureScript/Backend/Wasm/MiddleEnd.purs), [Simplify](../purescript-backend-wasm/compiler/src/PureScript/Backend/Wasm/MiddleEnd/Optimize/Simplify.purs), [DictElim](../purescript-backend-wasm/compiler/src/PureScript/Backend/Wasm/MiddleEnd/Optimize/DictElim.purs), [Impurify](../purescript-backend-wasm/compiler/src/PureScript/Backend/Wasm/MiddleEnd/Optimize/Impurify.purs), reachability. [Specialize](../purescript-backend-wasm/compiler/src/PureScript/Backend/Wasm/MiddleEnd/Optimize/Specialize.purs) crée des workers pour un argument fonctionnel connu invariant dans la récursion, captures explicites ; ce n’est pas une monomorphisation des types ForAll.
-- **07–10, 26** : [Lower](../purescript-backend-wasm/compiler/src/PureScript/Backend/Wasm/Lower.purs), `RCallKnown` et constructeurs directs ; [Unbox](../purescript-backend-wasm/compiler/src/PureScript/Backend/Wasm/Lower/Unbox.purs), signatures à point fixe, locaux i32/f64, ABI intermodule/générique conservant des boîtes. [Collect](../purescript-backend-wasm/compiler/src/PureScript/Backend/Wasm/Lower/Collect.purs) utilise les externs pour les champs d’ADT, avec repli boxed.
-- **11–14, 23** : [Codegen](../purescript-backend-wasm/compiler/src/PureScript/Backend/Wasm/Codegen.purs), enums entièrement nullaires en i31ref, structs GC d’ADT, records en tableaux parallèles de labels/valeurs avec recherche par clé, arrays génériques eqref. `copyFields` connu permet une reconstruction explicite de record, sans payload numérique déboxé. [Intrinsics](../purescript-backend-wasm/compiler/src/PureScript/Backend/Wasm/Intrinsics.purs) expose des arrays i32/i64 explicites, sans spécialisation générale de `Array Int`.
-- **15–17** : `return_call` pour les appels directs terminaux ayant une représentation de retour compatible, y compris entre fonctions top-level mutuellement récursives. Les appels terminaux via `RApply` restent exclus. Pas de passe propre de canonisation de compteur identifiée.
-- **19–21, 24, 27** : partage `SShared` et [CAFs](../purescript-backend-wasm/compiler/src/PureScript/Backend/Wasm/Codegen/Caf.purs) globalisées hors cycles. Ni l’un ni l’autre ne constitue le cache par invocation de Javapurs. Pas de fusion dédiée de producteur de thunks, d’ownership de valeurs uniques ou de suppression des cellules Ref : [Prim](../purescript-backend-wasm/compiler/src/PureScript/Backend/Wasm/Codegen/Prim.purs) conserve les helpers GC RefNew/Read/Write.
-
-## Couche hôte et runtime — distincte des passes du tableau
-
-| Backend | Configuration constatée dans les runners / projets émis | Conséquence pour la lecture |
-|---|---|---|
-| sharpurs | Projet F# `net8.0`, Release | Tailcalls, représentation finale des DU, JIT et GC sont aussi du ressort F#/.NET. |
-| purust | Cargo Release, mais profil généré `opt-level=1`, `debug=true` | Ne pas présumer O3/LTO/PGO. Les optimisations LLVM sont distinctes de l’émission Purust. |
-| phpurs | OPcache/JIT activé par le runner, mode `1255`, buffer 128 Mo | Le JIT et les zvals ne sont pas des passes Phpurs. |
-| gopurs | Go ; `GOGC=800` ; PGO seulement avec `--pgo` | Les choix du compilateur Go, l’analyse d’échappement et le GC contribuent au résultat ; PGO n’est pas actif par défaut. |
-| javapurs | Java sur JVM ; harness avec warm-up | Le JIT peut inliner, dévirtualiser et éliminer certaines allocations ; l’audit ne prouve pas qu’il le fait à tous les sites. |
-| psgo | Go ; `GOGC=1000` | Le compilateur Go et son GC contribuent au résultat ; ces mécanismes hôtes ne sont pas des passes psgo. |
-| JS / ES | Node/V8 | Représentations numériques, hidden classes et optimisations spéculatives appartiennent au moteur. |
-| purescm | Chez, `--optimize-level 3` | Le compilateur Scheme et ses appels terminaux natifs apportent des optimisations supplémentaires. |
-| purerl | `erlc`, puis BEAM | Les appels terminaux et la gestion des termes sont fournis par Erlang/BEAM. |
-| Wasm | Optimisations MIR actives, Binaryen dont O3 après assemblage, Node/WasmGC | Le tableau ne prétend pas inventorier toutes les passes internes Binaryen/V8. |
-
-Repères vérifiables : [runner Sharpurs](bin/sharp/run), [runner Purust](bin/rust/run), [runner Phpurs](bin/php/run), [runner Gopurs](bin/go/run), [runner Javapurs](bin/java/run), [profil Cargo émis](../purust/purust/src/Main.purs), [projet F# et runtime d’application](../sharpurs/sharpurs/src/Main.purs), [autres runners](bin), [pipeline Wasm/Binaryen](../purescript-backend-wasm/purs-wasm/src/PursWasm/CLI/Build.purs).
-
-## Chantiers qui ressortent de l’audit
-
-| Backend | Lacune ou extension concrète à examiner | Distinction à préserver |
-|---|---|---|
-| sharpurs | Étendre la consommation du PBO optimisé et les layouts natifs au-delà des noyaux | Le noyau de thunks retire des enveloppes, mais construit encore la chaîne et répète le worker. |
-| purust | Champs de records et arrays primitifs ; extension des chemins typés | La réutilisation de mémoire est déjà réelle ; un champ `Option<UnknownType>` n’est pas un champ Int natif. |
-| phpurs | Layout de records fermés ; réduction du coût restant des closures ; invariants prouvés | La fusion et les régions enums/nullable sont déjà intégrées ; le cache Church scratch ne l’est pas. |
-| gopurs | Dispatcher de TCO mutuel ; extension du natif aux frontières de slices/ADT | La monomorphisation existe déjà ; `Rc` n’est pas une preuve de reuse d’ADT actif. |
-| javapurs | Étendre les workers, typer les payloads d’ADT et les arrays | Le cache invariant et les records Int existent ; les workers actuels restent `Object`. |
-| psgo | Réaligner les motifs ST sur l’IR produit ; représentations typées et appels saturés automatiques | FnN est explicite ; la passe historique ST ne reconnaît pas les références qualifiées émises. |
-| JS / ES | Évaluer des extensions de dé-curryfication globale et les intermédiaires restants | ES possède déjà TCO mutuel, uncurrying local et scalarisation de refs. |
-| purescm | Représentation des records PureScript et appels globaux ordinaires curryfiés | Les lambdas locales peuvent déjà être dé-curryfiées par PBO ; les records PureScript restent des listes d’associations. |
-| purerl | Coût des surcharges curryfiées et dictionnaires résiduels | Les appels terminaux sont natifs ; la macro MEMOIZE du runner n’est pas un cache actif. |
-| Wasm | Layout de records à champs fixes ; extension des signatures et collections non boxées | Externs et inférence existent déjà ; TAST et monomorphisation par types restent à intégrer. |
-
-Ces pistes sont des **écarts de couverture**, pas des gains chiffrés promis ni un ordre de priorité mesuré. Avant d’en implémenter une : choisir un cas concret, inspecter sa sortie actuelle, puis comparer une expérience courte à la baseline correspondante du README.
+[Audit notes: technique scope, evidence, limitations, and source revisions](optimization-audit.md).
