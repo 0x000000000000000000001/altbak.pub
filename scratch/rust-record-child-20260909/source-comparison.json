@@ -1,0 +1,8 @@
+{
+  "generated_libraries": 302,
+  "changed": [
+    "Purs_Test_Records/src/lib.rs"
+  ],
+  "after_sha256": "18273718c8ef1677057c0ad1191470e32155dae1e501a3e39c53934ad81fcd4e",
+  "one_child_reused": true
+}

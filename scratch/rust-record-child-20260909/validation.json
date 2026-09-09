@@ -1,0 +1,28 @@
+{
+  "generator_build": "pass",
+  "generator_recompile_warnings": 64,
+  "codegen_tests": 22,
+  "tast_tests": 13,
+  "clean_runner_outputs": 14,
+  "paired_runner_processes": 10,
+  "paired_outputs_each": 14,
+  "actual_generated_counts": {
+    "count": {
+      "before": "0 3 3\n1 5 5\n2 7 7\n10 23 23\n10000 20003 20003\n",
+      "after": "0 3 3\n1 4 4\n2 5 5\n10 13 13\n10000 10003 10003\n"
+    },
+    "check": {
+      "before": "24 seed/count combinations: all four fields, retained roots, nested and leaf-only sharing passed\n",
+      "after": "24 seed/count combinations: all four fields, retained roots, nested and leaf-only sharing passed\n"
+    }
+  },
+  "generated_sources": {
+    "generated_libraries": 302,
+    "changed": [
+      "Purs_Test_Records/src/lib.rs"
+    ],
+    "after_sha256": "18273718c8ef1677057c0ad1191470e32155dae1e501a3e39c53934ad81fcd4e",
+    "one_child_reused": true
+  },
+  "compiler_after_sha256": "a8b189fb424085ef6c739f795e631e256fd8bf4a3313b1f8abda196d34753e5c"
+}
