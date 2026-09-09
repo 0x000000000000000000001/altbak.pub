@@ -1,6 +1,6 @@
 # Optimization techniques by backend
 
-Audit dated **September 9, 2026**. This matrix describes the techniques actually integrated into the compilers used by altbak, their coverage, and their limitations. It serves as a work list; **it is not a performance ranking**. The reference measurements remain those in the [README](README.md).
+Audit dated **September 9, 2026**: **46 techniques across 11 backends**, cross-checked against their invoked passes and code generation paths. This matrix describes integration, coverage, and limitations. It serves as a work list; **it is not a ranking of backend speed**. The reference measurements remain those in the [README](README.md).
 
 All eleven backends referenced by the runners are included. **Our five backends occupy the first columns: sharpurs, purust, phpurs, gopurs, and javapurs.** The other six follow on the right: psgo, official JS, ES, purescm, purerl, and Wasm, which is experimental across the 14 core cases. The README's “Native FP-style” and “Native hand-optimized” columns are handwritten implementations: their shortcuts are not attributed to the compilers.
 
@@ -17,38 +17,59 @@ A conservative proof of purity, arity, or non-escape is necessary for correctnes
 
 ## Matrix
 
+**Rows are sorted by estimated performance importance, highest first**, prioritizing our five backends and the core benchmarks. This is a qualitative estimate; neighboring positions can vary by workload. [Ordering rationale](optimization-audit.md#estimated-impact-order).
+
+**Cell references:** backend columns are **A–K**, and technique rows are **1–46**. For example, **E12** means **javapurs × ADT fields specialized by payload type**. Coordinates follow the current table order; the audit uses separate stable technique IDs.
+
 The headers link to each backend's evidence and limitations. **JS** refers to the official code generator; **ES** refers to Arista's `purs-backend-es`. **Sharpurs emits F#**, with C# interoperability, rather than translating PureScript function bodies into C#.
 
-| Technique | [sharpurs](optimization-audit.md#sharpurs) | [purust](optimization-audit.md#purust) | [phpurs](optimization-audit.md#phpurs) | [gopurs](optimization-audit.md#gopurs) | [javapurs](optimization-audit.md#javapurs) | [psgo](optimization-audit.md#psgo) | [JS](optimization-audit.md#official-js) | [ES](optimization-audit.md#es) | [purescm](optimization-audit.md#purescm) | [purerl](optimization-audit.md#purerl) | [Wasm](optimization-audit.md#wasm) |
-| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Partial evaluation, β-reduction, simplification | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
-| Automatic inlining and dead code elimination | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
-| Elimination of known type class dictionaries | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 | 🟡 | 🟡 (PBO) | 🟡 (PBO) | 🟡 | 🟡 |
-| Using TAST to select representations | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
-| Effective `TypeApp` type instantiation | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
-| Monomorphization by cloning polymorphic functions | 🔴 | 🔴 | 🔴 | 🟡 (PBO) | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
-| Automatic uncurrying / wrapper-worker | 🟡 | 🟡 | 🟢 | 🟡 | 🟡 | 🔴 | 🔴 | 🟡 (PBO) | 🟡 (PBO) | 🟡 | 🟢 |
-| Direct emission of primitive operations | 🟡 (PBO) | 🟢 (PBO) | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
-| Keeping numeric parameters and locals unboxed | 🟡 | 🟡 | ⚪ | 🟡 | 🟡 | 🔴 | ⚪ | ⚪ | ⚪ | ⚪ | 🟡 |
-| ADT fields specialized by payload type | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 |
-| Shared nullary constructors / allocation-free enums | 🟡 | 🟡 | 🟡 | 🟢 | 🟢 | 🟡 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 |
-| Closed records: specialized layout and fixed fields | 🔴 | 🟡 | 🔴 | 🟡 | 🟡 | 🔴 | ⚪ | ⚪ | 🔴 | 🔴 | 🔴 |
-| Records: unboxed numeric fields in that layout | 🔴 | 🔴 | ⚪ | 🟡 | 🟡 | 🔴 | ⚪ | ⚪ | ⚪ | ⚪ | 🔴 |
-| Record updates without generic copying by key | 🔴 | 🟡 | 🔴 | 🟡 | 🟡 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🟡 |
-| Self-tail recursion with bounded stack usage | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 | 🟢 (PBO) | ⚪ | ⚪ | 🟡 |
-| Mutual tail recursion with bounded stack usage | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🟢 (PBO) | ⚪ | ⚪ | 🟡 |
-| Canonicalizing counted recursion into an induction loop | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
-| Flattening `let` bindings and `Effect` glue | 🟡 (PBO) | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
-| Limited common subexpression sharing — CSE | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 |
-| Loop invariants: hoisting / caching per invocation | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
-| Dedicated fusion of a thunk producer with its consumer | 🔴 | 🔴 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
-| Specialization of higher-order functions / closures | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🔴 | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🟡 |
-| Arrays with primitive storage selected by the backend | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 |
-| Memory reuse after proving ownership / uniqueness | 🔴 | 🟡 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
-| Erasure of `newtype` wrappers | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 |
-| Saturated ADT construction without closure chains | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🔴 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 |
-| Elimination of non-escaping Ref / ST cells | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🟡 (PBO) | 🔴 | 🔴 | 🔴 |
-| Borrowing to avoid explicit clones / reference counting | ⚪ | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
-| Scrutinee fusion / case-of-case | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🔴 | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🟡 |
+| # | Technique | **A**<br>[sharpurs](optimization-audit.md#sharpurs) | **B**<br>[purust](optimization-audit.md#purust) | **C**<br>[phpurs](optimization-audit.md#phpurs) | **D**<br>[gopurs](optimization-audit.md#gopurs) | **E**<br>[javapurs](optimization-audit.md#javapurs) | **F**<br>[psgo](optimization-audit.md#psgo) | **G**<br>[JS](optimization-audit.md#official-js) | **H**<br>[ES](optimization-audit.md#es) | **I**<br>[purescm](optimization-audit.md#purescm) | **J**<br>[purerl](optimization-audit.md#purerl) | **K**<br>[Wasm](optimization-audit.md#wasm) |
+| :---: | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 1 | Partial evaluation, β-reduction, simplification | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
+| 2 | Automatic inlining and dead code elimination | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
+| 3 | Specialization of higher-order functions / closures | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🔴 | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🟡 |
+| 4 | Automatic uncurrying / wrapper-worker | 🟡 | 🟡 | 🟢 | 🟡 | 🟡 | 🔴 | 🔴 | 🟡 (PBO) | 🟡 (PBO) | 🟡 | 🟢 |
+| 5 | Elimination of known type class dictionaries | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 | 🟡 | 🟡 (PBO) | 🟡 (PBO) | 🟡 | 🟡 |
+| 6 | Monomorphization by cloning polymorphic functions | 🔴 | 🔴 | 🔴 | 🟡 (PBO) | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 7 | Using TAST to select representations | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 8 | Effective `TypeApp` type instantiation | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 9 | Keeping numeric parameters and locals unboxed | 🟡 | 🟡 | ⚪ | 🟡 | 🟡 | 🔴 | ⚪ | ⚪ | ⚪ | ⚪ | 🟡 |
+| 10 | Direct emission of primitive operations | 🟡 (PBO) | 🟢 (PBO) | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
+| 11 | Self-tail recursion with bounded stack usage | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 | 🟢 (PBO) | ⚪ | ⚪ | 🟡 |
+| 12 | ADT fields specialized by payload type | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 |
+| 13 | Memory reuse after proving ownership / uniqueness | 🔴 | 🟡 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 14 | Loop invariants: hoisting / caching per invocation | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 15 | Dedicated fusion of a thunk producer with its consumer | 🔴 | 🔴 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 16 | Scrutinee fusion / case-of-case | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🔴 | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🟡 |
+| 17 | Scalar replacement of known / non-escaping records and arrays | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🔴 | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🟡 |
+| 18 | Last-use moves / borrowing to avoid explicit reference counting | ⚪ | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| 19 | Closed records: specialized layout and fixed fields | 🔴 | 🟡 | 🔴 | 🟡 | 🟡 | 🔴 | ⚪ | ⚪ | 🔴 | 🔴 | 🔴 |
+| 20 | Record updates without generic copying by key | 🔴 | 🟢 | 🔴 | 🟡 | 🟡 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🟡 |
+| 21 | Records: unboxed numeric fields in that layout | 🔴 | 🔴 | ⚪ | 🟡 | 🟡 | 🔴 | ⚪ | ⚪ | ⚪ | ⚪ | 🔴 |
+| 22 | Record-update coalescing / read-after-write forwarding | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🔴 | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🟡 |
+| 23 | Arrays with primitive storage selected by the backend | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 |
+| 24 | Saturated ADT construction without closure chains | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🔴 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 |
+| 25 | Erasure of `newtype` wrappers | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 |
+| 26 | Nullable / niche representations for ordinary payload ADTs | 🔴 | 🔴 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 27 | Unboxed value results for selected payload ADTs | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 28 | Erasure of ordinary single-field data wrappers | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 29 | Factoring pattern tests into decision trees | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🔴 | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🟢 |
+| 30 | Flattening `let` bindings and `Effect` glue | 🟡 (PBO) | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
+| 31 | Native N-ary calls for explicit FnN / EffectFnN (1–10) | 🔴 | 🟡 (PBO) | 🟢 (PBO) | 🟡 (PBO) | 🔴 | 🟢 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🔴 |
+| 32 | Eta reduction / forwarding-wrapper elimination | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 | 🟡 | 🟡 (PBO) | 🟡 (PBO) | 🟡 | 🔴 |
+| 33 | Elimination of non-escaping Ref / ST cells | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🟡 (PBO) | 🔴 | 🔴 | 🔴 |
+| 34 | Library loop / collection traversal intrinsics | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 |
+| 35 | Collection construction / concatenation fusion | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🟡 | 🔴 |
+| 36 | Static representation of capture-free local lambdas | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 37 | Class-specific native layouts for retained dictionaries | 🔴 | 🟡 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 38 | Recursive local workers with explicit capture parameters | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 |
+| 39 | Shared nullary constructors / allocation-free enums | 🟢 | 🟡 | 🟡 | 🟢 | 🟢 | 🟡 | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 |
+| 40 | Bypassing unchanged constructor reconstruction | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 41 | Native linked-list representation / intrinsics | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟢 | 🟢 | 🔴 |
+| 42 | Mutual tail recursion with bounded stack usage | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🟢 (PBO) | ⚪ | ⚪ | 🟡 |
+| 43 | Canonicalizing counted recursion into an induction loop | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 44 | Limited common subexpression sharing — CSE | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 |
+| 45 | Shared continuations for non-tail cases | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | 🟢 |
+| 46 | Factoring identical branch tails | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 |
 
 [Audit notes: technique scope, evidence, limitations, and source revisions](optimization-audit.md).
