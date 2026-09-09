@@ -1,0 +1,22 @@
+{
+  "VerifyLazy.fsx": "677725f3b7b6ce6088e71da72006e5381d3a97f1993c82389279b83b0360a3c7",
+  "fixture/corefn.json": "e89f1d5427ae0a1653ed721fe6e318879f42904025c4b6959d65b5a81a383fc2",
+  "fixture/generated.fs": "55a193f39e568bae22f312e58de50e36da3f34f2d5d6f314ebe690b6a4f5be4b",
+  "fixture/oracle.fs": "cd07325b593761941741b4b5b3d5814eb0b53757abbc20e8350cb1d1d435d902",
+  "fixture/thunk-kernel.fsx": "1a6560f39f9873a519b2358e6e1524dd1f2b1ef902e3fde1d210ea177e579e74",
+  "fixture/validation.log": "479b554d8ed9930b0898f8c70d56d458c446f0d511bd839fed3f033751189205",
+  "regression-adt-interop.log": "9692192359d93c23b87cc641648b3318926d29ac92f753ea2ac1bf469da6ed24",
+  "regression-adt-kernel.log": "ff8ba808fcda58a3eec36056e134d031324e627902e717f5ccf794108af22713",
+  "regression-adt-multi.log": "52500e95edc028eb7ba6e136c13946261dd8eb2d9e2f1bb99497a2d0a5cf3bb4",
+  "regression-adt-unary.log": "9125978f485a24cb1aa039250f6e2ac7684dac92d6b7d3606704e0a9f0e27ec0",
+  "regression-direct-call.log": "4e2088e252816130a1edc4a1b46c1340fab4ed2769e2aa2bffd03e447eb24506",
+  "regression-int-arithmetic.log": "51dd788a84f8dd1ed5101ca5d2c45b8a56a4faf9bf7abef6dc37dbfa39e6ba10",
+  "regression-int-comparison.log": "26c8cf42e37b4e9b157bc0e49954aa1dede4674cbd8f77ad722cb0108c47b5d5",
+  "regression-int-kernel.log": "67c2c30d82430f131ce8ff490942ae494fca48145b219f8d8797be0dc429427b",
+  "regression-local-int-kernel.log": "ba27b22bcbe3894cd842158dde8ac51810db505d695fb7530b7a26d5bd80befa",
+  "regression-main.log": "fe005a512d67b66b41dbe7a15bee606f70b579777b9dd50ab9c3f20a2b27c3db",
+  "regression-runtime-apply.log": "5dcc90b0bffabe7fd213504dba593dde6ad36726d2bdbc5b05b3f071c25cf846",
+  "validation-after-lazy.log": "51cef2091bdc27201831cdabc81a081872fb0fc1ca2914689403a6d1b7a93988",
+  "validation-before-lazy.log": "51cef2091bdc27201831cdabc81a081872fb0fc1ca2914689403a6d1b7a93988",
+  "validation-normal-lazy.log": "51cef2091bdc27201831cdabc81a081872fb0fc1ca2914689403a6d1b7a93988"
+}

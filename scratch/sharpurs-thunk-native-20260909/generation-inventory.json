@@ -1,0 +1,24 @@
+{
+  "inputFiles": 355,
+  "changedFiles": [
+    "Test.LazyEvaluation.fs"
+  ],
+  "unchangedFiles": 354,
+  "addedBindings": [
+    "Test_LazyEvaluation_buildThunks_thunk_native"
+  ],
+  "changedExistingBindings": [
+    "Test_LazyEvaluation_runManyTimes_tco"
+  ],
+  "unchangedExistingBindings": [
+    "Test_LazyEvaluation_Lazy",
+    "Test_LazyEvaluation_act",
+    "Test_LazyEvaluation_buildThunks",
+    "Test_LazyEvaluation_buildThunks_tco",
+    "Test_LazyEvaluation_defer",
+    "Test_LazyEvaluation_describe",
+    "Test_LazyEvaluation_force",
+    "Test_LazyEvaluation_runManyTimes"
+  ],
+  "source": "Normally regenerated compiler output; no isolated source patch."
+}

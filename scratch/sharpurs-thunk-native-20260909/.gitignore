@@ -1,0 +1,7 @@
+# Keep local snapshots and compiled runtimes out of the audit commit.
+/before/
+/after/
+/normal-before-runtime/
+/backend-before.bundle.js
+/backend-after.bundle.js
+/__pycache__/

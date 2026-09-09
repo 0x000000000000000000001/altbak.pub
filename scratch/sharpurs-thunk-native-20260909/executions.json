@@ -1,0 +1,232 @@
+[
+  {
+    "label": "official-before-1",
+    "variant": "before",
+    "startedUtc": "2026-09-09T10:50:23.569445+00:00",
+    "wallSeconds": 2.102171292,
+    "loadBefore": [
+      8.95556640625,
+      6.787109375,
+      6.72900390625
+    ],
+    "loadAfter": [
+      8.55859375,
+      6.74072265625,
+      6.712890625
+    ],
+    "assemblySha256": "e16f6d3dab894a726a47928fb8596259d44058b4d637f718d42369ee6076a2ad",
+    "logSha256": "d11f723ff675d4a898bf9e5382e15e518a58520e426978443b77b59e16353381",
+    "summary": {
+      "total_ms": 93.65,
+      "lazy_ms": 37.01108,
+      "rbtree_ms": 43.2585
+    }
+  },
+  {
+    "label": "official-after-1",
+    "variant": "after",
+    "startedUtc": "2026-09-09T10:50:25.768191+00:00",
+    "wallSeconds": 1.4435457500000002,
+    "loadBefore": [
+      8.55859375,
+      6.74072265625,
+      6.712890625
+    ],
+    "loadAfter": [
+      8.55859375,
+      6.74072265625,
+      6.712890625
+    ],
+    "assemblySha256": "2c915d6b33aeec78b37354f30fa3c68bdec1f16f39c6a69b449b57f42f7c6815",
+    "logSha256": "3cdb7c11e961052e062cad06b71ee704fb3069a5b879e3c298804182f7c4baa2",
+    "summary": {
+      "total_ms": 62.44,
+      "lazy_ms": 5.93163,
+      "rbtree_ms": 40.50163
+    }
+  },
+  {
+    "label": "official-after-2",
+    "variant": "after",
+    "startedUtc": "2026-09-09T10:50:27.303265+00:00",
+    "wallSeconds": 1.4158290000000004,
+    "loadBefore": [
+      8.55859375,
+      6.74072265625,
+      6.712890625
+    ],
+    "loadAfter": [
+      8.55859375,
+      6.74072265625,
+      6.712890625
+    ],
+    "assemblySha256": "2c915d6b33aeec78b37354f30fa3c68bdec1f16f39c6a69b449b57f42f7c6815",
+    "logSha256": "28e3603e0abd58adf810c4b77540c501e5a664e3690fffd9f005375b7886a3b2",
+    "summary": {
+      "total_ms": 62.23,
+      "lazy_ms": 6.637,
+      "rbtree_ms": 40.25775
+    }
+  },
+  {
+    "label": "official-before-2",
+    "variant": "before",
+    "startedUtc": "2026-09-09T10:50:28.804710+00:00",
+    "wallSeconds": 1.995649041,
+    "loadBefore": [
+      8.55859375,
+      6.74072265625,
+      6.712890625
+    ],
+    "loadAfter": [
+      8.033203125,
+      6.66162109375,
+      6.68505859375
+    ],
+    "assemblySha256": "e16f6d3dab894a726a47928fb8596259d44058b4d637f718d42369ee6076a2ad",
+    "logSha256": "5a4aac0183fef1610e6ea29d6b32afcfc46e9a66b3fdf978e2206566515399ee",
+    "summary": {
+      "total_ms": 93.61,
+      "lazy_ms": 37.66767,
+      "rbtree_ms": 40.14033
+    }
+  },
+  {
+    "label": "official-before-3",
+    "variant": "before",
+    "startedUtc": "2026-09-09T10:50:30.890204+00:00",
+    "wallSeconds": 2.1427400000000008,
+    "loadBefore": [
+      8.033203125,
+      6.66162109375,
+      6.68505859375
+    ],
+    "loadAfter": [
+      8.033203125,
+      6.66162109375,
+      6.68505859375
+    ],
+    "assemblySha256": "e16f6d3dab894a726a47928fb8596259d44058b4d637f718d42369ee6076a2ad",
+    "logSha256": "4f988fd3f9e9d5eab4af88fe74fe6498eef67d292b112442ce0fa9d68cb97b36",
+    "summary": {
+      "total_ms": 95.39,
+      "lazy_ms": 37.032419999999995,
+      "rbtree_ms": 44.569129999999994
+    }
+  },
+  {
+    "label": "official-after-3",
+    "variant": "after",
+    "startedUtc": "2026-09-09T10:50:33.126590+00:00",
+    "wallSeconds": 1.4539251669999995,
+    "loadBefore": [
+      8.033203125,
+      6.66162109375,
+      6.68505859375
+    ],
+    "loadAfter": [
+      8.033203125,
+      6.66162109375,
+      6.68505859375
+    ],
+    "assemblySha256": "2c915d6b33aeec78b37354f30fa3c68bdec1f16f39c6a69b449b57f42f7c6815",
+    "logSha256": "2509be2050002dfe9b293a0385612d742059546ced16a57278e5083af901dd9d",
+    "summary": {
+      "total_ms": 63.6,
+      "lazy_ms": 5.90583,
+      "rbtree_ms": 41.781459999999996
+    }
+  },
+  {
+    "label": "official-after-4",
+    "variant": "after",
+    "startedUtc": "2026-09-09T10:50:34.669030+00:00",
+    "wallSeconds": 1.4314442920000001,
+    "loadBefore": [
+      8.033203125,
+      6.66162109375,
+      6.68505859375
+    ],
+    "loadAfter": [
+      7.7900390625,
+      6.6337890625,
+      6.6748046875
+    ],
+    "assemblySha256": "2c915d6b33aeec78b37354f30fa3c68bdec1f16f39c6a69b449b57f42f7c6815",
+    "logSha256": "b9d363b4eaaab26ef19cfb04ce20387323c9295c15f4da8bc00a699ce56bef2a",
+    "summary": {
+      "total_ms": 62.36,
+      "lazy_ms": 5.82404,
+      "rbtree_ms": 41.54325
+    }
+  },
+  {
+    "label": "official-before-4",
+    "variant": "before",
+    "startedUtc": "2026-09-09T10:50:36.191116+00:00",
+    "wallSeconds": 2.0332491249999993,
+    "loadBefore": [
+      7.7900390625,
+      6.6337890625,
+      6.6748046875
+    ],
+    "loadAfter": [
+      7.7900390625,
+      6.6337890625,
+      6.6748046875
+    ],
+    "assemblySha256": "e16f6d3dab894a726a47928fb8596259d44058b4d637f718d42369ee6076a2ad",
+    "logSha256": "e94c36a67b1d3cb37ca90daa7a440429be3448bff00f713a5b773aa93fdc4d29",
+    "summary": {
+      "total_ms": 94.02,
+      "lazy_ms": 38.20779,
+      "rbtree_ms": 42.355959999999996
+    }
+  },
+  {
+    "label": "official-before-5",
+    "variant": "before",
+    "startedUtc": "2026-09-09T10:50:38.315198+00:00",
+    "wallSeconds": 2.0404692089999994,
+    "loadBefore": [
+      7.7900390625,
+      6.6337890625,
+      6.6748046875
+    ],
+    "loadAfter": [
+      7.40625,
+      6.5732421875,
+      6.65283203125
+    ],
+    "assemblySha256": "e16f6d3dab894a726a47928fb8596259d44058b4d637f718d42369ee6076a2ad",
+    "logSha256": "dccc267fbdcf905fa55d1ced9804b58fdbafffd4fc4c8d5f03f0198634f51816",
+    "summary": {
+      "total_ms": 94.74,
+      "lazy_ms": 38.00808,
+      "rbtree_ms": 40.86067
+    }
+  },
+  {
+    "label": "official-after-5",
+    "variant": "after",
+    "startedUtc": "2026-09-09T10:50:40.475355+00:00",
+    "wallSeconds": 1.4358998750000005,
+    "loadBefore": [
+      7.40625,
+      6.5732421875,
+      6.65283203125
+    ],
+    "loadAfter": [
+      7.40625,
+      6.5732421875,
+      6.65283203125
+    ],
+    "assemblySha256": "2c915d6b33aeec78b37354f30fa3c68bdec1f16f39c6a69b449b57f42f7c6815",
+    "logSha256": "1c8bd21f848222fcb274c451cef5dfc19ba5cbfbd724bbb33bebeb6a7f166f58",
+    "summary": {
+      "total_ms": 62.01,
+      "lazy_ms": 6.1228299999999996,
+      "rbtree_ms": 41.13333
+    }
+  }
+]

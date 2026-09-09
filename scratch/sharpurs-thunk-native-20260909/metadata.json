@@ -1,0 +1,85 @@
+{
+  "startedUtc": "2026-09-09T10:50:23.469427+00:00",
+  "probe": false,
+  "order": [
+    "before",
+    "after",
+    "after",
+    "before",
+    "before",
+    "after",
+    "after",
+    "before",
+    "before",
+    "after"
+  ],
+  "sdk": "8.0.423",
+  "runtimes": [
+    "Microsoft.AspNetCore.App 8.0.29 [/Users/0x1/.dotnet/shared/Microsoft.AspNetCore.App]",
+    "Microsoft.NETCore.App 8.0.29 [/Users/0x1/.dotnet/shared/Microsoft.NETCore.App]"
+  ],
+  "runtimeConfigs": {
+    "before": {
+      "runtimeOptions": {
+        "tfm": "net8.0",
+        "framework": {
+          "name": "Microsoft.NETCore.App",
+          "version": "8.0.0"
+        },
+        "configProperties": {
+          "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
+          "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
+        }
+      }
+    },
+    "after": {
+      "runtimeOptions": {
+        "tfm": "net8.0",
+        "framework": {
+          "name": "Microsoft.NETCore.App",
+          "version": "8.0.0"
+        },
+        "configProperties": {
+          "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
+          "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
+        }
+      }
+    }
+  },
+  "assemblies": {
+    "before": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-thunk-native-20260909/before/bin/Release/net8.0/Program.dll",
+      "sha256": "e16f6d3dab894a726a47928fb8596259d44058b4d637f718d42369ee6076a2ad"
+    },
+    "after": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-thunk-native-20260909/after/bin/Release/net8.0/Program.dll",
+      "sha256": "2c915d6b33aeec78b37354f30fa3c68bdec1f16f39c6a69b449b57f42f7c6815"
+    }
+  },
+  "inputsSha256": "f4eede8ea391969475c9140660b44501dee5499a08dffee1a2abe2c54638278a",
+  "buildManifestsSha256": {
+    "before": "eaa5f89c98126c41df546410694da5fdcaeb98fc82591c396045ae5a817b51e4",
+    "after": "94d27b4c2130fb073a4a53847b06434cae8b872c2606615b14935fe579c325a0"
+  },
+  "historicalOutputSha256": "a3eabbe40e9ddb766059bc4e60e8cbde73ca2dae4a93acd2a2cac768fb60b542",
+  "officialReadme": {
+    "compiled_total_ms": 89.03,
+    "compiled_lazy_us": 35376.75,
+    "native_optimized_lazy_us": 75.0,
+    "compiled_rbtree_us": 39940.38,
+    "source": "README.baseline.md",
+    "sha256": "8ccc4915c8c1975127cd174d856f465f29d8f71cad5faa35d88fa2b3ec1b9743",
+    "note": "Historical rounded figures, not a simultaneous control. Native optimized Lazy executes 1,000 increments and returns 1,000; compiled Lazy forces 1,000,000 thunks and returns 1,000,000. Native timing is not a directly comparable target."
+  },
+  "sourceGeneratedPath": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/sharp/output/Main",
+  "environmentOverrides": {
+    "DOTNET_TieredCompilation": null,
+    "DOTNET_TieredPGO": null,
+    "DOTNET_gcServer": null,
+    "COMPlus_TieredCompilation": null,
+    "COMPlus_TieredPGO": null,
+    "COMPlus_gcServer": null
+  },
+  "finishedUtc": "2026-09-09T10:50:42.000202+00:00",
+  "sourceManifestsUnchanged": true
+}

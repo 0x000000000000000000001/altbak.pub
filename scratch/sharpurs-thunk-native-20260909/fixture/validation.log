@@ -1,0 +1,94 @@
+$ /Users/0x1/.local/bin/purs compile /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-thunk-kernel-O3G57b/*.purs /Users/0x1/Documents/htdocs/sharpurs/sharpurs/.spago/p/prelude-6.0.2/src/**/*.purs /Users/0x1/Documents/htdocs/sharpurs/sharpurs/.spago/p/partial-4.0.0/src/**/*.purs --output /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-thunk-kernel-O3G57b/output --codegen corefn,js
+[ 2 of 54] Compiling Record.Unsafe
+[ 1 of 54] Compiling Type.Proxy
+[ 3 of 54] Compiling Partial
+[ 4 of 54] Compiling Data.Void
+[ 5 of 54] Compiling Data.Unit
+[ 6 of 54] Compiling Data.NaturalTransformation
+[ 7 of 54] Compiling Data.Boolean
+[ 8 of 54] Compiling Control.Semigroupoid
+[ 9 of 54] Compiling Partial.Unsafe
+[10 of 54] Compiling Control.Category
+[11 of 54] Compiling Data.Symbol
+[12 of 54] Compiling ThunkExternal
+[13 of 54] Compiling Data.Semiring
+[14 of 54] Compiling Data.HeytingAlgebra
+[15 of 54] Compiling Data.Semigroup
+[16 of 54] Compiling Data.Show
+[17 of 54] Compiling Data.Ring
+[18 of 54] Compiling Data.Generic.Rep
+[20 of 54] Compiling Data.BooleanAlgebra
+[19 of 54] Compiling Data.Eq
+[21 of 54] Compiling Data.CommutativeRing
+[22 of 54] Compiling Data.Ordering
+[23 of 54] Compiling Data.EuclideanRing
+[24 of 54] Compiling Data.Ord
+[25 of 54] Compiling Data.DivisionRing
+[26 of 54] Compiling Data.Field
+[27 of 54] Compiling Data.Bounded
+[29 of 54] Compiling Data.Reflectable
+[28 of 54] Compiling Data.Function
+[30 of 54] Compiling Data.Monoid
+[31 of 54] Compiling Data.Functor
+[32 of 54] Compiling Control.Apply
+[34 of 54] Compiling Data.Monoid.Generic
+[33 of 54] Compiling Data.Bounded.Generic
+[35 of 54] Compiling Control.Applicative
+[36 of 54] Compiling Control.Bind
+[37 of 54] Compiling Control.Monad
+[38 of 54] Compiling Prelude
+[39 of 54] Compiling Data.Monoid.Dual
+[40 of 54] Compiling Data.Monoid.Conj
+[41 of 54] Compiling Data.Ring.Generic
+[42 of 54] Compiling Data.Semiring.Generic
+[43 of 54] Compiling Data.HeytingAlgebra.Generic
+[44 of 54] Compiling Data.Show.Generic
+[45 of 54] Compiling Data.Monoid.Endo
+[46 of 54] Compiling Data.Monoid.Disj
+[47 of 54] Compiling Data.Ord.Generic
+[48 of 54] Compiling Data.Semigroup.First
+[49 of 54] Compiling Data.Monoid.Multiplicative
+[50 of 54] Compiling Data.Semigroup.Generic
+[51 of 54] Compiling Data.Monoid.Additive
+[52 of 54] Compiling Data.Semigroup.Last
+[54 of 54] Compiling TypedThunks
+[53 of 54] Compiling Data.Eq.Generic
+
+$ /Users/0x1/.dotnet/dotnet fsi --nologo --optimize+ --exec thunk-kernel.fsx
+thunk-kernel runtime: 237 checks passed
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-thunk-kernel-O3G57b/thunk-kernel.fsx(50,218): warning FS0025: Incomplete pattern matches on this expression.
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-thunk-kernel-O3G57b/thunk-kernel.fsx(59,220): warning FS0025: Incomplete pattern matches on this expression.
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-thunk-kernel-O3G57b/thunk-kernel.fsx(66,75): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-thunk-kernel-O3G57b/thunk-kernel.fsx(72,90): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-thunk-kernel-O3G57b/thunk-kernel.fsx(84,69): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-thunk-kernel-O3G57b/thunk-kernel.fsx(143,220): warning FS0025: Incomplete pattern matches on this expression.
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-thunk-kernel-O3G57b/thunk-kernel.fsx(150,75): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-thunk-kernel-O3G57b/thunk-kernel.fsx(156,90): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+
+
+
+/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-thunk-kernel-O3G57b/thunk-kernel.fsx(168,69): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+

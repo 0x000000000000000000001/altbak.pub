@@ -1,0 +1,25 @@
+[<AutoOpen>]
+module PureScript_Test_LazyEvaluation
+
+open System
+open System.Collections.Generic
+
+let rec private Test_LazyEvaluation_buildThunks_thunk_native (sharpurs_thunk_local_0: int) (sharpurs_thunk_local_1: (unit -> int)) : (unit -> int) = (if (sharpurs_thunk_local_0 = (0)) then sharpurs_thunk_local_1 else (Test_LazyEvaluation_buildThunks_thunk_native ((sharpurs_thunk_local_0 - (1))) ((fun (sharpurs_thunk_local_2: unit) -> ((sharpurs_thunk_local_1 ()) + (1))))))
+
+let Test_LazyEvaluation_Lazy  = (box (fun (x: obj) -> (box x)))
+
+let Test_LazyEvaluation_force  = (box (fun (v: obj) -> (match ((unbox ((box v)))) with | f -> ((sharpurs_apply (box ((box f))) (box ((box Data_Unit_unit))))))))
+
+let Test_LazyEvaluation_describe  = (sharpurs_apply (box ((box Effect_Console_log))) (box ((box "Lazy Evaluation (1M Thunks Forced, 1k Depth):"))))
+
+let Test_LazyEvaluation_defer  = (box Test_LazyEvaluation_Lazy)
+
+let rec Test_LazyEvaluation_buildThunks_tco (v: obj) (v1: obj) : obj = ((match (((unbox ((box v))), (unbox ((box v1))))) with | (LitInt 0 (), acc) -> ((box acc)) | (n, acc) -> ((Test_LazyEvaluation_buildThunks_tco ((box ((unbox<int> (box ((box n)))) - (unbox<int> (box ((box 1))))))) ((sharpurs_apply (box ((box Test_LazyEvaluation_defer))) (box ((box (fun (v2: obj) -> (box ((unbox<int> (box ((sharpurs_apply (box ((box Test_LazyEvaluation_force))) (box ((box acc))))))) + (unbox<int> (box ((box 1))))))))))))))))
+and Test_LazyEvaluation_buildThunks = box (fun (v: obj) ->  (fun (v1: obj) -> Test_LazyEvaluation_buildThunks_tco v v1))
+
+
+let rec Test_LazyEvaluation_runManyTimes_tco (v: obj) (v1: obj) : obj = ((match (((unbox ((box v))), (unbox ((box v1))))) with | (LitInt 0 (), acc) -> ((box acc)) | (n, acc) -> ((Test_LazyEvaluation_runManyTimes_tco ((box ((unbox<int> (box ((box n)))) - (unbox<int> (box ((box 1))))))) ((box ((unbox<int> (box ((box acc)))) + (unbox<int> (box ((box ((Test_LazyEvaluation_buildThunks_thunk_native ((1000)) ((fun () -> (0)))) ()))))))))))))
+and Test_LazyEvaluation_runManyTimes = box (fun (v: obj) ->  (fun (v1: obj) -> Test_LazyEvaluation_runManyTimes_tco v v1))
+
+
+let Test_LazyEvaluation_act  = (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Control_Bind_bind))) (box ((box Effect_bindEffect)))))) (box ((sharpurs_apply (box ((box Bench_opaque))) (box ((box 1000))))))))) (box ((box (fun (dummy: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box Control_Applicative_pure))) (box ((box Effect_applicativeEffect)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Show_show))) (box ((box Data_Show_showInt)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Test_LazyEvaluation_runManyTimes))) (box ((box dummy)))))) (box ((box 0)))))))))))))))
