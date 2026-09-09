@@ -1,0 +1,139 @@
+{
+  "codegen-tests": {
+    "passed": 20,
+    "failed": 0
+  },
+  "tast-tests": {
+    "passed": 12,
+    "failed": 0
+  },
+  "fixture-tests": {
+    "passed": 1,
+    "failed": 0
+  },
+  "build": {
+    "generator_exit": 0,
+    "clean_runner_exit": 0,
+    "warnings": 0,
+    "errors": 0,
+    "outputs": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ]
+  },
+  "allocations": {
+    "before": [
+      {
+        "input": 0,
+        "output": 0,
+        "allocations": 11,
+        "frees": 11
+      },
+      {
+        "input": 1,
+        "output": 1,
+        "allocations": 27,
+        "frees": 27
+      },
+      {
+        "input": 2,
+        "output": 32,
+        "allocations": 145,
+        "frees": 145
+      },
+      {
+        "input": 3,
+        "output": 243,
+        "allocations": 641,
+        "frees": 641
+      },
+      {
+        "input": 10,
+        "output": 100000,
+        "allocations": 133641,
+        "frees": 133641
+      }
+    ],
+    "prototype": [
+      {
+        "input": 0,
+        "output": 0,
+        "allocations": 9,
+        "frees": 9
+      },
+      {
+        "input": 1,
+        "output": 1,
+        "allocations": 12,
+        "frees": 12
+      },
+      {
+        "input": 2,
+        "output": 32,
+        "allocations": 21,
+        "frees": 21
+      },
+      {
+        "input": 3,
+        "output": 243,
+        "allocations": 36,
+        "frees": 36
+      },
+      {
+        "input": 10,
+        "output": 100000,
+        "allocations": 309,
+        "frees": 309
+      }
+    ],
+    "integrated": [
+      {
+        "input": 0,
+        "output": 0,
+        "allocations": 9,
+        "frees": 9
+      },
+      {
+        "input": 1,
+        "output": 1,
+        "allocations": 12,
+        "frees": 12
+      },
+      {
+        "input": 2,
+        "output": 32,
+        "allocations": 21,
+        "frees": 21
+      },
+      {
+        "input": 3,
+        "output": 243,
+        "allocations": 36,
+        "frees": 36
+      },
+      {
+        "input": 10,
+        "output": 100000,
+        "allocations": 309,
+        "frees": 309
+      }
+    ]
+  },
+  "paired_runners": {
+    "pairs": 5,
+    "outputs_per_process": 14,
+    "all_outputs_correct": true
+  }
+}

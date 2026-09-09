@@ -1,0 +1,11 @@
+--- Church-before.rs
++++ Church-after.rs
+@@ -76,7 +76,7 @@
+ pub fn Test_Church_fromInt(mut a0: i64, mut a1: purust_core::Func1<i64, i64>, mut a2: i64) -> i64 {
+     // AST: Typed(Abs(..., Typed(Branch(...))))
+     loop {
+-        break {
++        break if a0 >= 0 { let mut _function_count = a0; let mut _function_result = a2; while _function_count > 0 { _function_result = (a1)(_function_result); _function_count -= 1; } _function_result } else {
+ fn Test_Church_fromInt(mut purs_local_0: i64) -> purust_core::Func2<purust_core::Func1<i64, i64>, i64, i64> {
+     loop {
+         break /* Typed purust_core::Func2<purust_core::Func1<i64, i64>, i64, i64> <- purust_core::Func2<purust_core::Func1<i64, i64>, i64, i64> : Branch(...) */if (/* Typed i64 <- i64 : Local(...) */purs_local_0.clone() == 0) {

@@ -37,7 +37,7 @@ The headers link to each backend's evidence and limitations. **JS** refers to th
 | 10 | Direct emission of primitive operations | 🟡 (PBO) | 🟢 (PBO) | 🟡 (PBO) | 🟢 (PBO) | 🟡 (PBO) | 🟡 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
 | 11 | ADT fields specialized by payload type | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 |
 | 12 | Memory reuse after proving ownership / uniqueness (FBIP) | 🔴 | 🟡 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
-| 13 | ADT reuse specialization: write only changed fields | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 13 | ADT reuse specialization: write only changed fields | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
 | 14 | Last-use moves / borrowing to avoid explicit reference counting | ⚪ | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 | 15 | Perceus: branch-local release specialization / dup-drop fusion | ⚪ | 🔴 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 | 16 | Self-tail recursion with bounded stack usage | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 | 🟢 (PBO) | ⚪ | ⚪ | 🟡 |
@@ -69,13 +69,20 @@ The headers link to each backend's evidence and limitations. **JS** refers to th
 | 42 | Bypassing unchanged constructor reconstruction | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
 | 43 | Native linked-list representation / intrinsics | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟢 | 🟢 | 🔴 |
 | 44 | Mutual tail recursion with bounded stack usage | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🟢 (PBO) | ⚪ | ⚪ | 🟡 |
-| 45 | Canonicalizing counted recursion into an induction loop | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 45 | Canonicalizing counted recursion into an induction loop | 🔴 | 🟡 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
 | 46 | Limited common subexpression sharing — CSE | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 |
 | 47 | Shared continuations for non-tail cases | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | 🟢 |
 | 48 | Factoring identical branch tails | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 |
 | 49 | Sticky sharing / saturating reference counts | ⚪ | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 [Audit notes: technique scope, evidence, limitations, and source revisions](optimization-audit.md).
+
+## Latest Purust integrations
+
+- **B13: red → yellow.** A uniquely owned ADT can now update one scalar field while leaving the other fields in place. Calls, conversions and changes to multiple fields retain the existing reconstruction. The rule handles RBTree recoloration and four `Data.Time` setters. Five paired full runners measured **RBTree 18.237 → 17.644 ms**, **total 20.977 → 20.354 ms**. [Scope, tests and measurements](scratch/rust-recolor-field-20260909/REPORT.md).
+- **B3/B4 remain yellow; B45: red → yellow.** A typed recursive function producer of the form `build 0 = identity; build n = let previous = build (n - 1) in \f x -> f (previous f x)` now becomes a countdown loop in its saturated wrapper for `n >= 0`. This is one restricted transformation recorded under higher-order specialization, wrapper/worker use and counted-recursion recognition; its gain is counted once. It requires `Int -> (Int -> Int) -> Int -> Int`, preserves the negative fallback and callback order, and does not provide general monomorphization. Five paired full runners measured **Church 1.439 → 0.164 ms**, **total 21.053 → 19.691 ms**; separate allocation counts fell **133,641 → 309**. [Scope, tests and measurements](scratch/rust-function-fusion-20260909/REPORT.md).
+
+These are separate experiments with their own baselines, not successive runs whose times can be subtracted. The latest integration passes **20 codegen tests, 12 TAST tests and all 14 runner results**, including a clean build. The README remains the historical reference. The row order is retained: extensions to changed-child reconstruction, read-only borrowing and record representation still need their own measured prototypes. [Purust baby steps](../purust/purust/todo.md).
 
 ## Perceus, FBIP and sticky sharing
 
@@ -84,7 +91,7 @@ These names describe related but distinct mechanisms. **Perceus** combines preci
 | Mechanism | Priority / matrix cells | Current Purust scope |
 | --- | --- | --- |
 | **FBIP / reuse analysis** | **12 — B12**, with fixed-field record updates in **B22** | Partial for ADTs: recognized consumed nodes and rotations reuse unique `Rc` cells, with a copying fallback when required. Record setters use `PerceusPtr::make_mut`. Neither cell claims universal in-place execution. |
-| **Reuse specialization: leave unchanged ADT fields in place** | **13 — B13, missing** | Cell reuse often extracts and rebuilds the whole payload. A constructor-aware rewrite of only the changed fields is the next Purust prototype. Fixed-field record setters already belong to **B22**. **B42** is different: returning the original constructor when the replacement is already equal. |
+| **Reuse specialization: leave unchanged ADT fields in place** | **13 — B13, partial** | [ReuseFields](../purust/purust/src/Purust/ReuseFields.purs) updates one scalar field of a uniquely owned ADT, preserving unchanged fields in place; shared/weak cases retain the reconstruction fallback. Calls, conversions and multiple changed fields are outside this first scope. Updating a child through a call is the next extension to prototype. Fixed-field record setters belong to **B22**. **B42** is different: returning the original constructor when the replacement is already equal. |
 | **Last-use moves / borrowing; propagation of uniqueness** | **14 — B14, partial**, also **B12** | Selected moves and borrows are integrated. Some reconstruction paths retest uniqueness; read-only traversals can still clone child pointers. Extending these proofs may remove more work. |
 | **Perceus: release specialization and dup/drop fusion** | **15 — B15, missing** | No branch-local compiler pass over reference-count operations was established. Existing last-use moves, borrows and ownership transfers retain their credit in **B12/B14**; they do not by themselves establish this additional transformation. |
 | **Sticky sharing / saturating reference counts** | **49 — B49, partial** | `PerceusPtr` saturates at `u32::MAX`; subsequent clones/drops leave the count unchanged and the object stays alive. Native ADTs such as RBTree use `std::rc::Rc`, so this mechanism does not apply to that path. No benchmark gain is attributed to saturation. |
