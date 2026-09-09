@@ -1,0 +1,13 @@
+{
+  "balanceBodyIdentical": true,
+  "balanceBodySha256": "c6f3bd9b803f311f154b2fe34f088e34845322b1361006dbbce88d8d7973568c",
+  "beforeAfterNormalSourcesUnchanged": true,
+  "normalRuntimeUnchanged": true,
+  "backendSourcesAndBundleUnchanged": true,
+  "targetedRuntimeChecks": {
+    "RBTree": 27087,
+    "balance": 138,
+    "CodePoints": 165,
+    "total": 27390
+  }
+}

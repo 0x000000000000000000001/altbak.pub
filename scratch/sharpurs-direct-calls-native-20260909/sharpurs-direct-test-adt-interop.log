@@ -1,0 +1,6 @@
+
+> sharpurs@0.1.0 test:adt-interop
+> node tests/adt-interop.mjs
+
+adt-interop runtime: 62 checks passed
+adt-interop converter: 13 checks passed

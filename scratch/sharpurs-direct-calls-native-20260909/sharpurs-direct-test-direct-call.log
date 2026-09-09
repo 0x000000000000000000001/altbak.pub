@@ -1,0 +1,21 @@
+Relevé de l'exécution observée (ce fichier n'est pas un log brut).
+
+Répertoire de travail :
+/Users/0x1/Documents/htdocs/sharpurs/sharpurs
+
+Commande réellement exécutée :
+PURS=/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/js/node_modules/.bin/purs DOTNET=/Users/0x1/.dotnet/dotnet DIRECT_CALL_ARTIFACTS=/private/tmp/sharpurs-direct-call-tests node tests/direct-call.mjs
+
+Résultat observé : code de sortie 0.
+stdout observé :
+direct-call runtime: 130 checks passed
+direct-call converter: 67 checks passed
+
+Le runner vérifie que FSI termine avec succès et sans avertissement FS.
+
+Artéfacts conservés :
+/private/tmp/sharpurs-direct-call-tests/DirectCall.fs
+/private/tmp/sharpurs-direct-call-tests/DirectFallback.fs
+/private/tmp/sharpurs-direct-call-tests/direct-call.fsx
+
+Aucun nouveau test ou build exécuté pour rédiger ce relevé.

@@ -1,0 +1,152 @@
+
+> sharpurs@0.1.0 build
+> spago build && spago bundle --module Main --platform node --outfile bin/sharpurs.js --bundle-type app
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: sharpurs
+
+Downloading dependencies...
+Building...
+[1 of 6] Compiling Spago.Generated.BuildInfo
+[2 of 6] Compiling Sharpurs.DirectCall
+[3 of 6] Compiling Sharpurs.CodeGen
+[4 of 6] Compiling Test.Main
+[5 of 6] Compiling Main
+[6 of 6] Compiling Sharpurs.AdtInterop
+[WARNING 1/14 UnusedImport] src/Main.purs:9:1
+
+  9  import Effect.Class.Console as Console
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Class.Console as Console is redundant
+
+[WARNING 2/14 UnusedImport] src/Main.purs:21:1
+
+  21  import Data.List (List(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.List is redundant
+
+[WARNING 3/14 UnusedExplicitImport] src/Main.purs:22:1
+
+  22  import PureScript.Backend.Optimizer.App (coreFnModulesFromOutput, parseCLIArgs, checkCache, writeCache, loadDirectives)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.App contains the following unused references:
+    checkCache
+    writeCache
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.App (coreFnModulesFromOutput, loadDirectives, parseCLIArgs)
+
+[WARNING 4/14 UnusedImport] src/Main.purs:33:1
+
+  33  import Data.String (joinWith)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.String is redundant
+
+[WARNING 5/14 UnusedName] src/Main.purs:98:7
+
+  98    let cacheVersion = "1.0.0"
+            ^^^^^^^^^^^^^^^^^^^^^^
+
+  Name cacheVersion was introduced but not used.
+  in value declaration main
+
+[WARNING 6/14 UnusedName] src/Main.purs:113:13
+
+  113          let modNameStr = unwrap coreFnMod.name
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name modNameStr was introduced but not used.
+  in value declaration main
+
+[WARNING 7/14 ShadowedName] src/Main.purs:138:17
+
+  138              let wrappers = appendFfiWrappers modNameStr requiredForeigns content
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name wrappers was shadowed.
+  in value declaration main
+
+[WARNING 8/14 UnusedImport] src/Sharpurs/CodeGen.purs:9:1
+
+  9  import Data.String.CodeUnits as CU
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.String.CodeUnits as CU is redundant
+
+[WARNING 9/14 DuplicateImport] src/Sharpurs/CodeGen.purs:18:1
+
+  18  import Data.Maybe (Maybe(..), fromMaybe)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.Maybe (Maybe(..), fromMaybe)
+
+[WARNING 10/14 ShadowedName] src/Sharpurs/CodeGen.purs:76:5
+
+  76      translateDataDecl decl = FsDeclData (modPrefix <> "_" <> sanitizeName decl.name) (map translateDataCtor decl.constructors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name translateDataDecl was shadowed.
+  in value declaration translateModuleUsing
+
+[WARNING 11/14 ShadowedName] src/Sharpurs/CodeGen.purs:191:16
+
+  191      expandBind adtCtors currentMod (Binding _ (Ident name) val) =
+                      ^^^^^^^^
+
+  Name adtCtors was shadowed.
+  in value declaration translateBindUsing
+
+[WARNING 12/14 ShadowedName] src/Sharpurs/CodeGen.purs:191:25
+
+  191      expandBind adtCtors currentMod (Binding _ (Ident name) val) =
+                               ^^^^^^^^^^
+
+  Name currentMod was shadowed.
+  in value declaration translateBindUsing
+
+[WARNING 13/14 ShadowedName] src/Sharpurs/CodeGen.purs:362:17
+
+  362    ExprTypeApp _ expr _ -> translateExpr adtCtors localEnv currentMod expr
+                       ^^^^
+
+  Name expr was shadowed.
+  in value declaration translateExprFallback
+
+[WARNING 14/14 ShadowedName] src/Sharpurs/CodeGen.purs:395:60
+
+  395              recStrs = Array.concat (Array.mapWithIndex (\i b -> makeLocalRec b i) bindings)
+                                                                  ^
+
+  Name b was shadowed.
+  in value declaration translateExprFallback
+
+           Src   Lib   All
+Warnings    14     0    14
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: sharpurs
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Bundling...
+
+  bin/sharpurs.js  1.0mb ⚠️
+
+⚡ Done in 31ms
+
+✓ Bundle succeeded.
+

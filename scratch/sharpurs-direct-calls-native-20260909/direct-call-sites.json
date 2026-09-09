@@ -1,0 +1,22 @@
+[
+  {
+    "module": "Data.String.CodePoints.fs",
+    "function": "Data_String_CodePoints_unsurrogate",
+    "directApplicationSites": 2
+  },
+  {
+    "module": "Test.RBTree.fs",
+    "function": "Test_RBTree_max",
+    "directApplicationSites": 0
+  },
+  {
+    "module": "Test.RBTree.fs",
+    "function": "Test_RBTree_balance",
+    "directApplicationSites": 2
+  },
+  {
+    "module": "Test.RBTree.fs",
+    "function": "Test_RBTree_insert",
+    "directApplicationSites": 1
+  }
+]
