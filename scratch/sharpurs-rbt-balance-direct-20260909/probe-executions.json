@@ -1,0 +1,46 @@
+[
+  {
+    "label": "probe-official-before-1",
+    "variant": "before",
+    "startedUtc": "2026-09-09T07:43:09.653711+00:00",
+    "wallSeconds": 4.172319083,
+    "loadBefore": [
+      7.24462890625,
+      6.37890625,
+      5.2685546875
+    ],
+    "loadAfter": [
+      8.42578125,
+      6.63818359375,
+      5.3662109375
+    ],
+    "assemblySha256": "7e9d37eb224b8e0390fdf0d03450a0bdd5b43aa064d460abd1d57aa63b101823",
+    "logSha256": "14480df0f598e570f0fda5868acdcd6b18defdc78d64a317cbc6cdab487995c0",
+    "summary": {
+      "total_ms": 227.69,
+      "rbtree_ms": 143.91238
+    }
+  },
+  {
+    "label": "probe-official-after-1",
+    "variant": "after",
+    "startedUtc": "2026-09-09T07:43:13.907167+00:00",
+    "wallSeconds": 3.4419727920000005,
+    "loadBefore": [
+      8.42578125,
+      6.63818359375,
+      5.3662109375
+    ],
+    "loadAfter": [
+      8.42578125,
+      6.63818359375,
+      5.3662109375
+    ],
+    "assemblySha256": "51e33fcad4883818c90721dcf00404951cb260c5412c22cdd9af97d76d9bf0c8",
+    "logSha256": "2b19911bd235f19edbb29b5bf612efc9f6597e0c65b482f1e6ea9f0f1eba3b09",
+    "summary": {
+      "total_ms": 174.62,
+      "rbtree_ms": 92.97688000000001
+    }
+  }
+]

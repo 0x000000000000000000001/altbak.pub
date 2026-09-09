@@ -1,0 +1,22 @@
+[
+  {
+    "before": "(sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Test_RBTree_balance))) (box ((box color)))))) (box ((Test_RBTree_ins_tco ((box x)) ((box a)))))))) (box ((box y)))))) (box ((box b))))",
+    "after": "(Test_RBTree_balance_direct (box ((box color))) (box ((Test_RBTree_ins_tco ((box x)) ((box a))))) (box ((box y))) (box ((box b))))",
+    "arguments": [
+      "(box ((box color)))",
+      "(box ((Test_RBTree_ins_tco ((box x)) ((box a)))))",
+      "(box ((box y)))",
+      "(box ((box b)))"
+    ]
+  },
+  {
+    "before": "(sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Test_RBTree_balance))) (box ((box color)))))) (box ((box a)))))) (box ((box y)))))) (box ((Test_RBTree_ins_tco ((box x)) ((box b))))))",
+    "after": "(Test_RBTree_balance_direct (box ((box color))) (box ((box a))) (box ((box y))) (box ((Test_RBTree_ins_tco ((box x)) ((box b))))))",
+    "arguments": [
+      "(box ((box color)))",
+      "(box ((box a)))",
+      "(box ((box y)))",
+      "(box ((Test_RBTree_ins_tco ((box x)) ((box b)))))"
+    ]
+  }
+]
