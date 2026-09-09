@@ -1,0 +1,10 @@
+{
+  "baseline": "Generated RBTree matches the previous rotation-reuse stage exactly. Saved current full runner before regeneration.",
+  "before_binary_sha256": "0afe0aa6615207f1a9f9e79cab979c6e15e0c5253349595ac91c09f0f62493b6",
+  "before_binary_bytes": 1509120,
+  "git_head": {
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust": "ce3f2cc30f3f8ef471ae35ec3fa822f75ede706c",
+    "/Users/0x1/Documents/htdocs/purust/purust": "2cdee421437dfd5806f25eb3b09b57c5469bfdcc",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-purust": "6e256c6a962c94d09ad2599c165231633bbfaa98"
+  }
+}

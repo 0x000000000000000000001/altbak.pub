@@ -1,0 +1,14 @@
+{
+  "before": {
+    "single_empty": 2,
+    "single_node": 1,
+    "full_empty": 200001,
+    "full_node": 100000
+  },
+  "shared": {
+    "single_empty": 1,
+    "single_node": 1,
+    "full_empty": 100001,
+    "full_node": 100000
+  }
+}

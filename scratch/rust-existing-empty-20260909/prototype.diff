@@ -1,0 +1,11 @@
+--- RBTree-before.rs
++++ RBTree-after.rs
+@@ -1658,7 +1658,7 @@
+     loop {
+         break /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Branch(...) */if /* OpIsTag Debug: Test_RBTree_E -> Other */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1).as_ref(), crate::Tree::E) {
+         /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */{
+-    let mut __purust_empty_0 = std::rc::Rc::new(crate::Tree::E);
++    let mut __purust_empty_0 = purs_local_1;
+     std::rc::Rc::new(crate::Tree::T(crate::Color::R, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_empty_0.clone(), /* Typed i64 <- i64 : Local(...) */purs_local_0, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_empty_0))
+ }
+     } else if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1).as_ref(), crate::Tree::T(..)) {

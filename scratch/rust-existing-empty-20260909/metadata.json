@@ -1,0 +1,9 @@
+{
+  "before_matches_previous_after": true,
+  "before_binary_sha256": "5ae847ee7f237f259f69b7a67b52208a4c8bebc01fa3d1f9f2a2dcf9d981f6ba",
+  "git_head": {
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust": "ce3f2cc30f3f8ef471ae35ec3fa822f75ede706c",
+    "/Users/0x1/Documents/htdocs/purust/purust": "2cdee421437dfd5806f25eb3b09b57c5469bfdcc",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-purust": "6e256c6a962c94d09ad2599c165231633bbfaa98"
+  }
+}

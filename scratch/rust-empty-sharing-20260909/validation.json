@@ -1,0 +1,147 @@
+{
+  "recorded_at": "2026-09-09T10:00:27.975226+00:00",
+  "observed_git_heads": {
+    "purust/purust": "2cdee421437dfd5806f25eb3b09b57c5469bfdcc",
+    "purescript-backend-optimizer-purust": "6e256c6a962c94d09ad2599c165231633bbfaa98",
+    "altbak.pub-purust": "ce3f2cc30f3f8ef471ae35ec3fa822f75ede706c"
+  },
+  "note": "Source hashes identify the validated implementation. The only source edit after the build removed trailing whitespace from five modified lines of CodeGen.purs; todo documentation was updated afterwards.",
+  "source_sha256": {
+    "src/Purust/CodeGen.purs": "b761d64c77a48c010b9bc11e3600527a44537938863bf11f43f00294e9b28680",
+    "src/Purust/ShareNullaries.purs": "4d766babf4bcc9a51a21457550a07ba2b31469334f6bbdf9521fcfb36e117ddf",
+    "bin/purust.js": "caa5c67abc4c8da39efe393a2569e9be71e1784824ed7d3ea70f40cb4cf40a8d",
+    "tests/tast/shared-nullaries.mjs": "7fc86091dca6f19b8e7972c0b88c83489804b0f2d938c75a18db8fe0de873d40",
+    "tests/tast/fixtures/shared-nullaries/OtherNullaries.purs": "63f68b2d64833d6dc5703045c96d6f206cd5d26690366e79ccdcb2db588dcea0",
+    "tests/tast/fixtures/shared-nullaries/SharedNullaries.purs": "dbdc5c4048074469220645c23ab3dd4220d86ef355990a6458b4f04d16dcd121",
+    "tests/tast/fixtures/shared-nullaries/checks.rs": "8bb2f5841b2bb95fefdd12e4734c89eee19719c1ada42c3b4a887af946492a30"
+  },
+  "evidence_sha256": {
+    ".gitignore": "e410628af6a9334b1fddf4a2f551c21418d7be03a9dbc733acd78df0013810d2",
+    "RBTree-after.rs": "9f7258c59c39bce6b7e245e52908e792d52658449969e1ce2a92800628ed7983",
+    "RBTree-before.rs": "fd5db1e64850c828c91e12eae410ac70f08a0c073667cd7a3719ca0fc0d254ab",
+    "RBTree.diff": "bf32572db0b45b241dd799ffd25409a6b9ab5193dc6186f005cafd1d2f07a2ce",
+    "README-rust-baseline.md": "f948a1d8d539f6c905bbcb87b9520b01b894c3becee4aea9abf46a28680b66f6",
+    "REPORT.md": "76a9f9eeeb9e8326fb66fd24678da0118f30ae670a7e8cbf670972449f2bb735",
+    "allocations.json": "edd0f4b0728f18b29075026cad3b993ea9d7b9fa3bf081d4cf1e4f655cedb59e",
+    "build.log": "ae0b99100be0d8dc6d7e2c8b5c5e943d67d358e17689f7e9cbea4a526a4180f1",
+    "clean-run.log": "0bf6855cce65b2a0d12eb541a7269fd6ff7b9df6fe7702375ab238e4fa18c814",
+    "codegen-tests.log": "10cfff123e6e8af192509e1e421e2b2c17939547861f13cf36ce075cbd1357d2",
+    "combined-results.json": "6f73a03f34660f856d602585d39c7696fb9b5435c072aaa35e38ea530d0ea22f",
+    "confirmation/paired-after-1.log": "83b68c1daea121465afc0b1e5073f87a942262ee7b634de2dadcd75762f647a5",
+    "confirmation/paired-after-2.log": "c4f1b054350bb6790b9f6df7f7322453390a42e315a5f2f8dbac7f78f9c54c93",
+    "confirmation/paired-after-3.log": "f5546b32d070223d951aad9a783ae5daebb830f69ac9329a16800657a8dbfdea",
+    "confirmation/paired-after-4.log": "82a95abb21b1c54119661633e2f3decdf2e71b21e0b1f9015cc338b343b503e4",
+    "confirmation/paired-after-5.log": "c73cc15abe26887cee6f77f9a981efb89a41b247e3cc6d3b26e9a0b01ae82a27",
+    "confirmation/paired-before-1.log": "3d81335e6dd8bc3803ce249ba49a2b1b9b82276e12191e9a0f52e5e145c336a8",
+    "confirmation/paired-before-2.log": "8b10dbbc74a6c04dc3e34fec85f42a903cfbef99a5e7cd610ffa081a565cb4dd",
+    "confirmation/paired-before-3.log": "94e050a0d2452bdec9a339de2b818e6260fc48c348d67bfd8e5a7f307cb59406",
+    "confirmation/paired-before-4.log": "8747096dc7dbbb6172522d2dce83b9654e450a0e16baabacf913a4e4cbb59e18",
+    "confirmation/paired-before-5.log": "d246e891ddb9670b44cb9f72e17117f5a9f5d8626722b2746e9c035d0d697c5c",
+    "confirmation/results.json": "fc706d0ed1164875342b1ecdd7edd66b5207f46b95043d5e1f993b81be2ef2d6",
+    "confirmation.log": "4b64d4d02434813b4ee9438d190b8710b2db6805a62e1b69c9e2a167d167e172",
+    "count.log": "9fcfb82f8d0d148327f25778cda401377a52ac903dbdb38303a3f6f707058106",
+    "count.py": "910cac5f55f2bf82ae442fda8040dd3bd33c61db9661d98bd11b80622e6b64a0",
+    "fixture.log": "dca552ff16d3961f669bcf697a23deb517375492db63ce60abf16f36ebd44d91",
+    "measure.log": "087d7f5516500c022f48f48ff9ceac39081351070a7e0dcf26934a734368c01d",
+    "measure.py": "c9f0f37eb70a3d0af0fcb6588a96c7ea7de86ce3114aa9a68558187658560518",
+    "metadata.json": "a13735ce0abae29def634def75ef658c470706ada427b1c1ea0619bc997c0894",
+    "paired-after-1.log": "e56042b8c27b89e2aac8e0744680c5d75e1a0f69a3b67f245699cd0cc44cf0ec",
+    "paired-after-2.log": "f43ab0b74993f85332d9caad8c288de745883b53e11f15df51b3e23453e9c202",
+    "paired-after-3.log": "9073c01095b53dfb65fb9d19726077703c6e76e38ea3de1b5e020f1ea0a67409",
+    "paired-after-4.log": "c650396ce079ae96eee8e26778b21737fa65e0828f37466e612f1715e12839be",
+    "paired-after-5.log": "0e9526bd30e43b684005fc4f2e61ea78bd31f334e21d0ce63b7629107aa5ac6b",
+    "paired-before-1.log": "ba27796b2ac8f29760dbfbf733a644eaffc702c7176d06e9c3833945a6def3e4",
+    "paired-before-2.log": "ef5804c27fd26ac297fad40a41deb2607fc697c5faa1774bbe3637d6ad82c041",
+    "paired-before-3.log": "96c42eb9210867e7fd5e98448675d46173b07cbbea8dde7eecf5112d2ea3f9b5",
+    "paired-before-4.log": "c73325c583427edcb987d439a867015209455b66186e583808354f9dbeef43eb",
+    "paired-before-5.log": "e7fd53ff792042856563981614f47368c508ce4d2d0de318de1959203014a77c",
+    "probe.json": "cc41b3118915e4ad06b5e3ecee8e534661091dbc2ec8c9807bea9c976fac291f",
+    "probe.log": "0365b2dc3c1e80ea60d17236f66fd14358b7ec1685bfd95527862ac2a177a53e",
+    "probe.py": "2c9f6a311ebcf9dcec4bc21a5d06442c396db4ea078f10f31eff911b7551d8d2",
+    "results.json": "22ed6ca5c75ebbd0255fe547bf62301b8a56a77f062ec7b0953638d2351f673a",
+    "tast-tests.log": "912027d2aebb6c2a94b493e91d046bac1fcb2490241dd4fe13159491ae72ab25"
+  },
+  "binary_sha256": {
+    "before": "0afe0aa6615207f1a9f9e79cab979c6e15e0c5253349595ac91c09f0f62493b6",
+    "after": "bc127427db0dc4501fd003d4ee49cfec71b5ae95e0ea3453124d9c65c96239ea"
+  },
+  "binary_bytes": {
+    "before": 1509120,
+    "after": 1509120
+  },
+  "before_rbtree_matches_previous_validated_after": true,
+  "current_rbtree_and_binary_match_measured_after": true,
+  "tests": {
+    "codegen": {
+      "passed": 16,
+      "failed": 0
+    },
+    "tast": {
+      "passed": 7,
+      "failed": 0
+    }
+  },
+  "shared_nullary_fixture": {
+    "leaf_allocations": 2,
+    "local_and_nested_sharing": true,
+    "same_constructor_name_in_different_modules": true,
+    "old_values_weak_references_and_call_order_checked": true,
+    "all_allocations_and_weak_control_blocks_freed": true
+  },
+  "runner": {
+    "command": "bin/rust/run -c",
+    "passed": true,
+    "expected_outputs": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "checked_full_runs": 21,
+    "paired_runs": 20
+  },
+  "rbtree": {
+    "allocations": {
+      "before": {
+        "allocations": 300001,
+        "deallocations": 300001,
+        "requested_bytes": 14400048,
+        "allocations_24_bytes": 0,
+        "tree_size": 32,
+        "empty_constructors": 200001,
+        "payload_constructors": 100000
+      },
+      "after": {
+        "allocations": 200001,
+        "deallocations": 200001,
+        "requested_bytes": 9600048,
+        "allocations_24_bytes": 0,
+        "tree_size": 32,
+        "empty_constructors": 100001,
+        "payload_constructors": 100000
+      },
+      "invariants": "Four rotations, ordering, red/black invariants, duplicates, and the exact keys of 200 simultaneously retained versions checked before and after insertion/destruction on both generated kernels."
+    },
+    "retained_versions_checked": 200,
+    "timing_series": [
+      "results.json",
+      "confirmation/results.json"
+    ],
+    "interpretation": "Fewer allocations, no speed gain; median RBTree slower by 2.6% and 1.5% in the two five-pair series."
+  },
+  "official_readme_baseline_ms": {
+    "compiled_rbtree": 20.099,
+    "native_optimized_rbtree": 36.07,
+    "compiled_total": 42.74
+  }
+}
