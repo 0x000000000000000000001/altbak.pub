@@ -113,21 +113,23 @@ Array Processing        | ~ 5430 μs | ~ 187 μs         | ~ 316 μs            
 
 PHP Benchmark           | Compiled PHP ([phpurs](https://github.com/0x000000000000000000001/phpurs), WIP) | Native FP-style PHP FFI | Native hand-optimized PHP FFI |
 ----------------------- | ------------------------- | ----------------------- | ----------------------------- |
-AST Evaluation          | ~ 5 μs                    | ~ 9 μs         | ~ 10 μs                  |
+AST Evaluation          | ~ 3 μs                    | ~ 9 μs         | ~ 10 μs                  |
 Fibonacci               | ~ 2 μs                    | ~ 11 μs        | ~ 451 μs                 |
-List Processing         | ~ 147 μs                  | ~ 4 μs         | ~ 166 μs                 |
-Tail Call Optimization  | ~ 68 μs                   | ~ 1937 μs      | ~ 109 μs                 |
-Deep Record Updates     | ~ 1478 μs                 | ~ 4016 μs      | ~ 199 μs                 |
-Ackermann               | ~ 44 μs                   | ~ 665 μs       | ~ 579 μs                 |
-Church Numerals         | ~ 8689 μs                 | ~ 8922 μs      | ~ 105 μs                 |
-Prime Sieve             | ~ 474 μs                  | ~ 7 μs         | ~ 386 μs                 |
-Red-Black Tree          | ~ 174287 μs               | ~ 730387 μs    | ~ 123096 μs              |
-Polymorphism            | ~ 6437 μs                 | ~ 1169540 μs   | ~ 74555 μs               |
-State Monad             | ~ 427 μs                  | ~ 358 μs       | ~ 86 μs                  |
-Lazy Evaluation         | ~ 44911 μs                | ~ 151601 μs    | ~ 368 μs                 |
-Array Processing        | ~ 96 μs                   | ~ 448 μs       | ~ 249 μs                 |
+List Processing         | ~ 163 μs                  | ~ 4 μs         | ~ 166 μs                 |
+Tail Call Optimization  | ~ 76 μs                   | ~ 1937 μs      | ~ 109 μs                 |
+Deep Record Updates     | ~ 1518 μs                 | ~ 4016 μs      | ~ 199 μs                 |
+Ackermann               | ~ 47 μs                   | ~ 665 μs       | ~ 579 μs                 |
+Church Numerals         | ~ 9384 μs                 | ~ 8922 μs      | ~ 105 μs                 |
+Prime Sieve             | ~ 498 μs                  | ~ 7 μs         | ~ 386 μs                 |
+Red-Black Tree          | ~ 176562 μs               | ~ 730387 μs    | ~ 123096 μs              |
+Polymorphism            | ~ 6505 μs                 | ~ 1169540 μs   | ~ 74555 μs               |
+State Monad             | ~ 424 μs                  | ~ 358 μs       | ~ 86 μs                  |
+Lazy Evaluation         | ~ 828 μs                  | ~ 151601 μs    | ~ 368 μs                 |
+Array Processing        | ~ 100 μs                  | ~ 448 μs       | ~ 249 μs                 |
 RowToList               | ~ 1 μs                    | ~ 4 μs         | ~ 94 μs                  |
-**Total Execution Time**    | ~ 237.07 ms           | ~ 2067.91 ms   | ~ 200.45 ms              |
+**Total Execution Time**    | ~ 196.11 ms           | ~ 2067.91 ms   | ~ 200.45 ms              |
+
+PHPurs R11 (2026-09-09): compiled column from the second integrated run after a clean rebuild. Alternating runs with fusion disabled/enabled give 238.73–243.73 ms / 196.11–200.03 ms total, and 46.67–47.15 ms / 0.783–0.828 ms for Lazy. Previous compiled reference: 237.07 ms total, 44.911 ms for Lazy. Native columns retain their historical measurements. [Validation and measurements](../phpurs/phpurs/audit/2026-09-09/r11-integrated/report.md).
 
 #### Rust
 
