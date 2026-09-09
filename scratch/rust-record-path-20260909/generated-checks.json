@@ -1,0 +1,10 @@
+{
+  "count": {
+    "before": "0 3 3\n1 4 4\n2 5 5\n10 13 13\n10000 10003 10003\n",
+    "after": "0 3 3\n1 3 3\n2 3 3\n10 3 3\n10000 3 3\n"
+  },
+  "check": {
+    "before": "8 independent sharing masks and 24 seed/count combinations: all four fields, retained roots, nested and leaf-only sharing passed\n",
+    "after": "8 independent sharing masks and 24 seed/count combinations: all four fields, retained roots, nested and leaf-only sharing passed\n"
+  }
+}

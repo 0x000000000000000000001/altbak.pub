@@ -1,0 +1,36 @@
+{
+  "generator_build": "pass",
+  "generator_recompile_warnings": 64,
+  "codegen_tests": 22,
+  "tast_tests": 13,
+  "clean_runner_outputs": 14,
+  "paired_runner_processes": 10,
+  "paired_outputs_each": 14,
+  "actual_generated_counts": {
+    "count": {
+      "before": "0 3 3\n1 4 4\n2 5 5\n10 13 13\n10000 10003 10003\n",
+      "after": "0 3 3\n1 3 3\n2 3 3\n10 3 3\n10000 3 3\n"
+    },
+    "check": {
+      "before": "8 independent sharing masks and 24 seed/count combinations: all four fields, retained roots, nested and leaf-only sharing passed\n",
+      "after": "8 independent sharing masks and 24 seed/count combinations: all four fields, retained roots, nested and leaf-only sharing passed\n"
+    }
+  },
+  "generated_sources": {
+    "generated_libraries": 302,
+    "changed": [
+      "Purs_Test_Records/src/lib.rs"
+    ],
+    "after_sha256": "8cb6c2da6a3c18587dd6b296d07e5aad49857248229371cfbf7e335cdb35bf3c",
+    "reused_child_levels": 2
+  },
+  "profile": {
+    "opt_level": 1,
+    "allocator": "mimalloc"
+  },
+  "compiler_after_sha256": {
+    "src/Purust/CodeGen.purs": "f1a0771fc389725b973b22e674d31c9ce7fa74d6479722f4cee61b5593d9e9fd",
+    "src/Purust/RecordUpdates.purs": "e2abe42970f054065e697305ea236c78c724c50208d4772e522a1732d420cd0b",
+    "bin/purust.js": "ec8175e977cd9c9e2e8b122e035718985064903546085043f2a6b627db9baebf"
+  }
+}
