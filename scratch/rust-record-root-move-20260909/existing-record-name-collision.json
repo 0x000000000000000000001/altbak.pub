@@ -1,0 +1,7 @@
+{
+  "baseline_bundle": "build/purust-before.js",
+  "fixture_change": "openRow label score renamed a",
+  "baseline_runtime_Record_a_struct_definitions": 2,
+  "compiler_exit": 0,
+  "record_root_rule_not_in_baseline": true
+}

@@ -1,0 +1,89 @@
+{
+  "root": "/Users/0x1/Documents/htdocs/altbak.pub-purust",
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Test_Records/src/lib.rs",
+  "sha256": "5c24fadb3e609f6d6cce9aa60d5c2cea187b9935fd468b91a89dcfbc6704fe15",
+  "purust_revision": "cce9ca16eb04fc9a786d2a667b046000f4f9d07d",
+  "readme_ms": {
+    "records": 0.969,
+    "native_records": 0.004,
+    "rbtree": 18.449,
+    "native_rbtree": 36.07,
+    "church": 0.173,
+    "native_church": 0.001,
+    "total": 19.95,
+    "native_total": 36.13
+  },
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "binary_sha256": {
+    "before": "379c683c45a9164e199d4fc69689689bb468204b3c9115d960187669350875d2",
+    "root_move": "d2c5fac8895f524c8680a9dbcb528194f99b6e998452272df6ebffef18940b76",
+    "owned_path": "007a626953ea19f1abedc7adcab2f0115cc8623ed5a1120bf8c0638cd1fa6bc9"
+  },
+  "corefn_type_table": [
+    {
+      "args": [
+        1,
+        2
+      ],
+      "ret": 2,
+      "type": "Func"
+    },
+    {
+      "type": "Int"
+    },
+    {
+      "row": 3,
+      "type": "Record"
+    },
+    {
+      "fields": [
+        {
+          "label": "a",
+          "type": 1
+        },
+        {
+          "label": "b",
+          "type": 4
+        }
+      ],
+      "tail": null,
+      "type": "Row"
+    },
+    {
+      "row": 5,
+      "type": "Record"
+    },
+    {
+      "fields": [
+        {
+          "label": "c",
+          "type": 1
+        },
+        {
+          "label": "d",
+          "type": 6
+        }
+      ],
+      "tail": null,
+      "type": "Row"
+    },
+    {
+      "row": 7,
+      "type": "Record"
+    },
+    {
+      "fields": [
+        {
+          "label": "e",
+          "type": 1
+        },
+        {
+          "label": "f",
+          "type": 1
+        }
+      ],
+      "tail": null,
+      "type": "Row"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "count": {
+    "before": "0 3 3\n1 6 6\n2 9 9\n10 33 33\n10000 30003 30003\n",
+    "after": "0 3 3\n1 5 5\n2 7 7\n10 23 23\n10000 20003 20003\n"
+  },
+  "check": {
+    "before": "24 seed/count combinations: all four fields, retained roots, nested and leaf-only sharing passed\n",
+    "after": "24 seed/count combinations: all four fields, retained roots, nested and leaf-only sharing passed\n"
+  }
+}
