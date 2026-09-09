@@ -113,21 +113,21 @@ Array Processing        | ~ 5430 μs | ~ 187 μs         | ~ 316 μs            
 
 PHP Benchmark           | Compiled PHP ([phpurs](https://github.com/0x000000000000000000001/phpurs), WIP) | Native FP-style PHP FFI (WIP) | Native hand-optimized PHP FFI (WIP) |
 ----------------------- | ------------------------- | ----------------------- | ----------------------------- |
-AST Evaluation          | ~ 4.00 μs                 | ~ 9 μs         | ~ 10 μs                  |
-Fibonacci               | ~ 3.00 μs                 | ~ 11 μs        | ~ 451 μs                 |
-List Processing         | ~ 158.00 μs               | ~ 4 μs         | ~ 166 μs                 |
-Tail Call Optimization  | ~ 68.00 μs                | ~ 1937 μs      | ~ 109 μs                 |
-Deep Record Updates     | ~ 1531.00 μs              | ~ 4016 μs      | ~ 199 μs                 |
-Ackermann               | ~ 47.00 μs                | ~ 665 μs       | ~ 579 μs                 |
-Church Numerals         | ~ 8794.00 μs              | ~ 8922 μs      | ~ 105 μs                 |
-Prime Sieve             | ~ 405.00 μs               | ~ 7 μs         | ~ 386 μs                 |
-Red-Black Tree          | ~ 107566.00 μs            | ~ 730387 μs    | ~ 123096 μs              |
-Polymorphism            | ~ 6519.00 μs              | ~ 1169540 μs   | ~ 74555 μs               |
-State Monad             | ~ 435.00 μs               | ~ 358 μs       | ~ 86 μs                  |
-Lazy Evaluation         | ~ 790.00 μs               | ~ 151601 μs    | ~ 368 μs                 |
-Array Processing        | ~ 90.00 μs                | ~ 448 μs       | ~ 249 μs                 |
+AST Evaluation          | ~ 5.00 μs                 | ~ 9 μs         | ~ 10 μs                  |
+Fibonacci               | ~ 2.00 μs                 | ~ 11 μs        | ~ 451 μs                 |
+List Processing         | ~ 159.00 μs               | ~ 4 μs         | ~ 166 μs                 |
+Tail Call Optimization  | ~ 77.00 μs                | ~ 1937 μs      | ~ 109 μs                 |
+Deep Record Updates     | ~ 1449.00 μs              | ~ 4016 μs      | ~ 199 μs                 |
+Ackermann               | ~ 46.00 μs                | ~ 665 μs       | ~ 579 μs                 |
+Church Numerals         | ~ 2106.00 μs              | ~ 8922 μs      | ~ 105 μs                 |
+Prime Sieve             | ~ 397.00 μs               | ~ 7 μs         | ~ 386 μs                 |
+Red-Black Tree          | ~ 107980.00 μs            | ~ 730387 μs    | ~ 123096 μs              |
+Polymorphism            | ~ 6166.00 μs              | ~ 1169540 μs   | ~ 74555 μs               |
+State Monad             | ~ 430.00 μs               | ~ 358 μs       | ~ 86 μs                  |
+Lazy Evaluation         | ~ 785.00 μs               | ~ 151601 μs    | ~ 368 μs                 |
+Array Processing        | ~ 91.00 μs                | ~ 448 μs       | ~ 249 μs                 |
 RowToList               | ~ 1.00 μs                 | ~ 4 μs         | ~ 94 μs                  |
-**Total Execution Time**| ~ 126.41 ms               | ~ 2067.91 ms   | ~ 200.45 ms              |
+**Total Execution Time**| ~ 119.69 ms               | ~ 2067.91 ms   | ~ 200.45 ms              |
 
 #### Rust
 
