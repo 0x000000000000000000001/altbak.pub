@@ -1,0 +1,107 @@
+{
+  "recorded_at": "2026-09-09T08:52:19.013220+00:00",
+  "observed_git_heads": {
+    "purust/purust": "bb0a911449e0491b497c8c8159f02733671db912",
+    "purescript-backend-optimizer-purust": "6e256c6a962c94d09ad2599c165231633bbfaa98",
+    "altbak.pub-purust": "1721ca620adfb201daf85ae30cee582198283020"
+  },
+  "note": "Working tree source hashes identify the validated implementation; observed HEADs may precede these changes.",
+  "source_sha256": {
+    "src/Purust/CodeGen.purs": "ad9f1ab06a08657ef3e3b7643fb54f332b32ef2b6f628a461553d78d614f60a0",
+    "src/Purust/OwnedFields.purs": "061ad0b465654558106507f5d0af23b4f590eefc0e9d0ac868081aa811492d1b",
+    "bin/purust.js": "1572faf7f9fa0797d279ee6f476255b5eb00351a6df01e4d57c05c5741bfda59",
+    "tests/tast/consumed-nodes.mjs": "ecd0fe114b64568a69db6e25a3604b5244b593801918e69941fee014bc1654eb",
+    "tests/tast/fixtures/consumed-nodes/ConsumedNodes.purs": "828e19008c39bf7e80791c127633dd5a5fad0979962d04117b7b176f32eabe52",
+    "tests/tast/fixtures/consumed-nodes/checks.rs": "668e88810f70e5ab1956e0fa5947702d939670f98defd743d07da2355d532021",
+    "tests/codegen/constructor-reuse.mjs": "8a00dc6e2c9fa95cbcce2f6509584a3bc5fda11ea91eb66597904f7fcf3d6695"
+  },
+  "evidence_sha256": {
+    "RBTree-before.rs": "59607de4eac8e35dc9de336a47025b5ee1dcc2f63fb9c2da8a80d00fe81f6fba",
+    "RBTree-after.rs": "44ae3716d13a32916de312bd6ebaa821c8809685d9fa62c7a95879f23560e75a",
+    "RBTree.diff": "804695b42018ea652072163e27f957f3017f548128b697745a55a297dc832af0",
+    "measure.py": "a2031cb2b2d20bf50d12d166969672a73d31e375ce756717d4a529e1762efb13",
+    "count.py": "48da3f19c1fa99638f9414ad46a4c8778ab50bd01f66b17486fce62cfbdafaaa",
+    "results.json": "601a61b6dfd0a3eea528b31b53941c95ff061e34bb33198eb8d9df828bc2e532",
+    "allocations.json": "dc0f4da327bfffccdbd1f2124d6d3416458d9503ad0e683fe0c02f6811634d80",
+    "codegen-tests.log": "932a622853238cd0c16458ef374beabbd25eac8858f2e287d2a5d89b8ff5e8cc",
+    "tast-tests.log": "1ff624feac37f5ff8dcdad4352b85f87eadf5fdf2b169f4a8235784632be752a",
+    "clean-run.log": "4b59f955ca2a6ef4c41e79c6c826d6c8917ee33df3b4e52ae408980e2df781f7",
+    "fixture-before.log": "85643b5a67b05267c31c1cd00fbffe70e91b5461a275542b34ffeb2b4ef139d8",
+    "proof.log": "880f214374db08e98f31b5a1f9a352430afdcf217f5c78c2d0804c7f325b9d3c",
+    "measure.log": "ea46958d3973d30a116da59c4b2db51c5134da742c2336b94c60751af98d40e5"
+  },
+  "binary_sha256": {
+    "before": "ae26c6c50d1c64d1ab7a8b47835270044c9ce7d83bc49ea1fdc1ff5b0e0efe85",
+    "after": "b4aa8c69919518bbee828818b3c9f8e35f14a5568f3f9ac24684ec764b172985"
+  },
+  "before_binary_matches_previous_validated_after": true,
+  "tests": {
+    "codegen": {
+      "passed": 15,
+      "failed": 0
+    },
+    "tast": {
+      "passed": 5,
+      "failed": 0
+    }
+  },
+  "fixture_allocations_per_1000_updates": {
+    "before": {
+      "unique_root": 0,
+      "shared_root": 1000,
+      "unique_two_node_path": 1000
+    },
+    "after": {
+      "unique_root": 0,
+      "shared_root": 1000,
+      "unique_two_node_path": 0
+    }
+  },
+  "runner": {
+    "command": "bin/rust/run -c",
+    "passed": true,
+    "expected_outputs": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "checked_full_runs": 11,
+    "paired_runs": 10
+  },
+  "rbtree": {
+    "allocations": {
+      "before": {
+        "allocations": 2683933,
+        "deallocations": 2683933,
+        "requested_bytes": 128828784,
+        "allocations_24_bytes": 0,
+        "tree_size": 32
+      },
+      "after": {
+        "allocations": 2683933,
+        "deallocations": 2683933,
+        "requested_bytes": 128828784,
+        "allocations_24_bytes": 0,
+        "tree_size": 32
+      },
+      "invariants": "Four rotations, ordering, red/black invariants, duplicates, and the exact keys of 200 simultaneously retained versions checked before and after insertion/destruction on both generated kernels."
+    },
+    "retained_versions_checked": 200
+  },
+  "official_readme_baseline_ms": {
+    "compiled_rbtree": 41.482,
+    "native_optimized_rbtree": 36.07,
+    "compiled_total": 64.69
+  }
+}

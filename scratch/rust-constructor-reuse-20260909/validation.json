@@ -1,0 +1,35 @@
+{
+  "heads_observed_at_validation": {
+    "purust": "bb0a911449e0491b497c8c8159f02733671db912",
+    "purescript-backend-optimizer-purust": "6e256c6a962c94d09ad2599c165231633bbfaa98",
+    "altbak.pub-purust": "1721ca620adfb201daf85ae30cee582198283020"
+  },
+  "purust_head_at_start": "0f27ab61ebbea34b39e326956a6c388c8ca1e293",
+  "sources_sha256": {
+    "src/Purust/CodeGen.purs": "53fc8a34800e188bbbb598f16c016a2b0ce32057eb90090e9d8ae065aa9a35ca",
+    "bin/purust.js": "2ea2b041a6a8c2c4cd11ce2d97fc316ba6e900eaa45d573121eb0b25ad7a65f5",
+    "tests/codegen/constructor-reuse.mjs": "8a00dc6e2c9fa95cbcce2f6509584a3bc5fda11ea91eb66597904f7fcf3d6695",
+    "tests/tast/consumed-nodes.mjs": "ecd0fe114b64568a69db6e25a3604b5244b593801918e69941fee014bc1654eb",
+    "tests/tast/fixtures/consumed-nodes/ConsumedNodes.purs": "d617047b87fa4e177d72749220e0ccbea30a9c2d576e6a5206d5f33530015af0",
+    "tests/tast/fixtures/consumed-nodes/checks.rs": "477ba44a351811a16308f3d7ce74b4963be7c75c9e3ba010d2bf3f0495425f6e"
+  },
+  "rbtree_sha256": {
+    "before": "857018d92d4ac66ca97fdbf8ab731b499832bbb99590cf8ed8068201f555a964",
+    "after": "59607de4eac8e35dc9de336a47025b5ee1dcc2f63fb9c2da8a80d00fe81f6fba"
+  },
+  "lazy_generated_sha256_unchanged": "fb33c08fb046ea46595ed10901360296369a7be4daa9e78e2557bbf1e5adbe76",
+  "checks": {
+    "codegen": 15,
+    "tast": 5,
+    "clean_runner_results": 14,
+    "paired_processes": 10,
+    "zero_allocation_budget_failed_before": true,
+    "zero_allocation_budget_passed_after": true
+  },
+  "log_sha256": {
+    "before-test.log": "36a15453ebf02b27caf743f65c81578fc02cf4fc9ea4405e2e30dbea150fb08d",
+    "codegen-tests.log": "353cdd180a892888ddec3d589c1029a3e22b1840e69ec9d18edc4ecea67974f3",
+    "tast-tests.log": "08dd4d3ee5f446fe16b2817dd12ab7fd9e615730717b1f2cab1a1705e9773b22",
+    "clean-run.log": "c03f6e3953e3f1d42f7d0a20325ae91427845d506c0a43070fb906cffde69373"
+  }
+}
