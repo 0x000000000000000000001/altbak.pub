@@ -1,0 +1,29 @@
+{
+  "before_binary_sha256": "26452c1a85a010e020c0480c22b813888e68da1478f7871bcf483822b132cc78",
+  "source_sha256": {
+    "src/Purust/CodeGen.purs": "1d9a1ec3e9a7fcdcfb93189a740b082cf5b708fc282384ef5074668abb0d3010",
+    "bin/purust.js": "28088786e45d1133ed04a8d87bc42fc32891727b02fe0a11d512919699481718"
+  },
+  "observed_git_heads": {
+    "/Users/0x1/Documents/htdocs/purust/purust": "a0590d8b77a85ee30912e3dad6a8bf58dbe530a5",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust": "9a2860431a6cdf876fe0c102de20f4bb7782c095",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-purust": "6e256c6a962c94d09ad2599c165231633bbfaa98"
+  },
+  "baseline": "Current App runner saved and executed: 14 expected results and benchmark titles checked. LazyEvaluation matches the audited source. The executable hash differs from the earlier step record; this step measures the currently saved executable.",
+  "benchmark_names": [
+    "AST Evaluation:",
+    "Fibonacci:",
+    "List Processing (900 elements):",
+    "Tail Call Optimization (100k calls):",
+    "Deep Record Updates (10k iterations):",
+    "Ackermann (3, 4):",
+    "Church Numerals (100k Closure Applications):",
+    "Prime Sieve (sum primes up to 500):",
+    "Red-Black Tree (100k Worst-Case Insertions):",
+    "Polymorphism (10M Type Class Dict Lookups):",
+    "State Monad (1.2k Binds, 60 Stack Depth):",
+    "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+    "Array Processing (900 elements):",
+    "RowToList (Keys Count):"
+  ]
+}

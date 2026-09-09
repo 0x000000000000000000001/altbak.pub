@@ -1,0 +1,11 @@
+--- LazyEvaluation-before.rs
++++ LazyEvaluation-after.rs
+@@ -79,7 +79,7 @@
+         let _tco_temp_0 = /* Typed i64 <- i64 : PrimOp(...) */(/* Typed i64 <- i64 : Local(...) */purs_local_0 - /* Typed i64 <- i64 : Lit */1);
+         let _tco_temp_1 = /* Typed Abs */purust_core::Func1::Shared(std::rc::Rc::new(move |mut _a0: ()| -> i64 {
+     drop(_a0);
+-    /* Typed i64 <- i64 : PrimOp(...) */((purs_local_1.clone())(/* Typed () <- () : Var(...) */Data_Unit_unit()) + 1)
++    /* Typed i64 <- i64 : PrimOp(...) */((purs_local_1)(/* Typed () <- () : Var(...) */Data_Unit_unit()) + 1)
+ }));
+         purs_local_0 = _tco_temp_0;
+         purs_local_1 = _tco_temp_1;

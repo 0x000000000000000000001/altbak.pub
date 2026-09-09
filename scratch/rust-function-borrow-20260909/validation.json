@@ -1,0 +1,154 @@
+{
+  "recorded_at": "2026-09-09T10:43:34.187465+00:00",
+  "observed_git_heads": {
+    "purust/purust": "a0590d8b77a85ee30912e3dad6a8bf58dbe530a5",
+    "altbak.pub-purust": "9a2860431a6cdf876fe0c102de20f4bb7782c095",
+    "purescript-backend-optimizer-purust": "6e256c6a962c94d09ad2599c165231633bbfaa98"
+  },
+  "note": "Source hashes identify the validated working tree. The saved current baseline was executed and its 14 benchmark names/results checked before changing the generator; see metadata.json for the baseline revision and executable identity.",
+  "source_sha256": {
+    "src/Purust/CodeGen.purs": "0d93358c4ef1b6b0d7b6c437afd282489bddc0c20fa268b0a5147df6f7d768c7",
+    "bin/purust.js": "2bae4581b6047508f78c60f76a4178620c693a4153834cad7dd08637c5dfe1eb",
+    "tests/codegen/function-borrows.mjs": "853c7163aca4402b12e2381b313756bb47f63c2fd8b1a3879056bd496334ba65",
+    "tests/tast/function-borrows.mjs": "cf78f9a24fda37cfe4e5143e10efea56e02113a054234614cb4424e4ba4a9cf6",
+    "tests/tast/fixtures/function-borrows/FunctionBorrows.purs": "211addc2ca2441ad1909893762cec7c54913d3a437910c09a8a30fbcae7b45e8",
+    "tests/tast/fixtures/function-borrows/checks.rs": "19e9bad00e36c97b73e94909694d17063a692d96517bc8945e6f72f68bc87dd3"
+  },
+  "evidence_sha256": {
+    ".gitignore": "e410628af6a9334b1fddf4a2f551c21418d7be03a9dbc733acd78df0013810d2",
+    "Church-after.rs": "781b594f196e50bb14fb275c90eaf05524ae502a7d10fd3269ac46e62fef5da7",
+    "Church-before.rs": "636a5dddd3cd4f36a1ff12372f9a102cdd972449fef957182a31de80b9897ca4",
+    "Church.diff": "be2958e0c0078b8c8f7052e85dccdeb5a838552b7c49d604a821c3d6accac1c1",
+    "LazyEvaluation-after.rs": "7c19824a5fd83bd19de0d534047920fcbab0d2c09dbc7e5a10680c3a8a11f806",
+    "LazyEvaluation-before.rs": "fb33c08fb046ea46595ed10901360296369a7be4daa9e78e2557bbf1e5adbe76",
+    "LazyEvaluation.diff": "fe3c08035d95e72d51c89a94bdfbd99aeb54462614e90eda0e11647f6d47f5a1",
+    "REPORT.md": "80d141e3e8a1359faf7eef9ac5dd954bafebd0804e4ff6a792e796152d31856f",
+    "allocations.json": "1196b47322caa3e8e9fffe8301cea4794bedf9715ae1819678aab6b8a1d736d7",
+    "baseline-run.log": "1ebca7636dc6be9613bd36de03bb4e486b802a318180d0eb9a71f89536670003",
+    "boundaries.log": "a491c14e57bceb5d24c0bbc441496f42582400280f3332766e5631296234ec52",
+    "build.log": "737e9559540cbfe1ff730e6085e3735b5274c2c496aee935eee110b771147fe2",
+    "clean-run.log": "c3e43f64ef40eeff145e718f86d7d5d143c760c0a7634fcc9ada00d44fea8409",
+    "codegen-tests.log": "2f3f169a9e57fa1bd58d8433aeb70b9327d8bd19de6c41f67428b7258bfa339f",
+    "count.log": "1196b47322caa3e8e9fffe8301cea4794bedf9715ae1819678aab6b8a1d736d7",
+    "count.py": "ab95ad14a60e0d351e6fe035ebd5ef4f047ae6a2ff2825af69bfa3c689939606",
+    "fixture.log": "157d8243e7a68207c6b0824cbce23f40fbb378aa550acf8b3c81bbe0459b8e88",
+    "integration.patch": "b080c390707a6dda09915a061ab86e143ed21aa1e1e66e0684437f830613e6e6",
+    "measure.log": "ee7043838636bc1cdb2e2c37942a6364423794571da339195dd9181aef001fe5",
+    "measure.py": "276a7461053986814aaae235c43882a99dfb149f56cfbcd09074195e06b639ec",
+    "metadata.json": "314d74821937b231e82423a56cdd88269d2330f42667987e905e4bb01cdc9dce",
+    "paired-after-1.log": "57d04499ced01b2ec06f5fb906191ea79b86871d0212101558bcd7fe89c4a870",
+    "paired-after-2.log": "1b0d39ba13d28bc4c0c43a5a84ae5a5b3b26321f6329386a4bcbe69ac431bb45",
+    "paired-after-3.log": "40eafbaa010bf26d610f0eec4e3fcb7da423910716f96626aae80454b5d31eaf",
+    "paired-after-4.log": "1d017b8a3e2f13101d8e9bcefe472054e29b46ea9b537d9e3fa1088769e70778",
+    "paired-after-5.log": "b7436a9b9b829d5e71586cc83f87e7a93e1866bcbed76b5908d722b73b4250ac",
+    "paired-before-1.log": "efa1c4e22afd86e87009e70e4d9ec00ad716b79ec7dca8a08b5ed300ae9a1a36",
+    "paired-before-2.log": "2e7f1c8da05ffff0efbdfecf8835a28de3edd9f902825cd67e1c4a20680fde72",
+    "paired-before-3.log": "04cd1f2a6196e38fc986bb78a11273c63038a49ebf98bb9a08d60c61e4b4aad0",
+    "paired-before-4.log": "9c1e6e16c39c0bfd5650eaff78f934cfad838376cd7876a2b6e2dcf4ea88059d",
+    "paired-before-5.log": "807a2c5825a9d4f4383932a6567c6761bb62545876f0d0d6ec6274b740599cdf",
+    "prototype-results.json": "802f2826078450237f863d2b26d0777d0431c65b751f3e846255b561998a1c89",
+    "prototype.log": "cbf8c636cd5722ac0294b13edfdf6ac3d71dfc5fab2df0a799046dc5386b24c4",
+    "prototype.py": "05b1a4e0928642d2b0fdf5e21110dc5405b1e1c9f5f0d1eaa7d27bd7eda0a629",
+    "results.json": "d7d32af4b66be589bce9868b66af7a0bb250ffe3ea5bfdc45a8200ce72b9fca4",
+    "tast-tests.log": "afd2c1910b097fc8b9c74320e244938623cd0874b53e9ac7125d2e7bc6c55c74"
+  },
+  "binary_sha256": {
+    "before": "26452c1a85a010e020c0480c22b813888e68da1478f7871bcf483822b132cc78",
+    "after": "ed90d25a0bfa9052d71eb90d136eabbc3b8a7bed9d8f1fe6496a0ac5020bec2a"
+  },
+  "binary_bytes": {
+    "before": 1509120,
+    "after": 1509088
+  },
+  "current_generated_sources_and_binary_match_measured_after": true,
+  "lazy_change_matches_exact_prototype": true,
+  "rbtree_source_unchanged": true,
+  "tests": {
+    "codegen": {
+      "passed": 18,
+      "failed": 0
+    },
+    "tast": {
+      "passed": 9,
+      "failed": 0
+    }
+  },
+  "function_borrow_fixture": {
+    "func1_func2_no_extra_owner_during_calls": true,
+    "captured_nested_and_repeated_calls": true,
+    "callee_passed_and_captured_in_arguments": true,
+    "partial_application_owns_callee_after_return": true,
+    "weak_references_expire_after_owners_drop": true
+  },
+  "boundary_test": {
+    "typed_typeapp_native_wrappers": true,
+    "conversions": true,
+    "computed_callee_evaluated_once_before_argument": true,
+    "callee_alive_during_argument_evaluation": true,
+    "argument_panic_releases_both_functions": true
+  },
+  "runner": {
+    "command": "bin/rust/run -c",
+    "passed": true,
+    "expected_outputs": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "benchmark_names": [
+      "AST Evaluation:",
+      "Fibonacci:",
+      "List Processing (900 elements):",
+      "Tail Call Optimization (100k calls):",
+      "Deep Record Updates (10k iterations):",
+      "Ackermann (3, 4):",
+      "Church Numerals (100k Closure Applications):",
+      "Prime Sieve (sum primes up to 500):",
+      "Red-Black Tree (100k Worst-Case Insertions):",
+      "Polymorphism (10M Type Class Dict Lookups):",
+      "State Monad (1.2k Binds, 60 Stack Depth):",
+      "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+      "Array Processing (900 elements):",
+      "RowToList (Keys Count):"
+    ],
+    "checked_full_runs": 12,
+    "paired_runs": 10
+  },
+  "lazy_allocations": {
+    "before": {
+      "result": 1000000,
+      "allocations": 1000000,
+      "bytes_requested": 32000000,
+      "deallocations": 1000000
+    },
+    "after": {
+      "result": 1000000,
+      "allocations": 1000000,
+      "bytes_requested": 32000000,
+      "deallocations": 1000000
+    }
+  },
+  "official_readme_baseline_ms": {
+    "compiled_lazy": 19.791,
+    "compiled_church": 1.592,
+    "compiled_total": 42.74,
+    "native_optimized_lazy_displayed": 0,
+    "native_optimized_church": 0.001,
+    "native_optimized_total": 36.13
+  },
+  "rbtree_sha256_before_after": {
+    "before": "9ada7a41741f0b4bd28c70f29cee61cb660b222d9395337b503182e8bae38063",
+    "after": "9ada7a41741f0b4bd28c70f29cee61cb660b222d9395337b503182e8bae38063"
+  }
+}

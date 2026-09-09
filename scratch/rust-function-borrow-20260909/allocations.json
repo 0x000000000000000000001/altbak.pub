@@ -1,0 +1,14 @@
+{
+  "before": {
+    "result": 1000000,
+    "allocations": 1000000,
+    "bytes_requested": 32000000,
+    "deallocations": 1000000
+  },
+  "after": {
+    "result": 1000000,
+    "allocations": 1000000,
+    "bytes_requested": 32000000,
+    "deallocations": 1000000
+  }
+}

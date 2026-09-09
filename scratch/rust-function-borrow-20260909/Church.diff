@@ -1,0 +1,20 @@
+--- Church-before.rs
++++ Church-after.rs
+@@ -57,7 +57,7 @@
+ 
+ pub fn Test_Church_succC(mut purs_local_0: purust_core::Func2<purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType>, mut purs_local_1: purust_core::Func1<crate::UnknownType, crate::UnknownType>, mut purs_local_2: crate::UnknownType) -> crate::UnknownType {
+     // AST: Typed(Typed(Abs(..., Typed(Abs(..., Typed(Abs(..., Typed(Typed(App(Local(...)))))))))))
+-/* Typed crate::UnknownType <- crate::UnknownType : App(Local(...)) */(purs_local_1.clone())(/* Typed crate::UnknownType <- crate::UnknownType : App(Local(...)) */(purs_local_0)(/* Typed purust_core::Func1<crate::UnknownType, crate::UnknownType> <- purust_core::Func1<crate::UnknownType, crate::UnknownType> : Local(...) */purs_local_1, /* Typed crate::UnknownType <- crate::UnknownType : Local(...) */purs_local_2))
++/* Typed crate::UnknownType <- crate::UnknownType : App(Local(...)) */(purs_local_1)(/* Typed crate::UnknownType <- crate::UnknownType : App(Local(...)) */(purs_local_0)(/* Typed purust_core::Func1<crate::UnknownType, crate::UnknownType> <- purust_core::Func1<crate::UnknownType, crate::UnknownType> : Local(...) */purs_local_1.clone(), /* Typed crate::UnknownType <- crate::UnknownType : Local(...) */purs_local_2))
+ }
+ 
+ pub fn Test_Church_mulC(mut purs_local_0: purust_core::Func2<purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType>, mut purs_local_1: purust_core::Func2<purust_core::Func1<crate::UnknownType, crate::UnknownType>, crate::UnknownType, crate::UnknownType>, mut purs_local_2: purust_core::Func1<crate::UnknownType, crate::UnknownType>, mut purs_local_3: crate::UnknownType) -> crate::UnknownType {
+@@ -87,7 +87,7 @@
+     /* Typed Abs */purust_core::Func2::Shared(std::rc::Rc::new(move |mut _a0: purust_core::Func1<i64, i64>, mut _a1: i64| -> i64 {
+     let mut purs_local_2 = _a0;
+     let mut purs_local_3 = _a1;
+-    /* Typed i64 <- i64 : App(Local(...)) */(purs_local_2.clone())(/* Typed i64 <- i64 : App(Local(...)) */(purs_local_1.clone())(/* Typed purust_core::Func1<i64, i64> <- purust_core::Func1<i64, i64> : Local(...) */purs_local_2, /* Typed i64 <- i64 : Local(...) */purs_local_3))
++    /* Typed i64 <- i64 : App(Local(...)) */(purs_local_2)(/* Typed i64 <- i64 : App(Local(...)) */(purs_local_1)(/* Typed purust_core::Func1<i64, i64> <- purust_core::Func1<i64, i64> : Local(...) */purs_local_2.clone(), /* Typed i64 <- i64 : Local(...) */purs_local_3))
+ }))
+ }
+     };
