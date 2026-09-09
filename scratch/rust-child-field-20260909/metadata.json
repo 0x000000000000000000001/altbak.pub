@@ -1,0 +1,24 @@
+{
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Test_RBTree/src/lib.rs",
+  "source_sha256": "2e2eb6f6a13ead68554d1199baab7d4983dd5addfb9ab517d88904c588873d56",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "binary_sha256": {
+    "before": "bd1b376c6a07d156636a6d9cf2e551502e50965a4fd5ea8dc7512239ab9d10d9",
+    "red_rebuild": "532f2c7de93153ed84d95ad7c620d0c1dc7e8f981b331ea0ac081045bf42bb6b",
+    "red_field": "3d4c57cd018f84a24d7ecd52db3df9c652fa2a5c3050cdafbc16229ab9938315"
+  },
+  "flags": [
+    "rustc",
+    "--edition=2021",
+    "-C",
+    "opt-level=1",
+    "--extern",
+    "mimalloc=/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/target/release/deps/libmimalloc-75dbfc20d1ebff0c.rlib",
+    "-L",
+    "dependency=/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/target/release/deps"
+  ],
+  "revisions": {
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust": "b8c447ac03abbe3bb1d66a477bc0f02d10352c88",
+    "/Users/0x1/Documents/htdocs/purust/purust": "1776edb43bbed7c56c17c4efa340d079c97d58cd"
+  }
+}

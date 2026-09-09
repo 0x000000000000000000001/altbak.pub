@@ -1,0 +1,5 @@
+{
+  "before": "B13 red-parent cases: 128; unique parent address retained: 32/32 (observation only)\nB13 extra checks passed: BTreeSet, RB invariants, 200 persistent versions, 512 mixed-sharing insertions, independent children, weak values and final lifetimes",
+  "red_rebuild": "B13 red-parent cases: 128; unique parent address retained: 32/32 (observation only)\nB13 extra checks passed: BTreeSet, RB invariants, 200 persistent versions, 512 mixed-sharing insertions, independent children, weak values and final lifetimes",
+  "red_field": "B13 red-parent cases: 128; unique parent address retained: 32/32 (observation only)\nB13 extra checks passed: BTreeSet, RB invariants, 200 persistent versions, 512 mixed-sharing insertions, independent children, weak values and final lifetimes"
+}

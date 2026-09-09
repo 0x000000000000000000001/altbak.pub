@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-09",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "revisions": {
+    "/Users/0x1/Documents/htdocs/purust/purust": "1776edb43bbed7c56c17c4efa340d079c97d58cd",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust": "b8c447ac03abbe3bb1d66a477bc0f02d10352c88",
+    "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-purust": "6e256c6a962c94d09ad2599c165231633bbfaa98",
+    "/Users/0x1/Documents/htdocs/purescript": "65010ea6512741ef38b3027c6f25d82511c648cd"
+  },
+  "source_sha256": {
+    "../purust/purust/src/Purust/CodeGen.purs": "841ce45e9680b7af6adb9a59c12904bde77d32e97bc733cab72827d966149d37",
+    "../purust/purust/src/Purust/ChildCalls.purs": "793c8c2e3832a4a10b9fcecff19f036185d201de196f88afe8c41a2581d37ab6",
+    "../purust/purust/src/Purust/ChildUpdates.purs": "dbd52c267dddc0f716559f8d4b3caf0f236bfcdc65c4216bbe6f87c0797e582c"
+  },
+  "bundle_sha256": {
+    "purust-stage2.js": "acd34800a969387bf7684cec2d63a6085d7d9bfe67b9c82440452f13f3756c5b",
+    "purust-stage1.js": "998aa5435adde868949e9c9e001a38e4aeccf7f81e6fba03518cc1639cc03b41",
+    "purust-before.js": "ec8175e977cd9c9e2e8b122e035718985064903546085043f2a6b627db9baebf"
+  },
+  "validation": {
+    "codegen": 23,
+    "tast": 14,
+    "runner_outputs": 14,
+    "clean_build": "bin/rust/run -c"
+  },
+  "profile": "release, opt-level=1, mimalloc; existing runner timing method unchanged"
+}

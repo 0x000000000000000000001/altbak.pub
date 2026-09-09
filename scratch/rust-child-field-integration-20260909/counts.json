@@ -1,0 +1,146 @@
+{
+  "method": "Logical Rc API operations, separate from timings; actual generated kernels with the original validation harness.",
+  "variants": {
+    "before": {
+      "source_sha256": "2e2eb6f6a13ead68554d1199baab7d4983dd5addfb9ab517d88904c588873d56",
+      "unique_build_child": {
+        "take": 2383932,
+        "rebuild_helper": 2383932,
+        "child_call": 0,
+        "full_parent_write": 0
+      },
+      "phases": {
+        "checks": {
+          "clone": 33,
+          "drop_last": 20,
+          "drop_shared": 33,
+          "get_mut_unique": 53,
+          "get_mut_weak": 2,
+          "new": 21,
+          "unwrap_unique": 1
+        },
+        "persistent_build": {
+          "clone": 5808,
+          "drop_shared": 2802,
+          "get_mut_shared": 1303,
+          "get_mut_unique": 860,
+          "new": 1504,
+          "unwrap_shared": 1303
+        },
+        "persistent_depth": {
+          "clone": 401,
+          "drop_shared": 401
+        },
+        "persistent_drop": {
+          "drop_last": 1504,
+          "drop_shared": 1703
+        },
+        "unique_build": {
+          "clone": 3060100,
+          "drop_shared": 2960100,
+          "get_mut_unique": 4867864,
+          "new": 100001
+        },
+        "unique_depth_and_drop": {
+          "clone": 200000,
+          "drop_last": 100001,
+          "drop_shared": 300000
+        }
+      }
+    },
+    "stage1": {
+      "source_sha256": "d004ec4d9744738fb9cd6306fb2dc0f5e5e443aaf57400ad81c3b9dca2cce687",
+      "unique_build_child": {
+        "take": 2383932,
+        "rebuild_helper": 1668902,
+        "child_call": 715030,
+        "full_parent_write": 715030
+      },
+      "phases": {
+        "checks": {
+          "clone": 33,
+          "drop_last": 20,
+          "drop_shared": 33,
+          "get_mut_unique": 49,
+          "get_mut_weak": 2,
+          "new": 21,
+          "unwrap_unique": 1
+        },
+        "persistent_build": {
+          "clone": 5808,
+          "drop_shared": 2802,
+          "get_mut_shared": 1683,
+          "get_mut_unique": 860,
+          "new": 1504,
+          "unwrap_shared": 1303
+        },
+        "persistent_depth": {
+          "clone": 401,
+          "drop_shared": 401
+        },
+        "persistent_drop": {
+          "drop_last": 1504,
+          "drop_shared": 1703
+        },
+        "unique_build": {
+          "clone": 3060100,
+          "drop_shared": 2960100,
+          "get_mut_unique": 4152834,
+          "new": 100001
+        },
+        "unique_depth_and_drop": {
+          "clone": 200000,
+          "drop_last": 100001,
+          "drop_shared": 300000
+        }
+      }
+    },
+    "stage2": {
+      "source_sha256": "fc60ee33c692f8729d61ff9a5a088fc5ded8cb519cb3ba980d641879d3e92949",
+      "unique_build_child": {
+        "take": 1668902,
+        "rebuild_helper": 1668902,
+        "child_call": 715030,
+        "full_parent_write": 0
+      },
+      "phases": {
+        "checks": {
+          "clone": 37,
+          "drop_last": 20,
+          "drop_shared": 37,
+          "get_mut_unique": 49,
+          "get_mut_weak": 2,
+          "new": 21,
+          "unwrap_unique": 1
+        },
+        "persistent_build": {
+          "clone": 5808,
+          "drop_shared": 2802,
+          "get_mut_shared": 1683,
+          "get_mut_unique": 860,
+          "new": 1504,
+          "unwrap_shared": 1303
+        },
+        "persistent_depth": {
+          "clone": 401,
+          "drop_shared": 401
+        },
+        "persistent_drop": {
+          "drop_last": 1504,
+          "drop_shared": 1703
+        },
+        "unique_build": {
+          "clone": 3775130,
+          "drop_shared": 3675130,
+          "get_mut_unique": 4152834,
+          "new": 100001
+        },
+        "unique_depth_and_drop": {
+          "clone": 200000,
+          "drop_last": 100001,
+          "drop_shared": 300000
+        }
+      }
+    }
+  }
+}
