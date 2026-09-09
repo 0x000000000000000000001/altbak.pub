@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-09",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "base_heads": {
+    "purust": "550d5ee2e816425da14d66e84fbf1c8c5f3e619e",
+    "altbak.pub-purust": "bea12f26f3b4b4e7a488bf7c6ee3f6c19a2e3667",
+    "pbo": "978ccca1061caff67219b707692d6568063ebd00"
+  },
+  "codegen_tests_passed": 14,
+  "tast_tests_passed": 4,
+  "clean_runner_outputs": [
+    "7",
+    "55",
+    "202950",
+    "100000",
+    "20000",
+    "125",
+    "100000",
+    "21536",
+    "22",
+    "10000000",
+    "1200",
+    "1000000",
+    "202950",
+    "5"
+  ],
+  "source_sha256": {
+    "purust/purust/src/Purust/CodeGen.purs": "b161e30ade6776e98db1eebfe78cab0f4ece56ea4ce2fc549b6ff6ef69d721a2",
+    "purust/purust/bin/purust.js": "9def7082f0c20d5b05e20bbb66daac2cb96d050e174c37c34d59a3bf3c666263",
+    "purust/purust/tests/tast/returned-functions.mjs": "df31a5db86a6867250ca6ef80b5fb57aae7cb0fc44a2f8002527d500d33171fd",
+    "purust/purust/tests/tast/fixtures/returned-functions/ReturnedFunctions.purs": "30cc78d2d3133d3fe3c56e50dc9b245e144f7141e60d31b0d11892b41e623035",
+    "purust/purust/tests/tast/fixtures/returned-functions/checks.rs": "30e8438b5532f505d9d09236fe2b19de1b397f056148057dbb375533fa33294a",
+    "altbak.pub-purust/scratch/rust-returned-functions-20260909/LazyEvaluation-before.rs": "8110b0674c244d4822476c36c3d427a18e23d3fca45aec7316b9244cadf2ec0b",
+    "altbak.pub-purust/scratch/rust-returned-functions-20260909/LazyEvaluation-after.rs": "fb33c08fb046ea46595ed10901360296369a7be4daa9e78e2557bbf1e5adbe76"
+  },
+  "test_log_sha256": {
+    "codegen": "508358c88059f8fff9b9b34bccf6d1da95544185664358349bea9cff5c8f0c2f",
+    "tast": "8c9822a8332e269ae2474837f3400baa9d4a042a281524629c7cb3cd4840dff2",
+    "returned": "1edc625f1df8ef272ba541f4d8243175723c3e4bb86d041df9bc8d1aa541c37d"
+  }
+}

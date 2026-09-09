@@ -1,0 +1,45 @@
+--- before
++++ after
+@@ -69,28 +69,27 @@
+ pub fn Test_LazyEvaluation_buildThunks(mut a0: i64, mut a1: purust_core::Func1<(), i64>, mut a2: ()) -> i64 {
+     // AST: Typed(Abs(..., Typed(Abs(..., Typed(Branch(...))))))
+     loop {
+-        break (/* Typed Abs */purust_core::Func3::Shared(std::rc::Rc::new({ let _f = (purust_core::Func1::Static(|mut _a0: i64| -> purust_core::Func2<purust_core::Func1<(), i64>, (), i64> {
+-    let mut purs_local_0 = _a0;
+-    /* Typed Abs */purust_core::Func2::Shared(std::rc::Rc::new({ let _f = (purust_core::Func1::Shared(std::rc::Rc::new(move |mut _a0: purust_core::Func1<(), i64>| -> purust_core::Func1<(), i64> {
+-    let mut purs_local_1 = _a0;
+-    /* Typed purust_core::Func1<(), i64> <- purust_core::Func1<(), i64> : Branch(...) */if (/* Typed i64 <- i64 : Local(...) */purs_local_0.clone() == 0) {
++        break {
++fn Test_LazyEvaluation_buildThunks(mut purs_local_0: i64, mut purs_local_1: purust_core::Func1<(), i64>) -> purust_core::Func1<(), i64> {
++    loop {
++        break /* Typed purust_core::Func1<(), i64> <- purust_core::Func1<(), i64> : Branch(...) */if (/* Typed i64 <- i64 : Local(...) */purs_local_0.clone() == 0) {
+         /* Typed purust_core::Func1<(), i64> <- purust_core::Func1<(), i64> : Local(...) */purs_local_1
+     } else {
+         /* Typed purust_core::Func1<(), i64> <- purust_core::Func1<(), i64> : App(Var(...)) */{
+-        let mut eval_arg_0 = /* Typed i64 <- i64 : PrimOp(...) */(/* Typed i64 <- i64 : Local(...) */purs_local_0.clone() - /* Typed i64 <- i64 : Lit */1);
+-        let mut eval_arg_1 = /* Typed Abs */purust_core::Func1::Shared(std::rc::Rc::new(move |mut _a0: ()| -> i64 {
++        let _tco_temp_0 = /* Typed i64 <- i64 : PrimOp(...) */(/* Typed i64 <- i64 : Local(...) */purs_local_0 - /* Typed i64 <- i64 : Lit */1);
++        let _tco_temp_1 = /* Typed Abs */purust_core::Func1::Shared(std::rc::Rc::new(move |mut _a0: ()| -> i64 {
+     drop(_a0);
+     /* Typed i64 <- i64 : PrimOp(...) */((purs_local_1.clone())(/* Typed () <- () : Var(...) */Data_Unit_unit()) + 1)
+ }));
+-    purust_core::Func1::Shared(std::rc::Rc::new(move |mut eta_0: ()| -> i64 {
+-    let mut eval_arg_0 = eval_arg_0.clone();
+-    let mut eval_arg_1 = eval_arg_1.clone();
+-    Test_LazyEvaluation_buildThunks(eval_arg_0, eval_arg_1, eta_0.clone())
+-}))
++        purs_local_0 = _tco_temp_0;
++        purs_local_1 = _tco_temp_1;
++        continue;
++    }
++    };
++    }
+ }
+-    }
+-}))).clone(); move |mut _a0: purust_core::Func1<(), i64>, mut _a1: ()| -> i64 { ((_f)(_a0.clone()))(_a1.clone()) } }))
+-} as fn(i64) -> purust_core::Func2<purust_core::Func1<(), i64>, (), i64>)).clone(); move |mut _a0: i64, mut _a1: purust_core::Func1<(), i64>, mut _a2: ()| -> i64 { ((_f)(_a0.clone()))(_a1.clone(), _a2.clone()) } })))(a0.clone(), a1.clone(), a2.clone());
++(Test_LazyEvaluation_buildThunks(a0.clone(), a1.clone()))(a2.clone())
++};
+     }
+ }
+ 
