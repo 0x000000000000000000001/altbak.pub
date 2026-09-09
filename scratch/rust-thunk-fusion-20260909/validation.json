@@ -1,0 +1,52 @@
+{
+  "recorded_at": "2026-09-09T14:09:10.880755+00:00",
+  "source_sha256": {
+    "bin/purust.js": "4e436086b8326eee2520de2727102c4d32e59c4b81c8abf63ce9eae87c880011",
+    "src/Purust/CodeGen.purs": "b5983b6c0da39023d7ada36a181f4085f73ee284ceaefa9ab4acda4ded03ec70",
+    "todo.md": "49c1a3be986e7897cf05f46eadcaef2fc952b7da5533a4253a706e500360779d",
+    "src/Purust/ThunkFusion.purs": "3df30910c8ef34ae66fcd8c03660eca30ec3d256bb70fb9790baafc86a324fd3",
+    "tests/codegen/thunk-fusion.mjs": "881b7a588997b99f70ac7c8621949b48dd8431784be2dd3e0cfe026c0b4fb107",
+    "tests/tast/thunk-fusion.mjs": "8ada121f8948b28ebae4d6a7c3219f49e5c7f93c4d3f302e790fb4db75ac10a5",
+    "tests/tast/fixtures/thunk-fusion/ThunkFusion.purs": "54ae64c596e17dc3f9835abe4a5ec40520abf2f7ac96a89ab07138f12458de27",
+    "tests/tast/fixtures/thunk-fusion/checks.rs": "973cd443dcbbbfda8298996aa2b21936ae2646f17692db4f84b1c1f54deae98f"
+  },
+  "evidence_sha256": {
+    "REPORT.md": "d5bf264a11c6e2c4a09f92fe4eefb8ba9689a5f45448f15de1e1faea35834c58",
+    "metadata.json": "2c50cbd2693de4c06b11b8d0d24d49c069f157117c3bc9f1b7bdefa8304198a9",
+    "results.json": "1739f598dc92920d252f965f4b5da5bd7bc7592018e2be56d6fc0e9063dadb33",
+    "allocations.json": "bca5b9bab83599364b7cdb3b5390aaf76ccfb618c41cd0276be78fca03e05edc",
+    "source-comparison.json": "2bf696eee26d44f6f40a359760afa4552bfb49151063f543f816435ee32dab2d",
+    "integration.patch": "1f469473d1490384da65ffa239954593482026b12026d74ba05c210af84512e9",
+    "LazyEvaluation-before.rs": "7c19824a5fd83bd19de0d534047920fcbab0d2c09dbc7e5a10680c3a8a11f806",
+    "LazyEvaluation-after.rs": "c7fbac8486293e987b3e21b230f94d0829aebf9f388212f85c6cc089a39f7a4a",
+    "LazyEvaluation.diff": "a54cfcca660123a311aa9bfcbe83af80e3cb8d0ceac52d8af3c79c8175fcbe2c",
+    "count.py": "6f2489de6606424de94305ffcd980bcfa48dca5086214675aac6554d77021161",
+    "measure.py": "276a7461053986814aaae235c43882a99dfb149f56cfbcd09074195e06b639ec",
+    "codegen-tests.log": "5675c568f439f24948b0b438fe940d8ad6991fab52c440b8e445cb1f75bca73a",
+    "tast-tests.log": "949aa85987aef280b4100fc4b8772d9de54bbf09cd6fe3fa49775c615c77a812",
+    "fusion-overflow-checks.log": "71753a51679874c0d010de344a26ef9961d2a763065fc24224fdb1877186820c",
+    "clean-run.log": "7a633da0cbfbf0a8212a3a7b1a8d47fd7d9437c4691f80357512b484dc13a55a",
+    "generator-build.log": "2ed50721940c33e503070f53468ee5f937ad2ebce23123907b89aca41a01b757"
+  },
+  "worktree_document_sha256": {
+    "todo.md": "be560c42c9add6674c2a8c3004a7c686bd5af17ccc6264fa373462609b644631",
+    "optimization-audit.md": "c5d959ca34a5663e7dbe8bc417643c1ab189b75955a5b5c330153d1d3e12f68f"
+  },
+  "validation": {
+    "codegen_tests": 19,
+    "tast_tests": 10,
+    "focused_fixture_overflow_checks": true,
+    "full_clean_runner_outputs": 14,
+    "alternating_runner_pairs": 5,
+    "generated_crate_sources_compared": 302,
+    "changed_generated_modules": [
+      "Test.LazyEvaluation"
+    ]
+  },
+  "normal_checkouts_status": {
+    "altbak.pub": " M optimization-audit.md\n M todo.md\n",
+    "purescript-backend-optimizer": "",
+    "purescript-backend-optimizer-purust": ""
+  },
+  "normal_checkout_note": "The observed altbak.pub documentation changes concern concurrent Sharpurs work. This task edited only Purust and altbak.pub-purust; the normal documentation was left as found. PBO checkouts are clean."
+}

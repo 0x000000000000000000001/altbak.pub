@@ -1,0 +1,45 @@
+{
+  "benchmark_names": [
+    "AST Evaluation:",
+    "Fibonacci:",
+    "List Processing (900 elements):",
+    "Tail Call Optimization (100k calls):",
+    "Deep Record Updates (10k iterations):",
+    "Ackermann (3, 4):",
+    "Church Numerals (100k Closure Applications):",
+    "Prime Sieve (sum primes up to 500):",
+    "Red-Black Tree (100k Worst-Case Insertions):",
+    "Polymorphism (10M Type Class Dict Lookups):",
+    "State Monad (1.2k Binds, 60 Stack Depth):",
+    "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+    "Array Processing (900 elements):",
+    "RowToList (Keys Count):"
+  ],
+  "outputs": [
+    "7",
+    "55",
+    "202950",
+    "100000",
+    "20000",
+    "125",
+    "100000",
+    "21536",
+    "22",
+    "10000000",
+    "1200",
+    "1000000",
+    "202950",
+    "5"
+  ],
+  "revisions": {
+    "purust/purust": "bf8883466016bce5752ccb57946d79501c2d9318",
+    "purescript-backend-optimizer-purust": "6e256c6a962c94d09ad2599c165231633bbfaa98",
+    "altbak.pub-purust": "bf304ae34cadc6506fb8c9e275e599f444e4c9a8"
+  },
+  "before_sha256": {
+    "before-binary": "32d5f510d316b6c6d0ce11b6bce1b584dedb133c7290a298d0a9c6d09d37988f",
+    "LazyEvaluation-before.rs": "7c19824a5fd83bd19de0d534047920fcbab0d2c09dbc7e5a10680c3a8a11f806",
+    "before-purust.js": "2bae4581b6047508f78c60f76a4178620c693a4153834cad7dd08637c5dfe1eb"
+  },
+  "source_origin": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output"
+}

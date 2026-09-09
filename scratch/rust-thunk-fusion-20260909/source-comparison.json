@@ -1,0 +1,11 @@
+{
+  "method": "Old saved bundle and new bundle, using the same freshly rebuilt TAST inputs. Rust crate source files compared.",
+  "files_compared": 302,
+  "changed_files": {
+    "Purs_Test_LazyEvaluation/src/lib.rs": {
+      "before": "7c19824a5fd83bd19de0d534047920fcbab0d2c09dbc7e5a10680c3a8a11f806",
+      "after": "c7fbac8486293e987b3e21b230f94d0829aebf9f388212f85c6cc089a39f7a4a"
+    }
+  },
+  "saved_baseline_lazy_matches_regeneration": true
+}
