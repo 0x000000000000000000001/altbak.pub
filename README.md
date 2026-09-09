@@ -173,21 +173,21 @@ RowToList               | ~ 0.67 μs                 | ~ 47 μs         | ~ 45 �
 
 Java Benchmark          | Compiled Java ([javapurs](https://github.com/0x000000000000000000001/javapurs), WIP) | Native FP-style Java FFI (WIP) | Native hand-optimized Java FFI (WIP) |
 ----------------------- | ------------------------- | ------------------------ | ------------------------------ |
-AST Evaluation          | ~ 54.00 μs                | ~ 69 μs                  | ~ 4.4 μs                       |
-Fibonacci               | ~ 5.08 μs                 | ~ 2.5 μs                 | ~ 1.9 μs                       |
-List Processing         | ~ 174.88 μs               | ~ 65 μs                  | ~ 6.4 μs                       |
-Tail Call Optimization  | ~ 42.96 μs                | ~ 43 μs                  | ~ 42 μs                        |
-Deep Record Updates     | ~ 157.75 μs               | ~ 132 μs                 | ~ 18 μs                        |
-Ackermann               | ~ 19.50 μs                | ~ 10 μs                  | ~ 7.5 μs                       |
-Church Numerals         | ~ 701.88 μs               | ~ 435 μs                 | ~ 1.8 μs                       |
-Prime Sieve             | ~ 165.25 μs               | ~ 61 μs                  | ~ 8.9 μs                       |
-Red-Black Tree          | ~ 18313.00 μs             | ~ 12278 μs               | ~ 12384 μs                     |
-Polymorphism            | ~ 2.25 μs                 | ~ 148 μs                 | ~ 1.7 μs                       |
-State Monad             | ~ 66.25 μs                | ~ 40 μs                  | ~ 6.5 μs                       |
-Lazy Evaluation         | ~ 84.50 μs                | ~ 5168 μs                | ~ 1.5 μs                       |
-Array Processing        | ~ 70.58 μs                | ~ 41 μs                  | ~ 7.1 μs                       |
-RowToList               | ~ 1.67 μs                 | ~ 2.2 μs                 | ~ 1.3 μs                       |
-**Total Execution Time**| ~ 19.86 ms                | ~ 18.50 ms               | ~ 12.49 ms                     |
+AST Evaluation          | ~ 63.79 μs                | ~ 69 μs                  | ~ 4.4 μs                       |
+Fibonacci               | ~ 4.46 μs                 | ~ 2.5 μs                 | ~ 1.9 μs                       |
+List Processing         | ~ 152.00 μs               | ~ 65 μs                  | ~ 6.4 μs                       |
+Tail Call Optimization  | ~ 43.13 μs                | ~ 43 μs                  | ~ 42 μs                        |
+Deep Record Updates     | ~ 158.17 μs               | ~ 132 μs                 | ~ 18 μs                        |
+Ackermann               | ~ 21.63 μs                | ~ 10 μs                  | ~ 7.5 μs                       |
+Church Numerals         | ~ 753.63 μs               | ~ 435 μs                 | ~ 1.8 μs                       |
+Prime Sieve             | ~ 181.58 μs               | ~ 61 μs                  | ~ 8.9 μs                       |
+Red-Black Tree          | ~ 16207.92 μs             | ~ 12278 μs               | ~ 12384 μs                     |
+Polymorphism            | ~ 2.08 μs                 | ~ 148 μs                 | ~ 1.7 μs                       |
+State Monad             | ~ 75.08 μs                | ~ 40 μs                  | ~ 6.5 μs                       |
+Lazy Evaluation         | ~ 88.63 μs                | ~ 5168 μs                | ~ 1.5 μs                       |
+Array Processing        | ~ 74.00 μs                | ~ 41 μs                  | ~ 7.1 μs                       |
+RowToList               | ~ 1.79 μs                 | ~ 2.2 μs                 | ~ 1.3 μs                       |
+**Total Execution Time**| ~ 17.83 ms                | ~ 18.50 ms               | ~ 12.49 ms                     |
 
 > [!IMPORTANT]
 > **The 99/1 philosophy and the AOT compiler vs FFI approach**
