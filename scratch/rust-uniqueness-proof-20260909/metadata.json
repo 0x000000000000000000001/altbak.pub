@@ -1,0 +1,27 @@
+{
+  "revisions": {
+    "altbak_worktree": "79ce01b01da32f559cfc24ae4cb7aa6f41ad8100",
+    "purust": "ad20c453b9b1daef771a57d16b999aa757fbce09",
+    "pbo_worktree": "6e256c6a962c94d09ad2599c165231633bbfaa98"
+  },
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Test_RBTree/src/lib.rs",
+  "source_sha256": "9ada7a41741f0b4bd28c70f29cee61cb660b222d9395337b503182e8bae38063",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "README_reference": {
+    "path": "/Users/0x1/Documents/htdocs/altbak.pub/README.md",
+    "rbtree_ms": 18.985,
+    "total_ms": 21.82,
+    "native_rbtree_ms": 36.07,
+    "native_total_ms": 36.13
+  },
+  "reused_harnesses": {
+    "probe.py": "1a92cd3c37f34970a4b8dfd20d88ffa5fcfd0ee273013c1cd29223aa3c0c0df2",
+    "tracked_rc.rs": "6c3281bc5339f6fb8be6dcd283e69c566a8feb5c1a8a9a33f9cac68abb0c6687",
+    "count_harness.rs": "6c1924ca34756d4040cbc579b03226ad85b051815ff9a9fdd2ff5e7e5322dc7f"
+  },
+  "binary_sha256": {
+    "before": "369c8315e58989203a8136b7823c7f4c898a588504a7bc496be9bc7ef3dd1107",
+    "local": "81680d43086c747943f178650e19263812537a4ae7391515a2a5d770bbe37416",
+    "worker": "fddab03f88810f3eefbd74913b4f74182f29ea93d35bf1d0a22459d38a9c586a"
+  }
+}

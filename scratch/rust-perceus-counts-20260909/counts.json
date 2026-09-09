@@ -1,0 +1,1828 @@
+{
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Test_RBTree/src/lib.rs",
+  "source_sha256": "9ada7a41741f0b4bd28c70f29cee61cb660b222d9395337b503182e8bae38063",
+  "method": "Observed logical Rc API operations through a one-word wrapper around std::rc::Rc; not machine instructions or timings. Included kernel preserves original source line numbers.",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "prototype_replacements": 210,
+  "variants": {
+    "before": {
+      "phases": {
+        "checks": {
+          "clone": 33,
+          "drop_last": 20,
+          "drop_shared": 33,
+          "get_mut_unique": 66,
+          "get_mut_weak": 2,
+          "new": 21,
+          "unwrap_unique": 1
+        },
+        "persistent_build": {
+          "clone": 5808,
+          "drop_shared": 2802,
+          "get_mut_shared": 1303,
+          "get_mut_unique": 1060,
+          "new": 1504,
+          "unwrap_shared": 1303
+        },
+        "persistent_depth": {
+          "clone": 401,
+          "drop_shared": 401
+        },
+        "persistent_drop": {
+          "drop_last": 1504,
+          "drop_shared": 1703
+        },
+        "unique_build": {
+          "clone": 3060100,
+          "drop_shared": 2960100,
+          "get_mut_unique": 4967864,
+          "new": 100001
+        },
+        "unique_depth_and_drop": {
+          "clone": 200000,
+          "drop_last": 100001,
+          "drop_shared": 300000
+        }
+      },
+      "events": [
+        {
+          "phase": "checks",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 1422,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 1553,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 1660,
+          "count": 13
+        },
+        {
+          "phase": "checks",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 1741,
+          "count": 3
+        },
+        {
+          "phase": "checks",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 2306,
+          "count": 2
+        },
+        {
+          "phase": "checks",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 3024,
+          "count": 3
+        },
+        {
+          "phase": "checks",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 3155,
+          "count": 2
+        },
+        {
+          "phase": "checks",
+          "operation": "clone",
+          "kind": "node",
+          "line": 1741,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "clone",
+          "kind": "node",
+          "line": 1742,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "clone",
+          "kind": "node",
+          "line": 2306,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "clone",
+          "kind": "node",
+          "line": 2307,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "clone",
+          "kind": "node",
+          "line": 3024,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "clone",
+          "kind": "node",
+          "line": 3025,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "clone",
+          "kind": "node",
+          "line": 3155,
+          "count": 2
+        },
+        {
+          "phase": "checks",
+          "operation": "drop_last",
+          "kind": "empty",
+          "line": 0,
+          "count": 6
+        },
+        {
+          "phase": "checks",
+          "operation": "drop_last",
+          "kind": "node",
+          "line": 0,
+          "count": 14
+        },
+        {
+          "phase": "checks",
+          "operation": "drop_shared",
+          "kind": "empty",
+          "line": 0,
+          "count": 25
+        },
+        {
+          "phase": "checks",
+          "operation": "drop_shared",
+          "kind": "node",
+          "line": 0,
+          "count": 8
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "empty",
+          "line": 64,
+          "count": 20
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "empty",
+          "line": 1682,
+          "count": 13
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1663,
+          "count": 6
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1666,
+          "count": 6
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1682,
+          "count": 13
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1743,
+          "count": 2
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 2308,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 2310,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 3028,
+          "count": 2
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 3158,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 3160,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_weak",
+          "kind": "node",
+          "line": 46,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_weak",
+          "kind": "node",
+          "line": 1666,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "new",
+          "kind": "empty",
+          "line": 37,
+          "count": 4
+        },
+        {
+          "phase": "checks",
+          "operation": "new",
+          "kind": "empty",
+          "line": 44,
+          "count": 2
+        },
+        {
+          "phase": "checks",
+          "operation": "new",
+          "kind": "node",
+          "line": 43,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "new",
+          "kind": "node",
+          "line": 1618,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "new",
+          "kind": "node",
+          "line": 1660,
+          "count": 13
+        },
+        {
+          "phase": "checks",
+          "operation": "unwrap_unique",
+          "kind": "node",
+          "line": 1666,
+          "count": 1
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 50,
+          "count": 425
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 62,
+          "count": 1
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 139,
+          "count": 97
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 704,
+          "count": 83
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 986,
+          "count": 37
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 1117,
+          "count": 35
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 1422,
+          "count": 41
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 1553,
+          "count": 25
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 1660,
+          "count": 200
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 50,
+          "count": 2181
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 62,
+          "count": 199
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 139,
+          "count": 312
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 140,
+          "count": 312
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 205,
+          "count": 273
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 206,
+          "count": 273
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 269,
+          "count": 141
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 270,
+          "count": 141
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 329,
+          "count": 270
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 704,
+          "count": 14
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 705,
+          "count": 14
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 986,
+          "count": 4
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 987,
+          "count": 4
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 1117,
+          "count": 4
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 1204,
+          "count": 159
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 1205,
+          "count": 159
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 1264,
+          "count": 314
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 1422,
+          "count": 29
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 1423,
+          "count": 29
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 1553,
+          "count": 32
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "drop_shared",
+          "kind": "empty",
+          "line": 0,
+          "count": 318
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "drop_shared",
+          "kind": "node",
+          "line": 0,
+          "count": 2484
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_shared",
+          "kind": "node",
+          "line": 1663,
+          "count": 627
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_shared",
+          "kind": "node",
+          "line": 1666,
+          "count": 676
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "empty",
+          "line": 64,
+          "count": 330
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "empty",
+          "line": 1682,
+          "count": 200
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 141,
+          "count": 78
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 207,
+          "count": 24
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 209,
+          "count": 24
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 273,
+          "count": 12
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 332,
+          "count": 8
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 334,
+          "count": 8
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 706,
+          "count": 14
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 708,
+          "count": 14
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 990,
+          "count": 8
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1120,
+          "count": 2
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1122,
+          "count": 2
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1208,
+          "count": 4
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1267,
+          "count": 21
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1269,
+          "count": 21
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1426,
+          "count": 58
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1556,
+          "count": 16
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1558,
+          "count": 16
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1682,
+          "count": 200
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "empty",
+          "line": 57,
+          "count": 1
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 155,
+          "count": 39
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 221,
+          "count": 24
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 285,
+          "count": 6
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 344,
+          "count": 8
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 394,
+          "count": 127
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 480,
+          "count": 108
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 720,
+          "count": 14
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1002,
+          "count": 4
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1132,
+          "count": 2
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1182,
+          "count": 35
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1197,
+          "count": 42
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1220,
+          "count": 2
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1279,
+          "count": 21
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1329,
+          "count": 136
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1415,
+          "count": 285
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1438,
+          "count": 29
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1568,
+          "count": 16
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1618,
+          "count": 25
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1648,
+          "count": 380
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1660,
+          "count": 200
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "unwrap_shared",
+          "kind": "node",
+          "line": 1663,
+          "count": 627
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "unwrap_shared",
+          "kind": "node",
+          "line": 1666,
+          "count": 676
+        },
+        {
+          "phase": "persistent_depth",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 118,
+          "count": 101
+        },
+        {
+          "phase": "persistent_depth",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 120,
+          "count": 100
+        },
+        {
+          "phase": "persistent_depth",
+          "operation": "clone",
+          "kind": "node",
+          "line": 70,
+          "count": 1
+        },
+        {
+          "phase": "persistent_depth",
+          "operation": "clone",
+          "kind": "node",
+          "line": 118,
+          "count": 99
+        },
+        {
+          "phase": "persistent_depth",
+          "operation": "clone",
+          "kind": "node",
+          "line": 120,
+          "count": 100
+        },
+        {
+          "phase": "persistent_depth",
+          "operation": "drop_shared",
+          "kind": "empty",
+          "line": 0,
+          "count": 201
+        },
+        {
+          "phase": "persistent_depth",
+          "operation": "drop_shared",
+          "kind": "node",
+          "line": 0,
+          "count": 200
+        },
+        {
+          "phase": "persistent_drop",
+          "operation": "drop_last",
+          "kind": "empty",
+          "line": 0,
+          "count": 1
+        },
+        {
+          "phase": "persistent_drop",
+          "operation": "drop_last",
+          "kind": "node",
+          "line": 0,
+          "count": 1503
+        },
+        {
+          "phase": "persistent_drop",
+          "operation": "drop_shared",
+          "kind": "empty",
+          "line": 0,
+          "count": 626
+        },
+        {
+          "phase": "persistent_drop",
+          "operation": "drop_shared",
+          "kind": "node",
+          "line": 0,
+          "count": 1077
+        },
+        {
+          "phase": "unique_build",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 1660,
+          "count": 100000
+        },
+        {
+          "phase": "unique_build",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 1741,
+          "count": 50000
+        },
+        {
+          "phase": "unique_build",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 2306,
+          "count": 50000
+        },
+        {
+          "phase": "unique_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 1741,
+          "count": 765014
+        },
+        {
+          "phase": "unique_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 1742,
+          "count": 765014
+        },
+        {
+          "phase": "unique_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 1807,
+          "count": 665036
+        },
+        {
+          "phase": "unique_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 1808,
+          "count": 665036
+        },
+        {
+          "phase": "unique_build",
+          "operation": "drop_shared",
+          "kind": "empty",
+          "line": 0,
+          "count": 100000
+        },
+        {
+          "phase": "unique_build",
+          "operation": "drop_shared",
+          "kind": "node",
+          "line": 0,
+          "count": 2860100
+        },
+        {
+          "phase": "unique_build",
+          "operation": "get_mut_unique",
+          "kind": "empty",
+          "line": 64,
+          "count": 2383932
+        },
+        {
+          "phase": "unique_build",
+          "operation": "get_mut_unique",
+          "kind": "empty",
+          "line": 1682,
+          "count": 100000
+        },
+        {
+          "phase": "unique_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1663,
+          "count": 2183976
+        },
+        {
+          "phase": "unique_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1682,
+          "count": 100000
+        },
+        {
+          "phase": "unique_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1743,
+          "count": 199956
+        },
+        {
+          "phase": "unique_build",
+          "operation": "new",
+          "kind": "empty",
+          "line": 51,
+          "count": 1
+        },
+        {
+          "phase": "unique_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1660,
+          "count": 100000
+        },
+        {
+          "phase": "unique_depth_and_drop",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 118,
+          "count": 50000
+        },
+        {
+          "phase": "unique_depth_and_drop",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 120,
+          "count": 50001
+        },
+        {
+          "phase": "unique_depth_and_drop",
+          "operation": "clone",
+          "kind": "node",
+          "line": 118,
+          "count": 50000
+        },
+        {
+          "phase": "unique_depth_and_drop",
+          "operation": "clone",
+          "kind": "node",
+          "line": 120,
+          "count": 49999
+        },
+        {
+          "phase": "unique_depth_and_drop",
+          "operation": "drop_last",
+          "kind": "empty",
+          "line": 0,
+          "count": 1
+        },
+        {
+          "phase": "unique_depth_and_drop",
+          "operation": "drop_last",
+          "kind": "node",
+          "line": 0,
+          "count": 100000
+        },
+        {
+          "phase": "unique_depth_and_drop",
+          "operation": "drop_shared",
+          "kind": "empty",
+          "line": 0,
+          "count": 200001
+        },
+        {
+          "phase": "unique_depth_and_drop",
+          "operation": "drop_shared",
+          "kind": "node",
+          "line": 0,
+          "count": 99999
+        }
+      ]
+    },
+    "prototype": {
+      "phases": {
+        "checks": {
+          "clone": 13,
+          "drop_last": 20,
+          "drop_shared": 13,
+          "get_mut_unique": 66,
+          "get_mut_weak": 2,
+          "new": 21,
+          "unwrap_unique": 1
+        },
+        "persistent_build": {
+          "clone": 3006,
+          "get_mut_shared": 1303,
+          "get_mut_unique": 1060,
+          "new": 1504,
+          "unwrap_shared": 1303
+        },
+        "persistent_depth": {
+          "clone": 401,
+          "drop_shared": 401
+        },
+        "persistent_drop": {
+          "drop_last": 1504,
+          "drop_shared": 1703
+        },
+        "unique_build": {
+          "clone": 100000,
+          "get_mut_unique": 4967864,
+          "new": 100001
+        },
+        "unique_depth_and_drop": {
+          "clone": 200000,
+          "drop_last": 100001,
+          "drop_shared": 300000
+        }
+      },
+      "events": [
+        {
+          "phase": "checks",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 1660,
+          "count": 13
+        },
+        {
+          "phase": "checks",
+          "operation": "drop_last",
+          "kind": "empty",
+          "line": 0,
+          "count": 6
+        },
+        {
+          "phase": "checks",
+          "operation": "drop_last",
+          "kind": "node",
+          "line": 0,
+          "count": 14
+        },
+        {
+          "phase": "checks",
+          "operation": "drop_shared",
+          "kind": "empty",
+          "line": 0,
+          "count": 13
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "empty",
+          "line": 64,
+          "count": 20
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "empty",
+          "line": 1682,
+          "count": 13
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1663,
+          "count": 6
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1666,
+          "count": 6
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1682,
+          "count": 13
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1743,
+          "count": 2
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 2308,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 2310,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 3028,
+          "count": 2
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 3158,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 3160,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_weak",
+          "kind": "node",
+          "line": 46,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "get_mut_weak",
+          "kind": "node",
+          "line": 1666,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "new",
+          "kind": "empty",
+          "line": 37,
+          "count": 4
+        },
+        {
+          "phase": "checks",
+          "operation": "new",
+          "kind": "empty",
+          "line": 44,
+          "count": 2
+        },
+        {
+          "phase": "checks",
+          "operation": "new",
+          "kind": "node",
+          "line": 43,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "new",
+          "kind": "node",
+          "line": 1618,
+          "count": 1
+        },
+        {
+          "phase": "checks",
+          "operation": "new",
+          "kind": "node",
+          "line": 1660,
+          "count": 13
+        },
+        {
+          "phase": "checks",
+          "operation": "unwrap_unique",
+          "kind": "node",
+          "line": 1666,
+          "count": 1
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 50,
+          "count": 425
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 62,
+          "count": 1
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 1660,
+          "count": 200
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 50,
+          "count": 2181
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "clone",
+          "kind": "node",
+          "line": 62,
+          "count": 199
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_shared",
+          "kind": "node",
+          "line": 1663,
+          "count": 627
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_shared",
+          "kind": "node",
+          "line": 1666,
+          "count": 676
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "empty",
+          "line": 64,
+          "count": 330
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "empty",
+          "line": 1682,
+          "count": 200
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 141,
+          "count": 78
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 207,
+          "count": 24
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 209,
+          "count": 24
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 273,
+          "count": 12
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 332,
+          "count": 8
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 334,
+          "count": 8
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 706,
+          "count": 14
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 708,
+          "count": 14
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 990,
+          "count": 8
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1120,
+          "count": 2
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1122,
+          "count": 2
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1208,
+          "count": 4
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1267,
+          "count": 21
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1269,
+          "count": 21
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1426,
+          "count": 58
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1556,
+          "count": 16
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1558,
+          "count": 16
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1682,
+          "count": 200
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "empty",
+          "line": 57,
+          "count": 1
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 155,
+          "count": 39
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 221,
+          "count": 24
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 285,
+          "count": 6
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 344,
+          "count": 8
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 394,
+          "count": 127
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 480,
+          "count": 108
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 720,
+          "count": 14
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1002,
+          "count": 4
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1132,
+          "count": 2
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1182,
+          "count": 35
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1197,
+          "count": 42
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1220,
+          "count": 2
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1279,
+          "count": 21
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1329,
+          "count": 136
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1415,
+          "count": 285
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1438,
+          "count": 29
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1568,
+          "count": 16
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1618,
+          "count": 25
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1648,
+          "count": 380
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1660,
+          "count": 200
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "unwrap_shared",
+          "kind": "node",
+          "line": 1663,
+          "count": 627
+        },
+        {
+          "phase": "persistent_build",
+          "operation": "unwrap_shared",
+          "kind": "node",
+          "line": 1666,
+          "count": 676
+        },
+        {
+          "phase": "persistent_depth",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 118,
+          "count": 101
+        },
+        {
+          "phase": "persistent_depth",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 120,
+          "count": 100
+        },
+        {
+          "phase": "persistent_depth",
+          "operation": "clone",
+          "kind": "node",
+          "line": 70,
+          "count": 1
+        },
+        {
+          "phase": "persistent_depth",
+          "operation": "clone",
+          "kind": "node",
+          "line": 118,
+          "count": 99
+        },
+        {
+          "phase": "persistent_depth",
+          "operation": "clone",
+          "kind": "node",
+          "line": 120,
+          "count": 100
+        },
+        {
+          "phase": "persistent_depth",
+          "operation": "drop_shared",
+          "kind": "empty",
+          "line": 0,
+          "count": 201
+        },
+        {
+          "phase": "persistent_depth",
+          "operation": "drop_shared",
+          "kind": "node",
+          "line": 0,
+          "count": 200
+        },
+        {
+          "phase": "persistent_drop",
+          "operation": "drop_last",
+          "kind": "empty",
+          "line": 0,
+          "count": 1
+        },
+        {
+          "phase": "persistent_drop",
+          "operation": "drop_last",
+          "kind": "node",
+          "line": 0,
+          "count": 1503
+        },
+        {
+          "phase": "persistent_drop",
+          "operation": "drop_shared",
+          "kind": "empty",
+          "line": 0,
+          "count": 626
+        },
+        {
+          "phase": "persistent_drop",
+          "operation": "drop_shared",
+          "kind": "node",
+          "line": 0,
+          "count": 1077
+        },
+        {
+          "phase": "unique_build",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 1660,
+          "count": 100000
+        },
+        {
+          "phase": "unique_build",
+          "operation": "get_mut_unique",
+          "kind": "empty",
+          "line": 64,
+          "count": 2383932
+        },
+        {
+          "phase": "unique_build",
+          "operation": "get_mut_unique",
+          "kind": "empty",
+          "line": 1682,
+          "count": 100000
+        },
+        {
+          "phase": "unique_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1663,
+          "count": 2183976
+        },
+        {
+          "phase": "unique_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1682,
+          "count": 100000
+        },
+        {
+          "phase": "unique_build",
+          "operation": "get_mut_unique",
+          "kind": "node",
+          "line": 1743,
+          "count": 199956
+        },
+        {
+          "phase": "unique_build",
+          "operation": "new",
+          "kind": "empty",
+          "line": 51,
+          "count": 1
+        },
+        {
+          "phase": "unique_build",
+          "operation": "new",
+          "kind": "node",
+          "line": 1660,
+          "count": 100000
+        },
+        {
+          "phase": "unique_depth_and_drop",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 118,
+          "count": 50000
+        },
+        {
+          "phase": "unique_depth_and_drop",
+          "operation": "clone",
+          "kind": "empty",
+          "line": 120,
+          "count": 50001
+        },
+        {
+          "phase": "unique_depth_and_drop",
+          "operation": "clone",
+          "kind": "node",
+          "line": 118,
+          "count": 50000
+        },
+        {
+          "phase": "unique_depth_and_drop",
+          "operation": "clone",
+          "kind": "node",
+          "line": 120,
+          "count": 49999
+        },
+        {
+          "phase": "unique_depth_and_drop",
+          "operation": "drop_last",
+          "kind": "empty",
+          "line": 0,
+          "count": 1
+        },
+        {
+          "phase": "unique_depth_and_drop",
+          "operation": "drop_last",
+          "kind": "node",
+          "line": 0,
+          "count": 100000
+        },
+        {
+          "phase": "unique_depth_and_drop",
+          "operation": "drop_shared",
+          "kind": "empty",
+          "line": 0,
+          "count": 200001
+        },
+        {
+          "phase": "unique_depth_and_drop",
+          "operation": "drop_shared",
+          "kind": "node",
+          "line": 0,
+          "count": 99999
+        }
+      ]
+    }
+  },
+  "checks": "Four rotations; ordering/red-black invariants; all exact keys of 200 retained versions; weak-reference exclusion; global handle and payload lifetime balances."
+}

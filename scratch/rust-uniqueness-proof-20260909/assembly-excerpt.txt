@@ -1,0 +1,137 @@
+Original rebuild helper: native arm64 uniqueness check survives O1.
+The loads at Rc-box offsets 8 and 0 check weak and strong counts against 1.
+__ZN11time_before30Test_RBTree___purust_rebuild_T17h97d4da709907376aE:
+Lfunc_begin7:
+	.loc	2 63 0
+	.cfi_startproc
+	.cfi_personality 155, _rust_eh_personality
+	.cfi_lsda 16, Lexception3
+	sub	sp, sp, #128
+	.cfi_def_cfa_offset 128
+	stp	x24, x23, [sp, #64]
+	stp	x22, x21, [sp, #80]
+	stp	x20, x19, [sp, #96]
+	stp	x29, x30, [sp, #112]
+	add	x29, sp, #112
+	.cfi_def_cfa w29, 16
+	.cfi_offset w30, -8
+	.cfi_offset w29, -16
+	.cfi_offset w19, -24
+	.cfi_offset w20, -32
+	.cfi_offset w21, -40
+	.cfi_offset w22, -48
+	.cfi_offset w23, -56
+	.cfi_offset w24, -64
+	.cfi_remember_state
+	mov	x19, x4
+	mov	x20, x3
+	mov	x22, x2
+	mov	x21, x1
+	mov	x23, x0
+	str	x4, [sp, #8]
+Ltmp10094:
+	.loc	3 555 18 prologue_end
+	ldr	x8, [x4, #8]
+Ltmp10095:
+	.loc	4 1901 9
+	cmp	x8, #1
+	b.ne	LBB7_8
+Ltmp10096:
+	.loc	3 555 18
+	mov	x8, x19
+	ldr	x9, [x8], #16
+Ltmp10097:
+	.loc	4 1931 12
+	cmp	x9, #1
+	csel	x24, x8, xzr, eq
+Ltmp10098:
+	.loc	2 65 8
+	cbz	x24, LBB7_9
+LBB7_2:
+Ltmp10099:
+	.loc	7 810 1
+	ldrb	w8, [x24]
+	cbz	w8, LBB7_7
+Ltmp10100:
+	.loc	12 444 20
+	mov	x0, x24
+	ldr	x8, [x0, #16]!
+Ltmp10101:
+	.loc	3 555 18
+
+Borrowed-slot fill helper: receives the payload pointer; no Rc uniqueness check.
+__ZN11time_worker27Test_RBTree___purust_fill_T17h135b235e8519d40eE:
+Lfunc_begin7:
+	.loc	2 3264 0
+	.cfi_startproc
+	.cfi_personality 155, _rust_eh_personality
+	.cfi_lsda 16, Lexception3
+	stp	x24, x23, [sp, #-64]!
+	.cfi_def_cfa_offset 64
+	stp	x22, x21, [sp, #16]
+	stp	x20, x19, [sp, #32]
+	stp	x29, x30, [sp, #48]
+	add	x29, sp, #48
+	.cfi_def_cfa w29, 16
+	.cfi_offset w30, -8
+	.cfi_offset w29, -16
+	.cfi_offset w19, -24
+	.cfi_offset w20, -32
+	.cfi_offset w21, -40
+	.cfi_offset w22, -48
+	.cfi_offset w23, -56
+	.cfi_offset w24, -64
+	.cfi_remember_state
+	mov	x19, x4
+	mov	x20, x3
+	mov	x22, x2
+	mov	x21, x1
+	mov	x23, x0
+Ltmp10131:
+	.loc	7 810 1 prologue_end
+	ldrb	w8, [x4]
+	cbz	w8, LBB7_5
+Ltmp10132:
+	.loc	12 444 20
+	mov	x0, x19
+	ldr	x8, [x0, #16]!
+Ltmp10133:
+	.loc	3 555 18
+	ldr	x9, [x8]
+Ltmp10134:
+	.loc	4 3769 31
+	subs	x9, x9, #1
+Ltmp10135:
+	.loc	6 930 49
+	str	x9, [x8]
+Ltmp10136:
+	.loc	4 2481 16
+	b.ne	LBB7_3
+Ltmp2367:
+	.loc	4 2482 22
+	bl	__ZN5alloc2rc15Rc$LT$T$C$A$GT$9drop_slow17h553a03ad05e7cb6aE
+Ltmp10137:
+Ltmp2368:
+LBB7_3:
+	.loc	12 444 20
+	mov	x0, x19
+	ldr	x8, [x0, #24]!
+Ltmp10138:
+	.loc	3 555 18
+	ldr	x9, [x8]
+Ltmp10139:
+	.loc	4 3769 31
+	subs	x9, x9, #1
+Ltmp10140:
+	.loc	6 930 49
+	str	x9, [x8]
+Ltmp10141:
+	.loc	4 2481 16
+	b.ne	LBB7_5
+Ltmp2373:
+	.loc	4 2482 22
+	bl	__ZN5alloc2rc15Rc$LT$T$C$A$GT$9drop_slow17h553a03ad05e7cb6aE
+Ltmp10142:
+Ltmp2374:
+LBB7_5:
+	.loc	4 0 22 is_stmt 0

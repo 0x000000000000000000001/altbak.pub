@@ -1,0 +1,31 @@
+{
+  "scope": "Instrumentation, isolated Rust prototype, fresh TAST fixture, measurements, report and Purust roadmap only; no compiler/runtime integration.",
+  "checks": {
+    "four_rotations": true,
+    "retained_versions": 200,
+    "fixture_fresh_tast": true,
+    "weak_references": true,
+    "handle_and_payload_balances": true,
+    "source_unchanged": true,
+    "python_syntax": true
+  },
+  "artifact_sha256": {
+    ".gitignore": "6d4a0336225f2b6c5e0d86e7016311f166659db4e69a9aad2fc942851b2bced6",
+    "PerceusProbe.purs": "ce6323e2c636b2e995351b58193bc687285a4d4bc94f33c98cc5f4d8ce2c98b1",
+    "REPORT.md": "4abf6eb7f1e25a038de1cbfa8880386ebc851b4617f096ed618225e1d460855a",
+    "assembly-excerpt.txt": "2a45826f61f6d2f60e44cb45f9a0c264ede7f7602554d56f434bf3dbc64bd29a",
+    "assembly-summary.json": "c8ecf460f62052542d84282b9561236e2ae3edbdec8d1a1b44422f2e68172180",
+    "count_harness.rs": "6c1924ca34756d4040cbc579b03226ad85b051815ff9a9fdd2ff5e7e5322dc7f",
+    "counts.json": "24e03eebfb635cf5cdcc02c0317c02a02a48605e0aca360431f1c7269678aa7d",
+    "fixture.json": "3c986c3eef84025ffb31e1714a0229be50e11b4341e99128315653f38fb7820f",
+    "fixture.py": "05d87d466c02118a52c1dc453731ff47900f28c49d367c7f2bdd698bfeb85b42",
+    "fixture_harness.rs": "16d74599523a8b41328496362a2b4cd044664b3872085dc5baa5d1df65cf02cc",
+    "metadata.json": "9998946ef65d7d9d6006100dd5fdd50c5ef9b29878d4b6d3d77434259f4f1f51",
+    "probe.py": "1a92cd3c37f34970a4b8dfd20d88ffa5fcfd0ee273013c1cd29223aa3c0c0df2",
+    "summarize_ir.py": "0651cc33e976123f84dd865c0587a69173d5afdab40a6b2b4d976f8060a2ea72",
+    "time.py": "1c6b09ec79ce44cc6886874f05d20df94779f9325e1d0e8ef077a5c655c428fc",
+    "timings.json": "c185cdae0d506b2df085737a59f9d5ca9b7dc115de92e77fdc1d4cfc45dbb2c0",
+    "tracked_rc.rs": "6c3281bc5339f6fb8be6dcd283e69c566a8feb5c1a8a9a33f9cac68abb0c6687"
+  },
+  "purust_todo_sha256": "8690963c9542ceb0b8ef1a0da0eb662460bcd8d41b9a06a552bfeddfed0d9570"
+}

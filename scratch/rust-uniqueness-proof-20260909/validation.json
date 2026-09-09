@@ -1,0 +1,17 @@
+{
+  "method": "Native std::rc::Rc, no counter wrapper. Original four rotations, 100k nodes, 200 retained versions; four strong/weak recoloration cases; 512 mixed-sharing insertions including duplicates; preserved keys/invariants/lifetimes.",
+  "variants": {
+    "before": {
+      "result": "native Rc checks passed",
+      "source_sha256": "4b7e326eaaed5bd09b92b11c2090fcac1faf074895ff7c5f9f067a31700957ad"
+    },
+    "local": {
+      "result": "native Rc checks passed",
+      "source_sha256": "e74a4d7c12541420dee2b487c1c7ea78b6d49db99742f2aa252e3a586fa8af84"
+    },
+    "worker": {
+      "result": "native Rc checks passed",
+      "source_sha256": "cf04602da61b5511f6dd704b5f6bf706f6871e52f092c3a2344345902e1efc4e"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "revisions": {
+    "altbak_worktree": "79ce01b01da32f559cfc24ae4cb7aa6f41ad8100",
+    "purust": "ad20c453b9b1daef771a57d16b999aa757fbce09",
+    "pbo_worktree": "6e256c6a962c94d09ad2599c165231633bbfaa98"
+  },
+  "source_sha256": "9ada7a41741f0b4bd28c70f29cee61cb660b222d9395337b503182e8bae38063",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "baseline_readme": "altbak.pub/README.md, read September 9 2026",
+  "official_ms": {
+    "rbtree": 18.985,
+    "total": 21.82,
+    "rbtree_native": 36.07,
+    "total_native": 36.13
+  }
+}

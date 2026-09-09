@@ -1,0 +1,395 @@
+{
+  "tast_sha256": "a837551a86395f3ba9e773a2b02ead9c38ea9493f612a559a533b51545553a4a",
+  "generated_sha256": "71150225d060da1ce0146491782e555f897ea03eb83692ec8edac431ed20cd8d",
+  "prototype_replacements": 8,
+  "variants": {
+    "before": {
+      "phases": {
+        "shared": {
+          "clone": 7,
+          "drop_last": 7,
+          "drop_shared": 7,
+          "new": 7
+        },
+        "unique": {
+          "clone": 10,
+          "drop_last": 22,
+          "drop_shared": 10,
+          "new": 22
+        },
+        "weak_only": {
+          "clone": 4,
+          "drop_last": 7,
+          "drop_shared": 4,
+          "new": 7
+        }
+      },
+      "events": [
+        {
+          "phase": "shared",
+          "operation": "clone",
+          "kind": "node",
+          "line": 19,
+          "count": 2
+        },
+        {
+          "phase": "shared",
+          "operation": "clone",
+          "kind": "node",
+          "line": 20,
+          "count": 3
+        },
+        {
+          "phase": "shared",
+          "operation": "clone",
+          "kind": "node",
+          "line": 22,
+          "count": 1
+        },
+        {
+          "phase": "shared",
+          "operation": "clone",
+          "kind": "node",
+          "line": 23,
+          "count": 1
+        },
+        {
+          "phase": "shared",
+          "operation": "drop_last",
+          "kind": "empty",
+          "line": 0,
+          "count": 4
+        },
+        {
+          "phase": "shared",
+          "operation": "drop_last",
+          "kind": "node",
+          "line": 0,
+          "count": 3
+        },
+        {
+          "phase": "shared",
+          "operation": "drop_shared",
+          "kind": "node",
+          "line": 0,
+          "count": 7
+        },
+        {
+          "phase": "shared",
+          "operation": "new",
+          "kind": "empty",
+          "line": 5,
+          "count": 4
+        },
+        {
+          "phase": "shared",
+          "operation": "new",
+          "kind": "node",
+          "line": 5,
+          "count": 2
+        },
+        {
+          "phase": "shared",
+          "operation": "new",
+          "kind": "node",
+          "line": 8,
+          "count": 1
+        },
+        {
+          "phase": "unique",
+          "operation": "clone",
+          "kind": "node",
+          "line": 19,
+          "count": 3
+        },
+        {
+          "phase": "unique",
+          "operation": "clone",
+          "kind": "node",
+          "line": 20,
+          "count": 3
+        },
+        {
+          "phase": "unique",
+          "operation": "clone",
+          "kind": "node",
+          "line": 22,
+          "count": 4
+        },
+        {
+          "phase": "unique",
+          "operation": "drop_last",
+          "kind": "empty",
+          "line": 0,
+          "count": 13
+        },
+        {
+          "phase": "unique",
+          "operation": "drop_last",
+          "kind": "node",
+          "line": 0,
+          "count": 9
+        },
+        {
+          "phase": "unique",
+          "operation": "drop_shared",
+          "kind": "node",
+          "line": 0,
+          "count": 10
+        },
+        {
+          "phase": "unique",
+          "operation": "new",
+          "kind": "empty",
+          "line": 5,
+          "count": 12
+        },
+        {
+          "phase": "unique",
+          "operation": "new",
+          "kind": "empty",
+          "line": 15,
+          "count": 1
+        },
+        {
+          "phase": "unique",
+          "operation": "new",
+          "kind": "node",
+          "line": 5,
+          "count": 6
+        },
+        {
+          "phase": "unique",
+          "operation": "new",
+          "kind": "node",
+          "line": 8,
+          "count": 3
+        },
+        {
+          "phase": "weak_only",
+          "operation": "clone",
+          "kind": "node",
+          "line": 19,
+          "count": 1
+        },
+        {
+          "phase": "weak_only",
+          "operation": "clone",
+          "kind": "node",
+          "line": 20,
+          "count": 1
+        },
+        {
+          "phase": "weak_only",
+          "operation": "clone",
+          "kind": "node",
+          "line": 22,
+          "count": 2
+        },
+        {
+          "phase": "weak_only",
+          "operation": "drop_last",
+          "kind": "empty",
+          "line": 0,
+          "count": 4
+        },
+        {
+          "phase": "weak_only",
+          "operation": "drop_last",
+          "kind": "node",
+          "line": 0,
+          "count": 3
+        },
+        {
+          "phase": "weak_only",
+          "operation": "drop_shared",
+          "kind": "node",
+          "line": 0,
+          "count": 4
+        },
+        {
+          "phase": "weak_only",
+          "operation": "new",
+          "kind": "empty",
+          "line": 5,
+          "count": 4
+        },
+        {
+          "phase": "weak_only",
+          "operation": "new",
+          "kind": "node",
+          "line": 5,
+          "count": 2
+        },
+        {
+          "phase": "weak_only",
+          "operation": "new",
+          "kind": "node",
+          "line": 8,
+          "count": 1
+        }
+      ]
+    },
+    "prototype": {
+      "phases": {
+        "shared": {
+          "clone": 3,
+          "drop_last": 7,
+          "drop_shared": 3,
+          "new": 7
+        },
+        "unique": {
+          "drop_last": 22,
+          "new": 22
+        },
+        "weak_only": {
+          "drop_last": 7,
+          "new": 7
+        }
+      },
+      "events": [
+        {
+          "phase": "shared",
+          "operation": "clone",
+          "kind": "node",
+          "line": 20,
+          "count": 1
+        },
+        {
+          "phase": "shared",
+          "operation": "clone",
+          "kind": "node",
+          "line": 22,
+          "count": 1
+        },
+        {
+          "phase": "shared",
+          "operation": "clone",
+          "kind": "node",
+          "line": 23,
+          "count": 1
+        },
+        {
+          "phase": "shared",
+          "operation": "drop_last",
+          "kind": "empty",
+          "line": 0,
+          "count": 4
+        },
+        {
+          "phase": "shared",
+          "operation": "drop_last",
+          "kind": "node",
+          "line": 0,
+          "count": 3
+        },
+        {
+          "phase": "shared",
+          "operation": "drop_shared",
+          "kind": "node",
+          "line": 0,
+          "count": 3
+        },
+        {
+          "phase": "shared",
+          "operation": "new",
+          "kind": "empty",
+          "line": 5,
+          "count": 4
+        },
+        {
+          "phase": "shared",
+          "operation": "new",
+          "kind": "node",
+          "line": 5,
+          "count": 2
+        },
+        {
+          "phase": "shared",
+          "operation": "new",
+          "kind": "node",
+          "line": 8,
+          "count": 1
+        },
+        {
+          "phase": "unique",
+          "operation": "drop_last",
+          "kind": "empty",
+          "line": 0,
+          "count": 13
+        },
+        {
+          "phase": "unique",
+          "operation": "drop_last",
+          "kind": "node",
+          "line": 0,
+          "count": 9
+        },
+        {
+          "phase": "unique",
+          "operation": "new",
+          "kind": "empty",
+          "line": 5,
+          "count": 12
+        },
+        {
+          "phase": "unique",
+          "operation": "new",
+          "kind": "empty",
+          "line": 15,
+          "count": 1
+        },
+        {
+          "phase": "unique",
+          "operation": "new",
+          "kind": "node",
+          "line": 5,
+          "count": 6
+        },
+        {
+          "phase": "unique",
+          "operation": "new",
+          "kind": "node",
+          "line": 8,
+          "count": 3
+        },
+        {
+          "phase": "weak_only",
+          "operation": "drop_last",
+          "kind": "empty",
+          "line": 0,
+          "count": 4
+        },
+        {
+          "phase": "weak_only",
+          "operation": "drop_last",
+          "kind": "node",
+          "line": 0,
+          "count": 3
+        },
+        {
+          "phase": "weak_only",
+          "operation": "new",
+          "kind": "empty",
+          "line": 5,
+          "count": 4
+        },
+        {
+          "phase": "weak_only",
+          "operation": "new",
+          "kind": "node",
+          "line": 5,
+          "count": 2
+        },
+        {
+          "phase": "weak_only",
+          "operation": "new",
+          "kind": "node",
+          "line": 8,
+          "count": 1
+        }
+      ]
+    }
+  },
+  "checks": "Fresh TAST metadata, all pattern outcomes, branch priority, repeated shared inputs, retained child and root, weak references, balanced handle/payload lifetimes."
+}

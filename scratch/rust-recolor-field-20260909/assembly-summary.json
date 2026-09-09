@@ -1,0 +1,17 @@
+{
+  "method": "Static optimized LLVM sites in the standalone prototype harness; not dynamic instructions.",
+  "variants": {
+    "before": {
+      "main_ir_lines": 691,
+      "static_loads": 43,
+      "static_stores": 54,
+      "static_branches": 57
+    },
+    "recolor": {
+      "main_ir_lines": 486,
+      "static_loads": 27,
+      "static_stores": 43,
+      "static_branches": 40
+    }
+  }
+}

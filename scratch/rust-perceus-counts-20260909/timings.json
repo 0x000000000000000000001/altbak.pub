@@ -1,0 +1,127 @@
+{
+  "method": "Three alternating process pairs; 15 iterations after one warmup per process; O1/mimalloc; native std::rc::Rc; build, depth and destruction included. Isolated kernel, not full runner.",
+  "runs_ns": {
+    "before": [
+      [
+        25172000,
+        21826166,
+        20036041,
+        19300916,
+        19821500,
+        20084833,
+        19925167,
+        18971959,
+        19204334,
+        19134875,
+        19190000,
+        19334917,
+        19608333,
+        19904208,
+        19632084
+      ],
+      [
+        20096208,
+        20116917,
+        20169292,
+        20190209,
+        20047417,
+        20882292,
+        18968000,
+        19677459,
+        19427500,
+        19385666,
+        19853500,
+        19737291,
+        18718417,
+        19683917,
+        19636875
+      ],
+      [
+        18690292,
+        19393208,
+        19463000,
+        20073209,
+        20657334,
+        19951041,
+        19619291,
+        19535292,
+        19823875,
+        19917708,
+        19728084,
+        20202250,
+        19319291,
+        20096958,
+        19923208
+      ]
+    ],
+    "prototype": [
+      [
+        25839000,
+        23162375,
+        21444167,
+        21058042,
+        21082875,
+        21029625,
+        20756709,
+        20001916,
+        20806459,
+        21087708,
+        22162625,
+        21885750,
+        20961958,
+        20103333,
+        20425500
+      ],
+      [
+        20529500,
+        21311459,
+        20522958,
+        20738417,
+        21271083,
+        20867208,
+        19857500,
+        20551959,
+        21200625,
+        20244542,
+        20359208,
+        20306458,
+        19871958,
+        19905208,
+        21171583
+      ],
+      [
+        20562541,
+        20090042,
+        21111541,
+        20653250,
+        20226792,
+        20113209,
+        20547583,
+        21536208,
+        20314875,
+        21526875,
+        20174917,
+        20311625,
+        20460083,
+        20513958,
+        20116750
+      ]
+    ]
+  },
+  "median_ms": {
+    "before": 19.737291,
+    "prototype": 20.562541
+  },
+  "source_sha256": "9ada7a41741f0b4bd28c70f29cee61cb660b222d9395337b503182e8bae38063",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "scheduling": "Final series run after the counter process, TAST fixture and assembly compilations had completed; no concurrent process launched by this task during timings.",
+  "exploratory_overlapped_series": {
+    "median_ms": {
+      "before": 19.777625,
+      "prototype": 20.543375
+    },
+    "included_in_final_series": false,
+    "reason": "Counter instrumentation/compilation was launched concurrently; the final series was rerun in isolation."
+  },
+  "slowdown_percent": 4.181171570100473
+}

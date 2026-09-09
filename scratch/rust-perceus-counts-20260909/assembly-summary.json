@@ -1,0 +1,69 @@
+{
+  "method": "Static optimized LLVM IR instruction-site counts; not dynamic execution counts or a speed estimate.",
+  "variants": {
+    "before": {
+      "Test_RBTree_ins": {
+        "ir_lines": 1116,
+        "static_loads": 83,
+        "static_stores": 68,
+        "static_branches": 98
+      },
+      "Test_RBTree_depth": {
+        "ir_lines": 107,
+        "static_loads": 8,
+        "static_stores": 5,
+        "static_branches": 8
+      },
+      "Test_RBTree_balance": {
+        "ir_lines": 21950,
+        "static_loads": 1555,
+        "static_stores": 1920,
+        "static_branches": 1722
+      },
+      "Test_RBTree___purust_rebuild_T": {
+        "ir_lines": 195,
+        "static_loads": 11,
+        "static_stores": 23,
+        "static_branches": 14
+      },
+      "Test_RBTree_balance__purust_reuse": {
+        "ir_lines": 21089,
+        "static_loads": 1556,
+        "static_stores": 1502,
+        "static_branches": 1763
+      }
+    },
+    "prototype": {
+      "Test_RBTree_ins": {
+        "ir_lines": 1116,
+        "static_loads": 83,
+        "static_stores": 68,
+        "static_branches": 98
+      },
+      "Test_RBTree_depth": {
+        "ir_lines": 107,
+        "static_loads": 8,
+        "static_stores": 5,
+        "static_branches": 8
+      },
+      "Test_RBTree_balance": {
+        "ir_lines": 17481,
+        "static_loads": 1222,
+        "static_stores": 1534,
+        "static_branches": 1391
+      },
+      "Test_RBTree___purust_rebuild_T": {
+        "ir_lines": 195,
+        "static_loads": 11,
+        "static_stores": 23,
+        "static_branches": 14
+      },
+      "Test_RBTree_balance__purust_reuse": {
+        "ir_lines": 16618,
+        "static_loads": 1223,
+        "static_stores": 1116,
+        "static_branches": 1432
+      }
+    }
+  }
+}

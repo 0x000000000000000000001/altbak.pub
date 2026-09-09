@@ -1,0 +1,125 @@
+{
+  "method": "Static optimized LLVM sites, not executed instructions or a performance prediction.",
+  "variants": {
+    "before": {
+      "Test_RBTree_ins": {
+        "ir_lines": 1116,
+        "static_loads": 83,
+        "static_stores": 68,
+        "static_branches": 98
+      },
+      "Test_RBTree_depth": {
+        "ir_lines": 107,
+        "static_loads": 8,
+        "static_stores": 5,
+        "static_branches": 8
+      },
+      "Test_RBTree_balance": {
+        "ir_lines": 21950,
+        "static_loads": 1555,
+        "static_stores": 1920,
+        "static_branches": 1722
+      },
+      "Test_RBTree___purust_rebuild_T": {
+        "ir_lines": 195,
+        "static_loads": 11,
+        "static_stores": 23,
+        "static_branches": 14
+      },
+      "Test_RBTree_balance__purust_reuse": {
+        "ir_lines": 21089,
+        "static_loads": 1556,
+        "static_stores": 1502,
+        "static_branches": 1763
+      },
+      "4main": {
+        "ir_lines": 691,
+        "static_loads": 43,
+        "static_stores": 54,
+        "static_branches": 57
+      }
+    },
+    "local": {
+      "Test_RBTree_ins": {
+        "ir_lines": 1105,
+        "static_loads": 82,
+        "static_stores": 68,
+        "static_branches": 96
+      },
+      "Test_RBTree_depth": {
+        "ir_lines": 107,
+        "static_loads": 8,
+        "static_stores": 5,
+        "static_branches": 8
+      },
+      "Test_RBTree_balance": {
+        "ir_lines": 21950,
+        "static_loads": 1555,
+        "static_stores": 1920,
+        "static_branches": 1722
+      },
+      "Test_RBTree___purust_rebuild_T": {
+        "ir_lines": 195,
+        "static_loads": 11,
+        "static_stores": 23,
+        "static_branches": 14
+      },
+      "Test_RBTree_balance__purust_reuse": {
+        "ir_lines": 21089,
+        "static_loads": 1556,
+        "static_stores": 1502,
+        "static_branches": 1763
+      },
+      "4main": {
+        "ir_lines": 678,
+        "static_loads": 41,
+        "static_stores": 54,
+        "static_branches": 55
+      }
+    },
+    "worker": {
+      "Test_RBTree_ins": {
+        "ir_lines": 1204,
+        "static_loads": 86,
+        "static_stores": 74,
+        "static_branches": 107
+      },
+      "Test_RBTree_depth": {
+        "ir_lines": 107,
+        "static_loads": 8,
+        "static_stores": 5,
+        "static_branches": 8
+      },
+      "Test_RBTree_balance": {
+        "ir_lines": 21950,
+        "static_loads": 1555,
+        "static_stores": 1920,
+        "static_branches": 1722
+      },
+      "Test_RBTree___purust_fill_T": {
+        "ir_lines": 89,
+        "static_loads": 7,
+        "static_stores": 13,
+        "static_branches": 5
+      },
+      "Test_RBTree___purust_rebuild_T": {
+        "ir_lines": 194,
+        "static_loads": 11,
+        "static_stores": 23,
+        "static_branches": 14
+      },
+      "Test_RBTree_balance__purust_reuse": {
+        "ir_lines": 20819,
+        "static_loads": 1555,
+        "static_stores": 1500,
+        "static_branches": 1761
+      },
+      "4main": {
+        "ir_lines": 691,
+        "static_loads": 43,
+        "static_stores": 54,
+        "static_branches": 57
+      }
+    }
+  }
+}

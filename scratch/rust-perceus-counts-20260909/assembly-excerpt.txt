@@ -1,0 +1,80 @@
+before
+	ldr	x8, [x19, #32]
+Ltmp10197:
+	.loc	3 555 18
+	ldr	x9, [x8]
+Ltmp10198:
+	.loc	8 2511 13
+	adds	x10, x9, #1
+Ltmp10199:
+	.loc	6 930 49
+	str	x10, [x8]
+Ltmp10200:
+	.loc	9 457 8
+	b.hs	LBB8_1654
+Ltmp10201:
+	.loc	2 1742 64
+	ldrb	w10, [x8, #16]
+Ltmp10202:
+	.loc	6 930 49
+	str	x9, [x8]
+Ltmp10203:
+	.loc	2 1742 55
+	cmp	w10, #1
+	b.ne	LBB8_77
+Ltmp10204:
+	.loc	2 1743 144
+	ldrb	w8, [x25]
+	.loc	2 1743 113 is_stmt 0
+	tbz	w8, #0, LBB8_1264
+Ltmp10205:
+	.loc	12 444 20 is_stmt 1
+	ldr	x22, [x19, #32]
+Ltmp10206:
+	.loc	3 555 18
+	ldr	x8, [x22]
+Ltmp10207:
+	.loc	8 2511 13
+	adds	x9, x8, #1
+Ltmp10208:
+
+prototype
+	.cfi_restore w22
+	.cfi_restore w23
+	.cfi_restore w24
+	.cfi_restore w25
+	.cfi_restore w26
+	.cfi_restore w27
+	.cfi_restore w28
+	ret
+LBB8_16:
+	.cfi_restore_state
+Ltmp7743:
+	.loc	12 444 20 is_stmt 1
+	ldr	x8, [x21, #32]
+Ltmp7744:
+	.loc	2 1742 64
+	ldrb	w10, [x8, #16]
+	.loc	2 1742 55 is_stmt 0
+	tbz	w10, #0, LBB8_34
+Ltmp7745:
+	.loc	2 45 10 is_stmt 1
+	ldrb	w8, [x8, #17]
+Ltmp7746:
+	.loc	2 1743 56
+	tbz	w8, #0, LBB8_44
+Ltmp7747:
+	.loc	12 444 20
+	ldr	x8, [x21, #40]
+Ltmp7748:
+	.loc	2 1808 67
+	ldrb	w10, [x8, #16]
+	.loc	2 1808 58 is_stmt 0
+	tbz	w10, #0, LBB8_62
+Ltmp7749:
+	.loc	2 45 10 is_stmt 1
+	ldrb	w8, [x8, #17]
+Ltmp7750:
+	.loc	2 1809 56
+	tbz	w8, #0, LBB8_99
+
