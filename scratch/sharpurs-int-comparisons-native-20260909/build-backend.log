@@ -1,0 +1,260 @@
+
+> sharpurs@0.1.0 build
+> spago build && spago bundle --module Main --platform node --outfile bin/sharpurs.js --bundle-type app
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: sharpurs
+
+Downloading dependencies...
+Building...
+[ 1 of 25] Compiling Spago.Generated.BuildInfo
+[ 2 of 25] Compiling Sharpurs.IntComparison
+[ 3 of 25] Compiling PureScript.Backend.Optimizer.CoreFn.TypeTable
+[ 4 of 25] Compiling PureScript.Backend.Optimizer.Semantics
+[ 5 of 25] Compiling PureScript.Backend.Optimizer.CoreFn.Json
+[ 6 of 25] Compiling Sharpurs.IntKernel
+[ 7 of 25] Compiling PureScript.Backend.Optimizer.Codegen.Tco
+[ 8 of 25] Compiling PureScript.Backend.Optimizer.Directives
+[10 of 25] Compiling PureScript.Backend.Optimizer.Cache
+[11 of 25] Compiling PureScript.Backend.Optimizer.Reachability
+[ 9 of 25] Compiling PureScript.Backend.Optimizer.Semantics.Foreign
+[12 of 25] Compiling PureScript.Backend.Optimizer.App
+[13 of 25] Compiling Sharpurs.IntKernel.CodeGen
+[14 of 25] Compiling Sharpurs.Optimized
+[16 of 25] Compiling PureScript.Backend.Optimizer.FreeVars
+[15 of 25] Compiling PureScript.Backend.Optimizer.Substitute
+[17 of 25] Compiling PureScript.Backend.Optimizer.Convert
+[18 of 25] Compiling PureScript.Backend.Optimizer.Monomorphize
+[19 of 25] Compiling Sharpurs.AdtKernel
+[20 of 25] Compiling PureScript.Backend.Optimizer.Builder
+[21 of 25] Compiling PureScript.Backend.Optimizer.Tracer.Printer
+[22 of 25] Compiling Sharpurs.CodeGen
+[23 of 25] Compiling Main
+[25 of 25] Compiling Sharpurs.AdtInterop
+[24 of 25] Compiling Test.Main
+[WARNING 1/25 UnusedDctorImport] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/CoreFn/Json.purs:38:1
+
+  38  import PureScript.Backend.Optimizer.CoreFn (Ann(..), Bind(..), Binder(..), Binding(..), CaseAlternative(..), CaseGuard(..), ClassDecl, Comment(..), ConstructorType(..), DataConstructor, DataDecl, Expr(..), ExprType(..), Guard(..), Ident(..), Import(..), Literal(..), Meta(..), Module(..), ModuleName(..), Prop(..), ProperName(..), Qualified(..), ReExport(..), SourcePos, SourceSpan, emptySpan)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of type ExprType from module PureScript.Backend.Optimizer.CoreFn includes data constructors but only the type is used
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.CoreFn (Ann(..), Bind(..), Binder(..), Binding(..), CaseAlternative(..), CaseGuard(..), ClassDecl, Comment(..), ConstructorType(..), DataConstructor, DataDecl, Expr(..), ExprType, Guard(..), Ident(..), Import(..), Literal(..), Meta(..), Module(..), ModuleName(..), Prop(..), ProperName(..), Qualified(..), ReExport(..), SourcePos, SourceSpan, emptySpan)
+
+[WARNING 2/25 UnusedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/CoreFn/TypeTable.purs:111:18
+
+  111              Left err -> pure $ Just (Left (TypeMismatch "ExprType"))
+                        ^^^
+
+  Name err was introduced but not used.
+  in value declaration decodeTypeTableST
+
+[WARNING 3/25 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:243:31
+
+  243                   s1 = foldl (\acc (Tuple paramType arg) ->
+                                     ^^^
+
+  Name acc was shadowed.
+  in value declaration collectExpr
+
+[WARNING 4/25 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:317:30
+
+  317                  s1 = foldl (\acc (Tuple paramType arg) ->
+                                    ^^^
+
+  Name acc was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 5/25 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:317:51
+
+  317                  s1 = foldl (\acc (Tuple paramType arg) ->
+                                                         ^^^
+
+  Name arg was shadowed.
+  in value declaration collectLocalExpr
+
+[WARNING 6/25 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:550:11
+
+  550    goGuard subst (Unconditional e) = Unconditional (substituteVars subst e)
+                 ^^^^^
+
+  Name subst was shadowed.
+  in value declaration substituteVars
+
+[WARNING 7/25 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:551:11
+
+  551    goGuard subst (Guarded guards) = Guarded (map (\(Guard e1 e2) -> Guard (substituteVars subst e1) (substituteVars subst e2)) guards)
+                 ^^^^^
+
+  Name subst was shadowed.
+  in value declaration substituteVars
+
+[WARNING 8/25 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:747:3
+
+  747    expr | isAppOrTypeApp expr ->
+         ^^^^
+
+  Name expr was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 9/25 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:826:25
+
+  826            injectType ty expr =
+                               ^^^^
+
+  Name expr was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 10/25 ShadowedName] ../../purescript-backend-optimizer-sharpurs/src/PureScript/Backend/Optimizer/Monomorphize.purs:905:14
+
+  905            go expr = case expr of
+                    ^^^^
+
+  Name expr was shadowed.
+  in value declaration monomorphizeExpr
+
+[WARNING 11/25 UnusedImport] src/Main.purs:9:1
+
+  9  import Effect.Class.Console as Console
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Effect.Class.Console as Console is redundant
+
+[WARNING 12/25 UnusedImport] src/Main.purs:21:1
+
+  21  import Data.List (List(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.List is redundant
+
+[WARNING 13/25 UnusedExplicitImport] src/Main.purs:22:1
+
+  22  import PureScript.Backend.Optimizer.App (coreFnModulesFromOutput, parseCLIArgs, checkCache, writeCache, loadDirectives)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.App contains the following unused references:
+    checkCache
+    writeCache
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.App (coreFnModulesFromOutput, loadDirectives, parseCLIArgs)
+
+[WARNING 14/25 UnusedImport] src/Main.purs:33:1
+
+  33  import Data.String (joinWith)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.String is redundant
+
+[WARNING 15/25 UnusedName] src/Main.purs:98:7
+
+  98    let cacheVersion = "1.0.0"
+            ^^^^^^^^^^^^^^^^^^^^^^
+
+  Name cacheVersion was introduced but not used.
+  in value declaration main
+
+[WARNING 16/25 UnusedName] src/Main.purs:113:13
+
+  113          let modNameStr = unwrap coreFnMod.name
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name modNameStr was introduced but not used.
+  in value declaration main
+
+[WARNING 17/25 ShadowedName] src/Main.purs:138:17
+
+  138              let wrappers = appendFfiWrappers modNameStr requiredForeigns content
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name wrappers was shadowed.
+  in value declaration main
+
+[WARNING 18/25 ShadowedName] src/Sharpurs/AdtKernel.purs:169:9
+
+  169      let publicName = sanitizeName (String.replaceAll (Pattern ".") (Replacement "_") layout.moduleName <> "_" <> unwrap name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name publicName was shadowed.
+  in value declaration fromModule
+
+[WARNING 19/25 UnusedImport] src/Sharpurs/CodeGen.purs:9:1
+
+  9  import Data.String.CodeUnits as CU
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.String.CodeUnits as CU is redundant
+
+[WARNING 20/25 DuplicateImport] src/Sharpurs/CodeGen.purs:18:1
+
+  18  import Data.Maybe (Maybe(..), fromMaybe)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.Maybe (Maybe(..), fromMaybe)
+
+[WARNING 21/25 ShadowedName] src/Sharpurs/CodeGen.purs:70:5
+
+  70      translateDataDecl decl = FsDeclData (modPrefix <> "_" <> sanitizeName decl.name) (map translateDataCtor decl.constructors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name translateDataDecl was shadowed.
+  in value declaration translateModuleUsing
+
+[WARNING 22/25 ShadowedName] src/Sharpurs/CodeGen.purs:142:16
+
+  142      expandBind adtCtors currentMod (Binding _ (Ident name) val) =
+                      ^^^^^^^^
+
+  Name adtCtors was shadowed.
+  in value declaration translateBindUsing
+
+[WARNING 23/25 ShadowedName] src/Sharpurs/CodeGen.purs:142:25
+
+  142      expandBind adtCtors currentMod (Binding _ (Ident name) val) =
+                               ^^^^^^^^^^
+
+  Name currentMod was shadowed.
+  in value declaration translateBindUsing
+
+[WARNING 24/25 ShadowedName] src/Sharpurs/CodeGen.purs:303:17
+
+  303    ExprTypeApp _ expr _ -> translateExpr adtCtors localEnv currentMod expr
+                       ^^^^
+
+  Name expr was shadowed.
+  in value declaration translateExprFallback
+
+[WARNING 25/25 ShadowedName] src/Sharpurs/CodeGen.purs:336:60
+
+  336              recStrs = Array.concat (Array.mapWithIndex (\i b -> makeLocalRec b i) bindings)
+                                                                  ^
+
+  Name b was shadowed.
+  in value declaration translateExprFallback
+
+           Src   Lib   All
+Warnings    15    10    25
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: sharpurs
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Bundling...
+
+  bin/sharpurs.js  1.0mb ⚠️
+
+⚡ Done in 34ms
+
+✓ Bundle succeeded.
+

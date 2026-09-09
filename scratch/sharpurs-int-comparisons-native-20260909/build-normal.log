@@ -1,0 +1,12 @@
+  Determining projects to restore...
+CSSM_ModuleLoad(): One or more parameters passed to a function were not valid.
+  Restored /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/sharp/output/Main/FFI.CSharp.csproj (in 33 ms).
+  Restored /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/sharp/output/Main/Program.fsproj (in 57 ms).
+  FFI.CSharp -> /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/sharp/output/Main/bin/csharp/net8.0/FFI.CSharp.dll
+  Program -> /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/sharp/output/Main/bin/Release/net8.0/Program.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:32.13

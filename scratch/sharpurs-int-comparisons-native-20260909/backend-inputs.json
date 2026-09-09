@@ -1,0 +1,9 @@
+{
+  "src/Sharpurs/IntComparison.purs": "1a486f767212af2b012c874baaae62c3c534290474d0bc24ce5b1bc232c4e5e3",
+  "src/Sharpurs/CodeGen.purs": "c528c4d8c787750e41f5e148deba4ff07a4a1e7c6985614fd5e11d8ecf4508a1",
+  "src/Main.purs": "d91fbc0c30a02164869f6cf6cecb3f0829fa4c7a40efdcba1d1e59a03b459ce0",
+  "tests/int-comparison.mjs": "d43a59dc2c9759129b23d9d48a1066d3b3e4ae047807abb9e7111e2d89b7ee2d",
+  "tests/fixtures/IntCompare.purs": "ae763298ae9222832161ef1099e203797c2a865d990eda59ee950355bb1bb3a9",
+  "package.json": "9ae7e913f6a88e922768cb52994f50d030ad9177629b2246c75381f8d03ce835",
+  "bin/sharpurs.js": "84d892cf051c19b9e4fa0c13fbf698324776653fb8d68710c4013d1199d2c8a1"
+}

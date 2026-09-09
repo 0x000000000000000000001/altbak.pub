@@ -1,0 +1,12 @@
+  Determining projects to restore...
+CSSM_ModuleLoad(): One or more parameters passed to a function were not valid.
+  Restored /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-int-comparisons-native-20260909/after/FFI.CSharp.csproj (in 26 ms).
+  Restored /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-int-comparisons-native-20260909/after/Program.fsproj (in 66 ms).
+  FFI.CSharp -> /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-int-comparisons-native-20260909/after/bin/csharp/net8.0/FFI.CSharp.dll
+  Program -> /Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-int-comparisons-native-20260909/after/bin/Release/net8.0/Program.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:32.07

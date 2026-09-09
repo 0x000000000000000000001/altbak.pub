@@ -1,0 +1,12 @@
+[
+  {
+    "operation": "lessThan",
+    "before": "((unbox ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ord_lessThan))) (box ((box Data_Ord_ordInt)))))) (box ((box x)))))) (box ((box y)))))))",
+    "after": "(box ((unbox<int> x) < y))"
+  },
+  {
+    "operation": "greaterThan",
+    "before": "((unbox ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ord_greaterThan))) (box ((box Data_Ord_ordInt)))))) (box ((box x)))))) (box ((box y)))))))",
+    "after": "(box ((unbox<int> x) > y))"
+  }
+]

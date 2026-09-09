@@ -1,0 +1,15 @@
+{
+  "commits": {
+    "altbak.pub-sharpurs": "916fdeba901aa0d40cdddbc22ba1eff2f0ebd900",
+    "sharpurs/sharpurs": "6b7ae4d5211786726b0697607a22cb35021f1e1a",
+    "purescript-backend-optimizer-sharpurs": "6e256c6a962c94d09ad2599c165231633bbfaa98"
+  },
+  "backendSha256": {
+    "src/Main.purs": "d91fbc0c30a02164869f6cf6cecb3f0829fa4c7a40efdcba1d1e59a03b459ce0",
+    "src/Sharpurs/CodeGen.purs": "6c9e172d020e3176ee2e27d1265bc61cad320cc2f01ed5c4bf334c43f4769089",
+    "src/Sharpurs/AdtKernel.purs": "bd0de7cabe5000c78d459777525a0ee1ba1c04e8ab39df82365c0d1e64d90e8d",
+    "bin/sharpurs.js": "1533346a4b57a46ab65f115b03ca1a09a686336211b645f08005498708428539"
+  },
+  "hypothesis": "Native Int comparisons in ins remove the generic Ord dictionary/apply path; all other generated expressions unchanged.",
+  "generationPolicy": "Scratch comparison only; no compiler or normal generated source edits."
+}

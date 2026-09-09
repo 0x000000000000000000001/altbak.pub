@@ -1,0 +1,84 @@
+{
+  "startedUtc": "2026-09-09T07:14:04.717019+00:00",
+  "probe": false,
+  "order": [
+    "before",
+    "after",
+    "after",
+    "before",
+    "before",
+    "after",
+    "after",
+    "before",
+    "before",
+    "after"
+  ],
+  "sdk": "8.0.423",
+  "runtimes": [
+    "Microsoft.AspNetCore.App 8.0.29 [/Users/0x1/.dotnet/shared/Microsoft.AspNetCore.App]",
+    "Microsoft.NETCore.App 8.0.29 [/Users/0x1/.dotnet/shared/Microsoft.NETCore.App]"
+  ],
+  "runtimeConfigs": {
+    "before": {
+      "runtimeOptions": {
+        "tfm": "net8.0",
+        "framework": {
+          "name": "Microsoft.NETCore.App",
+          "version": "8.0.0"
+        },
+        "configProperties": {
+          "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
+          "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
+        }
+      }
+    },
+    "after": {
+      "runtimeOptions": {
+        "tfm": "net8.0",
+        "framework": {
+          "name": "Microsoft.NETCore.App",
+          "version": "8.0.0"
+        },
+        "configProperties": {
+          "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
+          "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
+        }
+      }
+    }
+  },
+  "assemblies": {
+    "before": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-int-comparisons-native-20260909/before/bin/Release/net8.0/Program.dll",
+      "sha256": "04d639880ad236aedf521977fd20846be6ee54fc185352e5455a878c64a270ed"
+    },
+    "after": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/scratch/sharpurs-int-comparisons-native-20260909/after/bin/Release/net8.0/Program.dll",
+      "sha256": "47170eee86493c5925c36631efd00ebfeae9a3fec02b0a2ba589a7dff56ba96e"
+    }
+  },
+  "inputsSha256": "e938d227abf6b7995cf800a0743d353b4dab7eb5747f2b25ccf6bddf2d04cd13",
+  "buildManifestsSha256": {
+    "before": "007c0b8022a8b49b2733f3bd43de539c352ced61a7ec799df9f8ea9f35e0997a",
+    "after": "3456dba37aa676a1fb81d664bf6cc922be1367f844c40bc32b9f20ebd8ff8b44"
+  },
+  "historicalOutputSha256": "a3eabbe40e9ddb766059bc4e60e8cbde73ca2dae4a93acd2a2cac768fb60b542",
+  "officialReadme": {
+    "compiled_total_ms": 294.8,
+    "compiled_rbtree_us": 213760.0,
+    "native_optimized_rbtree_us": 65156.0,
+    "source": "README.baseline.md",
+    "sha256": "0752ada6257da2bd5a818f028c31ff889c7142bb872bc160dc9a1ce63d73b4d9",
+    "note": "Historical rounded figures, not a simultaneous control. Native optimized RBTree uses a mutable SortedSet and returns its size; compiled RBTree returns depth."
+  },
+  "sourceGeneratedPath": "/Users/0x1/Documents/htdocs/altbak.pub-sharpurs/run/bak/sharp/output/Main",
+  "environmentOverrides": {
+    "DOTNET_TieredCompilation": null,
+    "DOTNET_TieredPGO": null,
+    "DOTNET_gcServer": null,
+    "COMPlus_TieredCompilation": null,
+    "COMPlus_TieredPGO": null,
+    "COMPlus_gcServer": null
+  },
+  "finishedUtc": "2026-09-09T07:14:51.061494+00:00",
+  "sourceManifestsUnchanged": true
+}
