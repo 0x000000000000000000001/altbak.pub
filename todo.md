@@ -48,7 +48,7 @@ The headers link to each backend's evidence and limitations. **JS** refers to th
 | 21 | Records: unboxed numeric fields in that layout | 🔴 | 🔴 | ⚪ | 🟡 | 🟡 | 🔴 | ⚪ | ⚪ | ⚪ | ⚪ | 🔴 |
 | 22 | Record-update coalescing / read-after-write forwarding | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🔴 | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🟡 |
 | 23 | Arrays with primitive storage selected by the backend | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 |
-| 24 | Saturated ADT construction without closure chains | 🟡 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🔴 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 |
+| 24 | Saturated ADT construction without closure chains | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🔴 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 |
 | 25 | Erasure of `newtype` wrappers | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 |
 | 26 | Nullable / niche representations for ordinary payload ADTs | 🔴 | 🔴 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
 | 27 | Unboxed value results for selected payload ADTs | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
