@@ -1,0 +1,87 @@
+--- a/src/Purust/CodeGen.purs
++++ b/src/Purust/CodeGen.purs
+@@ -12,7 +12,7 @@
+ import Effect.Unsafe (unsafePerformEffect)
+ import PureScript.Backend.Optimizer.Semantics (NeutralExpr(..), DataTypeMeta, CtorMeta)
+ import Purust.LocalNames (renameLocals)
+-import Purust.ShareNullaries (shareNullaries)
++import Purust.ShareNullaries (shareNullaries, reuseNullaries)
+ import Purust.ReturnCells (rewriteReturns, reuseNestedConstructor)
+ import Purust.OwnedFields (OwnedFields, fieldSources, projectionChain, rewriteFields)
+ import Purust.DataLayout (ValueEnums, isValueEnum)
+@@ -1161,6 +1161,25 @@
+     , String.indexOf (Pattern "std::rc::Rc<") native == Just 0 = Just (native <> "::" <> ctor)
+   identify _ = Nothing
+ 
++-- Only a positive tag test on a borrowed native local establishes this fact.
++-- Matching a nullary expression in the body also proves the payload is empty.
++reuseTestedNullaries :: ValueEnums -> String -> Map String ExprType -> Map String (Array (Tuple String ExprType)) -> Map String ExprType -> NeutralExpr -> NeutralExpr -> NeutralExpr
++reuseTestedNullaries valueEnums currentMod aritiesMap globalClassFields bound cond body =
++  case tested cond of
++    Just { key, value } -> reuseNullaries
++      (nullaryValue valueEnums currentMod aritiesMap globalClassFields bound)
++      representation key value body
++    Nothing -> body
++  where
++  representation value = codegenExprTypeWithValueEnums valueEnums currentMod false
++    (inferTypeExpr currentMod aritiesMap globalClassFields bound value)
++  tested wrapped@(NeutralExpr (Typed _ inner))
++    | representation wrapped == representation inner = tested inner
++  tested (NeutralExpr (Syn.TypeApp inner _)) = tested inner
++  tested (NeutralExpr (PrimOp (Op1 (OpIsTag (Qualified _ (Ident ctor))) value)))
++    | isBorrowableLocal representation value = Just { key: representation value <> "::" <> ctor, value }
++  tested _ = Nothing
++
+ codegenExpr_ :: ValueEnums -> String -> Set.Set String -> ReuseContext -> Maybe { name :: String, params :: Array String } -> Map.Map String ExprType -> Map.Map String (Array (Tuple String ExprType)) -> Map.Map String ExprType -> Set.Set String -> Boolean -> NeutralExpr -> String
+ codegenExpr_ valueEnums currentMod allZeroArity reuseContext mbLoop aritiesMap globalClassFields bound alive inEffectBlock expr@(NeutralExpr syn) =
+   let
+@@ -1382,7 +1401,9 @@
+       "}"
+   Branch branches def ->
+     let
+-      branchesArr = NonEmptyArray.toArray branches
++      branchesArr = map (\(Pair cond body) -> Pair cond
++        (reuseTestedNullaries valueEnums currentMod aritiesMap globalClassFields bound cond body))
++        (NonEmptyArray.toArray branches)
+       branchTy = inferTypeExpr currentMod aritiesMap globalClassFields bound expr
+       genBranchBody body = boxUnbox valueEnums currentMod branchTy
+         (inferTypeExpr currentMod aritiesMap globalClassFields bound body)
+--- a/src/Purust/ShareNullaries.purs
++++ b/src/Purust/ShareNullaries.purs
+@@ -1,4 +1,4 @@
+-module Purust.ShareNullaries (shareNullaries) where
++module Purust.ShareNullaries (shareNullaries, reuseNullaries) where
+ 
+ import Prelude
+ 
+@@ -10,6 +10,30 @@
+ import PureScript.Backend.Optimizer.CoreFn (ExprType, Ident(..))
+ import PureScript.Backend.Optimizer.Semantics (NeutralExpr(..))
+ import PureScript.Backend.Optimizer.Syntax (BackendSyntax(..), Level(..))
++import PureScript.Backend.Optimizer.Syntax as Syn
++
++-- In the successful arm of a tag test, a native local already is this nullary
++-- value. Reuse it in strict constructor trees; normal liveness retains any
++-- aliases needed afterwards. Stop at calls and scopes rather than introducing
++-- captures or carrying a branch fact into deferred computations.
++reuseNullaries
++  :: (NeutralExpr -> Maybe { key :: String, ty :: ExprType })
++  -> (NeutralExpr -> String)
++  -> String
++  -> NeutralExpr
++  -> NeutralExpr
++  -> NeutralExpr
++reuseNullaries identify representation key existing = go
++  where
++  go expr@(NeutralExpr syn) = case identify expr of
++    Just info | info.key == key -> NeutralExpr (Typed info.ty existing)
++    _ -> case syn of
++      Typed ty inner | representation expr == representation inner ->
++        NeutralExpr (Typed ty (go inner))
++      Syn.TypeApp inner ty -> NeutralExpr (Syn.TypeApp (go inner) ty)
++      CtorSaturated qualified dt typeName ctor fields ->
++        NeutralExpr (CtorSaturated qualified dt typeName ctor (map (map go) fields))
++      _ -> expr
+ 
+ -- Share repeated native nullary values only among direct constructor fields.
+ -- The binding belongs to this construction: there is no global retained root.
