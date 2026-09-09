@@ -1,0 +1,11 @@
+--- before/Data.String.NonEmpty.Internal.fs
++++ after/Data.String.NonEmpty.Internal.fs
+@@ -54,7 +54,7 @@
+ 
+ let Data_String_NonEmpty_Internal_join1With  = (box (fun (dictFoldable1: obj) -> (let Foldable0 = (sharpurs_apply (box ((Map.find "Foldable0" (unbox<Map<string, obj>> ((box dictFoldable1)))))) (box ((box Prim_undefined)))) in (box (fun (splice: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Control_Semigroupoid_compose))) (box ((box Control_Semigroupoid_semigroupoidFn)))))) (box ((box Data_String_NonEmpty_Internal_NonEmptyString)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_NonEmpty_Internal_joinWith))) (box ((box Foldable0)))))) (box ((box splice))))))))))))
+ 
+-let Data_String_NonEmpty_Internal_fromString  = (box (fun (v: obj) -> (match ((unbox ((box v)))) with | LitString "" () -> ((box Data_Maybe_Nothingusd_Ctor)) | s -> ((sharpurs_apply (box ((box ((fun (usd__arg1: obj) -> (box (Data_Maybe_Justusd_Ctor(usd__arg1)))))))) (box ((sharpurs_apply (box ((box Data_String_NonEmpty_Internal_NonEmptyString))) (box ((box s)))))))))))
++let Data_String_NonEmpty_Internal_fromString  = (box (fun (v: obj) -> (match ((unbox ((box v)))) with | LitString "" () -> ((box Data_Maybe_Nothingusd_Ctor)) | s -> ((box (Data_Maybe_Justusd_Ctor((sharpurs_apply (box ((box Data_String_NonEmpty_Internal_NonEmptyString))) (box ((box s)))))))))))
+ 
+ let Data_String_NonEmpty_Internal_stripPrefix  = (box (fun (pat: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Control_Bind_composeKleisliFlipped))) (box ((box Data_Maybe_bindMaybe)))))) (box ((box Data_String_NonEmpty_Internal_fromString)))))) (box ((sharpurs_apply (box ((box Data_String_NonEmpty_Internal_liftS))) (box ((sharpurs_apply (box ((box Data_String_CodeUnits_stripPrefix))) (box ((box pat))))))))))))
+ 

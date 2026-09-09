@@ -1,0 +1,568 @@
+{
+  "inputFiles": 355,
+  "changedFileCount": 80,
+  "unchangedFileCount": 275,
+  "files": [
+    {
+      "file": "Control.Biapply.fs",
+      "sharpursApplyBefore": 52,
+      "sharpursApplyAfter": 50,
+      "literalConstructorBefore": 3,
+      "literalConstructorAfter": 3
+    },
+    {
+      "file": "Control.Comonad.Env.Class.fs",
+      "sharpursApplyBefore": 54,
+      "sharpursApplyAfter": 48,
+      "literalConstructorBefore": 6,
+      "literalConstructorAfter": 6
+    },
+    {
+      "file": "Control.Comonad.Env.Trans.fs",
+      "sharpursApplyBefore": 131,
+      "sharpursApplyAfter": 121,
+      "literalConstructorBefore": 25,
+      "literalConstructorAfter": 25
+    },
+    {
+      "file": "Control.Comonad.Store.Trans.fs",
+      "sharpursApplyBefore": 42,
+      "sharpursApplyAfter": 36,
+      "literalConstructorBefore": 7,
+      "literalConstructorAfter": 7
+    },
+    {
+      "file": "Control.Comonad.Store.fs",
+      "sharpursApplyBefore": 11,
+      "sharpursApplyAfter": 9,
+      "literalConstructorBefore": 1,
+      "literalConstructorAfter": 1
+    },
+    {
+      "file": "Control.Comonad.Traced.Class.fs",
+      "sharpursApplyBefore": 59,
+      "sharpursApplyAfter": 55,
+      "literalConstructorBefore": 2,
+      "literalConstructorAfter": 2
+    },
+    {
+      "file": "Control.Monad.Error.Class.fs",
+      "sharpursApplyBefore": 73,
+      "sharpursApplyAfter": 71,
+      "literalConstructorBefore": 9,
+      "literalConstructorAfter": 9
+    },
+    {
+      "file": "Control.Monad.Except.Trans.fs",
+      "sharpursApplyBefore": 262,
+      "sharpursApplyAfter": 242,
+      "literalConstructorBefore": 36,
+      "literalConstructorAfter": 36
+    },
+    {
+      "file": "Control.Monad.Gen.fs",
+      "sharpursApplyBefore": 163,
+      "sharpursApplyAfter": 146,
+      "literalConstructorBefore": 25,
+      "literalConstructorAfter": 25
+    },
+    {
+      "file": "Control.Monad.List.Trans.fs",
+      "sharpursApplyBefore": 542,
+      "sharpursApplyAfter": 493,
+      "literalConstructorBefore": 87,
+      "literalConstructorAfter": 87
+    },
+    {
+      "file": "Control.Monad.Maybe.Trans.fs",
+      "sharpursApplyBefore": 216,
+      "sharpursApplyAfter": 204,
+      "literalConstructorBefore": 19,
+      "literalConstructorAfter": 19
+    },
+    {
+      "file": "Control.Monad.RWS.Trans.fs",
+      "sharpursApplyBefore": 329,
+      "sharpursApplyAfter": 282,
+      "literalConstructorBefore": 34,
+      "literalConstructorAfter": 34
+    },
+    {
+      "file": "Control.Monad.Rec.Class.fs",
+      "sharpursApplyBefore": 146,
+      "sharpursApplyAfter": 127,
+      "literalConstructorBefore": 42,
+      "literalConstructorAfter": 42
+    },
+    {
+      "file": "Control.Monad.State.Class.fs",
+      "sharpursApplyBefore": 23,
+      "sharpursApplyAfter": 13,
+      "literalConstructorBefore": 5,
+      "literalConstructorAfter": 5
+    },
+    {
+      "file": "Control.Monad.State.Trans.fs",
+      "sharpursApplyBefore": 245,
+      "sharpursApplyAfter": 221,
+      "literalConstructorBefore": 23,
+      "literalConstructorAfter": 23
+    },
+    {
+      "file": "Control.Monad.Writer.Class.fs",
+      "sharpursApplyBefore": 29,
+      "sharpursApplyAfter": 25,
+      "literalConstructorBefore": 3,
+      "literalConstructorAfter": 3
+    },
+    {
+      "file": "Control.Monad.Writer.Trans.fs",
+      "sharpursApplyBefore": 285,
+      "sharpursApplyAfter": 259,
+      "literalConstructorBefore": 27,
+      "literalConstructorAfter": 27
+    },
+    {
+      "file": "Control.Parallel.Class.fs",
+      "sharpursApplyBefore": 225,
+      "sharpursApplyAfter": 223,
+      "literalConstructorBefore": 4,
+      "literalConstructorAfter": 4
+    },
+    {
+      "file": "Data.Array.NonEmpty.fs",
+      "sharpursApplyBefore": 396,
+      "sharpursApplyAfter": 392,
+      "literalConstructorBefore": 5,
+      "literalConstructorAfter": 5
+    },
+    {
+      "file": "Data.Array.fs",
+      "sharpursApplyBefore": 655,
+      "sharpursApplyAfter": 644,
+      "literalConstructorBefore": 28,
+      "literalConstructorAfter": 28
+    },
+    {
+      "file": "Data.Bifunctor.fs",
+      "sharpursApplyBefore": 25,
+      "sharpursApplyAfter": 21,
+      "literalConstructorBefore": 6,
+      "literalConstructorAfter": 6
+    },
+    {
+      "file": "Data.Bounded.Generic.fs",
+      "sharpursApplyBefore": 36,
+      "sharpursApplyAfter": 30,
+      "literalConstructorBefore": 4,
+      "literalConstructorAfter": 4
+    },
+    {
+      "file": "Data.Char.Gen.fs",
+      "sharpursApplyBefore": 98,
+      "sharpursApplyAfter": 96,
+      "literalConstructorBefore": 1,
+      "literalConstructorAfter": 1
+    },
+    {
+      "file": "Data.Date.Component.fs",
+      "sharpursApplyBefore": 149,
+      "sharpursApplyAfter": 128,
+      "literalConstructorBefore": 21,
+      "literalConstructorAfter": 21
+    },
+    {
+      "file": "Data.Date.fs",
+      "sharpursApplyBefore": 272,
+      "sharpursApplyAfter": 266,
+      "literalConstructorBefore": 30,
+      "literalConstructorAfter": 30
+    },
+    {
+      "file": "Data.DateTime.Instant.fs",
+      "sharpursApplyBefore": 81,
+      "sharpursApplyAfter": 80,
+      "literalConstructorBefore": 4,
+      "literalConstructorAfter": 4
+    },
+    {
+      "file": "Data.Either.Nested.fs",
+      "sharpursApplyBefore": 128,
+      "sharpursApplyAfter": 74,
+      "literalConstructorBefore": 220,
+      "literalConstructorAfter": 220
+    },
+    {
+      "file": "Data.Either.fs",
+      "sharpursApplyBefore": 130,
+      "sharpursApplyAfter": 117,
+      "literalConstructorBefore": 51,
+      "literalConstructorAfter": 51
+    },
+    {
+      "file": "Data.Enum.Gen.fs",
+      "sharpursApplyBefore": 22,
+      "sharpursApplyAfter": 20,
+      "literalConstructorBefore": 2,
+      "literalConstructorAfter": 2
+    },
+    {
+      "file": "Data.Enum.Generic.fs",
+      "sharpursApplyBefore": 216,
+      "sharpursApplyAfter": 203,
+      "literalConstructorBefore": 33,
+      "literalConstructorAfter": 33
+    },
+    {
+      "file": "Data.Enum.fs",
+      "sharpursApplyBefore": 295,
+      "sharpursApplyAfter": 265,
+      "literalConstructorBefore": 56,
+      "literalConstructorAfter": 56
+    },
+    {
+      "file": "Data.Foldable.fs",
+      "sharpursApplyBefore": 434,
+      "sharpursApplyAfter": 422,
+      "literalConstructorBefore": 39,
+      "literalConstructorAfter": 39
+    },
+    {
+      "file": "Data.FoldableWithIndex.fs",
+      "sharpursApplyBefore": 452,
+      "sharpursApplyAfter": 451,
+      "literalConstructorBefore": 29,
+      "literalConstructorAfter": 29
+    },
+    {
+      "file": "Data.Functor.Coproduct.fs",
+      "sharpursApplyBefore": 118,
+      "sharpursApplyAfter": 116,
+      "literalConstructorBefore": 20,
+      "literalConstructorAfter": 20
+    },
+    {
+      "file": "Data.Functor.Costar.fs",
+      "sharpursApplyBefore": 102,
+      "sharpursApplyAfter": 98,
+      "literalConstructorBefore": 2,
+      "literalConstructorAfter": 2
+    },
+    {
+      "file": "Data.Functor.Product.fs",
+      "sharpursApplyBefore": 137,
+      "sharpursApplyAfter": 135,
+      "literalConstructorBefore": 9,
+      "literalConstructorAfter": 9
+    },
+    {
+      "file": "Data.Functor.Product2.fs",
+      "sharpursApplyBefore": 95,
+      "sharpursApplyAfter": 85,
+      "literalConstructorBefore": 16,
+      "literalConstructorAfter": 16
+    },
+    {
+      "file": "Data.HeytingAlgebra.Generic.fs",
+      "sharpursApplyBefore": 123,
+      "sharpursApplyAfter": 111,
+      "literalConstructorBefore": 13,
+      "literalConstructorAfter": 13
+    },
+    {
+      "file": "Data.Int.fs",
+      "sharpursApplyBefore": 75,
+      "sharpursApplyAfter": 74,
+      "literalConstructorBefore": 3,
+      "literalConstructorAfter": 3
+    },
+    {
+      "file": "Data.Interval.Duration.Iso.fs",
+      "sharpursApplyBefore": 134,
+      "sharpursApplyAfter": 132,
+      "literalConstructorBefore": 24,
+      "literalConstructorAfter": 24
+    },
+    {
+      "file": "Data.Interval.fs",
+      "sharpursApplyBefore": 367,
+      "sharpursApplyAfter": 344,
+      "literalConstructorBefore": 84,
+      "literalConstructorAfter": 84
+    },
+    {
+      "file": "Data.List.Internal.fs",
+      "sharpursApplyBefore": 110,
+      "sharpursApplyAfter": 20,
+      "literalConstructorBefore": 56,
+      "literalConstructorAfter": 56
+    },
+    {
+      "file": "Data.List.Lazy.NonEmpty.fs",
+      "sharpursApplyBefore": 75,
+      "sharpursApplyAfter": 62,
+      "literalConstructorBefore": 16,
+      "literalConstructorAfter": 16
+    },
+    {
+      "file": "Data.List.Lazy.Types.fs",
+      "sharpursApplyBefore": 550,
+      "sharpursApplyAfter": 522,
+      "literalConstructorBefore": 42,
+      "literalConstructorAfter": 42
+    },
+    {
+      "file": "Data.List.Lazy.fs",
+      "sharpursApplyBefore": 597,
+      "sharpursApplyAfter": 539,
+      "literalConstructorBefore": 80,
+      "literalConstructorAfter": 80
+    },
+    {
+      "file": "Data.List.NonEmpty.fs",
+      "sharpursApplyBefore": 294,
+      "sharpursApplyAfter": 234,
+      "literalConstructorBefore": 70,
+      "literalConstructorAfter": 70
+    },
+    {
+      "file": "Data.List.Partial.fs",
+      "sharpursApplyBefore": 10,
+      "sharpursApplyAfter": 8,
+      "literalConstructorBefore": 7,
+      "literalConstructorAfter": 7
+    },
+    {
+      "file": "Data.List.Types.fs",
+      "sharpursApplyBefore": 460,
+      "sharpursApplyAfter": 390,
+      "literalConstructorBefore": 82,
+      "literalConstructorAfter": 82
+    },
+    {
+      "file": "Data.List.fs",
+      "sharpursApplyBefore": 512,
+      "sharpursApplyAfter": 403,
+      "literalConstructorBefore": 131,
+      "literalConstructorAfter": 131
+    },
+    {
+      "file": "Data.Map.Internal.fs",
+      "sharpursApplyBefore": 1024,
+      "sharpursApplyAfter": 865,
+      "literalConstructorBefore": 148,
+      "literalConstructorAfter": 148
+    },
+    {
+      "file": "Data.Maybe.fs",
+      "sharpursApplyBefore": 101,
+      "sharpursApplyAfter": 92,
+      "literalConstructorBefore": 30,
+      "literalConstructorAfter": 30
+    },
+    {
+      "file": "Data.Monoid.Generic.fs",
+      "sharpursApplyBefore": 15,
+      "sharpursApplyAfter": 13,
+      "literalConstructorBefore": 1,
+      "literalConstructorAfter": 1
+    },
+    {
+      "file": "Data.NonEmpty.fs",
+      "sharpursApplyBefore": 252,
+      "sharpursApplyAfter": 244,
+      "literalConstructorBefore": 40,
+      "literalConstructorAfter": 40
+    },
+    {
+      "file": "Data.Profunctor.Choice.fs",
+      "sharpursApplyBefore": 24,
+      "sharpursApplyAfter": 23,
+      "literalConstructorBefore": 4,
+      "literalConstructorAfter": 4
+    },
+    {
+      "file": "Data.Profunctor.Split.fs",
+      "sharpursApplyBefore": 40,
+      "sharpursApplyAfter": 37,
+      "literalConstructorBefore": 3,
+      "literalConstructorAfter": 3
+    },
+    {
+      "file": "Data.Profunctor.Star.fs",
+      "sharpursApplyBefore": 168,
+      "sharpursApplyAfter": 166,
+      "literalConstructorBefore": 8,
+      "literalConstructorAfter": 8
+    },
+    {
+      "file": "Data.Profunctor.Strong.fs",
+      "sharpursApplyBefore": 22,
+      "sharpursApplyAfter": 18,
+      "literalConstructorBefore": 3,
+      "literalConstructorAfter": 3
+    },
+    {
+      "file": "Data.Ring.Generic.fs",
+      "sharpursApplyBefore": 30,
+      "sharpursApplyAfter": 28,
+      "literalConstructorBefore": 3,
+      "literalConstructorAfter": 3
+    },
+    {
+      "file": "Data.Semigroup.Foldable.fs",
+      "sharpursApplyBefore": 146,
+      "sharpursApplyAfter": 144,
+      "literalConstructorBefore": 9,
+      "literalConstructorAfter": 9
+    },
+    {
+      "file": "Data.Semigroup.Generic.fs",
+      "sharpursApplyBefore": 30,
+      "sharpursApplyAfter": 28,
+      "literalConstructorBefore": 3,
+      "literalConstructorAfter": 3
+    },
+    {
+      "file": "Data.Semiring.Generic.fs",
+      "sharpursApplyBefore": 78,
+      "sharpursApplyAfter": 70,
+      "literalConstructorBefore": 8,
+      "literalConstructorAfter": 8
+    },
+    {
+      "file": "Data.Set.NonEmpty.fs",
+      "sharpursApplyBefore": 130,
+      "sharpursApplyAfter": 124,
+      "literalConstructorBefore": 4,
+      "literalConstructorAfter": 4
+    },
+    {
+      "file": "Data.Set.fs",
+      "sharpursApplyBefore": 157,
+      "sharpursApplyAfter": 156,
+      "literalConstructorBefore": 1,
+      "literalConstructorAfter": 1
+    },
+    {
+      "file": "Data.String.CodePoints.fs",
+      "sharpursApplyBefore": 240,
+      "sharpursApplyAfter": 232,
+      "literalConstructorBefore": 11,
+      "literalConstructorAfter": 11
+    },
+    {
+      "file": "Data.String.CodeUnits.fs",
+      "sharpursApplyBefore": 67,
+      "sharpursApplyAfter": 64,
+      "literalConstructorBefore": 9,
+      "literalConstructorAfter": 9
+    },
+    {
+      "file": "Data.String.NonEmpty.CodePoints.fs",
+      "sharpursApplyBefore": 100,
+      "sharpursApplyAfter": 97,
+      "literalConstructorBefore": 3,
+      "literalConstructorAfter": 3
+    },
+    {
+      "file": "Data.String.NonEmpty.CodeUnits.fs",
+      "sharpursApplyBefore": 114,
+      "sharpursApplyAfter": 109,
+      "literalConstructorBefore": 5,
+      "literalConstructorAfter": 5
+    },
+    {
+      "file": "Data.String.NonEmpty.Internal.fs",
+      "sharpursApplyBefore": 95,
+      "sharpursApplyAfter": 94,
+      "literalConstructorBefore": 1,
+      "literalConstructorAfter": 1
+    },
+    {
+      "file": "Data.Time.Component.fs",
+      "sharpursApplyBefore": 168,
+      "sharpursApplyAfter": 164,
+      "literalConstructorBefore": 4,
+      "literalConstructorAfter": 4
+    },
+    {
+      "file": "Data.Time.fs",
+      "sharpursApplyBefore": 247,
+      "sharpursApplyAfter": 245,
+      "literalConstructorBefore": 22,
+      "literalConstructorAfter": 22
+    },
+    {
+      "file": "Data.Traversable.fs",
+      "sharpursApplyBefore": 382,
+      "sharpursApplyAfter": 380,
+      "literalConstructorBefore": 22,
+      "literalConstructorAfter": 22
+    },
+    {
+      "file": "Data.TraversableWithIndex.fs",
+      "sharpursApplyBefore": 255,
+      "sharpursApplyAfter": 254,
+      "literalConstructorBefore": 13,
+      "literalConstructorAfter": 13
+    },
+    {
+      "file": "Data.Tuple.Nested.fs",
+      "sharpursApplyBefore": 405,
+      "sharpursApplyAfter": 75,
+      "literalConstructorBefore": 330,
+      "literalConstructorAfter": 330
+    },
+    {
+      "file": "Data.Tuple.fs",
+      "sharpursApplyBefore": 232,
+      "sharpursApplyAfter": 182,
+      "literalConstructorBefore": 61,
+      "literalConstructorAfter": 61
+    },
+    {
+      "file": "Data.Unfoldable.fs",
+      "sharpursApplyBefore": 38,
+      "sharpursApplyAfter": 35,
+      "literalConstructorBefore": 3,
+      "literalConstructorAfter": 3
+    },
+    {
+      "file": "Data.Unfoldable1.fs",
+      "sharpursApplyBefore": 62,
+      "sharpursApplyAfter": 49,
+      "literalConstructorBefore": 11,
+      "literalConstructorAfter": 11
+    },
+    {
+      "file": "Effect.Aff.fs",
+      "sharpursApplyBefore": 324,
+      "sharpursApplyAfter": 320,
+      "literalConstructorBefore": 9,
+      "literalConstructorAfter": 9
+    },
+    {
+      "file": "Main.fs",
+      "sharpursApplyBefore": 2,
+      "sharpursApplyAfter": 0,
+      "literalConstructorBefore": 1,
+      "literalConstructorAfter": 1
+    },
+    {
+      "file": "Test.ListOps.fs",
+      "sharpursApplyBefore": 32,
+      "sharpursApplyAfter": 28,
+      "literalConstructorBefore": 5,
+      "literalConstructorAfter": 5
+    },
+    {
+      "file": "Test.Primes.fs",
+      "sharpursApplyBefore": 33,
+      "sharpursApplyAfter": 25,
+      "literalConstructorBefore": 9,
+      "literalConstructorAfter": 9
+    }
+  ],
+  "note": "Textual inventory of normal generation; occurrence counts are not runtime call counts."
+}

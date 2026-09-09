@@ -1,0 +1,11 @@
+--- before/Data.Functor.Product.fs
++++ after/Data.Functor.Product.fs
+@@ -12,7 +12,7 @@
+ 
+ let Data_Functor_Product_showProduct  = (box (fun (dictShow: obj) -> (box (fun (dictShow1: obj) -> (sharpurs_apply (box ((box Data_Show_Showusd_Dict))) (box ((box ((Map.add "show" (box ((box (fun (v: obj) -> (match ((unbox ((box v)))) with | Data_Tuple_Tupleusd_Ctor(fa, ga) -> ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semigroup_append))) (box ((box Data_Semigroup_semigroupString)))))) (box ((box "(product ")))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semigroup_append))) (box ((box Data_Semigroup_semigroupString)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Show_show))) (box ((box dictShow)))))) (box ((box fa))))))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semigroup_append))) (box ((box Data_Semigroup_semigroupString)))))) (box ((box " ")))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semigroup_append))) (box ((box Data_Semigroup_semigroupString)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Show_show))) (box ((box dictShow1)))))) (box ((box ga))))))))) (box ((box ")"))))))))))))))))))) Map.empty))))))))))
+ 
+-let Data_Functor_Product_product  = (box (fun (fa: obj) -> (box (fun (ga: obj) -> (sharpurs_apply (box ((box Data_Functor_Product_Product))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box ((fun (usd__arg1: obj) -> (fun (usd__arg2: obj) -> (box (Data_Tuple_Tupleusd_Ctor(usd__arg1, usd__arg2))))))))) (box ((box fa)))))) (box ((box ga)))))))))))
++let Data_Functor_Product_product  = (box (fun (fa: obj) -> (box (fun (ga: obj) -> (sharpurs_apply (box ((box Data_Functor_Product_Product))) (box ((box (Data_Tuple_Tupleusd_Ctor((box fa), (box ga)))))))))))
+ 
+ let Data_Functor_Product_newtypeProduct  = (sharpurs_apply (box ((box Data_Newtype_Newtypeusd_Dict))) (box ((box ((Map.add "Coercible0" (box ((box (fun (usd__unused: obj) -> (box Prim_undefined))))) Map.empty))))))
+ 

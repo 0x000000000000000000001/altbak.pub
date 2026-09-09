@@ -1,0 +1,16 @@
+--- before/Data.Functor.Coproduct.fs
++++ after/Data.Functor.Coproduct.fs
+@@ -8,11 +8,11 @@
+ 
+ let Data_Functor_Coproduct_showCoproduct  = (box (fun (dictShow: obj) -> (box (fun (dictShow1: obj) -> (sharpurs_apply (box ((box Data_Show_Showusd_Dict))) (box ((box ((Map.add "show" (box ((box (fun (v: obj) -> (match ((unbox ((box v)))) with | Data_Either_Leftusd_Ctor(fa) -> ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semigroup_append))) (box ((box Data_Semigroup_semigroupString)))))) (box ((box "(left ")))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semigroup_append))) (box ((box Data_Semigroup_semigroupString)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Show_show))) (box ((box dictShow)))))) (box ((box fa))))))))) (box ((box ")")))))))) | Data_Either_Rightusd_Ctor(ga) -> ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semigroup_append))) (box ((box Data_Semigroup_semigroupString)))))) (box ((box "(right ")))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semigroup_append))) (box ((box Data_Semigroup_semigroupString)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Show_show))) (box ((box dictShow1)))))) (box ((box ga))))))))) (box ((box ")"))))))))))))) Map.empty))))))))))
+ 
+-let Data_Functor_Coproduct_right  = (box (fun (ga: obj) -> (sharpurs_apply (box ((box Data_Functor_Coproduct_Coproduct))) (box ((sharpurs_apply (box ((box ((fun (usd__arg1: obj) -> (box (Data_Either_Rightusd_Ctor(usd__arg1)))))))) (box ((box ga)))))))))
++let Data_Functor_Coproduct_right  = (box (fun (ga: obj) -> (sharpurs_apply (box ((box Data_Functor_Coproduct_Coproduct))) (box ((box (Data_Either_Rightusd_Ctor((box ga)))))))))
+ 
+ let Data_Functor_Coproduct_newtypeCoproduct  = (sharpurs_apply (box ((box Data_Newtype_Newtypeusd_Dict))) (box ((box ((Map.add "Coercible0" (box ((box (fun (usd__unused: obj) -> (box Prim_undefined))))) Map.empty))))))
+ 
+-let Data_Functor_Coproduct_left  = (box (fun (fa: obj) -> (sharpurs_apply (box ((box Data_Functor_Coproduct_Coproduct))) (box ((sharpurs_apply (box ((box ((fun (usd__arg1: obj) -> (box (Data_Either_Leftusd_Ctor(usd__arg1)))))))) (box ((box fa)))))))))
++let Data_Functor_Coproduct_left  = (box (fun (fa: obj) -> (sharpurs_apply (box ((box Data_Functor_Coproduct_Coproduct))) (box ((box (Data_Either_Leftusd_Ctor((box fa)))))))))
+ 
+ let Data_Functor_Coproduct_functorCoproduct  = (box (fun (dictFunctor: obj) -> (box (fun (dictFunctor1: obj) -> (sharpurs_apply (box ((box Data_Functor_Functorusd_Dict))) (box ((box ((Map.add "map" (box ((box (fun (f: obj) -> (box (fun (v: obj) -> (match (((unbox ((box f))), (unbox ((box v))))) with | (f1, e) -> ((sharpurs_apply (box ((box Data_Functor_Coproduct_Coproduct))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Bifunctor_bimap))) (box ((box Data_Bifunctor_bifunctorEither)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Functor_map))) (box ((box dictFunctor)))))) (box ((box f1))))))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Functor_map))) (box ((box dictFunctor1)))))) (box ((box f1))))))))) (box ((box e))))))))))))))) Map.empty))))))))))
+ 

@@ -1,0 +1,10 @@
+--- before/Data.Monoid.Generic.fs
++++ after/Data.Monoid.Generic.fs
+@@ -14,6 +14,6 @@
+ 
+ let Data_Monoid_Generic_genericMonoidConstructor  = (box (fun (dictGenericMonoid: obj) -> (sharpurs_apply (box ((box Data_Monoid_Generic_GenericMonoidusd_Dict))) (box ((box ((Map.add "genericMempty'" (box ((sharpurs_apply (box ((box Data_Generic_Rep_Constructor))) (box ((sharpurs_apply (box ((box Data_Monoid_Generic_genericMempty_prime))) (box ((box dictGenericMonoid))))))))) Map.empty))))))))
+ 
+-let Data_Monoid_Generic_genericMonoidProduct  = (box (fun (dictGenericMonoid: obj) -> (box (fun (dictGenericMonoid1: obj) -> (sharpurs_apply (box ((box Data_Monoid_Generic_GenericMonoidusd_Dict))) (box ((box ((Map.add "genericMempty'" (box ((sharpurs_apply (box ((sharpurs_apply (box ((box ((fun (usd__arg1: obj) -> (fun (usd__arg2: obj) -> (box (Data_Generic_Rep_Productusd_Ctor(usd__arg1, usd__arg2))))))))) (box ((sharpurs_apply (box ((box Data_Monoid_Generic_genericMempty_prime))) (box ((box dictGenericMonoid))))))))) (box ((sharpurs_apply (box ((box Data_Monoid_Generic_genericMempty_prime))) (box ((box dictGenericMonoid1))))))))) Map.empty))))))))))
++let Data_Monoid_Generic_genericMonoidProduct  = (box (fun (dictGenericMonoid: obj) -> (box (fun (dictGenericMonoid1: obj) -> (sharpurs_apply (box ((box Data_Monoid_Generic_GenericMonoidusd_Dict))) (box ((box ((Map.add "genericMempty'" (box ((box (Data_Generic_Rep_Productusd_Ctor((sharpurs_apply (box ((box Data_Monoid_Generic_genericMempty_prime))) (box ((box dictGenericMonoid)))), (sharpurs_apply (box ((box Data_Monoid_Generic_genericMempty_prime))) (box ((box dictGenericMonoid1))))))))) Map.empty))))))))))
+ 
+ let Data_Monoid_Generic_genericMempty  = (box (fun (dictGeneric: obj) -> (box (fun (dictGenericMonoid: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box Data_Generic_Rep_to))) (box ((box dictGeneric)))))) (box ((sharpurs_apply (box ((box Data_Monoid_Generic_genericMempty_prime))) (box ((box dictGenericMonoid)))))))))))

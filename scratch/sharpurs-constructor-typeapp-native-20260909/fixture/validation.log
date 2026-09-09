@@ -1,0 +1,59 @@
+$ /Users/0x1/.local/bin/purs compile /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-constructor-typeapp-n04hE9/*.purs /Users/0x1/Documents/htdocs/sharpurs/sharpurs/.spago/p/prelude-6.0.2/src/**/*.purs --output /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/sharpurs-constructor-typeapp-n04hE9/output --codegen corefn,js
+[ 1 of 53] Compiling Type.Proxy
+[ 3 of 53] Compiling Data.Unit
+[ 2 of 53] Compiling Record.Unsafe
+[ 4 of 53] Compiling Data.Void
+[ 5 of 53] Compiling Data.NaturalTransformation
+[ 6 of 53] Compiling Data.Boolean
+[ 7 of 53] Compiling Control.Semigroupoid
+[ 8 of 53] Compiling ConstructorImported
+[ 9 of 53] Compiling Data.Symbol
+[10 of 53] Compiling Control.Category
+[11 of 53] Compiling Data.Semigroup
+[12 of 53] Compiling Data.HeytingAlgebra
+[13 of 53] Compiling Data.Semiring
+[14 of 53] Compiling Data.Show
+[15 of 53] Compiling Data.Ring
+[16 of 53] Compiling Data.Generic.Rep
+[17 of 53] Compiling Data.BooleanAlgebra
+[18 of 53] Compiling Data.Eq
+[19 of 53] Compiling Data.CommutativeRing
+[20 of 53] Compiling Data.Ordering
+[21 of 53] Compiling Data.EuclideanRing
+[22 of 53] Compiling Data.Ord
+[23 of 53] Compiling Data.DivisionRing
+[24 of 53] Compiling Data.Field
+[25 of 53] Compiling Data.Reflectable
+[27 of 53] Compiling Data.Bounded
+[26 of 53] Compiling Data.Function
+[28 of 53] Compiling Data.Monoid
+[29 of 53] Compiling Data.Functor
+[30 of 53] Compiling Control.Apply
+[31 of 53] Compiling Data.Monoid.Generic
+[32 of 53] Compiling Data.Bounded.Generic
+[33 of 53] Compiling Control.Applicative
+[34 of 53] Compiling Control.Bind
+[35 of 53] Compiling Control.Monad
+[36 of 53] Compiling Prelude
+[37 of 53] Compiling Data.Semigroup.Last
+[38 of 53] Compiling Data.Monoid.Conj
+[39 of 53] Compiling ConstructorNative
+[40 of 53] Compiling Data.Semigroup.First
+[41 of 53] Compiling Data.Ord.Generic
+[42 of 53] Compiling Data.Eq.Generic
+[43 of 53] Compiling Data.Semigroup.Generic
+[44 of 53] Compiling Data.Monoid.Additive
+[45 of 53] Compiling Data.Semiring.Generic
+[46 of 53] Compiling Data.Show.Generic
+[47 of 53] Compiling Data.Ring.Generic
+[48 of 53] Compiling Data.Monoid.Multiplicative
+[49 of 53] Compiling Data.Monoid.Disj
+[50 of 53] Compiling Data.Monoid.Dual
+[51 of 53] Compiling Data.Monoid.Endo
+[52 of 53] Compiling Data.HeytingAlgebra.Generic
+[53 of 53] Compiling ConstructorTypeApp
+
+$ /Users/0x1/.dotnet/dotnet fsi --nologo --optimize+ --exec constructor-typeapp.fsx
+constructor-typeapp runtime: 133 checks passed
+
+constructor-typeapp converter/JS: 62 checks passed

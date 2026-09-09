@@ -1,0 +1,57 @@
+[
+  {
+    "suite": "runtime-apply",
+    "exitCode": 0,
+    "seconds": 0.69
+  },
+  {
+    "suite": "int-kernel",
+    "exitCode": 0,
+    "seconds": 0.65
+  },
+  {
+    "suite": "local-int-kernel",
+    "exitCode": 0,
+    "seconds": 0.67
+  },
+  {
+    "suite": "adt-kernel",
+    "exitCode": 0,
+    "seconds": 1.3
+  },
+  {
+    "suite": "adt-interop",
+    "exitCode": 0,
+    "seconds": 1.33
+  },
+  {
+    "suite": "adt-unary",
+    "exitCode": 0,
+    "seconds": 1.27
+  },
+  {
+    "suite": "adt-multi",
+    "exitCode": 0,
+    "seconds": 2.93
+  },
+  {
+    "suite": "int-comparison",
+    "exitCode": 0,
+    "seconds": 1.14
+  },
+  {
+    "suite": "int-arithmetic",
+    "exitCode": 0,
+    "seconds": 1.25
+  },
+  {
+    "suite": "direct-call",
+    "exitCode": 0,
+    "seconds": 1.44
+  },
+  {
+    "suite": "thunk-kernel",
+    "exitCode": 0,
+    "seconds": 4.14
+  }
+]

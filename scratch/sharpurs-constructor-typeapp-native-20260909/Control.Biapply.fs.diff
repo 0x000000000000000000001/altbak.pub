@@ -1,0 +1,11 @@
+--- before/Control.Biapply.fs
++++ after/Control.Biapply.fs
+@@ -6,7 +6,7 @@
+ 
+ let Control_Biapply_Biapplyusd_Dict  = (box (fun (x: obj) -> (box x)))
+ 
+-let Control_Biapply_biapplyTuple  = (sharpurs_apply (box ((box Control_Biapply_Biapplyusd_Dict))) (box ((box ((Map.add "biapply" (box ((box (fun (v: obj) -> (box (fun (v1: obj) -> (match (((unbox ((box v))), (unbox ((box v1))))) with | (Data_Tuple_Tupleusd_Ctor(f, g), Data_Tuple_Tupleusd_Ctor(a, b)) -> ((sharpurs_apply (box ((sharpurs_apply (box ((box ((fun (usd__arg1: obj) -> (fun (usd__arg2: obj) -> (box (Data_Tuple_Tupleusd_Ctor(usd__arg1, usd__arg2))))))))) (box ((sharpurs_apply (box ((box f))) (box ((box a))))))))) (box ((sharpurs_apply (box ((box g))) (box ((box b))))))))))))))) (Map.add "Bifunctor0" (box ((box (fun (usd__unused: obj) -> (box Data_Bifunctor_bifunctorTuple))))) Map.empty)))))))
++let Control_Biapply_biapplyTuple  = (sharpurs_apply (box ((box Control_Biapply_Biapplyusd_Dict))) (box ((box ((Map.add "biapply" (box ((box (fun (v: obj) -> (box (fun (v1: obj) -> (match (((unbox ((box v))), (unbox ((box v1))))) with | (Data_Tuple_Tupleusd_Ctor(f, g), Data_Tuple_Tupleusd_Ctor(a, b)) -> ((box (Data_Tuple_Tupleusd_Ctor((sharpurs_apply (box ((box f))) (box ((box a)))), (sharpurs_apply (box ((box g))) (box ((box b))))))))))))))) (Map.add "Bifunctor0" (box ((box (fun (usd__unused: obj) -> (box Data_Bifunctor_bifunctorTuple))))) Map.empty)))))))
+ 
+ let Control_Biapply_biapply  = (box (fun (dict: obj) -> (match ((unbox ((box dict)))) with | v -> ((Map.find "biapply" (unbox<Map<string, obj>> ((box v))))))))
+ 

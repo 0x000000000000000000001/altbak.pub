@@ -1,0 +1,7 @@
+[<AutoOpen>]
+module PureScript_Main
+
+open System
+open System.Collections.Generic
+
+let Main_test  = (box (Data_List_Types_Consusd_Ctor((box 1), (box Data_List_Types_Nilusd_Ctor))))

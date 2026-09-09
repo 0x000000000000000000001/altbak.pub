@@ -1,0 +1,24 @@
+{
+  "checkedUtc": "2026-09-09T14:09:54.380844+00:00",
+  "passed": true,
+  "counts": {
+    "before": {
+      "sources": 355,
+      "runtime": 8
+    },
+    "after": {
+      "sources": 355,
+      "runtime": 8
+    },
+    "normal": {
+      "sources": 355,
+      "runtime": 8
+    },
+    "normalBeforeRuntime": 8,
+    "backendBeforeBin": 4,
+    "backendAfterSources": 16
+  },
+  "inputsSha256": "3f6b43698e0778e64506046b138f698da51e8b932300f3dc3d3494e5a2559b83",
+  "metadataSha256": "97cf6241e0ee765db5ec35bf2a756522a69aeef060cb9ec66c1123a5921c2f96",
+  "comparisonSha256": "dfc8b2b0a9758dec75f919acda967afab31410af26a8aaf050ee2e89df40e6eb"
+}

@@ -1,0 +1,11 @@
+--- before/Data.Int.fs
++++ after/Data.Int.fs
+@@ -79,7 +79,7 @@
+ 
+ let Data_Int_showParity  = (sharpurs_apply (box ((box Data_Show_Showusd_Dict))) (box ((box ((Map.add "show" (box ((box (fun (v: obj) -> (match ((unbox ((box v)))) with | Data_Int_Evenusd_Ctor -> ((box "Even")) | Data_Int_Oddusd_Ctor -> ((box "Odd"))))))) Map.empty))))))
+ 
+-let Data_Int_radix  = (box (fun (n: obj) -> (match ((unbox ((box n)))) with | n1 when (unbox (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_HeytingAlgebra_conj))) (box ((box Data_HeytingAlgebra_heytingAlgebraBoolean)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ord_greaterThanOrEq))) (box ((box Data_Ord_ordInt)))))) (box ((box n1)))))) (box ((box 2))))))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ord_lessThanOrEq))) (box ((box Data_Ord_ordInt)))))) (box ((box n1)))))) (box ((box 36)))))))) -> ((sharpurs_apply (box ((box ((fun (usd__arg1: obj) -> (box (Data_Maybe_Justusd_Ctor(usd__arg1)))))))) (box ((sharpurs_apply (box ((box Data_Int_Radix))) (box ((box n1)))))))) | n1 when (unbox (box Data_Boolean_otherwise)) -> ((box Data_Maybe_Nothingusd_Ctor)))))
++let Data_Int_radix  = (box (fun (n: obj) -> (match ((unbox ((box n)))) with | n1 when (unbox (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_HeytingAlgebra_conj))) (box ((box Data_HeytingAlgebra_heytingAlgebraBoolean)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ord_greaterThanOrEq))) (box ((box Data_Ord_ordInt)))))) (box ((box n1)))))) (box ((box 2))))))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ord_lessThanOrEq))) (box ((box Data_Ord_ordInt)))))) (box ((box n1)))))) (box ((box 36)))))))) -> ((box (Data_Maybe_Justusd_Ctor((sharpurs_apply (box ((box Data_Int_Radix))) (box ((box n1)))))))) | n1 when (unbox (box Data_Boolean_otherwise)) -> ((box Data_Maybe_Nothingusd_Ctor)))))
+ 
+ let Data_Int_odd  = (box (fun (x: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Eq_notEq))) (box ((box Data_Eq_eqInt)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Int_Bits_and))) (box ((box x)))))) (box ((box 1))))))))) (box ((box 0))))))
+ 

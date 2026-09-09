@@ -1,0 +1,53 @@
+[<AutoOpen>]
+module PureScript_Test_Primes
+
+open System
+open System.Collections.Generic
+
+type Test_Primes_List =
+  | Test_Primes_Nilusd_Ctor
+  | Test_Primes_Consusd_Ctor of obj * obj
+
+let Test_Primes_Nil  = (box Test_Primes_Nilusd_Ctor)
+
+let Test_Primes_Cons  = (box ((fun (usd__arg1: obj) -> (fun (usd__arg2: obj) -> (box (Test_Primes_Consusd_Ctor(usd__arg1, usd__arg2)))))))
+
+let Test_Primes_sumList  = (box (fun (lst: obj) -> (
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        let rec go_tco (v: obj) (v1: obj) : obj = ((match (((unbox ((box v))), (unbox ((box v1))))) with | (Test_Primes_Nilusd_Ctor, acc) -> ((box acc)) | (Test_Primes_Consusd_Ctor(x, xs), acc) -> ((go_tco ((box xs)) ((box ((unbox<int> (box ((box acc)))) + (unbox<int> (box ((box x))))))))))) 
+                                                                                                                                                                                                        and go = box ((fun (v: obj) -> (fun (v1: obj) -> go_tco v v1))) 
+                                                                                                                                                                                                        in
+                                                                                                                                                                                                        (go_tco ((box lst)) ((box 0)))
+                                                                                                                                                                                                        )))
+
+let Test_Primes_reverse  = (box (fun (lst: obj) -> (
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        let rec go_tco (v: obj) (v1: obj) : obj = ((match (((unbox ((box v))), (unbox ((box v1))))) with | (Test_Primes_Nilusd_Ctor, acc) -> ((box acc)) | (Test_Primes_Consusd_Ctor(x, xs), acc) -> ((go_tco ((box xs)) ((box (Test_Primes_Consusd_Ctor((box x), (box acc))))))))) 
+                                                                                                                                                                                                        and go = box ((fun (v: obj) -> (fun (v1: obj) -> go_tco v v1))) 
+                                                                                                                                                                                                        in
+                                                                                                                                                                                                        (go_tco ((box lst)) ((box Test_Primes_Nilusd_Ctor)))
+                                                                                                                                                                                                        )))
+
+let Test_Primes_range  = (box (fun (start: obj) -> (box (fun (end_var: obj) -> (
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        let rec go_tco (curr: obj) (acc: obj) : obj = ((match ((unbox ((box ((unbox<int> (box ((box curr)))) < (unbox<int> (box ((box start))))))))) with | LitBool true () -> ((box acc)) | _ -> ((go_tco ((box ((unbox<int> (box ((box curr)))) - (unbox<int> (box ((box 1))))))) ((box (Test_Primes_Consusd_Ctor((box curr), (box acc))))))))) 
+                                                                                                                                                                                                        and go = box ((fun (curr: obj) -> (fun (acc: obj) -> go_tco curr acc))) 
+                                                                                                                                                                                                        in
+                                                                                                                                                                                                        (go_tco ((box end_var)) ((box Test_Primes_Nilusd_Ctor)))
+                                                                                                                                                                                                        )))))
+
+let Test_Primes_filter  = (box (fun (p: obj) -> (box (fun (lst: obj) -> (
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        let rec go_tco (v: obj) (v1: obj) : obj = ((match (((unbox ((box v))), (unbox ((box v1))))) with | (Test_Primes_Nilusd_Ctor, acc) -> ((sharpurs_apply (box ((box Test_Primes_reverse))) (box ((box acc))))) | (Test_Primes_Consusd_Ctor(x, xs), acc) -> ((match ((unbox ((sharpurs_apply (box ((box p))) (box ((box x))))))) with | LitBool true () -> ((go_tco ((box xs)) ((box (Test_Primes_Consusd_Ctor((box x), (box acc))))))) | _ -> ((go_tco ((box xs)) ((box acc)))))))) 
+                                                                                                                                                                                                        and go = box ((fun (v: obj) -> (fun (v1: obj) -> go_tco v v1))) 
+                                                                                                                                                                                                        in
+                                                                                                                                                                                                        (go_tco ((box lst)) ((box Test_Primes_Nilusd_Ctor)))
+                                                                                                                                                                                                        )))))
+
+let rec Test_Primes_sieve_tco (v: obj) : obj = ((match ((unbox ((box v)))) with | Test_Primes_Nilusd_Ctor -> ((box Test_Primes_Nilusd_Ctor)) | Test_Primes_Consusd_Ctor(p, xs) -> ((box (Test_Primes_Consusd_Ctor((box p), (Test_Primes_sieve_tco ((sharpurs_apply (box ((sharpurs_apply (box ((box Test_Primes_filter))) (box ((box (fun (x: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box Data_HeytingAlgebra_not))) (box ((box Data_HeytingAlgebra_heytingAlgebraBoolean)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Eq_eq))) (box ((box Data_Eq_eqInt)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_EuclideanRing_mod))) (box ((box Data_EuclideanRing_euclideanRingInt)))))) (box ((box x)))))) (box ((box p))))))))) (box ((box 0)))))))))))))) (box ((box xs))))))))))))
+and Test_Primes_sieve = box (fun (v: obj) -> Test_Primes_sieve_tco v)
+
+
+let Test_Primes_describe  = (sharpurs_apply (box ((box Effect_Console_log))) (box ((box "Prime Sieve (sum primes up to 500):"))))
+
+let Test_Primes_act  = (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Control_Bind_bind))) (box ((box Effect_bindEffect)))))) (box ((sharpurs_apply (box ((box Bench_opaque))) (box ((box 500))))))))) (box ((box (fun (dummy: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box Control_Applicative_pure))) (box ((box Effect_applicativeEffect)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Show_show))) (box ((box Data_Show_showInt)))))) (box ((sharpurs_apply (box ((box Test_Primes_sumList))) (box ((sharpurs_apply (box ((box Test_Primes_sieve))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Test_Primes_range))) (box ((box 2)))))) (box ((box dummy)))))))))))))))))))))

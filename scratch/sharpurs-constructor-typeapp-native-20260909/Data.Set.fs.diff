@@ -1,0 +1,11 @@
+--- before/Data.Set.fs
++++ after/Data.Set.fs
+@@ -10,7 +10,7 @@
+ 
+ let Data_Set_union  = (box (fun (dictOrd: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box Safe_Coerce_coerce))) (box ((box Prim_undefined)))))) (box ((sharpurs_apply (box ((box Data_Map_Internal_union))) (box ((box dictOrd)))))))))
+ 
+-let Data_Set_toggle  = (box (fun (dictOrd: obj) -> (box (fun (a: obj) -> (box (fun (v: obj) -> (match (((unbox ((box a))), (unbox ((box v))))) with | (a1, m) -> ((sharpurs_apply (box ((box Data_Set_Set))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Map_Internal_alter))) (box ((box dictOrd)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Maybe_maybe))) (box ((sharpurs_apply (box ((box ((fun (usd__arg1: obj) -> (box (Data_Maybe_Justusd_Ctor(usd__arg1)))))))) (box ((box Data_Unit_unit))))))))) (box ((box (fun (v1: obj) -> (box Data_Maybe_Nothingusd_Ctor))))))))))) (box ((box a1)))))) (box ((box m)))))))))))))))
++let Data_Set_toggle  = (box (fun (dictOrd: obj) -> (box (fun (a: obj) -> (box (fun (v: obj) -> (match (((unbox ((box a))), (unbox ((box v))))) with | (a1, m) -> ((sharpurs_apply (box ((box Data_Set_Set))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Map_Internal_alter))) (box ((box dictOrd)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Maybe_maybe))) (box ((box (Data_Maybe_Justusd_Ctor((box Data_Unit_unit))))))))) (box ((box (fun (v1: obj) -> (box Data_Maybe_Nothingusd_Ctor))))))))))) (box ((box a1)))))) (box ((box m)))))))))))))))
+ 
+ let Data_Set_toMap  = (box (fun (v: obj) -> (match ((unbox ((box v)))) with | s -> ((box s)))))
+ 

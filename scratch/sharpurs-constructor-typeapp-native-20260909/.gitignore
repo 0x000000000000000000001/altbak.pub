@@ -1,0 +1,8 @@
+/before/
+/after/
+/normal-before-runtime/
+/backend-before-bin/
+/backend-after-bin/
+__pycache__/
+*.dll
+*.pdb

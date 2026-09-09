@@ -1,0 +1,165 @@
+[<AutoOpen>]
+module PureScript_Data_String_CodeUnits
+
+open System
+open System.Collections.Generic
+
+module Data_String_CodeUnits_FFI =
+    open System
+    
+    let fromCharArray = fun (a: obj) ->
+        let arr = unbox<obj[]> a
+        let chars = Array.zeroCreate arr.Length
+        for i = 0 to arr.Length - 1 do
+            chars.[i] <- unbox<char> arr.[i]
+        box (new String(chars))
+    
+    let toCharArray = fun (str: obj) ->
+        let s = unbox<string> str
+        let arr = Array.zeroCreate s.Length
+        for i = 0 to s.Length - 1 do
+            arr.[i] <- box s.[i]
+        box arr
+    
+    let singleton = fun (c: obj) ->
+        let ch = unbox<char> c
+        box (ch.ToString())
+    
+    let _charAt = fun (just: obj) -> fun (nothing: obj) -> fun (idx: obj) -> fun (str: obj) ->
+        let i = unbox<int> idx
+        let s = unbox<string> str
+        if i >= 0 && i < s.Length then
+            sharpurs_apply just (box s.[i])
+        else
+            nothing
+    
+    let _toChar = fun (just: obj) -> fun (nothing: obj) -> fun (str: obj) ->
+        let s = unbox<string> str
+        if s.Length = 1 then
+            sharpurs_apply just (box s.[0])
+        else
+            nothing
+    
+    let length = fun (str: obj) ->
+        let s = unbox<string> str
+        box s.Length
+    
+    let countPrefix = fun (p: obj) -> fun (str: obj) ->
+        let s = unbox<string> str
+        let mutable i = 0
+        while i < s.Length && unbox<bool> (sharpurs_apply p (box s.[i])) do
+            i <- i + 1
+        box i
+    
+    let _indexOf = fun (just: obj) -> fun (nothing: obj) -> fun (x: obj) -> fun (s: obj) ->
+        let str = unbox<string> s
+        let sub = unbox<string> x
+        let idx = str.IndexOf(sub, StringComparison.Ordinal)
+        if idx = -1 then nothing else sharpurs_apply just (box idx)
+    
+    let _indexOfStartingAt = fun (just: obj) -> fun (nothing: obj) -> fun (x: obj) -> fun (startIdx: obj) -> fun (str: obj) ->
+        let s = unbox<string> str
+        let sub = unbox<string> x
+        let start = unbox<int> startIdx
+        if start < 0 || start > s.Length then nothing
+        else
+            let idx = s.IndexOf(sub, start, StringComparison.Ordinal)
+            if idx = -1 then nothing else sharpurs_apply just (box idx)
+    
+    let _lastIndexOf = fun (just: obj) -> fun (nothing: obj) -> fun (x: obj) -> fun (s: obj) ->
+        let str = unbox<string> s
+        let sub = unbox<string> x
+        let idx = str.LastIndexOf(sub, StringComparison.Ordinal)
+        if idx = -1 then nothing else sharpurs_apply just (box idx)
+    
+    let _lastIndexOfStartingAt = fun (just: obj) -> fun (nothing: obj) -> fun (x: obj) -> fun (startIdx: obj) -> fun (str: obj) ->
+        let s = unbox<string> str
+        let sub = unbox<string> x
+        let start = unbox<int> startIdx
+        let safeStart = max 0 (min s.Length start)
+        let endIdx = min s.Length (safeStart + sub.Length)
+        let idx = s.Substring(0, endIdx).LastIndexOf(sub, StringComparison.Ordinal)
+        if idx = -1 then nothing else sharpurs_apply just (box idx)
+    
+    let take = fun (idx: obj) -> fun (str: obj) ->
+        let i = unbox<int> idx
+        let s = unbox<string> str
+        let safeI = max 0 (min s.Length i)
+        box (s.Substring(0, safeI))
+    
+    let drop = fun (idx: obj) -> fun (str: obj) ->
+        let i = unbox<int> idx
+        let s = unbox<string> str
+        let safeI = max 0 (min s.Length i)
+        box (s.Substring(safeI))
+    
+    let slice = fun (start: obj) -> fun (end_: obj) -> fun (str: obj) ->
+        let s = unbox<string> str
+        let mutable st = unbox<int> start
+        let mutable en = unbox<int> end_
+        if st < 0 then st <- s.Length + st
+        if en < 0 then en <- s.Length + en
+        st <- max 0 (min s.Length st)
+        en <- max 0 (min s.Length en)
+        if st > en then box ""
+        else box (s.Substring(st, en - st))
+    
+    let splitAt = fun (idx: obj) -> fun (str: obj) ->
+        let s = unbox<string> str
+        let i = unbox<int> idx
+        let safeI = max 0 (min s.Length i)
+        box (Map.ofList [ "before", box (s.Substring(0, safeI)); "after", box (s.Substring(safeI)) ])
+    
+
+let Data_String_CodeUnits__charAt = box (Data_String_CodeUnits_FFI.``_charAt``)
+let Data_String_CodeUnits__indexOf = box (Data_String_CodeUnits_FFI.``_indexOf``)
+let Data_String_CodeUnits__indexOfStartingAt = box (Data_String_CodeUnits_FFI.``_indexOfStartingAt``)
+let Data_String_CodeUnits__lastIndexOf = box (Data_String_CodeUnits_FFI.``_lastIndexOf``)
+let Data_String_CodeUnits__lastIndexOfStartingAt = box (Data_String_CodeUnits_FFI.``_lastIndexOfStartingAt``)
+let Data_String_CodeUnits__toChar = box (Data_String_CodeUnits_FFI.``_toChar``)
+let Data_String_CodeUnits_countPrefix = box (Data_String_CodeUnits_FFI.``countPrefix``)
+let Data_String_CodeUnits_drop = box (Data_String_CodeUnits_FFI.``drop``)
+let Data_String_CodeUnits_fromCharArray = box (Data_String_CodeUnits_FFI.``fromCharArray``)
+let Data_String_CodeUnits_length = box (Data_String_CodeUnits_FFI.``length``)
+let Data_String_CodeUnits_singleton = box (Data_String_CodeUnits_FFI.``singleton``)
+let Data_String_CodeUnits_slice = box (Data_String_CodeUnits_FFI.``slice``)
+let Data_String_CodeUnits_splitAt = box (Data_String_CodeUnits_FFI.``splitAt``)
+let Data_String_CodeUnits_take = box (Data_String_CodeUnits_FFI.``take``)
+let Data_String_CodeUnits_toCharArray = box (Data_String_CodeUnits_FFI.``toCharArray``)
+
+
+let Data_String_CodeUnits_zero  = (sharpurs_apply (box ((box Data_Semiring_zero))) (box ((box Data_Semiring_semiringInt))))
+
+let Data_String_CodeUnits_one  = (sharpurs_apply (box ((box Data_Semiring_one))) (box ((box Data_Semiring_semiringInt))))
+
+let Data_String_CodeUnits_uncons  = (box (fun (v: obj) -> (match ((unbox ((box v)))) with | LitString "" () -> ((box Data_Maybe_Nothingusd_Ctor)) | s -> ((box (Data_Maybe_Justusd_Ctor((box ((Map.add "head" (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_Unsafe_charAt))) (box ((box Data_String_CodeUnits_zero)))))) (box ((box s)))))) (Map.add "tail" (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_CodeUnits_drop))) (box ((box Data_String_CodeUnits_one)))))) (box ((box s)))))) Map.empty)))))))))))
+
+let Data_String_CodeUnits_toChar  = (sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_CodeUnits__toChar))) (box ((box ((fun (usd__arg1: obj) -> (box (Data_Maybe_Justusd_Ctor(usd__arg1))))))))))) (box ((box Data_Maybe_Nothingusd_Ctor))))
+
+let Data_String_CodeUnits_takeWhile  = (box (fun (p: obj) -> (box (fun (s: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_CodeUnits_take))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_CodeUnits_countPrefix))) (box ((box p)))))) (box ((box s))))))))) (box ((box s))))))))
+
+let Data_String_CodeUnits_takeRight  = (box (fun (i: obj) -> (box (fun (s: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_CodeUnits_drop))) (box ((box ((unbox<int> (box ((sharpurs_apply (box ((box Data_String_CodeUnits_length))) (box ((box s))))))) - (unbox<int> (box ((box i))))))))))) (box ((box s))))))))
+
+let Data_String_CodeUnits_stripSuffix  = (box (fun (v: obj) -> (box (fun (str: obj) -> (match (((unbox ((box v))), (unbox ((box str))))) with | (suffix, str1) -> ((let v1 = (sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_CodeUnits_splitAt))) (box ((box ((unbox<int> (box ((sharpurs_apply (box ((box Data_String_CodeUnits_length))) (box ((box str1))))))) - (unbox<int> (box ((sharpurs_apply (box ((box Data_String_CodeUnits_length))) (box ((box suffix)))))))))))))) (box ((box str1)))) in (match ((unbox ((box v1)))) with | (HasProp "before" (before) & HasProp "after" (after)) -> ((match ((unbox ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Eq_eq))) (box ((box Data_Eq_eqString)))))) (box ((box after)))))) (box ((box suffix))))))) with | LitBool true () -> ((box (Data_Maybe_Justusd_Ctor((box before))))) | _ -> ((box Data_Maybe_Nothingusd_Ctor))))))))))))
+
+let Data_String_CodeUnits_stripPrefix  = (box (fun (v: obj) -> (box (fun (str: obj) -> (match (((unbox ((box v))), (unbox ((box str))))) with | (prefix, str1) -> ((let v1 = (sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_CodeUnits_splitAt))) (box ((sharpurs_apply (box ((box Data_String_CodeUnits_length))) (box ((box prefix))))))))) (box ((box str1)))) in (match ((unbox ((box v1)))) with | (HasProp "before" (before) & HasProp "after" (after)) -> ((match ((unbox ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Eq_eq))) (box ((box Data_Eq_eqString)))))) (box ((box before)))))) (box ((box prefix))))))) with | LitBool true () -> ((box (Data_Maybe_Justusd_Ctor((box after))))) | _ -> ((box Data_Maybe_Nothingusd_Ctor))))))))))))
+
+let Data_String_CodeUnits_startsWith  = (box (fun (pat: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Control_Semigroupoid_compose))) (box ((box Control_Semigroupoid_semigroupoidFn)))))) (box ((box Data_Maybe_isJust)))))) (box ((sharpurs_apply (box ((box Data_String_CodeUnits_stripPrefix))) (box ((box pat)))))))))
+
+let Data_String_CodeUnits_lastIndexOf_prime  = (sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_CodeUnits__lastIndexOfStartingAt))) (box ((box ((fun (usd__arg1: obj) -> (box (Data_Maybe_Justusd_Ctor(usd__arg1))))))))))) (box ((box Data_Maybe_Nothingusd_Ctor))))
+
+let Data_String_CodeUnits_lastIndexOf  = (sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_CodeUnits__lastIndexOf))) (box ((box ((fun (usd__arg1: obj) -> (box (Data_Maybe_Justusd_Ctor(usd__arg1))))))))))) (box ((box Data_Maybe_Nothingusd_Ctor))))
+
+let Data_String_CodeUnits_indexOf_prime  = (sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_CodeUnits__indexOfStartingAt))) (box ((box ((fun (usd__arg1: obj) -> (box (Data_Maybe_Justusd_Ctor(usd__arg1))))))))))) (box ((box Data_Maybe_Nothingusd_Ctor))))
+
+let Data_String_CodeUnits_indexOf  = (sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_CodeUnits__indexOf))) (box ((box ((fun (usd__arg1: obj) -> (box (Data_Maybe_Justusd_Ctor(usd__arg1))))))))))) (box ((box Data_Maybe_Nothingusd_Ctor))))
+
+let Data_String_CodeUnits_endsWith  = (box (fun (pat: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Control_Semigroupoid_compose))) (box ((box Control_Semigroupoid_semigroupoidFn)))))) (box ((box Data_Maybe_isJust)))))) (box ((sharpurs_apply (box ((box Data_String_CodeUnits_stripSuffix))) (box ((box pat)))))))))
+
+let Data_String_CodeUnits_dropWhile  = (box (fun (p: obj) -> (box (fun (s: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_CodeUnits_drop))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_CodeUnits_countPrefix))) (box ((box p)))))) (box ((box s))))))))) (box ((box s))))))))
+
+let Data_String_CodeUnits_dropRight  = (box (fun (i: obj) -> (box (fun (s: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_CodeUnits_take))) (box ((box ((unbox<int> (box ((sharpurs_apply (box ((box Data_String_CodeUnits_length))) (box ((box s))))))) - (unbox<int> (box ((box i))))))))))) (box ((box s))))))))
+
+let Data_String_CodeUnits_contains  = (box (fun (pat: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Control_Semigroupoid_compose))) (box ((box Control_Semigroupoid_semigroupoidFn)))))) (box ((box Data_Maybe_isJust)))))) (box ((sharpurs_apply (box ((box Data_String_CodeUnits_indexOf))) (box ((box pat)))))))))
+
+let Data_String_CodeUnits_charAt  = (sharpurs_apply (box ((sharpurs_apply (box ((box Data_String_CodeUnits__charAt))) (box ((box ((fun (usd__arg1: obj) -> (box (Data_Maybe_Justusd_Ctor(usd__arg1))))))))))) (box ((box Data_Maybe_Nothingusd_Ctor))))

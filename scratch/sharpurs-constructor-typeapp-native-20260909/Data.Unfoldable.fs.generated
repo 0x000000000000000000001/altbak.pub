@@ -1,0 +1,49 @@
+[<AutoOpen>]
+module PureScript_Data_Unfoldable
+
+open System
+open System.Collections.Generic
+
+module Data_Unfoldable_FFI =
+    let unfoldrArrayImpl = 
+        fun (isNothing: obj) -> fun (fromJust: obj) -> fun (fst: obj) -> fun (snd: obj) -> fun (f: obj) -> fun (b: obj) ->
+            let isNothing' = isNothing :?> (obj -> obj)
+            let fromJust' = fromJust :?> (obj -> obj)
+            let fst' = fst :?> (obj -> obj)
+            let snd' = snd :?> (obj -> obj)
+            let f' = f :?> (obj -> obj)
+            
+            let result = System.Collections.Generic.List<obj>()
+            let mutable value = b
+            let mutable looping = true
+            
+            while looping do
+                let maybe = f' value
+                if (isNothing' maybe :?> bool) then
+                    looping <- false
+                else
+                    let tuple = fromJust' maybe
+                    result.Add(fst' tuple)
+                    value <- snd' tuple
+                    
+            result.ToArray() :> obj
+    
+
+let Data_Unfoldable_unfoldrArrayImpl = box (Data_Unfoldable_FFI.``unfoldrArrayImpl``)
+
+
+let Data_Unfoldable_Unfoldableusd_Dict  = (box (fun (x: obj) -> (box x)))
+
+let Data_Unfoldable_unfoldr  = (box (fun (dict: obj) -> (match ((unbox ((box dict)))) with | v -> ((Map.find "unfoldr" (unbox<Map<string, obj>> ((box v))))))))
+
+let Data_Unfoldable_unfoldableMaybe  = (sharpurs_apply (box ((box Data_Unfoldable_Unfoldableusd_Dict))) (box ((box ((Map.add "unfoldr" (box ((box (fun (f: obj) -> (box (fun (b: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Functor_map))) (box ((box Data_Maybe_functorMaybe)))))) (box ((box Data_Tuple_fst)))))) (box ((sharpurs_apply (box ((box f))) (box ((box b))))))))))))) (Map.add "Unfoldable10" (box ((box (fun (usd__unused: obj) -> (box Data_Unfoldable1_unfoldable1Maybe))))) Map.empty)))))))
+
+let Data_Unfoldable_unfoldableArray  = (sharpurs_apply (box ((box Data_Unfoldable_Unfoldableusd_Dict))) (box ((box ((Map.add "unfoldr" (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Unfoldable_unfoldrArrayImpl))) (box ((box Data_Maybe_isNothing)))))) (box ((sharpurs_apply (box ((box Partial_Unsafe_unsafePartial))) (box ((box (fun (usd__unused: obj) -> (sharpurs_apply (box ((box Data_Maybe_fromJust))) (box ((box Prim_undefined)))))))))))))) (box ((box Data_Tuple_fst)))))) (box ((box Data_Tuple_snd)))))) (Map.add "Unfoldable10" (box ((box (fun (usd__unused: obj) -> (box Data_Unfoldable1_unfoldable1Array))))) Map.empty)))))))
+
+let Data_Unfoldable_replicate  = (box (fun (dictUnfoldable: obj) -> (box (fun (n: obj) -> (box (fun (v: obj) -> (let step = (box (fun (i: obj) -> (match ((unbox ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Ord_lessThanOrEq))) (box ((box Data_Ord_ordInt)))))) (box ((box i)))))) (box ((box 0))))))) with | LitBool true () -> ((box Data_Maybe_Nothingusd_Ctor)) | _ -> ((box (Data_Maybe_Justusd_Ctor((box (Data_Tuple_Tupleusd_Ctor((box v), (box ((unbox<int> (box ((box i)))) - (unbox<int> (box ((box 1)))))))))))))))) in (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Unfoldable_unfoldr))) (box ((box dictUnfoldable)))))) (box ((box step)))))) (box ((box n)))))))))))
+
+let Data_Unfoldable_replicateA  = (box (fun (dictApplicative: obj) -> (box (fun (dictUnfoldable: obj) -> (box (fun (dictTraversable: obj) -> (box (fun (n: obj) -> (box (fun (m: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Traversable_sequence))) (box ((box dictTraversable)))))) (box ((box dictApplicative)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Unfoldable_replicate))) (box ((box dictUnfoldable)))))) (box ((box n)))))) (box ((box m)))))))))))))))))
+
+let Data_Unfoldable_none  = (box (fun (dictUnfoldable: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Unfoldable_unfoldr))) (box ((box dictUnfoldable)))))) (box ((sharpurs_apply (box ((box Data_Function_const))) (box ((box Data_Maybe_Nothingusd_Ctor))))))))) (box ((box Data_Unit_unit))))))
+
+let Data_Unfoldable_fromMaybe  = (box (fun (dictUnfoldable: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((box Data_Unfoldable_unfoldr))) (box ((box dictUnfoldable)))))) (box ((box (fun (b: obj) -> (sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Functor_map))) (box ((box Data_Maybe_functorMaybe)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Function_flip))) (box ((box ((fun (usd__arg1: obj) -> (fun (usd__arg2: obj) -> (box (Data_Tuple_Tupleusd_Ctor(usd__arg1, usd__arg2)))))))))))) (box ((box Data_Maybe_Nothingusd_Ctor))))))))) (box ((box b)))))))))))
