@@ -1,0 +1,114 @@
+{
+  "recorded_at": "2026-09-09T09:15:53.818355+00:00",
+  "observed_git_heads": {
+    "purust/purust": "3ce4c4c6828dfa36be22843d31d0b1657fdf9dfb",
+    "purescript-backend-optimizer-purust": "6e256c6a962c94d09ad2599c165231633bbfaa98",
+    "altbak.pub-purust": "4492638e34197a812844552476bbb219b3136c5b"
+  },
+  "note": "Source hashes identify the validated working tree implementation; HEADs may precede these edits.",
+  "source_sha256": {
+    "src/Purust/CodeGen.purs": "ae1f55d69f893efa5af9c3be3cd88cdb23ad9bc6904359a942b7ad8c57e27421",
+    "src/Purust/ReturnCells.purs": "a38c5c802ad8169991685cd7ca8d240076da7443ad256a08027df6268fedb678",
+    "src/Purust/OwnedFields.purs": "061ad0b465654558106507f5d0af23b4f590eefc0e9d0ac868081aa811492d1b",
+    "bin/purust.js": "a6e58aaa46f1bb4e47f36b4ceb282a2dfcdc889bdbfaf4a8289f2c199a952e65",
+    "tests/codegen/return-cell-names.mjs": "bd0423682dd0cb7d1cf8edb8f7193ea5ed77aaefa834f397d69b149243097fa6",
+    "tests/tast/consumed-nodes.mjs": "ecd0fe114b64568a69db6e25a3604b5244b593801918e69941fee014bc1654eb",
+    "tests/tast/fixtures/consumed-nodes/ConsumedNodes.purs": "1d279cdd38505ddefa635253a4072f5f59d53bc32cd35768949d5c7652cd5716",
+    "tests/tast/fixtures/consumed-nodes/checks.rs": "03b05b4f31b0cb1443cdfec983da4e2f45fd7646bb949f398ee5bf7b8846a890"
+  },
+  "evidence_sha256": {
+    "RBTree-before.rs": "44ae3716d13a32916de312bd6ebaa821c8809685d9fa62c7a95879f23560e75a",
+    "RBTree-after.rs": "f039675780d2ad96f397e3d111a6e4716d50f06755ec4cdd62c8f56e37110667",
+    "RBTree.diff": "db4c8ac43daaf451921d287ae5572cfadec6fc247ca7f6f7c3764bf939197db0",
+    "proof.rs": "9a2b46df52fadaa15f4ca1306bfd41ea52f3eabbfdc1a1424c9eafbbd62b257d",
+    "measure.py": "a2031cb2b2d20bf50d12d166969672a73d31e375ce756717d4a529e1762efb13",
+    "count.py": "76df9ea016c541fb4df52f92ed606957c075f97177d7a046c45e6a832355365c",
+    "results.json": "5c773f146b2a97b5754a9fd373a6c8fb2d77f2d9f145f49e2889a7f089c057ff",
+    "allocations.json": "15ff47df3560241a022c054215f085e0a93fbc4ea8c1bc5c2733c71a087f4daf",
+    "build.log": "bb6951871cf2a0af9703bb4fdbc8c8150c13aa357b97173ef3833f79165d5fb1",
+    "codegen-tests.log": "d38f7f7be12311d9c1bd6c4ff09ff4065035a494a29eeacfb5f9ec1c7bd37476",
+    "tast-tests.log": "83f88d355bc309b841d990799ae733eb038470d1a98c5f72c8d88c45f2423b2a",
+    "fixture-before.log": "b00eb84d861d3efcbdd540685955ec762066c0de57ffcbfd44fac8fa1ebadf24",
+    "fixture-after.log": "f4d72afcc953718d1ea482f8f59fb1f632eb95e323ad04eaf207c60e8436c6fd",
+    "clean-run.log": "f1bb9ad02ea6b68c8abe61593a536aea06a2fa12004ee9f48471dd13d4b0833f",
+    "final-run.log": "e9e173da4fe2a1ae53a4c4ec3c664390abb40953d12b66137e01992bc614dbb9",
+    "count.log": "1ebd9f95161888ae38671fa5675b098dbcea55da4cd8d58d2fb0eeb80c1058c7",
+    "measure.log": "f20d2a0ab48ab913f9e2ffa464395a4d8bfea6084168f57a4bbeb53e517f9903",
+    "name-regression-before.log": "1ec567eb25c2a93e7c6a34e66d97687c871a84d3a117cd1610a47df23b91a919"
+  },
+  "binary_sha256": {
+    "before": "d914fee19becdbb63b49fd6c6f8c4ffebbd77afde9b9d1f7aca5c0287afff4cd",
+    "after": "cd767c104d2d165089b801f53ac9b92f9da5f984936664c442959b1009c92e44"
+  },
+  "before_rbtree_matches_previous_validated_after": true,
+  "final_generated_sources_and_manifests_identical_to_measured": 606,
+  "final_binary_identical_to_measured_after": true,
+  "tests": {
+    "codegen": {
+      "passed": 16,
+      "failed": 0
+    },
+    "tast": {
+      "passed": 5,
+      "failed": 0
+    }
+  },
+  "fixture_allocations_for_2000_calls": {
+    "before": {
+      "unique": 2000,
+      "shared": 2000
+    },
+    "after": {
+      "unique": 0,
+      "shared": 2000
+    }
+  },
+  "runner": {
+    "clean_command": "bin/rust/run -c",
+    "final_command": "bin/rust/run",
+    "passed": true,
+    "expected_outputs": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "checked_full_runs": 12,
+    "paired_runs": 10
+  },
+  "rbtree": {
+    "allocations": {
+      "before": {
+        "allocations": 2683933,
+        "deallocations": 2683933,
+        "requested_bytes": 128828784,
+        "allocations_24_bytes": 0,
+        "tree_size": 32
+      },
+      "after": {
+        "allocations": 499957,
+        "deallocations": 499957,
+        "requested_bytes": 23997936,
+        "allocations_24_bytes": 0,
+        "tree_size": 32
+      },
+      "invariants": "Four rotations, ordering, red/black invariants, duplicates, and the exact keys of 200 simultaneously retained versions checked before and after insertion/destruction on both generated kernels."
+    },
+    "retained_versions_checked": 200
+  },
+  "official_readme_baseline_ms": {
+    "compiled_rbtree": 35.323,
+    "native_optimized_rbtree": 36.07,
+    "compiled_total": 58.39
+  }
+}
