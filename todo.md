@@ -37,7 +37,7 @@ The headers link to each backend's evidence and limitations. **JS** refers to th
 | 10 | Direct emission of primitive operations | 🟡 (PBO) | 🟢 (PBO) | 🟡 (PBO) | 🟢 (PBO) | 🟡 (PBO) | 🟡 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
 | 11 | Self-tail recursion with bounded stack usage | 🟡 | 🟡 | 🟢 (PBO) | 🟢 (PBO) | 🟢 (PBO) | 🟢 | 🟢 | 🟢 (PBO) | ⚪ | ⚪ | 🟡 |
 | 12 | ADT fields specialized by payload type | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 |
-| 13 | Memory reuse after proving ownership / uniqueness | 🔴 | 🟡 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 13 | Memory reuse after proving ownership / uniqueness (FBIP) | 🔴 | 🟡 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
 | 14 | Loop invariants: hoisting / caching per invocation | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
 | 15 | Dedicated fusion of a thunk producer with its consumer | 🔴 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
 | 16 | Scrutinee fusion / case-of-case | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🔴 | 🟡 (PBO) | 🟡 (PBO) | 🔴 | 🟡 |
@@ -73,3 +73,19 @@ The headers link to each backend's evidence and limitations. **JS** refers to th
 | 46 | Factoring identical branch tails | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 |
 
 [Audit notes: technique scope, evidence, limitations, and source revisions](optimization-audit.md).
+
+## Perceus, FBIP and sticky sharing
+
+These names describe related but distinct mechanisms. **Perceus** combines precise reference counting, reuse analysis and specialization; **FBIP** means *functional but in-place*, where functional code can reuse uniquely owned storage while preserving shared values. A runtime pointer named `PerceusPtr` alone does not establish the complete compiler algorithm. See the [Perceus paper, sections 2.2–2.7](https://www.microsoft.com/en-us/research/wp-content/uploads/2020/11/perceus-tr-v4.pdf).
+
+| Mechanism | Relation to the matrix | Current Purust scope |
+| --- | --- | --- |
+| **FBIP / reuse analysis** | **B13**, with fixed-field record updates in **B20** | Partial for ADTs: recognized consumed nodes and rotations reuse unique `Rc` cells, with a copying fallback when required. Record setters use `PerceusPtr::make_mut`. Neither cell claims universal in-place execution. |
+| **Precise reference counting, drop specialization and dup/drop fusion** | **B18** covers last-use moves and borrowing that reduce reference-count traffic | These optimizations are integrated for selected paths. A systematic Perceus pass that places releases at the earliest safe point and specializes/fuses reference-count operations across all branches is not established. |
+| **Reuse specialization: leave unchanged fields in place** | Extends **B13**; fixed-field record setters already contribute through **B20** | Record setters modify the selected field when unique. ADT reuse often extracts and rebuilds the whole payload; specializing those writes remains planned work. **B40** is a different optimization: returning the original constructor when the replacement is already equal. |
+| **Propagating uniqueness / extending inferred borrows** | Further work within **B13/B18** | Some generated reconstruction paths retest uniqueness; read-only traversals can still clone child pointers. Removing these costs requires usage proofs and measurements, not just native TAST types. |
+| **Sticky sharing / saturating reference counts** | Runtime capability not separately rated among the 46 rows | `PerceusPtr` saturates at `u32::MAX`; subsequent clones/drops leave the count unchanged and the object stays alive. Native ADTs such as RBTree use `std::rc::Rc`, so this mechanism does not apply to that path. No benchmark gain is attributed to saturation. |
+
+Evidence: [ownership and reuse](optimization-audit.md#purust), [record setters and last-use generation](../purust/purust/src/Purust/CodeGen.purs), and the [saturating pointer runtime](../purust/purust/tests/runtime/perceus_ptr/src/lib.rs). The [Purust plan](../purust/purust/todo.md) breaks the remaining work into measured baby steps. Shared nullary constructors in **B39** are another distinct mechanism: sharing a value does not imply an immortal or saturated reference count.
+
+This terminology cross-reference adds no blanket Perceus rating for another backend and does not change the existing cell ratings or coordinates.
