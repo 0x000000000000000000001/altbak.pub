@@ -1,0 +1,17 @@
+{
+  "before": {
+    "allocations": 499957,
+    "deallocations": 499957,
+    "requested_bytes": 23997936,
+    "allocations_24_bytes": 0,
+    "tree_size": 32
+  },
+  "after": {
+    "allocations": 300001,
+    "deallocations": 300001,
+    "requested_bytes": 14400048,
+    "allocations_24_bytes": 0,
+    "tree_size": 32
+  },
+  "invariants": "Four rotations, ordering, red/black invariants, duplicates, and the exact keys of 200 simultaneously retained versions checked before and after insertion/destruction on both generated kernels."
+}

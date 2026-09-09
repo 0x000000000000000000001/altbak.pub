@@ -1,0 +1,160 @@
+{
+  "recorded_at": "2026-09-09T09:40:02.995373+00:00",
+  "observed_git_heads": {
+    "purust/purust": "deb9af9957ccd9fdfb0b1e50209f34b4b4447059",
+    "purescript-backend-optimizer-purust": "6e256c6a962c94d09ad2599c165231633bbfaa98",
+    "altbak.pub-purust": "8dc0a24c9431dbe4c5fad554c42cb942898aeb72"
+  },
+  "note": "Source hashes identify the validated working tree implementation; observed HEADs may precede these edits.",
+  "source_sha256": {
+    "src/Purust/CodeGen.purs": "5f8fe9f20e3d5daf758d531de597999498974188ae3957864b4bccfec93ff169",
+    "src/Purust/ReturnCells.purs": "9186c5429e4d065ca919912d33c19180c74aa3cd1acf7f4d63847cc8efb4ff7b",
+    "src/Purust/OwnedFields.purs": "ea6a58168d2b6e708306127603242aa2e1c356f24ec37e0fca2eb3b69e1e32f0",
+    "bin/purust.js": "28f32601d1f558a24513dd3c218963e048d5894d737eeb1e8a7791327ae0f2ad",
+    "tests/tast/rotations.mjs": "2ececd744e424b40c762993b6ccad5df10d03e5c19764a69a7aec6602be85aad",
+    "tests/tast/fixtures/rotations/Rotations.purs": "d2fd1c24378189ee02dc39cf8d416bac902e7ae15d8f50f221a12548ded7cff6",
+    "tests/tast/fixtures/rotations/checks.rs": "7c46cd99c37e7e096b07a8d195518d231042847f8dcc0fbb8771425c08e2017f"
+  },
+  "evidence_sha256": {
+    "RBTree-before.rs": "f039675780d2ad96f397e3d111a6e4716d50f06755ec4cdd62c8f56e37110667",
+    "RBTree-after.rs": "fd5db1e64850c828c91e12eae410ac70f08a0c073667cd7a3719ca0fc0d254ab",
+    "RBTree.diff": "fab5094f2574ff7b1ad728af75e7c58fe3a6c26a3ea15477d5b86c3617bc7f86",
+    "proof.rs": "47f5eefaf80a84191fdfe4b4f00cbdac7e7d4f4d4ae4928ec717699ff62c777b",
+    "measure.py": "a2031cb2b2d20bf50d12d166969672a73d31e375ce756717d4a529e1762efb13",
+    "count.py": "76df9ea016c541fb4df52f92ed606957c075f97177d7a046c45e6a832355365c",
+    "results.json": "925e317e0ee57d04ef98ca2533a018017476a5c095b139c9eb8f70ad8cfce1c6",
+    "allocations.json": "0e03e9662202662a7c0137812fd3e170611b9e69a532e4be030a5e4c4dbe1bc8",
+    "build.log": "4e4846208999c91b9e1b1400debd4a5dfc208812742e28669dd2c68d608a2ec4",
+    "codegen-tests.log": "a9bbc92380a79a87184506600d30f3191400f145a2b7b7cec6184732f018f065",
+    "tast-tests.log": "5cca240587b25276bad27d0b2db688304e48459768384c54faa357f9fc0f204e",
+    "fixture-before.log": "f1fb31cff2d9f57eaaffb32e7eec0991884cb8c0ecc5c37e020733d21dee7a04",
+    "fixture-after.log": "e4573e28ffedced1963cc5c9fd04ff0f4d7fec2f48ce2c599be4fb415852e64a",
+    "rotations.log": "0e483f4a7f28bc8de286ab5b96d6192feb8c4d9e49531ff0f0388c9486e9b713",
+    "rotations-final.log": "99a2a9241369ea2b237eaa8713c21dcabd5921a5cae5bac5ae886eb257272a3e",
+    "clean-run.log": "0469c2be9fab1b725f83b968981967b5280588aaef22bb78358617e61461a464",
+    "count.log": "2695a626ea13075f9e98b5fad6bd08585b5dfdc7a694a26172116f3511c288c6",
+    "measure.log": "c8aa29504bb325c75f5850b6ccf0f90eabf18c904b1a008b2c63e81b404fb9b9",
+    "proof.log": "b263af5fa9784df26b4424229d65a0a0e8f5aacec0f6eb563d31c722f7dd8647"
+  },
+  "binary_sha256": {
+    "before": "96725fdec9e580e0cddc25c410d041f56c3fa1c5060a4459fe2107d486d0c4a6",
+    "after": "f34bfe30d86b80ec9ad5d37bb344c72cc3cf5ac9a1012c44a77ee91c724cc1ab"
+  },
+  "binary_bytes": {
+    "before": 1423248,
+    "after": 1509120
+  },
+  "before_rbtree_matches_previous_validated_after": true,
+  "current_rbtree_and_binary_match_measured_after": true,
+  "tests": {
+    "codegen": {
+      "passed": 16,
+      "failed": 0
+    },
+    "tast": {
+      "passed": 6,
+      "failed": 0
+    },
+    "final_formatted_rotation_fixture": {
+      "passed": 1,
+      "failed": 0
+    }
+  },
+  "rotation_fixture": {
+    "orientations": [
+      "left-left",
+      "left-right",
+      "right-left",
+      "right-right"
+    ],
+    "mode_order": [
+      "unique",
+      "shared root",
+      "shared child",
+      "weak root",
+      "weak child"
+    ],
+    "allocations_after": [
+      [
+        1,
+        3,
+        2,
+        3,
+        2
+      ],
+      [
+        1,
+        3,
+        2,
+        3,
+        2
+      ],
+      [
+        1,
+        3,
+        2,
+        3,
+        2
+      ],
+      [
+        1,
+        3,
+        2,
+        3,
+        2
+      ]
+    ],
+    "left_left_allocations_before": {
+      "unique": 3,
+      "shared_root": 3
+    },
+    "values_colors_cell_addresses_and_complete_releases_checked": true
+  },
+  "runner": {
+    "command": "bin/rust/run -c",
+    "passed": true,
+    "expected_outputs": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "checked_full_runs": 11,
+    "paired_runs": 10
+  },
+  "rbtree": {
+    "allocations": {
+      "before": {
+        "allocations": 499957,
+        "deallocations": 499957,
+        "requested_bytes": 23997936,
+        "allocations_24_bytes": 0,
+        "tree_size": 32
+      },
+      "after": {
+        "allocations": 300001,
+        "deallocations": 300001,
+        "requested_bytes": 14400048,
+        "allocations_24_bytes": 0,
+        "tree_size": 32
+      },
+      "invariants": "Four rotations, ordering, red/black invariants, duplicates, and the exact keys of 200 simultaneously retained versions checked before and after insertion/destruction on both generated kernels."
+    },
+    "retained_versions_checked": 200
+  },
+  "official_readme_baseline_ms": {
+    "compiled_rbtree": 21.72,
+    "native_optimized_rbtree": 36.07,
+    "compiled_total": 45.25
+  }
+}

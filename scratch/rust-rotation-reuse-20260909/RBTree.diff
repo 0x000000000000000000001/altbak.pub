@@ -1,0 +1,2168 @@
+--- RBTree-before.rs
++++ RBTree-after.rs
+@@ -138,7 +138,49 @@
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+         if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+-        {
++        { let mut purs_local_1 = purs_local_1; let _taken = std::rc::Rc::get_mut(&mut purs_local_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_1_0, mut _owned_purs_local_1_1, mut _owned_purs_local_1_2, mut _owned_purs_local_1_3)) => { let mut _owned_purs_local_1_1 = _owned_purs_local_1_1; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_1_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_1_1_0, mut _owned__owned_purs_local_1_1_1, mut _owned__owned_purs_local_1_1_2, mut _owned__owned_purs_local_1_1_3)) => {
++    let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_1_1_1;
++    {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_1_1_3;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_1_1_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_1_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_1)))
++}
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_4 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_5 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3;
++    {
++    let mut purs_local_8 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_1_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }, std::option::Option::None => {
+     let mut purs_local_4 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_5 = { if let crate::Tree::T(_, _, _, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -159,10 +201,49 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+     } else if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+-        {
++        { let mut purs_local_1 = purs_local_1; let _taken = std::rc::Rc::get_mut(&mut purs_local_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_1_0, mut _owned_purs_local_1_1, mut _owned_purs_local_1_2, mut _owned_purs_local_1_3)) => {
++    let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_1;
++    { let mut _owned_purs_local_1_3 = _owned_purs_local_1_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_1_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_1_3_0, mut _owned__owned_purs_local_1_3_1, mut _owned__owned_purs_local_1_3_2, mut _owned__owned_purs_local_1_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_1_3_1;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_1_3_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_1_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_1_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3)))
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_1_2;
++    {
++    let mut purs_local_9 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_4 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -183,13 +264,49 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => { let mut _owned_purs_local_3_1 = _owned_purs_local_3_1; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_1_0, mut _owned__owned_purs_local_3_1_1, mut _owned__owned_purs_local_3_1_2, mut _owned__owned_purs_local_3_1_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_1;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_1_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1)))
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -207,12 +324,45 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3)))
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -230,7 +380,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -250,7 +400,40 @@
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3)))
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -268,7 +451,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -305,7 +488,43 @@
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => { let mut _owned_purs_local_3_1 = _owned_purs_local_3_1; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_1_0, mut _owned__owned_purs_local_3_1_1, mut _owned__owned_purs_local_3_1_2, mut _owned__owned_purs_local_3_1_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_1;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_1_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1)))
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -323,12 +542,45 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3)))
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -346,7 +598,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -366,7 +618,40 @@
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3)))
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -384,7 +669,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -418,7 +703,46 @@
+     }
+     } else if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+-        {
++        { let mut purs_local_1 = purs_local_1; let _taken = std::rc::Rc::get_mut(&mut purs_local_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_1_0, mut _owned_purs_local_1_1, mut _owned_purs_local_1_2, mut _owned_purs_local_1_3)) => {
++    let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_1;
++    { let mut _owned_purs_local_1_3 = _owned_purs_local_1_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_1_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_1_3_0, mut _owned__owned_purs_local_1_3_1, mut _owned__owned_purs_local_1_3_2, mut _owned__owned_purs_local_1_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_1_3_1;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_1_3_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_1_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_1_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3)))
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_1_2;
++    {
++    let mut purs_local_9 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_4 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -439,13 +763,49 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => { let mut _owned_purs_local_3_1 = _owned_purs_local_3_1; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_1_0, mut _owned__owned_purs_local_3_1_1, mut _owned__owned_purs_local_3_1_2, mut _owned__owned_purs_local_3_1_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_1;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_1_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1)))
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -463,12 +823,45 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3)))
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -486,7 +879,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -506,7 +899,40 @@
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3)))
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -524,7 +950,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -561,7 +987,43 @@
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => { let mut _owned_purs_local_3_1 = _owned_purs_local_3_1; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_1_0, mut _owned__owned_purs_local_3_1_1, mut _owned__owned_purs_local_3_1_2, mut _owned__owned_purs_local_3_1_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_1;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_1_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1)))
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -579,12 +1041,45 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3)))
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -602,7 +1097,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -622,7 +1117,40 @@
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3)))
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -640,7 +1168,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -677,7 +1205,43 @@
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => { let mut _owned_purs_local_3_1 = _owned_purs_local_3_1; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_1_0, mut _owned__owned_purs_local_3_1_1, mut _owned__owned_purs_local_3_1_2, mut _owned__owned_purs_local_3_1_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_1;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_1_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1)))
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -695,12 +1259,45 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3)))
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -718,7 +1315,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -738,7 +1335,40 @@
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3)))
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -756,7 +1386,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -793,7 +1423,43 @@
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => { let mut _owned_purs_local_3_1 = _owned_purs_local_3_1; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_1_0, mut _owned__owned_purs_local_3_1_1, mut _owned__owned_purs_local_3_1_2, mut _owned__owned_purs_local_3_1_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_1;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_1_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1)))
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -811,12 +1477,45 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3)))
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -834,7 +1533,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -854,7 +1553,40 @@
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3)))
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : CtorSaturated(...) */std::rc::Rc::new(crate::Tree::T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7))))
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -872,7 +1604,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -1008,7 +1740,49 @@
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+         if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+-        {
++        { let mut purs_local_1 = purs_local_1; let _taken = std::rc::Rc::get_mut(&mut purs_local_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_1_0, mut _owned_purs_local_1_1, mut _owned_purs_local_1_2, mut _owned_purs_local_1_3)) => { let mut _owned_purs_local_1_1 = _owned_purs_local_1_1; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_1_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_1_1_0, mut _owned__owned_purs_local_1_1_1, mut _owned__owned_purs_local_1_1_2, mut _owned__owned_purs_local_1_1_3)) => {
++    let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_1_1_1;
++    {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_1_1_3;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_1_1_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_1_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_1), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_4 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_5 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3;
++    {
++    let mut purs_local_8 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_1_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }, std::option::Option::None => {
+     let mut purs_local_4 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_5 = { if let crate::Tree::T(_, _, _, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1029,10 +1803,49 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+     } else if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+-        {
++        { let mut purs_local_1 = purs_local_1; let _taken = std::rc::Rc::get_mut(&mut purs_local_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_1_0, mut _owned_purs_local_1_1, mut _owned_purs_local_1_2, mut _owned_purs_local_1_3)) => {
++    let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_1;
++    { let mut _owned_purs_local_1_3 = _owned_purs_local_1_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_1_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_1_3_0, mut _owned__owned_purs_local_1_3_1, mut _owned__owned_purs_local_1_3_2, mut _owned__owned_purs_local_1_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_1_3_1;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_1_3_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_1_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_1_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_1_2;
++    {
++    let mut purs_local_9 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_4 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1053,13 +1866,49 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => { let mut _owned_purs_local_3_1 = _owned_purs_local_3_1; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_1_0, mut _owned__owned_purs_local_3_1_1, mut _owned__owned_purs_local_3_1_2, mut _owned__owned_purs_local_3_1_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_1;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_1_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1077,12 +1926,45 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1100,7 +1982,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -1120,7 +2002,40 @@
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1138,7 +2053,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -1175,7 +2090,43 @@
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => { let mut _owned_purs_local_3_1 = _owned_purs_local_3_1; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_1_0, mut _owned__owned_purs_local_3_1_1, mut _owned__owned_purs_local_3_1_2, mut _owned__owned_purs_local_3_1_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_1;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_1_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1193,12 +2144,45 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1216,7 +2200,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -1236,7 +2220,40 @@
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1254,7 +2271,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -1288,7 +2305,46 @@
+     }
+     } else if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+-        {
++        { let mut purs_local_1 = purs_local_1; let _taken = std::rc::Rc::get_mut(&mut purs_local_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_1_0, mut _owned_purs_local_1_1, mut _owned_purs_local_1_2, mut _owned_purs_local_1_3)) => {
++    let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_1;
++    { let mut _owned_purs_local_1_3 = _owned_purs_local_1_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_1_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_1_3_0, mut _owned__owned_purs_local_1_3_1, mut _owned__owned_purs_local_1_3_2, mut _owned__owned_purs_local_1_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_1_3_1;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_1_3_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_1_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_1_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_1_2;
++    {
++    let mut purs_local_9 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_1_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_4 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_1).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1309,13 +2365,49 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!((/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         if /* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) {
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => { let mut _owned_purs_local_3_1 = _owned_purs_local_3_1; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_1_0, mut _owned__owned_purs_local_3_1_1, mut _owned__owned_purs_local_3_1_2, mut _owned__owned_purs_local_3_1_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_1;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_1_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1333,12 +2425,45 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1356,7 +2481,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -1376,7 +2501,40 @@
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1394,7 +2552,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -1431,7 +2589,43 @@
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => { let mut _owned_purs_local_3_1 = _owned_purs_local_3_1; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_1_0, mut _owned__owned_purs_local_3_1_1, mut _owned__owned_purs_local_3_1_2, mut _owned__owned_purs_local_3_1_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_1;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_1_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1449,12 +2643,45 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1472,7 +2699,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -1492,7 +2719,40 @@
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1510,7 +2770,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -1547,7 +2807,43 @@
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => { let mut _owned_purs_local_3_1 = _owned_purs_local_3_1; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_1_0, mut _owned__owned_purs_local_3_1_1, mut _owned__owned_purs_local_3_1_2, mut _owned__owned_purs_local_3_1_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_1;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_1_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1565,12 +2861,45 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1588,7 +2917,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -1608,7 +2937,40 @@
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1626,7 +2988,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -1663,7 +3025,43 @@
+         if /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => { let mut _owned_purs_local_3_1 = _owned_purs_local_3_1; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_1).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_1_0, mut _owned__owned_purs_local_3_1_1, mut _owned__owned_purs_local_3_1_2, mut _owned__owned_purs_local_3_1_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_1;
++    {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_1_3;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_1_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}
++}, _ => unreachable!() } }, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, _, _, ref f, ..) = ({ if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1681,12 +3079,45 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1704,7 +3135,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
+@@ -1724,7 +3155,40 @@
+     } else if (/* OpIsTag Debug: Test_RBTree_T -> Func */ matches!(({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref(), crate::Tree::T(..)) && /* OpIsTag Debug: Test_RBTree_R -> Other */ matches!(({ if let crate::Tree::T(ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } }), crate::Color::R)) {
+         {
+     let mut purs_local_4 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_1;
+-    {
++    { let mut purs_local_3 = purs_local_3; let _taken = std::rc::Rc::get_mut(&mut purs_local_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned_purs_local_3_0, mut _owned_purs_local_3_1, mut _owned_purs_local_3_2, mut _owned_purs_local_3_3)) => {
++    let mut purs_local_5 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_1;
++    { let mut _owned_purs_local_3_3 = _owned_purs_local_3_3; let _taken = std::rc::Rc::get_mut(&mut _owned_purs_local_3_3).and_then(|node| node.__purust_take()); match _taken { std::option::Option::Some(crate::Tree::T(mut _owned__owned_purs_local_3_3_0, mut _owned__owned_purs_local_3_3_1, mut _owned__owned_purs_local_3_3_2, mut _owned__owned_purs_local_3_3_3)) => {
++    let mut purs_local_6 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_1;
++    {
++    let mut purs_local_7 = /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned__owned_purs_local_3_3_3;
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = /* Typed i64 <- i64 : Local(...) */_owned__owned_purs_local_3_3_2;
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, std::option::Option::None => {
++    let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_7 = { if let crate::Tree::T(_, _, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    {
++    let mut purs_local_8 = /* Typed i64 <- i64 : Local(...) */purs_local_2;
++    {
++    let mut purs_local_9 = /* Typed i64 <- i64 : Local(...) */_owned_purs_local_3_2;
++    {
++    let mut purs_local_10 = { if let crate::Tree::T(_, _, ref f, ..) = (/* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */_owned_purs_local_3_3).as_ref() { f.clone() } else { unreachable!() } };
++    /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : App(Var(...)) */Test_RBTree___purust_rebuild_T(crate::Color::R, Test_RBTree___purust_rebuild_T(crate::Color::B, purs_local_4, purs_local_8, purs_local_5, /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */purs_local_3), purs_local_9, std::rc::Rc::new(crate::Tree::T(crate::Color::B, purs_local_6, purs_local_10, purs_local_7)), /* Typed std::rc::Rc<crate::Tree> <- std::rc::Rc<crate::Tree> : Local(...) */__purust_cell)
++}
++}
++}
++}
++}, _ => unreachable!() } }
++}, std::option::Option::None => {
+     let mut purs_local_5 = { if let crate::Tree::T(_, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } };
+     {
+     let mut purs_local_6 = { if let crate::Tree::T(_, ref f, ..) = ({ if let crate::Tree::T(_, _, _, ref f, ..) = (purs_local_3).as_ref() { f.clone() } else { unreachable!() } }).as_ref() { f.clone() } else { unreachable!() } };
+@@ -1742,7 +3206,7 @@
+ }
+ }
+ }
+-}
++}, _ => unreachable!() } }
+ }
+     } else {
+         {
