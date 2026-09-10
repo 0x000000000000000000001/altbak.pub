@@ -1,0 +1,18 @@
+{
+  "same_tast": true,
+  "original_lazy_equals_regenerated_baseline": true,
+  "same_cargo_lock": true,
+  "before_bundle_sha256": "2448d53eed9146277e31b1c2527e42edc0a6592491e67addc0632bb9c688cdbf",
+  "after_bundle_sha256": "c0b454141934b277b96799f4f2e40764efd00a8fa62b37a2fb37424548308fba",
+  "profile": "release opt-level=1 debug=true mimalloc",
+  "runtime": "unchanged local Perceus runtime; threaded not enabled",
+  "changed_benchmark_rust_modules": [
+    "Test.LazyEvaluation"
+  ],
+  "identity_only_bundle_sha256": "0363746c7efb4ad09a7d8305d31f2bf47f5f75d4deea77527ca15c666af80f80",
+  "same_tast_after_clean_rebuild": true,
+  "final_changed_benchmark_rust_modules": [
+    "Purs_Test_LazyEvaluation/src/lib.rs"
+  ],
+  "additional_correctness_fix": "Convert zero-argument binding bodies to their declared result representation; fixes pre-existing Fn2..Fn10 value compilation errors."
+}

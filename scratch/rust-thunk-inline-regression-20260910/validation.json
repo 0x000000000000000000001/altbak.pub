@@ -1,0 +1,97 @@
+{
+  "compiler_bundle_sha256": "c0b454141934b277b96799f4f2e40764efd00a8fa62b37a2fb37424548308fba",
+  "codegen": {
+    "passed": 41,
+    "failed": 0
+  },
+  "tast": {
+    "passed": 16,
+    "failed": 0
+  },
+  "packages": {
+    "arrays": {
+      "command": "CARGO_NET_OFFLINE=true ./bin/test",
+      "exit_code": 0,
+      "summary": "Summary: five complete original modules, 6 additional groups and 3 Rust FFI checks passed.",
+      "log": "/tmp/purust-thunk-inline-arrays.log"
+    },
+    "foldable-traversable": {
+      "command": "CARGO_NET_OFFLINE=true ./bin/test",
+      "exit_code": 0,
+      "summary": "Summary: complete original Go suite, 8 additional groups and 3 Rust FFI checks passed.",
+      "log": "/tmp/purust-thunk-inline-foldable-traversable.log"
+    },
+    "unfoldable": {
+      "command": "CARGO_NET_OFFLINE=true ./bin/test",
+      "exit_code": 0,
+      "summary": "Summary: 17 unchanged upstream assertions, 7 integration groups and native FFI checks passed.",
+      "log": "/tmp/purust-thunk-inline-unfoldable.log"
+    },
+    "unsafe-coerce": {
+      "command": "CARGO_NET_OFFLINE=true ./bin/test",
+      "exit_code": 0,
+      "summary": "Summary: original fixtures, integration assertions and expected process failures passed.",
+      "log": "/tmp/purust-thunk-inline-unsafe-coerce.log"
+    },
+    "partial": {
+      "command": "CARGO_NET_OFFLINE=true ./bin/test",
+      "exit_code": 0,
+      "summary": "Summary: original fixtures, integration assertions and expected process failures passed.",
+      "log": "/tmp/purust-thunk-inline-partial.log"
+    },
+    "assert": {
+      "command": "CARGO_NET_OFFLINE=true ./bin/test",
+      "exit_code": 0,
+      "summary": "Summary: 11 scenarios passed (including 10 expected process failures).",
+      "log": "/tmp/purust-thunk-inline-assert.log"
+    },
+    "console": {
+      "command": "CARGO_NET_OFFLINE=true ./bin/test",
+      "exit_code": 0,
+      "summary": "Summary: 7 console scenarios passed.",
+      "log": "/tmp/purust-thunk-inline-console.log"
+    },
+    "effect": {
+      "command": "CARGO_NET_OFFLINE=true ./bin/test",
+      "exit_code": 0,
+      "summary": "Summary: 17 Effect checks and 23 adapter checks replayed twice, 4 Ref integration tests and 3 expected process failures passed.",
+      "log": "/tmp/purust-thunk-inline-effect.log"
+    },
+    "refs": {
+      "command": "CARGO_NET_OFFLINE=true ./bin/test",
+      "exit_code": 0,
+      "summary": "[OK] replaying new allocates a fresh reference\n[OK] callbacks retain the same reference\n[OK] references preserve record and array values",
+      "log": "/tmp/purust-thunk-inline-refs.log"
+    },
+    "exceptions": {
+      "command": "CARGO_NET_OFFLINE=true ./bin/test",
+      "exit_code": 0,
+      "summary": "Summary: original exception assertions, 8 integration checks and 3 expected process failures passed.",
+      "log": "/tmp/purust-thunk-inline-exceptions.log"
+    },
+    "functions": {
+      "command": "CARGO_NET_OFFLINE=true ./bin/test",
+      "exit_code": 0,
+      "summary": "Summary: 11 original Go tests and 12 additional adapter checks passed.",
+      "log": "/tmp/purust-thunk-inline-functions.log"
+    },
+    "avar": {
+      "command": "CARGO_NET_OFFLINE=true ./bin/test",
+      "exit_code": 0,
+      "summary": "Summary: 16 original Go tests, 8 additional checks and 2 Rust checks passed (8 threads, 1000 values).",
+      "log": "/tmp/purust-thunk-inline-avar.log"
+    },
+    "aff": {
+      "command": "CARGO_NET_OFFLINE=true ./bin/test",
+      "exit_code": 0,
+      "summary": "Summary: 45 Aff checks, concurrent Ref/AVar integration and child lifetime checks passed.",
+      "log": "/tmp/purust-thunk-inline-aff.log"
+    }
+  },
+  "clean_runr": {
+    "exit_code": 0,
+    "outputs_checked": 14,
+    "lazy_us": 0,
+    "note": "Clean rebuild with the identity fix; final Fn value correction subsequently regenerated and compiled from identical TAST. Final isolated timings use both corrections."
+  }
+}
