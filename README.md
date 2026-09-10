@@ -149,6 +149,26 @@ Array Processing        | ~ 14 μs                | ~ 14 μs      | ~ 1 μs     
 RowToList               | ~ 0 μs                 | ~ 27 μs      | ~ 0 μs                 |
 **Total Execution Time**| ~ 12.56 ms                | ~ 94.61 ms      | ~ 36.13 ms                |
 
+#### C++
+
+C++ Benchmark           | Compiled C++ ([pscpp](https://github.com/purescript-native/purescript), WIP) | Native FP-style C++ FFI (WIP) | Native hand-written C++ FFI (WIP) |
+----------------------- | ------------------------- | ------------------------- | ------------------------------- |
+AST Evaluation          | ~ 0.03 μs                 | -                         | -                               |
+Fibonacci               | ~ 0.01 μs                 | -                         | -                               |
+List Processing         | ~ 1.39 μs                 | -                         | -                               |
+Tail Call Optimization  | ~ 25.06 μs                | -                         | -                               |
+Deep Record Updates     | ~ 14.78 μs                | -                         | -                               |
+Ackermann               | ~ 1.39 μs                 | -                         | -                               |
+Church Numerals         | ~ 22.36 μs                | -                         | -                               |
+Prime Sieve             | ~ 9.32 μs                 | -                         | -                               |
+Red-Black Tree          | ~ 6076.46 μs              | -                         | -                               |
+Polymorphism            | ~ 3088.77 μs              | -                         | -                               |
+State Monad             | ~ 2.47 μs                 | -                         | -                               |
+Lazy Evaluation         | ~ 341.13 μs               | -                         | -                               |
+Array Processing        | ~ 0.29 μs                 | -                         | -                               |
+RowToList               | ~ 0.01 μs                 | -                         | -                               |
+**Total Execution Time**| ~ 9.58 ms                 | -                         | -                               |
+
 #### F#/C#
 
 F#/C# Benchmark         | Compiled F#/C# ([sharpurs](https://github.com/0x000000000000000000001/sharpurs), WIP) | Native FP-style F#/C# FFI (WIP) | Native hand-written F#/C# FFI (WIP) |

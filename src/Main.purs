@@ -1,4 +1,7 @@
 module Main where
-import Data.List (List(..))
-test :: List Int
-test = Cons 1 Nil
+import Prelude
+import App (main) as Entry
+import Effect (Effect)
+
+main :: Effect Unit
+main = Entry.main
