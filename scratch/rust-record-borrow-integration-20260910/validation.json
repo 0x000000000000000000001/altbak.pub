@@ -1,0 +1,26 @@
+{
+  "build": "npm run build; succeeded",
+  "codegen": {
+    "command": "npm run test:codegen",
+    "passed": 27,
+    "failed": 0
+  },
+  "tast": {
+    "command": "PURS=/Users/0x1/Documents/htdocs/purescript/.stack-work/dist/aarch64-osx/ghc-9.8.4/build/purs/purs npm run test:tast",
+    "passed": 16,
+    "failed": 0,
+    "extended_record_fixture_rerun": "passed"
+  },
+  "clean_benchmark": {
+    "command": "bin/rust/run -c",
+    "results_verified": 14
+  },
+  "source_files_sha256": {
+    "src/Purust/CodeGen.purs": "433e98f7136ff08cc6734f93b14ad15d683adf6ff3cbdf1916ce4666ca1e0413",
+    "src/Purust/RecordBorrows.purs": "4fb669c86725506ee0beaac6a733e21fc1d137c87d84b87976fcc28b946ca401",
+    "tests/codegen/record-borrows.mjs": "09a1f2034f97a08bfd640db1eb7fd5843f7a413e3b0f3c4c8c4caac72d1c70ff",
+    "tests/tast/record-borrows.mjs": "98f0beef66c0c891337fa78e435f59b247a47029d6c20ef461aad9cf7b4f6868",
+    "tests/tast/fixtures/record-borrows/RecordBorrows.purs": "7969a19d4e1cada1771c5bb1be28c7bf4059789aaa350582603d811328b8faf7",
+    "tests/tast/fixtures/record-borrows/checks.rs": "939abb06b08f82800d3b3a96b83ca67909ac143af78ca434d16b5ec8f02a9d59"
+  }
+}

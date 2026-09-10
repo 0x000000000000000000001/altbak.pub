@@ -1,0 +1,209 @@
+{
+  "method": "Each exact generated Records kernel and its own copied purust_core are recompiled with O1 and separate dependencies. A private PerceusPtr increments an atomic on clone entry. The global allocator counts heap allocation/free calls using System. Counters reset before initial construction; update snapshots precede the four-field verification and destruction.",
+  "limitations": "Instrumentation may prevent optimizer elimination, so clone counts describe these instrumented binaries rather than refcount instructions surviving in timed binaries. No timing is performed. The counting allocator is System, not the timed runner's mimalloc. Immediate Value::Int copies and other pointer types are not counted as PerceusPtr clones. Heap counts exclude printing and include initial construction, verification and final destruction.",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "variants": {
+    "before": {
+      "source_sha256": {
+        "/Users/0x1/Documents/htdocs/purust/purust/tests/runtime/perceus_ptr/src/lib.rs": "7e8a3eacf3276a9b13c862c4ce083062aea890534392a150e8a6620824333aa8",
+        "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-record-borrow-integration-20260910/build/before-output/purust_core/src/lib.rs": "c07f725997ab2595892d371003cf3722cca849b784d38437f3706165382e77f3",
+        "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-record-borrow-integration-20260910/build/before-output/Purs_Test_Records/src/lib.rs": "8cb6c2da6a3c18587dd6b296d07e5aad49857248229371cfbf7e335cdb35bf3c"
+      },
+      "instrumented_core_sha256": "c07f725997ab2595892d371003cf3722cca849b784d38437f3706165382e77f3",
+      "third_party_dependency_directory": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/target/release/deps",
+      "results": [
+        {
+          "iterations": 0,
+          "initial_clones": 0,
+          "update_clones": 0,
+          "verification_clones": 5,
+          "drop_clones": 0,
+          "initial_allocations": 3,
+          "update_allocations": 0,
+          "verification_allocations": 0,
+          "total_allocations": 3,
+          "total_frees": 3,
+          "fields": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "iterations": 1,
+          "initial_clones": 0,
+          "update_clones": 11,
+          "verification_clones": 5,
+          "drop_clones": 0,
+          "initial_allocations": 3,
+          "update_allocations": 0,
+          "verification_allocations": 0,
+          "total_allocations": 3,
+          "total_frees": 3,
+          "fields": [
+            1,
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "iterations": 2,
+          "initial_clones": 0,
+          "update_clones": 22,
+          "verification_clones": 5,
+          "drop_clones": 0,
+          "initial_allocations": 3,
+          "update_allocations": 0,
+          "verification_allocations": 0,
+          "total_allocations": 3,
+          "total_frees": 3,
+          "fields": [
+            2,
+            4,
+            6,
+            3
+          ]
+        },
+        {
+          "iterations": 10,
+          "initial_clones": 0,
+          "update_clones": 110,
+          "verification_clones": 5,
+          "drop_clones": 0,
+          "initial_allocations": 3,
+          "update_allocations": 0,
+          "verification_allocations": 0,
+          "total_allocations": 3,
+          "total_frees": 3,
+          "fields": [
+            10,
+            20,
+            30,
+            20
+          ]
+        },
+        {
+          "iterations": 10000,
+          "initial_clones": 0,
+          "update_clones": 110000,
+          "verification_clones": 5,
+          "drop_clones": 0,
+          "initial_allocations": 3,
+          "update_allocations": 0,
+          "verification_allocations": 0,
+          "total_allocations": 3,
+          "total_frees": 3,
+          "fields": [
+            10000,
+            20000,
+            30000,
+            20000
+          ]
+        }
+      ]
+    },
+    "after": {
+      "source_sha256": {
+        "/Users/0x1/Documents/htdocs/purust/purust/tests/runtime/perceus_ptr/src/lib.rs": "7e8a3eacf3276a9b13c862c4ce083062aea890534392a150e8a6620824333aa8",
+        "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/purust_core/src/lib.rs": "259bfbf021abac571bb8810e5aaca41d164f3efe4e496b30c561102bb626b460",
+        "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Test_Records/src/lib.rs": "39254374eda2f93c39fe1d980ade075e1038d9a01e5eb33e383d59470d4052ef"
+      },
+      "instrumented_core_sha256": "259bfbf021abac571bb8810e5aaca41d164f3efe4e496b30c561102bb626b460",
+      "third_party_dependency_directory": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/target/release/deps",
+      "results": [
+        {
+          "iterations": 0,
+          "initial_clones": 0,
+          "update_clones": 0,
+          "verification_clones": 5,
+          "drop_clones": 0,
+          "initial_allocations": 3,
+          "update_allocations": 0,
+          "verification_allocations": 0,
+          "total_allocations": 3,
+          "total_frees": 3,
+          "fields": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "iterations": 1,
+          "initial_clones": 0,
+          "update_clones": 2,
+          "verification_clones": 5,
+          "drop_clones": 0,
+          "initial_allocations": 3,
+          "update_allocations": 0,
+          "verification_allocations": 0,
+          "total_allocations": 3,
+          "total_frees": 3,
+          "fields": [
+            1,
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "iterations": 2,
+          "initial_clones": 0,
+          "update_clones": 4,
+          "verification_clones": 5,
+          "drop_clones": 0,
+          "initial_allocations": 3,
+          "update_allocations": 0,
+          "verification_allocations": 0,
+          "total_allocations": 3,
+          "total_frees": 3,
+          "fields": [
+            2,
+            4,
+            6,
+            3
+          ]
+        },
+        {
+          "iterations": 10,
+          "initial_clones": 0,
+          "update_clones": 20,
+          "verification_clones": 5,
+          "drop_clones": 0,
+          "initial_allocations": 3,
+          "update_allocations": 0,
+          "verification_allocations": 0,
+          "total_allocations": 3,
+          "total_frees": 3,
+          "fields": [
+            10,
+            20,
+            30,
+            20
+          ]
+        },
+        {
+          "iterations": 10000,
+          "initial_clones": 0,
+          "update_clones": 20000,
+          "verification_clones": 5,
+          "drop_clones": 0,
+          "initial_allocations": 3,
+          "update_allocations": 0,
+          "verification_allocations": 0,
+          "total_allocations": 3,
+          "total_frees": 3,
+          "fields": [
+            10000,
+            20000,
+            30000,
+            20000
+          ]
+        }
+      ]
+    }
+  }
+}

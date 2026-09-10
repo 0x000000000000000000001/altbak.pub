@@ -1,0 +1,17 @@
+--- before/Records.rs
++++ after/Records.rs
+@@ -53,10 +53,10 @@
+         /* Typed crate::UnknownType <- crate::UnknownType : App(Var(...)) */{
+         let _tco_temp_0 = /* Typed i64 <- i64 : PrimOp(...) */(/* Typed i64 <- i64 : Local(...) */purs_local_0.clone() - /* Typed i64 <- i64 : Lit */1);
+         let _tco_temp_1 = /* Typed crate::UnknownType <- crate::UnknownType : Update */{
+-    let _record_update_0 = crate::mk_int(/* Typed i64 <- i64 : PrimOp(...) */(((purs_local_1.clone()).get_a()).unwrap_int() + 1));
+-    let _record_child_update_0 = crate::mk_int(/* Typed i64 <- i64 : PrimOp(...) */((((purs_local_1.clone()).get_b()).get_c()).unwrap_int() + 2));
+-    let _record_child_1_update_0 = crate::mk_int(/* Typed i64 <- i64 : PrimOp(...) */(((((purs_local_1.clone()).get_b()).get_d()).get_e()).unwrap_int() + 3));
+-    let _record_child_1_update_1 = crate::mk_int(/* Typed i64 <- i64 : PrimOp(...) */(((((purs_local_1.clone()).get_b()).get_d()).get_f()).unwrap_int() + { let _mod_l: i64 = /* Typed i64 <- i64 : Local(...) */purs_local_0; let _mod_r: i64 = /* Typed i64 <- i64 : Lit */5; _mod_l.checked_rem_euclid(_mod_r).unwrap_or(0_i64) }));
++    let _record_update_0 = crate::mk_int(/* Typed i64 <- i64 : PrimOp(...) */(/* purust record: borrowed scalar */((&purs_local_1).__purust_borrow_a()).unwrap_int() + 1));
++    let _record_child_update_0 = crate::mk_int(/* Typed i64 <- i64 : PrimOp(...) */(/* purust record: borrowed scalar */((&purs_local_1).__purust_borrow_b().__purust_borrow_c()).unwrap_int() + 2));
++    let _record_child_1_update_0 = crate::mk_int(/* Typed i64 <- i64 : PrimOp(...) */(/* purust record: borrowed scalar */((&purs_local_1).__purust_borrow_b().__purust_borrow_d().__purust_borrow_e()).unwrap_int() + 3));
++    let _record_child_1_update_1 = crate::mk_int(/* Typed i64 <- i64 : PrimOp(...) */(/* purust record: borrowed scalar */((&purs_local_1).__purust_borrow_b().__purust_borrow_d().__purust_borrow_f()).unwrap_int() + { let _mod_l: i64 = /* Typed i64 <- i64 : Local(...) */purs_local_0; let _mod_r: i64 = /* Typed i64 <- i64 : Lit */5; _mod_l.checked_rem_euclid(_mod_r).unwrap_or(0_i64) }));
+     let mut _base = purs_local_1;
+     _base.set_a(_record_update_0);
+     let mut _record_child = _base.get_b();

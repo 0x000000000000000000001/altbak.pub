@@ -1,0 +1,14 @@
+{
+  "source_sha256": {
+    "Purs_Test_Records/src/lib.rs": "8cb6c2da6a3c18587dd6b296d07e5aad49857248229371cfbf7e335cdb35bf3c",
+    "purust_core/src/lib.rs": "c07f725997ab2595892d371003cf3722cca849b784d38437f3706165382e77f3"
+  },
+  "binary_sha256": {
+    "before": "af3b2b0a89bcb7aaf06ed13a18764f8e84bfe11c5b16a6fe58b83016d24e8d96",
+    "root_borrow": "e02080fc27f08d4e260afa505bf00bd03a4a240deb23f6ee4a186c8582abd5b0",
+    "path_borrow": "58f263e548fb03ceaf139537c96e1eee29ea4bf8453077a71aad41880086512c"
+  },
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "profile": "O1/debug=true/mimalloc; fresh isolated Cargo workspace, same added borrowed methods in all variants",
+  "scope": "Only four RHS projections change. Scalar values, all setters and runtime layouts remain unchanged."
+}

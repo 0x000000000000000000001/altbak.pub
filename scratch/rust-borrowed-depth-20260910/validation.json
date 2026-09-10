@@ -1,0 +1,15 @@
+{
+  "method": "Native Rc O1 correctness without clocks: existing 100k-tree/rotation/persistence harness plus repeated depth and shared/weak destruction checks.",
+  "variants": {
+    "before": {
+      "source_sha256": "d3330b6fd36a36c9dd7f321383ab64c510328add641b903afd29bda52a493936",
+      "passed": true,
+      "output": "B13 red-parent cases: 128; unique parent address retained: 32/32 (observation only)\nB13 extra checks passed: BTreeSet, RB invariants, 200 persistent versions, 512 mixed-sharing insertions, independent children, weak values and final lifetimes\nDepth checks passed: 100k tree, owned destruction before return, repeated reads, later insertion, shared edges and independent child/Weak lifetimes"
+    },
+    "borrowed": {
+      "source_sha256": "036aa2a26735ea4e0f4cf3a893d08a82b7316b76568030f3c203626028664030",
+      "passed": true,
+      "output": "B13 red-parent cases: 128; unique parent address retained: 32/32 (observation only)\nB13 extra checks passed: BTreeSet, RB invariants, 200 persistent versions, 512 mixed-sharing insertions, independent children, weak values and final lifetimes\nDepth checks passed: 100k tree, owned destruction before return, repeated reads, later insertion, shared edges and independent child/Weak lifetimes"
+    }
+  }
+}

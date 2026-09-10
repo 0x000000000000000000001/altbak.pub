@@ -1,0 +1,37 @@
+[package]
+name = "Purs_Test_RBTree"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+purust_core = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/purust_core" }
+perceus_ptr = { path = "/Users/0x1/Documents/htdocs/purust/purust/tests/runtime/perceus_ptr" }
+fancy-regex = "0.13"
+Purs_Bench = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Bench" }
+Purs_Control_Applicative = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Control_Applicative" }
+Purs_Control_Apply = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Control_Apply" }
+Purs_Control_Bind = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Control_Bind" }
+Purs_Control_Category = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Control_Category" }
+Purs_Control_Monad = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Control_Monad" }
+Purs_Control_Semigroupoid = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Control_Semigroupoid" }
+Purs_Data_Boolean = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_Boolean" }
+Purs_Data_CommutativeRing = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_CommutativeRing" }
+Purs_Data_Eq = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_Eq" }
+Purs_Data_EuclideanRing = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_EuclideanRing" }
+Purs_Data_Function = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_Function" }
+Purs_Data_Functor = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_Functor" }
+Purs_Data_HeytingAlgebra = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_HeytingAlgebra" }
+Purs_Data_Monoid = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_Monoid" }
+Purs_Data_Ord = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_Ord" }
+Purs_Data_Ordering = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_Ordering" }
+Purs_Data_Ring = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_Ring" }
+Purs_Data_Semigroup = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_Semigroup" }
+Purs_Data_Semiring = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_Semiring" }
+Purs_Data_Show = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_Show" }
+Purs_Data_Symbol = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_Symbol" }
+Purs_Data_Unit = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_Unit" }
+Purs_Data_Void = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Data_Void" }
+Purs_Effect = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Effect" }
+Purs_Effect_Console = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Effect_Console" }
+Purs_Record_Unsafe = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Record_Unsafe" }
+Purs_Type_Proxy = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Type_Proxy" }

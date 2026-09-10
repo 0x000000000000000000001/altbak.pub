@@ -1,0 +1,14 @@
+{
+  "profile": "release O1/debug=true/mimalloc; same lockfile; explicit clean of changed crates for each variant",
+  "variants": {
+    "before": {
+      "binary_sha256": "4b21575d968b8de83935669fe6322f1d8175a936c394b06aa3a9518f9a34b9ab",
+      "source_sha256": "d3330b6fd36a36c9dd7f321383ab64c510328add641b903afd29bda52a493936"
+    },
+    "borrowed": {
+      "binary_sha256": "18276cde87dd5811ed643759853b34aa0ef18148faa687acb4541bc7889e8e08",
+      "source_sha256": "036aa2a26735ea4e0f4cf3a893d08a82b7316b76568030f3c203626028664030"
+    }
+  },
+  "runners_executed": false
+}

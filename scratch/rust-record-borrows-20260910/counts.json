@@ -1,0 +1,200 @@
+{
+  "method": "Isolated copy of PerceusPtr increments AtomicUsize once on entry to clone. The copied borrowed-getter purust_core is linked against that runtime. Fresh initial record before reset; snapshot immediately after updateRec and before four-field verification.",
+  "limitations": "Counts dynamic clone invocations in instrumented O1 binaries, not time or the number of reference-counter instructions surviving in uninstrumented machine code. Atomic side effects can prevent optimizer elimination. No timing is taken. Only PerceusPtr clones are counted, not Value::Int copies, other pointer types, allocation or destruction operations.",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "source_sha256": {
+    "/Users/0x1/Documents/htdocs/purust/purust/tests/runtime/perceus_ptr/src/lib.rs": "7e8a3eacf3276a9b13c862c4ce083062aea890534392a150e8a6620824333aa8",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-record-borrows-20260910/build/workspace/purust_core/src/lib.rs": "51b6c3907390f6de2c231b2895f0f24e3ad390746aa8493fea2b25c4b0ab0bff",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-record-borrows-20260910/build/Records-before.rs": "8cb6c2da6a3c18587dd6b296d07e5aad49857248229371cfbf7e335cdb35bf3c",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-record-borrows-20260910/build/Records-root_borrow.rs": "51633c6e004ae093e8d984c02d0ff9b3627af2a80139ee5fb53aeedd32ed43f1",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-record-borrows-20260910/build/Records-path_borrow.rs": "c7c8dcdaaf4b4ec8cfd1e26701fb6965e4b46f315d7ff277358ead7f277c1aaa"
+  },
+  "results": {
+    "before": [
+      {
+        "iterations": 0,
+        "update_clones": 0,
+        "verification_clones": 5,
+        "drop_clones": 0,
+        "fields": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "iterations": 1,
+        "update_clones": 11,
+        "verification_clones": 5,
+        "drop_clones": 0,
+        "fields": [
+          1,
+          2,
+          3,
+          1
+        ]
+      },
+      {
+        "iterations": 2,
+        "update_clones": 22,
+        "verification_clones": 5,
+        "drop_clones": 0,
+        "fields": [
+          2,
+          4,
+          6,
+          3
+        ]
+      },
+      {
+        "iterations": 10,
+        "update_clones": 110,
+        "verification_clones": 5,
+        "drop_clones": 0,
+        "fields": [
+          10,
+          20,
+          30,
+          20
+        ]
+      },
+      {
+        "iterations": 10000,
+        "update_clones": 110000,
+        "verification_clones": 5,
+        "drop_clones": 0,
+        "fields": [
+          10000,
+          20000,
+          30000,
+          20000
+        ]
+      }
+    ],
+    "root_borrow": [
+      {
+        "iterations": 0,
+        "update_clones": 0,
+        "verification_clones": 5,
+        "drop_clones": 0,
+        "fields": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "iterations": 1,
+        "update_clones": 7,
+        "verification_clones": 5,
+        "drop_clones": 0,
+        "fields": [
+          1,
+          2,
+          3,
+          1
+        ]
+      },
+      {
+        "iterations": 2,
+        "update_clones": 14,
+        "verification_clones": 5,
+        "drop_clones": 0,
+        "fields": [
+          2,
+          4,
+          6,
+          3
+        ]
+      },
+      {
+        "iterations": 10,
+        "update_clones": 70,
+        "verification_clones": 5,
+        "drop_clones": 0,
+        "fields": [
+          10,
+          20,
+          30,
+          20
+        ]
+      },
+      {
+        "iterations": 10000,
+        "update_clones": 70000,
+        "verification_clones": 5,
+        "drop_clones": 0,
+        "fields": [
+          10000,
+          20000,
+          30000,
+          20000
+        ]
+      }
+    ],
+    "path_borrow": [
+      {
+        "iterations": 0,
+        "update_clones": 0,
+        "verification_clones": 5,
+        "drop_clones": 0,
+        "fields": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "iterations": 1,
+        "update_clones": 2,
+        "verification_clones": 5,
+        "drop_clones": 0,
+        "fields": [
+          1,
+          2,
+          3,
+          1
+        ]
+      },
+      {
+        "iterations": 2,
+        "update_clones": 4,
+        "verification_clones": 5,
+        "drop_clones": 0,
+        "fields": [
+          2,
+          4,
+          6,
+          3
+        ]
+      },
+      {
+        "iterations": 10,
+        "update_clones": 20,
+        "verification_clones": 5,
+        "drop_clones": 0,
+        "fields": [
+          10,
+          20,
+          30,
+          20
+        ]
+      },
+      {
+        "iterations": 10000,
+        "update_clones": 20000,
+        "verification_clones": 5,
+        "drop_clones": 0,
+        "fields": [
+          10000,
+          20000,
+          30000,
+          20000
+        ]
+      }
+    ]
+  }
+}

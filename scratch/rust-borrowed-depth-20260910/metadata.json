@@ -1,0 +1,12 @@
+{
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Test_RBTree/src/lib.rs",
+  "source_sha256": "d3330b6fd36a36c9dd7f321383ab64c510328add641b903afd29bda52a493936",
+  "variants_sha256": {
+    "before": "d3330b6fd36a36c9dd7f321383ab64c510328add641b903afd29bda52a493936",
+    "borrowed": "036aa2a26735ea4e0f4cf3a893d08a82b7316b76568030f3c203626028664030"
+  },
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "change": "Only the owned depth function is replaced by an owned wrapper, explicit final drop, and a worker borrowing &Tree; all construction/insertion code remains identical.",
+  "timing_scope": "Full runner construction + traversal + destruction, O1/debug=true/mimalloc. No traversal-only timing.",
+  "timings_run": false
+}

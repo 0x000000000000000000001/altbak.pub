@@ -1,0 +1,88 @@
+{
+  "method": "Logical Rc operations through the existing one-word tracked wrapper; no timing and no insertion changes.",
+  "variants": {
+    "before": {
+      "source_sha256": "d3330b6fd36a36c9dd7f321383ab64c510328add641b903afd29bda52a493936",
+      "phases": {
+        "checks": {
+          "clone": 37,
+          "drop_last": 20,
+          "drop_shared": 37,
+          "get_mut_unique": 45,
+          "get_mut_weak": 3,
+          "new": 21,
+          "unwrap_unique": 1
+        },
+        "persistent_build": {
+          "clone": 5808,
+          "drop_shared": 2802,
+          "get_mut_shared": 2606,
+          "get_mut_unique": 860,
+          "new": 1504,
+          "unwrap_shared": 1303
+        },
+        "persistent_depth": {
+          "clone": 401,
+          "drop_shared": 401
+        },
+        "persistent_drop": {
+          "drop_last": 1504,
+          "drop_shared": 1703
+        },
+        "unique_build": {
+          "clone": 2483932,
+          "drop_shared": 2383932,
+          "get_mut_unique": 2783866,
+          "new": 100001
+        },
+        "unique_depth_and_drop": {
+          "clone": 200000,
+          "drop_last": 100001,
+          "drop_shared": 300000
+        }
+      },
+      "global_handle_and_payload_balance_passed": true
+    },
+    "borrowed": {
+      "source_sha256": "036aa2a26735ea4e0f4cf3a893d08a82b7316b76568030f3c203626028664030",
+      "phases": {
+        "checks": {
+          "clone": 37,
+          "drop_last": 20,
+          "drop_shared": 37,
+          "get_mut_unique": 45,
+          "get_mut_weak": 3,
+          "new": 21,
+          "unwrap_unique": 1
+        },
+        "persistent_build": {
+          "clone": 5808,
+          "drop_shared": 2802,
+          "get_mut_shared": 2606,
+          "get_mut_unique": 860,
+          "new": 1504,
+          "unwrap_shared": 1303
+        },
+        "persistent_depth": {
+          "clone": 1,
+          "drop_shared": 1
+        },
+        "persistent_drop": {
+          "drop_last": 1504,
+          "drop_shared": 1703
+        },
+        "unique_build": {
+          "clone": 2483932,
+          "drop_shared": 2383932,
+          "get_mut_unique": 2783866,
+          "new": 100001
+        },
+        "unique_depth_and_drop": {
+          "drop_last": 100001,
+          "drop_shared": 100000
+        }
+      },
+      "global_handle_and_payload_balance_passed": true
+    }
+  }
+}

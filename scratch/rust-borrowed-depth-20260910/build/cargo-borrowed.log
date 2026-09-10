@@ -1,0 +1,5 @@
+     Removed 26 files, 8.2MiB total
+   Compiling Purs_Test_RBTree v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-borrowed-depth-20260910/build/full-output/Purs_Test_RBTree)
+   Compiling Purs_App v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-borrowed-depth-20260910/build/full-output/Purs_App)
+   Compiling purust_output v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-borrowed-depth-20260910/build/full-output)
+    Finished `release` profile [optimized + debuginfo] target(s) in 1.88s

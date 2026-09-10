@@ -1,0 +1,17 @@
+[workspace]
+members = ["Purs_App", "Purs_Test_RBTree"]
+
+[package]
+name = "purust_output"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+debug = true
+opt-level = 1
+
+[dependencies]
+mimalloc = "0.1.32"
+Purs_App = { path = "Purs_App" }
+purust_core = { path = "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/purust_core" }
+perceus_ptr = { path = "/Users/0x1/Documents/htdocs/purust/purust/tests/runtime/perceus_ptr" }

@@ -1,0 +1,14 @@
+{
+  "before": {
+    "check": "8 independent sharing masks and 24 seed/count combinations: all four fields, retained roots, nested and leaf-only sharing passed\n",
+    "count": "0 3 3\n1 3 3\n2 3 3\n10 3 3\n10000 3 3\n"
+  },
+  "root_borrow": {
+    "check": "8 independent sharing masks and 24 seed/count combinations: all four fields, retained roots, nested and leaf-only sharing passed\n",
+    "count": "0 3 3\n1 3 3\n2 3 3\n10 3 3\n10000 3 3\n"
+  },
+  "path_borrow": {
+    "check": "8 independent sharing masks and 24 seed/count combinations: all four fields, retained roots, nested and leaf-only sharing passed\n",
+    "count": "0 3 3\n1 3 3\n2 3 3\n10 3 3\n10000 3 3\n"
+  }
+}
