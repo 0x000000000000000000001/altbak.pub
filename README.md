@@ -135,19 +135,19 @@ Rust Benchmark          | Compiled Rust ([purust](https://github.com/0x000000000
 ----------------------- | ------------------------- | ------------------------ | ------------------------------ |
 AST Evaluation          | ~ 1 μs                 | ~ 38 μs      | ~ 1 μs                 |
 Fibonacci               | ~ 1 μs                 | ~ 27 μs      | ~ 1 μs                 |
-List Processing         | ~ 30 μs                | ~ 76 μs      | ~ 1 μs                 |
-Tail Call Optimization  | ~ 40 μs                | ~ 114 μs     | ~ 35 μs                |
-Deep Record Updates     | ~ 647 μs               | ~ 272 μs     | ~ 4 μs                 |
-Ackermann               | ~ 19 μs                | ~ 38 μs      | ~ 18 μs                |
-Church Numerals         | ~ 174 μs               | ~ 598 μs     | ~ 1 μs                 |
-Prime Sieve             | ~ 189 μs               | ~ 221 μs     | ~ 1 μs                 |
-Red-Black Tree          | ~ 15956 μs             | ~ 59784 μs   | ~ 36070 μs             |
+List Processing         | ~ 32 μs                | ~ 76 μs      | ~ 1 μs                 |
+Tail Call Optimization  | ~ 43 μs                | ~ 114 μs     | ~ 35 μs                |
+Deep Record Updates     | ~ 674 μs               | ~ 272 μs     | ~ 4 μs                 |
+Ackermann               | ~ 20 μs                | ~ 38 μs      | ~ 18 μs                |
+Church Numerals         | ~ 183 μs               | ~ 598 μs     | ~ 1 μs                 |
+Prime Sieve             | ~ 198 μs               | ~ 221 μs     | ~ 1 μs                 |
+Red-Black Tree          | ~ 11754 μs             | ~ 59784 μs   | ~ 36070 μs             |
 Polymorphism            | ~ 1 μs                 | ~ 8342 μs    | ~ 1 μs                 |
-State Monad             | ~ 49 μs                | ~ 145 μs     | ~ 1 μs                 |
-Lazy Evaluation         | ~ 0 μs                 | ~ 24919 μs   | ~ 0 μs                 |
+State Monad             | ~ 54 μs                | ~ 145 μs     | ~ 1 μs                 |
+Lazy Evaluation         | ~ 1 μs                 | ~ 24919 μs   | ~ 0 μs                 |
 Array Processing        | ~ 14 μs                | ~ 14 μs      | ~ 1 μs                 |
 RowToList               | ~ 1 μs                 | ~ 27 μs      | ~ 0 μs                 |
-**Total Execution Time**| ~ 17.12 ms                | ~ 94.61 ms      | ~ 36.13 ms                |
+**Total Execution Time**| ~ 12.98 ms                | ~ 94.61 ms      | ~ 36.13 ms                |
 
 #### F#/C#
 
