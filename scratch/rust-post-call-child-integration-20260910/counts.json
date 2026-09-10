@@ -1,0 +1,151 @@
+{
+  "method": "Exact freshly emitted kernel declarations; only Rc API instrumentation and logical event counters added. No algorithm patch and no timings.",
+  "checks": "Four rotations, ordering/red-black invariants, exact keys of 200 retained versions, weak-reference exclusion, global handle and payload lifetime balances.",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "variants": {
+    "before": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-post-call-child-integration-20260910/build/before-output/Purs_Test_RBTree/src/lib.rs",
+      "sha256": "fc60ee33c692f8729d61ff9a5a088fc5ded8cb519cb3ba980d641879d3e92949",
+      "snapshot": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-post-call-child-integration-20260910/build/operations-input-before.rs",
+      "extracted_kernel_sha256": "b4f686e22888386ce61fec309f06c841e8a8ddefdb4f290c612f9f2ca06c0a67",
+      "unique_build": {
+        "take": 1668902,
+        "rebuild_helper": 1668902,
+        "red_retained_fields": 715030,
+        "post_no_rotation": 0,
+        "post_rotation": 0,
+        "post_unique": 0,
+        "ins_calls": 2283976
+      },
+      "phases": {
+        "checks": {
+          "clone": 37,
+          "drop_last": 20,
+          "drop_shared": 37,
+          "get_mut_unique": 49,
+          "get_mut_weak": 2,
+          "new": 21,
+          "unwrap_unique": 1
+        },
+        "persistent_build": {
+          "clone": 5808,
+          "drop_shared": 2802,
+          "get_mut_shared": 1683,
+          "get_mut_unique": 860,
+          "new": 1504,
+          "unwrap_shared": 1303
+        },
+        "persistent_depth": {
+          "clone": 401,
+          "drop_shared": 401
+        },
+        "persistent_drop": {
+          "drop_last": 1504,
+          "drop_shared": 1703
+        },
+        "unique_build": {
+          "clone": 3775130,
+          "drop_shared": 3675130,
+          "get_mut_unique": 4152834,
+          "new": 100001
+        },
+        "unique_depth_and_drop": {
+          "clone": 200000,
+          "drop_last": 100001,
+          "drop_shared": 300000
+        }
+      },
+      "lifetime_totals": {
+        "clone": 3981376,
+        "drop_last": 101525,
+        "drop_shared": 3980073,
+        "get_mut_unique": 4153743,
+        "get_mut_weak": 2,
+        "new": 101526,
+        "unwrap_unique": 1,
+        "get_mut_shared": 1683,
+        "unwrap_shared": 1303
+      },
+      "instrumented_sites": {
+        "pub fn __purust_take(&mut self) -> std::option::Option<Self> {": 1,
+        "let payload = crate::Tree::T(a0, a1, a2, a3);": 1,
+        "if let std::option::Option::Some(_purust_child_slot) = std::rc::Rc::get_mut(&mut purs_local_1) {": 2,
+        "if let std::option::Option::Some(_purust_post_slot) = std::rc::Rc::get_mut(&mut purs_local_1) {": 0,
+        "if Test_RBTree_balance__purust_child_rebuilds(_purust_post_field_0, _purust_post_field_1, _purust_post_field_2, _purust_post_field_3) { purs_local_1 } else {": 0,
+        "pub fn Test_RBTree_ins(mut purs_local_0: i64, mut purs_local_1: std::rc::Rc<crate::Tree>) -> std::rc::Rc<crate::Tree> {": 1
+      }
+    },
+    "after": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Test_RBTree/src/lib.rs",
+      "sha256": "d3330b6fd36a36c9dd7f321383ab64c510328add641b903afd29bda52a493936",
+      "snapshot": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-post-call-child-integration-20260910/build/operations-input-after.rs",
+      "extracted_kernel_sha256": "8e265dfe92dc4cf4be7ab9e405c06787803064aab9d8dfa779acc7deedd1996b",
+      "unique_build": {
+        "take": 299934,
+        "rebuild_helper": 299934,
+        "red_retained_fields": 715030,
+        "post_no_rotation": 1368968,
+        "post_rotation": 99978,
+        "post_unique": 1468946,
+        "ins_calls": 2283976
+      },
+      "phases": {
+        "checks": {
+          "clone": 37,
+          "drop_last": 20,
+          "drop_shared": 37,
+          "get_mut_unique": 45,
+          "get_mut_weak": 3,
+          "new": 21,
+          "unwrap_unique": 1
+        },
+        "persistent_build": {
+          "clone": 5808,
+          "drop_shared": 2802,
+          "get_mut_shared": 2606,
+          "get_mut_unique": 860,
+          "new": 1504,
+          "unwrap_shared": 1303
+        },
+        "persistent_depth": {
+          "clone": 401,
+          "drop_shared": 401
+        },
+        "persistent_drop": {
+          "drop_last": 1504,
+          "drop_shared": 1703
+        },
+        "unique_build": {
+          "clone": 2483932,
+          "drop_shared": 2383932,
+          "get_mut_unique": 2783866,
+          "new": 100001
+        },
+        "unique_depth_and_drop": {
+          "clone": 200000,
+          "drop_last": 100001,
+          "drop_shared": 300000
+        }
+      },
+      "lifetime_totals": {
+        "clone": 2690178,
+        "drop_last": 101525,
+        "drop_shared": 2688875,
+        "get_mut_unique": 2784771,
+        "get_mut_weak": 3,
+        "new": 101526,
+        "unwrap_unique": 1,
+        "get_mut_shared": 2606,
+        "unwrap_shared": 1303
+      },
+      "instrumented_sites": {
+        "pub fn __purust_take(&mut self) -> std::option::Option<Self> {": 1,
+        "let payload = crate::Tree::T(a0, a1, a2, a3);": 1,
+        "if let std::option::Option::Some(_purust_child_slot) = std::rc::Rc::get_mut(&mut purs_local_1) {": 2,
+        "if let std::option::Option::Some(_purust_post_slot) = std::rc::Rc::get_mut(&mut purs_local_1) {": 2,
+        "if Test_RBTree_balance__purust_child_rebuilds(_purust_post_field_0, _purust_post_field_1, _purust_post_field_2, _purust_post_field_3) { purs_local_1 } else {": 2,
+        "pub fn Test_RBTree_ins(mut purs_local_0: i64, mut purs_local_1: std::rc::Rc<crate::Tree>) -> std::rc::Rc<crate::Tree> {": 1
+      }
+    }
+  }
+}

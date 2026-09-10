@@ -1,0 +1,22 @@
+{
+  "method": "Exact emitted kernel declarations extracted verbatim and compiled with native std::rc::Rc, rustc O1. Existing validation harnesses reused without algorithm patches.",
+  "checks": "Four rotations; 100000-key tree/depth22; 128 red-parent plus 128 black-parent sharing/weak combinations; 200 retained versions with i64 bounds; 512 mixed-sharing insertions with duplicates; ordering/red-black invariants; final weak expiry.",
+  "variants": {
+    "before": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-post-call-child-integration-20260910/build/before-output/Purs_Test_RBTree/src/lib.rs",
+      "sha256": "fc60ee33c692f8729d61ff9a5a088fc5ded8cb519cb3ba980d641879d3e92949",
+      "snapshot": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-post-call-child-integration-20260910/build/operations-input-before.rs",
+      "extracted_kernel_sha256": "b4f686e22888386ce61fec309f06c841e8a8ddefdb4f290c612f9f2ca06c0a67",
+      "output": "B13 red-parent cases: 128; unique parent address retained: 32/32 (observation only)\nB13 extra checks passed: BTreeSet, RB invariants, 200 persistent versions, 512 mixed-sharing insertions, independent children, weak values and final lifetimes\nPost-call black-parent cases: 128; unique parent address retained: 32/32 (observation only)",
+      "passed": true
+    },
+    "after": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Test_RBTree/src/lib.rs",
+      "sha256": "d3330b6fd36a36c9dd7f321383ab64c510328add641b903afd29bda52a493936",
+      "snapshot": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-post-call-child-integration-20260910/build/operations-input-after.rs",
+      "extracted_kernel_sha256": "8e265dfe92dc4cf4be7ab9e405c06787803064aab9d8dfa779acc7deedd1996b",
+      "output": "B13 red-parent cases: 128; unique parent address retained: 32/32 (observation only)\nB13 extra checks passed: BTreeSet, RB invariants, 200 persistent versions, 512 mixed-sharing insertions, independent children, weak values and final lifetimes\nPost-call black-parent cases: 128; unique parent address retained: 32/32 (observation only)",
+      "passed": true
+    }
+  }
+}

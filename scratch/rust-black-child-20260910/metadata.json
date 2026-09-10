@@ -1,0 +1,10 @@
+{
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Test_RBTree/src/lib.rs",
+  "source_sha256": "fc60ee33c692f8729d61ff9a5a088fc5ded8cb519cb3ba980d641879d3e92949",
+  "profile": "O1/mimalloc; source Rust patched only in isolated copies",
+  "revisions": {
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust": "b5120ad3670625fd464f6c7d7d9d602e04d82ec8",
+    "/Users/0x1/Documents/htdocs/purust/purust": "d7aa70124e7174079cbb2cf866051e174b7a7129"
+  }
+}

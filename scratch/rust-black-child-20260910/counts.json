@@ -1,0 +1,146 @@
+{
+  "method": "Logical Rc API operations through the existing one-word wrapper, independent of timings. Four rotations, 200 persistent versions and global lifetime balances checked.",
+  "variants": {
+    "before": {
+      "unique_build": {
+        "take": 1668902,
+        "rebuild_helper": 1668902,
+        "direct_full_write": 0,
+        "no_rotation": 0,
+        "rotation": 0
+      },
+      "phases": {
+        "checks": {
+          "clone": 37,
+          "drop_last": 20,
+          "drop_shared": 37,
+          "get_mut_unique": 49,
+          "get_mut_weak": 2,
+          "new": 21,
+          "unwrap_unique": 1
+        },
+        "persistent_build": {
+          "clone": 5808,
+          "drop_shared": 2802,
+          "get_mut_shared": 1683,
+          "get_mut_unique": 860,
+          "new": 1504,
+          "unwrap_shared": 1303
+        },
+        "persistent_depth": {
+          "clone": 401,
+          "drop_shared": 401
+        },
+        "persistent_drop": {
+          "drop_last": 1504,
+          "drop_shared": 1703
+        },
+        "unique_build": {
+          "clone": 3775130,
+          "drop_shared": 3675130,
+          "get_mut_unique": 4152834,
+          "new": 100001
+        },
+        "unique_depth_and_drop": {
+          "clone": 200000,
+          "drop_last": 100001,
+          "drop_shared": 300000
+        }
+      }
+    },
+    "black_rebuild": {
+      "unique_build": {
+        "take": 1768880,
+        "rebuild_helper": 299934,
+        "direct_full_write": 1468946,
+        "no_rotation": 1368968,
+        "rotation": 99978
+      },
+      "phases": {
+        "checks": {
+          "clone": 29,
+          "drop_last": 20,
+          "drop_shared": 29,
+          "get_mut_unique": 45,
+          "get_mut_weak": 3,
+          "new": 21,
+          "unwrap_unique": 1
+        },
+        "persistent_build": {
+          "clone": 5808,
+          "drop_shared": 2802,
+          "get_mut_shared": 2606,
+          "get_mut_unique": 860,
+          "new": 1504,
+          "unwrap_shared": 1303
+        },
+        "persistent_depth": {
+          "clone": 401,
+          "drop_shared": 401
+        },
+        "persistent_drop": {
+          "drop_last": 1504,
+          "drop_shared": 1703
+        },
+        "unique_build": {
+          "clone": 1014986,
+          "drop_shared": 914986,
+          "get_mut_unique": 2783866,
+          "new": 100001
+        },
+        "unique_depth_and_drop": {
+          "clone": 200000,
+          "drop_last": 100001,
+          "drop_shared": 300000
+        }
+      }
+    },
+    "black_field": {
+      "unique_build": {
+        "take": 299934,
+        "rebuild_helper": 299934,
+        "direct_full_write": 0,
+        "no_rotation": 1368968,
+        "rotation": 99978
+      },
+      "phases": {
+        "checks": {
+          "clone": 37,
+          "drop_last": 20,
+          "drop_shared": 37,
+          "get_mut_unique": 45,
+          "get_mut_weak": 3,
+          "new": 21,
+          "unwrap_unique": 1
+        },
+        "persistent_build": {
+          "clone": 5808,
+          "drop_shared": 2802,
+          "get_mut_shared": 2606,
+          "get_mut_unique": 860,
+          "new": 1504,
+          "unwrap_shared": 1303
+        },
+        "persistent_depth": {
+          "clone": 401,
+          "drop_shared": 401
+        },
+        "persistent_drop": {
+          "drop_last": 1504,
+          "drop_shared": 1703
+        },
+        "unique_build": {
+          "clone": 2483932,
+          "drop_shared": 2383932,
+          "get_mut_unique": 2783866,
+          "new": 100001
+        },
+        "unique_depth_and_drop": {
+          "clone": 200000,
+          "drop_last": 100001,
+          "drop_shared": 300000
+        }
+      }
+    }
+  }
+}
