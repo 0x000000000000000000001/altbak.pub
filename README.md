@@ -235,25 +235,12 @@ Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Sch
 
 Benchmark               | Compiled JS ([official](https://github.com/purescript/purescript)) | Compiled JS ([Arista](https://github.com/aristanetworks/purescript-backend-optimizer)) | Compiled Go ([gopurs](https://github.com/0x000000000000000000001/gopurs), mature WIP)
 ----------------------- | ------------- | -------------- | --------------- 
-AST Evaluation          | ~ 96 μs       | ~ 68 μs        | ~ 44 μs         
-Fibonacci               | ~ 49 μs       | ~ 38 μs        | ~ 2 μs          
-List Processing         | ~ 409 μs      | ~ 374 μs       | ~ 222 μs        
-Tail Call Optimization  | ~ 1195 μs     | ~ 1572 μs      | ~ 1837 μs       
-Deep Record Updates     | ~ 414 μs      | ~ 597 μs       | ~ 1780 μs       
-Ackermann               | ~ 218 μs      | ~ 224 μs       | ~ 32 μs         
-Church Numerals         | ~ 1812 μs     | ~ 1654 μs      | ~ 698 μs        
-Prime Sieve             | ~ 693 μs      | ~ 656 μs       | ~ 434 μs        
-Red-Black Tree          | ~ 99135 μs    | ~ 58721 μs     | ~ 49991 μs      
-Polymorphism            | ~ 8466 μs     | ~ 8930 μs      | ~ 2509 μs       
-State Monad             | ~ 491 μs      | ~ 765 μs       | ~ 33 μs         
-Lazy Evaluation         | ~ 14911 μs    | ~ 13361 μs     | ~ 22896 μs      
-Array Processing        | ~ 223 μs      | ~ 189 μs       | ~ 67 μs         
 File I/O                | ~ 429223 μs   | ~ 479362 μs    | ~ 476440 μs     
 STArray Operations      | ~ 3 μs        | ~ 3 μs         | ~ 0 μs          
 String Operations       | ~ 2 μs        | ~ 2 μs         | ~ 1 μs          
 Aff Operations          | ~ 11482 μs    | ~ 11378 μs     | ~ 11030 μs      
 Parallelism             | ~ 15113637 μs | ~ 14690018 μs  | ~ 1255501 μs    
-**Total Execution Time**    | ~ 15682.46 ms | ~ 15267.91 ms  | ~ 1823.52 ms    
+**Total Execution Time**| ~ 15554.34 ms | ~ 15180.76 ms  | ~ 1742.97 ms    
 
 > [!NOTE]
 > **Hardware Context**
