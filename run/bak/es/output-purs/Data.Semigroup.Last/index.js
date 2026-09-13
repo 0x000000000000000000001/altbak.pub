@@ -6,9 +6,10 @@ var Last = function (x) {
     return x;
 };
 var showLast = function (dictShow) {
+    var show = Data_Show.show(dictShow);
     return {
         show: function (v) {
-            return "(Last " + (Data_Show.show(dictShow)(v) + ")");
+            return "(Last " + (show(v) + ")");
         }
     };
 };

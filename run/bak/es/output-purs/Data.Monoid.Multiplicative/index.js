@@ -7,17 +7,19 @@ var Multiplicative = function (x) {
     return x;
 };
 var showMultiplicative = function (dictShow) {
+    var show = Data_Show.show(dictShow);
     return {
         show: function (v) {
-            return "(Multiplicative " + (Data_Show.show(dictShow)(v) + ")");
+            return "(Multiplicative " + (show(v) + ")");
         }
     };
 };
 var semigroupMultiplicative = function (dictSemiring) {
+    var mul = Data_Semiring.mul(dictSemiring);
     return {
         append: function (v) {
             return function (v1) {
-                return Data_Semiring.mul(dictSemiring)(v)(v1);
+                return mul(v)(v1);
             };
         }
     };

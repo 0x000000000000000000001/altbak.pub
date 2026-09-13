@@ -3,6 +3,7 @@ import * as Bench from "../Bench/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
 import * as Type_Proxy from "../Type.Proxy/index.js";
+var show = /* #__PURE__ */ Data_Show.show(Data_Show.showInt);
 var keysNil = {
     keysImpl: function (v) {
         return 0;
@@ -12,20 +13,22 @@ var keysImpl = function (dict) {
     return dict.keysImpl;
 };
 var keysCons = function (dictRecordKeys) {
+    var keysImpl1 = keysImpl(dictRecordKeys);
     return {
         keysImpl: function (v) {
-            return 1 + keysImpl(dictRecordKeys)(Type_Proxy["Proxy"].value) | 0;
+            return 1 + keysImpl1(Type_Proxy["Proxy"].value) | 0;
         }
     };
 };
-var keysCons1 = /* #__PURE__ */ keysCons(/* #__PURE__ */ keysCons(/* #__PURE__ */ keysCons(/* #__PURE__ */ keysCons(/* #__PURE__ */ keysCons(keysNil)))));
 var keys = function () {
     return function (dictRecordKeys) {
+        var keysImpl1 = keysImpl(dictRecordKeys);
         return function (v) {
-            return keysImpl(dictRecordKeys)(Type_Proxy["Proxy"].value);
+            return keysImpl1(Type_Proxy["Proxy"].value);
         };
     };
 };
+var keys1 = /* #__PURE__ */ keys()(/* #__PURE__ */ keysCons(/* #__PURE__ */ keysCons(/* #__PURE__ */ keysCons(/* #__PURE__ */ keysCons(/* #__PURE__ */ keysCons(keysNil))))));
 var describe = /* #__PURE__ */ Effect_Console.log("RowToList (Keys Count):");
 var act = function __do() {
     Bench.opaque(10000)();
@@ -36,7 +39,7 @@ var act = function __do() {
         d: 4.0,
         e: "five"
     };
-    return Data_Show.show(Data_Show.showInt)(keys()(keysCons1)(rec));
+    return show(keys1(rec));
 };
 export {
     keysImpl,

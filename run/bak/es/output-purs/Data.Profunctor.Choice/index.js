@@ -2,7 +2,6 @@
 import * as Control_Category from "../Control.Category/index.js";
 import * as Control_Semigroupoid from "../Control.Semigroupoid/index.js";
 import * as Data_Either from "../Data.Either/index.js";
-import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Profunctor from "../Data.Profunctor/index.js";
 var identity = /* #__PURE__ */ Control_Category.identity(Control_Category.categoryFn);
@@ -13,20 +12,25 @@ var left = function (dict) {
     return dict.left;
 };
 var splitChoice = function (dictSemigroupoid) {
+    var composeFlipped = Control_Semigroupoid.composeFlipped(dictSemigroupoid);
     return function (dictChoice) {
+        var left1 = left(dictChoice);
+        var right1 = right(dictChoice);
         return function (l) {
             return function (r) {
-                return Control_Semigroupoid.composeFlipped(dictSemigroupoid)(left(dictChoice)(l))(right(dictChoice)(r));
+                return composeFlipped(left1(l))(right1(r));
             };
         };
     };
 };
 var fanin = function (dictSemigroupoid) {
+    var splitChoice1 = splitChoice(dictSemigroupoid);
     return function (dictChoice) {
-        var Profunctor0 = dictChoice.Profunctor0();
+        var rmap = Data_Profunctor.rmap(dictChoice.Profunctor0());
+        var splitChoice2 = splitChoice1(dictChoice);
         return function (l) {
             return function (r) {
-                return Data_Profunctor.rmap(Profunctor0)(Data_Either.either(identity)(identity))(splitChoice(dictSemigroupoid)(dictChoice)(l)(r));
+                return rmap(Data_Either.either(identity)(identity))(splitChoice2(l)(r));
             };
         };
     };
@@ -35,7 +39,7 @@ var choiceFn = {
     left: function (v) {
         return function (v1) {
             if (v1 instanceof Data_Either.Left) {
-                return Data_Function.apply(Data_Either.Left.create)(v(v1.value0));
+                return new Data_Either.Left(v(v1.value0));
             };
             if (v1 instanceof Data_Either.Right) {
                 return new Data_Either.Right(v1.value0);

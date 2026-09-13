@@ -7,10 +7,10 @@ var First = function (x) {
     return x;
 };
 var showFirst = function (dictShow) {
-    var showMaybe = Data_Maybe.showMaybe(dictShow);
+    var show = Data_Show.show(Data_Maybe.showMaybe(dictShow));
     return {
         show: function (v) {
-            return "First (" + (Data_Show.show(showMaybe)(v) + ")");
+            return "First (" + (show(v) + ")");
         }
     };
 };

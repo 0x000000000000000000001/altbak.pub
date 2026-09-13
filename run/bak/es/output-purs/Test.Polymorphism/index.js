@@ -2,6 +2,7 @@
 import * as Bench from "../Bench/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
+var show = /* #__PURE__ */ Data_Show.show(Data_Show.showInt);
 var mempty_ = function (dict) {
     return dict.mempty_;
 };
@@ -9,6 +10,8 @@ var mappend_ = function (dict) {
     return dict.mappend_;
 };
 var polyLoop = function (dictMonoidish) {
+    var mappend_1 = mappend_(dictMonoidish);
+    var mempty_1 = mempty_(dictMonoidish);
     return function (n_init) {
         return function (acc_init) {
             var go = function ($copy_v) {
@@ -22,7 +25,7 @@ var polyLoop = function (dictMonoidish) {
                             return v1;
                         };
                         $tco_var_v = v - 1 | 0;
-                        $copy_v1 = mappend_(dictMonoidish)(v1)(mempty_(dictMonoidish));
+                        $copy_v1 = mappend_1(v1)(mempty_1);
                         return;
                     };
                     while (!$tco_done) {
@@ -43,10 +46,11 @@ var intMonoidish = {
         };
     }
 };
+var polyLoop1 = /* #__PURE__ */ polyLoop(intMonoidish);
 var describe = /* #__PURE__ */ Effect_Console.log("Polymorphism (10M Type Class Dict Lookups):");
 var act = function __do() {
     var dummy = Bench.opaque(10000000)();
-    return Data_Show.show(Data_Show.showInt)(polyLoop(intMonoidish)(dummy)(0));
+    return show(polyLoop1(dummy)(0));
 };
 export {
     mappend_,

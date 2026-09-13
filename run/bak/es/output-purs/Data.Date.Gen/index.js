@@ -6,35 +6,35 @@ import * as Data_Bounded from "../Data.Bounded/index.js";
 import * as Data_Date from "../Data.Date/index.js";
 import * as Data_Date_Component from "../Data.Date.Component/index.js";
 import * as Data_Date_Component_Gen from "../Data.Date.Component.Gen/index.js";
-import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Int from "../Data.Int/index.js";
 import * as Data_Maybe from "../Data.Maybe/index.js";
 import * as Data_Time_Duration from "../Data.Time.Duration/index.js";
-import * as Partial_Unsafe from "../Partial.Unsafe/index.js";
+var fromJust = /* #__PURE__ */ Data_Maybe.fromJust();
+var bind = /* #__PURE__ */ Control_Bind.bind(Data_Maybe.bindMaybe);
 var bottom = /* #__PURE__ */ Data_Bounded.bottom(Data_Date_Component.boundedMonth);
 var bottom1 = /* #__PURE__ */ Data_Bounded.bottom(Data_Date_Component.boundedDay);
 var genDate = function (dictMonadGen) {
     var Monad0 = dictMonadGen.Monad0();
     var Bind1 = Monad0.Bind1();
-    var Functor0 = ((Monad0.Bind1()).Apply0()).Functor0();
+    var bind1 = Control_Bind.bind(Bind1);
+    var map = Data_Functor.map((Bind1.Apply0()).Functor0());
+    var chooseInt = Control_Monad_Gen_Class.chooseInt(dictMonadGen);
     var pure = Control_Applicative.pure(Monad0.Applicative0());
-    return Control_Bind.bind(Bind1)(Data_Date_Component_Gen.genYear(dictMonadGen))(function (year) {
+    return bind1(Data_Date_Component_Gen.genYear(dictMonadGen))(function (year) {
         var maxDays = (function () {
-            var $11 = Data_Date.isLeapYear(year);
-            if ($11) {
+            var $16 = Data_Date.isLeapYear(year);
+            if ($16) {
                 return 365;
             };
             return 364;
         })();
-        return Control_Bind.bind(Bind1)(Data_Functor.map(Functor0)(function ($12) {
-            return Data_Time_Duration.Days(Data_Int.toNumber($12));
-        })(Control_Monad_Gen_Class.chooseInt(dictMonadGen)(0)(maxDays)))(function (days) {
-            return Data_Function.apply(pure)(Data_Function.apply(Partial_Unsafe.unsafePartial)(function () {
-                return Data_Maybe.fromJust()(Control_Bind.bind(Data_Maybe.bindMaybe)(Data_Date.exactDate(year)(bottom)(bottom1))(function (janFirst) {
-                    return Data_Date.adjust(days)(janFirst);
-                }));
-            }));
+        return bind1(map(function ($17) {
+            return Data_Time_Duration.Days(Data_Int.toNumber($17));
+        })(chooseInt(0)(maxDays)))(function (days) {
+            return pure(fromJust(bind(Data_Date.exactDate(year)(bottom)(bottom1))(function (janFirst) {
+                return Data_Date.adjust(days)(janFirst);
+            })));
         });
     });
 };

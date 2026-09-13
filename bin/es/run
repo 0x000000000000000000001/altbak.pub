@@ -61,7 +61,9 @@ elif [ "$MODE" == "x" ]; then
   trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/Test/Parallelism.purs src/AppX.purs" EXIT
 fi
 
-export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
+mkdir -p run/bak/es/host-bin
+ln -sf "$PWD/run/bak/js/node_modules/purescript/purs.bin" run/bak/es/host-bin/purs
+export PATH="$PWD/run/bak/es/host-bin:$PWD/run/bak/js/node_modules/.bin:$PATH"
 echo 'Building...'
 spago build > /dev/null 2>&1
 purs-backend-es build --output-dir run/bak/es/output > /dev/null 2>&1

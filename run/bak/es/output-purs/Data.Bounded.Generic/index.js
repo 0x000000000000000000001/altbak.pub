@@ -20,9 +20,10 @@ var genericTopConstructor = function (dictGenericTop) {
     };
 };
 var genericTopProduct = function (dictGenericTop) {
+    var genericTop$prime1 = genericTop$prime(dictGenericTop);
     return function (dictGenericTop1) {
         return {
-            "genericTop'": new Data_Generic_Rep.Product(genericTop$prime(dictGenericTop), genericTop$prime(dictGenericTop1))
+            "genericTop'": new Data_Generic_Rep.Product(genericTop$prime1, genericTop$prime(dictGenericTop1))
         };
     };
 };
@@ -32,8 +33,9 @@ var genericTopSum = function (dictGenericTop) {
     };
 };
 var genericTop = function (dictGeneric) {
+    var to = Data_Generic_Rep.to(dictGeneric);
     return function (dictGenericTop) {
-        return Data_Generic_Rep.to(dictGeneric)(genericTop$prime(dictGenericTop));
+        return to(genericTop$prime(dictGenericTop));
     };
 };
 var genericBottomNoArguments = /* #__PURE__ */ (function () {
@@ -55,9 +57,10 @@ var genericBottomConstructor = function (dictGenericBottom) {
     };
 };
 var genericBottomProduct = function (dictGenericBottom) {
+    var genericBottom$prime1 = genericBottom$prime(dictGenericBottom);
     return function (dictGenericBottom1) {
         return {
-            "genericBottom'": new Data_Generic_Rep.Product(genericBottom$prime(dictGenericBottom), genericBottom$prime(dictGenericBottom1))
+            "genericBottom'": new Data_Generic_Rep.Product(genericBottom$prime1, genericBottom$prime(dictGenericBottom1))
         };
     };
 };
@@ -67,8 +70,9 @@ var genericBottomSum = function (dictGenericBottom) {
     };
 };
 var genericBottom = function (dictGeneric) {
+    var to = Data_Generic_Rep.to(dictGeneric);
     return function (dictGenericBottom) {
-        return Data_Generic_Rep.to(dictGeneric)(genericBottom$prime(dictGenericBottom));
+        return to(genericBottom$prime(dictGenericBottom));
     };
 };
 export {

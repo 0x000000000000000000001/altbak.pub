@@ -21,6 +21,7 @@ import * as Data_Monoid_Multiplicative from "../Data.Monoid.Multiplicative/index
 import * as Data_Tuple from "../Data.Tuple/index.js";
 import * as Data_Unit from "../Data.Unit/index.js";
 var map = /* #__PURE__ */ Data_Functor.map(Data_Tuple.functorTuple);
+var bimap = /* #__PURE__ */ Data_Bifunctor.bimap(Data_Bifunctor.bifunctorTuple);
 var map1 = /* #__PURE__ */ Data_Functor.map(Data_Monoid_Multiplicative.functorMultiplicative);
 var map2 = /* #__PURE__ */ Data_Functor.map(Data_Maybe.functorMaybe);
 var map3 = /* #__PURE__ */ Data_Functor.map(Data_Maybe_Last.functorLast);
@@ -28,35 +29,39 @@ var map4 = /* #__PURE__ */ Data_Functor.map(Data_Maybe_First.functorFirst);
 var map5 = /* #__PURE__ */ Data_Functor.map(Data_Either.functorEither);
 var map6 = /* #__PURE__ */ Data_Functor.map(Data_Monoid_Dual.functorDual);
 var map7 = /* #__PURE__ */ Data_Functor.map(Data_Monoid_Disj.functorDisj);
+var bimap1 = /* #__PURE__ */ Data_Bifunctor.bimap(Data_Bifunctor.bifunctorEither);
 var map8 = /* #__PURE__ */ Data_Functor.map(Data_Monoid_Conj.functorConj);
 var map9 = /* #__PURE__ */ Data_Functor.map(Data_Monoid_Additive.functorAdditive);
 var mapWithIndex = function (dict) {
     return dict.mapWithIndex;
 };
 var mapDefault = function (dictFunctorWithIndex) {
+    var mapWithIndex1 = mapWithIndex(dictFunctorWithIndex);
     return function (f) {
-        return mapWithIndex(dictFunctorWithIndex)(Data_Function["const"](f));
+        return mapWithIndex1(Data_Function["const"](f));
     };
 };
 var functorWithIndexTuple = {
     mapWithIndex: function (f) {
-        return Data_Function.apply(map)(f(Data_Unit.unit));
+        return map(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Tuple.functorTuple;
     }
 };
 var functorWithIndexProduct = function (dictFunctorWithIndex) {
+    var mapWithIndex1 = mapWithIndex(dictFunctorWithIndex);
     var functorProduct = Data_Functor_Product.functorProduct(dictFunctorWithIndex.Functor0());
     return function (dictFunctorWithIndex1) {
+        var mapWithIndex2 = mapWithIndex(dictFunctorWithIndex1);
         var functorProduct1 = functorProduct(dictFunctorWithIndex1.Functor0());
         return {
             mapWithIndex: function (f) {
                 return function (v) {
-                    return Data_Bifunctor.bimap(Data_Bifunctor.bifunctorTuple)(mapWithIndex(dictFunctorWithIndex)(function ($53) {
-                        return f(Data_Either.Left.create($53));
-                    }))(mapWithIndex(dictFunctorWithIndex1)(function ($54) {
-                        return f(Data_Either.Right.create($54));
+                    return bimap(mapWithIndex1(function ($63) {
+                        return f(Data_Either.Left.create($63));
+                    }))(mapWithIndex2(function ($64) {
+                        return f(Data_Either.Right.create($64));
                     }))(v);
                 };
             },
@@ -68,7 +73,7 @@ var functorWithIndexProduct = function (dictFunctorWithIndex) {
 };
 var functorWithIndexMultiplicative = {
     mapWithIndex: function (f) {
-        return Data_Function.apply(map1)(f(Data_Unit.unit));
+        return map1(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Monoid_Multiplicative.functorMultiplicative;
@@ -76,7 +81,7 @@ var functorWithIndexMultiplicative = {
 };
 var functorWithIndexMaybe = {
     mapWithIndex: function (f) {
-        return Data_Function.apply(map2)(f(Data_Unit.unit));
+        return map2(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Maybe.functorMaybe;
@@ -84,7 +89,7 @@ var functorWithIndexMaybe = {
 };
 var functorWithIndexLast = {
     mapWithIndex: function (f) {
-        return Data_Function.apply(map3)(f(Data_Unit.unit));
+        return map3(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Maybe_Last.functorLast;
@@ -102,7 +107,7 @@ var functorWithIndexIdentity = {
 };
 var functorWithIndexFirst = {
     mapWithIndex: function (f) {
-        return Data_Function.apply(map4)(f(Data_Unit.unit));
+        return map4(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Maybe_First.functorFirst;
@@ -110,7 +115,7 @@ var functorWithIndexFirst = {
 };
 var functorWithIndexEither = {
     mapWithIndex: function (f) {
-        return Data_Function.apply(map5)(f(Data_Unit.unit));
+        return map5(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Either.functorEither;
@@ -118,7 +123,7 @@ var functorWithIndexEither = {
 };
 var functorWithIndexDual = {
     mapWithIndex: function (f) {
-        return Data_Function.apply(map6)(f(Data_Unit.unit));
+        return map6(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Monoid_Dual.functorDual;
@@ -126,23 +131,25 @@ var functorWithIndexDual = {
 };
 var functorWithIndexDisj = {
     mapWithIndex: function (f) {
-        return Data_Function.apply(map7)(f(Data_Unit.unit));
+        return map7(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Monoid_Disj.functorDisj;
     }
 };
 var functorWithIndexCoproduct = function (dictFunctorWithIndex) {
+    var mapWithIndex1 = mapWithIndex(dictFunctorWithIndex);
     var functorCoproduct = Data_Functor_Coproduct.functorCoproduct(dictFunctorWithIndex.Functor0());
     return function (dictFunctorWithIndex1) {
+        var mapWithIndex2 = mapWithIndex(dictFunctorWithIndex1);
         var functorCoproduct1 = functorCoproduct(dictFunctorWithIndex1.Functor0());
         return {
             mapWithIndex: function (f) {
                 return function (v) {
-                    return Data_Bifunctor.bimap(Data_Bifunctor.bifunctorEither)(mapWithIndex(dictFunctorWithIndex)(function ($55) {
-                        return f(Data_Either.Left.create($55));
-                    }))(mapWithIndex(dictFunctorWithIndex1)(function ($56) {
-                        return f(Data_Either.Right.create($56));
+                    return bimap1(mapWithIndex1(function ($65) {
+                        return f(Data_Either.Left.create($65));
+                    }))(mapWithIndex2(function ($66) {
+                        return f(Data_Either.Right.create($66));
                     }))(v);
                 };
             },
@@ -164,26 +171,27 @@ var functorWithIndexConst = {
 };
 var functorWithIndexConj = {
     mapWithIndex: function (f) {
-        return Data_Function.apply(map8)(f(Data_Unit.unit));
+        return map8(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Monoid_Conj.functorConj;
     }
 };
 var functorWithIndexCompose = function (dictFunctorWithIndex) {
+    var mapWithIndex1 = mapWithIndex(dictFunctorWithIndex);
     var functorCompose = Data_Functor_Compose.functorCompose(dictFunctorWithIndex.Functor0());
     return function (dictFunctorWithIndex1) {
-        var mapWithIndex1 = mapWithIndex(dictFunctorWithIndex1);
+        var mapWithIndex2 = mapWithIndex(dictFunctorWithIndex1);
         var functorCompose1 = functorCompose(dictFunctorWithIndex1.Functor0());
         return {
             mapWithIndex: function (f) {
                 return function (v) {
-                    return Data_Function.apply(Data_Functor_Compose.Compose)(mapWithIndex(dictFunctorWithIndex)((function () {
-                        var $57 = Data_Tuple.curry(f);
-                        return function ($58) {
-                            return mapWithIndex1($57($58));
+                    return mapWithIndex1((function () {
+                        var $67 = Data_Tuple.curry(f);
+                        return function ($68) {
+                            return mapWithIndex2($67($68));
                         };
-                    })())(v));
+                    })())(v);
                 };
             },
             Functor0: function () {
@@ -199,11 +207,12 @@ var functorWithIndexArray = {
     }
 };
 var functorWithIndexApp = function (dictFunctorWithIndex) {
+    var mapWithIndex1 = mapWithIndex(dictFunctorWithIndex);
     var functorApp = Data_Functor_App.functorApp(dictFunctorWithIndex.Functor0());
     return {
         mapWithIndex: function (f) {
             return function (v) {
-                return Data_Function.apply(Data_Functor_App.App)(mapWithIndex(dictFunctorWithIndex)(f)(v));
+                return mapWithIndex1(f)(v);
             };
         },
         Functor0: function () {
@@ -213,7 +222,7 @@ var functorWithIndexApp = function (dictFunctorWithIndex) {
 };
 var functorWithIndexAdditive = {
     mapWithIndex: function (f) {
-        return Data_Function.apply(map9)(f(Data_Unit.unit));
+        return map9(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Monoid_Additive.functorAdditive;

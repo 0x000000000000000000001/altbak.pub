@@ -2,14 +2,20 @@
 import * as $foreign from "./foreign.js";
 import * as Control_Applicative from "../Control.Applicative/index.js";
 import * as Control_Bind from "../Control.Bind/index.js";
-import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Ord from "../Data.Ord/index.js";
 import * as Effect from "../Effect/index.js";
 import * as Effect_Aff from "../Effect.Aff/index.js";
 import * as Effect_Class from "../Effect.Class/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
+var discard = /* #__PURE__ */ Control_Bind.discard(Control_Bind.discardUnit);
+var min = /* #__PURE__ */ Data_Ord.min(Data_Ord.ordNumber);
+var discard2 = /* #__PURE__ */ discard(Effect_Aff.bindAff);
 var liftEffect = /* #__PURE__ */ Effect_Class.liftEffect(Effect_Aff.monadEffectAff);
+var $$void = /* #__PURE__ */ Data_Functor["void"](Effect_Aff.functorAff);
+var bind1 = /* #__PURE__ */ Control_Bind.bind(Effect_Aff.bindAff);
+var pure1 = /* #__PURE__ */ Control_Applicative.pure(Effect_Aff.applicativeAff);
+var void1 = /* #__PURE__ */ Data_Functor["void"](Effect.functorEffect);
 var runBenchSync = function (describe) {
     return function (act) {
         return function __do() {
@@ -59,7 +65,7 @@ var runBenchSync = function (describe) {
             act();
             var t20 = $foreign.benchNow();
             var d10 = t20 - t19;
-            var best = Data_Ord.min(Data_Ord.ordNumber)(Data_Ord.min(Data_Ord.ordNumber)(Data_Ord.min(Data_Ord.ordNumber)(Data_Ord.min(Data_Ord.ordNumber)(d1)(d2))(Data_Ord.min(Data_Ord.ordNumber)(d3)(d4)))(Data_Ord.min(Data_Ord.ordNumber)(Data_Ord.min(Data_Ord.ordNumber)(d5)(d6))(Data_Ord.min(Data_Ord.ordNumber)(d7)(d8))))(Data_Ord.min(Data_Ord.ordNumber)(d9)(d10));
+            var best = min(min(min(min(d1)(d2))(min(d3)(d4)))(min(min(d5)(d6))(min(d7)(d8))))(min(d9)(d10));
             Effect_Console.log("\x0a(Execution time - best of 10)\x0a\x0a" + ($foreign.formatNumber(best) + " \u03bcs\x0a"))();
             return best;
         };
@@ -67,55 +73,55 @@ var runBenchSync = function (describe) {
 };
 var runBenchAff = function (describe) {
     return function (act) {
-        return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Function.apply(liftEffect)(Effect_Console.log("--------------------------------------------------\x0a\x0a(Test)\x0a")))(function () {
-            return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Function.apply(liftEffect)(describe))(function () {
-                return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Function.apply(liftEffect)(Effect_Console.log("\x0a(Output & Warm-up)\x0a")))(function () {
-                    return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Functor["void"](Effect_Aff.functorAff)(act))(function () {
-                        return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Functor["void"](Effect_Aff.functorAff)(act))(function () {
-                            return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Functor["void"](Effect_Aff.functorAff)(act))(function () {
-                                return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t1) {
-                                    return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Functor["void"](Effect_Aff.functorAff)(act))(function () {
-                                        return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t2) {
+        return discard2(liftEffect(Effect_Console.log("--------------------------------------------------\x0a\x0a(Test)\x0a")))(function () {
+            return discard2(liftEffect(describe))(function () {
+                return discard2(liftEffect(Effect_Console.log("\x0a(Output & Warm-up)\x0a")))(function () {
+                    return discard2($$void(act))(function () {
+                        return discard2($$void(act))(function () {
+                            return discard2($$void(act))(function () {
+                                return bind1(liftEffect($foreign.benchNow))(function (t1) {
+                                    return discard2($$void(act))(function () {
+                                        return bind1(liftEffect($foreign.benchNow))(function (t2) {
                                             var d1 = t2 - t1;
-                                            return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t3) {
-                                                return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Functor["void"](Effect_Aff.functorAff)(act))(function () {
-                                                    return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t4) {
+                                            return bind1(liftEffect($foreign.benchNow))(function (t3) {
+                                                return discard2($$void(act))(function () {
+                                                    return bind1(liftEffect($foreign.benchNow))(function (t4) {
                                                         var d2 = t4 - t3;
-                                                        return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t5) {
-                                                            return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Functor["void"](Effect_Aff.functorAff)(act))(function () {
-                                                                return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t6) {
+                                                        return bind1(liftEffect($foreign.benchNow))(function (t5) {
+                                                            return discard2($$void(act))(function () {
+                                                                return bind1(liftEffect($foreign.benchNow))(function (t6) {
                                                                     var d3 = t6 - t5;
-                                                                    return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t7) {
-                                                                        return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Functor["void"](Effect_Aff.functorAff)(act))(function () {
-                                                                            return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t8) {
+                                                                    return bind1(liftEffect($foreign.benchNow))(function (t7) {
+                                                                        return discard2($$void(act))(function () {
+                                                                            return bind1(liftEffect($foreign.benchNow))(function (t8) {
                                                                                 var d4 = t8 - t7;
-                                                                                return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t9) {
-                                                                                    return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Functor["void"](Effect_Aff.functorAff)(act))(function () {
-                                                                                        return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t10) {
+                                                                                return bind1(liftEffect($foreign.benchNow))(function (t9) {
+                                                                                    return discard2($$void(act))(function () {
+                                                                                        return bind1(liftEffect($foreign.benchNow))(function (t10) {
                                                                                             var d5 = t10 - t9;
-                                                                                            return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t11) {
-                                                                                                return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Functor["void"](Effect_Aff.functorAff)(act))(function () {
-                                                                                                    return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t12) {
+                                                                                            return bind1(liftEffect($foreign.benchNow))(function (t11) {
+                                                                                                return discard2($$void(act))(function () {
+                                                                                                    return bind1(liftEffect($foreign.benchNow))(function (t12) {
                                                                                                         var d6 = t12 - t11;
-                                                                                                        return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t13) {
-                                                                                                            return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Functor["void"](Effect_Aff.functorAff)(act))(function () {
-                                                                                                                return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t14) {
+                                                                                                        return bind1(liftEffect($foreign.benchNow))(function (t13) {
+                                                                                                            return discard2($$void(act))(function () {
+                                                                                                                return bind1(liftEffect($foreign.benchNow))(function (t14) {
                                                                                                                     var d7 = t14 - t13;
-                                                                                                                    return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t15) {
-                                                                                                                        return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Functor["void"](Effect_Aff.functorAff)(act))(function () {
-                                                                                                                            return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t16) {
+                                                                                                                    return bind1(liftEffect($foreign.benchNow))(function (t15) {
+                                                                                                                        return discard2($$void(act))(function () {
+                                                                                                                            return bind1(liftEffect($foreign.benchNow))(function (t16) {
                                                                                                                                 var d8 = t16 - t15;
-                                                                                                                                return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t17) {
-                                                                                                                                    return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Functor["void"](Effect_Aff.functorAff)(act))(function () {
-                                                                                                                                        return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t18) {
+                                                                                                                                return bind1(liftEffect($foreign.benchNow))(function (t17) {
+                                                                                                                                    return discard2($$void(act))(function () {
+                                                                                                                                        return bind1(liftEffect($foreign.benchNow))(function (t18) {
                                                                                                                                             var d9 = t18 - t17;
-                                                                                                                                            return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t19) {
-                                                                                                                                                return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Functor["void"](Effect_Aff.functorAff)(act))(function () {
-                                                                                                                                                    return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t20) {
+                                                                                                                                            return bind1(liftEffect($foreign.benchNow))(function (t19) {
+                                                                                                                                                return discard2($$void(act))(function () {
+                                                                                                                                                    return bind1(liftEffect($foreign.benchNow))(function (t20) {
                                                                                                                                                         var d10 = t20 - t19;
-                                                                                                                                                        var best = Data_Ord.min(Data_Ord.ordNumber)(Data_Ord.min(Data_Ord.ordNumber)(Data_Ord.min(Data_Ord.ordNumber)(Data_Ord.min(Data_Ord.ordNumber)(d1)(d2))(Data_Ord.min(Data_Ord.ordNumber)(d3)(d4)))(Data_Ord.min(Data_Ord.ordNumber)(Data_Ord.min(Data_Ord.ordNumber)(d5)(d6))(Data_Ord.min(Data_Ord.ordNumber)(d7)(d8))))(Data_Ord.min(Data_Ord.ordNumber)(d9)(d10));
-                                                                                                                                                        return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Data_Function.apply(liftEffect)(Effect_Console.log("\x0a(Execution time - best of 10)\x0a\x0a" + ($foreign.formatNumber(best) + " \u03bcs\x0a"))))(function () {
-                                                                                                                                                            return Control_Applicative.pure(Effect_Aff.applicativeAff)(best);
+                                                                                                                                                        var best = min(min(min(min(d1)(d2))(min(d3)(d4)))(min(min(d5)(d6))(min(d7)(d8))))(min(d9)(d10));
+                                                                                                                                                        return discard2(liftEffect(Effect_Console.log("\x0a(Execution time - best of 10)\x0a\x0a" + ($foreign.formatNumber(best) + " \u03bcs\x0a"))))(function () {
+                                                                                                                                                            return pure1(best);
                                                                                                                                                         });
                                                                                                                                                     });
                                                                                                                                                 });
@@ -163,49 +169,49 @@ var runBench = function (describe) {
             Effect_Console.log("\x0a(Output & Warm-up)\x0a")();
             var out = act();
             Effect_Console.log(out)();
-            Data_Functor["void"](Effect.functorEffect)(act)();
-            Data_Functor["void"](Effect.functorEffect)(act)();
+            void1(act)();
+            void1(act)();
             var t1 = $foreign.benchNow();
-            Data_Functor["void"](Effect.functorEffect)(act)();
+            void1(act)();
             var t2 = $foreign.benchNow();
             var d1 = t2 - t1;
             var t3 = $foreign.benchNow();
-            Data_Functor["void"](Effect.functorEffect)(act)();
+            void1(act)();
             var t4 = $foreign.benchNow();
             var d2 = t4 - t3;
             var t5 = $foreign.benchNow();
-            Data_Functor["void"](Effect.functorEffect)(act)();
+            void1(act)();
             var t6 = $foreign.benchNow();
             var d3 = t6 - t5;
             var t7 = $foreign.benchNow();
-            Data_Functor["void"](Effect.functorEffect)(act)();
+            void1(act)();
             var t8 = $foreign.benchNow();
             var d4 = t8 - t7;
             var t9 = $foreign.benchNow();
-            Data_Functor["void"](Effect.functorEffect)(act)();
+            void1(act)();
             var t10 = $foreign.benchNow();
             var d5 = t10 - t9;
             var t11 = $foreign.benchNow();
-            Data_Functor["void"](Effect.functorEffect)(act)();
+            void1(act)();
             var t12 = $foreign.benchNow();
             var d6 = t12 - t11;
             var t13 = $foreign.benchNow();
-            Data_Functor["void"](Effect.functorEffect)(act)();
+            void1(act)();
             var t14 = $foreign.benchNow();
             var d7 = t14 - t13;
             var t15 = $foreign.benchNow();
-            Data_Functor["void"](Effect.functorEffect)(act)();
+            void1(act)();
             var t16 = $foreign.benchNow();
             var d8 = t16 - t15;
             var t17 = $foreign.benchNow();
-            Data_Functor["void"](Effect.functorEffect)(act)();
+            void1(act)();
             var t18 = $foreign.benchNow();
             var d9 = t18 - t17;
             var t19 = $foreign.benchNow();
-            Data_Functor["void"](Effect.functorEffect)(act)();
+            void1(act)();
             var t20 = $foreign.benchNow();
             var d10 = t20 - t19;
-            var best = Data_Ord.min(Data_Ord.ordNumber)(Data_Ord.min(Data_Ord.ordNumber)(Data_Ord.min(Data_Ord.ordNumber)(Data_Ord.min(Data_Ord.ordNumber)(d1)(d2))(Data_Ord.min(Data_Ord.ordNumber)(d3)(d4)))(Data_Ord.min(Data_Ord.ordNumber)(Data_Ord.min(Data_Ord.ordNumber)(d5)(d6))(Data_Ord.min(Data_Ord.ordNumber)(d7)(d8))))(Data_Ord.min(Data_Ord.ordNumber)(d9)(d10));
+            var best = min(min(min(min(d1)(d2))(min(d3)(d4)))(min(min(d5)(d6))(min(d7)(d8))))(min(d9)(d10));
             Effect_Console.log("\x0a(Execution time - best of 10)\x0a\x0a" + ($foreign.formatNumber(best) + " \u03bcs\x0a"))();
             return best;
         };

@@ -2,6 +2,7 @@
 import * as Bench from "../Bench/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
+var show = /* #__PURE__ */ Data_Show.show(Data_Show.showInt);
 var Val = /* #__PURE__ */ (function () {
     function Val(value0) {
         this.value0 = value0;
@@ -71,7 +72,7 @@ var buildTree = function (v) {
 };
 var act = function __do() {
     var dummy = Bench.opaque(3)();
-    return Data_Show.show(Data_Show.showInt)($$eval(buildTree(dummy)));
+    return show($$eval(buildTree(dummy)));
 };
 export {
     Val,

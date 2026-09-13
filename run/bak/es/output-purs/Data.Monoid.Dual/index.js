@@ -8,17 +8,19 @@ var Dual = function (x) {
     return x;
 };
 var showDual = function (dictShow) {
+    var show = Data_Show.show(dictShow);
     return {
         show: function (v) {
-            return "(Dual " + (Data_Show.show(dictShow)(v) + ")");
+            return "(Dual " + (show(v) + ")");
         }
     };
 };
 var semigroupDual = function (dictSemigroup) {
+    var append1 = Data_Semigroup.append(dictSemigroup);
     return {
         append: function (v) {
             return function (v1) {
-                return Data_Semigroup.append(dictSemigroup)(v1)(v);
+                return append1(v1)(v);
             };
         }
     };

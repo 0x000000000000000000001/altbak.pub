@@ -7,17 +7,19 @@ var Additive = function (x) {
     return x;
 };
 var showAdditive = function (dictShow) {
+    var show = Data_Show.show(dictShow);
     return {
         show: function (v) {
-            return "(Additive " + (Data_Show.show(dictShow)(v) + ")");
+            return "(Additive " + (show(v) + ")");
         }
     };
 };
 var semigroupAdditive = function (dictSemiring) {
+    var add = Data_Semiring.add(dictSemiring);
     return {
         append: function (v) {
             return function (v1) {
-                return Data_Semiring.add(dictSemiring)(v)(v1);
+                return add(v)(v1);
             };
         }
     };

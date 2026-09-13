@@ -2,6 +2,7 @@
 import * as Bench from "../Bench/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
+var show = /* #__PURE__ */ Data_Show.show(Data_Show.showInt);
 var describe = /* #__PURE__ */ Effect_Console.log("Ackermann (3, 4):");
 var ackermann = function (v) {
     return function (v1) {
@@ -16,7 +17,7 @@ var ackermann = function (v) {
 };
 var act = function __do() {
     var dummy = Bench.opaque(3)();
-    return Data_Show.show(Data_Show.showInt)(ackermann(dummy)(4));
+    return show(ackermann(dummy)(4));
 };
 export {
     ackermann,

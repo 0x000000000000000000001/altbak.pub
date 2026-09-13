@@ -17,53 +17,45 @@ var $runtime_lazy = function (name, moduleName, init) {
         return val;
     };
 };
-var $lazy_applicativeEffect = /* #__PURE__ */ $runtime_lazy("applicativeEffect", "Effect", function () {
+var monadEffect = {
+    Applicative0: function () {
+        return applicativeEffect;
+    },
+    Bind1: function () {
+        return bindEffect;
+    }
+};
+var bindEffect = {
+    bind: $foreign.bindE,
+    Apply0: function () {
+        return $lazy_applyEffect(0);
+    }
+};
+var applicativeEffect = {
+    pure: $foreign.pureE,
+    Apply0: function () {
+        return $lazy_applyEffect(0);
+    }
+};
+var $lazy_functorEffect = /* #__PURE__ */ $runtime_lazy("functorEffect", "Effect", function () {
     return {
-        pure: $foreign.pureE,
-        Apply0: function () {
-            return $lazy_applyEffect(0);
-        }
+        map: Control_Applicative.liftA1(applicativeEffect)
     };
 });
 var $lazy_applyEffect = /* #__PURE__ */ $runtime_lazy("applyEffect", "Effect", function () {
     return {
-        apply: Control_Monad.ap($lazy_monadEffect(0)),
+        apply: Control_Monad.ap(monadEffect),
         Functor0: function () {
             return $lazy_functorEffect(0);
         }
     };
 });
-var $lazy_bindEffect = /* #__PURE__ */ $runtime_lazy("bindEffect", "Effect", function () {
-    return {
-        bind: $foreign.bindE,
-        Apply0: function () {
-            return $lazy_applyEffect(0);
-        }
-    };
-});
-var $lazy_functorEffect = /* #__PURE__ */ $runtime_lazy("functorEffect", "Effect", function () {
-    return {
-        map: Control_Applicative.liftA1($lazy_applicativeEffect(0))
-    };
-});
-var $lazy_monadEffect = /* #__PURE__ */ $runtime_lazy("monadEffect", "Effect", function () {
-    return {
-        Applicative0: function () {
-            return $lazy_applicativeEffect(0);
-        },
-        Bind1: function () {
-            return $lazy_bindEffect(0);
-        }
-    };
-});
-var applicativeEffect = /* #__PURE__ */ $lazy_applicativeEffect(26);
-var applyEffect = /* #__PURE__ */ $lazy_applyEffect(23);
-var bindEffect = /* #__PURE__ */ $lazy_bindEffect(31);
 var functorEffect = /* #__PURE__ */ $lazy_functorEffect(20);
-var monadEffect = /* #__PURE__ */ $lazy_monadEffect(36);
+var applyEffect = /* #__PURE__ */ $lazy_applyEffect(23);
+var lift2 = /* #__PURE__ */ Control_Apply.lift2(applyEffect);
 var semigroupEffect = function (dictSemigroup) {
     return {
-        append: Control_Apply.lift2(applyEffect)(Data_Semigroup.append(dictSemigroup))
+        append: lift2(Data_Semigroup.append(dictSemigroup))
     };
 };
 var monoidEffect = function (dictMonoid) {

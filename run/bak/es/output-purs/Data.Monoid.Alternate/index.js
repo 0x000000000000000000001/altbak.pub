@@ -6,17 +6,19 @@ var Alternate = function (x) {
     return x;
 };
 var showAlternate = function (dictShow) {
+    var show = Data_Show.show(dictShow);
     return {
         show: function (v) {
-            return "(Alternate " + (Data_Show.show(dictShow)(v) + ")");
+            return "(Alternate " + (show(v) + ")");
         }
     };
 };
 var semigroupAlternate = function (dictAlt) {
+    var alt = Control_Alt.alt(dictAlt);
     return {
         append: function (v) {
             return function (v1) {
-                return Control_Alt.alt(dictAlt)(v)(v1);
+                return alt(v)(v1);
             };
         }
     };

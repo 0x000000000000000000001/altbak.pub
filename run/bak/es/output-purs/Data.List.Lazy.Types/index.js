@@ -37,8 +37,12 @@ var $runtime_lazy = function (name, moduleName, init) {
         return val;
     };
 };
-var identity = /* #__PURE__ */ Control_Category.identity(Control_Category.categoryFn);
 var unwrap = /* #__PURE__ */ Data_Newtype.unwrap();
+var map = /* #__PURE__ */ Data_Functor.map(Data_Lazy.functorLazy);
+var eq1 = /* #__PURE__ */ Data_Eq.eq1(Data_Lazy.eq1Lazy);
+var compare1 = /* #__PURE__ */ Data_Ord.compare1(Data_Lazy.ord1Lazy);
+var add = /* #__PURE__ */ Data_Semiring.add(Data_Semiring.semiringInt);
+var identity = /* #__PURE__ */ Control_Category.identity(Control_Category.categoryFn);
 var List = function (x) {
     return x;
 };
@@ -64,9 +68,9 @@ var Cons = /* #__PURE__ */ (function () {
 var NonEmptyList = function (x) {
     return x;
 };
-var nil = /* #__PURE__ */ Data_Function.apply(List)(/* #__PURE__ */ Data_Lazy.defer(function (v) {
+var nil = /* #__PURE__ */ Data_Lazy.defer(function (v) {
     return Nil.value;
-}));
+});
 var newtypeNonEmptyList = {
     Coercible0: function () {
         return undefined;
@@ -77,31 +81,26 @@ var newtypeList = {
         return undefined;
     }
 };
-var step = /* #__PURE__ */ (function () {
-    var $272 = Data_Newtype.unwrap();
-    return function ($273) {
-        return Data_Lazy.force($272($273));
-    };
-})();
-var $lazy_semigroupList = /* #__PURE__ */ $runtime_lazy("semigroupList", "Data.List.Lazy.Types", function () {
-    return {
-        append: function (xs) {
-            return function (ys) {
-                var go = function (v) {
-                    if (v instanceof Nil) {
-                        return step(ys);
-                    };
-                    if (v instanceof Cons) {
-                        return new Cons(v.value0, Data_Semigroup.append($lazy_semigroupList(0))(v.value1)(ys));
-                    };
-                    throw new Error("Failed pattern match at Data.List.Lazy.Types (line 103, column 5 - line 103, column 21): " + [ v.constructor.name ]);
+var step = function ($319) {
+    return Data_Lazy.force(unwrap($319));
+};
+var semigroupList = {
+    append: function (xs) {
+        return function (ys) {
+            var go = function (v) {
+                if (v instanceof Nil) {
+                    return step(ys);
                 };
-                return Data_Functor.map(Data_Lazy.functorLazy)(go)(Data_Newtype.unwrap()(xs));
+                if (v instanceof Cons) {
+                    return new Cons(v.value0, Data_Semigroup.append(semigroupList)(v.value1)(ys));
+                };
+                throw new Error("Failed pattern match at Data.List.Lazy.Types (line 103, column 5 - line 103, column 21): " + [ v.constructor.name ]);
             };
-        }
-    };
-});
-var semigroupList = /* #__PURE__ */ $lazy_semigroupList(100);
+            return map(go)(unwrap(xs));
+        };
+    }
+};
+var append1 = /* #__PURE__ */ Data_Semigroup.append(semigroupList);
 var monoidList = {
     mempty: nil,
     Semigroup0: function () {
@@ -110,40 +109,39 @@ var monoidList = {
 };
 var lazyList = {
     defer: function (f) {
-        return Data_Function.apply(List)(Data_Lazy.defer(function ($274) {
-            return step(f($274));
-        }));
+        return Data_Lazy.defer(function ($320) {
+            return step(f($320));
+        });
     }
 };
-var $lazy_functorList = /* #__PURE__ */ $runtime_lazy("functorList", "Data.List.Lazy.Types", function () {
-    return {
-        map: function (f) {
-            return function (xs) {
-                var go = function (v) {
-                    if (v instanceof Nil) {
-                        return Nil.value;
-                    };
-                    if (v instanceof Cons) {
-                        return new Cons(f(v.value0), Data_Functor.map($lazy_functorList(0))(f)(v.value1));
-                    };
-                    throw new Error("Failed pattern match at Data.List.Lazy.Types (line 112, column 5 - line 112, column 17): " + [ v.constructor.name ]);
+var defer = /* #__PURE__ */ Control_Lazy.defer(lazyList);
+var functorList = {
+    map: function (f) {
+        return function (xs) {
+            var go = function (v) {
+                if (v instanceof Nil) {
+                    return Nil.value;
                 };
-                return Data_Functor.map(Data_Lazy.functorLazy)(go)(Data_Newtype.unwrap()(xs));
+                if (v instanceof Cons) {
+                    return new Cons(f(v.value0), Data_Functor.map(functorList)(f)(v.value1));
+                };
+                throw new Error("Failed pattern match at Data.List.Lazy.Types (line 112, column 5 - line 112, column 17): " + [ v.constructor.name ]);
             };
-        }
-    };
-});
-var functorList = /* #__PURE__ */ $lazy_functorList(109);
-var functorNonEmpty = /* #__PURE__ */ Data_NonEmpty.functorNonEmpty(functorList);
+            return map(go)(unwrap(xs));
+        };
+    }
+};
+var map1 = /* #__PURE__ */ Data_Functor.map(/* #__PURE__ */ Data_NonEmpty.functorNonEmpty(functorList));
 var functorNonEmptyList = {
     map: function (f) {
         return function (v) {
-            return Data_Functor.map(Data_Lazy.functorLazy)(Data_Functor.map(functorNonEmpty)(f))(v);
+            return map(map1(f))(v);
         };
     }
 };
 var eq1List = {
     eq1: function (dictEq) {
+        var eq = Data_Eq.eq(dictEq);
         return function (xs) {
             return function (ys) {
                 var go = function ($copy_v) {
@@ -156,7 +154,7 @@ var eq1List = {
                                 $tco_done = true;
                                 return true;
                             };
-                            if (v instanceof Cons && (v1 instanceof Cons && Data_Eq.eq(dictEq)(v.value0)(v1.value0))) {
+                            if (v instanceof Cons && (v1 instanceof Cons && eq(v.value0)(v1.value0))) {
                                 $tco_var_v = step(v.value1);
                                 $copy_v1 = step(v1.value1);
                                 return;
@@ -176,20 +174,20 @@ var eq1List = {
     }
 };
 var eqNonEmpty = /* #__PURE__ */ Data_NonEmpty.eqNonEmpty(eq1List);
-var eq1 = /* #__PURE__ */ Data_Eq.eq1(eq1List);
+var eq11 = /* #__PURE__ */ Data_Eq.eq1(eq1List);
 var eq1NonEmptyList = {
     eq1: function (dictEq) {
-        var eqNonEmpty1 = eqNonEmpty(dictEq);
+        var eq12 = eq1(eqNonEmpty(dictEq));
         return function (v) {
             return function (v1) {
-                return Data_Eq.eq1(Data_Lazy.eq1Lazy)(eqNonEmpty1)(v)(v1);
+                return eq12(v)(v1);
             };
         };
     }
 };
 var eqList = function (dictEq) {
     return {
-        eq: eq1(dictEq)
+        eq: eq11(dictEq)
     };
 };
 var eqNonEmptyList = function (dictEq) {
@@ -197,6 +195,7 @@ var eqNonEmptyList = function (dictEq) {
 };
 var ord1List = {
     compare1: function (dictOrd) {
+        var compare = Data_Ord.compare(dictOrd);
         return function (xs) {
             return function (ys) {
                 var go = function ($copy_v) {
@@ -218,7 +217,7 @@ var ord1List = {
                                 return Data_Ordering.GT.value;
                             };
                             if (v instanceof Cons && v1 instanceof Cons) {
-                                var v2 = Data_Ord.compare(dictOrd)(v.value0)(v1.value0);
+                                var v2 = compare(v.value0)(v1.value0);
                                 if (v2 instanceof Data_Ordering.EQ) {
                                     $tco_var_v = step(v.value1);
                                     $copy_v1 = step(v1.value1);
@@ -244,13 +243,13 @@ var ord1List = {
     }
 };
 var ordNonEmpty = /* #__PURE__ */ Data_NonEmpty.ordNonEmpty(ord1List);
-var compare1 = /* #__PURE__ */ Data_Ord.compare1(ord1List);
+var compare11 = /* #__PURE__ */ Data_Ord.compare1(ord1List);
 var ord1NonEmptyList = {
     compare1: function (dictOrd) {
-        var ordNonEmpty1 = ordNonEmpty(dictOrd);
+        var compare12 = compare1(ordNonEmpty(dictOrd));
         return function (v) {
             return function (v1) {
-                return Data_Ord.compare1(Data_Lazy.ord1Lazy)(ordNonEmpty1)(v)(v1);
+                return compare12(v)(v1);
             };
         };
     },
@@ -261,7 +260,7 @@ var ord1NonEmptyList = {
 var ordList = function (dictOrd) {
     var eqList1 = eqList(dictOrd.Eq0());
     return {
-        compare: compare1(dictOrd),
+        compare: compare11(dictOrd),
         Eq0: function () {
             return eqList1;
         }
@@ -272,63 +271,65 @@ var ordNonEmptyList = function (dictOrd) {
 };
 var cons = function (x) {
     return function (xs) {
-        return Data_Function.apply(List)(Data_Lazy.defer(function (v) {
+        return Data_Lazy.defer(function (v) {
             return new Cons(x, xs);
-        }));
+        });
     };
 };
-var $lazy_foldableList = /* #__PURE__ */ $runtime_lazy("foldableList", "Data.List.Lazy.Types", function () {
-    return {
-        foldr: function (op) {
-            return function (z) {
-                return function (xs) {
-                    var rev = Data_Foldable.foldl($lazy_foldableList(0))(Data_Function.flip(cons))(nil);
-                    return Data_Foldable.foldl($lazy_foldableList(0))(Data_Function.flip(op))(z)(rev(xs));
+var foldableList = {
+    foldr: function (op) {
+        return function (z) {
+            return function (xs) {
+                var rev = Data_Foldable.foldl(foldableList)(Data_Function.flip(cons))(nil);
+                return Data_Foldable.foldl(foldableList)(Data_Function.flip(op))(z)(rev(xs));
+            };
+        };
+    },
+    foldl: function (op) {
+        var go = function ($copy_b) {
+            return function ($copy_xs) {
+                var $tco_var_b = $copy_b;
+                var $tco_done = false;
+                var $tco_result;
+                function $tco_loop(b, xs) {
+                    var v = step(xs);
+                    if (v instanceof Nil) {
+                        $tco_done = true;
+                        return b;
+                    };
+                    if (v instanceof Cons) {
+                        $tco_var_b = op(b)(v.value0);
+                        $copy_xs = v.value1;
+                        return;
+                    };
+                    throw new Error("Failed pattern match at Data.List.Lazy.Types (line 127, column 7 - line 129, column 40): " + [ v.constructor.name ]);
                 };
-            };
-        },
-        foldl: function (op) {
-            var go = function ($copy_b) {
-                return function ($copy_xs) {
-                    var $tco_var_b = $copy_b;
-                    var $tco_done = false;
-                    var $tco_result;
-                    function $tco_loop(b, xs) {
-                        var v = step(xs);
-                        if (v instanceof Nil) {
-                            $tco_done = true;
-                            return b;
-                        };
-                        if (v instanceof Cons) {
-                            $tco_var_b = op(b)(v.value0);
-                            $copy_xs = v.value1;
-                            return;
-                        };
-                        throw new Error("Failed pattern match at Data.List.Lazy.Types (line 127, column 7 - line 129, column 40): " + [ v.constructor.name ]);
-                    };
-                    while (!$tco_done) {
-                        $tco_result = $tco_loop($tco_var_b, $copy_xs);
-                    };
-                    return $tco_result;
+                while (!$tco_done) {
+                    $tco_result = $tco_loop($tco_var_b, $copy_xs);
                 };
+                return $tco_result;
             };
-            return go;
-        },
-        foldMap: function (dictMonoid) {
-            var Semigroup0 = dictMonoid.Semigroup0();
-            var mempty = Data_Monoid.mempty(dictMonoid);
-            return function (f) {
-                return Data_Foldable.foldl($lazy_foldableList(0))(function (b) {
-                    return function (a) {
-                        return Data_Semigroup.append(Semigroup0)(b)(f(a));
-                    };
-                })(mempty);
-            };
-        }
-    };
-});
-var foldableList = /* #__PURE__ */ $lazy_foldableList(118);
+        };
+        return go;
+    },
+    foldMap: function (dictMonoid) {
+        var append2 = Data_Semigroup.append(dictMonoid.Semigroup0());
+        var mempty = Data_Monoid.mempty(dictMonoid);
+        return function (f) {
+            return Data_Foldable.foldl(foldableList)(function (b) {
+                return function (a) {
+                    return append2(b)(f(a));
+                };
+            })(mempty);
+        };
+    }
+};
+var foldr = /* #__PURE__ */ Data_Foldable.foldr(foldableList);
 var foldableNonEmpty = /* #__PURE__ */ Data_NonEmpty.foldableNonEmpty(foldableList);
+var foldr1 = /* #__PURE__ */ Data_Foldable.foldr(foldableNonEmpty);
+var foldl = /* #__PURE__ */ Data_Foldable.foldl(foldableNonEmpty);
+var foldMap = /* #__PURE__ */ Data_Foldable.foldMap(foldableNonEmpty);
+var foldl1 = /* #__PURE__ */ Data_Foldable.foldl(foldableList);
 var extendList = {
     extend: function (f) {
         return function (l) {
@@ -346,7 +347,7 @@ var extendList = {
                 return nil;
             };
             if (v instanceof Cons) {
-                return cons(f(l))((Data_Foldable.foldr(foldableList)(go)({
+                return cons(f(l))((foldr(go)({
                     val: nil,
                     acc: nil
                 })(v.value1)).val);
@@ -372,12 +373,12 @@ var extendNonEmptyList = {
                 };
             };
             var v1 = Data_Lazy.force(v);
-            return Data_Function.apply(NonEmptyList)(Data_Lazy.defer(function (v2) {
-                return new Data_NonEmpty.NonEmpty(f(v), (Data_Foldable.foldr(foldableList)(go)({
+            return Data_Lazy.defer(function (v2) {
+                return new Data_NonEmpty.NonEmpty(f(v), (foldr(go)({
                     val: nil,
                     acc: nil
                 })(v1.value1)).val);
-            }));
+            });
         };
     },
     Functor0: function () {
@@ -388,26 +389,28 @@ var foldableNonEmptyList = {
     foldr: function (f) {
         return function (b) {
             return function (v) {
-                return Data_Foldable.foldr(foldableNonEmpty)(f)(b)(Data_Lazy.force(v));
+                return foldr1(f)(b)(Data_Lazy.force(v));
             };
         };
     },
     foldl: function (f) {
         return function (b) {
             return function (v) {
-                return Data_Foldable.foldl(foldableNonEmpty)(f)(b)(Data_Lazy.force(v));
+                return foldl(f)(b)(Data_Lazy.force(v));
             };
         };
     },
     foldMap: function (dictMonoid) {
+        var foldMap1 = foldMap(dictMonoid);
         return function (f) {
             return function (v) {
-                return Data_Foldable.foldMap(foldableNonEmpty)(dictMonoid)(f)(Data_Lazy.force(v));
+                return foldMap1(f)(Data_Lazy.force(v));
             };
         };
     }
 };
 var showList = function (dictShow) {
+    var show = Data_Show.show(dictShow);
     return {
         show: function (xs) {
             return "(fromFoldable [" + ((function () {
@@ -416,9 +419,9 @@ var showList = function (dictShow) {
                     return "";
                 };
                 if (v instanceof Cons) {
-                    return Data_Show.show(dictShow)(v.value0) + Data_Foldable.foldl(foldableList)(function (shown) {
+                    return show(v.value0) + foldl1(function (shown) {
                         return function (x$prime) {
-                            return shown + ("," + Data_Show.show(dictShow)(x$prime));
+                            return shown + ("," + show(x$prime));
                         };
                     })("")(v.value1);
                 };
@@ -428,116 +431,119 @@ var showList = function (dictShow) {
     };
 };
 var showNonEmptyList = function (dictShow) {
-    var showLazy = Data_Lazy.showLazy(Data_NonEmpty.showNonEmpty(dictShow)(showList(dictShow)));
+    var show = Data_Show.show(Data_Lazy.showLazy(Data_NonEmpty.showNonEmpty(dictShow)(showList(dictShow))));
     return {
         show: function (v) {
-            return "(NonEmptyList " + (Data_Show.show(showLazy)(v) + ")");
+            return "(NonEmptyList " + (show(v) + ")");
         }
     };
 };
 var showStep = function (dictShow) {
-    var showList1 = showList(dictShow);
+    var show = Data_Show.show(dictShow);
+    var show1 = Data_Show.show(showList(dictShow));
     return {
         show: function (v) {
             if (v instanceof Nil) {
                 return "Nil";
             };
             if (v instanceof Cons) {
-                return "(" + (Data_Show.show(dictShow)(v.value0) + (" : " + (Data_Show.show(showList1)(v.value1) + ")")));
+                return "(" + (show(v.value0) + (" : " + (show1(v.value1) + ")")));
             };
             throw new Error("Failed pattern match at Data.List.Lazy.Types (line 36, column 1 - line 38, column 62): " + [ v.constructor.name ]);
         }
     };
 };
-var $lazy_foldableWithIndexList = /* #__PURE__ */ $runtime_lazy("foldableWithIndexList", "Data.List.Lazy.Types", function () {
-    return {
-        foldrWithIndex: function (f) {
-            return function (b) {
-                return function (xs) {
-                    var v = (function () {
-                        var rev = Data_Foldable.foldl(foldableList)(function (v1) {
-                            return function (a) {
-                                return new Data_Tuple.Tuple(v1.value0 + 1 | 0, cons(a)(v1.value1));
-                            };
-                        });
-                        return rev(new Data_Tuple.Tuple(0, nil))(xs);
-                    })();
-                    return Data_Function.apply(Data_Tuple.snd)(Data_Foldable.foldl(foldableList)(function (v1) {
+var foldableWithIndexList = {
+    foldrWithIndex: function (f) {
+        return function (b) {
+            return function (xs) {
+                var v = (function () {
+                    var rev = foldl1(function (v1) {
                         return function (a) {
-                            return new Data_Tuple.Tuple(v1.value0 - 1 | 0, f(v1.value0 - 1 | 0)(a)(v1.value1));
+                            return new Data_Tuple.Tuple(v1.value0 + 1 | 0, cons(a)(v1.value1));
                         };
-                    })(new Data_Tuple.Tuple(v.value0, b))(v.value1));
-                };
-            };
-        },
-        foldlWithIndex: function (f) {
-            return function (acc) {
-                var $275 = Data_Foldable.foldl(foldableList)(function (v) {
+                    });
+                    return rev(new Data_Tuple.Tuple(0, nil))(xs);
+                })();
+                return Data_Tuple.snd(foldl1(function (v1) {
                     return function (a) {
-                        return new Data_Tuple.Tuple(v.value0 + 1 | 0, f(v.value0)(v.value1)(a));
+                        return new Data_Tuple.Tuple(v1.value0 - 1 | 0, f(v1.value0 - 1 | 0)(a)(v1.value1));
                     };
-                })(new Data_Tuple.Tuple(0, acc));
-                return function ($276) {
-                    return Data_Tuple.snd($275($276));
+                })(new Data_Tuple.Tuple(v.value0, b))(v.value1));
+            };
+        };
+    },
+    foldlWithIndex: function (f) {
+        return function (acc) {
+            var $321 = foldl1(function (v) {
+                return function (a) {
+                    return new Data_Tuple.Tuple(v.value0 + 1 | 0, f(v.value0)(v.value1)(a));
                 };
+            })(new Data_Tuple.Tuple(0, acc));
+            return function ($322) {
+                return Data_Tuple.snd($321($322));
             };
-        },
-        foldMapWithIndex: function (dictMonoid) {
-            var Semigroup0 = dictMonoid.Semigroup0();
-            var mempty = Data_Monoid.mempty(dictMonoid);
-            return function (f) {
-                return Data_FoldableWithIndex.foldlWithIndex($lazy_foldableWithIndexList(0))(function (i) {
-                    return function (acc) {
-                        var $277 = Data_Semigroup.append(Semigroup0)(acc);
-                        var $278 = f(i);
-                        return function ($279) {
-                            return $277($278($279));
-                        };
+        };
+    },
+    foldMapWithIndex: function (dictMonoid) {
+        var append2 = Data_Semigroup.append(dictMonoid.Semigroup0());
+        var mempty = Data_Monoid.mempty(dictMonoid);
+        return function (f) {
+            return Data_FoldableWithIndex.foldlWithIndex(foldableWithIndexList)(function (i) {
+                return function (acc) {
+                    var $323 = append2(acc);
+                    var $324 = f(i);
+                    return function ($325) {
+                        return $323($324($325));
                     };
-                })(mempty);
-            };
-        },
-        Foldable0: function () {
-            return foldableList;
-        }
-    };
-});
-var foldableWithIndexList = /* #__PURE__ */ $lazy_foldableWithIndexList(133);
+                };
+            })(mempty);
+        };
+    },
+    Foldable0: function () {
+        return foldableList;
+    }
+};
 var foldableWithIndexNonEmpty = /* #__PURE__ */ Data_NonEmpty.foldableWithIndexNonEmpty(foldableWithIndexList);
+var foldMapWithIndex = /* #__PURE__ */ Data_FoldableWithIndex.foldMapWithIndex(foldableWithIndexNonEmpty);
+var foldlWithIndex = /* #__PURE__ */ Data_FoldableWithIndex.foldlWithIndex(foldableWithIndexNonEmpty);
+var foldrWithIndex = /* #__PURE__ */ Data_FoldableWithIndex.foldrWithIndex(foldableWithIndexNonEmpty);
+var foldrWithIndex1 = /* #__PURE__ */ Data_FoldableWithIndex.foldrWithIndex(foldableWithIndexList);
 var foldableWithIndexNonEmptyList = {
     foldMapWithIndex: function (dictMonoid) {
+        var foldMapWithIndex1 = foldMapWithIndex(dictMonoid);
         return function (f) {
             return function (v) {
-                return Data_Function.apply(Data_FoldableWithIndex.foldMapWithIndex(foldableWithIndexNonEmpty)(dictMonoid)((function () {
-                    var $280 = Data_Maybe.maybe(0)(Data_Semiring.add(Data_Semiring.semiringInt)(1));
-                    return function ($281) {
-                        return f($280($281));
+                return foldMapWithIndex1((function () {
+                    var $326 = Data_Maybe.maybe(0)(add(1));
+                    return function ($327) {
+                        return f($326($327));
                     };
-                })()))(Data_Lazy.force(v));
+                })())(Data_Lazy.force(v));
             };
         };
     },
     foldlWithIndex: function (f) {
         return function (b) {
             return function (v) {
-                return Data_Function.apply(Data_FoldableWithIndex.foldlWithIndex(foldableWithIndexNonEmpty)((function () {
-                    var $282 = Data_Maybe.maybe(0)(Data_Semiring.add(Data_Semiring.semiringInt)(1));
-                    return function ($283) {
-                        return f($282($283));
+                return foldlWithIndex((function () {
+                    var $328 = Data_Maybe.maybe(0)(add(1));
+                    return function ($329) {
+                        return f($328($329));
                     };
-                })())(b))(Data_Lazy.force(v));
+                })())(b)(Data_Lazy.force(v));
             };
         };
     },
     foldrWithIndex: function (f) {
         return function (b) {
             return function (v) {
-                return Data_Function.apply(Data_FoldableWithIndex.foldrWithIndex(foldableWithIndexNonEmpty)((function () {
-                    var $284 = Data_Maybe.maybe(0)(Data_Semiring.add(Data_Semiring.semiringInt)(1));
-                    return function ($285) {
-                        return f($284($285));
+                return foldrWithIndex((function () {
+                    var $330 = Data_Maybe.maybe(0)(add(1));
+                    return function ($331) {
+                        return f($330($331));
                     };
-                })())(b))(Data_Lazy.force(v));
+                })())(b)(Data_Lazy.force(v));
             };
         };
     },
@@ -547,7 +553,7 @@ var foldableWithIndexNonEmptyList = {
 };
 var functorWithIndexList = {
     mapWithIndex: function (f) {
-        return Data_FoldableWithIndex.foldrWithIndex(foldableWithIndexList)(function (i) {
+        return foldrWithIndex1(function (i) {
             return function (x) {
                 return function (acc) {
                     return cons(f(i)(x))(acc);
@@ -559,18 +565,18 @@ var functorWithIndexList = {
         return functorList;
     }
 };
-var functorWithIndex = /* #__PURE__ */ Data_NonEmpty.functorWithIndex(functorWithIndexList);
+var mapWithIndex = /* #__PURE__ */ Data_FunctorWithIndex.mapWithIndex(/* #__PURE__ */ Data_NonEmpty.functorWithIndex(functorWithIndexList));
 var functorWithIndexNonEmptyList = {
     mapWithIndex: function (f) {
         return function (v) {
-            return Data_Function.apply(NonEmptyList)(Data_Lazy.defer(function (v1) {
-                return Data_Function.apply(Data_FunctorWithIndex.mapWithIndex(functorWithIndex)((function () {
-                    var $286 = Data_Maybe.maybe(0)(Data_Semiring.add(Data_Semiring.semiringInt)(1));
-                    return function ($287) {
-                        return f($286($287));
+            return Data_Lazy.defer(function (v1) {
+                return mapWithIndex((function () {
+                    var $332 = Data_Maybe.maybe(0)(add(1));
+                    return function ($333) {
+                        return f($332($333));
                     };
-                })()))(Data_Lazy.force(v));
-            }));
+                })())(Data_Lazy.force(v));
+            });
         };
     },
     Functor0: function () {
@@ -578,7 +584,7 @@ var functorWithIndexNonEmptyList = {
     }
 };
 var toList = function (v) {
-    return Control_Lazy.defer(lazyList)(function (v1) {
+    return defer(function (v1) {
         var v2 = Data_Lazy.force(v);
         return cons(v2.value0)(v2.value1);
     });
@@ -588,58 +594,61 @@ var semigroupNonEmptyList = {
         return function (as$prime) {
             var v1 = Data_Lazy.force(v);
             return Data_Lazy.defer(function (v2) {
-                return new Data_NonEmpty.NonEmpty(v1.value0, Data_Semigroup.append(semigroupList)(v1.value1)(toList(as$prime)));
+                return new Data_NonEmpty.NonEmpty(v1.value0, append1(v1.value1)(toList(as$prime)));
             });
         };
     }
 };
-var $lazy_traversableList = /* #__PURE__ */ $runtime_lazy("traversableList", "Data.List.Lazy.Types", function () {
-    return {
-        traverse: function (dictApplicative) {
-            var Apply0 = dictApplicative.Apply0();
-            var Functor0 = (dictApplicative.Apply0()).Functor0();
-            return function (f) {
-                return Data_Foldable.foldr(foldableList)(function (a) {
-                    return function (b) {
-                        return Control_Apply.apply(Apply0)(Data_Functor.map(Functor0)(cons)(f(a)))(b);
-                    };
-                })(Control_Applicative.pure(dictApplicative)(nil));
-            };
-        },
-        sequence: function (dictApplicative) {
-            return Data_Traversable.traverse($lazy_traversableList(0))(dictApplicative)(identity);
-        },
-        Functor0: function () {
-            return functorList;
-        },
-        Foldable1: function () {
-            return foldableList;
-        }
-    };
-});
-var traversableList = /* #__PURE__ */ $lazy_traversableList(161);
+var traversableList = {
+    traverse: function (dictApplicative) {
+        var Apply0 = dictApplicative.Apply0();
+        var apply1 = Control_Apply.apply(Apply0);
+        var map2 = Data_Functor.map(Apply0.Functor0());
+        var pure = Control_Applicative.pure(dictApplicative);
+        return function (f) {
+            return foldr(function (a) {
+                return function (b) {
+                    return apply1(map2(cons)(f(a)))(b);
+                };
+            })(pure(nil));
+        };
+    },
+    sequence: function (dictApplicative) {
+        return Data_Traversable.traverse(traversableList)(dictApplicative)(identity);
+    },
+    Functor0: function () {
+        return functorList;
+    },
+    Foldable1: function () {
+        return foldableList;
+    }
+};
 var traversableNonEmpty = /* #__PURE__ */ Data_NonEmpty.traversableNonEmpty(traversableList);
+var traverse = /* #__PURE__ */ Data_Traversable.traverse(traversableNonEmpty);
+var sequence = /* #__PURE__ */ Data_Traversable.sequence(traversableNonEmpty);
 var traversableNonEmptyList = {
     traverse: function (dictApplicative) {
-        var Functor0 = (dictApplicative.Apply0()).Functor0();
+        var map2 = Data_Functor.map((dictApplicative.Apply0()).Functor0());
+        var traverse1 = traverse(dictApplicative);
         return function (f) {
             return function (v) {
-                return Data_Function.apply(Data_Functor.map(Functor0)(function (xxs) {
-                    return Data_Function.apply(NonEmptyList)(Data_Lazy.defer(function (v1) {
+                return map2(function (xxs) {
+                    return Data_Lazy.defer(function (v1) {
                         return xxs;
-                    }));
-                }))(Data_Traversable.traverse(traversableNonEmpty)(dictApplicative)(f)(Data_Lazy.force(v)));
+                    });
+                })(traverse1(f)(Data_Lazy.force(v)));
             };
         };
     },
     sequence: function (dictApplicative) {
-        var Functor0 = (dictApplicative.Apply0()).Functor0();
+        var map2 = Data_Functor.map((dictApplicative.Apply0()).Functor0());
+        var sequence1 = sequence(dictApplicative);
         return function (v) {
-            return Data_Function.apply(Data_Functor.map(Functor0)(function (xxs) {
-                return Data_Function.apply(NonEmptyList)(Data_Lazy.defer(function (v1) {
+            return map2(function (xxs) {
+                return Data_Lazy.defer(function (v1) {
                     return xxs;
-                }));
-            }))(Data_Traversable.sequence(traversableNonEmpty)(dictApplicative)(Data_Lazy.force(v)));
+                });
+            })(sequence1(Data_Lazy.force(v)));
         };
     },
     Functor0: function () {
@@ -652,15 +661,17 @@ var traversableNonEmptyList = {
 var traversableWithIndexList = {
     traverseWithIndex: function (dictApplicative) {
         var Apply0 = dictApplicative.Apply0();
-        var Functor0 = (dictApplicative.Apply0()).Functor0();
+        var apply1 = Control_Apply.apply(Apply0);
+        var map2 = Data_Functor.map(Apply0.Functor0());
+        var pure = Control_Applicative.pure(dictApplicative);
         return function (f) {
-            return Data_FoldableWithIndex.foldrWithIndex(foldableWithIndexList)(function (i) {
+            return foldrWithIndex1(function (i) {
                 return function (a) {
                     return function (b) {
-                        return Control_Apply.apply(Apply0)(Data_Functor.map(Functor0)(cons)(f(i)(a)))(b);
+                        return apply1(map2(cons)(f(i)(a)))(b);
                     };
                 };
-            })(Control_Applicative.pure(dictApplicative)(nil));
+            })(pure(nil));
         };
     },
     FunctorWithIndex0: function () {
@@ -673,22 +684,23 @@ var traversableWithIndexList = {
         return traversableList;
     }
 };
-var traversableWithIndexNonEmpty = /* #__PURE__ */ Data_NonEmpty.traversableWithIndexNonEmpty(traversableWithIndexList);
+var traverseWithIndex = /* #__PURE__ */ Data_TraversableWithIndex.traverseWithIndex(/* #__PURE__ */ Data_NonEmpty.traversableWithIndexNonEmpty(traversableWithIndexList));
 var traversableWithIndexNonEmptyList = {
     traverseWithIndex: function (dictApplicative) {
-        var Functor0 = (dictApplicative.Apply0()).Functor0();
+        var map2 = Data_Functor.map((dictApplicative.Apply0()).Functor0());
+        var traverseWithIndex1 = traverseWithIndex(dictApplicative);
         return function (f) {
             return function (v) {
-                return Data_Function.apply(Data_Functor.map(Functor0)(function (xxs) {
-                    return Data_Function.apply(NonEmptyList)(Data_Lazy.defer(function (v1) {
+                return map2(function (xxs) {
+                    return Data_Lazy.defer(function (v1) {
                         return xxs;
-                    }));
-                }))(Data_Function.apply(Data_TraversableWithIndex.traverseWithIndex(traversableWithIndexNonEmpty)(dictApplicative)((function () {
-                    var $288 = Data_Maybe.maybe(0)(Data_Semiring.add(Data_Semiring.semiringInt)(1));
-                    return function ($289) {
-                        return f($288($289));
+                    });
+                })(traverseWithIndex1((function () {
+                    var $334 = Data_Maybe.maybe(0)(add(1));
+                    return function ($335) {
+                        return f($334($335));
                     };
-                })()))(Data_Lazy.force(v)));
+                })())(Data_Lazy.force(v)));
             };
         };
     },
@@ -706,7 +718,7 @@ var unfoldable1List = {
     unfoldr1: /* #__PURE__ */ (function () {
         var go = function (f) {
             return function (b) {
-                return Control_Lazy.defer(lazyList)(function (v) {
+                return defer(function (v) {
                     var v1 = f(b);
                     if (v1.value1 instanceof Data_Maybe.Just) {
                         return cons(v1.value0)(go(f)(v1.value1.value0));
@@ -725,7 +737,7 @@ var unfoldableList = {
     unfoldr: /* #__PURE__ */ (function () {
         var go = function (f) {
             return function (b) {
-                return Control_Lazy.defer(lazyList)(function (v) {
+                return defer(function (v) {
                     var v1 = f(b);
                     if (v1 instanceof Data_Maybe.Nothing) {
                         return nil;
@@ -743,84 +755,77 @@ var unfoldableList = {
         return unfoldable1List;
     }
 };
-var unfoldable1NonEmpty = /* #__PURE__ */ Data_NonEmpty.unfoldable1NonEmpty(unfoldableList);
+var unfoldr1 = /* #__PURE__ */ Data_Unfoldable1.unfoldr1(/* #__PURE__ */ Data_NonEmpty.unfoldable1NonEmpty(unfoldableList));
 var unfoldable1NonEmptyList = {
     unfoldr1: function (f) {
         return function (b) {
-            return Data_Function.apply(NonEmptyList)(Data_Lazy.defer(function (v) {
-                return Data_Unfoldable1.unfoldr1(unfoldable1NonEmpty)(f)(b);
-            }));
+            return Data_Lazy.defer(function (v) {
+                return unfoldr1(f)(b);
+            });
         };
     }
 };
 var comonadNonEmptyList = {
     extract: function (v) {
-        return Data_Function.apply(Data_NonEmpty.head)(Data_Lazy.force(v));
+        return Data_NonEmpty.head(Data_Lazy.force(v));
     },
     Extend0: function () {
         return extendNonEmptyList;
     }
 };
-var $lazy_applicativeList = /* #__PURE__ */ $runtime_lazy("applicativeList", "Data.List.Lazy.Types", function () {
-    return {
-        pure: function (a) {
-            return cons(a)(nil);
-        },
-        Apply0: function () {
-            return $lazy_applyList(0);
-        }
-    };
-});
+var monadList = {
+    Applicative0: function () {
+        return applicativeList;
+    },
+    Bind1: function () {
+        return bindList;
+    }
+};
+var bindList = {
+    bind: function (xs) {
+        return function (f) {
+            var go = function (v) {
+                if (v instanceof Nil) {
+                    return Nil.value;
+                };
+                if (v instanceof Cons) {
+                    return step(append1(f(v.value0))(Control_Bind.bind(bindList)(v.value1)(f)));
+                };
+                throw new Error("Failed pattern match at Data.List.Lazy.Types (line 180, column 5 - line 180, column 17): " + [ v.constructor.name ]);
+            };
+            return map(go)(unwrap(xs));
+        };
+    },
+    Apply0: function () {
+        return $lazy_applyList(0);
+    }
+};
+var applicativeList = {
+    pure: function (a) {
+        return cons(a)(nil);
+    },
+    Apply0: function () {
+        return $lazy_applyList(0);
+    }
+};
 var $lazy_applyList = /* #__PURE__ */ $runtime_lazy("applyList", "Data.List.Lazy.Types", function () {
     return {
-        apply: Control_Monad.ap($lazy_monadList(0)),
+        apply: Control_Monad.ap(monadList),
         Functor0: function () {
             return functorList;
         }
     };
 });
-var $lazy_bindList = /* #__PURE__ */ $runtime_lazy("bindList", "Data.List.Lazy.Types", function () {
-    return {
-        bind: function (xs) {
-            return function (f) {
-                var go = function (v) {
-                    if (v instanceof Nil) {
-                        return Nil.value;
-                    };
-                    if (v instanceof Cons) {
-                        return step(Data_Semigroup.append(semigroupList)(f(v.value0))(Control_Bind.bind($lazy_bindList(0))(v.value1)(f)));
-                    };
-                    throw new Error("Failed pattern match at Data.List.Lazy.Types (line 180, column 5 - line 180, column 17): " + [ v.constructor.name ]);
-                };
-                return Data_Functor.map(Data_Lazy.functorLazy)(go)(Data_Newtype.unwrap()(xs));
-            };
-        },
-        Apply0: function () {
-            return $lazy_applyList(0);
-        }
-    };
-});
-var $lazy_monadList = /* #__PURE__ */ $runtime_lazy("monadList", "Data.List.Lazy.Types", function () {
-    return {
-        Applicative0: function () {
-            return $lazy_applicativeList(0);
-        },
-        Bind1: function () {
-            return $lazy_bindList(0);
-        }
-    };
-});
-var applicativeList = /* #__PURE__ */ $lazy_applicativeList(174);
 var applyList = /* #__PURE__ */ $lazy_applyList(171);
-var bindList = /* #__PURE__ */ $lazy_bindList(177);
-var monadList = /* #__PURE__ */ $lazy_monadList(183);
+var apply = /* #__PURE__ */ Control_Apply.apply(applyList);
+var bind = /* #__PURE__ */ Control_Bind.bind(bindList);
 var applyNonEmptyList = {
     apply: function (v) {
         return function (v1) {
             var v2 = Data_Lazy.force(v1);
             var v3 = Data_Lazy.force(v);
             return Data_Lazy.defer(function (v4) {
-                return new Data_NonEmpty.NonEmpty(v3.value0(v2.value0), Data_Semigroup.append(semigroupList)(Control_Apply.apply(applyList)(v3.value1)(cons(v2.value0)(nil)))(Control_Apply.apply(applyList)(cons(v3.value0)(v3.value1))(v2.value1)));
+                return new Data_NonEmpty.NonEmpty(v3.value0(v2.value0), append1(apply(v3.value1)(cons(v2.value0)(nil)))(apply(cons(v3.value0)(v3.value1))(v2.value1)));
             });
         };
     },
@@ -832,10 +837,10 @@ var bindNonEmptyList = {
     bind: function (v) {
         return function (f) {
             var v1 = Data_Lazy.force(v);
-            var v2 = Data_Function.apply(Data_Lazy.force)(Data_Function.apply(unwrap)(f(v1.value0)));
+            var v2 = Data_Lazy.force(unwrap(f(v1.value0)));
             return Data_Lazy.defer(function (v3) {
-                return new Data_NonEmpty.NonEmpty(v2.value0, Data_Semigroup.append(semigroupList)(v2.value1)(Control_Bind.bind(bindList)(v1.value1)(function ($290) {
-                    return toList(f($290));
+                return new Data_NonEmpty.NonEmpty(v2.value0, append1(v2.value1)(bind(v1.value1)(function ($336) {
+                    return toList(f($336));
                 })));
             });
         };
@@ -851,7 +856,7 @@ var altNonEmptyList = {
     }
 };
 var altList = {
-    alt: /* #__PURE__ */ Data_Semigroup.append(semigroupList),
+    alt: append1,
     Functor0: function () {
         return functorList;
     }
@@ -862,6 +867,7 @@ var plusList = {
         return altList;
     }
 };
+var singleton = /* #__PURE__ */ Data_NonEmpty.singleton(plusList);
 var alternativeList = {
     Applicative0: function () {
         return applicativeList;
@@ -881,7 +887,7 @@ var monadPlusList = {
 var applicativeNonEmptyList = {
     pure: function (a) {
         return Data_Lazy.defer(function (v) {
-            return Data_NonEmpty.singleton(plusList)(a);
+            return singleton(a);
         });
     },
     Apply0: function () {

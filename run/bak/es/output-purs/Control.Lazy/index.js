@@ -28,9 +28,10 @@ var defer = function (dict) {
     return dict.defer;
 };
 var fix = function (dictLazy) {
+    var defer1 = defer(dictLazy);
     return function (f) {
         var $lazy_go = $runtime_lazy("go", "Control.Lazy", function () {
-            return defer(dictLazy)(function (v) {
+            return defer1(function (v) {
                 return f($lazy_go(25));
             });
         });

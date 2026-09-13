@@ -3,6 +3,8 @@ import * as Bench from "../Bench/index.js";
 import * as Data_EuclideanRing from "../Data.EuclideanRing/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
+var mod = /* #__PURE__ */ Data_EuclideanRing.mod(Data_EuclideanRing.euclideanRingInt);
+var show = /* #__PURE__ */ Data_Show.show(Data_Show.showInt);
 var updateRec = function ($copy_v) {
     return function ($copy_v1) {
         var $tco_var_v = $copy_v;
@@ -20,7 +22,7 @@ var updateRec = function ($copy_v) {
                     c: v1.b.c + 2 | 0,
                     d: {
                         e: v1.b.d.e + 3 | 0,
-                        f: v1.b.d.f + Data_EuclideanRing.mod(Data_EuclideanRing.euclideanRingInt)(v)(5) | 0
+                        f: v1.b.d.f + mod(v)(5) | 0
                     }
                 }
             };
@@ -45,7 +47,7 @@ var initial = {
 var describe = /* #__PURE__ */ Effect_Console.log("Deep Record Updates (10k iterations):");
 var act = function __do() {
     var dummy = Bench.opaque(10000)();
-    return Data_Show.show(Data_Show.showInt)((updateRec(dummy)(initial)).b.d.f);
+    return show((updateRec(dummy)(initial)).b.d.f);
 };
 export {
     initial,

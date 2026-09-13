@@ -19,18 +19,6 @@ import * as Data_Show from "../Data.Show/index.js";
 import * as Data_Traversable from "../Data.Traversable/index.js";
 import * as Data_TraversableWithIndex from "../Data.TraversableWithIndex/index.js";
 import * as Data_Unfoldable1 from "../Data.Unfoldable1/index.js";
-var $runtime_lazy = function (name, moduleName, init) {
-    var state = 0;
-    var val;
-    return function (lineNumber) {
-        if (state === 2) return val;
-        if (state === 1) throw new ReferenceError(name + " was needed before it finished initializing (module " + moduleName + ", line " + lineNumber + ")", moduleName, lineNumber);
-        state = 1;
-        val = init();
-        state = 2;
-        return val;
-    };
-};
 var NonEmptyArray = function (x) {
     return x;
 };
@@ -38,10 +26,10 @@ var unfoldable1NonEmptyArray = Data_Unfoldable1.unfoldable1Array;
 var traversableWithIndexNonEmptyArray = Data_TraversableWithIndex.traversableWithIndexArray;
 var traversableNonEmptyArray = Data_Traversable.traversableArray;
 var showNonEmptyArray = function (dictShow) {
-    var showArray = Data_Show.showArray(dictShow);
+    var show = Data_Show.show(Data_Show.showArray(dictShow));
     return {
         show: function (v) {
-            return "(NonEmptyArray " + (Data_Show.show(showArray)(v) + ")");
+            return "(NonEmptyArray " + (show(v) + ")");
         }
     };
 };
@@ -55,40 +43,34 @@ var functorWithIndexNonEmptyArray = Data_FunctorWithIndex.functorWithIndexArray;
 var functorNonEmptyArray = Data_Functor.functorArray;
 var foldableWithIndexNonEmptyArray = Data_FoldableWithIndex.foldableWithIndexArray;
 var foldableNonEmptyArray = Data_Foldable.foldableArray;
-var $lazy_foldable1NonEmptyArray = /* #__PURE__ */ $runtime_lazy("foldable1NonEmptyArray", "Data.Array.NonEmpty.Internal", function () {
-    return {
-        foldMap1: function (dictSemigroup) {
-            return Data_Semigroup_Foldable.foldMap1DefaultL($lazy_foldable1NonEmptyArray(0))(functorNonEmptyArray)(dictSemigroup);
-        },
-        foldr1: Data_Function_Uncurried.runFn2($foreign.foldr1Impl),
-        foldl1: Data_Function_Uncurried.runFn2($foreign.foldl1Impl),
-        Foldable0: function () {
-            return foldableNonEmptyArray;
-        }
-    };
-});
-var foldable1NonEmptyArray = /* #__PURE__ */ $lazy_foldable1NonEmptyArray(51);
-var $lazy_traversable1NonEmptyArray = /* #__PURE__ */ $runtime_lazy("traversable1NonEmptyArray", "Data.Array.NonEmpty.Internal", function () {
-    return {
-        traverse1: function (dictApply) {
-            var apply = Control_Apply.apply(dictApply);
-            var map = Data_Functor.map(dictApply.Functor0());
-            return function (f) {
-                return $foreign.traverse1Impl(apply, map, f);
-            };
-        },
-        sequence1: function (dictApply) {
-            return Data_Semigroup_Traversable.sequence1Default($lazy_traversable1NonEmptyArray(0))(dictApply);
-        },
-        Foldable10: function () {
-            return foldable1NonEmptyArray;
-        },
-        Traversable1: function () {
-            return traversableNonEmptyArray;
-        }
-    };
-});
-var traversable1NonEmptyArray = /* #__PURE__ */ $lazy_traversable1NonEmptyArray(60);
+var foldable1NonEmptyArray = {
+    foldMap1: function (dictSemigroup) {
+        return Data_Semigroup_Foldable.foldMap1DefaultL(foldable1NonEmptyArray)(functorNonEmptyArray)(dictSemigroup);
+    },
+    foldr1: /* #__PURE__ */ Data_Function_Uncurried.runFn2($foreign.foldr1Impl),
+    foldl1: /* #__PURE__ */ Data_Function_Uncurried.runFn2($foreign.foldl1Impl),
+    Foldable0: function () {
+        return foldableNonEmptyArray;
+    }
+};
+var traversable1NonEmptyArray = {
+    traverse1: function (dictApply) {
+        var apply = Control_Apply.apply(dictApply);
+        var map = Data_Functor.map(dictApply.Functor0());
+        return function (f) {
+            return $foreign.traverse1Impl(apply, map, f);
+        };
+    },
+    sequence1: function (dictApply) {
+        return Data_Semigroup_Traversable.sequence1Default(traversable1NonEmptyArray)(dictApply);
+    },
+    Foldable10: function () {
+        return foldable1NonEmptyArray;
+    },
+    Traversable1: function () {
+        return traversableNonEmptyArray;
+    }
+};
 var eqNonEmptyArray = function (dictEq) {
     return Data_Eq.eqArray(dictEq);
 };

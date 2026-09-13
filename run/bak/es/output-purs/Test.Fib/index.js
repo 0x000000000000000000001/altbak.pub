@@ -2,6 +2,7 @@
 import * as Bench from "../Bench/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
+var show = /* #__PURE__ */ Data_Show.show(Data_Show.showInt);
 var fib = function (v) {
     if (v === 0) {
         return 0;
@@ -14,7 +15,7 @@ var fib = function (v) {
 var describe = /* #__PURE__ */ Effect_Console.log("Fibonacci:");
 var act = function __do() {
     var dummy = Bench.opaque(10)();
-    return Data_Show.show(Data_Show.showInt)(fib(dummy));
+    return show(fib(dummy));
 };
 export {
     fib,

@@ -12,23 +12,27 @@ var cmap = function (dict) {
     return dict.cmap;
 };
 var cmapFlipped = function (dictContravariant) {
+    var cmap1 = cmap(dictContravariant);
     return function (x) {
         return function (f) {
-            return cmap(dictContravariant)(f)(x);
+            return cmap1(f)(x);
         };
     };
 };
 var coerce = function (dictContravariant) {
+    var cmap1 = cmap(dictContravariant);
     return function (dictFunctor) {
+        var map = Data_Functor.map(dictFunctor);
         return function (a) {
-            return Data_Functor.map(dictFunctor)(Data_Void.absurd)(cmap(dictContravariant)(Data_Void.absurd)(a));
+            return map(Data_Void.absurd)(cmap1(Data_Void.absurd)(a));
         };
     };
 };
 var imapC = function (dictContravariant) {
+    var cmap1 = cmap(dictContravariant);
     return function (v) {
         return function (f) {
-            return cmap(dictContravariant)(f);
+            return cmap1(f);
         };
     };
 };

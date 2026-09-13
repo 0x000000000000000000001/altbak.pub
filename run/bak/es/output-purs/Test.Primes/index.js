@@ -3,6 +3,8 @@ import * as Bench from "../Bench/index.js";
 import * as Data_EuclideanRing from "../Data.EuclideanRing/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
+var mod = /* #__PURE__ */ Data_EuclideanRing.mod(Data_EuclideanRing.euclideanRingInt);
+var show = /* #__PURE__ */ Data_Show.show(Data_Show.showInt);
 var Nil = /* #__PURE__ */ (function () {
     function Nil() {
 
@@ -82,8 +84,8 @@ var range = function (start) {
                 var $tco_done = false;
                 var $tco_result;
                 function $tco_loop(curr, acc) {
-                    var $15 = curr < start;
-                    if ($15) {
+                    var $24 = curr < start;
+                    if ($24) {
                         $tco_done = true;
                         return acc;
                     };
@@ -113,8 +115,8 @@ var filter = function (p) {
                         return reverse(v1);
                     };
                     if (v instanceof Cons) {
-                        var $18 = p(v.value0);
-                        if ($18) {
+                        var $27 = p(v.value0);
+                        if ($27) {
                             $tco_var_v = v.value1;
                             $copy_v1 = new Cons(v.value0, v1);
                             return;
@@ -140,7 +142,7 @@ var sieve = function (v) {
     };
     if (v instanceof Cons) {
         return new Cons(v.value0, sieve(filter(function (x) {
-            return !(Data_EuclideanRing.mod(Data_EuclideanRing.euclideanRingInt)(x)(v.value0) === 0);
+            return !(mod(x)(v.value0) === 0);
         })(v.value1)));
     };
     throw new Error("Failed pattern match at Test.Primes (line 40, column 1 - line 40, column 30): " + [ v.constructor.name ]);
@@ -148,7 +150,7 @@ var sieve = function (v) {
 var describe = /* #__PURE__ */ Effect_Console.log("Prime Sieve (sum primes up to 500):");
 var act = function __do() {
     var dummy = Bench.opaque(500)();
-    return Data_Show.show(Data_Show.showInt)(sumList(sieve(range(2)(dummy))));
+    return show(sumList(sieve(range(2)(dummy))));
 };
 export {
     Nil,

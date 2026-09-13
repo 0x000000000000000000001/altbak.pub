@@ -15,12 +15,13 @@ var showSemigroupMap = function (dictShow) {
     };
 };
 var semigroupSemigroupMap = function (dictOrd) {
+    var unionWith = Data_Map_Internal.unionWith(dictOrd);
     return function (dictSemigroup) {
         var append = Data_Semigroup.append(dictSemigroup);
         return {
             append: function (v) {
                 return function (v1) {
-                    return Data_Map_Internal.unionWith(dictOrd)(append)(v)(v1);
+                    return unionWith(append)(v)(v1);
                 };
             }
         };
@@ -56,9 +57,9 @@ var monoidSemigroupMap = function (dictOrd) {
     };
 };
 var keys = /* #__PURE__ */ (function () {
-    var $36 = Data_Functor["void"](Data_Map_Internal.functorMap);
-    return function ($37) {
-        return Data_Set.fromMap($36($37));
+    var $38 = Data_Functor["void"](Data_Map_Internal.functorMap);
+    return function ($39) {
+        return Data_Set.fromMap($38($39));
     };
 })();
 var functorWithIndexSemigroupMap = Data_Map_Internal.functorWithIndexMap;

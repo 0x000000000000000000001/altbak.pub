@@ -72,7 +72,7 @@ elif [ "$MODE" == "fficc" ]; then
 fi
 
 echo 'Building...'
-npx spago build > /dev/null 2>&1
+spago build > /dev/null 2>&1
 
 echo "=== JS V8 ==="
         
