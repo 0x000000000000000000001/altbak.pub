@@ -11,7 +11,7 @@ import Data.Array (replicate)
 import Data.Foldable (sum)
 
 describe :: Effect Unit
-describe = log "Parallelism (4 x Fib 42)"
+describe = log "Parallelism (10 x Fib 42)"
 
 fib :: Int -> Int
 fib 0 = 0
@@ -28,7 +28,7 @@ heavyTask n = do
 act :: Aff Unit
 act = do
   -- We launch heavy tasks in parallel using forkAff
-  fibers <- traverse (\_ -> forkAff (heavyTask 42)) (replicate 4 unit)
+  fibers <- traverse (\_ -> forkAff (heavyTask 42)) (replicate 10 unit)
 
   -- Wait for all of them to complete and collect results
   results <- traverse joinFiber fibers
