@@ -1,0 +1,5206 @@
+{
+  "full_runner_us": {
+    "AST Evaluation:": {
+      "before": {
+        "median": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_lifetimes": {
+        "median": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_consuming": {
+        "median": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_reuse": {
+        "median": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      }
+    },
+    "Fibonacci:": {
+      "before": {
+        "median": 1.0,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_lifetimes": {
+        "median": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_consuming": {
+        "median": 1.0,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 1,
+        "blocks": 8
+      },
+      "list_reuse": {
+        "median": 1.0,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 1,
+        "blocks": 8
+      }
+    },
+    "List Processing (900 elements):": {
+      "before": {
+        "median": 36.0,
+        "minimum": 34.0,
+        "maximum": 37.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_lifetimes": {
+        "median": 29.0,
+        "minimum": 28.0,
+        "maximum": 30.0,
+        "delta_percent": -19.444444444444443,
+        "paired_favorable": 8,
+        "blocks": 8
+      },
+      "list_consuming": {
+        "median": 29.0,
+        "minimum": 29.0,
+        "maximum": 35.0,
+        "delta_percent": -19.444444444444443,
+        "paired_favorable": 7,
+        "blocks": 8
+      },
+      "list_reuse": {
+        "median": 25.0,
+        "minimum": 25.0,
+        "maximum": 26.0,
+        "delta_percent": -30.555555555555557,
+        "paired_favorable": 8,
+        "blocks": 8
+      }
+    },
+    "Tail Call Optimization (100k calls):": {
+      "before": {
+        "median": 35.0,
+        "minimum": 34.0,
+        "maximum": 39.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_lifetimes": {
+        "median": 35.0,
+        "minimum": 34.0,
+        "maximum": 35.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 3,
+        "blocks": 8
+      },
+      "list_consuming": {
+        "median": 35.0,
+        "minimum": 34.0,
+        "maximum": 40.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 1,
+        "blocks": 8
+      },
+      "list_reuse": {
+        "median": 35.0,
+        "minimum": 34.0,
+        "maximum": 35.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 2,
+        "blocks": 8
+      }
+    },
+    "Deep Record Updates (10k iterations):": {
+      "before": {
+        "median": 382.5,
+        "minimum": 372.0,
+        "maximum": 401.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_lifetimes": {
+        "median": 378.0,
+        "minimum": 362.0,
+        "maximum": 394.0,
+        "delta_percent": -1.17647058823529,
+        "paired_favorable": 5,
+        "blocks": 8
+      },
+      "list_consuming": {
+        "median": 389.5,
+        "minimum": 363.0,
+        "maximum": 407.0,
+        "delta_percent": 1.8300653594771177,
+        "paired_favorable": 3,
+        "blocks": 8
+      },
+      "list_reuse": {
+        "median": 384.0,
+        "minimum": 362.0,
+        "maximum": 404.0,
+        "delta_percent": 0.39215686274509665,
+        "paired_favorable": 4,
+        "blocks": 8
+      }
+    },
+    "Ackermann (3, 4):": {
+      "before": {
+        "median": 17.0,
+        "minimum": 17.0,
+        "maximum": 18.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_lifetimes": {
+        "median": 17.0,
+        "minimum": 17.0,
+        "maximum": 19.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 1,
+        "blocks": 8
+      },
+      "list_consuming": {
+        "median": 17.0,
+        "minimum": 17.0,
+        "maximum": 19.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 1,
+        "blocks": 8
+      },
+      "list_reuse": {
+        "median": 17.0,
+        "minimum": 16.0,
+        "maximum": 19.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 2,
+        "blocks": 8
+      }
+    },
+    "Church Numerals (100k Closure Applications):": {
+      "before": {
+        "median": 157.5,
+        "minimum": 155.0,
+        "maximum": 165.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_lifetimes": {
+        "median": 161.0,
+        "minimum": 156.0,
+        "maximum": 165.0,
+        "delta_percent": 2.2222222222222143,
+        "paired_favorable": 3,
+        "blocks": 8
+      },
+      "list_consuming": {
+        "median": 158.0,
+        "minimum": 156.0,
+        "maximum": 167.0,
+        "delta_percent": 0.31746031746031633,
+        "paired_favorable": 4,
+        "blocks": 8
+      },
+      "list_reuse": {
+        "median": 157.5,
+        "minimum": 155.0,
+        "maximum": 159.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 4,
+        "blocks": 8
+      }
+    },
+    "Prime Sieve (sum primes up to 500):": {
+      "before": {
+        "median": 156.0,
+        "minimum": 154.0,
+        "maximum": 160.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_lifetimes": {
+        "median": 158.0,
+        "minimum": 156.0,
+        "maximum": 164.0,
+        "delta_percent": 1.2820512820512775,
+        "paired_favorable": 2,
+        "blocks": 8
+      },
+      "list_consuming": {
+        "median": 161.0,
+        "minimum": 156.0,
+        "maximum": 163.0,
+        "delta_percent": 3.205128205128216,
+        "paired_favorable": 2,
+        "blocks": 8
+      },
+      "list_reuse": {
+        "median": 159.0,
+        "minimum": 156.0,
+        "maximum": 161.0,
+        "delta_percent": 1.9230769230769162,
+        "paired_favorable": 2,
+        "blocks": 8
+      }
+    },
+    "Red-Black Tree (100k Worst-Case Insertions):": {
+      "before": {
+        "median": 10619.0,
+        "minimum": 10505.0,
+        "maximum": 10651.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_lifetimes": {
+        "median": 10651.0,
+        "minimum": 10526.0,
+        "maximum": 10765.0,
+        "delta_percent": 0.30134664281005197,
+        "paired_favorable": 2,
+        "blocks": 8
+      },
+      "list_consuming": {
+        "median": 10655.5,
+        "minimum": 10563.0,
+        "maximum": 10746.0,
+        "delta_percent": 0.34372351445521865,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_reuse": {
+        "median": 10649.5,
+        "minimum": 10552.0,
+        "maximum": 10704.0,
+        "delta_percent": 0.28722101892832974,
+        "paired_favorable": 3,
+        "blocks": 8
+      }
+    },
+    "Polymorphism (10M Type Class Dict Lookups):": {
+      "before": {
+        "median": 1.0,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_lifetimes": {
+        "median": 1.0,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 2,
+        "blocks": 8
+      },
+      "list_consuming": {
+        "median": 1.0,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 1,
+        "blocks": 8
+      },
+      "list_reuse": {
+        "median": 1.0,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 1,
+        "blocks": 8
+      }
+    },
+    "State Monad (1.2k Binds, 60 Stack Depth):": {
+      "before": {
+        "median": 60.5,
+        "minimum": 60.0,
+        "maximum": 63.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_lifetimes": {
+        "median": 62.0,
+        "minimum": 60.0,
+        "maximum": 65.0,
+        "delta_percent": 2.4793388429751984,
+        "paired_favorable": 1,
+        "blocks": 8
+      },
+      "list_consuming": {
+        "median": 61.0,
+        "minimum": 60.0,
+        "maximum": 62.0,
+        "delta_percent": 0.8264462809917328,
+        "paired_favorable": 2,
+        "blocks": 8
+      },
+      "list_reuse": {
+        "median": 63.0,
+        "minimum": 61.0,
+        "maximum": 65.0,
+        "delta_percent": 4.132231404958686,
+        "paired_favorable": 1,
+        "blocks": 8
+      }
+    },
+    "Lazy Evaluation (1M Thunks Forced, 1k Depth):": {
+      "before": {
+        "median": 1.0,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_lifetimes": {
+        "median": 1.0,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 1,
+        "blocks": 8
+      },
+      "list_consuming": {
+        "median": 1.0,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 1,
+        "blocks": 8
+      },
+      "list_reuse": {
+        "median": 0.5,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "delta_percent": -50.0,
+        "paired_favorable": 2,
+        "blocks": 8
+      }
+    },
+    "Array Processing (900 elements):": {
+      "before": {
+        "median": 25.0,
+        "minimum": 24.0,
+        "maximum": 25.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_lifetimes": {
+        "median": 24.0,
+        "minimum": 24.0,
+        "maximum": 25.0,
+        "delta_percent": -4.0000000000000036,
+        "paired_favorable": 5,
+        "blocks": 8
+      },
+      "list_consuming": {
+        "median": 24.0,
+        "minimum": 24.0,
+        "maximum": 25.0,
+        "delta_percent": -4.0000000000000036,
+        "paired_favorable": 5,
+        "blocks": 8
+      },
+      "list_reuse": {
+        "median": 24.0,
+        "minimum": 24.0,
+        "maximum": 25.0,
+        "delta_percent": -4.0000000000000036,
+        "paired_favorable": 5,
+        "blocks": 8
+      }
+    },
+    "RowToList (Keys Count):": {
+      "before": {
+        "median": 1.0,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_lifetimes": {
+        "median": 1.0,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 2,
+        "blocks": 8
+      },
+      "list_consuming": {
+        "median": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      },
+      "list_reuse": {
+        "median": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 8
+      }
+    }
+  },
+  "full_runner_observed_total_us": {
+    "before": {
+      "median": 11501.5,
+      "minimum": 11377.0,
+      "maximum": 11528.0,
+      "delta_percent": 0.0,
+      "paired_favorable": 0,
+      "blocks": 8
+    },
+    "list_lifetimes": {
+      "median": 11513.5,
+      "minimum": 11390.0,
+      "maximum": 11621.0,
+      "delta_percent": 0.10433421727600312,
+      "paired_favorable": 1,
+      "blocks": 8
+    },
+    "list_consuming": {
+      "median": 11527.0,
+      "minimum": 11427.0,
+      "maximum": 11622.0,
+      "delta_percent": 0.22171021171151217,
+      "paired_favorable": 1,
+      "blocks": 8
+    },
+    "list_reuse": {
+      "median": 11532.5,
+      "minimum": 11410.0,
+      "maximum": 11580.0,
+      "delta_percent": 0.2695300612963525,
+      "paired_favorable": 3,
+      "blocks": 8
+    }
+  },
+  "full_runner_sum_of_medians_us": {
+    "before": 11493.5,
+    "list_lifetimes": 11520.0,
+    "list_consuming": 11535.0,
+    "list_reuse": 11518.5
+  },
+  "list_sharing_ns_per_operation": [
+    {
+      "n": 900,
+      "scenario": "unique",
+      "stages": {
+        "baseline": {
+          "median": 26697.5,
+          "minimum": 26108.75,
+          "maximum": 26975.42,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 4
+        },
+        "lifetimes": {
+          "median": 19126.04,
+          "minimum": 18319.17,
+          "maximum": 19702.08,
+          "delta_percent": -28.360183537784433,
+          "paired_favorable": 4,
+          "blocks": 4
+        },
+        "consuming": {
+          "median": 18411.245000000003,
+          "minimum": 18181.25,
+          "maximum": 18640.42,
+          "delta_percent": -31.037569060773475,
+          "paired_favorable": 4,
+          "blocks": 4
+        },
+        "reuse": {
+          "median": 14306.455,
+          "minimum": 13816.25,
+          "maximum": 15074.59,
+          "delta_percent": -46.41275400318382,
+          "paired_favorable": 4,
+          "blocks": 4
+        }
+      }
+    },
+    {
+      "n": 900,
+      "scenario": "root-retained",
+      "stages": {
+        "baseline": {
+          "median": 25148.129999999997,
+          "minimum": 24710.0,
+          "maximum": 25337.5,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 4
+        },
+        "lifetimes": {
+          "median": 24702.71,
+          "minimum": 24634.16,
+          "maximum": 25880.42,
+          "delta_percent": -1.771185372431261,
+          "paired_favorable": 3,
+          "blocks": 4
+        },
+        "consuming": {
+          "median": 27739.165,
+          "minimum": 26980.42,
+          "maximum": 31988.33,
+          "delta_percent": 10.303092118579006,
+          "paired_favorable": 0,
+          "blocks": 4
+        },
+        "reuse": {
+          "median": 28086.46,
+          "minimum": 27146.25,
+          "maximum": 30144.58,
+          "delta_percent": 11.684089433289868,
+          "paired_favorable": 0,
+          "blocks": 4
+        }
+      }
+    },
+    {
+      "n": 900,
+      "scenario": "interior-retained",
+      "stages": {
+        "baseline": {
+          "median": 24187.085,
+          "minimum": 24138.75,
+          "maximum": 24951.25,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 4
+        },
+        "lifetimes": {
+          "median": 22137.29,
+          "minimum": 21958.33,
+          "maximum": 22227.08,
+          "delta_percent": -8.474750057727077,
+          "paired_favorable": 4,
+          "blocks": 4
+        },
+        "consuming": {
+          "median": 23605.83,
+          "minimum": 22537.5,
+          "maximum": 24230.0,
+          "delta_percent": -2.4031626795870453,
+          "paired_favorable": 3,
+          "blocks": 4
+        },
+        "reuse": {
+          "median": 22295.205,
+          "minimum": 21342.08,
+          "maximum": 22665.84,
+          "delta_percent": -7.821860302719397,
+          "paired_favorable": 4,
+          "blocks": 4
+        }
+      }
+    },
+    {
+      "n": 900,
+      "scenario": "weak",
+      "stages": {
+        "baseline": {
+          "median": 26058.54,
+          "minimum": 25839.58,
+          "maximum": 27213.75,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 4
+        },
+        "lifetimes": {
+          "median": 19566.455,
+          "minimum": 19463.75,
+          "maximum": 19621.67,
+          "delta_percent": -24.913464069744506,
+          "paired_favorable": 4,
+          "blocks": 4
+        },
+        "consuming": {
+          "median": 18940.21,
+          "minimum": 18733.75,
+          "maximum": 19468.34,
+          "delta_percent": -27.316687734615986,
+          "paired_favorable": 4,
+          "blocks": 4
+        },
+        "reuse": {
+          "median": 15318.75,
+          "minimum": 14962.91,
+          "maximum": 15670.84,
+          "delta_percent": -41.214089507700734,
+          "paired_favorable": 4,
+          "blocks": 4
+        }
+      }
+    },
+    {
+      "n": 9000,
+      "scenario": "unique",
+      "stages": {
+        "baseline": {
+          "median": 242631.25,
+          "minimum": 241895.8,
+          "maximum": 250312.5,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 4
+        },
+        "lifetimes": {
+          "median": 205243.8,
+          "minimum": 203316.7,
+          "maximum": 208062.5,
+          "delta_percent": -15.409165142577475,
+          "paired_favorable": 4,
+          "blocks": 4
+        },
+        "consuming": {
+          "median": 201916.7,
+          "minimum": 199779.1,
+          "maximum": 203220.9,
+          "delta_percent": -16.78042296695087,
+          "paired_favorable": 4,
+          "blocks": 4
+        },
+        "reuse": {
+          "median": 160343.75,
+          "minimum": 157283.3,
+          "maximum": 164316.6,
+          "delta_percent": -33.914633832204224,
+          "paired_favorable": 4,
+          "blocks": 4
+        }
+      }
+    },
+    {
+      "n": 9000,
+      "scenario": "root-retained",
+      "stages": {
+        "baseline": {
+          "median": 240824.95,
+          "minimum": 236891.6,
+          "maximum": 245412.5,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 4
+        },
+        "lifetimes": {
+          "median": 244377.1,
+          "minimum": 242141.7,
+          "maximum": 248416.7,
+          "delta_percent": 1.4749925205008951,
+          "paired_favorable": 1,
+          "blocks": 4
+        },
+        "consuming": {
+          "median": 262135.4,
+          "minimum": 257016.7,
+          "maximum": 266050.0,
+          "delta_percent": 8.848937786554089,
+          "paired_favorable": 0,
+          "blocks": 4
+        },
+        "reuse": {
+          "median": 268318.75,
+          "minimum": 264758.3,
+          "maximum": 274008.4,
+          "delta_percent": 11.416508131736336,
+          "paired_favorable": 0,
+          "blocks": 4
+        }
+      }
+    },
+    {
+      "n": 9000,
+      "scenario": "interior-retained",
+      "stages": {
+        "baseline": {
+          "median": 255860.45,
+          "minimum": 251054.2,
+          "maximum": 259808.4,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 4
+        },
+        "lifetimes": {
+          "median": 241987.5,
+          "minimum": 239650.0,
+          "maximum": 242916.6,
+          "delta_percent": -5.422076760984362,
+          "paired_favorable": 4,
+          "blocks": 4
+        },
+        "consuming": {
+          "median": 253110.4,
+          "minimum": 251495.9,
+          "maximum": 255337.5,
+          "delta_percent": -1.0748241863875463,
+          "paired_favorable": 3,
+          "blocks": 4
+        },
+        "reuse": {
+          "median": 245766.65,
+          "minimum": 242408.4,
+          "maximum": 249100.0,
+          "delta_percent": -3.9450411347279446,
+          "paired_favorable": 4,
+          "blocks": 4
+        }
+      }
+    },
+    {
+      "n": 9000,
+      "scenario": "weak",
+      "stages": {
+        "baseline": {
+          "median": 247481.25,
+          "minimum": 246279.2,
+          "maximum": 255804.2,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 4
+        },
+        "lifetimes": {
+          "median": 215756.3,
+          "minimum": 212441.7,
+          "maximum": 217687.5,
+          "delta_percent": -12.81913276258303,
+          "paired_favorable": 4,
+          "blocks": 4
+        },
+        "consuming": {
+          "median": 207097.85,
+          "minimum": 206441.7,
+          "maximum": 208000.0,
+          "delta_percent": -16.31776144657423,
+          "paired_favorable": 4,
+          "blocks": 4
+        },
+        "reuse": {
+          "median": 166822.9,
+          "minimum": 163945.9,
+          "maximum": 168754.1,
+          "delta_percent": -32.591701391519564,
+          "paired_favorable": 4,
+          "blocks": 4
+        }
+      }
+    }
+  ],
+  "fbip_ns": [
+    {
+      "scenario": "diamond",
+      "depth": 7,
+      "updates": 128,
+      "stages": {
+        "persistent": {
+          "median": 11916.0,
+          "minimum": 9833,
+          "maximum": 12666,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 6750.0,
+          "minimum": 5666,
+          "maximum": 7583,
+          "delta_percent": -43.353474320241695,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 6250.0,
+          "minimum": 6083,
+          "maximum": 7042,
+          "delta_percent": -47.54951325948304,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 4708.5,
+          "minimum": 4541,
+          "maximum": 5458,
+          "delta_percent": -60.48590130916415,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 11916.0,
+          "minimum": 9833,
+          "maximum": 12666,
+          "delta_percent": 76.53333333333335,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 6750.0,
+          "minimum": 5666,
+          "maximum": 7583,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 6250.0,
+          "minimum": 6083,
+          "maximum": 7042,
+          "delta_percent": -7.4074074074074066,
+          "paired_favorable": 6,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 4708.5,
+          "minimum": 4541,
+          "maximum": 5458,
+          "delta_percent": -30.24444444444444,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 11916.0,
+          "minimum": 9833,
+          "maximum": 12666,
+          "delta_percent": 90.656,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 6750.0,
+          "minimum": 5666,
+          "maximum": 7583,
+          "delta_percent": 8.000000000000007,
+          "paired_favorable": 2,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 6250.0,
+          "minimum": 6083,
+          "maximum": 7042,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 4708.5,
+          "minimum": 4541,
+          "maximum": 5458,
+          "delta_percent": -24.663999999999998,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "diamond",
+      "depth": 7,
+      "updates": 2048,
+      "stages": {
+        "persistent": {
+          "median": 134541.5,
+          "minimum": 121209,
+          "maximum": 148875,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 46854.5,
+          "minimum": 46583,
+          "maximum": 55833,
+          "delta_percent": -65.17468587759167,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 43229.5,
+          "minimum": 42917,
+          "maximum": 51791,
+          "delta_percent": -67.86902182597933,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 22416.5,
+          "minimum": 17375,
+          "maximum": 24583,
+          "delta_percent": -83.33859812771524,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 134541.5,
+          "minimum": 121209,
+          "maximum": 148875,
+          "delta_percent": 187.14744581630364,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 46854.5,
+          "minimum": 46583,
+          "maximum": 55833,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 43229.5,
+          "minimum": 42917,
+          "maximum": 51791,
+          "delta_percent": -7.736716857505687,
+          "paired_favorable": 7,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 22416.5,
+          "minimum": 17375,
+          "maximum": 24583,
+          "delta_percent": -52.15721008654452,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 134541.5,
+          "minimum": 121209,
+          "maximum": 148875,
+          "delta_percent": 211.22613030453743,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 46854.5,
+          "minimum": 46583,
+          "maximum": 55833,
+          "delta_percent": 8.385477509571015,
+          "paired_favorable": 1,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 43229.5,
+          "minimum": 42917,
+          "maximum": 51791,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 22416.5,
+          "minimum": 17375,
+          "maximum": 24583,
+          "delta_percent": -48.1453636984004,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "diamond",
+      "depth": 10,
+      "updates": 128,
+      "stages": {
+        "persistent": {
+          "median": 37854.0,
+          "minimum": 35666,
+          "maximum": 44333,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 32271.0,
+          "minimum": 30083,
+          "maximum": 36209,
+          "delta_percent": -14.748771596132503,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 31542.0,
+          "minimum": 31166,
+          "maximum": 35750,
+          "delta_percent": -16.674591852908538,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 29249.5,
+          "minimum": 28833,
+          "maximum": 33083,
+          "delta_percent": -22.730755006075974,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 37854.0,
+          "minimum": 35666,
+          "maximum": 44333,
+          "delta_percent": 17.3003625546156,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 32271.0,
+          "minimum": 30083,
+          "maximum": 36209,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 31542.0,
+          "minimum": 31166,
+          "maximum": 35750,
+          "delta_percent": -2.258994143348514,
+          "paired_favorable": 6,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 29249.5,
+          "minimum": 28833,
+          "maximum": 33083,
+          "delta_percent": -9.362895478912957,
+          "paired_favorable": 7,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 37854.0,
+          "minimum": 35666,
+          "maximum": 44333,
+          "delta_percent": 20.01141335362373,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 32271.0,
+          "minimum": 30083,
+          "maximum": 36209,
+          "delta_percent": 2.3112041088072965,
+          "paired_favorable": 2,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 31542.0,
+          "minimum": 31166,
+          "maximum": 35750,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 29249.5,
+          "minimum": 28833,
+          "maximum": 33083,
+          "delta_percent": -7.268086995117617,
+          "paired_favorable": 7,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "diamond",
+      "depth": 10,
+      "updates": 2048,
+      "stages": {
+        "persistent": {
+          "median": 205458.5,
+          "minimum": 200000,
+          "maximum": 213167,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 92770.5,
+          "minimum": 91958,
+          "maximum": 102250,
+          "delta_percent": -54.847085907859736,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 85041.5,
+          "minimum": 84375,
+          "maximum": 94583,
+          "delta_percent": -58.60891615581736,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 57042.0,
+          "minimum": 54916,
+          "maximum": 69334,
+          "delta_percent": -72.23672907180769,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 205458.5,
+          "minimum": 200000,
+          "maximum": 213167,
+          "delta_percent": 121.46964821791411,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 92770.5,
+          "minimum": 91958,
+          "maximum": 102250,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 85041.5,
+          "minimum": 84375,
+          "maximum": 94583,
+          "delta_percent": -8.33131221670682,
+          "paired_favorable": 7,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 57042.0,
+          "minimum": 54916,
+          "maximum": 69334,
+          "delta_percent": -38.51278154154607,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 205458.5,
+          "minimum": 200000,
+          "maximum": 213167,
+          "delta_percent": 141.59792571861973,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 92770.5,
+          "minimum": 91958,
+          "maximum": 102250,
+          "delta_percent": 9.08850384812121,
+          "paired_favorable": 1,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 85041.5,
+          "minimum": 84375,
+          "maximum": 94583,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 57042.0,
+          "minimum": 54916,
+          "maximum": 69334,
+          "delta_percent": -32.924513325846796,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "mixed",
+      "depth": 7,
+      "updates": 128,
+      "stages": {
+        "persistent": {
+          "median": 11896.5,
+          "minimum": 11708,
+          "maximum": 13458,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 6854.0,
+          "minimum": 6334,
+          "maximum": 7583,
+          "delta_percent": -42.386416172823935,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 6270.5,
+          "minimum": 5833,
+          "maximum": 7333,
+          "delta_percent": -47.29122010675408,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 4979.0,
+          "minimum": 4625,
+          "maximum": 5334,
+          "delta_percent": -58.14735426385912,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 11896.5,
+          "minimum": 11708,
+          "maximum": 13458,
+          "delta_percent": 73.57017799824919,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 6854.0,
+          "minimum": 6334,
+          "maximum": 7583,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 6270.5,
+          "minimum": 5833,
+          "maximum": 7333,
+          "delta_percent": -8.513276918587687,
+          "paired_favorable": 7,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 4979.0,
+          "minimum": 4625,
+          "maximum": 5334,
+          "delta_percent": -27.356288298803623,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 11896.5,
+          "minimum": 11708,
+          "maximum": 13458,
+          "delta_percent": 89.72171278207479,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 6854.0,
+          "minimum": 6334,
+          "maximum": 7583,
+          "delta_percent": 9.30547803205486,
+          "paired_favorable": 1,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 6270.5,
+          "minimum": 5833,
+          "maximum": 7333,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 4979.0,
+          "minimum": 4625,
+          "maximum": 5334,
+          "delta_percent": -20.596443664779517,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "mixed",
+      "depth": 7,
+      "updates": 2048,
+      "stages": {
+        "persistent": {
+          "median": 126478.5,
+          "minimum": 123667,
+          "maximum": 143333,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 46729.0,
+          "minimum": 40916,
+          "maximum": 56167,
+          "delta_percent": -63.05379965764932,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 43083.5,
+          "minimum": 42958,
+          "maximum": 47458,
+          "delta_percent": -65.93610771791253,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 22250.0,
+          "minimum": 21666,
+          "maximum": 22834,
+          "delta_percent": -82.40807726214337,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 126478.5,
+          "minimum": 123667,
+          "maximum": 143333,
+          "delta_percent": 170.66382760170345,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 46729.0,
+          "minimum": 40916,
+          "maximum": 56167,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 43083.5,
+          "minimum": 42958,
+          "maximum": 47458,
+          "delta_percent": -7.8013653191808086,
+          "paired_favorable": 6,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 22250.0,
+          "minimum": 21666,
+          "maximum": 22834,
+          "delta_percent": -52.38502856898286,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 126478.5,
+          "minimum": 123667,
+          "maximum": 143333,
+          "delta_percent": 193.5659823366254,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 46729.0,
+          "minimum": 40916,
+          "maximum": 56167,
+          "delta_percent": 8.461475971079423,
+          "paired_favorable": 2,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 43083.5,
+          "minimum": 42958,
+          "maximum": 47458,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 22250.0,
+          "minimum": 21666,
+          "maximum": 22834,
+          "delta_percent": -48.356099202711015,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "mixed",
+      "depth": 10,
+      "updates": 128,
+      "stages": {
+        "persistent": {
+          "median": 39374.5,
+          "minimum": 37834,
+          "maximum": 42292,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 32708.5,
+          "minimum": 32209,
+          "maximum": 32917,
+          "delta_percent": -16.929738790333847,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 32187.5,
+          "minimum": 30542,
+          "maximum": 37417,
+          "delta_percent": -18.252930195938998,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 30083.5,
+          "minimum": 29708,
+          "maximum": 32458,
+          "delta_percent": -23.596490114160183,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 39374.5,
+          "minimum": 37834,
+          "maximum": 42292,
+          "delta_percent": 20.38002354128132,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 32708.5,
+          "minimum": 32209,
+          "maximum": 32917,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 32187.5,
+          "minimum": 30542,
+          "maximum": 37417,
+          "delta_percent": -1.5928581255636898,
+          "paired_favorable": 7,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 30083.5,
+          "minimum": 29708,
+          "maximum": 32458,
+          "delta_percent": -8.025436813060827,
+          "paired_favorable": 7,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 39374.5,
+          "minimum": 37834,
+          "maximum": 42292,
+          "delta_percent": 22.32854368932038,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 32708.5,
+          "minimum": 32209,
+          "maximum": 32917,
+          "delta_percent": 1.6186407766990207,
+          "paired_favorable": 1,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 32187.5,
+          "minimum": 30542,
+          "maximum": 37417,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 30083.5,
+          "minimum": 29708,
+          "maximum": 32458,
+          "delta_percent": -6.536699029126214,
+          "paired_favorable": 7,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "mixed",
+      "depth": 10,
+      "updates": 2048,
+      "stages": {
+        "persistent": {
+          "median": 204187.5,
+          "minimum": 201625,
+          "maximum": 231333,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 94500.5,
+          "minimum": 93750,
+          "maximum": 110209,
+          "delta_percent": -53.71876339149067,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 86874.5,
+          "minimum": 86250,
+          "maximum": 96917,
+          "delta_percent": -57.453565962656874,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 57812.5,
+          "minimum": 56000,
+          "maximum": 69458,
+          "delta_percent": -71.6865625956535,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 204187.5,
+          "minimum": 201625,
+          "maximum": 231333,
+          "delta_percent": 116.0702853424056,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 94500.5,
+          "minimum": 93750,
+          "maximum": 110209,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 86874.5,
+          "minimum": 86250,
+          "maximum": 96917,
+          "delta_percent": -8.069798572494324,
+          "paired_favorable": 7,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 57812.5,
+          "minimum": 56000,
+          "maximum": 69458,
+          "delta_percent": -38.82307501018513,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 204187.5,
+          "minimum": 201625,
+          "maximum": 231333,
+          "delta_percent": 135.0373239558213,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 94500.5,
+          "minimum": 93750,
+          "maximum": 110209,
+          "delta_percent": 8.778180018302262,
+          "paired_favorable": 1,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 86874.5,
+          "minimum": 86250,
+          "maximum": 96917,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 57812.5,
+          "minimum": 56000,
+          "maximum": 69458,
+          "delta_percent": -33.452854404917446,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "old-root",
+      "depth": 7,
+      "updates": 128,
+      "stages": {
+        "persistent": {
+          "median": 11833.0,
+          "minimum": 11708,
+          "maximum": 13250,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 8229.0,
+          "minimum": 6625,
+          "maximum": 9500,
+          "delta_percent": -30.45719597735147,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 8042.0,
+          "minimum": 6583,
+          "maximum": 8125,
+          "delta_percent": -32.03752218372349,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 7416.5,
+          "minimum": 7209,
+          "maximum": 8375,
+          "delta_percent": -37.323586579903655,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 11833.0,
+          "minimum": 11708,
+          "maximum": 13250,
+          "delta_percent": 43.79633005225423,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 8229.0,
+          "minimum": 6625,
+          "maximum": 9500,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 8042.0,
+          "minimum": 6583,
+          "maximum": 8125,
+          "delta_percent": -2.272451087616967,
+          "paired_favorable": 7,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 7416.5,
+          "minimum": 7209,
+          "maximum": 8375,
+          "delta_percent": -9.873617693522906,
+          "paired_favorable": 5,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 11833.0,
+          "minimum": 11708,
+          "maximum": 13250,
+          "delta_percent": 47.14001492166129,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 8229.0,
+          "minimum": 6625,
+          "maximum": 9500,
+          "delta_percent": 2.3252922158667033,
+          "paired_favorable": 1,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 8042.0,
+          "minimum": 6583,
+          "maximum": 8125,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 7416.5,
+          "minimum": 7209,
+          "maximum": 8375,
+          "delta_percent": -7.777915941308134,
+          "paired_favorable": 5,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "old-root",
+      "depth": 7,
+      "updates": 2048,
+      "stages": {
+        "persistent": {
+          "median": 123562.5,
+          "minimum": 123042,
+          "maximum": 135125,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 54000.0,
+          "minimum": 48334,
+          "maximum": 54625,
+          "delta_percent": -56.297420333839156,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 48999.5,
+          "minimum": 43125,
+          "maximum": 49292,
+          "delta_percent": -60.34436014162873,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 29625.0,
+          "minimum": 29167,
+          "maximum": 30166,
+          "delta_percent": -76.02427921092566,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 123562.5,
+          "minimum": 123042,
+          "maximum": 135125,
+          "delta_percent": 128.81944444444446,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 54000.0,
+          "minimum": 48334,
+          "maximum": 54625,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 48999.5,
+          "minimum": 43125,
+          "maximum": 49292,
+          "delta_percent": -9.260185185185188,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 29625.0,
+          "minimum": 29167,
+          "maximum": 30166,
+          "delta_percent": -45.138888888888886,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 123562.5,
+          "minimum": 123042,
+          "maximum": 135125,
+          "delta_percent": 152.1709405198012,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 54000.0,
+          "minimum": 48334,
+          "maximum": 54625,
+          "delta_percent": 10.205206175573212,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 48999.5,
+          "minimum": 43125,
+          "maximum": 49292,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 29625.0,
+          "minimum": 29167,
+          "maximum": 30166,
+          "delta_percent": -39.540199389789684,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "old-root",
+      "depth": 10,
+      "updates": 128,
+      "stages": {
+        "persistent": {
+          "median": 39875.5,
+          "minimum": 39250,
+          "maximum": 43625,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 36396.0,
+          "minimum": 30458,
+          "maximum": 42875,
+          "delta_percent": -8.725909392985665,
+          "paired_favorable": 6,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 35687.5,
+          "minimum": 30125,
+          "maximum": 36542,
+          "delta_percent": -10.502689621446748,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 35395.5,
+          "minimum": 33625,
+          "maximum": 35625,
+          "delta_percent": -11.234968840516101,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 39875.5,
+          "minimum": 39250,
+          "maximum": 43625,
+          "delta_percent": 9.560116496318273,
+          "paired_favorable": 2,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 36396.0,
+          "minimum": 30458,
+          "maximum": 42875,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 35687.5,
+          "minimum": 30125,
+          "maximum": 36542,
+          "delta_percent": -1.9466424881855127,
+          "paired_favorable": 7,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 35395.5,
+          "minimum": 33625,
+          "maximum": 35625,
+          "delta_percent": -2.748928453676225,
+          "paired_favorable": 7,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 39875.5,
+          "minimum": 39250,
+          "maximum": 43625,
+          "delta_percent": 11.735201401050798,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 36396.0,
+          "minimum": 30458,
+          "maximum": 42875,
+          "delta_percent": 1.9852889667250517,
+          "paired_favorable": 1,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 35687.5,
+          "minimum": 30125,
+          "maximum": 36542,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 35395.5,
+          "minimum": 33625,
+          "maximum": 35625,
+          "delta_percent": -0.8182136602451817,
+          "paired_favorable": 5,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "old-root",
+      "depth": 10,
+      "updates": 2048,
+      "stages": {
+        "persistent": {
+          "median": 208916.5,
+          "minimum": 204083,
+          "maximum": 214333,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 110666.5,
+          "minimum": 109750,
+          "maximum": 126166,
+          "delta_percent": -47.028358219671496,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 107999.5,
+          "minimum": 101500,
+          "maximum": 126958,
+          "delta_percent": -48.304944798519976,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 77250.0,
+          "minimum": 75708,
+          "maximum": 84083,
+          "delta_percent": -63.02350460590714,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 208916.5,
+          "minimum": 204083,
+          "maximum": 214333,
+          "delta_percent": 88.7802541871298,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 110666.5,
+          "minimum": 109750,
+          "maximum": 126166,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 107999.5,
+          "minimum": 101500,
+          "maximum": 126958,
+          "delta_percent": -2.4099433884689603,
+          "paired_favorable": 5,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 77250.0,
+          "minimum": 75708,
+          "maximum": 84083,
+          "delta_percent": -30.19567800553916,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 208916.5,
+          "minimum": 204083,
+          "maximum": 214333,
+          "delta_percent": 93.44209926897811,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 110666.5,
+          "minimum": 109750,
+          "maximum": 126166,
+          "delta_percent": 2.469455877110538,
+          "paired_favorable": 3,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 107999.5,
+          "minimum": 101500,
+          "maximum": 126958,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 77250.0,
+          "minimum": 75708,
+          "maximum": 84083,
+          "delta_percent": -28.47189107356979,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "unique",
+      "depth": 7,
+      "updates": 128,
+      "stages": {
+        "persistent": {
+          "median": 11958.5,
+          "minimum": 11750,
+          "maximum": 13042,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 5979.0,
+          "minimum": 5875,
+          "maximum": 6834,
+          "delta_percent": -50.00209056319773,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 5687.0,
+          "minimum": 5542,
+          "maximum": 6500,
+          "delta_percent": -52.443868378141076,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 4167.0,
+          "minimum": 4041,
+          "maximum": 4625,
+          "delta_percent": -65.15449262031191,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 11958.5,
+          "minimum": 11750,
+          "maximum": 13042,
+          "delta_percent": 100.00836260244186,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 5979.0,
+          "minimum": 5875,
+          "maximum": 6834,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 5687.0,
+          "minimum": 5542,
+          "maximum": 6500,
+          "delta_percent": -4.883759826057865,
+          "paired_favorable": 6,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 4167.0,
+          "minimum": 4041,
+          "maximum": 4625,
+          "delta_percent": -30.306071249372803,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 11958.5,
+          "minimum": 11750,
+          "maximum": 13042,
+          "delta_percent": 110.27782662212063,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 5979.0,
+          "minimum": 5875,
+          "maximum": 6834,
+          "delta_percent": 5.1345173202039796,
+          "paired_favorable": 2,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 5687.0,
+          "minimum": 5542,
+          "maximum": 6500,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 4167.0,
+          "minimum": 4041,
+          "maximum": 4625,
+          "delta_percent": -26.72762440654124,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "unique",
+      "depth": 7,
+      "updates": 2048,
+      "stages": {
+        "persistent": {
+          "median": 124583.0,
+          "minimum": 120291,
+          "maximum": 136583,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 45479.0,
+          "minimum": 45084,
+          "maximum": 54875,
+          "delta_percent": -63.49501938466725,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 42083.0,
+          "minimum": 41917,
+          "maximum": 50375,
+          "delta_percent": -66.22091296565343,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 21333.5,
+          "minimum": 16667,
+          "maximum": 22417,
+          "delta_percent": -82.87607458481494,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 124583.0,
+          "minimum": 120291,
+          "maximum": 136583,
+          "delta_percent": 173.93522285010664,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 45479.0,
+          "minimum": 45084,
+          "maximum": 54875,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 42083.0,
+          "minimum": 41917,
+          "maximum": 50375,
+          "delta_percent": -7.46718265573122,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 21333.5,
+          "minimum": 16667,
+          "maximum": 22417,
+          "delta_percent": -53.09153675322676,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 124583.0,
+          "minimum": 120291,
+          "maximum": 136583,
+          "delta_percent": 196.04115676163772,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 45479.0,
+          "minimum": 45084,
+          "maximum": 54875,
+          "delta_percent": 8.069766889242679,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 42083.0,
+          "minimum": 41917,
+          "maximum": 50375,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 21333.5,
+          "minimum": 16667,
+          "maximum": 22417,
+          "delta_percent": -49.306133117886084,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "unique",
+      "depth": 10,
+      "updates": 128,
+      "stages": {
+        "persistent": {
+          "median": 38104.5,
+          "minimum": 36208,
+          "maximum": 45958,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 30437.0,
+          "minimum": 24916,
+          "maximum": 33208,
+          "delta_percent": -20.12229526696322,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 30291.5,
+          "minimum": 28041,
+          "maximum": 32750,
+          "delta_percent": -20.50413993097928,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 27750.0,
+          "minimum": 22625,
+          "maximum": 30833,
+          "delta_percent": -27.17395583198835,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 38104.5,
+          "minimum": 36208,
+          "maximum": 45958,
+          "delta_percent": 25.191378913821993,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 30437.0,
+          "minimum": 24916,
+          "maximum": 33208,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 30291.5,
+          "minimum": 28041,
+          "maximum": 32750,
+          "delta_percent": -0.4780366001905567,
+          "paired_favorable": 5,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 27750.0,
+          "minimum": 22625,
+          "maximum": 30833,
+          "delta_percent": -8.82807109767717,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 38104.5,
+          "minimum": 36208,
+          "maximum": 45958,
+          "delta_percent": 25.792714127725592,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 30437.0,
+          "minimum": 24916,
+          "maximum": 33208,
+          "delta_percent": 0.4803327666176971,
+          "paired_favorable": 3,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 30291.5,
+          "minimum": 28041,
+          "maximum": 32750,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 27750.0,
+          "minimum": 22625,
+          "maximum": 30833,
+          "delta_percent": -8.390142449201921,
+          "paired_favorable": 7,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "unique",
+      "depth": 10,
+      "updates": 2048,
+      "stages": {
+        "persistent": {
+          "median": 204562.5,
+          "minimum": 200958,
+          "maximum": 209833,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 83688.0,
+          "minimum": 78000,
+          "maximum": 93167,
+          "delta_percent": -59.08927589367552,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 78271.0,
+          "minimum": 77834,
+          "maximum": 89375,
+          "delta_percent": -61.73736633058356,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 52875.5,
+          "minimum": 51291,
+          "maximum": 64625,
+          "delta_percent": -74.15190956309196,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 204562.5,
+          "minimum": 200958,
+          "maximum": 209833,
+          "delta_percent": 144.4346859764841,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 83688.0,
+          "minimum": 78000,
+          "maximum": 93167,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 78271.0,
+          "minimum": 77834,
+          "maximum": 89375,
+          "delta_percent": -6.472851543829461,
+          "paired_favorable": 7,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 52875.5,
+          "minimum": 51291,
+          "maximum": 64625,
+          "delta_percent": -36.818301309626236,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 204562.5,
+          "minimum": 200958,
+          "maximum": 209833,
+          "delta_percent": 161.35158615579206,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 83688.0,
+          "minimum": 78000,
+          "maximum": 93167,
+          "delta_percent": 6.920826359698995,
+          "paired_favorable": 1,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 78271.0,
+          "minimum": 77834,
+          "maximum": 89375,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 52875.5,
+          "minimum": 51291,
+          "maximum": 64625,
+          "delta_percent": -32.44560565215725,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "weak-mixed",
+      "depth": 7,
+      "updates": 128,
+      "stages": {
+        "persistent": {
+          "median": 12062.5,
+          "minimum": 11792,
+          "maximum": 13583,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 6500.0,
+          "minimum": 5792,
+          "maximum": 7042,
+          "delta_percent": -46.1139896373057,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 5916.5,
+          "minimum": 5833,
+          "maximum": 6750,
+          "delta_percent": -50.951295336787574,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 4437.5,
+          "minimum": 4375,
+          "maximum": 5000,
+          "delta_percent": -63.212435233160626,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 12062.5,
+          "minimum": 11792,
+          "maximum": 13583,
+          "delta_percent": 85.57692307692308,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 6500.0,
+          "minimum": 5792,
+          "maximum": 7042,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 5916.5,
+          "minimum": 5833,
+          "maximum": 6750,
+          "delta_percent": -8.976923076923082,
+          "paired_favorable": 6,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 4437.5,
+          "minimum": 4375,
+          "maximum": 5000,
+          "delta_percent": -31.73076923076923,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 12062.5,
+          "minimum": 11792,
+          "maximum": 13583,
+          "delta_percent": 103.8789825065495,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 6500.0,
+          "minimum": 5792,
+          "maximum": 7042,
+          "delta_percent": 9.862249640834953,
+          "paired_favorable": 2,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 5916.5,
+          "minimum": 5833,
+          "maximum": 6750,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 4437.5,
+          "minimum": 4375,
+          "maximum": 5000,
+          "delta_percent": -24.997887264429984,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "weak-mixed",
+      "depth": 7,
+      "updates": 2048,
+      "stages": {
+        "persistent": {
+          "median": 124604.0,
+          "minimum": 123416,
+          "maximum": 141292,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 45792.0,
+          "minimum": 45583,
+          "maximum": 45958,
+          "delta_percent": -63.24997592372637,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 42437.5,
+          "minimum": 42333,
+          "maximum": 51208,
+          "delta_percent": -65.94210458733268,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 21958.0,
+          "minimum": 16959,
+          "maximum": 24833,
+          "delta_percent": -82.37777278418028,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 124604.0,
+          "minimum": 123416,
+          "maximum": 141292,
+          "delta_percent": 172.10866526904263,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 45792.0,
+          "minimum": 45583,
+          "maximum": 45958,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 42437.5,
+          "minimum": 42333,
+          "maximum": 51208,
+          "delta_percent": -7.325515373864433,
+          "paired_favorable": 6,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 21958.0,
+          "minimum": 16959,
+          "maximum": 24833,
+          "delta_percent": -52.048392732355,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 124604.0,
+          "minimum": 123416,
+          "maximum": 141292,
+          "delta_percent": 193.61767304860086,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 45792.0,
+          "minimum": 45583,
+          "maximum": 45958,
+          "delta_percent": 7.90456553755523,
+          "paired_favorable": 2,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 42437.5,
+          "minimum": 42333,
+          "maximum": 51208,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 21958.0,
+          "minimum": 16959,
+          "maximum": 24833,
+          "delta_percent": -48.25802650957291,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "weak-mixed",
+      "depth": 10,
+      "updates": 128,
+      "stages": {
+        "persistent": {
+          "median": 38542.0,
+          "minimum": 38042,
+          "maximum": 39667,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 31458.0,
+          "minimum": 31209,
+          "maximum": 33666,
+          "delta_percent": -18.379949146385766,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 30979.0,
+          "minimum": 30833,
+          "maximum": 31375,
+          "delta_percent": -19.622749208655488,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 28521.0,
+          "minimum": 28250,
+          "maximum": 31584,
+          "delta_percent": -26.000207565772403,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 38542.0,
+          "minimum": 38042,
+          "maximum": 39667,
+          "delta_percent": 22.51891410769915,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 31458.0,
+          "minimum": 31209,
+          "maximum": 33666,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 30979.0,
+          "minimum": 30833,
+          "maximum": 31375,
+          "delta_percent": -1.5226651408226877,
+          "paired_favorable": 7,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 28521.0,
+          "minimum": 28250,
+          "maximum": 31584,
+          "delta_percent": -9.336257867633035,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 38542.0,
+          "minimum": 38042,
+          "maximum": 39667,
+          "delta_percent": 24.41331224377805,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 31458.0,
+          "minimum": 31209,
+          "maximum": 33666,
+          "delta_percent": 1.546208722037501,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 30979.0,
+          "minimum": 30833,
+          "maximum": 31375,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 28521.0,
+          "minimum": 28250,
+          "maximum": 31584,
+          "delta_percent": -7.934407179056779,
+          "paired_favorable": 7,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "weak-mixed",
+      "depth": 10,
+      "updates": 2048,
+      "stages": {
+        "persistent": {
+          "median": 206812.5,
+          "minimum": 203500,
+          "maximum": 223584,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 83916.5,
+          "minimum": 83625,
+          "maximum": 96958,
+          "delta_percent": -59.4238742822605,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 79333.5,
+          "minimum": 78125,
+          "maximum": 88292,
+          "delta_percent": -61.63989120580236,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 52020.5,
+          "minimum": 51000,
+          "maximum": 63750,
+          "delta_percent": -74.84653974010276,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 206812.5,
+          "minimum": 203500,
+          "maximum": 223584,
+          "delta_percent": 146.4503405170616,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 83916.5,
+          "minimum": 83625,
+          "maximum": 96958,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 79333.5,
+          "minimum": 78125,
+          "maximum": 88292,
+          "delta_percent": -5.461381253984621,
+          "paired_favorable": 7,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 52020.5,
+          "minimum": 51000,
+          "maximum": 63750,
+          "delta_percent": -38.00921153765946,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 206812.5,
+          "minimum": 203500,
+          "maximum": 223584,
+          "delta_percent": 160.68747754731606,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 83916.5,
+          "minimum": 83625,
+          "maximum": 96958,
+          "delta_percent": 5.77687862000289,
+          "paired_favorable": 1,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 79333.5,
+          "minimum": 78125,
+          "maximum": 88292,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 52020.5,
+          "minimum": 51000,
+          "maximum": 63750,
+          "delta_percent": -34.428078932607285,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "weak-root",
+      "depth": 7,
+      "updates": 128,
+      "stages": {
+        "persistent": {
+          "median": 11917.0,
+          "minimum": 11875,
+          "maximum": 13458,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 6187.5,
+          "minimum": 5833,
+          "maximum": 7000,
+          "delta_percent": -48.078375430057896,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 6042.0,
+          "minimum": 4667,
+          "maximum": 6583,
+          "delta_percent": -49.29932029873291,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 4313.0,
+          "minimum": 3917,
+          "maximum": 5084,
+          "delta_percent": -63.80800537047915,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 11917.0,
+          "minimum": 11875,
+          "maximum": 13458,
+          "delta_percent": 92.59797979797979,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 6187.5,
+          "minimum": 5833,
+          "maximum": 7000,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 6042.0,
+          "minimum": 4667,
+          "maximum": 6583,
+          "delta_percent": -2.351515151515149,
+          "paired_favorable": 6,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 4313.0,
+          "minimum": 3917,
+          "maximum": 5084,
+          "delta_percent": -30.294949494949496,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 11917.0,
+          "minimum": 11875,
+          "maximum": 13458,
+          "delta_percent": 97.23601456471367,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 6187.5,
+          "minimum": 5833,
+          "maximum": 7000,
+          "delta_percent": 2.408142999006957,
+          "paired_favorable": 2,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 6042.0,
+          "minimum": 4667,
+          "maximum": 6583,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 4313.0,
+          "minimum": 3917,
+          "maximum": 5084,
+          "delta_percent": -28.616352201257868,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "weak-root",
+      "depth": 7,
+      "updates": 2048,
+      "stages": {
+        "persistent": {
+          "median": 123854.5,
+          "minimum": 117125,
+          "maximum": 136958,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 45687.5,
+          "minimum": 44833,
+          "maximum": 55292,
+          "delta_percent": -63.111957982955815,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 42375.0,
+          "minimum": 42250,
+          "maximum": 44375,
+          "delta_percent": -65.78646718528596,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 21937.5,
+          "minimum": 21292,
+          "maximum": 24416,
+          "delta_percent": -82.28768433928522,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 123854.5,
+          "minimum": 117125,
+          "maximum": 136958,
+          "delta_percent": 171.09056087551298,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 45687.5,
+          "minimum": 44833,
+          "maximum": 55292,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 42375.0,
+          "minimum": 42250,
+          "maximum": 44375,
+          "delta_percent": -7.25034199726402,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 21937.5,
+          "minimum": 21292,
+          "maximum": 24416,
+          "delta_percent": -51.98358413132696,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 123854.5,
+          "minimum": 117125,
+          "maximum": 136958,
+          "delta_percent": 192.282005899705,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 45687.5,
+          "minimum": 44833,
+          "maximum": 55292,
+          "delta_percent": 7.8171091445427665,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 42375.0,
+          "minimum": 42250,
+          "maximum": 44375,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 21937.5,
+          "minimum": 21292,
+          "maximum": 24416,
+          "delta_percent": -48.23008849557522,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "weak-root",
+      "depth": 10,
+      "updates": 128,
+      "stages": {
+        "persistent": {
+          "median": 38646.0,
+          "minimum": 38125,
+          "maximum": 45209,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 31687.5,
+          "minimum": 31167,
+          "maximum": 34875,
+          "delta_percent": -18.00574444961962,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 30875.0,
+          "minimum": 30666,
+          "maximum": 34459,
+          "delta_percent": -20.10816125860374,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 28208.5,
+          "minimum": 25792,
+          "maximum": 28500,
+          "delta_percent": -27.007969776949746,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 38646.0,
+          "minimum": 38125,
+          "maximum": 45209,
+          "delta_percent": 21.95976331360947,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 31687.5,
+          "minimum": 31167,
+          "maximum": 34875,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 30875.0,
+          "minimum": 30666,
+          "maximum": 34459,
+          "delta_percent": -2.564102564102566,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 28208.5,
+          "minimum": 25792,
+          "maximum": 28500,
+          "delta_percent": -10.979092702169623,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 38646.0,
+          "minimum": 38125,
+          "maximum": 45209,
+          "delta_percent": 25.169230769230765,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 31687.5,
+          "minimum": 31167,
+          "maximum": 34875,
+          "delta_percent": 2.6315789473684292,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 30875.0,
+          "minimum": 30666,
+          "maximum": 34459,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 28208.5,
+          "minimum": 25792,
+          "maximum": 28500,
+          "delta_percent": -8.636437246963558,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    },
+    {
+      "scenario": "weak-root",
+      "depth": 10,
+      "updates": 2048,
+      "stages": {
+        "persistent": {
+          "median": 204145.5,
+          "minimum": 201917,
+          "maximum": 209667,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 83625.0,
+          "minimum": 83375,
+          "maximum": 88000,
+          "delta_percent": -59.03656950557323,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 78125.0,
+          "minimum": 77417,
+          "maximum": 88458,
+          "delta_percent": -61.73072636918276,
+          "paired_favorable": 8,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 52667.0,
+          "minimum": 50791,
+          "maximum": 54500,
+          "delta_percent": -74.20124372077758,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_rechecked": {
+        "persistent": {
+          "median": 204145.5,
+          "minimum": 201917,
+          "maximum": 209667,
+          "delta_percent": 144.1201793721973,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 83625.0,
+          "minimum": 83375,
+          "maximum": 88000,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 78125.0,
+          "minimum": 77417,
+          "maximum": 88458,
+          "delta_percent": -6.576980568011958,
+          "paired_favorable": 6,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 52667.0,
+          "minimum": 50791,
+          "maximum": 54500,
+          "delta_percent": -37.020029895366214,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      },
+      "vs_reuse_retained": {
+        "persistent": {
+          "median": 204145.5,
+          "minimum": 201917,
+          "maximum": 209667,
+          "delta_percent": 161.30624,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "reuse_rechecked": {
+          "median": 83625.0,
+          "minimum": 83375,
+          "maximum": 88000,
+          "delta_percent": 7.040000000000002,
+          "paired_favorable": 2,
+          "blocks": 8
+        },
+        "reuse_retained": {
+          "median": 78125.0,
+          "minimum": 77417,
+          "maximum": 88458,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 8
+        },
+        "fields_retained": {
+          "median": 52667.0,
+          "minimum": 50791,
+          "maximum": 54500,
+          "delta_percent": -32.58624,
+          "paired_favorable": 8,
+          "blocks": 8
+        }
+      }
+    }
+  ],
+  "sticky_ns": {
+    "read-owned": {
+      "normal": {
+        "median": 12964291.5,
+        "minimum": 12428708,
+        "maximum": 13135875,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 6
+      },
+      "checked": {
+        "median": 14331021.0,
+        "minimum": 14106292,
+        "maximum": 14582375,
+        "delta_percent": 10.542261410891607,
+        "paired_favorable": 0,
+        "blocks": 6
+      },
+      "forced": {
+        "median": 13936958.5,
+        "minimum": 13656500,
+        "maximum": 14541208,
+        "delta_percent": 7.502662216442757,
+        "paired_favorable": 0,
+        "blocks": 6
+      }
+    },
+    "read-borrowed": {
+      "normal": {
+        "median": 4623999.5,
+        "minimum": 4508208,
+        "maximum": 4832833,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 6
+      },
+      "checked": {
+        "median": 4619874.5,
+        "minimum": 4563084,
+        "maximum": 4999291,
+        "delta_percent": -0.08920848715490148,
+        "paired_favorable": 2,
+        "blocks": 6
+      },
+      "forced": {
+        "median": 4611125.0,
+        "minimum": 4561583,
+        "maximum": 4752000,
+        "delta_percent": -0.27842779827290665,
+        "paired_favorable": 3,
+        "blocks": 6
+      }
+    },
+    "closure-read": {
+      "normal": {
+        "median": 13561249.5,
+        "minimum": 13219500,
+        "maximum": 14054791,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 6
+      },
+      "checked": {
+        "median": 15158500.5,
+        "minimum": 14780000,
+        "maximum": 15293333,
+        "delta_percent": 11.778051867565754,
+        "paired_favorable": 0,
+        "blocks": 6
+      },
+      "forced": {
+        "median": 14773646.0,
+        "minimum": 14505125,
+        "maximum": 14857542,
+        "delta_percent": 8.940153339115241,
+        "paired_favorable": 0,
+        "blocks": 6
+      }
+    },
+    "update-unique": {
+      "normal": {
+        "median": 39798875.0,
+        "minimum": 39514750,
+        "maximum": 40198333,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 6
+      },
+      "checked": {
+        "median": 40876021.0,
+        "minimum": 40524250,
+        "maximum": 41775500,
+        "delta_percent": 2.706473487001837,
+        "paired_favorable": 0,
+        "blocks": 6
+      },
+      "forced": {
+        "median": 39763041.5,
+        "minimum": 39660417,
+        "maximum": 40184083,
+        "delta_percent": -0.09003646459856407,
+        "paired_favorable": 3,
+        "blocks": 6
+      }
+    },
+    "update-retained": {
+      "normal": {
+        "median": 39527875.5,
+        "minimum": 39349541,
+        "maximum": 40726250,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 6
+      },
+      "checked": {
+        "median": 40674250.5,
+        "minimum": 40186333,
+        "maximum": 41595042,
+        "delta_percent": 2.9001685152544976,
+        "paired_favorable": 0,
+        "blocks": 6
+      },
+      "forced": {
+        "median": 39949021.0,
+        "minimum": 39476291,
+        "maximum": 41085958,
+        "delta_percent": 1.0654392493216536,
+        "paired_favorable": 2,
+        "blocks": 6
+      }
+    },
+    "fanout": {
+      "normal": {
+        "median": 8570291.5,
+        "minimum": 8351041,
+        "maximum": 8797958,
+        "delta_percent": 0.0,
+        "paired_favorable": 0,
+        "blocks": 6
+      },
+      "checked": {
+        "median": 8422104.0,
+        "minimum": 7984750,
+        "maximum": 8709459,
+        "delta_percent": -1.7290835440078034,
+        "paired_favorable": 4,
+        "blocks": 6
+      },
+      "forced": {
+        "median": 8763396.0,
+        "minimum": 8558667,
+        "maximum": 9451125,
+        "delta_percent": 2.253184737065239,
+        "paired_favorable": 1,
+        "blocks": 6
+      }
+    }
+  },
+  "ir_batch_ns": {
+    "list_map/0": {
+      "stages": {
+        "naive": {
+          "median": 15279708,
+          "minimum": 15178791,
+          "maximum": 15523083,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "pushdown": {
+          "median": 15157375,
+          "minimum": 15132459,
+          "maximum": 15324458,
+          "delta_percent": -0.8006239386250003,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 12707958,
+          "minimum": 12653958,
+          "maximum": 12772250,
+          "delta_percent": -16.83114624965346,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 12637458,
+          "minimum": 12498791,
+          "maximum": 12659625,
+          "delta_percent": -17.292542501466645,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 12647417,
+          "minimum": 12538583,
+          "maximum": 12807459,
+          "delta_percent": -17.22736455434881,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 11337625,
+          "minimum": 11244292,
+          "maximum": 11555000,
+          "delta_percent": -25.799465539524714,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 11315584,
+          "minimum": 11197958,
+          "maximum": 11822417,
+          "delta_percent": -25.943715678336265,
+          "paired_favorable": 7,
+          "blocks": 7
+        }
+      },
+      "adjacent": {
+        "pushdown": {
+          "median": 15157375,
+          "minimum": 15132459,
+          "maximum": 15324458,
+          "delta_percent": -0.8006239386250003,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 12707958,
+          "minimum": 12653958,
+          "maximum": 12772250,
+          "delta_percent": -16.159902357763134,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 12637458,
+          "minimum": 12498791,
+          "maximum": 12659625,
+          "delta_percent": -0.5547704831885603,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 12647417,
+          "minimum": 12538583,
+          "maximum": 12807459,
+          "delta_percent": 0.07880540532756442,
+          "paired_favorable": 1,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 11337625,
+          "minimum": 11244292,
+          "maximum": 11555000,
+          "delta_percent": -10.356201586458324,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 11315584,
+          "minimum": 11197958,
+          "maximum": 11822417,
+          "delta_percent": -0.19440579486444953,
+          "paired_favorable": 4,
+          "blocks": 7
+        }
+      }
+    },
+    "list_map/1": {
+      "stages": {
+        "naive": {
+          "median": 15444583,
+          "minimum": 15239375,
+          "maximum": 16421333,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "pushdown": {
+          "median": 15410625,
+          "minimum": 15271834,
+          "maximum": 15755125,
+          "delta_percent": -0.21986996994350916,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 14844792,
+          "minimum": 14782875,
+          "maximum": 14946708,
+          "delta_percent": -3.883504009140293,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 14716084,
+          "minimum": 14601375,
+          "maximum": 14859833,
+          "delta_percent": -4.71685768401775,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 14701750,
+          "minimum": 14515541,
+          "maximum": 14730625,
+          "delta_percent": -4.809666923347821,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 15603625,
+          "minimum": 15404500,
+          "maximum": 15918417,
+          "delta_percent": 1.0297591071251277,
+          "paired_favorable": 1,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 15558500,
+          "minimum": 15492375,
+          "maximum": 15905583,
+          "delta_percent": 0.7375854692871942,
+          "paired_favorable": 2,
+          "blocks": 7
+        }
+      },
+      "adjacent": {
+        "pushdown": {
+          "median": 15410625,
+          "minimum": 15271834,
+          "maximum": 15755125,
+          "delta_percent": -0.21986996994350916,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 14844792,
+          "minimum": 14782875,
+          "maximum": 14946708,
+          "delta_percent": -3.6717070203187707,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 14716084,
+          "minimum": 14601375,
+          "maximum": 14859833,
+          "delta_percent": -0.8670246103818724,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 14701750,
+          "minimum": 14515541,
+          "maximum": 14730625,
+          "delta_percent": -0.09740362993306828,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 15603625,
+          "minimum": 15404500,
+          "maximum": 15918417,
+          "delta_percent": 6.134473787134187,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 15558500,
+          "minimum": 15492375,
+          "maximum": 15905583,
+          "delta_percent": -0.2891956196076184,
+          "paired_favorable": 3,
+          "blocks": 7
+        }
+      }
+    },
+    "list_map/2": {
+      "stages": {
+        "naive": {
+          "median": 15576250,
+          "minimum": 15398166,
+          "maximum": 15963500,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "pushdown": {
+          "median": 15458917,
+          "minimum": 15344417,
+          "maximum": 15739542,
+          "delta_percent": -0.753281438086828,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 14938875,
+          "minimum": 14788417,
+          "maximum": 15287291,
+          "delta_percent": -4.09196693684295,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 14841041,
+          "minimum": 14705375,
+          "maximum": 14859291,
+          "delta_percent": -4.720064200304952,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 14779125,
+          "minimum": 14675166,
+          "maximum": 14840375,
+          "delta_percent": -5.1175668084423425,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 15680875,
+          "minimum": 15483542,
+          "maximum": 15829750,
+          "delta_percent": 0.671695690554519,
+          "paired_favorable": 2,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 15639250,
+          "minimum": 15484417,
+          "maximum": 15791500,
+          "delta_percent": 0.4044619211941214,
+          "paired_favorable": 2,
+          "blocks": 7
+        }
+      },
+      "adjacent": {
+        "pushdown": {
+          "median": 15458917,
+          "minimum": 15344417,
+          "maximum": 15739542,
+          "delta_percent": -0.753281438086828,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 14938875,
+          "minimum": 14788417,
+          "maximum": 15287291,
+          "delta_percent": -3.364026082810334,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 14841041,
+          "minimum": 14705375,
+          "maximum": 14859291,
+          "delta_percent": -0.6548953652801837,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 14779125,
+          "minimum": 14675166,
+          "maximum": 14840375,
+          "delta_percent": -0.41719445421651846,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 15680875,
+          "minimum": 15483542,
+          "maximum": 15829750,
+          "delta_percent": 6.101511422360928,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 15639250,
+          "minimum": 15484417,
+          "maximum": 15791500,
+          "delta_percent": -0.26545074812470704,
+          "paired_favorable": 5,
+          "blocks": 7
+        }
+      }
+    },
+    "list_filter/0": {
+      "stages": {
+        "naive": {
+          "median": 11577458,
+          "minimum": 11327250,
+          "maximum": 11894708,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "pushdown": {
+          "median": 11657625,
+          "minimum": 11499916,
+          "maximum": 11771875,
+          "delta_percent": 0.6924404303604526,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 8852042,
+          "minimum": 8727167,
+          "maximum": 9334917,
+          "delta_percent": -23.54071161389659,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 8844583,
+          "minimum": 8670000,
+          "maximum": 9171458,
+          "delta_percent": -23.605138537319682,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 8824833,
+          "minimum": 8767375,
+          "maximum": 8978083,
+          "delta_percent": -23.775728661680308,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 8626666,
+          "minimum": 8614291,
+          "maximum": 8688958,
+          "delta_percent": -25.487391100878966,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 8541500,
+          "minimum": 8510916,
+          "maximum": 8740208,
+          "delta_percent": -26.22301026702062,
+          "paired_favorable": 7,
+          "blocks": 7
+        }
+      },
+      "adjacent": {
+        "pushdown": {
+          "median": 11657625,
+          "minimum": 11499916,
+          "maximum": 11771875,
+          "delta_percent": 0.6924404303604526,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 8852042,
+          "minimum": 8727167,
+          "maximum": 9334917,
+          "delta_percent": -24.06650582773078,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 8844583,
+          "minimum": 8670000,
+          "maximum": 9171458,
+          "delta_percent": -0.08426304348759794,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 8824833,
+          "minimum": 8767375,
+          "maximum": 8978083,
+          "delta_percent": -0.2233005219126727,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 8626666,
+          "minimum": 8614291,
+          "maximum": 8688958,
+          "delta_percent": -2.2455609074981897,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 8541500,
+          "minimum": 8510916,
+          "maximum": 8740208,
+          "delta_percent": -0.9872411891221899,
+          "paired_favorable": 4,
+          "blocks": 7
+        }
+      }
+    },
+    "list_filter/1": {
+      "stages": {
+        "naive": {
+          "median": 11507875,
+          "minimum": 11463167,
+          "maximum": 11786125,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "pushdown": {
+          "median": 11558291,
+          "minimum": 11436959,
+          "maximum": 11665833,
+          "delta_percent": 0.438099996741359,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 11159459,
+          "minimum": 11109333,
+          "maximum": 11454292,
+          "delta_percent": -3.0276310787178295,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 11135458,
+          "minimum": 11018583,
+          "maximum": 11273625,
+          "delta_percent": -3.2361926072363545,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 11118458,
+          "minimum": 11040792,
+          "maximum": 11721209,
+          "delta_percent": -3.383917534731651,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 11895167,
+          "minimum": 11718167,
+          "maximum": 12134375,
+          "delta_percent": 3.3654519187947374,
+          "paired_favorable": 1,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 11885000,
+          "minimum": 11706875,
+          "maximum": 12422584,
+          "delta_percent": 3.277103722450936,
+          "paired_favorable": 0,
+          "blocks": 7
+        }
+      },
+      "adjacent": {
+        "pushdown": {
+          "median": 11558291,
+          "minimum": 11436959,
+          "maximum": 11665833,
+          "delta_percent": 0.438099996741359,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 11159459,
+          "minimum": 11109333,
+          "maximum": 11454292,
+          "delta_percent": -3.4506139359183785,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 11135458,
+          "minimum": 11018583,
+          "maximum": 11273625,
+          "delta_percent": -0.215073150051448,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 11118458,
+          "minimum": 11040792,
+          "maximum": 11721209,
+          "delta_percent": -0.15266547635489625,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 11895167,
+          "minimum": 11718167,
+          "maximum": 12134375,
+          "delta_percent": 6.985761874533325,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 11885000,
+          "minimum": 11706875,
+          "maximum": 12422584,
+          "delta_percent": -0.08547168778715308,
+          "paired_favorable": 4,
+          "blocks": 7
+        }
+      }
+    },
+    "list_filter/2": {
+      "stages": {
+        "naive": {
+          "median": 11536458,
+          "minimum": 11516250,
+          "maximum": 11676667,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "pushdown": {
+          "median": 11537209,
+          "minimum": 11477875,
+          "maximum": 11667333,
+          "delta_percent": 0.00650979702783161,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 11191875,
+          "minimum": 11090709,
+          "maximum": 11333084,
+          "delta_percent": -2.9869046461227566,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 11072791,
+          "minimum": 10941250,
+          "maximum": 11348792,
+          "delta_percent": -4.0191452177089415,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 11116250,
+          "minimum": 10992458,
+          "maximum": 12727791,
+          "delta_percent": -3.6424351391042165,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 11801958,
+          "minimum": 11658292,
+          "maximum": 12026083,
+          "delta_percent": 2.301399615029154,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 11731334,
+          "minimum": 11662041,
+          "maximum": 12259667,
+          "delta_percent": 1.689218649259594,
+          "paired_favorable": 0,
+          "blocks": 7
+        }
+      },
+      "adjacent": {
+        "pushdown": {
+          "median": 11537209,
+          "minimum": 11477875,
+          "maximum": 11667333,
+          "delta_percent": 0.00650979702783161,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 11191875,
+          "minimum": 11090709,
+          "maximum": 11333084,
+          "delta_percent": -2.9932195906306247,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 11072791,
+          "minimum": 10941250,
+          "maximum": 11348792,
+          "delta_percent": -1.064021890880662,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 11116250,
+          "minimum": 10992458,
+          "maximum": 12727791,
+          "delta_percent": 0.39248460482999015,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 11801958,
+          "minimum": 11658292,
+          "maximum": 12026083,
+          "delta_percent": 6.168519059934785,
+          "paired_favorable": 1,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 11731334,
+          "minimum": 11662041,
+          "maximum": 12259667,
+          "delta_percent": -0.5984091792226365,
+          "paired_favorable": 5,
+          "blocks": 7
+        }
+      }
+    },
+    "tree_map/0": {
+      "stages": {
+        "naive": {
+          "median": 7691125,
+          "minimum": 7356833,
+          "maximum": 7847625,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "pushdown": {
+          "median": 7598417,
+          "minimum": 7376292,
+          "maximum": 7880833,
+          "delta_percent": -1.2053893286092743,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 7476542,
+          "minimum": 7257042,
+          "maximum": 7668666,
+          "delta_percent": -2.790007963724428,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 7362583,
+          "minimum": 7255333,
+          "maximum": 7571750,
+          "delta_percent": -4.271702774301545,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 7171750,
+          "minimum": 6970292,
+          "maximum": 7644125,
+          "delta_percent": -6.752913260413784,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 5447709,
+          "minimum": 5338542,
+          "maximum": 5632583,
+          "delta_percent": -29.16889271725528,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 5539709,
+          "minimum": 5375041,
+          "maximum": 5631958,
+          "delta_percent": -27.97270880397861,
+          "paired_favorable": 7,
+          "blocks": 7
+        }
+      },
+      "adjacent": {
+        "pushdown": {
+          "median": 7598417,
+          "minimum": 7376292,
+          "maximum": 7880833,
+          "delta_percent": -1.2053893286092743,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 7476542,
+          "minimum": 7257042,
+          "maximum": 7668666,
+          "delta_percent": -1.603952507476225,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 7362583,
+          "minimum": 7255333,
+          "maximum": 7571750,
+          "delta_percent": -1.5242206891902699,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 7171750,
+          "minimum": 6970292,
+          "maximum": 7644125,
+          "delta_percent": -2.5919300332505557,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 5447709,
+          "minimum": 5338542,
+          "maximum": 5632583,
+          "delta_percent": -24.03933489036846,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 5539709,
+          "minimum": 5375041,
+          "maximum": 5631958,
+          "delta_percent": 1.6887833032197541,
+          "paired_favorable": 2,
+          "blocks": 7
+        }
+      }
+    },
+    "tree_map/1": {
+      "stages": {
+        "naive": {
+          "median": 7490375,
+          "minimum": 7390792,
+          "maximum": 7826000,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "pushdown": {
+          "median": 7618542,
+          "minimum": 7399875,
+          "maximum": 7863750,
+          "delta_percent": 1.7110892311800185,
+          "paired_favorable": 2,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 7208625,
+          "minimum": 6938583,
+          "maximum": 7404542,
+          "delta_percent": -3.7614939171937367,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 7456708,
+          "minimum": 7229625,
+          "maximum": 7618708,
+          "delta_percent": -0.44947015336348484,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 7293000,
+          "minimum": 7150709,
+          "maximum": 7467875,
+          "delta_percent": -2.6350483120003987,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 8244792,
+          "minimum": 8019458,
+          "maximum": 8349209,
+          "delta_percent": 10.071818834170521,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 8231250,
+          "minimum": 7597958,
+          "maximum": 8516208,
+          "delta_percent": 9.891026817749449,
+          "paired_favorable": 0,
+          "blocks": 7
+        }
+      },
+      "adjacent": {
+        "pushdown": {
+          "median": 7618542,
+          "minimum": 7399875,
+          "maximum": 7863750,
+          "delta_percent": 1.7110892311800185,
+          "paired_favorable": 2,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 7208625,
+          "minimum": 6938583,
+          "maximum": 7404542,
+          "delta_percent": -5.380517689605179,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 7456708,
+          "minimum": 7229625,
+          "maximum": 7618708,
+          "delta_percent": 3.4414746224141313,
+          "paired_favorable": 1,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 7293000,
+          "minimum": 7150709,
+          "maximum": 7467875,
+          "delta_percent": -2.1954460332897607,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 8244792,
+          "minimum": 8019458,
+          "maximum": 8349209,
+          "delta_percent": 13.05076100370217,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 8231250,
+          "minimum": 7597958,
+          "maximum": 8516208,
+          "delta_percent": -0.16424914054835593,
+          "paired_favorable": 4,
+          "blocks": 7
+        }
+      }
+    },
+    "tree_map/2": {
+      "stages": {
+        "naive": {
+          "median": 7454416,
+          "minimum": 7363667,
+          "maximum": 7950167,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "pushdown": {
+          "median": 7562417,
+          "minimum": 7404833,
+          "maximum": 7593500,
+          "delta_percent": 1.448819062418849,
+          "paired_favorable": 2,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 7244292,
+          "minimum": 6998834,
+          "maximum": 7365167,
+          "delta_percent": -2.8187855359829705,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 7145667,
+          "minimum": 7026750,
+          "maximum": 7635709,
+          "delta_percent": -4.141826804406945,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 7019084,
+          "minimum": 6851458,
+          "maximum": 7165500,
+          "delta_percent": -5.839920927407327,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 6909375,
+          "minimum": 6749416,
+          "maximum": 7119209,
+          "delta_percent": -7.311652582844852,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 6956958,
+          "minimum": 6726750,
+          "maximum": 7120875,
+          "delta_percent": -6.673332961294354,
+          "paired_favorable": 7,
+          "blocks": 7
+        }
+      },
+      "adjacent": {
+        "pushdown": {
+          "median": 7562417,
+          "minimum": 7404833,
+          "maximum": 7593500,
+          "delta_percent": 1.448819062418849,
+          "paired_favorable": 2,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 7244292,
+          "minimum": 6998834,
+          "maximum": 7365167,
+          "delta_percent": -4.20665773918577,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 7145667,
+          "minimum": 7026750,
+          "maximum": 7635709,
+          "delta_percent": -1.3614166850259513,
+          "paired_favorable": 2,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 7019084,
+          "minimum": 6851458,
+          "maximum": 7165500,
+          "delta_percent": -1.7714651410428162,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 6909375,
+          "minimum": 6749416,
+          "maximum": 7119209,
+          "delta_percent": -1.5630102161478643,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 6956958,
+          "minimum": 6726750,
+          "maximum": 7120875,
+          "delta_percent": 0.6886729986431472,
+          "paired_favorable": 3,
+          "blocks": 7
+        }
+      }
+    },
+    "tree_choose/0": {
+      "stages": {
+        "naive": {
+          "median": 3678542,
+          "minimum": 3324500,
+          "maximum": 3845167,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "pushdown": {
+          "median": 3734459,
+          "minimum": 3612375,
+          "maximum": 3792292,
+          "delta_percent": 1.5200859470953398,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 3705167,
+          "minimum": 3556250,
+          "maximum": 4015083,
+          "delta_percent": 0.723792198104567,
+          "paired_favorable": 2,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 3784250,
+          "minimum": 3485042,
+          "maximum": 3835333,
+          "delta_percent": 2.873638523088773,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 3663209,
+          "minimum": 3453750,
+          "maximum": 3907875,
+          "delta_percent": -0.4168227520577439,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 3700875,
+          "minimum": 3491917,
+          "maximum": 3947000,
+          "delta_percent": 0.6071155365359404,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 3597750,
+          "minimum": 3357958,
+          "maximum": 3831458,
+          "delta_percent": -2.1963049490803743,
+          "paired_favorable": 5,
+          "blocks": 7
+        }
+      },
+      "adjacent": {
+        "pushdown": {
+          "median": 3734459,
+          "minimum": 3612375,
+          "maximum": 3792292,
+          "delta_percent": 1.5200859470953398,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 3705167,
+          "minimum": 3556250,
+          "maximum": 4015083,
+          "delta_percent": -0.7843706411022278,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 3784250,
+          "minimum": 3485042,
+          "maximum": 3835333,
+          "delta_percent": 2.1343977208044818,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 3663209,
+          "minimum": 3453750,
+          "maximum": 3907875,
+          "delta_percent": -3.1985466076501323,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 3700875,
+          "minimum": 3491917,
+          "maximum": 3947000,
+          "delta_percent": 1.0282241608382092,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 3597750,
+          "minimum": 3357958,
+          "maximum": 3831458,
+          "delta_percent": -2.7865031918127503,
+          "paired_favorable": 6,
+          "blocks": 7
+        }
+      }
+    },
+    "tree_choose/1": {
+      "stages": {
+        "naive": {
+          "median": 3750666,
+          "minimum": 3684958,
+          "maximum": 3905959,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "pushdown": {
+          "median": 3762834,
+          "minimum": 3677583,
+          "maximum": 3963541,
+          "delta_percent": 0.3244223825848547,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 3806417,
+          "minimum": 3688250,
+          "maximum": 3983083,
+          "delta_percent": 1.486429343481932,
+          "paired_favorable": 2,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 3726958,
+          "minimum": 3540208,
+          "maximum": 3845834,
+          "delta_percent": -0.6321010721829112,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 3674583,
+          "minimum": 3325125,
+          "maximum": 3894875,
+          "delta_percent": -2.0285197348950845,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 3742709,
+          "minimum": 3571875,
+          "maximum": 3939083,
+          "delta_percent": -0.21214898900622225,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 3663250,
+          "minimum": 3600792,
+          "maximum": 3918583,
+          "delta_percent": -2.3306794046710655,
+          "paired_favorable": 5,
+          "blocks": 7
+        }
+      },
+      "adjacent": {
+        "pushdown": {
+          "median": 3762834,
+          "minimum": 3677583,
+          "maximum": 3963541,
+          "delta_percent": 0.3244223825848547,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 3806417,
+          "minimum": 3688250,
+          "maximum": 3983083,
+          "delta_percent": 1.1582493407894079,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 3726958,
+          "minimum": 3540208,
+          "maximum": 3845834,
+          "delta_percent": -2.087501185498064,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 3674583,
+          "minimum": 3325125,
+          "maximum": 3894875,
+          "delta_percent": -1.4053015891244303,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 3742709,
+          "minimum": 3571875,
+          "maximum": 3939083,
+          "delta_percent": 1.8539790773538067,
+          "paired_favorable": 2,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 3663250,
+          "minimum": 3600792,
+          "maximum": 3918583,
+          "delta_percent": -2.1230344117055266,
+          "paired_favorable": 3,
+          "blocks": 7
+        }
+      }
+    },
+    "tree_choose/2": {
+      "stages": {
+        "naive": {
+          "median": 3724500,
+          "minimum": 3591875,
+          "maximum": 3914334,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "pushdown": {
+          "median": 3894417,
+          "minimum": 3695084,
+          "maximum": 4093291,
+          "delta_percent": 4.562142569472405,
+          "paired_favorable": 2,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 3785084,
+          "minimum": 3541958,
+          "maximum": 3894458,
+          "delta_percent": 1.6266344475768468,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 3741000,
+          "minimum": 3477250,
+          "maximum": 4044083,
+          "delta_percent": 0.4430124848973094,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 3656250,
+          "minimum": 3523709,
+          "maximum": 3737792,
+          "delta_percent": -1.832460732984298,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 3719666,
+          "minimum": 3384750,
+          "maximum": 3840834,
+          "delta_percent": -0.12978923345415838,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 3694542,
+          "minimum": 3501416,
+          "maximum": 3933583,
+          "delta_percent": -0.8043495771244413,
+          "paired_favorable": 5,
+          "blocks": 7
+        }
+      },
+      "adjacent": {
+        "pushdown": {
+          "median": 3894417,
+          "minimum": 3695084,
+          "maximum": 4093291,
+          "delta_percent": 4.562142569472405,
+          "paired_favorable": 2,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 3785084,
+          "minimum": 3541958,
+          "maximum": 3894458,
+          "delta_percent": -2.8074291992870815,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 3741000,
+          "minimum": 3477250,
+          "maximum": 4044083,
+          "delta_percent": -1.1646769265886814,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 3656250,
+          "minimum": 3523709,
+          "maximum": 3737792,
+          "delta_percent": -2.265437048917407,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 3719666,
+          "minimum": 3384750,
+          "maximum": 3840834,
+          "delta_percent": 1.7344547008546929,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 3694542,
+          "minimum": 3501416,
+          "maximum": 3933583,
+          "delta_percent": -0.6754369881596944,
+          "paired_favorable": 4,
+          "blocks": 7
+        }
+      }
+    },
+    "tree_update/0": {
+      "stages": {
+        "naive": {
+          "median": 4049542,
+          "minimum": 3919500,
+          "maximum": 4280792,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "pushdown": {
+          "median": 4033042,
+          "minimum": 3871000,
+          "maximum": 4095834,
+          "delta_percent": -0.4074534848632294,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 4001958,
+          "minimum": 3678500,
+          "maximum": 4373750,
+          "delta_percent": -1.175046462044349,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 3930167,
+          "minimum": 3715333,
+          "maximum": 4109541,
+          "delta_percent": -2.947864227608954,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 3930167,
+          "minimum": 3803542,
+          "maximum": 4087167,
+          "delta_percent": -2.947864227608954,
+          "paired_favorable": 7,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 3710416,
+          "minimum": 3584666,
+          "maximum": 3963083,
+          "delta_percent": -8.374428515619792,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 3635291,
+          "minimum": 3585542,
+          "maximum": 4057417,
+          "delta_percent": -10.229576579277355,
+          "paired_favorable": 6,
+          "blocks": 7
+        }
+      },
+      "adjacent": {
+        "pushdown": {
+          "median": 4033042,
+          "minimum": 3871000,
+          "maximum": 4095834,
+          "delta_percent": -0.4074534848632294,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 4001958,
+          "minimum": 3678500,
+          "maximum": 4373750,
+          "delta_percent": -0.7707333571036479,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 3930167,
+          "minimum": 3715333,
+          "maximum": 4109541,
+          "delta_percent": -1.7938968874735783,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 3930167,
+          "minimum": 3803542,
+          "maximum": 4087167,
+          "delta_percent": 0.0,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 3710416,
+          "minimum": 3584666,
+          "maximum": 3963083,
+          "delta_percent": -5.591390900183124,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 3635291,
+          "minimum": 3585542,
+          "maximum": 4057417,
+          "delta_percent": -2.02470558557315,
+          "paired_favorable": 4,
+          "blocks": 7
+        }
+      }
+    },
+    "tree_update/1": {
+      "stages": {
+        "naive": {
+          "median": 4086250,
+          "minimum": 4015708,
+          "maximum": 4352542,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "pushdown": {
+          "median": 4029125,
+          "minimum": 3804708,
+          "maximum": 4168333,
+          "delta_percent": -1.3979810339553422,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 3896459,
+          "minimum": 3705916,
+          "maximum": 4350833,
+          "delta_percent": -4.644625267665958,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 3952041,
+          "minimum": 3764167,
+          "maximum": 4318042,
+          "delta_percent": -3.2844050168247207,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 3966375,
+          "minimum": 3839875,
+          "maximum": 4270416,
+          "delta_percent": -2.9336188436830835,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 4009417,
+          "minimum": 3878417,
+          "maximum": 4272750,
+          "delta_percent": -1.8802814316304706,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 4004875,
+          "minimum": 3972834,
+          "maximum": 4191583,
+          "delta_percent": -1.9914346895074986,
+          "paired_favorable": 5,
+          "blocks": 7
+        }
+      },
+      "adjacent": {
+        "pushdown": {
+          "median": 4029125,
+          "minimum": 3804708,
+          "maximum": 4168333,
+          "delta_percent": -1.3979810339553422,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 3896459,
+          "minimum": 3705916,
+          "maximum": 4350833,
+          "delta_percent": -3.292675208637108,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 3952041,
+          "minimum": 3764167,
+          "maximum": 4318042,
+          "delta_percent": 1.4264746530118666,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 3966375,
+          "minimum": 3839875,
+          "maximum": 4270416,
+          "delta_percent": 0.36269866633469316,
+          "paired_favorable": 4,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 4009417,
+          "minimum": 3878417,
+          "maximum": 4272750,
+          "delta_percent": 1.0851722290504462,
+          "paired_favorable": 2,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 4004875,
+          "minimum": 3972834,
+          "maximum": 4191583,
+          "delta_percent": -0.11328330278441712,
+          "paired_favorable": 4,
+          "blocks": 7
+        }
+      }
+    },
+    "tree_update/2": {
+      "stages": {
+        "naive": {
+          "median": 3930291,
+          "minimum": 3831084,
+          "maximum": 4116791,
+          "delta_percent": 0.0,
+          "paired_favorable": 0,
+          "blocks": 7
+        },
+        "pushdown": {
+          "median": 4065125,
+          "minimum": 3699583,
+          "maximum": 4322166,
+          "delta_percent": 3.430636561007816,
+          "paired_favorable": 2,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 3964791,
+          "minimum": 3871000,
+          "maximum": 4169500,
+          "delta_percent": 0.8777975981931085,
+          "paired_favorable": 2,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 3923083,
+          "minimum": 3762459,
+          "maximum": 4160833,
+          "delta_percent": -0.1833960895007536,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 4029042,
+          "minimum": 3804209,
+          "maximum": 4185084,
+          "delta_percent": 2.5125620469323984,
+          "paired_favorable": 3,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 3792666,
+          "minimum": 3577167,
+          "maximum": 3945833,
+          "delta_percent": -3.5016491145312134,
+          "paired_favorable": 6,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 3748041,
+          "minimum": 3680541,
+          "maximum": 3921541,
+          "delta_percent": -4.637061225237515,
+          "paired_favorable": 7,
+          "blocks": 7
+        }
+      },
+      "adjacent": {
+        "pushdown": {
+          "median": 4065125,
+          "minimum": 3699583,
+          "maximum": 4322166,
+          "delta_percent": 3.430636561007816,
+          "paired_favorable": 2,
+          "blocks": 7
+        },
+        "precise": {
+          "median": 3964791,
+          "minimum": 3871000,
+          "maximum": 4169500,
+          "delta_percent": -2.468165185572402,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "fusion": {
+          "median": 3923083,
+          "minimum": 3762459,
+          "maximum": 4160833,
+          "delta_percent": -1.0519596114902385,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "specialized_drop": {
+          "median": 4029042,
+          "minimum": 3804209,
+          "maximum": 4185084,
+          "delta_percent": 2.7009115025096397,
+          "paired_favorable": 2,
+          "blocks": 7
+        },
+        "reuse": {
+          "median": 3792666,
+          "minimum": 3577167,
+          "maximum": 3945833,
+          "delta_percent": -5.866804069056619,
+          "paired_favorable": 5,
+          "blocks": 7
+        },
+        "retained_fields": {
+          "median": 3748041,
+          "minimum": 3680541,
+          "maximum": 3921541,
+          "delta_percent": -1.1766129682919568,
+          "paired_favorable": 4,
+          "blocks": 7
+        }
+      }
+    }
+  }
+}

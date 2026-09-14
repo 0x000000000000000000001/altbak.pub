@@ -1,0 +1,261 @@
+{
+  "method": "Six rotated/reversed blocks, separate process per variant, one unmeasured warmup then seven samples; construction + 20 retained-root reads + final destruction; no instrumentation.",
+  "order": [
+    [
+      "before",
+      "borrowed",
+      "consuming"
+    ],
+    [
+      "before",
+      "consuming",
+      "borrowed"
+    ],
+    [
+      "consuming",
+      "before",
+      "borrowed"
+    ],
+    [
+      "consuming",
+      "borrowed",
+      "before"
+    ],
+    [
+      "borrowed",
+      "consuming",
+      "before"
+    ],
+    [
+      "borrowed",
+      "before",
+      "consuming"
+    ]
+  ],
+  "runs_ns": {
+    "before": [
+      [
+        17326125,
+        16812542,
+        17108458,
+        17353292,
+        16999291,
+        16899750,
+        16944041
+      ],
+      [
+        16779334,
+        16690958,
+        17112958,
+        17051917,
+        17059209,
+        16781542,
+        16937958
+      ],
+      [
+        17029417,
+        17008583,
+        16996500,
+        16976417,
+        16981125,
+        17721041,
+        16988208
+      ],
+      [
+        16814084,
+        17074792,
+        17162333,
+        17006083,
+        17333916,
+        17380000,
+        17331958
+      ],
+      [
+        17285791,
+        17223083,
+        17174375,
+        16965959,
+        17073958,
+        17108458,
+        17078250
+      ],
+      [
+        17333333,
+        17207916,
+        16832958,
+        17197709,
+        17034583,
+        16845375,
+        17023709
+      ]
+    ],
+    "borrowed": [
+      [
+        13788584,
+        13796375,
+        14012833,
+        13549500,
+        13601625,
+        13846958,
+        13794292
+      ],
+      [
+        13951000,
+        14440541,
+        14065250,
+        13767125,
+        13599000,
+        13666917,
+        13552709
+      ],
+      [
+        13898041,
+        13937083,
+        13756708,
+        14142000,
+        14123583,
+        13918792,
+        14347292
+      ],
+      [
+        13469083,
+        14070500,
+        14047250,
+        13664958,
+        13834417,
+        13808292,
+        14194250
+      ],
+      [
+        13823250,
+        13785000,
+        16254917,
+        16804792,
+        14609208,
+        14241083,
+        14802542
+      ],
+      [
+        13836416,
+        13636542,
+        13403542,
+        13994083,
+        13614708,
+        13749375,
+        14028791
+      ]
+    ],
+    "consuming": [
+      [
+        17886125,
+        17369750,
+        17636083,
+        17430708,
+        17695542,
+        18017834,
+        17675750
+      ],
+      [
+        18035583,
+        17706833,
+        17768125,
+        18105250,
+        17860375,
+        17896167,
+        18231042
+      ],
+      [
+        18224000,
+        17987625,
+        17912166,
+        17521875,
+        17761458,
+        17901208,
+        17924916
+      ],
+      [
+        17968833,
+        17424250,
+        17794542,
+        17947458,
+        17774459,
+        17695875,
+        17611209
+      ],
+      [
+        17893375,
+        18493750,
+        17443041,
+        17414000,
+        18056791,
+        17635583,
+        17652208
+      ],
+      [
+        17756917,
+        17955250,
+        17642833,
+        17502084,
+        17687750,
+        17684333,
+        17767042
+      ]
+    ]
+  },
+  "process_medians_ms": {
+    "before": [
+      16.999291,
+      16.937958,
+      16.9965,
+      17.162333,
+      17.108458,
+      17.034583
+    ],
+    "borrowed": [
+      13.794292,
+      13.767125,
+      13.937083,
+      13.834417,
+      14.609208,
+      13.749375
+    ],
+    "consuming": [
+      17.67575,
+      17.896167,
+      17.912166,
+      17.774459,
+      17.652208,
+      17.68775
+    ]
+  },
+  "median_ms": {
+    "before": 17.016937,
+    "borrowed": 13.8143545,
+    "consuming": 17.7311045
+  },
+  "build": {
+    "source_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+    "workload": "Build 100000 nodes with generated constructor; 20 depth calls each consume clone of retained root; final drop inside sample; black_box size/count/owner/result.",
+    "profile": "release opt-level=1 debug=true mimalloc; identical harness and Cargo package across three exact kernels",
+    "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+    "cargo_lock_sha256": "92d20c37d00f69c519be6427d83b9fb8d37f8036788d785ea279bd6c52de71a2",
+    "variants": {
+      "before": {
+        "source_sha256": "a548accac8ba723d0cb989dcb6fedf80667bb0d4138256c117a132a924e74f7c",
+        "binary_sha256": "2040a406d6666ae945bab1085d294441e67aa0466aa6327b1ac2e84ba7630a12",
+        "smoke": "100000 nodes, 20 retained-root reads, depth sum 440; final owner released"
+      },
+      "borrowed": {
+        "source_sha256": "5755aa9613ff1ebf69f02456267d3f27bdd0cecc7f37acff87effc6b097a49f8",
+        "binary_sha256": "3108754f13e5649fa869a5f2c36651ce01b562e4d1506d5e9aaeb4e2adb13c6b",
+        "smoke": "100000 nodes, 20 retained-root reads, depth sum 440; final owner released"
+      },
+      "consuming": {
+        "source_sha256": "11d2e1adb435ce324e0c811062ab6fc1653dd923871fc5cb40cbb8fa8d382ba3",
+        "binary_sha256": "421920799e52e85e4fa9554628594c2386b6936dddf35ce7b944b128fbb43a34",
+        "smoke": "100000 nodes, 20 retained-root reads, depth sum 440; final owner released"
+      }
+    },
+    "timings_run": false
+  }
+}

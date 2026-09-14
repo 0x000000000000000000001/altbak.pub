@@ -1,0 +1,2663 @@
+{
+  "build_metadata_sha256": "1f0b896da4ef260c15665198eceb9c3b7bacdcdec8bcc2a615294ae63bbd2a78",
+  "orders": [
+    {
+      "round": 0,
+      "n": 900,
+      "scenario": "unique",
+      "order": [
+        "baseline",
+        "lifetimes",
+        "consuming",
+        "reuse"
+      ]
+    },
+    {
+      "round": 0,
+      "n": 900,
+      "scenario": "root-retained",
+      "order": [
+        "lifetimes",
+        "consuming",
+        "reuse",
+        "baseline"
+      ]
+    },
+    {
+      "round": 0,
+      "n": 900,
+      "scenario": "interior-retained",
+      "order": [
+        "consuming",
+        "reuse",
+        "baseline",
+        "lifetimes"
+      ]
+    },
+    {
+      "round": 0,
+      "n": 900,
+      "scenario": "weak",
+      "order": [
+        "reuse",
+        "baseline",
+        "lifetimes",
+        "consuming"
+      ]
+    },
+    {
+      "round": 0,
+      "n": 9000,
+      "scenario": "unique",
+      "order": [
+        "baseline",
+        "lifetimes",
+        "consuming",
+        "reuse"
+      ]
+    },
+    {
+      "round": 0,
+      "n": 9000,
+      "scenario": "root-retained",
+      "order": [
+        "lifetimes",
+        "consuming",
+        "reuse",
+        "baseline"
+      ]
+    },
+    {
+      "round": 0,
+      "n": 9000,
+      "scenario": "interior-retained",
+      "order": [
+        "consuming",
+        "reuse",
+        "baseline",
+        "lifetimes"
+      ]
+    },
+    {
+      "round": 0,
+      "n": 9000,
+      "scenario": "weak",
+      "order": [
+        "reuse",
+        "baseline",
+        "lifetimes",
+        "consuming"
+      ]
+    },
+    {
+      "round": 1,
+      "n": 900,
+      "scenario": "unique",
+      "order": [
+        "lifetimes",
+        "consuming",
+        "reuse",
+        "baseline"
+      ]
+    },
+    {
+      "round": 1,
+      "n": 900,
+      "scenario": "root-retained",
+      "order": [
+        "consuming",
+        "reuse",
+        "baseline",
+        "lifetimes"
+      ]
+    },
+    {
+      "round": 1,
+      "n": 900,
+      "scenario": "interior-retained",
+      "order": [
+        "reuse",
+        "baseline",
+        "lifetimes",
+        "consuming"
+      ]
+    },
+    {
+      "round": 1,
+      "n": 900,
+      "scenario": "weak",
+      "order": [
+        "baseline",
+        "lifetimes",
+        "consuming",
+        "reuse"
+      ]
+    },
+    {
+      "round": 1,
+      "n": 9000,
+      "scenario": "unique",
+      "order": [
+        "lifetimes",
+        "consuming",
+        "reuse",
+        "baseline"
+      ]
+    },
+    {
+      "round": 1,
+      "n": 9000,
+      "scenario": "root-retained",
+      "order": [
+        "consuming",
+        "reuse",
+        "baseline",
+        "lifetimes"
+      ]
+    },
+    {
+      "round": 1,
+      "n": 9000,
+      "scenario": "interior-retained",
+      "order": [
+        "reuse",
+        "baseline",
+        "lifetimes",
+        "consuming"
+      ]
+    },
+    {
+      "round": 1,
+      "n": 9000,
+      "scenario": "weak",
+      "order": [
+        "baseline",
+        "lifetimes",
+        "consuming",
+        "reuse"
+      ]
+    },
+    {
+      "round": 2,
+      "n": 900,
+      "scenario": "unique",
+      "order": [
+        "consuming",
+        "reuse",
+        "baseline",
+        "lifetimes"
+      ]
+    },
+    {
+      "round": 2,
+      "n": 900,
+      "scenario": "root-retained",
+      "order": [
+        "reuse",
+        "baseline",
+        "lifetimes",
+        "consuming"
+      ]
+    },
+    {
+      "round": 2,
+      "n": 900,
+      "scenario": "interior-retained",
+      "order": [
+        "baseline",
+        "lifetimes",
+        "consuming",
+        "reuse"
+      ]
+    },
+    {
+      "round": 2,
+      "n": 900,
+      "scenario": "weak",
+      "order": [
+        "lifetimes",
+        "consuming",
+        "reuse",
+        "baseline"
+      ]
+    },
+    {
+      "round": 2,
+      "n": 9000,
+      "scenario": "unique",
+      "order": [
+        "consuming",
+        "reuse",
+        "baseline",
+        "lifetimes"
+      ]
+    },
+    {
+      "round": 2,
+      "n": 9000,
+      "scenario": "root-retained",
+      "order": [
+        "reuse",
+        "baseline",
+        "lifetimes",
+        "consuming"
+      ]
+    },
+    {
+      "round": 2,
+      "n": 9000,
+      "scenario": "interior-retained",
+      "order": [
+        "baseline",
+        "lifetimes",
+        "consuming",
+        "reuse"
+      ]
+    },
+    {
+      "round": 2,
+      "n": 9000,
+      "scenario": "weak",
+      "order": [
+        "lifetimes",
+        "consuming",
+        "reuse",
+        "baseline"
+      ]
+    },
+    {
+      "round": 3,
+      "n": 900,
+      "scenario": "unique",
+      "order": [
+        "reuse",
+        "baseline",
+        "lifetimes",
+        "consuming"
+      ]
+    },
+    {
+      "round": 3,
+      "n": 900,
+      "scenario": "root-retained",
+      "order": [
+        "baseline",
+        "lifetimes",
+        "consuming",
+        "reuse"
+      ]
+    },
+    {
+      "round": 3,
+      "n": 900,
+      "scenario": "interior-retained",
+      "order": [
+        "lifetimes",
+        "consuming",
+        "reuse",
+        "baseline"
+      ]
+    },
+    {
+      "round": 3,
+      "n": 900,
+      "scenario": "weak",
+      "order": [
+        "consuming",
+        "reuse",
+        "baseline",
+        "lifetimes"
+      ]
+    },
+    {
+      "round": 3,
+      "n": 9000,
+      "scenario": "unique",
+      "order": [
+        "reuse",
+        "baseline",
+        "lifetimes",
+        "consuming"
+      ]
+    },
+    {
+      "round": 3,
+      "n": 9000,
+      "scenario": "root-retained",
+      "order": [
+        "baseline",
+        "lifetimes",
+        "consuming",
+        "reuse"
+      ]
+    },
+    {
+      "round": 3,
+      "n": 9000,
+      "scenario": "interior-retained",
+      "order": [
+        "lifetimes",
+        "consuming",
+        "reuse",
+        "baseline"
+      ]
+    },
+    {
+      "round": 3,
+      "n": 9000,
+      "scenario": "weak",
+      "order": [
+        "consuming",
+        "reuse",
+        "baseline",
+        "lifetimes"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "variant": "baseline",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2834042,
+        2766250,
+        2780667,
+        2682250,
+        2523625,
+        2666542,
+        2697542
+      ],
+      "round": 0
+    },
+    {
+      "variant": "lifetimes",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1960375,
+        1811083,
+        1800041,
+        1831917,
+        1872625,
+        2011000,
+        1805500
+      ],
+      "round": 0
+    },
+    {
+      "variant": "consuming",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1844833,
+        1802709,
+        1831375,
+        1969916,
+        1885417,
+        1835792,
+        1859917
+      ],
+      "round": 0
+    },
+    {
+      "variant": "reuse",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1360875,
+        1381625,
+        1367000,
+        1494416,
+        1447333,
+        1476875,
+        1346042
+      ],
+      "round": 0
+    },
+    {
+      "variant": "lifetimes",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2710709,
+        2441000,
+        2588042,
+        2600792,
+        2470834,
+        2398459,
+        2740125
+      ],
+      "round": 0
+    },
+    {
+      "variant": "consuming",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        3198833,
+        2912334,
+        3216625,
+        4829958,
+        3369792,
+        3106959,
+        2988375
+      ],
+      "round": 0
+    },
+    {
+      "variant": "reuse",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        3077750,
+        3252042,
+        3096334,
+        2990916,
+        2988333,
+        2734584,
+        3014458
+      ],
+      "round": 0
+    },
+    {
+      "variant": "baseline",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2861917,
+        2472708,
+        2469000,
+        2626083,
+        2417125,
+        2497084,
+        2524792
+      ],
+      "round": 0
+    },
+    {
+      "variant": "consuming",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2348709,
+        2392583,
+        2394875,
+        2253750,
+        2182083,
+        2156916,
+        2210958
+      ],
+      "round": 0
+    },
+    {
+      "variant": "reuse",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2106291,
+        2232167,
+        2306583,
+        2122208,
+        2117458,
+        2134208,
+        2241958
+      ],
+      "round": 0
+    },
+    {
+      "variant": "baseline",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2446458,
+        2467625,
+        2328084,
+        2351000,
+        2528459,
+        2380250,
+        2419542
+      ],
+      "round": 0
+    },
+    {
+      "variant": "lifetimes",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2207458,
+        2514500,
+        2205542,
+        2190833,
+        2290000,
+        2300166,
+        2111042
+      ],
+      "round": 0
+    },
+    {
+      "variant": "reuse",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1570125,
+        1567084,
+        1682250,
+        1505709,
+        1549417,
+        1700333,
+        1531625
+      ],
+      "round": 0
+    },
+    {
+      "variant": "baseline",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2533875,
+        2472708,
+        2583958,
+        2603583,
+        2548917,
+        2589417,
+        2608917
+      ],
+      "round": 0
+    },
+    {
+      "variant": "lifetimes",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1902750,
+        1990334,
+        1912375,
+        1946375,
+        2009459,
+        1985375,
+        1863875
+      ],
+      "round": 0
+    },
+    {
+      "variant": "consuming",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2078792,
+        1966250,
+        2023916,
+        1832792,
+        1869625,
+        1868083,
+        1874625
+      ],
+      "round": 0
+    },
+    {
+      "variant": "baseline",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2397583,
+        2504667,
+        2448291,
+        2310333,
+        2307458,
+        2418958,
+        2498334
+      ],
+      "round": 0
+    },
+    {
+      "variant": "lifetimes",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2068250,
+        2012875,
+        2105000,
+        1948416,
+        2044000,
+        2023542,
+        2033959
+      ],
+      "round": 0
+    },
+    {
+      "variant": "consuming",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1948417,
+        1979791,
+        2025792,
+        2110667,
+        2017291,
+        2028125,
+        2117792
+      ],
+      "round": 0
+    },
+    {
+      "variant": "reuse",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1511750,
+        1658500,
+        1623708,
+        1514375,
+        1590167,
+        1589375,
+        1603042
+      ],
+      "round": 0
+    },
+    {
+      "variant": "lifetimes",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2405750,
+        2438292,
+        2362625,
+        2421417,
+        2493625,
+        2441750,
+        2316833
+      ],
+      "round": 0
+    },
+    {
+      "variant": "consuming",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2703750,
+        2510375,
+        2619167,
+        2552875,
+        2616042,
+        2662333,
+        2515417
+      ],
+      "round": 0
+    },
+    {
+      "variant": "reuse",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2605333,
+        2665583,
+        2692666,
+        2613250,
+        2731542,
+        2828542,
+        2781500
+      ],
+      "round": 0
+    },
+    {
+      "variant": "baseline",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2360959,
+        2533334,
+        2329209,
+        2400083,
+        2361750,
+        2368916,
+        2443125
+      ],
+      "round": 0
+    },
+    {
+      "variant": "consuming",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2601084,
+        2450583,
+        2468667,
+        2553375,
+        2649000,
+        2519542,
+        2641625
+      ],
+      "round": 0
+    },
+    {
+      "variant": "reuse",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2491000,
+        2446292,
+        2450667,
+        2324166,
+        2436000,
+        2403583,
+        2424958
+      ],
+      "round": 0
+    },
+    {
+      "variant": "baseline",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2575291,
+        2570542,
+        2629541,
+        2354583,
+        2425333,
+        2574167,
+        2454125
+      ],
+      "round": 0
+    },
+    {
+      "variant": "lifetimes",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2311833,
+        2381125,
+        2494250,
+        2396500,
+        2401958,
+        2351959,
+        2460666
+      ],
+      "round": 0
+    },
+    {
+      "variant": "reuse",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1608792,
+        1860084,
+        1597708,
+        1612583,
+        1639459,
+        1725166,
+        1694625
+      ],
+      "round": 0
+    },
+    {
+      "variant": "baseline",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2585708,
+        2437541,
+        2540584,
+        2577666,
+        2365917,
+        2367375,
+        2462792
+      ],
+      "round": 0
+    },
+    {
+      "variant": "lifetimes",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2169834,
+        2238208,
+        2116625,
+        2144541,
+        2089084,
+        2208750,
+        2145959
+      ],
+      "round": 0
+    },
+    {
+      "variant": "consuming",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2019292,
+        1969166,
+        2157500,
+        2089292,
+        2030417,
+        2077041,
+        2133708
+      ],
+      "round": 0
+    },
+    {
+      "variant": "lifetimes",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1828208,
+        1931292,
+        1958083,
+        1880333,
+        1894292,
+        1914542,
+        2006416
+      ],
+      "round": 1
+    },
+    {
+      "variant": "consuming",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1761916,
+        1896625,
+        1728583,
+        1742542,
+        1822375,
+        1818125,
+        1896541
+      ],
+      "round": 1
+    },
+    {
+      "variant": "reuse",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1471208,
+        1532916,
+        1448875,
+        1424000,
+        1475041,
+        1526084,
+        1402250
+      ],
+      "round": 1
+    },
+    {
+      "variant": "baseline",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2647625,
+        2782292,
+        2523541,
+        2580792,
+        2722125,
+        2692667,
+        2579000
+      ],
+      "round": 1
+    },
+    {
+      "variant": "consuming",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2803833,
+        2795125,
+        2657291,
+        2790500,
+        2703417,
+        2680541,
+        2782333
+      ],
+      "round": 1
+    },
+    {
+      "variant": "reuse",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2965709,
+        2751125,
+        2993042,
+        3024417,
+        2762625,
+        2822667,
+        2861667
+      ],
+      "round": 1
+    },
+    {
+      "variant": "baseline",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2544166,
+        2368209,
+        2465500,
+        2593167,
+        2581625,
+        2440583,
+        2532542
+      ],
+      "round": 1
+    },
+    {
+      "variant": "lifetimes",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2469875,
+        2507917,
+        2422042,
+        2470416,
+        2727959,
+        2524500,
+        2474167
+      ],
+      "round": 1
+    },
+    {
+      "variant": "reuse",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2140916,
+        2266584,
+        2370083,
+        2132875,
+        2279334,
+        2305000,
+        2148917
+      ],
+      "round": 1
+    },
+    {
+      "variant": "baseline",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2425917,
+        2325125,
+        2417084,
+        2574083,
+        2369167,
+        2417875,
+        2558708
+      ],
+      "round": 1
+    },
+    {
+      "variant": "lifetimes",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2242333,
+        2413833,
+        2219333,
+        2205542,
+        2336375,
+        2186333,
+        2220000
+      ],
+      "round": 1
+    },
+    {
+      "variant": "consuming",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2271375,
+        2302333,
+        2376791,
+        2411792,
+        2354625,
+        2395834,
+        2403542
+      ],
+      "round": 1
+    },
+    {
+      "variant": "baseline",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2715500,
+        2501500,
+        2525709,
+        2624792,
+        2602500,
+        2565833,
+        2596208
+      ],
+      "round": 1
+    },
+    {
+      "variant": "lifetimes",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1887708,
+        2040875,
+        1932750,
+        1953833,
+        2027042,
+        2039083,
+        1872125
+      ],
+      "round": 1
+    },
+    {
+      "variant": "consuming",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2030334,
+        1789625,
+        1846167,
+        1899583,
+        2025125,
+        1803667,
+        1873375
+      ],
+      "round": 1
+    },
+    {
+      "variant": "reuse",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1486792,
+        1442291,
+        1491417,
+        1525583,
+        1536083,
+        1618250,
+        1496291
+      ],
+      "round": 1
+    },
+    {
+      "variant": "lifetimes",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2067125,
+        1953583,
+        2033167,
+        2140000,
+        2072542,
+        1956500,
+        2023750
+      ],
+      "round": 1
+    },
+    {
+      "variant": "consuming",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2112292,
+        1918500,
+        2015458,
+        1975000,
+        1995375,
+        1997791,
+        2101375
+      ],
+      "round": 1
+    },
+    {
+      "variant": "reuse",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1519000,
+        1560792,
+        1668125,
+        1571875,
+        1572833,
+        1673750,
+        1697875
+      ],
+      "round": 1
+    },
+    {
+      "variant": "baseline",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2446333,
+        2503125,
+        2349625,
+        2453209,
+        2519375,
+        2685291,
+        2531750
+      ],
+      "round": 1
+    },
+    {
+      "variant": "consuming",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2570167,
+        2732708,
+        2562458,
+        2613833,
+        2761292,
+        2461208,
+        2566916
+      ],
+      "round": 1
+    },
+    {
+      "variant": "reuse",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2740084,
+        2734500,
+        2590083,
+        2650000,
+        2916916,
+        2847208,
+        2911375
+      ],
+      "round": 1
+    },
+    {
+      "variant": "baseline",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2425542,
+        2501708,
+        2365375,
+        2401458,
+        2560625,
+        2324459,
+        2394708
+      ],
+      "round": 1
+    },
+    {
+      "variant": "lifetimes",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2382125,
+        2465625,
+        2642500,
+        2318333,
+        2351416,
+        2471917,
+        2536875
+      ],
+      "round": 1
+    },
+    {
+      "variant": "reuse",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2485250,
+        2420042,
+        2488958,
+        2475708,
+        2328708,
+        2479333,
+        2497417
+      ],
+      "round": 1
+    },
+    {
+      "variant": "baseline",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2655500,
+        2366125,
+        2421667,
+        2576084,
+        2654791,
+        2546667,
+        2467166
+      ],
+      "round": 1
+    },
+    {
+      "variant": "lifetimes",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2459375,
+        2470125,
+        2413875,
+        2413375,
+        2504917,
+        2328125,
+        2328750
+      ],
+      "round": 1
+    },
+    {
+      "variant": "consuming",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2416542,
+        2566583,
+        2606958,
+        2511583,
+        2469250,
+        2670084,
+        2514959
+      ],
+      "round": 1
+    },
+    {
+      "variant": "baseline",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2387458,
+        2463917,
+        2553166,
+        2366417,
+        2475917,
+        2543125,
+        2662500
+      ],
+      "round": 1
+    },
+    {
+      "variant": "lifetimes",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2212459,
+        2116541,
+        2169167,
+        2217583,
+        2299500,
+        2083667,
+        2107875
+      ],
+      "round": 1
+    },
+    {
+      "variant": "consuming",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2144291,
+        2059041,
+        2206792,
+        2045791,
+        2063792,
+        2080000,
+        2161334
+      ],
+      "round": 1
+    },
+    {
+      "variant": "reuse",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1650000,
+        1816542,
+        1612541,
+        1601708,
+        1716292,
+        1610250,
+        1768416
+      ],
+      "round": 1
+    },
+    {
+      "variant": "consuming",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1901250,
+        1844458,
+        1856708,
+        1859958,
+        1905000,
+        1910041,
+        1864042
+      ],
+      "round": 2
+    },
+    {
+      "variant": "reuse",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1507459,
+        1395708,
+        1550625,
+        1508333,
+        1399375,
+        1360583,
+        1581250
+      ],
+      "round": 2
+    },
+    {
+      "variant": "baseline",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2752500,
+        2610875,
+        2615250,
+        2604791,
+        2531750,
+        2567500,
+        2689500
+      ],
+      "round": 2
+    },
+    {
+      "variant": "lifetimes",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1952375,
+        2036625,
+        1987834,
+        1880042,
+        1930083,
+        1975625,
+        1970208
+      ],
+      "round": 2
+    },
+    {
+      "variant": "reuse",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2888625,
+        2839625,
+        2732166,
+        2645542,
+        2645500,
+        2755625,
+        3079042
+      ],
+      "round": 2
+    },
+    {
+      "variant": "baseline",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2471000,
+        2448375,
+        2595333,
+        2720084,
+        2398458,
+        2431375,
+        2652959
+      ],
+      "round": 2
+    },
+    {
+      "variant": "lifetimes",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2569250,
+        2411292,
+        2424292,
+        2814666,
+        2425500,
+        2466375,
+        2529375
+      ],
+      "round": 2
+    },
+    {
+      "variant": "consuming",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2823708,
+        2765500,
+        2694000,
+        2955625,
+        2556958,
+        2645167,
+        2767416
+      ],
+      "round": 2
+    },
+    {
+      "variant": "baseline",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2442917,
+        2413875,
+        2395333,
+        2642625,
+        2383000,
+        2310125,
+        2441250
+      ],
+      "round": 2
+    },
+    {
+      "variant": "lifetimes",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2222708,
+        2323625,
+        2260375,
+        2257042,
+        2121042,
+        2201375,
+        2148375
+      ],
+      "round": 2
+    },
+    {
+      "variant": "consuming",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2290375,
+        2447250,
+        2994334,
+        2423000,
+        2419250,
+        2421459,
+        2530583
+      ],
+      "round": 2
+    },
+    {
+      "variant": "reuse",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2252708,
+        2246583,
+        2115083,
+        2289833,
+        2267792,
+        2112667,
+        2197625
+      ],
+      "round": 2
+    },
+    {
+      "variant": "lifetimes",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1977125,
+        1928916,
+        2079792,
+        1962167,
+        1851250,
+        1901625,
+        2049334
+      ],
+      "round": 2
+    },
+    {
+      "variant": "consuming",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1973334,
+        2091000,
+        1867667,
+        1878500,
+        1937458,
+        1913417,
+        1876541
+      ],
+      "round": 2
+    },
+    {
+      "variant": "reuse",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1472584,
+        1563125,
+        1521667,
+        1518958,
+        1539333,
+        1550459,
+        1654500
+      ],
+      "round": 2
+    },
+    {
+      "variant": "baseline",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2936292,
+        2580417,
+        2645291,
+        2788500,
+        2721375,
+        2634750,
+        2738708
+      ],
+      "round": 2
+    },
+    {
+      "variant": "consuming",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2028083,
+        2088667,
+        2011792,
+        2012542,
+        2118250,
+        1883458,
+        1921292
+      ],
+      "round": 2
+    },
+    {
+      "variant": "reuse",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1651375,
+        1519334,
+        1558417,
+        1643083,
+        1646541,
+        1616708,
+        1601709
+      ],
+      "round": 2
+    },
+    {
+      "variant": "baseline",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2320208,
+        2421500,
+        2448500,
+        2445292,
+        2552750,
+        2417625,
+        2390959
+      ],
+      "round": 2
+    },
+    {
+      "variant": "lifetimes",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1986375,
+        2196750,
+        2039250,
+        2080625,
+        2088750,
+        2092708,
+        1986333
+      ],
+      "round": 2
+    },
+    {
+      "variant": "reuse",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2611000,
+        2747709,
+        2673709,
+        2628500,
+        2741084,
+        2667417,
+        2706166
+      ],
+      "round": 2
+    },
+    {
+      "variant": "baseline",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2339291,
+        2405875,
+        2519291,
+        2500792,
+        2454125,
+        2554000,
+        2335000
+      ],
+      "round": 2
+    },
+    {
+      "variant": "lifetimes",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2421917,
+        2325208,
+        2418959,
+        2549125,
+        2401833,
+        2460166,
+        2487208
+      ],
+      "round": 2
+    },
+    {
+      "variant": "consuming",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2626666,
+        2625083,
+        2654167,
+        2509167,
+        2628417,
+        2610833,
+        2699667
+      ],
+      "round": 2
+    },
+    {
+      "variant": "baseline",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2598750,
+        2602958,
+        2598084,
+        2530709,
+        2689708,
+        2555958,
+        2563750
+      ],
+      "round": 2
+    },
+    {
+      "variant": "lifetimes",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2287083,
+        2516625,
+        2312291,
+        2310458,
+        2425875,
+        2448292,
+        2430791
+      ],
+      "round": 2
+    },
+    {
+      "variant": "consuming",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2524875,
+        2528042,
+        2657417,
+        2645042,
+        2521958,
+        2394875,
+        2503292
+      ],
+      "round": 2
+    },
+    {
+      "variant": "reuse",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2475375,
+        2336084,
+        2424084,
+        2511333,
+        2289166,
+        2324208,
+        2439500
+      ],
+      "round": 2
+    },
+    {
+      "variant": "lifetimes",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2160917,
+        2286584,
+        2077875,
+        2124417,
+        2124666,
+        2119708,
+        2041167
+      ],
+      "round": 2
+    },
+    {
+      "variant": "consuming",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2078667,
+        2175375,
+        2049458,
+        2027542,
+        2041875,
+        2064417,
+        2082709
+      ],
+      "round": 2
+    },
+    {
+      "variant": "reuse",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1616875,
+        1699708,
+        1747833,
+        1834541,
+        1667333,
+        1593000,
+        1686458
+      ],
+      "round": 2
+    },
+    {
+      "variant": "baseline",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2393500,
+        2647458,
+        2370625,
+        2457959,
+        2582458,
+        2473708,
+        2530666
+      ],
+      "round": 2
+    },
+    {
+      "variant": "reuse",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1348833,
+        1382291,
+        1403375,
+        1504125,
+        1447583,
+        1359875,
+        1390083
+      ],
+      "round": 3
+    },
+    {
+      "variant": "baseline",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2775500,
+        2569750,
+        2755667,
+        2724417,
+        2663833,
+        2691875,
+        2652875
+      ],
+      "round": 3
+    },
+    {
+      "variant": "lifetimes",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1929667,
+        1855500,
+        1890334,
+        1910666,
+        1952083,
+        2035417,
+        1878125
+      ],
+      "round": 3
+    },
+    {
+      "variant": "consuming",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1895583,
+        1796791,
+        1816292,
+        1837416,
+        1900125,
+        1778208,
+        1868333
+      ],
+      "round": 3
+    },
+    {
+      "variant": "baseline",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2465917,
+        2662125,
+        2508333,
+        2467667,
+        2533750,
+        2576042,
+        2535375
+      ],
+      "round": 3
+    },
+    {
+      "variant": "lifetimes",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2426417,
+        2438833,
+        2578958,
+        2505167,
+        2463416,
+        2600667,
+        2393750
+      ],
+      "round": 3
+    },
+    {
+      "variant": "consuming",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2731166,
+        2642875,
+        2698042,
+        2675125,
+        2692709,
+        2720209,
+        2858000
+      ],
+      "round": 3
+    },
+    {
+      "variant": "reuse",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2714625,
+        2594458,
+        2671916,
+        2741292,
+        2705541,
+        2724042,
+        2804250
+      ],
+      "round": 3
+    },
+    {
+      "variant": "lifetimes",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2314583,
+        2269125,
+        2110667,
+        2214875,
+        2192250,
+        2177833,
+        2195833
+      ],
+      "round": 3
+    },
+    {
+      "variant": "consuming",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2292333,
+        2459500,
+        2344375,
+        2350250,
+        2354833,
+        2309375,
+        2185709
+      ],
+      "round": 3
+    },
+    {
+      "variant": "reuse",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2191542,
+        2115458,
+        2288625,
+        2223583,
+        2234042,
+        2212458,
+        2092333
+      ],
+      "round": 3
+    },
+    {
+      "variant": "baseline",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2431333,
+        2516167,
+        2426291,
+        2523834,
+        2501666,
+        2406208,
+        2495125
+      ],
+      "round": 3
+    },
+    {
+      "variant": "consuming",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1849375,
+        1946834,
+        1989584,
+        1966209,
+        1938125,
+        2173583,
+        1830500
+      ],
+      "round": 3
+    },
+    {
+      "variant": "reuse",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1455750,
+        1549917,
+        1554250,
+        1510125,
+        1538542,
+        1524417,
+        1487166
+      ],
+      "round": 3
+    },
+    {
+      "variant": "baseline",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2659916,
+        2630875,
+        2588834,
+        2615500,
+        2619000,
+        2462917,
+        2477083
+      ],
+      "round": 3
+    },
+    {
+      "variant": "lifetimes",
+      "n": 900,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 100,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1908792,
+        1965459,
+        2035750,
+        1860000,
+        1971250,
+        1959458,
+        1937875
+      ],
+      "round": 3
+    },
+    {
+      "variant": "reuse",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1557250,
+        1647875,
+        1644291,
+        1579750,
+        1619542,
+        1643166,
+        1693458
+      ],
+      "round": 3
+    },
+    {
+      "variant": "baseline",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2493333,
+        2422292,
+        2431125,
+        2514542,
+        2482250,
+        2276375,
+        2384917
+      ],
+      "round": 3
+    },
+    {
+      "variant": "lifetimes",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2158666,
+        2023208,
+        2169792,
+        2049125,
+        2066167,
+        2070917,
+        2152959
+      ],
+      "round": 3
+    },
+    {
+      "variant": "consuming",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "unique",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2037417,
+        1928458,
+        2032209,
+        2011667,
+        2091708,
+        2054208,
+        1943666
+      ],
+      "round": 3
+    },
+    {
+      "variant": "baseline",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2334666,
+        2394125,
+        2540208,
+        2476000,
+        2415041,
+        2369375,
+        2490458
+      ],
+      "round": 3
+    },
+    {
+      "variant": "lifetimes",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2512834,
+        2421875,
+        2484167,
+        2504125,
+        2340250,
+        2391750,
+        2501125
+      ],
+      "round": 3
+    },
+    {
+      "variant": "consuming",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2743500,
+        2768875,
+        2648875,
+        2930875,
+        2526500,
+        2660500,
+        2511917
+      ],
+      "round": 3
+    },
+    {
+      "variant": "reuse",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "root-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2625667,
+        2699959,
+        2669791,
+        2719084,
+        2624334,
+        2617208,
+        2647583
+      ],
+      "round": 3
+    },
+    {
+      "variant": "lifetimes",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2431375,
+        2563167,
+        2355125,
+        2429166,
+        2457083,
+        2366958,
+        2357833
+      ],
+      "round": 3
+    },
+    {
+      "variant": "consuming",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2498792,
+        2596500,
+        2553959,
+        2537333,
+        2674875,
+        2440750,
+        2443042
+      ],
+      "round": 3
+    },
+    {
+      "variant": "reuse",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2439375,
+        2381917,
+        2561292,
+        2491000,
+        2476083,
+        2524083,
+        2498500
+      ],
+      "round": 3
+    },
+    {
+      "variant": "baseline",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "interior-retained",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2466917,
+        2496333,
+        2510542,
+        2653500,
+        2508750,
+        2538875,
+        2581000
+      ],
+      "round": 3
+    },
+    {
+      "variant": "consuming",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2137625,
+        2027250,
+        2064916,
+        2096125,
+        2134500,
+        2003917,
+        2029958
+      ],
+      "round": 3
+    },
+    {
+      "variant": "reuse",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        1585167,
+        1610459,
+        1728542,
+        1700166,
+        1728500,
+        1628667,
+        1687541
+      ],
+      "round": 3
+    },
+    {
+      "variant": "baseline",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2546000,
+        2531000,
+        2684875,
+        2516333,
+        2558042,
+        2593416,
+        2563292
+      ],
+      "round": 3
+    },
+    {
+      "variant": "lifetimes",
+      "n": 9000,
+      "ratio": 50,
+      "scenario": "weak",
+      "iterations": 10,
+      "warmup_batches": 1,
+      "samples_ns": [
+        2151833,
+        2239708,
+        2266167,
+        2351458,
+        2168875,
+        2176875,
+        2161791
+      ],
+      "round": 3
+    }
+  ]
+}

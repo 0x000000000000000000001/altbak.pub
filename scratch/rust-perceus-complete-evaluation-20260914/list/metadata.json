@@ -1,0 +1,77 @@
+{
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-evaluation-20260914/build/frozen/Purs_Test_ListOps/src/lib.rs",
+  "source_sha256": "687280582b00e16f9e698a7e14719144ad829819aae34d81e2647fcd6e48ec48",
+  "variants": {
+    "baseline": {
+      "plain": "687280582b00e16f9e698a7e14719144ad829819aae34d81e2647fcd6e48ec48",
+      "counted": "20ff6c8a2a69562e891b127543d80cc9de6c3e9819300a0c4947e1b29f0c6045"
+    },
+    "lifetimes": {
+      "plain": "4a81efb7113f333619be2ef602ea6d8159235ee4ea81976b275949434e6eb6b1",
+      "counted": "1f9b0bb1cac71e2c1964776fc0ca1f5d8a8af2776756da28d37bf85c1c2540bc"
+    },
+    "consuming": {
+      "plain": "4f3811fb4f1ab936aa8e7560c1643e083943954a62417d2c29cfe78e549b955e",
+      "counted": "edb143b71ca0f311873240bf87d397c722bf1139b4c76d562a1a6b62685362df"
+    },
+    "reuse": {
+      "plain": "2b7c34d62e7af1f133a2ac33a3f04e542dee9685fd6a042fddc56cdb4b07b0c3",
+      "counted": "894599624fadd05186278f8dfbd307959a040b803d33340378611ccad101cbbf"
+    }
+  },
+  "steps": [
+    "Byte-identical baseline",
+    "Release two Value::Class argument wrappers after acquiring both Rc<List> arguments, before the closed filter call",
+    "Add the prior consumed-pattern substitution in both filter loops",
+    "Reuse each retained Cons cell only when Rc::get_mut succeeds; preserve its head and replace only its tail"
+  ],
+  "unchanged": "Range, foldl, thunk/closure generation, boxing representation, accumulator clones and every other module remain unchanged in all plain variants.",
+  "scope": "Manual scratch prototype for the actual closed List Int filter; not a compiler rule for arbitrary Value/Class payloads or callbacks.",
+  "profile": "rustc O1 debug=yes; System allocator for checks; full runner uses its own mimalloc configuration",
+  "deps": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-evaluation-20260914/build/list-validation/target/release/deps",
+  "no_timings": true,
+  "binaries": {
+    "baseline": {
+      "counted": {
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/build/checks-baseline-counted",
+        "sha256": "df6e63bf5132339952c9fef26b2b57f06919e17e1470d86a065c25de5dfcd7cc"
+      },
+      "plain": {
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/build/checks-baseline",
+        "sha256": "17dda5e4555913d36efabebf459ff90c5d0a54a351639103cbcca050ec218c44"
+      }
+    },
+    "lifetimes": {
+      "counted": {
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/build/checks-lifetimes-counted",
+        "sha256": "9e77e8120dfcd589bf4e3d3cd888eb936fff5b7a4b070988e3ef39fcc0043ef1"
+      },
+      "plain": {
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/build/checks-lifetimes",
+        "sha256": "183677348b71ca15e12ea1bb72d413e50d37e10641731c0bed520c896411de6b"
+      }
+    },
+    "consuming": {
+      "counted": {
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/build/checks-consuming-counted",
+        "sha256": "5f3944c29003b6f4cc8062413ad533e63dc50515c9c05e87487da944f0a179c5"
+      },
+      "plain": {
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/build/checks-consuming",
+        "sha256": "a76be432cd9f4351c5e2a4dc709915db0990d5681c4ed5e6631ae7b0bd368026"
+      }
+    },
+    "reuse": {
+      "counted": {
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/build/checks-reuse-counted",
+        "sha256": "377bafb90b6322bf621d622972e7350148695ef71d704cb4c96bd7c4f464c9e9"
+      },
+      "plain": {
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/build/checks-reuse",
+        "sha256": "414572b04ec984971c662b43fdc3ec4ecda25383bfafc360c8a437f45c1bcd41"
+      }
+    }
+  },
+  "harness_sha256": "02176412e9a6b39ad7a68136a2071124d44c982be6cdc2036c81cdca600f08a5",
+  "script_sha256": "1ca64a95aac6ce0c0e554d4761193a367944b3da2e1be04ce3f8b065ac3c3024"
+}

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "cases_per_binary": 96,
+  "stage_count": 4,
+  "scenario_count": 6,
+  "dimensions": {
+    "depth": [
+      7,
+      10
+    ],
+    "updates": [
+      128,
+      2048
+    ]
+  },
+  "plain_matches_instrumented": true,
+  "oracle": "Full structural equality with independent Box<Model> update implementation, including every retained old version/subtree; checked before final owner release.",
+  "lifetimes": "Every allocated payload, every strong pointer handle and every weak observer balanced. Weak::strong_count zero after final owners dropped.",
+  "logs": [
+    "build/validation-plain.jsonl",
+    "build/validation-counts.jsonl"
+  ]
+}

@@ -1,0 +1,1335 @@
+{
+  "rows": [
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 13107167,
+      "mode": "normal",
+      "block": 0
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14582375,
+      "mode": "checked",
+      "block": 0
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 13656500,
+      "mode": "forced",
+      "block": 0
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14106292,
+      "mode": "checked",
+      "block": 1
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 13959709,
+      "mode": "forced",
+      "block": 1
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 12823375,
+      "mode": "normal",
+      "block": 1
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14541208,
+      "mode": "forced",
+      "block": 2
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 12973208,
+      "mode": "normal",
+      "block": 2
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14199459,
+      "mode": "checked",
+      "block": 2
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14064709,
+      "mode": "forced",
+      "block": 3
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14364292,
+      "mode": "checked",
+      "block": 3
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 12428708,
+      "mode": "normal",
+      "block": 3
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 13135875,
+      "mode": "normal",
+      "block": 4
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 13818167,
+      "mode": "forced",
+      "block": 4
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14297750,
+      "mode": "checked",
+      "block": 4
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14401583,
+      "mode": "checked",
+      "block": 5
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 12955375,
+      "mode": "normal",
+      "block": 5
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 13914208,
+      "mode": "forced",
+      "block": 5
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4832833,
+      "mode": "normal",
+      "block": 0
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4640666,
+      "mode": "checked",
+      "block": 0
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4752000,
+      "mode": "forced",
+      "block": 0
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4999291,
+      "mode": "checked",
+      "block": 1
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4611333,
+      "mode": "forced",
+      "block": 1
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4595583,
+      "mode": "normal",
+      "block": 1
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4590292,
+      "mode": "forced",
+      "block": 2
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4508208,
+      "mode": "normal",
+      "block": 2
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4578625,
+      "mode": "checked",
+      "block": 2
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4561583,
+      "mode": "forced",
+      "block": 3
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4599083,
+      "mode": "checked",
+      "block": 3
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4652416,
+      "mode": "normal",
+      "block": 3
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4546750,
+      "mode": "normal",
+      "block": 4
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4610917,
+      "mode": "forced",
+      "block": 4
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4563084,
+      "mode": "checked",
+      "block": 4
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4751750,
+      "mode": "checked",
+      "block": 5
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4733167,
+      "mode": "normal",
+      "block": 5
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4696000,
+      "mode": "forced",
+      "block": 5
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 13219500,
+      "mode": "normal",
+      "block": 0
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14780000,
+      "mode": "checked",
+      "block": 0
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14778625,
+      "mode": "forced",
+      "block": 0
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15163959,
+      "mode": "checked",
+      "block": 1
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14505125,
+      "mode": "forced",
+      "block": 1
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14054791,
+      "mode": "normal",
+      "block": 1
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14647000,
+      "mode": "forced",
+      "block": 2
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14021000,
+      "mode": "normal",
+      "block": 2
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15221334,
+      "mode": "checked",
+      "block": 2
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14768667,
+      "mode": "forced",
+      "block": 3
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15293333,
+      "mode": "checked",
+      "block": 3
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 13420458,
+      "mode": "normal",
+      "block": 3
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 13533083,
+      "mode": "normal",
+      "block": 4
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14857542,
+      "mode": "forced",
+      "block": 4
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15005334,
+      "mode": "checked",
+      "block": 4
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15153042,
+      "mode": "checked",
+      "block": 5
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 13589416,
+      "mode": "normal",
+      "block": 5
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14805750,
+      "mode": "forced",
+      "block": 5
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39638000,
+      "mode": "normal",
+      "block": 0
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41283000,
+      "mode": "checked",
+      "block": 0
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40026875,
+      "mode": "forced",
+      "block": 0
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40693625,
+      "mode": "checked",
+      "block": 1
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40184083,
+      "mode": "forced",
+      "block": 1
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39975917,
+      "mode": "normal",
+      "block": 1
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39660417,
+      "mode": "forced",
+      "block": 2
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39723833,
+      "mode": "normal",
+      "block": 2
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41775500,
+      "mode": "checked",
+      "block": 2
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39694542,
+      "mode": "forced",
+      "block": 3
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40524250,
+      "mode": "checked",
+      "block": 3
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39873917,
+      "mode": "normal",
+      "block": 3
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40198333,
+      "mode": "normal",
+      "block": 4
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39740166,
+      "mode": "forced",
+      "block": 4
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41058417,
+      "mode": "checked",
+      "block": 4
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40571625,
+      "mode": "checked",
+      "block": 5
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39514750,
+      "mode": "normal",
+      "block": 5
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39785917,
+      "mode": "forced",
+      "block": 5
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39657375,
+      "mode": "normal",
+      "block": 0
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40364292,
+      "mode": "checked",
+      "block": 0
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39582750,
+      "mode": "forced",
+      "block": 0
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40186333,
+      "mode": "checked",
+      "block": 1
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39476291,
+      "mode": "forced",
+      "block": 1
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39527584,
+      "mode": "normal",
+      "block": 1
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40277583,
+      "mode": "forced",
+      "block": 2
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39528167,
+      "mode": "normal",
+      "block": 2
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40255750,
+      "mode": "checked",
+      "block": 2
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40082959,
+      "mode": "forced",
+      "block": 3
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41074458,
+      "mode": "checked",
+      "block": 3
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39410542,
+      "mode": "normal",
+      "block": 3
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39349541,
+      "mode": "normal",
+      "block": 4
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 39815083,
+      "mode": "forced",
+      "block": 4
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40984209,
+      "mode": "checked",
+      "block": 4
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41595042,
+      "mode": "checked",
+      "block": 5
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40726250,
+      "mode": "normal",
+      "block": 5
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41085958,
+      "mode": "forced",
+      "block": 5
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 8565500,
+      "mode": "normal",
+      "block": 0
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 8655542,
+      "mode": "checked",
+      "block": 0
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 9451125,
+      "mode": "forced",
+      "block": 0
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 8586625,
+      "mode": "checked",
+      "block": 1
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 9072791,
+      "mode": "forced",
+      "block": 1
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 8797958,
+      "mode": "normal",
+      "block": 1
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 8595209,
+      "mode": "forced",
+      "block": 2
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 8660000,
+      "mode": "normal",
+      "block": 2
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 7984750,
+      "mode": "checked",
+      "block": 2
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 8916792,
+      "mode": "forced",
+      "block": 3
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 8709459,
+      "mode": "checked",
+      "block": 3
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 8575083,
+      "mode": "normal",
+      "block": 3
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 8421667,
+      "mode": "normal",
+      "block": 4
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 8558667,
+      "mode": "forced",
+      "block": 4
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 8257583,
+      "mode": "checked",
+      "block": 4
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 8216750,
+      "mode": "checked",
+      "block": 5
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 8351041,
+      "mode": "normal",
+      "block": 5
+    },
+    {
+      "scenario": "fanout",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 8610000,
+      "mode": "forced",
+      "block": 5
+    }
+  ],
+  "order": [
+    {
+      "scenario": "read-owned",
+      "block": 0,
+      "order": [
+        "normal",
+        "checked",
+        "forced"
+      ]
+    },
+    {
+      "scenario": "read-owned",
+      "block": 1,
+      "order": [
+        "checked",
+        "forced",
+        "normal"
+      ]
+    },
+    {
+      "scenario": "read-owned",
+      "block": 2,
+      "order": [
+        "forced",
+        "normal",
+        "checked"
+      ]
+    },
+    {
+      "scenario": "read-owned",
+      "block": 3,
+      "order": [
+        "forced",
+        "checked",
+        "normal"
+      ]
+    },
+    {
+      "scenario": "read-owned",
+      "block": 4,
+      "order": [
+        "normal",
+        "forced",
+        "checked"
+      ]
+    },
+    {
+      "scenario": "read-owned",
+      "block": 5,
+      "order": [
+        "checked",
+        "normal",
+        "forced"
+      ]
+    },
+    {
+      "scenario": "read-borrowed",
+      "block": 0,
+      "order": [
+        "normal",
+        "checked",
+        "forced"
+      ]
+    },
+    {
+      "scenario": "read-borrowed",
+      "block": 1,
+      "order": [
+        "checked",
+        "forced",
+        "normal"
+      ]
+    },
+    {
+      "scenario": "read-borrowed",
+      "block": 2,
+      "order": [
+        "forced",
+        "normal",
+        "checked"
+      ]
+    },
+    {
+      "scenario": "read-borrowed",
+      "block": 3,
+      "order": [
+        "forced",
+        "checked",
+        "normal"
+      ]
+    },
+    {
+      "scenario": "read-borrowed",
+      "block": 4,
+      "order": [
+        "normal",
+        "forced",
+        "checked"
+      ]
+    },
+    {
+      "scenario": "read-borrowed",
+      "block": 5,
+      "order": [
+        "checked",
+        "normal",
+        "forced"
+      ]
+    },
+    {
+      "scenario": "closure-read",
+      "block": 0,
+      "order": [
+        "normal",
+        "checked",
+        "forced"
+      ]
+    },
+    {
+      "scenario": "closure-read",
+      "block": 1,
+      "order": [
+        "checked",
+        "forced",
+        "normal"
+      ]
+    },
+    {
+      "scenario": "closure-read",
+      "block": 2,
+      "order": [
+        "forced",
+        "normal",
+        "checked"
+      ]
+    },
+    {
+      "scenario": "closure-read",
+      "block": 3,
+      "order": [
+        "forced",
+        "checked",
+        "normal"
+      ]
+    },
+    {
+      "scenario": "closure-read",
+      "block": 4,
+      "order": [
+        "normal",
+        "forced",
+        "checked"
+      ]
+    },
+    {
+      "scenario": "closure-read",
+      "block": 5,
+      "order": [
+        "checked",
+        "normal",
+        "forced"
+      ]
+    },
+    {
+      "scenario": "update-unique",
+      "block": 0,
+      "order": [
+        "normal",
+        "checked",
+        "forced"
+      ]
+    },
+    {
+      "scenario": "update-unique",
+      "block": 1,
+      "order": [
+        "checked",
+        "forced",
+        "normal"
+      ]
+    },
+    {
+      "scenario": "update-unique",
+      "block": 2,
+      "order": [
+        "forced",
+        "normal",
+        "checked"
+      ]
+    },
+    {
+      "scenario": "update-unique",
+      "block": 3,
+      "order": [
+        "forced",
+        "checked",
+        "normal"
+      ]
+    },
+    {
+      "scenario": "update-unique",
+      "block": 4,
+      "order": [
+        "normal",
+        "forced",
+        "checked"
+      ]
+    },
+    {
+      "scenario": "update-unique",
+      "block": 5,
+      "order": [
+        "checked",
+        "normal",
+        "forced"
+      ]
+    },
+    {
+      "scenario": "update-retained",
+      "block": 0,
+      "order": [
+        "normal",
+        "checked",
+        "forced"
+      ]
+    },
+    {
+      "scenario": "update-retained",
+      "block": 1,
+      "order": [
+        "checked",
+        "forced",
+        "normal"
+      ]
+    },
+    {
+      "scenario": "update-retained",
+      "block": 2,
+      "order": [
+        "forced",
+        "normal",
+        "checked"
+      ]
+    },
+    {
+      "scenario": "update-retained",
+      "block": 3,
+      "order": [
+        "forced",
+        "checked",
+        "normal"
+      ]
+    },
+    {
+      "scenario": "update-retained",
+      "block": 4,
+      "order": [
+        "normal",
+        "forced",
+        "checked"
+      ]
+    },
+    {
+      "scenario": "update-retained",
+      "block": 5,
+      "order": [
+        "checked",
+        "normal",
+        "forced"
+      ]
+    },
+    {
+      "scenario": "fanout",
+      "block": 0,
+      "order": [
+        "normal",
+        "checked",
+        "forced"
+      ]
+    },
+    {
+      "scenario": "fanout",
+      "block": 1,
+      "order": [
+        "checked",
+        "forced",
+        "normal"
+      ]
+    },
+    {
+      "scenario": "fanout",
+      "block": 2,
+      "order": [
+        "forced",
+        "normal",
+        "checked"
+      ]
+    },
+    {
+      "scenario": "fanout",
+      "block": 3,
+      "order": [
+        "forced",
+        "checked",
+        "normal"
+      ]
+    },
+    {
+      "scenario": "fanout",
+      "block": 4,
+      "order": [
+        "normal",
+        "forced",
+        "checked"
+      ]
+    },
+    {
+      "scenario": "fanout",
+      "block": 5,
+      "order": [
+        "checked",
+        "normal",
+        "forced"
+      ]
+    }
+  ],
+  "summary_ms": {
+    "read-owned": {
+      "normal": 12.9642915,
+      "checked": 14.331021,
+      "forced": 13.9369585
+    },
+    "read-borrowed": {
+      "normal": 4.6239995,
+      "checked": 4.6198745,
+      "forced": 4.611125
+    },
+    "closure-read": {
+      "normal": 13.5612495,
+      "checked": 15.1585005,
+      "forced": 14.773646
+    },
+    "update-unique": {
+      "normal": 39.798875,
+      "checked": 40.876021,
+      "forced": 39.7630415
+    },
+    "update-retained": {
+      "normal": 39.5278755,
+      "checked": 40.6742505,
+      "forced": 39.949021
+    },
+    "fanout": {
+      "normal": 8.5702915,
+      "checked": 8.422104,
+      "forced": 8.763396
+    }
+  },
+  "scope": "Six balanced blocks; 1M iterations or simultaneously retained owners; 10k warmup; input setup outside timer; final releases inside; no counters."
+}

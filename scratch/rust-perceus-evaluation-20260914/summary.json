@@ -1,0 +1,194 @@
+{
+  "full_tree_us": {
+    "borrowed": {
+      "before_median": 10994.5,
+      "after_median": 11019.0,
+      "change_percent": 0.22283869207331275,
+      "before_range": [
+        10874.0,
+        11346.0
+      ],
+      "after_range": [
+        10644.0,
+        11091.0
+      ],
+      "favorable_blocks": 5,
+      "blocks": 8
+    },
+    "consuming": {
+      "before_median": 10994.5,
+      "after_median": 10878.0,
+      "change_percent": -1.059620719450638,
+      "before_range": [
+        10874.0,
+        11346.0
+      ],
+      "after_range": [
+        10749.0,
+        11000.0
+      ],
+      "favorable_blocks": 6,
+      "blocks": 8
+    },
+    "hybrid": {
+      "before_median": 10994.5,
+      "after_median": 10847.5,
+      "change_percent": -1.3370321524398543,
+      "before_range": [
+        10874.0,
+        11346.0
+      ],
+      "after_range": [
+        10588.0,
+        11010.0
+      ],
+      "favorable_blocks": 7,
+      "blocks": 8
+    }
+  },
+  "full_total_sum_of_medians_us": {
+    "before": 11880.0,
+    "borrowed": 11906.5,
+    "consuming": 11767.5,
+    "hybrid": 11753.0
+  },
+  "list_us_initial_series": {
+    "before_median": 36.0,
+    "after_median": 38.0,
+    "change_percent": 5.555555555555558,
+    "before_range": [
+      35.0,
+      38.0
+    ],
+    "after_range": [
+      37.0,
+      42.0
+    ],
+    "favorable_blocks": 0,
+    "blocks": 8
+  },
+  "retained_tree_ms": {
+    "borrowed": {
+      "before_median": 17.07725,
+      "after_median": 13.870562,
+      "change_percent": -18.77754322270857,
+      "before_range": [
+        16.848541,
+        17.250458
+      ],
+      "after_range": [
+        13.709375,
+        13.974166
+      ],
+      "favorable_blocks": 8,
+      "blocks": 8
+    },
+    "consuming": {
+      "before_median": 17.07725,
+      "after_median": 17.7784165,
+      "change_percent": 4.105851351944834,
+      "before_range": [
+        16.848541,
+        17.250458
+      ],
+      "after_range": [
+        17.579584,
+        18.848375
+      ],
+      "favorable_blocks": 0,
+      "blocks": 8
+    },
+    "hybrid": {
+      "before_median": 17.07725,
+      "after_median": 13.8417915,
+      "change_percent": -18.946015898344292,
+      "before_range": [
+        16.848541,
+        17.250458
+      ],
+      "after_range": [
+        13.602,
+        14.105125
+      ],
+      "favorable_blocks": 8,
+      "blocks": 8
+    }
+  },
+  "sticky_ms_per_million_iterations": {
+    "read-owned": {
+      "before_median": 13.865667,
+      "after_median": 15.24875,
+      "change_percent": 9.974875352191859,
+      "before_range": [
+        13.75875,
+        14.56375
+      ],
+      "after_range": [
+        14.893,
+        15.644167
+      ],
+      "favorable_blocks": 0,
+      "blocks": 7
+    },
+    "read-borrowed": {
+      "before_median": 4.626,
+      "after_median": 4.622625,
+      "change_percent": -0.07295719844357951,
+      "before_range": [
+        4.513416,
+        4.663458
+      ],
+      "after_range": [
+        4.5555,
+        4.736083
+      ],
+      "favorable_blocks": 3,
+      "blocks": 7
+    },
+    "closure-read": {
+      "before_median": 15.6585,
+      "after_median": 16.110917,
+      "change_percent": 2.8892741961235036,
+      "before_range": [
+        15.477292,
+        16.94425
+      ],
+      "after_range": [
+        15.585958,
+        17.040417
+      ],
+      "favorable_blocks": 0,
+      "blocks": 7
+    },
+    "update-unique": {
+      "before_median": 41.066667,
+      "after_median": 40.782875,
+      "change_percent": -0.6910519424427775,
+      "before_range": [
+        40.275292,
+        41.711625
+      ],
+      "after_range": [
+        40.223,
+        41.401334
+      ],
+      "favorable_blocks": 4,
+      "blocks": 7
+    },
+    "update-retained": {
+      "before_median": 41.463625,
+      "after_median": 41.707041,
+      "change_percent": 0.587059139185242,
+      "before_range": [
+        40.077209,
+        42.569167
+      ],
+      "after_range": [
+        40.139209,
+        41.875417
+      ],
+      "favorable_blocks": 4,
+      "blocks": 7
+    }
+  }
+}

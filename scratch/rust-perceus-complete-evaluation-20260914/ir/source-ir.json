@@ -1,0 +1,260 @@
+{
+  "layouts": {
+    "List": {
+      "fields": [
+        "i64",
+        "ptr"
+      ],
+      "scalar": 0,
+      "children": [
+        1
+      ]
+    },
+    "Tree": {
+      "fields": [
+        "ptr",
+        "i64",
+        "ptr"
+      ],
+      "scalar": 1,
+      "children": [
+        0,
+        2
+      ]
+    },
+    "TreeAlt": {
+      "fields": [
+        "i64",
+        "ptr",
+        "ptr"
+      ],
+      "scalar": 0,
+      "children": [
+        1,
+        2
+      ]
+    }
+  },
+  "programs": [
+    {
+      "name": "list_map",
+      "layout": "List",
+      "body": [
+        "build",
+        [
+          "add",
+          [
+            "field",
+            0
+          ],
+          [
+            "int",
+            1
+          ]
+        ],
+        [
+          "call",
+          [
+            "field",
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "list_filter",
+      "layout": "List",
+      "body": [
+        "if",
+        [
+          "even",
+          [
+            "field",
+            0
+          ]
+        ],
+        [
+          "build",
+          [
+            "field",
+            0
+          ],
+          [
+            "call",
+            [
+              "field",
+              1
+            ]
+          ]
+        ],
+        [
+          "call",
+          [
+            "field",
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "tree_map",
+      "layout": "Tree",
+      "body": [
+        "build",
+        [
+          "call",
+          [
+            "field",
+            0
+          ]
+        ],
+        [
+          "add",
+          [
+            "field",
+            1
+          ],
+          [
+            "int",
+            1
+          ]
+        ],
+        [
+          "call",
+          [
+            "field",
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "tree_update",
+      "layout": "Tree",
+      "body": [
+        "build",
+        [
+          "field",
+          0
+        ],
+        [
+          "add",
+          [
+            "field",
+            1
+          ],
+          [
+            "int",
+            1
+          ]
+        ],
+        [
+          "field",
+          2
+        ]
+      ]
+    },
+    {
+      "name": "tree_choose",
+      "layout": "Tree",
+      "body": [
+        "if",
+        [
+          "even",
+          [
+            "field",
+            1
+          ]
+        ],
+        [
+          "field",
+          0
+        ],
+        [
+          "field",
+          2
+        ]
+      ]
+    },
+    {
+      "name": "treealt_map",
+      "layout": "TreeAlt",
+      "body": [
+        "build",
+        [
+          "add",
+          [
+            "field",
+            0
+          ],
+          [
+            "int",
+            1
+          ]
+        ],
+        [
+          "call",
+          [
+            "field",
+            1
+          ]
+        ],
+        [
+          "call",
+          [
+            "field",
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "treealt_update",
+      "layout": "TreeAlt",
+      "body": [
+        "build",
+        [
+          "add",
+          [
+            "field",
+            0
+          ],
+          [
+            "int",
+            1
+          ]
+        ],
+        [
+          "field",
+          1
+        ],
+        [
+          "field",
+          2
+        ]
+      ]
+    },
+    {
+      "name": "treealt_choose",
+      "layout": "TreeAlt",
+      "body": [
+        "if",
+        [
+          "even",
+          [
+            "field",
+            0
+          ]
+        ],
+        [
+          "field",
+          1
+        ],
+        [
+          "field",
+          2
+        ]
+      ]
+    }
+  ]
+}

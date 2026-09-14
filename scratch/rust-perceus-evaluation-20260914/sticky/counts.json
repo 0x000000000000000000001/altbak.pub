@@ -1,0 +1,205 @@
+{
+  "rows": [
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 10000,
+      "checksum": 170000,
+      "counts": {
+        "allocations": 3,
+        "frees": 3,
+        "allocated_bytes": 168,
+        "freed_bytes": 168,
+        "clone_calls": 30000,
+        "drop_calls": 30003,
+        "refcount_writes": 60003,
+        "sticky_clones": 0,
+        "sticky_drops": 0,
+        "make_mut_copies": 0,
+        "max_normal_owners": 2
+      }
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "forced-sticky",
+      "n": 10000,
+      "checksum": 170000,
+      "counts": {
+        "allocations": 3,
+        "frees": 0,
+        "allocated_bytes": 168,
+        "freed_bytes": 0,
+        "clone_calls": 30000,
+        "drop_calls": 30001,
+        "refcount_writes": 0,
+        "sticky_clones": 30000,
+        "sticky_drops": 30001,
+        "make_mut_copies": 0,
+        "max_normal_owners": 1
+      }
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 10000,
+      "checksum": 170000,
+      "counts": {
+        "allocations": 3,
+        "frees": 3,
+        "allocated_bytes": 168,
+        "freed_bytes": 168,
+        "clone_calls": 0,
+        "drop_calls": 3,
+        "refcount_writes": 3,
+        "sticky_clones": 0,
+        "sticky_drops": 0,
+        "make_mut_copies": 0,
+        "max_normal_owners": 1
+      }
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "forced-sticky",
+      "n": 10000,
+      "checksum": 170000,
+      "counts": {
+        "allocations": 3,
+        "frees": 0,
+        "allocated_bytes": 168,
+        "freed_bytes": 0,
+        "clone_calls": 0,
+        "drop_calls": 1,
+        "refcount_writes": 0,
+        "sticky_clones": 0,
+        "sticky_drops": 1,
+        "make_mut_copies": 0,
+        "max_normal_owners": 1
+      }
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 10000,
+      "checksum": 170000,
+      "counts": {
+        "allocations": 3,
+        "frees": 3,
+        "allocated_bytes": 168,
+        "freed_bytes": 168,
+        "clone_calls": 30001,
+        "drop_calls": 30004,
+        "refcount_writes": 60005,
+        "sticky_clones": 0,
+        "sticky_drops": 0,
+        "make_mut_copies": 0,
+        "max_normal_owners": 3
+      }
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "forced-sticky",
+      "n": 10000,
+      "checksum": 170000,
+      "counts": {
+        "allocations": 3,
+        "frees": 0,
+        "allocated_bytes": 168,
+        "freed_bytes": 0,
+        "clone_calls": 30001,
+        "drop_calls": 30002,
+        "refcount_writes": 0,
+        "sticky_clones": 30001,
+        "sticky_drops": 30002,
+        "make_mut_copies": 0,
+        "max_normal_owners": 1
+      }
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 10000,
+      "checksum": 80027,
+      "counts": {
+        "allocations": 3,
+        "frees": 3,
+        "allocated_bytes": 168,
+        "freed_bytes": 168,
+        "clone_calls": 20000,
+        "drop_calls": 20003,
+        "refcount_writes": 40003,
+        "sticky_clones": 0,
+        "sticky_drops": 0,
+        "make_mut_copies": 0,
+        "max_normal_owners": 2
+      }
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "forced-sticky",
+      "n": 10000,
+      "checksum": 80027,
+      "counts": {
+        "allocations": 6,
+        "frees": 3,
+        "allocated_bytes": 336,
+        "freed_bytes": 168,
+        "clone_calls": 20002,
+        "drop_calls": 20006,
+        "refcount_writes": 39999,
+        "sticky_clones": 4,
+        "sticky_drops": 5,
+        "make_mut_copies": 3,
+        "max_normal_owners": 2
+      }
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 10000,
+      "checksum": 80027,
+      "counts": {
+        "allocations": 6,
+        "frees": 6,
+        "allocated_bytes": 336,
+        "freed_bytes": 336,
+        "clone_calls": 20003,
+        "drop_calls": 20009,
+        "refcount_writes": 40012,
+        "sticky_clones": 0,
+        "sticky_drops": 0,
+        "make_mut_copies": 3,
+        "max_normal_owners": 3
+      }
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "forced-sticky",
+      "n": 10000,
+      "checksum": 80027,
+      "counts": {
+        "allocations": 6,
+        "frees": 3,
+        "allocated_bytes": 336,
+        "freed_bytes": 168,
+        "clone_calls": 20003,
+        "drop_calls": 20007,
+        "refcount_writes": 39999,
+        "sticky_clones": 5,
+        "sticky_drops": 6,
+        "make_mut_copies": 3,
+        "max_normal_owners": 2
+      }
+    }
+  ],
+  "lifecycle": {
+    "normal_returns_to_unique_after_two_owners": true,
+    "normal_drop_runs": true,
+    "sticky_count": 4294967295,
+    "sticky_stays_nonunique": true,
+    "make_mut_copies_and_preserves_old": true,
+    "sticky_payload_not_dropped": true
+  },
+  "counter_scope": "PerceusPtr cells only; closure Rc and other allocations excluded.",
+  "plain_executable_same_checksums": true,
+  "no_timings": true
+}

@@ -1,0 +1,12 @@
+{
+  "before": {},
+  "borrowed": {
+    "RBTree": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-evaluation-20260914/b15/build/RBTree-borrowed.rs"
+  },
+  "consuming": {
+    "RBTree": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-evaluation-20260914/b15/build/RBTree-consuming.rs"
+  },
+  "list_consuming": {
+    "ListOps": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-evaluation-20260914/list/ListOps-consumed.rs"
+  }
+}

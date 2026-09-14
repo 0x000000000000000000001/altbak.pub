@@ -1,0 +1,9 @@
+{
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-evaluation-20260914/build/frozen/Purs_Test_ListOps/src/lib.rs",
+  "sha256": {
+    "before": "687280582b00e16f9e698a7e14719144ad829819aae34d81e2647fcd6e48ec48",
+    "consumed": "3489346b31a6c3c2e6d0cf176ea94b9cab9305e750075b2061b019d508325add"
+  },
+  "scope": "Only the two generated filter loop bodies change. Range, fold, boxing, closures, recursion thunks, accumulator clones and allocator are unchanged.",
+  "hypothesis": "Consuming the matched node transfers head/tail if its strong count is one; shared nodes clone their payload. This tests one missing consumed-pattern case, not a complete Perceus pass."
+}

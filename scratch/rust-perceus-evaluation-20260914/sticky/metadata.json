@@ -1,0 +1,45 @@
+{
+  "inputs": {
+    "/Users/0x1/Documents/htdocs/purust/purust/tests/runtime/perceus_ptr/src/lib.rs": "6157fa30c2618e826dd5ed750770e340be6d174df303325cdad37b824e993a67",
+    "/Users/0x1/Documents/htdocs/purust/purust/tests/runtime/perceus_ptr/src/local.rs": "7e8a3eacf3276a9b13c862c4ce083062aea890534392a150e8a6620824333aa8",
+    "/Users/0x1/Documents/htdocs/purust/purust/tests/runtime/perceus_ptr/src/threaded.rs": "b07f88d1ee0bb31ad4f1d0557ca119089b0cb55413a85252a832b40b6518359a",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/purust_core/src/lib.rs": "41090c4e5b1db31ace310227ce5a363c43d3e3180fd45337f7955fa562f156bf",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Test_Records/src/lib.rs": "6343d7b109a260c8360b22ceee33be861bafe80972b0c01b580a271836d447f3"
+  },
+  "generated_records_kernel_sha256": "14e60387a4ec32b8d907e96f29dbae1925f37efab9fe4158796a8ef442f83485",
+  "instrumented_runtime_sha256": "368c13bc86582a4821f71a37690f25470994908106c965ec84cc3edc43be6795",
+  "scope": "Exact generated update kernel and purust_core; only private runtime copy exposes test count setter and optional counters.",
+  "artificial_saturation": "Set initial three PerceusPtr cells directly to u32::MAX. Never lower threshold; never claim natural saturation.",
+  "threaded": "Source inspected only: Arc delegates clone/drop/make_mut; STICKY_COUNT is a constant, not a sticky execution branch.",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "profile": {
+    "opt_level": 1,
+    "overflow_checks": true,
+    "allocator": "Rust default System; full benchmark runner uses mimalloc"
+  },
+  "frozen_sources": {
+    "harness.rs": "b909f49bcedfcc84efa7f51bc01bf82f809ff1e064ae4d62e1692ba1caf8d8ff",
+    "probe.py": "7c126af756208ebee1e8caf6170675f75334fa9240d6f432da6d79de7e2b1a13",
+    "build/records.rs": "14e60387a4ec32b8d907e96f29dbae1925f37efab9fe4158796a8ef442f83485",
+    "build/purust_core.rs": "41090c4e5b1db31ace310227ce5a363c43d3e3180fd45337f7955fa562f156bf",
+    "build/lib.rs": "6157fa30c2618e826dd5ed750770e340be6d174df303325cdad37b824e993a67",
+    "build/local.rs": "368c13bc86582a4821f71a37690f25470994908106c965ec84cc3edc43be6795",
+    "build/threaded.rs": "b07f88d1ee0bb31ad4f1d0557ca119089b0cb55413a85252a832b40b6518359a"
+  },
+  "binaries": {
+    "counts": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-evaluation-20260914/sticky/build/counts/probe",
+      "sha256": "ab276d604f58a1c8851ec18c76c168997e69b079db8c8b696f8d622adfe93b9f"
+    },
+    "plain": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-evaluation-20260914/sticky/build/plain/probe",
+      "sha256": "2a740d5152dcb52281b264ec09828da59335edddf4a730ed34b9f2c7f30727b8"
+    }
+  },
+  "timing_protocol": {
+    "warmup": "10000 iterations, same scenario and saturation mode, outside the timer",
+    "setup": "Fresh input construction, saturation and closure capture outside timer",
+    "segment": "Workload loop, checksum/result observation, validation, and destruction of all final owners",
+    "forced_retention": "Three cells deliberately retained per forced invocation; warmup retains its own three cells"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/full-output/Cargo.lock",
+  "original_lock_sha256": "bc8ce76709b702c27266ff47ba2dac88a976333720ebaa94adc7131f986da1c2",
+  "runner_lock_sha256": "f0940613f7abc868751094afa9536c52e87c9794d40ef107c0b22168c4d73136",
+  "original_packages": 316,
+  "runner_packages": 114,
+  "added_or_changed_packages": [],
+  "note": "Same exact effective Cargo.lock as the preceding full-runner experiment. Removed entries only: unrelated workspace packages; all remaining complete package blocks are identical to the live baseline lock."
+}

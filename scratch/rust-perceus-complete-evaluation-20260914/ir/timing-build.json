@@ -1,0 +1,53 @@
+{
+  "profile": "O1, debug=true, mimalloc, --cfg untracked direct std::rc::Rc; same generated IR functions",
+  "matrix": "5 functions x unique/shared-root/shared-child; fresh input and retained alias every iteration",
+  "boundary": "construction + transformation + result checksum traversal + destruction of every result/input/retained alias",
+  "stage_order": "Seven cyclic rotations: each stage appears once at every position",
+  "validation": "Analytic checksum/count outside timed region; runtime seed and black_box input/size/result",
+  "variants": {
+    "naive": {
+      "binary_sha256": "0ec27c76e7b44189614769893d5b8aeaf0912ff0042a31ea1fe4bacbfe530c0b",
+      "source_sha256": "9400689893afb47498570b83be0243e33d58f448f0105fbfbb62f0f71888f154",
+      "validated_ir_source_sha256": "62f48006c4b3feff1973c3461bdd19f9acc7b46cdfc1dd3ee6ec60f00fb1cb11",
+      "smoke": "PASS smoke: 5 workloads x 3 ownership modes x 2 dynamic seeds; no clocks"
+    },
+    "pushdown": {
+      "binary_sha256": "879b10b8bfef6945e8406059aae84d3bf118f9968aec0acc994e366eec88e624",
+      "source_sha256": "ae4429d894b00cfa969b66229f9802536c407ca421f6b9bc8e7ddf00d513d5ff",
+      "validated_ir_source_sha256": "bd53ed22502b7fdab29ad30c4082ddc09038cd433621ab5f678474b45113b6b4",
+      "smoke": "PASS smoke: 5 workloads x 3 ownership modes x 2 dynamic seeds; no clocks"
+    },
+    "precise": {
+      "binary_sha256": "8bfda7095e4180a9dab2bb4345cc5183e1cf68ed4252469e11e8c4b28da5d79f",
+      "source_sha256": "ae4623fc3b05a7c308e5a9a36c3c404baeb1624d48be91b4e36a07a91992dc32",
+      "validated_ir_source_sha256": "449f083719850add1aedd6d7b9f45899a9b3a55135e3153de1f13e62e809b26c",
+      "smoke": "PASS smoke: 5 workloads x 3 ownership modes x 2 dynamic seeds; no clocks"
+    },
+    "fusion": {
+      "binary_sha256": "eb630f670edb2510925b0f95a5f9a38340bff383f8160dc3c4a3ed3483ce74ce",
+      "source_sha256": "4b0d5754a29047d2bd4ba2040f7df01ba27bbb8d3758ff826274f5946f151f85",
+      "validated_ir_source_sha256": "333691e75ceb4647a8db5745ee75a0bfab50504854f4243330ba02b8b2f8a6c9",
+      "smoke": "PASS smoke: 5 workloads x 3 ownership modes x 2 dynamic seeds; no clocks"
+    },
+    "specialized_drop": {
+      "binary_sha256": "e80274c90866c07ba9fac2570bb2f7dcc1809843fcb8adff80a420f1676976cc",
+      "source_sha256": "87df359f4d8165c7c9382577f92f8be5485e652a716981fe81602a1804a33072",
+      "validated_ir_source_sha256": "5334642346024f92e6b094de2d38bd11d9f38e6166d9023cd680add7509ae140",
+      "smoke": "PASS smoke: 5 workloads x 3 ownership modes x 2 dynamic seeds; no clocks"
+    },
+    "reuse": {
+      "binary_sha256": "ba2fbbe0f4015302597f55525e25a8d666ea9b219709de1286bcf9f29c5817a3",
+      "source_sha256": "1551fb2aad0fd71ae7a77b16cd5b4e3b3aa6c6247b6a449df29cf531367954cd",
+      "validated_ir_source_sha256": "193db6edcd0197273653b30cc2e1000ae476368dbb4ea61cbbda95de930a86be",
+      "smoke": "PASS smoke: 5 workloads x 3 ownership modes x 2 dynamic seeds; no clocks"
+    },
+    "retained_fields": {
+      "binary_sha256": "e22c99093b8636f42cbd778fef884ec1177a35b5623eb267fc50ebdf237fc9b2",
+      "source_sha256": "2750b90a7abb0036a4d77f2c7dc24c9545a1ef0f0995d4f294b14316feda8e64",
+      "validated_ir_source_sha256": "9e664882213d876f11c1babd2d9e9455b463ec662f13450dfcb843e144d16d81",
+      "smoke": "PASS smoke: 5 workloads x 3 ownership modes x 2 dynamic seeds; no clocks"
+    }
+  },
+  "timings_run": false,
+  "cargo_lock_sha256": "9b5a902a8c95da772147a2fd61aac252adb2aefc07eeccd1eceb09e8f2f24230"
+}

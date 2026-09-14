@@ -1,0 +1,587 @@
+{
+  "rows": [
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14563750,
+      "pair": 0
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15386000,
+      "pair": 0
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15044542,
+      "pair": 1
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 13848708,
+      "pair": 1
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 13937166,
+      "pair": 2
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 14893000,
+      "pair": 2
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15430375,
+      "pair": 3
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 13865667,
+      "pair": 3
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 13854833,
+      "pair": 4
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15240459,
+      "pair": 4
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15644167,
+      "pair": 5
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 13991833,
+      "pair": 5
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 13758750,
+      "pair": 6
+    },
+    {
+      "scenario": "read-owned",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15248750,
+      "pair": 6
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4630167,
+      "pair": 0
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4601084,
+      "pair": 0
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4713292,
+      "pair": 1
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4513416,
+      "pair": 1
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4627500,
+      "pair": 2
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4708750,
+      "pair": 2
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4736083,
+      "pair": 3
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4626000,
+      "pair": 3
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4520667,
+      "pair": 4
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4588292,
+      "pair": 4
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4622625,
+      "pair": 5
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4663458,
+      "pair": 5
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4581167,
+      "pair": 6
+    },
+    {
+      "scenario": "read-borrowed",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 4555500,
+      "pair": 6
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15658500,
+      "pair": 0
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 16009583,
+      "pair": 0
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 16349000,
+      "pair": 1
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15539334,
+      "pair": 1
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 16379083,
+      "pair": 2
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 17040417,
+      "pair": 2
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 16024500,
+      "pair": 3
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15477292,
+      "pair": 3
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15534417,
+      "pair": 4
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15585958,
+      "pair": 4
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 16110917,
+      "pair": 5
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 15659083,
+      "pair": 5
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 16944250,
+      "pair": 6
+    },
+    {
+      "scenario": "closure-read",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 17000000,
+      "elapsed_ns": 17036583,
+      "pair": 6
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40735625,
+      "pair": 0
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40890625,
+      "pair": 0
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40782875,
+      "pair": 1
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41066667,
+      "pair": 1
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41115583,
+      "pair": 2
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40267125,
+      "pair": 2
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41139916,
+      "pair": 3
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41711625,
+      "pair": 3
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41131250,
+      "pair": 4
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41401334,
+      "pair": 4
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40223000,
+      "pair": 5
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40564666,
+      "pair": 5
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40275292,
+      "pair": 6
+    },
+    {
+      "scenario": "update-unique",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40411041,
+      "pair": 6
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40077209,
+      "pair": 0
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40693292,
+      "pair": 0
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40139209,
+      "pair": 1
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41431500,
+      "pair": 1
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41463625,
+      "pair": 2
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 40735625,
+      "pair": 2
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41875417,
+      "pair": 3
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41344333,
+      "pair": 3
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41634625,
+      "pair": 4
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41755334,
+      "pair": 4
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41826042,
+      "pair": 5
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 42569167,
+      "pair": 5
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "normal",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41847292,
+      "pair": 6
+    },
+    {
+      "scenario": "update-retained",
+      "sticky": "forced-sticky",
+      "n": 1000000,
+      "checksum": 8000027,
+      "elapsed_ns": 41707041,
+      "pair": 6
+    }
+  ],
+  "summary_ns": {
+    "read-owned": {
+      "normal": 13865667,
+      "forced-sticky": 15248750
+    },
+    "read-borrowed": {
+      "normal": 4626000,
+      "forced-sticky": 4622625
+    },
+    "closure-read": {
+      "normal": 15658500,
+      "forced-sticky": 16110917
+    },
+    "update-unique": {
+      "normal": 41066667,
+      "forced-sticky": 40782875
+    },
+    "update-retained": {
+      "normal": 41463625,
+      "forced-sticky": 41707041
+    }
+  },
+  "scope": "Synthetic forced saturation; exact Records kernel for update scenarios. Not a full suite benchmark."
+}

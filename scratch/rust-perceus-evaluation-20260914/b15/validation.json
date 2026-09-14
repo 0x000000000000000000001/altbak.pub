@@ -1,0 +1,30 @@
+{
+  "method": "Native Rc O1, no clocks. Existing 100k rotations/invariants/persistence suite and owned depth/shared/Weak boundary checks.",
+  "variants": {
+    "before": {
+      "source_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+      "passed": true,
+      "output": "B13 red-parent cases: 128; unique parent address retained: 32/32 (observation only)\nB13 extra checks passed: BTreeSet, RB invariants, 200 persistent versions, 512 mixed-sharing insertions, independent children, weak values and final lifetimes\nDepth checks passed: 100k tree, owned destruction before return, repeated reads, later insertion, shared edges and independent child/Weak lifetimes"
+    },
+    "borrowed": {
+      "source_sha256": "eed6d02991f8f718ad68f49c17034a5386a950f2f03678aab6f36b1db9e51559",
+      "passed": true,
+      "output": "B13 red-parent cases: 128; unique parent address retained: 32/32 (observation only)\nB13 extra checks passed: BTreeSet, RB invariants, 200 persistent versions, 512 mixed-sharing insertions, independent children, weak values and final lifetimes\nDepth checks passed: 100k tree, owned destruction before return, repeated reads, later insertion, shared edges and independent child/Weak lifetimes"
+    },
+    "consuming": {
+      "source_sha256": "a0b1f300badbe189ea1be515fad8d0def0ef0b60ef11497d3eae0978dab60e88",
+      "passed": true,
+      "output": "B13 red-parent cases: 128; unique parent address retained: 32/32 (observation only)\nB13 extra checks passed: BTreeSet, RB invariants, 200 persistent versions, 512 mixed-sharing insertions, independent children, weak values and final lifetimes\nDepth checks passed: 100k tree, owned destruction before return, repeated reads, later insertion, shared edges and independent child/Weak lifetimes"
+    },
+    "hybrid": {
+      "source_sha256": "e43b6b2d5301dad40e5d86c96fcd6460cf1dde20e6d0fe07ef8d0ad7c32fad0b",
+      "passed": true,
+      "output": "B13 red-parent cases: 128; unique parent address retained: 32/32 (observation only)\nB13 extra checks passed: BTreeSet, RB invariants, 200 persistent versions, 512 mixed-sharing insertions, independent children, weak values and final lifetimes\nDepth checks passed: 100k tree, owned destruction before return, repeated reads, later insertion, shared edges and independent child/Weak lifetimes"
+    }
+  },
+  "scope_checks": {
+    "passed": true,
+    "output": "Scope counterexamples: original/consuming drop logs [[0, 1, 2], [1, 2, 0]]; live root at first callback [true, false]\nPanic scope: all payloads released exactly once; original/consuming unwind drop logs [[0, 1, 2], [2, 1, 0]]",
+    "meaning": "Adversarial callbacks, destructor order and unwinding are counterexamples outside the eligible plain-tree total traversal; they are not claimed equivalent."
+  }
+}

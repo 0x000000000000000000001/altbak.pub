@@ -1,0 +1,142 @@
+{
+  "snapshot_sha256": "98a3ad5e16bdeb892a5143d2da185a98584b0f2c1581eb61be6ece4c51a2c93b",
+  "variants": {
+    "before": {
+      "workspace": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-runners/before",
+      "replacements": {
+        "RBTree": {
+          "input": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/frozen/Purs_Test_RBTree/src/lib.rs",
+          "source_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+          "saved": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-runners/before/Purs_Test_RBTree/src/lib.rs",
+          "saved_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+          "differs_from_baseline": false
+        },
+        "ListOps": {
+          "input": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/frozen/Purs_Test_ListOps/src/lib.rs",
+          "source_sha256": "687280582b00e16f9e698a7e14719144ad829819aae34d81e2647fcd6e48ec48",
+          "saved": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-runners/before/Purs_Test_ListOps/src/lib.rs",
+          "saved_sha256": "687280582b00e16f9e698a7e14719144ad829819aae34d81e2647fcd6e48ec48",
+          "differs_from_baseline": false
+        }
+      },
+      "inputs": {
+        "Cargo.lock": "f0940613f7abc868751094afa9536c52e87c9794d40ef107c0b22168c4d73136",
+        "Cargo.toml": "ab6ccacf1cd102c21d3237d2b814f0f303574acc056295f3d6a6715bfd26c3f8",
+        "Purs_App/Cargo.toml": "771b866884fb1c28324c0d1771a1df61ce5c29ade50866f88e06d8861c0d7f20",
+        "Purs_App/src/lib.rs": "cad35084b419b95fd3aa7d624984c3cd35281eab021e4f9358fdc9b974ac2d85",
+        "Purs_Test_ListOps/Cargo.toml": "57692228766706a33aa4cdcdd0f49de4d99b6369b6f1d9b26e54e86f9a33137e",
+        "Purs_Test_ListOps/src/lib.rs": "687280582b00e16f9e698a7e14719144ad829819aae34d81e2647fcd6e48ec48",
+        "Purs_Test_RBTree/Cargo.toml": "d86cb37d339c6f9c2f790c4461a87877d79796e770b29398786914bb08d99e2d",
+        "Purs_Test_RBTree/src/lib.rs": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+        "src/main.rs": "8b3c81a59c1b2d00e08e0cd57201e69aa88ef96137a8851e9e078e54f5f9beab"
+      },
+      "lock_sha256": "f0940613f7abc868751094afa9536c52e87c9794d40ef107c0b22168c4d73136",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-binaries/before",
+      "binary_sha256": "7486817f0bbb5127e1659e244f14d398aea0ac3a4834f4f3feb8cb092fba0a70",
+      "log": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-build-before.log"
+    },
+    "list_lifetimes": {
+      "workspace": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-runners/list_lifetimes",
+      "replacements": {
+        "RBTree": {
+          "input": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/frozen/Purs_Test_RBTree/src/lib.rs",
+          "source_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+          "saved": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-runners/list_lifetimes/Purs_Test_RBTree/src/lib.rs",
+          "saved_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+          "differs_from_baseline": false
+        },
+        "ListOps": {
+          "input": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/ListOps-lifetimes.rs",
+          "source_sha256": "4a81efb7113f333619be2ef602ea6d8159235ee4ea81976b275949434e6eb6b1",
+          "saved": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-runners/list_lifetimes/Purs_Test_ListOps/src/lib.rs",
+          "saved_sha256": "4a81efb7113f333619be2ef602ea6d8159235ee4ea81976b275949434e6eb6b1",
+          "differs_from_baseline": true
+        }
+      },
+      "inputs": {
+        "Cargo.lock": "f0940613f7abc868751094afa9536c52e87c9794d40ef107c0b22168c4d73136",
+        "Cargo.toml": "e5b9eab880ca53d37cd51142a7e50a55858ce1a26863bd034cc64ed9eb201985",
+        "Purs_App/Cargo.toml": "8138c04301209f8de3898d36177c5ace3aa6c328c64fb154f08680b40476336b",
+        "Purs_App/src/lib.rs": "cad35084b419b95fd3aa7d624984c3cd35281eab021e4f9358fdc9b974ac2d85",
+        "Purs_Test_ListOps/Cargo.toml": "57692228766706a33aa4cdcdd0f49de4d99b6369b6f1d9b26e54e86f9a33137e",
+        "Purs_Test_ListOps/src/lib.rs": "4a81efb7113f333619be2ef602ea6d8159235ee4ea81976b275949434e6eb6b1",
+        "Purs_Test_RBTree/Cargo.toml": "d86cb37d339c6f9c2f790c4461a87877d79796e770b29398786914bb08d99e2d",
+        "Purs_Test_RBTree/src/lib.rs": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+        "src/main.rs": "8b3c81a59c1b2d00e08e0cd57201e69aa88ef96137a8851e9e078e54f5f9beab"
+      },
+      "lock_sha256": "f0940613f7abc868751094afa9536c52e87c9794d40ef107c0b22168c4d73136",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-binaries/list_lifetimes",
+      "binary_sha256": "9f5079b523640f60c5579cec6e9cdff37be31ebad85ef7112b0c1b32cf8fd068",
+      "log": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-build-list_lifetimes.log"
+    },
+    "list_consuming": {
+      "workspace": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-runners/list_consuming",
+      "replacements": {
+        "RBTree": {
+          "input": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/frozen/Purs_Test_RBTree/src/lib.rs",
+          "source_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+          "saved": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-runners/list_consuming/Purs_Test_RBTree/src/lib.rs",
+          "saved_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+          "differs_from_baseline": false
+        },
+        "ListOps": {
+          "input": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/ListOps-consuming.rs",
+          "source_sha256": "4f3811fb4f1ab936aa8e7560c1643e083943954a62417d2c29cfe78e549b955e",
+          "saved": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-runners/list_consuming/Purs_Test_ListOps/src/lib.rs",
+          "saved_sha256": "4f3811fb4f1ab936aa8e7560c1643e083943954a62417d2c29cfe78e549b955e",
+          "differs_from_baseline": true
+        }
+      },
+      "inputs": {
+        "Cargo.lock": "f0940613f7abc868751094afa9536c52e87c9794d40ef107c0b22168c4d73136",
+        "Cargo.toml": "0b0830e3bdb39aab6d77b0dc14463b47f0ea1599f6803bdcaeef0e637ccf93e5",
+        "Purs_App/Cargo.toml": "089a61308efd758a8ebefc7eaf96deb3941c216e44e1b2cf224e09597eee1c16",
+        "Purs_App/src/lib.rs": "cad35084b419b95fd3aa7d624984c3cd35281eab021e4f9358fdc9b974ac2d85",
+        "Purs_Test_ListOps/Cargo.toml": "57692228766706a33aa4cdcdd0f49de4d99b6369b6f1d9b26e54e86f9a33137e",
+        "Purs_Test_ListOps/src/lib.rs": "4f3811fb4f1ab936aa8e7560c1643e083943954a62417d2c29cfe78e549b955e",
+        "Purs_Test_RBTree/Cargo.toml": "d86cb37d339c6f9c2f790c4461a87877d79796e770b29398786914bb08d99e2d",
+        "Purs_Test_RBTree/src/lib.rs": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+        "src/main.rs": "8b3c81a59c1b2d00e08e0cd57201e69aa88ef96137a8851e9e078e54f5f9beab"
+      },
+      "lock_sha256": "f0940613f7abc868751094afa9536c52e87c9794d40ef107c0b22168c4d73136",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-binaries/list_consuming",
+      "binary_sha256": "3ae52871cc09505470f2310a538297fb87d08b885eb117369a50410dad6ccfea",
+      "log": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-build-list_consuming.log"
+    },
+    "list_reuse": {
+      "workspace": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-runners/list_reuse",
+      "replacements": {
+        "RBTree": {
+          "input": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/frozen/Purs_Test_RBTree/src/lib.rs",
+          "source_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+          "saved": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-runners/list_reuse/Purs_Test_RBTree/src/lib.rs",
+          "saved_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+          "differs_from_baseline": false
+        },
+        "ListOps": {
+          "input": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/ListOps-reuse.rs",
+          "source_sha256": "2b7c34d62e7af1f133a2ac33a3f04e542dee9685fd6a042fddc56cdb4b07b0c3",
+          "saved": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-runners/list_reuse/Purs_Test_ListOps/src/lib.rs",
+          "saved_sha256": "2b7c34d62e7af1f133a2ac33a3f04e542dee9685fd6a042fddc56cdb4b07b0c3",
+          "differs_from_baseline": true
+        }
+      },
+      "inputs": {
+        "Cargo.lock": "f0940613f7abc868751094afa9536c52e87c9794d40ef107c0b22168c4d73136",
+        "Cargo.toml": "636502d3da053a44dcefd557b41e46b149aa1404eefd0e099a3ee26f596f0fb5",
+        "Purs_App/Cargo.toml": "4524d5ea7af929513de226ef35a672662f3de120bf044bed8e84fcff6a692c5a",
+        "Purs_App/src/lib.rs": "cad35084b419b95fd3aa7d624984c3cd35281eab021e4f9358fdc9b974ac2d85",
+        "Purs_Test_ListOps/Cargo.toml": "57692228766706a33aa4cdcdd0f49de4d99b6369b6f1d9b26e54e86f9a33137e",
+        "Purs_Test_ListOps/src/lib.rs": "2b7c34d62e7af1f133a2ac33a3f04e542dee9685fd6a042fddc56cdb4b07b0c3",
+        "Purs_Test_RBTree/Cargo.toml": "d86cb37d339c6f9c2f790c4461a87877d79796e770b29398786914bb08d99e2d",
+        "Purs_Test_RBTree/src/lib.rs": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+        "src/main.rs": "8b3c81a59c1b2d00e08e0cd57201e69aa88ef96137a8851e9e078e54f5f9beab"
+      },
+      "lock_sha256": "f0940613f7abc868751094afa9536c52e87c9794d40ef107c0b22168c4d73136",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-binaries/list_reuse",
+      "binary_sha256": "28fb75125a6f93fd9c26a0560bda6268eeee0cf12d129c97835c7d4e8a429bd5",
+      "log": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/full-build-list_reuse.log"
+    }
+  },
+  "method": "Disjoint root/App/RBTree/ListOps sources, frozen shared dependencies, four packages cleaned before each offline locked O1/debug=true/mimalloc build."
+}

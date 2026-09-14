@@ -1,0 +1,67 @@
+{
+  "dependencies": {
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libpurust_core-51ba3e9846829d42.rlib": "0753ec2998de289689ff71b5426ab407d33f63211868b999e6505606fcd9d8a1",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libperceus_ptr-05e4e695848f92c2.rlib": "8586805d37acde85eda2d20a247b22d7908bae879b454e0e330327ee9aa29674",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libfancy_regex-3392df1bc38a1e00.rlib": "e6d60fe210ef53c98a5dc1c78c75d4d206d4e7793e276bd0243cf7461ad7547a",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Bench-0bd17ba80afac779.rlib": "e9405f38a65be35b5c2f1dc3e7943a474989b7bcfd39ed5b982fc12db6cc2072",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Control_Applicative-c594b169310272f0.rlib": "f232eaebca073f2fa7e2d185c8a28ee9a839f29be2a3c896de4867d07e8685b6",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Control_Apply-d317e475034136dc.rlib": "796eb2571bf7f4ba4bf059b53d900145739e2c157ec46289f86c5231998cde0d",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Control_Bind-c79ec24d90723a69.rlib": "35f48abfbe0d9997a58684d00dd1792c39085f9d718aaf9d48be78645a73b02e",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Control_Category-2e2c29d4a84da242.rlib": "0fc987baf8103f5b0caec8f0ca64152313a44529aec0d6061aa64c543581539e",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Control_Monad-2b0a87ef70854ec6.rlib": "217093765a660e25498e35ccff31e4c894488b35f34f21ccab72fe5a7f499ce9",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Control_Semigroupoid-ee02857e62bc9285.rlib": "aacbcb4f6c3725de73bb1e7ee82557b001877394dde14ec5b0b4dae565702f95",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_Boolean-fd1f3f09562b052e.rlib": "2438da1dc2f4c215b8edce3175a4b1e6ff7229abfc3e35114c97e158c8b62572",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_CommutativeRing-52b345a7924ae1f7.rlib": "6b9eedeeafc242356cf9e15d2951579ccdc352acd98bb4898da1325793c8972f",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_Eq-0280c060e58ecd62.rlib": "4d91fce4408f3f7cca168dd18770048b497b0e644654cd40cfb9c1d40c435fc8",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_EuclideanRing-b3e41873849aceba.rlib": "2ed208aacbe5eb22fbcbcdbef0ae9731fcd30c94392792f0f2c18ffb425feaa3",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_Function-a9e5e95953f1aca4.rlib": "b909f2c40561c34b7ef6c4790a88d73403a81f6ffe78f1baa7497f3e692751b4",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_Functor-04820e8bf5c2c76c.rlib": "237abd81b314c43bcc7bb3c9bcfa47d0c9159f865bcb4187aea12c208a3ef516",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_HeytingAlgebra-27df47beeef73eec.rlib": "d6ab4760526f61cf8aaebabc7f9879ed8d9f888d98866ba58081a2e122c733c1",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_Monoid-4b864264a8cce79d.rlib": "73fe81aa54b3fa6eb42aa66a45fec12c7699f61dcce0e26ede576c247b6ec15c",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_Ord-9cf15cf80dcce731.rlib": "e684e128727f3058dee2cee865ae12b3f80ed90cc652442cc4ff8b0997a864bf",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_Ordering-44f5ea8cb758a3bc.rlib": "c6336ded3a342feb854f3582d771da1b6747357996ac7fa877242e1cf2282a79",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_Ring-f8a27da4782dda4e.rlib": "9d52c7a7d6d8dc2c6fcec26eb2636d85203bb82ba20dd1ede1ea6a38cb20d931",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_Semigroup-1f380b6569c30919.rlib": "3c9a010710d30fb9f659eec33177b68d1c3214757f48eb7a5bf152a8c108fd84",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_Semiring-fa5255cf87bd45ac.rlib": "b5b3431ef637924863ac407b10372c1f8288eb3f8a49bb3e9cb35e466c27010a",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_Show-b4cf49d2793053e2.rlib": "02c25ce923faf88cecc8766fdfd1bec033a623eb964c7216cbb2c64693718000",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_Symbol-8e1f2e8af67e6933.rlib": "40e686d646d68b9e422bf6335f228ad6bdbdb2c1478c90088e5e3c3fe584b646",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_Unit-9978513d6e50c0f0.rlib": "b8543e8ef5c4879f3b00440544f836f7b224855112a5ee7900eb37ec83301d2a",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Data_Void-4f13be5c883f1b6e.rlib": "75df535b645bab7071ea3cd16c1668de49f4d93f549b06d4976fc9d0d9145f6f",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Effect-90c05c89a475963f.rlib": "eb23c74e38042ac4f6817df8b9cb5e353ca75d9d0906ceb45505311d062cbbf0",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Effect_Console-b789c2119adaa3d1.rlib": "8c82f7d217c2e090d64e8002f5a123f86f4a4951d10e6231a48ab8d3dc68325c",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Record_Unsafe-29cd640ecc6c318c.rlib": "51ce5c71756d0f79a1a94b4073b925f628a929fca71640e10e29ae2172e63aaa",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libPurs_Type_Proxy-6f53d9b8fcb2aef2.rlib": "9bce1b285d918061003bd440c30e57fe3ba36fc4c25d788c655d7144e5ef4731",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/build/cargo-target/release/deps/libmimalloc-f9014d291b3f900c.rlib": "35265d5aa03f70349d3ee166e953fc98aae5b6680c8bc3d97989a17902a88f05"
+  },
+  "profile": "O1, debuginfo=2, mimalloc from complete frozen runner; no counter instrumentation",
+  "harness_sha256": "079e0c4b9c4ba4d53095b72d174647a0217e9e7319209025d2ef4734c8a9135d",
+  "script_sha256": "e3814a3e420e48e2aa4fc75726cfdd59c9c40b7e5ea9ddce99095252687f9708",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "variants": {
+    "baseline": {
+      "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/ListOps-baseline.rs",
+      "source_sha256": "687280582b00e16f9e698a7e14719144ad829819aae34d81e2647fcd6e48ec48",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/build/sharing/sharing-baseline",
+      "binary_sha256": "dd9ba9862069dc71888aff28e520a2ce8f5493124b8877aa6709b9d799e955a5"
+    },
+    "lifetimes": {
+      "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/ListOps-lifetimes.rs",
+      "source_sha256": "4a81efb7113f333619be2ef602ea6d8159235ee4ea81976b275949434e6eb6b1",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/build/sharing/sharing-lifetimes",
+      "binary_sha256": "072e7d2ddd2b2a803d5401f488dbee117ac12c3271ebf0f0eaba8375c76e7556"
+    },
+    "consuming": {
+      "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/ListOps-consuming.rs",
+      "source_sha256": "4f3811fb4f1ab936aa8e7560c1643e083943954a62417d2c29cfe78e549b955e",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/build/sharing/sharing-consuming",
+      "binary_sha256": "8e3aa1c59e03404d540a9f9b212673c364aede8cba4a4c5a4169026cb4de7a6a"
+    },
+    "reuse": {
+      "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/ListOps-reuse.rs",
+      "source_sha256": "2b7c34d62e7af1f133a2ac33a3f04e542dee9685fd6a042fddc56cdb4b07b0c3",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/build/sharing/sharing-reuse",
+      "binary_sha256": "50f783336f8f654584fd0cc448c21df50ba9170a1ae3c9bf3b872caee4b2dbef"
+    }
+  },
+  "timed_scope": "Input construction, owner/Weak setup, filter, borrowed output sum, output/retained owner/Weak destruction. One full warmup batch then seven timed batches per process."
+}

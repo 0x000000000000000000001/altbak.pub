@@ -1,0 +1,50 @@
+--- generated/ListOps-before.rs
++++ scratch/ListOps-consumed.rs
+@@ -139,17 +139,18 @@
+             break /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Branch(...) */if /* OpIsTag Debug: Test_ListOps_Nil -> Other */ matches!((/* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Local(...) */purs_local_2).as_ref(), crate::List::Nil) {
+         /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Local(...) */purs_local_3.clone()
+     } else if /* OpIsTag Debug: Test_ListOps_Cons -> Func */ matches!((/* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Local(...) */purs_local_2).as_ref(), crate::List::Cons(..)) {
+-        if /* Typed bool <- bool : PrimOp(...) */(/* Typed i64 <- i64 : PrimOp(...) */{ let _mod_l: i64 = ({ match (purs_local_2).as_ref() { crate::List::Cons(ref f, ..) => f.clone(), _ => unreachable!() } }).unwrap_int(); let _mod_r: i64 = /* Typed i64 <- i64 : Lit */2; _mod_l.checked_rem_euclid(_mod_r).unwrap_or(0_i64) } == /* Typed i64 <- i64 : Lit */0) {
+-        {
+-        let _tco_temp_0 = /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Accessor(Local(...)) */{ match (purs_local_2).as_ref() { crate::List::Cons(_, ref f, ..) => f.clone(), _ => unreachable!() } };
+-        let _tco_temp_1 = /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : CtorSaturated(...) */std::rc::Rc::new(crate::List::Cons({ match (purs_local_2).as_ref() { crate::List::Cons(ref f, ..) => f.clone(), _ => unreachable!() } }, /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Local(...) */purs_local_3.clone()));
++        let crate::List::Cons(probe_head, probe_tail) = std::rc::Rc::unwrap_or_clone(purs_local_2) else { unreachable!() };
++        if /* Typed bool <- bool : PrimOp(...) */(/* Typed i64 <- i64 : PrimOp(...) */{ let _mod_l: i64 = (probe_head.clone()).unwrap_int(); let _mod_r: i64 = /* Typed i64 <- i64 : Lit */2; _mod_l.checked_rem_euclid(_mod_r).unwrap_or(0_i64) } == /* Typed i64 <- i64 : Lit */0) {
++        {
++        let _tco_temp_0 = /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Accessor(Local(...)) */probe_tail;
++        let _tco_temp_1 = /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : CtorSaturated(...) */std::rc::Rc::new(crate::List::Cons(probe_head, /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Local(...) */purs_local_3.clone()));
+         purs_local_2 = _tco_temp_0;
+         purs_local_3 = _tco_temp_1;
+         continue;
+     }
+     } else {
+         {
+-        let _tco_temp_0 = /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Accessor(Local(...)) */{ match (purs_local_2).as_ref() { crate::List::Cons(_, ref f, ..) => f.clone(), _ => unreachable!() } };
++        let _tco_temp_0 = /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Accessor(Local(...)) */probe_tail;
+         let _tco_temp_1 = /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Local(...) */purs_local_3.clone();
+         purs_local_2 = _tco_temp_0;
+         purs_local_3 = _tco_temp_1;
+@@ -219,17 +220,18 @@
+             break /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Branch(...) */if /* OpIsTag Debug: Test_ListOps_Nil -> Other */ matches!((/* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Local(...) */purs_local_3).as_ref(), crate::List::Nil) {
+         /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Local(...) */purs_local_4.clone()
+     } else if /* OpIsTag Debug: Test_ListOps_Cons -> Func */ matches!((/* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Local(...) */purs_local_3).as_ref(), crate::List::Cons(..)) {
+-        if /* Typed bool <- bool : PrimOp(...) */(/* Typed i64 <- i64 : PrimOp(...) */{ let _mod_l: i64 = ({ match (purs_local_3).as_ref() { crate::List::Cons(ref f, ..) => f.clone(), _ => unreachable!() } }).unwrap_int(); let _mod_r: i64 = /* Typed i64 <- i64 : Lit */2; _mod_l.checked_rem_euclid(_mod_r).unwrap_or(0_i64) } == /* Typed i64 <- i64 : Lit */0) {
+-        {
+-        let _tco_temp_0 = /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Accessor(Local(...)) */{ match (purs_local_3).as_ref() { crate::List::Cons(_, ref f, ..) => f.clone(), _ => unreachable!() } };
+-        let _tco_temp_1 = /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : CtorSaturated(...) */std::rc::Rc::new(crate::List::Cons({ match (purs_local_3).as_ref() { crate::List::Cons(ref f, ..) => f.clone(), _ => unreachable!() } }, /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Local(...) */purs_local_4.clone()));
++        let crate::List::Cons(probe_head, probe_tail) = std::rc::Rc::unwrap_or_clone(purs_local_3) else { unreachable!() };
++        if /* Typed bool <- bool : PrimOp(...) */(/* Typed i64 <- i64 : PrimOp(...) */{ let _mod_l: i64 = (probe_head.clone()).unwrap_int(); let _mod_r: i64 = /* Typed i64 <- i64 : Lit */2; _mod_l.checked_rem_euclid(_mod_r).unwrap_or(0_i64) } == /* Typed i64 <- i64 : Lit */0) {
++        {
++        let _tco_temp_0 = /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Accessor(Local(...)) */probe_tail;
++        let _tco_temp_1 = /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : CtorSaturated(...) */std::rc::Rc::new(crate::List::Cons(probe_head, /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Local(...) */purs_local_4.clone()));
+         purs_local_3 = _tco_temp_0;
+         purs_local_4 = _tco_temp_1;
+         continue;
+     }
+     } else {
+         {
+-        let _tco_temp_0 = /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Accessor(Local(...)) */{ match (purs_local_3).as_ref() { crate::List::Cons(_, ref f, ..) => f.clone(), _ => unreachable!() } };
++        let _tco_temp_0 = /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Accessor(Local(...)) */probe_tail;
+         let _tco_temp_1 = /* Typed std::rc::Rc<crate::List> <- std::rc::Rc<crate::List> : Local(...) */purs_local_4.clone();
+         purs_local_3 = _tco_temp_0;
+         purs_local_4 = _tco_temp_1;

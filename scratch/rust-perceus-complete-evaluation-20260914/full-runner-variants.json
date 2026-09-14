@@ -1,0 +1,12 @@
+{
+  "before": {},
+  "list_lifetimes": {
+    "ListOps": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/ListOps-lifetimes.rs"
+  },
+  "list_consuming": {
+    "ListOps": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/ListOps-consuming.rs"
+  },
+  "list_reuse": {
+    "ListOps": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/ListOps-reuse.rs"
+  }
+}

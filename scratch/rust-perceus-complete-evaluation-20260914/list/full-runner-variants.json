@@ -1,0 +1,14 @@
+{
+  "list-baseline": {
+    "ListOps": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/ListOps-baseline.rs"
+  },
+  "list-lifetimes": {
+    "ListOps": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/ListOps-lifetimes.rs"
+  },
+  "list-consuming": {
+    "ListOps": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/ListOps-consuming.rs"
+  },
+  "list-reuse": {
+    "ListOps": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/list/ListOps-reuse.rs"
+  }
+}

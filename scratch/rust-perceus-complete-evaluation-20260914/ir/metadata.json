@@ -1,0 +1,32 @@
+{
+  "files_sha256": {
+    "prototype.py": "2f0c18ca851e3f40f2e84f4c568c4e8bd82e7b5642d4bd836464554388b389e4",
+    "runtime.rs": "ca8a34d8326de9cfb9c24b06319a4093623c705c591daba5db19a49ed11e9388",
+    "source-ir.json": "a475521ce25e53869674ad1ed174902d0cf142fb562a6b599d257c379a1fd45a",
+    "ir-checks.json": "a7fc6202d3c0c9733e36d14ca0b1f58603c3c571e67af1e8d519b09266e454d3",
+    "naive.ir.json": "0ce24da31f8aec8c28b7d5181cf4c6ce7f82a1c88c28c6f62790673845a55319",
+    "pushdown.ir.json": "e8a2c7428fcc5e138471ddf398ca9274138ef580da906f1ee16ae227d7cfb130",
+    "precise.ir.json": "8a7f91334588305f3adee2097b1d8f308df5848508db403849ca804b444d8806",
+    "fusion.ir.json": "5ea8f12b131bbed97004f6b38cad67e9ae521dcd34ec4678108eae3914fc3126",
+    "specialized_drop.ir.json": "3b2ec75cd7ec614d727b54862ad782c1811e99d14f2518d7b856e10402ea7218",
+    "reuse.ir.json": "bdd5226747c10b75aedc2c8fe19df35366cbc12a8966db7267f61cb96802b734",
+    "retained_fields.ir.json": "3c7b6c8a63ae542cca2d4bbac5619811006ef0a2d66921b298c1c6018e4f83a2",
+    "build/naive.rs": "62f48006c4b3feff1973c3461bdd19f9acc7b46cdfc1dd3ee6ec60f00fb1cb11",
+    "build/pushdown.rs": "bd53ed22502b7fdab29ad30c4082ddc09038cd433621ab5f678474b45113b6b4",
+    "build/precise.rs": "449f083719850add1aedd6d7b9f45899a9b3a55135e3153de1f13e62e809b26c",
+    "build/fusion.rs": "333691e75ceb4647a8db5745ee75a0bfab50504854f4243330ba02b8b2f8a6c9",
+    "build/specialized_drop.rs": "5334642346024f92e6b094de2d38bd11d9f38e6166d9023cd680add7509ae140",
+    "build/reuse.rs": "193db6edcd0197273653b30cc2e1000ae476368dbb4ea61cbbda95de930a86be",
+    "build/retained_fields.rs": "9e664882213d876f11c1babd2d9e9455b463ec662f13450dfcb843e144d16d81",
+    "build/naive-native": "ae3676b8bd0ce958aedbc9997153ad9c8b54d7a2f6ea68d0858c23f5414799e2",
+    "build/pushdown-native": "e7259b4b7d757b7435933d2ef468f76d146ea798f4ba2123abde29c10f840338",
+    "build/precise-native": "abeb12026fee0fc785da0745da59a9e4216ab3388ff1989c181a198374fd18fe",
+    "build/fusion-native": "fd72d910b0ce0722fe9cc93201510717107bf7122d6967d8a463940247f0686a",
+    "build/specialized_drop-native": "91f73a5cf3ffeac7631df21fe50e93c514137fcae53bcadfdf1571e846f4dcfa",
+    "build/reuse-native": "5582d7d223c7eacaee2c7e63c0ace932b20521cf55441e0340aa92d21963c1a3",
+    "build/retained_fields-native": "d2a1f613fffe55b650d09aff1b7e0ab0840079520311f45c22d8fcf4f232f4d4"
+  },
+  "representation": "native Rc; counted wrapper is one word and delegates ownership to native Rc; all 7 stages additionally compiled with --cfg untracked as direct std::rc::Rc",
+  "validation_cases": 1344,
+  "timing_executed_by_this_task": false
+}

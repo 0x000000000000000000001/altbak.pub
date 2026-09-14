@@ -1,0 +1,70 @@
+{
+  "scope": "Synthetic native two-child/two-i64 ADT; same representation and update plan, not compiler-emitted output.",
+  "stages": [
+    "persistent",
+    "reuse_rechecked",
+    "reuse_retained",
+    "fields_retained"
+  ],
+  "scenarios": [
+    "unique",
+    "old-root",
+    "mixed",
+    "diamond",
+    "weak-root",
+    "weak-mixed"
+  ],
+  "dimensions": {
+    "depth": [
+      7,
+      10
+    ],
+    "updates": [
+      128,
+      2048
+    ]
+  },
+  "actions": "Deterministic interleaving: leaf scalar add, two-scalar change on middle-depth node, child permutation on shallower node.",
+  "profile": "Cargo release opt-level=1 debug=true mimalloc, same Cargo.lock for all stages; counters compile only in counts executable.",
+  "source_hashes": {
+    "src/main.rs": "2d41bcdbee38ff9fab7d51b6dfd4245d9790f506cfdc161912b88d1565116674",
+    "Cargo.toml": "a1accbda2c1433d4cf8b14ade2dd1d63d4dda7c44b159736bfa3ccaf2f0aa6ad",
+    "Cargo.lock": "db9daba8801df8419c18e34f96bd545efbb6f10813d95515535ea32acc132f52",
+    "probe.py": "78b43699ccc8446ed701b5d65d20832883452f09f26c5058a4a334cf409521b5"
+  },
+  "binaries": {
+    "plain": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/fbip/build/plain",
+      "sha256": "0db5f5649f29c772a93b9ec8dc84c8d6a99d92a343e9bd74cef7064642ba2cf7",
+      "command": [
+        "cargo",
+        "build",
+        "--release",
+        "--offline",
+        "--locked"
+      ]
+    },
+    "counts": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/fbip/build/counts",
+      "sha256": "f38e728a82bfbea3ddf041604a60f72925f90c419e3f4f0f06517e3946eb6467",
+      "command": [
+        "cargo",
+        "build",
+        "--release",
+        "--offline",
+        "--locked",
+        "--features",
+        "counts"
+      ]
+    }
+  },
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "counter_scope": "Logical Rc cell allocations/payload destructions, Ptr clone/drop, uniqueness tests and payload operations. Empty cells are included. Weak control blocks are not separate allocation counters; all observers are dropped and strong payload expiration is checked.",
+  "timing_scope": "Plan and oracle construction outside timer. Native tree construction, ownership setup, updates, final checksum, all owners/weak observers destruction inside timer. One unmeasured verified warmup then seven samples, plain executable only.",
+  "timings_run": false,
+  "script_progress_update": {
+    "previous_sha256": "bde6172c5de22b86c08739634fac8104cfa1a22132d3c98840f6a1c52f136bd7",
+    "current_sha256": "78b43699ccc8446ed701b5d65d20832883452f09f26c5058a4a334cf409521b5",
+    "change": "Only per-combination flushed progress and timings checkpoint; Rust source and compiled binaries unchanged."
+  }
+}

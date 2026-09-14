@@ -1,0 +1,26 @@
+[
+  {
+    "variant": "baseline",
+    "smoke_passed": true,
+    "cases": 72,
+    "clock_read": false
+  },
+  {
+    "variant": "lifetimes",
+    "smoke_passed": true,
+    "cases": 72,
+    "clock_read": false
+  },
+  {
+    "variant": "consuming",
+    "smoke_passed": true,
+    "cases": 72,
+    "clock_read": false
+  },
+  {
+    "variant": "reuse",
+    "smoke_passed": true,
+    "cases": 72,
+    "clock_read": false
+  }
+]

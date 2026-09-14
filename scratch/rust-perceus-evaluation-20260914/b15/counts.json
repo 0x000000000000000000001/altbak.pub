@@ -1,0 +1,172 @@
+{
+  "method": "Scratch copy of existing one-word native Rc wrapper, extended only with try_unwrap. Operations only, no clocks. Successful consumption=unwrap_unique; failed try_unwrap_shared returns ownership and is not a release. Destruction=drop_last+unwrap_unique. Global balances checked.",
+  "variants": {
+    "before": {
+      "source_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+      "phases": {
+        "checks": {
+          "clone": 35,
+          "drop_last": 20,
+          "drop_shared": 35,
+          "get_mut_unique": 42,
+          "get_mut_weak": 3,
+          "new": 21,
+          "unwrap_unique": 1
+        },
+        "persistent_build": {
+          "clone": 5808,
+          "drop_shared": 2802,
+          "get_mut_shared": 2606,
+          "get_mut_unique": 860,
+          "new": 1504,
+          "unwrap_shared": 1303
+        },
+        "persistent_depth": {
+          "clone": 401,
+          "drop_shared": 401
+        },
+        "persistent_drop": {
+          "drop_last": 1504,
+          "drop_shared": 1703
+        },
+        "unique_build": {
+          "clone": 2283976,
+          "drop_shared": 2183976,
+          "get_mut_unique": 2483932,
+          "new": 100001
+        },
+        "unique_depth_and_drop": {
+          "clone": 200000,
+          "drop_last": 100001,
+          "drop_shared": 300000
+        }
+      },
+      "global_handle_and_payload_balance_passed": true
+    },
+    "borrowed": {
+      "source_sha256": "eed6d02991f8f718ad68f49c17034a5386a950f2f03678aab6f36b1db9e51559",
+      "phases": {
+        "checks": {
+          "clone": 35,
+          "drop_last": 20,
+          "drop_shared": 35,
+          "get_mut_unique": 42,
+          "get_mut_weak": 3,
+          "new": 21,
+          "unwrap_unique": 1
+        },
+        "persistent_build": {
+          "clone": 5808,
+          "drop_shared": 2802,
+          "get_mut_shared": 2606,
+          "get_mut_unique": 860,
+          "new": 1504,
+          "unwrap_shared": 1303
+        },
+        "persistent_depth": {
+          "clone": 1,
+          "drop_shared": 1
+        },
+        "persistent_drop": {
+          "drop_last": 1504,
+          "drop_shared": 1703
+        },
+        "unique_build": {
+          "clone": 2283976,
+          "drop_shared": 2183976,
+          "get_mut_unique": 2483932,
+          "new": 100001
+        },
+        "unique_depth_and_drop": {
+          "drop_last": 100001,
+          "drop_shared": 100000
+        }
+      },
+      "global_handle_and_payload_balance_passed": true
+    },
+    "consuming": {
+      "source_sha256": "a0b1f300badbe189ea1be515fad8d0def0ef0b60ef11497d3eae0978dab60e88",
+      "phases": {
+        "checks": {
+          "clone": 35,
+          "drop_last": 20,
+          "drop_shared": 35,
+          "get_mut_unique": 42,
+          "get_mut_weak": 3,
+          "new": 21,
+          "unwrap_unique": 1
+        },
+        "persistent_build": {
+          "clone": 5808,
+          "drop_shared": 2802,
+          "get_mut_shared": 2606,
+          "get_mut_unique": 860,
+          "new": 1504,
+          "unwrap_shared": 1303
+        },
+        "persistent_depth": {
+          "clone": 401,
+          "unwrap_shared": 401
+        },
+        "persistent_drop": {
+          "drop_last": 1504,
+          "drop_shared": 1703
+        },
+        "unique_build": {
+          "clone": 2283976,
+          "drop_shared": 2183976,
+          "get_mut_unique": 2483932,
+          "new": 100001
+        },
+        "unique_depth_and_drop": {
+          "unwrap_shared": 100000,
+          "unwrap_unique": 100001
+        }
+      },
+      "global_handle_and_payload_balance_passed": true
+    },
+    "hybrid": {
+      "source_sha256": "e43b6b2d5301dad40e5d86c96fcd6460cf1dde20e6d0fe07ef8d0ad7c32fad0b",
+      "phases": {
+        "checks": {
+          "clone": 35,
+          "drop_last": 20,
+          "drop_shared": 35,
+          "get_mut_unique": 42,
+          "get_mut_weak": 3,
+          "new": 21,
+          "unwrap_unique": 1
+        },
+        "persistent_build": {
+          "clone": 5808,
+          "drop_shared": 2802,
+          "get_mut_shared": 2606,
+          "get_mut_unique": 860,
+          "new": 1504,
+          "unwrap_shared": 1303
+        },
+        "persistent_depth": {
+          "clone": 1,
+          "drop_shared": 1,
+          "try_unwrap_shared": 1
+        },
+        "persistent_drop": {
+          "drop_last": 1504,
+          "drop_shared": 1703
+        },
+        "unique_build": {
+          "clone": 2283976,
+          "drop_shared": 2183976,
+          "get_mut_unique": 2483932,
+          "new": 100001
+        },
+        "unique_depth_and_drop": {
+          "drop_shared": 100000,
+          "try_unwrap_shared": 100000,
+          "unwrap_unique": 100001
+        }
+      },
+      "global_handle_and_payload_balance_passed": true
+    }
+  }
+}

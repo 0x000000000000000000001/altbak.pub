@@ -1,0 +1,25 @@
+{
+  "source_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+  "workload": "Build 100000 nodes with generated constructor; 20 depth calls each consume clone of retained root; final drop inside sample; black_box size/count/owner/result.",
+  "profile": "release opt-level=1 debug=true mimalloc; identical harness and Cargo package across three exact kernels",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "cargo_lock_sha256": "92d20c37d00f69c519be6427d83b9fb8d37f8036788d785ea279bd6c52de71a2",
+  "variants": {
+    "before": {
+      "source_sha256": "a548accac8ba723d0cb989dcb6fedf80667bb0d4138256c117a132a924e74f7c",
+      "binary_sha256": "2040a406d6666ae945bab1085d294441e67aa0466aa6327b1ac2e84ba7630a12",
+      "smoke": "100000 nodes, 20 retained-root reads, depth sum 440; final owner released"
+    },
+    "borrowed": {
+      "source_sha256": "5755aa9613ff1ebf69f02456267d3f27bdd0cecc7f37acff87effc6b097a49f8",
+      "binary_sha256": "3108754f13e5649fa869a5f2c36651ce01b562e4d1506d5e9aaeb4e2adb13c6b",
+      "smoke": "100000 nodes, 20 retained-root reads, depth sum 440; final owner released"
+    },
+    "consuming": {
+      "source_sha256": "11d2e1adb435ce324e0c811062ab6fc1653dd923871fc5cb40cbb8fa8d382ba3",
+      "binary_sha256": "421920799e52e85e4fa9554628594c2386b6936dddf35ce7b944b128fbb43a34",
+      "smoke": "100000 nodes, 20 retained-root reads, depth sum 440; final owner released"
+    }
+  },
+  "timings_run": false
+}

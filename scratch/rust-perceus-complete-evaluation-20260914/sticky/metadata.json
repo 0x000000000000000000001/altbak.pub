@@ -1,0 +1,30 @@
+{
+  "runtime_source_sha256": "7e8a3eacf3276a9b13c862c4ce083062aea890534392a150e8a6620824333aa8",
+  "scope": "Same payload, u32 layout, getter/update code and checksummed harness; checked removes only sticky guards and uses checked_add. Forced uses the unmodified saturating runtime with three initial counters manually set to MAX.",
+  "profile": "O1; overflow checks enabled; default System allocator; matches the prior isolated sticky experiment, not the full mimalloc runner.",
+  "binaries": {
+    "normal-plain": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/sticky/build/normal-plain/probe",
+      "sha256": "3b7fe2329fa73fb8e9cf31d493269bae15b045f5082243ea6b3c296caa154c6d"
+    },
+    "normal-counts": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/sticky/build/normal-counts/probe",
+      "sha256": "fafe68f767f5c9d44e6c9f239eed08411963b4fda43ccc53110656a37e6cdf0a"
+    },
+    "checked-plain": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/sticky/build/checked-plain/probe",
+      "sha256": "5aed5af7b1e3304e9b51200ab81cb44741cda6ce8837d59a85a6414af68f7d70"
+    },
+    "checked-counts": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-perceus-complete-evaluation-20260914/sticky/build/checked-counts/probe",
+      "sha256": "fb5abda0412ee973ebbe9af249e7800db1e2b725814491e98585b73af3407162"
+    }
+  },
+  "files": {
+    "harness.rs": "fd0a3bc9c3273940879520647897e95645eaae6908045ea71194dd64f2204281",
+    "build/local.rs": "368c13bc86582a4821f71a37690f25470994908106c965ec84cc3edc43be6795",
+    "build/checked.rs": "763ce74ddbae7fc8dfa2c4d4d087e009d0ea5cff42652da3396d134e31b653d5",
+    "build/records.rs": "14e60387a4ec32b8d907e96f29dbae1925f37efab9fe4158796a8ef442f83485",
+    "build/purust_core.rs": "41090c4e5b1db31ace310227ce5a363c43d3e3180fd45337f7955fa562f156bf"
+  }
+}

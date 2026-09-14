@@ -1,0 +1,134 @@
+{
+  "rounds": 4,
+  "samples_per_process": 7,
+  "summaries": [
+    {
+      "n": 900,
+      "scenario": "unique",
+      "median_process_median_ns_per_operation": {
+        "baseline": 26697.5,
+        "lifetimes": 19126.04,
+        "consuming": 18411.245000000003,
+        "reuse": 14306.455
+      },
+      "delta_percent_from_baseline": {
+        "baseline": 0.0,
+        "lifetimes": -28.360183537784433,
+        "consuming": -31.037569060773475,
+        "reuse": -46.41275400318382
+      }
+    },
+    {
+      "n": 900,
+      "scenario": "root-retained",
+      "median_process_median_ns_per_operation": {
+        "baseline": 25148.129999999997,
+        "lifetimes": 24702.71,
+        "consuming": 27739.165,
+        "reuse": 28086.46
+      },
+      "delta_percent_from_baseline": {
+        "baseline": 0.0,
+        "lifetimes": -1.771185372431261,
+        "consuming": 10.303092118579006,
+        "reuse": 11.684089433289868
+      }
+    },
+    {
+      "n": 900,
+      "scenario": "interior-retained",
+      "median_process_median_ns_per_operation": {
+        "baseline": 24187.085,
+        "lifetimes": 22137.29,
+        "consuming": 23605.83,
+        "reuse": 22295.205
+      },
+      "delta_percent_from_baseline": {
+        "baseline": 0.0,
+        "lifetimes": -8.474750057727077,
+        "consuming": -2.4031626795870453,
+        "reuse": -7.821860302719397
+      }
+    },
+    {
+      "n": 900,
+      "scenario": "weak",
+      "median_process_median_ns_per_operation": {
+        "baseline": 26058.54,
+        "lifetimes": 19566.455,
+        "consuming": 18940.21,
+        "reuse": 15318.75
+      },
+      "delta_percent_from_baseline": {
+        "baseline": 0.0,
+        "lifetimes": -24.913464069744506,
+        "consuming": -27.316687734615986,
+        "reuse": -41.214089507700734
+      }
+    },
+    {
+      "n": 9000,
+      "scenario": "unique",
+      "median_process_median_ns_per_operation": {
+        "baseline": 242631.25,
+        "lifetimes": 205243.8,
+        "consuming": 201916.7,
+        "reuse": 160343.75
+      },
+      "delta_percent_from_baseline": {
+        "baseline": 0.0,
+        "lifetimes": -15.409165142577475,
+        "consuming": -16.78042296695087,
+        "reuse": -33.914633832204224
+      }
+    },
+    {
+      "n": 9000,
+      "scenario": "root-retained",
+      "median_process_median_ns_per_operation": {
+        "baseline": 240824.95,
+        "lifetimes": 244377.1,
+        "consuming": 262135.4,
+        "reuse": 268318.75
+      },
+      "delta_percent_from_baseline": {
+        "baseline": 0.0,
+        "lifetimes": 1.4749925205008951,
+        "consuming": 8.848937786554089,
+        "reuse": 11.416508131736336
+      }
+    },
+    {
+      "n": 9000,
+      "scenario": "interior-retained",
+      "median_process_median_ns_per_operation": {
+        "baseline": 255860.45,
+        "lifetimes": 241987.5,
+        "consuming": 253110.4,
+        "reuse": 245766.65
+      },
+      "delta_percent_from_baseline": {
+        "baseline": 0.0,
+        "lifetimes": -5.422076760984362,
+        "consuming": -1.0748241863875463,
+        "reuse": -3.9450411347279446
+      }
+    },
+    {
+      "n": 9000,
+      "scenario": "weak",
+      "median_process_median_ns_per_operation": {
+        "baseline": 247481.25,
+        "lifetimes": 215756.3,
+        "consuming": 207097.85,
+        "reuse": 166822.9
+      },
+      "delta_percent_from_baseline": {
+        "baseline": 0.0,
+        "lifetimes": -12.81913276258303,
+        "consuming": -16.31776144657423,
+        "reuse": -32.591701391519564
+      }
+    }
+  ]
+}

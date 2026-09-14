@@ -1,0 +1,9 @@
+{
+  "typed_linear_programs_checked": 56,
+  "invalid_ir_rejected": [
+    "use_after_drop",
+    "pointer_in_scalar_field",
+    "leaked_owner",
+    "escaped_reset_token"
+  ]
+}

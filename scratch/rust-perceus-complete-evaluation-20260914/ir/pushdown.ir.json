@@ -1,0 +1,1291 @@
+[
+  {
+    "name": "list_map",
+    "layout": "List",
+    "types": {
+      "n": "ptr",
+      "f0": "i64",
+      "f1": "ptr",
+      "v1": "i64",
+      "v2": "i64",
+      "v3": "ptr",
+      "v4": "ptr",
+      "v5": "ptr",
+      "v6": "ptr",
+      "v7": "ptr"
+    },
+    "entry": {
+      "op": "borrow_match",
+      "input": "n"
+    },
+    "body": {
+      "ops": [
+        {
+          "op": "copy_field",
+          "out": "f0",
+          "args": [
+            "n"
+          ],
+          "index": 0
+        },
+        {
+          "op": "dup_field",
+          "out": "f1",
+          "args": [
+            "n"
+          ],
+          "index": 1
+        },
+        {
+          "op": "const",
+          "out": "v1",
+          "value": 1
+        },
+        {
+          "op": "add",
+          "out": "v2",
+          "args": [
+            "f0",
+            "v1"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v3",
+          "args": [
+            "f1"
+          ]
+        },
+        {
+          "op": "call",
+          "out": "v4",
+          "args": [
+            "v3"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v5",
+          "args": [
+            "v4"
+          ]
+        },
+        {
+          "op": "build",
+          "out": "v6",
+          "args": [
+            "v2",
+            "v5"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v7",
+          "args": [
+            "v6"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "v6"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "v4"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "f1"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "n"
+          ]
+        }
+      ],
+      "term": {
+        "op": "return",
+        "value": "v7"
+      }
+    },
+    "source_body": [
+      "build",
+      [
+        "add",
+        [
+          "field",
+          0
+        ],
+        [
+          "int",
+          1
+        ]
+      ],
+      [
+        "call",
+        [
+          "field",
+          1
+        ]
+      ]
+    ],
+    "empty": {
+      "op": "new_empty"
+    }
+  },
+  {
+    "name": "list_filter",
+    "layout": "List",
+    "types": {
+      "n": "ptr",
+      "f0": "i64",
+      "f1": "ptr",
+      "v1": "bool",
+      "v2": "ptr",
+      "v3": "ptr",
+      "v4": "ptr",
+      "v5": "ptr",
+      "v6": "ptr",
+      "v7": "ptr",
+      "v8": "ptr",
+      "v9": "ptr"
+    },
+    "entry": {
+      "op": "borrow_match",
+      "input": "n"
+    },
+    "body": {
+      "ops": [
+        {
+          "op": "copy_field",
+          "out": "f0",
+          "args": [
+            "n"
+          ],
+          "index": 0
+        },
+        {
+          "op": "even",
+          "out": "v1",
+          "args": [
+            "f0"
+          ]
+        }
+      ],
+      "term": {
+        "op": "if",
+        "test": "v1",
+        "yes": {
+          "ops": [
+            {
+              "op": "dup_field",
+              "out": "f1",
+              "args": [
+                "n"
+              ],
+              "index": 1
+            },
+            {
+              "op": "dup",
+              "out": "v2",
+              "args": [
+                "f1"
+              ]
+            },
+            {
+              "op": "call",
+              "out": "v3",
+              "args": [
+                "v2"
+              ]
+            },
+            {
+              "op": "dup",
+              "out": "v4",
+              "args": [
+                "v3"
+              ]
+            },
+            {
+              "op": "build",
+              "out": "v5",
+              "args": [
+                "f0",
+                "v4"
+              ]
+            },
+            {
+              "op": "dup",
+              "out": "v6",
+              "args": [
+                "v5"
+              ]
+            },
+            {
+              "op": "drop",
+              "args": [
+                "v5"
+              ]
+            },
+            {
+              "op": "drop",
+              "args": [
+                "v3"
+              ]
+            },
+            {
+              "op": "drop",
+              "args": [
+                "f1"
+              ]
+            },
+            {
+              "op": "drop",
+              "args": [
+                "n"
+              ]
+            }
+          ],
+          "term": {
+            "op": "return",
+            "value": "v6"
+          }
+        },
+        "no": {
+          "ops": [
+            {
+              "op": "dup_field",
+              "out": "f1",
+              "args": [
+                "n"
+              ],
+              "index": 1
+            },
+            {
+              "op": "dup",
+              "out": "v7",
+              "args": [
+                "f1"
+              ]
+            },
+            {
+              "op": "call",
+              "out": "v8",
+              "args": [
+                "v7"
+              ]
+            },
+            {
+              "op": "dup",
+              "out": "v9",
+              "args": [
+                "v8"
+              ]
+            },
+            {
+              "op": "drop",
+              "args": [
+                "v8"
+              ]
+            },
+            {
+              "op": "drop",
+              "args": [
+                "f1"
+              ]
+            },
+            {
+              "op": "drop",
+              "args": [
+                "n"
+              ]
+            }
+          ],
+          "term": {
+            "op": "return",
+            "value": "v9"
+          }
+        }
+      }
+    },
+    "source_body": [
+      "if",
+      [
+        "even",
+        [
+          "field",
+          0
+        ]
+      ],
+      [
+        "build",
+        [
+          "field",
+          0
+        ],
+        [
+          "call",
+          [
+            "field",
+            1
+          ]
+        ]
+      ],
+      [
+        "call",
+        [
+          "field",
+          1
+        ]
+      ]
+    ],
+    "empty": {
+      "op": "new_empty"
+    }
+  },
+  {
+    "name": "tree_map",
+    "layout": "Tree",
+    "types": {
+      "n": "ptr",
+      "f0": "ptr",
+      "f1": "i64",
+      "f2": "ptr",
+      "v1": "ptr",
+      "v2": "ptr",
+      "v3": "i64",
+      "v4": "i64",
+      "v5": "ptr",
+      "v6": "ptr",
+      "v7": "ptr",
+      "v8": "ptr",
+      "v9": "ptr",
+      "v10": "ptr"
+    },
+    "entry": {
+      "op": "borrow_match",
+      "input": "n"
+    },
+    "body": {
+      "ops": [
+        {
+          "op": "dup_field",
+          "out": "f0",
+          "args": [
+            "n"
+          ],
+          "index": 0
+        },
+        {
+          "op": "copy_field",
+          "out": "f1",
+          "args": [
+            "n"
+          ],
+          "index": 1
+        },
+        {
+          "op": "dup_field",
+          "out": "f2",
+          "args": [
+            "n"
+          ],
+          "index": 2
+        },
+        {
+          "op": "dup",
+          "out": "v1",
+          "args": [
+            "f0"
+          ]
+        },
+        {
+          "op": "call",
+          "out": "v2",
+          "args": [
+            "v1"
+          ]
+        },
+        {
+          "op": "const",
+          "out": "v3",
+          "value": 1
+        },
+        {
+          "op": "add",
+          "out": "v4",
+          "args": [
+            "f1",
+            "v3"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v5",
+          "args": [
+            "f2"
+          ]
+        },
+        {
+          "op": "call",
+          "out": "v6",
+          "args": [
+            "v5"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v7",
+          "args": [
+            "v2"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v8",
+          "args": [
+            "v6"
+          ]
+        },
+        {
+          "op": "build",
+          "out": "v9",
+          "args": [
+            "v7",
+            "v4",
+            "v8"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v10",
+          "args": [
+            "v9"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "v9"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "v6"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "v2"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "f2"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "f0"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "n"
+          ]
+        }
+      ],
+      "term": {
+        "op": "return",
+        "value": "v10"
+      }
+    },
+    "source_body": [
+      "build",
+      [
+        "call",
+        [
+          "field",
+          0
+        ]
+      ],
+      [
+        "add",
+        [
+          "field",
+          1
+        ],
+        [
+          "int",
+          1
+        ]
+      ],
+      [
+        "call",
+        [
+          "field",
+          2
+        ]
+      ]
+    ],
+    "empty": {
+      "op": "new_empty"
+    }
+  },
+  {
+    "name": "tree_update",
+    "layout": "Tree",
+    "types": {
+      "n": "ptr",
+      "f0": "ptr",
+      "f1": "i64",
+      "f2": "ptr",
+      "v1": "i64",
+      "v2": "i64",
+      "v3": "ptr",
+      "v4": "ptr",
+      "v5": "ptr",
+      "v6": "ptr"
+    },
+    "entry": {
+      "op": "borrow_match",
+      "input": "n"
+    },
+    "body": {
+      "ops": [
+        {
+          "op": "dup_field",
+          "out": "f0",
+          "args": [
+            "n"
+          ],
+          "index": 0
+        },
+        {
+          "op": "copy_field",
+          "out": "f1",
+          "args": [
+            "n"
+          ],
+          "index": 1
+        },
+        {
+          "op": "dup_field",
+          "out": "f2",
+          "args": [
+            "n"
+          ],
+          "index": 2
+        },
+        {
+          "op": "const",
+          "out": "v1",
+          "value": 1
+        },
+        {
+          "op": "add",
+          "out": "v2",
+          "args": [
+            "f1",
+            "v1"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v3",
+          "args": [
+            "f0"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v4",
+          "args": [
+            "f2"
+          ]
+        },
+        {
+          "op": "build",
+          "out": "v5",
+          "args": [
+            "v3",
+            "v2",
+            "v4"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v6",
+          "args": [
+            "v5"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "v5"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "f2"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "f0"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "n"
+          ]
+        }
+      ],
+      "term": {
+        "op": "return",
+        "value": "v6"
+      }
+    },
+    "source_body": [
+      "build",
+      [
+        "field",
+        0
+      ],
+      [
+        "add",
+        [
+          "field",
+          1
+        ],
+        [
+          "int",
+          1
+        ]
+      ],
+      [
+        "field",
+        2
+      ]
+    ],
+    "empty": {
+      "op": "new_empty"
+    }
+  },
+  {
+    "name": "tree_choose",
+    "layout": "Tree",
+    "types": {
+      "n": "ptr",
+      "f0": "ptr",
+      "f1": "i64",
+      "f2": "ptr",
+      "v1": "bool",
+      "v2": "ptr",
+      "v3": "ptr"
+    },
+    "entry": {
+      "op": "borrow_match",
+      "input": "n"
+    },
+    "body": {
+      "ops": [
+        {
+          "op": "copy_field",
+          "out": "f1",
+          "args": [
+            "n"
+          ],
+          "index": 1
+        },
+        {
+          "op": "even",
+          "out": "v1",
+          "args": [
+            "f1"
+          ]
+        }
+      ],
+      "term": {
+        "op": "if",
+        "test": "v1",
+        "yes": {
+          "ops": [
+            {
+              "op": "dup_field",
+              "out": "f0",
+              "args": [
+                "n"
+              ],
+              "index": 0
+            },
+            {
+              "op": "dup",
+              "out": "v2",
+              "args": [
+                "f0"
+              ]
+            },
+            {
+              "op": "drop",
+              "args": [
+                "f0"
+              ]
+            },
+            {
+              "op": "drop",
+              "args": [
+                "n"
+              ]
+            }
+          ],
+          "term": {
+            "op": "return",
+            "value": "v2"
+          }
+        },
+        "no": {
+          "ops": [
+            {
+              "op": "dup_field",
+              "out": "f2",
+              "args": [
+                "n"
+              ],
+              "index": 2
+            },
+            {
+              "op": "dup",
+              "out": "v3",
+              "args": [
+                "f2"
+              ]
+            },
+            {
+              "op": "drop",
+              "args": [
+                "f2"
+              ]
+            },
+            {
+              "op": "drop",
+              "args": [
+                "n"
+              ]
+            }
+          ],
+          "term": {
+            "op": "return",
+            "value": "v3"
+          }
+        }
+      }
+    },
+    "source_body": [
+      "if",
+      [
+        "even",
+        [
+          "field",
+          1
+        ]
+      ],
+      [
+        "field",
+        0
+      ],
+      [
+        "field",
+        2
+      ]
+    ],
+    "empty": {
+      "op": "new_empty"
+    }
+  },
+  {
+    "name": "treealt_map",
+    "layout": "TreeAlt",
+    "types": {
+      "n": "ptr",
+      "f0": "i64",
+      "f1": "ptr",
+      "f2": "ptr",
+      "v1": "i64",
+      "v2": "i64",
+      "v3": "ptr",
+      "v4": "ptr",
+      "v5": "ptr",
+      "v6": "ptr",
+      "v7": "ptr",
+      "v8": "ptr",
+      "v9": "ptr",
+      "v10": "ptr"
+    },
+    "entry": {
+      "op": "borrow_match",
+      "input": "n"
+    },
+    "body": {
+      "ops": [
+        {
+          "op": "copy_field",
+          "out": "f0",
+          "args": [
+            "n"
+          ],
+          "index": 0
+        },
+        {
+          "op": "dup_field",
+          "out": "f1",
+          "args": [
+            "n"
+          ],
+          "index": 1
+        },
+        {
+          "op": "dup_field",
+          "out": "f2",
+          "args": [
+            "n"
+          ],
+          "index": 2
+        },
+        {
+          "op": "const",
+          "out": "v1",
+          "value": 1
+        },
+        {
+          "op": "add",
+          "out": "v2",
+          "args": [
+            "f0",
+            "v1"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v3",
+          "args": [
+            "f1"
+          ]
+        },
+        {
+          "op": "call",
+          "out": "v4",
+          "args": [
+            "v3"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v5",
+          "args": [
+            "f2"
+          ]
+        },
+        {
+          "op": "call",
+          "out": "v6",
+          "args": [
+            "v5"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v7",
+          "args": [
+            "v4"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v8",
+          "args": [
+            "v6"
+          ]
+        },
+        {
+          "op": "build",
+          "out": "v9",
+          "args": [
+            "v2",
+            "v7",
+            "v8"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v10",
+          "args": [
+            "v9"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "v9"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "v6"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "v4"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "f2"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "f1"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "n"
+          ]
+        }
+      ],
+      "term": {
+        "op": "return",
+        "value": "v10"
+      }
+    },
+    "source_body": [
+      "build",
+      [
+        "add",
+        [
+          "field",
+          0
+        ],
+        [
+          "int",
+          1
+        ]
+      ],
+      [
+        "call",
+        [
+          "field",
+          1
+        ]
+      ],
+      [
+        "call",
+        [
+          "field",
+          2
+        ]
+      ]
+    ],
+    "empty": {
+      "op": "new_empty"
+    }
+  },
+  {
+    "name": "treealt_update",
+    "layout": "TreeAlt",
+    "types": {
+      "n": "ptr",
+      "f0": "i64",
+      "f1": "ptr",
+      "f2": "ptr",
+      "v1": "i64",
+      "v2": "i64",
+      "v3": "ptr",
+      "v4": "ptr",
+      "v5": "ptr",
+      "v6": "ptr"
+    },
+    "entry": {
+      "op": "borrow_match",
+      "input": "n"
+    },
+    "body": {
+      "ops": [
+        {
+          "op": "copy_field",
+          "out": "f0",
+          "args": [
+            "n"
+          ],
+          "index": 0
+        },
+        {
+          "op": "dup_field",
+          "out": "f1",
+          "args": [
+            "n"
+          ],
+          "index": 1
+        },
+        {
+          "op": "dup_field",
+          "out": "f2",
+          "args": [
+            "n"
+          ],
+          "index": 2
+        },
+        {
+          "op": "const",
+          "out": "v1",
+          "value": 1
+        },
+        {
+          "op": "add",
+          "out": "v2",
+          "args": [
+            "f0",
+            "v1"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v3",
+          "args": [
+            "f1"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v4",
+          "args": [
+            "f2"
+          ]
+        },
+        {
+          "op": "build",
+          "out": "v5",
+          "args": [
+            "v2",
+            "v3",
+            "v4"
+          ]
+        },
+        {
+          "op": "dup",
+          "out": "v6",
+          "args": [
+            "v5"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "v5"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "f2"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "f1"
+          ]
+        },
+        {
+          "op": "drop",
+          "args": [
+            "n"
+          ]
+        }
+      ],
+      "term": {
+        "op": "return",
+        "value": "v6"
+      }
+    },
+    "source_body": [
+      "build",
+      [
+        "add",
+        [
+          "field",
+          0
+        ],
+        [
+          "int",
+          1
+        ]
+      ],
+      [
+        "field",
+        1
+      ],
+      [
+        "field",
+        2
+      ]
+    ],
+    "empty": {
+      "op": "new_empty"
+    }
+  },
+  {
+    "name": "treealt_choose",
+    "layout": "TreeAlt",
+    "types": {
+      "n": "ptr",
+      "f0": "i64",
+      "f1": "ptr",
+      "f2": "ptr",
+      "v1": "bool",
+      "v2": "ptr",
+      "v3": "ptr"
+    },
+    "entry": {
+      "op": "borrow_match",
+      "input": "n"
+    },
+    "body": {
+      "ops": [
+        {
+          "op": "copy_field",
+          "out": "f0",
+          "args": [
+            "n"
+          ],
+          "index": 0
+        },
+        {
+          "op": "even",
+          "out": "v1",
+          "args": [
+            "f0"
+          ]
+        }
+      ],
+      "term": {
+        "op": "if",
+        "test": "v1",
+        "yes": {
+          "ops": [
+            {
+              "op": "dup_field",
+              "out": "f1",
+              "args": [
+                "n"
+              ],
+              "index": 1
+            },
+            {
+              "op": "dup",
+              "out": "v2",
+              "args": [
+                "f1"
+              ]
+            },
+            {
+              "op": "drop",
+              "args": [
+                "f1"
+              ]
+            },
+            {
+              "op": "drop",
+              "args": [
+                "n"
+              ]
+            }
+          ],
+          "term": {
+            "op": "return",
+            "value": "v2"
+          }
+        },
+        "no": {
+          "ops": [
+            {
+              "op": "dup_field",
+              "out": "f2",
+              "args": [
+                "n"
+              ],
+              "index": 2
+            },
+            {
+              "op": "dup",
+              "out": "v3",
+              "args": [
+                "f2"
+              ]
+            },
+            {
+              "op": "drop",
+              "args": [
+                "f2"
+              ]
+            },
+            {
+              "op": "drop",
+              "args": [
+                "n"
+              ]
+            }
+          ],
+          "term": {
+            "op": "return",
+            "value": "v3"
+          }
+        }
+      }
+    },
+    "source_body": [
+      "if",
+      [
+        "even",
+        [
+          "field",
+          0
+        ]
+      ],
+      [
+        "field",
+        1
+      ],
+      [
+        "field",
+        2
+      ]
+    ],
+    "empty": {
+      "op": "new_empty"
+    }
+  }
+]
