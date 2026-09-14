@@ -47,6 +47,7 @@ ln -s run/bak/rust/spago.rust.yaml spago.yaml
 touch run/bak/rust/spago.lock && ln -s run/bak/rust/spago.lock spago.lock
 
 ENTRY_POINT="App"
+BACKEND_ARGS=()
 
 if [ "$MODE" == "test" ]; then
   ENTRY_POINT="AppX"
@@ -63,6 +64,8 @@ EOF
   trap "rm -f src/AppX.purs" EXIT
 elif [ "$MODE" == "x" ]; then
   ENTRY_POINT="AppX"
+  # The extended suite uses Aff, whose Rust runtime requires atomic ownership.
+  BACKEND_ARGS+=(--threaded)
   cp -r srx/Test/* src/Test/
   cp srx/AppX.purs src/
   trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/Test/Parallelism.purs src/AppX.purs" EXIT
@@ -85,7 +88,7 @@ spago build
 # Generate Rust code
 LOG_DIR="$PWD/run/bak/rust/logs"
 mkdir -p "$LOG_DIR"
-if ! ../purust/purust/bin/purust --main "$ENTRY_POINT" --source output --out output/purust_output > "$LOG_DIR/purust.log" 2> "$LOG_DIR/purust_trace.log"; then
+if ! ../purust/purust/bin/purust --main "$ENTRY_POINT" --source output --out output/purust_output "${BACKEND_ARGS[@]}" > "$LOG_DIR/purust.log" 2> "$LOG_DIR/purust_trace.log"; then
     cat "$LOG_DIR/purust_trace.log" >&2
     echo "PURUST FAILED (logs: $LOG_DIR)" >&2
     exit 1

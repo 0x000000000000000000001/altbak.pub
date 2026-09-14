@@ -1,0 +1,39 @@
+{
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-rotation-fields-20260914/build/generated/Purs_Test_RBTree/src/lib.rs",
+  "source_sha256": "33ae6022e29f228a26e5d55a15edab26ac2d34ee17e0bc302b60918cc81fc7fb",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "profile": "O1/debug=true/mimalloc; isolated generated kernel; construction, depth and destruction included",
+  "baseline_readme": {
+    "RBTree_ms": 11.631,
+    "suite_ms": 12.56,
+    "native_RBTree_ms": 36.07,
+    "native_suite_ms": 36.13
+  },
+  "variants": {
+    "before": {
+      "source_sha256": "b72ece37329f09a45d4cb5f1c757d3bef2d5680dbd8da884b44d905e510aca38",
+      "binary_sha256": "cbf384d650d2ee5a7512e03aa40e5ae571b5afd77f8d21c6e4ff0bd55f01b8e1"
+    },
+    "rebuild": {
+      "source_sha256": "10afd698b270a5f458ac0b0aecfb800be0de3868a8a9b7c0420bdebd54d05134",
+      "binary_sha256": "1ef24ba54cd8d015f46a020e9f74e85615d66a3102f408f3fa2da16f78c766ab"
+    },
+    "fields": {
+      "source_sha256": "9482f66876661a425d5e2e682d1ac66647776ded40c1ae61e0a593f5171b0b58",
+      "binary_sha256": "460e36ba3271afa1fc9e8479f7ddb8019018407513d39aec59ffabd06c5becbd"
+    }
+  },
+  "backend_revision": "2f9bafbd1c77cf91231a8bb665f6024747a71394",
+  "input_generation": {
+    "command": "purust/purust/bin/purust --main App --source altbak.pub/run/bak/rust/output --out /tmp/rust-audit-20260914/generated",
+    "notes": "Generated during the preceding audit, then copied without changes to build/generated. RBTree PureScript source last changed 2026-08-29."
+  },
+  "scripts_sha256": {
+    "probe.py": "c8f1eb896aa12621572fb12c01cde18526fb0b6aa595e547f163f96c39307ee8",
+    "rotation.rs": "8468bc579fe8696a1d52efa0482aeb1863eb44d4072e31946067bca3193f4c3c",
+    "rebuild.rs": "8a4ef6f975462c0dc3b3522e7c30ae05bf948df5cdda537b972a0cf4fe1defab",
+    "validation-extra.rs": "ded82332706d511a08b806a8aa837239e27239844d0efe3e6b81ee4165a75bdb",
+    "runner.py": "e7b6416f72eda6664c6068b49055f00b1a4d62014e18bf020f0951191c40289b"
+  },
+  "cargo_lock_sha256": "ab0b7eb2ff0d3badb7b6e51dc896863a0392ead82559108e44db940c18b1c1f8"
+}

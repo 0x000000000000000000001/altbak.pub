@@ -1,0 +1,58 @@
+{
+  "profile": "Original generated release O1/debug=true/mimalloc; one shared dependency cache; explicit clean of RBTree/App/root for each variant",
+  "source_directory": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-rotation-fields-20260914/build/generated",
+  "generated_inputs": {
+    "file_count": 606,
+    "sha256": "2d2570d66ba3a74c74b9c85a1770b35ae6aae5b42e21feb2c7d80cd3fe501671"
+  },
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "cargo": "cargo 1.96.0 (30a34c682 2026-05-25)",
+  "lock_sha256": "8be7342ad3f4374550aad7bbfb506bd1435aa911f3e4702804744f8c6cd32362",
+  "allocator_packages_identical_to_probe": [
+    {
+      "name": "cc",
+      "version": "1.4.5",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "005ec2760ca554fae18df7a11195552ec576cd665632a881bc011d5bb2fd4d80"
+    },
+    {
+      "name": "find-msvc-tools",
+      "version": "0.1.12",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "3e0f1c7c3a72c66fd80abe965175f7523475c0489a87d3ff9d6e8c87d87a9d2d"
+    },
+    {
+      "name": "libmimalloc-sys",
+      "version": "0.1.49",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "6a45a52f43e1c16f667ccfe4dd8c85b7f7c204fd5e3bf46c5b0db9a5c3c0b8e9"
+    },
+    {
+      "name": "mimalloc",
+      "version": "0.1.52",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "2d4139bb28d14ad1facf21d5eb8825051b326e172d216b39f6d31df53cc97862"
+    },
+    {
+      "name": "shlex",
+      "version": "2.0.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba"
+    }
+  ],
+  "variants": {
+    "before": {
+      "binary_sha256": "a59d88f4c5d8b0b2e001e898ff920536d90d1a795cf606780ad07e67d4fa1edd",
+      "source_sha256": "33ae6022e29f228a26e5d55a15edab26ac2d34ee17e0bc302b60918cc81fc7fb"
+    },
+    "rebuild": {
+      "binary_sha256": "e4c6716558fc9710f58b12c95bb0da289c826ec63548560806bb0113cc21073f",
+      "source_sha256": "c61f5769b2a5a6f8d49d364d6b8a50b525ffa1c08949a62a2a8ad417ef836442"
+    },
+    "fields": {
+      "binary_sha256": "fe7ae6b1c2efcbb043b21630c51182f302f25874bab0524b417b77b1f89710bb",
+      "source_sha256": "0584113cfe233df43e393f1ef3936bb02149d01b15f074749989fd9b30d3f3c2"
+    }
+  },
+  "runners_executed": false
+}

@@ -1,0 +1,142 @@
+{
+  "before": {
+    "unique_build": {
+      "take": 299934,
+      "rebuild_helper": 299934,
+      "prototype_rotations": 0,
+      "rebuild_direct": 0
+    },
+    "phases": {
+      "checks": {
+        "clone": 37,
+        "drop_last": 20,
+        "drop_shared": 37,
+        "get_mut_unique": 45,
+        "get_mut_weak": 3,
+        "new": 21,
+        "unwrap_unique": 1
+      },
+      "persistent_build": {
+        "clone": 5808,
+        "drop_shared": 2802,
+        "get_mut_shared": 2606,
+        "get_mut_unique": 860,
+        "new": 1504,
+        "unwrap_shared": 1303
+      },
+      "persistent_depth": {
+        "clone": 401,
+        "drop_shared": 401
+      },
+      "persistent_drop": {
+        "drop_last": 1504,
+        "drop_shared": 1703
+      },
+      "unique_build": {
+        "clone": 2483932,
+        "drop_shared": 2383932,
+        "get_mut_unique": 2783866,
+        "new": 100001
+      },
+      "unique_depth_and_drop": {
+        "clone": 200000,
+        "drop_last": 100001,
+        "drop_shared": 300000
+      }
+    }
+  },
+  "rebuild": {
+    "unique_build": {
+      "take": 299934,
+      "rebuild_helper": 0,
+      "prototype_rotations": 99978,
+      "rebuild_direct": 299934
+    },
+    "phases": {
+      "checks": {
+        "clone": 35,
+        "drop_last": 20,
+        "drop_shared": 35,
+        "get_mut_shared": 3,
+        "get_mut_unique": 43,
+        "get_mut_weak": 3,
+        "new": 21,
+        "unwrap_unique": 1
+      },
+      "persistent_build": {
+        "clone": 5808,
+        "drop_shared": 2802,
+        "get_mut_shared": 2606,
+        "get_mut_unique": 860,
+        "new": 1504,
+        "unwrap_shared": 1303
+      },
+      "persistent_depth": {
+        "clone": 401,
+        "drop_shared": 401
+      },
+      "persistent_drop": {
+        "drop_last": 1504,
+        "drop_shared": 1703
+      },
+      "unique_build": {
+        "clone": 2283976,
+        "drop_shared": 2183976,
+        "get_mut_unique": 2483932,
+        "new": 100001
+      },
+      "unique_depth_and_drop": {
+        "clone": 200000,
+        "drop_last": 100001,
+        "drop_shared": 300000
+      }
+    }
+  },
+  "fields": {
+    "unique_build": {
+      "take": 0,
+      "rebuild_helper": 0,
+      "prototype_rotations": 99978,
+      "rebuild_direct": 0
+    },
+    "phases": {
+      "checks": {
+        "clone": 35,
+        "drop_last": 20,
+        "drop_shared": 35,
+        "get_mut_shared": 3,
+        "get_mut_unique": 43,
+        "get_mut_weak": 3,
+        "new": 21,
+        "unwrap_unique": 1
+      },
+      "persistent_build": {
+        "clone": 5808,
+        "drop_shared": 2802,
+        "get_mut_shared": 2606,
+        "get_mut_unique": 860,
+        "new": 1504,
+        "unwrap_shared": 1303
+      },
+      "persistent_depth": {
+        "clone": 401,
+        "drop_shared": 401
+      },
+      "persistent_drop": {
+        "drop_last": 1504,
+        "drop_shared": 1703
+      },
+      "unique_build": {
+        "clone": 2283976,
+        "drop_shared": 2183976,
+        "get_mut_unique": 2483932,
+        "new": 100001
+      },
+      "unique_depth_and_drop": {
+        "clone": 200000,
+        "drop_last": 100001,
+        "drop_shared": 300000
+      }
+    }
+  }
+}

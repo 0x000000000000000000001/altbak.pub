@@ -6,7 +6,8 @@ import Effect (Effect)
 import Effect.Console (log)
 import Effect.Class (liftEffect)
 import Effect.Aff (launchAff_)
-import Bench (formatNumber, runBenchAff, runBenchSync)
+import Bench (formatNumber, runBenchSync)
+import Bench.Aff (runBenchAff)
 import Test.AffOperations as AffOperations
 import Test.FileOps as FileOps
 import Test.STArray as STArray
