@@ -1,0 +1,6 @@
+Build directory: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/erl/output-runs/ffi-gwba105a
+[purs] purs compile --codegen corefn … (50 source arguments)
+[purerl] purerl
+[erlc] erlc -o beams output/AppFFI/appFFI@ps.erl … (82 source arguments)
+Artifact: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/erl/output-runs/ffi-gwba105a
+Command: erl -noshell -pa beams -eval (appFFI@ps:main())(),halt().

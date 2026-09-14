@@ -1,7 +1,7 @@
 <?php
 
 $benchNow = function() {
-    return microtime(true) * 1000000.0;
+    return hrtime(true) / 1000.0;
 };
 
 $opaque = function($a) {

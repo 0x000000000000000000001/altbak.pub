@@ -1,0 +1,119 @@
+--- before
++++ after
+@@ -76,6 +76,17 @@
+ })
+ 	})
+ 	return cache_Test_LazyEvaluation_defer__3873826587
++}
++
++var cache_Test_LazyEvaluation_buildThunks__gopurs_strict_thunk_0 gopurs_runtime.Value
++var once_Test_LazyEvaluation_buildThunks__gopurs_strict_thunk_0 sync.Once
++func Get_Test_LazyEvaluation_buildThunks__gopurs_strict_thunk_0() gopurs_runtime.Value {
++	once_Test_LazyEvaluation_buildThunks__gopurs_strict_thunk_0.Do(func() {
++		cache_Test_LazyEvaluation_buildThunks__gopurs_strict_thunk_0 = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
++return gopurs_runtime.Int(Call_Test_LazyEvaluation_buildThunks__gopurs_strict_thunk_0(v_0_box.IntVal, v1_1_box.IntVal))
++})
++	})
++	return cache_Test_LazyEvaluation_buildThunks__gopurs_strict_thunk_0
+ }
+ 
+ var cache_Test_LazyEvaluation_buildThunks gopurs_runtime.Value
+@@ -158,15 +169,15 @@
+ }
+ }
+ 
+-func Call_Test_LazyEvaluation_buildThunks(v_0_loop int64, v1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+-buildThunks:
+-for {
+-if false { continue buildThunks }
++func Call_Test_LazyEvaluation_buildThunks__gopurs_strict_thunk_0(v_0_loop int64, v1_1_loop int64) int64 {
++buildThunks__gopurs_strict_thunk_0:
++for {
++if false { continue buildThunks__gopurs_strict_thunk_0 }
+ var v_0 int64 = v_0_loop
+ _ = v_0
+-var v1_1 gopurs_runtime.Value = v1_1_loop
++var v1_1 int64 = v1_1_loop
+ _ = v1_1
+-var __t0 gopurs_runtime.Value
++var __t0 int64
+ {
+ if (v_0) == (int64(0)) {
+ __t0 = v1_1
+@@ -177,26 +188,24 @@
+ }
+ {
+ v_0_loop = (v_0) - (int64(1))
+-v1_1_loop = gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+-return gopurs_runtime.Int((gopurs_runtime.Apply(v1_1, Get_Data_Unit_unit()).IntVal) + (int64(1)))
+-})
+-continue buildThunks
+-__t0 = func() gopurs_runtime.Value { panic("unreachable") }()
++v1_1_loop = (v1_1) + (int64(1))
++continue buildThunks__gopurs_strict_thunk_0
++__t0 = func() int64 { panic("unreachable") }()
+ }
+ end_branch_0:
+ return __t0
+ }
+ }
+ 
+-func Call_Test_LazyEvaluation_runManyTimes(v_0_loop int64, v1_1_loop int64) int64 {
+-runManyTimes:
+-for {
+-if false { continue runManyTimes }
++func Call_Test_LazyEvaluation_buildThunks(v_0_loop int64, v1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
++buildThunks:
++for {
++if false { continue buildThunks }
+ var v_0 int64 = v_0_loop
+ _ = v_0
+-var v1_1 int64 = v1_1_loop
++var v1_1 gopurs_runtime.Value = v1_1_loop
+ _ = v1_1
+-var __t0 int64
++var __t0 gopurs_runtime.Value
+ {
+ if (v_0) == (int64(0)) {
+ __t0 = v1_1
+@@ -207,9 +216,37 @@
+ }
+ {
+ v_0_loop = (v_0) - (int64(1))
+-v1_1_loop = (v1_1) + (gopurs_runtime.Apply(Call_Test_LazyEvaluation_buildThunks(int64(1000), gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+-return gopurs_runtime.Int(int64(0))
+-})), Get_Data_Unit_unit()).IntVal)
++v1_1_loop = gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
++return gopurs_runtime.Int((gopurs_runtime.Apply(v1_1, Get_Data_Unit_unit()).IntVal) + (int64(1)))
++})
++continue buildThunks
++__t0 = func() gopurs_runtime.Value { panic("unreachable") }()
++}
++end_branch_0:
++return __t0
++}
++}
++
++func Call_Test_LazyEvaluation_runManyTimes(v_0_loop int64, v1_1_loop int64) int64 {
++runManyTimes:
++for {
++if false { continue runManyTimes }
++var v_0 int64 = v_0_loop
++_ = v_0
++var v1_1 int64 = v1_1_loop
++_ = v1_1
++var __t0 int64
++{
++if (v_0) == (int64(0)) {
++__t0 = v1_1
++goto end_branch_0
++} else {
++
++}
++}
++{
++v_0_loop = (v_0) - (int64(1))
++v1_1_loop = (v1_1) + (Call_Test_LazyEvaluation_buildThunks__gopurs_strict_thunk_0(int64(1000), int64(0)))
+ continue runManyTimes
+ __t0 = func() int64 { panic("unreachable") }()
+ }

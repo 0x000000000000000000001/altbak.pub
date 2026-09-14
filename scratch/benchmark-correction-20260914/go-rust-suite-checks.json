@@ -1,0 +1,220 @@
+{
+  "purpose": "Correctness smoke only; timings are not a performance comparison",
+  "all_passed": true,
+  "suites": [
+    {
+      "language": "go",
+      "mode": "pure",
+      "validated_values": [
+        "7",
+        "55",
+        "202950",
+        "100000",
+        "20000",
+        "125",
+        "100000",
+        "21536",
+        "22",
+        "10000000",
+        "1200",
+        "1000000",
+        "202950",
+        "5"
+      ],
+      "profile": {
+        "GOGC": "800",
+        "pgo": false,
+        "GOFLAGS": "",
+        "GOEXPERIMENT": ""
+      },
+      "toolchain": "go version go1.27.0 darwin/arm64",
+      "binary_sha256": "289d695a16d5a7b4df004923fb883020445fd1dd35a70d7ba890d996e8cd4491",
+      "run_only_command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/bin/go/run",
+        "--run-only",
+        "--build-dir",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/pure"
+      ],
+      "manifest": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/pure/manifest.json",
+      "raw_log": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/pure/results.log"
+    },
+    {
+      "language": "go",
+      "mode": "ffi",
+      "validated_values": [
+        "7",
+        "55",
+        "202950",
+        "100000",
+        "20000",
+        "125",
+        "100000",
+        "21536",
+        "22",
+        "10000000",
+        "1200",
+        "1000000",
+        "202950",
+        "5"
+      ],
+      "profile": {
+        "GOGC": "800",
+        "pgo": false,
+        "GOFLAGS": "",
+        "GOEXPERIMENT": ""
+      },
+      "toolchain": "go version go1.27.0 darwin/arm64",
+      "binary_sha256": "df340aaab933ae02711462c7cd355c94eedc9e97043bcebfd11a0639cf7f8a2c",
+      "run_only_command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/bin/go/run",
+        "--ffi",
+        "--run-only",
+        "--build-dir",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/ffi"
+      ],
+      "manifest": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/ffi/manifest.json",
+      "raw_log": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/ffi/results.log"
+    },
+    {
+      "language": "go",
+      "mode": "fficc",
+      "validated_values": [
+        "7",
+        "55",
+        "202950",
+        "100000",
+        "20000",
+        "125",
+        "100000",
+        "21536",
+        "22",
+        "10000000",
+        "1200",
+        "1000000",
+        "202950",
+        "5"
+      ],
+      "profile": {
+        "GOGC": "800",
+        "pgo": false,
+        "GOFLAGS": "",
+        "GOEXPERIMENT": ""
+      },
+      "toolchain": "go version go1.27.0 darwin/arm64",
+      "binary_sha256": "fed56660c8cd2b2be105f22d6f4b4a3a3062ec347342952e14070a2e2e23f0df",
+      "run_only_command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/bin/go/run",
+        "--fficc",
+        "--run-only",
+        "--build-dir",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/fficc"
+      ],
+      "manifest": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/fficc/manifest.json",
+      "raw_log": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/fficc/results.log"
+    },
+    {
+      "language": "rust",
+      "mode": "pure",
+      "validated_values": [
+        "7",
+        "55",
+        "202950",
+        "100000",
+        "20000",
+        "125",
+        "100000",
+        "21536",
+        "22",
+        "10000000",
+        "1200",
+        "1000000",
+        "202950",
+        "5"
+      ],
+      "profile": {
+        "CARGO_PROFILE_RELEASE_DEBUG": "false",
+        "CARGO_PROFILE_RELEASE_OPT_LEVEL": "3"
+      },
+      "toolchain": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+      "binary_sha256": "fbe7182d2cd3b10e373798dbc6e2d26aa76019dcd3c162b449c4b90ad588efce",
+      "run_only_command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/bin/rust/run",
+        "--run-only",
+        "--build-dir",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/rust/pure"
+      ],
+      "manifest": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/rust/pure/manifest.json",
+      "raw_log": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/rust/pure/results.log"
+    },
+    {
+      "language": "rust",
+      "mode": "ffi",
+      "validated_values": [
+        "7",
+        "55",
+        "202950",
+        "100000",
+        "20000",
+        "125",
+        "100000",
+        "21536",
+        "22",
+        "10000000",
+        "1200",
+        "1000000",
+        "202950",
+        "5"
+      ],
+      "profile": {
+        "CARGO_PROFILE_RELEASE_DEBUG": "false",
+        "CARGO_PROFILE_RELEASE_OPT_LEVEL": "3"
+      },
+      "toolchain": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+      "binary_sha256": "feed3eff89a6611ed0290189e4c08ff18ad9011dd18fd76ed7f78713b66bfc89",
+      "run_only_command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/bin/rust/run",
+        "--ffi",
+        "--run-only",
+        "--build-dir",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/rust/ffi"
+      ],
+      "manifest": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/rust/ffi/manifest.json",
+      "raw_log": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/rust/ffi/results.log"
+    },
+    {
+      "language": "rust",
+      "mode": "fficc",
+      "validated_values": [
+        "7",
+        "55",
+        "202950",
+        "100000",
+        "20000",
+        "125",
+        "100000",
+        "21536",
+        "22",
+        "10000000",
+        "1200",
+        "1000000",
+        "202950",
+        "5"
+      ],
+      "profile": {
+        "CARGO_PROFILE_RELEASE_DEBUG": "false",
+        "CARGO_PROFILE_RELEASE_OPT_LEVEL": "3"
+      },
+      "toolchain": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+      "binary_sha256": "2c5cd151fcb56de37fa557b1a517deb2e14d810e9999183b788316afedafb375",
+      "run_only_command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/bin/rust/run",
+        "--fficc",
+        "--run-only",
+        "--build-dir",
+        "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/rust/fficc"
+      ],
+      "manifest": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/rust/fficc/manifest.json",
+      "raw_log": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/rust/fficc/results.log"
+    }
+  ]
+}

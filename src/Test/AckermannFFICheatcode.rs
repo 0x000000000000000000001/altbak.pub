@@ -8,5 +8,5 @@ pub fn Test_AckermannFFICheatcode_runAckermannFFICheatcode(limit: i64) -> i64 {
             ack(m - 1, ack(m, n - 1))
         }
     }
-    ack(3, 4)
+    ack(limit, 4)
 }

@@ -1,0 +1,30 @@
+go: mode=ffi, profile={"GOEXPERIMENT": "", "GOFLAGS": "", "GOGC": "800", "pgo": false}
+Built /private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/tmpi62yvu6p/project/work/benchmark; manifest /private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/tmpi62yvu6p/project/work/manifest.json
+go: mode=ffi, profile={"GOEXPERIMENT": "", "GOFLAGS": "", "GOGC": "800", "pgo": false}
+go: mode=fficc, profile={"GOEXPERIMENT": "", "GOFLAGS": "", "GOGC": "800", "pgo": false}
+go: mode=ffi, profile={"GOEXPERIMENT": "", "GOFLAGS": "", "GOGC": "800", "pgo": false}
+.usage: driver.py [-h] [--ffi | --fficc | --test TEST | --x]
+                 [--expected EXPECTED] [--build-only | --run-only] [-c]
+                 [--pgo] [--pgo-profile PGO_PROFILE] [--build-dir BUILD_DIR]
+                 {go,rust}
+driver.py: error: argument --fficc: not allowed with argument --ffi
+usage: driver.py [-h] [--ffi | --fficc | --test TEST | --x]
+                 [--expected EXPECTED] [--build-only | --run-only] [-c]
+                 [--pgo] [--pgo-profile PGO_PROFILE] [--build-dir BUILD_DIR]
+                 {go,rust}
+driver.py: error: invalid --test module
+usage: driver.py [-h] [--ffi | --fficc | --test TEST | --x]
+                 [--expected EXPECTED] [--build-only | --run-only] [-c]
+                 [--pgo] [--pgo-profile PGO_PROFILE] [--build-dir BUILD_DIR]
+                 {go,rust}
+driver.py: error: PGO options are Go-only
+usage: driver.py [-h] [--ffi | --fficc | --test TEST | --x]
+                 [--expected EXPECTED] [--build-only | --run-only] [-c]
+                 [--pgo] [--pgo-profile PGO_PROFILE] [--build-dir BUILD_DIR]
+                 {go,rust}
+driver.py: error: --build-only --pgo requires --pgo-profile; training executes the benchmark
+....
+----------------------------------------------------------------------
+Ran 5 tests in 0.027s
+
+OK

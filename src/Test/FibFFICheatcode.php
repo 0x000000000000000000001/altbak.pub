@@ -1,10 +1,11 @@
 <?php
-$exports['runFibFFICheatcode'] = function($limit) {
-    function fib($n) {
-        if ($n <= 0) return 0;
-        if ($n === 1) return 1;
-        return fib($n - 1) + fib($n - 2);
+class FibonacciNative {
+    public static function evaluate($n) {
+        if ($n <= 1) return $n;
+        return self::evaluate($n - 1) + self::evaluate($n - 2);
     }
-    return fib((int)$limit);
+}
+$exports['runFibFFICheatcode'] = function($limit) {
+    return FibonacciNative::evaluate((int)$limit);
 };
 return $exports;

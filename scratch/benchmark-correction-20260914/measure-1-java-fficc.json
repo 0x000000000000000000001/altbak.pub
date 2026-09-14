@@ -1,0 +1,63 @@
+{
+  "mode": "fficc",
+  "labels": [
+    "AST Evaluation FFICheatcode:",
+    "Fibonacci FFICheatcode:",
+    "List Processing FFICheatcode (900 elements):",
+    "Tail Call Optimization FFICheatcode (100k calls):",
+    "Deep Record Updates FFICheatcode (10k iterations):",
+    "Ackermann FFICheatcode (3, 4):",
+    "Church Numerals FFICheatcode (100k Closure Applications):",
+    "Prime Sieve FFICheatcode (sum primes up to 500):",
+    "Red-Black Tree FFICheatcode (100k Worst-Case Insertions):",
+    "Polymorphism FFICheatcode (10M Type Class Dict Lookups):",
+    "State Monad FFICheatcode (1.2k Binds, 60 Stack Depth):",
+    "Lazy Evaluation FFICheatcode (1M Thunks Forced, 1k Depth):",
+    "Array Processing FFICheatcode (900 elements):",
+    "RowToList FFICheatcode (Keys Count):"
+  ],
+  "values": [
+    "7",
+    "55",
+    "202950",
+    "100000",
+    "20000",
+    "125",
+    "100000",
+    "21536",
+    "22",
+    "10000000",
+    "1200",
+    "1000000",
+    "202950",
+    "5"
+  ],
+  "times_us": [
+    108.38,
+    4.0,
+    7.83,
+    37.67,
+    27.46,
+    9.13,
+    13.96,
+    9.21,
+    9261.42,
+    2.67,
+    7.46,
+    2.54,
+    8.25,
+    2.33
+  ],
+  "total_ms": 9.5,
+  "sum_displayed_lines_ms": 9.50231,
+  "values_validated": true,
+  "timer_unit": "microseconds",
+  "started_utc": "2026-09-14T22:25:18.590278+00:00",
+  "process_seconds": 0.3208487920000067,
+  "command": [
+    "/Users/0x1/Documents/htdocs/altbak.pub/bin/java/run",
+    "--fficc",
+    "--run-only"
+  ],
+  "key": "java-fficc"
+}

@@ -19,8 +19,31 @@ import Test.LazyEvaluationFFICheatcode as LazyEvaluationFFICheatcode
 import Test.ArrayOpsFFICheatcode as ArrayOpsFFICheatcode
 import Test.RowToListFFICheatcode as RowToListFFICheatcode
 
+warmup :: Effect Unit
+warmup = do
+  void AstTreeFFICheatcode.act
+  void FibFFICheatcode.act
+  void ListOpsFFICheatcode.act
+  void TCOFFICheatcode.act
+  void RecordsFFICheatcode.act
+  void AckermannFFICheatcode.act
+  void ChurchFFICheatcode.act
+  void PrimesFFICheatcode.act
+  void RBTreeFFICheatcode.act
+  void PolymorphismFFICheatcode.act
+  void StateMonadFFICheatcode.act
+  void LazyEvaluationFFICheatcode.act
+  void ArrayOpsFFICheatcode.act
+  void RowToListFFICheatcode.act
+
 main :: Effect Unit
 main = do
+  log "Global warm-up in progress (this may take a moment)...\n"
+  warmup
+  warmup
+  warmup
+  log "Global warm-up complete. Starting benchmarks...\n"
+
   t1 <- runBench AstTreeFFICheatcode.describe AstTreeFFICheatcode.act
   t2 <- runBench FibFFICheatcode.describe FibFFICheatcode.act
   t3 <- runBench ListOpsFFICheatcode.describe ListOpsFFICheatcode.act

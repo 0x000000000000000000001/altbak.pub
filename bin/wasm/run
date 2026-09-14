@@ -6,9 +6,10 @@ WORK="$ROOT/run/bak/wasm"
 BACKEND="${PURS_WASM_ROOT:-$ROOT/../purescript-backend-wasm}"
 CLEAN=0
 TEST_NAME=""
+ACTION=build-run
 
 usage() {
-  echo "Usage: $0 [-c|--clean] [--test NAME]"
+  echo "Usage: $0 [-c|--clean] [--test NAME] [--build-only|--run-only]"
   echo "Runs the core PureScript benchmarks with purs-wasm on Node (Wasm GC)."
   echo "PURS_WASM_ROOT overrides the sibling purescript-backend-wasm checkout."
   echo "PURS_WASM_PURS overrides the standard PureScript compiler executable."
@@ -17,6 +18,9 @@ usage() {
 while [[ $# -gt 0 ]]; do
   case "$1" in
     -c|--clean) CLEAN=1; shift ;;
+    --build-only|--run-only)
+      [[ "$ACTION" == build-run ]] || { echo 'Choose one action.' >&2; exit 2; }
+      ACTION="${1#--}"; shift ;;
     --test)
       if [[ $# -lt 2 ]]; then usage >&2; exit 1; fi
       TEST_NAME="$2"
@@ -27,13 +31,31 @@ while [[ $# -gt 0 ]]; do
       shift 2
       ;;
     --x|--ffi|--fficc)
-      echo "WASM: skipping $1 (only compiled core tests are supported)."
-      exit 0
+      echo "WASM: unsupported $1 (only compiled core tests are supported)." >&2
+      exit 2
       ;;
     -h|--help) usage; exit 0 ;;
     *) echo "Unknown option: $1" >&2; usage >&2; exit 1 ;;
   esac
 done
+
+MODE=pure
+VALIDATE=(--mode pure)
+RESULT_NAME=wasm
+if [[ -n "$TEST_NAME" ]]; then
+  MODE="test-$TEST_NAME"
+  VALIDATE=(--mode test --test "$TEST_NAME")
+  RESULT_NAME="wasm_$TEST_NAME"
+fi
+WORK="$WORK/modes/$MODE"
+if [[ "$ACTION" == run-only ]]; then
+  [[ "$CLEAN" == 0 ]] || { echo '--clean conflicts with --run-only' >&2; exit 2; }
+  [[ -f "$WORK/build.sha256" ]] || { echo 'No validated build; run --build-only first.' >&2; exit 1; }
+  cd "$WORK"
+  shasum -a 256 -c build.sha256 >/dev/null
+  node output-wasm/index.mjs | python3 "$ROOT/bin/benchmark/validate.py" "${VALIDATE[@]}" --output "$WORK/validated.json" | tee "$WORK/run.stdout"
+  exit
+fi
 
 for tool in node spago; do
   command -v "$tool" >/dev/null || { echo "WASM: missing $tool." >&2; exit 1; }
@@ -67,6 +89,7 @@ BACKEND="$(cd "$BACKEND" && pwd)"
 # may point at native package forks or an incompatible compiler version.
 if [[ "$CLEAN" == 1 ]]; then rm -rf "$WORK"; fi
 mkdir -p "$WORK" "$ROOT/var/benchmark"
+rm -f "$WORK/build.sha256"
 mkdir -p "$WORK/bin"
 ln -sf "$PURS_BIN" "$WORK/bin/purs"
 export PATH="$WORK/bin:$PATH"
@@ -110,6 +133,19 @@ fi
 # Reject any silent JS fallback for an algorithm or library operation. Only
 # timing, formatting, logging and the original opaque input barrier may cross.
 node "$ROOT/bin/wasm/check-imports.mjs" output-wasm/index.wasm
+python3 - "$PURS_VERSION" "$BACKEND" <<'PY_MANIFEST'
+import hashlib, json, pathlib, subprocess, sys
+work = pathlib.Path.cwd()
+paths = [p for folder in ('src', 'output-wasm') for p in (work / folder).rglob('*') if p.is_file()]
+manifest = {'purs': sys.argv[1], 'backend': sys.argv[2], 'node': subprocess.check_output(['node', '--version'], text=True).strip(),
+            'sha256': {str(p.relative_to(work)): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}}
+(work / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
+PY_MANIFEST
+find output-wasm -type f -exec shasum -a 256 {} + > build.sha256
+if [[ "$ACTION" == build-only ]]; then
+  echo "Artifact: $WORK"
+  exit
+fi
 echo "=== WASM GC / Node $(node --version) (purs-wasm) ==="
-node output-wasm/index.mjs | tee "$WORK/result.tmp"
+node output-wasm/index.mjs | python3 "$ROOT/bin/benchmark/validate.py" "${VALIDATE[@]}" --output "$WORK/validated.json" | tee "$WORK/result.tmp"
 mv "$WORK/result.tmp" "$ROOT/var/benchmark/${RESULT_NAME}_time.txt"

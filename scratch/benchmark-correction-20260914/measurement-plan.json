@@ -1,0 +1,336 @@
+[
+  {
+    "group": "js",
+    "key": "js-pure",
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/js/run",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/js/output-runs/pure-73iynaml"
+    ]
+  },
+  {
+    "group": "js",
+    "key": "js-ffi",
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/js/run",
+      "--ffi",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/js/output-runs/ffi-focrjqzx"
+    ]
+  },
+  {
+    "group": "js",
+    "key": "js-fficc",
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/js/run",
+      "--fficc",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/js/output-runs/fficc-neyplf72"
+    ]
+  },
+  {
+    "group": "es",
+    "key": "es-pure",
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/es/run",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/es/output-runs/pure-b6ezmw3m"
+    ]
+  },
+  {
+    "group": "go",
+    "key": "go-pure",
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/go/run",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/pure"
+    ]
+  },
+  {
+    "group": "go",
+    "key": "go-ffi",
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/go/run",
+      "--ffi",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/ffi"
+    ]
+  },
+  {
+    "group": "go",
+    "key": "go-fficc",
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/go/run",
+      "--fficc",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/fficc"
+    ]
+  },
+  {
+    "group": "psgo",
+    "key": "psgo-pure",
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/psgo/run",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/psgo/output-runs/pure-1mjy1t1f"
+    ]
+  },
+  {
+    "group": "scm",
+    "key": "scm-pure",
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/scm/run",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/scm/output-runs/pure-65gackhs"
+    ]
+  },
+  {
+    "group": "scm",
+    "key": "scm-ffi",
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/scm/run",
+      "--ffi",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/scm/output-runs/ffi-snzy0a7b"
+    ]
+  },
+  {
+    "group": "scm",
+    "key": "scm-fficc",
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/scm/run",
+      "--fficc",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/scm/output-runs/fficc-191f7jk3"
+    ]
+  },
+  {
+    "group": "erl",
+    "key": "erl-pure",
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/erl/run",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/erl/output-runs/pure-_8jeagxl"
+    ]
+  },
+  {
+    "group": "erl",
+    "key": "erl-ffi",
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/erl/run",
+      "--ffi",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/erl/output-runs/ffi-gwba105a"
+    ]
+  },
+  {
+    "group": "erl",
+    "key": "erl-fficc",
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/erl/run",
+      "--fficc",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/erl/output-runs/fficc-osgoffoo"
+    ]
+  },
+  {
+    "group": "php",
+    "key": "php-pure",
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/php/run",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/php/pure"
+    ]
+  },
+  {
+    "group": "php",
+    "key": "php-ffi",
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/php/run",
+      "--ffi",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/php/ffi"
+    ]
+  },
+  {
+    "group": "php",
+    "key": "php-fficc",
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/php/run",
+      "--fficc",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/php/fficc"
+    ]
+  },
+  {
+    "group": "rust",
+    "key": "rust-pure",
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/rust/run",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/rust/pure"
+    ]
+  },
+  {
+    "group": "rust",
+    "key": "rust-ffi",
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/rust/run",
+      "--ffi",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/rust/ffi"
+    ]
+  },
+  {
+    "group": "rust",
+    "key": "rust-fficc",
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/rust/run",
+      "--fficc",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/rust/fficc"
+    ]
+  },
+  {
+    "group": "cpp",
+    "key": "cpp-pure",
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/cpp/run",
+      "--run-only"
+    ]
+  },
+  {
+    "group": "cpp",
+    "key": "cpp-ffi",
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/cpp/run",
+      "--ffi",
+      "--run-only"
+    ]
+  },
+  {
+    "group": "cpp",
+    "key": "cpp-fficc",
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/cpp/run",
+      "--fficc",
+      "--run-only"
+    ]
+  },
+  {
+    "group": "sharp",
+    "key": "sharp-pure",
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/sharp/run",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/sharp/output-runs/pure-7jfaxsbm"
+    ]
+  },
+  {
+    "group": "sharp",
+    "key": "sharp-ffi",
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/sharp/run",
+      "--ffi",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/sharp/output-runs/ffi-dpmueqyh"
+    ]
+  },
+  {
+    "group": "sharp",
+    "key": "sharp-fficc",
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/sharp/run",
+      "--fficc",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/sharp/output-runs/fficc-o1ly20wz"
+    ]
+  },
+  {
+    "group": "java",
+    "key": "java-pure",
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/java/run",
+      "--run-only"
+    ]
+  },
+  {
+    "group": "java",
+    "key": "java-ffi",
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/java/run",
+      "--ffi",
+      "--run-only"
+    ]
+  },
+  {
+    "group": "java",
+    "key": "java-fficc",
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/java/run",
+      "--fficc",
+      "--run-only"
+    ]
+  },
+  {
+    "group": "wasm",
+    "key": "wasm-pure",
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/wasm/run",
+      "--run-only"
+    ]
+  }
+]

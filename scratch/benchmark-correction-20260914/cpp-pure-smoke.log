@@ -1,0 +1,15 @@
+CPP_RESULT Test.AstTree 7
+CPP_RESULT Test.Fib 55
+CPP_RESULT Test.ListOps 202950
+CPP_RESULT Test.TCO 100000
+CPP_RESULT Test.Records 20000
+CPP_RESULT Test.Ackermann 125
+CPP_RESULT Test.Church 100000
+CPP_RESULT Test.Primes 21536
+CPP_RESULT Test.RBTree 22
+CPP_RESULT Test.Polymorphism 10000000
+CPP_RESULT Test.StateMonad 1200
+CPP_RESULT Test.LazyEvaluation 1000000
+CPP_RESULT Test.ArrayOps 202950
+CPP_RESULT Test.RowToList 5
+C++: 14 expected results verified; /Users/0x1/Documents/htdocs/altbak.pub/run/bak/cpp/modes/pure/smoke-1789423580746921000.json

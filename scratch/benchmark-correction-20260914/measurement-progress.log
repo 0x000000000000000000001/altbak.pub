@@ -1,0 +1,210 @@
+2026-09-14T22:23:17.298727+00:00: round 1/3 js-pure
+Validated 14 results: js-pure, sum 128.48367 ms
+2026-09-14T22:23:20.550094+00:00: round 1/3 js-ffi
+Validated 14 results: js-ffi, sum 48.30790 ms
+2026-09-14T22:23:22.497732+00:00: round 1/3 js-fficc
+Validated 14 results: js-fficc, sum 30.95125 ms
+2026-09-14T22:23:24.147412+00:00: round 1/3 es-pure
+Validated 14 results: es-pure, sum 69.38413 ms
+2026-09-14T22:23:26.450697+00:00: round 1/3 go-pure
+Validated 14 results: go-pure, sum 45.55583 ms
+2026-09-14T22:23:28.269714+00:00: round 1/3 go-ffi
+Validated 14 results: go-ffi, sum 97.58867 ms
+2026-09-14T22:23:30.973261+00:00: round 1/3 go-fficc
+Validated 14 results: go-fficc, sum 11.74634 ms
+2026-09-14T22:23:32.240509+00:00: round 1/3 psgo-pure
+Validated 14 results: psgo-pure, sum 1521.91287 ms
+2026-09-14T22:23:58.101858+00:00: round 1/3 scm-pure
+Validated 14 results: scm-pure, sum 44.58800 ms
+2026-09-14T22:24:00.046483+00:00: round 1/3 scm-ffi
+Validated 14 results: scm-ffi, sum 46.03300 ms
+2026-09-14T22:24:01.948475+00:00: round 1/3 scm-fficc
+Validated 14 results: scm-fficc, sum 19.30800 ms
+2026-09-14T22:24:03.410934+00:00: round 1/3 erl-pure
+Validated 14 results: erl-pure, sum 92.12100 ms
+2026-09-14T22:24:06.187305+00:00: round 1/3 erl-ffi
+Validated 14 results: erl-ffi, sum 76.01100 ms
+2026-09-14T22:24:08.661778+00:00: round 1/3 erl-fficc
+Validated 14 results: erl-fficc, sum 15.57100 ms
+2026-09-14T22:24:10.164005+00:00: round 1/3 php-pure
+Validated 14 results: php-pure, sum 125.13313 ms
+2026-09-14T22:24:13.604454+00:00: round 1/3 php-ffi
+Validated 14 results: php-ffi, sum 1095.54978 ms
+2026-09-14T22:24:32.699883+00:00: round 1/3 php-fficc
+Validated 14 results: php-fficc, sum 214.31696 ms
+2026-09-14T22:24:37.481807+00:00: round 1/3 rust-pure
+Validated 14 results: rust-pure, sum 9.79884 ms
+2026-09-14T22:24:38.719662+00:00: round 1/3 rust-ffi
+Validated 14 results: rust-ffi, sum 61.08265 ms
+2026-09-14T22:24:40.793291+00:00: round 1/3 rust-fficc
+Validated 14 results: rust-fficc, sum 32.05828 ms
+2026-09-14T22:24:42.389476+00:00: round 1/3 cpp-pure
+Validated 14 results: cpp-pure, sum 953.17787 ms
+2026-09-14T22:24:58.887713+00:00: round 1/3 cpp-ffi
+Validated 14 results: cpp-ffi, sum 136.51506 ms
+2026-09-14T22:25:02.174304+00:00: round 1/3 cpp-fficc
+Validated 14 results: cpp-fficc, sum 22.50399 ms
+2026-09-14T22:25:03.615589+00:00: round 1/3 sharp-pure
+Validated 14 results: sharp-pure, sum 350.77538 ms
+2026-09-14T22:25:11.034881+00:00: round 1/3 sharp-ffi
+Validated 14 results: sharp-ffi, sum 78.20175 ms
+2026-09-14T22:25:13.753239+00:00: round 1/3 sharp-fficc
+Validated 14 results: sharp-fficc, sum 13.79073 ms
+2026-09-14T22:25:15.307461+00:00: round 1/3 java-pure
+Validated 14 results: java-pure, sum 18.27984 ms
+2026-09-14T22:25:16.962300+00:00: round 1/3 java-ffi
+Validated 14 results: java-ffi, sum 18.47689 ms
+2026-09-14T22:25:18.590278+00:00: round 1/3 java-fficc
+Validated 14 results: java-fficc, sum 9.50231 ms
+2026-09-14T22:25:19.915222+00:00: round 1/3 wasm-pure
+Validated 14 results: wasm-pure, sum 580.56725 ms
+2026-09-14T22:25:30.494105+00:00: round 2/3 js-ffi
+Validated 14 results: js-ffi, sum 49.78914 ms
+2026-09-14T22:25:32.458287+00:00: round 2/3 js-fficc
+Validated 14 results: js-fficc, sum 32.31943 ms
+2026-09-14T22:25:34.125895+00:00: round 2/3 js-pure
+Validated 14 results: js-pure, sum 131.70882 ms
+2026-09-14T22:25:37.423433+00:00: round 2/3 es-pure
+Validated 14 results: es-pure, sum 70.10854 ms
+2026-09-14T22:25:39.734428+00:00: round 2/3 go-ffi
+Validated 14 results: go-ffi, sum 98.10329 ms
+2026-09-14T22:25:42.418401+00:00: round 2/3 go-fficc
+Validated 14 results: go-fficc, sum 11.50037 ms
+2026-09-14T22:25:43.692415+00:00: round 2/3 go-pure
+Validated 14 results: go-pure, sum 44.84781 ms
+2026-09-14T22:25:45.504024+00:00: round 2/3 psgo-pure
+Validated 14 results: psgo-pure, sum 1514.38918 ms
+2026-09-14T22:26:11.065169+00:00: round 2/3 scm-ffi
+Validated 14 results: scm-ffi, sum 47.62800 ms
+2026-09-14T22:26:12.978104+00:00: round 2/3 scm-fficc
+Validated 14 results: scm-fficc, sum 19.26700 ms
+2026-09-14T22:26:14.428269+00:00: round 2/3 scm-pure
+Validated 14 results: scm-pure, sum 46.47100 ms
+2026-09-14T22:26:16.329777+00:00: round 2/3 erl-ffi
+Validated 14 results: erl-ffi, sum 74.56900 ms
+2026-09-14T22:26:18.771698+00:00: round 2/3 erl-fficc
+Validated 14 results: erl-fficc, sum 15.09900 ms
+2026-09-14T22:26:20.241961+00:00: round 2/3 erl-pure
+Validated 14 results: erl-pure, sum 90.37200 ms
+2026-09-14T22:26:22.956054+00:00: round 2/3 php-ffi
+Validated 14 results: php-ffi, sum 1078.89156 ms
+2026-09-14T22:26:41.668325+00:00: round 2/3 php-fficc
+Validated 14 results: php-fficc, sum 209.42793 ms
+2026-09-14T22:26:46.364473+00:00: round 2/3 php-pure
+Validated 14 results: php-pure, sum 125.45768 ms
+2026-09-14T22:26:49.775112+00:00: round 2/3 rust-ffi
+Validated 14 results: rust-ffi, sum 60.84129 ms
+2026-09-14T22:26:51.847122+00:00: round 2/3 rust-fficc
+Validated 14 results: rust-fficc, sum 31.47755 ms
+2026-09-14T22:26:53.435109+00:00: round 2/3 rust-pure
+Validated 14 results: rust-pure, sum 9.59916 ms
+2026-09-14T22:26:54.680374+00:00: round 2/3 cpp-ffi
+Validated 14 results: cpp-ffi, sum 134.25792 ms
+2026-09-14T22:26:57.928907+00:00: round 2/3 cpp-fficc
+Validated 14 results: cpp-fficc, sum 21.10849 ms
+2026-09-14T22:26:59.362414+00:00: round 2/3 cpp-pure
+Validated 14 results: cpp-pure, sum 943.03245 ms
+2026-09-14T22:27:15.666426+00:00: round 2/3 sharp-ffi
+Validated 14 results: sharp-ffi, sum 68.36661 ms
+2026-09-14T22:27:18.350982+00:00: round 2/3 sharp-fficc
+Validated 14 results: sharp-fficc, sum 13.22276 ms
+2026-09-14T22:27:19.894524+00:00: round 2/3 sharp-pure
+Validated 14 results: sharp-pure, sum 346.58355 ms
+2026-09-14T22:27:27.161230+00:00: round 2/3 java-ffi
+Validated 14 results: java-ffi, sum 24.61155 ms
+2026-09-14T22:27:28.820374+00:00: round 2/3 java-fficc
+Validated 14 results: java-fficc, sum 9.18682 ms
+2026-09-14T22:27:30.134763+00:00: round 2/3 java-pure
+Validated 14 results: java-pure, sum 18.00447 ms
+2026-09-14T22:27:31.742490+00:00: round 2/3 wasm-pure
+Validated 14 results: wasm-pure, sum 580.05731 ms
+2026-09-14T22:27:42.293981+00:00: round 3/3 js-fficc
+Validated 14 results: js-fficc, sum 31.40015 ms
+2026-09-14T22:27:43.945189+00:00: round 3/3 js-pure
+Validated 14 results: js-pure, sum 129.33083 ms
+2026-09-14T22:27:47.214986+00:00: round 3/3 js-ffi
+Validated 14 results: js-ffi, sum 50.86602 ms
+2026-09-14T22:27:49.172056+00:00: round 3/3 es-pure
+Validated 14 results: es-pure, sum 70.95888 ms
+2026-09-14T22:27:51.509338+00:00: round 3/3 go-fficc
+Validated 14 results: go-fficc, sum 11.95195 ms
+2026-09-14T22:27:52.795434+00:00: round 3/3 go-pure
+Validated 14 results: go-pure, sum 44.68367 ms
+2026-09-14T22:27:54.623257+00:00: round 3/3 go-ffi
+Validated 14 results: go-ffi, sum 100.01301 ms
+2026-09-14T22:27:57.324415+00:00: round 3/3 psgo-pure
+Validated 14 results: psgo-pure, sum 1476.14436 ms
+2026-09-14T22:28:22.535277+00:00: round 3/3 scm-fficc
+Validated 14 results: scm-fficc, sum 19.08200 ms
+2026-09-14T22:28:23.976361+00:00: round 3/3 scm-pure
+Validated 14 results: scm-pure, sum 45.61100 ms
+2026-09-14T22:28:25.871020+00:00: round 3/3 scm-ffi
+Validated 14 results: scm-ffi, sum 46.65600 ms
+2026-09-14T22:28:27.789479+00:00: round 3/3 erl-fficc
+Validated 14 results: erl-fficc, sum 15.37400 ms
+2026-09-14T22:28:29.258680+00:00: round 3/3 erl-pure
+Validated 14 results: erl-pure, sum 90.99500 ms
+2026-09-14T22:28:32.689436+00:00: round 3/3 erl-ffi
+Validated 14 results: erl-ffi, sum 74.93200 ms
+2026-09-14T22:28:35.159832+00:00: round 3/3 php-fficc
+Validated 14 results: php-fficc, sum 210.50056 ms
+2026-09-14T22:28:39.853796+00:00: round 3/3 php-pure
+Validated 14 results: php-pure, sum 125.36802 ms
+2026-09-14T22:28:43.297190+00:00: round 3/3 php-ffi
+Validated 14 results: php-ffi, sum 1075.38652 ms
+2026-09-14T22:29:02.239867+00:00: round 3/3 rust-fficc
+Validated 14 results: rust-fficc, sum 31.88797 ms
+2026-09-14T22:29:03.831271+00:00: round 3/3 rust-pure
+Validated 14 results: rust-pure, sum 9.80375 ms
+2026-09-14T22:29:05.077722+00:00: round 3/3 rust-ffi
+Validated 14 results: rust-ffi, sum 63.03414 ms
+2026-09-14T22:29:07.189748+00:00: round 3/3 cpp-fficc
+Validated 14 results: cpp-fficc, sum 20.42059 ms
+2026-09-14T22:29:08.606325+00:00: round 3/3 cpp-pure
+Validated 14 results: cpp-pure, sum 948.67234 ms
+2026-09-14T22:29:25.263608+00:00: round 3/3 cpp-ffi
+Validated 14 results: cpp-ffi, sum 133.29271 ms
+2026-09-14T22:29:28.497742+00:00: round 3/3 sharp-fficc
+Validated 14 results: sharp-fficc, sum 13.35040 ms
+2026-09-14T22:29:30.037857+00:00: round 3/3 sharp-pure
+Validated 14 results: sharp-pure, sum 337.15843 ms
+2026-09-14T22:29:37.090031+00:00: round 3/3 sharp-ffi
+Validated 14 results: sharp-ffi, sum 75.58822 ms
+2026-09-14T22:29:39.756615+00:00: round 3/3 java-fficc
+Validated 14 results: java-fficc, sum 9.18177 ms
+2026-09-14T22:29:41.084672+00:00: round 3/3 java-pure
+Validated 14 results: java-pure, sum 18.01935 ms
+2026-09-14T22:29:42.682431+00:00: round 3/3 java-ffi
+Validated 14 results: java-ffi, sum 17.45802 ms
+2026-09-14T22:29:44.237447+00:00: round 3/3 wasm-pure
+Validated 14 results: wasm-pure, sum 573.44531 ms
+js-pure: 129.09633 ms
+js-ffi: 49.78506 ms
+js-fficc: 31.37723 ms
+es-pure: 70.30771 ms
+go-pure: 44.72962 ms
+go-ffi: 98.03896 ms
+go-fficc: 11.71742 ms
+psgo-pure: 1514.82617 ms
+scm-pure: 45.78100 ms
+scm-ffi: 46.50800 ms
+scm-fficc: 19.19600 ms
+erl-pure: 90.64800 ms
+erl-ffi: 74.89700 ms
+erl-fficc: 15.34400 ms
+php-pure: 125.40876 ms
+php-ffi: 1081.66365 ms
+php-fficc: 211.11160 ms
+rust-pure: 9.77934 ms
+rust-ffi: 61.34592 ms
+rust-fficc: 31.88700 ms
+cpp-pure: 946.32079 ms
+cpp-ffi: 134.53582 ms
+cpp-fficc: 21.10899 ms
+sharp-pure: 346.59092 ms
+sharp-ffi: 75.61891 ms
+sharp-fficc: 13.41190 ms
+java-pure: 18.03261 ms
+java-ffi: 18.11889 ms
+java-fficc: 9.19252 ms
+wasm-pure: 579.83264 ms

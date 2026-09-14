@@ -1,0 +1,5 @@
+Build directory: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/es/output-runs/pure-b6ezmw3m
+[purs] /Users/0x1/Documents/htdocs/altbak.pub/run/bak/js/node_modules/purescript/purs.bin compile --codegen js,corefn … (108 source arguments)
+[es] purs-backend-es build --output-dir es-output
+Artifact: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/es/output-runs/pure-b6ezmw3m
+Command: node --input-type=module -e import { main } from './es-output/App/index.js'; main();

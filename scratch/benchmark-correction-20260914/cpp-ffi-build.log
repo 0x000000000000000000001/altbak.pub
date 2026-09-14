@@ -1,0 +1,9 @@
+C++: corefn.log
+C++: pscpp.log
+C++: imported library namespaces without providers (no stubs; an executed lookup must fail):
+  Control.Bind
+  Data.Symbol
+  Record.Unsafe
+C++: make.log
+Binary: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/cpp/modes/ffi/output/bin/main
+Manifest: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/cpp/modes/ffi/build.json

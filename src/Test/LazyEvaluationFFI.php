@@ -1,23 +1,16 @@
 <?php
-$exports['runLazyEvaluationFFI'] = function($limit) {
-    $n = (int)$limit;
-    
-    $defer = function($f) { return $f; };
-    $force = function($l) { return $l(); };
-    
-    $buildThunks = function($depth, $acc) use (&$buildThunks, $defer, $force) {
-        if ($depth === 0) return $acc;
-        return $buildThunks($depth - 1, $defer(function() use ($force, $acc) {
-            return $force($acc) + 1;
-        }));
-    };
-    
-    $runManyTimes = function($times, $acc) use (&$runManyTimes, $buildThunks, $defer, $force) {
-        if ($times === 0) return $acc;
-        $t = $buildThunks(1000, $defer(function() { return 0; }));
-        return $runManyTimes($times - 1, $acc + $force($t));
-    };
-    
-    return $runManyTimes($n, 0);
+$exports['runLazyEvaluationFFI'] = function($count) {
+    // Tail-recursive construction/repetition become loops; each force still
+    // evaluates the full chain of 1000 closures, as in Test.LazyEvaluation.
+    $result = 0;
+    for ($repetition = 0; $repetition < (int)$count; $repetition++) {
+        $thunk = function() { return 0; };
+        for ($depth = 0; $depth < 1000; $depth++) {
+            $previous = $thunk;
+            $thunk = function() use ($previous) { return $previous() + 1; };
+        }
+        $result += $thunk();
+    }
+    return $result;
 };
 return $exports;

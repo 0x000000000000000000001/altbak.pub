@@ -1,0 +1,4 @@
+=== RUN   TestBenchmarkClockAndOpaque
+--- PASS: TestBenchmarkClockAndOpaque (0.03s)
+PASS
+ok  	command-line-arguments	0.330s

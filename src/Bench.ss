@@ -3,11 +3,12 @@
   (import (except (chezscheme) opaque)
           (prefix (purescm runtime) rt:))
 
+  (define origin (current-time 'time-monotonic))
   (define benchNow
     (lambda ()
-      (let ([t (current-time)])
-        (+ (* (time-second t) 1e6)
-           (/ (time-nanosecond t) 1e3)))))
+      (let ([elapsed (time-difference (current-time 'time-monotonic) origin)])
+        (+ (* (time-second elapsed) 1e6)
+           (/ (time-nanosecond elapsed) 1e3)))))
 
   (define (opaque a)
     (lambda () a))

@@ -1,0 +1,9 @@
+Artifact: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/psgo/output-runs/pure-1mjy1t1f
+spago build
+psgo --no-build
+Retrying psgo go.mod initialization race
+psgo --no-build
+go mod edit -dropreplace github.com/purescript-native/go-ffi
+go mod edit -replace=github.com/i-am-the-slime/go-ffi=./go-ffi
+go mod tidy
+go build -pgo=off -o Main ./main.go

@@ -1,7 +1,8 @@
 export const runArrayOpsFFI = function(limit) {
   let n = Math.floor(limit);
   let arr = [];
-  for (let i = 1; i <= n; i++) {
+  const step = n >= 1 ? 1 : -1;
+  for (let i = 1; i !== n + step; i += step) {
     arr.push(i);
   }
   

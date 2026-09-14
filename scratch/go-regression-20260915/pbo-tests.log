@@ -1,0 +1,165 @@
+$ node test/monomorphize-callsite.mjs /Users/0x1/Documents/htdocs/gopurs/gopurs/output
+✔ call-site ForAll names are instantiated independently of the definition (none dictionary) (3.639875ms)
+✔ call-site ForAll names are instantiated independently of the definition (static dictionary) (0.520416ms)
+✖ call-site ForAll names are instantiated independently of the definition (dynamic dictionary) (0.845542ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 2
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7.324083
+
+✖ failing tests:
+
+test at test/monomorphize-callsite.mjs:34:3
+✖ call-site ForAll names are instantiated independently of the definition (dynamic dictionary) (0.845542ms)
+  AssertionError [ERR_ASSERTION]: the specialized definition has a concrete Int function type
+  + actual - expected
+  
+    Just {
+  +   value0: ConstrainedType {
+  -   value0: Func {
+        value0: [
+  +       Tuple {
+  +         value0: [
+  +           'Fixture',
+  +           'Marker'
+  +         ],
+  +         value1: [
+  +           Int {}
+  +         ]
+  +       }
+  -       Int {}
+        ],
+  +     value1: Func {
+  +       value0: [
+  +         Int {}
+  +       ],
+  +       value1: Int {}
+  +     }
+  -     value1: Int {}
+      }
+    }
+  
+      at TestContext.<anonymous> (file:///Users/0x1/Documents/htdocs/purescript-backend-optimizer-gopurs/test/monomorphize-callsite.mjs:78:12)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [Just],
+    expected: [Just],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+exit_code=1
+
+$ node test/static-args.mjs /Users/0x1/Documents/htdocs/gopurs/gopurs/output
+✔ map keeps a dynamic callback before a static array (1.130417ms)
+✔ eta expansion preserves argument positions, static mask 0 (0.1175ms)
+✔ eta expansion preserves argument positions, static mask 1 (0.076875ms)
+✔ eta expansion preserves argument positions, static mask 2 (0.089291ms)
+✔ eta expansion preserves argument positions, static mask 3 (0.094916ms)
+✔ eta expansion preserves argument positions, static mask 4 (0.059292ms)
+✔ eta expansion preserves argument positions, static mask 5 (0.050209ms)
+✔ eta expansion preserves argument positions, static mask 6 (0.044625ms)
+✔ eta expansion preserves argument positions, static mask 7 (0.080709ms)
+✔ lambda preserves argument positions, static mask 0 (0.107625ms)
+✔ lambda preserves argument positions, static mask 1 (0.058125ms)
+✔ lambda preserves argument positions, static mask 2 (0.046417ms)
+✔ lambda preserves argument positions, static mask 3 (0.042208ms)
+✔ lambda preserves argument positions, static mask 4 (0.036375ms)
+✔ lambda preserves argument positions, static mask 5 (0.033125ms)
+✔ lambda preserves argument positions, static mask 6 (0.035334ms)
+✔ lambda preserves argument positions, static mask 7 (0.056959ms)
+✔ static dictionary removal preserves the normal argument order (0.072834ms)
+✔ dynamic dictionary keeps its position before normal arguments, static mask 0 (0.063666ms)
+✔ dynamic dictionary keeps its position before normal arguments, static mask 1 (0.027459ms)
+✔ dynamic dictionary keeps its position before normal arguments, static mask 2 (0.024916ms)
+✔ dynamic dictionary keeps its position before normal arguments, static mask 3 (0.025792ms)
+✔ eta expansion advances each parameter and application annotation (0.170625ms)
+✔ a recursive specialization removes the static dictionary from its own calls (2.656541ms)
+✔ partial specializations retain dynamic constraints on bindings and call heads (0.589791ms)
+✔ a local recursive specialization keeps the original function in callback scope (1.122416ms)
+✔ local specialization preserves each application and TypeApp result annotation (0.710625ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10.951917
+exit_code=0
+
+$ node test/static-dictionaries.mjs /Users/0x1/Documents/htdocs/gopurs/gopurs/output
+✔ different static dictionaries at the same type retain distinct behavior (4.304959ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6.645167
+exit_code=0
+
+$ node test/static-argument-keys.mjs /Users/0x1/Documents/htdocs/gopurs/gopurs/output
+✔ the same static argument in different positions keeps distinct specializations (4.053459ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6.343667
+exit_code=0
+
+$ node test/typeapp.mjs /Users/0x1/Documents/htdocs/gopurs/gopurs/output
+PASS independent instantiations leave the shared generic AST unchanged
+PASS an inner ForAll shadows the instantiated variable in all its annotations
+PASS successive @b @String arguments cannot capture the caller's free b
+PASS alpha-renaming also updates annotations bound by the remaining quantifier
+PASS fresh binders avoid names occurring only in nested expression annotations
+PASS nested TypeApp arguments specialize while the reference's own ForAll stays generic
+PASS substitution is simultaneous rather than recursively replacing inserted variables
+PASS substitution preserves an inner quantifier that shadows its key
+PASS capture avoidance preserves free variables and renames bound occurrences
+PASS records retain field order, open row tails, arrays, and ADT arguments
+PASS constraints and higher-kinded type applications substitute structurally
+PASS closed row tails and opaque primitive types are preserved
+PASS expressions without an explicit quantifier cannot guess an instantiation
+PASS an unconsumable external TypeApp cannot be erased by the runtime spine fallback
+PASS a TypeApp after a value argument cannot instantiate the initial function scope
+PASS unapplied and partially applied external quantifiers keep the lexical body pending
+PASS InlineNever retains type arguments when it returns an opaque external reference
+PASS curried and uncurried fallback calls preserve residual type applications
+PASS a partially applied constructor keeps its typed head and remaining function type
+PASS staged Tuple applications saturate and retain the result type
+PASS staged Cons applications saturate and retain the result type
+PASS joining staged runtime applications preserves a residual TypeApp head
+PASS imported constructors retain their module through quotation and later saturation
+PASS inlined constructor definitions are evaluated in their defining module
+TypeApp scope regression tests: 24 passed, 0 failed (/Users/0x1/Documents/htdocs/gopurs/gopurs/output)
+exit_code=0
+
+The dynamic-dictionary fixture now expects ConstrainedType on both the definition and the call head; the first fixture expectation incorrectly required a bare Func on the definition. No compiler changes.
+$ node test/monomorphize-callsite.mjs /Users/0x1/Documents/htdocs/gopurs/gopurs/output
+✔ call-site ForAll names are instantiated independently of the definition (none dictionary) (3.536875ms)
+✔ call-site ForAll names are instantiated independently of the definition (static dictionary) (0.584958ms)
+✔ call-site ForAll names are instantiated independently of the definition (dynamic dictionary) (0.370666ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7.317958
+exit_code=0

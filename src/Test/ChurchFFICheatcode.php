@@ -1,6 +1,7 @@
 <?php
 $exports['runChurchFFICheatcode'] = function($limit) {
-    $n = (int)$limit * 10000;
+    $value = (int)$limit;
+    $n = $value * $value * $value * $value * $value;
     $acc = 0;
     for ($i = 0; $i < $n; $i++) {
         $acc++;

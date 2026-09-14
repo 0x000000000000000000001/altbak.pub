@@ -1,0 +1,30 @@
+{
+  "php": {
+    "command": [
+      "/opt/homebrew/bin/php",
+      "--version"
+    ],
+    "output": "PHP 8.5.4 (cli) (built: Mar 10 2026 23:15:23) (NTS)\nCopyright (c) The PHP Group\nBuilt by Homebrew\nZend Engine v4.5.4, Copyright (c) Zend Technologies\n    with Zend OPcache v8.5.4, Copyright (c), by Zend Technologies"
+  },
+  "fsharp": {
+    "command": [
+      "/Users/0x1/.dotnet/dotnet",
+      "--info"
+    ],
+    "output": ".NET SDK:\n Version:           8.0.423\n Commit:            62e3aa2c1f\n Workload version:  8.0.400-manifests.a04bdf47\n MSBuild version:   17.11.48+02bf66295\n\nRuntime Environment:\n OS Name:     Mac OS X\n OS Version:  26.1\n OS Platform: Darwin\n RID:         osx-arm64\n Base Path:   /Users/0x1/.dotnet/sdk/8.0.423/\n\n.NET workloads installed:\nConfigured to use loose manifests when installing new manifests.\nThere are no installed workloads to display.\n\nHost:\n  Version:      8.0.29\n  Architecture: arm64\n  Commit:       18fd75c847\n\n.NET SDKs installed:\n  8.0.423 [/Users/0x1/.dotnet/sdk]\n\n.NET runtimes installed:\n  Microsoft.AspNetCore.App 8.0.29 [/Users/0x1/.dotnet/shared/Microsoft.AspNetCore.App]\n  Microsoft.NETCore.App 8.0.29 [/Users/0x1/.dotnet/shared/Microsoft.NETCore.App]\n\nOther architectures found:\n  None\n\nEnvironment variables:\n  Not set\n\nglobal.json file:\n  Not found\n\nLearn more:\n  https://aka.ms/dotnet/info\n\nDownload .NET:\n  https://aka.ms/dotnet/download"
+  },
+  "java": {
+    "command": [
+      "/opt/homebrew/opt/openjdk/bin/java",
+      "--version"
+    ],
+    "output": "openjdk 26.0.2 2026-07-21\nOpenJDK Runtime Environment Homebrew (build 26.0.2)\nOpenJDK 64-Bit Server VM Homebrew (build 26.0.2, mixed mode, sharing)"
+  },
+  "javac": {
+    "command": [
+      "/opt/homebrew/opt/openjdk/bin/javac",
+      "--version"
+    ],
+    "output": "javac 26.0.2"
+  }
+}

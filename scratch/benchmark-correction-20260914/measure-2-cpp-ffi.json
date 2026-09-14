@@ -1,0 +1,63 @@
+{
+  "mode": "ffi",
+  "labels": [
+    "AST Evaluation FFI:",
+    "Fibonacci FFI:",
+    "List Processing FFI (900 elements):",
+    "Tail Call Optimization FFI (100k calls):",
+    "Deep Record Updates FFI (10k iterations):",
+    "Ackermann FFI (3, 4):",
+    "Church Numerals FFI (100k Closure Applications):",
+    "Prime Sieve FFI (sum primes up to 500):",
+    "Red-Black Tree FFI (100k Worst-Case Insertions):",
+    "Polymorphism FFI (10M Type Class Dict Lookups):",
+    "State Monad FFI (1.2k Binds, 60 Stack Depth):",
+    "Lazy Evaluation FFI (1M Thunks Forced, 1k Depth):",
+    "Array Processing FFI (900 elements):",
+    "RowToList FFI (Keys Count):"
+  ],
+  "values": [
+    "7",
+    "55",
+    "202950",
+    "100000",
+    "20000",
+    "125",
+    "100000",
+    "21536",
+    "22",
+    "10000000",
+    "1200",
+    "1000000",
+    "202950",
+    "5"
+  ],
+  "times_us": [
+    1.42,
+    0.42,
+    33.67,
+    32.0,
+    561.08,
+    17.46,
+    4372.12,
+    255.79,
+    70032.25,
+    27242.62,
+    200.5,
+    31506.88,
+    1.42,
+    0.29
+  ],
+  "total_ms": 134.26,
+  "sum_displayed_lines_ms": 134.25792,
+  "values_validated": true,
+  "timer_unit": "microseconds",
+  "started_utc": "2026-09-14T22:26:54.680374+00:00",
+  "process_seconds": 2.2420462079999766,
+  "command": [
+    "/Users/0x1/Documents/htdocs/altbak.pub/bin/cpp/run",
+    "--ffi",
+    "--run-only"
+  ],
+  "key": "cpp-ffi"
+}

@@ -9,27 +9,24 @@ fn zero() -> Church {
 
 fn succ(n: Church) -> Church {
     Arc::new(move |f| {
-        let f_clone1 = Arc::clone(&f);
-        let f_clone2 = Arc::clone(&f);
-        let n_f = n(f_clone1);
-        Arc::new(move |x| f_clone2(n_f(x)))
+        let n = n.clone();
+        Arc::new(move |x| f(n(f.clone())(x)))
     })
 }
 
 fn add_c(m: Church, n: Church) -> Church {
     Arc::new(move |f| {
-        let f_clone1 = Arc::clone(&f);
-        let f_clone2 = Arc::clone(&f);
-        let m_f = m(f_clone1);
-        let n_f = n(f_clone2);
-        Arc::new(move |x| m_f(n_f(x)))
+        let m = m.clone();
+        let n = n.clone();
+        Arc::new(move |x| m(f.clone())(n(f.clone())(x)))
     })
 }
 
 fn mul_c(m: Church, n: Church) -> Church {
     Arc::new(move |f| {
-        let n_f = n(f);
-        m(n_f)
+        let m = m.clone();
+        let n = n.clone();
+        Arc::new(move |x| m(n(f.clone()))(x))
     })
 }
 

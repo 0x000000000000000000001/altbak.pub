@@ -1,0 +1,62 @@
+{
+  "mode": "pure",
+  "labels": [
+    "AST Evaluation:",
+    "Fibonacci:",
+    "List Processing (900 elements):",
+    "Tail Call Optimization (100k calls):",
+    "Deep Record Updates (10k iterations):",
+    "Ackermann (3, 4):",
+    "Church Numerals (100k Closure Applications):",
+    "Prime Sieve (sum primes up to 500):",
+    "Red-Black Tree (100k Worst-Case Insertions):",
+    "Polymorphism (10M Type Class Dict Lookups):",
+    "State Monad (1.2k Binds, 60 Stack Depth):",
+    "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+    "Array Processing (900 elements):",
+    "RowToList (Keys Count):"
+  ],
+  "values": [
+    "7",
+    "55",
+    "202950",
+    "100000",
+    "20000",
+    "125",
+    "100000",
+    "21536",
+    "22",
+    "10000000",
+    "1200",
+    "1000000",
+    "202950",
+    "5"
+  ],
+  "times_us": [
+    52.58,
+    5.13,
+    149.17,
+    41.83,
+    158.96,
+    20.63,
+    519.54,
+    171.38,
+    16675.67,
+    2.42,
+    66.33,
+    83.0,
+    70.92,
+    1.79
+  ],
+  "total_ms": 18.02,
+  "sum_displayed_lines_ms": 18.01935,
+  "values_validated": true,
+  "timer_unit": "microseconds",
+  "started_utc": "2026-09-14T22:29:41.084672+00:00",
+  "process_seconds": 0.5920137090000139,
+  "command": [
+    "/Users/0x1/Documents/htdocs/altbak.pub/bin/java/run",
+    "--run-only"
+  ],
+  "key": "java-pure"
+}

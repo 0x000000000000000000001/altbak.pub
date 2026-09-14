@@ -1,0 +1,15 @@
+CPP_RESULT Test.AstTreeFFI 7
+CPP_RESULT Test.FibFFI 55
+CPP_RESULT Test.ListOpsFFI 202950
+CPP_RESULT Test.TCOFFI 100000
+CPP_RESULT Test.RecordsFFI 20000
+CPP_RESULT Test.AckermannFFI 125
+CPP_RESULT Test.ChurchFFI 100000
+CPP_RESULT Test.PrimesFFI 21536
+CPP_RESULT Test.RBTreeFFI 22
+CPP_RESULT Test.PolymorphismFFI 10000000
+CPP_RESULT Test.StateMonadFFI 1200
+CPP_RESULT Test.LazyEvaluationFFI 1000000
+CPP_RESULT Test.ArrayOpsFFI 202950
+CPP_RESULT Test.RowToListFFI 5
+C++: 14 expected results verified; /Users/0x1/Documents/htdocs/altbak.pub/run/bak/cpp/modes/ffi/smoke-1789423619267671000.json

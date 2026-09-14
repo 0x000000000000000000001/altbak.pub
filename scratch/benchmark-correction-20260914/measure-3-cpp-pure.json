@@ -1,0 +1,62 @@
+{
+  "mode": "pure",
+  "labels": [
+    "AST Evaluation:",
+    "Fibonacci:",
+    "List Processing (900 elements):",
+    "Tail Call Optimization (100k calls):",
+    "Deep Record Updates (10k iterations):",
+    "Ackermann (3, 4):",
+    "Church Numerals (100k Closure Applications):",
+    "Prime Sieve (sum primes up to 500):",
+    "Red-Black Tree (100k Worst-Case Insertions):",
+    "Polymorphism (10M Type Class Dict Lookups):",
+    "State Monad (1.2k Binds, 60 Stack Depth):",
+    "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+    "Array Processing (900 elements):",
+    "RowToList (Keys Count):"
+  ],
+  "values": [
+    "7",
+    "55",
+    "202950",
+    "100000",
+    "20000",
+    "125",
+    "100000",
+    "21536",
+    "22",
+    "10000000",
+    "1200",
+    "1000000",
+    "202950",
+    "5"
+  ],
+  "times_us": [
+    3.08,
+    0.58,
+    145.79,
+    2823.54,
+    1487.62,
+    203.62,
+    2517.58,
+    959.04,
+    655882.83,
+    247063.83,
+    300.67,
+    37244.25,
+    39.08,
+    0.83
+  ],
+  "total_ms": 948.67,
+  "sum_displayed_lines_ms": 948.6723399999998,
+  "values_validated": true,
+  "timer_unit": "microseconds",
+  "started_utc": "2026-09-14T22:29:08.606325+00:00",
+  "process_seconds": 15.651897125000005,
+  "command": [
+    "/Users/0x1/Documents/htdocs/altbak.pub/bin/cpp/run",
+    "--run-only"
+  ],
+  "key": "cpp-pure"
+}

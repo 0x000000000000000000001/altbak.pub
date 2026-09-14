@@ -1,0 +1,7 @@
+go: mode=pure, profile={"GOEXPERIMENT": "", "GOFLAGS": "", "GOGC": "800", "pgo": false}
+npm run build --silent
+spago build
+/Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs --main App
+go mod tidy
+go build -pgo=off -o /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure/benchmark ./main
+Built /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure/benchmark; manifest /Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure/manifest.json

@@ -1,0 +1,3 @@
+["/opt/homebrew/opt/openjdk/bin/javac", "-d", "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/java/modes/pure/classes", "-sourcepath", "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/java/modes/pure/java_output", "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/java/modes/pure/java_output/MainRun.java"]
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.

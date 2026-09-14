@@ -1,0 +1,9 @@
+{
+  "/Users/0x1/Documents/htdocs/altbak.pub/bin/native/driver.py": "b2ddffc6bb96f5598b8b26f004fe27b6aa41e40ad82f7f6c3b440ca84f9a05a0",
+  "/Users/0x1/Documents/htdocs/altbak.pub/test/native/runner/check.py": "9accb72a9f24fcb5127b63e0e2a91c4c7e204447f7712a236b6a74aa6473c088",
+  "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-gopurs/src/PureScript/Backend/Optimizer/Monomorphize.purs": "e9b106d9b66ddfe199d220610cf4cca4d92130672a8fc66cd53a907818ec1c4e",
+  "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-gopurs/test/monomorphize-callsite.mjs": "5ae18be50403c2ab2e0853c4ef12396d2a1087f5e381129352a1046e37263cc6",
+  "/Users/0x1/Documents/htdocs/gopurs/gopurs/src/Gopurs/ThunkFusion.purs": "4ca6a112cb02ec597b75274ddc31a035fd1c9b92470e71ca50dcb45444dd5100",
+  "/Users/0x1/Documents/htdocs/gopurs/gopurs/tests/passing/ThunkFusionNewtype.purs": "64f3d3afca7fdd27f79780b81342ff757cb5ef1e3641250b65151d51e0e8cb5a",
+  "/Users/0x1/Documents/htdocs/gopurs/gopurs/tests/passing-snapshots/ThunkFusionNewtype.go": "71f94fbf49a60ca65c1b5692badd08a961fc48524eddc7c335730a5ab8b30f5d"
+}

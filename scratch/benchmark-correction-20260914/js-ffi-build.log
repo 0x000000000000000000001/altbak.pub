@@ -1,0 +1,4 @@
+Build directory: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/js/output-runs/ffi-focrjqzx
+[purs] purs compile --codegen js,corefn … (49 source arguments)
+Artifact: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/js/output-runs/ffi-focrjqzx
+Command: node --input-type=module -e import { main } from './output/AppFFI/index.js'; main();

@@ -1,0 +1,7 @@
+["/opt/homebrew/bin/php", "/Users/0x1/Documents/htdocs/altbak.pub/bin/php/composer.phar", "install", "--no-plugins", "--no-interaction", "--no-progress", "--prefer-dist", "--no-dev"]
+Installing dependencies from lock file
+Verifying lock file contents can be installed on current platform.
+Package operations: 2 installs, 0 updates, 0 removals
+  - Installing revolt/event-loop (v1.0.9): Extracting archive
+  - Installing phpurs/lib-deps (dev-edge 9331789): Symlinking from output
+Generating autoload files

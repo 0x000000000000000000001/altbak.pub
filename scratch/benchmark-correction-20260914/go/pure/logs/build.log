@@ -1,0 +1,1 @@
+["go", "build", "-pgo=off", "-o", "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/pure/benchmark", "./main"]

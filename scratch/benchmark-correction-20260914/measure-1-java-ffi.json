@@ -1,0 +1,63 @@
+{
+  "mode": "ffi",
+  "labels": [
+    "AST Evaluation FFI:",
+    "Fibonacci FFI:",
+    "List Processing FFI (900 elements):",
+    "Tail Call Optimization FFI (100k calls):",
+    "Deep Record Updates FFI (10k iterations):",
+    "Ackermann FFI (3, 4):",
+    "Church Numerals FFI (100k Closure Applications):",
+    "Prime Sieve FFI (sum primes up to 500):",
+    "Red-Black Tree FFI (100k Worst-Case Insertions):",
+    "Polymorphism FFI (10M Type Class Dict Lookups):",
+    "State Monad FFI (1.2k Binds, 60 Stack Depth):",
+    "Lazy Evaluation FFI (1M Thunks Forced, 1k Depth):",
+    "Array Processing FFI (900 elements):",
+    "RowToList FFI (Keys Count):"
+  ],
+  "values": [
+    "7",
+    "55",
+    "202950",
+    "100000",
+    "20000",
+    "125",
+    "100000",
+    "21536",
+    "22",
+    "10000000",
+    "1200",
+    "1000000",
+    "202950",
+    "5"
+  ],
+  "times_us": [
+    79.13,
+    3.21,
+    59.0,
+    39.0,
+    133.29,
+    11.04,
+    462.54,
+    67.63,
+    12187.67,
+    144.92,
+    36.83,
+    5209.42,
+    40.5,
+    2.71
+  ],
+  "total_ms": 18.48,
+  "sum_displayed_lines_ms": 18.47689,
+  "values_validated": true,
+  "timer_unit": "microseconds",
+  "started_utc": "2026-09-14T22:25:16.962300+00:00",
+  "process_seconds": 0.622369790999997,
+  "command": [
+    "/Users/0x1/Documents/htdocs/altbak.pub/bin/java/run",
+    "--ffi",
+    "--run-only"
+  ],
+  "key": "java-ffi"
+}

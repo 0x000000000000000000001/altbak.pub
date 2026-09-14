@@ -1,0 +1,16 @@
+C++: corefn.log
+C++: pscpp.log
+C++: imported library namespaces without providers (no stubs; an executed lookup must fail):
+  Control.Bind
+  Control.Extend
+  Control.Monad.ST.Uncurried
+  Data.Array.NonEmpty.Internal
+  Data.Array.ST
+  Data.Symbol
+  Data.Unfoldable
+  Data.Unfoldable1
+  Partial
+  Record.Unsafe
+C++: make.log
+Binary: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/cpp/modes/pure/output/bin/main
+Manifest: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/cpp/modes/pure/build.json

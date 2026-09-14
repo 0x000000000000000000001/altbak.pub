@@ -1,0 +1,1446 @@
+{
+  "js-pure": {
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/js/run",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/js/output-runs/pure-73iynaml"
+    ],
+    "times_us": [
+      2.29,
+      2.04,
+      52.04,
+      177.54,
+      71.88,
+      63.71,
+      1252.08,
+      129.42,
+      89448.83,
+      23021.92,
+      70.29,
+      14776.42,
+      27.29,
+      0.58
+    ],
+    "total_ms": 129.09633,
+    "run_totals_ms": [
+      128.48367,
+      131.70882,
+      129.33083
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "js-ffi": {
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/js/run",
+      "--ffi",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/js/output-runs/ffi-focrjqzx"
+    ],
+    "times_us": [
+      1.67,
+      1.88,
+      25.42,
+      50.58,
+      45.63,
+      36.88,
+      1247.75,
+      83.29,
+      25283.08,
+      4645.92,
+      69.0,
+      18282.38,
+      10.87,
+      0.71
+    ],
+    "total_ms": 49.785059999999994,
+    "run_totals_ms": [
+      48.3079,
+      49.78914,
+      50.86602
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "js-fficc": {
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/js/run",
+      "--fficc",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/js/output-runs/fficc-neyplf72"
+    ],
+    "times_us": [
+      1.92,
+      2.0,
+      1.17,
+      57.21,
+      10.38,
+      40.54,
+      35.29,
+      6.62,
+      28190.38,
+      2717.67,
+      0.96,
+      310.67,
+      2.04,
+      0.38
+    ],
+    "total_ms": 31.37723,
+    "run_totals_ms": [
+      30.951249999999995,
+      32.319430000000004,
+      31.40015
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "es-pure": {
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/es/run",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/es/output-runs/pure-b6ezmw3m"
+    ],
+    "times_us": [
+      1.83,
+      1.67,
+      12.08,
+      200.13,
+      142.17,
+      58.58,
+      1259.46,
+      74.08,
+      49863.88,
+      7476.71,
+      14.25,
+      11184.04,
+      18.75,
+      0.08
+    ],
+    "total_ms": 70.30771,
+    "run_totals_ms": [
+      69.38413,
+      70.10854,
+      70.95888000000001
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "go-pure": {
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/go/run",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/pure"
+    ],
+    "times_us": [
+      0.83,
+      0.58,
+      15.25,
+      51.5,
+      6.54,
+      15.25,
+      476.83,
+      69.88,
+      24213.46,
+      2267.42,
+      127.33,
+      17467.0,
+      17.17,
+      0.58
+    ],
+    "total_ms": 44.729620000000004,
+    "run_totals_ms": [
+      45.55583,
+      44.84781,
+      44.68367
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "go-ffi": {
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/go/run",
+      "--ffi",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/ffi"
+    ],
+    "times_us": [
+      0.88,
+      0.5,
+      22.12,
+      33.12,
+      40.83,
+      19.75,
+      868.71,
+      104.83,
+      24653.71,
+      58008.92,
+      39.08,
+      14243.21,
+      2.92,
+      0.38
+    ],
+    "total_ms": 98.03896,
+    "run_totals_ms": [
+      97.58866999999998,
+      98.10328999999999,
+      100.01301000000002
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "go-fficc": {
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/go/run",
+      "--fficc",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/fficc"
+    ],
+    "times_us": [
+      0.88,
+      0.5,
+      0.79,
+      33.17,
+      16.5,
+      20.0,
+      22.88,
+      1.08,
+      9294.42,
+      2324.58,
+      0.75,
+      0.75,
+      0.79,
+      0.33
+    ],
+    "total_ms": 11.71742,
+    "run_totals_ms": [
+      11.74634,
+      11.500370000000002,
+      11.95195
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "psgo-pure": {
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/psgo/run",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/psgo/output-runs/pure-1mjy1t1f"
+    ],
+    "times_us": [
+      4.71,
+      5.21,
+      235.88,
+      6340.5,
+      5549.0,
+      396.08,
+      3767.25,
+      1291.42,
+      894408.75,
+      528156.42,
+      290.29,
+      74337.29,
+      42.54,
+      0.83
+    ],
+    "total_ms": 1514.8261700000005,
+    "run_totals_ms": [
+      1521.91287,
+      1514.3891800000001,
+      1476.14436
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "scm-pure": {
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/scm/run",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/scm/output-runs/pure-65gackhs"
+    ],
+    "times_us": [
+      0.0,
+      0.0,
+      6.0,
+      276.0,
+      162.0,
+      15.0,
+      234.0,
+      33.0,
+      23619.0,
+      18474.0,
+      2.0,
+      2953.0,
+      7.0,
+      0.0
+    ],
+    "total_ms": 45.781,
+    "run_totals_ms": [
+      44.588,
+      46.471,
+      45.611
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "scm-ffi": {
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/scm/run",
+      "--ffi",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/scm/output-runs/ffi-snzy0a7b"
+    ],
+    "times_us": [
+      0.0,
+      0.0,
+      4.0,
+      313.0,
+      47.0,
+      10.0,
+      229.0,
+      23.0,
+      15929.0,
+      28059.0,
+      2.0,
+      1888.0,
+      4.0,
+      0.0
+    ],
+    "total_ms": 46.508,
+    "run_totals_ms": [
+      46.033,
+      47.628,
+      46.656
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "scm-fficc": {
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/scm/run",
+      "--fficc",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/scm/output-runs/fficc-191f7jk3"
+    ],
+    "times_us": [
+      0.0,
+      0.0,
+      2.0,
+      315.0,
+      42.0,
+      9.0,
+      60.0,
+      1.0,
+      12050.0,
+      6713.0,
+      1.0,
+      0.0,
+      3.0,
+      0.0
+    ],
+    "total_ms": 19.196,
+    "run_totals_ms": [
+      19.308,
+      19.267,
+      19.082
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "erl-pure": {
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/erl/run",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/erl/output-runs/pure-_8jeagxl"
+    ],
+    "times_us": [
+      0.0,
+      0.0,
+      31.0,
+      1241.0,
+      407.0,
+      22.0,
+      474.0,
+      136.0,
+      16852.0,
+      62673.0,
+      20.0,
+      8768.0,
+      24.0,
+      0.0
+    ],
+    "total_ms": 90.648,
+    "run_totals_ms": [
+      92.121,
+      90.372,
+      90.995
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "erl-ffi": {
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/erl/run",
+      "--ffi",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/erl/output-runs/ffi-gwba105a"
+    ],
+    "times_us": [
+      0.0,
+      0.0,
+      5.0,
+      113.0,
+      1278.0,
+      21.0,
+      392.0,
+      35.0,
+      14300.0,
+      51986.0,
+      14.0,
+      6739.0,
+      14.0,
+      0.0
+    ],
+    "total_ms": 74.897,
+    "run_totals_ms": [
+      76.011,
+      74.569,
+      74.932
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "erl-fficc": {
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/erl/run",
+      "--fficc",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/erl/output-runs/fficc-osgoffoo"
+    ],
+    "times_us": [
+      0.0,
+      0.0,
+      1.0,
+      91.0,
+      16.0,
+      22.0,
+      0.0,
+      33.0,
+      15173.0,
+      0.0,
+      7.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "total_ms": 15.344,
+    "run_totals_ms": [
+      15.571,
+      15.099,
+      15.374
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "php-pure": {
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/php/run",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/php/pure"
+    ],
+    "times_us": [
+      5.33,
+      2.83,
+      155.83,
+      75.71,
+      1515.5,
+      45.46,
+      2223.67,
+      438.96,
+      113127.5,
+      6464.46,
+      445.0,
+      808.17,
+      98.96,
+      1.38
+    ],
+    "total_ms": 125.40876000000002,
+    "run_totals_ms": [
+      125.13313000000001,
+      125.45768,
+      125.36802000000002
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "php-ffi": {
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/php/run",
+      "--ffi",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/php/ffi"
+    ],
+    "times_us": [
+      5.29,
+      4.13,
+      161.46,
+      52.29,
+      1747.17,
+      98.5,
+      6997.42,
+      882.04,
+      530606.5,
+      435328.13,
+      531.54,
+      105235.88,
+      11.17,
+      2.13
+    ],
+    "total_ms": 1081.66365,
+    "run_totals_ms": [
+      1095.5497799999998,
+      1078.8915599999998,
+      1075.38652
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "php-fficc": {
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/php/run",
+      "--fficc",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/php/fficc"
+    ],
+    "times_us": [
+      3.71,
+      3.21,
+      2.17,
+      51.21,
+      489.38,
+      51.29,
+      34.42,
+      3.25,
+      120196.21,
+      89940.38,
+      1.79,
+      331.17,
+      2.08,
+      1.33
+    ],
+    "total_ms": 211.1116,
+    "run_totals_ms": [
+      214.31696000000002,
+      209.42792999999998,
+      210.50056000000004
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "rust-pure": {
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/rust/run",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/rust/pure"
+    ],
+    "times_us": [
+      1.12,
+      0.88,
+      32.92,
+      29.71,
+      385.38,
+      17.46,
+      164.42,
+      152.08,
+      8913.29,
+      0.88,
+      55.29,
+      0.75,
+      24.33,
+      0.83
+    ],
+    "total_ms": 9.77934,
+    "run_totals_ms": [
+      9.79884,
+      9.59916,
+      9.803750000000003
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "rust-ffi": {
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/rust/run",
+      "--ffi",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/rust/ffi"
+    ],
+    "times_us": [
+      1.29,
+      1.0,
+      11.54,
+      31.25,
+      98.75,
+      17.38,
+      1196.54,
+      81.46,
+      31941.79,
+      6925.0,
+      30.42,
+      21006.88,
+      1.79,
+      0.83
+    ],
+    "total_ms": 61.34592000000001,
+    "run_totals_ms": [
+      61.08265,
+      60.84129,
+      63.03414000000001
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "rust-fficc": {
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/rust/run",
+      "--fficc",
+      "--run-only",
+      "--build-dir",
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/rust/fficc"
+    ],
+    "times_us": [
+      1.29,
+      0.87,
+      1.25,
+      35.75,
+      4.25,
+      19.42,
+      0.87,
+      1.71,
+      31817.46,
+      0.88,
+      0.75,
+      0.75,
+      1.0,
+      0.75
+    ],
+    "total_ms": 31.887,
+    "run_totals_ms": [
+      32.058279999999996,
+      31.47755,
+      31.887970000000003
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "cpp-pure": {
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/cpp/run",
+      "--run-only"
+    ],
+    "times_us": [
+      3.12,
+      0.58,
+      137.17,
+      2713.04,
+      1477.5,
+      222.88,
+      2609.58,
+      961.29,
+      650654.88,
+      249959.92,
+      300.67,
+      37244.25,
+      35.08,
+      0.83
+    ],
+    "total_ms": 946.32079,
+    "run_totals_ms": [
+      953.1778699999999,
+      943.0324500000002,
+      948.6723399999998
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "cpp-ffi": {
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/cpp/run",
+      "--ffi",
+      "--run-only"
+    ],
+    "times_us": [
+      1.33,
+      0.42,
+      33.83,
+      32.0,
+      561.08,
+      18.54,
+      4372.12,
+      267.29,
+      70032.25,
+      27346.62,
+      199.67,
+      31668.92,
+      1.46,
+      0.29
+    ],
+    "total_ms": 134.53582,
+    "run_totals_ms": [
+      136.51506,
+      134.25792,
+      133.29270999999997
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "cpp-fficc": {
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/cpp/run",
+      "--fficc",
+      "--run-only"
+    ],
+    "times_us": [
+      1.33,
+      0.33,
+      0.75,
+      30.71,
+      3.79,
+      16.96,
+      0.33,
+      1.46,
+      21051.0,
+      0.38,
+      0.33,
+      0.29,
+      1.04,
+      0.29
+    ],
+    "total_ms": 21.108990000000006,
+    "run_totals_ms": [
+      22.503990000000005,
+      21.108490000000007,
+      20.420590000000004
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "sharp-pure": {
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/sharp/run",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/sharp/output-runs/pure-7jfaxsbm"
+    ],
+    "times_us": [
+      76.38,
+      2.04,
+      180.79,
+      55.17,
+      2171.58,
+      96.25,
+      1571.88,
+      369.83,
+      43232.67,
+      292475.58,
+      162.46,
+      6140.04,
+      55.5,
+      0.75
+    ],
+    "total_ms": 346.59092000000004,
+    "run_totals_ms": [
+      350.77538,
+      346.58355,
+      337.15843
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "sharp-ffi": {
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/sharp/run",
+      "--ffi",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/sharp/output-runs/ffi-dpmueqyh"
+    ],
+    "times_us": [
+      72.63,
+      1.46,
+      13.58,
+      37.54,
+      81.08,
+      42.46,
+      339.96,
+      100.08,
+      37477.83,
+      23654.04,
+      79.21,
+      13693.58,
+      24.83,
+      0.63
+    ],
+    "total_ms": 75.61891,
+    "run_totals_ms": [
+      78.20175,
+      68.36661000000001,
+      75.58822
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "sharp-fficc": {
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/sharp/run",
+      "--fficc",
+      "--run-only",
+      "--artifact",
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/sharp/output-runs/fficc-o1ly20wz"
+    ],
+    "times_us": [
+      71.67,
+      1.33,
+      3.38,
+      43.71,
+      14.88,
+      45.33,
+      27.17,
+      17.42,
+      10625.17,
+      2306.38,
+      5.0,
+      236.04,
+      13.75,
+      0.67
+    ],
+    "total_ms": 13.4119,
+    "run_totals_ms": [
+      13.79073,
+      13.22276,
+      13.350399999999997
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "java-pure": {
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/java/run",
+      "--run-only"
+    ],
+    "times_us": [
+      55.17,
+      5.08,
+      149.17,
+      41.96,
+      158.96,
+      20.63,
+      527.63,
+      176.96,
+      16675.67,
+      2.46,
+      66.33,
+      79.88,
+      70.92,
+      1.79
+    ],
+    "total_ms": 18.032610000000002,
+    "run_totals_ms": [
+      18.27984,
+      18.00447,
+      18.01935
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "java-ffi": {
+    "mode": "ffi",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/java/run",
+      "--ffi",
+      "--run-only"
+    ],
+    "times_us": [
+      81.63,
+      3.21,
+      57.63,
+      37.25,
+      133.29,
+      10.63,
+      462.54,
+      64.0,
+      12187.67,
+      145.5,
+      28.04,
+      4864.54,
+      40.5,
+      2.46
+    ],
+    "total_ms": 18.11889,
+    "run_totals_ms": [
+      18.47689,
+      24.61155,
+      17.458019999999998
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "java-fficc": {
+    "mode": "fficc",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/java/run",
+      "--fficc",
+      "--run-only"
+    ],
+    "times_us": [
+      104.79,
+      4.0,
+      8.17,
+      38.67,
+      27.17,
+      9.04,
+      2.92,
+      9.21,
+      8965.83,
+      2.67,
+      7.13,
+      2.54,
+      8.0,
+      2.38
+    ],
+    "total_ms": 9.192519999999998,
+    "run_totals_ms": [
+      9.50231,
+      9.186819999999999,
+      9.181769999999998
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  },
+  "wasm-pure": {
+    "mode": "pure",
+    "command": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/wasm/run",
+      "--run-only"
+    ],
+    "times_us": [
+      0.58,
+      1.25,
+      15.21,
+      110.42,
+      278.88,
+      15.46,
+      1491.08,
+      34.5,
+      558526.63,
+      12262.88,
+      13.25,
+      7035.25,
+      46.83,
+      0.42
+    ],
+    "total_ms": 579.83264,
+    "run_totals_ms": [
+      580.56725,
+      580.05731,
+      573.4453100000001
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "aggregation": "row median of 3 independent processes, each best of 10"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "frontend": {
+    "path": "/Users/0x1/Documents/htdocs/purescript/.stack-work/dist/aarch64-osx/ghc-9.8.4/build/purs/purs",
+    "version": "0.15.16 [development build; commit: a6a9864786599d6a3be7585904815279954a6c81 DIRTY]",
+    "sha256": "31c8fb80912fd243cbbca7b464aaa86ba28cca3ca740b9c17e50ca37cf885a90"
+  },
+  "backend": {
+    "path": "/Users/0x1/Documents/htdocs/phpurs/phpurs/bin/phpurs.js",
+    "sha256": "fd2bf6d005445c07f231a6c8fef2a7ffa4d79bd82d22482cffb3e122daed1c1b"
+  },
+  "entries": {
+    "pure": "App",
+    "ffi": "AppFFI",
+    "fficc": "AppFFICheatcode"
+  },
+  "note": "Correctness smokes only; printed durations are not retained as coordinated performance measurements."
+}

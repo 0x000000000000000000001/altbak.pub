@@ -94,6 +94,10 @@ int main() {
             CHECK_PAIR(ListOps, n, k * (k + 1));
             CHECK_PAIR(ArrayOps, n, k * (k + 1));
         }
+        for (int n : {-1, -2, -3, -8}) {
+            const int k = (-n) / 2;
+            CHECK_PAIR(ArrayOps, n, -k * (k + 1));
+        }
         for (int n : {0, 1, 2, 3, 4, 5, 100000}) {
             const int r = n % 3;
             CHECK_PAIR(TCO, n, 3 * (n / 3) + r * (r + 1) / 2);

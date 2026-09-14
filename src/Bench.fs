@@ -12,4 +12,4 @@ let opaque (a: obj) =
 
 let formatNumber (a: obj) =
     let num = unbox<float> a
-    box (num.ToString("0.00"))
+    box (num.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture))

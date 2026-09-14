@@ -1,0 +1,39 @@
+["npm", "run", "build", "--silent"]
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: gopurs
+
+Downloading dependencies...
+Building...
+[1 of 6] Compiling Gopurs.ThunkFusion
+[2 of 6] Compiling PureScript.Backend.Optimizer.Monomorphize
+[3 of 6] Compiling Gopurs.CodeGen
+[4 of 6] Compiling Gopurs.Monomorphization
+[5 of 6] Compiling Gopurs.GlobalTypes
+[6 of 6] Compiling Main
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: gopurs
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Bundling...
+
+  bin/gopurs.js  1.5mb ⚠️
+
+⚡ Done in 31ms
+
+✓ Bundle succeeded.
+

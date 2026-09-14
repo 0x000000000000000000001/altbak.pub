@@ -1,0 +1,6 @@
+java: mode=pure, profile={"inherited_jvm_options": {"JAVA_TOOL_OPTIONS": "", "JDK_JAVA_OPTIONS": "", "_JAVA_OPTIONS": ""}, "jar": "/opt/homebrew/opt/openjdk/bin/jar", "java": "/opt/homebrew/opt/openjdk/bin/java", "javac": "/opt/homebrew/opt/openjdk/bin/javac", "javac_flags": [], "jvm_flags": ["-Xss100M"]}
+spago build
+/Users/0x1/Documents/htdocs/javapurs/javapurs/bin/javapurs --main App
+/opt/homebrew/opt/openjdk/bin/javac -d /Users/0x1/Documents/htdocs/altbak.pub/run/bak/java/modes/pure/classes -sourcepath /Users/0x1/Documents/htdocs/altbak.pub/run/bak/java/modes/pure/java_output /Users/0x1/Documents/htdocs/altbak.pub/run/bak/java/modes/pure/java_output/MainRun.java
+/opt/homebrew/opt/openjdk/bin/jar cfe /Users/0x1/Documents/htdocs/altbak.pub/run/bak/java/modes/pure/benchmark.jar MainRun -C /Users/0x1/Documents/htdocs/altbak.pub/run/bak/java/modes/pure/classes .
+Built /Users/0x1/Documents/htdocs/altbak.pub/run/bak/java/modes/pure/benchmark.jar; manifest /Users/0x1/Documents/htdocs/altbak.pub/run/bak/java/modes/pure/manifest.json

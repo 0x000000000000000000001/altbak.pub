@@ -19,8 +19,31 @@ import Test.LazyEvaluationFFI as LazyEvaluationFFI
 import Test.ArrayOpsFFI as ArrayOpsFFI
 import Test.RowToListFFI as RowToListFFI
 
+warmup :: Effect Unit
+warmup = do
+  void AstTreeFFI.act
+  void FibFFI.act
+  void ListOpsFFI.act
+  void TCOFFI.act
+  void RecordsFFI.act
+  void AckermannFFI.act
+  void ChurchFFI.act
+  void PrimesFFI.act
+  void RBTreeFFI.act
+  void PolymorphismFFI.act
+  void StateMonadFFI.act
+  void LazyEvaluationFFI.act
+  void ArrayOpsFFI.act
+  void RowToListFFI.act
+
 main :: Effect Unit
 main = do
+  log "Global warm-up in progress (this may take a moment)...\n"
+  warmup
+  warmup
+  warmup
+  log "Global warm-up complete. Starting benchmarks...\n"
+
   t1 <- runBench AstTreeFFI.describe AstTreeFFI.act
   t2 <- runBench FibFFI.describe FibFFI.act
   t3 <- runBench ListOpsFFI.describe ListOpsFFI.act

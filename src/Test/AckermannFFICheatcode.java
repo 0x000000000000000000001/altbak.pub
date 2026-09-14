@@ -7,4 +7,4 @@ private static int ackermann(int m, int n) {
 }
 
 public static final java.util.function.Function<Object, Object> runAckermannFFICheatcode = Bench.nativeBenchmark(input ->
-    ackermann(3, 4));
+    ackermann(((Number) input).intValue(), 4));

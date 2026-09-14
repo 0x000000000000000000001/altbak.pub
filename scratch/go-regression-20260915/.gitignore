@@ -1,0 +1,8 @@
+# Generated compiler copies and isolated build products.
+/gopurs-before-rebuild.js
+/*-compiler.mjs
+/proof-benchmark
+/same-tast/
+/monomorph-callsite-proof/output/
+/monomorph-callsite-proof/before.mjs
+/monomorph-callsite-proof/after.mjs

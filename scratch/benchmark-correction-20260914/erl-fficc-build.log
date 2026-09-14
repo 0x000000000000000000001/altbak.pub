@@ -1,0 +1,6 @@
+Build directory: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/erl/output-runs/fficc-osgoffoo
+[purs] purs compile --codegen corefn … (50 source arguments)
+[purerl] purerl
+[erlc] erlc -o beams output/AppFFICheatcode/appFFICheatcode@ps.erl … (82 source arguments)
+Artifact: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/erl/output-runs/fficc-osgoffoo
+Command: erl -noshell -pa beams -eval (appFFICheatcode@ps:main())(),halt().

@@ -1,0 +1,4 @@
+Artifact: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/sharp/output-runs/pure-7jfaxsbm
+[purs] purs compile --codegen corefn … (108 source arguments)
+[sharpurs] /Users/0x1/Documents/htdocs/sharpurs/sharpurs/bin/sharpurs --main App
+[dotnet] /Users/0x1/.dotnet/dotnet build /Users/0x1/Documents/htdocs/altbak.pub/run/bak/sharp/output-runs/pure-7jfaxsbm/output/Main/Program.fsproj -c Release -p:Optimize=true -p:NuGetAudit=false --ignore-failed-sources -o /Users/0x1/Documents/htdocs/altbak.pub/run/bak/sharp/output-runs/pure-7jfaxsbm/binary

@@ -16,7 +16,13 @@ with tempfile.TemporaryDirectory(prefix='altbak-native-rust-') as temporary:
     for name in NOMINAL:
         for suffix in ['FFI', 'FFICheatcode']:
             module = name + suffix
-            lines.append(f'#[path = "{ROOT}/src/Test/{module}.rs"] mod {module};')
+            original = (ROOT / 'src' / 'Test' / (module + '.rs')).read_text()
+            extra = Path(__file__).with_name(module + '.checks.rs')
+            if extra.exists():
+                original += '\n' + extra.read_text()
+            copied = folder / (module + '.rs')
+            copied.write_text(original)
+            lines.append(f'#[path = "{copied}"] mod {module};')
     lines += ['fn main() {', 'let mut failures = 0;']
     count = 0
     for name, argument, expected in cases():
@@ -25,6 +31,8 @@ with tempfile.TemporaryDirectory(prefix='altbak-native-rust-') as temporary:
             lines += [f'let got = {module}::Test_{module}_run{module}(std::hint::black_box({argument}));',
                       f'if got != {expected} {{ failures += 1; eprintln!("FAIL {module}({argument}): expected {expected}, got {{}}", got); }}']
             count += 1
+    for module in ['RBTreeFFI', 'ChurchFFI', 'ListOpsFFI']:
+        lines.append(f'{module}::check_structure();')
     lines += [f'assert_eq!(failures, 0, "native Rust contracts ({count} cases)");',
               f'println!("PASS native Rust: {count} values; no timing");', '}']
     source = folder / 'contracts.rs'
@@ -32,3 +40,8 @@ with tempfile.TemporaryDirectory(prefix='altbak-native-rust-') as temporary:
     subprocess.run(['rustc', '--edition=2021', '-C', 'opt-level=1', '-C', 'overflow-checks=yes',
                     str(source), '-o', str(folder / 'contracts')], check=True)
     subprocess.run([str(folder / 'contracts')], check=True)
+
+    clock = folder / 'clock.rs'
+    clock.write_text(Path(__file__).with_name('clock.rs').read_text().replace('BENCH_PATH', str(ROOT / 'src/Bench.rs')))
+    subprocess.run(['rustc', '--edition=2021', str(clock), '-o', str(folder / 'clock')], check=True)
+    subprocess.run([str(folder / 'clock')], check=True)

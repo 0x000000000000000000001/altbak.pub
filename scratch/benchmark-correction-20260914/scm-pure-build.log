@@ -1,0 +1,7 @@
+Build directory: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/scm/output-runs/pure-65gackhs
+[purs] purs compile --codegen corefn … (108 source arguments)
+Private purescm ICU bindings _74 -> _78 (/opt/homebrew/opt/icu4c/lib/libicuuc.dylib)
+[scheme] node /Users/0x1/Documents/htdocs/altbak.pub/run/bak/scm/output-runs/pure-65gackhs/toolchain/purescm/index.js build
+[bundle] node /Users/0x1/Documents/htdocs/altbak.pub/run/bak/scm/output-runs/pure-65gackhs/toolchain/purescm/index.js bundle-app --main App --output bundle
+Artifact: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/scm/output-runs/pure-65gackhs
+Command: chez --optimize-level 3 --program bundle/main

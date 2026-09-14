@@ -1,0 +1,15 @@
+CPP_RESULT Test.AstTreeFFICheatcode 7
+CPP_RESULT Test.FibFFICheatcode 55
+CPP_RESULT Test.ListOpsFFICheatcode 202950
+CPP_RESULT Test.TCOFFICheatcode 100000
+CPP_RESULT Test.RecordsFFICheatcode 20000
+CPP_RESULT Test.AckermannFFICheatcode 125
+CPP_RESULT Test.ChurchFFICheatcode 100000
+CPP_RESULT Test.PrimesFFICheatcode 21536
+CPP_RESULT Test.RBTreeFFICheatcode 22
+CPP_RESULT Test.PolymorphismFFICheatcode 10000000
+CPP_RESULT Test.StateMonadFFICheatcode 1200
+CPP_RESULT Test.LazyEvaluationFFICheatcode 1000000
+CPP_RESULT Test.ArrayOpsFFICheatcode 202950
+CPP_RESULT Test.RowToListFFICheatcode 5
+C++: 14 expected results verified; /Users/0x1/Documents/htdocs/altbak.pub/run/bak/cpp/modes/fficc/smoke-1789423619885720000.json

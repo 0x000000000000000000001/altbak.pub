@@ -1,8 +1,9 @@
 -module(test_arrayOpsFFICheatcode@foreign).
 -export([runArrayOpsFFICheatcode/1]).
-runArrayOpsFFICheatcode(N) -> sum_evens(N, 0).
-sum_evens(0, Acc) -> Acc;
-sum_evens(N, Acc) ->
-  if N rem 2 == 0 -> sum_evens(N - 1, Acc + N);
-     true -> sum_evens(N - 1, Acc)
-  end.
+runArrayOpsFFICheatcode(N) ->
+  Step = case N >= 1 of true -> 1; false -> -1 end,
+  sum_evens(1, N + Step, Step, 0).
+sum_evens(Stop, Stop, _Step, Acc) -> Acc;
+sum_evens(I, Stop, Step, Acc) ->
+  Next = case I rem 2 of 0 -> Acc + I; _ -> Acc end,
+  sum_evens(I + Step, Stop, Step, Next).

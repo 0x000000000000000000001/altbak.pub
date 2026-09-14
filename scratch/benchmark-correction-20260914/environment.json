@@ -1,0 +1,15 @@
+{
+  "node --version": "v24.8.0",
+  "go version": "go version go1.27.0 darwin/arm64",
+  "rustc --version": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "php --version": "PHP 8.5.4 (cli) (built: Mar 10 2026 23:15:23) (NTS)\nCopyright (c) The PHP Group\nBuilt by Homebrew\nZend Engine v4.5.4, Copyright (c) Zend Technologies\n    with Zend OPcache v8.5.4, Copyright (c), by Zend Technologies",
+  "dotnet --version": "[Errno 2] No such file or directory: 'dotnet'",
+  "chez --version": "10.4.1",
+  "psgo --version": "upgrade-0.15 (DIRTY)",
+  "clang++ --version": "Apple clang version 17.0.0 (clang-1700.3.19.1)\nTarget: arm64-apple-darwin25.1.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin",
+  "platform": "macOS-26.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "base_commit": "5dda0cd14492510de4028d335bbe56013b894392",
+  "turn_start_commit": "bfa652a7a",
+  "note": "HEAD advanced during work; artifact manifests record actual input hashes."
+}

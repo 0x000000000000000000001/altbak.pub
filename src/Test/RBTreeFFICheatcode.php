@@ -9,8 +9,8 @@ class RBNodeCheat {
     }
 }
 
-$exports['runRBTreeFFICheatcode'] = function($limit) {
-    function balance($c, $a, $x, $b) {
+class RBTreeNative {
+    public static function balance($c, $a, $x, $b) {
         if ($c === 1) { // black
             if ($a !== null && $a->color === 0) {
                 if ($a->left !== null && $a->left->color === 0) {
@@ -32,31 +32,34 @@ $exports['runRBTreeFFICheatcode'] = function($limit) {
         return new RBNodeCheat($c, $a, $x, $b);
     }
 
-    function ins($x, $t) {
+    public static function ins($x, $t) {
         if ($t === null) return new RBNodeCheat(0, null, $x, null);
-        if ($x < $t->value) return balance($t->color, ins($x, $t->left), $t->value, $t->right);
-        if ($x > $t->value) return balance($t->color, $t->left, $t->value, ins($x, $t->right));
+        if ($x < $t->value) return self::balance($t->color, self::ins($x, $t->left), $t->value, $t->right);
+        if ($x > $t->value) return self::balance($t->color, $t->left, $t->value, self::ins($x, $t->right));
         return $t;
     }
 
-    function insert($x, $t) {
-        $res = ins($x, $t);
+    public static function insert($x, $t) {
+        $res = self::ins($x, $t);
         return new RBNodeCheat(1, $res->left, $res->value, $res->right);
     }
 
-    function depth($t) {
+    public static function depth($t) {
         if ($t === null) return 0;
-        $ld = depth($t->left);
-        $rd = depth($t->right);
+        $ld = self::depth($t->left);
+        $rd = self::depth($t->right);
         return 1 + ($ld > $rd ? $ld : $rd);
     }
 
+}
+
+$exports['runRBTreeFFICheatcode'] = function($limit) {
     $n = (int)$limit;
     $acc = null;
     for ($i = $n; $i > 0; $i--) {
-        $acc = insert($i, $acc);
+        $acc = RBTreeNative::insert($i, $acc);
     }
     
-    return depth($acc); // BenchCheck actually logs output, for 100k it should output something consistent
+    return RBTreeNative::depth($acc);
 };
 return $exports;

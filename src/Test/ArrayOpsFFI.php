@@ -5,7 +5,8 @@ $exports['runArrayOpsFFI'] = function($limit) {
     $range = function($start) {
         return function($end) use ($start) {
             $arr = [];
-            for ($i = $start; $i <= $end; $i++) {
+            $step = $end >= $start ? 1 : -1;
+            for ($i = $start; $step > 0 ? $i <= $end : $i >= $end; $i += $step) {
                 $arr[] = $i;
             }
             return $arr;

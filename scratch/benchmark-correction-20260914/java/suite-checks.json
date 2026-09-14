@@ -1,0 +1,131 @@
+{
+  "purpose": "Correctness smoke only; no performance comparison",
+  "all_passed": true,
+  "suites": [
+    {
+      "mode": "pure",
+      "values": [
+        "7",
+        "55",
+        "202950",
+        "100000",
+        "20000",
+        "125",
+        "100000",
+        "21536",
+        "22",
+        "10000000",
+        "1200",
+        "1000000",
+        "202950",
+        "5"
+      ],
+      "entry": "App",
+      "toolchain": "openjdk version \"26.0.2\" 2026-07-21\nOpenJDK Runtime Environment Homebrew (build 26.0.2)\nOpenJDK 64-Bit Server VM Homebrew (build 26.0.2, mixed mode, sharing)",
+      "profile": {
+        "java": "/opt/homebrew/opt/openjdk/bin/java",
+        "javac": "/opt/homebrew/opt/openjdk/bin/javac",
+        "jar": "/opt/homebrew/opt/openjdk/bin/jar",
+        "jvm_flags": [
+          "-Xss100M"
+        ],
+        "javac_flags": [],
+        "inherited_jvm_options": {
+          "JAVA_TOOL_OPTIONS": "",
+          "JDK_JAVA_OPTIONS": "",
+          "_JAVA_OPTIONS": ""
+        }
+      },
+      "jar_sha256": "dffba8231033b4247367699d59d09f4606f88cbbb1d32caa439693261896124c",
+      "workspace": "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/java/modes/pure",
+      "run_only_command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/bin/java/run",
+        "--run-only"
+      ]
+    },
+    {
+      "mode": "ffi",
+      "values": [
+        "7",
+        "55",
+        "202950",
+        "100000",
+        "20000",
+        "125",
+        "100000",
+        "21536",
+        "22",
+        "10000000",
+        "1200",
+        "1000000",
+        "202950",
+        "5"
+      ],
+      "entry": "AppFFI",
+      "toolchain": "openjdk version \"26.0.2\" 2026-07-21\nOpenJDK Runtime Environment Homebrew (build 26.0.2)\nOpenJDK 64-Bit Server VM Homebrew (build 26.0.2, mixed mode, sharing)",
+      "profile": {
+        "java": "/opt/homebrew/opt/openjdk/bin/java",
+        "javac": "/opt/homebrew/opt/openjdk/bin/javac",
+        "jar": "/opt/homebrew/opt/openjdk/bin/jar",
+        "jvm_flags": [
+          "-Xss100M"
+        ],
+        "javac_flags": [],
+        "inherited_jvm_options": {
+          "JAVA_TOOL_OPTIONS": "",
+          "JDK_JAVA_OPTIONS": "",
+          "_JAVA_OPTIONS": ""
+        }
+      },
+      "jar_sha256": "5b79adfa87c597590f1dffbe076273cec01295a837d0586e1d16cbf1cb18fb9e",
+      "workspace": "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/java/modes/ffi",
+      "run_only_command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/bin/java/run",
+        "--ffi",
+        "--run-only"
+      ]
+    },
+    {
+      "mode": "fficc",
+      "values": [
+        "7",
+        "55",
+        "202950",
+        "100000",
+        "20000",
+        "125",
+        "100000",
+        "21536",
+        "22",
+        "10000000",
+        "1200",
+        "1000000",
+        "202950",
+        "5"
+      ],
+      "entry": "AppFFICheatcode",
+      "toolchain": "openjdk version \"26.0.2\" 2026-07-21\nOpenJDK Runtime Environment Homebrew (build 26.0.2)\nOpenJDK 64-Bit Server VM Homebrew (build 26.0.2, mixed mode, sharing)",
+      "profile": {
+        "java": "/opt/homebrew/opt/openjdk/bin/java",
+        "javac": "/opt/homebrew/opt/openjdk/bin/javac",
+        "jar": "/opt/homebrew/opt/openjdk/bin/jar",
+        "jvm_flags": [
+          "-Xss100M"
+        ],
+        "javac_flags": [],
+        "inherited_jvm_options": {
+          "JAVA_TOOL_OPTIONS": "",
+          "JDK_JAVA_OPTIONS": "",
+          "_JAVA_OPTIONS": ""
+        }
+      },
+      "jar_sha256": "acdfc62a52209a74e35ba5f9e2430e7ab458fcff84d2f01d8cc9a8f33339deba",
+      "workspace": "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/java/modes/fficc",
+      "run_only_command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/bin/java/run",
+        "--fficc",
+        "--run-only"
+      ]
+    }
+  ]
+}

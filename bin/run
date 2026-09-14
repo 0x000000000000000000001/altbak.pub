@@ -1,141 +1,39 @@
 #!/usr/bin/env bash
-set -e
+set -uo pipefail
 cd "$(dirname "$0")/.."
-CLEAN=""
-MODE="pure"
-TEST_NAME=""
 
-while [[ $# -gt 0 ]]
-do
+MODE=pure
+ARGS=()
+while [[ $# -gt 0 ]]; do
   case "$1" in
-    --clean)
-    CLEAN="--clean"
-    shift
-    ;;
+    --clean|-c) ARGS+=(--clean); shift ;;
+    --ffi|--fficc|--x)
+      [[ "$MODE" == pure ]] || { echo 'Choose only one benchmark mode.' >&2; exit 2; }
+      MODE="${1#--}"; ARGS+=("$1"); shift ;;
     --test)
-    MODE="test"
-    TEST_NAME="$2"
-    shift 2
-    ;;
-    --ffi)
-    MODE="ffi"
-    shift
-    ;;
-    --fficc)
-    MODE="fficc"
-    shift
-    ;;
-    --x)
-    MODE="x"
-    shift
-    ;;
-    *)
-    shift
-    ;;
+      [[ "$MODE" == pure && $# -ge 2 ]] || { echo '--test requires a module and cannot be combined with another mode.' >&2; exit 2; }
+      MODE=test; ARGS+=(--test "$2"); shift 2 ;;
+    *) echo "Unknown option: $1" >&2; exit 2 ;;
   esac
 done
 
-if [ "$MODE" == "test" ]; then
-  echo "================================"
-  echo "  Running test $TEST_NAME...  "
-  echo "================================"
-  echo ""
-  ./bin/js/run $CLEAN --test "$TEST_NAME" || echo "=== JS failed ==="
-  
-  echo ""
-  ./bin/es/run $CLEAN --test "$TEST_NAME" || echo "=== ES failed ==="
-
-  echo ""
-  ./bin/wasm/run $CLEAN --test "$TEST_NAME" || echo "=== WASM failed ==="
-  
-  echo ""
-  ./bin/php/run $CLEAN --test "$TEST_NAME" || echo "=== PHP failed ==="
-  
-  echo ""
-  ./bin/go/run $CLEAN --test "$TEST_NAME" || echo "=== Go (gopurs) failed ==="
-  
-  echo ""
-  ./bin/rust/run $CLEAN --test "$TEST_NAME" || echo "=== Rust (purust) failed ==="
-  
-  echo ""
-  ./bin/sharp/run $CLEAN --test "$TEST_NAME" || echo "=== F#/C# failed ==="
-  
-  echo ""
-  ./bin/scm/run $CLEAN --test "$TEST_NAME" || echo "=== Scheme failed ==="
-  
-  echo ""
-  ./bin/erl/run $CLEAN --test "$TEST_NAME" || echo "=== Erlang failed ==="
-
-elif [ "$MODE" == "x" ]; then
-  echo "================================"
-  echo "  Running extended backends...  "
-  echo "================================"
-  echo ""
-  ./bin/js/run $CLEAN --x || echo "=== JS failed ==="
-  
-  echo ""
-  ./bin/es/run $CLEAN --x || echo "=== ES failed ==="
-  
-  echo ""
-  ./bin/php/run $CLEAN --x || echo "=== PHP failed ==="
-  
-  echo ""
-  ./bin/go/run $CLEAN --x || echo "=== Go (gopurs) failed ==="
-  
-  echo ""
-  ./bin/rust/run $CLEAN --x || echo "=== Rust (purust) failed ==="
-  
-  echo ""
-  ./bin/sharp/run $CLEAN --x || echo "=== F#/C# failed ==="
-elif [[ "$MODE" == "ffi" || "$MODE" == "fficc" ]]; then
-  echo "================================"
-  echo "    Running FFI backends...     "
-  echo "================================"
-  echo ""
-  ./bin/js/run $CLEAN --$MODE || echo "=== JS failed ==="
-  
-  echo ""
-  ./bin/es/run $CLEAN --$MODE || echo "=== ES failed ==="
-  
-  echo ""
-  ./bin/php/run $CLEAN --$MODE || echo "=== PHP failed ==="
-  
-  echo ""
-  ./bin/go/run $CLEAN --$MODE || echo "=== Go (gopurs) failed ==="
-  
-  echo ""
-  ./bin/rust/run $CLEAN --$MODE || echo "=== Rust (purust) failed ==="
-  
-  echo ""
-  ./bin/sharp/run $CLEAN --$MODE || echo "=== F#/C# failed ==="
-else
-  echo "================================"
-  echo "    Running pure backends...    "
-  echo "================================"
-  echo ""
-  ./bin/js/run $CLEAN || echo "=== JS failed ==="
-  
-  echo ""
-  ./bin/es/run $CLEAN || echo "=== ES failed ==="
-
-  echo ""
-  ./bin/wasm/run $CLEAN || echo "=== WASM failed ==="
-  
-  echo ""
-  ./bin/scm/run $CLEAN || echo "=== Scheme failed ==="
-  
-  echo ""
-  ./bin/erl/run $CLEAN || echo "=== Erlang failed ==="
-  
-  echo ""
-  ./bin/php/run $CLEAN || echo "=== PHP failed ==="
-  
-  echo ""
-  ./bin/go/run $CLEAN || echo "=== Go (gopurs) failed ==="
-  
-  echo ""
-  ./bin/rust/run $CLEAN || echo "=== Rust (purust) failed ==="
-  
-  echo ""
-  ./bin/sharp/run $CLEAN || echo "=== F#/C# failed ==="
+# All documented core backends take part. Unsupported extended/foreign modes
+# are excluded explicitly instead of being silently treated as compiled mode.
+BACKENDS=(js es php go rust sharp)
+case "$MODE" in
+  pure|test) BACKENDS+=(java wasm scm erl cpp psgo) ;;
+  ffi|fficc) BACKENDS+=(java scm erl cpp) ;;
+  x) ;;
+esac
+FAILED=()
+for backend in "${BACKENDS[@]}"; do
+  echo "=== $backend / $MODE ==="
+  if ! "./bin/$backend/run" ${ARGS[@]+"${ARGS[@]}"}; then
+    FAILED+=("$backend")
+    echo "=== $backend failed ===" >&2
+  fi
+done
+if [[ ${#FAILED[@]} -gt 0 ]]; then
+  echo "Benchmark failures: ${FAILED[*]}" >&2
+  exit 1
 fi

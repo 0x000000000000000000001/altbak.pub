@@ -30,10 +30,7 @@ fn put(s: i64) -> StateFn {
 }
 
 fn modify(f: Box<dyn Fn(i64) -> i64>) -> StateFn {
-    bind_state(
-        get(),
-        Box::new(move |s: i64| put(f(s)))
-    )
+    bind_state(get(), Box::new(move |s: i64| put(f(s))))
 }
 
 fn chain_modifications(n: i64) -> StateFn {
@@ -42,19 +39,19 @@ fn chain_modifications(n: i64) -> StateFn {
     }
     bind_state(
         modify(Box::new(|x| x + 1)),
-        Box::new(move |_| chain_modifications(n - 1))
+        Box::new(move |_| chain_modifications(n - 1)),
     )
 }
 
-fn run_many_times_state_monad(n: i64, acc: i64) -> i64 {
+fn run_many_times_state_monad(n: i64, depth: i64, acc: i64) -> i64 {
     if n == 0 {
         return acc;
     }
-    let s = chain_modifications(60);
+    let s = chain_modifications(depth);
     let res = run_state(&s, 0);
-    run_many_times_state_monad(n - 1, acc + res.state)
+    run_many_times_state_monad(n - 1, depth, acc + res.state)
 }
 
 pub fn Test_StateMonadFFI_runStateMonadFFI(limit: i64) -> i64 {
-    run_many_times_state_monad(limit, 0)
+    run_many_times_state_monad(20, limit, 0)
 }

@@ -1,0 +1,7 @@
+Build directory: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/scm/output-runs/fficc-191f7jk3
+[purs] purs compile --codegen corefn … (49 source arguments)
+Private purescm ICU bindings _74 -> _78 (/opt/homebrew/opt/icu4c/lib/libicuuc.dylib)
+[scheme] node /Users/0x1/Documents/htdocs/altbak.pub/run/bak/scm/output-runs/fficc-191f7jk3/toolchain/purescm/index.js build
+[bundle] node /Users/0x1/Documents/htdocs/altbak.pub/run/bak/scm/output-runs/fficc-191f7jk3/toolchain/purescm/index.js bundle-app --main AppFFICheatcode --output bundle
+Artifact: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/scm/output-runs/fficc-191f7jk3
+Command: chez --optimize-level 3 --program bundle/main

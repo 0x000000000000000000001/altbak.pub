@@ -1,10 +1,12 @@
 <?php
-$exports['runAckermannFFICheatcode'] = function($limit) {
-    function ack($m, $n) {
+class AckermannNative {
+    public static function evaluate($m, $n) {
         if ($m === 0) return $n + 1;
-        if ($n === 0) return ack($m - 1, 1);
-        return ack($m - 1, ack($m, $n - 1));
+        if ($n === 0) return self::evaluate($m - 1, 1);
+        return self::evaluate($m - 1, self::evaluate($m, $n - 1));
     }
-    return ack(3, 4);
+}
+$exports['runAckermannFFICheatcode'] = function($m) {
+    return AckermannNative::evaluate((int)$m, 4);
 };
 return $exports;

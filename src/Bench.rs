@@ -1,21 +1,20 @@
-use std::rc::Rc;
 use crate::{mk_number, mk_string, UnknownType};
+use std::rc::Rc;
 
 pub fn Bench_benchNow() -> UnknownType {
-    crate::Value::Func1(purust_core::Func1::Shared(Rc::new(move |mut _u: UnknownType| -> UnknownType {
-        let start = std::time::SystemTime::now();
-        let since_the_epoch = start
-            .duration_since(std::time::UNIX_EPOCH)
-            .expect("Time went backwards");
-        let micros = since_the_epoch.as_micros() as f64;
-        mk_number(micros)
-    })))
+    crate::Value::Func1(purust_core::Func1::Shared(Rc::new(
+        move |mut _u: UnknownType| -> UnknownType {
+            static EPOCH: std::sync::OnceLock<std::time::Instant> = std::sync::OnceLock::new();
+            let elapsed = EPOCH.get_or_init(std::time::Instant::now).elapsed();
+            mk_number(elapsed.as_secs_f64() * 1_000_000.0)
+        },
+    )))
 }
 
 pub fn Bench_opaque(mut a0: UnknownType) -> UnknownType {
-    crate::Value::Func1(purust_core::Func1::Shared(Rc::new(move |mut _u: UnknownType| -> UnknownType {
-        std::hint::black_box(a0.clone())
-    })))
+    crate::Value::Func1(purust_core::Func1::Shared(Rc::new(
+        move |mut _u: UnknownType| -> UnknownType { std::hint::black_box(a0.clone()) },
+    )))
 }
 
 pub fn Bench_formatNumber(mut n: f64) -> String {

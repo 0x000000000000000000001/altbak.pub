@@ -1,0 +1,19 @@
+{
+  "commands": {
+    "old": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/go_app"
+    ],
+    "regressed": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/scratch/benchmark-correction-20260914/go/pure/benchmark"
+    ],
+    "fixed": [
+      "/Users/0x1/Documents/htdocs/altbak.pub/bin/go/run",
+      "--run-only"
+    ]
+  },
+  "GOGC": 800,
+  "pgo": false,
+  "processes_per_variant": 5,
+  "inner_statistic": "best of 10",
+  "order": "rotate old, regressed, fixed each round"
+}

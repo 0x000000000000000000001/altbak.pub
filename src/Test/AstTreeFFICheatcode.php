@@ -1,22 +1,22 @@
 <?php
-$exports['runAstTreeFFICheatcode'] = function($limit) {
-    function buildAst($n) {
-        if ($n === 0) return (object)['typ' => 0, 'value' => 1];
-        return (object)[
-            'typ' => 1,
-            'left' => (object)['typ' => 2, 'left' => (object)['typ' => 0, 'value' => $n], 'right' => buildAst($n - 1)],
-            'right' => (object)['typ' => 3, 'left' => buildAst($n - 1), 'right' => (object)['typ' => 0, 'value' => 1]]
-        ];
+class AstTreeNative {
+    public static function build($n) {
+        if ($n === 0) return (object)['tag' => 0, 'value' => 1];
+        return (object)['tag' => 1,
+            'left' => (object)['tag' => 2, 'left' => (object)['tag' => 0, 'value' => $n], 'right' => self::build($n - 1)],
+            'right' => (object)['tag' => 3, 'left' => self::build($n - 1), 'right' => (object)['tag' => 0, 'value' => 1]]];
     }
-    function evalAst($e) {
-        switch($e->typ) {
-            case 0: return $e->value;
-            case 1: return evalAst($e->left) + evalAst($e->right);
-            case 2: return evalAst($e->left) * evalAst($e->right);
-            case 3: return evalAst($e->left) - evalAst($e->right);
+    public static function evaluate($tree) {
+        switch ($tree->tag) {
+            case 0: return $tree->value;
+            case 1: return self::evaluate($tree->left) + self::evaluate($tree->right);
+            case 2: return self::evaluate($tree->left) * self::evaluate($tree->right);
+            case 3: return self::evaluate($tree->left) - self::evaluate($tree->right);
         }
-        return 0;
+        throw new \LogicException('Unknown AST tag');
     }
-    return evalAst(buildAst((int)$limit));
+}
+$exports['runAstTreeFFICheatcode'] = function($limit) {
+    return AstTreeNative::evaluate(AstTreeNative::build((int)$limit));
 };
 return $exports;

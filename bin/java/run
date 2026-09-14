@@ -1,98 +1,139 @@
-#!/usr/bin/env bash
-set -e
-cd "$(dirname "$0")/../.."
+#!/usr/bin/env python3
+"""Compile an isolated Java benchmark suite or validate its saved executable."""
+import argparse
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import shlex
+import shutil
+import subprocess
+import sys
 
-CLEAN=0
-MODE="pure"
-TEST_NAME=""
+sys.dont_write_bytecode = True
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / 'bin/native'))
+import driver as common
 
-while [[ $# -gt 0 ]]
-do
-  case "$1" in
-    -c|--clean)
-    CLEAN=1
-    shift
-    ;;
-    --test)
-    MODE="test"
-    TEST_NAME="$2"
-    shift 2
-    ;;
-    --x)
-    MODE="x"
-    shift
-    ;;
-    --ffi)
-    MODE="ffi"
-    shift
-    ;;
-    --fficc)
-    MODE="fficc"
-    shift
-    ;;
-    *)
-    shift
-    ;;
-  esac
-done
 
-if [ "$CLEAN" == "1" ]; then
-  rm -rf run/bak/java/output/* run/bak/java/spago/*
-  rm -rf java_output
-fi
-mkdir -p run/bak/java/output run/bak/java/spago java_output
-rm -rf output .spago spago.yaml spago.lock
-ln -s run/bak/java/output output
-ln -s run/bak/java/spago .spago
-ln -s run/bak/java/spago.java.yaml spago.yaml
-touch run/bak/java/spago.lock && ln -s run/bak/java/spago.lock spago.lock
+def java_tool(name):
+    if os.environ.get(name.upper()):
+        return os.environ[name.upper()]
+    for home in [os.environ.get('JAVA_HOME'), '/opt/homebrew/opt/openjdk']:
+        if home and (Path(home) / 'bin' / name).is_file():
+            return str(Path(home) / 'bin' / name)
+    return shutil.which(name) or name
 
-ENTRY_POINT="App"
 
-if [ "$MODE" == "test" ]; then
-  ENTRY_POINT="AppX"
-  cat <<INNER_EOF > src/AppX.purs
-module AppX where
-import Prelude
-import Effect (Effect)
-import Bench (runBench)
-import Test.$TEST_NAME as $TEST_NAME
+def inputs():
+    paths = []
+    for base in ['src', 'srx']:
+        paths.extend(path for path in (ROOT / base).rglob('*') if path.is_file() and path.suffix in {'.purs', '.java'})
+    paths += [Path(__file__).resolve(), ROOT / 'bin/native/driver.py', ROOT / 'bin/benchmark/validate.py',
+              ROOT / 'run/bak/java/spago.java.yaml', ROOT.parent / 'javapurs/javapurs/bin/javapurs',
+              ROOT.parent / 'javapurs/javapurs/bin/javapurs.js']
+    return {str(path):common.digest(path) for path in sorted(paths)}
 
-main :: Effect Unit
-main = void \$ runBench $TEST_NAME.describe $TEST_NAME.act
-INNER_EOF
-  trap "rm -f src/AppX.purs" EXIT
-elif [ "$MODE" == "x" ]; then
-  ENTRY_POINT="AppX"
-  cp -r srx/Test/* src/Test/
-  cp srx/AppX.purs src/
-  trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/Test/Parallelism.purs src/AppX.purs" EXIT
-elif [ "$MODE" == "ffi" ]; then
-  ENTRY_POINT="AppJavaFFI"
-elif [ "$MODE" == "fficc" ]; then
-  ENTRY_POINT="AppJavaFFICheatcode"
-fi
 
-export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
+def execute(directory, env, profile, args):
+    command = [profile['java'], *profile['jvm_flags'], '-jar', str(directory / 'benchmark.jar')]
+    print(' '.join(command), flush=True)
+    with (directory / 'results.log').open('w') as output:
+        process = subprocess.Popen(command, cwd=directory, env=env, stdout=subprocess.PIPE,
+                                   stderr=subprocess.STDOUT, text=True, bufsize=1)
+        chunks=[]
+        assert process.stdout is not None
+        for line in process.stdout:
+            print(line, end='', flush=True)
+            output.write(line); output.flush(); chunks.append(line)
+        code=process.wait()
+    if code:
+        raise RuntimeError(f'JVM exited {code}; see {directory / "results.log"}')
+    result=common.validate_output(''.join(chunks), args.mode, args.test, args.expected)
+    common.write_json(directory / 'results.json', result)
+    return result
 
-if [ "$CLEAN" == "1" ]; then
-  echo "=== Rebuilding javapurs backend ==="
-  (cd ../javapurs/javapurs && spago build -q)
-fi
 
-echo 'Building...'
-spago build
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    modes=parser.add_mutually_exclusive_group()
+    modes.add_argument('--ffi',action='store_true')
+    modes.add_argument('--fficc',action='store_true')
+    modes.add_argument('--test')
+    modes.add_argument('--x',action='store_true')
+    parser.add_argument('--expected')
+    actions=parser.add_mutually_exclusive_group()
+    actions.add_argument('--build-only',action='store_true')
+    actions.add_argument('--run-only',action='store_true')
+    parser.add_argument('-c','--clean',action='store_true',help='clean only this marked Java workspace')
+    parser.add_argument('--build-dir',type=Path)
+    args=parser.parse_args()
+    if args.test:
+        args.test=args.test.removeprefix('Test.')
+        if not re.fullmatch(r'[A-Z][A-Za-z0-9_]*(?:\.[A-Z][A-Za-z0-9_]*)*',args.test):
+            parser.error('invalid --test module')
+    args.mode='test' if args.test else 'x' if args.x else 'ffi' if args.ffi else 'fficc' if args.fficc else 'pure'
+    common.expected_cases(args.mode,args.test,args.expected)
+    if args.run_only and args.clean:
+        parser.error('--run-only cannot clean its executable')
+    key=args.mode+('-'+args.test.replace('.','-') if args.test else '')
+    selected=args.build_dir or ROOT / 'run/bak/java/modes' / key
+    if selected.is_symlink():
+        raise ValueError('Build directory must not be a symlink')
+    directory=selected.resolve()
+    env=os.environ.copy()
+    env['PATH']=str(ROOT / 'run/bak/js/node_modules/.bin')+os.pathsep+env['PATH']
+    profile={'java':java_tool('java'),'javac':java_tool('javac'),'jar':java_tool('jar'),
+             'jvm_flags':['-Xss100M',*shlex.split(env.get('JAVA_OPTS',''))],
+             'javac_flags':shlex.split(env.get('JAVAC_OPTS','')),
+             'inherited_jvm_options':{key:env.get(key,'') for key in ['JAVA_TOOL_OPTIONS','JDK_JAVA_OPTIONS','_JAVA_OPTIONS']}}
+    print(f'java: mode={args.mode}, profile={json.dumps(profile,sort_keys=True)}',flush=True)
+    fingerprint=inputs()
+    manifest_path=directory/'manifest.json'
+    if args.run_only:
+        manifest=json.loads(manifest_path.read_text())
+        for name,value in {'language':'java','mode':args.mode,'test':args.test,'expected':args.expected,
+                           'profile':profile,'inputs':fingerprint}.items():
+            if manifest.get(name)!=value:
+                raise ValueError(f'Stale or incompatible Java build ({name}); rebuild first')
+        if common.digest(directory/'benchmark.jar')!=manifest.get('jar_sha256'):
+            raise ValueError('Executable jar SHA differs from its build manifest')
+        execute(directory,env,profile,args)
+        return
+    entry=common.prepare(directory,'java',args)
+    # Use the shared entry directly: Java aliases add no work and currently
+    # expose a backend Supplier<Void>/Supplier<Object> cast incompatibility.
+    # Neither old Java classes nor old generated sources may survive a rebuild.
+    for name in ['java_output','classes']:
+        target=directory/name
+        if target.is_symlink(): target.unlink()
+        elif target.exists(): shutil.rmtree(target)
+        target.mkdir()
+    logs=directory/'logs'; logs.mkdir(exist_ok=True)
+    commands=[common.logged(['spago','build'],directory,logs/'spago.log',env)]
+    backend=ROOT.parent/'javapurs/javapurs/bin/javapurs'
+    commands.append(common.logged([backend,'--main',entry],directory,logs/'backend.log',env))
+    generated=directory/'java_output'
+    if not (generated/'MainRun.java').is_file():
+        raise RuntimeError('Javapurs did not generate java_output/MainRun.java')
+    commands.append(common.logged([profile['javac'],*profile['javac_flags'],'-d',directory/'classes',
+                                    '-sourcepath',generated,generated/'MainRun.java'],directory,logs/'javac.log',env))
+    commands.append(common.logged([profile['jar'],'cfe',directory/'benchmark.jar','MainRun',
+                                    '-C',directory/'classes','.'],directory,logs/'jar.log',env))
+    if fingerprint!=inputs():
+        raise RuntimeError('Sources changed during build; no manifest was accepted')
+    toolchain=subprocess.check_output([profile['java'],'-version'],text=True,stderr=subprocess.STDOUT,env=env).strip()
+    manifest={'language':'java','mode':args.mode,'test':args.test,'expected':args.expected,'entry':entry,
+              'profile':profile,'inputs':fingerprint,'jar_sha256':common.digest(directory/'benchmark.jar'),
+              'toolchain':toolchain,'commands':commands}
+    common.write_json(manifest_path,manifest)
+    print(f'Built {directory / "benchmark.jar"}; manifest {manifest_path}',flush=True)
+    if not args.build_only: execute(directory,env,profile,args)
 
-# Generate Java code
-../javapurs/javapurs/bin/javapurs --main ${ENTRY_POINT} || { echo "JAVAPURS FAILED"; exit 1; }
 
-echo "=== Java ==="
-if [ -d "java_output" ] && [ -f "java_output/MainRun.java" ]; then
-    cd java_output
-    javac MainRun.java
-    java -Xss100M MainRun
-    cd ..
-else
-    echo "No java_output/MainRun.java generated." >&2
-    exit 1
-fi
+if __name__=='__main__':
+    try: main()
+    except (OSError,ValueError,RuntimeError,subprocess.SubprocessError) as error:
+        print(f'ERROR: {error}',file=sys.stderr)
+        sys.exit(1)

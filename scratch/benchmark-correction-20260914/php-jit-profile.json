@@ -1,0 +1,13 @@
+{
+    "jit": {
+        "enabled": true,
+        "on": true,
+        "kind": 5,
+        "opt_level": 5,
+        "opt_flags": 6,
+        "buffer_size": 134217712,
+        "buffer_free": 134214120
+    },
+    "memory_limit": "128M",
+    "xdebug.mode": false
+}

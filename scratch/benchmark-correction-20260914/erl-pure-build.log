@@ -1,0 +1,6 @@
+Build directory: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/erl/output-runs/pure-_8jeagxl
+[purs] purs compile --codegen corefn … (103 source arguments)
+[purerl] purerl
+[erlc] erlc -o beams output/App/app@ps.erl … (133 source arguments)
+Artifact: /Users/0x1/Documents/htdocs/altbak.pub/run/bak/erl/output-runs/pure-_8jeagxl
+Command: erl -noshell -pa beams -eval (app@ps:main())(),halt().

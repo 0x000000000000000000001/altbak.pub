@@ -1,113 +1,68 @@
 #!/usr/bin/env python3
-"""Validate both Java FFI suites and report medians of five fresh JVM runs."""
-
+"""Compare separate, validated Java native suites in fresh JVMs."""
 import argparse
-import datetime
-import hashlib
 import json
-import os
 from pathlib import Path
-import platform
-import re
-import shutil
 import statistics
 import subprocess
+import sys
+
+ROOT=Path(__file__).resolve().parents[2]
 
 
-ROOT = Path(__file__).resolve().parents[2]
-CASES = [
-    ("AST Evaluation", "7"),
-    ("Fibonacci", "55"),
-    ("List Processing", "202950"),
-    ("Tail Call Optimization", "100000"),
-    ("Deep Record Updates", "20000"),
-    ("Ackermann", "125"),
-    ("Church Numerals", "100000"),
-    ("Prime Sieve", "21536"),
-    ("Red-Black Tree", "22"),
-    ("Polymorphism", "10000000"),
-    ("State Monad", "1200"),
-    ("Lazy Evaluation", "1000000"),
-    ("Array Processing", "202950"),
-    ("RowToList", "5"),
-]
-RESULT = re.compile(
-    r"\(Test\)\s+([^\n]+)\s+\(Output & Warm-up\)\s+([^\n]+)\s+"
-    r"\(Execution time - best of 10\)\s+([\d.]+) μs"
-)
-
-
-def run_logged(command, path, cwd):
-    with path.open("w") as log:
-        subprocess.run(command, cwd=cwd, stdout=log, stderr=subprocess.STDOUT, check=True)
-    results = RESULT.findall(path.read_text())
-    expected = [value for _, value in CASES] * 2
-    actual = [value for _, value, _ in results]
-    if actual != expected:
-        raise RuntimeError(f"Incorrect native results in {path}: {actual}")
-    return [float(micros) for _, _, micros in results]
+def command(mode,action,directory):
+    return [str(ROOT/'bin/java/run'),*([] if mode=='pure' else ['--'+mode]),
+            action,'--build-dir',str(directory)]
 
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--runs", type=int, default=5)
-    args = parser.parse_args()
-    if args.runs < 3:
-        parser.error("use at least three independent JVM runs")
-
-    destination = ROOT / "run/bak/java/native-bench"
-    destination.mkdir(parents=True, exist_ok=True)
-    java = os.environ.get("JAVA", shutil.which("java") or "java")
-    print("Building and checking all 28 native results...", flush=True)
-    run_logged([str(ROOT / "bin/java/run"), "--ffi"], destination / "build-and-run.log", ROOT)
-
-    samples = []
-    for index in range(args.runs):
-        print(f"Measuring JVM {index + 1}/{args.runs}...", flush=True)
-        samples.append(run_logged(
-            [java, "-Xss100M", "MainRun"],
-            destination / f"run-{index + 1:02}.log",
-            ROOT / "java_output",
-        ))
-
-    rows = []
-    for index, (name, expected) in enumerate(CASES):
-        row = {"benchmark": name, "expected": expected}
-        for mode, offset in [("fp", 0), ("optimized", len(CASES))]:
-            values = [sample[index + offset] for sample in samples]
-            row[f"{mode}_samples_us"] = values
-            row[f"{mode}_median_us"] = statistics.median(values)
-        rows.append(row)
-
-    sources = sorted(ROOT.glob("src/Test/*FFI.java")) + sorted(ROOT.glob("src/Test/*FFICheatcode.java"))
-    sources += [ROOT / name for name in [
-        "src/Bench.java", "src/Bench.purs", "src/AppFFI.purs", "src/AppJavaFFI.purs",
-        "src/AppJavaFFICheatcode.purs", "bin/java/run", "bin/java/benchmark-native",
-    ]]
-    report = {
-        "measured_at": datetime.datetime.now().astimezone().isoformat(),
-        "platform": platform.platform(),
-        "machine": platform.machine(),
-        "java": subprocess.run([java, "-version"], capture_output=True, text=True, check=True).stderr.strip(),
-        "jvm_command": [java, "-Xss100M", "MainRun"],
-        "jvm_runs": args.runs,
-        "whole_suite_warmups": 3,
-        "warmups_per_case": 3,
-        "samples_per_case": 10,
-        "statistic": "median across fresh JVMs of each case's minimum of ten samples",
-        "native_barrier": "volatile input and result; barrier cost included",
-        "source_sha256": {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest() for path in sources},
-        "benchmarks": rows,
-        "fp_total_ms": sum(row["fp_median_us"] for row in rows) / 1000,
-        "optimized_total_ms": sum(row["optimized_median_us"] for row in rows) / 1000,
-    }
-    (destination / "results.json").write_text(json.dumps(report, indent=2) + "\n")
-    print("\nBenchmark | Native FP (μs) | Native optimized (μs)")
-    for row in rows:
-        print(f"{row['benchmark']} | {row['fp_median_us']:.2f} | {row['optimized_median_us']:.2f}")
-    print(f"Total (ms) | {report['fp_total_ms']:.2f} | {report['optimized_total_ms']:.2f}")
-    print(f"\n28/28 results validated in every JVM. Report: {destination / 'results.json'}")
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--runs',type=int,default=5)
+    parser.add_argument('--include-pure',action='store_true')
+    parser.add_argument('--build-root',type=Path,default=ROOT/'run/bak/java/modes')
+    parser.add_argument('--output',type=Path,default=ROOT/'run/bak/java/native-bench')
+    actions=parser.add_mutually_exclusive_group()
+    actions.add_argument('--build-only',action='store_true')
+    actions.add_argument('--run-only',action='store_true')
+    args=parser.parse_args()
+    args.build_root=args.build_root.resolve()
+    if args.runs<3: parser.error('use at least three independent JVM runs')
+    modes=['pure','ffi','fficc'] if args.include_pure else ['ffi','fficc']
+    destination=args.output.resolve(); destination.mkdir(parents=True,exist_ok=True)
+    if not args.run_only:
+        for mode in modes:
+            with (destination/f'{mode}-build.log').open('w') as output:
+                subprocess.run(command(mode,'--build-only',args.build_root/mode),cwd=ROOT,
+                               stdout=output,stderr=subprocess.STDOUT,check=True)
+    if args.build_only:
+        print('Java builds complete; no JVM benchmark was executed.'); return
+    samples={mode:[] for mode in modes}
+    manifests={}
+    for block in range(args.runs):
+        order=modes[block%len(modes):]+modes[:block%len(modes)]
+        if (block//len(modes))%2: order=list(reversed(order))
+        for mode in order:
+            print(f'JVM block {block+1}/{args.runs}: {mode}',flush=True)
+            log=destination/f'{block+1:02}-{mode}.log'
+            with log.open('w') as output:
+                subprocess.run(command(mode,'--run-only',args.build_root/mode),cwd=ROOT,
+                               stdout=output,stderr=subprocess.STDOUT,check=True)
+            # The runner validates exactly 14 results for this mode, plus labels and total.
+            result=json.loads((args.build_root/mode/'results.json').read_text())
+            samples[mode].append(result)
+            manifests[mode]=json.loads((args.build_root/mode/'manifest.json').read_text())
+            (destination/'checkpoint.json').write_text(json.dumps({'samples':samples,'manifests':manifests},indent=2)+'\n')
+    summary={mode:{'median_each_case_us':[statistics.median(sample['times_us'][index] for sample in samples[mode]) for index in range(14)],
+                   'median_total_ms':statistics.median(sample['total_ms'] for sample in samples[mode])}
+             for mode in modes}
+    report={'runs_per_mode':args.runs,'modes':modes,'process_order':'rotations with reversed blocks',
+            'statistic':'median across fresh JVMs; each case reports its best of ten within that JVM',
+            'whole_suite_warmups':3,'samples':samples,'summary':summary,'build_manifests':manifests}
+    (destination/'results.json').write_text(json.dumps(report,indent=2)+'\n')
+    print(f'All 14 values validated in each separate suite; report: {destination / "results.json"}')
 
 
-if __name__ == "__main__":
-    main()
+if __name__=='__main__':
+    try: main()
+    except (OSError,ValueError,RuntimeError,subprocess.SubprocessError) as error:
+        print(f'ERROR: {error}',file=sys.stderr); sys.exit(1)

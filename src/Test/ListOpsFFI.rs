@@ -1,4 +1,3 @@
-
 enum List {
     Nil,
     Cons(i64, Box<List>),
@@ -15,16 +14,12 @@ fn range_list(start: i64, end: i64) -> Box<List> {
 }
 
 fn filter_evens(mut lst: &List) -> Box<List> {
-    let mut evens = Vec::new();
+    let mut acc = Box::new(List::Nil);
     while let List::Cons(x, xs) = lst {
         if x % 2 == 0 {
-            evens.push(*x);
+            acc = Box::new(List::Cons(*x, acc));
         }
         lst = xs;
-    }
-    let mut acc = Box::new(List::Nil);
-    for x in evens.iter().rev() {
-        acc = Box::new(List::Cons(*x, acc));
     }
     acc
 }

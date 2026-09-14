@@ -1,0 +1,11 @@
+{
+  "before_generation_exit": 0,
+  "after_generation_exit": 0,
+  "before_worker_occurrences": 0,
+  "after_worker_occurrences": 3,
+  "thunk_fusion_guards_byte_identical": true,
+  "same_tast_sha256": "f685d904e30741f555b6bc81747c58597e425310273d1df9093b77469b91f622",
+  "before_generated_sha256": "57caabe47568fdbdd4fcf918807f3036c76eab87d9bdf4d5f5244a65f2bfa6f2",
+  "after_generated_sha256": "2f9373312dd01a98fff21962a9a06627faf47d3c09eb68335f82a6407d8d2b28",
+  "go_build_or_benchmark": false
+}

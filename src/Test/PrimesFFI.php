@@ -6,7 +6,7 @@ $exports['runPrimesFFI'] = function($limit) {
         return function($end) use ($start) {
             $go = function($curr, $acc) use (&$go, $start) {
                 if ($curr < $start) return $acc;
-                return (object)["type" => "Cons", "value0" => $curr, "value1" => $acc];
+                return $go($curr - 1, (object)["type" => "Cons", "value0" => $curr, "value1" => $acc]);
             };
             return $go($end, (object)["type" => "Nil"]);
         };

@@ -1,0 +1,36 @@
+# Go/Rust build products; retain manifests, validation JSON and logs as evidence.
+/go/*/.spago/
+/go/*/src/
+/go/*/output/
+/go/*/target/
+/go/*/var/
+/go/*/benchmark
+/go/*/training
+/go/*/*.prof
+/go/*/spago.yaml
+/go/*/spago.lock
+/go/*/.altbak-native-workspace
+/rust/*/.spago/
+/rust/*/src/
+/rust/*/output/
+/rust/*/target/
+/rust/*/var/
+/rust/*/benchmark
+/rust/*/training
+/rust/*/*.prof
+/rust/*/spago.yaml
+/rust/*/spago.lock
+/rust/*/.altbak-native-workspace
+
+# Private PHP source/dependency/build snapshots; keep manifests and logs.
+/php/*/src/
+/php/*/.spago/
+/php/*/output/
+/php/*/vendor/
+/php/*/var/
+/php/*/opcache/
+/php/*/spago.yaml
+/php/*/spago.lock
+/php/*/composer.json
+/php/*/composer.lock
+/php/*/.altbak-php-workspace

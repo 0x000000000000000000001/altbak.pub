@@ -1,0 +1,17 @@
+panic: FFI not implemented: log
+
+goroutine 1 [running]:
+gopurs/output/purescript.init.func278({0x5bdb05210d38?, 0x1045c6f60?, 0x104558af0?})
+	/Users/0x1/Documents/htdocs/altbak.pub/scratch/go-regression-20260915/same-tast/output/purescript/Effect_Console_ffi.go:12 +0x2c
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, 0x1046fc9a8}, {0x5bdb05218040?, 0x5bdb052141b0?, 0x5bdb05188090?})
+	/Users/0x1/Documents/htdocs/altbak.pub/scratch/go-regression-20260915/same-tast/output/gopurs_runtime/runtime.go:516 +0x6c
+gopurs/output/purescript.Get_App_main.func1()
+	/Users/0x1/Documents/htdocs/altbak.pub/scratch/go-regression-20260915/same-tast/output/purescript/App.go:75 +0xac
+sync.(*Once).doSlow(0x1045cad86?, 0x5?)
+	/opt/homebrew/Cellar/go/1.27.0/libexec/src/sync/once.go:78 +0xdc
+sync.(*Once).Do(...)
+	/opt/homebrew/Cellar/go/1.27.0/libexec/src/sync/once.go:69
+gopurs/output/purescript.Get_App_main()
+	/Users/0x1/Documents/htdocs/altbak.pub/scratch/go-regression-20260915/same-tast/output/purescript/App.go:74 +0x40
+main.main()
+	/Users/0x1/Documents/htdocs/altbak.pub/scratch/go-regression-20260915/same-tast/output/main/main.go:18 +0xa0

@@ -3,12 +3,14 @@
   (import (chezscheme))
   ;; Materialize the range, filtered array, then fold, as in Test.ArrayOps.
   (define (runArrayOpsFFI limit)
-    (let* ([input (make-vector limit)]
-           [evens (make-vector (quotient limit 2))])
-      (do ([i 0 (+ i 1)]) ((= i limit))
-        (vector-set! input i (+ i 1)))
+    (let* ([size (+ 1 (abs (- limit 1)))]
+           [step (if (>= limit 1) 1 -1)]
+           [input (make-vector size)]
+           [evens (make-vector (quotient size 2))])
+      (do ([i 0 (+ i 1)]) ((= i size))
+        (vector-set! input i (+ 1 (* i step))))
       (let filter-loop ([i 0] [j 0])
-        (unless (= i limit)
+        (unless (= i size)
           (let ([x (vector-ref input i)])
             (if (= (modulo x 2) 0)
                 (begin (vector-set! evens j x) (filter-loop (+ i 1) (+ j 1)))

@@ -29,3 +29,10 @@ run/bak/*/.spago/
 *.gopurs-cache.json
 .purmeta
 run/bak/wasm/
+
+/run/bak/go/modes/
+/run/bak/rust/modes/
+
+/run/bak/java/modes/
+
+/run/bak/php/modes/
