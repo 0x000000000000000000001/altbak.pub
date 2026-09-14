@@ -1,8 +1,8 @@
 module Test.PolymorphismFFI
-type Show = { show: int -> string }
-let showInt : Show = { show = fun x -> string x }
-let print (dict: Show) x = dict.show x
+
+type Monoidish = { mempty: int; mappend: int -> int -> int }
+let rec polyLoop dictionary count acc =
+    if count = 0 then acc
+    else polyLoop dictionary (count - 1) (dictionary.mappend acc dictionary.mempty)
 let runPolymorphismFFI (n: obj) =
-    let mutable res = 0
-    for i in 1 .. (unbox<int> n) do res <- res + 1
-    res :> obj
+    polyLoop { mempty = 1; mappend = (+) } (unbox<int> n) 0 :> obj

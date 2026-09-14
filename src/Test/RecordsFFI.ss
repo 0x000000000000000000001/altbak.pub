@@ -1,15 +1,16 @@
 (library (Test.RecordsFFI foreign)
   (export runRecordsFFI)
   (import (chezscheme))
-
-  ;; Whitebox FFI for records means using purely functional nested updates
-  (define (runRecordsFFI limit)
-    (let loop ([n limit] [a 0] [b_c 0] [b_d_e 0] [b_d_f 0])
-      (if (<= n 0)
-          b_d_f
-          (loop (- n 1) 
-                (+ a 1) 
-                (+ b_c 2) 
-                (+ b_d_e 3) 
-                (+ b_d_f (modulo n 5))))))
-)
+  (define-record-type outer (fields a b))
+  (define-record-type middle (fields c d))
+  (define-record-type inner (fields e f))
+  (define (update n r)
+    (if (= n 0) r
+        (let* ([b (outer-b r)] [d (middle-d b)])
+          (update (- n 1)
+            (make-outer (+ (outer-a r) 1)
+              (make-middle (+ (middle-c b) 2)
+                (make-inner (+ (inner-e d) 3) (+ (inner-f d) (modulo n 5)))))))))
+  (define (runRecordsFFI n)
+    (inner-f (middle-d (outer-b
+      (update n (make-outer 0 (make-middle 0 (make-inner 0 0)))))))))

@@ -18,9 +18,5 @@
         (vector 1 (vector 2 (vector 0 depth) (buildTree (- depth 1)))
                   (vector 3 (buildTree (- depth 1)) (vector 0 1)))))
 
-  (define (runAstTreeFFICheatcode limit)
-    (let loop ([i limit] [res 0])
-      (if (= i 0)
-          res
-          (loop (- i 1) (eval-ast (buildTree 6))))))
-)
+  (define (runAstTreeFFICheatcode depth)
+    (eval-ast (buildTree depth))))

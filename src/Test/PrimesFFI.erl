@@ -1,18 +1,18 @@
 -module(test_primesFFI@foreign).
 -export([runPrimesFFI/1]).
-divides(D, N) -> N rem D == 0.
-any_divides(_N, { nil }) -> false;
-any_divides(N, { cons, X, Xs }) ->
-  case divides(X, N) of
-    true -> true;
-    false -> any_divides(N, Xs)
+range(Start, Curr, Acc) when Curr < Start -> Acc;
+range(Start, Curr, Acc) -> range(Start, Curr - 1, {cons, Curr, Acc}).
+reverse({nil}, Acc) -> Acc;
+reverse({cons, X, Xs}, Acc) -> reverse(Xs, {cons, X, Acc}).
+filter(_P, {nil}, Acc) -> reverse(Acc, {nil});
+filter(P, {cons, X, Xs}, Acc) ->
+  case P(X) of
+    true -> filter(P, Xs, {cons, X, Acc});
+    false -> filter(P, Xs, Acc)
   end.
-primes(Limit, Curr, Acc) when Curr > Limit -> Acc;
-primes(Limit, Curr, Acc) ->
-  case any_divides(Curr, Acc) of
-    true -> primes(Limit, Curr + 1, Acc);
-    false -> primes(Limit, Curr + 1, { cons, Curr, Acc })
-  end.
-sum_list({ nil }) -> 0;
-sum_list({ cons, X, Xs }) -> X + sum_list(Xs).
-runPrimesFFI(N) -> sum_list(primes(N, 2, { nil })).
+sieve({nil}) -> {nil};
+sieve({cons, P, Xs}) ->
+  {cons, P, sieve(filter(fun(X) -> X rem P =/= 0 end, Xs, {nil}))}.
+sum_list({nil}, Acc) -> Acc;
+sum_list({cons, X, Xs}, Acc) -> sum_list(Xs, Acc + X).
+runPrimesFFI(N) -> sum_list(sieve(range(2, N, {nil})), 0).

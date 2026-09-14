@@ -11,7 +11,7 @@
   (define (filter-list p lst)
     (let loop ([l lst] [acc '()])
       (cond
-        [(null? l) (reverse acc)]
+        [(null? l) acc]
         [(p (car l)) (loop (cdr l) (cons (car l) acc))]
         [else (loop (cdr l) acc)])))
 

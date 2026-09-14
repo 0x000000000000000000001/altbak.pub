@@ -9,5 +9,5 @@
       [else (ack (- m 1) (ack m (- n 1)))]))
 
   (define (runAckermannFFI limit)
-    (ack 3 4))
+    (ack limit 4))
 )

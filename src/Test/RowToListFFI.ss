@@ -1,6 +1,10 @@
 (library (Test.RowToListFFI foreign)
   (export runRowToListFFI)
   (import (chezscheme))
-
-  (define (runRowToListFFI limit) 5)
-)
+  (define-record-type dictionary (fields keys))
+  (define nil-dict (make-dictionary (lambda (proxy) 0)))
+  (define (cons-dict tail)
+    (make-dictionary (lambda (proxy) (+ 1 ((dictionary-keys tail) 'proxy)))))
+  (define (runRowToListFFI ignored)
+    (let ([dict (cons-dict (cons-dict (cons-dict (cons-dict (cons-dict nil-dict)))))])
+      ((dictionary-keys dict) 'proxy))))

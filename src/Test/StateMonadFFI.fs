@@ -11,6 +11,6 @@ let runStateMonadFFI (n: obj) =
     let rec loop i acc =
         if i = 0 then acc
         else
-            let _, s' = runState (chain 60) 0
+            let _, s' = runState (chain (unbox<int> n)) 0
             loop (i - 1) (acc + s')
-    loop (unbox<int> n) 0 :> obj
+    loop 20 0 :> obj

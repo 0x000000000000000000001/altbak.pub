@@ -1,26 +1,20 @@
-export const runAstTreeFFI = function(limit) {
-  let depth = Math.floor(limit);
-  let tree = buildTree(depth);
-  return evalTree(tree);
+export const runAstTreeFFI = function(depth) {
+  return evaluate(buildTree(depth));
 };
 
-function buildTree(depth) {
-  if (depth === 0) {
-    return { type: "Literal", value: 1 };
-  }
-  return {
-    type: "Add",
-    left: buildTree(depth - 1),
-    right: buildTree(depth - 1)
-  };
+function buildTree(n) {
+  if (n === 0) return { type: "Val", value: 1 };
+  return { type: "Add",
+    left: { type: "Mul", left: { type: "Val", value: n }, right: buildTree(n - 1) },
+    right: { type: "Sub", left: buildTree(n - 1), right: { type: "Val", value: 1 } } };
 }
 
-function evalTree(node) {
-  if (node.type === "Literal") {
-    return node.value;
+function evaluate(tree) {
+  switch (tree.type) {
+    case "Val": return tree.value;
+    case "Add": return evaluate(tree.left) + evaluate(tree.right);
+    case "Mul": return evaluate(tree.left) * evaluate(tree.right);
+    case "Sub": return evaluate(tree.left) - evaluate(tree.right);
+    default: throw new Error("Invalid expression");
   }
-  if (node.type === "Add") {
-    return evalTree(node.left) + evalTree(node.right);
-  }
-  return 0;
 }

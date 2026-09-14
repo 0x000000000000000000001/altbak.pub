@@ -1,6 +1,14 @@
 module Test.LazyEvaluationFFI
-let runLazyEvaluationFFI (n: obj) =
-    let n' = unbox<int> n
-    let mutable res = 0
-    for i in 1 .. n' do res <- res + 1
-    res :> obj
+
+type Thunk = unit -> int
+let buildThunks depth (initial: Thunk) =
+    let mutable result = initial
+    for _ in 1 .. depth do
+        let previous = result
+        result <- fun () -> previous () + 1
+    result
+let runLazyEvaluationFFI (input: obj) =
+    let mutable result = 0
+    for _ in 1 .. unbox<int> input do
+        result <- result + (buildThunks 1000 (fun () -> 0)) ()
+    result :> obj

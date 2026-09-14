@@ -1,5 +1,6 @@
 module Test.TCOFFICheatcode
+
 let runTCOFFICheatcode (n: obj) =
     let mutable acc = 0
-    for i in 1 .. (unbox<int> n) do acc <- acc + 1
+    for remaining in unbox<int> n .. -1 .. 1 do acc <- acc + remaining % 3
     acc :> obj

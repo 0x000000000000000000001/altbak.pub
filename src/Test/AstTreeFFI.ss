@@ -16,9 +16,5 @@
         `(Add (Mul (Val ,depth) ,(buildTree (- depth 1)))
               (Sub ,(buildTree (- depth 1)) (Val 1)))))
 
-  (define (runAstTreeFFI limit)
-    (let loop ([i limit] [res 0])
-      (if (= i 0)
-          res
-          (loop (- i 1) (eval-ast (buildTree 6))))))
-)
+  (define (runAstTreeFFI depth)
+    (eval-ast (buildTree depth))))

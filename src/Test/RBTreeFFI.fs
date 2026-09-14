@@ -17,7 +17,7 @@ let insert x t =
     match ins t with
     | Node(_, a, y, b) -> Node(Black, a, y, b)
     | Empty -> Empty
-let rec count = function Empty -> 0 | Node(_, a, _, b) -> 1 + count a + count b
+let rec depth = function Empty -> 0 | Node(_, a, _, b) -> 1 + max (depth a) (depth b)
 let runRBTreeFFI (n: obj) =
-    let rec build i t = if i > (unbox<int> n) then t else build (i + 1) (insert i t)
-    count (build 1 Empty) :> obj
+    let rec build i t = if i = 0 then t else build (i - 1) (insert i t)
+    depth (build (unbox<int> n) Empty) :> obj

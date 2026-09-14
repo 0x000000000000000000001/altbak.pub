@@ -4,5 +4,5 @@ export const runAckermannFFICheatcode = function(limit) {
     if (n === 0) return ack(m - 1, 1);
     return ack(m - 1, ack(m, n - 1));
   }
-  return ack(3, 4);
+  return ack(limit, 4);
 };

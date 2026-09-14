@@ -1,6 +1,6 @@
 export const runStateMonadFFI = function(limit) {
   let dummy = Math.floor(limit);
-  return runManyTimes(dummy, 0);
+  return runManyTimes(20, dummy, 0);
 };
 
 function runState(state) {
@@ -48,11 +48,11 @@ function chainModifications(n) {
   });
 }
 
-function runManyTimes(n, acc) {
+function runManyTimes(n, depth, acc) {
   let currN = n;
   let currAcc = acc;
   while (currN > 0) {
-    currAcc += runState(chainModifications(60))(0).state;
+    currAcc += runState(chainModifications(depth))(0).state;
     currN--;
   }
   return currAcc;

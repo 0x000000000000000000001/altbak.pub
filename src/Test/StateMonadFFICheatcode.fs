@@ -1,7 +1,10 @@
 module Test.StateMonadFFICheatcode
-let runStateMonadFFICheatcode (n: obj) =
-    let n' = unbox<int> n
-    let mutable state = 0
-    for i in 1 .. n' do
-        for j in 1 .. 60 do state <- state + 1
-    state :> obj
+
+let runStateMonadFFICheatcode (input: obj) =
+    let depth = unbox<int> input
+    let mutable total = 0
+    for _ in 1 .. 20 do
+        let mutable state = 0
+        for _ in 1 .. depth do state <- state + 1
+        total <- total + state
+    total :> obj

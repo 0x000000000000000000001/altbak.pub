@@ -27,8 +27,8 @@
                     (lambda (_) (chain (- n 1))))))
 
   (define (runStateMonadFFI limit)
-    (let loop ([n limit] [acc 0])
+    (let loop ([n 20] [acc 0])
       (if (<= n 0)
           acc
-          (loop (- n 1) (+ acc (cdr (run-state (chain 60) 0)))))))
+          (loop (- n 1) (+ acc (cdr (run-state (chain limit) 0)))))))
 )

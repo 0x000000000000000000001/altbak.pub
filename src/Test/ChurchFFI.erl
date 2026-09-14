@@ -6,9 +6,6 @@ church(N) ->
   fun(F) -> fun(X) -> F((C(F))(X)) end end.
 unchurch(C) -> (C(fun(X) -> X + 1 end))(0).
 mul(M, N) -> fun(F) -> fun(X) -> (M(N(F)))(X) end end.
-runChurchFFI(N) -> 
-  C10 = church(N),
-  C100 = mul(C10, C10),
-  C10k = mul(C100, C100),
-  C100k = mul(C10k, C10),
-  unchurch(C100k).
+c100(N) -> mul(church(N), church(N)).
+c10k(N) -> mul(c100(N), c100(N)).
+runChurchFFI(N) -> unchurch(mul(c10k(N), church(N))).

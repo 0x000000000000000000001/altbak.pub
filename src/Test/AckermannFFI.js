@@ -1,5 +1,5 @@
-export const runAckermannFFI = function(ignore) {
-  return ack(3, 4);
+export const runAckermannFFI = function(limit) {
+  return ack(limit, 4);
 };
 
 function ack(m, n) {

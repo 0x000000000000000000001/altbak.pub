@@ -4,7 +4,7 @@
 
   (define (runChurchFFICheatcode limit)
     (let loop ([i 0] [acc 0])
-      (if (>= i (* limit 10000))
+      (if (>= i (expt limit 5))
           acc
           (loop (+ i 1) (+ acc 1)))))
 )

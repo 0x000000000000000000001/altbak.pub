@@ -1,4 +1,4 @@
--module(test_arrayOpsFFI@foreign).
+-module(test_arrayProcessingFFI@foreign).
 -export([runArrayOpsFFI/1]).
 runArrayOpsFFI(N) ->
   Arr = array:from_list(lists:seq(1, N)),
