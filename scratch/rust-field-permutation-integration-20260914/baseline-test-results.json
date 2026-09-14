@@ -1,0 +1,149 @@
+[
+  {
+    "name": "shared-nullaries",
+    "test": "/Users/0x1/Documents/htdocs/purust/purust/tests/tast/shared-nullaries.mjs",
+    "testSha256": "7fc86091dca6f19b8e7972c0b88c83489804b0f2d938c75a18db8fe0de873d40",
+    "command": "/opt/homebrew/Cellar/node/24.8.0/bin/node",
+    "args": [
+      "--import",
+      "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/baseline-test-hook.mjs",
+      "/Users/0x1/Documents/htdocs/purust/purust/tests/tast/shared-nullaries.mjs"
+    ],
+    "cwd": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/",
+    "purs": "/Users/0x1/Documents/htdocs/purescript/.stack-work/dist/aarch64-osx/ghc-9.8.4/build/purs/purs",
+    "status": 1,
+    "signal": null,
+    "error": null,
+    "log": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/baseline-test-evidence/shared-nullaries.log",
+    "redirects": [
+      {
+        "command": "/opt/homebrew/Cellar/node/24.8.0/bin/node",
+        "args": [
+          "--stack-size=65536",
+          "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/purust-rule-disabled.js",
+          "--source",
+          "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-shared-nullaries-POEM83/output",
+          "--out",
+          "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-shared-nullaries-POEM83/rust",
+          "--main",
+          "SharedNullaries"
+        ],
+        "cwd": "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-shared-nullaries-POEM83",
+        "status": 0,
+        "signal": null,
+        "sources": [
+          {
+            "name": "Purs_SharedNullaries",
+            "original": "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-shared-nullaries-POEM83/rust/Purs_SharedNullaries/src/lib.rs",
+            "saved": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/baseline-test-evidence/shared-nullaries/Purs_SharedNullaries.rs",
+            "sha256": "1a1796e35448423c2c163675d5bd17acf56a0ea5bf453a41686ed4e505a952f0"
+          },
+          {
+            "name": "Purs_OtherNullaries",
+            "original": "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-shared-nullaries-POEM83/rust/Purs_OtherNullaries/src/lib.rs",
+            "saved": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/baseline-test-evidence/shared-nullaries/Purs_OtherNullaries.rs",
+            "sha256": "518fbc39e62ecbd9f8f0ae96d2ff6d5b333739e4548dcdf2941c889b1fa393f6"
+          }
+        ],
+        "bundle": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/purust-rule-disabled.js",
+        "bundleSha256": "86f28b0b9b65baf8d4834e002aca07faf426548cb648ec44137f8d9378860ec4",
+        "originalBundle": "/Users/0x1/Documents/htdocs/purust/purust/bin/purust.js",
+        "originalBundleSha256": "47cf0093f2a256223724c9a33b81f66194ddb56ad2eacfa328c04e2bc9ba2ec3"
+      }
+    ]
+  },
+  {
+    "name": "record-root-move",
+    "test": "/Users/0x1/Documents/htdocs/purust/purust/tests/tast/record-root-move.mjs",
+    "testSha256": "cd46abd3d1172d1cbbd0116856c4f1cf36f057be2f706b468370c241a210dc9b",
+    "command": "/opt/homebrew/Cellar/node/24.8.0/bin/node",
+    "args": [
+      "--import",
+      "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/baseline-test-hook.mjs",
+      "/Users/0x1/Documents/htdocs/purust/purust/tests/tast/record-root-move.mjs"
+    ],
+    "cwd": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/",
+    "purs": "/Users/0x1/Documents/htdocs/purescript/.stack-work/dist/aarch64-osx/ghc-9.8.4/build/purs/purs",
+    "status": 1,
+    "signal": null,
+    "error": null,
+    "log": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/baseline-test-evidence/record-root-move.log",
+    "redirects": [
+      {
+        "command": "/opt/homebrew/Cellar/node/24.8.0/bin/node",
+        "args": [
+          "--stack-size=65536",
+          "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/purust-rule-disabled.js",
+          "--source",
+          "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-record-root-move-970gXr/output",
+          "--out",
+          "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-record-root-move-970gXr/rust",
+          "--main",
+          "RecordRootMove"
+        ],
+        "cwd": "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-record-root-move-970gXr",
+        "status": 0,
+        "signal": null,
+        "sources": [
+          {
+            "name": "Purs_RecordRootMove",
+            "original": "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-record-root-move-970gXr/rust/Purs_RecordRootMove/src/lib.rs",
+            "saved": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/baseline-test-evidence/record-root-move/Purs_RecordRootMove.rs",
+            "sha256": "223e9935aa740fb66ec8cfc5cd9f723b8f5723281c617d8150aefb64beee1f9b"
+          }
+        ],
+        "bundle": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/purust-rule-disabled.js",
+        "bundleSha256": "86f28b0b9b65baf8d4834e002aca07faf426548cb648ec44137f8d9378860ec4",
+        "originalBundle": "/Users/0x1/Documents/htdocs/purust/purust/bin/purust.js",
+        "originalBundleSha256": "47cf0093f2a256223724c9a33b81f66194ddb56ad2eacfa328c04e2bc9ba2ec3"
+      }
+    ]
+  },
+  {
+    "name": "foreign-object",
+    "test": "/Users/0x1/Documents/htdocs/purust/purust/tests/tast/foreign-object.mjs",
+    "testSha256": "44f3bf6f99a0d305911186932959c55f810b4acb2b025baf79d04a3a6a4da46d",
+    "command": "/opt/homebrew/Cellar/node/24.8.0/bin/node",
+    "args": [
+      "--import",
+      "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/baseline-test-hook.mjs",
+      "/Users/0x1/Documents/htdocs/purust/purust/tests/tast/foreign-object.mjs"
+    ],
+    "cwd": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/",
+    "purs": "/Users/0x1/Documents/htdocs/purescript/.stack-work/dist/aarch64-osx/ghc-9.8.4/build/purs/purs",
+    "status": 1,
+    "signal": null,
+    "error": null,
+    "log": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/baseline-test-evidence/foreign-object.log",
+    "redirects": [
+      {
+        "command": "/opt/homebrew/Cellar/node/24.8.0/bin/node",
+        "args": [
+          "--stack-size=65536",
+          "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/purust-rule-disabled.js",
+          "--source",
+          "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-foreign-object-LFe3tC/tast",
+          "--out",
+          "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-foreign-object-LFe3tC/normal",
+          "--main",
+          "ObjectProbe"
+        ],
+        "cwd": "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-foreign-object-LFe3tC",
+        "status": 0,
+        "signal": null,
+        "sources": [
+          {
+            "name": "Purs_Foreign_Object",
+            "original": "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-foreign-object-LFe3tC/normal/Purs_Foreign_Object/src/lib.rs",
+            "saved": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/baseline-test-evidence/foreign-object/Purs_Foreign_Object.rs",
+            "sha256": "a2d173b4e80b4c6f98ba58b2e79a63c99391befde1f850ec855bfe75e2ef4502"
+          }
+        ],
+        "bundle": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/purust-rule-disabled.js",
+        "bundleSha256": "86f28b0b9b65baf8d4834e002aca07faf426548cb648ec44137f8d9378860ec4",
+        "originalBundle": "/Users/0x1/Documents/htdocs/purust/purust/bin/purust.js",
+        "originalBundleSha256": "47cf0093f2a256223724c9a33b81f66194ddb56ad2eacfa328c04e2bc9ba2ec3"
+      }
+    ]
+  }
+]

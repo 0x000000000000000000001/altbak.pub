@@ -1,0 +1,11 @@
+{
+  "before_RBTree_sha256": "33ae6022e29f228a26e5d55a15edab26ac2d34ee17e0bc302b60918cc81fc7fb",
+  "after_RBTree_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+  "disabled_bundle_sha256": "86f28b0b9b65baf8d4834e002aca07faf426548cb648ec44137f8d9378860ec4",
+  "current_bundle_sha256": "47cf0093f2a256223724c9a33b81f66194ddb56ad2eacfa328c04e2bc9ba2ec3",
+  "raw_generation_differences": [
+    "Purs_Test_RBTree/src/lib.rs"
+  ],
+  "comparison": "Both variants regenerated from project cwd; all sources and manifests byte-identical except RBTree.",
+  "ffi_context": "/Users/0x1/Documents/htdocs/altbak.pub-purust"
+}

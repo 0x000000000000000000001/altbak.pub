@@ -1,0 +1,17 @@
+{
+  "command": [
+    "cargo",
+    "test",
+    "--offline",
+    "--quiet",
+    "-p",
+    "Purs_JsonReadObjectProbe",
+    "--test",
+    "json_read_object",
+    "--",
+    "--test-threads=1"
+  ],
+  "status": 101,
+  "stdout": "\nrunning 17 tests\n....... 7/17\nown_property_order_matches_javascript --- FAILED\n.........\nfailures:\n\n---- own_property_order_matches_javascript stdout ----\n\nthread 'own_property_order_matches_javascript' (2977434) panicked at Purs_JsonReadObjectProbe/tests/json_read_object.rs:126:5:\nassertion `left == right` failed\n  left: [\"alpha\", \"beta\", \"constructor\", \"z\"]\n right: [\"z\", \"alpha\", \"constructor\", \"beta\"]\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n\n\nfailures:\n    own_property_order_matches_javascript\n\ntest result: FAILED. 16 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n",
+  "stderr": "error: test failed, to rerun pass `-p Purs_JsonReadObjectProbe --test json_read_object`\n"
+}

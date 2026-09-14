@@ -1,0 +1,96 @@
+{
+  "before": {
+    "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/disabled/Purs_Test_RBTree/src/lib.rs",
+    "source_sha256": "33ae6022e29f228a26e5d55a15edab26ac2d34ee17e0bc302b60918cc81fc7fb",
+    "unique_build": {
+      "take": 299934,
+      "rebuild_helper": 299934,
+      "generated_permutations": 0
+    },
+    "phases": {
+      "checks": {
+        "clone": 37,
+        "drop_last": 20,
+        "drop_shared": 37,
+        "get_mut_unique": 45,
+        "get_mut_weak": 3,
+        "new": 21,
+        "unwrap_unique": 1
+      },
+      "persistent_build": {
+        "clone": 5808,
+        "drop_shared": 2802,
+        "get_mut_shared": 2606,
+        "get_mut_unique": 860,
+        "new": 1504,
+        "unwrap_shared": 1303
+      },
+      "persistent_depth": {
+        "clone": 401,
+        "drop_shared": 401
+      },
+      "persistent_drop": {
+        "drop_last": 1504,
+        "drop_shared": 1703
+      },
+      "unique_build": {
+        "clone": 2483932,
+        "drop_shared": 2383932,
+        "get_mut_unique": 2783866,
+        "new": 100001
+      },
+      "unique_depth_and_drop": {
+        "clone": 200000,
+        "drop_last": 100001,
+        "drop_shared": 300000
+      }
+    }
+  },
+  "after": {
+    "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/after/Purs_Test_RBTree/src/lib.rs",
+    "source_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+    "unique_build": {
+      "take": 0,
+      "rebuild_helper": 0,
+      "generated_permutations": 99978
+    },
+    "phases": {
+      "checks": {
+        "clone": 35,
+        "drop_last": 20,
+        "drop_shared": 35,
+        "get_mut_unique": 42,
+        "get_mut_weak": 3,
+        "new": 21,
+        "unwrap_unique": 1
+      },
+      "persistent_build": {
+        "clone": 5808,
+        "drop_shared": 2802,
+        "get_mut_shared": 2606,
+        "get_mut_unique": 860,
+        "new": 1504,
+        "unwrap_shared": 1303
+      },
+      "persistent_depth": {
+        "clone": 401,
+        "drop_shared": 401
+      },
+      "persistent_drop": {
+        "drop_last": 1504,
+        "drop_shared": 1703
+      },
+      "unique_build": {
+        "clone": 2283976,
+        "drop_shared": 2183976,
+        "get_mut_unique": 2483932,
+        "new": 100001
+      },
+      "unique_depth_and_drop": {
+        "clone": 200000,
+        "drop_last": 100001,
+        "drop_shared": 300000
+      }
+    }
+  }
+}

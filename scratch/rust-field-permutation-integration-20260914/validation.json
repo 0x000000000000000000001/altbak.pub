@@ -1,0 +1,12 @@
+{
+  "before": {
+    "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/disabled/Purs_Test_RBTree/src/lib.rs",
+    "source_sha256": "33ae6022e29f228a26e5d55a15edab26ac2d34ee17e0bc302b60918cc81fc7fb",
+    "output": "B13 red-parent cases: 128; unique parent address retained: 32/32 (observation only)\nB13 extra checks passed: BTreeSet, RB invariants, 200 persistent versions, 512 mixed-sharing insertions, independent children, weak values and final lifetimes\nall checks passed\n"
+  },
+  "after": {
+    "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rust-field-permutation-integration-20260914/build/after/Purs_Test_RBTree/src/lib.rs",
+    "source_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+    "output": "B13 red-parent cases: 128; unique parent address retained: 32/32 (observation only)\nB13 extra checks passed: BTreeSet, RB invariants, 200 persistent versions, 512 mixed-sharing insertions, independent children, weak values and final lifetimes\nLL extra validation: 54 guard/ownership cases and 6 absent patterns passed\nall checks passed\n"
+  }
+}

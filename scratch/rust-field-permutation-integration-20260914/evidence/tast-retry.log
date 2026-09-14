@@ -1,0 +1,458 @@
+MonadAff, 120 fresh modules: test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+✔ tests/tast/aff-class.mjs (68866.696833ms)
+Diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB
+normal: 58 fresh TAST modules; 4 representation tests passed
+threaded: 58 fresh TAST modules; 5 representation tests passed
+Retained diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: check-missing-ffi: 
+     Locking 12 packages to latest compatible versions
+    Checking memchr v2.8.3
+    Checking regex-syntax v0.8.11
+    Checking bit-vec v0.6.3
+    Checking perceus_ptr v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/perceus_ptr)
+    Checking bit-set v0.5.3
+    Checking aho-corasick v1.1.5
+    Checking regex-automata v0.4.18
+    Checking fancy-regex v0.13.0
+    Checking purust_core v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/purust_core)
+    Checking Purs_Record_Unsafe v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Record_Unsafe)
+    Checking Purs_Type_Proxy v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Type_Proxy)
+    Checking Purs_Data_Unit v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Unit)
+    Checking Purs_Data_Void v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Void)
+    Checking Purs_Data_Boolean v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Boolean)
+    Checking Purs_Unsafe_Coerce v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Unsafe_Coerce)
+    Checking Purs_Data_Function_Uncurried v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Function_Uncurried)
+    Checking Purs_Data_Int_Bits v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Int_Bits)
+    Checking Purs_Safe_Coerce v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Safe_Coerce)
+    Checking Purs_Control_Semigroupoid v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Control_Semigroupoid)
+    Checking Purs_Data_Symbol v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Symbol)
+    Checking Purs_Data_Reflectable v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Reflectable)
+    Checking Purs_Data_Newtype v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Newtype)
+    Checking Purs_Control_Category v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Control_Category)
+    Checking Purs_Data_Semiring v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Semiring)
+    Checking Purs_Data_HeytingAlgebra v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_HeytingAlgebra)
+    Checking Purs_Data_Semigroup v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Semigroup)
+    Checking Purs_Data_Show v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Show)
+    Checking Purs_Data_Ring v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Ring)
+    Checking Purs_Data_Eq v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Eq)
+    Checking Purs_Data_Generic_Rep v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Generic_Rep)
+    Checking Purs_Data_CommutativeRing v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_CommutativeRing)
+    Checking Purs_Data_Ordering v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Ordering)
+    Checking Purs_Data_EuclideanRing v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_EuclideanRing)
+    Checking Purs_Data_Ord v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Ord)
+    Checking Purs_Data_DivisionRing v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_DivisionRing)
+    Checking Purs_Data_Function v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Function)
+    Checking Purs_Data_Bounded v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Bounded)
+    Checking Purs_Data_Monoid v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Monoid)
+    Checking Purs_Data_Functor v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Functor)
+    Checking Purs_Data_Monoid_Endo v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Monoid_Endo)
+    Checking Purs_Control_Apply v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Control_Apply)
+    Checking Purs_Control_Alt v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Control_Alt)
+    Checking Purs_Control_Extend v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Control_Extend)
+    Checking Purs_Control_Comonad v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Control_Comonad)
+    Checking Purs_Control_Plus v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Control_Plus)
+    Checking Purs_Control_Applicative v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Control_Applicative)
+    Checking Purs_Control_Bind v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Control_Bind)
+    Checking Purs_Control_Alternative v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Control_Alternative)
+    Checking Purs_Control_Monad v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Control_Monad)
+    Checking Purs_Data_Monoid_Additive v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Monoid_Additive)
+    Checking Purs_Data_Monoid_Dual v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Monoid_Dual)
+    Checking Purs_Data_Monoid_Multiplicative v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Monoid_Multiplicative)
+    Checking Purs_Data_Monoid_Conj v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Monoid_Conj)
+    Checking Purs_Data_Monoid_Alternate v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Monoid_Alternate)
+    Checking Purs_Data_Monoid_Disj v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Monoid_Disj)
+    Checking Purs_Data_Functor_Invariant v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Functor_Invariant)
+    Checking Purs_Data_Maybe v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Maybe)
+    Checking Purs_Data_Number v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Number)
+    Checking Purs_Data_Int v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_Data_Int)
+    Checking Purs_JS_BigInt v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_JS_BigInt)
+    Checking Purs_BigIntProbe v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-q3cbyB/missing-ffi/rust/Purs_BigIntProbe)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 7.62s
+
+
+0 !== 101
+
+    at run (file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/bigint.mjs:29:10)
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/bigint.mjs:93:20
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 0,
+  expected: 101,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/bigint.mjs (72102.411833ms)
+Child calls: 128 root/child sharing cases, both sides, helper fallback, persistence, order and unwind checked.
+✔ tests/tast/child-call-reuse.mjs (27196.456125ms)
+Reconstruction across 2000 calls: unique=0, shared=2000
+Consumed nodes: values, shared children, retained versions and releases checked.
+Allocations for 1000 updates: unique root=0, shared root=1000, unique two-node path=0
+✔ tests/tast/consumed-nodes.mjs (27443.963458ms)
+/Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-crypto-hash-tast-K4YGUR
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: build: 
+
+error: no matching package named `fancy-regex` found
+location searched: crates.io index
+required by package `purust_core v0.1.0 (/var/www/b8x/run/bak/rust/output/purust-crypto-hash-tast-K4YGUR/rust/purust_core)`
+note: offline mode (via `--offline`) can sometimes cause surprising resolution failures
+help: if this error is too confusing you may wish to retry without `--offline`
+
+
+101 !== 0
+
+    at run (file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/crypto-hash.mjs:39:10)
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/crypto-hash.mjs:123:3
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 101,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/crypto-hash.mjs (44438.199292ms)
+Data.Exists (normal): packing, rank-2 callback, payload identity and deferred results passed.
+Data.Exists (threaded): packing, rank-2 callback, payload identity and deferred results passed.
+✔ tests/tast/exists.mjs (4670.046292ms)
+normal: 34 fresh TAST modules; relocated native execution passed
+threaded: 34 fresh TAST modules; relocated native execution passed
+✔ tests/tast/ffi-cargo.mjs (46976.096917ms)
+Scalar field updates preserve aliases, weak references, callbacks and retained values.
+✔ tests/tast/field-updates.mjs (26117.16ms)
+Diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-foreign-error-C5aAaF
+normal: 110 fresh modules, 10 original contracts + 5 JS-qualified predicate tests passed (600 predicate assertions)
+threaded: 110 fresh modules, 10 original contracts + 5 JS-qualified predicate tests passed (600 predicate assertions)
+✔ tests/tast/foreign-error.mjs (169412.264667ms)
+normal: 66 fresh TAST modules, 10 native tests passed
+threaded: 66 fresh TAST modules, 10 native tests passed
+✔ tests/tast/foreign-object-st.mjs (62124.827208ms)
+Retained diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-foreign-object-04NMtX
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Unknown fallback shape: Foreign_Object__foldM
+    at guardObject (file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/foreign-object.mjs:43:47)
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/foreign-object.mjs:94:30
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: null,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/foreign-object.mjs (10093.532625ms)
+normal, 91 fresh modules: test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.39s
+threaded, 91 fresh modules: test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
+✔ tests/tast/free-monad-rec.mjs (120468.263ms)
+Function calls borrow native Func1/Func2; captures replay, partial applications own their callees, callee arguments retain their owner, and all weak references expire.
+✔ tests/tast/function-borrows.mjs (26479.195459ms)
+Function fusion: callback traces, zero, saved/partially applied functions, cross-module calls, capture drops, panic/overflow and near misses checked.
+✔ tests/tast/function-fusion.mjs (30113.886583ms)
+JSDate diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-js-date-fc0rA0
+graph
+tast
+generate-normal
+test-normal
+generate-threaded
+test-threaded
+(node:81070) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/0x1/Documents/htdocs/purust/purust-js-date/src/Data/JSDate.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/0x1/Documents/htdocs/purust/purust-js-date/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ tests/tast/js-date.mjs (147154.349667ms)
+Known empty: one allocation with unique/shared/weak seeds; nested and imported constructors, fallback, calls, later uses and all releases checked.
+✔ tests/tast/known-nullaries.mjs (37040.199709ms)
+normal, 77 fresh modules: test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+threaded, 77 fresh modules: test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+✔ tests/tast/lazy.mjs (87200.670083ms)
+Diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-module-values-mTXRaC
+JS: eager module values, shared handles, fresh factories and replayable effects
+normal: 36 fresh TAST modules, module-value probes passed
+threaded: 36 fresh TAST modules, module-value probes passed
+✔ tests/tast/module-values.mjs (54797.365542ms)
+Diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V
+JS: 8 checks passed; 54 fresh TAST modules
+normal: 7 nullable tests passed
+threaded: 7 nullable tests + 1 threaded-sharing test passed
+Retained diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: cargo: 
+
+     Locking 12 packages to latest compatible versions
+    Checking memchr v2.8.3
+    Checking bit-vec v0.6.3
+    Checking regex-syntax v0.8.11
+    Checking perceus_ptr v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/perceus_ptr)
+    Checking bit-set v0.5.3
+    Checking aho-corasick v1.1.5
+    Checking regex-automata v0.4.18
+    Checking fancy-regex v0.13.0
+    Checking purust_core v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/purust_core)
+    Checking Purs_Record_Unsafe v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Record_Unsafe)
+    Checking Purs_Type_Proxy v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Type_Proxy)
+    Checking Purs_Data_Unit v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Unit)
+    Checking Purs_Data_Void v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Void)
+    Checking Purs_Data_Boolean v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Boolean)
+    Checking Purs_Unsafe_Coerce v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Unsafe_Coerce)
+    Checking Purs_Data_Function_Uncurried v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Function_Uncurried)
+    Checking Purs_Control_Semigroupoid v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Control_Semigroupoid)
+    Checking Purs_Data_Symbol v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Symbol)
+    Checking Purs_Safe_Coerce v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Safe_Coerce)
+    Checking Purs_Data_Newtype v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Newtype)
+    Checking Purs_Control_Category v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Control_Category)
+    Checking Purs_Data_Semigroup v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Semigroup)
+    Checking Purs_Data_HeytingAlgebra v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_HeytingAlgebra)
+    Checking Purs_Data_Semiring v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Semiring)
+    Checking Purs_Data_Show v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Show)
+    Checking Purs_Data_Eq v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Eq)
+    Checking Purs_Data_Ring v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Ring)
+    Checking Purs_Data_CommutativeRing v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_CommutativeRing)
+    Checking Purs_Data_Ordering v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Ordering)
+    Checking Purs_Data_Generic_Rep v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Generic_Rep)
+    Checking Purs_Data_EuclideanRing v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_EuclideanRing)
+    Checking Purs_Data_Ord v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Ord)
+    Checking Purs_Data_Function v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Function)
+    Checking Purs_Data_Monoid v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Monoid)
+    Checking Purs_Data_Bounded v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Bounded)
+    Checking Purs_Data_Functor v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Functor)
+    Checking Purs_Data_Monoid_Endo v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Monoid_Endo)
+    Checking Purs_Control_Apply v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Control_Apply)
+    Checking Purs_Control_Alt v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Control_Alt)
+    Checking Purs_Control_Extend v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Control_Extend)
+    Checking Purs_Control_Plus v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Control_Plus)
+    Checking Purs_Control_Comonad v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Control_Comonad)
+    Checking Purs_Control_Applicative v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Control_Applicative)
+    Checking Purs_Control_Bind v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Control_Bind)
+    Checking Purs_Control_Alternative v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Control_Alternative)
+    Checking Purs_Control_Monad v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Control_Monad)
+    Checking Purs_Data_Monoid_Conj v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Monoid_Conj)
+    Checking Purs_Data_Monoid_Multiplicative v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Monoid_Multiplicative)
+    Checking Purs_Data_Monoid_Dual v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Monoid_Dual)
+    Checking Purs_Data_Monoid_Disj v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Monoid_Disj)
+    Checking Purs_Data_Monoid_Additive v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Monoid_Additive)
+    Checking Purs_Data_Monoid_Alternate v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Monoid_Alternate)
+    Checking Purs_Data_Functor_Invariant v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Functor_Invariant)
+    Checking Purs_Data_Maybe v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Maybe)
+    Checking Purs_Data_Nullable v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_Data_Nullable)
+    Checking Purs_NullableProbe v0.1.0 (/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Purs_NullableProbe)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 8.62s
+
+
+0 !== 101
+
+    at run (file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/nullable.mjs:36:10)
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/nullable.mjs:116:23
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 0,
+  expected: 101,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/nullable.mjs (74702.494875ms)
+TAST enum eligibility: nullary constructors, phantom parameters, payloads and nested Color checked.
+✔ tests/tast/nullary-enums.mjs (263.939959ms)
+normal, 3 fresh modules: test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+threaded, 3 fresh modules: test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+✔ tests/tast/pipes-x.mjs (43042.668666ms)
+normal: 33 fresh TAST modules, relocated Cargo binary and runtime tests passed
+threaded: 33 fresh TAST modules, relocated Cargo binary and runtime tests passed
+✔ tests/tast/portable-cargo.mjs (44590.823333ms)
+Post-call child guards: 320 sharing cases (256 simple, 64 complex), returned tags, one call, recursion, persistence and unwind checked.
+✔ tests/tast/post-call-child-reuse.mjs (37549.845291ms)
+Record scalar borrows: Int/Number/Boolean/Char at 1-3 levels, unary/binary operations, short-circuit callback order, branch conditions, field-name collisions, 8 sharing masks, writes after reads, owned returns, captures and unwind checked.
+✔ tests/tast/record-borrows.mjs (31625.055917ms)
+Diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-record-keyword-ZwRTbA
+normal: 2 fresh TAST modules, 3 record keyword tests passed
+threaded: 2 fresh TAST modules, 3 record keyword tests passed
+✔ tests/tast/record-keyword.mjs (35034.580791ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: updateDeep
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/record-root-move.mjs:38:12
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'RecordRootMove_updateDeep(mut purs_local_0: i64, mut purs_local_1: crate::UnknownType) -> crate::UnknownType {\n' +
+    '    // AST: Typed(Abs(..., Typed(Abs(..., Typed(Branch(...))))))\n' +
+    '    loop {\n' +
+    '        break /* Typed crate::UnknownType <- crate::UnknownType : Branch(...) */if (/* Typed i64 <- i64 : Local(...) */purs_local_0.clone() == 0) {\n' +
+    '        /* Typed crate::UnknownType <- crate::UnknownType : Local(...) */purs_local_1\n' +
+    '    } else {\n' +
+    '        {\n' +
+    '        let _tco_temp_0 = /* Typed i64 <- i64 : PrimOp(...) */(/* Typed i64 <- i64 : Local(...) */purs_local_0.clone() - /* Typed i64 <- i64 : Lit */1);\n' +
+    '        let _tco_temp_1 = /* Typed crate::UnknownType <- crate::UnknownType : Update */{\n' +
+    '    let _record_update_0 = crate::mk_int(/* Typed i64 <- i64 : PrimOp(...) */(/* purust record: borrowed scalar */((&purs_local_1).__purust_borrow_a()).unwrap_int() + 1));\n' +
+    '    let _record_child_update_0 = crate::mk_int(/* Typed i64 <- i64 : PrimOp(...) */(/* purust record: borrowed scalar */((&purs_local_1).__purust_borrow_b().__purust_borrow_c()).unwrap_int() + 2));\n' +
+    '    let _record_child_1_update_0 = crate::mk_int(/* Typed i64 <- i64 : PrimOp(...) */(/* purust record: borrowed scalar */((&purs_local_1).__purust_borrow_b().__purust_borrow_d().__purust_borrow_e()).unwrap_int() + 3));\n' +
+    '    let _record_child_1_update_1 = crate::mk_int(/* Typed i64 <- i64 : PrimOp(...) */(/* purust record: borrowed scalar */((&purs_local_1).__purust_borrow_b().__purust_borrow_d().__purust_borrow_f()).unwrap_int() + { let _mod_l: i64 = /* Typed i64 <- i64 : Local(...) */purs_local_0; let _mod_r: i64 = /* Typed i64 <- i64 : Lit */5; _mod_l.checked_rem_euclid(_mod_r).unwrap_or(0_i64) }));\n' +
+    '    let mut _base = purs_local_1;\n' +
+    '    _base.set_a(_record_update_0);\n' +
+    '    let mut _record_child = _base.get_b();\n' +
+    '    _base.set_b(purust_core::Value::Unit);\n' +
+    '    _record_child.set_c(_record_child_update_0);\n' +
+    '    let mut _record_child_1 = _record_child.get_d();\n' +
+    '    _record_child.set_d(purust_core::Value::Unit);\n' +
+    '    _record_child_1.set_e(_record_child_1_update_0);\n' +
+    '    _record_child_1.set_f(_record_child_1_update_1);\n' +
+    '    _record_child.set_d(_record_child_1);\n' +
+    '    _base.set_b(_record_child);\n' +
+    '    _base\n' +
+    '};\n' +
+    '        purs_local_0 = _tco_temp_0;\n' +
+    '        purs_local_1 = _tco_temp_1;\n' +
+    '        continue;\n' +
+    '    }\n' +
+    '    };\n' +
+    '    }\n' +
+    '}\n' +
+    '\n',
+  expected: /_base\.set_b\(crate::Value::Unit\);/,
+  operator: 'match',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/record-root-move.mjs (4846.946333ms)
+normal, 123 fresh modules: test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+threaded, 123 fresh modules: test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+✔ tests/tast/record-set.mjs (91673.8835ms)
+Returned functions: results, partial applications, replay, recursion and allocation budget checked.
+✔ tests/tast/returned-functions.mjs (31446.110292ms)
+Four rotations: [unique, shared root, shared child, weak root, weak child] allocations = [[1, 3, 2, 3, 2], [1, 3, 2, 3, 2], [1, 3, 2, 3, 2], [1, 3, 2, 3, 2]]
+Keys, colors, reused addresses, persistence and complete releases checked.
+✔ tests/tast/rotations.mjs (35881.197209ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-shared-nullaries-EFr4ye/checks: 
+
+
+thread 'main' (2940736) panicked at /Users/0x1/Documents/htdocs/purust/purust/tests/tast/fixtures/shared-nullaries/checks.rs:101:5:
+assertion `left == right` failed: All cells and weak control blocks are freed
+  left: 23
+ right: 17
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+101 !== 0
+
+    at run (file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/shared-nullaries.mjs:15:10)
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/shared-nullaries.mjs:51:24
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 101,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/shared-nullaries.mjs (31077.654291ms)
+Thunk fusion: closed Int workers, polymorphic newtype wrappers, noncommuting updates, old parameter values, unknown inputs, repeated/unused/conditional/opaque seed demands checked.
+✔ tests/tast/thunk-fusion.mjs (29699.293833ms)
+TAST instantiation: native Int/Number loops, two quantifiers, partial application, generic dictionaries and lexical result types checked across modules.
+✔ tests/tast/type-instantiation.mjs (32182.230333ms)
+Global enum layouts: cross-module construction, Value, FFI, stubs, Unit and persistence checked.
+✔ tests/tast/value-enums-interop.mjs (3386.119ms)
+Diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-variant-case-InsI4z
+normal: 89 fresh modules, 10 native contracts passed
+threaded: 89 fresh modules, 10 native contracts passed
+alias-only normal: Cargo passes, 5 runtime failures confirmed
+alias-only threaded: Cargo passes, 5 runtime failures confirmed
+✔ tests/tast/variant-case.mjs (98824.968583ms)
+graph
+tast
+reference
+generate-normal
+test-normal
+generate-threaded
+test-threaded
+/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-variant-f-e7F67X
+✔ tests/tast/variant-f.mjs (75739.188917ms)
+Diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-variant-public-ef5pOl
+graph
+purs-version
+tast
+reference
+generate-normal
+check-normal
+tests-normal
+generate-threaded
+check-threaded
+tests-threaded
+Variant public: 12 qualified native contracts per mode; unvariant remains a separate unqualified example.
+✔ tests/tast/variant-public.mjs (103367.213875ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 30
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 205523.567417
+
+✖ failing tests:
+
+test at tests/tast/bigint.mjs:1:1
+✖ tests/tast/bigint.mjs (72102.411833ms)
+  'test failed'
+
+test at tests/tast/crypto-hash.mjs:1:1
+✖ tests/tast/crypto-hash.mjs (44438.199292ms)
+  'test failed'
+
+test at tests/tast/foreign-object.mjs:1:1
+✖ tests/tast/foreign-object.mjs (10093.532625ms)
+  'test failed'
+
+test at tests/tast/nullable.mjs:1:1
+✖ tests/tast/nullable.mjs (74702.494875ms)
+  'test failed'
+
+test at tests/tast/record-root-move.mjs:1:1
+✖ tests/tast/record-root-move.mjs (4846.946333ms)
+  'test failed'
+
+test at tests/tast/shared-nullaries.mjs:1:1
+✖ tests/tast/shared-nullaries.mjs (31077.654291ms)
+  'test failed'

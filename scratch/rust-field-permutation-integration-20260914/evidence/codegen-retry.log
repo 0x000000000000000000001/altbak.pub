@@ -1,0 +1,59 @@
+/Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-crypto-hash-UzT0eM
+normal: xxhash64: 3044 JS differential vectors, Effect replay and asynchronous Promise reactions passed
+threaded: xxhash64: 3044 JS differential vectors, Effect replay and asynchronous Promise reactions passed
+✔ tests/codegen/crypto-hash-ffi.mjs (2403.0255ms)
+/Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-datetime-instant-pU0Lc8
+normal: toDateTimeImpl: 42273 JS constructor vectors passed
+canonicalDateImpl: 101590 JS constructor vectors passed, native Func4 and curried ABI
+threaded: toDateTimeImpl: 42273 JS constructor vectors passed
+canonicalDateImpl: 101590 JS constructor vectors passed, native Func4 and curried ABI
+✔ tests/codegen/datetime-instant-ffi.mjs (2660.776375ms)
+/Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-object-foldm-8Fvkra
+normal: 14 tests, 267 original JS vectors passed
+threaded: 11 tests, 267 original JS vectors passed
+✔ tests/codegen/foreign-object-foldm.mjs (3680.82425ms)
+/Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-uuid-VatUmu
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: native-normal: 
+
+error: no matching package named `uuid` found
+location searched: crates.io index
+required by package `uuid_ffi v0.0.0 (/var/www/b8x/run/bak/rust/output/purust-uuid-VatUmu/normal)`
+note: offline mode (via `--offline`) can sometimes cause surprising resolution failures
+help: if this error is too confusing you may wish to retry without `--offline`
+
+
+101 !== 0
+
+    at run (file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/uuid-ffi.mjs:39:10)
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/uuid-ffi.mjs:196:20
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 101,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/codegen/uuid-ffi.mjs (1307.615ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3689.841833
+
+✖ failing tests:
+
+test at tests/codegen/uuid-ffi.mjs:1:1
+✖ tests/codegen/uuid-ffi.mjs (1307.615ms)
+  'test failed'

@@ -1,0 +1,23 @@
+{
+  "head": "a7f511626b394a5670f425685020e7759d04c883",
+  "foreignTypesHeadSha256": "b61aa26cb668f95f428f0e51d4aa244ce1871d6fda387d7e2299b784793db9d2",
+  "mainUnchangedFromHead": true,
+  "foreignTypesUnchangedFromHead": true,
+  "executedHeadForeignTypeForwards": true,
+  "exactGeneratedSuffix": "// Opaque FFI declaration only: no native values can be constructed.\n#[derive(Clone, Debug)]\npub enum Nullable {}\n",
+  "rustSourceCount": 59,
+  "permutationFiles": [],
+  "cargoStatus": 0,
+  "cargoArgs": [
+    "check",
+    "--offline",
+    "--manifest-path",
+    "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V/missing-file/normal/Cargo.toml",
+    "-p",
+    "Purs_NullableProbe",
+    "--lib"
+  ],
+  "diagnostic": "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-DV9Q4V",
+  "expectedCargoStatus": 101,
+  "conclusion": "The missing-file negative expects an undefined Nullable type, but unchanged HEAD emits an opaque uninhabited Nullable declaration. Executing the exact HEAD emitter reproduces the declaration byte for byte; no generated Rust source contains the new field permutation path."
+}

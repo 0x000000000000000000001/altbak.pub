@@ -1,0 +1,22 @@
+{
+  "baseline_readme_ms": {
+    "RBTree": 11.631,
+    "total": 12.56,
+    "native_RBTree": 36.07,
+    "native_total": 36.13
+  },
+  "user_latest_ms": {
+    "RBTree": 12.198,
+    "total": 13.17
+  },
+  "backend_commit": "a7f511626b394a5670f425685020e7759d04c883",
+  "captured": "2026-09-14T21:29:23.363428",
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output",
+  "hashes": {
+    "RBTree-before.rs": "33ae6022e29f228a26e5d55a15edab26ac2d34ee17e0bc302b60918cc81fc7fb",
+    "baseline-Cargo.toml": "46de8120db4db066f579e8ef728f4b6ae985f2cf15f3bd69dfe3ceb9607fbcf9",
+    "runner-before": "e4f092e9a6413f435f18991d2c78899e68f46e51321a10a92d354766c4e32337",
+    "purust-before.js": "627e4ae3c20e9d3d7ab8fad594c0f131b6682423c2d71b1660db44ae69767f37",
+    "baseline-Cargo.lock": "bc8ce76709b702c27266ff47ba2dac88a976333720ebaa94adc7131f986da1c2"
+  }
+}

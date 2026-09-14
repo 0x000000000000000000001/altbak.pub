@@ -1,0 +1,12 @@
+/Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-uuid-v8rkrM
+normal: UUID: 9979 differential vectors, 8192 unique native v4 UUIDs passed; all accepted by JS uuid 13.0.0
+threaded: UUID: 9979 differential vectors, 12288 unique native v4 UUIDs passed; all accepted by JS uuid 13.0.0
+✔ tests/codegen/uuid-ffi.mjs (4122.322292ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4126.208667

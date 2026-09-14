@@ -1,0 +1,946 @@
+
+> purust@0.1.0 test:tast
+> node --test tests/tast/*.mjs
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Use the TAST fork.
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/aff-class.mjs:57:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/aff-class.mjs (4102.977583ms)
+Diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-w2Ox8i
+Retained diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-bigint-w2Ox8i
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(Array.isArray(input.typeTable) && Array.isArray(input.dataDecls) && Array.isArray(input.classDecls))
+
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/bigint.mjs:54:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/bigint.mjs (1518.874292ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: PURS must select the TAST fork
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/child-call-reuse.mjs:23:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/child-call-reuse.mjs (767.069625ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: PURS must select the TAST fork
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/consumed-nodes.mjs:23:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/consumed-nodes.mjs (875.96725ms)
+/Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-crypto-hash-tast-k4AR6A
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: reference: 
+
+permission denied while trying to connect to the docker API at unix:///Users/0x1/.orbstack/run/docker.sock
+
+
+1 !== 0
+
+    at run (file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/crypto-hash.mjs:39:10)
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/crypto-hash.mjs:69:32
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/crypto-hash.mjs (6332.5525ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Use the TAST fork.
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/exists.mjs:28:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/exists.mjs (171.048125ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(Array.isArray(typed.typeTable) && Array.isArray(typed.dataDecls))
+
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/ffi-cargo.mjs:44:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/ffi-cargo.mjs (590.646958ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: PURS must select the TAST fork
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/field-permutations.mjs:23:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/field-permutations.mjs (843.556834ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: PURS must select the TAST fork
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/field-updates.mjs:23:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/field-updates.mjs (960.801667ms)
+Diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-foreign-error-vLIgwk
+Retained diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-foreign-error-vLIgwk
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(Array.isArray(t.typeTable) && Array.isArray(t.dataDecls) && Array.isArray(t.classDecls))
+
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/foreign-error.mjs:117:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/foreign-error.mjs (4753.67575ms)
+Retained diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-foreign-object-st-bf8wpW
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(Array.isArray(input.typeTable) && Array.isArray(input.classDecls))
+
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/foreign-object-st.mjs:51:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/foreign-object-st.mjs (1468.088292ms)
+Retained diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-foreign-object-28OWMp
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(Array.isArray(input.typeTable) && Array.isArray(input.classDecls))
+
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/foreign-object.mjs:75:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/foreign-object.mjs (3690.077375ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Use the TAST fork.
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/free-monad-rec.mjs:55:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/free-monad-rec.mjs (3970.850208ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: PURS must select the TAST fork
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/function-borrows.mjs:23:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/function-borrows.mjs (657.59475ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: PURS must select the TAST fork
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/function-fusion.mjs:23:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/function-fusion.mjs (654.359959ms)
+JSDate diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-js-date-oUiXhu
+graph
+tast
+Retained JSDate diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-js-date-oUiXhu
+file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/js-date.mjs:69
+  assert.ok(module.typeTable.some(t => t.type === 'Adt' && t.fqn.join('.') === 'Data.JSDate.JSDate'));
+                             ^
+
+TypeError: Cannot read properties of undefined (reading 'some')
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/js-date.mjs:69:30
+
+Node.js v24.8.0
+✖ tests/tast/js-date.mjs (3650.915542ms)
+/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-json-read-bigint-8a0qW0
+normal: 163 fresh TAST modules; 5 real ReadForeign BigInt tests passed
+threaded: 163 fresh TAST modules; 5 real ReadForeign BigInt tests passed
+✔ tests/tast/json-read-bigint.mjs (100797.873667ms)
+/Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-json-read-object-jGYZO8
+normal: 165 fresh TAST modules; test result: FAILED. 16 passed; 1 failed
+threaded: 165 fresh TAST modules; test result: FAILED. 16 passed; 1 failed
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Reproduction retained: /Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-json-read-object-jGYZO8/report.json
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/json-read-object.mjs:140:10 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/json-read-object.mjs (127912.493792ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: PURS must select the TAST fork
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/known-nullaries.mjs:23:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/known-nullaries.mjs (788.739541ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Use the TAST fork.
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/lazy.mjs:54:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/lazy.mjs (2356.341709ms)
+Diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-module-values-55zqA2
+Retained diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-module-values-55zqA2
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(Array.isArray(input.typeTable) && Array.isArray(input.classDecls))
+
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/module-values.mjs:48:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/module-values.mjs (735.070875ms)
+Diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-KtMqyp
+Retained diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-nullable-KtMqyp
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(Array.isArray(input.typeTable) && Array.isArray(input.dataDecls) && Array.isArray(input.classDecls))
+
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/nullable.mjs:78:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/nullable.mjs (1101.90225ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Set PURS to the TAST fork: dataDecls are required.
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/nullary-enums.mjs:22:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/nullary-enums.mjs (304.398625ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Use the TAST fork.
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/pipes-x.mjs:32:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/pipes-x.mjs (111.027917ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Use the TAST fork.
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/portable-cargo.mjs:53:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/portable-cargo.mjs (443.328166ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: PURS must select the TAST fork
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/post-call-child-reuse.mjs:23:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/post-call-child-reuse.mjs (573.293333ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: PURS must select the TAST fork
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/record-borrows.mjs:23:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/record-borrows.mjs (638.650166ms)
+Diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-record-keyword-3Bdk6F
+Retained diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-record-keyword-3Bdk6F
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(Array.isArray(input.typeTable) && Array.isArray(input.dataDecls) && Array.isArray(input.classDecls))
+
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/record-keyword.mjs:36:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/record-keyword.mjs (111.537875ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: PURS must select the TAST fork
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/record-root-move.mjs:23:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/record-root-move.mjs (508.621834ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Use the TAST fork.
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/record-set.mjs:55:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/record-set.mjs (2871.836417ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: PURS must select the TAST fork
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/returned-functions.mjs:23:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/returned-functions.mjs (433.196416ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: PURS must select the TAST fork
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/rotations.mjs:23:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/rotations.mjs (428.131042ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: PURS must select the TAST fork
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/shared-nullaries.mjs:23:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/shared-nullaries.mjs (450.998791ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: PURS must select the TAST fork
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/thunk-fusion.mjs:23:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/thunk-fusion.mjs (504.374709ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: PURS must be the TAST fork.
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/type-instantiation.mjs:44:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/type-instantiation.mjs (440.029209ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Set PURS to the TAST compiler.
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/value-enums-interop.mjs:24:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/value-enums-interop.mjs (83.611208ms)
+Diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-variant-case-ITvVZv
+Retained diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-variant-case-ITvVZv
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(Array.isArray(input.typeTable) && Array.isArray(input.dataDecls) && Array.isArray(input.classDecls))
+
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/variant-case.mjs:74:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/variant-case.mjs (2145.099208ms)
+graph
+tast
+/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-variant-f-Re5PUf
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Set PURS to the typed TAST fork, not the official compiler.
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/variant-f.mjs:44:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/variant-f.mjs (2173.734708ms)
+Diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-variant-public-zyTIUM
+graph
+purs-version
+tast
+Retained diagnostic: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-variant-public-zyTIUM
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+
+undefined !== []
+
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/tast/variant-public.mjs:50:42
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: undefined,
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/tast/variant-public.mjs (2117.524208ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 1
+ℹ fail 38
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 128769.208917
+
+✖ failing tests:
+
+test at tests/tast/aff-class.mjs:1:1
+✖ tests/tast/aff-class.mjs (4102.977583ms)
+  'test failed'
+
+test at tests/tast/bigint.mjs:1:1
+✖ tests/tast/bigint.mjs (1518.874292ms)
+  'test failed'
+
+test at tests/tast/child-call-reuse.mjs:1:1
+✖ tests/tast/child-call-reuse.mjs (767.069625ms)
+  'test failed'
+
+test at tests/tast/consumed-nodes.mjs:1:1
+✖ tests/tast/consumed-nodes.mjs (875.96725ms)
+  'test failed'
+
+test at tests/tast/crypto-hash.mjs:1:1
+✖ tests/tast/crypto-hash.mjs (6332.5525ms)
+  'test failed'
+
+test at tests/tast/exists.mjs:1:1
+✖ tests/tast/exists.mjs (171.048125ms)
+  'test failed'
+
+test at tests/tast/ffi-cargo.mjs:1:1
+✖ tests/tast/ffi-cargo.mjs (590.646958ms)
+  'test failed'
+
+test at tests/tast/field-permutations.mjs:1:1
+✖ tests/tast/field-permutations.mjs (843.556834ms)
+  'test failed'
+
+test at tests/tast/field-updates.mjs:1:1
+✖ tests/tast/field-updates.mjs (960.801667ms)
+  'test failed'
+
+test at tests/tast/foreign-error.mjs:1:1
+✖ tests/tast/foreign-error.mjs (4753.67575ms)
+  'test failed'
+
+test at tests/tast/foreign-object-st.mjs:1:1
+✖ tests/tast/foreign-object-st.mjs (1468.088292ms)
+  'test failed'
+
+test at tests/tast/foreign-object.mjs:1:1
+✖ tests/tast/foreign-object.mjs (3690.077375ms)
+  'test failed'
+
+test at tests/tast/free-monad-rec.mjs:1:1
+✖ tests/tast/free-monad-rec.mjs (3970.850208ms)
+  'test failed'
+
+test at tests/tast/function-borrows.mjs:1:1
+✖ tests/tast/function-borrows.mjs (657.59475ms)
+  'test failed'
+
+test at tests/tast/function-fusion.mjs:1:1
+✖ tests/tast/function-fusion.mjs (654.359959ms)
+  'test failed'
+
+test at tests/tast/js-date.mjs:1:1
+✖ tests/tast/js-date.mjs (3650.915542ms)
+  'test failed'
+
+test at tests/tast/json-read-object.mjs:1:1
+✖ tests/tast/json-read-object.mjs (127912.493792ms)
+  'test failed'
+
+test at tests/tast/known-nullaries.mjs:1:1
+✖ tests/tast/known-nullaries.mjs (788.739541ms)
+  'test failed'
+
+test at tests/tast/lazy.mjs:1:1
+✖ tests/tast/lazy.mjs (2356.341709ms)
+  'test failed'
+
+test at tests/tast/module-values.mjs:1:1
+✖ tests/tast/module-values.mjs (735.070875ms)
+  'test failed'
+
+test at tests/tast/nullable.mjs:1:1
+✖ tests/tast/nullable.mjs (1101.90225ms)
+  'test failed'
+
+test at tests/tast/nullary-enums.mjs:1:1
+✖ tests/tast/nullary-enums.mjs (304.398625ms)
+  'test failed'
+
+test at tests/tast/pipes-x.mjs:1:1
+✖ tests/tast/pipes-x.mjs (111.027917ms)
+  'test failed'
+
+test at tests/tast/portable-cargo.mjs:1:1
+✖ tests/tast/portable-cargo.mjs (443.328166ms)
+  'test failed'
+
+test at tests/tast/post-call-child-reuse.mjs:1:1
+✖ tests/tast/post-call-child-reuse.mjs (573.293333ms)
+  'test failed'
+
+test at tests/tast/record-borrows.mjs:1:1
+✖ tests/tast/record-borrows.mjs (638.650166ms)
+  'test failed'
+
+test at tests/tast/record-keyword.mjs:1:1
+✖ tests/tast/record-keyword.mjs (111.537875ms)
+  'test failed'
+
+test at tests/tast/record-root-move.mjs:1:1
+✖ tests/tast/record-root-move.mjs (508.621834ms)
+  'test failed'
+
+test at tests/tast/record-set.mjs:1:1
+✖ tests/tast/record-set.mjs (2871.836417ms)
+  'test failed'
+
+test at tests/tast/returned-functions.mjs:1:1
+✖ tests/tast/returned-functions.mjs (433.196416ms)
+  'test failed'
+
+test at tests/tast/rotations.mjs:1:1
+✖ tests/tast/rotations.mjs (428.131042ms)
+  'test failed'
+
+test at tests/tast/shared-nullaries.mjs:1:1
+✖ tests/tast/shared-nullaries.mjs (450.998791ms)
+  'test failed'
+
+test at tests/tast/thunk-fusion.mjs:1:1
+✖ tests/tast/thunk-fusion.mjs (504.374709ms)
+  'test failed'
+
+test at tests/tast/type-instantiation.mjs:1:1
+✖ tests/tast/type-instantiation.mjs (440.029209ms)
+  'test failed'
+
+test at tests/tast/value-enums-interop.mjs:1:1
+✖ tests/tast/value-enums-interop.mjs (83.611208ms)
+  'test failed'
+
+test at tests/tast/variant-case.mjs:1:1
+✖ tests/tast/variant-case.mjs (2145.099208ms)
+  'test failed'
+
+test at tests/tast/variant-f.mjs:1:1
+✖ tests/tast/variant-f.mjs (2173.734708ms)
+  'test failed'
+
+test at tests/tast/variant-public.mjs:1:1
+✖ tests/tast/variant-public.mjs (2117.524208ms)
+  'test failed'
