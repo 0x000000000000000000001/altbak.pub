@@ -3,7 +3,6 @@ module Test.Parallelism where
 import Prelude
 
 import Effect (Effect)
-import Effect.Class (liftEffect)
 import Effect.Console (log)
 import Effect.Aff (Aff, delay, Milliseconds(..), forkAff, joinFiber)
 import Data.Traversable (traverse)

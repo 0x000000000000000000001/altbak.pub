@@ -4,7 +4,6 @@ import Prelude
 import Effect (Effect)
 import Effect.Console (log)
 import Effect.Aff (Aff, delay, Milliseconds(..))
-import Effect.Class (liftEffect)
 
 describe :: Effect Unit
 describe = log "Aff Operations (Asynchronous Delays)"

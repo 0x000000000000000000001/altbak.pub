@@ -97,6 +97,9 @@ fi
 echo "=== Rust ==="
 if [ -f "output/purust_output/Cargo.toml" ] && [ -f "output/purust_output/src/main.rs" ]; then
     cd output/purust_output
+    if [ "$MODE" == "x" ]; then
+        mkdir -p var
+    fi
     cargo run -q --release
     cd ../..
 else
