@@ -1,0 +1,29 @@
+package:
+  name: ps-cpp-test
+  dependencies:
+    - console
+    - effect
+    - prelude
+    - datetime
+    - strings
+    - arrays
+    - partial
+    - st
+    - maybe
+    - either
+    - now
+    - lazy
+    - exceptions
+    - foldable-traversable
+    - refs
+    - unsafe-coerce
+    - functions
+    - integers
+    - enums
+    - numbers
+    - record
+    - assert
+    - aff
+workspace:
+  packageSet:
+    registry: 77.7.0

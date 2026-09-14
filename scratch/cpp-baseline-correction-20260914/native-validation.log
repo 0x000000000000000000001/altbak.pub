@@ -1,0 +1,4 @@
+Compiling native checks (ASan + UBSan)
+C++ clock unit and opaque input checks passed
+176 native C++ result checks passed
+C++ handwritten RBTree: LL/LR/RL/RR, ordering, colors, black heights, counts, deterministic mixed insertions, duplicates, and depth(100000)=22 passed

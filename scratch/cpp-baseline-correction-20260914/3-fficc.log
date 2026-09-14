@@ -1,0 +1,202 @@
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation FFICheatcode:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+1.29 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci FFICheatcode:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+0.33 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing FFICheatcode (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+0.67 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization FFICheatcode (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+34.21 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates FFICheatcode (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+3.75 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann FFICheatcode (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+16.12 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals FFICheatcode (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+0.38 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve FFICheatcode (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+1.46 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree FFICheatcode (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+21831.83 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism FFICheatcode (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+0.29 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad FFICheatcode (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+0.29 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation FFICheatcode (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+0.29 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing FFICheatcode (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+0.83 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList FFICheatcode (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+0.29 μs
+
+
+==================================================
+
+Total exec time: 21.89 ms
+
+C++: 14 expected results verified; /Users/0x1/Documents/htdocs/altbak.pub/run/bak/cpp/modes/fficc/run-1789421508428462000.json

@@ -1,0 +1,23 @@
+{
+  "values": [
+    "7",
+    "55",
+    "202950",
+    "100000",
+    "20000",
+    "125",
+    "100000",
+    "21536",
+    "22",
+    "10000000",
+    "1200",
+    "1000000",
+    "202950",
+    "5"
+  ],
+  "smoke": true,
+  "binary_sha256": "632b4d704c25e4e4a1f31b9f4b71334966801fc388414337a4508061a88cf8c2",
+  "build_sha256": "f6964c6ab6ee4adb6f0aea298b778098ef08c92e788f6163c1a3ab71c089451f",
+  "log": "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/cpp/modes/fficc/smoke-1789421399918397000.log",
+  "mode": "fficc"
+}

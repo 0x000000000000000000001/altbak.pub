@@ -151,23 +151,23 @@ RowToList               | ~ 0 μs                 | ~ 27 μs      | ~ 0 μs     
 
 #### C++
 
-C++ Benchmark           | Compiled C++ ([pscpp](https://github.com/purescript-native/purescript), WIP) | Native FP-style C++ FFI (WIP) | Native hand-written C++ FFI (WIP) |
------------------------ | ------------------------- | ------------------------- | ------------------------------- |
-AST Evaluation          | ~ 0.03 μs                 | -                         | -                               |
-Fibonacci               | ~ 0.01 μs                 | -                         | -                               |
-List Processing         | ~ 1.39 μs                 | -                         | -                               |
-Tail Call Optimization  | ~ 25.06 μs                | -                         | -                               |
-Deep Record Updates     | ~ 14.78 μs                | -                         | -                               |
-Ackermann               | ~ 1.39 μs                 | -                         | -                               |
-Church Numerals         | ~ 22.36 μs                | -                         | -                               |
-Prime Sieve             | ~ 9.32 μs                 | -                         | -                               |
-Red-Black Tree          | ~ 6076.46 μs              | -                         | -                               |
-Polymorphism            | ~ 3088.77 μs              | -                         | -                               |
-State Monad             | ~ 2.47 μs                 | -                         | -                               |
-Lazy Evaluation         | ~ 341.13 μs               | -                         | -                               |
-Array Processing        | ~ 0.29 μs                 | -                         | -                               |
-RowToList               | ~ 0.01 μs                 | -                         | -                               |
-**Total Execution Time**| ~ 9.58 ms                 | -                         | -                               |
+C++ Benchmark | Compiled C++ ([pscpp](https://github.com/purescript-native/purescript), WIP) | Native FP-style C++ FFI (WIP) | Native hand-written C++ FFI (WIP) |
+--- | --- | --- | --- |
+AST Evaluation | ~ 3.21 μs | ~ 1.33 μs | ~ 1.29 μs |
+Fibonacci | ~ 0.62 μs | ~ 0.38 μs | ~ 0.33 μs |
+List Processing | ~ 144.96 μs | ~ 34.25 μs | ~ 0.67 μs |
+Tail Call Optimization | ~ 2660.42 μs | ~ 34.88 μs | ~ 34.21 μs |
+Deep Record Updates | ~ 1479.46 μs | ~ 594.21 μs | ~ 3.75 μs |
+Ackermann | ~ 217.54 μs | ~ 16.67 μs | ~ 16.12 μs |
+Church Numerals | ~ 2617.33 μs | ~ 4306.50 μs | ~ 0.38 μs |
+Prime Sieve | ~ 977.50 μs | ~ 268.79 μs | ~ 1.46 μs |
+Red-Black Tree | ~ 660229.75 μs | ~ 67734.62 μs | ~ 21270.88 μs |
+Polymorphism | ~ 244668.12 μs | ~ 27749.96 μs | ~ 0.38 μs |
+State Monad | ~ 294.58 μs | ~ 199.67 μs | ~ 0.29 μs |
+Lazy Evaluation | ~ 37664.75 μs | ~ 32286.75 μs | ~ 0.29 μs |
+Array Processing | ~ 36.08 μs | ~ 1.54 μs | ~ 0.83 μs |
+RowToList | ~ 0.88 μs | ~ 0.33 μs | ~ 0.29 μs |
+**Total Execution Time** | ~ 951.00 ms | ~ 133.23 ms | ~ 21.33 ms |
 
 #### F#/C#
 

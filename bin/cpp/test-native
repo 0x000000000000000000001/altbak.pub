@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+"""Check native C++ kernels independently, with optional address/UB sanitizers."""
+import argparse
+import os
+from pathlib import Path
+import shlex
+import subprocess
+import tempfile
+
+ROOT = Path(__file__).resolve().parents[2]
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--runtime", type=Path, default=ROOT / "run/bak/cpp/modes/pure/output/src",
+                    help="directory containing generated purescript.h and purescript.cpp")
+parser.add_argument("--sanitize", action="store_true")
+args = parser.parse_args()
+runtime = args.runtime.resolve()
+if not (runtime / "purescript.cpp").is_file():
+    parser.error("runtime missing; build with bin/cpp/run --build-only, then pass --runtime BUILD_DIR/output/src")
+sources = sorted((ROOT / "src/Test").glob("*FFI.cc")) + sorted((ROOT / "src/Test").glob("*FFICheatcode.cc"))
+if len(sources) != 28:
+    parser.error(f"expected 28 native kernels, found {len(sources)}")
+flags = ["-std=c++11", "-Wall", "-Wextra", "-DNDEBUG"]
+flags += (["-O1", "-g", "-fsanitize=address,undefined", "-fno-sanitize-recover=all",
+           "-fno-omit-frame-pointer"] if args.sanitize else ["-O3"])
+with tempfile.TemporaryDirectory(prefix="altbak-cpp-check-") as directory:
+    executable = Path(directory) / "native-check"
+    command = shlex.split(os.environ.get("CXX", "clang++")) + flags + [
+        "-I", str(runtime), str(ROOT / "test/cpp-native.cpp"), str(ROOT / "bin/cpp/bench_ffi.cc"),
+        str(runtime / "purescript.cpp"), *map(str, sources), "-o", str(executable)]
+    print("Compiling native checks (" + ("ASan + UBSan" if args.sanitize else "-O3") + ")", flush=True)
+    subprocess.run(command, check=True)
+    subprocess.run([str(executable)], check=True)
+    tree_executable = Path(directory) / "rbtree-check"
+    tree_command = shlex.split(os.environ.get("CXX", "clang++")) + flags + [
+        "-I", str(runtime), str(ROOT / "test/cpp-rbtree.cpp"),
+        str(runtime / "purescript.cpp"), "-o", str(tree_executable)]
+    subprocess.run(tree_command, check=True)
+    subprocess.run([str(tree_executable)], check=True)

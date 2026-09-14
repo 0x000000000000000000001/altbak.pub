@@ -1,0 +1,23 @@
+{
+  "values": [
+    "7",
+    "55",
+    "202950",
+    "100000",
+    "20000",
+    "125",
+    "100000",
+    "21536",
+    "22",
+    "10000000",
+    "1200",
+    "1000000",
+    "202950",
+    "5"
+  ],
+  "smoke": true,
+  "binary_sha256": "d9c16c745cd265a794eabf38ce3b8a8063e4c80d1183910c4d67767def392c78",
+  "build_sha256": "4aa60d8f3dea3b6b18bde8f8c843eeac27b87aba3b252c19255a29e20a9c5732",
+  "log": "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/cpp/modes/pure/smoke-1789421328854470000.log",
+  "mode": "pure"
+}

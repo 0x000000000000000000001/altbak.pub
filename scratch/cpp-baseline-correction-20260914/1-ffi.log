@@ -1,0 +1,202 @@
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation FFI:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+1.17 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci FFI:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+0.33 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing FFI (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+34.25 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization FFI (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+34.88 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates FFI (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+594.21 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann FFI (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+16.67 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals FFI (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+4259.75 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve FFI (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+273.21 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree FFI (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+66779.92 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism FFI (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+27596.58 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad FFI (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+199.67 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation FFI (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+34328.75 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing FFI (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+1.62 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList FFI (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+0.33 μs
+
+
+==================================================
+
+Total exec time: 134.12 ms
+
+C++: 14 expected results verified; /Users/0x1/Documents/htdocs/altbak.pub/run/bak/cpp/modes/ffi/run-1789421487335522000.json

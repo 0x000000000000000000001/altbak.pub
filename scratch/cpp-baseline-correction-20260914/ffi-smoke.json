@@ -1,0 +1,23 @@
+{
+  "values": [
+    "7",
+    "55",
+    "202950",
+    "100000",
+    "20000",
+    "125",
+    "100000",
+    "21536",
+    "22",
+    "10000000",
+    "1200",
+    "1000000",
+    "202950",
+    "5"
+  ],
+  "smoke": true,
+  "binary_sha256": "f3a184cd476f16d8eab3b339bb5b75493dc5b74ccb524d547b8ba1383be95d0d",
+  "build_sha256": "1102d1345550f3760cda4ad2a122fa975cd702d4dd7125dcceee1beafaea50cb",
+  "log": "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/cpp/modes/ffi/smoke-1789421364026041000.log",
+  "mode": "ffi"
+}

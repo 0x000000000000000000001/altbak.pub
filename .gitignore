@@ -21,6 +21,7 @@ composer.json
 cachegrind.out*
 .psc-ide-port
 run/bak/*/output*/
+/run/bak/cpp/modes/
 /java_output/
 /run/bak/java/native-bench/
 run/bak/*/spago/
