@@ -233,14 +233,14 @@ Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Sch
 
 #### Extended Results
 
-Benchmark               | Compiled JS ([official](https://github.com/purescript/purescript)) | Compiled JS ([Arista](https://github.com/aristanetworks/purescript-backend-optimizer)) | Compiled Go ([gopurs](https://github.com/0x000000000000000000001/gopurs), mature WIP)
------------------------ | ------------- | -------------- | --------------- 
-File I/O                | ~ 429223 μs   | ~ 479362 μs    | ~ 476440 μs     
-STArray Operations      | ~ 3 μs        | ~ 3 μs         | ~ 0 μs          
-String Operations       | ~ 2 μs        | ~ 2 μs         | ~ 1 μs          
-Aff Operations          | ~ 11482 μs    | ~ 11378 μs     | ~ 11030 μs      
-Parallelism             | ~ 15113637 μs | ~ 14690018 μs  | ~ 1255501 μs    
-**Total Execution Time**| ~ 15554.34 ms | ~ 15180.76 ms  | ~ 1742.97 ms    
+Benchmark               | Compiled JS ([official](https://github.com/purescript/purescript)) | Compiled JS ([Arista](https://github.com/aristanetworks/purescript-backend-optimizer)) | Compiled Go ([gopurs](https://github.com/0x000000000000000000001/gopurs), mature WIP) | Compiled Rust ([purust](https://github.com/0x000000000000000000001/purust), WIP)
+----------------------- | ------------- | -------------- | --------------- | ---------------
+File I/O                | ~ 429223 μs   | ~ 479362 μs    | ~ 476440 μs     | ~ 451274 μs     
+STArray Operations      | ~ 3 μs        | ~ 3 μs         | ~ 0 μs          | ~ 1 μs          
+String Operations       | ~ 2 μs        | ~ 2 μs         | ~ 1 μs          | ~ 560 μs        
+Aff Operations          | ~ 11482 μs    | ~ 11378 μs     | ~ 11030 μs      | ~ 10421 μs      
+Parallelism             | ~ 15113637 μs | ~ 14690018 μs  | ~ 1255501 μs    | ~ 423907 μs     
+**Total Execution Time**| ~ 15554.34 ms | ~ 15180.76 ms  | ~ 1742.97 ms    | ~ 886.16 ms     
 
 > [!NOTE]
 > **Hardware Context**
