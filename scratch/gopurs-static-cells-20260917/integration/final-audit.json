@@ -1,0 +1,23 @@
+{
+  "changed_functions": [
+    "Call_Test_RBTree___gopurs_owned_balance_0_consume",
+    "Call_Test_RBTree___gopurs_owned_makeBlack_0_consume"
+  ],
+  "rbtree_lines": {
+    "before": 5141,
+    "after": 3932
+  },
+  "rbtree_sha256": {
+    "before": "b93c7cf9a01100043f900e975de5ec4ab94f69a34515be1f1214e2ee390a6527",
+    "after": "b3e33a544e5ce23fcbe6a610edde4390c000c2e673356aa7d11427371464046f"
+  },
+  "binary_sha256": {
+    "before/probe/probe": "de330261d9ed3c08082555a48c2ee0cd3107f121fe1eeb26b71787af8b7d697b",
+    "after/probe/probe": "24bf2f2ee1c15e42a4b22b78e9559383a22f2babc7e98c903ce0105e2325396e",
+    "before/benchmark": "d1b02e63962488a7968ca17553914677bfed5d3c0be3c6bdd34fc4c40c94dc1c",
+    "after/benchmark": "d5002be89084dfbcbe10084ec00280e5bc4426a6a1c10ebd22f18cde3a3b61b4",
+    "native/benchmark": "f48adfd3a9ab93a0590c8fadccb1aa443ede3d007a0365379a745f1d560919aa"
+  },
+  "test_count_per_variant": 8,
+  "pointer_assertion_change": "Recolor result may reuse input or distinct donor; no value/shape/persistence assertion removed"
+}

@@ -1,0 +1,1808 @@
+--- before/Test_RBTree.go
++++ after/Test_RBTree.go
+@@ -193,81 +193,21 @@
+ _ = __dead_53
+ __dead_54 := __arg1.V1
+ _ = __dead_54
+-var __cell_56 *Constructor_Test_RBTree_T
+-if (__donor_slot_55) != (nil) {
+-__cell_56 = __donor_slot_55
+-__donor_slot_55 = nil
+-} else {
+-if (__dead_53) != (nil) {
+-__cell_56 = __dead_53
+-__dead_53 = nil
+-} else {
+-if (__dead_54) != (nil) {
+-__cell_56 = __dead_54
+-__dead_54 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_56) == (nil) {
+-__cell_56 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_56 := __dead_53
+ __cell_56.Rc = 1
+ __cell_56.V0 = __scalar_44
+ __cell_56.V1 = __read_45
+ __cell_56.V2 = __scalar_46
+ __cell_56.V3 = __read_47
+-var __cell_57 *Constructor_Test_RBTree_T
+-if (__donor_slot_55) != (nil) {
+-__cell_57 = __donor_slot_55
+-__donor_slot_55 = nil
+-} else {
+-if (__dead_53) != (nil) {
+-__cell_57 = __dead_53
+-__dead_53 = nil
+-} else {
+-if (__dead_54) != (nil) {
+-__cell_57 = __dead_54
+-__dead_54 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_57) == (nil) {
+-__cell_57 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_57 := __dead_54
+ __cell_57.Rc = 1
+ __cell_57.V0 = __scalar_49
+ __cell_57.V1 = __read_50
+ __cell_57.V2 = __scalar_51
+ __cell_57.V3 = __read_52
+-var __cell_58 *Constructor_Test_RBTree_T
+-if (__donor_slot_55) != (nil) {
+-__cell_58 = __donor_slot_55
+-__donor_slot_55 = nil
+-} else {
+-if (__dead_53) != (nil) {
+-__cell_58 = __dead_53
+-__dead_53 = nil
+-} else {
+-if (__dead_54) != (nil) {
+-__cell_58 = __dead_54
+-__dead_54 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_58) == (nil) {
++__cell_58 := __donor_slot_55
++if __cell_58 == nil {
+ __cell_58 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_58.Rc = 1
+ __cell_58.V0 = __scalar_43
+@@ -310,81 +250,21 @@
+ _ = __dead_80
+ __dead_81 := __arg1.V3
+ _ = __dead_81
+-var __cell_83 *Constructor_Test_RBTree_T
+-if (__donor_slot_82) != (nil) {
+-__cell_83 = __donor_slot_82
+-__donor_slot_82 = nil
+-} else {
+-if (__dead_80) != (nil) {
+-__cell_83 = __dead_80
+-__dead_80 = nil
+-} else {
+-if (__dead_81) != (nil) {
+-__cell_83 = __dead_81
+-__dead_81 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_83) == (nil) {
+-__cell_83 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_83 := __dead_80
+ __cell_83.Rc = 1
+ __cell_83.V0 = __scalar_71
+ __cell_83.V1 = __read_72
+ __cell_83.V2 = __scalar_73
+ __cell_83.V3 = __read_74
+-var __cell_84 *Constructor_Test_RBTree_T
+-if (__donor_slot_82) != (nil) {
+-__cell_84 = __donor_slot_82
+-__donor_slot_82 = nil
+-} else {
+-if (__dead_80) != (nil) {
+-__cell_84 = __dead_80
+-__dead_80 = nil
+-} else {
+-if (__dead_81) != (nil) {
+-__cell_84 = __dead_81
+-__dead_81 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_84) == (nil) {
+-__cell_84 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_84 := __dead_81
+ __cell_84.Rc = 1
+ __cell_84.V0 = __scalar_76
+ __cell_84.V1 = __read_77
+ __cell_84.V2 = __scalar_78
+ __cell_84.V3 = __read_79
+-var __cell_85 *Constructor_Test_RBTree_T
+-if (__donor_slot_82) != (nil) {
+-__cell_85 = __donor_slot_82
+-__donor_slot_82 = nil
+-} else {
+-if (__dead_80) != (nil) {
+-__cell_85 = __dead_80
+-__dead_80 = nil
+-} else {
+-if (__dead_81) != (nil) {
+-__cell_85 = __dead_81
+-__dead_81 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_85) == (nil) {
++__cell_85 := __donor_slot_82
++if __cell_85 == nil {
+ __cell_85 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_85.Rc = 1
+ __cell_85.V0 = __scalar_70
+@@ -428,81 +308,21 @@
+ _ = __dead_115
+ __dead_116 := __arg3.V1
+ _ = __dead_116
+-var __cell_118 *Constructor_Test_RBTree_T
+-if (__donor_slot_117) != (nil) {
+-__cell_118 = __donor_slot_117
+-__donor_slot_117 = nil
+-} else {
+-if (__dead_115) != (nil) {
+-__cell_118 = __dead_115
+-__dead_115 = nil
+-} else {
+-if (__dead_116) != (nil) {
+-__cell_118 = __dead_116
+-__dead_116 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_118) == (nil) {
+-__cell_118 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_118 := __dead_115
+ __cell_118.Rc = 1
+ __cell_118.V0 = __scalar_106
+ __cell_118.V1 = __read_107
+ __cell_118.V2 = __scalar_108
+ __cell_118.V3 = __read_109
+-var __cell_119 *Constructor_Test_RBTree_T
+-if (__donor_slot_117) != (nil) {
+-__cell_119 = __donor_slot_117
+-__donor_slot_117 = nil
+-} else {
+-if (__dead_115) != (nil) {
+-__cell_119 = __dead_115
+-__dead_115 = nil
+-} else {
+-if (__dead_116) != (nil) {
+-__cell_119 = __dead_116
+-__dead_116 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_119) == (nil) {
+-__cell_119 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_119 := __dead_116
+ __cell_119.Rc = 1
+ __cell_119.V0 = __scalar_111
+ __cell_119.V1 = __read_112
+ __cell_119.V2 = __scalar_113
+ __cell_119.V3 = __read_114
+-var __cell_120 *Constructor_Test_RBTree_T
+-if (__donor_slot_117) != (nil) {
+-__cell_120 = __donor_slot_117
+-__donor_slot_117 = nil
+-} else {
+-if (__dead_115) != (nil) {
+-__cell_120 = __dead_115
+-__dead_115 = nil
+-} else {
+-if (__dead_116) != (nil) {
+-__cell_120 = __dead_116
+-__dead_116 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_120) == (nil) {
++__cell_120 := __donor_slot_117
++if __cell_120 == nil {
+ __cell_120 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_120.Rc = 1
+ __cell_120.V0 = __scalar_105
+@@ -544,81 +364,21 @@
+ _ = __dead_134
+ __dead_135 := __arg3.V3
+ _ = __dead_135
+-var __cell_137 *Constructor_Test_RBTree_T
+-if (__donor_slot_136) != (nil) {
+-__cell_137 = __donor_slot_136
+-__donor_slot_136 = nil
+-} else {
+-if (__dead_134) != (nil) {
+-__cell_137 = __dead_134
+-__dead_134 = nil
+-} else {
+-if (__dead_135) != (nil) {
+-__cell_137 = __dead_135
+-__dead_135 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_137) == (nil) {
+-__cell_137 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_137 := __dead_134
+ __cell_137.Rc = 1
+ __cell_137.V0 = __scalar_125
+ __cell_137.V1 = __read_126
+ __cell_137.V2 = __scalar_127
+ __cell_137.V3 = __read_128
+-var __cell_138 *Constructor_Test_RBTree_T
+-if (__donor_slot_136) != (nil) {
+-__cell_138 = __donor_slot_136
+-__donor_slot_136 = nil
+-} else {
+-if (__dead_134) != (nil) {
+-__cell_138 = __dead_134
+-__dead_134 = nil
+-} else {
+-if (__dead_135) != (nil) {
+-__cell_138 = __dead_135
+-__dead_135 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_138) == (nil) {
+-__cell_138 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_138 := __dead_135
+ __cell_138.Rc = 1
+ __cell_138.V0 = __scalar_130
+ __cell_138.V1 = __read_131
+ __cell_138.V2 = __scalar_132
+ __cell_138.V3 = __read_133
+-var __cell_139 *Constructor_Test_RBTree_T
+-if (__donor_slot_136) != (nil) {
+-__cell_139 = __donor_slot_136
+-__donor_slot_136 = nil
+-} else {
+-if (__dead_134) != (nil) {
+-__cell_139 = __dead_134
+-__dead_134 = nil
+-} else {
+-if (__dead_135) != (nil) {
+-__cell_139 = __dead_135
+-__dead_135 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_139) == (nil) {
++__cell_139 := __donor_slot_136
++if __cell_139 == nil {
+ __cell_139 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_139.Rc = 1
+ __cell_139.V0 = __scalar_124
+@@ -695,81 +455,21 @@
+ _ = __dead_153
+ __dead_154 := __arg3.V3
+ _ = __dead_154
+-var __cell_156 *Constructor_Test_RBTree_T
+-if (__donor_slot_155) != (nil) {
+-__cell_156 = __donor_slot_155
+-__donor_slot_155 = nil
+-} else {
+-if (__dead_153) != (nil) {
+-__cell_156 = __dead_153
+-__dead_153 = nil
+-} else {
+-if (__dead_154) != (nil) {
+-__cell_156 = __dead_154
+-__dead_154 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_156) == (nil) {
+-__cell_156 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_156 := __dead_153
+ __cell_156.Rc = 1
+ __cell_156.V0 = __scalar_144
+ __cell_156.V1 = __read_145
+ __cell_156.V2 = __scalar_146
+ __cell_156.V3 = __read_147
+-var __cell_157 *Constructor_Test_RBTree_T
+-if (__donor_slot_155) != (nil) {
+-__cell_157 = __donor_slot_155
+-__donor_slot_155 = nil
+-} else {
+-if (__dead_153) != (nil) {
+-__cell_157 = __dead_153
+-__dead_153 = nil
+-} else {
+-if (__dead_154) != (nil) {
+-__cell_157 = __dead_154
+-__dead_154 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_157) == (nil) {
+-__cell_157 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_157 := __dead_154
+ __cell_157.Rc = 1
+ __cell_157.V0 = __scalar_149
+ __cell_157.V1 = __read_150
+ __cell_157.V2 = __scalar_151
+ __cell_157.V3 = __read_152
+-var __cell_158 *Constructor_Test_RBTree_T
+-if (__donor_slot_155) != (nil) {
+-__cell_158 = __donor_slot_155
+-__donor_slot_155 = nil
+-} else {
+-if (__dead_153) != (nil) {
+-__cell_158 = __dead_153
+-__dead_153 = nil
+-} else {
+-if (__dead_154) != (nil) {
+-__cell_158 = __dead_154
+-__dead_154 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_158) == (nil) {
++__cell_158 := __donor_slot_155
++if __cell_158 == nil {
+ __cell_158 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_158.Rc = 1
+ __cell_158.V0 = __scalar_143
+@@ -883,81 +583,21 @@
+ _ = __dead_188
+ __dead_189 := __arg3.V1
+ _ = __dead_189
+-var __cell_191 *Constructor_Test_RBTree_T
+-if (__donor_slot_190) != (nil) {
+-__cell_191 = __donor_slot_190
+-__donor_slot_190 = nil
+-} else {
+-if (__dead_188) != (nil) {
+-__cell_191 = __dead_188
+-__dead_188 = nil
+-} else {
+-if (__dead_189) != (nil) {
+-__cell_191 = __dead_189
+-__dead_189 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_191) == (nil) {
+-__cell_191 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_191 := __dead_188
+ __cell_191.Rc = 1
+ __cell_191.V0 = __scalar_179
+ __cell_191.V1 = __read_180
+ __cell_191.V2 = __scalar_181
+ __cell_191.V3 = __read_182
+-var __cell_192 *Constructor_Test_RBTree_T
+-if (__donor_slot_190) != (nil) {
+-__cell_192 = __donor_slot_190
+-__donor_slot_190 = nil
+-} else {
+-if (__dead_188) != (nil) {
+-__cell_192 = __dead_188
+-__dead_188 = nil
+-} else {
+-if (__dead_189) != (nil) {
+-__cell_192 = __dead_189
+-__dead_189 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_192) == (nil) {
+-__cell_192 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_192 := __dead_189
+ __cell_192.Rc = 1
+ __cell_192.V0 = __scalar_184
+ __cell_192.V1 = __read_185
+ __cell_192.V2 = __scalar_186
+ __cell_192.V3 = __read_187
+-var __cell_193 *Constructor_Test_RBTree_T
+-if (__donor_slot_190) != (nil) {
+-__cell_193 = __donor_slot_190
+-__donor_slot_190 = nil
+-} else {
+-if (__dead_188) != (nil) {
+-__cell_193 = __dead_188
+-__dead_188 = nil
+-} else {
+-if (__dead_189) != (nil) {
+-__cell_193 = __dead_189
+-__dead_189 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_193) == (nil) {
++__cell_193 := __donor_slot_190
++if __cell_193 == nil {
+ __cell_193 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_193.Rc = 1
+ __cell_193.V0 = __scalar_178
+@@ -999,81 +639,21 @@
+ _ = __dead_207
+ __dead_208 := __arg3.V3
+ _ = __dead_208
+-var __cell_210 *Constructor_Test_RBTree_T
+-if (__donor_slot_209) != (nil) {
+-__cell_210 = __donor_slot_209
+-__donor_slot_209 = nil
+-} else {
+-if (__dead_207) != (nil) {
+-__cell_210 = __dead_207
+-__dead_207 = nil
+-} else {
+-if (__dead_208) != (nil) {
+-__cell_210 = __dead_208
+-__dead_208 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_210) == (nil) {
+-__cell_210 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_210 := __dead_207
+ __cell_210.Rc = 1
+ __cell_210.V0 = __scalar_198
+ __cell_210.V1 = __read_199
+ __cell_210.V2 = __scalar_200
+ __cell_210.V3 = __read_201
+-var __cell_211 *Constructor_Test_RBTree_T
+-if (__donor_slot_209) != (nil) {
+-__cell_211 = __donor_slot_209
+-__donor_slot_209 = nil
+-} else {
+-if (__dead_207) != (nil) {
+-__cell_211 = __dead_207
+-__dead_207 = nil
+-} else {
+-if (__dead_208) != (nil) {
+-__cell_211 = __dead_208
+-__dead_208 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_211) == (nil) {
+-__cell_211 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_211 := __dead_208
+ __cell_211.Rc = 1
+ __cell_211.V0 = __scalar_203
+ __cell_211.V1 = __read_204
+ __cell_211.V2 = __scalar_205
+ __cell_211.V3 = __read_206
+-var __cell_212 *Constructor_Test_RBTree_T
+-if (__donor_slot_209) != (nil) {
+-__cell_212 = __donor_slot_209
+-__donor_slot_209 = nil
+-} else {
+-if (__dead_207) != (nil) {
+-__cell_212 = __dead_207
+-__dead_207 = nil
+-} else {
+-if (__dead_208) != (nil) {
+-__cell_212 = __dead_208
+-__dead_208 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_212) == (nil) {
++__cell_212 := __donor_slot_209
++if __cell_212 == nil {
+ __cell_212 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_212.Rc = 1
+ __cell_212.V0 = __scalar_197
+@@ -1150,81 +730,21 @@
+ _ = __dead_226
+ __dead_227 := __arg3.V3
+ _ = __dead_227
+-var __cell_229 *Constructor_Test_RBTree_T
+-if (__donor_slot_228) != (nil) {
+-__cell_229 = __donor_slot_228
+-__donor_slot_228 = nil
+-} else {
+-if (__dead_226) != (nil) {
+-__cell_229 = __dead_226
+-__dead_226 = nil
+-} else {
+-if (__dead_227) != (nil) {
+-__cell_229 = __dead_227
+-__dead_227 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_229) == (nil) {
+-__cell_229 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_229 := __dead_226
+ __cell_229.Rc = 1
+ __cell_229.V0 = __scalar_217
+ __cell_229.V1 = __read_218
+ __cell_229.V2 = __scalar_219
+ __cell_229.V3 = __read_220
+-var __cell_230 *Constructor_Test_RBTree_T
+-if (__donor_slot_228) != (nil) {
+-__cell_230 = __donor_slot_228
+-__donor_slot_228 = nil
+-} else {
+-if (__dead_226) != (nil) {
+-__cell_230 = __dead_226
+-__dead_226 = nil
+-} else {
+-if (__dead_227) != (nil) {
+-__cell_230 = __dead_227
+-__dead_227 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_230) == (nil) {
+-__cell_230 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_230 := __dead_227
+ __cell_230.Rc = 1
+ __cell_230.V0 = __scalar_222
+ __cell_230.V1 = __read_223
+ __cell_230.V2 = __scalar_224
+ __cell_230.V3 = __read_225
+-var __cell_231 *Constructor_Test_RBTree_T
+-if (__donor_slot_228) != (nil) {
+-__cell_231 = __donor_slot_228
+-__donor_slot_228 = nil
+-} else {
+-if (__dead_226) != (nil) {
+-__cell_231 = __dead_226
+-__dead_226 = nil
+-} else {
+-if (__dead_227) != (nil) {
+-__cell_231 = __dead_227
+-__dead_227 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_231) == (nil) {
++__cell_231 := __donor_slot_228
++if __cell_231 == nil {
+ __cell_231 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_231.Rc = 1
+ __cell_231.V0 = __scalar_216
+@@ -1338,81 +858,21 @@
+ _ = __dead_253
+ __dead_254 := __arg1.V3
+ _ = __dead_254
+-var __cell_256 *Constructor_Test_RBTree_T
+-if (__donor_slot_255) != (nil) {
+-__cell_256 = __donor_slot_255
+-__donor_slot_255 = nil
+-} else {
+-if (__dead_253) != (nil) {
+-__cell_256 = __dead_253
+-__dead_253 = nil
+-} else {
+-if (__dead_254) != (nil) {
+-__cell_256 = __dead_254
+-__dead_254 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_256) == (nil) {
+-__cell_256 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_256 := __dead_253
+ __cell_256.Rc = 1
+ __cell_256.V0 = __scalar_244
+ __cell_256.V1 = __read_245
+ __cell_256.V2 = __scalar_246
+ __cell_256.V3 = __read_247
+-var __cell_257 *Constructor_Test_RBTree_T
+-if (__donor_slot_255) != (nil) {
+-__cell_257 = __donor_slot_255
+-__donor_slot_255 = nil
+-} else {
+-if (__dead_253) != (nil) {
+-__cell_257 = __dead_253
+-__dead_253 = nil
+-} else {
+-if (__dead_254) != (nil) {
+-__cell_257 = __dead_254
+-__dead_254 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_257) == (nil) {
+-__cell_257 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_257 := __dead_254
+ __cell_257.Rc = 1
+ __cell_257.V0 = __scalar_249
+ __cell_257.V1 = __read_250
+ __cell_257.V2 = __scalar_251
+ __cell_257.V3 = __read_252
+-var __cell_258 *Constructor_Test_RBTree_T
+-if (__donor_slot_255) != (nil) {
+-__cell_258 = __donor_slot_255
+-__donor_slot_255 = nil
+-} else {
+-if (__dead_253) != (nil) {
+-__cell_258 = __dead_253
+-__dead_253 = nil
+-} else {
+-if (__dead_254) != (nil) {
+-__cell_258 = __dead_254
+-__dead_254 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_258) == (nil) {
++__cell_258 := __donor_slot_255
++if __cell_258 == nil {
+ __cell_258 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_258.Rc = 1
+ __cell_258.V0 = __scalar_243
+@@ -1456,81 +916,21 @@
+ _ = __dead_288
+ __dead_289 := __arg3.V1
+ _ = __dead_289
+-var __cell_291 *Constructor_Test_RBTree_T
+-if (__donor_slot_290) != (nil) {
+-__cell_291 = __donor_slot_290
+-__donor_slot_290 = nil
+-} else {
+-if (__dead_288) != (nil) {
+-__cell_291 = __dead_288
+-__dead_288 = nil
+-} else {
+-if (__dead_289) != (nil) {
+-__cell_291 = __dead_289
+-__dead_289 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_291) == (nil) {
+-__cell_291 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_291 := __dead_288
+ __cell_291.Rc = 1
+ __cell_291.V0 = __scalar_279
+ __cell_291.V1 = __read_280
+ __cell_291.V2 = __scalar_281
+ __cell_291.V3 = __read_282
+-var __cell_292 *Constructor_Test_RBTree_T
+-if (__donor_slot_290) != (nil) {
+-__cell_292 = __donor_slot_290
+-__donor_slot_290 = nil
+-} else {
+-if (__dead_288) != (nil) {
+-__cell_292 = __dead_288
+-__dead_288 = nil
+-} else {
+-if (__dead_289) != (nil) {
+-__cell_292 = __dead_289
+-__dead_289 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_292) == (nil) {
+-__cell_292 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_292 := __dead_289
+ __cell_292.Rc = 1
+ __cell_292.V0 = __scalar_284
+ __cell_292.V1 = __read_285
+ __cell_292.V2 = __scalar_286
+ __cell_292.V3 = __read_287
+-var __cell_293 *Constructor_Test_RBTree_T
+-if (__donor_slot_290) != (nil) {
+-__cell_293 = __donor_slot_290
+-__donor_slot_290 = nil
+-} else {
+-if (__dead_288) != (nil) {
+-__cell_293 = __dead_288
+-__dead_288 = nil
+-} else {
+-if (__dead_289) != (nil) {
+-__cell_293 = __dead_289
+-__dead_289 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_293) == (nil) {
++__cell_293 := __donor_slot_290
++if __cell_293 == nil {
+ __cell_293 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_293.Rc = 1
+ __cell_293.V0 = __scalar_278
+@@ -1572,81 +972,21 @@
+ _ = __dead_307
+ __dead_308 := __arg3.V3
+ _ = __dead_308
+-var __cell_310 *Constructor_Test_RBTree_T
+-if (__donor_slot_309) != (nil) {
+-__cell_310 = __donor_slot_309
+-__donor_slot_309 = nil
+-} else {
+-if (__dead_307) != (nil) {
+-__cell_310 = __dead_307
+-__dead_307 = nil
+-} else {
+-if (__dead_308) != (nil) {
+-__cell_310 = __dead_308
+-__dead_308 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_310) == (nil) {
+-__cell_310 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_310 := __dead_307
+ __cell_310.Rc = 1
+ __cell_310.V0 = __scalar_298
+ __cell_310.V1 = __read_299
+ __cell_310.V2 = __scalar_300
+ __cell_310.V3 = __read_301
+-var __cell_311 *Constructor_Test_RBTree_T
+-if (__donor_slot_309) != (nil) {
+-__cell_311 = __donor_slot_309
+-__donor_slot_309 = nil
+-} else {
+-if (__dead_307) != (nil) {
+-__cell_311 = __dead_307
+-__dead_307 = nil
+-} else {
+-if (__dead_308) != (nil) {
+-__cell_311 = __dead_308
+-__dead_308 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_311) == (nil) {
+-__cell_311 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_311 := __dead_308
+ __cell_311.Rc = 1
+ __cell_311.V0 = __scalar_303
+ __cell_311.V1 = __read_304
+ __cell_311.V2 = __scalar_305
+ __cell_311.V3 = __read_306
+-var __cell_312 *Constructor_Test_RBTree_T
+-if (__donor_slot_309) != (nil) {
+-__cell_312 = __donor_slot_309
+-__donor_slot_309 = nil
+-} else {
+-if (__dead_307) != (nil) {
+-__cell_312 = __dead_307
+-__dead_307 = nil
+-} else {
+-if (__dead_308) != (nil) {
+-__cell_312 = __dead_308
+-__dead_308 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_312) == (nil) {
++__cell_312 := __donor_slot_309
++if __cell_312 == nil {
+ __cell_312 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_312.Rc = 1
+ __cell_312.V0 = __scalar_297
+@@ -1723,81 +1063,21 @@
+ _ = __dead_326
+ __dead_327 := __arg3.V3
+ _ = __dead_327
+-var __cell_329 *Constructor_Test_RBTree_T
+-if (__donor_slot_328) != (nil) {
+-__cell_329 = __donor_slot_328
+-__donor_slot_328 = nil
+-} else {
+-if (__dead_326) != (nil) {
+-__cell_329 = __dead_326
+-__dead_326 = nil
+-} else {
+-if (__dead_327) != (nil) {
+-__cell_329 = __dead_327
+-__dead_327 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_329) == (nil) {
+-__cell_329 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_329 := __dead_326
+ __cell_329.Rc = 1
+ __cell_329.V0 = __scalar_317
+ __cell_329.V1 = __read_318
+ __cell_329.V2 = __scalar_319
+ __cell_329.V3 = __read_320
+-var __cell_330 *Constructor_Test_RBTree_T
+-if (__donor_slot_328) != (nil) {
+-__cell_330 = __donor_slot_328
+-__donor_slot_328 = nil
+-} else {
+-if (__dead_326) != (nil) {
+-__cell_330 = __dead_326
+-__dead_326 = nil
+-} else {
+-if (__dead_327) != (nil) {
+-__cell_330 = __dead_327
+-__dead_327 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_330) == (nil) {
+-__cell_330 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_330 := __dead_327
+ __cell_330.Rc = 1
+ __cell_330.V0 = __scalar_322
+ __cell_330.V1 = __read_323
+ __cell_330.V2 = __scalar_324
+ __cell_330.V3 = __read_325
+-var __cell_331 *Constructor_Test_RBTree_T
+-if (__donor_slot_328) != (nil) {
+-__cell_331 = __donor_slot_328
+-__donor_slot_328 = nil
+-} else {
+-if (__dead_326) != (nil) {
+-__cell_331 = __dead_326
+-__dead_326 = nil
+-} else {
+-if (__dead_327) != (nil) {
+-__cell_331 = __dead_327
+-__dead_327 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_331) == (nil) {
++__cell_331 := __donor_slot_328
++if __cell_331 == nil {
+ __cell_331 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_331.Rc = 1
+ __cell_331.V0 = __scalar_316
+@@ -1911,81 +1191,21 @@
+ _ = __dead_361
+ __dead_362 := __arg3.V1
+ _ = __dead_362
+-var __cell_364 *Constructor_Test_RBTree_T
+-if (__donor_slot_363) != (nil) {
+-__cell_364 = __donor_slot_363
+-__donor_slot_363 = nil
+-} else {
+-if (__dead_361) != (nil) {
+-__cell_364 = __dead_361
+-__dead_361 = nil
+-} else {
+-if (__dead_362) != (nil) {
+-__cell_364 = __dead_362
+-__dead_362 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_364) == (nil) {
+-__cell_364 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_364 := __dead_361
+ __cell_364.Rc = 1
+ __cell_364.V0 = __scalar_352
+ __cell_364.V1 = __read_353
+ __cell_364.V2 = __scalar_354
+ __cell_364.V3 = __read_355
+-var __cell_365 *Constructor_Test_RBTree_T
+-if (__donor_slot_363) != (nil) {
+-__cell_365 = __donor_slot_363
+-__donor_slot_363 = nil
+-} else {
+-if (__dead_361) != (nil) {
+-__cell_365 = __dead_361
+-__dead_361 = nil
+-} else {
+-if (__dead_362) != (nil) {
+-__cell_365 = __dead_362
+-__dead_362 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_365) == (nil) {
+-__cell_365 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_365 := __dead_362
+ __cell_365.Rc = 1
+ __cell_365.V0 = __scalar_357
+ __cell_365.V1 = __read_358
+ __cell_365.V2 = __scalar_359
+ __cell_365.V3 = __read_360
+-var __cell_366 *Constructor_Test_RBTree_T
+-if (__donor_slot_363) != (nil) {
+-__cell_366 = __donor_slot_363
+-__donor_slot_363 = nil
+-} else {
+-if (__dead_361) != (nil) {
+-__cell_366 = __dead_361
+-__dead_361 = nil
+-} else {
+-if (__dead_362) != (nil) {
+-__cell_366 = __dead_362
+-__dead_362 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_366) == (nil) {
++__cell_366 := __donor_slot_363
++if __cell_366 == nil {
+ __cell_366 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_366.Rc = 1
+ __cell_366.V0 = __scalar_351
+@@ -2027,81 +1247,21 @@
+ _ = __dead_380
+ __dead_381 := __arg3.V3
+ _ = __dead_381
+-var __cell_383 *Constructor_Test_RBTree_T
+-if (__donor_slot_382) != (nil) {
+-__cell_383 = __donor_slot_382
+-__donor_slot_382 = nil
+-} else {
+-if (__dead_380) != (nil) {
+-__cell_383 = __dead_380
+-__dead_380 = nil
+-} else {
+-if (__dead_381) != (nil) {
+-__cell_383 = __dead_381
+-__dead_381 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_383) == (nil) {
+-__cell_383 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_383 := __dead_380
+ __cell_383.Rc = 1
+ __cell_383.V0 = __scalar_371
+ __cell_383.V1 = __read_372
+ __cell_383.V2 = __scalar_373
+ __cell_383.V3 = __read_374
+-var __cell_384 *Constructor_Test_RBTree_T
+-if (__donor_slot_382) != (nil) {
+-__cell_384 = __donor_slot_382
+-__donor_slot_382 = nil
+-} else {
+-if (__dead_380) != (nil) {
+-__cell_384 = __dead_380
+-__dead_380 = nil
+-} else {
+-if (__dead_381) != (nil) {
+-__cell_384 = __dead_381
+-__dead_381 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_384) == (nil) {
+-__cell_384 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_384 := __dead_381
+ __cell_384.Rc = 1
+ __cell_384.V0 = __scalar_376
+ __cell_384.V1 = __read_377
+ __cell_384.V2 = __scalar_378
+ __cell_384.V3 = __read_379
+-var __cell_385 *Constructor_Test_RBTree_T
+-if (__donor_slot_382) != (nil) {
+-__cell_385 = __donor_slot_382
+-__donor_slot_382 = nil
+-} else {
+-if (__dead_380) != (nil) {
+-__cell_385 = __dead_380
+-__dead_380 = nil
+-} else {
+-if (__dead_381) != (nil) {
+-__cell_385 = __dead_381
+-__dead_381 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_385) == (nil) {
++__cell_385 := __donor_slot_382
++if __cell_385 == nil {
+ __cell_385 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_385.Rc = 1
+ __cell_385.V0 = __scalar_370
+@@ -2178,81 +1338,21 @@
+ _ = __dead_399
+ __dead_400 := __arg3.V3
+ _ = __dead_400
+-var __cell_402 *Constructor_Test_RBTree_T
+-if (__donor_slot_401) != (nil) {
+-__cell_402 = __donor_slot_401
+-__donor_slot_401 = nil
+-} else {
+-if (__dead_399) != (nil) {
+-__cell_402 = __dead_399
+-__dead_399 = nil
+-} else {
+-if (__dead_400) != (nil) {
+-__cell_402 = __dead_400
+-__dead_400 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_402) == (nil) {
+-__cell_402 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_402 := __dead_399
+ __cell_402.Rc = 1
+ __cell_402.V0 = __scalar_390
+ __cell_402.V1 = __read_391
+ __cell_402.V2 = __scalar_392
+ __cell_402.V3 = __read_393
+-var __cell_403 *Constructor_Test_RBTree_T
+-if (__donor_slot_401) != (nil) {
+-__cell_403 = __donor_slot_401
+-__donor_slot_401 = nil
+-} else {
+-if (__dead_399) != (nil) {
+-__cell_403 = __dead_399
+-__dead_399 = nil
+-} else {
+-if (__dead_400) != (nil) {
+-__cell_403 = __dead_400
+-__dead_400 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_403) == (nil) {
+-__cell_403 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_403 := __dead_400
+ __cell_403.Rc = 1
+ __cell_403.V0 = __scalar_395
+ __cell_403.V1 = __read_396
+ __cell_403.V2 = __scalar_397
+ __cell_403.V3 = __read_398
+-var __cell_404 *Constructor_Test_RBTree_T
+-if (__donor_slot_401) != (nil) {
+-__cell_404 = __donor_slot_401
+-__donor_slot_401 = nil
+-} else {
+-if (__dead_399) != (nil) {
+-__cell_404 = __dead_399
+-__dead_399 = nil
+-} else {
+-if (__dead_400) != (nil) {
+-__cell_404 = __dead_400
+-__dead_400 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_404) == (nil) {
++__cell_404 := __donor_slot_401
++if __cell_404 == nil {
+ __cell_404 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_404.Rc = 1
+ __cell_404.V0 = __scalar_389
+@@ -2367,81 +1467,21 @@
+ _ = __dead_434
+ __dead_435 := __arg3.V1
+ _ = __dead_435
+-var __cell_437 *Constructor_Test_RBTree_T
+-if (__donor_slot_436) != (nil) {
+-__cell_437 = __donor_slot_436
+-__donor_slot_436 = nil
+-} else {
+-if (__dead_434) != (nil) {
+-__cell_437 = __dead_434
+-__dead_434 = nil
+-} else {
+-if (__dead_435) != (nil) {
+-__cell_437 = __dead_435
+-__dead_435 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_437) == (nil) {
+-__cell_437 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_437 := __dead_434
+ __cell_437.Rc = 1
+ __cell_437.V0 = __scalar_425
+ __cell_437.V1 = __read_426
+ __cell_437.V2 = __scalar_427
+ __cell_437.V3 = __read_428
+-var __cell_438 *Constructor_Test_RBTree_T
+-if (__donor_slot_436) != (nil) {
+-__cell_438 = __donor_slot_436
+-__donor_slot_436 = nil
+-} else {
+-if (__dead_434) != (nil) {
+-__cell_438 = __dead_434
+-__dead_434 = nil
+-} else {
+-if (__dead_435) != (nil) {
+-__cell_438 = __dead_435
+-__dead_435 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_438) == (nil) {
+-__cell_438 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_438 := __dead_435
+ __cell_438.Rc = 1
+ __cell_438.V0 = __scalar_430
+ __cell_438.V1 = __read_431
+ __cell_438.V2 = __scalar_432
+ __cell_438.V3 = __read_433
+-var __cell_439 *Constructor_Test_RBTree_T
+-if (__donor_slot_436) != (nil) {
+-__cell_439 = __donor_slot_436
+-__donor_slot_436 = nil
+-} else {
+-if (__dead_434) != (nil) {
+-__cell_439 = __dead_434
+-__dead_434 = nil
+-} else {
+-if (__dead_435) != (nil) {
+-__cell_439 = __dead_435
+-__dead_435 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_439) == (nil) {
++__cell_439 := __donor_slot_436
++if __cell_439 == nil {
+ __cell_439 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_439.Rc = 1
+ __cell_439.V0 = __scalar_424
+@@ -2483,81 +1523,21 @@
+ _ = __dead_453
+ __dead_454 := __arg3.V3
+ _ = __dead_454
+-var __cell_456 *Constructor_Test_RBTree_T
+-if (__donor_slot_455) != (nil) {
+-__cell_456 = __donor_slot_455
+-__donor_slot_455 = nil
+-} else {
+-if (__dead_453) != (nil) {
+-__cell_456 = __dead_453
+-__dead_453 = nil
+-} else {
+-if (__dead_454) != (nil) {
+-__cell_456 = __dead_454
+-__dead_454 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_456) == (nil) {
+-__cell_456 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_456 := __dead_453
+ __cell_456.Rc = 1
+ __cell_456.V0 = __scalar_444
+ __cell_456.V1 = __read_445
+ __cell_456.V2 = __scalar_446
+ __cell_456.V3 = __read_447
+-var __cell_457 *Constructor_Test_RBTree_T
+-if (__donor_slot_455) != (nil) {
+-__cell_457 = __donor_slot_455
+-__donor_slot_455 = nil
+-} else {
+-if (__dead_453) != (nil) {
+-__cell_457 = __dead_453
+-__dead_453 = nil
+-} else {
+-if (__dead_454) != (nil) {
+-__cell_457 = __dead_454
+-__dead_454 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_457) == (nil) {
+-__cell_457 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_457 := __dead_454
+ __cell_457.Rc = 1
+ __cell_457.V0 = __scalar_449
+ __cell_457.V1 = __read_450
+ __cell_457.V2 = __scalar_451
+ __cell_457.V3 = __read_452
+-var __cell_458 *Constructor_Test_RBTree_T
+-if (__donor_slot_455) != (nil) {
+-__cell_458 = __donor_slot_455
+-__donor_slot_455 = nil
+-} else {
+-if (__dead_453) != (nil) {
+-__cell_458 = __dead_453
+-__dead_453 = nil
+-} else {
+-if (__dead_454) != (nil) {
+-__cell_458 = __dead_454
+-__dead_454 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_458) == (nil) {
++__cell_458 := __donor_slot_455
++if __cell_458 == nil {
+ __cell_458 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_458.Rc = 1
+ __cell_458.V0 = __scalar_443
+@@ -2634,81 +1614,21 @@
+ _ = __dead_472
+ __dead_473 := __arg3.V3
+ _ = __dead_473
+-var __cell_475 *Constructor_Test_RBTree_T
+-if (__donor_slot_474) != (nil) {
+-__cell_475 = __donor_slot_474
+-__donor_slot_474 = nil
+-} else {
+-if (__dead_472) != (nil) {
+-__cell_475 = __dead_472
+-__dead_472 = nil
+-} else {
+-if (__dead_473) != (nil) {
+-__cell_475 = __dead_473
+-__dead_473 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_475) == (nil) {
+-__cell_475 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_475 := __dead_472
+ __cell_475.Rc = 1
+ __cell_475.V0 = __scalar_463
+ __cell_475.V1 = __read_464
+ __cell_475.V2 = __scalar_465
+ __cell_475.V3 = __read_466
+-var __cell_476 *Constructor_Test_RBTree_T
+-if (__donor_slot_474) != (nil) {
+-__cell_476 = __donor_slot_474
+-__donor_slot_474 = nil
+-} else {
+-if (__dead_472) != (nil) {
+-__cell_476 = __dead_472
+-__dead_472 = nil
+-} else {
+-if (__dead_473) != (nil) {
+-__cell_476 = __dead_473
+-__dead_473 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_476) == (nil) {
+-__cell_476 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_476 := __dead_473
+ __cell_476.Rc = 1
+ __cell_476.V0 = __scalar_468
+ __cell_476.V1 = __read_469
+ __cell_476.V2 = __scalar_470
+ __cell_476.V3 = __read_471
+-var __cell_477 *Constructor_Test_RBTree_T
+-if (__donor_slot_474) != (nil) {
+-__cell_477 = __donor_slot_474
+-__donor_slot_474 = nil
+-} else {
+-if (__dead_472) != (nil) {
+-__cell_477 = __dead_472
+-__dead_472 = nil
+-} else {
+-if (__dead_473) != (nil) {
+-__cell_477 = __dead_473
+-__dead_473 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_477) == (nil) {
++__cell_477 := __donor_slot_474
++if __cell_477 == nil {
+ __cell_477 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_477.Rc = 1
+ __cell_477.V0 = __scalar_462
+@@ -2822,81 +1742,21 @@
+ _ = __dead_507
+ __dead_508 := __arg3.V1
+ _ = __dead_508
+-var __cell_510 *Constructor_Test_RBTree_T
+-if (__donor_slot_509) != (nil) {
+-__cell_510 = __donor_slot_509
+-__donor_slot_509 = nil
+-} else {
+-if (__dead_507) != (nil) {
+-__cell_510 = __dead_507
+-__dead_507 = nil
+-} else {
+-if (__dead_508) != (nil) {
+-__cell_510 = __dead_508
+-__dead_508 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_510) == (nil) {
+-__cell_510 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_510 := __dead_507
+ __cell_510.Rc = 1
+ __cell_510.V0 = __scalar_498
+ __cell_510.V1 = __read_499
+ __cell_510.V2 = __scalar_500
+ __cell_510.V3 = __read_501
+-var __cell_511 *Constructor_Test_RBTree_T
+-if (__donor_slot_509) != (nil) {
+-__cell_511 = __donor_slot_509
+-__donor_slot_509 = nil
+-} else {
+-if (__dead_507) != (nil) {
+-__cell_511 = __dead_507
+-__dead_507 = nil
+-} else {
+-if (__dead_508) != (nil) {
+-__cell_511 = __dead_508
+-__dead_508 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_511) == (nil) {
+-__cell_511 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_511 := __dead_508
+ __cell_511.Rc = 1
+ __cell_511.V0 = __scalar_503
+ __cell_511.V1 = __read_504
+ __cell_511.V2 = __scalar_505
+ __cell_511.V3 = __read_506
+-var __cell_512 *Constructor_Test_RBTree_T
+-if (__donor_slot_509) != (nil) {
+-__cell_512 = __donor_slot_509
+-__donor_slot_509 = nil
+-} else {
+-if (__dead_507) != (nil) {
+-__cell_512 = __dead_507
+-__dead_507 = nil
+-} else {
+-if (__dead_508) != (nil) {
+-__cell_512 = __dead_508
+-__dead_508 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_512) == (nil) {
++__cell_512 := __donor_slot_509
++if __cell_512 == nil {
+ __cell_512 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_512.Rc = 1
+ __cell_512.V0 = __scalar_497
+@@ -2938,81 +1798,21 @@
+ _ = __dead_526
+ __dead_527 := __arg3.V3
+ _ = __dead_527
+-var __cell_529 *Constructor_Test_RBTree_T
+-if (__donor_slot_528) != (nil) {
+-__cell_529 = __donor_slot_528
+-__donor_slot_528 = nil
+-} else {
+-if (__dead_526) != (nil) {
+-__cell_529 = __dead_526
+-__dead_526 = nil
+-} else {
+-if (__dead_527) != (nil) {
+-__cell_529 = __dead_527
+-__dead_527 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_529) == (nil) {
+-__cell_529 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_529 := __dead_526
+ __cell_529.Rc = 1
+ __cell_529.V0 = __scalar_517
+ __cell_529.V1 = __read_518
+ __cell_529.V2 = __scalar_519
+ __cell_529.V3 = __read_520
+-var __cell_530 *Constructor_Test_RBTree_T
+-if (__donor_slot_528) != (nil) {
+-__cell_530 = __donor_slot_528
+-__donor_slot_528 = nil
+-} else {
+-if (__dead_526) != (nil) {
+-__cell_530 = __dead_526
+-__dead_526 = nil
+-} else {
+-if (__dead_527) != (nil) {
+-__cell_530 = __dead_527
+-__dead_527 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_530) == (nil) {
+-__cell_530 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_530 := __dead_527
+ __cell_530.Rc = 1
+ __cell_530.V0 = __scalar_522
+ __cell_530.V1 = __read_523
+ __cell_530.V2 = __scalar_524
+ __cell_530.V3 = __read_525
+-var __cell_531 *Constructor_Test_RBTree_T
+-if (__donor_slot_528) != (nil) {
+-__cell_531 = __donor_slot_528
+-__donor_slot_528 = nil
+-} else {
+-if (__dead_526) != (nil) {
+-__cell_531 = __dead_526
+-__dead_526 = nil
+-} else {
+-if (__dead_527) != (nil) {
+-__cell_531 = __dead_527
+-__dead_527 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_531) == (nil) {
++__cell_531 := __donor_slot_528
++if __cell_531 == nil {
+ __cell_531 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_531.Rc = 1
+ __cell_531.V0 = __scalar_516
+@@ -3089,81 +1889,21 @@
+ _ = __dead_545
+ __dead_546 := __arg3.V3
+ _ = __dead_546
+-var __cell_548 *Constructor_Test_RBTree_T
+-if (__donor_slot_547) != (nil) {
+-__cell_548 = __donor_slot_547
+-__donor_slot_547 = nil
+-} else {
+-if (__dead_545) != (nil) {
+-__cell_548 = __dead_545
+-__dead_545 = nil
+-} else {
+-if (__dead_546) != (nil) {
+-__cell_548 = __dead_546
+-__dead_546 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_548) == (nil) {
+-__cell_548 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_548 := __dead_545
+ __cell_548.Rc = 1
+ __cell_548.V0 = __scalar_536
+ __cell_548.V1 = __read_537
+ __cell_548.V2 = __scalar_538
+ __cell_548.V3 = __read_539
+-var __cell_549 *Constructor_Test_RBTree_T
+-if (__donor_slot_547) != (nil) {
+-__cell_549 = __donor_slot_547
+-__donor_slot_547 = nil
+-} else {
+-if (__dead_545) != (nil) {
+-__cell_549 = __dead_545
+-__dead_545 = nil
+-} else {
+-if (__dead_546) != (nil) {
+-__cell_549 = __dead_546
+-__dead_546 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_549) == (nil) {
+-__cell_549 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+-}
++__cell_549 := __dead_546
+ __cell_549.Rc = 1
+ __cell_549.V0 = __scalar_541
+ __cell_549.V1 = __read_542
+ __cell_549.V2 = __scalar_543
+ __cell_549.V3 = __read_544
+-var __cell_550 *Constructor_Test_RBTree_T
+-if (__donor_slot_547) != (nil) {
+-__cell_550 = __donor_slot_547
+-__donor_slot_547 = nil
+-} else {
+-if (__dead_545) != (nil) {
+-__cell_550 = __dead_545
+-__dead_545 = nil
+-} else {
+-if (__dead_546) != (nil) {
+-__cell_550 = __dead_546
+-__dead_546 = nil
+-} else {
+-
+-}
+-}
+-}
+-if (__cell_550) == (nil) {
++__cell_550 := __donor_slot_547
++if __cell_550 == nil {
+ __cell_550 = new(Constructor_Test_RBTree_T)
+-} else {
+-
+ }
+ __cell_550.Rc = 1
+ __cell_550.V0 = __scalar_535

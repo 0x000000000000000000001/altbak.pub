@@ -1,0 +1,38 @@
+{
+  "checked_utc": "2026-09-16T23:02:49.422947+00:00",
+  "variants": {
+    "before": {
+      "source_hashes_unchanged": true,
+      "top_level_tests_passed": [
+        "TestFourRotations",
+        "TestPersistentHistories",
+        "TestRetainedSubtreeAndSharedChild",
+        "TestNominalBuild",
+        "TestOwnedFreshSequences",
+        "TestFreshBuildMatchesPersistent",
+        "TestRecolorCopiesFieldsIntoDistinctDonor",
+        "TestInsertWithDistinctDonorPreservesShape"
+      ],
+      "binary_sha256": "de330261d9ed3c08082555a48c2ee0cd3107f121fe1eeb26b71787af8b7d697b",
+      "main_sha256": "89f4d532606d734fc9cfd605648748cbd80ba02ba1b9aaa2a7d2a9a78ec633cb",
+      "entrypoints_sha256": "2e94ae02128c2795f11a670c10b64f95c2062a4b9bba01cd07fc5a78f4d8d47d"
+    },
+    "after": {
+      "source_hashes_unchanged": true,
+      "top_level_tests_passed": [
+        "TestFourRotations",
+        "TestPersistentHistories",
+        "TestRetainedSubtreeAndSharedChild",
+        "TestNominalBuild",
+        "TestOwnedFreshSequences",
+        "TestFreshBuildMatchesPersistent",
+        "TestRecolorCopiesFieldsIntoDistinctDonor",
+        "TestInsertWithDistinctDonorPreservesShape"
+      ],
+      "binary_sha256": "c5aecf0111c7a13ac1690048d9a51dfdfeb2f9cd1e786990d8eed308171e75b3",
+      "main_sha256": "89f4d532606d734fc9cfd605648748cbd80ba02ba1b9aaa2a7d2a9a78ec633cb",
+      "entrypoints_sha256": "2e94ae02128c2795f11a670c10b64f95c2062a4b9bba01cd07fc5a78f4d8d47d"
+    }
+  },
+  "source_copy_unchanged": true
+}

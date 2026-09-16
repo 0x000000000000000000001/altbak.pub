@@ -1,0 +1,62 @@
+{
+  "protocol": "5 alternating process pairs; n=100000; 3 warmups + 5 samples/process; forced GC before each measured call; GOGC=800; GOWORK=off; PGO off; depth=22 validated for every sample",
+  "environment": {
+    "GOGC": "800",
+    "GOWORK": "off",
+    "GOMAXPROCS": null,
+    "GOMEMLIMIT": null
+  },
+  "variants": {
+    "before": {
+      "samples": 25,
+      "processes": 5,
+      "nanoseconds": {
+        "median": 9508291,
+        "min": 9098375,
+        "max": 12222959
+      },
+      "allocated_bytes": {
+        "median": 3200000,
+        "min": 3200000,
+        "max": 3200016
+      },
+      "allocations": {
+        "median": 100000,
+        "min": 100000,
+        "max": 100001
+      }
+    },
+    "after": {
+      "samples": 25,
+      "processes": 5,
+      "nanoseconds": {
+        "median": 9423834,
+        "min": 8980125,
+        "max": 9816541
+      },
+      "allocated_bytes": {
+        "median": 3200000,
+        "min": 3200000,
+        "max": 3200016
+      },
+      "allocations": {
+        "median": 100000,
+        "min": 100000,
+        "max": 100001
+      }
+    }
+  },
+  "paired_change_percent": {
+    "median": -2.1371558779595623,
+    "min": -12.347981666044582,
+    "max": 1.6719071981903255,
+    "all": [
+      -12.347981666044582,
+      1.6719071981903255,
+      -1.1534228325292495,
+      -2.1371558779595623,
+      -3.0545613987352005
+    ]
+  },
+  "pooled_median_change_percent": -0.8882458477553978
+}

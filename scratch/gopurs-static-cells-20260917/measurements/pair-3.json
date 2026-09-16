@@ -1,0 +1,114 @@
+{
+  "pair": 3,
+  "order": [
+    "before",
+    "after"
+  ],
+  "records": {
+    "before": {
+      "binary_sha256": "de330261d9ed3c08082555a48c2ee0cd3107f121fe1eeb26b71787af8b7d697b",
+      "started_utc": "2026-09-16T23:01:21.373217+00:00",
+      "samples": [
+        {
+          "mode": "pure",
+          "iteration": 1,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9507542,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "pure",
+          "iteration": 2,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9468167,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "pure",
+          "iteration": 3,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9292417,
+          "allocated_bytes": 3200016,
+          "allocations": 100001
+        },
+        {
+          "mode": "pure",
+          "iteration": 4,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9098375,
+          "allocated_bytes": 3200016,
+          "allocations": 100001
+        },
+        {
+          "mode": "pure",
+          "iteration": 5,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9495208,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        }
+      ],
+      "median_ns": 9468167
+    },
+    "after": {
+      "binary_sha256": "c5aecf0111c7a13ac1690048d9a51dfdfeb2f9cd1e786990d8eed308171e75b3",
+      "started_utc": "2026-09-16T23:01:21.458874+00:00",
+      "samples": [
+        {
+          "mode": "pure",
+          "iteration": 1,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9444125,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "pure",
+          "iteration": 2,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9171750,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "pure",
+          "iteration": 3,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9358959,
+          "allocated_bytes": 3200016,
+          "allocations": 100001
+        },
+        {
+          "mode": "pure",
+          "iteration": 4,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9333084,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "pure",
+          "iteration": 5,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9696208,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        }
+      ],
+      "median_ns": 9358959
+    }
+  },
+  "paired_change_percent": -1.1534228325292495
+}

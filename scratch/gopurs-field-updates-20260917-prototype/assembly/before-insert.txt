@@ -1,0 +1,58 @@
+
+/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-field-updates-20260917-prototype/before/probe/probe:	file format mach-o arm64
+
+Disassembly of section __TEXT,__text:
+
+00000001000ff390 <_gopurs/output/purescript.Call_Test_RBTree___gopurs_owned_insert_0_consume>:
+1000ff390: f9400b90    	ldr	x16, [x28, #0x10]
+1000ff394: eb3063ff    	cmp	sp, x16
+1000ff398: 54000569    	b.ls	0x1000ff444 <_gopurs/output/purescript.Call_Test_RBTree___gopurs_owned_insert_0_consume+0xb4>
+1000ff39c: f81b0ffe    	str	x30, [sp, #-0x50]!
+1000ff3a0: f81f83fd    	stur	x29, [sp, #-0x8]
+1000ff3a4: d10023fd    	sub	x29, sp, #0x8
+1000ff3a8: f100005f    	cmp	x2, #0x0
+1000ff3ac: 9a9f1042    	csel	x2, x2, xzr, ne
+1000ff3b0: 97ffff7c    	bl	0x1000ff1a0 <_gopurs/output/purescript.Call_Test_RBTree___gopurs_owned_ins_0_consume>
+1000ff3b4: b4000400    	cbz	x0, 0x1000ff434 <_gopurs/output/purescript.Call_Test_RBTree___gopurs_owned_insert_0_consume+0xa4>
+1000ff3b8: a9409003    	ldp	x3, x4, [x0, #0x8]
+1000ff3bc: f9400c05    	ldr	x5, [x0, #0x18]
+1000ff3c0: b5000180    	cbnz	x0, 0x1000ff3f0 <_gopurs/output/purescript.Call_Test_RBTree___gopurs_owned_insert_0_consume+0x60>
+1000ff3c4: f90023e3    	str	x3, [sp, #0x40]
+1000ff3c8: f9001be4    	str	x4, [sp, #0x30]
+1000ff3cc: f9001fe5    	str	x5, [sp, #0x38]
+1000ff3d0: b27b03e0    	orr	x0, xzr, #0x20
+1000ff3d4: f00010e1    	adrp	x1, 0x10031e000 <_type:*+0x38db8>
+1000ff3d8: 91160021    	add	x1, x1, #0x580
+1000ff3dc: b24003e2    	orr	x2, xzr, #0x1
+1000ff3e0: 97fc6ca8    	bl	0x10001a680 <_runtime.mallocgcSmallScanNoHeaderSC4>
+1000ff3e4: f94023e3    	ldr	x3, [sp, #0x40]
+1000ff3e8: f9401be4    	ldr	x4, [sp, #0x30]
+1000ff3ec: f9401fe5    	ldr	x5, [sp, #0x38]
+1000ff3f0: d2800021    	mov	x1, #0x1                ; =1
+1000ff3f4: f2cd0101    	movk	x1, #0x6808, lsl #32
+1000ff3f8: f2ebcc41    	movk	x1, #0x5e62, lsl #48
+1000ff3fc: f9000001    	str	x1, [x0]
+1000ff400: 900013db    	adrp	x27, 0x100377000 <_runtime.mheap_+0x18800>
+1000ff404: b94ad361    	ldr	w1, [x27, #0xad0]
+1000ff408: 340000c1    	cbz	w1, 0x1000ff420 <_gopurs/output/purescript.Call_Test_RBTree___gopurs_owned_insert_0_consume+0x90>
+1000ff40c: f9400401    	ldr	x1, [x0, #0x8]
+1000ff410: f9400c02    	ldr	x2, [x0, #0x18]
+1000ff414: 97fdf73b    	bl	0x10007d100 <_runtime.gcWriteBarrier4>
+1000ff418: a9000723    	stp	x3, x1, [x25]
+1000ff41c: a9010b25    	stp	x5, x2, [x25, #0x10]
+1000ff420: a9009003    	stp	x3, x4, [x0, #0x8]
+1000ff424: f9000c05    	str	x5, [x0, #0x18]
+1000ff428: f85f83fd    	ldur	x29, [sp, #-0x8]
+1000ff42c: f84507fe    	ldr	x30, [sp], #0x50
+1000ff430: d65f03c0    	ret
+1000ff434: aa1f03e0    	mov	x0, xzr
+1000ff438: f85f83fd    	ldur	x29, [sp, #-0x8]
+1000ff43c: f84507fe    	ldr	x30, [sp], #0x50
+1000ff440: d65f03c0    	ret
+1000ff444: a90087e0    	stp	x0, x1, [sp, #0x8]
+1000ff448: f9000fe2    	str	x2, [sp, #0x18]
+1000ff44c: aa1e03e3    	mov	x3, x30
+1000ff450: 97fdef94    	bl	0x10007b2a0 <_runtime.morestack_noctxt.abi0>
+1000ff454: a94087e0    	ldp	x0, x1, [sp, #0x8]
+1000ff458: f9400fe2    	ldr	x2, [sp, #0x18]
+1000ff45c: 17ffffcd    	b	0x1000ff390 <_gopurs/output/purescript.Call_Test_RBTree___gopurs_owned_insert_0_consume>

@@ -1,0 +1,1056 @@
+{
+  "patched": 21,
+  "unchanged_one_cell_segments": 19,
+  "segments": [
+    {
+      "original_line": 190,
+      "donor": "__donor_slot_55",
+      "dead": [
+        [
+          "__dead_53",
+          "__arg1"
+        ],
+        [
+          "__dead_54",
+          "__arg1.V1"
+        ]
+      ],
+      "cells": [
+        "__cell_56",
+        "__cell_57",
+        "__cell_58"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg1": [
+          "__let_scalar_40 := int64(__arg1.V1.V2)",
+          "__let_scalar_41 := int64(__arg1.V2)",
+          "__read_45 := __arg1.V1.V1",
+          "__read_47 := __arg1.V1.V3",
+          "__read_50 := __arg1.V3"
+        ],
+        "__arg1.V1": [
+          "__let_scalar_40 := int64(__arg1.V1.V2)",
+          "__read_45 := __arg1.V1.V1",
+          "__read_47 := __arg1.V1.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_56.Rc = 1",
+        "__cell_56.V0 = __scalar_44",
+        "__cell_56.V1 = __read_45",
+        "__cell_56.V2 = __scalar_46",
+        "__cell_56.V3 = __read_47",
+        "__cell_57.Rc = 1",
+        "__cell_57.V0 = __scalar_49",
+        "__cell_57.V1 = __read_50",
+        "__cell_57.V2 = __scalar_51",
+        "__cell_57.V3 = __read_52",
+        "__cell_58.Rc = 1",
+        "__cell_58.V0 = __scalar_43",
+        "__cell_58.V1 = __cell_56",
+        "__cell_58.V2 = __scalar_48",
+        "__cell_58.V3 = __cell_57"
+      ]
+    },
+    {
+      "original_line": 307,
+      "donor": "__donor_slot_82",
+      "dead": [
+        [
+          "__dead_80",
+          "__arg1"
+        ],
+        [
+          "__dead_81",
+          "__arg1.V3"
+        ]
+      ],
+      "cells": [
+        "__cell_83",
+        "__cell_84",
+        "__cell_85"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg1": [
+          "__let_scalar_67 := int64(__arg1.V2)",
+          "__let_scalar_68 := int64(__arg1.V3.V2)",
+          "__read_72 := __arg1.V1",
+          "__read_74 := __arg1.V3.V1",
+          "__read_77 := __arg1.V3.V3"
+        ],
+        "__arg1.V3": [
+          "__let_scalar_68 := int64(__arg1.V3.V2)",
+          "__read_74 := __arg1.V3.V1",
+          "__read_77 := __arg1.V3.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_83.Rc = 1",
+        "__cell_83.V0 = __scalar_71",
+        "__cell_83.V1 = __read_72",
+        "__cell_83.V2 = __scalar_73",
+        "__cell_83.V3 = __read_74",
+        "__cell_84.Rc = 1",
+        "__cell_84.V0 = __scalar_76",
+        "__cell_84.V1 = __read_77",
+        "__cell_84.V2 = __scalar_78",
+        "__cell_84.V3 = __read_79",
+        "__cell_85.Rc = 1",
+        "__cell_85.V0 = __scalar_70",
+        "__cell_85.V1 = __cell_83",
+        "__cell_85.V2 = __scalar_75",
+        "__cell_85.V3 = __cell_84"
+      ]
+    },
+    {
+      "original_line": 425,
+      "donor": "__donor_slot_117",
+      "dead": [
+        [
+          "__dead_115",
+          "__arg3"
+        ],
+        [
+          "__dead_116",
+          "__arg3.V1"
+        ]
+      ],
+      "cells": [
+        "__cell_118",
+        "__cell_119",
+        "__cell_120"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_103 := int64(__arg3.V1.V2)",
+          "__let_scalar_104 := int64(__arg3.V2)",
+          "__read_109 := __arg3.V1.V1",
+          "__read_112 := __arg3.V1.V3",
+          "__read_114 := __arg3.V3"
+        ],
+        "__arg3.V1": [
+          "__let_scalar_103 := int64(__arg3.V1.V2)",
+          "__read_109 := __arg3.V1.V1",
+          "__read_112 := __arg3.V1.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_118.Rc = 1",
+        "__cell_118.V0 = __scalar_106",
+        "__cell_118.V1 = __read_107",
+        "__cell_118.V2 = __scalar_108",
+        "__cell_118.V3 = __read_109",
+        "__cell_119.Rc = 1",
+        "__cell_119.V0 = __scalar_111",
+        "__cell_119.V1 = __read_112",
+        "__cell_119.V2 = __scalar_113",
+        "__cell_119.V3 = __read_114",
+        "__cell_120.Rc = 1",
+        "__cell_120.V0 = __scalar_105",
+        "__cell_120.V1 = __cell_118",
+        "__cell_120.V2 = __scalar_110",
+        "__cell_120.V3 = __cell_119"
+      ]
+    },
+    {
+      "original_line": 541,
+      "donor": "__donor_slot_136",
+      "dead": [
+        [
+          "__dead_134",
+          "__arg3"
+        ],
+        [
+          "__dead_135",
+          "__arg3.V3"
+        ]
+      ],
+      "cells": [
+        "__cell_137",
+        "__cell_138",
+        "__cell_139"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_122 := int64(__arg3.V2)",
+          "__let_scalar_123 := int64(__arg3.V3.V2)",
+          "__read_128 := __arg3.V1",
+          "__read_131 := __arg3.V3.V1",
+          "__read_133 := __arg3.V3.V3"
+        ],
+        "__arg3.V3": [
+          "__let_scalar_123 := int64(__arg3.V3.V2)",
+          "__read_131 := __arg3.V3.V1",
+          "__read_133 := __arg3.V3.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_137.Rc = 1",
+        "__cell_137.V0 = __scalar_125",
+        "__cell_137.V1 = __read_126",
+        "__cell_137.V2 = __scalar_127",
+        "__cell_137.V3 = __read_128",
+        "__cell_138.Rc = 1",
+        "__cell_138.V0 = __scalar_130",
+        "__cell_138.V1 = __read_131",
+        "__cell_138.V2 = __scalar_132",
+        "__cell_138.V3 = __read_133",
+        "__cell_139.Rc = 1",
+        "__cell_139.V0 = __scalar_124",
+        "__cell_139.V1 = __cell_137",
+        "__cell_139.V2 = __scalar_129",
+        "__cell_139.V3 = __cell_138"
+      ]
+    },
+    {
+      "original_line": 692,
+      "donor": "__donor_slot_155",
+      "dead": [
+        [
+          "__dead_153",
+          "__arg3"
+        ],
+        [
+          "__dead_154",
+          "__arg3.V3"
+        ]
+      ],
+      "cells": [
+        "__cell_156",
+        "__cell_157",
+        "__cell_158"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_141 := int64(__arg3.V2)",
+          "__let_scalar_142 := int64(__arg3.V3.V2)",
+          "__read_147 := __arg3.V1",
+          "__read_150 := __arg3.V3.V1",
+          "__read_152 := __arg3.V3.V3"
+        ],
+        "__arg3.V3": [
+          "__let_scalar_142 := int64(__arg3.V3.V2)",
+          "__read_150 := __arg3.V3.V1",
+          "__read_152 := __arg3.V3.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_156.Rc = 1",
+        "__cell_156.V0 = __scalar_144",
+        "__cell_156.V1 = __read_145",
+        "__cell_156.V2 = __scalar_146",
+        "__cell_156.V3 = __read_147",
+        "__cell_157.Rc = 1",
+        "__cell_157.V0 = __scalar_149",
+        "__cell_157.V1 = __read_150",
+        "__cell_157.V2 = __scalar_151",
+        "__cell_157.V3 = __read_152",
+        "__cell_158.Rc = 1",
+        "__cell_158.V0 = __scalar_143",
+        "__cell_158.V1 = __cell_156",
+        "__cell_158.V2 = __scalar_148",
+        "__cell_158.V3 = __cell_157"
+      ]
+    },
+    {
+      "original_line": 880,
+      "donor": "__donor_slot_190",
+      "dead": [
+        [
+          "__dead_188",
+          "__arg3"
+        ],
+        [
+          "__dead_189",
+          "__arg3.V1"
+        ]
+      ],
+      "cells": [
+        "__cell_191",
+        "__cell_192",
+        "__cell_193"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_176 := int64(__arg3.V1.V2)",
+          "__let_scalar_177 := int64(__arg3.V2)",
+          "__read_182 := __arg3.V1.V1",
+          "__read_185 := __arg3.V1.V3",
+          "__read_187 := __arg3.V3"
+        ],
+        "__arg3.V1": [
+          "__let_scalar_176 := int64(__arg3.V1.V2)",
+          "__read_182 := __arg3.V1.V1",
+          "__read_185 := __arg3.V1.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_191.Rc = 1",
+        "__cell_191.V0 = __scalar_179",
+        "__cell_191.V1 = __read_180",
+        "__cell_191.V2 = __scalar_181",
+        "__cell_191.V3 = __read_182",
+        "__cell_192.Rc = 1",
+        "__cell_192.V0 = __scalar_184",
+        "__cell_192.V1 = __read_185",
+        "__cell_192.V2 = __scalar_186",
+        "__cell_192.V3 = __read_187",
+        "__cell_193.Rc = 1",
+        "__cell_193.V0 = __scalar_178",
+        "__cell_193.V1 = __cell_191",
+        "__cell_193.V2 = __scalar_183",
+        "__cell_193.V3 = __cell_192"
+      ]
+    },
+    {
+      "original_line": 996,
+      "donor": "__donor_slot_209",
+      "dead": [
+        [
+          "__dead_207",
+          "__arg3"
+        ],
+        [
+          "__dead_208",
+          "__arg3.V3"
+        ]
+      ],
+      "cells": [
+        "__cell_210",
+        "__cell_211",
+        "__cell_212"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_195 := int64(__arg3.V2)",
+          "__let_scalar_196 := int64(__arg3.V3.V2)",
+          "__read_201 := __arg3.V1",
+          "__read_204 := __arg3.V3.V1",
+          "__read_206 := __arg3.V3.V3"
+        ],
+        "__arg3.V3": [
+          "__let_scalar_196 := int64(__arg3.V3.V2)",
+          "__read_204 := __arg3.V3.V1",
+          "__read_206 := __arg3.V3.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_210.Rc = 1",
+        "__cell_210.V0 = __scalar_198",
+        "__cell_210.V1 = __read_199",
+        "__cell_210.V2 = __scalar_200",
+        "__cell_210.V3 = __read_201",
+        "__cell_211.Rc = 1",
+        "__cell_211.V0 = __scalar_203",
+        "__cell_211.V1 = __read_204",
+        "__cell_211.V2 = __scalar_205",
+        "__cell_211.V3 = __read_206",
+        "__cell_212.Rc = 1",
+        "__cell_212.V0 = __scalar_197",
+        "__cell_212.V1 = __cell_210",
+        "__cell_212.V2 = __scalar_202",
+        "__cell_212.V3 = __cell_211"
+      ]
+    },
+    {
+      "original_line": 1147,
+      "donor": "__donor_slot_228",
+      "dead": [
+        [
+          "__dead_226",
+          "__arg3"
+        ],
+        [
+          "__dead_227",
+          "__arg3.V3"
+        ]
+      ],
+      "cells": [
+        "__cell_229",
+        "__cell_230",
+        "__cell_231"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_214 := int64(__arg3.V2)",
+          "__let_scalar_215 := int64(__arg3.V3.V2)",
+          "__read_220 := __arg3.V1",
+          "__read_223 := __arg3.V3.V1",
+          "__read_225 := __arg3.V3.V3"
+        ],
+        "__arg3.V3": [
+          "__let_scalar_215 := int64(__arg3.V3.V2)",
+          "__read_223 := __arg3.V3.V1",
+          "__read_225 := __arg3.V3.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_229.Rc = 1",
+        "__cell_229.V0 = __scalar_217",
+        "__cell_229.V1 = __read_218",
+        "__cell_229.V2 = __scalar_219",
+        "__cell_229.V3 = __read_220",
+        "__cell_230.Rc = 1",
+        "__cell_230.V0 = __scalar_222",
+        "__cell_230.V1 = __read_223",
+        "__cell_230.V2 = __scalar_224",
+        "__cell_230.V3 = __read_225",
+        "__cell_231.Rc = 1",
+        "__cell_231.V0 = __scalar_216",
+        "__cell_231.V1 = __cell_229",
+        "__cell_231.V2 = __scalar_221",
+        "__cell_231.V3 = __cell_230"
+      ]
+    },
+    {
+      "original_line": 1335,
+      "donor": "__donor_slot_255",
+      "dead": [
+        [
+          "__dead_253",
+          "__arg1"
+        ],
+        [
+          "__dead_254",
+          "__arg1.V3"
+        ]
+      ],
+      "cells": [
+        "__cell_256",
+        "__cell_257",
+        "__cell_258"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg1": [
+          "__let_scalar_240 := int64(__arg1.V2)",
+          "__let_scalar_241 := int64(__arg1.V3.V2)",
+          "__read_245 := __arg1.V1",
+          "__read_247 := __arg1.V3.V1",
+          "__read_250 := __arg1.V3.V3"
+        ],
+        "__arg1.V3": [
+          "__let_scalar_241 := int64(__arg1.V3.V2)",
+          "__read_247 := __arg1.V3.V1",
+          "__read_250 := __arg1.V3.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_256.Rc = 1",
+        "__cell_256.V0 = __scalar_244",
+        "__cell_256.V1 = __read_245",
+        "__cell_256.V2 = __scalar_246",
+        "__cell_256.V3 = __read_247",
+        "__cell_257.Rc = 1",
+        "__cell_257.V0 = __scalar_249",
+        "__cell_257.V1 = __read_250",
+        "__cell_257.V2 = __scalar_251",
+        "__cell_257.V3 = __read_252",
+        "__cell_258.Rc = 1",
+        "__cell_258.V0 = __scalar_243",
+        "__cell_258.V1 = __cell_256",
+        "__cell_258.V2 = __scalar_248",
+        "__cell_258.V3 = __cell_257"
+      ]
+    },
+    {
+      "original_line": 1453,
+      "donor": "__donor_slot_290",
+      "dead": [
+        [
+          "__dead_288",
+          "__arg3"
+        ],
+        [
+          "__dead_289",
+          "__arg3.V1"
+        ]
+      ],
+      "cells": [
+        "__cell_291",
+        "__cell_292",
+        "__cell_293"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_276 := int64(__arg3.V1.V2)",
+          "__let_scalar_277 := int64(__arg3.V2)",
+          "__read_282 := __arg3.V1.V1",
+          "__read_285 := __arg3.V1.V3",
+          "__read_287 := __arg3.V3"
+        ],
+        "__arg3.V1": [
+          "__let_scalar_276 := int64(__arg3.V1.V2)",
+          "__read_282 := __arg3.V1.V1",
+          "__read_285 := __arg3.V1.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_291.Rc = 1",
+        "__cell_291.V0 = __scalar_279",
+        "__cell_291.V1 = __read_280",
+        "__cell_291.V2 = __scalar_281",
+        "__cell_291.V3 = __read_282",
+        "__cell_292.Rc = 1",
+        "__cell_292.V0 = __scalar_284",
+        "__cell_292.V1 = __read_285",
+        "__cell_292.V2 = __scalar_286",
+        "__cell_292.V3 = __read_287",
+        "__cell_293.Rc = 1",
+        "__cell_293.V0 = __scalar_278",
+        "__cell_293.V1 = __cell_291",
+        "__cell_293.V2 = __scalar_283",
+        "__cell_293.V3 = __cell_292"
+      ]
+    },
+    {
+      "original_line": 1569,
+      "donor": "__donor_slot_309",
+      "dead": [
+        [
+          "__dead_307",
+          "__arg3"
+        ],
+        [
+          "__dead_308",
+          "__arg3.V3"
+        ]
+      ],
+      "cells": [
+        "__cell_310",
+        "__cell_311",
+        "__cell_312"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_295 := int64(__arg3.V2)",
+          "__let_scalar_296 := int64(__arg3.V3.V2)",
+          "__read_301 := __arg3.V1",
+          "__read_304 := __arg3.V3.V1",
+          "__read_306 := __arg3.V3.V3"
+        ],
+        "__arg3.V3": [
+          "__let_scalar_296 := int64(__arg3.V3.V2)",
+          "__read_304 := __arg3.V3.V1",
+          "__read_306 := __arg3.V3.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_310.Rc = 1",
+        "__cell_310.V0 = __scalar_298",
+        "__cell_310.V1 = __read_299",
+        "__cell_310.V2 = __scalar_300",
+        "__cell_310.V3 = __read_301",
+        "__cell_311.Rc = 1",
+        "__cell_311.V0 = __scalar_303",
+        "__cell_311.V1 = __read_304",
+        "__cell_311.V2 = __scalar_305",
+        "__cell_311.V3 = __read_306",
+        "__cell_312.Rc = 1",
+        "__cell_312.V0 = __scalar_297",
+        "__cell_312.V1 = __cell_310",
+        "__cell_312.V2 = __scalar_302",
+        "__cell_312.V3 = __cell_311"
+      ]
+    },
+    {
+      "original_line": 1720,
+      "donor": "__donor_slot_328",
+      "dead": [
+        [
+          "__dead_326",
+          "__arg3"
+        ],
+        [
+          "__dead_327",
+          "__arg3.V3"
+        ]
+      ],
+      "cells": [
+        "__cell_329",
+        "__cell_330",
+        "__cell_331"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_314 := int64(__arg3.V2)",
+          "__let_scalar_315 := int64(__arg3.V3.V2)",
+          "__read_320 := __arg3.V1",
+          "__read_323 := __arg3.V3.V1",
+          "__read_325 := __arg3.V3.V3"
+        ],
+        "__arg3.V3": [
+          "__let_scalar_315 := int64(__arg3.V3.V2)",
+          "__read_323 := __arg3.V3.V1",
+          "__read_325 := __arg3.V3.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_329.Rc = 1",
+        "__cell_329.V0 = __scalar_317",
+        "__cell_329.V1 = __read_318",
+        "__cell_329.V2 = __scalar_319",
+        "__cell_329.V3 = __read_320",
+        "__cell_330.Rc = 1",
+        "__cell_330.V0 = __scalar_322",
+        "__cell_330.V1 = __read_323",
+        "__cell_330.V2 = __scalar_324",
+        "__cell_330.V3 = __read_325",
+        "__cell_331.Rc = 1",
+        "__cell_331.V0 = __scalar_316",
+        "__cell_331.V1 = __cell_329",
+        "__cell_331.V2 = __scalar_321",
+        "__cell_331.V3 = __cell_330"
+      ]
+    },
+    {
+      "original_line": 1908,
+      "donor": "__donor_slot_363",
+      "dead": [
+        [
+          "__dead_361",
+          "__arg3"
+        ],
+        [
+          "__dead_362",
+          "__arg3.V1"
+        ]
+      ],
+      "cells": [
+        "__cell_364",
+        "__cell_365",
+        "__cell_366"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_349 := int64(__arg3.V1.V2)",
+          "__let_scalar_350 := int64(__arg3.V2)",
+          "__read_355 := __arg3.V1.V1",
+          "__read_358 := __arg3.V1.V3",
+          "__read_360 := __arg3.V3"
+        ],
+        "__arg3.V1": [
+          "__let_scalar_349 := int64(__arg3.V1.V2)",
+          "__read_355 := __arg3.V1.V1",
+          "__read_358 := __arg3.V1.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_364.Rc = 1",
+        "__cell_364.V0 = __scalar_352",
+        "__cell_364.V1 = __read_353",
+        "__cell_364.V2 = __scalar_354",
+        "__cell_364.V3 = __read_355",
+        "__cell_365.Rc = 1",
+        "__cell_365.V0 = __scalar_357",
+        "__cell_365.V1 = __read_358",
+        "__cell_365.V2 = __scalar_359",
+        "__cell_365.V3 = __read_360",
+        "__cell_366.Rc = 1",
+        "__cell_366.V0 = __scalar_351",
+        "__cell_366.V1 = __cell_364",
+        "__cell_366.V2 = __scalar_356",
+        "__cell_366.V3 = __cell_365"
+      ]
+    },
+    {
+      "original_line": 2024,
+      "donor": "__donor_slot_382",
+      "dead": [
+        [
+          "__dead_380",
+          "__arg3"
+        ],
+        [
+          "__dead_381",
+          "__arg3.V3"
+        ]
+      ],
+      "cells": [
+        "__cell_383",
+        "__cell_384",
+        "__cell_385"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_368 := int64(__arg3.V2)",
+          "__let_scalar_369 := int64(__arg3.V3.V2)",
+          "__read_374 := __arg3.V1",
+          "__read_377 := __arg3.V3.V1",
+          "__read_379 := __arg3.V3.V3"
+        ],
+        "__arg3.V3": [
+          "__let_scalar_369 := int64(__arg3.V3.V2)",
+          "__read_377 := __arg3.V3.V1",
+          "__read_379 := __arg3.V3.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_383.Rc = 1",
+        "__cell_383.V0 = __scalar_371",
+        "__cell_383.V1 = __read_372",
+        "__cell_383.V2 = __scalar_373",
+        "__cell_383.V3 = __read_374",
+        "__cell_384.Rc = 1",
+        "__cell_384.V0 = __scalar_376",
+        "__cell_384.V1 = __read_377",
+        "__cell_384.V2 = __scalar_378",
+        "__cell_384.V3 = __read_379",
+        "__cell_385.Rc = 1",
+        "__cell_385.V0 = __scalar_370",
+        "__cell_385.V1 = __cell_383",
+        "__cell_385.V2 = __scalar_375",
+        "__cell_385.V3 = __cell_384"
+      ]
+    },
+    {
+      "original_line": 2175,
+      "donor": "__donor_slot_401",
+      "dead": [
+        [
+          "__dead_399",
+          "__arg3"
+        ],
+        [
+          "__dead_400",
+          "__arg3.V3"
+        ]
+      ],
+      "cells": [
+        "__cell_402",
+        "__cell_403",
+        "__cell_404"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_387 := int64(__arg3.V2)",
+          "__let_scalar_388 := int64(__arg3.V3.V2)",
+          "__read_393 := __arg3.V1",
+          "__read_396 := __arg3.V3.V1",
+          "__read_398 := __arg3.V3.V3"
+        ],
+        "__arg3.V3": [
+          "__let_scalar_388 := int64(__arg3.V3.V2)",
+          "__read_396 := __arg3.V3.V1",
+          "__read_398 := __arg3.V3.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_402.Rc = 1",
+        "__cell_402.V0 = __scalar_390",
+        "__cell_402.V1 = __read_391",
+        "__cell_402.V2 = __scalar_392",
+        "__cell_402.V3 = __read_393",
+        "__cell_403.Rc = 1",
+        "__cell_403.V0 = __scalar_395",
+        "__cell_403.V1 = __read_396",
+        "__cell_403.V2 = __scalar_397",
+        "__cell_403.V3 = __read_398",
+        "__cell_404.Rc = 1",
+        "__cell_404.V0 = __scalar_389",
+        "__cell_404.V1 = __cell_402",
+        "__cell_404.V2 = __scalar_394",
+        "__cell_404.V3 = __cell_403"
+      ]
+    },
+    {
+      "original_line": 2364,
+      "donor": "__donor_slot_436",
+      "dead": [
+        [
+          "__dead_434",
+          "__arg3"
+        ],
+        [
+          "__dead_435",
+          "__arg3.V1"
+        ]
+      ],
+      "cells": [
+        "__cell_437",
+        "__cell_438",
+        "__cell_439"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_422 := int64(__arg3.V1.V2)",
+          "__let_scalar_423 := int64(__arg3.V2)",
+          "__read_428 := __arg3.V1.V1",
+          "__read_431 := __arg3.V1.V3",
+          "__read_433 := __arg3.V3"
+        ],
+        "__arg3.V1": [
+          "__let_scalar_422 := int64(__arg3.V1.V2)",
+          "__read_428 := __arg3.V1.V1",
+          "__read_431 := __arg3.V1.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_437.Rc = 1",
+        "__cell_437.V0 = __scalar_425",
+        "__cell_437.V1 = __read_426",
+        "__cell_437.V2 = __scalar_427",
+        "__cell_437.V3 = __read_428",
+        "__cell_438.Rc = 1",
+        "__cell_438.V0 = __scalar_430",
+        "__cell_438.V1 = __read_431",
+        "__cell_438.V2 = __scalar_432",
+        "__cell_438.V3 = __read_433",
+        "__cell_439.Rc = 1",
+        "__cell_439.V0 = __scalar_424",
+        "__cell_439.V1 = __cell_437",
+        "__cell_439.V2 = __scalar_429",
+        "__cell_439.V3 = __cell_438"
+      ]
+    },
+    {
+      "original_line": 2480,
+      "donor": "__donor_slot_455",
+      "dead": [
+        [
+          "__dead_453",
+          "__arg3"
+        ],
+        [
+          "__dead_454",
+          "__arg3.V3"
+        ]
+      ],
+      "cells": [
+        "__cell_456",
+        "__cell_457",
+        "__cell_458"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_441 := int64(__arg3.V2)",
+          "__let_scalar_442 := int64(__arg3.V3.V2)",
+          "__read_447 := __arg3.V1",
+          "__read_450 := __arg3.V3.V1",
+          "__read_452 := __arg3.V3.V3"
+        ],
+        "__arg3.V3": [
+          "__let_scalar_442 := int64(__arg3.V3.V2)",
+          "__read_450 := __arg3.V3.V1",
+          "__read_452 := __arg3.V3.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_456.Rc = 1",
+        "__cell_456.V0 = __scalar_444",
+        "__cell_456.V1 = __read_445",
+        "__cell_456.V2 = __scalar_446",
+        "__cell_456.V3 = __read_447",
+        "__cell_457.Rc = 1",
+        "__cell_457.V0 = __scalar_449",
+        "__cell_457.V1 = __read_450",
+        "__cell_457.V2 = __scalar_451",
+        "__cell_457.V3 = __read_452",
+        "__cell_458.Rc = 1",
+        "__cell_458.V0 = __scalar_443",
+        "__cell_458.V1 = __cell_456",
+        "__cell_458.V2 = __scalar_448",
+        "__cell_458.V3 = __cell_457"
+      ]
+    },
+    {
+      "original_line": 2631,
+      "donor": "__donor_slot_474",
+      "dead": [
+        [
+          "__dead_472",
+          "__arg3"
+        ],
+        [
+          "__dead_473",
+          "__arg3.V3"
+        ]
+      ],
+      "cells": [
+        "__cell_475",
+        "__cell_476",
+        "__cell_477"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_460 := int64(__arg3.V2)",
+          "__let_scalar_461 := int64(__arg3.V3.V2)",
+          "__read_466 := __arg3.V1",
+          "__read_469 := __arg3.V3.V1",
+          "__read_471 := __arg3.V3.V3"
+        ],
+        "__arg3.V3": [
+          "__let_scalar_461 := int64(__arg3.V3.V2)",
+          "__read_469 := __arg3.V3.V1",
+          "__read_471 := __arg3.V3.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_475.Rc = 1",
+        "__cell_475.V0 = __scalar_463",
+        "__cell_475.V1 = __read_464",
+        "__cell_475.V2 = __scalar_465",
+        "__cell_475.V3 = __read_466",
+        "__cell_476.Rc = 1",
+        "__cell_476.V0 = __scalar_468",
+        "__cell_476.V1 = __read_469",
+        "__cell_476.V2 = __scalar_470",
+        "__cell_476.V3 = __read_471",
+        "__cell_477.Rc = 1",
+        "__cell_477.V0 = __scalar_462",
+        "__cell_477.V1 = __cell_475",
+        "__cell_477.V2 = __scalar_467",
+        "__cell_477.V3 = __cell_476"
+      ]
+    },
+    {
+      "original_line": 2819,
+      "donor": "__donor_slot_509",
+      "dead": [
+        [
+          "__dead_507",
+          "__arg3"
+        ],
+        [
+          "__dead_508",
+          "__arg3.V1"
+        ]
+      ],
+      "cells": [
+        "__cell_510",
+        "__cell_511",
+        "__cell_512"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_495 := int64(__arg3.V1.V2)",
+          "__let_scalar_496 := int64(__arg3.V2)",
+          "__read_501 := __arg3.V1.V1",
+          "__read_504 := __arg3.V1.V3",
+          "__read_506 := __arg3.V3"
+        ],
+        "__arg3.V1": [
+          "__let_scalar_495 := int64(__arg3.V1.V2)",
+          "__read_501 := __arg3.V1.V1",
+          "__read_504 := __arg3.V1.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_510.Rc = 1",
+        "__cell_510.V0 = __scalar_498",
+        "__cell_510.V1 = __read_499",
+        "__cell_510.V2 = __scalar_500",
+        "__cell_510.V3 = __read_501",
+        "__cell_511.Rc = 1",
+        "__cell_511.V0 = __scalar_503",
+        "__cell_511.V1 = __read_504",
+        "__cell_511.V2 = __scalar_505",
+        "__cell_511.V3 = __read_506",
+        "__cell_512.Rc = 1",
+        "__cell_512.V0 = __scalar_497",
+        "__cell_512.V1 = __cell_510",
+        "__cell_512.V2 = __scalar_502",
+        "__cell_512.V3 = __cell_511"
+      ]
+    },
+    {
+      "original_line": 2935,
+      "donor": "__donor_slot_528",
+      "dead": [
+        [
+          "__dead_526",
+          "__arg3"
+        ],
+        [
+          "__dead_527",
+          "__arg3.V3"
+        ]
+      ],
+      "cells": [
+        "__cell_529",
+        "__cell_530",
+        "__cell_531"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_514 := int64(__arg3.V2)",
+          "__let_scalar_515 := int64(__arg3.V3.V2)",
+          "__read_520 := __arg3.V1",
+          "__read_523 := __arg3.V3.V1",
+          "__read_525 := __arg3.V3.V3"
+        ],
+        "__arg3.V3": [
+          "__let_scalar_515 := int64(__arg3.V3.V2)",
+          "__read_523 := __arg3.V3.V1",
+          "__read_525 := __arg3.V3.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_529.Rc = 1",
+        "__cell_529.V0 = __scalar_517",
+        "__cell_529.V1 = __read_518",
+        "__cell_529.V2 = __scalar_519",
+        "__cell_529.V3 = __read_520",
+        "__cell_530.Rc = 1",
+        "__cell_530.V0 = __scalar_522",
+        "__cell_530.V1 = __read_523",
+        "__cell_530.V2 = __scalar_524",
+        "__cell_530.V3 = __read_525",
+        "__cell_531.Rc = 1",
+        "__cell_531.V0 = __scalar_516",
+        "__cell_531.V1 = __cell_529",
+        "__cell_531.V2 = __scalar_521",
+        "__cell_531.V3 = __cell_530"
+      ]
+    },
+    {
+      "original_line": 3086,
+      "donor": "__donor_slot_547",
+      "dead": [
+        [
+          "__dead_545",
+          "__arg3"
+        ],
+        [
+          "__dead_546",
+          "__arg3.V3"
+        ]
+      ],
+      "cells": [
+        "__cell_548",
+        "__cell_549",
+        "__cell_550"
+      ],
+      "nonnull_snapshot_evidence": {
+        "__arg3": [
+          "__let_scalar_533 := int64(__arg3.V2)",
+          "__let_scalar_534 := int64(__arg3.V3.V2)",
+          "__read_539 := __arg3.V1",
+          "__read_542 := __arg3.V3.V1",
+          "__read_544 := __arg3.V3.V3"
+        ],
+        "__arg3.V3": [
+          "__let_scalar_534 := int64(__arg3.V3.V2)",
+          "__read_542 := __arg3.V3.V1",
+          "__read_544 := __arg3.V3.V3"
+        ]
+      },
+      "unchanged_field_writes": [
+        "__cell_548.Rc = 1",
+        "__cell_548.V0 = __scalar_536",
+        "__cell_548.V1 = __read_537",
+        "__cell_548.V2 = __scalar_538",
+        "__cell_548.V3 = __read_539",
+        "__cell_549.Rc = 1",
+        "__cell_549.V0 = __scalar_541",
+        "__cell_549.V1 = __read_542",
+        "__cell_549.V2 = __scalar_543",
+        "__cell_549.V3 = __read_544",
+        "__cell_550.Rc = 1",
+        "__cell_550.V0 = __scalar_535",
+        "__cell_550.V1 = __cell_548",
+        "__cell_550.V2 = __scalar_540",
+        "__cell_550.V3 = __cell_549"
+      ]
+    }
+  ]
+}

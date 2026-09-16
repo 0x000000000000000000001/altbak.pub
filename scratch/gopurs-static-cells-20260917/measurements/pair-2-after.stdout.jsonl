@@ -1,0 +1,5 @@
+{"mode":"pure","iteration":1,"input":100000,"depth":22,"nanoseconds":9605792,"allocated_bytes":3200000,"allocations":100000}
+{"mode":"pure","iteration":2,"input":100000,"depth":22,"nanoseconds":9619917,"allocated_bytes":3200000,"allocations":100000}
+{"mode":"pure","iteration":3,"input":100000,"depth":22,"nanoseconds":9511375,"allocated_bytes":3200016,"allocations":100001}
+{"mode":"pure","iteration":4,"input":100000,"depth":22,"nanoseconds":9514166,"allocated_bytes":3200016,"allocations":100001}
+{"mode":"pure","iteration":5,"input":100000,"depth":22,"nanoseconds":9622708,"allocated_bytes":3200000,"allocations":100000}

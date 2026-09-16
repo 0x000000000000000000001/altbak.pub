@@ -1,0 +1,38 @@
+{
+  "checked_utc": "2026-09-16T22:55:52.690368+00:00",
+  "variants": {
+    "before": {
+      "source_hashes_unchanged": true,
+      "top_level_tests_passed": [
+        "TestFourRotations",
+        "TestPersistentHistories",
+        "TestRetainedSubtreeAndSharedChild",
+        "TestNominalBuild",
+        "TestOwnedFreshSequences",
+        "TestFreshBuildMatchesPersistent",
+        "TestRecolorCopiesFieldsIntoDistinctDonor",
+        "TestInsertWithDistinctDonorPreservesShape"
+      ],
+      "binary_sha256": "6b4c8c271a35ba2a5b67545ed2d95c9a04e8cbb5c21db43fcce8e289525db9c1",
+      "main_sha256": "89f4d532606d734fc9cfd605648748cbd80ba02ba1b9aaa2a7d2a9a78ec633cb",
+      "entrypoints_sha256": "2e94ae02128c2795f11a670c10b64f95c2062a4b9bba01cd07fc5a78f4d8d47d"
+    },
+    "after": {
+      "source_hashes_unchanged": true,
+      "top_level_tests_passed": [
+        "TestFourRotations",
+        "TestPersistentHistories",
+        "TestRetainedSubtreeAndSharedChild",
+        "TestNominalBuild",
+        "TestOwnedFreshSequences",
+        "TestFreshBuildMatchesPersistent",
+        "TestRecolorCopiesFieldsIntoDistinctDonor",
+        "TestInsertWithDistinctDonorPreservesShape"
+      ],
+      "binary_sha256": "5fe0ffb032edf1cd57ecacca41c75d6e603a0f46133b679904e742a0eea64921",
+      "main_sha256": "89f4d532606d734fc9cfd605648748cbd80ba02ba1b9aaa2a7d2a9a78ec633cb",
+      "entrypoints_sha256": "2e94ae02128c2795f11a670c10b64f95c2062a4b9bba01cd07fc5a78f4d8d47d"
+    }
+  },
+  "upstream_rbtree_unchanged": true
+}

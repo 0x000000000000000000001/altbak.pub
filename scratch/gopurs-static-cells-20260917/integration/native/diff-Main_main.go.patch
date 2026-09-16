@@ -1,0 +1,11 @@
+--- before/Main/main.go
++++ native/Main/main.go
+@@ -15,7 +15,7 @@
+ 		defer pprof.StopCPUProfile()
+ 	}
+ 
+-	gopurs_runtime.Apply(purescript.Get_App_main(), gopurs_runtime.Value{})
++	gopurs_runtime.Apply(purescript.Get_AppFFICheatcode_main(), gopurs_runtime.Value{})
+ 
+ 	gopurs_runtime.EventLoopWait()
+ 
