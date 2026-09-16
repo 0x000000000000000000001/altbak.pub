@@ -210,6 +210,26 @@ Array Processing        | ~ 62.50 μs                | ~ 41.29 μs              
 RowToList               | ~ 1.88 μs                 | ~ 2.75 μs                | ~ 2.46 μs                      |
 **Total Execution Time**| ~ 17.53 ms                | ~ 17.73 ms               | ~ 9.36 ms                      |
 
+#### Koka
+
+Koka Benchmark          | Native |
+----------------------- | ----- |
+AST Evaluation          | ~ 0 μs |
+Fibonacci               | ~ 0 μs |
+List Processing         | ~ 1 μs |
+Tail Call Optimization  | ~ 702 μs |
+Deep Record Updates     | ~ 214 μs |
+Ackermann               | ~ 22 μs |
+Church Numerals         | ~ 143 μs |
+Prime Sieve             | ~ 13 μs |
+Red-Black Tree          | ~ 22553 μs |
+Polymorphism            | ~ 9947 μs |
+State Monad             | ~ 4 μs |
+Lazy Evaluation         | ~ 1 μs |
+Array Processing        | ~ 1 μs |
+RowToList               | ~ 0 μs |
+**Total Execution Time**| ~ 33.60 ms |
+
 > [!IMPORTANT]
 > **The 99/1 philosophy and the AOT compiler vs FFI approach**
 > 
