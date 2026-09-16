@@ -1,0 +1,141 @@
+{
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+  "platform": "macOS-26.1-arm64-arm-64bit",
+  "flags": [
+    "--edition=2021",
+    "-C",
+    "opt-level=3",
+    "-C",
+    "codegen-units=1"
+  ],
+  "n": 100000,
+  "rounds": 21,
+  "samples": 10,
+  "warmups": 3,
+  "seed": 16092026,
+  "scope": "allocation + descending build + depth + full destruction/release",
+  "source_manifest": {
+    "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/output/purust_output/Purs_Test_RBTree/src/lib.rs",
+    "resolved_source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Test_RBTree/src/lib.rs",
+    "source_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+    "baseline_sha256": "b7d2da1714ba487751bd80ab65cd874b6a2aa3f62c4ef080a813e379749c8685",
+    "extraction": "Enums and all algorithm functions unchanged; unused module constructor and Effect adapters omitted."
+  },
+  "allocator": {
+    "name": "mimalloc",
+    "library": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/modes/pure/target/release/deps/libmimalloc-f3b757f24cb2cb99.rlib",
+    "library_sha256": "16735daa1cb62fb6d1716b48bada97719864e3e0250839e8572a6d56165f154d"
+  },
+  "variants": {
+    "generated": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/baseline.rs",
+      "kernel_sha256": "b7d2da1714ba487751bd80ab65cd874b6a2aa3f62c4ef080a813e379749c8685",
+      "harness_sha256": "308b80a112c27cd433a46f53ff6e88ba36db454cbfcae5e9f15ad5f6bc452796",
+      "binary_sha256": "529c114f8ba92d169d32684fbf471ea5155fb62455bc372e43e712ef74976097",
+      "cfg": []
+    },
+    "guard_simple": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/decisions/kernel-simple-guard.rs",
+      "kernel_sha256": "d3820300d62d6817ae86164c7133bf12809f7f00cf9e5dd0903031cdbe9320ac",
+      "harness_sha256": "6e6efd7fa745bd2f0dd39351f2279a93cae49713476db6e6ad86f5787b3e9840",
+      "binary_sha256": "1c3b3b68088f21da588623f1d8430949e58bb67986a0e6f963fa67985408972e",
+      "cfg": []
+    },
+    "guard_fused": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/decisions/kernel-fused-guard.rs",
+      "kernel_sha256": "454fdfbf4ce8c3a23ee551b42ad94623fc27fd80ce6d48bdd352dc4559aef282",
+      "harness_sha256": "495b7233020b45cab1230fce60752db57efc99fb3c2f2ed811236e1253ac9f70",
+      "binary_sha256": "236670f862842baed726dc25e472bd945a20bb1b69637d2030af68392a490cb3",
+      "cfg": []
+    },
+    "guard_unique": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/decisions/kernel-fused-unique.rs",
+      "kernel_sha256": "3079fec951fa69f1fb35a6fba51d0621a7b3b14aedf1520936a6b802e5b4bfae",
+      "harness_sha256": "8311230890b907d07e23a7e2fd38aaad05b54f3859db596f67dd4a2d562b8258",
+      "binary_sha256": "3238119f1647be5589f9899f0958c6b13db96bb04df28bd7393a2f038b15a597",
+      "cfg": []
+    },
+    "region": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/baseline.rs",
+      "kernel_sha256": "b7d2da1714ba487751bd80ab65cd874b6a2aa3f62c4ef080a813e379749c8685",
+      "harness_sha256": "60dc91076e64eeb22b1354e9a539400554dfab091cd62f2cffb1298b09deecfb",
+      "binary_sha256": "0dfb04df5e62592f2563dd6a593eb49e7e9b8f759bb18598b0e4664b351be973",
+      "cfg": [],
+      "allocator_sha256": "c2fe4539c34d376e7b2a30463b5688b8daab7a692bed2e63194dd4b81fe2fed1"
+    },
+    "region_local": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/baseline.rs",
+      "kernel_sha256": "b7d2da1714ba487751bd80ab65cd874b6a2aa3f62c4ef080a813e379749c8685",
+      "harness_sha256": "6766cc6d90142d45cec099a5fa02d8a8b616e905d76e3c94fc5fdb611aaaddae",
+      "binary_sha256": "799e31fe45a42c0216716c6145e1aa432a7ca5395a15983a7d9c3331b768c79e",
+      "cfg": [
+        "--cfg",
+        "upstream_mimalloc"
+      ],
+      "allocator_sha256": "c4fe4c0264a28e4b879a3cb9e59604588c1658e6203db7e1cbd74a9162e8a63b"
+    },
+    "region_local_fused": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/decisions/kernel-fused-guard.rs",
+      "kernel_sha256": "454fdfbf4ce8c3a23ee551b42ad94623fc27fd80ce6d48bdd352dc4559aef282",
+      "harness_sha256": "3c4ba590f04acf94ee3f119ff623daa34e8cf525b0226e7d854905d2d38e114d",
+      "binary_sha256": "22a8f11765fd0b7180ed832f6bd700dfd8d189c38d5dae7493d9d119abb1c125",
+      "cfg": [
+        "--cfg",
+        "upstream_mimalloc"
+      ],
+      "allocator_sha256": "c4fe4c0264a28e4b879a3cb9e59604588c1658e6203db7e1cbd74a9162e8a63b"
+    },
+    "region_local_unique": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/decisions/kernel-fused-unique.rs",
+      "kernel_sha256": "3079fec951fa69f1fb35a6fba51d0621a7b3b14aedf1520936a6b802e5b4bfae",
+      "harness_sha256": "1ed45258b81c3ecb1895278afc711fc8cb9e64976ac52758ba278eba78830c11",
+      "binary_sha256": "7fc1c6f0f0044a9fd993dcc63f1e7a42051000c363d2d4703cc5ec7ed3ff48a9",
+      "cfg": [
+        "--cfg",
+        "upstream_mimalloc"
+      ],
+      "allocator_sha256": "c4fe4c0264a28e4b879a3cb9e59604588c1658e6203db7e1cbd74a9162e8a63b"
+    },
+    "arena_u32": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/arena/kernel.rs",
+      "kernel_sha256": "55178dad3e08128088dea608103e334c01478555e3b98795c2fbf1229ec43e0d",
+      "harness_sha256": "5a4a0b407bc77eb32b41b37ce871e03562729508eb5216cb15645589b8e79024",
+      "binary_sha256": "c3ed9c305c21a5f34553f25bb979628f758da1e7f9959f802d5db14805ef7d75",
+      "cfg": []
+    },
+    "arena_grow": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/arena/kernel.rs",
+      "kernel_sha256": "55178dad3e08128088dea608103e334c01478555e3b98795c2fbf1229ec43e0d",
+      "harness_sha256": "5a4a0b407bc77eb32b41b37ce871e03562729508eb5216cb15645589b8e79024",
+      "binary_sha256": "f4a0390333a0f41eb9fcdee6867ea92c181d45ccb5f4092c0812fb429cb83ff5",
+      "cfg": [
+        "--cfg",
+        "arena_grow"
+      ]
+    },
+    "arena_usize": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/arena/kernel.rs",
+      "kernel_sha256": "55178dad3e08128088dea608103e334c01478555e3b98795c2fbf1229ec43e0d",
+      "harness_sha256": "5a4a0b407bc77eb32b41b37ce871e03562729508eb5216cb15645589b8e79024",
+      "binary_sha256": "60ae0ed14ecea85dbdd34161ce29e3fcb40977c0f562cd4aea1e88f6425b19ff",
+      "cfg": [
+        "--cfg",
+        "arena_usize"
+      ]
+    },
+    "arena_unchecked": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/arena/kernel-unchecked.rs",
+      "kernel_sha256": "4a877e7855540dc1a908cf1a078137a08198e2f3d54a1a15a43d2bf73ef19a59",
+      "harness_sha256": "51d87d8a18d54ff4a4275a7a9fc67968148f339f19c6c47593936ccfb2708903",
+      "binary_sha256": "860614f0bbc3582e363bb1b48e3b184746ea8adbbb15d968bb13c5dae7625b2b",
+      "cfg": []
+    },
+    "arena_unchecked_inline": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/arena/kernel-unchecked-inline.rs",
+      "kernel_sha256": "1b74b91127b07b0a556816d7920198832d71725c2ba511c595684b9684b35cb7",
+      "harness_sha256": "3c1a9c4b0374cc777f55e4d6278b67904e8598b8d9cf26d2505b07739a19a1eb",
+      "binary_sha256": "67da4a3cf18d7146ca6bf26c33061f1df4e844e0900d3635ce087c8a73115435",
+      "cfg": []
+    }
+  }
+}

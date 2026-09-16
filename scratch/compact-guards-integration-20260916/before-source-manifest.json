@@ -1,0 +1,14 @@
+{
+  "/Users/0x1/Documents/htdocs/purust/purust/bin/purust.js": {
+    "copy": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/compact-guards-integration-20260916/before-purust.js",
+    "sha256": "4de4f7da2f8931fe9b4461bc1133a73f1277b7bd23ff8dae4f60998204eb7cd1"
+  },
+  "/Users/0x1/Documents/htdocs/purust/purust/src/Purust/ChildBranchPrinter.purs": {
+    "copy": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/compact-guards-integration-20260916/before-ChildBranchPrinter.purs",
+    "sha256": "35ef06ead40c577ba97252148d337e86f7be21c7c531cefd380ea2ced3f7dcd6"
+  },
+  "/Users/0x1/Documents/htdocs/purust/purust/src/Purust/CodeGen.purs": {
+    "copy": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/compact-guards-integration-20260916/before-CodeGen.purs",
+    "sha256": "f303134af406146d7937a14acf16249732dc95831c6da73afb685475b86e95a2"
+  }
+}

@@ -1,0 +1,20 @@
+(library (Test.ArrayOpsFFI foreign)
+  (export runArrayOpsFFI)
+  (import (chezscheme))
+  ;; Materialize the range, filtered array, then fold, as in Test.ArrayOps.
+  (define (runArrayOpsFFI limit)
+    (let* ([size (+ 1 (abs (- limit 1)))]
+           [step (if (>= limit 1) 1 -1)]
+           [input (make-vector size)]
+           [evens (make-vector (quotient size 2))])
+      (do ([i 0 (+ i 1)]) ((= i size))
+        (vector-set! input i (+ 1 (* i step))))
+      (let filter-loop ([i 0] [j 0])
+        (unless (= i size)
+          (let ([x (vector-ref input i)])
+            (if (= (modulo x 2) 0)
+                (begin (vector-set! evens j x) (filter-loop (+ i 1) (+ j 1)))
+                (filter-loop (+ i 1) j)))))
+      (let fold ([i 0] [sum 0])
+        (if (= i (vector-length evens)) sum
+            (fold (+ i 1) (+ sum (vector-ref evens i))))))))

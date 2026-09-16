@@ -1,0 +1,6 @@
+{
+  "bin/purust.js": "f7a814665746dfc0fd822253b11bb18037b2ffb03842531f5b9b4543868cf82c",
+  "src/Purust/ChildBranchPrinter.purs": "99d774c07872d7760197530ce4723c723ad70ef3b333edc8a5dda06f35d88456",
+  "src/Purust/CodeGen.purs": "f303134af406146d7937a14acf16249732dc95831c6da73afb685475b86e95a2",
+  "tests/codegen/child-branch-printer.mjs": "a23dcec72b2ab0058e15aac305abaac7119b0695623d2b4cfe4a64c17b73dcc2"
+}

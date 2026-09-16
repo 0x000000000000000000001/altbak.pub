@@ -1,0 +1,1 @@
+validated 880 cases and 246072 retained snapshots, all four fields, old root/child aliases, extra fields and existing i64 release wrapping

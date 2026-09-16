@@ -1,0 +1,14 @@
+all 30 cases and retained snapshots match
+Value=24 Option<Value>=24 Record_a_b=48
+operations original n=0 reads=0 cloning_getters=0 setters=0
+original n=0 allocations=0 deallocations=0 bytes=0 result=[0, 0, 0, 0]
+operations original n=1 reads=9 cloning_getters=2 setters=8
+original n=1 allocations=3 deallocations=3 bytes=168 result=[1, 2, 3, 1]
+operations original n=10000 reads=90000 cloning_getters=20000 setters=80000
+original n=10000 allocations=3 deallocations=3 bytes=168 result=[10000, 20000, 30000, 20000]
+operations scalar n=0 reads=0 cloning_getters=0 setters=0
+scalar n=0 allocations=0 deallocations=0 bytes=0 result=[0, 0, 0, 0]
+operations scalar n=1 reads=9 cloning_getters=2 setters=8
+scalar n=1 allocations=3 deallocations=3 bytes=168 result=[1, 2, 3, 1]
+operations scalar n=10000 reads=9 cloning_getters=2 setters=8
+scalar n=10000 allocations=3 deallocations=3 bytes=168 result=[10000, 20000, 30000, 20000]

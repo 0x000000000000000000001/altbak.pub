@@ -1,0 +1,6 @@
+ascending: exact shape/colors/keys and RB invariants; used=4800048, fallback=0
+descending: exact shape/colors/keys and RB invariants; used=4800048, fallback=0
+random: exact shape/colors/keys and RB invariants; used=4800048, fallback=0
+duplicates: exact shape/colors/keys and RB invariants; used=480048, fallback=0
+capacity overflow: system fallback exact and valid
+4 fresh region reinitializations; retained snapshots; Weak; alignment: passed

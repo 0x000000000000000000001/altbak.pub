@@ -1,0 +1,279 @@
+MonadAff: native dictionary construction, superclass identity, deferred methods and opaque ABI passed in Rc/Arc.
+✔ tests/codegen/aff-class.mjs (1654.765834ms)
+Branches reconcile boxed values, primitives, functions and ADTs.
+✔ tests/codegen/branch-representations.mjs (600.732ms)
+Child branch printer: 1078 ordered decisions checked under Rc and Arc; bounded fallback and malformed metadata checked.
+✔ tests/codegen/child-branch-printer.mjs (3282.168792ms)
+Constructor branches: ordered paths, dominating tags, aliases, short-circuiting, layouts and opaque boundaries checked.
+✔ tests/codegen/child-branches.mjs (59.828875ms)
+Child-call proof: aliasing, conversions, field order, saturation, recursive graphs and opaque boundaries checked.
+✔ tests/codegen/child-call-eligibility.mjs (1037.99625ms)
+Keyword class fields: native literals, constructors, dynamic conversion, projections and distinct labels passed in Rc/Arc.
+✔ tests/codegen/class-keyword-fields.mjs (1922.612958ms)
+Class record values: top-level bindings, superclass callbacks, native identity, deferred effects and non-class downcasts passed in Rc and Arc.
+✔ tests/codegen/class-record-values.mjs (1929.259209ms)
+Constructor reuse: native locals, shared inputs, later uses, conversions and single evaluation checked.
+✔ tests/codegen/constructor-reuse.mjs (1110.43175ms)
+/Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-crypto-hash-XM2byE
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: reference: 
+
+permission denied while trying to connect to the docker API at unix:///Users/0x1/.orbstack/run/docker.sock
+
+
+1 !== 0
+
+    at run (file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/crypto-hash-ffi.mjs:35:10)
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/crypto-hash-ffi.mjs:121:32
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/codegen/crypto-hash-ffi.mjs (98.339709ms)
+/Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-datetime-instant-1F9Xqx
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: reference: 
+
+permission denied while trying to connect to the docker API at unix:///Users/0x1/.orbstack/run/docker.sock
+
+
+1 !== 0
+
+    at run (file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/datetime-instant-ffi.mjs:35:10)
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/datetime-instant-ffi.mjs:183:32
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/codegen/datetime-instant-ffi.mjs (151.213875ms)
+26-deep boxed/native constructor reads: bounded compilation, lifetime, identity, single evaluation and invalid paths passed in Rc/Arc.
+✔ tests/codegen/deep-constructor-fields.mjs (1986.104792ms)
+Discarded callback parameters skip unused conversions; used and captured parameters retain their checks.
+✔ tests/codegen/discarded-callbacks.mjs (761.18275ms)
+Effect FFI: pure, bind and loops preserve deferral, order and replay.
+✔ tests/codegen/effect-ffi.mjs (1035.469ms)
+Erased abstractions: captured, binary, uncurried and partial binder Rust checks passed.
+✔ tests/codegen/erased-abstractions.mjs (968.743084ms)
+✔ FFI Cargo: absent declaration preserves output; pinned dependencies retain their options (1.508209ms)
+✔ FFI Cargo: reject malformed declarations, injection, unsupported sources and reserved/colliding names (2.565ms)
+Erased FFI values: append, map, array comparison and unsafePartial Rust checks passed.
+✔ tests/codegen/ffi-erased-values.mjs (917.215792ms)
+Field reads preserve shared children, persistent parents, conversions and single evaluation.
+✔ tests/codegen/field-borrows.mjs (928.993083ms)
+Field permutations: 53 accepted/rejected proofs, six layouts/directions executed under Rc and Arc with unique/shared/weak cells, staged scalars and preserved frontiers.
+✔ tests/codegen/field-permutations.mjs (1946.226166ms)
+✔ tests/codegen/foreign-error.mjs (67.827042ms)
+/Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-object-foldm-zB0OAn
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: normal: 
+
+permission denied while trying to connect to the docker API at unix:///Users/0x1/.orbstack/run/docker.sock
+
+
+1 !== 0
+
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/foreign-object-foldm.mjs:114:12 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/codegen/foreign-object-foldm.mjs (94.312416ms)
+Foreign.Object bridges native records only, preserving fields and existing object identity in Rc/Arc.
+✔ tests/codegen/foreign-object-values.mjs (1815.430042ms)
+Foreign opaque declarations retain identity, respect supplied layouts and cannot be instantiated in Rc/Arc.
+✔ tests/codegen/foreign-types.mjs (239.0605ms)
+✔ tests/codegen/free-val.mjs (69.624875ms)
+arity 12: typed/boxed/curried normal/threaded checks passed; /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-arity12-2KwF74
+✔ tests/codegen/function-arity12.mjs (1756.7765ms)
+Borrowed calls: native and TypeApp wrappers, conversions, computed callees, argument order and unwind releases checked.
+✔ tests/codegen/function-borrows.mjs (887.472459ms)
+Counted function fusion: typed shape, renamed/local identities, callback order, counter captures, conversions, opaque calls and recursive groups checked.
+✔ tests/codegen/function-fusion.mjs (55.076875ms)
+Imported main values keep distinct qualified symbols and entry aliases.
+✔ tests/codegen/imported-main.mjs (987.039458ms)
+normal: JSON: 1287 differential cases and native property-order checks passed
+threaded: JSON: 1287 differential cases and native property-order checks passed
+/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-json-N6qA3p
+✔ tests/codegen/json-ffi.mjs (11779.045708ms)
+normal: JSON: 1588 valid, 638 rejected, 72 pretty-print and 1287 stringify cases passed
+threaded: JSON: 1588 valid, 638 rejected, 72 pretty-print and 1287 stringify cases passed
+/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-json-parse-JH4P3e
+✔ tests/codegen/json-parse.mjs (14565.359291ms)
+Known nullary boundaries: tested calls run once; conversions, false arms, payload tags and deferred captures checked.
+✔ tests/codegen/known-nullaries.mjs (950.551041ms)
+normal: test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+threaded: test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.55s
+✔ Data.Lazy (normal): memoization, ownership, unwind and contention (893.5905ms)
+✔ Data.Lazy (threaded): memoization, ownership, unwind and contention (1438.155583ms)
+Local names: recursive groups, global references and effect shadowing checks passed.
+✔ tests/codegen/local-names.mjs (53.116125ms)
+Lexical locals preserve values across name collisions and nested abstractions.
+✔ tests/codegen/local-shadowing.mjs (822.789166ms)
+Module values: original closed TAST eligibility and explicit normal/threaded typed storage
+✔ tests/codegen/module-values.mjs (47.100375ms)
+Typed annotations and type applications: 4 generated Rust checks passed.
+✔ tests/codegen/nested-typed.mjs (914.369833ms)
+✔ Effect.Now.now (normal): deferred clock, replay and Effect bind (697.349791ms)
+✔ Effect.Now.now (threaded): deferred clock, replay and Effect bind (531.001459ms)
+Owned String boxing preserves UTF-16 and compiles diverging expressions without an unsized str.
+✔ tests/codegen/owned-string.mjs (948.033375ms)
+Partial applications, global not signatures, array-pattern fields and boxed bit operations passed.
+✔ tests/codegen/partial-application-types.mjs (526.4905ms)
+Partial polymorphic aliases preserve emitted arity and callback execution in Rc/Arc.
+✔ tests/codegen/partial-function-alias.mjs (1448.45175ms)
+✔ tests/codegen/pipes-x.mjs (77.50275ms)
+✔ polymorphic identity preserves the caller value and its type scope (1.103709ms)
+✔ identity does not invoke or force a function, effect, or delayed reference (0.1215ms)
+✔ the guard retains other polymorphic implementations and unsupported spines (0.160958ms)
+✔ identity reduction respects explicit inlining directives (0.23825ms)
+Post-child helpers preserve constructor-helper names and omit always-false predicates.
+✔ tests/codegen/post-child-helpers.mjs (712.723375ms)
+Post-child call: both arms, single evaluation, unique/shared/Weak unwind and allocation balance checked.
+✔ tests/codegen/post-child-panic.mjs (1012.529042ms)
+Primitive modulo: 12 generated Rust checks passed.
+✔ tests/codegen/primitive-modulo.mjs (1081.132167ms)
+Promise.Rejection: transparent payload, native Error identity, curried/uncurried ABI passed in Rc/Arc.
+✔ tests/codegen/promise-rejection.mjs (1547.683208ms)
+Pure effects and primitive ST refs preserve values, defer execution, replay and share cells with the FFI.
+✔ tests/codegen/pure-effect-values.mjs (805.926916ms)
+Quoted instance names: declarations and imported references agree; /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-quoted-instances-Qk8BES
+✔ tests/codegen/quoted-instance-names.mjs (678.099583ms)
+Record borrowing: closed TAST paths, four native scalars, root storage, annotations and opaque boundaries checked.
+✔ tests/codegen/record-borrows.mjs (96.235125ms)
+Record child reuse: closed TAST rows, same local/field, wrappers, one path across three child levels, sibling limit, sharing/liveness and fallback guards checked.
+✔ tests/codegen/record-child-reuse.mjs (219.197167ms)
+record keywords: closed/generic/dynamic fields preserve labels in Rc/Arc; /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-record-keywords-NqY02c
+✔ tests/codegen/record-keyword.mjs (1683.8425ms)
+record metadata fields: normal/threaded native checks passed; /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-record-metadata-Kg7wBS
+✔ tests/codegen/record-metadata-fields.mjs (1197.726125ms)
+record name: normal/threaded native checks passed; /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/purust-record-name-VZRDiL
+✔ tests/codegen/record-name.mjs (1665.28175ms)
+Record root move: last use, compatible wrappers, live/captured bases, calls, open rows, conversions and already movable bases checked.
+✔ tests/codegen/record-root-move.mjs (147.33675ms)
+normal: test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+threaded: test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+✔ tests/codegen/record-set-ffi.mjs (1633.3475ms)
+Recursive values: opaque identity, aliases, primitives, records and function adapters passed in local and threaded modes.
+✔ tests/codegen/recursive-values.mjs (1300.221917ms)
+Foreign names retain their declarations and meaning at worker/helper boundaries.
+✔ tests/codegen/return-cell-names.mjs (1533.597833ms)
+A local Value ADT cannot shadow runtime boxing, callbacks, records or effects in Rc/Arc.
+✔ tests/codegen/runtime-value-shadow.mjs (1979.001292ms)
+Test.Spec.Console.write: silent construction, replay, UTF-16/ANSI bytes and closed stdout passed in normal/threaded modes (closed stdout: Unix only).
+✔ tests/codegen/spec-console-ffi.mjs (1690.946209ms)
+Native superclass thunk results survive two unannotated projections.
+✔ tests/codegen/superclass-fields.mjs (922.924833ms)
+Tag tests preserve shared parents, opaque sum/value-enum checks, conversions and single evaluation.
+✔ tests/codegen/tag-borrows.mjs (1010.638541ms)
+Tail calls: local and global loops preserve Value/int conversions and argument swaps.
+✔ tests/codegen/tail-call-values.mjs (1036.635917ms)
+threaded runtime: Send + Sync, 8000 atomic Ref updates, shared thunk initialization, literal preservation
+✔ tests/codegen/threaded-runtime.mjs (1011.218709ms)
+Thunk fusion guards: demand counts, closed inputs, Int bounds, proof budget, deferred/opaque calls, recursive scopes, fresh names and unchanged fallback verified.
+✔ tests/codegen/thunk-fusion.mjs (164.0105ms)
+Typed Let results: deferred effects, nested scopes, recursive bindings and retained functions passed.
+✔ tests/codegen/typed-let-results.mjs (986.406166ms)
+Opaque Fn2/Fn10 bindings return callable Values and retain captures across repeated calls.
+✔ tests/codegen/uncurried-binding-values.mjs (723.581792ms)
+Unit construction x1000: allocations=0, requested_bytes=0, deallocations=0
+Unit passage x1000: allocations=0, requested_bytes=0, deallocations=0
+Minimal runtime: Value=24 bytes, Record_a=96 bytes
+✔ tests/codegen/unit-values.mjs (1177.552ms)
+Unsafe primitives: first-class coercion, preserved identities, deferred function results and Partial crash diagnostics passed.
+✔ tests/codegen/unsafe-primitives.mjs (702.685375ms)
+Usage metadata: reuse, live arguments, guarded fallback, repeatable captures and types passed.
+✔ tests/codegen/usage-metadata.mjs (945.984917ms)
+UTF-16 literals, all Char units and order, Show, PUA separation and UTF-8 console boundaries passed.
+(node:25267) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/0x1/Documents/htdocs/purust/purust-prelude/src/Data/Show.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/0x1/Documents/htdocs/purust/purust-prelude/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ tests/codegen/utf16-values.mjs (936.136584ms)
+/Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-uuid-aarHq7
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: reference: 
+
+permission denied while trying to connect to the docker API at unix:///Users/0x1/.orbstack/run/docker.sock
+
+
+1 !== 0
+
+    at run (file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/uuid-ffi.mjs:39:10)
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/uuid-ffi.mjs:170:32
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/codegen/uuid-ffi.mjs (100.514083ms)
+Color: 1 byte(s); 1000 native iterations: 0 allocations; one tree node: 1 allocation
+✔ tests/codegen/value-enums.mjs (842.399125ms)
+✔ tests/codegen/variant-case.mjs (71.759875ms)
+Variant: 44 mapping boundaries; Value/native literals, scalar projections, native identity and negative receivers passed in Rc/Arc.
+✔ tests/codegen/variant-public.mjs (1331.075083ms)
+ℹ tests 79
+ℹ suites 0
+ℹ pass 75
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 24060.387792
+
+✖ failing tests:
+
+test at tests/codegen/crypto-hash-ffi.mjs:1:1
+✖ tests/codegen/crypto-hash-ffi.mjs (98.339709ms)
+  'test failed'
+
+test at tests/codegen/datetime-instant-ffi.mjs:1:1
+✖ tests/codegen/datetime-instant-ffi.mjs (151.213875ms)
+  'test failed'
+
+test at tests/codegen/foreign-object-foldm.mjs:1:1
+✖ tests/codegen/foreign-object-foldm.mjs (94.312416ms)
+  'test failed'
+
+test at tests/codegen/uuid-ffi.mjs:1:1
+✖ tests/codegen/uuid-ffi.mjs (100.514083ms)
+  'test failed'

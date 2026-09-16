@@ -1,0 +1,103 @@
+round 1 {'arena_grow': 12966.38, 'arena_usize': 12975.29, 'guard_simple': 8678.04, 'region': 10902.79, 'generated': 9146.67, 'arena_u32': 12876.25, 'guard_fused': 8650.46, 'region_fused': 10496.17}
+round 2 {'region': 10698.38, 'region_fused': 10338.0, 'generated': 9006.33, 'guard_simple': 8700.75, 'guard_fused': 8561.88, 'arena_usize': 12508.5, 'arena_grow': 12544.21, 'arena_u32': 12806.21}
+round 3 {'arena_grow': 12344.04, 'arena_u32': 12647.96, 'generated': 9234.17, 'region_fused': 10582.75, 'region': 10627.83, 'arena_usize': 12595.79, 'guard_simple': 8689.75, 'guard_fused': 8604.54}
+round 4 {'arena_u32': 12625.46, 'region': 10516.12, 'generated': 9242.0, 'region_fused': 10201.92, 'guard_simple': 8692.38, 'arena_usize': 12672.33, 'arena_grow': 12656.08, 'guard_fused': 8569.5}
+round 5 {'region_fused': 10455.79, 'guard_simple': 8509.58, 'region': 10229.29, 'generated': 9119.79, 'arena_usize': 13056.08, 'guard_fused': 8800.04, 'arena_grow': 12465.04, 'arena_u32': 12512.46}
+round 6 {'region_fused': 10398.29, 'arena_grow': 12162.67, 'arena_u32': 12224.5, 'generated': 9216.08, 'guard_fused': 8551.92, 'guard_simple': 8714.0, 'arena_usize': 13163.67, 'region': 10495.46}
+round 7 {'arena_u32': 12616.38, 'arena_usize': 12449.62, 'guard_simple': 8722.62, 'region_fused': 10321.58, 'generated': 9282.92, 'guard_fused': 8651.5, 'arena_grow': 12474.92, 'region': 11242.54}
+round 8 {'arena_u32': 12771.46, 'region': 10815.5, 'arena_grow': 12285.04, 'guard_simple': 8782.21, 'region_fused': 10828.54, 'generated': 9463.04, 'arena_usize': 13638.25, 'guard_fused': 9005.38}
+round 9 {'generated': 9454.0, 'arena_usize': 13600.71, 'arena_u32': 12555.04, 'guard_simple': 9124.88, 'region': 11081.33, 'guard_fused': 8658.25, 'arena_grow': 13107.71, 'region_fused': 10790.79}
+round 10 {'arena_grow': 12852.17, 'guard_fused': 8594.58, 'region': 11004.0, 'guard_simple': 8609.83, 'region_fused': 10416.25, 'generated': 9175.88, 'arena_usize': 13003.21, 'arena_u32': 12706.0}
+round 11 {'arena_grow': 12307.5, 'guard_fused': 8644.83, 'generated': 9253.71, 'region_fused': 10477.62, 'guard_simple': 8849.79, 'region': 10917.58, 'arena_u32': 12598.58, 'arena_usize': 12749.08}
+round 12 {'generated': 9283.08, 'region_fused': 10314.42, 'region': 10686.62, 'guard_simple': 8818.83, 'arena_usize': 13212.54, 'arena_u32': 12425.54, 'guard_fused': 8483.33, 'arena_grow': 12441.42}
+round 13 {'arena_grow': 12580.5, 'guard_simple': 8592.5, 'guard_fused': 8639.17, 'generated': 9245.96, 'region': 10906.38, 'arena_usize': 13049.12, 'arena_u32': 12307.0, 'region_fused': 10719.17}
+round 14 {'region': 10869.42, 'guard_fused': 8764.92, 'arena_u32': 12852.5, 'arena_usize': 13091.54, 'generated': 9239.83, 'arena_grow': 12602.67, 'guard_simple': 8600.58, 'region_fused': 10432.04}
+round 15 {'guard_fused': 8875.0, 'arena_u32': 12964.0, 'arena_grow': 12906.58, 'guard_simple': 8719.54, 'arena_usize': 13319.38, 'region_fused': 10690.67, 'generated': 9121.5, 'region': 10755.21}
+round 16 {'arena_usize': 12632.25, 'region_fused': 10796.12, 'arena_grow': 12236.62, 'guard_fused': 8838.62, 'generated': 8990.08, 'region': 10924.75, 'arena_u32': 12593.25, 'guard_simple': 8816.0}
+round 17 {'generated': 9306.67, 'arena_u32': 12622.46, 'arena_usize': 13171.29, 'arena_grow': 12154.21, 'region': 10832.79, 'guard_simple': 8685.08, 'guard_fused': 8787.54, 'region_fused': 10452.0}
+round 18 {'arena_usize': 13145.58, 'arena_grow': 12651.83, 'generated': 9125.5, 'arena_u32': 12817.29, 'guard_fused': 8817.88, 'region': 10735.29, 'guard_simple': 8792.75, 'region_fused': 10394.25}
+round 19 {'arena_u32': 12426.33, 'region': 10633.42, 'guard_simple': 8638.71, 'guard_fused': 8593.83, 'region_fused': 10480.71, 'arena_usize': 13055.88, 'arena_grow': 12680.46, 'generated': 9342.46}
+round 20 {'guard_simple': 8969.0, 'arena_grow': 13306.92, 'arena_u32': 13174.71, 'generated': 9510.04, 'arena_usize': 13726.96, 'region_fused': 10970.79, 'region': 11059.79, 'guard_fused': 8780.12}
+round 21 {'arena_usize': 13195.0, 'guard_simple': 8737.67, 'generated': 9169.46, 'region_fused': 10467.83, 'region': 11101.58, 'arena_u32': 12535.71, 'guard_fused': 8760.75, 'arena_grow': 12950.25}
+{
+  "generated": {
+    "median_best10_us": 9239.834,
+    "median_median10_us": 9337.1875,
+    "median_paired_gain_pct": 0.0,
+    "paired_gain_range_pct": [
+      0.0,
+      0.0
+    ],
+    "wins": 0
+  },
+  "guard_simple": {
+    "median_best10_us": 8714.0,
+    "median_median10_us": 8877.292000000001,
+    "median_paired_gain_pct": 5.689165200321932,
+    "paired_gain_range_pct": [
+      1.93638924134516,
+      7.53281416946161
+    ],
+    "wins": 21
+  },
+  "guard_fused": {
+    "median_best10_us": 8651.5,
+    "median_median10_us": 8864.6875,
+    "median_paired_gain_pct": 6.335003473783152,
+    "paired_gain_range_pct": [
+      1.684723044270009,
+      8.615122799182117
+    ],
+    "wins": 21
+  },
+  "region": {
+    "median_best10_us": 10832.791,
+    "median_median10_us": 11041.521,
+    "median_paired_gain_pct": -17.63649649982888,
+    "paired_gain_range_pct": [
+      -21.520012662841935,
+      -12.165847642139216
+    ],
+    "wins": 0
+  },
+  "region_fused": {
+    "median_best10_us": 10467.834,
+    "median_median10_us": 10827.25,
+    "median_paired_gain_pct": -14.13996192088005,
+    "paired_gain_range_pct": [
+      -20.089269476154993,
+      -10.386453148669105
+    ],
+    "wins": 0
+  },
+  "arena_u32": {
+    "median_best10_us": 12622.458,
+    "median_median10_us": 13015.395499999999,
+    "median_paired_gain_pct": -36.71154827253693,
+    "paired_gain_range_pct": [
+      -42.19114483108719,
+      -32.64311964204314
+    ],
+    "wins": 0
+  },
+  "arena_grow": {
+    "median_best10_us": 12580.5,
+    "median_median10_us": 12932.979500000001,
+    "median_paired_gain_pct": -36.39495038547227,
+    "paired_gain_range_pct": [
+      -41.760654454786646,
+      -29.82126677658199
+    ],
+    "wins": 0
+  },
+  "arena_usize": {
+    "median_best10_us": 13056.083,
+    "median_median10_us": 13485.4585,
+    "median_paired_gain_pct": -41.710823218494156,
+    "paired_gain_range_pct": [
+      -46.02176177163844,
+      -34.11328572688952
+    ],
+    "wins": 0
+  }
+}

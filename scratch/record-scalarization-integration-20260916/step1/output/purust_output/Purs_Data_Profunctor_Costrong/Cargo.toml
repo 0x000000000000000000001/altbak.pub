@@ -1,0 +1,16 @@
+[package]
+name = "Purs_Data_Profunctor_Costrong"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+purust_core = { path = "../purust_core" }
+perceus_ptr = { path = "../perceus_ptr" }
+fancy-regex = "0.13"
+Purs_Control_Category = { path = "../Purs_Control_Category" }
+Purs_Control_Semigroupoid = { path = "../Purs_Control_Semigroupoid" }
+Purs_Data_Newtype = { path = "../Purs_Data_Newtype" }
+Purs_Data_Profunctor = { path = "../Purs_Data_Profunctor" }
+Purs_Record_Unsafe = { path = "../Purs_Record_Unsafe" }
+Purs_Safe_Coerce = { path = "../Purs_Safe_Coerce" }
+Purs_Unsafe_Coerce = { path = "../Purs_Unsafe_Coerce" }

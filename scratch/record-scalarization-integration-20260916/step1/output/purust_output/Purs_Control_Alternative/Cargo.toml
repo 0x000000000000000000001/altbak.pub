@@ -1,0 +1,31 @@
+[package]
+name = "Purs_Control_Alternative"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+purust_core = { path = "../purust_core" }
+perceus_ptr = { path = "../perceus_ptr" }
+fancy-regex = "0.13"
+Purs_Control_Alt = { path = "../Purs_Control_Alt" }
+Purs_Control_Applicative = { path = "../Purs_Control_Applicative" }
+Purs_Control_Apply = { path = "../Purs_Control_Apply" }
+Purs_Control_Category = { path = "../Purs_Control_Category" }
+Purs_Control_Plus = { path = "../Purs_Control_Plus" }
+Purs_Control_Semigroupoid = { path = "../Purs_Control_Semigroupoid" }
+Purs_Data_Boolean = { path = "../Purs_Data_Boolean" }
+Purs_Data_Eq = { path = "../Purs_Data_Eq" }
+Purs_Data_Function = { path = "../Purs_Data_Function" }
+Purs_Data_Functor = { path = "../Purs_Data_Functor" }
+Purs_Data_HeytingAlgebra = { path = "../Purs_Data_HeytingAlgebra" }
+Purs_Data_Ord = { path = "../Purs_Data_Ord" }
+Purs_Data_Ordering = { path = "../Purs_Data_Ordering" }
+Purs_Data_Ring = { path = "../Purs_Data_Ring" }
+Purs_Data_Semigroup = { path = "../Purs_Data_Semigroup" }
+Purs_Data_Semiring = { path = "../Purs_Data_Semiring" }
+Purs_Data_Show = { path = "../Purs_Data_Show" }
+Purs_Data_Symbol = { path = "../Purs_Data_Symbol" }
+Purs_Data_Unit = { path = "../Purs_Data_Unit" }
+Purs_Data_Void = { path = "../Purs_Data_Void" }
+Purs_Record_Unsafe = { path = "../Purs_Record_Unsafe" }
+Purs_Type_Proxy = { path = "../Purs_Type_Proxy" }

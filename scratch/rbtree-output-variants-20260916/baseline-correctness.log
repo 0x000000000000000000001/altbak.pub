@@ -1,0 +1,10 @@
+rotation	keys=3	depth=2	exact_shape=true
+rotation	keys=3	depth=2	exact_shape=true
+rotation	keys=3	depth=2	exact_shape=true
+rotation	keys=3	depth=2	exact_shape=true
+descending	keys=100000	depth=22	exact_shape=true
+ascending	keys=100000	depth=22	exact_shape=true
+shuffled	keys=100000	depth=23	exact_shape=true
+duplicates	keys=4096	depth=17	exact_shape=true
+persistent_200	ok
+weak	ok

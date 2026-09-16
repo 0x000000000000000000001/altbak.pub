@@ -1,0 +1,6 @@
+{
+  "src/Main.purs": "64e02ecd23bd8be8321a5cd948d4362c7e3542c59dfe92db6a382c91afd21935",
+  "src/Purust/CodeGen.purs": "f303134af406146d7937a14acf16249732dc95831c6da73afb685475b86e95a2",
+  "src/Purust/ChildBranchPrinter.purs": "99d774c07872d7760197530ce4723c723ad70ef3b333edc8a5dda06f35d88456",
+  "bin/purust.js": "f7a814665746dfc0fd822253b11bb18037b2ffb03842531f5b9b4543868cf82c"
+}

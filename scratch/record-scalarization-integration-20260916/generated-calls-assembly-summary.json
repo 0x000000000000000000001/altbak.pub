@@ -1,0 +1,9 @@
+{
+  "__ZN14calls_noinline14reference_loop17hff8d2f43f5050f10E": [
+    "100000a90: 94000010    \tbl\t0x100000ad0 <__ZN14calls_noinline24ScalarRecords_nextFields17hd2e54377a5f905e1E>"
+  ],
+  "__ZN14calls_noinline49ScalarRecords_nextFields__purust_record_field_0_017h13dbafd2aa92e8c4E": [],
+  "__ZN14calls_noinline49ScalarRecords_nextFields__purust_record_field_1_017ha427e5d84c0a7995E": [],
+  "__ZN14calls_noinline49ScalarRecords_nextFields__purust_record_field_2_017h01882b52ae715310E": [],
+  "__ZN14calls_noinline49ScalarRecords_nextFields__purust_record_field_3_017hf193773e269e0411E": []
+}

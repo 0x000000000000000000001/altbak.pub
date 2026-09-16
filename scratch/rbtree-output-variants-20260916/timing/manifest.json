@@ -1,0 +1,90 @@
+{
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+  "platform": "macOS-26.1-arm64-arm-64bit",
+  "flags": [
+    "--edition=2021",
+    "-C",
+    "opt-level=3",
+    "-C",
+    "codegen-units=1"
+  ],
+  "n": 100000,
+  "rounds": 21,
+  "samples": 10,
+  "warmups": 3,
+  "seed": 16092026,
+  "scope": "allocation + descending build + depth + full destruction/release",
+  "source_manifest": {
+    "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/output/purust_output/Purs_Test_RBTree/src/lib.rs",
+    "resolved_source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Test_RBTree/src/lib.rs",
+    "source_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+    "baseline_sha256": "b7d2da1714ba487751bd80ab65cd874b6a2aa3f62c4ef080a813e379749c8685",
+    "extraction": "Enums and all algorithm functions unchanged; unused module constructor and Effect adapters omitted."
+  },
+  "variants": {
+    "generated": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/baseline.rs",
+      "kernel_sha256": "b7d2da1714ba487751bd80ab65cd874b6a2aa3f62c4ef080a813e379749c8685",
+      "harness_sha256": "e20eeadab2afbed91a236ada5bba3e21db6622cba34d4d6396048f07abe10861",
+      "binary_sha256": "692fbf290d63d6304b5b1d97ffdf92e08fa9509b9489f00302f44ced11d84566",
+      "cfg": []
+    },
+    "guard_simple": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/decisions/kernel-simple-guard.rs",
+      "kernel_sha256": "d3820300d62d6817ae86164c7133bf12809f7f00cf9e5dd0903031cdbe9320ac",
+      "harness_sha256": "f3b11f27e9796f88f02e3ebe60747b21feeb3db9006b9666986bc38e57d9de28",
+      "binary_sha256": "1251f15d702736fbb0341a4b19df78e2484b1f8e12c738618f71c2df7e78b6de",
+      "cfg": []
+    },
+    "guard_fused": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/decisions/kernel-fused-guard.rs",
+      "kernel_sha256": "454fdfbf4ce8c3a23ee551b42ad94623fc27fd80ce6d48bdd352dc4559aef282",
+      "harness_sha256": "16d3d5c65aff9aace0f70949a08608100388ee7f2a5b1aecca718ea7b8a14e39",
+      "binary_sha256": "2e1c08db2ba1f7109c8a2010eff1106c74845c099421847f3a8e80ad8f6e39eb",
+      "cfg": []
+    },
+    "region": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/baseline.rs",
+      "kernel_sha256": "b7d2da1714ba487751bd80ab65cd874b6a2aa3f62c4ef080a813e379749c8685",
+      "harness_sha256": "8f0d3a2a556f019f3d369df019153e3ab9282966e24e0e1cf3718eb1635f7551",
+      "binary_sha256": "1a01875e5063b9191369c6371128e13010633e231dc75f76bdfdacac8fe9c56a",
+      "cfg": [],
+      "allocator_sha256": "bf908b09716aae1e85edb88b6c5900c9e3ae7e72fac4521e760f49ac3e12f3e0"
+    },
+    "region_fused": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/decisions/kernel-fused-guard.rs",
+      "kernel_sha256": "454fdfbf4ce8c3a23ee551b42ad94623fc27fd80ce6d48bdd352dc4559aef282",
+      "harness_sha256": "9d9faa497a1e2132bdf86c3aacd2b18d088acf5f4fcdd6a7b5e72b232cfbaaac",
+      "binary_sha256": "bd625510c3855f538bbb3ffa2bba24807d47084aae8e14f7a45930d9b8291ec3",
+      "cfg": [],
+      "allocator_sha256": "bf908b09716aae1e85edb88b6c5900c9e3ae7e72fac4521e760f49ac3e12f3e0"
+    },
+    "arena_u32": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/arena/kernel.rs",
+      "kernel_sha256": "55178dad3e08128088dea608103e334c01478555e3b98795c2fbf1229ec43e0d",
+      "harness_sha256": "147bd68d1f09e8880f9bf308d55a1f60003933718aeafc5ff3a3f25c27df72d4",
+      "binary_sha256": "90eb7812b34d1c6228adaa87686ec4a82f4ba34de93a95cfa751d1d27c2d21cc",
+      "cfg": []
+    },
+    "arena_grow": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/arena/kernel.rs",
+      "kernel_sha256": "55178dad3e08128088dea608103e334c01478555e3b98795c2fbf1229ec43e0d",
+      "harness_sha256": "147bd68d1f09e8880f9bf308d55a1f60003933718aeafc5ff3a3f25c27df72d4",
+      "binary_sha256": "6ea478ffd9aa1006cb4a971ebe86711f41c9e55a10c37debe89f9250fbb1cc9d",
+      "cfg": [
+        "--cfg",
+        "arena_grow"
+      ]
+    },
+    "arena_usize": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/arena/kernel.rs",
+      "kernel_sha256": "55178dad3e08128088dea608103e334c01478555e3b98795c2fbf1229ec43e0d",
+      "harness_sha256": "147bd68d1f09e8880f9bf308d55a1f60003933718aeafc5ff3a3f25c27df72d4",
+      "binary_sha256": "d8de22cfa789acd39923aec02123f8d92768fe78e7f3ae348e0bd4fbce6fda56",
+      "cfg": [
+        "--cfg",
+        "arena_usize"
+      ]
+    }
+  }
+}

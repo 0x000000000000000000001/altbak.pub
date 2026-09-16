@@ -1,0 +1,1 @@
+retained child aliases and unrelated root field c preserved in both variants

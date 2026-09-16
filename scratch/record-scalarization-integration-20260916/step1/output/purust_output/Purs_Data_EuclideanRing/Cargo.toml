@@ -1,0 +1,18 @@
+[package]
+name = "Purs_Data_EuclideanRing"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+purust_core = { path = "../purust_core" }
+perceus_ptr = { path = "../perceus_ptr" }
+fancy-regex = "0.13"
+Purs_Data_CommutativeRing = { path = "../Purs_Data_CommutativeRing" }
+Purs_Data_Eq = { path = "../Purs_Data_Eq" }
+Purs_Data_HeytingAlgebra = { path = "../Purs_Data_HeytingAlgebra" }
+Purs_Data_Ring = { path = "../Purs_Data_Ring" }
+Purs_Data_Semiring = { path = "../Purs_Data_Semiring" }
+Purs_Data_Symbol = { path = "../Purs_Data_Symbol" }
+Purs_Data_Unit = { path = "../Purs_Data_Unit" }
+Purs_Record_Unsafe = { path = "../Purs_Record_Unsafe" }
+Purs_Type_Proxy = { path = "../Purs_Type_Proxy" }

@@ -1,0 +1,19 @@
+["/Users/0x1/Documents/htdocs/purust/purust/bin/purust", "--main", "App", "--source", "output", "--out", "output/purust_output"]
+Generating Rust code for App
+genApp valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4
+genApp valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other
+genApp valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4
+genApp valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other
+genApp valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func
+genApp valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other
+genApp valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4
+genApp valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other
+genApp valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func
+genApp valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other
+genApp valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4
+genApp valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other
+genApp valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func
+genApp valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Func
+genApp valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4
+genApp valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other
+Successfully generated Rust code.

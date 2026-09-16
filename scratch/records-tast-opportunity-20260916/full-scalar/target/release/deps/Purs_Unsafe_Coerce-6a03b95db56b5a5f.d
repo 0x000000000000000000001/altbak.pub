@@ -1,0 +1,7 @@
+/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/records-tast-opportunity-20260916/full-scalar/target/release/deps/Purs_Unsafe_Coerce-6a03b95db56b5a5f.d: Purs_Unsafe_Coerce/src/lib.rs
+
+/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/records-tast-opportunity-20260916/full-scalar/target/release/deps/libPurs_Unsafe_Coerce-6a03b95db56b5a5f.rlib: Purs_Unsafe_Coerce/src/lib.rs
+
+/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/records-tast-opportunity-20260916/full-scalar/target/release/deps/libPurs_Unsafe_Coerce-6a03b95db56b5a5f.rmeta: Purs_Unsafe_Coerce/src/lib.rs
+
+Purs_Unsafe_Coerce/src/lib.rs:

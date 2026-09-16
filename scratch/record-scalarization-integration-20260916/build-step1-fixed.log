@@ -1,0 +1,39 @@
+
+> purust@0.1.0 build
+> spago build && spago bundle --module Main --platform node --outfile bin/purust.js --bundle-type app
+
+Reading Spago workspace configuration...
+‼ Your "spago.yaml" is using an outdated format. Run Spago with the --migrate flag to update it to the latest version.
+
+✓ Selecting package to build: purust
+
+Downloading dependencies...
+Building...
+[1 of 1] Compiling Purust.RecordScalarCalls
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+‼ Your "spago.yaml" is using an outdated format. Run Spago with the --migrate flag to update it to the latest version.
+
+✓ Selecting package to build: purust
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Bundling...
+
+  bin/purust.js  1.5mb ⚠️
+
+⚡ Done in 35ms
+
+✓ Bundle succeeded.
+

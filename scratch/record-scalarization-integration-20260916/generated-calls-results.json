@@ -1,0 +1,1552 @@
+{
+  "commands": [
+    [
+      "rustc",
+      "--edition=2021",
+      "-Awarnings",
+      "-C",
+      "opt-level=3",
+      "-C",
+      "lto=off",
+      "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/record-scalarization-integration-20260916/calls-normal.rs",
+      "-L",
+      "dependency=/Users/0x1/Documents/htdocs/altbak.pub-purust/output/purust_output/target/release/deps",
+      "-L",
+      "native=/Users/0x1/Documents/htdocs/altbak.pub-purust/output/purust_output/target/release/build/libmimalloc-sys-dc3635455ea5cb57/out",
+      "--extern",
+      "mimalloc=/Users/0x1/Documents/htdocs/altbak.pub-purust/output/purust_output/target/release/deps/libmimalloc-f9014d291b3f900c.rlib",
+      "-o",
+      "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/record-scalarization-integration-20260916/calls-normal"
+    ],
+    [
+      "rustc",
+      "--edition=2021",
+      "-Awarnings",
+      "-C",
+      "opt-level=3",
+      "-C",
+      "lto=off",
+      "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/record-scalarization-integration-20260916/calls-noinline.rs",
+      "-L",
+      "dependency=/Users/0x1/Documents/htdocs/altbak.pub-purust/output/purust_output/target/release/deps",
+      "-L",
+      "native=/Users/0x1/Documents/htdocs/altbak.pub-purust/output/purust_output/target/release/build/libmimalloc-sys-dc3635455ea5cb57/out",
+      "--extern",
+      "mimalloc=/Users/0x1/Documents/htdocs/altbak.pub-purust/output/purust_output/target/release/deps/libmimalloc-f9014d291b3f900c.rlib",
+      "-o",
+      "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/record-scalarization-integration-20260916/calls-noinline"
+    ]
+  ],
+  "source_sha256": "0e5bf5953a80d8d41b2e84a180db36abd40668a79fc465fc2bc446f999e1f662",
+  "binary_sha256": {
+    "normal": "2d8b0815ffa2f3f618f2091a13474b992a71efa8f8aef45404bedadd290da963",
+    "noinline": "2896cae2619fe1ece20aa82d6cf62bc6311f45e32934110e6663bacf481abb9e"
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "order": [
+        [
+          "normal",
+          "generated"
+        ],
+        [
+          "noinline",
+          "reference"
+        ],
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "noinline",
+          "generated"
+        ]
+      ],
+      "ns": {
+        "normal/generated": [
+          4916,
+          6333,
+          6167,
+          5625,
+          4959,
+          4958,
+          4958,
+          5000,
+          4959,
+          5000
+        ],
+        "noinline/reference": [
+          436417,
+          677500,
+          459291,
+          496292,
+          498917,
+          501000,
+          498042,
+          398333,
+          360541,
+          349292
+        ],
+        "normal/reference": [
+          465917,
+          504375,
+          488375,
+          499709,
+          497666,
+          494333,
+          364166,
+          369666,
+          349417,
+          344042
+        ],
+        "noinline/generated": [
+          25208,
+          35750,
+          40292,
+          41042,
+          41041,
+          40916,
+          41041,
+          41041,
+          43000,
+          38792
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "order": [
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "noinline",
+          "reference"
+        ],
+        [
+          "normal",
+          "generated"
+        ]
+      ],
+      "ns": {
+        "normal/reference": [
+          336709,
+          361000,
+          447959,
+          539084,
+          390334,
+          385542,
+          541375,
+          472500,
+          398083,
+          567916
+        ],
+        "noinline/generated": [
+          20542,
+          28750,
+          27084,
+          28584,
+          27375,
+          28625,
+          27041,
+          28583,
+          27292,
+          28583
+        ],
+        "noinline/reference": [
+          547333,
+          504334,
+          501000,
+          505250,
+          503250,
+          502708,
+          498708,
+          423500,
+          378791,
+          398291
+        ],
+        "normal/generated": [
+          4959,
+          6292,
+          6292,
+          5625,
+          6875,
+          7083,
+          7083,
+          7084,
+          7083,
+          8292
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "order": [
+        [
+          "noinline",
+          "reference"
+        ],
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "normal",
+          "generated"
+        ],
+        [
+          "normal",
+          "reference"
+        ]
+      ],
+      "ns": {
+        "noinline/reference": [
+          429167,
+          358584,
+          377042,
+          391250,
+          342584,
+          347750,
+          471750,
+          349750,
+          338417,
+          378917
+        ],
+        "noinline/generated": [
+          29375,
+          28542,
+          25667,
+          46750,
+          23500,
+          26125,
+          32625,
+          27625,
+          28833,
+          27375
+        ],
+        "normal/generated": [
+          5125,
+          6291,
+          6250,
+          5625,
+          5000,
+          4959,
+          12292,
+          6167,
+          6291,
+          6542
+        ],
+        "normal/reference": [
+          381000,
+          396208,
+          438500,
+          443958,
+          472750,
+          457959,
+          460791,
+          445083,
+          386375,
+          347625
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "order": [
+        [
+          "noinline",
+          "reference"
+        ],
+        [
+          "normal",
+          "generated"
+        ],
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "normal",
+          "reference"
+        ]
+      ],
+      "ns": {
+        "noinline/reference": [
+          394166,
+          431834,
+          436000,
+          467083,
+          471917,
+          476333,
+          481417,
+          468125,
+          424291,
+          356833
+        ],
+        "normal/generated": [
+          5042,
+          6291,
+          6375,
+          6209,
+          5583,
+          5541,
+          6959,
+          6208,
+          5583,
+          6917
+        ],
+        "noinline/generated": [
+          25542,
+          41833,
+          27125,
+          28708,
+          25708,
+          28333,
+          25334,
+          25625,
+          26208,
+          26375
+        ],
+        "normal/reference": [
+          331792,
+          316250,
+          364834,
+          366792,
+          330750,
+          351125,
+          354416,
+          358167,
+          351416,
+          350750
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "order": [
+        [
+          "normal",
+          "generated"
+        ],
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "noinline",
+          "reference"
+        ],
+        [
+          "noinline",
+          "generated"
+        ]
+      ],
+      "ns": {
+        "normal/generated": [
+          6875,
+          6041,
+          6875,
+          6833,
+          5584,
+          5500,
+          6834,
+          6833,
+          6250,
+          6833
+        ],
+        "normal/reference": [
+          312125,
+          349000,
+          346917,
+          355000,
+          352000,
+          351542,
+          372209,
+          408834,
+          424667,
+          486875
+        ],
+        "noinline/reference": [
+          357750,
+          402708,
+          352125,
+          366042,
+          356333,
+          354250,
+          377875,
+          375417,
+          421750,
+          465083
+        ],
+        "noinline/generated": [
+          20583,
+          28666,
+          27333,
+          28542,
+          26500,
+          28583,
+          27291,
+          36500,
+          27208,
+          28042
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "order": [
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "normal",
+          "generated"
+        ],
+        [
+          "noinline",
+          "reference"
+        ]
+      ],
+      "ns": {
+        "noinline/generated": [
+          20500,
+          23042,
+          23958,
+          25458,
+          22791,
+          22791,
+          22791,
+          22791,
+          25458,
+          20833
+        ],
+        "normal/reference": [
+          419833,
+          424916,
+          435750,
+          437125,
+          341084,
+          344000,
+          381333,
+          380000,
+          331666,
+          327708
+        ],
+        "normal/generated": [
+          5041,
+          6292,
+          6209,
+          5667,
+          4958,
+          5000,
+          6208,
+          6209,
+          6125,
+          6167
+        ],
+        "noinline/reference": [
+          360291,
+          393750,
+          408083,
+          363792,
+          377792,
+          407416,
+          394958,
+          355416,
+          368958,
+          380584
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "order": [
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "noinline",
+          "reference"
+        ],
+        [
+          "normal",
+          "generated"
+        ]
+      ],
+      "ns": {
+        "noinline/generated": [
+          27708,
+          28417,
+          26208,
+          28416,
+          25542,
+          28458,
+          25416,
+          28459,
+          25917,
+          28458
+        ],
+        "normal/reference": [
+          363875,
+          329709,
+          330125,
+          347666,
+          351167,
+          339833,
+          341791,
+          394042,
+          437291,
+          433125
+        ],
+        "noinline/reference": [
+          339000,
+          349500,
+          387125,
+          341125,
+          359125,
+          348500,
+          360417,
+          364875,
+          357625,
+          396709
+        ],
+        "normal/generated": [
+          7125,
+          7125,
+          6959,
+          6667,
+          6916,
+          6916,
+          6958,
+          6000,
+          7125,
+          7083
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "order": [
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "noinline",
+          "reference"
+        ],
+        [
+          "normal",
+          "generated"
+        ]
+      ],
+      "ns": {
+        "normal/reference": [
+          338583,
+          343500,
+          356500,
+          348792,
+          342750,
+          401875,
+          426083,
+          446125,
+          472250,
+          434333
+        ],
+        "noinline/generated": [
+          20166,
+          24875,
+          23417,
+          25458,
+          25417,
+          25416,
+          25375,
+          25333,
+          25417,
+          22958
+        ],
+        "noinline/reference": [
+          401625,
+          489125,
+          416792,
+          451667,
+          442083,
+          451416,
+          439875,
+          423667,
+          365959,
+          363917
+        ],
+        "normal/generated": [
+          5167,
+          6292,
+          6292,
+          5750,
+          6208,
+          6209,
+          6167,
+          6166,
+          6000,
+          6166
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "order": [
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "normal",
+          "generated"
+        ],
+        [
+          "noinline",
+          "reference"
+        ]
+      ],
+      "ns": {
+        "normal/reference": [
+          395459,
+          417250,
+          422916,
+          343542,
+          348541,
+          353250,
+          355166,
+          337083,
+          347166,
+          346417
+        ],
+        "noinline/generated": [
+          27000,
+          25000,
+          28666,
+          23042,
+          28417,
+          27959,
+          28208,
+          27042,
+          26750,
+          25958
+        ],
+        "normal/generated": [
+          7000,
+          7042,
+          6917,
+          6917,
+          6833,
+          7084,
+          7125,
+          7125,
+          7125,
+          7084
+        ],
+        "noinline/reference": [
+          332833,
+          339292,
+          372834,
+          336416,
+          351500,
+          400292,
+          465250,
+          446208,
+          446542,
+          450667
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "order": [
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "noinline",
+          "reference"
+        ],
+        [
+          "normal",
+          "generated"
+        ],
+        [
+          "normal",
+          "reference"
+        ]
+      ],
+      "ns": {
+        "noinline/generated": [
+          20166,
+          23834,
+          23125,
+          25375,
+          25458,
+          25375,
+          25459,
+          25375,
+          23208,
+          25459
+        ],
+        "noinline/reference": [
+          518042,
+          462541,
+          461625,
+          447916,
+          459125,
+          462375,
+          467000,
+          430959,
+          369250,
+          386167
+        ],
+        "normal/generated": [
+          4917,
+          6333,
+          6292,
+          5625,
+          4959,
+          5000,
+          6167,
+          6167,
+          6125,
+          6209
+        ],
+        "normal/reference": [
+          423750,
+          447209,
+          340584,
+          333833,
+          365000,
+          372916,
+          342333,
+          336458,
+          336500,
+          383708
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "order": [
+        [
+          "noinline",
+          "reference"
+        ],
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "normal",
+          "generated"
+        ]
+      ],
+      "ns": {
+        "noinline/reference": [
+          453125,
+          452834,
+          434916,
+          447417,
+          395625,
+          366292,
+          383292,
+          388459,
+          363542,
+          362708
+        ],
+        "normal/reference": [
+          417083,
+          460666,
+          460500,
+          458291,
+          434375,
+          404084,
+          347417,
+          377208,
+          358583,
+          339917
+        ],
+        "noinline/generated": [
+          20125,
+          23834,
+          25417,
+          25417,
+          23209,
+          25416,
+          25417,
+          25417,
+          25417,
+          25417
+        ],
+        "normal/generated": [
+          7291,
+          6833,
+          5625,
+          5625,
+          5583,
+          6959,
+          6708,
+          6917,
+          6958,
+          6958
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "order": [
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "noinline",
+          "reference"
+        ],
+        [
+          "normal",
+          "generated"
+        ]
+      ],
+      "ns": {
+        "noinline/generated": [
+          30291,
+          25625,
+          29209,
+          23542,
+          21542,
+          25417,
+          25416,
+          25417,
+          25417,
+          23333
+        ],
+        "normal/reference": [
+          349125,
+          444458,
+          364250,
+          508208,
+          444250,
+          430375,
+          442125,
+          443042,
+          419125,
+          348500
+        ],
+        "noinline/reference": [
+          337625,
+          365416,
+          408167,
+          406958,
+          439292,
+          457750,
+          452750,
+          440375,
+          442500,
+          441875
+        ],
+        "normal/generated": [
+          6458,
+          7084,
+          6959,
+          6958,
+          6916,
+          6792,
+          12334,
+          6166,
+          6125,
+          6209
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "order": [
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "noinline",
+          "reference"
+        ],
+        [
+          "normal",
+          "generated"
+        ]
+      ],
+      "ns": {
+        "normal/reference": [
+          401000,
+          425458,
+          467916,
+          433625,
+          428125,
+          422583,
+          397084,
+          363125,
+          350417,
+          388750
+        ],
+        "noinline/generated": [
+          21833,
+          22875,
+          25375,
+          25375,
+          25416,
+          21208,
+          25375,
+          25458,
+          25416,
+          25375
+        ],
+        "noinline/reference": [
+          419791,
+          361000,
+          397416,
+          401375,
+          339875,
+          358875,
+          419875,
+          360917,
+          360000,
+          350583
+        ],
+        "normal/generated": [
+          10792,
+          6958,
+          7000,
+          7084,
+          7000,
+          6250,
+          5708,
+          6042,
+          6958,
+          7375
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "order": [
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "normal",
+          "generated"
+        ],
+        [
+          "noinline",
+          "reference"
+        ]
+      ],
+      "ns": {
+        "normal/reference": [
+          335292,
+          385875,
+          329042,
+          352000,
+          347958,
+          339083,
+          362250,
+          344666,
+          406125,
+          392625
+        ],
+        "noinline/generated": [
+          20458,
+          28834,
+          27166,
+          28625,
+          27250,
+          28584,
+          27375,
+          28500,
+          27292,
+          28500
+        ],
+        "normal/generated": [
+          5042,
+          6291,
+          6208,
+          5625,
+          4958,
+          6166,
+          6166,
+          6125,
+          6167,
+          5666
+        ],
+        "noinline/reference": [
+          440959,
+          440708,
+          444541,
+          424125,
+          436708,
+          357125,
+          374667,
+          386709,
+          350208,
+          365042
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "order": [
+        [
+          "normal",
+          "generated"
+        ],
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "noinline",
+          "reference"
+        ],
+        [
+          "normal",
+          "reference"
+        ]
+      ],
+      "ns": {
+        "normal/generated": [
+          4875,
+          6334,
+          6208,
+          5667,
+          5000,
+          5000,
+          6167,
+          6208,
+          6083,
+          6125
+        ],
+        "noinline/generated": [
+          27875,
+          25000,
+          28542,
+          25750,
+          28334,
+          27000,
+          28333,
+          25916,
+          28458,
+          25333
+        ],
+        "noinline/reference": [
+          394625,
+          340333,
+          367458,
+          348750,
+          349625,
+          380125,
+          369625,
+          405292,
+          486959,
+          446709
+        ],
+        "normal/reference": [
+          326125,
+          362958,
+          370750,
+          340458,
+          358166,
+          349167,
+          356958,
+          353333,
+          367042,
+          373792
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "order": [
+        [
+          "noinline",
+          "reference"
+        ],
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "normal",
+          "generated"
+        ]
+      ],
+      "ns": {
+        "noinline/reference": [
+          384125,
+          352209,
+          348334,
+          359042,
+          389417,
+          357708,
+          356292,
+          355375,
+          378708,
+          362958
+        ],
+        "normal/reference": [
+          336084,
+          358084,
+          395417,
+          366500,
+          341000,
+          357667,
+          382709,
+          351250,
+          347625,
+          353000
+        ],
+        "noinline/generated": [
+          25666,
+          28500,
+          29166,
+          28500,
+          26375,
+          28458,
+          25333,
+          28333,
+          25500,
+          28458
+        ],
+        "normal/generated": [
+          12208,
+          6375,
+          6208,
+          6709,
+          6959,
+          6958,
+          6959,
+          5500,
+          5583,
+          6959
+        ]
+      }
+    },
+    {
+      "round": 16,
+      "order": [
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "normal",
+          "generated"
+        ],
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "noinline",
+          "reference"
+        ]
+      ],
+      "ns": {
+        "noinline/generated": [
+          20208,
+          23917,
+          25459,
+          25417,
+          24250,
+          25458,
+          25375,
+          25458,
+          25375,
+          25334
+        ],
+        "normal/generated": [
+          6458,
+          6375,
+          6250,
+          6958,
+          6916,
+          6958,
+          6875,
+          5584,
+          5625,
+          5542
+        ],
+        "normal/reference": [
+          348875,
+          325708,
+          338125,
+          381416,
+          341542,
+          333834,
+          345333,
+          341500,
+          359667,
+          338833
+        ],
+        "noinline/reference": [
+          392000,
+          380125,
+          404416,
+          356958,
+          371166,
+          399625,
+          359375,
+          355375,
+          360792,
+          380291
+        ]
+      }
+    },
+    {
+      "round": 17,
+      "order": [
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "noinline",
+          "reference"
+        ],
+        [
+          "normal",
+          "generated"
+        ]
+      ],
+      "ns": {
+        "normal/reference": [
+          380125,
+          376584,
+          361292,
+          337583,
+          342792,
+          350875,
+          382291,
+          350791,
+          344875,
+          341250
+        ],
+        "noinline/generated": [
+          27708,
+          28500,
+          28084,
+          29166,
+          26709,
+          25375,
+          32375,
+          28375,
+          28042,
+          27792
+        ],
+        "noinline/reference": [
+          346750,
+          396875,
+          357500,
+          347208,
+          360791,
+          372417,
+          364209,
+          358042,
+          391583,
+          416958
+        ],
+        "normal/generated": [
+          5833,
+          7125,
+          7000,
+          6958,
+          6750,
+          5583,
+          5584,
+          6959,
+          6875,
+          6958
+        ]
+      }
+    },
+    {
+      "round": 18,
+      "order": [
+        [
+          "noinline",
+          "generated"
+        ],
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "normal",
+          "generated"
+        ],
+        [
+          "noinline",
+          "reference"
+        ]
+      ],
+      "ns": {
+        "noinline/generated": [
+          20125,
+          23833,
+          27458,
+          25333,
+          26958,
+          25375,
+          32959,
+          27000,
+          28791,
+          30667
+        ],
+        "normal/reference": [
+          429709,
+          428750,
+          426125,
+          427042,
+          438083,
+          445083,
+          355500,
+          349167,
+          361958,
+          345625
+        ],
+        "normal/generated": [
+          4958,
+          6291,
+          6166,
+          5625,
+          6208,
+          6208,
+          6125,
+          6209,
+          5917,
+          4958
+        ],
+        "noinline/reference": [
+          451500,
+          400333,
+          358500,
+          396958,
+          399125,
+          372250,
+          355458,
+          366000,
+          373458,
+          352458
+        ]
+      }
+    },
+    {
+      "round": 19,
+      "order": [
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "normal",
+          "generated"
+        ],
+        [
+          "noinline",
+          "reference"
+        ],
+        [
+          "noinline",
+          "generated"
+        ]
+      ],
+      "ns": {
+        "normal/reference": [
+          451667,
+          426750,
+          339875,
+          351083,
+          380708,
+          342542,
+          334875,
+          361208,
+          394417,
+          347000
+        ],
+        "normal/generated": [
+          5708,
+          7250,
+          6916,
+          5833,
+          5709,
+          5667,
+          5625,
+          5625,
+          5583,
+          6917
+        ],
+        "noinline/reference": [
+          375333,
+          405167,
+          343709,
+          353791,
+          394083,
+          368375,
+          364834,
+          346209,
+          364416,
+          376750
+        ],
+        "noinline/generated": [
+          28917,
+          28792,
+          27417,
+          28625,
+          26458,
+          28625,
+          26625,
+          28625,
+          26792,
+          28708
+        ]
+      }
+    },
+    {
+      "round": 20,
+      "order": [
+        [
+          "noinline",
+          "reference"
+        ],
+        [
+          "normal",
+          "generated"
+        ],
+        [
+          "normal",
+          "reference"
+        ],
+        [
+          "noinline",
+          "generated"
+        ]
+      ],
+      "ns": {
+        "noinline/reference": [
+          339125,
+          349083,
+          352042,
+          348833,
+          371708,
+          350958,
+          393500,
+          465375,
+          465292,
+          452333
+        ],
+        "normal/generated": [
+          5708,
+          5666,
+          5000,
+          4958,
+          4917,
+          4959,
+          4958,
+          5291,
+          4958,
+          6166
+        ],
+        "normal/reference": [
+          356208,
+          334208,
+          404333,
+          437875,
+          429917,
+          427833,
+          435750,
+          415625,
+          408875,
+          423792
+        ],
+        "noinline/generated": [
+          36625,
+          26625,
+          28791,
+          33208,
+          25708,
+          25416,
+          25375,
+          25416,
+          25375,
+          25417
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "normal": {
+      "reference_median_best_us": 336.084,
+      "generated_median_best_us": 5.167,
+      "paired_change_pct": -98.40569169960474,
+      "wins": 21
+    },
+    "noinline": {
+      "reference_median_best_us": 349.292,
+      "generated_median_best_us": 21.542,
+      "paired_change_pct": -93.61954831543872,
+      "wins": 21
+    }
+  }
+}

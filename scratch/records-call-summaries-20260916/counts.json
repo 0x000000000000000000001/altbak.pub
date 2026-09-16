@@ -1,0 +1,110 @@
+[
+  {
+    "variant": "record",
+    "stride": 0,
+    "calls": [
+      10000,
+      0
+    ],
+    "materializations": 0,
+    "allocations": 3,
+    "deallocations": 3,
+    "snapshots": 0
+  },
+  {
+    "variant": "materialized",
+    "stride": 0,
+    "calls": [
+      0,
+      10000
+    ],
+    "materializations": 10000,
+    "allocations": 3,
+    "deallocations": 3,
+    "snapshots": 0
+  },
+  {
+    "variant": "scalar",
+    "stride": 0,
+    "calls": [
+      0,
+      10000
+    ],
+    "materializations": 1,
+    "allocations": 3,
+    "deallocations": 3,
+    "snapshots": 0
+  },
+  {
+    "variant": "record",
+    "stride": 100,
+    "calls": [
+      10000,
+      0
+    ],
+    "materializations": 0,
+    "allocations": 306,
+    "deallocations": 306,
+    "snapshots": 100
+  },
+  {
+    "variant": "materialized",
+    "stride": 100,
+    "calls": [
+      0,
+      10000
+    ],
+    "materializations": 10000,
+    "allocations": 306,
+    "deallocations": 306,
+    "snapshots": 100
+  },
+  {
+    "variant": "scalar",
+    "stride": 100,
+    "calls": [
+      0,
+      10000
+    ],
+    "materializations": 100,
+    "allocations": 306,
+    "deallocations": 306,
+    "snapshots": 100
+  },
+  {
+    "variant": "record",
+    "stride": 1,
+    "calls": [
+      10000,
+      0
+    ],
+    "materializations": 0,
+    "allocations": 30013,
+    "deallocations": 30013,
+    "snapshots": 10000
+  },
+  {
+    "variant": "materialized",
+    "stride": 1,
+    "calls": [
+      0,
+      10000
+    ],
+    "materializations": 10000,
+    "allocations": 30013,
+    "deallocations": 30013,
+    "snapshots": 10000
+  },
+  {
+    "variant": "scalar",
+    "stride": 1,
+    "calls": [
+      0,
+      10000
+    ],
+    "materializations": 10000,
+    "allocations": 30013,
+    "deallocations": 30013,
+    "snapshots": 10000
+  }
+]

@@ -1,0 +1,1 @@
+Record scalarization: generated loops, simultaneous field dependencies, scalar lets, retained aliases, untouched fields, zero allocations/identity and conservative fallbacks passed under Rc/Arc.

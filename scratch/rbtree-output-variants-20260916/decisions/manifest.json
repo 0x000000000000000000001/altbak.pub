@@ -1,0 +1,13 @@
+{
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/output/purust_output/Purs_Test_RBTree/src/lib.rs",
+  "sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+  "changes": {
+    "simple-guard": "Replace only rebuild guard by match classifier; old LL permutation guard unchanged.",
+    "fused-guard": "Classify once at two post-child call sites; branch by classification and omit redundant LL predicate inside private permutation worker. All get_mut checks and generic fallbacks preserved."
+  },
+  "checks": {
+    "simple-guard": "PASS exhaustive 722 guard color/shape combinations; exact shapes/colors/keys/depth, all rotations, asc/desc 100k, shuffle10k, duplicates, 200 retained snapshots, root and child Weak",
+    "fused-guard": "PASS exhaustive 722 guard color/shape combinations; exact shapes/colors/keys/depth, all rotations, asc/desc 100k, shuffle10k, duplicates, 200 retained snapshots, root and child Weak"
+  },
+  "timings": "not run; parent orchestrates sequentially"
+}

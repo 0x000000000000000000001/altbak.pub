@@ -1,0 +1,22 @@
+{
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/output/purust_output/Purs_Test_Records/src/lib.rs",
+  "source_sha256": "6343d7b109a260c8360b22ceee33be861bafe80972b0c01b580a271836d447f3",
+  "extracted_function": "Test_Records_updateRec",
+  "kernel_original_sha256": "14e60387a4ec32b8d907e96f29dbae1925f37efab9fe4158796a8ef442f83485",
+  "source_update_expression_sha256": "6a0ad9b22e7af460d94b4f39bf71b4cbcfa96368c38d510cd347990452642d8c",
+  "record_step_expression_sha256": "eb6f24609ad0b8b068803afa8e16644461a6fe33a19ee71d64527985fcfcc85c",
+  "callee_sha256": "dc5051c8d43e796b7410993335750ebef38f303087fedfe53ccbc87824bec94f",
+  "record_step_transformation": {
+    "purs_local_0": "n",
+    "purs_local_1": "r",
+    "other_expression_changes": []
+  },
+  "boundary": "Both step functions inline(never), in a separate Rust crate; build must disable LTO",
+  "counters": "Atomic call counters exist only under --cfg counted",
+  "scalar_arithmetic": [
+    "a + 1",
+    "c + 2",
+    "e + 3",
+    "f + n.checked_rem_euclid(5).unwrap_or(0_i64)"
+  ]
+}

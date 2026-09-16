@@ -1,0 +1,19 @@
+{
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/output/purust_output/Purs_Test_Records/src/lib.rs",
+  "sha256": "6343d7b109a260c8360b22ceee33be861bafe80972b0c01b580a271836d447f3",
+  "command": [
+    "rustc",
+    "--edition=2021",
+    "-C",
+    "opt-level=3",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/records-tast-opportunity-20260916/probe.rs",
+    "-L",
+    "dependency=/Users/0x1/Documents/htdocs/altbak.pub-purust/output/purust_output/target/release/deps",
+    "--extern",
+    "purust_core=/Users/0x1/Documents/htdocs/altbak.pub-purust/output/purust_output/target/release/deps/libpurust_core-f1dcb156b5759628.rlib",
+    "--extern",
+    "perceus_ptr=/Users/0x1/Documents/htdocs/altbak.pub-purust/output/purust_output/target/release/deps/libperceus_ptr-498c0d7eee971451.rlib",
+    "-o",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/records-tast-opportunity-20260916/probe"
+  ]
+}

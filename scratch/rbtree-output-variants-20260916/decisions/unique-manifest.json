@@ -1,0 +1,8 @@
+{
+  "fused_source_sha256": "454fdfbf4ce8c3a23ee551b42ad94623fc27fd80ce6d48bdd352dc4559aef282",
+  "replaced_get_mut_sites": 103,
+  "helper_source": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-tast-perf-proof-20260916/unique/kernel_unique_sites.rs",
+  "checks": "rotation\tkeys=3\tdepth=2\tmutation_calls=8\tempty_dynamic_checks=0\nrotation\tkeys=3\tdepth=2\tmutation_calls=11\tempty_dynamic_checks=0\nrotation\tkeys=3\tdepth=2\tmutation_calls=11\tempty_dynamic_checks=0\nrotation\tkeys=3\tdepth=2\tmutation_calls=11\tempty_dynamic_checks=0\ndescending_100k\tkeys=100000\tdepth=22\tmutation_calls=2483932\tempty_dynamic_checks=0\nascending_100k\tkeys=100000\tdepth=22\tmutation_calls=2783866\tempty_dynamic_checks=0\nshuffled_100k\tkeys=100000\tdepth=24\tmutation_calls=1956041\tempty_dynamic_checks=0\nduplicates_100k\tkeys=4096\tdepth=17\tmutation_calls=1349338\tempty_dynamic_checks=0\noriginal_buildTree_100k\tok\n",
+  "contract": "Experimental specialization requiring exclusive provenance at every mutable site, including temporarily E payloads; no Weak aliases. Not a general persistent API. cfg verify_unique checks strong=1/weak=0 on every mutable call. Timing compiles without cfg.",
+  "timings": "parent only"
+}

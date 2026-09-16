@@ -1,0 +1,8 @@
+all 30 cases and retained snapshots match
+Value=24 Option<Value>=24 Record_a_b=48
+original n=0 allocations=0 deallocations=0 bytes=0 result=[0, 0, 0, 0]
+original n=1 allocations=3 deallocations=3 bytes=168 result=[1, 2, 3, 1]
+original n=10000 allocations=3 deallocations=3 bytes=168 result=[10000, 20000, 30000, 20000]
+scalar n=0 allocations=0 deallocations=0 bytes=0 result=[0, 0, 0, 0]
+scalar n=1 allocations=3 deallocations=3 bytes=168 result=[1, 2, 3, 1]
+scalar n=10000 allocations=3 deallocations=3 bytes=168 result=[10000, 20000, 30000, 20000]

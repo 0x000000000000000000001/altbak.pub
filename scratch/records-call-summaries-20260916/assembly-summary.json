@@ -1,0 +1,30 @@
+{
+  "run_record": {
+    "symbol": "__ZN5probe10run_record17h9eef9897ea5526b1E",
+    "worker_calls": [
+      "1000060b0: 940048d0    \tbl\t0x1000183f0 <__ZN11call_fields11record_step17h71a88671be7ef419E>",
+      "100006140: 940048ac    \tbl\t0x1000183f0 <__ZN11call_fields11record_step17h71a88671be7ef419E>"
+    ]
+  },
+  "run_scalar": {
+    "symbol": "__ZN5probe10run_scalar17h7b62ddf29cef391cE",
+    "worker_calls": [
+      "100006260: 94004920    \tbl\t0x1000186e0 <__ZN11call_fields11scalar_step17h4b70c9e599b2de4eE>",
+      "1000062d4: 94004903    \tbl\t0x1000186e0 <__ZN11call_fields11scalar_step17h4b70c9e599b2de4eE>"
+    ]
+  },
+  "run_materialized": {
+    "symbol": "__ZN5probe16run_materialized17h649687d9ec268664E",
+    "worker_calls": [
+      "100006674: 9400481b    \tbl\t0x1000186e0 <__ZN11call_fields11scalar_step17h4b70c9e599b2de4eE>"
+    ]
+  },
+  "record_step": {
+    "symbol": "__ZN11call_fields11record_step17h71a88671be7ef419E",
+    "worker_calls": []
+  },
+  "scalar_step": {
+    "symbol": "__ZN11call_fields11scalar_step17h4b70c9e599b2de4eE",
+    "worker_calls": []
+  }
+}

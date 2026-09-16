@@ -1,0 +1,7 @@
+/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/compact-guards-integration-20260916/compact/target/release/deps/Purs_Data_Identity-7d893e9140aa7088.d: Purs_Data_Identity/src/lib.rs
+
+/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/compact-guards-integration-20260916/compact/target/release/deps/libPurs_Data_Identity-7d893e9140aa7088.rlib: Purs_Data_Identity/src/lib.rs
+
+/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/compact-guards-integration-20260916/compact/target/release/deps/libPurs_Data_Identity-7d893e9140aa7088.rmeta: Purs_Data_Identity/src/lib.rs
+
+Purs_Data_Identity/src/lib.rs:

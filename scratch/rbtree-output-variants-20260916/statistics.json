@@ -1,0 +1,260 @@
+{
+  "timing": {
+    "generated": {
+      "median_gain_pct": 0.0,
+      "bootstrap_median_95_pct": [
+        0.0,
+        0.0
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "guard_simple": {
+      "median_gain_pct": 5.689165200321932,
+      "bootstrap_median_95_pct": [
+        4.709024241127457,
+        6.168806789543224
+      ],
+      "wins": 21,
+      "rounds": 21
+    },
+    "guard_fused": {
+      "median_gain_pct": 6.335003473783152,
+      "bootstrap_median_95_pct": [
+        4.934949662642952,
+        6.8184276935862265
+      ],
+      "wins": 21,
+      "rounds": 21
+    },
+    "region": {
+      "median_gain_pct": -17.63649649982888,
+      "bootstrap_median_95_pct": [
+        -17.980630035008673,
+        -15.119352051468237
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "region_fused": {
+      "median_gain_pct": -14.13996192088005,
+      "bootstrap_median_95_pct": [
+        -14.649456917438464,
+        -12.902904965608663
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "arena_u32": {
+      "median_gain_pct": -36.71154827253693,
+      "bootstrap_median_95_pct": [
+        -38.534698374623375,
+        -35.628125514751964
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "arena_grow": {
+      "median_gain_pct": -36.39495038547227,
+      "bootstrap_median_95_pct": [
+        -38.64721810873706,
+        -34.38574318826721
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "arena_usize": {
+      "median_gain_pct": -41.710823218494156,
+      "bootstrap_median_95_pct": [
+        -43.16206992440179,
+        -40.513163226635385
+      ],
+      "wins": 0,
+      "rounds": 21
+    }
+  },
+  "timing-mimalloc": {
+    "generated": {
+      "median_gain_pct": 0.0,
+      "bootstrap_median_95_pct": [
+        0.0,
+        0.0
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "guard_simple": {
+      "median_gain_pct": 4.58581749829392,
+      "bootstrap_median_95_pct": [
+        4.083622663810294,
+        5.240669970397138
+      ],
+      "wins": 20,
+      "rounds": 21
+    },
+    "guard_fused": {
+      "median_gain_pct": 5.071685818843797,
+      "bootstrap_median_95_pct": [
+        4.218810270375362,
+        5.535006167167255
+      ],
+      "wins": 20,
+      "rounds": 21
+    },
+    "guard_unique": {
+      "median_gain_pct": 9.089173001443962,
+      "bootstrap_median_95_pct": [
+        8.321267733172345,
+        9.608157445064968
+      ],
+      "wins": 21,
+      "rounds": 21
+    },
+    "region": {
+      "median_gain_pct": -25.634976076555027,
+      "bootstrap_median_95_pct": [
+        -27.25134482967977,
+        -24.260353134775325
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "region_local": {
+      "median_gain_pct": -25.636154426658585,
+      "bootstrap_median_95_pct": [
+        -26.97619515661305,
+        -24.77801580852479
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "region_local_fused": {
+      "median_gain_pct": -21.80998072628002,
+      "bootstrap_median_95_pct": [
+        -23.651771630504737,
+        -20.808524226931002
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "region_local_unique": {
+      "median_gain_pct": -12.413371028355801,
+      "bootstrap_median_95_pct": [
+        -14.296913295314106,
+        -11.599199629141443
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "arena_u32": {
+      "median_gain_pct": -50.99103770792637,
+      "bootstrap_median_95_pct": [
+        -51.80283696782002,
+        -49.75754850429579
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "arena_grow": {
+      "median_gain_pct": -48.82171680082752,
+      "bootstrap_median_95_pct": [
+        -51.189416925735934,
+        -47.55953608628205
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "arena_usize": {
+      "median_gain_pct": -55.65596909851849,
+      "bootstrap_median_95_pct": [
+        -57.49551435406699,
+        -54.3643454349356
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "arena_unchecked": {
+      "median_gain_pct": -41.58080144621874,
+      "bootstrap_median_95_pct": [
+        -43.75609282509387,
+        -39.27514355058308
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "arena_unchecked_inline": {
+      "median_gain_pct": -39.30225286260962,
+      "bootstrap_median_95_pct": [
+        -41.387504355249696,
+        -37.33617386798851
+      ],
+      "wins": 0,
+      "rounds": 21
+    }
+  },
+  "timing-directional": {
+    "generated": {
+      "median_gain_pct": 0.0,
+      "bootstrap_median_95_pct": [
+        0.0,
+        0.0
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "guard_fused": {
+      "median_gain_pct": 3.9913795623890747,
+      "bootstrap_median_95_pct": [
+        3.2874719810661146,
+        5.624106742187395
+      ],
+      "wins": 19,
+      "rounds": 21
+    },
+    "guard_unique": {
+      "median_gain_pct": 8.011984371683345,
+      "bootstrap_median_95_pct": [
+        6.946386195206067,
+        8.959879660133529
+      ],
+      "wins": 21,
+      "rounds": 21
+    },
+    "arena_u32": {
+      "median_gain_pct": -51.766007035680126,
+      "bootstrap_median_95_pct": [
+        -55.250945586508536,
+        -49.44045351032196
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "arena_directional": {
+      "median_gain_pct": -40.66433403025458,
+      "bootstrap_median_95_pct": [
+        -43.96679893139539,
+        -37.60719462796294
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "arena_unchecked_inline": {
+      "median_gain_pct": -42.53597415152297,
+      "bootstrap_median_95_pct": [
+        -43.67393127323116,
+        -39.92997942914462
+      ],
+      "wins": 0,
+      "rounds": 21
+    },
+    "arena_unchecked_directional_inline": {
+      "median_gain_pct": -35.63882194230974,
+      "bootstrap_median_95_pct": [
+        -37.313170086553214,
+        -33.30834968683283
+      ],
+      "wins": 0,
+      "rounds": 21
+    }
+  }
+}

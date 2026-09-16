@@ -1,0 +1,7 @@
+/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/records-tast-opportunity-20260916/full-scalar/target/release/deps/Purs_Bench-045a528ef5426d9f.d: Purs_Bench/src/lib.rs
+
+/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/records-tast-opportunity-20260916/full-scalar/target/release/deps/libPurs_Bench-045a528ef5426d9f.rlib: Purs_Bench/src/lib.rs
+
+/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/records-tast-opportunity-20260916/full-scalar/target/release/deps/libPurs_Bench-045a528ef5426d9f.rmeta: Purs_Bench/src/lib.rs
+
+Purs_Bench/src/lib.rs:

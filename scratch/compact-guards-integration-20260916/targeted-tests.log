@@ -1,0 +1,18 @@
+Child branch printer: 980 ordered decisions checked under Rc and Arc; bounded fallback and malformed metadata checked.
+✔ tests/codegen/child-branch-printer.mjs (2791.375542ms)
+Constructor branches: ordered paths, dominating tags, aliases, short-circuiting, layouts and opaque boundaries checked.
+✔ tests/codegen/child-branches.mjs (63.303084ms)
+Field permutations: 53 accepted/rejected proofs, six layouts/directions executed under Rc and Arc with unique/shared/weak cells, staged scalars and preserved frontiers.
+✔ tests/codegen/field-permutations.mjs (1319.473833ms)
+Post-child helpers preserve constructor-helper names and omit always-false predicates.
+✔ tests/codegen/post-child-helpers.mjs (807.126792ms)
+Post-child call: both arms, single evaluation, unique/shared/Weak unwind and allocation balance checked.
+✔ tests/codegen/post-child-panic.mjs (1075.344875ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2795.666292

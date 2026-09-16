@@ -1,0 +1,58 @@
+--- /Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/compact-guards-integration-20260916/after/output/purust_output/Purs_Test_Records/src/lib.rs
++++ /Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/records-tast-opportunity-20260916/full-scalar/output/purust_output/Purs_Test_Records/src/lib.rs
+@@ -45,38 +45,24 @@
+ 
+ 
+ 
+-pub fn Test_Records_updateRec(mut purs_local_0: i64, mut purs_local_1: crate::UnknownType) -> crate::UnknownType {
+-    // AST: Typed(Abs(..., Typed(Abs(..., Typed(Branch(...))))))
+-    loop {
+-        break /* Typed crate::UnknownType <- crate::UnknownType : Branch(...) */if (/* Typed i64 <- i64 : Local(...) */purs_local_0.clone() == 0) {
+-        /* Typed crate::UnknownType <- crate::UnknownType : Local(...) */purs_local_1
+-    } else {
+-        {
+-        let _tco_temp_0 = /* Typed i64 <- i64 : PrimOp(...) */(/* Typed i64 <- i64 : Local(...) */purs_local_0.clone() - /* Typed i64 <- i64 : Lit */1);
+-        let _tco_temp_1 = /* Typed crate::UnknownType <- crate::UnknownType : Update */{
+-    let _record_update_0 = crate::mk_int(/* Typed i64 <- i64 : PrimOp(...) */(/* purust record: borrowed scalar */((&purs_local_1).__purust_borrow_a()).unwrap_int() + 1));
+-    let _record_child_update_0 = crate::mk_int(/* Typed i64 <- i64 : PrimOp(...) */(/* purust record: borrowed scalar */((&purs_local_1).__purust_borrow_b().__purust_borrow_c()).unwrap_int() + 2));
+-    let _record_child_1_update_0 = crate::mk_int(/* Typed i64 <- i64 : PrimOp(...) */(/* purust record: borrowed scalar */((&purs_local_1).__purust_borrow_b().__purust_borrow_d().__purust_borrow_e()).unwrap_int() + 3));
+-    let _record_child_1_update_1 = crate::mk_int(/* Typed i64 <- i64 : PrimOp(...) */(/* purust record: borrowed scalar */((&purs_local_1).__purust_borrow_b().__purust_borrow_d().__purust_borrow_f()).unwrap_int() + { let _mod_l: i64 = /* Typed i64 <- i64 : Local(...) */purs_local_0; let _mod_r: i64 = /* Typed i64 <- i64 : Lit */5; _mod_l.checked_rem_euclid(_mod_r).unwrap_or(0_i64) }));
+-    let mut _base = purs_local_1;
+-    _base.set_a(_record_update_0);
+-    let mut _record_child = _base.get_b();
+-    _base.set_b(purust_core::Value::Unit);
+-    _record_child.set_c(_record_child_update_0);
+-    let mut _record_child_1 = _record_child.get_d();
+-    _record_child.set_d(purust_core::Value::Unit);
+-    _record_child_1.set_e(_record_child_1_update_0);
+-    _record_child_1.set_f(_record_child_1_update_1);
+-    _record_child.set_d(_record_child_1);
+-    _base.set_b(_record_child);
+-    _base
+-};
+-        purs_local_0 = _tco_temp_0;
+-        purs_local_1 = _tco_temp_1;
+-        continue;
++#[inline(never)]
++pub fn Test_Records_updateRec(mut n: i64, mut r: Value) -> Value {
++    if n == 0 { return r; }
++    let mut a = r.__purust_borrow_a().unwrap_int();
++    let mut c = r.__purust_borrow_b().__purust_borrow_c().unwrap_int();
++    let mut e = r.__purust_borrow_b().__purust_borrow_d().__purust_borrow_e().unwrap_int();
++    let mut f = r.__purust_borrow_b().__purust_borrow_d().__purust_borrow_f().unwrap_int();
++    while n != 0 {
++        a += 1; c += 2; e += 3;
++        f += n.checked_rem_euclid(5).unwrap_or(0);
++        n -= 1;
+     }
+-    };
+-    }
++    r.set_a(mk_int(a));
++    let mut b = r.get_b(); r.set_b(Value::Unit);
++    b.set_c(mk_int(c));
++    let mut d = b.get_d(); b.set_d(Value::Unit);
++    d.set_e(mk_int(e)); d.set_f(mk_int(f));
++    b.set_d(d); r.set_b(b); r
+ }
+ 
+ pub fn Test_Records_initial() -> crate::UnknownType {

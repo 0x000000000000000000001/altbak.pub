@@ -1,0 +1,10 @@
+{
+  "src/Main.purs": "64e02ecd23bd8be8321a5cd948d4362c7e3542c59dfe92db6a382c91afd21935",
+  "src/Purust/ChildBranchPrinter.purs": "99d774c07872d7760197530ce4723c723ad70ef3b333edc8a5dda06f35d88456",
+  "src/Purust/CodeGen.purs": "4ef38fad2f0481e5323f03e5d2ff11b8fad92f6e200cf8c151aa92a51af4d5b7",
+  "src/Purust/RecordScalarization.purs": "51d56f6c36efd4b54b75a20edb6f02790e3ec696ee80aa17042d798107597492",
+  "src/Purust/RecordScalarCalls.purs": "5791898d53c7357b35cd92d90c7767fcfa62d7d02040133691432fd6a7b3c89f",
+  "tests/codegen/record-scalarization.mjs": "1ab0d1259bc2521a8f1c95e79a1fb885e7a2d067245288c568555a3fd394a7cb",
+  "bin/purust.js": "2271027eddf519a26df5f1f60648b6bf476a7e7dcac43f306028fad8e5f6a718",
+  "todo.md": "d462bb90525e9aca19cdd4793e7a6b40c8771964916f949b0ca03882e59a30ab"
+}

@@ -1,0 +1,80 @@
+{
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+  "platform": "macOS-26.1-arm64-arm-64bit",
+  "flags": [
+    "--edition=2021",
+    "-C",
+    "opt-level=3",
+    "-C",
+    "codegen-units=1"
+  ],
+  "n": 100000,
+  "rounds": 21,
+  "samples": 10,
+  "warmups": 3,
+  "seed": 16092026,
+  "scope": "allocation + descending build + depth + full destruction/release",
+  "source_manifest": {
+    "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/output/purust_output/Purs_Test_RBTree/src/lib.rs",
+    "resolved_source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/output/purust_output/Purs_Test_RBTree/src/lib.rs",
+    "source_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+    "baseline_sha256": "b7d2da1714ba487751bd80ab65cd874b6a2aa3f62c4ef080a813e379749c8685",
+    "extraction": "Enums and all algorithm functions unchanged; unused module constructor and Effect adapters omitted."
+  },
+  "allocator": {
+    "name": "mimalloc",
+    "library": "/Users/0x1/Documents/htdocs/altbak.pub-purust/run/bak/rust/modes/pure/target/release/deps/libmimalloc-f3b757f24cb2cb99.rlib",
+    "library_sha256": "16735daa1cb62fb6d1716b48bada97719864e3e0250839e8572a6d56165f154d"
+  },
+  "variants": {
+    "generated": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/baseline.rs",
+      "kernel_sha256": "b7d2da1714ba487751bd80ab65cd874b6a2aa3f62c4ef080a813e379749c8685",
+      "harness_sha256": "308b80a112c27cd433a46f53ff6e88ba36db454cbfcae5e9f15ad5f6bc452796",
+      "binary_sha256": "2deae957924b460170029f36dd1c8ececf71be8c9b3d6ad93342fec49d26b660",
+      "cfg": []
+    },
+    "guard_fused": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/decisions/kernel-fused-guard.rs",
+      "kernel_sha256": "454fdfbf4ce8c3a23ee551b42ad94623fc27fd80ce6d48bdd352dc4559aef282",
+      "harness_sha256": "495b7233020b45cab1230fce60752db57efc99fb3c2f2ed811236e1253ac9f70",
+      "binary_sha256": "f9f9426b04eec6ea3e970c5122b7260f921d7a75f88b6c0458959724173644c7",
+      "cfg": []
+    },
+    "guard_unique": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/decisions/kernel-fused-unique.rs",
+      "kernel_sha256": "3079fec951fa69f1fb35a6fba51d0621a7b3b14aedf1520936a6b802e5b4bfae",
+      "harness_sha256": "8311230890b907d07e23a7e2fd38aaad05b54f3859db596f67dd4a2d562b8258",
+      "binary_sha256": "472f654876e7ebcfb911e236990e9d32c2ea525e6d4a042fd6091a78b07ca38c",
+      "cfg": []
+    },
+    "arena_u32": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/arena/kernel.rs",
+      "kernel_sha256": "55178dad3e08128088dea608103e334c01478555e3b98795c2fbf1229ec43e0d",
+      "harness_sha256": "5a4a0b407bc77eb32b41b37ce871e03562729508eb5216cb15645589b8e79024",
+      "binary_sha256": "e9f8e71f2ec75f02442c4e4fbdde27909dcc4c50fda32c77838e754957d2ffb1",
+      "cfg": []
+    },
+    "arena_directional": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/arena/kernel-directional.rs",
+      "kernel_sha256": "516f4eb0abb3e56e09062e65751747189db5c162c23b809c1c2c50b0fbf55178",
+      "harness_sha256": "0658a6dbaad89369fb9c224f434f6c49d5da9b7a3242513c6797426e7bd2595b",
+      "binary_sha256": "5ef7a33f8c82e902f382a6fa3fbb7e8619dcb54ba43a8c6faea7fe30ff887eae",
+      "cfg": []
+    },
+    "arena_unchecked_inline": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/arena/kernel-unchecked-inline.rs",
+      "kernel_sha256": "1b74b91127b07b0a556816d7920198832d71725c2ba511c595684b9684b35cb7",
+      "harness_sha256": "3c1a9c4b0374cc777f55e4d6278b67904e8598b8d9cf26d2505b07739a19a1eb",
+      "binary_sha256": "d09356dcbe21eea18a8ffd17ba364bc50410f57d5f9cbb5cafc48130858d2e17",
+      "cfg": []
+    },
+    "arena_unchecked_directional_inline": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/rbtree-output-variants-20260916/arena/kernel-unchecked-directional-inline.rs",
+      "kernel_sha256": "f047831dbe215c68369500bc2bcd5e36ec49b1d05ab10b76471ee1627da61b6e",
+      "harness_sha256": "6613faae7e5fbc5e3b6a7b5fe0b4e75b9e495452edb892b5309f513a165af8cd",
+      "binary_sha256": "551675653b9eff85c34a2e29c1c4c204e24b404017644082f73eae60e524a2f4",
+      "cfg": []
+    }
+  }
+}

@@ -1,0 +1,153 @@
+round 1 {'arena_u32': 12667.17, 'guard_unique': 7593.29, 'arena_unchecked_inline': 11927.54, 'arena_unchecked': 11763.12, 'guard_fused': 7729.29, 'guard_simple': 7881.5, 'arena_usize': 13029.54, 'region_local_fused': 10617.67, 'region_local_unique': 9732.04, 'generated': 8282.5, 'region_local': 10286.25, 'region': 10303.5, 'arena_grow': 12338.17}
+round 2 {'region': 10465.29, 'guard_unique': 7569.12, 'generated': 8373.79, 'arena_usize': 12603.58, 'arena_grow': 12563.5, 'region_local_fused': 10184.21, 'arena_unchecked_inline': 11476.71, 'arena_u32': 12702.12, 'region_local_unique': 9118.42, 'region_local': 10204.58, 'arena_unchecked': 11691.25, 'guard_fused': 8002.92, 'guard_simple': 7992.96}
+round 3 {'arena_grow': 12507.12, 'region_local_fused': 10244.29, 'arena_unchecked_inline': 11797.92, 'guard_simple': 7983.96, 'guard_fused': 7982.88, 'arena_u32': 12701.33, 'arena_unchecked': 11559.88, 'generated': 7919.79, 'region': 10853.96, 'arena_usize': 12534.08, 'region_local': 10501.58, 'region_local_unique': 9290.12, 'guard_unique': 7685.88}
+round 4 {'region_local_unique': 9423.46, 'region_local': 10421.12, 'guard_fused': 7988.83, 'arena_unchecked': 11747.67, 'arena_u32': 12312.62, 'arena_usize': 13342.33, 'arena_grow': 12620.42, 'arena_unchecked_inline': 11730.46, 'guard_unique': 7660.92, 'generated': 8297.5, 'region_local_fused': 10344.71, 'guard_simple': 7838.75, 'region': 10463.96}
+round 5 {'arena_unchecked': 12029.33, 'arena_usize': 13259.42, 'arena_unchecked_inline': 11474.17, 'guard_simple': 8047.54, 'guard_unique': 7263.29, 'arena_grow': 12618.83, 'region_local_fused': 10113.62, 'region': 10575.12, 'region_local_unique': 9313.88, 'guard_fused': 8050.25, 'arena_u32': 12722.38, 'generated': 8404.83, 'region_local': 10608.54}
+round 6 {'arena_usize': 13166.62, 'generated': 8360.0, 'region_local_fused': 10184.12, 'region': 10503.08, 'guard_unique': 7598.83, 'arena_u32': 12691.54, 'arena_unchecked_inline': 11518.12, 'region_local_unique': 9775.62, 'guard_fused': 7906.88, 'arena_grow': 12400.38, 'guard_simple': 8045.33, 'arena_unchecked': 11662.29, 'region_local': 10502.21}
+round 7 {'generated': 8489.96, 'region_local_unique': 9318.25, 'guard_unique': 7391.08, 'region': 10458.96, 'arena_unchecked': 11823.29, 'arena_usize': 13147.12, 'arena_grow': 12209.04, 'arena_u32': 12708.21, 'region_local': 10666.46, 'region_local_fused': 10065.38, 'guard_simple': 7939.0, 'arena_unchecked_inline': 11641.96, 'guard_fused': 7996.71}
+round 8 {'guard_unique': 7573.79, 'region_local_fused': 10269.92, 'generated': 8431.62, 'region': 10477.17, 'arena_unchecked_inline': 11677.25, 'guard_fused': 7992.17, 'arena_grow': 12173.67, 'region_local': 10296.62, 'guard_simple': 7820.08, 'region_local_unique': 9450.29, 'arena_usize': 12988.04, 'arena_u32': 12575.0, 'arena_unchecked': 11666.88}
+round 9 {'guard_fused': 7667.17, 'arena_u32': 12702.62, 'arena_usize': 13297.04, 'arena_unchecked': 12217.42, 'guard_simple': 8053.21, 'arena_unchecked_inline': 11604.33, 'region_local': 10728.96, 'region_local_unique': 9429.67, 'generated': 8449.58, 'guard_unique': 7671.71, 'arena_grow': 12864.75, 'region': 10752.21, 'region_local_fused': 10118.08}
+round 10 {'arena_grow': 12659.12, 'region': 10555.92, 'arena_u32': 12647.0, 'arena_unchecked': 12230.71, 'guard_simple': 8062.08, 'region_local_fused': 10363.54, 'guard_fused': 8037.04, 'guard_unique': 7690.5, 'region_local': 10695.38, 'generated': 8507.96, 'arena_unchecked_inline': 11799.17, 'region_local_unique': 9562.0, 'arena_usize': 12884.08}
+round 11 {'arena_usize': 12839.54, 'region_local_fused': 10230.67, 'generated': 8248.67, 'region_local': 10576.29, 'guard_fused': 8040.71, 'guard_unique': 7651.67, 'guard_simple': 8067.83, 'region': 10795.88, 'region_local_unique': 9242.71, 'arena_unchecked_inline': 11662.58, 'arena_grow': 12260.79, 'arena_u32': 12521.71, 'arena_unchecked': 11477.62}
+round 12 {'region_local_unique': 9720.83, 'arena_u32': 12509.04, 'arena_unchecked': 11785.38, 'region_local_fused': 10165.33, 'guard_unique': 7641.04, 'arena_unchecked_inline': 11857.21, 'guard_fused': 8045.46, 'region_local': 10698.17, 'region': 10837.12, 'guard_simple': 8037.67, 'generated': 8414.42, 'arena_usize': 13210.33, 'arena_grow': 12721.71}
+round 13 {'region_local': 10414.92, 'generated': 8469.58, 'arena_grow': 12415.75, 'guard_fused': 8008.88, 'arena_usize': 13082.71, 'guard_unique': 7349.67, 'guard_simple': 8027.67, 'arena_unchecked_inline': 11467.71, 'region_local_unique': 9395.58, 'region': 10473.33, 'region_local_fused': 10382.17, 'arena_unchecked': 11617.12, 'arena_u32': 12783.71}
+round 14 {'arena_usize': 13102.96, 'arena_unchecked': 12311.54, 'arena_u32': 12426.54, 'region_local_unique': 9136.21, 'region_local': 10884.33, 'arena_grow': 12538.12, 'guard_unique': 7669.5, 'guard_fused': 8048.46, 'generated': 8127.33, 'region': 10381.54, 'guard_simple': 8073.92, 'arena_unchecked_inline': 11646.96, 'region_local_fused': 10010.83}
+round 15 {'arena_u32': 12568.0, 'region_local_fused': 10216.62, 'guard_simple': 7794.33, 'region_local': 10766.88, 'region_local_unique': 9708.83, 'arena_grow': 12493.5, 'arena_usize': 13191.92, 'generated': 8262.42, 'guard_unique': 7691.21, 'arena_unchecked': 11884.67, 'guard_fused': 8035.04, 'region': 11034.88, 'arena_unchecked_inline': 11722.12}
+round 16 {'arena_unchecked_inline': 11947.92, 'guard_fused': 7952.0, 'region_local_fused': 9994.67, 'region_local': 10421.42, 'arena_u32': 12753.46, 'region': 10628.67, 'arena_usize': 12552.75, 'arena_unchecked': 11763.88, 'guard_unique': 7696.54, 'arena_grow': 12267.0, 'region_local_unique': 9350.08, 'generated': 8446.5, 'guard_simple': 8123.42}
+round 17 {'region_local': 10557.0, 'guard_fused': 7846.04, 'arena_grow': 12484.46, 'guard_unique': 7744.08, 'region': 10528.79, 'arena_unchecked': 11687.21, 'arena_u32': 12571.62, 'guard_simple': 8115.12, 'generated': 8460.62, 'arena_usize': 12842.88, 'region_local_fused': 10036.67, 'region_local_unique': 9586.0, 'arena_unchecked_inline': 11858.58}
+round 18 {'arena_unchecked_inline': 11694.25, 'region': 10408.92, 'generated': 8394.88, 'arena_usize': 13011.33, 'arena_unchecked': 12233.62, 'guard_unique': 7655.17, 'region_local': 10299.38, 'guard_simple': 7782.04, 'arena_u32': 12571.96, 'region_local_fused': 10195.29, 'guard_fused': 8036.75, 'region_local_unique': 9595.08, 'arena_grow': 12250.08}
+round 19 {'arena_unchecked': 11526.17, 'region_local_fused': 10444.17, 'arena_unchecked_inline': 11523.08, 'arena_grow': 12437.08, 'generated': 8089.29, 'region_local': 11057.88, 'arena_u32': 12524.08, 'arena_usize': 13386.79, 'guard_simple': 7848.83, 'region_local_unique': 9499.17, 'region': 10825.5, 'guard_fused': 8034.21, 'guard_unique': 7718.17}
+round 20 {'arena_unchecked_inline': 11355.21, 'region_local': 10719.92, 'guard_simple': 7870.96, 'region': 10507.75, 'guard_fused': 7830.54, 'arena_grow': 12284.29, 'arena_u32': 12721.71, 'region_local_unique': 9185.29, 'arena_usize': 13078.58, 'guard_unique': 7702.46, 'arena_unchecked': 12248.96, 'region_local_fused': 10644.79, 'generated': 8472.54}
+round 21 {'generated': 8472.67, 'region_local': 10632.04, 'arena_unchecked_inline': 11473.58, 'arena_unchecked': 11606.0, 'guard_unique': 7653.71, 'region': 10391.08, 'region_local_unique': 9576.33, 'arena_grow': 12609.17, 'guard_fused': 8042.96, 'arena_u32': 12802.08, 'guard_simple': 8084.12, 'region_local_fused': 10116.75, 'arena_usize': 12825.79}
+{
+  "generated": {
+    "median_best10_us": 8404.834,
+    "median_median10_us": 8508.792000000001,
+    "median_paired_gain_pct": 0.0,
+    "paired_gain_range_pct": [
+      0.0,
+      0.0
+    ],
+    "wins": 0
+  },
+  "guard_simple": {
+    "median_best10_us": 8027.667,
+    "median_median10_us": 8090.333500000001,
+    "median_paired_gain_pct": 4.58581749829392,
+    "paired_gain_range_pct": [
+      -0.8102106721994629,
+      7.300084873211333
+    ],
+    "wins": 20
+  },
+  "guard_fused": {
+    "median_best10_us": 8002.916,
+    "median_median10_us": 8053.8755,
+    "median_paired_gain_pct": 5.071685818843797,
+    "paired_gain_range_pct": [
+      -0.7965234440500346,
+      9.25981791054068
+    ],
+    "wins": 20
+  },
+  "guard_unique": {
+    "median_best10_us": 7655.167,
+    "median_median10_us": 7712.916499999999,
+    "median_paired_gain_pct": 9.089173001443962,
+    "paired_gain_range_pct": [
+      2.9535750433849817,
+      13.581969614153
+    ],
+    "wins": 21
+  },
+  "region": {
+    "median_best10_us": 10507.75,
+    "median_median10_us": 10909.583,
+    "median_paired_gain_pct": -25.634976076555027,
+    "paired_gain_range_pct": [
+      -37.04853612317092,
+      -22.642436276846055
+    ],
+    "wins": 0
+  },
+  "region_local": {
+    "median_best10_us": 10576.292,
+    "median_median10_us": 10880.145499999999,
+    "median_paired_gain_pct": -25.636154426658585,
+    "paired_gain_range_pct": [
+      -36.69770317324472,
+      -21.863359140441908
+    ],
+    "wins": 0
+  },
+  "region_local_fused": {
+    "median_best10_us": 10195.292,
+    "median_median10_us": 10465.646,
+    "median_paired_gain_pct": -21.80998072628002,
+    "paired_gain_range_pct": [
+      -29.35050566984585,
+      -18.329083052151773
+    ],
+    "wins": 0
+  },
+  "region_local_unique": {
+    "median_best10_us": 9429.667,
+    "median_median10_us": 9729.667000000001,
+    "median_paired_gain_pct": -12.413371028355801,
+    "paired_gain_range_pct": [
+      -17.50596707960881,
+      -8.412469362795715
+    ],
+    "wins": 0
+  },
+  "arena_u32": {
+    "median_best10_us": 12667.167,
+    "median_median10_us": 12939.0,
+    "median_paired_gain_pct": -50.99103770792637,
+    "paired_gain_range_pct": [
+      -60.374578019220706,
+      -48.38957517324496
+    ],
+    "wins": 0
+  },
+  "arena_grow": {
+    "median_best10_us": 12484.459,
+    "median_median10_us": 12908.854,
+    "median_paired_gain_pct": -48.82171680082752,
+    "paired_gain_range_pct": [
+      -57.9223924062652,
+      -43.80566502146828
+    ],
+    "wins": 0
+  },
+  "arena_usize": {
+    "median_best10_us": 13078.584,
+    "median_median10_us": 13416.292,
+    "median_paired_gain_pct": -55.65596909851849,
+    "paired_gain_range_pct": [
+      -65.48782829051396,
+      -48.61481086840704
+    ],
+    "wins": 0
+  },
+  "arena_unchecked": {
+    "median_best10_us": 11763.125,
+    "median_median10_us": 12122.604,
+    "median_paired_gain_pct": -41.58080144621874,
+    "paired_gain_range_pct": [
+      -51.48316181950463,
+      -36.981677313846674
+    ],
+    "wins": 0
+  },
+  "arena_unchecked_inline": {
+    "median_best10_us": 11662.583,
+    "median_median10_us": 12030.979,
+    "median_paired_gain_pct": -39.30225286260962,
+    "paired_gain_range_pct": [
+      -48.96749813631467,
+      -34.02363777010491
+    ],
+    "wins": 0
+  }
+}

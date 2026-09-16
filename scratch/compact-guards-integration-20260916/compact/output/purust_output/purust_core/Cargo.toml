@@ -1,0 +1,8 @@
+[package]
+name = "purust_core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+perceus_ptr = { path = "../perceus_ptr" }
+fancy-regex = "0.13"

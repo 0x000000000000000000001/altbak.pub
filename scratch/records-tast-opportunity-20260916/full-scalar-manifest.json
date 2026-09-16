@@ -1,0 +1,27 @@
+{
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/compact-guards-integration-20260916/after",
+  "target": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/records-tast-opportunity-20260916/full-scalar",
+  "modified_files": [
+    "output/purust_output/Purs_Test_Records/src/lib.rs"
+  ],
+  "source_records_sha256": "6343d7b109a260c8360b22ceee33be861bafe80972b0c01b580a271836d447f3",
+  "variant_records_sha256": "2448107b9f9828bcb454f788ef09a0721a000deb3bc7de9cfaabcac467a4f6b1",
+  "command": [
+    "cargo",
+    "build",
+    "--release",
+    "--offline",
+    "--manifest-path",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/records-tast-opportunity-20260916/full-scalar/output/purust_output/Cargo.toml",
+    "--target-dir",
+    "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/records-tast-opportunity-20260916/full-scalar/target"
+  ],
+  "profile": {
+    "CARGO_PROFILE_RELEASE_DEBUG": "false",
+    "CARGO_PROFILE_RELEASE_OPT_LEVEL": "3"
+  },
+  "build_exit": 0,
+  "build_seconds": 13.832,
+  "binary": "/Users/0x1/Documents/htdocs/altbak.pub-purust/scratch/records-tast-opportunity-20260916/full-scalar/target/release/purust_output",
+  "binary_sha256": "8a0ea4c3dbcae39294e613a5a06a91e57eac46ec33d3d299d19fba53674fb6b9"
+}
