@@ -1,0 +1,26 @@
+--- before/Test_RBTree.go
++++ after/Test_RBTree.go
+@@ -3529,9 +3529,11 @@
+ }
+ __cell_12.Rc = 1
+ __cell_12.V0 = __scalar_6
++if __cell_12 != __let_tree_5 {
+ __cell_12.V1 = __read_7
+ __cell_12.V2 = __scalar_8
+ __cell_12.V3 = __read_9
++}
+ return __cell_12
+ } else {
+ if (__let_tree_5) == (nil) {
+@@ -3587,9 +3589,11 @@
+ }
+ __cell_6.Rc = 1
+ __cell_6.V0 = __scalar_0
++if __cell_6 != __arg0 {
+ __cell_6.V1 = __read_1
+ __cell_6.V2 = __scalar_2
+ __cell_6.V3 = __read_3
++}
+ return __cell_6
+ } else {
+ if (__arg0) == (nil) {
