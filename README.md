@@ -212,7 +212,7 @@ RowToList               | ~ 1.88 μs                 | ~ 2.75 μs               
 
 #### Koka
 
-Koka Benchmark          | Native |
+Koka Benchmark          | Native Koka |
 ----------------------- | ----- |
 AST Evaluation          | ~ 0 μs |
 Fibonacci               | ~ 0 μs |
