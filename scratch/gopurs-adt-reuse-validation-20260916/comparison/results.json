@@ -1,0 +1,1174 @@
+{
+  "environment": {
+    "GOGC": "800",
+    "GOWORK": "off",
+    "GOMAXPROCS": null
+  },
+  "suite_protocol": "3 processes per variant, rotated order; 3 global warmups, 3/test, best of 10; row medians",
+  "probe_protocol": "3 processes per variant, rotated order; 3 warmups, 5 calls/process, GC before each call outside timer",
+  "suite_runs": [
+    {
+      "key": "before-pure",
+      "repetition": 1,
+      "started_utc": "2026-09-16T21:34:06.414420+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/before-pure/benchmark",
+      "binary_sha256": "b42f6c0a1ec207a07234249f0ef2c53803c4aa549e13a38e82266adfe8701e67",
+      "validated": {
+        "mode": "pure",
+        "labels": [
+          "AST Evaluation:",
+          "Fibonacci:",
+          "List Processing (900 elements):",
+          "Tail Call Optimization (100k calls):",
+          "Deep Record Updates (10k iterations):",
+          "Ackermann (3, 4):",
+          "Church Numerals (100k Closure Applications):",
+          "Prime Sieve (sum primes up to 500):",
+          "Red-Black Tree (100k Worst-Case Insertions):",
+          "Polymorphism (10M Type Class Dict Lookups):",
+          "State Monad (1.2k Binds, 60 Stack Depth):",
+          "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+          "Array Processing (900 elements):",
+          "RowToList (Keys Count):"
+        ],
+        "values": [
+          "7",
+          "55",
+          "202950",
+          "100000",
+          "20000",
+          "125",
+          "100000",
+          "21536",
+          "22",
+          "10000000",
+          "1200",
+          "1000000",
+          "202950",
+          "5"
+        ],
+        "times_us": [
+          0.58,
+          0.5,
+          14.0,
+          52.5,
+          6.38,
+          19.29,
+          456.62,
+          93.58,
+          23860.79,
+          2228.5,
+          121.5,
+          228.96,
+          17.17,
+          0.5
+        ],
+        "total_ms": 27.1,
+        "sum_displayed_lines_ms": 27.10087,
+        "values_validated": true,
+        "timer_unit": "microseconds"
+      }
+    },
+    {
+      "key": "after-pure",
+      "repetition": 1,
+      "started_utc": "2026-09-16T21:34:06.872582+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/after-pure/benchmark",
+      "binary_sha256": "f022fd7ef07875367f29ebd1ce1752c4d40d9fefcc182481e7659f2f45d1b33c",
+      "validated": {
+        "mode": "pure",
+        "labels": [
+          "AST Evaluation:",
+          "Fibonacci:",
+          "List Processing (900 elements):",
+          "Tail Call Optimization (100k calls):",
+          "Deep Record Updates (10k iterations):",
+          "Ackermann (3, 4):",
+          "Church Numerals (100k Closure Applications):",
+          "Prime Sieve (sum primes up to 500):",
+          "Red-Black Tree (100k Worst-Case Insertions):",
+          "Polymorphism (10M Type Class Dict Lookups):",
+          "State Monad (1.2k Binds, 60 Stack Depth):",
+          "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+          "Array Processing (900 elements):",
+          "RowToList (Keys Count):"
+        ],
+        "values": [
+          "7",
+          "55",
+          "202950",
+          "100000",
+          "20000",
+          "125",
+          "100000",
+          "21536",
+          "22",
+          "10000000",
+          "1200",
+          "1000000",
+          "202950",
+          "5"
+        ],
+        "times_us": [
+          0.75,
+          0.54,
+          18.83,
+          57.88,
+          7.0,
+          17.17,
+          465.25,
+          88.5,
+          9922.17,
+          2247.08,
+          131.38,
+          229.04,
+          14.58,
+          0.58
+        ],
+        "total_ms": 13.2,
+        "sum_displayed_lines_ms": 13.20075,
+        "values_validated": true,
+        "timer_unit": "microseconds"
+      }
+    },
+    {
+      "key": "after-fficc",
+      "repetition": 1,
+      "started_utc": "2026-09-16T21:34:07.505344+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/after-fficc/benchmark",
+      "binary_sha256": "f48adfd3a9ab93a0590c8fadccb1aa443ede3d007a0365379a745f1d560919aa",
+      "validated": {
+        "mode": "fficc",
+        "labels": [
+          "AST Evaluation FFICheatcode:",
+          "Fibonacci FFICheatcode:",
+          "List Processing FFICheatcode (900 elements):",
+          "Tail Call Optimization FFICheatcode (100k calls):",
+          "Deep Record Updates FFICheatcode (10k iterations):",
+          "Ackermann FFICheatcode (3, 4):",
+          "Church Numerals FFICheatcode (100k Closure Applications):",
+          "Prime Sieve FFICheatcode (sum primes up to 500):",
+          "Red-Black Tree FFICheatcode (100k Worst-Case Insertions):",
+          "Polymorphism FFICheatcode (10M Type Class Dict Lookups):",
+          "State Monad FFICheatcode (1.2k Binds, 60 Stack Depth):",
+          "Lazy Evaluation FFICheatcode (1M Thunks Forced, 1k Depth):",
+          "Array Processing FFICheatcode (900 elements):",
+          "RowToList FFICheatcode (Keys Count):"
+        ],
+        "values": [
+          "7",
+          "55",
+          "202950",
+          "100000",
+          "20000",
+          "125",
+          "100000",
+          "21536",
+          "22",
+          "10000000",
+          "1200",
+          "1000000",
+          "202950",
+          "5"
+        ],
+        "times_us": [
+          1.29,
+          0.58,
+          0.96,
+          42.17,
+          16.33,
+          25.38,
+          29.21,
+          1.04,
+          8891.42,
+          2235.21,
+          0.67,
+          0.54,
+          0.88,
+          0.38
+        ],
+        "total_ms": 11.25,
+        "sum_displayed_lines_ms": 11.24606,
+        "values_validated": true,
+        "timer_unit": "microseconds"
+      }
+    },
+    {
+      "key": "after-pure",
+      "repetition": 2,
+      "started_utc": "2026-09-16T21:34:08.024158+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/after-pure/benchmark",
+      "binary_sha256": "f022fd7ef07875367f29ebd1ce1752c4d40d9fefcc182481e7659f2f45d1b33c",
+      "validated": {
+        "mode": "pure",
+        "labels": [
+          "AST Evaluation:",
+          "Fibonacci:",
+          "List Processing (900 elements):",
+          "Tail Call Optimization (100k calls):",
+          "Deep Record Updates (10k iterations):",
+          "Ackermann (3, 4):",
+          "Church Numerals (100k Closure Applications):",
+          "Prime Sieve (sum primes up to 500):",
+          "Red-Black Tree (100k Worst-Case Insertions):",
+          "Polymorphism (10M Type Class Dict Lookups):",
+          "State Monad (1.2k Binds, 60 Stack Depth):",
+          "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+          "Array Processing (900 elements):",
+          "RowToList (Keys Count):"
+        ],
+        "values": [
+          "7",
+          "55",
+          "202950",
+          "100000",
+          "20000",
+          "125",
+          "100000",
+          "21536",
+          "22",
+          "10000000",
+          "1200",
+          "1000000",
+          "202950",
+          "5"
+        ],
+        "times_us": [
+          0.79,
+          0.54,
+          16.79,
+          51.38,
+          6.92,
+          15.29,
+          464.21,
+          83.42,
+          10098.21,
+          2233.71,
+          113.83,
+          228.96,
+          14.62,
+          0.5
+        ],
+        "total_ms": 13.33,
+        "sum_displayed_lines_ms": 13.329169999999998,
+        "values_validated": true,
+        "timer_unit": "microseconds"
+      }
+    },
+    {
+      "key": "after-fficc",
+      "repetition": 2,
+      "started_utc": "2026-09-16T21:34:08.255993+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/after-fficc/benchmark",
+      "binary_sha256": "f48adfd3a9ab93a0590c8fadccb1aa443ede3d007a0365379a745f1d560919aa",
+      "validated": {
+        "mode": "fficc",
+        "labels": [
+          "AST Evaluation FFICheatcode:",
+          "Fibonacci FFICheatcode:",
+          "List Processing FFICheatcode (900 elements):",
+          "Tail Call Optimization FFICheatcode (100k calls):",
+          "Deep Record Updates FFICheatcode (10k iterations):",
+          "Ackermann FFICheatcode (3, 4):",
+          "Church Numerals FFICheatcode (100k Closure Applications):",
+          "Prime Sieve FFICheatcode (sum primes up to 500):",
+          "Red-Black Tree FFICheatcode (100k Worst-Case Insertions):",
+          "Polymorphism FFICheatcode (10M Type Class Dict Lookups):",
+          "State Monad FFICheatcode (1.2k Binds, 60 Stack Depth):",
+          "Lazy Evaluation FFICheatcode (1M Thunks Forced, 1k Depth):",
+          "Array Processing FFICheatcode (900 elements):",
+          "RowToList FFICheatcode (Keys Count):"
+        ],
+        "values": [
+          "7",
+          "55",
+          "202950",
+          "100000",
+          "20000",
+          "125",
+          "100000",
+          "21536",
+          "22",
+          "10000000",
+          "1200",
+          "1000000",
+          "202950",
+          "5"
+        ],
+        "times_us": [
+          0.83,
+          0.54,
+          0.92,
+          32.38,
+          16.12,
+          19.5,
+          22.46,
+          0.83,
+          8922.21,
+          2253.21,
+          0.75,
+          0.54,
+          0.88,
+          0.29
+        ],
+        "total_ms": 11.27,
+        "sum_displayed_lines_ms": 11.271460000000001,
+        "values_validated": true,
+        "timer_unit": "microseconds"
+      }
+    },
+    {
+      "key": "before-pure",
+      "repetition": 2,
+      "started_utc": "2026-09-16T21:34:08.452699+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/before-pure/benchmark",
+      "binary_sha256": "b42f6c0a1ec207a07234249f0ef2c53803c4aa549e13a38e82266adfe8701e67",
+      "validated": {
+        "mode": "pure",
+        "labels": [
+          "AST Evaluation:",
+          "Fibonacci:",
+          "List Processing (900 elements):",
+          "Tail Call Optimization (100k calls):",
+          "Deep Record Updates (10k iterations):",
+          "Ackermann (3, 4):",
+          "Church Numerals (100k Closure Applications):",
+          "Prime Sieve (sum primes up to 500):",
+          "Red-Black Tree (100k Worst-Case Insertions):",
+          "Polymorphism (10M Type Class Dict Lookups):",
+          "State Monad (1.2k Binds, 60 Stack Depth):",
+          "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+          "Array Processing (900 elements):",
+          "RowToList (Keys Count):"
+        ],
+        "values": [
+          "7",
+          "55",
+          "202950",
+          "100000",
+          "20000",
+          "125",
+          "100000",
+          "21536",
+          "22",
+          "10000000",
+          "1200",
+          "1000000",
+          "202950",
+          "5"
+        ],
+        "times_us": [
+          1.42,
+          1.29,
+          16.08,
+          51.5,
+          6.21,
+          15.08,
+          425.75,
+          92.62,
+          24848.29,
+          2294.83,
+          139.92,
+          228.96,
+          17.42,
+          0.38
+        ],
+        "total_ms": 28.14,
+        "sum_displayed_lines_ms": 28.139749999999996,
+        "values_validated": true,
+        "timer_unit": "microseconds"
+      }
+    },
+    {
+      "key": "after-fficc",
+      "repetition": 3,
+      "started_utc": "2026-09-16T21:34:08.928990+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/after-fficc/benchmark",
+      "binary_sha256": "f48adfd3a9ab93a0590c8fadccb1aa443ede3d007a0365379a745f1d560919aa",
+      "validated": {
+        "mode": "fficc",
+        "labels": [
+          "AST Evaluation FFICheatcode:",
+          "Fibonacci FFICheatcode:",
+          "List Processing FFICheatcode (900 elements):",
+          "Tail Call Optimization FFICheatcode (100k calls):",
+          "Deep Record Updates FFICheatcode (10k iterations):",
+          "Ackermann FFICheatcode (3, 4):",
+          "Church Numerals FFICheatcode (100k Closure Applications):",
+          "Prime Sieve FFICheatcode (sum primes up to 500):",
+          "Red-Black Tree FFICheatcode (100k Worst-Case Insertions):",
+          "Polymorphism FFICheatcode (10M Type Class Dict Lookups):",
+          "State Monad FFICheatcode (1.2k Binds, 60 Stack Depth):",
+          "Lazy Evaluation FFICheatcode (1M Thunks Forced, 1k Depth):",
+          "Array Processing FFICheatcode (900 elements):",
+          "RowToList FFICheatcode (Keys Count):"
+        ],
+        "values": [
+          "7",
+          "55",
+          "202950",
+          "100000",
+          "20000",
+          "125",
+          "100000",
+          "21536",
+          "22",
+          "10000000",
+          "1200",
+          "1000000",
+          "202950",
+          "5"
+        ],
+        "times_us": [
+          1.04,
+          0.5,
+          0.83,
+          33.08,
+          16.54,
+          19.92,
+          22.96,
+          0.83,
+          9032.62,
+          2292.04,
+          0.83,
+          0.58,
+          1.0,
+          0.29
+        ],
+        "total_ms": 11.42,
+        "sum_displayed_lines_ms": 11.423060000000001,
+        "values_validated": true,
+        "timer_unit": "microseconds"
+      }
+    },
+    {
+      "key": "before-pure",
+      "repetition": 3,
+      "started_utc": "2026-09-16T21:34:09.134178+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/before-pure/benchmark",
+      "binary_sha256": "b42f6c0a1ec207a07234249f0ef2c53803c4aa549e13a38e82266adfe8701e67",
+      "validated": {
+        "mode": "pure",
+        "labels": [
+          "AST Evaluation:",
+          "Fibonacci:",
+          "List Processing (900 elements):",
+          "Tail Call Optimization (100k calls):",
+          "Deep Record Updates (10k iterations):",
+          "Ackermann (3, 4):",
+          "Church Numerals (100k Closure Applications):",
+          "Prime Sieve (sum primes up to 500):",
+          "Red-Black Tree (100k Worst-Case Insertions):",
+          "Polymorphism (10M Type Class Dict Lookups):",
+          "State Monad (1.2k Binds, 60 Stack Depth):",
+          "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+          "Array Processing (900 elements):",
+          "RowToList (Keys Count):"
+        ],
+        "values": [
+          "7",
+          "55",
+          "202950",
+          "100000",
+          "20000",
+          "125",
+          "100000",
+          "21536",
+          "22",
+          "10000000",
+          "1200",
+          "1000000",
+          "202950",
+          "5"
+        ],
+        "times_us": [
+          0.54,
+          0.5,
+          16.46,
+          59.0,
+          7.12,
+          17.42,
+          483.46,
+          72.08,
+          24199.12,
+          2285.83,
+          137.54,
+          228.96,
+          21.42,
+          0.5
+        ],
+        "total_ms": 27.53,
+        "sum_displayed_lines_ms": 27.529949999999996,
+        "values_validated": true,
+        "timer_unit": "microseconds"
+      }
+    },
+    {
+      "key": "after-pure",
+      "repetition": 3,
+      "started_utc": "2026-09-16T21:34:09.599464+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/after-pure/benchmark",
+      "binary_sha256": "f022fd7ef07875367f29ebd1ce1752c4d40d9fefcc182481e7659f2f45d1b33c",
+      "validated": {
+        "mode": "pure",
+        "labels": [
+          "AST Evaluation:",
+          "Fibonacci:",
+          "List Processing (900 elements):",
+          "Tail Call Optimization (100k calls):",
+          "Deep Record Updates (10k iterations):",
+          "Ackermann (3, 4):",
+          "Church Numerals (100k Closure Applications):",
+          "Prime Sieve (sum primes up to 500):",
+          "Red-Black Tree (100k Worst-Case Insertions):",
+          "Polymorphism (10M Type Class Dict Lookups):",
+          "State Monad (1.2k Binds, 60 Stack Depth):",
+          "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+          "Array Processing (900 elements):",
+          "RowToList (Keys Count):"
+        ],
+        "values": [
+          "7",
+          "55",
+          "202950",
+          "100000",
+          "20000",
+          "125",
+          "100000",
+          "21536",
+          "22",
+          "10000000",
+          "1200",
+          "1000000",
+          "202950",
+          "5"
+        ],
+        "times_us": [
+          0.75,
+          0.54,
+          18.46,
+          58.92,
+          6.29,
+          17.38,
+          425.25,
+          88.5,
+          9949.29,
+          2257.92,
+          124.88,
+          229.88,
+          22.42,
+          0.62
+        ],
+        "total_ms": 13.2,
+        "sum_displayed_lines_ms": 13.2011,
+        "values_validated": true,
+        "timer_unit": "microseconds"
+      }
+    }
+  ],
+  "probe_runs": [
+    {
+      "key": "probe-before-owned-pure",
+      "repetition": 1,
+      "started_utc": "2026-09-16T21:34:09.831839+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/probe-before-owned/probe",
+      "binary_sha256": "696864f6840b968ef8f1a917e4fb2cccea9a08a165407212e677540ae06d43db",
+      "samples": [
+        {
+          "mode": "pure",
+          "iteration": 1,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 23554917,
+          "allocated_bytes": 79486480,
+          "allocations": 2483951
+        },
+        {
+          "mode": "pure",
+          "iteration": 2,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 23970458,
+          "allocated_bytes": 79486448,
+          "allocations": 2483949
+        },
+        {
+          "mode": "pure",
+          "iteration": 3,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 23496834,
+          "allocated_bytes": 79486464,
+          "allocations": 2483950
+        },
+        {
+          "mode": "pure",
+          "iteration": 4,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 22508958,
+          "allocated_bytes": 79486336,
+          "allocations": 2483948
+        },
+        {
+          "mode": "pure",
+          "iteration": 5,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 27798625,
+          "allocated_bytes": 79486448,
+          "allocations": 2483949
+        }
+      ]
+    },
+    {
+      "key": "probe-after-owned-pure",
+      "repetition": 1,
+      "started_utc": "2026-09-16T21:34:10.390522+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/probe-after-owned/probe",
+      "binary_sha256": "f4f965220e938730e5738495ed274304dd87e82b5796603b621fe46ca701760b",
+      "samples": [
+        {
+          "mode": "pure",
+          "iteration": 1,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 10458916,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "pure",
+          "iteration": 2,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 10308708,
+          "allocated_bytes": 3200016,
+          "allocations": 100001
+        },
+        {
+          "mode": "pure",
+          "iteration": 3,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 10169917,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "pure",
+          "iteration": 4,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 10353417,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "pure",
+          "iteration": 5,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 10236292,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        }
+      ]
+    },
+    {
+      "key": "probe-after-owned-fficc",
+      "repetition": 1,
+      "started_utc": "2026-09-16T21:34:10.793539+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/probe-after-owned/probe",
+      "binary_sha256": "f4f965220e938730e5738495ed274304dd87e82b5796603b621fe46ca701760b",
+      "samples": [
+        {
+          "mode": "fficc",
+          "iteration": 1,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 8911583,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "fficc",
+          "iteration": 2,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 8805375,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "fficc",
+          "iteration": 3,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 8860250,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "fficc",
+          "iteration": 4,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 8652250,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "fficc",
+          "iteration": 5,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 8779417,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        }
+      ]
+    },
+    {
+      "key": "probe-after-owned-pure",
+      "repetition": 2,
+      "started_utc": "2026-09-16T21:34:10.877550+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/probe-after-owned/probe",
+      "binary_sha256": "f4f965220e938730e5738495ed274304dd87e82b5796603b621fe46ca701760b",
+      "samples": [
+        {
+          "mode": "pure",
+          "iteration": 1,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9836500,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "pure",
+          "iteration": 2,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9455166,
+          "allocated_bytes": 3200016,
+          "allocations": 100001
+        },
+        {
+          "mode": "pure",
+          "iteration": 3,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9545000,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "pure",
+          "iteration": 4,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9639041,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "pure",
+          "iteration": 5,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9920625,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        }
+      ]
+    },
+    {
+      "key": "probe-after-owned-fficc",
+      "repetition": 2,
+      "started_utc": "2026-09-16T21:34:10.967164+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/probe-after-owned/probe",
+      "binary_sha256": "f4f965220e938730e5738495ed274304dd87e82b5796603b621fe46ca701760b",
+      "samples": [
+        {
+          "mode": "fficc",
+          "iteration": 1,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9003083,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "fficc",
+          "iteration": 2,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 8644209,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "fficc",
+          "iteration": 3,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 8782583,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "fficc",
+          "iteration": 4,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 8784084,
+          "allocated_bytes": 3200016,
+          "allocations": 100001
+        },
+        {
+          "mode": "fficc",
+          "iteration": 5,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9127000,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        }
+      ]
+    },
+    {
+      "key": "probe-before-owned-pure",
+      "repetition": 2,
+      "started_utc": "2026-09-16T21:34:11.049479+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/probe-before-owned/probe",
+      "binary_sha256": "696864f6840b968ef8f1a917e4fb2cccea9a08a165407212e677540ae06d43db",
+      "samples": [
+        {
+          "mode": "pure",
+          "iteration": 1,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 22265417,
+          "allocated_bytes": 79486352,
+          "allocations": 2483949
+        },
+        {
+          "mode": "pure",
+          "iteration": 2,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 22917458,
+          "allocated_bytes": 79491656,
+          "allocations": 2483954
+        },
+        {
+          "mode": "pure",
+          "iteration": 3,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 23418416,
+          "allocated_bytes": 79486336,
+          "allocations": 2483948
+        },
+        {
+          "mode": "pure",
+          "iteration": 4,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 22949458,
+          "allocated_bytes": 79486336,
+          "allocations": 2483948
+        },
+        {
+          "mode": "pure",
+          "iteration": 5,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 23227625,
+          "allocated_bytes": 79486352,
+          "allocations": 2483949
+        }
+      ]
+    },
+    {
+      "key": "probe-after-owned-fficc",
+      "repetition": 3,
+      "started_utc": "2026-09-16T21:34:11.259089+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/probe-after-owned/probe",
+      "binary_sha256": "f4f965220e938730e5738495ed274304dd87e82b5796603b621fe46ca701760b",
+      "samples": [
+        {
+          "mode": "fficc",
+          "iteration": 1,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 8770792,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "fficc",
+          "iteration": 2,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9107708,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "fficc",
+          "iteration": 3,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 8989042,
+          "allocated_bytes": 3200016,
+          "allocations": 100001
+        },
+        {
+          "mode": "fficc",
+          "iteration": 4,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9195500,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "fficc",
+          "iteration": 5,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 8861416,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        }
+      ]
+    },
+    {
+      "key": "probe-before-owned-pure",
+      "repetition": 3,
+      "started_utc": "2026-09-16T21:34:11.344238+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/probe-before-owned/probe",
+      "binary_sha256": "696864f6840b968ef8f1a917e4fb2cccea9a08a165407212e677540ae06d43db",
+      "samples": [
+        {
+          "mode": "pure",
+          "iteration": 1,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 22988833,
+          "allocated_bytes": 79486368,
+          "allocations": 2483950
+        },
+        {
+          "mode": "pure",
+          "iteration": 2,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 23154625,
+          "allocated_bytes": 79491656,
+          "allocations": 2483954
+        },
+        {
+          "mode": "pure",
+          "iteration": 3,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 22722292,
+          "allocated_bytes": 79486336,
+          "allocations": 2483948
+        },
+        {
+          "mode": "pure",
+          "iteration": 4,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 22808042,
+          "allocated_bytes": 79486352,
+          "allocations": 2483949
+        },
+        {
+          "mode": "pure",
+          "iteration": 5,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 23179291,
+          "allocated_bytes": 79486336,
+          "allocations": 2483948
+        }
+      ]
+    },
+    {
+      "key": "probe-after-owned-pure",
+      "repetition": 3,
+      "started_utc": "2026-09-16T21:34:11.553084+00:00",
+      "binary": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/probe-after-owned/probe",
+      "binary_sha256": "f4f965220e938730e5738495ed274304dd87e82b5796603b621fe46ca701760b",
+      "samples": [
+        {
+          "mode": "pure",
+          "iteration": 1,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 10165833,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "pure",
+          "iteration": 2,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9775292,
+          "allocated_bytes": 3200016,
+          "allocations": 100001
+        },
+        {
+          "mode": "pure",
+          "iteration": 3,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 10068500,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "pure",
+          "iteration": 4,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 10189375,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        },
+        {
+          "mode": "pure",
+          "iteration": 5,
+          "input": 100000,
+          "depth": 22,
+          "nanoseconds": 9983291,
+          "allocated_bytes": 3200000,
+          "allocations": 100000
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "suites": {
+      "before-pure": {
+        "times_us": [
+          0.58,
+          0.5,
+          16.08,
+          52.5,
+          6.38,
+          17.42,
+          456.62,
+          92.62,
+          24199.12,
+          2285.83,
+          137.54,
+          228.96,
+          17.42,
+          0.5
+        ],
+        "sum_row_medians_ms": 27.51207,
+        "process_totals_ms": [
+          27.10087,
+          28.139749999999996,
+          27.529949999999996
+        ],
+        "rbtree_us": 24199.12
+      },
+      "after-pure": {
+        "times_us": [
+          0.75,
+          0.54,
+          18.46,
+          57.88,
+          6.92,
+          17.17,
+          464.21,
+          88.5,
+          9949.29,
+          2247.08,
+          124.88,
+          229.04,
+          14.62,
+          0.58
+        ],
+        "sum_row_medians_ms": 13.219920000000002,
+        "process_totals_ms": [
+          13.20075,
+          13.329169999999998,
+          13.2011
+        ],
+        "rbtree_us": 9949.29
+      },
+      "after-fficc": {
+        "times_us": [
+          1.04,
+          0.54,
+          0.92,
+          33.08,
+          16.33,
+          19.92,
+          22.96,
+          0.83,
+          8922.21,
+          2253.21,
+          0.75,
+          0.54,
+          0.88,
+          0.29
+        ],
+        "sum_row_medians_ms": 11.273500000000002,
+        "process_totals_ms": [
+          11.24606,
+          11.271460000000001,
+          11.423060000000001
+        ],
+        "rbtree_us": 8922.21
+      }
+    },
+    "probes": {
+      "probe-before-owned-pure": {
+        "nanoseconds": 23154625,
+        "allocated_bytes": 79486352,
+        "allocations": 2483949,
+        "depth": 22,
+        "sample_count": 15,
+        "entrypoints": {
+          "buildFresh": "Call_Test_RBTree_buildTree",
+          "insertFresh": "Call_Test_RBTree_insert",
+          "precondition": "buildFresh starts from nil; insertFresh accepts only exclusively constructed, unretained nodes"
+        }
+      },
+      "probe-after-owned-pure": {
+        "nanoseconds": 10068500,
+        "allocated_bytes": 3200000,
+        "allocations": 100000,
+        "depth": 22,
+        "sample_count": 15,
+        "entrypoints": {
+          "buildFresh": "Call_Test_RBTree___gopurs_owned_buildTree_0",
+          "insertFresh": "Call_Test_RBTree___gopurs_owned_insert_0",
+          "precondition": "buildFresh starts from nil; insertFresh accepts only exclusively constructed, unretained nodes"
+        }
+      },
+      "probe-after-owned-fficc": {
+        "nanoseconds": 8860250,
+        "allocated_bytes": 3200000,
+        "allocations": 100000,
+        "depth": 22,
+        "sample_count": 15,
+        "entrypoints": {
+          "buildFresh": "Call_Test_RBTree___gopurs_owned_buildTree_0",
+          "insertFresh": "Call_Test_RBTree___gopurs_owned_insert_0",
+          "precondition": "buildFresh starts from nil; insertFresh accepts only exclusively constructed, unretained nodes"
+        }
+      }
+    }
+  }
+}

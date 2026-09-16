@@ -1,0 +1,20 @@
+{
+  "result": "PASS: Done; 1 fixture, 0 failed",
+  "workspace": "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/gopurs-tests-AnfPkd/0-OwnedTrees",
+  "source": "gopurs/gopurs/tests/passing/OwnedTrees.purs",
+  "command": "./bin/test OwnedTrees --update-snapshots --keep-workspace",
+  "backend_rebuilt": false,
+  "go_flags": "-pgo=off",
+  "hashes": {
+    "Main.go": "f1eb4c8e4b9f72ae2e49e42fd6f7f910bc3da2d911b7ade07dbebb5ebb857e15",
+    "corefn.json": "023797bc56ca03b239e080ffbfb96726114cb80325911377f5009d47dae2e94c",
+    "gopurs_main": "21c5df6510b15cd61c805b87ad36d9ca3566323d7a964c600b71e272d1dffd91",
+    "logs/execute.log": "eff2906dc8f6d10da753f78c53bbb4c2fc0a1b4bc925c1ec535b5f42902a240a",
+    "logs/format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/generate-go.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/go-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/go-dependencies.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/purescript.log": "126088e43b874e865207b5b0108083474158fa09f55c0b5453d80fc93a09a576",
+    "src/Main.purs": "10819092ea197f75f3a36d50fcdbeffc32ea6788c35a9bd52a2009559361eef4"
+  }
+}

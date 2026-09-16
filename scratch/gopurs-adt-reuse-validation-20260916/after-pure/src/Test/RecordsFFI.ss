@@ -1,0 +1,16 @@
+(library (Test.RecordsFFI foreign)
+  (export runRecordsFFI)
+  (import (chezscheme))
+  (define-record-type outer (fields a b))
+  (define-record-type middle (fields c d))
+  (define-record-type inner (fields e f))
+  (define (update n r)
+    (if (= n 0) r
+        (let* ([b (outer-b r)] [d (middle-d b)])
+          (update (- n 1)
+            (make-outer (+ (outer-a r) 1)
+              (make-middle (+ (middle-c b) 2)
+                (make-inner (+ (inner-e d) 3) (+ (inner-f d) (modulo n 5)))))))))
+  (define (runRecordsFFI n)
+    (inner-f (middle-d (outer-b
+      (update n (make-outer 0 (make-middle 0 (make-inner 0 0)))))))))

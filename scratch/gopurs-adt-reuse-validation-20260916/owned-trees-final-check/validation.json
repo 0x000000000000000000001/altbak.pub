@@ -1,0 +1,7 @@
+{
+  "result": "PASS: existing snapshot identical, compile and execution Done; 1 fixture, 0 failed",
+  "command": "./bin/test OwnedTrees --keep-workspace",
+  "snapshot_updated": false,
+  "workspace": "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/gopurs-tests-fNa63r/0-OwnedTrees",
+  "snapshot_sha256": "b3f3db76286b4c943a95b897ae03034b04077c1f76b0467689589fc50ca46fb4"
+}

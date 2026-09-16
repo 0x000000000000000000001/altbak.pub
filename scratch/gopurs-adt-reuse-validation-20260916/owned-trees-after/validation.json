@@ -1,0 +1,39 @@
+{
+  "result": "PASS: Done; 1 fixture, 0 failed",
+  "workspace": "/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/gopurs-tests-ptxSEI/0-OwnedTrees",
+  "command": "./bin/test OwnedTrees --update-snapshots --keep-workspace",
+  "backend_rebuilt_by_fixture": false,
+  "go_flags": "-pgo=off",
+  "changed_existing_functions": [
+    "Get_Main_main",
+    "Call_Main_three"
+  ],
+  "added_functions": [
+    "Call_Main___gopurs_owned_blacken_0_consume",
+    "Call_Main___gopurs_owned_blacken_0",
+    "Call_Main___gopurs_owned_build_0_consume",
+    "Call_Main___gopurs_owned_build_0",
+    "Call_Main___gopurs_owned_descend_0_consume",
+    "Call_Main___gopurs_owned_descend_0",
+    "Call_Main___gopurs_owned_graftAndPut_0_consume",
+    "Call_Main___gopurs_owned_graftAndPut_0",
+    "Call_Main___gopurs_owned_leftChild_0_consume",
+    "Call_Main___gopurs_owned_leftChild_0",
+    "Call_Main___gopurs_owned_put_0_consume",
+    "Call_Main___gopurs_owned_put_0",
+    "Call_Main___gopurs_owned_rebalance_0_consume",
+    "Call_Main___gopurs_owned_rebalance_0"
+  ],
+  "hashes": {
+    "Main.go": "b3f3db76286b4c943a95b897ae03034b04077c1f76b0467689589fc50ca46fb4",
+    "corefn.json": "023797bc56ca03b239e080ffbfb96726114cb80325911377f5009d47dae2e94c",
+    "gopurs_main": "6acd3e18dc925484039177f00f00022c6c7942cc4053cb26b08a0fd7283fdc21",
+    "logs/execute.log": "eff2906dc8f6d10da753f78c53bbb4c2fc0a1b4bc925c1ec535b5f42902a240a",
+    "logs/format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/generate-go.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/go-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/go-dependencies.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/purescript.log": "1e87076d47e26fac3349bbf63afc5e887f84c1811878e13c123e29426c84ad09",
+    "src/Main.purs": "10819092ea197f75f3a36d50fcdbeffc32ea6788c35a9bd52a2009559361eef4"
+  }
+}

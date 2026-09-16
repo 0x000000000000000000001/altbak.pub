@@ -1,0 +1,10 @@
+(library (Test.PolymorphismFFI foreign)
+  (export runPolymorphismFFI)
+  (import (chezscheme))
+  (define-record-type dictionary (fields mempty mappend))
+  (define (poly-loop dict n acc)
+    (if (= n 0) acc
+        (poly-loop dict (- n 1)
+          (((dictionary-mappend dict) acc) (dictionary-mempty dict)))))
+  (define (runPolymorphismFFI n)
+    (poly-loop (make-dictionary 1 (lambda (x) (lambda (y) (+ x y)))) n 0)))

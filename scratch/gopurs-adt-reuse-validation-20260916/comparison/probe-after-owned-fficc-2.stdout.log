@@ -1,0 +1,5 @@
+{"mode":"fficc","iteration":1,"input":100000,"depth":22,"nanoseconds":9003083,"allocated_bytes":3200000,"allocations":100000}
+{"mode":"fficc","iteration":2,"input":100000,"depth":22,"nanoseconds":8644209,"allocated_bytes":3200000,"allocations":100000}
+{"mode":"fficc","iteration":3,"input":100000,"depth":22,"nanoseconds":8782583,"allocated_bytes":3200000,"allocations":100000}
+{"mode":"fficc","iteration":4,"input":100000,"depth":22,"nanoseconds":8784084,"allocated_bytes":3200016,"allocations":100001}
+{"mode":"fficc","iteration":5,"input":100000,"depth":22,"nanoseconds":9127000,"allocated_bytes":3200000,"allocations":100000}

@@ -1,0 +1,65 @@
+package:
+  name: ps-go-test
+  dependencies:
+    - aff
+    - console
+    - effect
+    - prelude
+    - datetime
+    - strings
+    - arrays
+    - partial
+    - st
+    - maybe
+    - either
+    - now
+    - lazy
+workspace:
+  packageSet:
+    registry: 77.7.0
+  extraPackages:
+    prelude:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-prelude"
+    effect:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-effect"
+    console:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-console"
+    aff:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-aff"
+    now:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-now"
+    datetime:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-datetime"
+    exceptions:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-exceptions"
+    foldable-traversable:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-foldable-traversable"
+    st:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-st"
+    refs:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-refs"
+    unsafe-coerce:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-unsafe-coerce"
+    functions:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-functions"
+    partial:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-partial"
+    arrays:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-arrays"
+    strings:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-strings"
+    integers:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-integers"
+    enums:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-enums"
+    foreign-object:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-foreign-object"
+    numbers:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-numbers"
+    record:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-record"
+    assert:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-assert"
+    lazy:
+      path: "/Users/0x1/Documents/htdocs/gopurs/gopurs-lazy"
+

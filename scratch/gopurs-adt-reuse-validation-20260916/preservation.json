@@ -1,0 +1,30 @@
+{
+  "scope": "Existing Go artifacts, preserved before ADT reuse work; no compilation",
+  "toolchain": "go version go1.27.0 darwin/arm64",
+  "modes": {
+    "pure": {
+      "origin": "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure",
+      "binary_sha256": "b42f6c0a1ec207a07234249f0ef2c53803c4aa549e13a38e82266adfe8701e67",
+      "go_file_count": 388,
+      "recorded_profile": {
+        "GOGC": "800",
+        "pgo": false,
+        "GOFLAGS": "",
+        "GOEXPERIMENT": ""
+      },
+      "recorded_total_ms": 25.703000000000003
+    },
+    "fficc": {
+      "origin": "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/fficc",
+      "binary_sha256": "4eba43bab3f14facacee9ad43ebafe410914488adf5f18fea2fed2e0713c9e99",
+      "go_file_count": 388,
+      "recorded_profile": {
+        "GOGC": "800",
+        "pgo": false,
+        "GOFLAGS": "",
+        "GOEXPERIMENT": ""
+      },
+      "recorded_total_ms": 11.093910000000003
+    }
+  }
+}

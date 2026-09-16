@@ -1,0 +1,14 @@
+{
+  "pure": {
+    "nanoseconds": 21786375,
+    "allocated_bytes": 79486448,
+    "allocations": 2483949,
+    "depth": 22
+  },
+  "fficc": {
+    "nanoseconds": 8510875,
+    "allocated_bytes": 3200000,
+    "allocations": 100000,
+    "depth": 22
+  }
+}

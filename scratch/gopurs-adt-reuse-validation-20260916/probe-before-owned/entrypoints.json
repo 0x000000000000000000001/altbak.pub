@@ -1,0 +1,5 @@
+{
+  "buildFresh": "Call_Test_RBTree_buildTree",
+  "insertFresh": "Call_Test_RBTree_insert",
+  "precondition": "buildFresh starts from nil; insertFresh accepts only exclusively constructed, unretained nodes"
+}

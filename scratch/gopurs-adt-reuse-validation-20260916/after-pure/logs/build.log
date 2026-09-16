@@ -1,0 +1,1 @@
+["go", "build", "-pgo=off", "-o", "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/after-pure/benchmark", "./main"]
