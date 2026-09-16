@@ -1,0 +1,10 @@
+[package]
+name = "Purs_Data_Array_ST_Partial"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+purust_core = { path = "../purust_core" }
+perceus_ptr = { path = "../perceus_ptr" }
+fancy-regex = "0.13"
+Purs_Control_Monad_ST_Uncurried = { path = "../Purs_Control_Monad_ST_Uncurried" }

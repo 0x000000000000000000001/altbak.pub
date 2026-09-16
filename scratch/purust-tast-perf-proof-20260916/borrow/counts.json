@@ -1,0 +1,96 @@
+{
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Test_RBTree/src/lib.rs",
+  "source_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+  "construction_change": "none; all functions except depth byte-identical in extracted kernels",
+  "transform": "Original depth body kept; Rc input becomes borrowed; two recursive field clones become references; public owned wrapper retains original drop boundary.",
+  "extra_fact_required": "Transitive read-only, non-retaining argument contract, no FFI/effect/reference observation invalidating borrow; final backend analysis validates after optimization.",
+  "validation": "Both: 100000 nodes/depth22/BST/red-black invariants/four rotations/weak references/200 persistent versions/exact keys/balanced logical lifetimes passed",
+  "timing": "not run by this script",
+  "counts": {
+    "baseline": {
+      "checks": {
+        "call": 68,
+        "clone": 35,
+        "drop_last": 20,
+        "drop_shared": 35,
+        "get_mut_unique": 42,
+        "get_mut_weak": 3,
+        "new": 21,
+        "unwrap_unique": 1
+      },
+      "persistent_build": {
+        "call": 3336,
+        "clone": 5808,
+        "drop_shared": 2802,
+        "get_mut_shared": 2606,
+        "get_mut_unique": 860,
+        "new": 1504,
+        "unwrap_shared": 1303
+      },
+      "persistent_depth": {
+        "call": 401,
+        "clone": 401,
+        "drop_shared": 401
+      },
+      "persistent_drop": {
+        "drop_last": 1504,
+        "drop_shared": 1703
+      },
+      "unique_build": {
+        "call": 4052879,
+        "clone": 2283976,
+        "drop_shared": 2183976,
+        "get_mut_unique": 2483932,
+        "new": 100001
+      },
+      "unique_depth_and_drop": {
+        "call": 200001,
+        "clone": 200000,
+        "drop_last": 100001,
+        "drop_shared": 300000
+      }
+    },
+    "borrow": {
+      "checks": {
+        "call": 68,
+        "clone": 35,
+        "drop_last": 20,
+        "drop_shared": 35,
+        "get_mut_unique": 42,
+        "get_mut_weak": 3,
+        "new": 21,
+        "unwrap_unique": 1
+      },
+      "persistent_build": {
+        "call": 3336,
+        "clone": 5808,
+        "drop_shared": 2802,
+        "get_mut_shared": 2606,
+        "get_mut_unique": 860,
+        "new": 1504,
+        "unwrap_shared": 1303
+      },
+      "persistent_depth": {
+        "call": 402,
+        "clone": 1,
+        "drop_shared": 1
+      },
+      "persistent_drop": {
+        "drop_last": 1504,
+        "drop_shared": 1703
+      },
+      "unique_build": {
+        "call": 4052879,
+        "clone": 2283976,
+        "drop_shared": 2183976,
+        "get_mut_unique": 2483932,
+        "new": 100001
+      },
+      "unique_depth_and_drop": {
+        "call": 200002,
+        "drop_last": 100001,
+        "drop_shared": 100000
+      }
+    }
+  }
+}

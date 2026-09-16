@@ -1,0 +1,71 @@
+{
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+  "platform": "macOS-26.1-arm64-arm-64bit",
+  "flags": [
+    "--edition=2021",
+    "-C",
+    "opt-level=3",
+    "-C",
+    "codegen-units=1"
+  ],
+  "n": 100000,
+  "warmups": 3,
+  "samples": 10,
+  "rounds": 21,
+  "seed": 16092026,
+  "timed_scope": "build descending 100k + depth + full destruction",
+  "variants": {
+    "generated": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-tast-perf-proof-20260916/borrow/kernel-baseline.rs",
+      "kernel_sha": "b7d2da1714ba487751bd80ab65cd874b6a2aa3f62c4ef080a813e379749c8685",
+      "extra_flags": [],
+      "harness_sha": "11c4b6d8a0518956c865d875a0c0e146ea7c49fd8922cf0503170a3c5a609c09",
+      "binary_sha": "27f9938e84c48a4e92f97c8325a523c70cc24293a848ad6d259bc502a9ca4745"
+    },
+    "borrow_depth": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-tast-perf-proof-20260916/borrow/kernel-borrow.rs",
+      "kernel_sha": "56b028b1ce649c1157f177663bfe5dc469bab068984d30511dd9c44d7c45cbd5",
+      "extra_flags": [],
+      "harness_sha": "b6eb81d713304741797fb50fcef3586de45473535cfdabbe79aab34773d67381",
+      "binary_sha": "d9fa3fe3b676f6af77d2d50645325e3197dc7f27e2114fff36276a97dfdae211"
+    },
+    "borrow_ins": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-tast-perf-proof-20260916/borrow/kernel-borrow-ins.rs",
+      "kernel_sha": "e09e07aaed1479ffadb5c0a57be8f6cc32bb6bce9c0ed53aa9045e20dcc590c6",
+      "extra_flags": [],
+      "harness_sha": "04d62fafac89a13b7a4b6637b1881d3833f322364364a7faa2ec9ff488ab9997",
+      "binary_sha": "6dccb150fd2a6993a516590c738b1eda68494ad661fe8836983e36821a1a2003"
+    },
+    "borrow_both": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-tast-perf-proof-20260916/borrow/kernel-borrow-ins-depth.rs",
+      "kernel_sha": "1dd9c4e1bbad8ab10870b1d98a1387aed2913c011f6be525e7c9e883cbcffdf5",
+      "extra_flags": [],
+      "harness_sha": "32bb721ef70031b691b4d3dbe2f55091d7874d65098a7f361d03031a0853e64f",
+      "binary_sha": "506bc85e494a085c0ed5406fbf1c3cef4b75f9df63303976f0ebdc911aa2b560"
+    },
+    "unique_checks": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-tast-perf-proof-20260916/unique/kernel_unique.rs",
+      "kernel_sha": "d486c4d7441aca0adcfba6b52790eb8256b6de5f811c87ed5358c94d2e02c6a3",
+      "extra_flags": [],
+      "harness_sha": "c99638e58f380f7664ae2fcf74004e90cf0cc734fb5cc020c4a897c1ea6af359",
+      "binary_sha": "212be28f6b7fe72698f78845f750e01f2cb6a1a46bdf1cde22614d70978173b0"
+    },
+    "owned_rc": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-tast-perf-proof-20260916/unique/owned/kernel.rs",
+      "kernel_sha": "d115f0755aa24d027e6c641f1a5e9f205cbbc48c97642d9699eb8634ede602e2",
+      "extra_flags": [
+        "--cfg",
+        "rc_owner"
+      ],
+      "harness_sha": "3b43ac1e3accdd46ee39700e6dc496dda4a4218b25f31354f6c9fb98b7e00bea",
+      "binary_sha": "f7880749b5af8e7d085fe0c19b25a6e1c56817767f2749de72849b44bd6c3bfe"
+    },
+    "owned_box": {
+      "kernel": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-tast-perf-proof-20260916/unique/owned/kernel.rs",
+      "kernel_sha": "d115f0755aa24d027e6c641f1a5e9f205cbbc48c97642d9699eb8634ede602e2",
+      "extra_flags": [],
+      "harness_sha": "3b43ac1e3accdd46ee39700e6dc496dda4a4218b25f31354f6c9fb98b7e00bea",
+      "binary_sha": "6ce88fbb2d3f53694f8503aa190f9bfbb8847ea8df20c5e03ff9e5865a2f9fdf"
+    }
+  }
+}

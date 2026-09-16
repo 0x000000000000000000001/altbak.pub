@@ -1,0 +1,130 @@
+/Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-crypto-hash-j4FPpT
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: reference: 
+
+Error response from daemon: container 4e862d37e0364e0238cf49803d8fc093ff40d96c3f1368af4622325ca1ba59d7 is not running
+
+
+1 !== 0
+
+    at run (file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/crypto-hash-ffi.mjs:35:10)
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/crypto-hash-ffi.mjs:121:32
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/codegen/crypto-hash-ffi.mjs (133.050042ms)
+/Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-datetime-instant-QXKjfw
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: reference: 
+
+Error response from daemon: container 4e862d37e0364e0238cf49803d8fc093ff40d96c3f1368af4622325ca1ba59d7 is not running
+
+
+1 !== 0
+
+    at run (file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/datetime-instant-ffi.mjs:35:10)
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/datetime-instant-ffi.mjs:183:32
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/codegen/datetime-instant-ffi.mjs (154.632417ms)
+/Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-object-foldm-fto22F
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: normal: 
+
+Error response from daemon: container 4e862d37e0364e0238cf49803d8fc093ff40d96c3f1368af4622325ca1ba59d7 is not running
+
+
+1 !== 0
+
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/foreign-object-foldm.mjs:114:12 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/codegen/foreign-object-foldm.mjs (130.519875ms)
+/Users/0x1/Documents/htdocs/b8x/run/bak/rust/output/purust-uuid-FRiEBP
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: reference: 
+
+Error response from daemon: container 4e862d37e0364e0238cf49803d8fc093ff40d96c3f1368af4622325ca1ba59d7 is not running
+
+
+1 !== 0
+
+    at run (file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/uuid-ffi.mjs:39:10)
+    at file:///Users/0x1/Documents/htdocs/purust/purust/tests/codegen/uuid-ffi.mjs:170:32
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.8.0
+✖ tests/codegen/uuid-ffi.mjs (129.523458ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 0
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 160.763625
+
+✖ failing tests:
+
+test at tests/codegen/crypto-hash-ffi.mjs:1:1
+✖ tests/codegen/crypto-hash-ffi.mjs (133.050042ms)
+  'test failed'
+
+test at tests/codegen/datetime-instant-ffi.mjs:1:1
+✖ tests/codegen/datetime-instant-ffi.mjs (154.632417ms)
+  'test failed'
+
+test at tests/codegen/foreign-object-foldm.mjs:1:1
+✖ tests/codegen/foreign-object-foldm.mjs (130.519875ms)
+  'test failed'
+
+test at tests/codegen/uuid-ffi.mjs:1:1
+✖ tests/codegen/uuid-ffi.mjs (129.523458ms)
+  'test failed'

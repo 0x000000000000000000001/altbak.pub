@@ -1,0 +1,86 @@
+{
+  "baseline_us": 8788.42,
+  "target_us": 4394.21,
+  "runs": [
+    {
+      "mode": "test",
+      "labels": [
+        "Red-Black Tree (100k Worst-Case Insertions):"
+      ],
+      "values": [
+        "22"
+      ],
+      "times_us": [
+        8538.08
+      ],
+      "total_ms": null,
+      "sum_displayed_lines_ms": 8.53808,
+      "values_validated": true,
+      "timer_unit": "microseconds"
+    },
+    {
+      "mode": "test",
+      "labels": [
+        "Red-Black Tree (100k Worst-Case Insertions):"
+      ],
+      "values": [
+        "22"
+      ],
+      "times_us": [
+        8329.88
+      ],
+      "total_ms": null,
+      "sum_displayed_lines_ms": 8.32988,
+      "values_validated": true,
+      "timer_unit": "microseconds"
+    },
+    {
+      "mode": "test",
+      "labels": [
+        "Red-Black Tree (100k Worst-Case Insertions):"
+      ],
+      "values": [
+        "22"
+      ],
+      "times_us": [
+        8608.62
+      ],
+      "total_ms": null,
+      "sum_displayed_lines_ms": 8.60862,
+      "values_validated": true,
+      "timer_unit": "microseconds"
+    },
+    {
+      "mode": "test",
+      "labels": [
+        "Red-Black Tree (100k Worst-Case Insertions):"
+      ],
+      "values": [
+        "22"
+      ],
+      "times_us": [
+        8536.29
+      ],
+      "total_ms": null,
+      "sum_displayed_lines_ms": 8.536290000000001,
+      "values_validated": true,
+      "timer_unit": "microseconds"
+    },
+    {
+      "mode": "test",
+      "labels": [
+        "Red-Black Tree (100k Worst-Case Insertions):"
+      ],
+      "values": [
+        "22"
+      ],
+      "times_us": [
+        8348.96
+      ],
+      "total_ms": null,
+      "sum_displayed_lines_ms": 8.34896,
+      "values_validated": true,
+      "timer_unit": "microseconds"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "mode": "test",
+  "labels": [
+    "Red-Black Tree (100k Worst-Case Insertions):"
+  ],
+  "values": [
+    "22"
+  ],
+  "times_us": [
+    8139.83
+  ],
+  "total_ms": null,
+  "sum_displayed_lines_ms": 8.13983,
+  "values_validated": true,
+  "timer_unit": "microseconds"
+}

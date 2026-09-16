@@ -1,0 +1,97 @@
+--- with-usage/Purs_Data_Array/src/lib.rs
++++ without-usage/Purs_Data_Array/src/lib.rs
+@@ -365,7 +365,6 @@
+     let mut purs_local_1 = purs_local_1.clone();
+     let mut purs_local_2 = purs_local_2.clone();
+         /* Typed crate::UnknownType <- crate::UnknownType : EffectBind */{
+-    let mut purs_local_3 = /* Typed crate::UnknownType <- crate::UnknownType : EffectBind */{
+     let mut purs_local_3 = {
+         let _val_eval = Data_Array_ST_new();
+         if let purust_core::Value::Func1(f) = &_val_eval {
+@@ -380,7 +379,8 @@
+             _val_eval
+         }
+     };
+-    /* Typed crate::UnknownType <- crate::UnknownType : EffectBind */{
++    {
++    let mut purs_local_4 = /* Typed crate::UnknownType <- crate::UnknownType : EffectBind */{
+     let mut purs_local_4 = {
+         let _val_eval = Data_Array_ST_push(/* Typed crate::UnknownType <- crate::UnknownType : PrimOp(...) */(/* Typed crate::UnknownType <- crate::UnknownType : Local(...) */purs_local_1.clone()).unwrap_array()[(/* Typed i64 <- i64 : Lit */0) as usize].clone(), /* Typed crate::UnknownType <- crate::UnknownType : Local(...) */purs_local_3.clone());
+         if let purust_core::Value::Func1(f) = &_val_eval {
+@@ -454,9 +454,7 @@
+     })))
+ }
+ }))
+-}), /* Typed Abs */{
+-    let mut purs_local_3 = purs_local_3.clone();
+-    purust_core::Func1::Shared(std::rc::Rc::new(move |mut _a0: crate::UnknownType| -> crate::UnknownType {
++}), /* Typed Abs */purust_core::Func1::Shared(std::rc::Rc::new(move |mut _a0: crate::UnknownType| -> crate::UnknownType {
+     drop(_a0);
+     {
+     let mut purs_local_3 = purs_local_3.clone();
+@@ -466,36 +464,35 @@
+         /* Typed crate::UnknownType <- crate::UnknownType : EffectPure */purs_local_3.clone()
+     })))
+ }
+-}))
+-});
+-        if let purust_core::Value::Func1(f) = &_val_eval {
+-            f(purust_core::Value::Unit)
+-        } else if let purust_core::Value::Record_a(r) = &_val_eval {
+-            if r.call.is_some() {
+-                r.call.clone().unwrap()(purust_core::Value::Unit)
+-            } else {
+-                _val_eval
+-            }
+-        } else {
+-            _val_eval
+-        }
+-    }
+-}
+-};
+-    {
+-        let _val_eval = Data_Array_ST_unsafeFreeze(purs_local_3);
+-        if let purust_core::Value::Func1(f) = &_val_eval {
+-            f(purust_core::Value::Unit)
+-        } else if let purust_core::Value::Record_a(r) = &_val_eval {
+-            if r.call.is_some() {
+-                r.call.clone().unwrap()(purust_core::Value::Unit)
+-            } else {
+-                _val_eval
+-            }
+-        } else {
+-            _val_eval
+-        }
+-    }
++})));
++        if let purust_core::Value::Func1(f) = &_val_eval {
++            f(purust_core::Value::Unit)
++        } else if let purust_core::Value::Record_a(r) = &_val_eval {
++            if r.call.is_some() {
++                r.call.clone().unwrap()(purust_core::Value::Unit)
++            } else {
++                _val_eval
++            }
++        } else {
++            _val_eval
++        }
++    }
++};
++    {
++        let _val_eval = Data_Array_ST_unsafeFreeze(purs_local_4);
++        if let purust_core::Value::Func1(f) = &_val_eval {
++            f(purust_core::Value::Unit)
++        } else if let purust_core::Value::Record_a(r) = &_val_eval {
++            if r.call.is_some() {
++                r.call.clone().unwrap()(purust_core::Value::Unit)
++            } else {
++                _val_eval
++            }
++        } else {
++            _val_eval
++        }
++    }
++}
+ }
+     })))
+ })

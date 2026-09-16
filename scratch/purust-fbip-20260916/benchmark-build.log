@@ -1,0 +1,5 @@
+rust: mode=test, profile={"CARGO_PROFILE_RELEASE_DEBUG": "false", "CARGO_PROFILE_RELEASE_OPT_LEVEL": "3"}
+spago build
+/Users/0x1/Documents/htdocs/purust/purust/bin/purust --main AppX --source output --out output/purust_output
+cargo build --release --target-dir /Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/target --bin purust_output
+Built /Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/benchmark; manifest /Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/manifest.json

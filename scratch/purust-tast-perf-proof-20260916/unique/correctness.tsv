@@ -1,0 +1,9 @@
+rotation	keys=3	depth=2	mutation_calls=8	empty_dynamic_checks=0
+rotation	keys=3	depth=2	mutation_calls=11	empty_dynamic_checks=3
+rotation	keys=3	depth=2	mutation_calls=11	empty_dynamic_checks=3
+rotation	keys=3	depth=2	mutation_calls=11	empty_dynamic_checks=3
+descending_100k	keys=100000	depth=22	mutation_calls=2483932	empty_dynamic_checks=0
+ascending_100k	keys=100000	depth=22	mutation_calls=2783866	empty_dynamic_checks=299934
+shuffled_100k	keys=100000	depth=24	mutation_calls=1956041	empty_dynamic_checks=146697
+duplicates_100k	keys=4096	depth=17	mutation_calls=1349338	empty_dynamic_checks=104307
+original_buildTree_100k	ok

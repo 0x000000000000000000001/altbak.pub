@@ -1,0 +1,11 @@
+[package]
+name = "Purs_Control_Lazy"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+purust_core = { path = "../purust_core" }
+perceus_ptr = { path = "../perceus_ptr" }
+fancy-regex = "0.13"
+Purs_Data_Unit = { path = "../Purs_Data_Unit" }
+Purs_Record_Unsafe = { path = "../Purs_Record_Unsafe" }

@@ -1,0 +1,114 @@
+{
+  "timing": {
+    "generated": {
+      "median_gain_pct": 0.0,
+      "bootstrap_median_95_pct": [
+        0.0,
+        0.0
+      ],
+      "rounds_faster": 0,
+      "rounds": 21
+    },
+    "borrow_depth": {
+      "median_gain_pct": 0.2610442988695616,
+      "bootstrap_median_95_pct": [
+        -0.7882784131985954,
+        1.1070807763429946
+      ],
+      "rounds_faster": 11,
+      "rounds": 21
+    },
+    "borrow_ins": {
+      "median_gain_pct": -21.910417765161185,
+      "bootstrap_median_95_pct": [
+        -22.855106464488006,
+        -20.643454886290268
+      ],
+      "rounds_faster": 0,
+      "rounds": 21
+    },
+    "borrow_both": {
+      "median_gain_pct": -22.92832787041723,
+      "bootstrap_median_95_pct": [
+        -24.18998111665949,
+        -21.948394387318704
+      ],
+      "rounds_faster": 0,
+      "rounds": 21
+    },
+    "unique_checks": {
+      "median_gain_pct": 0.5039452827826585,
+      "bootstrap_median_95_pct": [
+        -0.16445865692096273,
+        1.2342599793926712
+      ],
+      "rounds_faster": 14,
+      "rounds": 21
+    },
+    "owned_rc": {
+      "median_gain_pct": -39.360756424761604,
+      "bootstrap_median_95_pct": [
+        -40.95780331824071,
+        -37.717498046190755
+      ],
+      "rounds_faster": 0,
+      "rounds": 21
+    },
+    "owned_box": {
+      "median_gain_pct": -43.28392439574367,
+      "bootstrap_median_95_pct": [
+        -52.77052563515372,
+        -41.22845889753215
+      ],
+      "rounds_faster": 0,
+      "rounds": 21
+    }
+  },
+  "timing-checks": {
+    "generated": {
+      "median_gain_pct": 0.0,
+      "bootstrap_median_95_pct": [
+        0.0,
+        0.0
+      ],
+      "rounds_faster": 0,
+      "rounds": 21
+    },
+    "borrow_ins": {
+      "median_gain_pct": -21.32309942653483,
+      "bootstrap_median_95_pct": [
+        -22.44052784418129,
+        -19.987954830614818
+      ],
+      "rounds_faster": 0,
+      "rounds": 21
+    },
+    "borrow_ins_hoisted": {
+      "median_gain_pct": -12.850301510072114,
+      "bootstrap_median_95_pct": [
+        -13.688526884429141,
+        -11.307520365351987
+      ],
+      "rounds_faster": 0,
+      "rounds": 21
+    },
+    "unique_checks": {
+      "median_gain_pct": 0.17826791095699734,
+      "bootstrap_median_95_pct": [
+        -2.029963762165088,
+        0.8709457554937572
+      ],
+      "rounds_faster": 12,
+      "rounds": 21
+    },
+    "unique_sites": {
+      "median_gain_pct": 3.1613999964945183,
+      "bootstrap_median_95_pct": [
+        2.587671911103717,
+        4.403098248560921
+      ],
+      "rounds_faster": 19,
+      "rounds": 21
+    }
+  }
+}

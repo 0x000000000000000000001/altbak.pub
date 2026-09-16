@@ -1,0 +1,88 @@
+round 1 {'unique_checks': 9064.75, 'generated': 9065.88, 'borrow_ins': 10877.96, 'borrow_ins_hoisted': 10522.62, 'unique_sites': 8807.29}
+round 2 {'borrow_ins': 10867.5, 'generated': 8865.38, 'borrow_ins_hoisted': 10575.12, 'unique_sites': 8978.79, 'unique_checks': 9185.83}
+round 3 {'borrow_ins': 10958.46, 'unique_checks': 9000.5, 'generated': 9032.46, 'unique_sites': 8634.75, 'borrow_ins_hoisted': 10209.29}
+round 4 {'borrow_ins_hoisted': 10181.67, 'unique_checks': 9186.0, 'unique_sites': 9026.92, 'borrow_ins': 10941.88, 'generated': 9266.71}
+round 5 {'borrow_ins': 11072.79, 'borrow_ins_hoisted': 10297.62, 'generated': 9246.62, 'unique_sites': 8555.79, 'unique_checks': 8872.58}
+round 6 {'unique_sites': 8898.71, 'unique_checks': 9162.62, 'generated': 8957.33, 'borrow_ins_hoisted': 10322.38, 'borrow_ins': 11105.17}
+round 7 {'generated': 9279.29, 'borrow_ins_hoisted': 10471.71, 'unique_sites': 8941.88, 'unique_checks': 9262.75, 'borrow_ins': 10807.12}
+round 8 {'unique_sites': 8750.62, 'borrow_ins': 10769.29, 'unique_checks': 9330.04, 'generated': 8915.83, 'borrow_ins_hoisted': 10090.67}
+round 9 {'borrow_ins_hoisted': 10007.12, 'unique_sites': 8792.17, 'generated': 9033.96, 'unique_checks': 9232.54, 'borrow_ins': 10956.96}
+round 10 {'borrow_ins': 11176.92, 'borrow_ins_hoisted': 10331.46, 'unique_sites': 8630.25, 'unique_checks': 8932.46, 'generated': 9308.29}
+round 11 {'unique_sites': 8846.12, 'borrow_ins': 10675.54, 'unique_checks': 9378.54, 'generated': 9294.71, 'borrow_ins_hoisted': 10345.71}
+round 12 {'unique_checks': 9047.25, 'generated': 9196.71, 'borrow_ins_hoisted': 10233.46, 'borrow_ins': 10591.42, 'unique_sites': 8989.21}
+round 13 {'borrow_ins': 10804.92, 'unique_checks': 9015.75, 'unique_sites': 8873.58, 'generated': 8756.79, 'borrow_ins_hoisted': 10553.29}
+round 14 {'generated': 9167.62, 'unique_sites': 8440.67, 'borrow_ins': 11244.08, 'borrow_ins_hoisted': 10055.54, 'unique_checks': 8971.12}
+round 15 {'borrow_ins_hoisted': 10166.04, 'generated': 9023.17, 'unique_sites': 8565.96, 'unique_checks': 9206.33, 'borrow_ins': 11005.12}
+round 16 {'generated': 8931.75, 'borrow_ins_hoisted': 10154.38, 'unique_checks': 9066.71, 'borrow_ins': 11268.83, 'unique_sites': 8631.33}
+round 17 {'borrow_ins': 11023.67, 'generated': 9013.04, 'borrow_ins_hoisted': 10305.71, 'unique_sites': 8943.92, 'unique_checks': 8757.17}
+round 18 {'borrow_ins_hoisted': 10304.46, 'unique_checks': 9222.88, 'generated': 9261.96, 'unique_sites': 8609.96, 'borrow_ins': 10880.79}
+round 19 {'unique_checks': 8935.46, 'borrow_ins': 11289.79, 'generated': 9299.71, 'unique_sites': 9005.71, 'borrow_ins_hoisted': 10446.29}
+round 20 {'generated': 8806.08, 'borrow_ins': 11337.67, 'unique_checks': 9324.5, 'unique_sites': 8547.58, 'borrow_ins_hoisted': 9975.96}
+round 21 {'unique_sites': 8585.04, 'borrow_ins': 10908.12, 'unique_checks': 8892.12, 'borrow_ins_hoisted': 10583.96, 'generated': 8908.92}
+{
+  "generated": {
+    "median_best10_us": 9033.958,
+    "median_median10_us": 9320.0625,
+    "best10_range_us": [
+      8756.792,
+      9308.292
+    ],
+    "median_paired_gain_pct": 0.0,
+    "paired_gain_range_pct": [
+      0.0,
+      0.0
+    ]
+  },
+  "borrow_ins": {
+    "median_best10_us": 10956.958,
+    "median_median10_us": 11267.396,
+    "best10_range_us": [
+      10591.417,
+      11337.666
+    ],
+    "median_paired_gain_pct": -21.32309942653483,
+    "paired_gain_range_pct": [
+      -28.74811650083242,
+      -14.856120278334718
+    ]
+  },
+  "borrow_ins_hoisted": {
+    "median_best10_us": 10304.458,
+    "median_median10_us": 10573.5,
+    "best10_range_us": [
+      9975.959,
+      10583.959
+    ],
+    "median_paired_gain_pct": -12.850301510072114,
+    "paired_gain_range_pct": [
+      -20.51550385118204,
+      -9.68534380496584
+    ]
+  },
+  "unique_checks": {
+    "median_best10_us": 9066.708,
+    "median_median10_us": 9289.6665,
+    "best10_range_us": [
+      8757.167,
+      9378.542
+    ],
+    "median_paired_gain_pct": 0.17826791095699734,
+    "paired_gain_range_pct": [
+      -5.887032861261909,
+      4.045162424127713
+    ]
+  },
+  "unique_sites": {
+    "median_best10_us": 8792.166,
+    "median_median10_us": 9015.3125,
+    "best10_range_us": [
+      8440.667,
+      9026.916
+    ],
+    "median_paired_gain_pct": 3.1613999964945183,
+    "paired_gain_range_pct": [
+      -1.333719014908663,
+      7.929621903164675
+    ]
+  }
+}

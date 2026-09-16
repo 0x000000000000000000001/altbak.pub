@@ -1,0 +1,15 @@
+rust: mode=test, profile={"CARGO_PROFILE_RELEASE_DEBUG": "false", "CARGO_PROFILE_RELEASE_OPT_LEVEL": "3"}
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+8608.62 μs
+

@@ -1,0 +1,2515 @@
+{
+  "summary": {
+    "total": 135,
+    "by_kind": {
+      "NonRec": 10,
+      "Abs": 15,
+      "Var": 61,
+      "VarBinder": 46,
+      "RecBinding": 3
+    },
+    "by_usage_escape": {
+      "0/False": 13,
+      "-1/True": 7,
+      "2/True": 2,
+      "1/True": 101,
+      "1/False": 10,
+      "3/True": 2
+    },
+    "by_function": {
+      "R": 1,
+      "B": 1,
+      "E": 1,
+      "T": 1,
+      "max": 4,
+      "makeBlack": 9,
+      "describe": 1,
+      "depth": 7,
+      "balance": 70,
+      "ins": 23,
+      "insert": 4,
+      "buildTree": 10,
+      "act": 3
+    },
+    "by_function_kind_usage_escape": {
+      "R/NonRec/0/False": 1,
+      "B/NonRec/0/False": 1,
+      "E/NonRec/0/False": 1,
+      "T/NonRec/0/False": 1,
+      "max/NonRec/0/False": 1,
+      "max/Abs/-1/True": 1,
+      "max/Abs/2/True": 1,
+      "max/Var/1/True": 1,
+      "makeBlack/NonRec/0/False": 1,
+      "makeBlack/Abs/1/False": 1,
+      "makeBlack/VarBinder/1/True": 3,
+      "makeBlack/Var/1/True": 3,
+      "makeBlack/Var/1/False": 1,
+      "describe/NonRec/0/False": 1,
+      "depth/RecBinding/0/False": 1,
+      "depth/Abs/1/False": 1,
+      "depth/VarBinder/1/True": 2,
+      "depth/Var/1/True": 2,
+      "depth/Var/1/False": 1,
+      "balance/NonRec/0/False": 1,
+      "balance/Abs/-1/True": 3,
+      "balance/Abs/1/False": 1,
+      "balance/VarBinder/1/True": 32,
+      "balance/Var/1/True": 32,
+      "balance/Var/1/False": 1,
+      "ins/RecBinding/0/False": 1,
+      "ins/Abs/-1/True": 1,
+      "ins/Abs/1/False": 1,
+      "ins/VarBinder/1/True": 4,
+      "ins/Var/1/True": 13,
+      "ins/VarBinder/3/True": 2,
+      "ins/Var/1/False": 1,
+      "insert/NonRec/0/False": 1,
+      "insert/Abs/-1/True": 1,
+      "insert/Abs/1/True": 1,
+      "insert/Var/1/True": 1,
+      "buildTree/RecBinding/0/False": 1,
+      "buildTree/Abs/-1/True": 1,
+      "buildTree/Abs/1/False": 1,
+      "buildTree/VarBinder/1/True": 2,
+      "buildTree/Var/1/True": 3,
+      "buildTree/VarBinder/2/True": 1,
+      "buildTree/Var/1/False": 1,
+      "act/NonRec/0/False": 1,
+      "act/Abs/1/True": 1,
+      "act/Var/1/True": 1
+    }
+  },
+  "occurrences": [
+    {
+      "function": "R",
+      "node": "NonRec",
+      "name": "R",
+      "usageCount": 0,
+      "escapes": false,
+      "span": {
+        "end": [
+          13,
+          19
+        ],
+        "start": [
+          13,
+          1
+        ]
+      },
+      "path": "$.decls[0]"
+    },
+    {
+      "function": "B",
+      "node": "NonRec",
+      "name": "B",
+      "usageCount": 0,
+      "escapes": false,
+      "span": {
+        "end": [
+          13,
+          19
+        ],
+        "start": [
+          13,
+          1
+        ]
+      },
+      "path": "$.decls[1]"
+    },
+    {
+      "function": "E",
+      "node": "NonRec",
+      "name": "E",
+      "usageCount": 0,
+      "escapes": false,
+      "span": {
+        "end": [
+          14,
+          38
+        ],
+        "start": [
+          14,
+          1
+        ]
+      },
+      "path": "$.decls[2]"
+    },
+    {
+      "function": "T",
+      "node": "NonRec",
+      "name": "T",
+      "usageCount": 0,
+      "escapes": false,
+      "span": {
+        "end": [
+          14,
+          38
+        ],
+        "start": [
+          14,
+          1
+        ]
+      },
+      "path": "$.decls[3]"
+    },
+    {
+      "function": "max",
+      "node": "NonRec",
+      "name": "max",
+      "usageCount": 0,
+      "escapes": false,
+      "span": {
+        "end": [
+          47,
+          25
+        ],
+        "start": [
+          47,
+          1
+        ]
+      },
+      "path": "$.decls[4]"
+    },
+    {
+      "function": "max",
+      "node": "Abs",
+      "name": "x",
+      "usageCount": -1,
+      "escapes": true,
+      "span": {
+        "end": [
+          47,
+          25
+        ],
+        "start": [
+          47,
+          1
+        ]
+      },
+      "path": "$.decls[4].expression"
+    },
+    {
+      "function": "max",
+      "node": "Abs",
+      "name": "y",
+      "usageCount": 2,
+      "escapes": true,
+      "span": {
+        "end": [
+          47,
+          25
+        ],
+        "start": [
+          47,
+          1
+        ]
+      },
+      "path": "$.decls[4].expression.body"
+    },
+    {
+      "function": "max",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          48,
+          33
+        ],
+        "start": [
+          48,
+          32
+        ]
+      },
+      "path": "$.decls[4].expression.body.body.caseAlternatives[1].expression"
+    },
+    {
+      "function": "makeBlack",
+      "node": "NonRec",
+      "name": "makeBlack",
+      "usageCount": 0,
+      "escapes": false,
+      "span": {
+        "end": [
+          33,
+          26
+        ],
+        "start": [
+          33,
+          1
+        ]
+      },
+      "path": "$.decls[5]"
+    },
+    {
+      "function": "makeBlack",
+      "node": "Abs",
+      "name": "v",
+      "usageCount": 1,
+      "escapes": false,
+      "span": {
+        "end": [
+          33,
+          26
+        ],
+        "start": [
+          33,
+          1
+        ]
+      },
+      "path": "$.decls[5].expression"
+    },
+    {
+      "function": "makeBlack",
+      "node": "VarBinder",
+      "name": "a",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          34,
+          17
+        ],
+        "start": [
+          34,
+          16
+        ]
+      },
+      "path": "$.decls[5].expression.body.caseAlternatives[0].binders[0].binders[1]"
+    },
+    {
+      "function": "makeBlack",
+      "node": "VarBinder",
+      "name": "y",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          34,
+          19
+        ],
+        "start": [
+          34,
+          18
+        ]
+      },
+      "path": "$.decls[5].expression.body.caseAlternatives[0].binders[0].binders[2]"
+    },
+    {
+      "function": "makeBlack",
+      "node": "VarBinder",
+      "name": "b",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          34,
+          21
+        ],
+        "start": [
+          34,
+          20
+        ]
+      },
+      "path": "$.decls[5].expression.body.caseAlternatives[0].binders[0].binders[3]"
+    },
+    {
+      "function": "makeBlack",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          34,
+          30
+        ],
+        "start": [
+          34,
+          29
+        ]
+      },
+      "path": "$.decls[5].expression.body.caseAlternatives[0].expression.abstraction.abstraction.argument"
+    },
+    {
+      "function": "makeBlack",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          34,
+          32
+        ],
+        "start": [
+          34,
+          31
+        ]
+      },
+      "path": "$.decls[5].expression.body.caseAlternatives[0].expression.abstraction.argument"
+    },
+    {
+      "function": "makeBlack",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          34,
+          34
+        ],
+        "start": [
+          34,
+          33
+        ]
+      },
+      "path": "$.decls[5].expression.body.caseAlternatives[0].expression.argument"
+    },
+    {
+      "function": "makeBlack",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": false,
+      "span": {
+        "end": [
+          34,
+          34
+        ],
+        "start": [
+          34,
+          1
+        ]
+      },
+      "path": "$.decls[5].expression.body.caseExpressions[0]"
+    },
+    {
+      "function": "describe",
+      "node": "NonRec",
+      "name": "describe",
+      "usageCount": 0,
+      "escapes": false,
+      "span": {
+        "end": [
+          50,
+          24
+        ],
+        "start": [
+          50,
+          1
+        ]
+      },
+      "path": "$.decls[6]"
+    },
+    {
+      "function": "depth",
+      "node": "RecBinding",
+      "name": "depth",
+      "usageCount": 0,
+      "escapes": false,
+      "span": {
+        "end": [
+          43,
+          21
+        ],
+        "start": [
+          43,
+          1
+        ]
+      },
+      "path": "$.decls[7].binds[0]"
+    },
+    {
+      "function": "depth",
+      "node": "Abs",
+      "name": "v",
+      "usageCount": 1,
+      "escapes": false,
+      "span": {
+        "end": [
+          43,
+          21
+        ],
+        "start": [
+          43,
+          1
+        ]
+      },
+      "path": "$.decls[7].binds[0].expression"
+    },
+    {
+      "function": "depth",
+      "node": "VarBinder",
+      "name": "a",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          45,
+          13
+        ],
+        "start": [
+          45,
+          12
+        ]
+      },
+      "path": "$.decls[7].binds[0].expression.body.caseAlternatives[1].binders[0].binders[1]"
+    },
+    {
+      "function": "depth",
+      "node": "VarBinder",
+      "name": "b",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          45,
+          17
+        ],
+        "start": [
+          45,
+          16
+        ]
+      },
+      "path": "$.decls[7].binds[0].expression.body.caseAlternatives[1].binders[0].binders[3]"
+    },
+    {
+      "function": "depth",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          45,
+          37
+        ],
+        "start": [
+          45,
+          36
+        ]
+      },
+      "path": "$.decls[7].binds[0].expression.body.caseAlternatives[1].expression.argument.abstraction.argument.argument"
+    },
+    {
+      "function": "depth",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          45,
+          47
+        ],
+        "start": [
+          45,
+          46
+        ]
+      },
+      "path": "$.decls[7].binds[0].expression.body.caseAlternatives[1].expression.argument.argument.argument"
+    },
+    {
+      "function": "depth",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": false,
+      "span": {
+        "end": [
+          44,
+          12
+        ],
+        "start": [
+          44,
+          1
+        ]
+      },
+      "path": "$.decls[7].binds[0].expression.body.caseExpressions[0]"
+    },
+    {
+      "function": "balance",
+      "node": "NonRec",
+      "name": "balance",
+      "usageCount": 0,
+      "escapes": false,
+      "span": {
+        "end": [
+          16,
+          48
+        ],
+        "start": [
+          16,
+          1
+        ]
+      },
+      "path": "$.decls[8]"
+    },
+    {
+      "function": "balance",
+      "node": "Abs",
+      "name": "v",
+      "usageCount": -1,
+      "escapes": true,
+      "span": {
+        "end": [
+          16,
+          48
+        ],
+        "start": [
+          16,
+          1
+        ]
+      },
+      "path": "$.decls[8].expression"
+    },
+    {
+      "function": "balance",
+      "node": "Abs",
+      "name": "v1",
+      "usageCount": -1,
+      "escapes": true,
+      "span": {
+        "end": [
+          16,
+          48
+        ],
+        "start": [
+          16,
+          1
+        ]
+      },
+      "path": "$.decls[8].expression.body"
+    },
+    {
+      "function": "balance",
+      "node": "Abs",
+      "name": "v2",
+      "usageCount": -1,
+      "escapes": true,
+      "span": {
+        "end": [
+          16,
+          48
+        ],
+        "start": [
+          16,
+          1
+        ]
+      },
+      "path": "$.decls[8].expression.body.body"
+    },
+    {
+      "function": "balance",
+      "node": "Abs",
+      "name": "v3",
+      "usageCount": 1,
+      "escapes": false,
+      "span": {
+        "end": [
+          16,
+          48
+        ],
+        "start": [
+          16,
+          1
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "a",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          17,
+          22
+        ],
+        "start": [
+          17,
+          21
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[0].binders[1].binders[1].binders[1]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "x",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          17,
+          24
+        ],
+        "start": [
+          17,
+          23
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[0].binders[1].binders[1].binders[2]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "b",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          17,
+          26
+        ],
+        "start": [
+          17,
+          25
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[0].binders[1].binders[1].binders[3]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "y",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          17,
+          29
+        ],
+        "start": [
+          17,
+          28
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[0].binders[1].binders[2]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "c",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          17,
+          31
+        ],
+        "start": [
+          17,
+          30
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[0].binders[1].binders[3]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "z",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          17,
+          34
+        ],
+        "start": [
+          17,
+          33
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[0].binders[2]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "d",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          17,
+          36
+        ],
+        "start": [
+          17,
+          35
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[0].binders[3]"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          17,
+          49
+        ],
+        "start": [
+          17,
+          48
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[0].expression.abstraction.abstraction.argument.abstraction.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          17,
+          51
+        ],
+        "start": [
+          17,
+          50
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[0].expression.abstraction.abstraction.argument.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          17,
+          53
+        ],
+        "start": [
+          17,
+          52
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[0].expression.abstraction.abstraction.argument.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          17,
+          56
+        ],
+        "start": [
+          17,
+          55
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[0].expression.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          17,
+          63
+        ],
+        "start": [
+          17,
+          62
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[0].expression.argument.abstraction.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          17,
+          65
+        ],
+        "start": [
+          17,
+          64
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[0].expression.argument.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          17,
+          67
+        ],
+        "start": [
+          17,
+          66
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[0].expression.argument.argument"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "a",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          18,
+          17
+        ],
+        "start": [
+          18,
+          16
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[1].binders[1].binders[1]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "x",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          18,
+          19
+        ],
+        "start": [
+          18,
+          18
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[1].binders[1].binders[2]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "b",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          18,
+          26
+        ],
+        "start": [
+          18,
+          25
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[1].binders[1].binders[3].binders[1]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "y",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          18,
+          28
+        ],
+        "start": [
+          18,
+          27
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[1].binders[1].binders[3].binders[2]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "c",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          18,
+          30
+        ],
+        "start": [
+          18,
+          29
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[1].binders[1].binders[3].binders[3]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "z",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          18,
+          34
+        ],
+        "start": [
+          18,
+          33
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[1].binders[2]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "d",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          18,
+          36
+        ],
+        "start": [
+          18,
+          35
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[1].binders[3]"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          18,
+          49
+        ],
+        "start": [
+          18,
+          48
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[1].expression.abstraction.abstraction.argument.abstraction.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          18,
+          51
+        ],
+        "start": [
+          18,
+          50
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[1].expression.abstraction.abstraction.argument.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          18,
+          53
+        ],
+        "start": [
+          18,
+          52
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[1].expression.abstraction.abstraction.argument.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          18,
+          56
+        ],
+        "start": [
+          18,
+          55
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[1].expression.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          18,
+          63
+        ],
+        "start": [
+          18,
+          62
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[1].expression.argument.abstraction.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          18,
+          65
+        ],
+        "start": [
+          18,
+          64
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[1].expression.argument.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          18,
+          67
+        ],
+        "start": [
+          18,
+          66
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[1].expression.argument.argument"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "a",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          19,
+          12
+        ],
+        "start": [
+          19,
+          11
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[2].binders[1]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "x",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          19,
+          14
+        ],
+        "start": [
+          19,
+          13
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[2].binders[2]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "b",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          19,
+          26
+        ],
+        "start": [
+          19,
+          25
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[2].binders[3].binders[1].binders[1]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "y",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          19,
+          28
+        ],
+        "start": [
+          19,
+          27
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[2].binders[3].binders[1].binders[2]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "c",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          19,
+          30
+        ],
+        "start": [
+          19,
+          29
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[2].binders[3].binders[1].binders[3]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "z",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          19,
+          33
+        ],
+        "start": [
+          19,
+          32
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[2].binders[3].binders[2]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "d",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          19,
+          35
+        ],
+        "start": [
+          19,
+          34
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[2].binders[3].binders[3]"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          19,
+          49
+        ],
+        "start": [
+          19,
+          48
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[2].expression.abstraction.abstraction.argument.abstraction.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          19,
+          51
+        ],
+        "start": [
+          19,
+          50
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[2].expression.abstraction.abstraction.argument.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          19,
+          53
+        ],
+        "start": [
+          19,
+          52
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[2].expression.abstraction.abstraction.argument.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          19,
+          56
+        ],
+        "start": [
+          19,
+          55
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[2].expression.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          19,
+          63
+        ],
+        "start": [
+          19,
+          62
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[2].expression.argument.abstraction.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          19,
+          65
+        ],
+        "start": [
+          19,
+          64
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[2].expression.argument.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          19,
+          67
+        ],
+        "start": [
+          19,
+          66
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[2].expression.argument.argument"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "a",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          20,
+          12
+        ],
+        "start": [
+          20,
+          11
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[3].binders[1]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "x",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          20,
+          14
+        ],
+        "start": [
+          20,
+          13
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[3].binders[2]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "b",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          20,
+          21
+        ],
+        "start": [
+          20,
+          20
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[3].binders[3].binders[1]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "y",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          20,
+          23
+        ],
+        "start": [
+          20,
+          22
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[3].binders[3].binders[2]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "c",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          20,
+          30
+        ],
+        "start": [
+          20,
+          29
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[3].binders[3].binders[3].binders[1]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "z",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          20,
+          32
+        ],
+        "start": [
+          20,
+          31
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[3].binders[3].binders[3].binders[2]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "d",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          20,
+          34
+        ],
+        "start": [
+          20,
+          33
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[3].binders[3].binders[3].binders[3]"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          20,
+          49
+        ],
+        "start": [
+          20,
+          48
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[3].expression.abstraction.abstraction.argument.abstraction.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          20,
+          51
+        ],
+        "start": [
+          20,
+          50
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[3].expression.abstraction.abstraction.argument.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          20,
+          53
+        ],
+        "start": [
+          20,
+          52
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[3].expression.abstraction.abstraction.argument.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          20,
+          56
+        ],
+        "start": [
+          20,
+          55
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[3].expression.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          20,
+          63
+        ],
+        "start": [
+          20,
+          62
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[3].expression.argument.abstraction.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          20,
+          65
+        ],
+        "start": [
+          20,
+          64
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[3].expression.argument.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          20,
+          67
+        ],
+        "start": [
+          20,
+          66
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[3].expression.argument.argument"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "color",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          21,
+          14
+        ],
+        "start": [
+          21,
+          9
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[4].binders[0]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "a",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          21,
+          16
+        ],
+        "start": [
+          21,
+          15
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[4].binders[1]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "x",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          21,
+          18
+        ],
+        "start": [
+          21,
+          17
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[4].binders[2]"
+    },
+    {
+      "function": "balance",
+      "node": "VarBinder",
+      "name": "b",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          21,
+          20
+        ],
+        "start": [
+          21,
+          19
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[4].binders[3]"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          21,
+          30
+        ],
+        "start": [
+          21,
+          25
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[4].expression.abstraction.abstraction.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          21,
+          32
+        ],
+        "start": [
+          21,
+          31
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[4].expression.abstraction.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          21,
+          34
+        ],
+        "start": [
+          21,
+          33
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[4].expression.abstraction.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          21,
+          36
+        ],
+        "start": [
+          21,
+          35
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseAlternatives[4].expression.argument"
+    },
+    {
+      "function": "balance",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": false,
+      "span": {
+        "end": [
+          17,
+          68
+        ],
+        "start": [
+          17,
+          1
+        ]
+      },
+      "path": "$.decls[8].expression.body.body.body.body.caseExpressions[3]"
+    },
+    {
+      "function": "ins",
+      "node": "RecBinding",
+      "name": "ins",
+      "usageCount": 0,
+      "escapes": false,
+      "span": {
+        "end": [
+          26,
+          27
+        ],
+        "start": [
+          26,
+          1
+        ]
+      },
+      "path": "$.decls[9].binds[0]"
+    },
+    {
+      "function": "ins",
+      "node": "Abs",
+      "name": "v",
+      "usageCount": -1,
+      "escapes": true,
+      "span": {
+        "end": [
+          26,
+          27
+        ],
+        "start": [
+          26,
+          1
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression"
+    },
+    {
+      "function": "ins",
+      "node": "Abs",
+      "name": "v1",
+      "usageCount": 1,
+      "escapes": false,
+      "span": {
+        "end": [
+          26,
+          27
+        ],
+        "start": [
+          26,
+          1
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body"
+    },
+    {
+      "function": "ins",
+      "node": "VarBinder",
+      "name": "x",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          27,
+          6
+        ],
+        "start": [
+          27,
+          5
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[0].binders[0]"
+    },
+    {
+      "function": "ins",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          27,
+          18
+        ],
+        "start": [
+          27,
+          17
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[0].expression.abstraction.argument"
+    },
+    {
+      "function": "ins",
+      "node": "VarBinder",
+      "name": "x",
+      "usageCount": 3,
+      "escapes": true,
+      "span": {
+        "end": [
+          28,
+          6
+        ],
+        "start": [
+          28,
+          5
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].binders[0]"
+    },
+    {
+      "function": "ins",
+      "node": "VarBinder",
+      "name": "color",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          28,
+          15
+        ],
+        "start": [
+          28,
+          10
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].binders[1].binders[0]"
+    },
+    {
+      "function": "ins",
+      "node": "VarBinder",
+      "name": "a",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          28,
+          17
+        ],
+        "start": [
+          28,
+          16
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].binders[1].binders[1]"
+    },
+    {
+      "function": "ins",
+      "node": "VarBinder",
+      "name": "y",
+      "usageCount": 3,
+      "escapes": true,
+      "span": {
+        "end": [
+          28,
+          19
+        ],
+        "start": [
+          28,
+          18
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].binders[1].binders[2]"
+    },
+    {
+      "function": "ins",
+      "node": "VarBinder",
+      "name": "b",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          28,
+          21
+        ],
+        "start": [
+          28,
+          20
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].binders[1].binders[3]"
+    },
+    {
+      "function": "ins",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          29,
+          30
+        ],
+        "start": [
+          29,
+          25
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].expression.caseAlternatives[0].expression.abstraction.abstraction.abstraction.argument"
+    },
+    {
+      "function": "ins",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          29,
+          39
+        ],
+        "start": [
+          29,
+          38
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].expression.caseAlternatives[0].expression.abstraction.abstraction.argument.argument"
+    },
+    {
+      "function": "ins",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          29,
+          44
+        ],
+        "start": [
+          29,
+          43
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].expression.caseAlternatives[0].expression.argument"
+    },
+    {
+      "function": "ins",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          30,
+          35
+        ],
+        "start": [
+          30,
+          30
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].expression.caseAlternatives[1].expression.caseAlternatives[0].expression.abstraction.abstraction.abstraction.argument"
+    },
+    {
+      "function": "ins",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          30,
+          37
+        ],
+        "start": [
+          30,
+          36
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].expression.caseAlternatives[1].expression.caseAlternatives[0].expression.abstraction.abstraction.argument"
+    },
+    {
+      "function": "ins",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          30,
+          39
+        ],
+        "start": [
+          30,
+          38
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].expression.caseAlternatives[1].expression.caseAlternatives[0].expression.abstraction.argument"
+    },
+    {
+      "function": "ins",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          30,
+          46
+        ],
+        "start": [
+          30,
+          45
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].expression.caseAlternatives[1].expression.caseAlternatives[0].expression.argument.abstraction.argument"
+    },
+    {
+      "function": "ins",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          30,
+          48
+        ],
+        "start": [
+          30,
+          47
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].expression.caseAlternatives[1].expression.caseAlternatives[0].expression.argument.argument"
+    },
+    {
+      "function": "ins",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          31,
+          15
+        ],
+        "start": [
+          31,
+          10
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].expression.caseAlternatives[1].expression.caseAlternatives[1].expression.abstraction.abstraction.abstraction.argument"
+    },
+    {
+      "function": "ins",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          31,
+          17
+        ],
+        "start": [
+          31,
+          16
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].expression.caseAlternatives[1].expression.caseAlternatives[1].expression.abstraction.abstraction.argument"
+    },
+    {
+      "function": "ins",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          31,
+          19
+        ],
+        "start": [
+          31,
+          18
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].expression.caseAlternatives[1].expression.caseAlternatives[1].expression.abstraction.argument"
+    },
+    {
+      "function": "ins",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          31,
+          21
+        ],
+        "start": [
+          31,
+          20
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseAlternatives[1].expression.caseAlternatives[1].expression.caseAlternatives[1].expression.argument"
+    },
+    {
+      "function": "ins",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": false,
+      "span": {
+        "end": [
+          27,
+          20
+        ],
+        "start": [
+          27,
+          1
+        ]
+      },
+      "path": "$.decls[9].binds[0].expression.body.body.caseExpressions[1]"
+    },
+    {
+      "function": "insert",
+      "node": "NonRec",
+      "name": "insert",
+      "usageCount": 0,
+      "escapes": false,
+      "span": {
+        "end": [
+          23,
+          30
+        ],
+        "start": [
+          23,
+          1
+        ]
+      },
+      "path": "$.decls[10]"
+    },
+    {
+      "function": "insert",
+      "node": "Abs",
+      "name": "x",
+      "usageCount": -1,
+      "escapes": true,
+      "span": {
+        "end": [
+          23,
+          30
+        ],
+        "start": [
+          23,
+          1
+        ]
+      },
+      "path": "$.decls[10].expression"
+    },
+    {
+      "function": "insert",
+      "node": "Abs",
+      "name": "s",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          23,
+          30
+        ],
+        "start": [
+          23,
+          1
+        ]
+      },
+      "path": "$.decls[10].expression.body"
+    },
+    {
+      "function": "insert",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          24,
+          32
+        ],
+        "start": [
+          24,
+          31
+        ]
+      },
+      "path": "$.decls[10].expression.body.body.argument.argument"
+    },
+    {
+      "function": "buildTree",
+      "node": "RecBinding",
+      "name": "buildTree",
+      "usageCount": 0,
+      "escapes": false,
+      "span": {
+        "end": [
+          38,
+          33
+        ],
+        "start": [
+          38,
+          1
+        ]
+      },
+      "path": "$.decls[11].binds[0]"
+    },
+    {
+      "function": "buildTree",
+      "node": "Abs",
+      "name": "v",
+      "usageCount": -1,
+      "escapes": true,
+      "span": {
+        "end": [
+          38,
+          33
+        ],
+        "start": [
+          38,
+          1
+        ]
+      },
+      "path": "$.decls[11].binds[0].expression"
+    },
+    {
+      "function": "buildTree",
+      "node": "Abs",
+      "name": "v1",
+      "usageCount": 1,
+      "escapes": false,
+      "span": {
+        "end": [
+          38,
+          33
+        ],
+        "start": [
+          38,
+          1
+        ]
+      },
+      "path": "$.decls[11].binds[0].expression.body"
+    },
+    {
+      "function": "buildTree",
+      "node": "VarBinder",
+      "name": "acc",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          39,
+          16
+        ],
+        "start": [
+          39,
+          13
+        ]
+      },
+      "path": "$.decls[11].binds[0].expression.body.body.caseAlternatives[0].binders[1]"
+    },
+    {
+      "function": "buildTree",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          39,
+          22
+        ],
+        "start": [
+          39,
+          19
+        ]
+      },
+      "path": "$.decls[11].binds[0].expression.body.body.caseAlternatives[0].expression"
+    },
+    {
+      "function": "buildTree",
+      "node": "VarBinder",
+      "name": "n",
+      "usageCount": 2,
+      "escapes": true,
+      "span": {
+        "end": [
+          40,
+          12
+        ],
+        "start": [
+          40,
+          11
+        ]
+      },
+      "path": "$.decls[11].binds[0].expression.body.body.caseAlternatives[1].binders[0]"
+    },
+    {
+      "function": "buildTree",
+      "node": "VarBinder",
+      "name": "acc",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          40,
+          16
+        ],
+        "start": [
+          40,
+          13
+        ]
+      },
+      "path": "$.decls[11].binds[0].expression.body.body.caseAlternatives[1].binders[1]"
+    },
+    {
+      "function": "buildTree",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          40,
+          46
+        ],
+        "start": [
+          40,
+          45
+        ]
+      },
+      "path": "$.decls[11].binds[0].expression.body.body.caseAlternatives[1].expression.argument.abstraction.argument"
+    },
+    {
+      "function": "buildTree",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          40,
+          50
+        ],
+        "start": [
+          40,
+          47
+        ]
+      },
+      "path": "$.decls[11].binds[0].expression.body.body.caseAlternatives[1].expression.argument.argument"
+    },
+    {
+      "function": "buildTree",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": false,
+      "span": {
+        "end": [
+          39,
+          22
+        ],
+        "start": [
+          39,
+          1
+        ]
+      },
+      "path": "$.decls[11].binds[0].expression.body.body.caseExpressions[1]"
+    },
+    {
+      "function": "act",
+      "node": "NonRec",
+      "name": "act",
+      "usageCount": 0,
+      "escapes": false,
+      "span": {
+        "end": [
+          53,
+          21
+        ],
+        "start": [
+          53,
+          1
+        ]
+      },
+      "path": "$.decls[12]"
+    },
+    {
+      "function": "act",
+      "node": "Abs",
+      "name": "dummy",
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          55,
+          31
+        ],
+        "start": [
+          55,
+          3
+        ]
+      },
+      "path": "$.decls[12].expression.argument"
+    },
+    {
+      "function": "act",
+      "node": "Var",
+      "name": null,
+      "usageCount": 1,
+      "escapes": true,
+      "span": {
+        "end": [
+          56,
+          38
+        ],
+        "start": [
+          56,
+          33
+        ]
+      },
+      "path": "$.decls[12].expression.argument.body.argument.argument.argument.abstraction.argument"
+    }
+  ]
+}

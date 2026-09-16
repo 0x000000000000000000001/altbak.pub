@@ -1,0 +1,96 @@
+{
+  "transform": "Mutable-slot recursive ins; emitted read/rotation guards, field permutation, shared fallback and reuse worker retained. Owned public adapter unchanged.",
+  "qualification": "Backend output prototype, not automatic Haskell inference. Construction changes versus baseline; depth independently isolated/composed.",
+  "extra_fact_required": "Argument consumed and result returned to same slot; child access path exclusive under get_mut; non-retaining/reentrant behavior; sharing and weak fallback remain dynamic.",
+  "validation": "Both: 100000 nodes/depth22/BST/red-black invariants/four rotations/weak references/200 persistent versions/exact keys/balanced logical lifetimes passed",
+  "timing": "not run by this script",
+  "counts": {
+    "borrow-ins": {
+      "checks": {
+        "call": 81,
+        "clone": 48,
+        "drop_last": 23,
+        "drop_shared": 47,
+        "get_mut_shared": 3,
+        "get_mut_unique": 38,
+        "get_mut_weak": 2,
+        "new": 23,
+        "unwrap_shared": 1
+      },
+      "persistent_build": {
+        "call": 6142,
+        "clone": 7311,
+        "drop_shared": 4305,
+        "get_mut_shared": 3909,
+        "get_mut_unique": 860,
+        "new": 1504,
+        "unwrap_shared": 1303
+      },
+      "persistent_depth": {
+        "call": 401,
+        "clone": 401,
+        "drop_shared": 401
+      },
+      "persistent_drop": {
+        "drop_last": 1504,
+        "drop_shared": 1703
+      },
+      "unique_build": {
+        "call": 4152879,
+        "clone": 200000,
+        "drop_shared": 100000,
+        "get_mut_unique": 2483932,
+        "new": 100001
+      },
+      "unique_depth_and_drop": {
+        "call": 200001,
+        "clone": 200000,
+        "drop_last": 100001,
+        "drop_shared": 300000
+      }
+    },
+    "borrow-ins-depth": {
+      "checks": {
+        "call": 81,
+        "clone": 48,
+        "drop_last": 23,
+        "drop_shared": 47,
+        "get_mut_shared": 3,
+        "get_mut_unique": 38,
+        "get_mut_weak": 2,
+        "new": 23,
+        "unwrap_shared": 1
+      },
+      "persistent_build": {
+        "call": 6142,
+        "clone": 7311,
+        "drop_shared": 4305,
+        "get_mut_shared": 3909,
+        "get_mut_unique": 860,
+        "new": 1504,
+        "unwrap_shared": 1303
+      },
+      "persistent_depth": {
+        "call": 402,
+        "clone": 1,
+        "drop_shared": 1
+      },
+      "persistent_drop": {
+        "drop_last": 1504,
+        "drop_shared": 1703
+      },
+      "unique_build": {
+        "call": 4152879,
+        "clone": 200000,
+        "drop_shared": 100000,
+        "get_mut_unique": 2483932,
+        "new": 100001
+      },
+      "unique_depth_and_drop": {
+        "call": 200002,
+        "drop_last": 100001,
+        "drop_shared": 100000
+      }
+    }
+  }
+}

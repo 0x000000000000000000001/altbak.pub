@@ -1,0 +1,9 @@
+rotation	keys=3	depth=2	exact_generated_shape=true
+rotation	keys=3	depth=2	exact_generated_shape=true
+rotation	keys=3	depth=2	exact_generated_shape=true
+rotation	keys=3	depth=2	exact_generated_shape=true
+descending_100k	keys=100000	depth=22	exact_generated_shape=true
+ascending_100k	keys=100000	depth=22	exact_generated_shape=true
+shuffled_100k	keys=100000	depth=24	exact_generated_shape=true
+duplicates_100k	keys=4096	depth=17	exact_generated_shape=true
+persistent_snapshots_200	ok

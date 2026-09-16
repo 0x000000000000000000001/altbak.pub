@@ -1,0 +1,181 @@
+{
+  "source_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+  "validation": "100000 nodes, depth 22, ordering/red-black invariants, four rotations, weak exclusion, 200 retained exact-key snapshots and balanced reference/payload lifetimes passed.",
+  "phases": {
+    "checks": {
+      "call": 68,
+      "clone": 35,
+      "drop_last": 20,
+      "drop_shared": 35,
+      "get_mut_unique": 42,
+      "get_mut_weak": 3,
+      "new": 21,
+      "unwrap_unique": 1
+    },
+    "persistent_build": {
+      "call": 3336,
+      "clone": 5808,
+      "drop_shared": 2802,
+      "get_mut_shared": 2606,
+      "get_mut_unique": 860,
+      "new": 1504,
+      "unwrap_shared": 1303
+    },
+    "persistent_depth": {
+      "call": 401,
+      "clone": 401,
+      "drop_shared": 401
+    },
+    "persistent_drop": {
+      "drop_last": 1504,
+      "drop_shared": 1703
+    },
+    "unique_build": {
+      "call": 4052879,
+      "clone": 2283976,
+      "drop_shared": 2183976,
+      "get_mut_unique": 2483932,
+      "new": 100001
+    },
+    "unique_depth_and_drop": {
+      "call": 200001,
+      "clone": 200000,
+      "drop_last": 100001,
+      "drop_shared": 300000
+    }
+  },
+  "by_function": {
+    "checks": {
+      "__purust_rebuild_T": {
+        "call": 9,
+        "get_mut_unique": 9
+      },
+      "balance": {
+        "call": 1,
+        "clone": 2,
+        "new": 1
+      },
+      "balance__purust_child_rebuilds": {
+        "call": 8
+      },
+      "balance__purust_permute_fields": {
+        "call": 4,
+        "get_mut_unique": 2
+      },
+      "balance__purust_permute_fields__matches": {
+        "call": 4
+      },
+      "balance__purust_reuse": {
+        "call": 3,
+        "clone": 8,
+        "get_mut_unique": 6
+      },
+      "ins": {
+        "call": 26,
+        "clone": 25,
+        "get_mut_unique": 12,
+        "get_mut_weak": 2,
+        "new": 13,
+        "unwrap_unique": 1
+      },
+      "insert": {
+        "call": 13,
+        "get_mut_unique": 13
+      },
+      "harness_or_drop": {
+        "drop_last": 20,
+        "drop_shared": 35,
+        "get_mut_weak": 1,
+        "new": 7
+      }
+    },
+    "persistent_build": {
+      "__purust_rebuild_T": {
+        "call": 330,
+        "get_mut_unique": 330
+      },
+      "balance": {
+        "call": 1303,
+        "clone": 2802,
+        "get_mut_unique": 330,
+        "new": 1303
+      },
+      "ins": {
+        "call": 1503,
+        "clone": 200,
+        "get_mut_shared": 2606,
+        "new": 200,
+        "unwrap_shared": 1303
+      },
+      "insert": {
+        "call": 200,
+        "get_mut_unique": 200
+      },
+      "harness_or_drop": {
+        "clone": 2606,
+        "drop_shared": 2802,
+        "new": 1
+      },
+      "__purust_rebuild_E": {
+        "clone": 200
+      }
+    },
+    "persistent_depth": {
+      "depth": {
+        "call": 401,
+        "clone": 400
+      },
+      "balance__purust_permute_fields__matches": {
+        "clone": 1
+      },
+      "harness_or_drop": {
+        "drop_shared": 401
+      }
+    },
+    "persistent_drop": {
+      "harness_or_drop": {
+        "drop_last": 1504,
+        "drop_shared": 1703
+      }
+    },
+    "unique_build": {
+      "balance__purust_child_rebuilds": {
+        "call": 1468946
+      },
+      "balance__purust_permute_fields": {
+        "call": 99978,
+        "get_mut_unique": 199956
+      },
+      "balance__purust_permute_fields__matches": {
+        "call": 99978
+      },
+      "buildTree": {
+        "call": 1
+      },
+      "ins": {
+        "call": 2283976,
+        "clone": 2283976,
+        "get_mut_unique": 2183976,
+        "new": 100000
+      },
+      "insert": {
+        "call": 100000,
+        "get_mut_unique": 100000
+      },
+      "harness_or_drop": {
+        "drop_shared": 2183976,
+        "new": 1
+      }
+    },
+    "unique_depth_and_drop": {
+      "depth": {
+        "call": 200001,
+        "clone": 200000
+      },
+      "harness_or_drop": {
+        "drop_last": 100001,
+        "drop_shared": 300000
+      }
+    }
+  }
+}

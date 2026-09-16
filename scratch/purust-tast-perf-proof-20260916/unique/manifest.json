@@ -1,0 +1,12 @@
+{
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Test_RBTree/src/lib.rs",
+  "source_sha256": "f5479b1b43a8a967665e4aec683d62a5c2c12d1db4d57c65f2a7c732a128964a",
+  "removed_non_kernel_functions": [
+    "Test_RBTree_T",
+    "Test_RBTree_describe",
+    "Test_RBTree_act"
+  ],
+  "replaced_get_mut_sites": 103,
+  "baseline_sha256": "f62c6ee3a8f254431f9c57020d6c8fec12f539bffd0deae3333f9e23c268c946",
+  "unique_sha256": "d486c4d7441aca0adcfba6b52790eb8256b6de5f811c87ed5358c94d2e02c6a3"
+}

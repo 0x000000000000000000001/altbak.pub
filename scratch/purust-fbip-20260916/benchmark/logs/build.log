@@ -1,0 +1,50 @@
+["cargo", "build", "--release", "--target-dir", "/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/target", "--bin", "purust_output"]
+    Updating crates.io index
+     Locking 12 packages to latest compatible versions
+      Adding fancy-regex v0.13.0 (available: v0.19.2)
+   Compiling memchr v2.8.3
+   Compiling bit-vec v0.6.3
+   Compiling regex-syntax v0.8.11
+   Compiling perceus_ptr v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/perceus_ptr)
+   Compiling find-msvc-tools v0.1.12
+   Compiling shlex v2.0.1
+   Compiling cc v1.4.6
+   Compiling bit-set v0.5.3
+   Compiling aho-corasick v1.1.5
+   Compiling libmimalloc-sys v0.1.49
+   Compiling regex-automata v0.4.18
+   Compiling fancy-regex v0.13.0
+   Compiling purust_core v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/purust_core)
+   Compiling mimalloc v0.1.52
+   Compiling Purs_Record_Unsafe v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Record_Unsafe)
+   Compiling Purs_Type_Proxy v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Type_Proxy)
+   Compiling Purs_Data_Unit v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_Unit)
+   Compiling Purs_Data_Void v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_Void)
+   Compiling Purs_Data_Boolean v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_Boolean)
+   Compiling Purs_Data_Symbol v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_Symbol)
+   Compiling Purs_Control_Semigroupoid v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Control_Semigroupoid)
+   Compiling Purs_Data_HeytingAlgebra v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_HeytingAlgebra)
+   Compiling Purs_Data_Semiring v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_Semiring)
+   Compiling Purs_Data_Semigroup v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_Semigroup)
+   Compiling Purs_Control_Category v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Control_Category)
+   Compiling Purs_Data_Eq v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_Eq)
+   Compiling Purs_Data_Ring v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_Ring)
+   Compiling Purs_Data_Show v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_Show)
+   Compiling Purs_Data_CommutativeRing v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_CommutativeRing)
+   Compiling Purs_Data_Ordering v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_Ordering)
+   Compiling Purs_Data_Ord v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_Ord)
+   Compiling Purs_Data_EuclideanRing v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_EuclideanRing)
+   Compiling Purs_Data_Function v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_Function)
+   Compiling Purs_Data_Functor v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_Functor)
+   Compiling Purs_Data_Monoid v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Data_Monoid)
+   Compiling Purs_Control_Apply v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Control_Apply)
+   Compiling Purs_Control_Bind v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Control_Bind)
+   Compiling Purs_Control_Applicative v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Control_Applicative)
+   Compiling Purs_Control_Monad v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Control_Monad)
+   Compiling Purs_Effect v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Effect)
+   Compiling Purs_Effect_Console v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Effect_Console)
+   Compiling Purs_Bench v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Bench)
+   Compiling Purs_Test_RBTree v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_Test_RBTree)
+   Compiling Purs_AppX v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output/Purs_AppX)
+   Compiling purust_output v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/scratch/purust-fbip-20260916/benchmark/output/purust_output)
+    Finished `release` profile [optimized] target(s) in 11.91s
