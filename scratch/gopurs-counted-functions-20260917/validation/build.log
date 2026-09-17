@@ -1,0 +1,35 @@
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: gopurs
+
+Downloading dependencies...
+Building...
+[1 of 3] Compiling Gopurs.FunctionFusion
+[2 of 3] Compiling Gopurs.CodeGen
+[3 of 3] Compiling Main
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: gopurs
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Bundling...
+
+  bin/gopurs.js  1.6mb ⚠️
+
+⚡ Done in 41ms
+
+✓ Bundle succeeded.
+

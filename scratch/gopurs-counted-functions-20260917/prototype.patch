@@ -1,0 +1,19 @@
+--- before/Test_Church.go
++++ prototype/Test_Church.go
+@@ -233,6 +233,16 @@
+ }
+ 
+ func Call_Test_Church_fromInt(v_0_loop int64) gopurs_runtime.Value {
++if v_0_loop >= 0 {
++  count := v_0_loop
++  return gopurs_runtime.Func2(func(f gopurs_runtime.Value, x gopurs_runtime.Value) gopurs_runtime.Value {
++    result := x
++    for remaining := count; remaining > 0; remaining-- {
++      result = gopurs_runtime.Apply(f, result)
++    }
++    return result
++  })
++}
+ fromInt:
+ for {
+ if false { continue fromInt }

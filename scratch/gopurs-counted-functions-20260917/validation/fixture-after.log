@@ -1,0 +1,14 @@
+Selected 1 fixtures; 0 excluded.
+Workspace: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/gopurs-tests-hDcWGH
+=> Testing CountedFunctions.purs
+   [purescript] spago build -q
+   [generate-go] /Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs --main Main
+   [format] gofmt -w /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/gopurs-tests-hDcWGH/0-CountedFunctions/output/purescript/Main.go
+   [go-dependencies] go mod tidy
+   [go-build] go build -o gopurs_main ./main/main.go
+   [execute] /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/gopurs-tests-hDcWGH/0-CountedFunctions/output/gopurs_main 
+Done
+   Updated snapshot: /Users/0x1/Documents/htdocs/gopurs/gopurs/tests/passing-snapshots/CountedFunctions.go
+   [OK]
+Summary: 1 passed, 0 failed.
+Kept workspace: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/gopurs-tests-hDcWGH

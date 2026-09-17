@@ -1,0 +1,22 @@
+Selected 2 fixtures; 0 excluded.
+Workspace: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/gopurs-tests-8svKfq
+=> Testing CountedFunctions.purs
+   [purescript] spago build -q
+   [generate-go] /Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs --main Main
+   [format] gofmt -w /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/gopurs-tests-8svKfq/0-CountedFunctions/output/purescript/Main.go
+   [go-dependencies] go mod tidy
+   [go-build] go build -o gopurs_main ./main/main.go
+   [execute] /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/gopurs-tests-8svKfq/0-CountedFunctions/output/gopurs_main 
+Done
+   [OK]
+=> Testing ThunkFusion.purs
+   [purescript] spago build -q
+   [generate-go] /Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs --main Main
+   [format] gofmt -w /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/gopurs-tests-8svKfq/1-ThunkFusion/output/purescript/Main.go
+   [go-dependencies] go mod tidy
+   [go-build] go build -o gopurs_main ./main/main.go
+   [execute] /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/gopurs-tests-8svKfq/1-ThunkFusion/output/gopurs_main 
+Done
+   [OK]
+Summary: 2 passed, 0 failed.
+Kept workspace: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/gopurs-tests-8svKfq

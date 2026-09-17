@@ -1,0 +1,61 @@
+{
+  "key": "integrated",
+  "repetition": 2,
+  "started_utc": "2026-09-17T07:29:00.343581+00:00",
+  "binary_sha256": "cb8d7d2004c217d2862ed2e5c05b797b20a55a9e27d6fa2afe80a2e9d7632b1e",
+  "validated": {
+    "mode": "pure",
+    "labels": [
+      "AST Evaluation:",
+      "Fibonacci:",
+      "List Processing (900 elements):",
+      "Tail Call Optimization (100k calls):",
+      "Deep Record Updates (10k iterations):",
+      "Ackermann (3, 4):",
+      "Church Numerals (100k Closure Applications):",
+      "Prime Sieve (sum primes up to 500):",
+      "Red-Black Tree (100k Worst-Case Insertions):",
+      "Polymorphism (10M Type Class Dict Lookups):",
+      "State Monad (1.2k Binds, 60 Stack Depth):",
+      "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+      "Array Processing (900 elements):",
+      "RowToList (Keys Count):"
+    ],
+    "values": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "times_us": [
+      0.75,
+      0.58,
+      19.33,
+      60.12,
+      7.29,
+      17.67,
+      242.04,
+      94.75,
+      10184.0,
+      2362.12,
+      124.67,
+      234.79,
+      16.96,
+      0.46
+    ],
+    "total_ms": 13.37,
+    "sum_displayed_lines_ms": 13.365530000000001,
+    "values_validated": true,
+    "timer_unit": "microseconds"
+  }
+}

@@ -1,0 +1,9 @@
+Selected 1 fixtures; 0 excluded.
+Workspace: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/gopurs-tests-MaJVq5
+=> Testing CountedFunctions.purs
+   [purescript] spago build -q
+   [generate-go] /Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs --main Main
+   [format] gofmt -w /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/gopurs-tests-MaJVq5/0-CountedFunctions/output/purescript/Main.go
+[FAILED] Missing snapshot: /Users/0x1/Documents/htdocs/gopurs/gopurs/tests/passing-snapshots/CountedFunctions.go. Use --update-snapshots to create it explicitly.
+Summary: 0 passed, 1 failed.
+Kept workspace: /var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/gopurs-tests-MaJVq5

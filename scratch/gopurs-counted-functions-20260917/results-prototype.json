@@ -1,0 +1,518 @@
+{
+  "protocol": "5 alternating pairs; 10 warmups/process; 7 batches of 100 calls; GC before each batch outside timer; GOGC=800; PGO off",
+  "runs": [
+    {
+      "pair": 1,
+      "name": "before",
+      "sha256": "dd23ddb725501fb7df693363cb040538e006a10f239f65086d48cdc095bcb533",
+      "samples": [
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 588166.67,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 500469.58,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 488424.17,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157.01,
+          "bytes_per_call": 6800.16,
+          "ns_per_call": 487564.59,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 483360.83,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 487660,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 487512.91,
+          "result": 100000
+        }
+      ],
+      "median_ns": 487660
+    },
+    {
+      "pair": 1,
+      "name": "prototype",
+      "sha256": "7ffec2dc2f663ba9bb410c757b6ce713afe6eaa6fed11492524ad514c34443c8",
+      "samples": [
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 291674.58,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 263349.58,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 235786.67,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 230021.67,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 230407.92,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 228930,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 240297.5,
+          "result": 100000
+        }
+      ],
+      "median_ns": 235786.67
+    },
+    {
+      "pair": 2,
+      "name": "prototype",
+      "sha256": "7ffec2dc2f663ba9bb410c757b6ce713afe6eaa6fed11492524ad514c34443c8",
+      "samples": [
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 232387.91,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 234603.34,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 230781.25,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 228544.16,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 228968.33,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 233140.42,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 234328.34,
+          "result": 100000
+        }
+      ],
+      "median_ns": 232387.91
+    },
+    {
+      "pair": 2,
+      "name": "before",
+      "sha256": "dd23ddb725501fb7df693363cb040538e006a10f239f65086d48cdc095bcb533",
+      "samples": [
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 491939.17,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 491759.58,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 486982.5,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 490406.66,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 489726.67,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 491625.83,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 484891.25,
+          "result": 100000
+        }
+      ],
+      "median_ns": 490406.66
+    },
+    {
+      "pair": 3,
+      "name": "before",
+      "sha256": "dd23ddb725501fb7df693363cb040538e006a10f239f65086d48cdc095bcb533",
+      "samples": [
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 476220.84,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 479432.08,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157.01,
+          "bytes_per_call": 6800.16,
+          "ns_per_call": 486328.34,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 490960,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157.01,
+          "bytes_per_call": 6800.16,
+          "ns_per_call": 494697.08,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 489740.42,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 492291.67,
+          "result": 100000
+        }
+      ],
+      "median_ns": 489740.42
+    },
+    {
+      "pair": 3,
+      "name": "prototype",
+      "sha256": "7ffec2dc2f663ba9bb410c757b6ce713afe6eaa6fed11492524ad514c34443c8",
+      "samples": [
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 228771.67,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 229462.09,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 226290.84,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 229375.84,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 234654.59,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112.01,
+          "bytes_per_call": 5280.16,
+          "ns_per_call": 234287.08,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112.01,
+          "bytes_per_call": 5280.16,
+          "ns_per_call": 233589.59,
+          "result": 100000
+        }
+      ],
+      "median_ns": 229462.09
+    },
+    {
+      "pair": 4,
+      "name": "prototype",
+      "sha256": "7ffec2dc2f663ba9bb410c757b6ce713afe6eaa6fed11492524ad514c34443c8",
+      "samples": [
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 233333.33,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 230724.58,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 232303.75,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112.01,
+          "bytes_per_call": 5280.16,
+          "ns_per_call": 234286.25,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112.01,
+          "bytes_per_call": 5280.16,
+          "ns_per_call": 234314.58,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 232033.75,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 231194.59,
+          "result": 100000
+        }
+      ],
+      "median_ns": 232303.75
+    },
+    {
+      "pair": 4,
+      "name": "before",
+      "sha256": "dd23ddb725501fb7df693363cb040538e006a10f239f65086d48cdc095bcb533",
+      "samples": [
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 492564.17,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 489433.33,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157.01,
+          "bytes_per_call": 6800.16,
+          "ns_per_call": 485432.5,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 487959.58,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 488459.17,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 485832.92,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 480783.33,
+          "result": 100000
+        }
+      ],
+      "median_ns": 487959.58
+    },
+    {
+      "pair": 5,
+      "name": "before",
+      "sha256": "dd23ddb725501fb7df693363cb040538e006a10f239f65086d48cdc095bcb533",
+      "samples": [
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 484892.08,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 485500.83,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157.01,
+          "bytes_per_call": 6800.16,
+          "ns_per_call": 473274.58,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 481285.42,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157.01,
+          "bytes_per_call": 6800.16,
+          "ns_per_call": 475283.75,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 477527.5,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 157,
+          "bytes_per_call": 6800,
+          "ns_per_call": 478285,
+          "result": 100000
+        }
+      ],
+      "median_ns": 478285
+    },
+    {
+      "pair": 5,
+      "name": "prototype",
+      "sha256": "7ffec2dc2f663ba9bb410c757b6ce713afe6eaa6fed11492524ad514c34443c8",
+      "samples": [
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 229746.25,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 229142.92,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112.01,
+          "bytes_per_call": 5280.16,
+          "ns_per_call": 227858.75,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 227029.59,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 227904.17,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112.01,
+          "bytes_per_call": 5280.16,
+          "ns_per_call": 232442.92,
+          "result": 100000
+        },
+        {
+          "allocs_per_call": 112,
+          "bytes_per_call": 5280,
+          "ns_per_call": 228272.92,
+          "result": 100000
+        }
+      ],
+      "median_ns": 228272.92
+    }
+  ],
+  "summary": {
+    "before": {
+      "ns_per_call": 487564.59,
+      "allocs_per_call": 157,
+      "bytes_per_call": 6800
+    },
+    "prototype": {
+      "ns_per_call": 231194.59,
+      "allocs_per_call": 112,
+      "bytes_per_call": 5280
+    }
+  },
+  "paired_median_change": -0.5239282934049578
+}

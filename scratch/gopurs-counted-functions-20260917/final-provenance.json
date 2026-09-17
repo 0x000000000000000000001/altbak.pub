@@ -1,0 +1,12 @@
+{
+  "go_version": "go version go1.27.0 darwin/arm64",
+  "bundle_sha256": "bce14daa1a651df96ca8a69a263277c10d533f9470837332d2b4c445b3b9a2bd",
+  "binaries": {
+    "before/probe": "dd23ddb725501fb7df693363cb040538e006a10f239f65086d48cdc095bcb533",
+    "before/benchmark": "0e0e59c5523da71a11c79cdb251c658dc3c21d49d5391aa23306743ebb316b25",
+    "prototype/probe": "7ffec2dc2f663ba9bb410c757b6ce713afe6eaa6fed11492524ad514c34443c8",
+    "integrated/probe": "d7e5388c1f1b4a7015ad25bfa9b505ce85f97e9fa9eb47120ed07140847fbed3",
+    "integrated/benchmark": "cb8d7d2004c217d2862ed2e5c05b797b20a55a9e27d6fa2afe80a2e9d7632b1e",
+    "native/benchmark": "f48adfd3a9ab93a0590c8fadccb1aa443ede3d007a0365379a745f1d560919aa"
+  }
+}

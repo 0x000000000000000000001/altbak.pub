@@ -69,13 +69,17 @@ The headers link to each backend's evidence and limitations. **JS** refers to th
 | 42 | Bypassing unchanged constructor reconstruction | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
 | 43 | Native linked-list representation / intrinsics | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟢 | 🟢 | 🔴 |
 | 44 | Mutual tail recursion with bounded stack usage | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🟢 (PBO) | ⚪ | ⚪ | 🟡 |
-| 45 | Canonicalizing counted recursion into an induction loop | 🔴 | 🟡 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| 45 | Canonicalizing counted recursion into an induction loop | 🔴 | 🟡 | 🔴 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
 | 46 | Limited common subexpression sharing — CSE | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 |
 | 47 | Shared continuations for non-tail cases | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | 🟢 |
 | 48 | Factoring identical branch tails | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 |
 | 49 | Sticky sharing / saturating reference counts | ⚪ | 🟡 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 [Audit notes: technique scope, evidence, limitations, and source revisions](optimization-audit.md).
+
+## Latest Gopurs integrations
+
+- **D3/D4 remain yellow; D45: red → yellow (17 September).** A typed recursive function producer `build 0 = identity; build n = let previous = build (n - 1) in \f x -> f (previous f x)` now captures its nonnegative count and calls a loop worker. Saved functions, partial applications, callback order and the original negative body are preserved. The rule is structural, limited to `Int -> (Int -> Int) -> Int -> Int`; callbacks still use the existing `Value` ABI. Five alternating probe pairs from the actual generator give **Church 490.800 → 236.358 µs**, all favorable, with **157 → 112 allocations** and **6,800 → 5,280 bytes** per calculation. The full runner confirms **486.04 → 233.92 µs**, then **480.54 → 236.29 µs** in a second series. **A stable total-suite improvement is not established**: other rows fluctuate enough to mask the Church saving. Build and bundle have no warnings; **97 tool tests**, the new TAST fixture and the existing ThunkFusion fixture pass. [Scope, full results and unchanged README baseline](scratch/gopurs-counted-functions-20260917/REPORT.md).
 
 ## Latest Purust integrations
 

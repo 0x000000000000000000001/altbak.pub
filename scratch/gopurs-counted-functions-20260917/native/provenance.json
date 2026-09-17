@@ -1,0 +1,9 @@
+{
+  "source": "/Users/0x1/Documents/htdocs/altbak.pub/scratch/gopurs-adt-reuse-validation-20260916/after-fficc",
+  "binary_sha256": "f48adfd3a9ab93a0590c8fadccb1aa443ede3d007a0365379a745f1d560919aa",
+  "go_diff_vs_before": [
+    "App/main/main.go",
+    "AppFFICheatcode/main/main.go",
+    "Main/main.go"
+  ]
+}

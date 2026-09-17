@@ -1,0 +1,8 @@
+# Keep the report, probes, patches, hashes and measurements in Git.
+# Frozen compiler inputs, generated packages and executables remain local.
+/*/output/
+/*/ffi/
+/*/probe
+/*/benchmark
+/gopurs-before.js
+/gopurs-integrated.js

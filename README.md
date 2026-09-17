@@ -60,7 +60,7 @@ List Processing         | ~ 19.92 μs                       | ~ 586 μs         
 Tail Call Optimization  | ~ 63.83 μs                       | ~ 13354 μs                            | ~ 39 μs       | ~ 42.12 μs              |
 Deep Record Updates     | ~ 7.46 μs                        | ~ 9492 μs                             | ~ 373 μs      | ~ 20.96 μs              |
 Ackermann               | ~ 18.17 μs                       | ~ 1267 μs                             | ~ 23 μs       | ~ 25.46 μs              |
-Church Numerals         | ~ 499.42 μs                      | ~ 5731 μs                             | ~ 1002 μs     | ~ 29.21 μs              |
+Church Numerals         | ~ 233.67 μs                      | ~ 5731 μs                             | ~ 1002 μs     | ~ 29.21 μs              |
 Prime Sieve             | ~ 92.29 μs                       | ~ 2549 μs                             | ~ 134 μs      | ~ 1.12 μs               |
 Red-Black Tree          | ~ 8979.42 μs                     | ~ 870034 μs                           | ~ 26529 μs    | ~ 8752.42 μs            |
 Polymorphism            | ~ 2217.29 μs                     | ~ 669801 μs                           | ~ 58848 μs    | ~ 2217.54 μs            |
@@ -68,7 +68,7 @@ State Monad             | ~ 114.92 μs                      | ~ 536 μs         
 Lazy Evaluation         | ~ 229.79 μs                      | ~ 71586 μs                            | ~ 14816 μs    | ~ 0.79 μs               |
 Array Processing        | ~ 14.21 μs                       | ~ 61 μs                               | ~ 7 μs        | ~ 0.79 μs               |
 RowToList               | ~ 0.50 μs                        | ~ 2 μs                                | ~ 1 μs        | ~ 0.33 μs               |
-**Total Execution Time**| ~ 12.26 ms                       | ~ 1645.32 ms                          | ~ 102.04 ms   | ~ 11.09 ms              |
+**Total Execution Time**| ~ 11.99 ms                       | ~ 1645.32 ms                          | ~ 102.04 ms   | ~ 11.09 ms              |
 
 #### Scheme
 
