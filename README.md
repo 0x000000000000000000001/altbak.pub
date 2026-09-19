@@ -1,4 +1,4 @@
-# PureScript universal multi runtime benchmark
+# 🌈 PureScript universal multi runtime benchmark
 
 ## Project goal
 This project is a proof of concept demonstrating the power of abstraction and portability offered by **PureScript**. The goal is to show how the exact same pure functional code (without any manual FFI) can be compiled and executed natively on radically different ecosystems. This is made possible by the PureScript compiler architecture, which generates an intermediate representation (`CoreFn`) that can be consumed by various backends:
@@ -132,23 +132,25 @@ RowToList               | ~ 2 μs                 | ~ 2 μs         | ~ 1 μs   
 
 #### Rust
 
+The compiled Purust column and C reference use `python3 tmp/run_purust_benchmark.py --update-readme`: the existing PureScript numeric expressions are compiled by Purust and timed without the `Effect`/string-formatting wrapper. Both programs use monotonic clocks, opaque inputs, consumed results, three global/local warm-ups, and ten batches calibrated to at least 10 ms (up to 16,777,216 calls). Each cell is the median of three independent processes' minimum per-call batch times, with alternating process order; totals sum the median cells. Raw runs and build fingerprints are saved in `var/benchmark/purust-reference/`. The Rust FFI columns use the earlier single-call protocol.
+
 Rust Benchmark          | Compiled Rust ([purust](https://github.com/0x000000000000000000001/purust), WIP) | Native FP-style Rust FFI (rustc -O3, WIP) | Native hand-written Rust FFI (rustc -O3, WIP) |
 ----------------------- | ------------------------- | ------------------------ | ------------------------------ |
-AST Evaluation          | ~ 1.21 μs              | ~ 3 μs       | ~ 1 μs                 |
-Fibonacci               | ~ 0.87 μs              | ~ 2 μs       | ~ 1 μs                 |
-List Processing         | ~ 35.04 μs             | ~ 26 μs      | ~ 1 μs                 |
-Tail Call Optimization  | ~ 33.29 μs             | ~ 108 μs     | ~ 35 μs                |
-Deep Record Updates     | ~ 4.29 μs              | ~ 362 μs     | ~ 4 μs                 |
-Ackermann               | ~ 20.33 μs             | ~ 39 μs      | ~ 18 μs                |
-Church Numerals         | ~ 204.37 μs            | ~ 441 μs     | ~ 1 μs                 |
-Prime Sieve             | ~ 164.88 μs            | ~ 194 μs     | ~ 1 μs                 |
-Red-Black Tree          | ~ 8322.88 μs           | ~ 37225 μs   | ~ 36070 μs             |
-Polymorphism            | ~ 0.83 μs              | ~ 6688 μs    | ~ 1 μs                 |
-State Monad             | ~ 53.96 μs             | ~ 110 μs     | ~ 1 μs                 |
-Lazy Evaluation         | ~ 0.88 μs              | ~ 21884 μs   | ~ 0 μs                 |
-Array Processing        | ~ 24.54 μs             | ~ 2 μs       | ~ 1 μs                 |
-RowToList               | ~ 0.79 μs              | ~ 1 μs       | ~ 0 μs                 |
-**Total Execution Time**| ~ 8.87 ms              | ~ 67.08 ms   | ~ 36.13 ms             |
+AST Evaluation          | ~ 0.267 μs              | ~ 3 μs       | ~ 1 μs                 |
+Fibonacci               | ~ 0.086 μs              | ~ 2 μs       | ~ 1 μs                 |
+List Processing         | ~ 31.318 μs             | ~ 26 μs      | ~ 1 μs                 |
+Tail Call Optimization  | ~ 30.352 μs             | ~ 108 μs     | ~ 35 μs                |
+Deep Record Updates     | ~ 3.257 μs              | ~ 362 μs     | ~ 4 μs                 |
+Ackermann               | ~ 16.890 μs             | ~ 39 μs      | ~ 18 μs                |
+Church Numerals         | ~ 172.145 μs            | ~ 441 μs     | ~ 1 μs                 |
+Prime Sieve             | ~ 154.524 μs            | ~ 194 μs     | ~ 1 μs                 |
+Red-Black Tree          | ~ 8600.333 μs           | ~ 37225 μs   | ~ 36070 μs             |
+Polymorphism            | ~ 0.041 μs              | ~ 6688 μs    | ~ 1 μs                 |
+State Monad             | ~ 55.963 μs             | ~ 110 μs     | ~ 1 μs                 |
+Lazy Evaluation         | ~ 0.001 μs              | ~ 21884 μs   | ~ 0 μs                 |
+Array Processing        | ~ 23.496 μs             | ~ 2 μs       | ~ 1 μs                 |
+RowToList               | ~ 0.064 μs              | ~ 1 μs       | ~ 0 μs                 |
+**Total Execution Time**| ~ 9.09 ms              | ~ 67.08 ms   | ~ 36.13 ms             |
 
 #### C++
 
@@ -274,21 +276,21 @@ RowToList               | ~ 0.001 μs |
 
 C Benchmark             | Native hand-written C (clang -O3) |
 ----------------------- | -------------------- |
-AST Evaluation          | ~ 0.092 μs |
-Fibonacci               | ~ 0.077 μs |
-List Processing         | ~ 0.045 μs |
-Tail Call Optimization  | ~ 32.410 μs |
-Deep Record Updates     | ~ 3.234 μs |
-Ackermann               | ~ 16.390 μs |
+AST Evaluation          | ~ 0.096 μs |
+Fibonacci               | ~ 0.082 μs |
+List Processing         | ~ 0.049 μs |
+Tail Call Optimization  | ~ 34.084 μs |
+Deep Record Updates     | ~ 3.426 μs |
+Ackermann               | ~ 16.467 μs |
 Church Numerals         | ~ 0.001 μs |
-Prime Sieve             | ~ 1.014 μs |
-Red-Black Tree          | ~ 8676.000 μs |
+Prime Sieve             | ~ 1.059 μs |
+Red-Black Tree          | ~ 9083.000 μs |
 Polymorphism            | ~ 0.001 μs |
 State Monad             | ~ 0.001 μs |
 Lazy Evaluation         | ~ 0.001 μs |
-Array Processing        | ~ 0.045 μs |
+Array Processing        | ~ 0.048 μs |
 RowToList               | ~ 0.001 μs |
-**Total Execution Time**| ~ 8.73 ms |
+**Total Execution Time**| ~ 9.14 ms |
 
 > [!IMPORTANT]
 > **The 99/1 philosophy and the AOT compiler vs FFI approach**
