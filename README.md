@@ -250,6 +250,26 @@ Array Processing        | ~ 0.00 μs |
 RowToList               | ~ 0.00 μs |
 **Total Execution Time**| ~ 13.55 ms |
 
+#### OCaml
+
+OCaml Benchmark         | Native OCaml (ocamlopt -O3) |
+----------------------- | --------------------------- |
+AST Evaluation          | ~ 0.00 μs |
+Fibonacci               | ~ 0.00 μs |
+List Processing         | ~ 0.00 μs |
+Tail Call Optimization  | ~ 44.82 μs |
+Deep Record Updates     | ~ 16.93 μs |
+Ackermann               | ~ 15.02 μs |
+Church Numerals         | ~ 21.93 μs |
+Prime Sieve             | ~ 16.21 μs |
+Red-Black Tree          | ~ 10190.01 μs |
+Polymorphism            | ~ 2761.84 μs |
+State Monad             | ~ 0.00 μs |
+Lazy Evaluation         | ~ 0.00 μs |
+Array Processing        | ~ 0.00 μs |
+RowToList               | ~ 0.00 μs |
+**Total Execution Time**| ~ 13.07 ms |
+
 > [!IMPORTANT]
 > **The 99/1 philosophy and the AOT compiler vs FFI approach**
 > 
