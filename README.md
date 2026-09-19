@@ -270,6 +270,26 @@ Array Processing        | ~ 0.00 μs |
 RowToList               | ~ 0.00 μs |
 **Total Execution Time**| ~ 13.07 ms |
 
+#### C (reference)
+
+C Benchmark             | Native C (clang -O3) |
+----------------------- | -------------------- |
+AST Evaluation          | ~ 0.00 μs |
+Fibonacci               | ~ 0.00 μs |
+List Processing         | ~ 0.00 μs |
+Tail Call Optimization  | ~ 59.00 μs |
+Deep Record Updates     | ~ 5.00 μs |
+Ackermann               | ~ 31.00 μs |
+Church Numerals         | ~ 0.00 μs |
+Prime Sieve             | ~ 1.00 μs |
+Red-Black Tree          | ~ 10887.00 μs |
+Polymorphism            | ~ 0.00 μs |
+State Monad             | ~ 0.00 μs |
+Lazy Evaluation         | ~ 0.00 μs |
+Array Processing        | ~ 0.00 μs |
+RowToList               | ~ 0.00 μs |
+**Total Execution Time**| ~ 10.98 ms |
+
 > [!IMPORTANT]
 > **The 99/1 philosophy and the AOT compiler vs FFI approach**
 > 
