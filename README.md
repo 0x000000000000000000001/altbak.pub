@@ -212,83 +212,87 @@ RowToList               | ~ 1.88 μs                 | ~ 2.75 μs               
 
 #### Koka
 
+The following four handwritten reference tables (Koka, Haskell, OCaml and C) use the corrected batch protocol. Reproduce and update them with `python3 tmp/run_benchmarks.py --update-readme`; `./bin/run` runs the PureScript backends above. The reference runner rebuilds all four programs before executing them sequentially and validates all 56 results before updating any table. Compiler versions, commands, source hashes and raw measurements are saved in `var/benchmark/native-references/`.
+
+Each reference uses a monotonic clock, three global and three local warm-ups, then ten measured batches. Calibration doubles the batch size until it takes at least 10 ms, capped at 16,777,216 invocations. Each table cell is the minimum batch duration divided by its invocation count; totals sum these per-invocation times. Every invocation has an opaque input and a consumed result. Times include this harness overhead and exclude output formatting. These handwritten implementations retain their intentional algorithmic shortcuts. Comparisons with the PureScript tables must account for their single-invocation timing protocol and string conversion.
+
 Koka Benchmark          | Native hand-written Koka (koka -O3) |
 ----------------------- | ----- |
-AST Evaluation          | ~ 0 μs |
-Fibonacci               | ~ 0 μs |
-List Processing         | ~ 1 μs |
-Tail Call Optimization  | ~ 702 μs |
-Deep Record Updates     | ~ 214 μs |
-Ackermann               | ~ 22 μs |
-Church Numerals         | ~ 143 μs |
-Prime Sieve             | ~ 13 μs |
-Red-Black Tree          | ~ 22553 μs |
-Polymorphism            | ~ 9947 μs |
-State Monad             | ~ 4 μs |
-Lazy Evaluation         | ~ 1 μs |
-Array Processing        | ~ 1 μs |
-RowToList               | ~ 0 μs |
-**Total Execution Time**| ~ 33.60 ms |
+AST Evaluation          | ~ 0.215 μs |
+Fibonacci               | ~ 0.138 μs |
+List Processing         | ~ 1.281 μs |
+Tail Call Optimization  | ~ 550.875 μs |
+Deep Record Updates     | ~ 193.703 μs |
+Ackermann               | ~ 17.303 μs |
+Church Numerals         | ~ 96.570 μs |
+Prime Sieve             | ~ 11.617 μs |
+Red-Black Tree          | ~ 21722.000 μs |
+Polymorphism            | ~ 9597.000 μs |
+State Monad             | ~ 2.326 μs |
+Lazy Evaluation         | ~ 1.050 μs |
+Array Processing        | ~ 1.230 μs |
+RowToList               | ~ 0.001 μs |
+**Total Execution Time**| ~ 32.20 ms |
 
 #### Haskell
 
 Haskell Benchmark       | Native hand-written Haskell (GHC -O2) |
 ----------------------- | ------------------------ |
-AST Evaluation          | ~ 0.00 μs |
-Fibonacci               | ~ 0.00 μs |
-List Processing         | ~ 0.00 μs |
-Tail Call Optimization  | ~ 59.00 μs |
-Deep Record Updates     | ~ 8.00 μs |
-Ackermann               | ~ 13.00 μs |
-Church Numerals         | ~ 76.00 μs |
-Prime Sieve             | ~ 29.00 μs |
-Red-Black Tree          | ~ 11125.00 μs |
-Polymorphism            | ~ 2243.00 μs |
-State Monad             | ~ 0.00 μs |
-Lazy Evaluation         | ~ 0.00 μs |
-Array Processing        | ~ 0.00 μs |
-RowToList               | ~ 0.00 μs |
-**Total Execution Time**| ~ 13.55 ms |
+AST Evaluation          | ~ 0.051 μs |
+Fibonacci               | ~ 0.182 μs |
+List Processing         | ~ 0.509 μs |
+Tail Call Optimization  | ~ 59.898 μs |
+Deep Record Updates     | ~ 7.286 μs |
+Ackermann               | ~ 7.503 μs |
+Church Numerals         | ~ 44.738 μs |
+Prime Sieve             | ~ 17.366 μs |
+Red-Black Tree          | ~ 10973.000 μs |
+Polymorphism            | ~ 4262.250 μs |
+State Monad             | ~ 0.618 μs |
+Lazy Evaluation         | ~ 0.455 μs |
+Array Processing        | ~ 0.509 μs |
+RowToList               | ~ 0.004 μs |
+**Total Execution Time**| ~ 15.37 ms |
 
 #### OCaml
 
 OCaml Benchmark         | Native hand-written OCaml (ocamlopt -O3) |
 ----------------------- | --------------------------- |
-AST Evaluation          | ~ 0.00 μs |
-Fibonacci               | ~ 0.00 μs |
-List Processing         | ~ 0.00 μs |
-Tail Call Optimization  | ~ 44.82 μs |
-Deep Record Updates     | ~ 16.93 μs |
-Ackermann               | ~ 15.02 μs |
-Church Numerals         | ~ 21.93 μs |
-Prime Sieve             | ~ 16.21 μs |
-Red-Black Tree          | ~ 10190.01 μs |
-Polymorphism            | ~ 2761.84 μs |
-State Monad             | ~ 0.00 μs |
-Lazy Evaluation         | ~ 0.00 μs |
-Array Processing        | ~ 0.00 μs |
-RowToList               | ~ 0.00 μs |
-**Total Execution Time**| ~ 13.07 ms |
+AST Evaluation          | ~ 0.049 μs |
+Fibonacci               | ~ 0.118 μs |
+List Processing         | ~ 0.426 μs |
+Tail Call Optimization  | ~ 48.609 μs |
+Deep Record Updates     | ~ 17.659 μs |
+Ackermann               | ~ 15.419 μs |
+Church Numerals         | ~ 22.639 μs |
+Prime Sieve             | ~ 16.877 μs |
+Red-Black Tree          | ~ 9975.000 μs |
+Polymorphism            | ~ 2234.500 μs |
+State Monad             | ~ 0.292 μs |
+Lazy Evaluation         | ~ 0.237 μs |
+Array Processing        | ~ 0.436 μs |
+RowToList               | ~ 0.001 μs |
+**Total Execution Time**| ~ 12.33 ms |
 
 #### C (reference)
 
 C Benchmark             | Native hand-written C (clang -O3) |
 ----------------------- | -------------------- |
-AST Evaluation          | ~ 0.00 μs |
-Fibonacci               | ~ 0.00 μs |
-List Processing         | ~ 0.00 μs |
-Tail Call Optimization  | ~ 59.00 μs |
-Deep Record Updates     | ~ 5.00 μs |
-Ackermann               | ~ 31.00 μs |
-Church Numerals         | ~ 0.00 μs |
-Prime Sieve             | ~ 1.00 μs |
-Red-Black Tree          | ~ 10887.00 μs |
-Polymorphism            | ~ 0.00 μs |
-State Monad             | ~ 0.00 μs |
-Lazy Evaluation         | ~ 0.00 μs |
-Array Processing        | ~ 0.00 μs |
-RowToList               | ~ 0.00 μs |
-**Total Execution Time**| ~ 10.98 ms |
+AST Evaluation          | ~ 0.092 μs |
+Fibonacci               | ~ 0.077 μs |
+List Processing         | ~ 0.045 μs |
+Tail Call Optimization  | ~ 32.410 μs |
+Deep Record Updates     | ~ 3.234 μs |
+Ackermann               | ~ 16.390 μs |
+Church Numerals         | ~ 0.001 μs |
+Prime Sieve             | ~ 1.014 μs |
+Red-Black Tree          | ~ 8676.000 μs |
+Polymorphism            | ~ 0.001 μs |
+State Monad             | ~ 0.001 μs |
+Lazy Evaluation         | ~ 0.001 μs |
+Array Processing        | ~ 0.045 μs |
+RowToList               | ~ 0.001 μs |
+**Total Execution Time**| ~ 8.73 ms |
 
 > [!IMPORTANT]
 > **The 99/1 philosophy and the AOT compiler vs FFI approach**

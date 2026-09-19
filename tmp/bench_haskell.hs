@@ -1,7 +1,10 @@
 {-# LANGUAGE BangPatterns #-}
 module Main where
 
-import Data.Time.Clock.POSIX (getPOSIXTime)
+import GHC.Clock (getMonotonicTimeNSec)
+import Data.IORef (IORef, newIORef, readIORef, writeIORef)
+import Data.Word (Word64)
+import Control.Monad (forM_, replicateM, replicateM_)
 import Control.Exception (evaluate)
 import Text.Printf
 import System.Environment (getArgs)
@@ -195,87 +198,81 @@ runRowToList :: Int -> Int
 runRowToList _ = 5
 
 -- Benchmarking Framework
-getTimeUs :: IO Double
-getTimeUs = do
-  t <- getPOSIXTime
-  return (realToFrac t * 1000000.0)
+-- Read the argument and consume the forced result on every invocation. Keeping
+-- this IO boundary out of line prevents sharing a pure result across a batch.
+{-# NOINLINE runOnce #-}
+runOnce :: (Int -> Int) -> IORef Int -> IORef Int -> IO Int
+runOnce act input output = do
+  arg <- readIORef input
+  result <- evaluate (act arg)
+  writeIORef output result
+  return result
+
+measureBatch :: Int -> (Int -> Int) -> IORef Int -> IORef Int -> IO Word64
+measureBatch count act input output = do
+  start <- getMonotonicTimeNSec
+  let loop 0 = return ()
+      loop !remaining = do
+        _ <- runOnce act input output
+        loop (remaining - 1)
+  loop count
+  end <- getMonotonicTimeNSec
+  return (end - start)
+
+calibrate :: (Int -> Int) -> IORef Int -> IORef Int -> IO Int
+calibrate act input output = go 1
+  where
+    go !count = do
+      elapsed <- measureBatch count act input output
+      if elapsed >= 10000000 || count >= 16777216
+        then return count
+        else go (count * 2)
 
 {-# NOINLINE bench #-}
 bench :: String -> (Int -> Int) -> Int -> IO Double
 bench name act arg = do
+  input <- newIORef arg
+  output <- newIORef 0
   putStrLn $ "--------------------------------------------------\n\n(Test)\n" ++ name
   putStrLn "\n(Output & Warm-up)"
-  
-  res <- evaluate (act arg)
-  print res
-  
-  _ <- evaluate (act arg)
-  _ <- evaluate (act arg)
-  
-  let loop i minDur | i > (10 :: Int) = return minDur
-      loop i minDur = do
-        t1 <- getTimeUs
-        let !arg' = arg + (i `mod` 2) * 0
-        _ <- evaluate (act arg')
-        t2 <- getTimeUs
-        let d = t2 - t1
-        let minDur' = if d < minDur then d else minDur
-        loop (i + 1) minDur'
-        
-  us <- loop 1 1000000000.0
-  putStrLn $ "\n(Execution time - best of 10)\n\n" ++ printf "%.2f" us ++ " us\n"
+  result <- runOnce act input output
+  print result
+  replicateM_ 2 (runOnce act input output)
+
+  count <- calibrate act input output
+  durations <- replicateM 10 (measureBatch count act input output)
+  let us = fromIntegral (minimum durations) / fromIntegral count / 1000.0
+  putStrLn $ "\n(Execution time - best of 10)\n\n" ++ printf "%.6f" us ++ " μs\n"
+  putStrLn $ "Batch iterations: " ++ show count ++ "\n"
   return us
 
 main :: IO ()
 main = do
   args <- getArgs
   let dummy = length args
-      lAst = 3 + dummy
-      lFib = 10 + dummy
-      lList = 900 + dummy
-      lTCO = 100000 + dummy
-      lRec = 10000 + dummy
-      lAck = 3 + dummy
-      lChur = 10 + dummy
-      lPri = 500 + dummy
-      lRB = 100000 + dummy
-      lPoly = 10000000 + dummy
-      lState = 60 + dummy
-      lLazy = 1000 + dummy
-      lArr = 900 + dummy
-      lRow = 0 + dummy
+      cases =
+        [ ("AST Evaluation:", runAstTree, 3 + dummy)
+        , ("Fibonacci:", runFib, 10 + dummy)
+        , ("List Processing (900 elements):", runListOps, 900 + dummy)
+        , ("Tail Call Optimization (100k calls):", runTCO, 100000 + dummy)
+        , ("Deep Record Updates (10k iterations):", runRecords, 10000 + dummy)
+        , ("Ackermann (3, 4):", runAckermann, 3 + dummy)
+        , ("Church Numerals (100k Closure Applications):", runChurch, 10 + dummy)
+        , ("Prime Sieve (sum primes up to 500):", runPrimes, 500 + dummy)
+        , ("Red-Black Tree (100k Worst-Case Insertions):", runRBTree, 100000 + dummy)
+        , ("Polymorphism (10M Type Class Dict Lookups):", runPolymorphism, 10000000 + dummy)
+        , ("State Monad (1.2k Binds, 60 Stack Depth):", runStateMonad, 60 + dummy)
+        , ("Lazy Evaluation (1M Thunks Forced, 1k Depth):", runLazyEvaluation, 1000 + dummy)
+        , ("Array Processing (900 elements):", runArrayOps, 900 + dummy)
+        , ("RowToList (Keys Count):", runRowToList, 0 + dummy)
+        ]
 
   putStrLn "Global warm-up in progress..."
-  _ <- evaluate $ runAstTree lAst
-  _ <- evaluate $ runFib lFib
-  _ <- evaluate $ runListOps lList
-  _ <- evaluate $ runTCO lTCO
-  _ <- evaluate $ runRecords lRec
-  _ <- evaluate $ runAckermann lAck
-  _ <- evaluate $ runChurch lChur
-  _ <- evaluate $ runPrimes lPri
-  _ <- evaluate $ runRBTree lRB
-  _ <- evaluate $ runPolymorphism lPoly
-  _ <- evaluate $ runStateMonad lState
-  _ <- evaluate $ runLazyEvaluation lLazy
-  _ <- evaluate $ runArrayOps lArr
-  _ <- evaluate $ runRowToList lRow
-  
-  total_us1 <- bench "AST Evaluation:" runAstTree lAst
-  total_us2 <- bench "Fibonacci:" runFib lFib
-  total_us3 <- bench "List Processing:" runListOps lList
-  total_us4 <- bench "Tail Call Optimization:" runTCO lTCO
-  total_us5 <- bench "Deep Record Updates:" runRecords lRec
-  total_us6 <- bench "Ackermann:" runAckermann lAck
-  total_us7 <- bench "Church Numerals (100k Closure Applications):" runChurch lChur
-  total_us8 <- bench "Prime Sieve (sum primes up to 500):" runPrimes lPri
-  total_us9 <- bench "Red-Black Tree:" runRBTree lRB
-  total_us10 <- bench "Polymorphism:" runPolymorphism lPoly
-  total_us11 <- bench "State Monad:" runStateMonad lState
-  total_us12 <- bench "Lazy Evaluation:" runLazyEvaluation lLazy
-  total_us13 <- bench "Array Processing:" runArrayOps lArr
-  total_us14 <- bench "RowToList:" runRowToList lRow
-  
-  let total = total_us1 + total_us2 + total_us3 + total_us4 + total_us5 + total_us6 + total_us7 + total_us8 + total_us9 + total_us10 + total_us11 + total_us12 + total_us13 + total_us14
-  putStrLn $ "\n==================================================\n"
-  putStrLn $ "Total exec time: " ++ printf "%.2f" (total / 1000.0) ++ " ms\n"
+  output <- newIORef 0
+  replicateM_ 3 $ forM_ cases $ \(_, act, arg) -> do
+    input <- newIORef arg
+    _ <- runOnce act input output
+    return ()
+  total <- sum <$> mapM (\(name, act, arg) -> bench name act arg) cases
+  putStrLn "\n==================================================\n"
+  putStrLn $ "Total exec time: " ++ printf "%.6f" (total / 1000.0) ++ " ms\n"

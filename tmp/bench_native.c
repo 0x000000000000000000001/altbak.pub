@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/time.h>
+#include <stdint.h>
+#include <time.h>
 
 typedef enum { VAL, ADD, MUL, SUB } ExprType;
 typedef struct Expr {
@@ -205,73 +206,100 @@ int runArrayOps(int limit) {
 }
 
 int runRowToList(int limit) {
+    (void)limit;
     return 5;
 }
 
-double get_time() {
-    struct timeval tv;
-    gettimeofday(&tv, NULL);
-    return tv.tv_sec * 1000000.0 + tv.tv_usec;
-}
+/* Read every input and preserve every result, including warm-up calls. */
+static volatile int benchmark_sink;
 
-double bench(const char* name, int (*act)(int), int arg) {
-    printf("--------------------------------------------------\n\n(Test)\n%s\n\n(Output & Warm-up)\n", name);
-    int res = act(arg);
-    printf("%d\n", res);
-    act(arg); act(arg);
-    
-    double min_dur = 1e12;
-    for (int i = 1; i <= 10; i++) {
-        double t1 = get_time();
-        
-        // Prevent pure function hoisting
-        volatile int a = arg + (i % 2) * 0;
-        act(a);
-        
-        double t2 = get_time();
-        double d = t2 - t1;
-        if (d < min_dur) min_dur = d;
+static uint64_t now_ns(void) {
+    struct timespec ts;
+    if (clock_gettime(CLOCK_MONOTONIC, &ts) != 0) {
+        perror("clock_gettime");
+        exit(1);
     }
-    printf("\n(Execution time - best of 10)\n\n%.2f us\n\n", min_dur);
-    return min_dur;
+    return (uint64_t)ts.tv_sec * 1000000000ULL + (uint64_t)ts.tv_nsec;
 }
 
-int main(int argc, char** argv) {
-    expr_arena = (Expr*)malloc(sizeof(Expr) * 100000);
-    tree_arena = (Tree*)malloc(sizeof(Tree) * 20000000);
-    
-    int dummy = argc;
-    int lAst = 3 + dummy - 1;
-    int lFib = 10 + dummy - 1;
-    int lList = 900 + dummy - 1;
-    int lTCO = 100000 + dummy - 1;
-    int lRec = 10000 + dummy - 1;
-    int lAck = 3 + dummy - 1;
-    int lChur = 10 + dummy - 1;
-    int lPri = 500 + dummy - 1;
-    int lRB = 100000 + dummy - 1;
-    int lPoly = 10000000 + dummy - 1;
-    int lState = 60 + dummy - 1;
-    int lLazy = 1000 + dummy - 1;
-    int lArr = 900 + dummy - 1;
-    int lRow = 0 + dummy - 1;
+__attribute__((noinline))
+static uint64_t batch(int (*act)(int), int arg, int iterations) {
+    volatile int opaque_arg = arg;
+    uint64_t start = now_ns();
+    for (int i = 0; i < iterations; ++i) {
+        benchmark_sink = act(opaque_arg);
+    }
+    return now_ns() - start;
+}
 
-    double total_us = 
-        bench("AST Evaluation:", runAstTree, lAst) +
-        bench("Fibonacci:", runFib, lFib) +
-        bench("List Processing:", runListOps, lList) +
-        bench("Tail Call Optimization:", runTCO, lTCO) +
-        bench("Deep Record Updates:", runRecords, lRec) +
-        bench("Ackermann:", runAckermann, lAck) +
-        bench("Church Numerals (100k Closure Applications):", runChurch, lChur) +
-        bench("Prime Sieve (sum primes up to 500):", runPrimes, lPri) +
-        bench("Red-Black Tree:", runRBTree, lRB) +
-        bench("Polymorphism:", runPolymorphism, lPoly) +
-        bench("State Monad:", runStateMonad, lState) +
-        bench("Lazy Evaluation:", runLazyEvaluation, lLazy) +
-        bench("Array Processing:", runArrayOps, lArr) +
-        bench("RowToList:", runRowToList, lRow);
+static double bench(const char* name, int (*act)(int), int arg) {
+    printf("--------------------------------------------------\n\n(Test)\n%s\n\n(Output & Warm-up)\n", name);
+    volatile int opaque_arg = arg;
+    int result = act(opaque_arg);
+    benchmark_sink = result;
+    printf("%d\n", result);
+    benchmark_sink = act(opaque_arg);
+    benchmark_sink = act(opaque_arg);
 
-    printf("\n==================================================\n\nTotal exec time: %.2f ms\n", total_us / 1000.0);
+    int iterations = 1;
+    while (batch(act, arg, iterations) < 10000000ULL && iterations < 16777216) {
+        iterations *= 2;
+    }
+    uint64_t best = UINT64_MAX;
+    for (int sample = 0; sample < 10; ++sample) {
+        uint64_t duration = batch(act, arg, iterations);
+        if (benchmark_sink != result) {
+            fprintf(stderr, "Unstable result: %s\n", name);
+            exit(1);
+        }
+        if (duration < best) best = duration;
+    }
+    double us = (double)best / 1000.0 / iterations;
+    printf("\n(Execution time - best of 10)\n\n%.6f μs\n\nBatch iterations: %d\n\n", us, iterations);
+    return us;
+}
+
+int main(void) {
+    expr_arena = malloc(sizeof(Expr) * 100000);
+    tree_arena = malloc(sizeof(Tree) * 20000000);
+    if (!expr_arena || !tree_arena) {
+        fprintf(stderr, "Unable to allocate benchmark arenas\n");
+        return 1;
+    }
+    const struct {
+        const char* name;
+        int (*act)(int);
+        int arg;
+    } cases[] = {
+        {"AST Evaluation:", runAstTree, 3},
+        {"Fibonacci:", runFib, 10},
+        {"List Processing (900 elements):", runListOps, 900},
+        {"Tail Call Optimization (100k calls):", runTCO, 100000},
+        {"Deep Record Updates (10k iterations):", runRecords, 10000},
+        {"Ackermann (3, 4):", runAckermann, 3},
+        {"Church Numerals (100k Closure Applications):", runChurch, 10},
+        {"Prime Sieve (sum primes up to 500):", runPrimes, 500},
+        {"Red-Black Tree (100k Worst-Case Insertions):", runRBTree, 100000},
+        {"Polymorphism (10M Type Class Dict Lookups):", runPolymorphism, 10000000},
+        {"State Monad (1.2k Binds, 60 Stack Depth):", runStateMonad, 60},
+        {"Lazy Evaluation (1M Thunks Forced, 1k Depth):", runLazyEvaluation, 1000},
+        {"Array Processing (900 elements):", runArrayOps, 900},
+        {"RowToList (Keys Count):", runRowToList, 0},
+    };
+    const size_t count = sizeof(cases) / sizeof(cases[0]);
+    puts("Global warm-up in progress...");
+    for (int warmup = 0; warmup < 3; ++warmup) {
+        for (size_t i = 0; i < count; ++i) {
+            volatile int arg = cases[i].arg;
+            benchmark_sink = cases[i].act(arg);
+        }
+    }
+    double total_us = 0;
+    for (size_t i = 0; i < count; ++i) {
+        total_us += bench(cases[i].name, cases[i].act, cases[i].arg);
+    }
+    printf("\n==================================================\n\nTotal exec time: %.6f ms\n", total_us / 1000.0);
+    free(expr_arena);
+    free(tree_arena);
     return 0;
 }

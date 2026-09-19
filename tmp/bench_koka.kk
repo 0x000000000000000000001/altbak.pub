@@ -201,55 +201,87 @@ fun runRowToList(limit: int): div int
   5
 
 // Benchmarking Framework
-fun bench(name, act)
+// The ndet effect keeps these calls observable to Koka. Volatile C accesses
+// keep inputs unknown and results live through the native optimizer as well.
+extern opaque(value: int): ndet int
+  c inline "({ volatile kk_integer_t bench_value = #1; bench_value; })"
+
+extern consume(value: int): ndet ()
+  c inline "({ volatile kk_integer_t bench_value = #1; kk_integer_drop(bench_value, kk_context()); kk_Unit; })"
+
+fun runOnce(act, input)
+  val result = act(opaque(input))
+  consume(result)
+  result
+
+fun runBatch(act, input, count)
+  val t1 = ticks()
+  for(1, count) fn(_)
+    runOnce(act, input)
+    ()
+  val t2 = ticks()
+  (t2 - t1).nano-seconds.float64 / 1000.0
+
+fun bench(name, act, input)
   println("--------------------------------------------------\n\n(Test)\n" ++ name)
   println("\n(Output & Warm-up)")
-  println((act() : int).show)
-  act()
-  act()
-  var min_dur := 1000000000.0
-  for(1, 10) fn(i)
-    val t1 = ticks()
-    act()
-    val t2 = ticks()
-    val d = (t2 - t1).nano-seconds.float64 / 1000.0
+  println(runOnce(act, input).show)
+  runOnce(act, input)
+  runOnce(act, input)
+
+  // Calibrate whole batches to at least 10 ms before measuring ten batches.
+  var count := 1
+  var duration := runBatch(act, input, count)
+  while { duration < 10000.0 && count < 16777216 }
+    count := count * 2
+    duration := runBatch(act, input, count)
+
+  var min_dur := 1.0e30
+  for(1, 10) fn(_)
+    val d = runBatch(act, input, count) / count.float64
     if d < min_dur then min_dur := d
   val us = min_dur
-  println("\n(Execution time - best of 10)\n\n" ++ us.show ++ " us\n")
+  println("\n(Execution time - best of 10)\n\n" ++ us.show-fixed(6) ++ " μs\n")
+  println("Batch iterations: " ++ count.show ++ "\n")
   us
+
+fun warmup()
+  runOnce(runAstTree, 3)
+  runOnce(runFib, 10)
+  runOnce(runListOps, 900)
+  runOnce(runTCO, 100000)
+  runOnce(runRecords, 10000)
+  runOnce(runAckermann, 3)
+  runOnce(runChurch, 10)
+  runOnce(runPrimes, 500)
+  runOnce(runRBTree, 100000)
+  runOnce(runPolymorphism, 10000000)
+  runOnce(runStateMonad, 60)
+  runOnce(runLazyEvaluation, 1000)
+  runOnce(runArrayOps, 900)
+  runOnce(runRowToList, 0)
+  ()
 
 pub fun main()
   println("Global warm-up in progress...")
-  runAstTree(3)
-  runFib(10)
-  runListOps(900)
-  runTCO(100000)
-  runRecords(10000)
-  runAckermann(3)
-  runChurch(10)
-  runPrimes(500)
-  runRBTree(100000)
-  runPolymorphism(10000000)
-  runStateMonad(60)
-  runLazyEvaluation(1000)
-  runArrayOps(900)
-  runRowToList(0)
+  for(1, 3) fn(_)
+    warmup()
 
   var total_us := 0.0
-  total_us := total_us + bench("AST Evaluation:", fn() { runAstTree(3) })
-  total_us := total_us + bench("Fibonacci:", fn() { runFib(10) })
-  total_us := total_us + bench("List Processing:", fn() { runListOps(900) })
-  total_us := total_us + bench("Tail Call Optimization:", fn() { runTCO(100000) })
-  total_us := total_us + bench("Deep Record Updates:", fn() { runRecords(10000) })
-  total_us := total_us + bench("Ackermann:", fn() { runAckermann(3) })
-  total_us := total_us + bench("Church Numerals (100k Closure Applications):", fn() { runChurch(10) })
-  total_us := total_us + bench("Prime Sieve (sum primes up to 500):", fn() { runPrimes(500) })
-  total_us := total_us + bench("Red-Black Tree:", fn() { runRBTree(100000) })
-  total_us := total_us + bench("Polymorphism:", fn() { runPolymorphism(10000000) })
-  total_us := total_us + bench("State Monad:", fn() { runStateMonad(60) })
-  total_us := total_us + bench("Lazy Evaluation:", fn() { runLazyEvaluation(1000) })
-  total_us := total_us + bench("Array Processing:", fn() { runArrayOps(900) })
-  total_us := total_us + bench("RowToList:", fn() { runRowToList(0) })
+  total_us := total_us + bench("AST Evaluation:", runAstTree, 3)
+  total_us := total_us + bench("Fibonacci:", runFib, 10)
+  total_us := total_us + bench("List Processing (900 elements):", runListOps, 900)
+  total_us := total_us + bench("Tail Call Optimization (100k calls):", runTCO, 100000)
+  total_us := total_us + bench("Deep Record Updates (10k iterations):", runRecords, 10000)
+  total_us := total_us + bench("Ackermann (3, 4):", runAckermann, 3)
+  total_us := total_us + bench("Church Numerals (100k Closure Applications):", runChurch, 10)
+  total_us := total_us + bench("Prime Sieve (sum primes up to 500):", runPrimes, 500)
+  total_us := total_us + bench("Red-Black Tree (100k Worst-Case Insertions):", runRBTree, 100000)
+  total_us := total_us + bench("Polymorphism (10M Type Class Dict Lookups):", runPolymorphism, 10000000)
+  total_us := total_us + bench("State Monad (1.2k Binds, 60 Stack Depth):", runStateMonad, 60)
+  total_us := total_us + bench("Lazy Evaluation (1M Thunks Forced, 1k Depth):", runLazyEvaluation, 1000)
+  total_us := total_us + bench("Array Processing (900 elements):", runArrayOps, 900)
+  total_us := total_us + bench("RowToList (Keys Count):", runRowToList, 0)
 
   println("\n==================================================\n")
   println("Total exec time: " ++ (total_us / 1000.0).show ++ " ms\n")

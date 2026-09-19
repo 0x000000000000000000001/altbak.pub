@@ -162,24 +162,43 @@ let runArrayOps limit =
 
 let runRowToList _ = 5
 
+external monotonic_ns : unit -> int64 = "altbak_monotonic_ns"
+
+let consume act arg =
+  ignore (Sys.opaque_identity (act (Sys.opaque_identity arg)))
+
+let time_batch act arg iterations =
+  let start = monotonic_ns () in
+  for _ = 1 to iterations do
+    consume act arg
+  done;
+  let finish = monotonic_ns () in
+  Int64.to_float (Int64.sub finish start) /. 1000.0
+
+let calibrate act arg =
+  let rec go iterations =
+    if time_batch act arg iterations >= 10000.0 || iterations >= 16777216 then
+      iterations
+    else
+      go (iterations * 2)
+  in
+  go 1
+
 let bench name act arg =
   Printf.printf "--------------------------------------------------\n\n(Test)\n%s\n\n(Output & Warm-up)\n" name;
-  let res = act arg in
+  let res = Sys.opaque_identity (act (Sys.opaque_identity arg)) in
   Printf.printf "%d\n" res;
-  
-  let _ = act arg in
-  let _ = act arg in
-  
-  let min_dur = ref 1000000000.0 in
-  for i = 1 to 10 do
-    let t1 = Unix.gettimeofday () in
-    let _ = act (arg + (i mod 2) * 0) in
-    let t2 = Unix.gettimeofday () in
-    let d = (t2 -. t1) *. 1000000.0 in
+  consume act arg;
+  consume act arg;
+
+  let iterations = calibrate act arg in
+  let min_dur = ref infinity in
+  for _ = 1 to 10 do
+    let d = time_batch act arg iterations /. float_of_int iterations in
     if d < !min_dur then min_dur := d
   done;
-  
-  Printf.printf "\n(Execution time - best of 10)\n\n%.2f us\n\n" !min_dur;
+
+  Printf.printf "\n(Execution time - best of 10)\n\n%.6f μs\nBatch iterations: %d\n\n" !min_dur iterations;
   !min_dur
 
 let () =
@@ -200,35 +219,38 @@ let () =
   let lRow = 0 + dummy - 1 in
   
   Printf.printf "Global warm-up in progress...\n";
-  let _ = runAstTree lAst in
-  let _ = runFib lFib in
-  let _ = runListOps lList in
-  let _ = runTCO lTCO in
-  let _ = runRecords lRec in
-  let _ = runAckermann lAck in
-  let _ = runChurch lChur in
-  let _ = runPrimes lPri in
-  let _ = runRBTree lRB in
-  let _ = runPolymorphism lPoly in
-  let _ = runStateMonad lState in
-  let _ = runLazyEvaluation lLazy in
-  let _ = runArrayOps lArr in
-  let _ = runRowToList lRow in
+  for _ = 1 to 3 do
+    consume runAstTree lAst;
+    consume runFib lFib;
+    consume runListOps lList;
+    consume runTCO lTCO;
+    consume runRecords lRec;
+    consume runAckermann lAck;
+    consume runChurch lChur;
+    consume runPrimes lPri;
+    consume runRBTree lRB;
+    consume runPolymorphism lPoly;
+    consume runStateMonad lState;
+    consume runLazyEvaluation lLazy;
+    consume runArrayOps lArr;
+    consume runRowToList lRow
+  done;
 
-  let total_us = 
-    bench "AST Evaluation:" runAstTree lAst +.
-    bench "Fibonacci:" runFib lFib +.
-    bench "List Processing:" runListOps lList +.
-    bench "Tail Call Optimization:" runTCO lTCO +.
-    bench "Deep Record Updates:" runRecords lRec +.
-    bench "Ackermann:" runAckermann lAck +.
-    bench "Church Numerals (100k Closure Applications):" runChurch lChur +.
-    bench "Prime Sieve (sum primes up to 500):" runPrimes lPri +.
-    bench "Red-Black Tree:" runRBTree lRB +.
-    bench "Polymorphism:" runPolymorphism lPoly +.
-    bench "State Monad:" runStateMonad lState +.
-    bench "Lazy Evaluation:" runLazyEvaluation lLazy +.
-    bench "Array Processing:" runArrayOps lArr +.
-    bench "RowToList:" runRowToList lRow
+  let t1 = bench "AST Evaluation:" runAstTree lAst in
+  let t2 = bench "Fibonacci:" runFib lFib in
+  let t3 = bench "List Processing (900 elements):" runListOps lList in
+  let t4 = bench "Tail Call Optimization (100k calls):" runTCO lTCO in
+  let t5 = bench "Deep Record Updates (10k iterations):" runRecords lRec in
+  let t6 = bench "Ackermann (3, 4):" runAckermann lAck in
+  let t7 = bench "Church Numerals (100k Closure Applications):" runChurch lChur in
+  let t8 = bench "Prime Sieve (sum primes up to 500):" runPrimes lPri in
+  let t9 = bench "Red-Black Tree (100k Worst-Case Insertions):" runRBTree lRB in
+  let t10 = bench "Polymorphism (10M Type Class Dict Lookups):" runPolymorphism lPoly in
+  let t11 = bench "State Monad (1.2k Binds, 60 Stack Depth):" runStateMonad lState in
+  let t12 = bench "Lazy Evaluation (1M Thunks Forced, 1k Depth):" runLazyEvaluation lLazy in
+  let t13 = bench "Array Processing (900 elements):" runArrayOps lArr in
+  let t14 = bench "RowToList (Keys Count):" runRowToList lRow in
+  let total_us = t1 +. t2 +. t3 +. t4 +. t5 +. t6 +. t7 +. t8 +.
+    t9 +. t10 +. t11 +. t12 +. t13 +. t14
   in
-  Printf.printf "\n==================================================\n\nTotal exec time: %.2f ms\n" (total_us /. 1000.0)
+  Printf.printf "\n==================================================\n\nTotal exec time: %.6f ms\n" (total_us /. 1000.0)
