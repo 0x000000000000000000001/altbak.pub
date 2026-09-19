@@ -1,0 +1,29 @@
+[<AutoOpen>]
+module PureScript_Data_Functor_Flip
+
+open System
+open System.Collections.Generic
+
+let Data_Functor_Flip_Flip  = (box (fun (x: obj) -> (box x)))
+
+let Data_Functor_Flip_showFlip  = (box (fun (dictShow: obj) -> (sharpurs_apply (box ((box Data_Show_Showusd_Dict))) (box ((box ((Map.add "show" (box ((box (fun (v: obj) -> (match ((unbox ((box v)))) with | x -> ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semigroup_append))) (box ((box Data_Semigroup_semigroupString)))))) (box ((box "(Flip ")))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Semigroup_append))) (box ((box Data_Semigroup_semigroupString)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Show_show))) (box ((box dictShow)))))) (box ((box x))))))))) (box ((box ")"))))))))))))) Map.empty))))))))
+
+let Data_Functor_Flip_semigroupoidFlip  = (box (fun (dictSemigroupoid: obj) -> (sharpurs_apply (box ((box Control_Semigroupoid_Semigroupoidusd_Dict))) (box ((box ((Map.add "compose" (box ((box (fun (v: obj) -> (box (fun (v1: obj) -> (match (((unbox ((box v))), (unbox ((box v1))))) with | (a, b) -> ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Function_apply))) (box ((box Data_Functor_Flip_Flip)))))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Control_Semigroupoid_compose))) (box ((box dictSemigroupoid)))))) (box ((box b)))))) (box ((box a))))))))))))))) Map.empty))))))))
+
+let Data_Functor_Flip_ordFlip  = (box (fun (dictOrd: obj) -> (box dictOrd)))
+
+let Data_Functor_Flip_newtypeFlip  = (sharpurs_apply (box ((box Data_Newtype_Newtypeusd_Dict))) (box ((box ((Map.add "Coercible0" (box ((box (fun (usd__unused: obj) -> (box Prim_undefined))))) Map.empty))))))
+
+let Data_Functor_Flip_functorFlip  = (box (fun (dictBifunctor: obj) -> (sharpurs_apply (box ((box Data_Functor_Functorusd_Dict))) (box ((box ((Map.add "map" (box ((box (fun (f: obj) -> (box (fun (v: obj) -> (match (((unbox ((box f))), (unbox ((box v))))) with | (f1, a) -> ((sharpurs_apply (box ((box Data_Functor_Flip_Flip))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Bifunctor_lmap))) (box ((box dictBifunctor)))))) (box ((box f1)))))) (box ((box a))))))))))))))) Map.empty))))))))
+
+let Data_Functor_Flip_eqFlip  = (box (fun (dictEq: obj) -> (box dictEq)))
+
+let Data_Functor_Flip_contravariantFlip  = (box (fun (dictProfunctor: obj) -> (sharpurs_apply (box ((box Data_Functor_Contravariant_Contravariantusd_Dict))) (box ((box ((Map.add "cmap" (box ((box (fun (f: obj) -> (box (fun (v: obj) -> (match (((unbox ((box f))), (unbox ((box v))))) with | (f1, a) -> ((sharpurs_apply (box ((box Data_Functor_Flip_Flip))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Profunctor_lcmap))) (box ((box dictProfunctor)))))) (box ((box f1)))))) (box ((box a))))))))))))))) Map.empty))))))))
+
+let Data_Functor_Flip_categoryFlip  = (box (fun (dictCategory: obj) -> (let semigroupoidFlip1 = (sharpurs_apply (box ((box Data_Functor_Flip_semigroupoidFlip))) (box ((sharpurs_apply (box ((Map.find "Semigroupoid0" (unbox<Map<string, obj>> ((box dictCategory)))))) (box ((box Prim_undefined))))))) in (sharpurs_apply (box ((box Control_Category_Categoryusd_Dict))) (box ((box ((Map.add "identity" (box ((sharpurs_apply (box ((box Data_Functor_Flip_Flip))) (box ((sharpurs_apply (box ((box Control_Category_identity))) (box ((box dictCategory))))))))) (Map.add "Semigroupoid0" (box ((box (fun (usd__unused: obj) -> (box semigroupoidFlip1))))) Map.empty))))))))))
+
+let Data_Functor_Flip_bifunctorFlip  = (box (fun (dictBifunctor: obj) -> (sharpurs_apply (box ((box Data_Bifunctor_Bifunctorusd_Dict))) (box ((box ((Map.add "bimap" (box ((box (fun (f: obj) -> (box (fun (g: obj) -> (box (fun (v: obj) -> (match (((unbox ((box f))), (unbox ((box g))), (unbox ((box v))))) with | (f1, g1, a) -> ((sharpurs_apply (box ((box Data_Functor_Flip_Flip))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Data_Bifunctor_bimap))) (box ((box dictBifunctor)))))) (box ((box g1)))))) (box ((box f1)))))) (box ((box a))))))))))))))))) Map.empty))))))))
+
+let Data_Functor_Flip_biapplyFlip  = (box (fun (dictBiapply: obj) -> (let bifunctorFlip1 = (sharpurs_apply (box ((box Data_Functor_Flip_bifunctorFlip))) (box ((sharpurs_apply (box ((Map.find "Bifunctor0" (unbox<Map<string, obj>> ((box dictBiapply)))))) (box ((box Prim_undefined))))))) in (sharpurs_apply (box ((box Control_Biapply_Biapplyusd_Dict))) (box ((box ((Map.add "biapply" (box ((box (fun (v: obj) -> (box (fun (v1: obj) -> (match (((unbox ((box v))), (unbox ((box v1))))) with | (fg, xy) -> ((sharpurs_apply (box ((box Data_Functor_Flip_Flip))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Control_Biapply_biapply))) (box ((box dictBiapply)))))) (box ((box fg)))))) (box ((box xy))))))))))))))) (Map.add "Bifunctor0" (box ((box (fun (usd__unused: obj) -> (box bifunctorFlip1))))) Map.empty))))))))))
+
+let Data_Functor_Flip_biapplicativeFlip  = (box (fun (dictBiapplicative: obj) -> (let biapplyFlip1 = (sharpurs_apply (box ((box Data_Functor_Flip_biapplyFlip))) (box ((sharpurs_apply (box ((Map.find "Biapply0" (unbox<Map<string, obj>> ((box dictBiapplicative)))))) (box ((box Prim_undefined))))))) in (sharpurs_apply (box ((box Control_Biapplicative_Biapplicativeusd_Dict))) (box ((box ((Map.add "bipure" (box ((box (fun (a: obj) -> (box (fun (b: obj) -> (sharpurs_apply (box ((box Data_Functor_Flip_Flip))) (box ((sharpurs_apply (box ((sharpurs_apply (box ((sharpurs_apply (box ((box Control_Biapplicative_bipure))) (box ((box dictBiapplicative)))))) (box ((box b)))))) (box ((box a))))))))))))) (Map.add "Biapply0" (box ((box (fun (usd__unused: obj) -> (box biapplyFlip1))))) Map.empty))))))))))

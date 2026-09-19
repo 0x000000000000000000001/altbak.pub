@@ -134,23 +134,23 @@ RowToList               | ~ 2 μs                 | ~ 2 μs         | ~ 1 μs   
 
 The compiled Purust column and C reference use `python3 tmp/run_purust_benchmark.py --update-readme`: the existing PureScript numeric expressions are compiled by Purust and timed without the `Effect`/string-formatting wrapper. Both programs use monotonic clocks, opaque inputs, consumed results, three global/local warm-ups, and ten batches calibrated to at least 10 ms (up to 16,777,216 calls). Each cell is the median of three independent processes' minimum per-call batch times, with alternating process order; totals sum the median cells. Raw runs and build fingerprints are saved in `var/benchmark/purust-reference/`. The Rust FFI columns use the earlier single-call protocol.
 
-Rust Benchmark          | Compiled Rust ([purust](https://github.com/0x000000000000000000001/purust), WIP) | Native FP-style Rust FFI (rustc -O3, WIP) | Native hand-written Rust FFI (rustc -O3, WIP) |
------------------------ | ------------------------- | ------------------------ | ------------------------------ |
-AST Evaluation          | ~ 0.267 μs              | ~ 3 μs       | ~ 1 μs                 |
-Fibonacci               | ~ 0.086 μs              | ~ 2 μs       | ~ 1 μs                 |
-List Processing         | ~ 31.318 μs             | ~ 26 μs      | ~ 1 μs                 |
-Tail Call Optimization  | ~ 30.352 μs             | ~ 108 μs     | ~ 35 μs                |
-Deep Record Updates     | ~ 3.257 μs              | ~ 362 μs     | ~ 4 μs                 |
-Ackermann               | ~ 16.890 μs             | ~ 39 μs      | ~ 18 μs                |
-Church Numerals         | ~ 172.145 μs            | ~ 441 μs     | ~ 1 μs                 |
-Prime Sieve             | ~ 154.524 μs            | ~ 194 μs     | ~ 1 μs                 |
-Red-Black Tree          | ~ 8600.333 μs           | ~ 37225 μs   | ~ 36070 μs             |
-Polymorphism            | ~ 0.041 μs              | ~ 6688 μs    | ~ 1 μs                 |
-State Monad             | ~ 55.963 μs             | ~ 110 μs     | ~ 1 μs                 |
-Lazy Evaluation         | ~ 0.001 μs              | ~ 21884 μs   | ~ 0 μs                 |
-Array Processing        | ~ 23.496 μs             | ~ 2 μs       | ~ 1 μs                 |
-RowToList               | ~ 0.064 μs              | ~ 1 μs       | ~ 0 μs                 |
-**Total Execution Time**| ~ 9.09 ms              | ~ 67.08 ms   | ~ 36.13 ms             |
+Rust Benchmark          | Compiled Rust ([purust](https://github.com/0x000000000000000000001/purust), WIP) | Compiled Rust (Fable, WIP) | Native FP-style Rust FFI (rustc -O3, WIP) | Native hand-written Rust FFI (rustc -O3, WIP) |
+----------------------- | ------------------------- | -------------------------- | ------------------------ | ------------------------------ |
+AST Evaluation          | ~ 0.267 μs              | TBD                        | ~ 3 μs       | ~ 1 μs                 |
+Fibonacci               | ~ 0.086 μs              | TBD                        | ~ 2 μs       | ~ 1 μs                 |
+List Processing         | ~ 31.318 μs             | TBD                        | ~ 26 μs      | ~ 1 μs                 |
+Tail Call Optimization  | ~ 30.352 μs             | TBD                        | ~ 108 μs     | ~ 35 μs                |
+Deep Record Updates     | ~ 3.257 μs              | TBD                        | ~ 362 μs     | ~ 4 μs                 |
+Ackermann               | ~ 16.890 μs             | TBD                        | ~ 39 μs      | ~ 18 μs                |
+Church Numerals         | ~ 172.145 μs            | TBD                        | ~ 441 μs     | ~ 1 μs                 |
+Prime Sieve             | ~ 154.524 μs            | TBD                        | ~ 194 μs     | ~ 1 μs                 |
+Red-Black Tree          | ~ 8600.333 μs           | TBD                        | ~ 37225 μs   | ~ 36070 μs             |
+Polymorphism            | ~ 0.041 μs              | TBD                        | ~ 6688 μs    | ~ 1 μs                 |
+State Monad             | ~ 55.963 μs             | TBD                        | ~ 110 μs     | ~ 1 μs                 |
+Lazy Evaluation         | ~ 0.001 μs              | TBD                        | ~ 21884 μs   | ~ 0 μs                 |
+Array Processing        | ~ 23.496 μs             | TBD                        | ~ 2 μs       | ~ 1 μs                 |
+RowToList               | ~ 0.064 μs              | TBD                        | ~ 1 μs       | ~ 0 μs                 |
+**Total Execution Time**| ~ 9.09 ms              | TBD                        | ~ 67.08 ms   | ~ 36.13 ms             |
 
 #### C++
 

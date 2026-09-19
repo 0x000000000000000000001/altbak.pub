@@ -1,0 +1,7 @@
+/Users/0x1/Documents/htdocs/altbak.pub/tmp/fable_test2/bin/Release/net8.0/fable_test2.deps.json
+/Users/0x1/Documents/htdocs/altbak.pub/tmp/fable_test2/bin/Release/net8.0/fable_test2.runtimeconfig.json
+/Users/0x1/Documents/htdocs/altbak.pub/tmp/fable_test2/obj/Release/net8.0/fable_test2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/0x1/Documents/htdocs/altbak.pub/tmp/fable_test2/obj/Release/net8.0/fable_test2.AssemblyInfoInputs.cache
+/Users/0x1/Documents/htdocs/altbak.pub/tmp/fable_test2/obj/Release/net8.0/fable_test2.AssemblyInfo.cs
+/Users/0x1/Documents/htdocs/altbak.pub/tmp/fable_test2/obj/Release/net8.0/fable_te.86694EDA.Up2Date
+/Users/0x1/Documents/htdocs/altbak.pub/tmp/fable_test2/obj/Release/net8.0/fable_test2.genruntimeconfig.cache

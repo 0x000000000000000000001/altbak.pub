@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <WarningsAsErrors>false</WarningsAsErrors>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <OutputPath>bin/csharp/</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Control.Apply.cs" />
+    <Compile Include="Control.Bind.cs" />
+    <Compile Include="Control.Monad.ST.Internal.cs" />
+    <Compile Include="Control.Monad.ST.Uncurried.cs" />
+    <Compile Include="Data.Array.ST.Partial.cs" />
+    <Compile Include="Data.Array.ST.cs" />
+    <Compile Include="Data.Array.cs" />
+    <Compile Include="Data.Bounded.cs" />
+    <Compile Include="Data.Date.cs" />
+    <Compile Include="Data.DateTime.Instant.cs" />
+    <Compile Include="Data.DateTime.cs" />
+    <Compile Include="Data.Enum.cs" />
+    <Compile Include="Data.Eq.cs" />
+    <Compile Include="Data.EuclideanRing.cs" />
+    <Compile Include="Data.Foldable.cs" />
+    <Compile Include="Data.Function.Uncurried.cs" />
+    <Compile Include="Data.Functor.cs" />
+    <Compile Include="Data.FunctorWithIndex.cs" />
+    <Compile Include="Data.HeytingAlgebra.cs" />
+    <Compile Include="Data.Int.Bits.cs" />
+    <Compile Include="Data.Int.cs" />
+    <Compile Include="Data.Number.Format.cs" />
+    <Compile Include="Data.Number.cs" />
+    <Compile Include="Data.Ord.cs" />
+    <Compile Include="Data.Reflectable.cs" />
+    <Compile Include="Data.Ring.cs" />
+    <Compile Include="Data.Semigroup.cs" />
+    <Compile Include="Data.Semiring.cs" />
+    <Compile Include="Data.Show.Generic.cs" />
+    <Compile Include="Data.Show.cs" />
+    <Compile Include="Data.String.CodePoints.cs" />
+    <Compile Include="Data.String.CodeUnits.cs" />
+    <Compile Include="Data.String.Common.cs" />
+    <Compile Include="Data.String.Unsafe.cs" />
+    <Compile Include="Data.Symbol.cs" />
+    <Compile Include="Data.Traversable.cs" />
+    <Compile Include="Data.Unfoldable1.cs" />
+    <Compile Include="Data.Unit.cs" />
+    <Compile Include="Effect.Aff.cs" />
+    <Compile Include="Effect.Console.cs" />
+    <Compile Include="Effect.Exception.cs" />
+    <Compile Include="Effect.Ref.cs" />
+    <Compile Include="Effect.Uncurried.cs" />
+    <Compile Include="Effect.Unsafe.cs" />
+    <Compile Include="Effect.cs" />
+    <Compile Include="Partial.Unsafe.cs" />
+    <Compile Include="Partial.cs" />
+    <Compile Include="Record.Unsafe.cs" />
+    <Compile Include="Unsafe.Coerce.cs" />
+  </ItemGroup>
+</Project>
