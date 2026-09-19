@@ -212,10 +212,6 @@ RowToList               | ~ 1.88 μs                 | ~ 2.75 μs               
 
 #### Koka
 
-The following four handwritten reference tables (Koka, Haskell, OCaml and C) use the corrected batch protocol. Reproduce and update them with `python3 tmp/run_benchmarks.py --update-readme`; `./bin/run` runs the PureScript backends above. The reference runner rebuilds all four programs before executing them sequentially and validates all 56 results before updating any table. Compiler versions, commands, source hashes and raw measurements are saved in `var/benchmark/native-references/`.
-
-Each reference uses a monotonic clock, three global and three local warm-ups, then ten measured batches. Calibration doubles the batch size until it takes at least 10 ms, capped at 16,777,216 invocations. Each table cell is the minimum batch duration divided by its invocation count; totals sum these per-invocation times. Every invocation has an opaque input and a consumed result. Times include this harness overhead and exclude output formatting. These handwritten implementations retain their intentional algorithmic shortcuts. Comparisons with the PureScript tables must account for their single-invocation timing protocol and string conversion.
-
 Koka Benchmark          | Native hand-written Koka (koka -O3) |
 ----------------------- | ----- |
 AST Evaluation          | ~ 0.215 μs |
