@@ -1,0 +1,138 @@
+--- a/src/Fable.Transforms/Rust/Fable2Rust.fs
++++ b/src/Fable.Transforms/Rust/Fable2Rust.fs
+@@ -674,6 +674,7 @@
+ 
+     let typeImplementsCloneTrait (com: IRustCompiler) ctx typ =
+         match typ with
++        | Fable.Any
+         | Fable.String
+         | Fable.LambdaType _
+         | Fable.DelegateType _
+@@ -1362,6 +1363,16 @@
+             varAttrs.UsageCount <- varAttrs.UsageCount - 1
+         | None -> ()
+ 
++    let tryFindModuleMember (com: IRustCompiler) ctx (ident: Fable.Ident) =
++        if Map.containsKey ident.Name ctx.ScopedSymbols then None
++        else
++            let rec find decls =
++                decls |> List.tryPick (function
++                    | Fable.MemberDeclaration decl when decl.Name = ident.Name -> Some(com.GetMember(decl.MemberRef))
++                    | Fable.ModuleDeclaration decl -> find decl.Members
++                    | _ -> None)
++            find ctx.File.Declarations
++
+     let transformIdent com ctx r (ident: Fable.Ident) =
+         updateUsageCount com ctx ident
+ 
+@@ -1385,6 +1396,10 @@
+ 
+     let transformIdentGet com ctx r (ident: Fable.Ident) =
+         let expr = transformIdent com ctx r ident
++        let expr =
++            if tryFindModuleMember com ctx ident |> Option.exists (fun memb -> memb.IsValue) then
++                mkCallExpr expr []
++            else expr
+ 
+         if ident.IsMutable && not (isInRefType com ident.Type) then
+             expr |> mutableGet
+@@ -1553,11 +1568,24 @@
+             let ar = makeLibCall com ctx None "HashMap" "entries" [ expr ]
+             makeLibCall com ctx None "Seq" "ofArray" [ ar ]
+ 
++        // Preserve the erased return type inside closures as well as pointer identity.
++        | Fable.DeclaredType _, Fable.Any
++            when shouldBeRefCountWrapped com ctx fromType = Some Lrc && not (isInterface com fromType) ->
++            makeLibCall com ctx None "Native" "box_lrc" [ expr ]
++
+         // boxing value types or wrapped types
+         | t, Fable.Any when isValueType com t || isWrappedType com t -> expr |> boxValue com ctx
+ 
+         // unboxing value types or wrapped types
+         | Fable.Any, t when isValueType com t || isWrappedType com t -> expr |> unboxValue com ctx t
++
++        // Declared reference types are boxed by coercing the existing Lrc to Any.
++        // Recover that same allocation instead of cloning the record/union value.
++        | Fable.Any, Fable.DeclaredType(entRef, genArgs)
++            when shouldBeRefCountWrapped com ctx toType = Some Lrc && not (isInterface com toType) ->
++            let innerType = transformEntityType com ctx entRef genArgs
++            let genArgsOpt = mkTypesGenericArgs [ innerType ]
++            makeLibCall com ctx genArgsOpt "Native" "unbox_lrc" [ expr ]
+ 
+         // casts to generic param
+         | _, Fable.GenericParam(name, _isMeasure, _constraints) -> makeCall (name :: "from" :: []) None [ expr ] // e.g. T::from(value)
+@@ -1703,7 +1731,9 @@
+             argsWithTypes
+             |> List.mapi (fun i (argType, arg) ->
+                 match arg with
+-                | Fable.IdentExpr ident when isFuncScoped ctx ident.Name -> makeFuncValue com ctx ident // local nested function ident
++                | Fable.IdentExpr ident when isFuncScoped ctx ident.Name
++                    || (tryFindModuleMember com ctx ident |> Option.exists (fun memb -> not memb.IsValue)) ->
++                    makeFuncValue com ctx ident
+                 | _ ->
+                     let isByRefPreferred = parameterIsByRefPreferred i parameters
+ 
+@@ -1835,11 +1865,6 @@
+         makeLibCall com ctx None "Native" "is_null" [ value |> mkAddrOfExpr ]
+ 
+     let makeNull com ctx (typ: Fable.Type) =
+-        let typ =
+-            match typ with
+-            | Fable.Any -> Fable.Unit
+-            | t -> t
+-
+         let genArgsOpt = transformGenArgs com ctx [ typ ]
+         makeLibCall com ctx genArgsOpt "Native" "null" []
+ 
+@@ -2471,7 +2496,11 @@
+ 
+     let transformCallee (com: IRustCompiler) ctx calleeExpr =
+         match calleeExpr with
+-        | Fable.IdentExpr ident -> transformIdent com ctx None ident
++        | Fable.IdentExpr ident ->
++            let expr = transformIdent com ctx None ident
++            if tryFindModuleMember com ctx ident |> Option.exists (fun memb -> memb.IsValue) then
++                mkCallExpr expr []
++            else expr
+         | Fable.Value(Fable.ThisValue _, _) -> transformExpr com ctx calleeExpr
+         | _ ->
+             let expr = transformExpr com ctx calleeExpr
+@@ -2526,7 +2555,7 @@
+                 let membGenArgsOpt = transformGenArgs com ctx membGenArgs
+ 
+                 let membGenArgsOpt =
+-                    if List.isEmpty callArgs && not (List.isEmpty memb.GenericParameters) then
++                    if not (List.isEmpty memb.GenericParameters) then
+                         membGenArgsOpt
+                     else
+                         None
+@@ -3861,8 +3890,6 @@
+ 
+                 mkTypedSelfParam ty false false
+             | _ -> mkImplSelfParam false false
+-        elif ctx.IsLambda && ident.Type = Fable.Any then
+-            mkInferredParam ident.Name false false
+         else
+             let ty = transformType com ctx ident.Type
+             mkTypedParam ident.Name ty false false
+@@ -3896,7 +3923,9 @@
+         || (shouldBeRefCountWrapped com ctx typ |> Option.isSome)
+ 
+     let isClosedOverIdent com ctx (ident: Fable.Ident) =
+-        not (ident.IsCompilerGenerated && ident.Name = "matchValue")
++        // Match temporaries can be captured like other local bindings.
++        // Module members are accessed through their getters, not captured as locals.
++        (tryFindModuleMember com ctx ident |> Option.isNone)
+         // isValueScoped || isRefScoped covers all scoped symbols (value or ref), collapsing two Map.tryFind calls into one
+         && (ident.IsMutable
+             || ctx.ScopedSymbols |> Map.containsKey ident.Name
+@@ -4442,7 +4471,8 @@
+         let staticTy = [ ty ] |> makeImportType com ctx "Native" "OnceInit"
+         let staticStmt = mkStaticItem [] name staticTy (Some initNone) |> mkItemStmt
+ 
+-        let callee = com.TransformExpr(ctx, makeIdentExpr name)
++        // This refers to the local OnceInit static, not the module getter.
++        let callee = makeFullNamePathExpr name None
+ 
+         let closureExpr =
+             let fnDecl = mkFnDecl [] VOID_RETURN_TY
