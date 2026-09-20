@@ -10,7 +10,9 @@ from datetime import datetime, timezone
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
+import platform
 import re
 import statistics
 import subprocess
@@ -97,8 +99,15 @@ def main():
             raise ValueError('Output already contains a campaign; use --resume')
         manifest = {'created_at_utc': datetime.now(timezone.utc).isoformat(),
                     'sources': current, 'plan': plan, 'runs': [],
+                    'host': {'system': platform.platform(), 'machine': platform.machine(),
+                             'logical_cpus': os.cpu_count()},
                     'protocol': {'processes': 3, 'samples': 10, 'core_batch_target_ms': 10,
                                  'numeric_results': True, 'extended_batches': False}}
+        if platform.system() == 'Darwin':
+            for name in ['machdep.cpu.brand_string', 'hw.physicalcpu', 'hw.perflevel0.physicalcpu', 'hw.perflevel1.physicalcpu']:
+                value = subprocess.run(['sysctl', '-n', name], capture_output=True, text=True)
+                if value.returncode == 0:
+                    manifest['host'][name] = value.stdout.strip()
         (directory / 'README.before.md').write_text((ROOT / 'README.md').read_text())
     def save():
         manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')

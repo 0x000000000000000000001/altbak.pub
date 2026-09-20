@@ -70,7 +70,10 @@ Extended tests retain an end-to-end Effect/Aff boundary and ten individual
 samples, with three independent processes. They are a separate experiment from
 the numeric core. Inputs for STArray, StringOps and the async computations are
 obtained inside each effect, preventing module initialization from doing the
-work before the timer. Their outputs are checked against explicit oracles.
+work before the timer. Every timed result is stored in an observable sink and
+compared with its warm-up value before the timer stops; the external validator
+checks the warm-up value against an independent oracle. These short string
+checks and the Effect/Aff adapters are part of the end-to-end interval.
 
 - File I/O performs 10,000 writes and reads and checks each read's content. It
   measures synchronous filesystem APIs with OS caching, without an `fsync`
