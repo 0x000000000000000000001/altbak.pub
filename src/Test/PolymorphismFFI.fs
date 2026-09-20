@@ -1,6 +1,6 @@
 module Test.PolymorphismFFI
 
-type Monoidish = { mempty: int; mappend: int -> int -> int }
+type Monoidish<'a> = { mempty: 'a; mappend: 'a -> 'a -> 'a }
 let rec polyLoop dictionary count acc =
     if count = 0 then acc
     else polyLoop dictionary (count - 1) (dictionary.mappend acc dictionary.mempty)

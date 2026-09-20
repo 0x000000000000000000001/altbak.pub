@@ -1,6 +1,6 @@
 module Test.ListOpsFFI
 
-type List = Nil | Cons of int * List
+type List<'a> = Nil | Cons of 'a * List<'a>
 let range start finish =
     let rec go current acc =
         if current < start then acc else go (current - 1) (Cons (current, acc))

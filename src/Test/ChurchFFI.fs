@@ -1,12 +1,11 @@
 module Test.ChurchFFI
 
-type Church = (int -> int) -> int -> int
-let rec fromInt n : Church =
-    if n = 0 then fun _ value -> value
-    else
-        let previous = fromInt (n - 1)
-        fun f value -> f (previous f value)
-let multiply (m: Church) (n: Church) : Church = fun f value -> m (n f) value
+type Church<'a> = ('a -> 'a) -> 'a -> 'a
+let zero : Church<'a> = fun _ value -> value
+let successor (previous: Church<'a>) : Church<'a> = fun f value -> f (previous f value)
+let rec fromInt n : Church<int> =
+    if n = 0 then zero else successor (fromInt (n - 1))
+let multiply (m: Church<'a>) (n: Church<'a>) : Church<'a> = fun f value -> m (n f) value
 let square n = multiply (fromInt n) (fromInt n)
 let runChurchFFI (input: obj) =
     let n = unbox<int> input
