@@ -32,13 +32,13 @@ console.log('JS batch: deferred execution, exact counts, recomputation, oracle r
         (work / 'check.php').write_text('<?php\n$exports = [];\n$bench = require ' +
             json.dumps(str(ROOT / 'src/Bench.php')) + ''';
 $calls = 0;
-$act = $bench['measureBatch'](17)(42)(function() use (&$calls) { $calls++; return 42; });
+$act = $bench['measureBatch'](17, 42, function() use (&$calls) { $calls++; return 42; });
 if ($calls !== 0) throw new Exception('Effect ran during construction');
 $elapsed = $act();
 if ($calls !== 17 || !is_finite($elapsed) || $elapsed <= 0) throw new Exception('Invalid batch');
 $act();
 if ($calls !== 34) throw new Exception('Cached result');
-try { $bench['measureBatch'](3)(42)(fn() => 43)(); }
+try { $bench['measureBatch'](3, 42, fn() => 43)(); }
 catch (RuntimeException $error) { echo "PHP batch contract passed\\n"; exit(0); }
 throw new Exception('Wrong result accepted');
 ''')

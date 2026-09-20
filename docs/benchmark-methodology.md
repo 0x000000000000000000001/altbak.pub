@@ -6,7 +6,8 @@ The compiled columns start with the same 14 PureScript kernels in `src/Test`.
 The Haskell, Koka, OCaml and native F# references translate their functional
 structures according to the [source contract](../tmp/fp_reference_contract.md).
 The FP-style FFI columns also retain these structures, callbacks and explicit
-dictionaries. Their host-language control loops may implement tail recursion;
+dictionaries. In FFI columns, the backend translates the PureScript wrapper;
+the native kernel is supplied as hand-written code. Their host-language control loops may implement tail recursion;
 they do not demonstrate that the host compiler optimizes recursive source.
 Dynamic languages use explicit dictionaries without static row proofs.
 
@@ -37,8 +38,18 @@ batches. The published cell is the median of three independent processes, run
 sequentially after all compilation has finished. The total sums these cell
 medians before rounding; it is not a separately selected fastest total.
 
-Direct numeric references call native functions; compiled programs and the FFI
-columns retain their generated Effect/call adapters. That overhead is included,
+These are warmed-up minimum batch durations, not mean latency or tail-latency
+measurements. Some short JIT kernels vary noticeably between processes: in the
+September 20 campaign, Java AST ranged from 0.140650 to 0.279165 microseconds.
+The archive retains all three measurements. Printed decimal places preserve
+small nonzero values; they do not establish that precision or justify rankings
+based on differences smaller than the observed variation.
+
+The numeric references, including the published Purust and sharpurs/Fable Rust
+columns, call numeric functions directly. Other compiled columns and the FFI
+columns retain their generated Effect/call adapters. The additional `rust-pure`
+diagnostic in the measurement archive retains Effect and is not the published
+Purust numeric column. Adapter overhead is included where present,
 as are input/result barriers. Very short kernels can mostly measure this
 overhead. Native representations, integer widths, garbage collectors and
 allocators differ. Rust numeric references use mimalloc; Fable's driver reserves
@@ -89,6 +100,15 @@ checks and the Effect/Aff adapters are part of the end-to-end interval.
 
 ## Evidence and reproduction
 
+The [September 20, 2026 archive](benchmark-results/2026-09-20.json) records the
+39 published columns and two additional diagnostics (`rust-pure` and
+`wasm-pure`): 123 process runs and 1,614 validated case outputs. It includes all
+per-process measurements, the common source fingerprints, build identities and
+recorded tool configurations. Missing version information is marked explicitly.
+Complete raw logs and manifests remain in
+`var/benchmark/fairness-20260920/{core-measurements,extended-measurements}`;
+their hashes are in the archive. These corrected tables establish a new baseline.
+
 Every published campaign keeps its build plan, source fingerprints, compiler
 commands/profiles, executable identities, raw stdout/stderr, validated outputs
 and per-process measurements. The measurement command is:
@@ -108,6 +128,15 @@ Backend runners expose `--build-only` and `--run-only`. The numeric launchers in
 accept `--build-only`. Source fidelity has separate native tests in `test/native`;
 `test/benchmark-batches.py` checks deferred execution, exact invocation counts,
 recomputation and rejection of incorrect results.
+
+`./bin/run` and `./bin/run --x` run the configured backends. They do not alone
+produce all the published native references or aggregate three processes.
+After collecting the core and extended plans from the same frozen sources,
+publish their validated medians with:
+
+```sh
+python3 bin/benchmark/publish.py --campaign path/to/core-campaign --campaign path/to/extended-campaign
+```
 
 These deliberately small synthetic programs help examine particular compiler
 transformations. Neither their aggregate total nor a faster cell establishes

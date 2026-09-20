@@ -47,4 +47,4 @@ The typed LazyEvaluation builder uses an explicit thunk factory to capture the p
 
 The Rust harness uses opaque inputs, consumes results, validates all expected outputs, performs three global and three local warm-ups, and measures ten calibrated batches of at least 10 ms (capped at 2^24 calls). Each table cell is the median across three processes of the minimum per-call batch time. The displayed total sums the median cells.
 
-Rust uses release optimization level 3, mimalloc (as in the Purust numeric harness), and a benchmark thread with a 1 GiB stack reservation (as in sharpurs' native entry point). Thread startup and build time are outside the timed kernels. The existing Rust FFI columns use their older measurement protocol.
+Rust uses release optimization level 3, mimalloc (as in the Purust numeric harness), and a benchmark thread with a 1 GiB stack reservation (as in sharpurs' native entry point). Thread startup and build time are outside the timed kernels. Rust FFI columns use the same numeric batch protocol, with their generated Effect/call adapters included. See the [common methodology](../../docs/benchmark-methodology.md).

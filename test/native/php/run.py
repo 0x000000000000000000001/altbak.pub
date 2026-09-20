@@ -79,7 +79,14 @@ lines += ['$exports = [];', f'$bench = require {json.dumps(str(ROOT / "src/Bench
           '$before = hrtime(true) / 1000.0;', '$clock = $bench["benchNow"]();', '$after = hrtime(true) / 1000.0;',
           'if ($clock < $before - 1.0 || $clock > $after + 1.0) throw new RuntimeException("clock must use monotonic microseconds");',
           'foreach ([123, 1.25, "ok"] as $value) if ($bench["opaque"]($value)() !== $value) throw new RuntimeException("opaque changed its input");',
-          f'echo "PASS native PHP: {2*len(CASES)} values, {len(PROBES)} generic/structural cases, repeated calls, clock/opaque contracts; no benchmark timing\\n";']
+          '$calls = 0; $act = function() use (&$calls) { $calls++; return 7; };',
+          '$batch = $bench["measureBatch"](3, 7, $act);',
+          'if ($calls !== 0) throw new RuntimeException("constructing a batch executed its Effect");',
+          '$elapsed = $batch();',
+          'if (!is_float($elapsed) || !is_finite($elapsed) || $elapsed < 0 || $calls !== 3) throw new RuntimeException("native batch ABI");',
+          'if ($GLOBALS["altbak_benchmark_result"] !== 7) throw new RuntimeException("batch result not consumed");',
+          '$batch(); if ($calls !== 6) throw new RuntimeException("batch must be reusable");',
+          f'echo "PASS native PHP: {2*len(CASES)} values, {len(PROBES)} generic/structural cases, repeated calls, clock/opaque/batch contracts; no benchmark timing\\n";']
 with tempfile.TemporaryDirectory(prefix='altbak-native-php-') as directory:
     check = Path(directory) / 'check.php'
     check.write_text('\n'.join(lines)+'\n')

@@ -36,6 +36,7 @@ def inputs():
     backend = ROOT.parent / 'phpurs/phpurs/bin'
     paths += [backend / 'phpurs', backend / 'phpurs.js', Path(__file__),
               ROOT / 'bin/php/run', ROOT / 'bin/php/composer.phar', ROOT / 'bin/benchmark/validate.py',
+              ROOT / 'test/native/php/generated.py', ROOT / 'test/native/oracle.py',
               ROOT / 'run/bak/php/spago.php.yaml', ROOT / 'run/bak/php/composer.json',
               ROOT / 'run/bak/php/composer.lock']
     return {str(p): digest(p) for p in sorted(paths)}
@@ -182,6 +183,10 @@ def main():
     commands.append(logged([php, ROOT / 'bin/php/composer.phar', 'install', '--no-plugins',
                             '--no-interaction', '--no-progress', '--prefer-dist', '--no-dev'],
                            directory, logs / 'composer.log', env))
+    if args.mode in {'pure', 'ffi', 'fficc', 'x'}:
+        commands.append(logged([sys.executable, '-B', ROOT / 'test/native/php/generated.py', directory,
+                                '--mode', args.mode, '--php', php], directory,
+                               logs / 'generated-contracts.log', env))
     if fingerprint != inputs():
         raise RuntimeError('Sources changed during build; no manifest was accepted')
     write_json(manifest_path, dict(required, entry=entry, commands=commands, artifacts=artifacts(directory)))

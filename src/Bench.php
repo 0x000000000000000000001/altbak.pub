@@ -14,21 +14,18 @@ $formatNumber = function($n) {
     return number_format($n, 6, '.', '');
 };
 
-$measureBatch = function($iterations) {
-    return function($expected) use ($iterations) {
-        return function($act) use ($iterations, $expected) {
-            return function() use ($iterations, $expected, $act) {
-                $result = 0;
-                $start = hrtime(true);
-                for ($i = 0; $i < $iterations; $i++) {
-                    $result = $act();
-                    $GLOBALS['altbak_benchmark_result'] = $result;
-                }
-                $elapsed = (hrtime(true) - $start) / 1000.0;
-                if ($result !== $expected) throw new \RuntimeException('Unstable benchmark result');
-                return $elapsed / $iterations;
-            };
-        };
+$measureBatch = function($iterations, $expected, $act) {
+    // Phpurs groups foreign-function arguments; the returned closure is Effect.
+    return function() use ($iterations, $expected, $act) {
+        $result = 0;
+        $start = hrtime(true);
+        for ($i = 0; $i < $iterations; $i++) {
+            $result = $act();
+            $GLOBALS['altbak_benchmark_result'] = $result;
+        }
+        $elapsed = (hrtime(true) - $start) / 1000.0;
+        if ($result !== $expected) throw new \RuntimeException('Unstable benchmark result');
+        return $elapsed / $iterations;
     };
 };
 
