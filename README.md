@@ -282,7 +282,6 @@ RowToList               | ~ 0.001 μs |
 **Total Execution Time**| ~ 9.14 ms |
 
 ### Extended benchmark results (I/O, mutability, async)
-Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Scheme and Erlang)
 
 #### Extended Results
 
