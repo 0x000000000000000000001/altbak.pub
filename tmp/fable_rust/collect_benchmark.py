@@ -29,6 +29,10 @@ TABLE_ROWS = [
     'Array Processing', 'RowToList',
 ]
 PROCESS_COUNT = 3
+VARIANTS = {
+    'sharpurs': {'result_key': 'Fable', 'label': 'Fable Rust (sharpurs)'},
+    'native-fsharp': {'result_key': 'Fable (native F#)', 'label': 'Fable Rust (native F#)'},
+}
 
 
 def utc_now() -> str:
@@ -87,24 +91,33 @@ def checked_result(output: str, validate_output) -> dict:
     return result
 
 
-def table_coordinates(original: str) -> tuple[list[str], int, int, int]:
+def table_coordinates(original: str, variant: str = 'sharpurs') -> tuple[list[str], int, int, int]:
+    if variant not in VARIANTS:
+        raise ValueError(f'Unknown Fable variant: {variant!r}')
     lines = original.splitlines(keepends=True)
     matches = []
     for line_number, line in enumerate(lines):
         if '|' not in line:
             continue
         for column, cell in enumerate(line.split('|')):
-            if 'Compiled Rust (Fable' in cell:
+            if variant == 'sharpurs':
+                selected = ('Fable' in cell
+                            and ('sharpurs' in cell or 'Compiled Rust (Fable' in cell))
+            else:
+                selected = 'Hand-written F#' in cell and 'Fable' in cell
+            if selected:
                 matches.append((line_number, column))
     if len(matches) != 1:
-        raise ValueError('Expected exactly one Compiled Rust (Fable header cell')
+        raise ValueError(f'Expected exactly one Fable header cell for {variant}')
     header, column = matches[0]
     header_cells = lines[header].rstrip('\r\n').split('|')
     label_column = 1 if not header_cells[0].strip() else 0
     if header + 16 >= len(lines):
         raise ValueError('Fable table is incomplete')
     separators = lines[header+1].rstrip('\r\n').split('|')
-    if len(separators) != len(header_cells) or not re.fullmatch(r'\s*:?-+:?\s*', separators[column]):
+    if (len(separators) != len(header_cells)
+            or any(not re.fullmatch(r'\s*:?-+:?\s*', separators[i])
+                   for i, cell in enumerate(header_cells) if cell.strip())):
         raise ValueError('Unexpected Fable table separator')
     expected = TABLE_ROWS + ['**Total Execution Time**']
     for offset, label in enumerate(expected, start=2):
@@ -114,8 +127,10 @@ def table_coordinates(original: str) -> tuple[list[str], int, int, int]:
     return lines, header, column, label_column
 
 
-def render_readme(original: str, result: dict) -> str:
-    lines, header, column, _ = table_coordinates(original)
+def render_readme(original: str, result: dict, variant: str = 'sharpurs') -> str:
+    lines, header, column, _ = table_coordinates(original, variant)
+    if len(result['times_us']) != len(TABLE_ROWS):
+        raise ValueError('Expected exactly 14 benchmark timings')
     edits = {header+i+2: f"~ {value:.3f} μs" for i, value in enumerate(result['times_us'])}
     edits[header+16] = f"~ {result['sum_displayed_lines_ms']:.2f} ms"
     if len(edits) != 15:
@@ -156,6 +171,8 @@ def aggregate(samples: list[dict]) -> dict:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--binary', required=True, type=Path)
+    parser.add_argument('--variant', choices=VARIANTS, default='sharpurs',
+                        help='Benchmark source route and README target column (default: sharpurs)')
     parser.add_argument('--output-dir', required=True, type=Path,
                         help='New empty results directory; never overwrites previous runs')
     parser.add_argument('--project-root', type=Path, help='Default: discover from this script or the working directory')
@@ -165,6 +182,8 @@ def main() -> int:
                         help='Provenance description supplied by builder (default: mimalloc)')
     parser.add_argument('--build-manifest', type=Path, help='Optional JSON build provenance to preserve and fingerprint')
     args = parser.parse_args()
+    variant = VARIANTS[args.variant]
+    label = variant['label']
     if not math.isfinite(args.timeout) or args.timeout <= 0:
         parser.error('--timeout must be a positive finite number')
     binary, directory = args.binary.resolve(), args.output_dir.resolve()
@@ -182,7 +201,7 @@ def main() -> int:
     if readme:
         if hashlib.sha256(readme_bytes).hexdigest() != readme_state['sha256']:
             raise RuntimeError('README changed while reading its initial snapshot')
-        table_coordinates(readme_bytes.decode('utf-8'))  # Fail before measuring malformed tables.
+        table_coordinates(readme_bytes.decode('utf-8'), args.variant)  # Fail before measuring malformed tables.
     validator_path = root / 'bin/benchmark/validate.py'
     spec = importlib.util.spec_from_file_location('altbak_fable_validator', validator_path)
     validator = importlib.util.module_from_spec(spec)
@@ -200,6 +219,7 @@ def main() -> int:
     directory.mkdir(parents=True, exist_ok=True)
     manifest = {
         'started_at_utc': utc_now(), 'status': 'measuring',
+        'variant': args.variant, 'result_key': variant['result_key'],
         'binary': str(binary), 'binary_sha256': watched[binary]['sha256'],
         'command': [str(binary)], 'working_directory': str(directory),
         'platform': platform.platform(), 'machine': platform.machine(),
@@ -228,7 +248,7 @@ def main() -> int:
             for path, state in watched.items():
                 ensure_unchanged(path, state)
             log = directory/f'fable-results-{repetition+1}.log'
-            print(f'Measuring Fable Rust, process {repetition+1}/{PROCESS_COUNT}; log: {log}', flush=True)
+            print(f'Measuring {label}, process {repetition+1}/{PROCESS_COUNT}; log: {log}', flush=True)
             started = utc_now()
             start = time.monotonic()
             process_info = {'number': repetition+1, 'started_at_utc': started, 'log': log.name}
@@ -252,13 +272,13 @@ def main() -> int:
             for path, state in watched.items():
                 ensure_unchanged(path, state)
             write_json(directory/'provenance.json', manifest)
-            print(f'Fable Rust: 14/14 expected outputs verified; process total {result["total_ms"]:.6f} ms', flush=True)
+            print(f'{label}: 14/14 expected outputs verified; process total {result["total_ms"]:.6f} ms', flush=True)
         result = aggregate(samples)
-        write_json(directory/'results.json', {'Fable': result})
+        write_json(directory/'results.json', {variant['result_key']: result})
         for path, state in watched.items():
             ensure_unchanged(path, state)
         if readme:
-            updated = render_readme(readme_bytes.decode('utf-8'), result).encode('utf-8')
+            updated = render_readme(readme_bytes.decode('utf-8'), result, args.variant).encode('utf-8')
             ensure_unchanged(readme, readme_state)
             # Preserve permissions and use an atomic rename to avoid partial README writes.
             fd, temp_name = tempfile.mkstemp(prefix='.'+readme.name+'.fable-', dir=readme.parent)
@@ -278,15 +298,15 @@ def main() -> int:
             manifest['readme_sha256_after'] = sha256(readme)
         manifest.update({'status': 'complete', 'completed_at_utc': utc_now()})
         write_json(directory/'provenance.json', manifest)
-        print(f'Fable Rust: sum of median rows {result["total_ms"]:.6f} ms; median process total {result["median_process_total_ms"]:.6f} ms', flush=True)
+        print(f'{label}: sum of median rows {result["total_ms"]:.6f} ms; median process total {result["median_process_total_ms"]:.6f} ms', flush=True)
         print(f'Results: {directory/"results.json"}', flush=True)
         if readme:
-            print('README: only the 15 Fable target cells updated.', flush=True)
+            print(f'README: only the 15 {args.variant} Fable target cells updated.', flush=True)
         return 0
     except (OSError, ValueError, RuntimeError, KeyboardInterrupt) as exc:
         manifest.update({'status': 'failed', 'failed_at_utc': utc_now(), 'error': str(exc)})
         write_json(directory/'provenance.json', manifest)
-        print(f'Fable collection failed: {exc}', file=sys.stderr)
+        print(f'{label} collection failed: {exc}', file=sys.stderr)
         return 1
 
 

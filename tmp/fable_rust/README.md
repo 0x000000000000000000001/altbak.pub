@@ -1,4 +1,25 @@
-# Fable Rust numeric benchmark
+# Fable Rust numeric benchmarks
+
+Two separate columns measure two source routes:
+
+- PureScript -> sharpurs -> generated F# with compatibility adaptations -> locally patched Fable -> Rust.
+- Hand-written, typed F# -> unmodified Fable -> Rust, following the native Koka/Haskell/OCaml reference implementations.
+
+## Hand-written F# reference
+
+```sh
+python3 tmp/run_fable_native_benchmark.py --dotnet /path/to/dotnet10/dotnet --update-readme
+```
+
+This builds [NativeBench.fs](NativeBench.fs) directly with the unmodified Fable 5.17.2 NuGet compiler and compiles its generated Rust with optimization level 3 and mimalloc. It needs .NET 10, Rust/Cargo, the cached Fable package and Cargo dependencies. It does not need sharpurs output or a Fable source checkout. Logs, source/compiler fingerprints, generated code and three validated measurement processes are saved in a fresh `var/benchmark/fable-native-rust/` directory.
+
+The source mirrors the native Haskell/OCaml implementations: recursive AST evaluation and Fibonacci, nested immutable records, a linked-list prime sieve and a persistent red-black tree. As in those references, List/Array, Church, Polymorphism, State and Lazy use simplified numeric loops, and RowToList returns the known field count. These rows do not measure the original PureScript abstractions. State takes depth 60 with 20 repetitions; RowToList takes 0, matching the native inputs. The Rust driver supplies timing, opaque inputs and result validation; all numeric kernels are compiled from F#.
+
+The tree's four balancing cases use separate matches with named children to avoid incorrect variable shadowing in Fable 5.17.2's translation of deeply nested patterns. This preserves the original rotations and tree structure; the compiler and its generated Rust remain unmodified.
+
+The timing protocol below is shared with the sharpurs/Fable column. The historical Koka/Haskell/OCaml tables use one process each; both Fable columns report medians of three processes. The C reference also differs algorithmically in its prime test and arena allocation, so these timings compare the published implementations, not identical allocations across languages.
+
+## PureScript through sharpurs
 
 Run from the repository root:
 
