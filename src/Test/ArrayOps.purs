@@ -18,7 +18,7 @@ sumEvens n = Array.foldl (+) 0 (filterEvens (range 1 n))
 describe :: Effect Unit
 describe = log "Array Processing (900 elements):"
 
-act :: Effect String
+act :: Effect Int
 act = do
   dummy <- Bench.opaque 900
-  pure (show ( sumEvens dummy))
+  pure ( sumEvens dummy)

@@ -10,7 +10,7 @@ foreign import runPrimesFFI :: Int -> Int
 describe :: Effect Unit
 describe = log "Prime Sieve FFI (sum primes up to 500):"
 
-act :: Effect String
+act :: Effect Int
 act = do
   dummy <- Bench.opaque 500
-  pure (show ( runPrimesFFI dummy))
+  pure ( runPrimesFFI dummy)

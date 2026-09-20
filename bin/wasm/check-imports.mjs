@@ -4,7 +4,7 @@ import { readFile } from "node:fs/promises";
 // Timing, output, and the optimizer barrier may call the host. The measured
 // algorithms and their library operations must remain inside WebAssembly.
 const allowed = new Map([
-  ["Bench", new Set(["formatNumber", "benchNow", "opaque"])],
+  ["Bench", new Set(["formatNumber", "benchNow", "opaque", "measureBatch"])],
   ["Effect.Console", new Set(["log"])],
 ]);
 

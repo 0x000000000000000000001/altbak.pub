@@ -10,7 +10,7 @@ foreign import runLazyEvaluationFFICheatcode :: Int -> Int
 describe :: Effect Unit
 describe = log "Lazy Evaluation FFICheatcode (1M Thunks Forced, 1k Depth):"
 
-act :: Effect String
+act :: Effect Int
 act = do
   dummy <- Bench.opaque 1000
-  pure (show ( runLazyEvaluationFFICheatcode dummy))
+  pure ( runLazyEvaluationFFICheatcode dummy)

@@ -239,6 +239,8 @@ def execute(args, work):
     for key in ["backend", "mode", "test", "expected"]:
         if manifest[key] != getattr(args, key):
             raise RuntimeError(f"Artifact {key}={manifest[key]!r} does not match requested {getattr(args, key)!r}")
+    if args.mode == "x":
+        (work / "var").mkdir(exist_ok=True)
     result = subprocess.run(manifest["run"], cwd=work, env=environment(args.backend),
                             text=True, capture_output=True)
     (work / "run.stdout").write_text(result.stdout)

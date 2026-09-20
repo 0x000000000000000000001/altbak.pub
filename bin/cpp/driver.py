@@ -124,7 +124,7 @@ def main_source(entry, cases):
               'main = do', '  smoke <- smokeRequested', '  if smoke then do']
     for i, case in enumerate(cases):
         lines += [f'    result{i} <- Case{i}.act',
-                  f'    log ("CPP_RESULT {case["module"]} " <> result{i})']
+                  f'    log ("CPP_RESULT {case["module"]} " <> show result{i})']
     lines.append('  else ' + ('Entry.main' if entry else 'void (runBench Case0.describe Case0.act)'))
     return '\n'.join(lines) + '\n'
 

@@ -8,5 +8,5 @@ instance MyClass Int where
   myMethod _ = "Int"
 describe :: Effect Unit
 describe = log "TC"
-act :: Effect String
+act :: Effect Int
 act = pure (myMethod 42)

@@ -10,7 +10,7 @@ foreign import runAckermannFFICheatcode :: Int -> Int
 describe :: Effect Unit
 describe = log "Ackermann FFICheatcode (3, 4):"
 
-act :: Effect String
+act :: Effect Int
 act = do
   m <- Bench.opaque 3
-  pure (show (runAckermannFFICheatcode m))
+  pure (runAckermannFFICheatcode m)

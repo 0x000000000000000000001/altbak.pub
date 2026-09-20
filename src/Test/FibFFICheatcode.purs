@@ -10,7 +10,7 @@ foreign import runFibFFICheatcode :: Int -> Int
 describe :: Effect Unit
 describe = log "Fibonacci FFICheatcode:"
 
-act :: Effect String
+act :: Effect Int
 act = do
   dummy <- Bench.opaque 10
-  pure (show ( runFibFFICheatcode dummy))
+  pure ( runFibFFICheatcode dummy)

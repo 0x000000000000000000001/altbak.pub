@@ -4,13 +4,17 @@ import Prelude
 import Effect (Effect)
 import Effect.Console (log)
 import Effect.Aff (Aff, delay, Milliseconds(..))
+import Effect.Class (liftEffect)
+import Data.Int (toNumber)
+import Bench as Bench
 
 describe :: Effect Unit
 describe = log "Aff Operations (Asynchronous Delays)"
 
--- | A simple test that launches an Aff block with a delay,
--- | proving that the asynchronous runtime (or its synchronous fallback in PHP) is functioning.
+-- This measures a 10 ms timer delay and its scheduling overhead, not the
+-- throughput of arbitrary asynchronous computations.
 act :: Aff String
 act = do
-  _ <- delay (Milliseconds 10.0)
-  pure "10"
+  milliseconds <- liftEffect $ Bench.opaque 10
+  _ <- delay (Milliseconds (toNumber milliseconds))
+  pure (show milliseconds)

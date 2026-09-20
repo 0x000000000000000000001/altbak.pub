@@ -23,7 +23,7 @@ polyLoop n_init acc_init = go n_init acc_init
 describe :: Effect Unit
 describe = log "Polymorphism (10M Type Class Dict Lookups):"
 
-act :: Effect String
+act :: Effect Int
 act = do
   dummy <- Bench.opaque 10000000
-  pure (show ( polyLoop dummy 0))
+  pure ( polyLoop dummy 0)

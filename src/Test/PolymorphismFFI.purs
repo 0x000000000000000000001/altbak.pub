@@ -10,7 +10,7 @@ foreign import runPolymorphismFFI :: Int -> Int
 describe :: Effect Unit
 describe = log "Polymorphism FFI (10M Type Class Dict Lookups):"
 
-act :: Effect String
+act :: Effect Int
 act = do
   dummy <- Bench.opaque 10000000
-  pure (show ( runPolymorphismFFI dummy))
+  pure ( runPolymorphismFFI dummy)

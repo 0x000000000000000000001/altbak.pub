@@ -10,7 +10,7 @@ foreign import runRBTreeFFICheatcode :: Int -> Int
 describe :: Effect Unit
 describe = log "Red-Black Tree FFICheatcode (100k Worst-Case Insertions):"
 
-act :: Effect String
+act :: Effect Int
 act = do
   dummy <- Bench.opaque 100000
-  pure (show ( runRBTreeFFICheatcode dummy))
+  pure ( runRBTreeFFICheatcode dummy)

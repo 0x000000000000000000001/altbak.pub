@@ -10,7 +10,7 @@ foreign import runRecordsFFICheatcode :: Int -> Int
 describe :: Effect Unit
 describe = log "Deep Record Updates FFICheatcode (10k iterations):"
 
-act :: Effect String
+act :: Effect Int
 act = do
   dummy <- Bench.opaque 10000
-  pure (show ( runRecordsFFICheatcode dummy))
+  pure ( runRecordsFFICheatcode dummy)

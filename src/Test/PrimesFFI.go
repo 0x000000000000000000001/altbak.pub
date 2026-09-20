@@ -1,90 +1,90 @@
 package Test_PrimesFFI
 
 
-type List interface {
+type List[A any] interface {
 	isList()
 }
 
-type Nil struct{}
+type Nil[A any] struct{}
 
-func (Nil) isList() {}
+func (Nil[A]) isList() {}
 
-type Cons struct {
-	value0 int
-	value1 List
+type Cons[A any] struct {
+	value0 A
+	value1 List[A]
 }
 
-func (Cons) isList() {}
+func (Cons[A]) isList() {}
 
-func rangeList(start int, end int) List {
-	var goFunc func(int, List) List
-	goFunc = func(curr int, acc List) List {
+func rangeList(start int, end int) List[int] {
+	var goFunc func(int, List[int]) List[int]
+	goFunc = func(curr int, acc List[int]) List[int] {
 		if curr < start {
 			return acc
 		}
-		return goFunc(curr-1, Cons{value0: curr, value1: acc})
+		return goFunc(curr-1, Cons[int]{value0: curr, value1: acc})
 	}
-	return goFunc(end, Nil{})
+	return goFunc(end, Nil[int]{})
 }
 
-func filter(p func(int) bool, lst List) List {
-	var goFunc func(List, List) List
-	goFunc = func(list List, acc List) List {
+func filter[A any](p func(A) bool, lst List[A]) List[A] {
+	var goFunc func(List[A], List[A]) List[A]
+	goFunc = func(list List[A], acc List[A]) List[A] {
 		switch l := list.(type) {
-		case Nil:
+		case Nil[A]:
 			return reverse(acc)
-		case Cons:
+		case Cons[A]:
 			x := l.value0
 			xs := l.value1
 			if p(x) {
-				return goFunc(xs, Cons{value0: x, value1: acc})
+				return goFunc(xs, Cons[A]{value0: x, value1: acc})
 			} else {
 				return goFunc(xs, acc)
 			}
 		}
-		return Nil{}
+		return Nil[A]{}
 	}
-	return goFunc(lst, Nil{})
+	return goFunc(lst, Nil[A]{})
 }
 
-func reverse(lst List) List {
-	var goFunc func(List, List) List
-	goFunc = func(list List, acc List) List {
+func reverse[A any](lst List[A]) List[A] {
+	var goFunc func(List[A], List[A]) List[A]
+	goFunc = func(list List[A], acc List[A]) List[A] {
 		switch l := list.(type) {
-		case Nil:
+		case Nil[A]:
 			return acc
-		case Cons:
-			return goFunc(l.value1, Cons{value0: l.value0, value1: acc})
+		case Cons[A]:
+			return goFunc(l.value1, Cons[A]{value0: l.value0, value1: acc})
 		}
-		return Nil{}
+		return Nil[A]{}
 	}
-	return goFunc(lst, Nil{})
+	return goFunc(lst, Nil[A]{})
 }
 
-func sieve(lst List) List {
+func sieve(lst List[int]) List[int] {
 	switch l := lst.(type) {
-	case Nil:
-		return Nil{}
-	case Cons:
+	case Nil[int]:
+		return Nil[int]{}
+	case Cons[int]:
 		p := l.value0
 		xs := l.value1
-		return Cons{
+		return Cons[int]{
 			value0: p,
 			value1: sieve(filter(func(x int) bool {
 				return x%p != 0
 			}, xs)),
 		}
 	}
-	return Nil{}
+	return Nil[int]{}
 }
 
-func sumList(lst List) int {
-	var goFunc func(List, int) int
-	goFunc = func(list List, acc int) int {
+func sumList(lst List[int]) int {
+	var goFunc func(List[int], int) int
+	goFunc = func(list List[int], acc int) int {
 		switch l := list.(type) {
-		case Nil:
+		case Nil[int]:
 			return acc
-		case Cons:
+		case Cons[int]:
 			return goFunc(l.value1, acc+l.value0)
 		}
 		return acc

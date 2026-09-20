@@ -10,7 +10,7 @@ foreign import runRowToListFFICheatcode :: Int -> Int
 describe :: Effect Unit
 describe = log "RowToList FFICheatcode (Keys Count):"
 
-act :: Effect String
+act :: Effect Int
 act = do
   dummy <- Bench.opaque 0
-  pure (show ( runRowToListFFICheatcode dummy))
+  pure ( runRowToListFFICheatcode dummy)

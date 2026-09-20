@@ -1,17 +1,17 @@
 package Test_LazyEvaluationFFI
 
 
-type Lazy func() int
+type Lazy[A any] func() A
 
-func force(l Lazy) int {
+func force[A any](l Lazy[A]) A {
 	return l()
 }
 
-func deferFunc(f func() int) Lazy {
+func deferFunc[A any](f func() A) Lazy[A] {
 	return f
 }
 
-func buildThunks(depth int, acc Lazy) Lazy {
+func buildThunks(depth int, acc Lazy[int]) Lazy[int] {
 	if depth == 0 {
 		return acc
 	}

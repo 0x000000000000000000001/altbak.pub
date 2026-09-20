@@ -10,6 +10,7 @@ import Data.String.Regex.Flags (noFlags)
 import Data.Either (Either(..))
 import Partial.Unsafe (unsafePartial)
 import Data.Array (length)
+import Bench as Bench
 
 regexPattern :: R.Regex
 regexPattern = unsafePartial (case R.regex "(hello|world)[0-9]+" noFlags of Right r -> r)
@@ -32,4 +33,6 @@ describe :: Effect.Effect Unit
 describe = Effect.Console.log "String Operations (1k Regex/Split):"
 
 act :: Effect.Effect String
-act = pure (show $ runStringOps 1000)
+act = do
+  iterations <- Bench.opaque 1000
+  pure (show $ runStringOps iterations)

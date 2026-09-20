@@ -10,7 +10,7 @@ foreign import runRecordsFFI :: Int -> Int
 describe :: Effect Unit
 describe = log "Deep Record Updates FFI (10k iterations):"
 
-act :: Effect String
+act :: Effect Int
 act = do
   dummy <- Bench.opaque 10000
-  pure (show ( runRecordsFFI dummy))
+  pure ( runRecordsFFI dummy)

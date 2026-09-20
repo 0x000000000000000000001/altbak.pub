@@ -16,7 +16,7 @@ ackermann m n = ackermann (m - 1) (ackermann m (n - 1))
 describe :: Effect Unit
 describe = log "Ackermann (3, 4):"
 
-act :: Effect String
+act :: Effect Int
 act = do
   dummy <- Bench.opaque 3
-  pure (show ( ackermann dummy 4))
+  pure ( ackermann dummy 4)
