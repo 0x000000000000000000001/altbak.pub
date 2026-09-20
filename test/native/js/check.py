@@ -39,6 +39,29 @@ def check(language):
                 function = "run" + stem
                 if language == "js":
                     shutil.copyfile(ROOT / "src/Test" / (stem + ".js"), tmp / "kernel.mjs")
+                    if suffix == "FFI":
+                        probes = {
+                            "ListOps": '''
+if (foldl(a => x => a + x.length)(0)({type:"Cons", value0:"ab", value1:{type:"Cons", value0:"c", value1:{type:"Nil"}}}) !== 3) throw Error("generic list fold");
+if (foldl(a => x => a + x)("")(filterEvens(range(1)(6))) !== "642") throw Error("filter order");''',
+                            "Primes": '''
+const input = {type:"Cons",value0:"a",value1:{type:"Cons",value0:"bb",value1:{type:"Cons",value0:"c",value1:{type:"Nil"}}}};
+const selected = filter(x => x.length === 1)(input);
+if (selected.value0 !== "a" || selected.value1.value0 !== "c" || input.value1.value0 !== "bb") throw Error("generic persistent filter");''',
+                            "Polymorphism": '''
+if (polyLoop({mempty_:"x",mappend_:a=>b=>a+b},3,"!") !== "!xxx") throw Error("generic dictionary");''',
+                            "Church": '''
+const two = succC(succC(zeroC));
+if (mulC(two)(two)(s=>s+"x")("!") !== "!xxxx") throw Error("generic Church");''',
+                            "StateMonad": '''
+const action = bindState(get)(s => bindState(put(s+"!"))(_ => pureState(s.length)));
+const result = runState(action)("ab");
+if (result.val !== 2 || result.state !== "ab!") throw Error("generic State");''',
+                            "RowToList": '''
+if (keys(dictNil,{}) !== 0 || keys(dictCons(dictCons(dictNil)),{name:"value",flag:true}) !== 2) throw Error("recursive row dictionary");''',
+                        }
+                        with (tmp / "kernel.mjs").open("a") as module:
+                            module.write("\n" + probes.get(name, "") + "\n")
                     (tmp / "check.mjs").write_text(
                         'import * as kernel from "./kernel.mjs";\n'
                         f'for (const [n, expected] of {json.dumps(cases)}) {{\n'

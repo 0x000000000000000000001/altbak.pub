@@ -11,6 +11,65 @@ sys.dont_write_bytecode = True
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from oracle import ROOT, NOMINAL, cases
 
+PROBES = {
+    'ListOps': '''
+func TestGenericFoldAndOrder(t *testing.T) {
+    words := ListOpsCons[string]{"a", ListOpsCons[string]{"bc", ListOpsNil[string]{}}}
+    if got := foldl(func(n int) func(string) int { return func(s string) int { return n + len(s) } }, 0, words); got != 3 { t.Fatal(got) }
+    if got := foldl(func(s string) func(int) string { return func(n int) string { return s + string(rune('0' + n)) } }, "", filterEvens(rangeListOps(1, 6))); got != "642" { t.Fatal(got) }
+}''',
+    'Primes': '''
+func TestGenericFilterAndReverse(t *testing.T) {
+    values := Cons[string]{"a", Cons[string]{"bb", Cons[string]{"c", Nil[string]{}}}}
+    result := filter(func(s string) bool { return len(s) == 1 }, values).(Cons[string])
+    if result.value0 != "a" || result.value1.(Cons[string]).value0 != "c" { t.Fatal(result) }
+    if values.value1.(Cons[string]).value0 != "bb" { t.Fatal("input was mutated") }
+}''',
+    'ArrayOps': '''
+func TestGenericArrayStages(t *testing.T) {
+    values := []string{"a", "bb", "c"}
+    selected := arrayFilter(func(s string) bool { return len(s) == 1 }, values)
+    if got := arrayFoldl(func(n int) func(string) int { return func(s string) int { return n + len(s) } }, 4, selected); got != 6 { t.Fatal(got) }
+    selected[0] = "changed"
+    if values[0] != "a" { t.Fatal("filter must produce a fresh array") }
+}''',
+    'Polymorphism': '''
+func TestDifferentMonoidish(t *testing.T) {
+    dict := Monoidish[string]{Mempty: "x", Mappend: func(x string) func(string) string { return func(y string) string { return x + y } }}
+    if got := polyLoop(dict, 3, "!"); got != "!xxx" { t.Fatal(got) }
+    if got := polyLoop(dict, 0, "unchanged"); got != "unchanged" { t.Fatal(got) }
+}''',
+    'Church': '''
+func TestGenericChurch(t *testing.T) {
+    two := succC(succC(zeroC[string]()))
+    if got := mulC(two, two)(func(s string) string { return s + "x" })("!"); got != "!xxxx" { t.Fatal(got) }
+}''',
+    'StateMonad': '''
+func TestGenericState(t *testing.T) {
+    action := bindState(get[string](), func(s string) State[string, int] {
+        return bindState(put(s + "!"), func(_ struct{}) State[string, int] { return pureState[string](len(s)) })
+    })
+    got := runState(action, "ab")
+    if got.val != 2 || got.state != "ab!" { t.Fatal(got) }
+    if again := runState(action, "z"); again.val != 1 || again.state != "z!" { t.Fatal(again) }
+}''',
+    'LazyEvaluation': '''
+func TestGenericNonMemoizingLazy(t *testing.T) {
+    calls := 0
+    thunk := deferFunc(func() string { calls++; return "value" })
+    if force(thunk) != "value" || force(thunk) != "value" || calls != 2 { t.Fatal(calls) }
+}''',
+    'RowToList': '''
+func TestTypedRowDictionary(t *testing.T) {
+    if keys[rowNil](keysNil{}, rowNil{}) != 0 { t.Fatal("empty row") }
+    type Tail = rowCons[bool, rowNil]
+    type Row = rowCons[string, Tail]
+    record := Row{"name", "value", Tail{"flag", true, rowNil{}}}
+    dict := keysCons[string, Tail]{keysCons[bool, rowNil]{keysNil{}}}
+    if keys[Row](dict, record) != 2 { t.Fatal("two-field row") }
+}''',
+}
+
 with tempfile.TemporaryDirectory(prefix='altbak-native-go-') as temporary:
     folder = Path(temporary)
     (folder / 'go.mod').write_text('module nativecontracts\n\ngo 1.22\n')
@@ -24,6 +83,9 @@ with tempfile.TemporaryDirectory(prefix='altbak-native-go-') as temporary:
             target = folder / module
             target.mkdir()
             shutil.copy2(ROOT / f'src/Test/{module}.go', target / 'kernel.go')
+            if suffix == 'FFI' and name in PROBES:
+                (target / 'generic_test.go').write_text(
+                    f'package Test_{module}\nimport "testing"\n' + PROBES[name] + '\n')
             lines.append(f'{module} "nativecontracts/{module}"')
     lines += [')', 'func TestNativeContracts(t *testing.T) {']
     count = 0
@@ -41,5 +103,5 @@ with tempfile.TemporaryDirectory(prefix='altbak-native-go-') as temporary:
               'if Bench.Opaque(123)().(int) != 123 { t.Fatal("opaque changed input") }', '}']
     (folder / 'contracts_test.go').write_text('\n'.join(lines) + '\n')
     environment = dict(os.environ, GOWORK='off', GOFLAGS='', GOCACHE=str(folder / 'cache'))
-    subprocess.run(['go', 'test', '-count=1', '-pgo=off', '.'], cwd=folder, env=environment, check=True)
-    print(f'PASS native Go: {count} values; no benchmark timing', flush=True)
+    subprocess.run(['go', 'test', '-count=1', '-pgo=off', './...'], cwd=folder, env=environment, check=True)
+    print(f'PASS native Go: {count} values, {len(PROBES)} generic/structural cases; no benchmark timing', flush=True)

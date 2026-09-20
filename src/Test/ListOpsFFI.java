@@ -1,27 +1,27 @@
-private sealed interface IntList permits Nil, Cons {}
-private enum Nil implements IntList { INSTANCE }
-private record Cons(int value, IntList tail) implements IntList {}
+private sealed interface List<A> permits Nil, Cons {}
+private record Nil<A>() implements List<A> {}
+private record Cons<A>(A value, List<A> tail) implements List<A> {}
 
-private static IntList range(int start, int end) {
-    IntList result = Nil.INSTANCE;
+private static List<Integer> range(int start, int end) {
+    List<Integer> result = new Nil<>();
     for (int current = end; current >= start; current--) {
-        result = new Cons(current, result);
+        result = new Cons<>(current, result);
     }
     return result;
 }
 
-private static IntList filterEvens(IntList list) {
-    IntList result = Nil.INSTANCE;
-    while (list instanceof Cons cons) {
-        if (cons.value() % 2 == 0) result = new Cons(cons.value(), result);
+private static List<Integer> filterEvens(List<Integer> list) {
+    List<Integer> result = new Nil<>();
+    while (list instanceof Cons<Integer> cons) {
+        if (cons.value() % 2 == 0) result = new Cons<>(cons.value(), result);
         list = cons.tail();
     }
     return result;
 }
 
-private static int foldl(java.util.function.IntBinaryOperator operation, int acc, IntList list) {
-    while (list instanceof Cons cons) {
-        acc = operation.applyAsInt(acc, cons.value());
+private static <A, B> B foldl(java.util.function.BiFunction<B, A, B> operation, B acc, List<A> list) {
+    while (list instanceof Cons<A> cons) {
+        acc = operation.apply(acc, cons.value());
         list = cons.tail();
     }
     return acc;

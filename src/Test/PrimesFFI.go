@@ -1,19 +1,19 @@
 package Test_PrimesFFI
 
 type List[A any] interface {
-	isList()
+	isList(A)
 }
 
 type Nil[A any] struct{}
 
-func (Nil[A]) isList() {}
+func (Nil[A]) isList(A) {}
 
 type Cons[A any] struct {
 	value0 A
 	value1 List[A]
 }
 
-func (Cons[A]) isList() {}
+func (Cons[A]) isList(A) {}
 
 func rangeList(start int, end int) List[int] {
 	var goFunc func(int, List[int]) List[int]

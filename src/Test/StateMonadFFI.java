@@ -1,34 +1,34 @@
-    private record StateResult<A>(A value, int state) {}
+    private record StateResult<S, A>(A value, S state) {}
 
     @FunctionalInterface
-    private interface State<A> {
-        StateResult<A> run(int initial);
+    private interface State<S, A> {
+        StateResult<S, A> run(S initial);
     }
 
-    private static <A, B> State<B> bindState(State<A> action, java.util.function.Function<A, State<B>> next) {
+    private static <S, A, B> State<S, B> bindState(State<S, A> action, java.util.function.Function<A, State<S, B>> next) {
         return initial -> {
-            StateResult<A> first = action.run(initial);
+            StateResult<S, A> first = action.run(initial);
             return next.apply(first.value()).run(first.state());
         };
     }
 
-    private static <A> State<A> pureState(A value) {
+    private static <S, A> State<S, A> pureState(A value) {
         return initial -> new StateResult<>(value, initial);
     }
 
-    private static State<Integer> getState() {
+    private static <S> State<S, S> getState() {
         return initial -> new StateResult<>(initial, initial);
     }
 
-    private static State<Void> putState(int value) {
+    private static <S> State<S, Void> putState(S value) {
         return ignored -> new StateResult<>(null, value);
     }
 
-    private static State<Void> modifyState(java.util.function.IntUnaryOperator update) {
-        return bindState(getState(), current -> putState(update.applyAsInt(current)));
+    private static <S> State<S, Void> modifyState(java.util.function.Function<S, S> update) {
+        return bindState(StateMonadFFI.<S>getState(), current -> putState(update.apply(current)));
     }
 
-    private static State<Void> chainModifications(int depth) {
+    private static State<Integer, Void> chainModifications(int depth) {
         if (depth == 0) return pureState(null);
         return bindState(modifyState(value -> value + 1), ignored -> chainModifications(depth - 1));
     }
