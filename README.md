@@ -94,7 +94,7 @@ RowToList               | ~ 0 μs          | ~ 0 μs           | ~ 0 μs        
 
 #### Erlang
 
-Erlang Benchmark        | Hand-written PureScript<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>↓<br>Erlang<br>↓<br>BEAM-JIT | Hand-written FP-style Erlang FFI<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>↓<br>Erlang<br>↓<br>BEAM-JIT<br><br>(WIP) | Hand-written imperative Erlang FFI<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>↓<br>Erlang<br>↓<br>BEAM-JIT<br><br>(WIP) |
+Erlang Benchmark        | Hand-written PureScript<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>↓<br>Erlang<br>↓<br>BEAM JIT | Hand-written FP-style Erlang FFI<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>↓<br>Erlang<br>↓<br>BEAM JIT<br><br>(WIP) | Hand-written imperative Erlang FFI<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>↓<br>Erlang<br>↓<br>BEAM JIT<br><br>(WIP) |
 ----------------------- | ----------------| -------------------------- | -------------------------------- |
 AST Evaluation          | ~ 0 μs          | ~ 0 μs           | ~ 0 μs                     |
 Fibonacci               | ~ 0 μs          | ~ 0 μs           | ~ 0 μs                     |

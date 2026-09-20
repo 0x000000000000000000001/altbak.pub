@@ -8,7 +8,7 @@ import Effect.Aff (Aff)
 import Effect.Class (liftEffect)
 import Effect.Console (log)
 
-foreign import consumeResult :: String -> Effect Unit
+foreign import consumeResult :: String -> String -> Effect Unit
 
 startReport :: Effect Unit -> Effect Unit
 startReport describe = do
@@ -21,19 +21,19 @@ finishReport best = do
   log ("\n(Execution time - best of 10)\n\n" <> formatNumber best <> " μs\n")
   pure best
 
-measureSync :: Effect String -> Effect Number
-measureSync act = do
+measureSync :: String -> Effect String -> Effect Number
+measureSync expected act = do
   start <- benchNow
   result <- act
-  consumeResult result
+  consumeResult expected result
   finish <- benchNow
   pure (finish - start)
 
-measureAff :: Aff String -> Aff Number
-measureAff act = do
+measureAff :: String -> Aff String -> Aff Number
+measureAff expected act = do
   start <- liftEffect benchNow
   result <- act
-  liftEffect $ consumeResult result
+  liftEffect $ consumeResult expected result
   finish <- liftEffect benchNow
   pure (finish - start)
 
@@ -42,19 +42,19 @@ runBenchSync describe act = do
   startReport describe
   out <- act
   log out
-  consumeResult out
-  act >>= consumeResult
-  act >>= consumeResult
-  d1 <- measureSync act
-  d2 <- measureSync act
-  d3 <- measureSync act
-  d4 <- measureSync act
-  d5 <- measureSync act
-  d6 <- measureSync act
-  d7 <- measureSync act
-  d8 <- measureSync act
-  d9 <- measureSync act
-  d10 <- measureSync act
+  consumeResult out out
+  act >>= consumeResult out
+  act >>= consumeResult out
+  d1 <- measureSync out act
+  d2 <- measureSync out act
+  d3 <- measureSync out act
+  d4 <- measureSync out act
+  d5 <- measureSync out act
+  d6 <- measureSync out act
+  d7 <- measureSync out act
+  d8 <- measureSync out act
+  d9 <- measureSync out act
+  d10 <- measureSync out act
   finishReport $ min (min (min (min d1 d2) (min d3 d4)) (min (min d5 d6) (min d7 d8))) (min d9 d10)
 
 runBenchAff :: Effect Unit -> Aff String -> Aff Number
@@ -62,17 +62,17 @@ runBenchAff describe act = do
   liftEffect $ startReport describe
   out <- act
   liftEffect $ log out
-  liftEffect $ consumeResult out
-  act >>= (liftEffect <<< consumeResult)
-  act >>= (liftEffect <<< consumeResult)
-  d1 <- measureAff act
-  d2 <- measureAff act
-  d3 <- measureAff act
-  d4 <- measureAff act
-  d5 <- measureAff act
-  d6 <- measureAff act
-  d7 <- measureAff act
-  d8 <- measureAff act
-  d9 <- measureAff act
-  d10 <- measureAff act
+  liftEffect $ consumeResult out out
+  act >>= (liftEffect <<< consumeResult out)
+  act >>= (liftEffect <<< consumeResult out)
+  d1 <- measureAff out act
+  d2 <- measureAff out act
+  d3 <- measureAff out act
+  d4 <- measureAff out act
+  d5 <- measureAff out act
+  d6 <- measureAff out act
+  d7 <- measureAff out act
+  d8 <- measureAff out act
+  d9 <- measureAff out act
+  d10 <- measureAff out act
   liftEffect $ finishReport $ min (min (min (min d1 d2) (min d3 d4)) (min (min d5 d6) (min d7 d8))) (min d9 d10)
