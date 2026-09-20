@@ -216,7 +216,7 @@ RowToList               | ~ 1.88 μs                 | ~ 2.75 μs               
 
 #### Koka
 
-Koka Benchmark          | Hand-written Koka<br>↓<br>Koka<br>↓<br>koka -O3 |
+Koka Benchmark          | Hand-written Koka<br>↓<br>koka -O3 |
 ----------------------- | ----- |
 AST Evaluation          | ~ 0.243 μs |
 Fibonacci               | ~ 0.125 μs |
@@ -236,7 +236,7 @@ RowToList               | ~ 0.001 μs |
 
 #### Haskell
 
-Haskell Benchmark       | Hand-written Haskell<br>↓<br>Haskell<br>↓<br>GHC -O2 |
+Haskell Benchmark       | Hand-written Haskell<br>↓<br>GHC -O2 |
 ----------------------- | ------------------------ |
 AST Evaluation          | ~ 0.057 μs |
 Fibonacci               | ~ 0.205 μs |
@@ -256,7 +256,7 @@ RowToList               | ~ 0.004 μs |
 
 #### OCaml
 
-OCaml Benchmark         | Hand-written OCaml<br>↓<br>OCaml<br>↓<br>ocamlopt -O3 |
+OCaml Benchmark         | Hand-written OCaml<br>↓<br>ocamlopt -O3 |
 ----------------------- | --------------------------- |
 AST Evaluation          | ~ 0.050 μs |
 Fibonacci               | ~ 0.124 μs |
@@ -276,7 +276,7 @@ RowToList               | ~ 0.005 μs |
 
 #### C (reference)
 
-C Benchmark             | Hand-written imperative C<br>↓<br>C<br>↓<br>clang -O3 |
+C Benchmark             | Hand-written imperative C<br>↓<br>clang -O3 |
 ----------------------- | -------------------- |
 AST Evaluation          | ~ 0.096 μs |
 Fibonacci               | ~ 0.082 μs |
