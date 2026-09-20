@@ -11,6 +11,7 @@ import sys
 
 sys.dont_write_bytecode = True
 from validate import CASES, EXTENDED_CASES, expected_cases
+from measure import fingerprints
 
 ROOT = Path(__file__).resolve().parents[2]
 GROUPS = {
@@ -116,6 +117,8 @@ def main():
         if results.keys() & incoming.keys():
             raise ValueError('Duplicate column in campaigns')
         results.update(incoming)
+    if fingerprints() != source_snapshot:
+        raise ValueError('Current sources differ from the completed campaigns')
     for keys in GROUPS.values():
         for key in keys:
             verify(key, results[key])
