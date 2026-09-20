@@ -132,7 +132,7 @@ RowToList               | ~ 2 μs                 | ~ 2 μs         | ~ 1 μs   
 
 #### Rust
 
-Rust Benchmark          | Hand-written PureScript --[purust](https://github.com/0x000000000000000000001/purust)--> Rust --rustc-O3--> ... (WIP) | PureScript --[sharpurs](https://github.com/0x000000000000000000001/sharpurs)--> F# --[Fable](https://github.com/fable-compiler/fable)--> Rust --rustc-O3--> ... (WIP) | Hand-written F# --[Fable](https://github.com/fable-compiler/fable)--> Rust --rustc-O3--> ... | Hand-written FP-style Rust FFI --rustc-O3--> ... (WIP) | Hand-written imperative Rust FFI --rustc-O3--> ... (WIP) |
+Rust Benchmark          | Hand-written PureScript --[purust](https://github.com/0x000000000000000000001/purust)--> Rust<br> --rustc-O3--> ... (WIP) | PureScript --[sharpurs](https://github.com/0x000000000000000000001/sharpurs)--> F# --[Fable](https://github.com/fable-compiler/fable)--> Rust --rustc-O3--> ... (WIP) | Hand-written F# --[Fable](https://github.com/fable-compiler/fable)--> Rust --rustc-O3--> ... | Hand-written FP-style Rust FFI --rustc-O3--> ... (WIP) | Hand-written imperative Rust FFI --rustc-O3--> ... (WIP) |
 ----------------------- | ------------------------- | -------------------------- | ------------------------------ | ------------------------ | ------------------------------ |
 AST Evaluation          | ~ 0.267 μs              | ~ 4.261 μs                        | ~ 0.262 μs | ~ 3 μs       | ~ 1 μs                 |
 Fibonacci               | ~ 0.086 μs              | ~ 12.119 μs                        | ~ 0.107 μs | ~ 2 μs       | ~ 1 μs                 |
@@ -212,8 +212,6 @@ Array Processing        | ~ 62.50 μs                | ~ 41.29 μs              
 RowToList               | ~ 1.88 μs                 | ~ 2.75 μs                | ~ 2.46 μs                      |
 **Total Execution Time**| ~ 17.53 ms                | ~ 17.73 ms               | ~ 9.36 ms                      |
 
-The hand-written Haskell, Koka, OCaml and F# references follow the [PureScript functional kernels](tmp/fp_reference_contract.md), including their data structures, closures and generic dictionaries. Their earlier numerical shortcuts have been removed; C remains the imperative reference. Timings are medians of three independently validated processes using calibrated batches. Reproduce these three native FP tables with `python3 tmp/run_benchmarks.py --languages Haskell Koka OCaml --update-readme`.
-
 #### Koka
 
 Koka Benchmark          | Hand-written Koka --koka-O3--> ... |
@@ -276,7 +274,7 @@ RowToList               | ~ 0.005 μs |
 
 #### C (reference)
 
-C Benchmark             | Hand-written C --clang-O3--> ... |
+C Benchmark             | Hand-written imperative C --clang-O3--> ... |
 ----------------------- | -------------------- |
 AST Evaluation          | ~ 0.096 μs |
 Fibonacci               | ~ 0.082 μs |
