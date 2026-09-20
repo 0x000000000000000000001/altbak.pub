@@ -3,43 +3,49 @@
 #include <memory>
 
 namespace {
-    struct StateResult { int val, state; };
-    using StateFn = std::function<StateResult(int)>;
-    using State = std::shared_ptr<const StateFn>;
+    struct Unit {};
+    template <class S, class A> struct StateResult { A val; S state; };
+    template <class S, class A> using StateFn = std::function<StateResult<S, A>(S)>;
+    template <class S, class A> using State = std::shared_ptr<const StateFn<S, A>>;
 
-    State bindState(State action, std::function<State(int)> next) {
-        return std::make_shared<StateFn>([action, next](int state) {
+    template <class S, class A, class B>
+    State<S, B> bindState(State<S, A> action, std::function<State<S, B>(A)> next) {
+        return std::make_shared<StateFn<S, B>>([action, next](S state) {
             const auto result = (*action)(state);
             return (*next(result.val))(result.state);
         });
     }
 
-    State pureState(int value) {
-        return std::make_shared<StateFn>([value](int state) {
-            return StateResult{value, state};
+    template <class S, class A>
+    State<S, A> pureState(A value) {
+        return std::make_shared<StateFn<S, A>>([value](S state) {
+            return StateResult<S, A>{value, state};
         });
     }
 
-    State get() {
-        return std::make_shared<StateFn>([](int state) {
-            return StateResult{state, state};
+    template <class S>
+    State<S, S> get() {
+        return std::make_shared<StateFn<S, S>>([](S state) {
+            return StateResult<S, S>{state, state};
         });
     }
 
-    State put(int nextState) {
-        return std::make_shared<StateFn>([nextState](int) {
-            return StateResult{0, nextState};
+    template <class S>
+    State<S, Unit> put(S nextState) {
+        return std::make_shared<StateFn<S, Unit>>([nextState](S) {
+            return StateResult<S, Unit>{Unit{}, nextState};
         });
     }
 
-    State modify(std::function<int(int)> f) {
-        return bindState(get(), [f](int state) { return put(f(state)); });
+    template <class S>
+    State<S, Unit> modify(std::function<S(S)> f) {
+        return bindState<S, S, Unit>(get<S>(), [f](S state) { return put<S>(f(state)); });
     }
 
-    State chainModifications(int depth) {
-        if (depth == 0) return pureState(0);
-        return bindState(modify([](int x) { return x + 1; }),
-            [depth](int) { return chainModifications(depth - 1); });
+    State<int, Unit> chainModifications(int depth) {
+        if (depth == 0) return pureState<int, Unit>(Unit{});
+        return bindState<int, Unit, Unit>(modify<int>([](int x) { return x + 1; }),
+            [depth](Unit) { return chainModifications(depth - 1); });
     }
 }
 

@@ -52,7 +52,7 @@ RowToList               | ~ 37 μs                | ~ 17 μs            | ~ 58 �
 
 #### Go
 
-Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[psgo](https://github.com/i-am-the-slime/purescript-native)<br>Go<br>↓<br>go-build | Hand-written FP-style Go FFI<br>↓<br>go-build<br>(WIP) | Hand-written imperative Go FFI<br>↓<br>go-build<br>(WIP) |
+Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[psgo](https://github.com/i-am-the-slime/purescript-native)<br>↓<br>Go<br>↓<br>go-build | Hand-written FP-style Go FFI<br>↓<br>go-build<br><br>(WIP) | Hand-written imperative Go FFI<br>↓<br>go-build<br><br>(WIP) |
 ----------------------- | -------------------------------- | ------------------------------------- | ---------------------- | ---------------------------- |
 AST Evaluation          | ~ 0.79 μs                        | ~ 296 μs                              | ~ 20 μs       | ~ 1 μs                  |
 Fibonacci               | ~ 0.62 μs                        | ~ 24 μs                               | ~ 2 μs        | ~ 0.58 μs               |
