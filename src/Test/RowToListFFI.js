@@ -3,7 +3,7 @@ export const runRowToListFFI = function(limit) {
   let rec = { a: 1, b: "two", c: true, d: 4.0, e: "five" };
   
   let dict = dictCons(dictCons(dictCons(dictCons(dictCons(dictNil)))));
-  return keysImpl(dict)({});
+  return keys(dict, rec);
 };
 
 const dictNil = {
@@ -22,4 +22,9 @@ function dictCons(dictTail) {
 
 function keysImpl(dict) {
   return dict.keysImpl;
+}
+
+// The record value is irrelevant, as in the PureScript RowToList dictionary.
+function keys(dict, _record) {
+  return keysImpl(dict)({});
 }

@@ -1,17 +1,20 @@
-export const runPolymorphismFFI = function(limit) {
-  let n = Math.floor(limit);
-  let dict = {
+const intMonoidish = {
     mempty_: 1,
     mappend_: function(x) {
       return function(y) {
         return x + y;
       };
     }
-  };
-  let acc = 0;
-  while (n > 0) {
+};
+
+function polyLoop(dict, n, acc) {
+  while (n !== 0) {
     acc = dict.mappend_(acc)(dict.mempty_);
     n--;
   }
   return acc;
+}
+
+export const runPolymorphismFFI = function(limit) {
+  return polyLoop(intMonoidish, Math.floor(limit), 0);
 };

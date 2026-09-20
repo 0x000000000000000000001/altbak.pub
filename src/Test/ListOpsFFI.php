@@ -30,16 +30,16 @@ $exports['runListOpsFFI'] = function($limit) {
         };
     };
 
-    $sumList = function($lst) {
-        $go = function($list, $acc) use (&$go) {
+    $foldl = function($f, $initial, $lst) {
+        $go = function($list, $acc) use (&$go, $f) {
             if ($list->type === "Nil") return $acc;
-            return $go($list->value1, $acc + $list->value0);
+            return $go($list->value1, $f($acc)($list->value0));
         };
-        return $go($lst, 0);
+        return $go($lst, $initial);
     };
 
     $rng = $range(1)($n);
     $filtered = $filter(function($x) { return $x % 2 === 0; })($rng);
-    return $sumList($filtered);
+    return $foldl(function($acc) { return function($x) use ($acc) { return $acc + $x; }; }, 0, $filtered);
 };
 return $exports;

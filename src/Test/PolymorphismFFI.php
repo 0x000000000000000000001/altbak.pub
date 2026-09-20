@@ -9,11 +9,13 @@ $exports['runPolymorphismFFI'] = function($limit) {
             };
         }
     ];
-    $acc = 0;
-    while ($n > 0) {
-        $acc = ($dict->mappend_)($acc)($dict->mempty_);
-        $n--;
-    }
-    return $acc;
+    $polyLoop = function($dictionary, $count, $acc) {
+        while ($count !== 0) {
+            $acc = ($dictionary->mappend_)($acc)($dictionary->mempty_);
+            $count--;
+        }
+        return $acc;
+    };
+    return $polyLoop($dict, $n, 0);
 };
 return $exports;

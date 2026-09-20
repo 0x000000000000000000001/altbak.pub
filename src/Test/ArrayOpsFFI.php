@@ -25,16 +25,16 @@ $exports['runArrayOpsFFI'] = function($limit) {
         };
     };
 
-    $sumArray = function($arr) {
-        $sum = 0;
+    $foldl = function($f, $initial, $arr) {
+        $acc = $initial;
         foreach ($arr as $x) {
-            $sum += $x;
+            $acc = $f($acc)($x);
         }
-        return $sum;
+        return $acc;
     };
 
     $rng = $range(1)($n);
     $filtered = $filter(function($x) { return $x % 2 === 0; })($rng);
-    return $sumArray($filtered);
+    return $foldl(function($acc) { return function($x) use ($acc) { return $acc + $x; }; }, 0, $filtered);
 };
 return $exports;

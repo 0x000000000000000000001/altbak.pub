@@ -7,6 +7,10 @@ $exports['runRowToListFFI'] = function($limit) {
         }];
     };
     $dict = $dictCons($dictCons($dictCons($dictCons($dictCons($dictNil)))));
-    return ($dict->keysImpl)(null);
+    // Dynamic PHP represents the heterogeneous record and its recursive
+    // dictionary explicitly; keys, like PureScript, does not inspect values.
+    $keys = function($dictionary, $record) { return ($dictionary->keysImpl)(null); };
+    $record = (object)['a' => 1, 'b' => 'two', 'c' => true, 'd' => 4.0, 'e' => 'five'];
+    return $keys($dict, $record);
 };
 return $exports;
