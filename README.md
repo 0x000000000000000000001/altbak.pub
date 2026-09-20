@@ -132,7 +132,7 @@ RowToList               | ~ 2 μs                 | ~ 2 μs         | ~ 1 μs   
 
 #### Rust
 
-Rust Benchmark          | Hand-written PureScript --[purust](https://github.com/0x000000000000000000001/purust)--> Rust<br>|<br>rustc-O3--> ... (WIP) | PureScript --[sharpurs](https://github.com/0x000000000000000000001/sharpurs)--> F# --[Fable](https://github.com/fable-compiler/fable)--> Rust --rustc-O3--> ... (WIP) | Hand-written F# --[Fable](https://github.com/fable-compiler/fable)--> Rust --rustc-O3--> ... | Hand-written FP-style Rust FFI --rustc-O3--> ... (WIP) | Hand-written imperative Rust FFI --rustc-O3--> ... (WIP) |
+Rust Benchmark          | Hand-written PureScript --[purust](https://github.com/0x000000000000000000001/purust)--> Rust<br>↓<br>rustc-O3--> ... (WIP) | PureScript --[sharpurs](https://github.com/0x000000000000000000001/sharpurs)--> F# --[Fable](https://github.com/fable-compiler/fable)--> Rust --rustc-O3--> ... (WIP) | Hand-written F# --[Fable](https://github.com/fable-compiler/fable)--> Rust --rustc-O3--> ... | Hand-written FP-style Rust FFI --rustc-O3--> ... (WIP) | Hand-written imperative Rust FFI --rustc-O3--> ... (WIP) |
 ----------------------- | ------------------------- | -------------------------- | ------------------------------ | ------------------------ | ------------------------------ |
 AST Evaluation          | ~ 0.267 μs              | ~ 4.261 μs                        | ~ 0.262 μs | ~ 3 μs       | ~ 1 μs                 |
 Fibonacci               | ~ 0.086 μs              | ~ 12.119 μs                        | ~ 0.107 μs | ~ 2 μs       | ~ 1 μs                 |
