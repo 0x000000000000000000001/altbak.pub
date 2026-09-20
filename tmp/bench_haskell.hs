@@ -1,9 +1,21 @@
 {-# LANGUAGE BangPatterns #-}
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE GADTs #-}
+{-# LANGUAGE KindSignatures #-}
+{-# LANGUAGE ScopedTypeVariables #-}
+{-# LANGUAGE TypeApplications #-}
+{-# LANGUAGE TypeOperators #-}
 module Main where
 
 import GHC.Clock (getMonotonicTimeNSec)
 import Data.IORef (IORef, newIORef, readIORef, writeIORef)
 import Data.Word (Word64)
+import qualified Data.Array.Unboxed as Array
+import qualified Data.List as List
+import Data.Kind (Type)
+import Data.Proxy (Proxy(..))
+import GHC.TypeLits (Symbol)
 import Control.Monad (forM_, replicateM, replicateM_)
 import Control.Exception (evaluate)
 import Text.Printf
@@ -22,7 +34,6 @@ buildTreeAst :: Int -> Expr
 buildTreeAst 0 = Val 1
 buildTreeAst n = Add (Mul (Val n) (buildTreeAst (n - 1))) (Sub (buildTreeAst (n - 1)) (Val 1))
 
-{-# NOINLINE runAstTree #-}
 runAstTree :: Int -> Int
 runAstTree limit = evalAst (buildTreeAst limit)
 
@@ -32,21 +43,36 @@ fib 0 = 0
 fib 1 = 1
 fib n = fib (n - 1) + fib (n - 2)
 
-{-# NOINLINE runFib #-}
 runFib :: Int -> Int
 runFib limit = fib limit
 
 -- 3. ListOps
-{-# NOINLINE runListOps #-}
-runListOps :: Int -> Int
-runListOps limit = go 1 0
+-- Strict constructor fields preserve PureScript's eager, immutable lists.
+-- Keep range, filtering (in reverse order), and folding as separate operations.
+data Lst a = Nil | Cons !a !(Lst a)
+
+lrange :: Int -> Int -> Lst Int
+lrange start end = go end Nil
   where
-    go !i !sum | i > limit = sum
-               | i `mod` 2 == 0 = go (i + 1) (sum + i)
-               | otherwise      = go (i + 1) sum
+    go !curr !acc | curr < start = acc
+                   | otherwise = go (curr - 1) (Cons curr acc)
+
+filterEvens :: Lst Int -> Lst Int
+filterEvens lst = go lst Nil
+  where
+    go Nil !acc = acc
+    go (Cons x xs) !acc
+      | x `mod` 2 == 0 = go xs (Cons x acc)
+      | otherwise = go xs acc
+
+lfoldl :: (b -> a -> b) -> b -> Lst a -> b
+lfoldl _ !acc Nil = acc
+lfoldl f !acc (Cons x xs) = lfoldl f (f acc x) xs
+
+runListOps :: Int -> Int
+runListOps limit = lfoldl (+) 0 (filterEvens (lrange 1 limit))
 
 -- 4. TCO
-{-# NOINLINE runTCO #-}
 runTCO :: Int -> Int
 runTCO limit = go limit 0
   where
@@ -58,7 +84,6 @@ data DictE = DictE { e :: !Int, f :: !Int }
 data DictC = DictC { c :: !Int, d :: !DictE }
 data DictA = DictA { a :: !Int, b :: !DictC }
 
-{-# NOINLINE runRecords #-}
 runRecords :: Int -> Int
 runRecords limit = go limit (DictA 0 (DictC 0 (DictE 0 0)))
   where
@@ -73,50 +98,85 @@ runRecords limit = go limit (DictA 0 (DictC 0 (DictE 0 0)))
 -- 6. Ackermann
 ack :: Int -> Int -> Int
 ack 0 !n = n + 1
-ack !m 0 | m > 0 = ack (m - 1) 1
+ack !m 0 = ack (m - 1) 1
 ack !m !n = ack (m - 1) (ack m (n - 1))
 
-{-# NOINLINE runAckermann #-}
 runAckermann :: Int -> Int
 runAckermann limit = ack limit 4
 
 -- 7. Church
-{-# NOINLINE runChurch #-}
+-- These are the actual higher-order numerals from Test.Church, not integer
+-- arithmetic or a hand-written count of closure applications.
+type Church a = (a -> a) -> a -> a
+
+zeroC :: Church a
+zeroC _ !x = x
+
+succC :: Church a -> Church a
+succC !n !f !x = f (n f x)
+
+addC :: Church a -> Church a -> Church a
+addC !m !n !f !x = m f (n f x)
+
+mulC :: Church a -> Church a -> Church a
+mulC !m !n !f !x = m (n f) x
+
+fromInt :: Int -> Church Int
+fromInt 0 = zeroC
+fromInt n = let !previous = fromInt (n - 1) in succC previous
+
+toInt :: Church Int -> Int
+toInt n = n (\x -> x + 1) 0
+
+c10 :: Int -> Church Int
+c10 = fromInt
+
+c100 :: Int -> Church Int
+c100 n =
+  let !left = c10 n
+      !right = c10 n
+  in mulC left right
+
+c10k :: Int -> Church Int
+c10k n =
+  let !left = c100 n
+      !right = c100 n
+  in mulC left right
+
+c100k :: Int -> Church Int
+c100k n =
+  let !left = c10k n
+      !right = c10 n
+  in mulC left right
+
 runChurch :: Int -> Int
-runChurch limit =
-  let count = limit * limit * limit * limit * limit
-      go !i !acc | i > count = acc
-                 | otherwise = go (i + 1) (acc + 1)
-  in go 1 0
+runChurch limit = toInt (c100k limit)
 
 -- 8. Primes
-data Lst = Nil | Cons !Int Lst
-
-lrange :: Int -> Int -> Lst
-lrange start end = go end Nil
+lreverse :: Lst a -> Lst a
+lreverse lst = go lst Nil
   where
-    go !curr acc | curr < start = acc
-                 | otherwise = go (curr - 1) (Cons curr acc)
+    go Nil !acc = acc
+    go (Cons x xs) !acc = go xs (Cons x acc)
 
-lfilter :: (Int -> Bool) -> Lst -> Lst
-lfilter p xs = go xs Nil
+lfilter :: (a -> Bool) -> Lst a -> Lst a
+lfilter p lst = go lst Nil
   where
-    rev Nil acc = acc
-    rev (Cons x rest) acc = rev rest (Cons x acc)
-    go Nil acc = rev acc Nil
-    go (Cons x rest) acc = if p x then go rest (Cons x acc) else go rest acc
+    go Nil !acc = lreverse acc
+    go (Cons x xs) !acc
+      | p x = go xs (Cons x acc)
+      | otherwise = go xs acc
 
-lsum :: Lst -> Int
+lsum :: Lst Int -> Int
 lsum xs = go xs 0
   where
     go Nil !acc = acc
     go (Cons x rest) !acc = go rest (acc + x)
 
-sieve :: Lst -> Lst
+sieve :: Lst Int -> Lst Int
 sieve Nil = Nil
 sieve (Cons p rest) = Cons p (sieve (lfilter (\x -> x `mod` p /= 0) rest))
 
-{-# NOINLINE runPrimes #-}
 runPrimes :: Int -> Int
 runPrimes limit = lsum (sieve (lrange 2 limit))
 
@@ -150,52 +210,138 @@ depth (T _ l _ r) =
       rd = depth r
   in if ld > rd then 1 + ld else 1 + rd
 
-{-# NOINLINE runRBTree #-}
 runRBTree :: Int -> Int
 runRBTree limit = go limit E
   where
-    go 0 acc = depth acc
-    go !i acc = go (i - 1) (insert i acc)
+    go 0 !acc = depth acc
+    go !i !acc = go (i - 1) (insert i acc)
 
 -- 10. Polymorphism
-{-# NOINLINE runPolymorphism #-}
-runPolymorphism :: Int -> Int
-runPolymorphism limit = go 1 0
+-- GHC may specialize this class dictionary, just as an optimizing PureScript
+-- backend may; the source retains the generic loop and instance dispatch.
+class Monoidish a where
+  mempty_ :: a
+  mappend_ :: a -> a -> a
+
+instance Monoidish Int where
+  mempty_ = 1
+  mappend_ x y = x + y
+
+polyLoop :: Monoidish a => Int -> a -> a
+polyLoop nInit accInit = go nInit accInit
   where
-    go !i !acc | i > limit = acc
-               | otherwise = go (i + 1) (acc + 1)
+    go 0 !acc = acc
+    go !n !acc = go (n - 1) (mappend_ acc mempty_)
+
+runPolymorphism :: Int -> Int
+runPolymorphism limit = polyLoop limit 0
 
 -- 11. StateMonad
-{-# NOINLINE runStateMonad #-}
+-- Match the custom State closure implementation, including a fresh state of
+-- zero for each 60-deep run. This is not a mutable counter or a flat loop.
+data StateResult s a = StateResult { stateVal :: !a, stateValue :: !s }
+newtype State s a = State (s -> StateResult s a)
+
+runState :: State s a -> s -> StateResult s a
+runState (State f) !s = f s
+
+bindState :: State s a -> (a -> State s b) -> State s b
+bindState (State f) !g = State $ \s ->
+  case f s of
+    StateResult value state ->
+      case g value of
+        State next -> next state
+
+pureState :: a -> State s a
+pureState !a = State $ \s -> StateResult a s
+
+get :: State s s
+get = State $ \s -> StateResult s s
+
+put :: s -> State s ()
+put !s = State $ \_ -> StateResult () s
+
+modify :: (s -> s) -> State s ()
+modify !f = bindState get $ \s -> put (f s)
+
+chainModifications :: Int -> State Int ()
+chainModifications 0 = pureState ()
+chainModifications n = bindState (modify (\x -> x + 1)) $ \_ -> chainModifications (n - 1)
+
+stateManyTimes :: Int -> Int -> Int
+stateManyTimes 0 !acc = acc
+stateManyTimes n !acc =
+  stateManyTimes (n - 1) (acc + stateValue (runState (chainModifications 60) 0))
+
 runStateMonad :: Int -> Int
-runStateMonad limit = go1 1 0
-  where
-    go1 !i !state | i > 20 = state
-                  | otherwise = go1 (i + 1) (go2 1 state)
-    go2 !j !state | j > limit = state
-                  | otherwise = go2 (j + 1) (state + 1)
+runStateMonad limit = stateManyTimes limit 0
 
 -- 12. LazyEvaluation
-{-# NOINLINE runLazyEvaluation #-}
+-- Explicit Unit -> a closures match PureScript's non-memoizing Lazy newtype.
+-- Do not replace these with Haskell lazy values or a sum of the chain lengths.
+newtype Lazy a = Lazy (() -> a)
+
+defer :: (() -> a) -> Lazy a
+defer !f = Lazy f
+
+force :: Lazy a -> a
+force (Lazy f) = f ()
+
+buildThunks :: Int -> Lazy Int -> Lazy Int
+buildThunks 0 !acc = acc
+buildThunks n !acc = buildThunks (n - 1) (defer $ \_ -> force acc + 1)
+
+lazyManyTimes :: Int -> Int -> Int
+lazyManyTimes 0 !acc = acc
+lazyManyTimes n !acc =
+  lazyManyTimes (n - 1) (acc + force (buildThunks 1000 (defer $ \_ -> 0)))
+
 runLazyEvaluation :: Int -> Int
-runLazyEvaluation limit = go 1 0
-  where
-    go !i !acc | i > limit = acc
-               | otherwise = go (i + 1) (acc + 1000)
+runLazyEvaluation limit = lazyManyTimes limit 0
 
 -- 13. ArrayOps
-{-# NOINLINE runArrayOps #-}
+-- The installed toolchain has array rather than vector. Materialize immutable
+-- integer arrays before and after filtering, then use the library fold.
+-- UArray gives eager integer elements, matching PureScript array evaluation.
+arrayRange :: Int -> Int -> Array.UArray Int Int
+arrayRange start end =
+  let step = if start <= end then 1 else -1
+  in Array.listArray (0, abs (end - start)) [start, start + step .. end]
+
+arrayFilterEvens :: Array.UArray Int Int -> Array.UArray Int Int
+arrayFilterEvens arr =
+  let values = filter (\x -> x `mod` 2 == 0) (Array.elems arr)
+  in Array.listArray (0, length values - 1) values
+
 runArrayOps :: Int -> Int
-runArrayOps limit = go 1 0
-  where
-    go !i !sum | i > limit = sum
-               | i `mod` 2 == 0 = go (i + 1) (sum + i)
-               | otherwise      = go (i + 1) sum
+runArrayOps limit = List.foldl' (+) 0 (Array.elems (arrayFilterEvens (arrayRange 1 limit)))
 
 -- 14. RowToList
-{-# NOINLINE runRowToList #-}
+-- Haskell has no built-in PureScript-style row conversion. A typed,
+-- heterogeneous record carries its row as a type-level list of (label, type)
+-- pairs; the class follows that list recursively, exactly as RecordKeys does.
+data Record (row :: [(Symbol, Type)]) where
+  RNil :: Record '[]
+  (:&) :: !a -> !(Record tail) -> Record ('(label, a) ': tail)
+infixr 5 :&
+
+class RecordKeys (row :: [(Symbol, Type)]) where
+  keysImpl :: Proxy row -> Int
+
+instance RecordKeys '[] where
+  keysImpl _ = 0
+
+instance RecordKeys tail => RecordKeys ('(label, a) ': tail) where
+  keysImpl _ = 1 + keysImpl (Proxy @tail)
+
+keys :: forall row. RecordKeys row => Record row -> Int
+keys !_ = keysImpl (Proxy @row)
+
+sampleRecord :: Record '[ '("a", Int), '("b", String), '("c", Bool), '("d", Double), '("e", String)]
+sampleRecord = 1 :& "two" :& True :& 4.0 :& "five" :& RNil
+
 runRowToList :: Int -> Int
-runRowToList _ = 5
+runRowToList !_ = keys sampleRecord
 
 -- Benchmarking Framework
 -- Read the argument and consume the forced result on every invocation. Keeping
@@ -246,33 +392,41 @@ bench name act arg = do
   putStrLn $ "Batch iterations: " ++ show count ++ "\n"
   return us
 
+-- Keep the validation keys, labels and inputs together so --check-only and
+-- measurement execute the same kernels. Command-line flags never alter inputs.
+cases :: [(String, String, Int -> Int, Int)]
+cases =
+  [ ("AstTree", "AST Evaluation:", runAstTree, 3)
+  , ("Fib", "Fibonacci:", runFib, 10)
+  , ("ListOps", "List Processing (900 elements):", runListOps, 900)
+  , ("TCO", "Tail Call Optimization (100k calls):", runTCO, 100000)
+  , ("Records", "Deep Record Updates (10k iterations):", runRecords, 10000)
+  , ("Ackermann", "Ackermann (3, 4):", runAckermann, 3)
+  , ("Church", "Church Numerals (100k Closure Applications):", runChurch, 10)
+  , ("Primes", "Prime Sieve (sum primes up to 500):", runPrimes, 500)
+  , ("RBTree", "Red-Black Tree (100k Worst-Case Insertions):", runRBTree, 100000)
+  , ("Polymorphism", "Polymorphism (10M Type Class Dict Lookups):", runPolymorphism, 10000000)
+  , ("StateMonad", "State Monad (1.2k Binds, 60 Stack Depth):", runStateMonad, 20)
+  , ("LazyEvaluation", "Lazy Evaluation (1M Thunks Forced, 1k Depth):", runLazyEvaluation, 1000)
+  , ("ArrayOps", "Array Processing (900 elements):", runArrayOps, 900)
+  , ("RowToList", "RowToList (Keys Count):", runRowToList, 10000)
+  ]
+
 main :: IO ()
 main = do
   args <- getArgs
-  let dummy = length args
-      cases =
-        [ ("AST Evaluation:", runAstTree, 3 + dummy)
-        , ("Fibonacci:", runFib, 10 + dummy)
-        , ("List Processing (900 elements):", runListOps, 900 + dummy)
-        , ("Tail Call Optimization (100k calls):", runTCO, 100000 + dummy)
-        , ("Deep Record Updates (10k iterations):", runRecords, 10000 + dummy)
-        , ("Ackermann (3, 4):", runAckermann, 3 + dummy)
-        , ("Church Numerals (100k Closure Applications):", runChurch, 10 + dummy)
-        , ("Prime Sieve (sum primes up to 500):", runPrimes, 500 + dummy)
-        , ("Red-Black Tree (100k Worst-Case Insertions):", runRBTree, 100000 + dummy)
-        , ("Polymorphism (10M Type Class Dict Lookups):", runPolymorphism, 10000000 + dummy)
-        , ("State Monad (1.2k Binds, 60 Stack Depth):", runStateMonad, 60 + dummy)
-        , ("Lazy Evaluation (1M Thunks Forced, 1k Depth):", runLazyEvaluation, 1000 + dummy)
-        , ("Array Processing (900 elements):", runArrayOps, 900 + dummy)
-        , ("RowToList (Keys Count):", runRowToList, 0 + dummy)
-        ]
-
-  putStrLn "Global warm-up in progress..."
-  output <- newIORef 0
-  replicateM_ 3 $ forM_ cases $ \(_, act, arg) -> do
-    input <- newIORef arg
-    _ <- runOnce act input output
-    return ()
-  total <- sum <$> mapM (\(name, act, arg) -> bench name act arg) cases
-  putStrLn "\n==================================================\n"
-  putStrLn $ "Total exec time: " ++ printf "%.6f" (total / 1000.0) ++ " ms\n"
+  case args of
+    ["--check-only"] -> forM_ cases $ \(key, _, act, arg) -> do
+      value <- evaluate (act arg)
+      putStrLn (key ++ "=" ++ show value)
+    [] -> do
+      putStrLn "Global warm-up in progress..."
+      output <- newIORef 0
+      replicateM_ 3 $ forM_ cases $ \(_, _, act, arg) -> do
+        input <- newIORef arg
+        _ <- runOnce act input output
+        return ()
+      total <- sum <$> mapM (\(_, name, act, arg) -> bench name act arg) cases
+      putStrLn "\n==================================================\n"
+      putStrLn $ "Total exec time: " ++ printf "%.6f" (total / 1000.0) ++ " ms\n"
+    _ -> fail "Usage: bench_haskell [--check-only]"

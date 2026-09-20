@@ -23,16 +23,30 @@ let rec fib = function
 
 let runFib limit = fib limit
 
-let runListOps limit =
-  let sum = ref 0 in
-  for i = 1 to limit do
-    if i mod 2 = 0 then sum := !sum + i
-  done;
-  !sum
+type 'a lst = Nil | Cons of 'a * 'a lst
+
+let lrange start_ end_ =
+  let rec go curr acc =
+    if curr < start_ then acc else go (curr - 1) (Cons (curr, acc))
+  in go end_ Nil
+
+(* Test.ListOps intentionally keeps the even elements in reverse order. *)
+let filterEvens xs =
+  let rec go rest acc = match rest with
+    | Nil -> acc
+    | Cons (x, tail) ->
+        if x mod 2 = 0 then go tail (Cons (x, acc)) else go tail acc
+  in go xs Nil
+
+let rec lfoldl f acc = function
+  | Nil -> acc
+  | Cons (x, xs) -> lfoldl f (f acc x) xs
+
+let runListOps limit = lfoldl ( + ) 0 (filterEvens (lrange 1 limit))
 
 let runTCO limit =
   let rec go n acc =
-    if n <= 0 then acc
+    if n = 0 then acc
     else go (n - 1) (acc + (n mod 3))
   in go limit 0
 
@@ -40,38 +54,42 @@ type dictE = { e : int; f : int }
 type dictC = { c : int; d : dictE }
 type dictA = { a : int; b : dictC }
 
-let runRecords limit =
-  let r = ref { a = 0; b = { c = 0; d = { e = 0; f = 0 } } } in
-  for n = limit downto 1 do
-    let oldD = (!r).b.d in
-    let newD = { e = oldD.e + 3; f = oldD.f + (n mod 5) } in
-    let oldC = (!r).b in
-    let newC = { c = oldC.c + 2; d = newD } in
-    r := { a = (!r).a + 1; b = newC }
-  done;
-  (!r).b.d.f
+let initial = { a = 0; b = { c = 0; d = { e = 0; f = 0 } } }
+
+let rec updateRec n r =
+  if n = 0 then r
+  else updateRec (n - 1)
+    { a = r.a + 1;
+      b = { c = r.b.c + 2;
+            d = { e = r.b.d.e + 3; f = r.b.d.f + (n mod 5) } } }
+
+let runRecords limit = (updateRec limit initial).b.d.f
 
 let rec ack m n =
   if m = 0 then n + 1
-  else if m > 0 && n = 0 then ack (m - 1) 1
+  else if n = 0 then ack (m - 1) 1
   else ack (m - 1) (ack m (n - 1))
 
 let runAckermann limit = ack limit 4
 
-let runChurch limit =
-  let count = limit * limit * limit * limit * limit in
-  let acc = ref 0 in
-  for i = 1 to count do
-    acc := !acc + 1
-  done;
-  !acc
+type 'a church = ('a -> 'a) -> 'a -> 'a
 
-type lst = Nil | Cons of int * lst
+let zeroC : 'a church = fun _ x -> x
+let succC (n : 'a church) : 'a church = fun f x -> f (n f x)
+let addC (m : 'a church) (n : 'a church) : 'a church =
+  fun f x -> m f (n f x)
+let mulC (m : 'a church) (n : 'a church) : 'a church =
+  fun f x -> m (n f) x
 
-let lrange start_ end_ =
-  let rec go curr acc =
-    if curr < start_ then acc else go (curr - 1) (Cons (curr, acc))
-  in go end_ Nil
+let rec fromInt n : int church =
+  if n = 0 then zeroC else succC (fromInt (n - 1))
+
+let toInt (n : int church) = n (fun x -> x + 1) 0
+let c10 n = fromInt n
+let c100 n = mulC (c10 n) (c10 n)
+let c10k n = mulC (c100 n) (c100 n)
+let c100k n = mulC (c10k n) (c10 n)
+let runChurch limit = toInt (c100k limit)
 
 let lfilter p xs =
   let rec rev l acc = match l with
@@ -123,44 +141,124 @@ let rec depth = function
       let rd = depth r in
       if ld > rd then 1 + ld else 1 + rd
 
-let runRBTree limit =
-  let acc = ref E in
-  for i = limit downto 1 do
-    acc := insert i !acc
-  done;
-  depth !acc
+let rec buildTree n acc =
+  if n = 0 then acc else buildTree (n - 1) (insert n acc)
 
-let runPolymorphism limit =
-  let acc = ref 0 in
-  for i = 1 to limit do
-    acc := !acc + 1
-  done;
-  !acc
+let runRBTree limit = depth (buildTree limit E)
 
-let runStateMonad limit =
-  let state = ref 0 in
-  for i = 1 to 20 do
-    for j = 1 to limit do
-      state := !state + 1
-    done
-  done;
-  !state
+(* An explicit typed dictionary represents Test.Polymorphism.Monoidish. *)
+type 'a monoidish = { mempty_ : 'a; mappend_ : 'a -> 'a -> 'a }
 
-let runLazyEvaluation limit =
-  let acc = ref 0 in
-  for i = 1 to limit do
-    acc := !acc + 1000
-  done;
-  !acc
+let intMonoidish = { mempty_ = 1; mappend_ = ( + ) }
+
+let polyLoop dict n_init acc_init =
+  let rec go n acc =
+    if n = 0 then acc else go (n - 1) (dict.mappend_ acc dict.mempty_)
+  in go n_init acc_init
+
+let runPolymorphism limit = polyLoop intMonoidish limit 0
+
+(* PureScript's State newtype is erased; retain its function and result record. *)
+type ('s, 'a) state_result = { value : 'a; state : 's }
+type ('s, 'a) state = 's -> ('s, 'a) state_result
+
+let runState (f : ('s, 'a) state) s = f s
+
+let bindState (f : ('s, 'a) state) (g : 'a -> ('s, 'b) state)
+    : ('s, 'b) state =
+  fun s ->
+    let r1 = f s in
+    let next = g r1.value in
+    next r1.state
+
+let pureState (a : 'a) : ('s, 'a) state = fun s -> { value = a; state = s }
+let get : ('s, 's) state = fun s -> { value = s; state = s }
+let put (s : 's) : ('s, unit) state = fun _ -> { value = (); state = s }
+let modify f = bindState get (fun s -> put (f s))
+
+let rec chainModifications n =
+  if n = 0 then pureState ()
+  else bindState (modify (fun x -> x + 1))
+    (fun () -> chainModifications (n - 1))
+
+let rec runStateManyTimes n acc =
+  if n = 0 then acc
+  else runStateManyTimes (n - 1)
+    (acc + (runState (chainModifications 60) 0).state)
+
+let runStateMonad limit = runStateManyTimes limit 0
+
+(* These thunks are deliberately non-memoizing, like Test.LazyEvaluation. *)
+type 'a thunk = unit -> 'a
+let defer (f : unit -> 'a) : 'a thunk = f
+let force (f : 'a thunk) = f ()
+
+let rec buildThunks n acc =
+  if n = 0 then acc
+  else buildThunks (n - 1) (defer (fun () -> force acc + 1))
+
+let rec runLazyManyTimes n acc =
+  if n = 0 then acc
+  else runLazyManyTimes (n - 1)
+    (acc + force (buildThunks 1000 (defer (fun () -> 0))))
+
+let runLazyEvaluation limit = runLazyManyTimes limit 0
+
+let arrayRange first last =
+  let step = if first <= last then 1 else -1 in
+  Array.init (abs (last - first) + 1) (fun i -> first + step * i)
+
+(* OCaml's Array has no filter. Keep range/filter/fold as separate operations;
+   this local buffer implements the same fresh-array contract as Data.Array. *)
+let arrayFilter p xs =
+  if Array.length xs = 0 then [||]
+  else
+    let buffer = Array.make (Array.length xs) xs.(0) in
+    let rec copy i written =
+      if i = Array.length xs then Array.sub buffer 0 written
+      else
+        let x = xs.(i) in
+        if p x then begin
+          buffer.(written) <- x;
+          copy (i + 1) (written + 1)
+        end else copy (i + 1) written
+    in copy 0 0
 
 let runArrayOps limit =
-  let sum = ref 0 in
-  for i = 1 to limit do
-    if i mod 2 = 0 then sum := !sum + i
-  done;
-  !sum
+  Array.fold_left ( + ) 0 (arrayFilter (fun x -> x mod 2 = 0) (arrayRange 1 limit))
 
-let runRowToList _ = 5
+(* A heterogeneous row and its type-indexed dictionary replace RowToList.
+   The shared row index enforces that the dictionary describes the record.
+   As in PureScript, keys counts the dictionary, without reading field values. *)
+type a_label = ALabel
+type b_label = BLabel
+type c_label = CLabel
+type d_label = DLabel
+type e_label = ELabel
+
+type _ record_row =
+  | RowNil : unit record_row
+  | RowCons : 'label * 'field * 'tail record_row ->
+      ('label * 'field * 'tail) record_row
+
+type _ record_keys =
+  | KeysNil : unit record_keys
+  | KeysCons : 'tail record_keys -> ('label * 'field * 'tail) record_keys
+
+let rec keysImpl : type row. row record_keys -> unit -> int =
+  fun dict () -> match dict with
+  | KeysNil -> 0
+  | KeysCons tail -> 1 + keysImpl tail ()
+
+let keys (type row) (dict : row record_keys) (_ : row record_row) = keysImpl dict ()
+
+let runRowToList _ =
+  let record = RowCons (ALabel, 1,
+    RowCons (BLabel, "two",
+      RowCons (CLabel, true,
+        RowCons (DLabel, 4.0, RowCons (ELabel, "five", RowNil))))) in
+  let dict = KeysCons (KeysCons (KeysCons (KeysCons (KeysCons KeysNil)))) in
+  keys dict record
 
 external monotonic_ns : unit -> int64 = "altbak_monotonic_ns"
 
@@ -202,22 +300,45 @@ let bench name act arg =
   !min_dur
 
 let () =
-  let dummy = Array.length Sys.argv in
-  let lAst = 3 + dummy - 1 in
-  let lFib = 10 + dummy - 1 in
-  let lList = 900 + dummy - 1 in
-  let lTCO = 100000 + dummy - 1 in
-  let lRec = 10000 + dummy - 1 in
-  let lAck = 3 + dummy - 1 in
-  let lChur = 10 + dummy - 1 in
-  let lPri = 500 + dummy - 1 in
-  let lRB = 100000 + dummy - 1 in
-  let lPoly = 10000000 + dummy - 1 in
-  let lState = 60 + dummy - 1 in
-  let lLazy = 1000 + dummy - 1 in
-  let lArr = 900 + dummy - 1 in
-  let lRow = 0 + dummy - 1 in
-  
+  let check_only = match Array.to_list Sys.argv with
+    | [_] -> false
+    | [_; "--check-only"] -> true
+    | _ -> invalid_arg "usage: benchmark [--check-only]"
+  in
+  let lAst = 3 in
+  let lFib = 10 in
+  let lList = 900 in
+  let lTCO = 100000 in
+  let lRec = 10000 in
+  let lAck = 3 in
+  let lChur = 10 in
+  let lPri = 500 in
+  let lRB = 100000 in
+  let lPoly = 10000000 in
+  let lState = 20 in
+  let lLazy = 1000 in
+  let lArr = 900 in
+  let lRow = 10000 in
+
+  if check_only then begin
+    let check key act arg =
+      Printf.printf "%s=%d\n" key (Sys.opaque_identity (act (Sys.opaque_identity arg)))
+    in
+    check "AstTree" runAstTree lAst;
+    check "Fib" runFib lFib;
+    check "ListOps" runListOps lList;
+    check "TCO" runTCO lTCO;
+    check "Records" runRecords lRec;
+    check "Ackermann" runAckermann lAck;
+    check "Church" runChurch lChur;
+    check "Primes" runPrimes lPri;
+    check "RBTree" runRBTree lRB;
+    check "Polymorphism" runPolymorphism lPoly;
+    check "StateMonad" runStateMonad lState;
+    check "LazyEvaluation" runLazyEvaluation lLazy;
+    check "ArrayOps" runArrayOps lArr;
+    check "RowToList" runRowToList lRow
+  end else begin
   Printf.printf "Global warm-up in progress...\n";
   for _ = 1 to 3 do
     consume runAstTree lAst;
@@ -254,3 +375,4 @@ let () =
     t9 +. t10 +. t11 +. t12 +. t13 +. t14
   in
   Printf.printf "\n==================================================\n\nTotal exec time: %.6f ms\n" (total_us /. 1000.0)
+  end

@@ -1,11 +1,9 @@
 module NativeBench
 
-// Handwritten F# counterparts of tmp/bench_ocaml.ml and tmp/bench_haskell.hs.
-// Like those native references, ListOps/ArrayOps, Church, Polymorphism, State
-// and LazyEvaluation use their numerical loops; RowToList returns the known
-// field count. They do not recreate PureScript closures or type dictionaries.
-// ASTs, nested immutable records, sieve lists and red-black trees retain the
-// reference data structures and algorithms. No sharpurs output is used here.
+// Direct F# translations of src/Test/*.purs. Keep the source abstractions:
+// immutable lists/arrays/records, higher-order Church/State/Lazy functions,
+// generic dictionaries and a type-indexed row dictionary. The compiler may
+// optimize them; the source must not replace them with numeric shortcuts.
 
 type Expr =
     | Val of int
@@ -32,16 +30,33 @@ let rec private fib = function
 
 let runFib limit = fib limit
 
-let runListOps limit =
-    let mutable sum = 0
-    for i = 1 to limit do
-        if i % 2 = 0 then
-            sum <- sum + i
-    sum
+type FpList<'a> = Nil | Cons of 'a * FpList<'a>
+
+let private rangeList start finish =
+    let rec go current acc =
+        if current < start then acc
+        else go (current - 1) (Cons (current, acc))
+    go finish Nil
+
+let private filterEvens values =
+    let rec go remaining acc =
+        match remaining with
+        | Nil -> acc
+        | Cons (value, rest) ->
+            if value % 2 = 0 then go rest (Cons (value, acc))
+            else go rest acc
+    go values Nil
+
+let rec private foldList f acc values =
+    match values with
+    | Nil -> acc
+    | Cons (value, rest) -> foldList f (f acc value) rest
+
+let runListOps limit = foldList (+) 0 (filterEvens (rangeList 1 limit))
 
 let runTCO limit =
     let rec go n acc =
-        if n <= 0 then acc
+        if n = 0 then acc
         else go (n - 1) (acc + n % 3)
     go limit 0
 
@@ -50,30 +65,38 @@ type DictC = { c: int; d: DictE }
 type DictA = { a: int; b: DictC }
 
 let runRecords limit =
-    let mutable record = { a = 0; b = { c = 0; d = { e = 0; f = 0 } } }
-    for n = limit downto 1 do
-        let oldD = record.b.d
-        let newD = { e = oldD.e + 3; f = oldD.f + n % 5 }
-        let oldC = record.b
-        let newC = { c = oldC.c + 2; d = newD }
-        record <- { a = record.a + 1; b = newC }
-    record.b.d.f
+    let rec update n record =
+        if n = 0 then record
+        else
+            update (n - 1)
+                { record with a = record.a + 1
+                              b = { record.b with c = record.b.c + 2
+                                                  d = { record.b.d with e = record.b.d.e + 3
+                                                                        f = record.b.d.f + n % 5 } } }
+    let initial = { a = 0; b = { c = 0; d = { e = 0; f = 0 } } }
+    (update limit initial).b.d.f
 
 let rec private ack m n =
     if m = 0 then n + 1
-    elif m > 0 && n = 0 then ack (m - 1) 1
+    elif n = 0 then ack (m - 1) 1
     else ack (m - 1) (ack m (n - 1))
 
 let runAckermann limit = ack limit 4
 
-let runChurch limit =
-    let count = limit * limit * limit * limit * limit
-    let mutable acc = 0
-    for _ = 1 to count do
-        acc <- acc + 1
-    acc
+type Church<'a> = ('a -> 'a) -> 'a -> 'a
 
-type IntList = Nil | Cons of int * IntList
+let private zeroC : Church<'a> = fun _ x -> x
+// Passing the function as an argument avoids stock Fable's Rust borrow/move
+// conflict when the same function is both the callee and an inner argument.
+let private applyChurchStep (f: 'a -> 'a) (x: 'a) = f x
+let private succC (n: Church<'a>) : Church<'a> = fun f x -> applyChurchStep f (n f x)
+let private mulC (m: Church<'a>) (n: Church<'a>) : Church<'a> = fun f x -> m (n f) x
+let rec private fromInt n : Church<int> =
+    if n = 0 then zeroC else succC (fromInt (n - 1))
+let private c100 n = mulC (fromInt n) (fromInt n)
+let private c10k n = mulC (c100 n) (c100 n)
+let private c100k n = mulC (c10k n) (fromInt n)
+let runChurch limit = c100k limit (fun x -> x + 1) 0
 
 let private listRange start finish =
     let rec go current acc =
@@ -163,35 +186,77 @@ let rec private depth = function
         if leftDepth > rightDepth then 1 + leftDepth else 1 + rightDepth
 
 let runRBTree limit =
-    let mutable tree = E
-    for value = limit downto 1 do
-        tree <- insert value tree
-    depth tree
+    let rec build n acc =
+        if n = 0 then acc else build (n - 1) (insert n acc)
+    depth (build limit E)
 
-let runPolymorphism limit =
-    let mutable acc = 0
-    for _ = 1 to limit do
-        acc <- acc + 1
-    acc
+type Monoidish<'a> = { Mempty: 'a; Mappend: 'a -> 'a -> 'a }
+
+let private polyLoop (dictionary: Monoidish<'a>) limit initial =
+    let rec go n acc =
+        if n = 0 then acc
+        else go (n - 1) (dictionary.Mappend acc dictionary.Mempty)
+    go limit initial
+
+let private intMonoidish = { Mempty = 1; Mappend = fun x y -> x + y }
+let runPolymorphism limit = polyLoop intMonoidish limit 0
+
+type StateResult<'s, 'a> = { Value: 'a; State: 's }
+type State<'s, 'a> = State of ('s -> StateResult<'s, 'a>)
+
+let private runState (State f) s = f s
+let private bindState (State f) g =
+    State (fun s ->
+        let r = f s
+        let (State next) = g r.Value
+        next r.State)
+let private pureState a = State (fun s -> { Value = a; State = s })
+let private getState<'s> : State<'s, 's> = State (fun s -> { Value = s; State = s })
+let private putState s = State (fun _ -> { Value = (); State = s })
+let private modifyState f = bindState getState (fun s -> putState (f s))
+let rec private chainModifications n =
+    if n = 0 then pureState ()
+    else bindState (modifyState (fun x -> x + 1)) (fun _ -> chainModifications (n - 1))
 
 let runStateMonad limit =
-    let mutable state = 0
-    for _ = 1 to 20 do
-        for _ = 1 to limit do
-            state <- state + 1
-    state
+    let rec go n acc =
+        if n = 0 then acc
+        else go (n - 1) (acc + (runState (chainModifications 60) 0).State)
+    go limit 0
+
+// Explicit functions, not System.Lazy: PureScript's custom Lazy does not memoize.
+type Thunk<'a> = Thunk of (unit -> 'a)
+let private defer f = Thunk f
+let private force (Thunk f) = f ()
+let rec private buildThunks n acc =
+    if n = 0 then acc
+    else buildThunks (n - 1) (defer (fun () -> force acc + 1))
 
 let runLazyEvaluation limit =
-    let mutable acc = 0
-    for _ = 1 to limit do
-        acc <- acc + 1000
-    acc
+    let rec go n acc =
+        if n = 0 then acc
+        else go (n - 1) (acc + force (buildThunks 1000 (defer (fun () -> 0))))
+    go limit 0
 
 let runArrayOps limit =
-    let mutable sum = 0
-    for i = 1 to limit do
-        if i % 2 = 0 then
-            sum <- sum + i
-    sum
+    let values =
+        if limit >= 1 then Array.init limit (fun i -> i + 1)
+        else Array.init (2 - limit) (fun i -> 1 - i)
+    values |> Array.filter (fun x -> x % 2 = 0) |> Array.fold (+) 0
 
-let runRowToList (_: int) = 5
+// F# has no RowToList constraint. A heterogeneous row and its type-indexed
+// recursive dictionary preserve keysNil/keysCons without hardcoding the count.
+type RowNil = RowNil
+type RowCons<'head, 'tail> = { Head: 'head; Tail: 'tail }
+type RecordKeys<'row> = { KeysImpl: unit -> int }
+// Construct the phantom-typed record in a generic scope: stock Fable's Rust
+// emitter otherwise leaves its phantom type unbound at concrete constructors.
+let private recordKeys<'row> implementation : RecordKeys<'row> = { KeysImpl = implementation }
+let private keysNil : RecordKeys<RowNil> = recordKeys (fun () -> 0)
+let private keysCons (tail: RecordKeys<'tail>) : RecordKeys<RowCons<'head, 'tail>> =
+    recordKeys (fun () -> 1 + tail.KeysImpl ())
+let private keys (dictionary: RecordKeys<'row>) (_record: 'row) = dictionary.KeysImpl ()
+
+let runRowToList (_: int) =
+    let record = { Head = 1; Tail = { Head = "two"; Tail = { Head = true; Tail = { Head = 4.0; Tail = { Head = "five"; Tail = RowNil } } } } }
+    keys (keysCons (keysCons (keysCons (keysCons (keysCons keysNil))))) record

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build hand-written F# with stock Fable, then measure the generated Rust.
 
-This reference follows the native Koka/Haskell/OCaml workloads. It does not use
+This reference translates the PureScript FP kernels to typed F#. It does not use
 PureScript, sharpurs, the compatibility runtime, or the local Fable emitter patch.
 """
 from __future__ import annotations
@@ -55,11 +55,7 @@ def build_native(args, directory):
         'package_tools_sha256': tree_hashes(package_tools),
         'package_runtime_sha256': tree_hashes(package / 'fable-library-rust'),
         'commands': [], 'benchmark_executed': False,
-        'native_input_overrides': {'StateMonad': 60, 'RowToList': 0},
-        'reference_source_sha256': {
-            name: sha256(ROOT / 'tmp' / name)
-            for name in ('bench_koka.kk', 'bench_haskell.hs', 'bench_ocaml.ml')
-        },
+        'reference_source_sha256': tree_hashes(ROOT / 'src/Test', {'.purs'}),
     }
     build = Build(root, environment, manifest)
     for name, command in (
@@ -94,15 +90,6 @@ def build_native(args, directory):
     build.run('01-fable-rust', [dotnet, package_tools / 'fable.dll', fsproj,
               '--noCache', '--lang', 'Rust', '--outDir', rust], root, 180)
     harness = harness_source.read_text().replace('BenchFable', 'NativeBench')
-    for old, new in (
-        ('act: NativeBench::runStateMonad, input: 20,',
-         'act: NativeBench::runStateMonad, input: 60,'),
-        ('act: NativeBench::runRowToList, input: 10000,',
-         'act: NativeBench::runRowToList, input: 0,'),
-    ):
-        if harness.count(old) != 1:
-            raise ValueError(f'Expected one native harness parameter: {old}')
-        harness = harness.replace(old, new)
     generated = (rust / 'NativeBench.rs').read_text()
     allocator = '#[global_allocator]\nstatic FABLE_BENCH_ALLOCATOR: mimalloc::MiMalloc = mimalloc::MiMalloc;\n'
     (rust / 'main.rs').write_text(generated.rstrip() + '\n\n' + allocator + '\n' + harness)
