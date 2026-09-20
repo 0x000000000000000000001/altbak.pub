@@ -24,7 +24,7 @@
                   (let ([elapsed (- (benchNow) start)])
                     (unless (= result expected)
                       (error 'measureBatch "Unstable benchmark result" result expected))
-                    elapsed)
+                    (/ elapsed iterations))
                   (let ([value (act)])
                     (set! benchmark-result value)
                     (loop (- n 1) value)))))))))

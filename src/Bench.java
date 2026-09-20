@@ -36,5 +36,5 @@ public static final java.util.function.Function<Object, Object> measureBatch = i
         double elapsed = (System.nanoTime() - start) / 1000.0;
         if (((Number) result).intValue() != ((Number) expected).intValue())
             throw new IllegalStateException("Unstable benchmark result");
-        return elapsed;
+        return elapsed / count;
     };

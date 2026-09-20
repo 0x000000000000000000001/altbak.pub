@@ -14,10 +14,11 @@ SPEC.loader.exec_module(VALIDATOR)
 
 def fixture(mode="pure", test=None):
     cases = VALIDATOR.expected_cases(mode, test)
+    durations = [max(1000.0, case.get("minimum_us", 0)) for case in cases]
     output = "".join("(Test)\n" + case["label"] + "\n(Output & Warm-up)\n\n" +
-                     (case["value"] or "") + "\n\n(Execution time - best of 10)\n\n1000.00 μs\n"
-                     for case in cases)
-    return output + ("" if mode == "test" else f"Total exec time: {len(cases):.2f} ms\n")
+                     case["value"] + f"\n\n(Execution time - best of 10)\n\n{duration:.2f} μs\n"
+                     for case, duration in zip(cases, durations))
+    return output + ("" if mode == "test" else f"Total exec time: {sum(durations) / 1000:.2f} ms\n")
 
 
 class ValidationTests(unittest.TestCase):
@@ -57,9 +58,10 @@ class ValidationTests(unittest.TestCase):
         self.assertEqual(result["values"], ["1200"])
         self.assertIsNone(result["total_ms"])
 
-    def test_extended_results_are_not_claimed_as_core_validation(self):
+    def test_extended_results_use_their_own_oracles(self):
         result = VALIDATOR.validate_output(fixture("x"), "x")
-        self.assertFalse(result["values_validated"])
+        self.assertTrue(result["values_validated"])
+        self.assertEqual(result["oracle"], "extended")
         self.assertEqual(len(result["times_us"]), 5)
 
     def test_scientific_notation(self):

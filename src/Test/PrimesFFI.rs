@@ -1,10 +1,10 @@
-enum List {
+enum List<A> {
     Nil,
-    Cons(i64, Box<List>),
+    Cons(A, Box<List<A>>),
 }
 
-fn range_list(start: i64, end: i64) -> List {
-    fn go_func(curr: i64, acc: List, start: i64) -> List {
+fn range_list(start: i64, end: i64) -> List<i64> {
+    fn go_func(curr: i64, acc: List<i64>, start: i64) -> List<i64> {
         if curr < start {
             acc
         } else {
@@ -14,8 +14,8 @@ fn range_list(start: i64, end: i64) -> List {
     go_func(end, List::Nil, start)
 }
 
-fn reverse(lst: List) -> List {
-    fn go_func(list: List, acc: List) -> List {
+fn reverse<A>(lst: List<A>) -> List<A> {
+    fn go_func<A>(list: List<A>, acc: List<A>) -> List<A> {
         match list {
             List::Nil => acc,
             List::Cons(x, xs) => go_func(*xs, List::Cons(x, Box::new(acc)))
@@ -24,16 +24,16 @@ fn reverse(lst: List) -> List {
     go_func(lst, List::Nil)
 }
 
-fn filter<P>(p: &P, lst: List) -> List 
-where P: Fn(i64) -> bool
+fn filter<A, P>(p: &P, lst: List<A>) -> List<A>
+where P: Fn(&A) -> bool
 {
-    fn go_func<P>(p: &P, list: List, acc: List) -> List 
-    where P: Fn(i64) -> bool 
+    fn go_func<A, P>(p: &P, list: List<A>, acc: List<A>) -> List<A>
+    where P: Fn(&A) -> bool
     {
         match list {
             List::Nil => reverse(acc),
             List::Cons(x, xs) => {
-                if p(x) {
+                if p(&x) {
                     go_func(p, *xs, List::Cons(x, Box::new(acc)))
                 } else {
                     go_func(p, *xs, acc)
@@ -44,18 +44,18 @@ where P: Fn(i64) -> bool
     go_func(p, lst, List::Nil)
 }
 
-fn sieve(lst: List) -> List {
+fn sieve(lst: List<i64>) -> List<i64> {
     match lst {
         List::Nil => List::Nil,
         List::Cons(p, xs) => {
-            let filtered = filter(&|x| x % p != 0, *xs);
+            let filtered = filter(&|x: &i64| *x % p != 0, *xs);
             List::Cons(p, Box::new(sieve(filtered)))
         }
     }
 }
 
-fn sum_list(lst: List) -> i64 {
-    fn go_func(list: List, acc: i64) -> i64 {
+fn sum_list(lst: List<i64>) -> i64 {
+    fn go_func(list: List<i64>, acc: i64) -> i64 {
         match list {
             List::Nil => acc,
             List::Cons(x, xs) => go_func(*xs, acc + x)

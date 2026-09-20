@@ -1,17 +1,21 @@
-struct Dict {
-    mempty_: i64,
-    mappend_: Box<dyn Fn(i64) -> Box<dyn Fn(i64) -> i64>>,
+struct Monoidish<A> {
+    mempty_: A,
+    mappend_: Box<dyn Fn(A) -> Box<dyn Fn(A) -> A>>,
 }
-pub fn Test_PolymorphismFFI_runPolymorphismFFI(mut limit: i64) -> i64 {
-    let dict = Dict {
-        mempty_: 1,
-        mappend_: Box::new(|x| Box::new(move |y| x + y)),
-    };
-    let mut acc = 0;
+
+fn poly_loop<A: Clone>(dict: &Monoidish<A>, mut limit: i64, mut acc: A) -> A {
     while limit > 0 {
         let f = (dict.mappend_)(acc);
-        acc = f(dict.mempty_);
+        acc = f(dict.mempty_.clone());
         limit -= 1;
     }
     acc
+}
+
+pub fn Test_PolymorphismFFI_runPolymorphismFFI(limit: i64) -> i64 {
+    let int_monoidish = Monoidish {
+        mempty_: 1,
+        mappend_: Box::new(|x| Box::new(move |y| x + y)),
+    };
+    poly_loop(&int_monoidish, limit, 0)
 }

@@ -74,7 +74,10 @@ def render_readme(original, purust, c):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--update-readme", action="store_true")
+    parser.add_argument("--build-only", action="store_true")
     args = parser.parse_args()
+    if args.build_only and args.update_readme:
+        parser.error('--build-only cannot update measurements')
     original = (ROOT / "README.md").read_text()
     parent = ROOT / "var/benchmark/purust-reference"
     parent.mkdir(parents=True, exist_ok=True)
@@ -130,6 +133,9 @@ def main():
                      "numeric_kernels": True},
     }
     native.write_json(directory / "manifest.json", manifest)
+    if args.build_only:
+        print('Build manifest: ' + str(directory / 'manifest.json'), flush=True)
+        return
     runs = {"Purust": [], "C (reference)": []}
     pair = [("Purust", binary), ("C (reference)", c_binary)]
     for repetition in range(3):

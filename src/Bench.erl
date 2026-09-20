@@ -12,7 +12,7 @@ measureBatch(Iterations, Expected, Act) -> fun() ->
   Result = measure_loop(Iterations, Act, 0),
   Elapsed = erlang:convert_time_unit(erlang:monotonic_time() - Start, native, nanosecond) / 1000.0,
   case Result =:= Expected of
-    true -> Elapsed;
+    true -> Elapsed / Iterations;
     false -> erlang:error({unstable_benchmark_result, Result, Expected})
   end
 end.

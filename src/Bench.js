@@ -24,5 +24,5 @@ export const measureBatch = (iterations) => (expected) => (act) => () => {
   }
   const elapsed = benchNow() - start;
   if (result !== expected) throw new Error(`Unstable benchmark result: ${result} != ${expected}`);
-  return elapsed;
+  return elapsed / iterations;
 };

@@ -1,7 +1,6 @@
 module Bench where
 
 import Prelude
-import Data.Int (toNumber)
 import Effect (Effect)
 import Effect.Console (log)
 
@@ -9,16 +8,16 @@ foreign import benchNow :: Effect Number
 foreign import opaque :: forall a. a -> Effect a
 foreign import formatNumber :: Number -> String
 
--- Returns total microseconds. The native driver consumes every numeric result
+-- Returns microseconds per invocation. The native driver consumes every numeric result
 -- and checks the final result against the separately validated warm-up value.
 foreign import measureBatch :: Int -> Int -> Effect Int -> Effect Number
 
-calibrate :: Int -> Effect Int -> Int -> Effect Int
-calibrate expected act iterations = do
+calibrate :: Int -> Effect Int -> Int -> Number -> Effect Int
+calibrate expected act iterations target = do
   elapsed <- measureBatch iterations expected act
-  if elapsed >= 10000.0 || iterations >= 16777216
+  if elapsed >= target || iterations >= 16777216
     then pure iterations
-    else calibrate expected act (iterations * 2)
+    else calibrate expected act (iterations * 2) (target / 2.0)
 
 runBench :: Effect Unit -> Effect Int -> Effect Number
 runBench describe act = do
@@ -29,7 +28,7 @@ runBench describe act = do
   log (show out)
   void act
   void act
-  iterations <- calibrate out act 1
+  iterations <- calibrate out act 1 10000.0
   d1 <- measureBatch iterations out act
   d2 <- measureBatch iterations out act
   d3 <- measureBatch iterations out act
@@ -40,7 +39,7 @@ runBench describe act = do
   d8 <- measureBatch iterations out act
   d9 <- measureBatch iterations out act
   d10 <- measureBatch iterations out act
-  let best = min (min (min (min d1 d2) (min d3 d4)) (min (min d5 d6) (min d7 d8))) (min d9 d10) / toNumber iterations
+  let best = min (min (min (min d1 d2) (min d3 d4)) (min (min d5 d6) (min d7 d8))) (min d9 d10)
   log ("\n(Execution time - best of 10)\n\n" <> formatNumber best <> " μs\n")
   log ("Batch iterations: " <> show iterations)
   pure best

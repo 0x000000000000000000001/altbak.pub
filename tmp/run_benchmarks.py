@@ -103,11 +103,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--update-readme", action="store_true",
                         help="replace only the selected reference tables after all results validate")
+    parser.add_argument("--build-only", action="store_true", help="build and check kernels without timing them")
     parser.add_argument("--languages", nargs="+", choices=list(CONFIG), default=list(CONFIG),
                         help="references to rebuild and measure (default: all four)")
     parser.add_argument("--timeout", type=float, default=180,
                         help="seconds allowed for each build or benchmark process")
     args = parser.parse_args()
+    if args.build_only and args.update_readme:
+        parser.error('--build-only cannot update measurements')
     if len(set(args.languages)) != len(args.languages):
         parser.error("--languages must not contain duplicates")
     if not math.isfinite(args.timeout) or args.timeout <= 0:
@@ -138,7 +141,7 @@ def main():
         cpu = subprocess.run(["sysctl", "-n", "machdep.cpu.brand_string"],
                              capture_output=True, text=True)
         manifest["cpu"] = cpu.stdout.strip() if cpu.returncode == 0 else "unavailable"
-    paths = [Path(__file__), ROOT / "bin/benchmark/validate.py", ROOT / "README.md"]
+    paths = [Path(__file__), ROOT / "bin/benchmark/validate.py"]
     paths += [ROOT / "src/Test" / (name + ".purs") for name in CASES]
     paths += [ROOT / "tmp" / filename for _, files, _ in selected.values() for filename in files]
     for path in paths:
@@ -182,6 +185,11 @@ def main():
             manifest["builds"][name]["correctness_validated_cases"] = 14
         save_manifest()
     verify_sources()
+    if args.build_only:
+        manifest['status'] = 'built'
+        save_manifest()
+        print('Build manifest: ' + str(directory / 'manifest.json'), flush=True)
+        return
     manifest["status"] = "measuring"
     save_manifest()
     samples = {name: [] for name in selected}

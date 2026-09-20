@@ -97,6 +97,7 @@ rm -rf "$WORK/src"
 mkdir -p "$WORK/src/Test"
 cp "$ROOT/bin/wasm/spago.yaml" "$WORK/spago.yaml"
 cp "$ROOT/src/Bench.purs" "$ROOT/src/Bench.js" "$ROOT/src/App.purs" "$WORK/src/"
+python3 "$ROOT/bin/wasm/adapt-batch.py" "$WORK/src/Bench.purs" "$WORK/src/Bench.js"
 for name in AstTree Fib ListOps TCO Records Ackermann Church Primes RBTree Polymorphism StateMonad LazyEvaluation ArrayOps RowToList; do
   cp "$ROOT/src/Test/$name.purs" "$WORK/src/Test/"
 done
@@ -129,6 +130,9 @@ if ! node "$BACKEND/purs-wasm/index.js" build -I output -O output-wasm -e "$ENTR
   cat wasm-build.log >&2
   exit 1
 fi
+
+# This checks only the suspended callback ABI, without running a benchmark.
+node "$ROOT/test/wasm-effect-ffi.mjs" output-wasm/marshal.js
 
 # Reject any silent JS fallback for an algorithm or library operation. Only
 # timing, formatting, logging and the original opaque input barrier may cross.

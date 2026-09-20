@@ -31,6 +31,6 @@ pub fn Bench_measureBatch(iterations: i64, expected: i64, action: UnknownType) -
         }
         let elapsed = start.elapsed().as_secs_f64() * 1_000_000.0;
         assert_eq!(result, expected, "Unstable benchmark result");
-        mk_number(elapsed)
+        mk_number(elapsed / iterations as f64)
     })))
 }

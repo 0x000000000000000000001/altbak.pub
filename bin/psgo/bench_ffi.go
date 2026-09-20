@@ -37,7 +37,7 @@ func init() {
                     }
                     elapsed := float64(time.Since(start).Nanoseconds()) / 1e3
                     if result != expected.(int) { panic("Unstable benchmark result") }
-                    return elapsed
+                    return elapsed / float64(count.(int))
                 }
             }
         }

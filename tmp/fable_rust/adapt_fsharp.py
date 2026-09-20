@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Remove provably unused sharpurs local boxed aliases in a separate scratch copy.
+"""Adapt audited sharpurs source shapes in a separate scratch copy.
 
-No algorithm body is rewritten. Only the exact generated two-argument local
-alias shape is accepted. Optionally split top-level non-recursive aliases out
-of let-rec groups, after checking the implementation does not reference them.
+Remove unused two-argument boxed aliases and extract the typed unit-thunk
+factory without changing its work. A separate helper validates reflection
+forwarders for the build orchestrator. Optionally split unreferenced top-level
+aliases out of let-rec groups. Every adaptation has a strict source-shape guard.
 """
 from __future__ import annotations
 import argparse
@@ -17,6 +18,92 @@ import sys
 
 def digest(text: str) -> str:
     return hashlib.sha256(text.encode()).hexdigest()
+
+
+def propagate_reflection_exceptions(text: str) -> tuple[str, list[dict]]:
+    """Adapt only the two audited sharpurs RBTree forwarding-adapter variants.
+
+    Older sharpurs emits boxed max/insert adapters; its typed ADT path emits
+    balance/ins/insert adapters. Check complete signatures and forwarding calls,
+    rather than accepting arbitrary exception occurrences based on their count.
+    """
+    wrapper = "raise (System.Reflection.TargetInvocationException(ex))"
+    variants = (
+        (
+            ("Test_RBTree_max_direct", (("x", "obj"), ("y", "obj")), "obj"),
+            ("Test_RBTree_insert_direct", (("x", "obj"), ("s", "obj")), "obj"),
+        ),
+        (
+            ("Test_RBTree_balance_adt_native", tuple(zip(
+                (f"sharpurs_adt_local_{i}" for i in range(4)),
+                ("Test_RBTree_Color", "Test_RBTree_Tree", "int", "Test_RBTree_Tree"))), "Test_RBTree_Tree"),
+            ("Test_RBTree_ins_adt_native", (("sharpurs_adt_local_0", "int"),
+                ("sharpurs_adt_local_1", "Test_RBTree_Tree")), "Test_RBTree_Tree"),
+            ("Test_RBTree_insert_adt_native", (("sharpurs_adt_local_0", "int"),
+                ("sharpurs_adt_local_1", "Test_RBTree_Tree")), "Test_RBTree_Tree"),
+        ),
+    )
+    occurrences = text.count("System.Reflection.TargetInvocationException")
+    for variant in variants:
+        if occurrences != len(variant):
+            continue
+        blocks = []
+        for callee, parameters, result_type in variant:
+            name = callee + "_apply"
+            signature = " ".join(f"({arg}: {typ})" for arg, typ in parameters)
+            success = "    try " + callee + " " + " ".join(arg for arg, _ in parameters) + "\n"
+            block = f"let {name} {signature} : {result_type} =\n{success}    with ex -> {wrapper}\n"
+            pattern = re.compile(r"^" + re.escape(block), re.M)
+            matches = list(pattern.finditer(text))
+            declarations = re.findall(r"^let (?:rec )?" + re.escape(callee) + r"\b", text, re.M)
+            if len(matches) != 1 or len(declarations) != 1:
+                break
+            blocks.append((name, matches[0], success))
+        else:
+            actions = []
+            rewritten = text
+            for name, match, success in sorted(blocks, key=lambda item: item[1].start(), reverse=True):
+                replacement = match.group().replace(wrapper, "raise ex")
+                rewritten = rewritten[:match.start()] + replacement + rewritten[match.end():]
+                actions.append({
+                    "action": "propagate_original_exception", "adapter": name,
+                    "source_line": text[:match.start()].count("\n") + 1,
+                    "success_path_sha256_before": digest(success),
+                    "success_path_sha256_after": digest(success),
+                    "proof": "Exact typed forwarding signature and call checked; only the exception rethrow changes.",
+                })
+            return rewritten, list(reversed(actions))
+    raise ValueError(f"Unsupported RBTree reflection adapters: found {occurrences} wrappers, "
+                     "but neither audited set of exact signatures and forwarding calls matched")
+
+
+def adapt_typed_thunk_capture(text: str) -> tuple[str, list[dict]]:
+    """Give Fable an explicit value parameter to capture in each thunk step."""
+    name = "Test_LazyEvaluation_buildThunks_thunk_native"
+    if not re.search(r"^let rec private " + name + r"\b", text, re.M):
+        return text, []
+    helper = "sharpurs_fable_lazyStep"
+    if helper in identifiers(text):
+        raise ValueError("Typed thunk adaptation helper name already exists")
+    closure = "((fun (sharpurs_thunk_local_2: unit) -> ((sharpurs_thunk_local_1 ()) + (1))))"
+    declaration = (f"let rec private {name} (sharpurs_thunk_local_0: int) "
+        "(sharpurs_thunk_local_1: (unit -> int)) : (unit -> int) = "
+        "(if (sharpurs_thunk_local_0 = (0)) then sharpurs_thunk_local_1 else "
+        f"({name} ((sharpurs_thunk_local_0 - (1))) {closure}))\n")
+    matches = list(re.finditer(r"^" + re.escape(declaration), text, re.M))
+    if len(matches) != 1:
+        raise ValueError("Unsupported typed LazyEvaluation thunk builder shape")
+    factory = (f"let private {helper} (previous: unit -> int) : unit -> int =\n"
+               "    fun () -> previous () + 1\n\n")
+    replacement = factory + declaration.replace(closure, f"({helper} sharpurs_thunk_local_1)")
+    match = matches[0]
+    rewritten = text[:match.start()] + replacement + text[match.end():]
+    return rewritten, [{
+        "action": "extract_typed_thunk_factory", "enclosing": name, "helper": helper,
+        "source_line": text[:match.start()].count("\n") + 1,
+        "sha256_before": digest(declaration), "sha256_after": digest(replacement),
+        "proof": "Exact builder checked. Each recursive step still allocates a non-memoizing unit thunk that calls the captured previous thunk and adds one. The factory captures a value before Fable reassigns its tail-call parameters.",
+    }]
 
 
 def mask(text: str) -> str:
@@ -112,6 +199,8 @@ def main() -> None:
         if path.suffix == '.fs':
             before = path.read_text()
             after, actions = transform(before, args.split_top_level_aliases)
+            after, thunk_actions = adapt_typed_thunk_capture(after)
+            actions.extend(thunk_actions)
             planned.append((path, before, after, actions))
     # Complete all analyses before writing the scratch copy.
     target.mkdir(parents=True, exist_ok=True)

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check exact PHP FFI sources against shared independent values, without timing."""
 from pathlib import Path
+import base64
 import json
 import os
 import runpy
@@ -59,7 +60,8 @@ for name in ORACLE['NOMINAL']:
             if source.count(needle) != 1:
                 raise RuntimeError(f'Cannot locate generic helper probe in {path}')
             instrumented = source.replace(needle, probe + needle, 1).removeprefix('<?php')
-            lines += ['$exports = [];', f'$probeModule = eval({json.dumps(instrumented)});',
+            encoded = base64.b64encode(instrumented.encode()).decode()
+            lines += ['$exports = [];', f"$probeModule = eval(base64_decode('{encoded}'));",
                       f'$probeModule[{json.dumps("run"+stem)}](0);']
 for name, argument, expected in CASES:
     for suffix in ['FFI', 'FFICheatcode']:

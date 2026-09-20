@@ -2,6 +2,7 @@
 #include <chrono>
 #include <iomanip>
 #include <sstream>
+#include <stdexcept>
 
 namespace {
 // Treat the boxed input (including primitive fields) as unknown at every call.
@@ -48,7 +49,7 @@ exports["measureBatch"] = [](const boxed& count) -> boxed {
                 const double elapsed = std::chrono::duration<double, std::micro>(Clock::now() - start).count();
                 if (unbox<int>(result) != unbox<int>(expected))
                     throw std::runtime_error("Unstable benchmark result");
-                return elapsed;
+                return elapsed / unbox<int>(count);
             };
         };
     };

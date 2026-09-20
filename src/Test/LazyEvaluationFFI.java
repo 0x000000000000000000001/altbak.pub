@@ -1,8 +1,17 @@
-    private static java.util.function.IntSupplier buildThunks(int depth, java.util.function.IntSupplier initial) {
-        java.util.function.IntSupplier result = initial;
+    @FunctionalInterface
+    private interface Lazy<A> { A force(); }
+
+    private static <A> Lazy<A> defer(java.util.function.Supplier<A> thunk) {
+        return () -> thunk.get();
+    }
+
+    private static <A> A force(Lazy<A> value) { return value.force(); }
+
+    private static Lazy<Integer> buildThunks(int depth, Lazy<Integer> initial) {
+        Lazy<Integer> result = initial;
         for (int i = 0; i < depth; i++) {
-            java.util.function.IntSupplier previous = result;
-            result = () -> previous.getAsInt() + 1;
+            Lazy<Integer> previous = result;
+            result = defer(() -> force(previous) + 1);
         }
         return result;
     }
@@ -11,7 +20,7 @@
         int count = (Integer) input;
         int result = 0;
         for (int i = 0; i < count; i++) {
-            result += buildThunks(1000, () -> 0).getAsInt();
+            result += force(buildThunks(1000, defer(() -> 0)));
         }
         return result;
     });

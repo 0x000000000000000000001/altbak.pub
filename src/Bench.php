@@ -26,7 +26,7 @@ $measureBatch = function($iterations) {
                 }
                 $elapsed = (hrtime(true) - $start) / 1000.0;
                 if ($result !== $expected) throw new \RuntimeException('Unstable benchmark result');
-                return $elapsed;
+                return $elapsed / $iterations;
             };
         };
     };

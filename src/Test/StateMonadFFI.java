@@ -25,7 +25,8 @@
     }
 
     private static <S> State<S, Void> modifyState(java.util.function.Function<S, S> update) {
-        return bindState(StateMonadFFI.<S>getState(), current -> putState(update.apply(current)));
+        State<S, S> get = getState();
+        return bindState(get, current -> putState(update.apply(current)));
     }
 
     private static State<Integer, Void> chainModifications(int depth) {

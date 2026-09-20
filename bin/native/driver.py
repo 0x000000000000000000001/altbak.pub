@@ -119,6 +119,8 @@ main = void $ runBench Case.describe Case.act
 
 
 def execute(binary, directory, env, args, name='results'):
+    if args.mode == 'x':
+        (directory / 'var').mkdir(exist_ok=True)
     raw = directory / (name + '.log')
     with raw.open('w') as output:
         process = subprocess.Popen([str(binary)], cwd=directory, env=env, stdout=subprocess.PIPE,

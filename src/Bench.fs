@@ -29,4 +29,4 @@ let measureBatch (iterations: obj) (expected: obj) (action: obj) =
             System.Threading.Volatile.Write(&benchmarkResult, result)
         let elapsed = float (System.Diagnostics.Stopwatch.GetTimestamp() - start) * 1000000.0 / float System.Diagnostics.Stopwatch.Frequency
         if unbox<int> result <> unbox<int> expected then failwith "Unstable benchmark result"
-        box elapsed)
+        box (elapsed / float (unbox<int> iterations)))

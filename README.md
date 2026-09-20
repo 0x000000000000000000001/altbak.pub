@@ -30,9 +30,11 @@ To ensure fair and executable comparisons across all backends, the test suite is
 
 Command: `./bin/run` (Runs all configured core backends, including Wasm). New tests will gradually be added.
 
+Core measurements use numeric results, observable inputs/outputs and ten calibrated batches per process. Published cells use the median of three independent processes. Formatting and build time are excluded. The FP-style FFI mappings and imperative algorithms have distinct roles, documented in the [methodology](docs/benchmark-methodology.md).
+
 #### JavaScript
 
-JS Benchmark            | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[Arista](https://github.com/aristanetworks/purescript-backend-optimizer)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written FP-style JS FFI<br>↓<br>V8 JIT<br><br>(WIP) | Hand-written imperative JS FFI<br>↓<br>V8 JIT<br><br>(WIP) |
+JS Benchmark            | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[Arista](https://github.com/aristanetworks/purescript-backend-optimizer)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written FP-style JS FFI<br>↓<br>JS<br>↓<br>V8 JIT<br><br>(WIP) | Hand-written imperative JS FFI<br>↓<br>JS<br>↓<br>V8 JIT<br><br>(WIP) |
 ----------------------- | ---------------------- | ------------------ | ---------------------- | ---------------------------- |
 AST Evaluation          | ~ 93 μs                | ~ 74 μs            | ~ 75 μs       | ~ 99 μs                 |
 Fibonacci               | ~ 43 μs                | ~ 46 μs            | ~ 43 μs       | ~ 41 μs                 |
@@ -52,7 +54,7 @@ RowToList               | ~ 37 μs                | ~ 17 μs            | ~ 58 �
 
 #### Go
 
-Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[psgo](https://github.com/i-am-the-slime/purescript-native)<br>↓<br>Go<br>↓<br>go-build | Hand-written FP-style Go FFI<br>↓<br>go-build<br><br>(WIP) | Hand-written imperative Go FFI<br>↓<br>go-build<br><br>(WIP) |
+Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[psgo](https://github.com/i-am-the-slime/purescript-native)<br>↓<br>Go<br>↓<br>go-build | Hand-written FP-style Go FFI<br>↓<br>Go<br>↓<br>go-build<br><br>(WIP) | Hand-written imperative Go FFI<br>↓<br>Go<br>↓<br>go-build<br><br>(WIP) |
 ----------------------- | -------------------------------- | ------------------------------------- | ---------------------- | ---------------------------- |
 AST Evaluation          | ~ 0.79 μs                        | ~ 296 μs                              | ~ 20 μs       | ~ 1 μs                  |
 Fibonacci               | ~ 0.62 μs                        | ~ 24 μs                               | ~ 2 μs        | ~ 0.58 μs               |
@@ -72,7 +74,7 @@ RowToList               | ~ 0.50 μs                        | ~ 2 μs           
 
 #### Scheme
 
-Scheme Benchmark        | Hand-written PureScript<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3 | Hand-written FP-style Scheme FFI<br>↓<br>Chez-O3<br><br>(WIP) | Hand-written imperative Scheme FFI<br>↓<br>Chez-O3<br><br>(WIP) |
+Scheme Benchmark        | Hand-written PureScript<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3 | Hand-written FP-style Scheme FFI<br>↓<br>Scheme<br>↓<br>Chez-O3<br><br>(WIP) | Hand-written imperative Scheme FFI<br>↓<br>Scheme<br>↓<br>Chez-O3<br><br>(WIP) |
 ----------------------- | ----------------| -------------------------- | -------------------------------- |
 AST Evaluation          | ~ 0 μs          | ~ 0 μs           | ~ 0 μs                     |
 Fibonacci               | ~ 0 μs          | ~ 0 μs           | ~ 0 μs                     |
@@ -92,7 +94,7 @@ RowToList               | ~ 0 μs          | ~ 0 μs           | ~ 0 μs        
 
 #### Erlang
 
-Erlang Benchmark        | Hand-written PureScript<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>Erlang<br>↓<br>BEAM-JIT | Hand-written FP-style Erlang FFI<br>↓<br>BEAM-JIT<br>(WIP) | Hand-written imperative Erlang FFI<br>↓<br>BEAM-JIT<br>(WIP) |
+Erlang Benchmark        | Hand-written PureScript<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>↓<br>Erlang<br>↓<br>BEAM-JIT | Hand-written FP-style Erlang FFI<br>↓<br>Erlang<br>↓<br>BEAM-JIT<br><br>(WIP) | Hand-written imperative Erlang FFI<br>↓<br>Erlang<br>↓<br>BEAM-JIT<br><br>(WIP) |
 ----------------------- | ----------------| -------------------------- | -------------------------------- |
 AST Evaluation          | ~ 0 μs          | ~ 0 μs           | ~ 0 μs                     |
 Fibonacci               | ~ 0 μs          | ~ 0 μs           | ~ 0 μs                     |
@@ -112,7 +114,7 @@ RowToList               | ~ 0 μs          | ~ 0 μs           | ~ 0 μs        
 
 #### PHP
 
-PHP Benchmark           | Hand-written PureScript<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>PHP<br>↓<br>Zend-JIT<br>(WIP) | Hand-written FP-style PHP FFI<br>↓<br>Zend-JIT<br>(WIP) | Hand-written imperative PHP FFI<br>↓<br>Zend-JIT<br>(WIP) |
+PHP Benchmark           | Hand-written PureScript<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend-JIT<br><br>(WIP) | Hand-written FP-style PHP FFI<br>↓<br>PHP<br>↓<br>Zend-JIT<br><br>(WIP) | Hand-written imperative PHP FFI<br>↓<br>PHP<br>↓<br>Zend-JIT<br><br>(WIP) |
 ----------------------- | ------------------------- | ----------------------- | ----------------------------- |
 AST Evaluation          | ~ 5 μs                 | ~ 5 μs         | ~ 4 μs                   |
 Fibonacci               | ~ 3 μs                 | ~ 4 μs         | ~ 3 μs                   |
@@ -132,7 +134,7 @@ RowToList               | ~ 2 μs                 | ~ 2 μs         | ~ 1 μs   
 
 #### Rust
 
-Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>Rust<br>↓<br>rustc-O3<br>(WIP) | PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>F#<br>↓<br>[Fable](https://github.com/fable-compiler/fable)<br>Rust<br>↓<br>rustc-O3<br>(WIP) | Hand-written F#<br>↓<br>[Fable](https://github.com/fable-compiler/fable)<br>Rust<br>↓<br>rustc-O3 | Hand-written FP-style Rust FFI<br>↓<br>rustc-O3<br>(WIP) | Hand-written imperative Rust FFI<br>↓<br>rustc-O3<br>(WIP) |
+Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc-O3<br><br>(WIP) | PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F# (adapted)<br>↓<br>[Fable (patched)](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc-O3<br><br>(WIP) | Hand-written F#<br>↓<br>[Fable](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc-O3 | Hand-written FP-style Rust FFI<br>↓<br>Rust<br>↓<br>rustc-O3<br><br>(WIP) | Hand-written imperative Rust FFI<br>↓<br>Rust<br>↓<br>rustc-O3<br><br>(WIP) |
 ----------------------- | ------------------------- | -------------------------- | ------------------------------ | ------------------------ | ------------------------------ |
 AST Evaluation          | ~ 0.267 μs              | ~ 4.261 μs                        | ~ 0.262 μs | ~ 3 μs       | ~ 1 μs                 |
 Fibonacci               | ~ 0.086 μs              | ~ 12.119 μs                        | ~ 0.107 μs | ~ 2 μs       | ~ 1 μs                 |
@@ -154,7 +156,7 @@ RowToList               | ~ 0.064 μs              | ~ 1.129 μs                
 
 #### C++
 
-C++ Benchmark           | Hand-written PureScript<br>↓<br>[pscpp](https://github.com/purescript-native/purescript)<br>C++<br>↓<br>clang++-O3<br>(WIP) | Hand-written FP-style C++ FFI<br>↓<br>clang++-O3<br>(WIP) | Hand-written imperative C++ FFI<br>↓<br>clang++-O3<br>(WIP) |
+C++ Benchmark           | Hand-written PureScript<br>↓<br>[pscpp](https://github.com/purescript-native/purescript)<br>↓<br>C++<br>↓<br>clang++-O3<br><br>(WIP) | Hand-written FP-style C++ FFI<br>↓<br>C++<br>↓<br>clang++-O3<br><br>(WIP) | Hand-written imperative C++ FFI<br>↓<br>C++<br>↓<br>clang++-O3<br><br>(WIP) |
 ----------------------- | ------------------------- | ------------------------- | ------------------------------- |
 AST Evaluation          | ~ 3.25 μs                 | ~ 1.29 μs                 | ~ 1.33 μs                       |
 Fibonacci               | ~ 0.62 μs                 | ~ 0.42 μs                 | ~ 0.38 μs                       |
@@ -174,7 +176,7 @@ RowToList               | ~ 1.00 μs                 | ~ 0.29 μs               
 
 #### F#/C#
 
-F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>F#/C#<br>↓<br>dotnet-Release<br>(WIP) | Hand-written FP-style F#/C# FFI<br>↓<br>dotnet-Release<br>(WIP) | Hand-written imperative F#/C# FFI<br>↓<br>dotnet-Release<br>(WIP) |
+F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet-Release<br><br>(WIP) | Hand-written FP-style F#/C# FFI<br>↓<br>F#/C#<br>↓<br>dotnet-Release<br><br>(WIP) | Hand-written imperative F#/C# FFI<br>↓<br>F#/C#<br>↓<br>dotnet-Release<br><br>(WIP) |
 ----------------------- | ------------------------- | ------------------------- | ------------------------------- |
 AST Evaluation          | ~ 73.38 μs                | ~ 77.17 μs                | ~ 74.79 μs                      |
 Fibonacci               | ~ 1.75 μs                 | ~ 1.13 μs                 | ~ 1.13 μs                       |
@@ -194,7 +196,7 @@ RowToList               | ~ 0.75 μs                 | ~ 0.71 μs               
 
 #### Java
 
-Java Benchmark          | Hand-written PureScript<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>Java<br>↓<br>HotSpot-JIT<br>(WIP) | Hand-written FP-style Java FFI<br>↓<br>HotSpot-JIT<br>(WIP) | Hand-written imperative Java FFI<br>↓<br>HotSpot-JIT<br>(WIP) |
+Java Benchmark          | Hand-written PureScript<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>↓<br>Java<br>↓<br>HotSpot-JIT<br><br>(WIP) | Hand-written FP-style Java FFI<br>↓<br>Java<br>↓<br>HotSpot-JIT<br><br>(WIP) | Hand-written imperative Java FFI<br>↓<br>Java<br>↓<br>HotSpot-JIT<br><br>(WIP) |
 ----------------------- | ------------------------- | ------------------------ | ------------------------------ |
 AST Evaluation          | ~ 56.00 μs                | ~ 78.46 μs               | ~ 108.29 μs                    |
 Fibonacci               | ~ 5.25 μs                 | ~ 2.71 μs                | ~ 4.04 μs                      |
@@ -214,7 +216,7 @@ RowToList               | ~ 1.88 μs                 | ~ 2.75 μs               
 
 #### Koka
 
-Koka Benchmark          | Hand-written Koka<br>↓<br>koka-O3 |
+Koka Benchmark          | Hand-written Koka<br>↓<br>Koka<br>↓<br>koka-O3 |
 ----------------------- | ----- |
 AST Evaluation          | ~ 0.243 μs |
 Fibonacci               | ~ 0.125 μs |
@@ -234,7 +236,7 @@ RowToList               | ~ 0.001 μs |
 
 #### Haskell
 
-Haskell Benchmark       | Hand-written Haskell<br>↓<br>GHC-O2 |
+Haskell Benchmark       | Hand-written Haskell<br>↓<br>Haskell<br>↓<br>GHC-O2 |
 ----------------------- | ------------------------ |
 AST Evaluation          | ~ 0.057 μs |
 Fibonacci               | ~ 0.205 μs |
@@ -254,7 +256,7 @@ RowToList               | ~ 0.004 μs |
 
 #### OCaml
 
-OCaml Benchmark         | Hand-written OCaml<br>↓<br>ocamlopt-O3 |
+OCaml Benchmark         | Hand-written OCaml<br>↓<br>OCaml<br>↓<br>ocamlopt-O3 |
 ----------------------- | --------------------------- |
 AST Evaluation          | ~ 0.050 μs |
 Fibonacci               | ~ 0.124 μs |
@@ -274,7 +276,7 @@ RowToList               | ~ 0.005 μs |
 
 #### C (reference)
 
-C Benchmark             | Hand-written imperative C<br>↓<br>clang-O3 |
+C Benchmark             | Hand-written imperative C<br>↓<br>C<br>↓<br>clang-O3 |
 ----------------------- | -------------------- |
 AST Evaluation          | ~ 0.096 μs |
 Fibonacci               | ~ 0.082 μs |
@@ -292,31 +294,16 @@ Array Processing        | ~ 0.048 μs |
 RowToList               | ~ 0.001 μs |
 **Total Execution Time**| ~ 9.14 ms |
 
-> [!IMPORTANT]
-> **The 99/1 philosophy and the AOT compiler vs FFI approach**
-> 
-> Using Rust as an example, the three columns give a concrete idea of what the AOT compiler actually does:
-> 
-> 1. **Compiled Rust (WIP)**: The actual code generated by our compiler (`purust`). For statically-typed AOT targets like Rust, the compiled code is now **faster** than even the most optimized handwritten FFI. This is because a compiler has no constraints regarding code readability. It can systematically apply machine-level optimizations (such as deep monomorphization, aggressive inlining, or generating loops with an immoderate use of `unsafe` blocks) that a human developer would never spontaneously write in order to keep their codebase maintainable.
-> 2. **Native FP-style Rust FFI**: This is what you get if a human translates PureScript's functional patterns (closures, type classes, boxed lists) directly into idiomatic, readable Rust using native features like traits and dynamic dispatch.
-> 3. **Native hand-written Rust FFI**: A highly optimized, human-written implementation using raw imperative shortcuts. Unlike column 2, it doesn't try to faithfully replicate unoptimized functional patterns; it just runs as fast as possible. These hand-optimized implementations look wildly different for each test, making it a tough challenge for a compiler to predict them all.
->
-> **The ultimate goal of the compiler** is to get as close as possible to the hand-optimized FFI (column 3). As the benchmarks now demonstrate for our most advanced backend (`purust`), **we have actually surpassed this goal**, beating the fastest hand-written imperative code in overall performance. Reaching this milestone remains our active objective for the other experimental AOT targets (like PHP and Go). We achieve this by detecting the structural shortcuts that a human brain naturally figures out when hand-optimizing code, and applying them ruthlessly. This relies on reproducible heuristics (unboxing, inlining, loop vectorization, TCO) that we actively carve into stone within the compiler engine, made possible by leveraging our custom TAST (Typed Abstract Syntax Tree) which preserves deep structural type information.
->
-> **Why are these tests so naive?** These tests are deliberately naive to stress the runtime. For example, the Lazy Evaluation benchmark dynamically allocates and forces 1 million closures to heavily stress the garbage collector and call stack. They represent absolute worst-case scenarios. We want to maximize the performance gap between compiled and native code and use these artificially worsened gaps to drive continuous optimizations. When a hand-optimized script replaces a million closures with a raw `for` loop taking 1 µs, it's inherently unfair. But that's exactly the point: we want to see what happens when a developer makes a huge design mistake, and measure the performance ratio when several bad choices compound together.
->
-> In practice, **your high-level codebase will execute faster than manually optimized native code**, letting you focus entirely on domain concepts instead of hardware details. Optimizing for catastrophic scenarios guarantees the best possible performance ratio for real-world projects, actively mitigating the impact of naive implementations. The historical need to manually optimize critical algorithmic *hot paths* by dropping down to FFI or using safe mutability abstractions (like the `ST` monad) is now virtually obsolete. You only need FFI for interacting with the outside world, not for raw computation speed. This philosophy applies universally to all backend languages benchmarked here: imperative code is kept to a strict, perfectly isolated minimum.
+The compiled columns measure the supplied PureScript kernels. FP references retain their functional structures; imperative references may change algorithms and allocation strategies. Automatic compiler optimization is allowed. These synthetic results characterize the listed programs and configurations, not the performance of arbitrary applications or the usefulness of FFI.
 
-> [!NOTE]
-> **Single-threaded benchmark**
-> All benchmarks presented here are strictly **single-threaded**. They measure raw sequential execution speed and do not take into account the powerful multi-threading capabilities inherent to languages like Go or Erlang (BEAM).
+Core calculations are sequential. The extended Parallelism test below also measures the runtimes' use of multiple CPU cores. See [measurement boundaries, source fidelity and reproduction](docs/benchmark-methodology.md).
 
 ### Extended benchmark results (I/O, mutability, async)
 Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Scheme and Erlang)
 
 #### Extended Results
 
-Benchmark               | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>JS<br>↓<br>V8-JIT | Hand-written PureScript<br>↓<br>[Arista](https://github.com/aristanetworks/purescript-backend-optimizer)<br>JS<br>↓<br>V8-JIT | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>Go<br>↓<br>go-build<br>(mature WIP) | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>Rust<br>↓<br>rustc-O3<br>(WIP)
+Benchmark               | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8-JIT | Hand-written PureScript<br>↓<br>[Arista](https://github.com/aristanetworks/purescript-backend-optimizer)<br>↓<br>JS<br>↓<br>V8-JIT | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc-O3<br><br>(WIP)
 ----------------------- | ------------- | -------------- | --------------- | ---------------
 File I/O                | ~ 429223 μs   | ~ 479362 μs    | ~ 427978.75 μs  | ~ 451274 μs     
 STArray Operations      | ~ 3 μs        | ~ 3 μs         | ~ 0.33 μs       | ~ 1 μs          

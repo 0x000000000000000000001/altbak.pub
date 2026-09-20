@@ -5,6 +5,16 @@
   (define nil-dict (make-dictionary (lambda (proxy) 0)))
   (define (cons-dict tail)
     (make-dictionary (lambda (proxy) (+ 1 ((dictionary-keys tail) 'proxy)))))
+  ;; Scheme has no static row constraint. Constructors carry an explicit
+  ;; dictionary alongside the heterogeneous record, rather than a field count.
+  (define-record-type row (fields values dictionary))
+  (define nil-row (make-row '() nil-dict))
+  (define (cons-row name value tail)
+    (make-row (cons (cons name value) (row-values tail))
+              (cons-dict (row-dictionary tail))))
+  (define (keys record)
+    ((dictionary-keys (row-dictionary record)) 'proxy))
   (define (runRowToListFFI ignored)
-    (let ([dict (cons-dict (cons-dict (cons-dict (cons-dict (cons-dict nil-dict)))))])
-      ((dictionary-keys dict) 'proxy))))
+    (let ([record (cons-row 'a 1 (cons-row 'b "two" (cons-row 'c #t
+                   (cons-row 'd 4.0 (cons-row 'e "five" nil-row)))))])
+      (keys record))))

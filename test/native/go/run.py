@@ -100,7 +100,10 @@ with tempfile.TemporaryDirectory(prefix='altbak-native-go-') as temporary:
               'previous := Bench.BenchNow(); fractional := false',
               'for i:=0; i<100; i++ { current := Bench.BenchNow(); if current < previous { t.Fatal("clock went backwards") }; fractional = fractional || current != float64(int64(current)); previous=current }',
               'if !fractional { t.Fatal("clock truncated fractional microseconds") }',
-              'if Bench.Opaque(123)().(int) != 123 { t.Fatal("opaque changed input") }', '}']
+              'if Bench.Opaque(123)().(int) != 123 { t.Fatal("opaque changed input") }',
+              'calls := 0; batch := Bench.MeasureBatch(3, 7, func() int { calls++; return 7 })',
+              'if calls != 0 { t.Fatal("constructing a batch must not execute the Effect") }',
+              'if elapsed := batch(); calls != 3 || elapsed < 0 { t.Fatal("batch did not execute exactly three calls") }', '}']
     (folder / 'contracts_test.go').write_text('\n'.join(lines) + '\n')
     environment = dict(os.environ, GOWORK='off', GOFLAGS='', GOCACHE=str(folder / 'cache'))
     subprocess.run(['go', 'test', '-count=1', '-pgo=off', './...'], cwd=folder, env=environment, check=True)

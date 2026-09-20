@@ -23,6 +23,7 @@ ASSETS = ROOT / 'tmp/fable_rust'
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--update-readme', action='store_true')
+    parser.add_argument('--build-only', action='store_true')
     parser.add_argument('--dotnet', type=Path, default=os.environ.get('FABLE_DOTNET') or shutil.which('dotnet'),
                         help='Path to a .NET 10 dotnet executable (or set FABLE_DOTNET)')
     parser.add_argument('--fable-package', type=Path, default=Path.home()/'.nuget/packages/fable/5.17.2')
@@ -30,6 +31,8 @@ def main():
     parser.add_argument('--source', type=Path, default=ROOT/'run/bak/sharp/output/Main')
     parser.add_argument('--timeout', type=float, default=180, help='Seconds allowed per measurement process')
     args = parser.parse_args()
+    if args.build_only and args.update_readme:
+        parser.error('--build-only cannot update measurements')
     if args.dotnet is None:
         parser.error('Supply --dotnet PATH to a .NET 10 executable, or set FABLE_DOTNET')
     parent = ROOT/'var/benchmark/fable-rust'
@@ -49,6 +52,9 @@ def main():
     with (directory/'check.log').open('w') as log:
         subprocess.run([binary, '--check-only'], cwd=ROOT, stdout=log,
                        stderr=subprocess.STDOUT, timeout=args.timeout, check=True)
+    if args.build_only:
+        print('14 kernels verified; build manifest: ' + str(manifest), flush=True)
+        return
     print('14 kernels executed successfully; starting measurements.', flush=True)
     command = [
         sys.executable, str(ASSETS/'collect_benchmark.py'), '--binary', binary,

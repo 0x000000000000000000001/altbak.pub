@@ -36,3 +36,9 @@ with tempfile.TemporaryDirectory(prefix="altbak-cpp-check-") as directory:
         str(runtime / "purescript.cpp"), "-o", str(tree_executable)]
     subprocess.run(tree_command, check=True)
     subprocess.run([str(tree_executable)], check=True)
+    functional_executable = Path(directory) / "functional-check"
+    functional_command = shlex.split(os.environ.get("CXX", "clang++")) + flags + [
+        "-I", str(runtime), str(ROOT / "test/cpp-functional.cpp"),
+        str(runtime / "purescript.cpp"), "-o", str(functional_executable)]
+    subprocess.run(functional_command, check=True)
+    subprocess.run([str(functional_executable)], check=True)

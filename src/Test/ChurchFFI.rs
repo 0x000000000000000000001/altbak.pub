@@ -1,36 +1,36 @@
-use std::sync::Arc;
+use std::rc::Rc;
 
-type IntFn = Arc<dyn Fn(i64) -> i64>;
-type Church = Arc<dyn Fn(IntFn) -> IntFn>;
+type Step<A> = Rc<dyn Fn(A) -> A>;
+type Church<A> = Rc<dyn Fn(Step<A>) -> Step<A>>;
 
-fn zero() -> Church {
-    Arc::new(|_f| Arc::new(|x| x))
+fn zero<A: 'static>() -> Church<A> {
+    Rc::new(|_f| Rc::new(|x| x))
 }
 
-fn succ(n: Church) -> Church {
-    Arc::new(move |f| {
+fn succ<A: 'static>(n: Church<A>) -> Church<A> {
+    Rc::new(move |f| {
         let n = n.clone();
-        Arc::new(move |x| f(n(f.clone())(x)))
+        Rc::new(move |x| f(n(f.clone())(x)))
     })
 }
 
-fn add_c(m: Church, n: Church) -> Church {
-    Arc::new(move |f| {
+fn add_c<A: 'static>(m: Church<A>, n: Church<A>) -> Church<A> {
+    Rc::new(move |f| {
         let m = m.clone();
         let n = n.clone();
-        Arc::new(move |x| m(f.clone())(n(f.clone())(x)))
+        Rc::new(move |x| m(f.clone())(n(f.clone())(x)))
     })
 }
 
-fn mul_c(m: Church, n: Church) -> Church {
-    Arc::new(move |f| {
+fn mul_c<A: 'static>(m: Church<A>, n: Church<A>) -> Church<A> {
+    Rc::new(move |f| {
         let m = m.clone();
         let n = n.clone();
-        Arc::new(move |x| m(n(f.clone()))(x))
+        Rc::new(move |x| m(n(f.clone()))(x))
     })
 }
 
-fn from_int(n: i64) -> Church {
+fn from_int(n: i64) -> Church<i64> {
     if n == 0 {
         zero()
     } else {
@@ -38,27 +38,27 @@ fn from_int(n: i64) -> Church {
     }
 }
 
-fn to_int(n: Church) -> i64 {
-    let f: IntFn = Arc::new(|x| x + 1);
+fn to_int(n: Church<i64>) -> i64 {
+    let f: Step<i64> = Rc::new(|x| x + 1);
     n(f)(0)
 }
 
-fn c10(limit: i64) -> Church {
-    from_int(limit) // Note: using limit here to match benchmark behavior
+fn c10(limit: i64) -> Church<i64> {
+    from_int(limit)
 }
 
-fn c100(limit: i64) -> Church {
+fn c100(limit: i64) -> Church<i64> {
     mul_c(c10(limit), c10(limit))
 }
 
-fn c10k(limit: i64) -> Church {
+fn c10k(limit: i64) -> Church<i64> {
     mul_c(c100(limit), c100(limit))
 }
 
-fn c100k(limit: i64) -> Church {
+fn c100k(limit: i64) -> Church<i64> {
     mul_c(c10k(limit), c10(limit))
 }
 
-pub fn Test_ChurchFFI_runChurchFFI(mut limit: i64) -> i64 {
+pub fn Test_ChurchFFI_runChurchFFI(limit: i64) -> i64 {
     to_int(c100k(limit))
 }

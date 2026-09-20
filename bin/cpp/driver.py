@@ -343,7 +343,7 @@ def main():
     parser.add_argument('--pscpp', type=Path, default=ROOT.parent / 'pscpp-bin/pscpp')
     parser.add_argument('--cxx', default=shutil.which('clang++') or 'c++')
     parser.add_argument('--spago', default=shutil.which('spago') or 'spago')
-    parser.add_argument('--ffi-root', type=Path, default=Path('/tmp/cpp-ffi'))
+    parser.add_argument('--ffi-root', type=Path, default=ROOT.parent / 'cpp-ffi')
     parser.add_argument('--dependency-root', type=Path,
                         help='cached Spago p directory to snapshot; existing C++ cache is preferred')
     args = parser.parse_args()

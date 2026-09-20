@@ -23,6 +23,7 @@ func Opaque(a interface{}) func() interface{} {
 }
 
 // Keep benchmark inputs opaque to the Go compiler without constraining kernels.
+//
 //go:noinline
 func opaqueValue(a interface{}) interface{} {
 	return a
@@ -30,16 +31,18 @@ func opaqueValue(a interface{}) interface{} {
 
 var benchmarkResult int64
 
-func MeasureBatch(iterations int, expected int, act func() int) float64 {
-	result := 0
-	start := time.Now()
-	for i := 0; i < iterations; i++ {
-		result = act()
-		atomic.StoreInt64(&benchmarkResult, int64(result))
+func MeasureBatch(iterations int, expected int, act func() int) func() float64 {
+	return func() float64 {
+		result := 0
+		start := time.Now()
+		for i := 0; i < iterations; i++ {
+			result = act()
+			atomic.StoreInt64(&benchmarkResult, int64(result))
+		}
+		elapsed := float64(time.Since(start).Nanoseconds()) / 1e3
+		if result != expected {
+			panic("Unstable benchmark result")
+		}
+		return elapsed / float64(iterations)
 	}
-	elapsed := float64(time.Since(start).Nanoseconds()) / 1e3
-	if result != expected {
-		panic("Unstable benchmark result")
-	}
-	return elapsed
 }

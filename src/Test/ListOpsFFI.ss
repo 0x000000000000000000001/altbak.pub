@@ -15,12 +15,12 @@
         [(p (car l)) (loop (cdr l) (cons (car l) acc))]
         [else (loop (cdr l) acc)])))
 
-  (define (sum-list lst)
-    (let loop ([l lst] [acc 0])
+  (define (foldl combine initial lst)
+    (let loop ([l lst] [acc initial])
       (if (null? l)
           acc
-          (loop (cdr l) (+ acc (car l))))))
+          (loop (cdr l) (combine acc (car l))))))
 
   (define (runListOpsFFI limit)
-    (sum-list (filter-list (lambda (x) (= (modulo x 2) 0)) (range-list 1 limit))))
+    (foldl + 0 (filter-list (lambda (x) (= (modulo x 2) 0)) (range-list 1 limit))))
 )

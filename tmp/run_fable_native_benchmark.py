@@ -134,6 +134,7 @@ debug = false
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--update-readme', action='store_true')
+    parser.add_argument('--build-only', action='store_true')
     parser.add_argument('--dotnet', type=Path,
                         default=os.environ.get('FABLE_DOTNET') or shutil.which('dotnet'))
     parser.add_argument('--fable-package', type=Path,
@@ -142,6 +143,8 @@ def main():
     parser.add_argument('--timeout', type=float, default=180,
                         help='Seconds allowed per measurement process')
     args = parser.parse_args()
+    if args.build_only and args.update_readme:
+        parser.error('--build-only cannot update measurements')
     if not math.isfinite(args.timeout) or args.timeout <= 0:
         parser.error('--timeout must be a positive finite number')
     if args.dotnet is None:
@@ -160,6 +163,9 @@ def main():
     directory = Path(tempfile.mkdtemp(prefix=stamp, dir=parent))
     print(f'Builds, validated results and provenance: {directory}', flush=True)
     binary, manifest = build_native(args, directory)
+    if args.build_only:
+        print('Build manifest: ' + str(manifest), flush=True)
+        return
     command = [sys.executable, str(ASSETS / 'collect_benchmark.py'),
                '--variant', 'native-fsharp', '--binary', str(binary),
                '--output-dir', str(directory / 'measurements'),

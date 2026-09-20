@@ -20,6 +20,8 @@ import sys
 import time
 import xml.etree.ElementTree as ET
 
+from adapt_fsharp import chunks, propagate_reflection_exceptions
+
 
 ASSETS = (
     "extract_fable_kernels.py", "adapt_fsharp.py", "runtime.fs",
@@ -128,8 +130,21 @@ class Build:
 def adapt_compatibility_sources(directory: Path, runtime: Path) -> list[dict]:
     changes = []
     target_runtime = directory / "Sharpurs_Prelude.fs"
+    # Keep the generated Euclidean Int implementation when the typed sharpurs
+    # path needs it. The compatibility overlay changes function dispatch, not
+    # integer arithmetic; this declaration is copied byte-for-byte.
+    retained = [(name, body) for name, body, _ in chunks(target_runtime.read_text())
+                if name == "sharpurs_int_mod"]
+    if len(retained) > 1:
+        raise ValueError("Duplicate generated sharpurs_int_mod runtime declarations")
     shutil.copy2(runtime, target_runtime)
     changes.append({"file": target_runtime.name, "action": "overlay_runtime", "sha256": sha256(runtime)})
+    for name, body in retained:
+        with target_runtime.open("a") as output:
+            output.write("\n" + body)
+        changes.append({"file": target_runtime.name, "action": "retain_generated_runtime_helper",
+                        "helper": name, "sha256": hashlib.sha256(body.encode()).hexdigest(),
+                        "proof": "Generated declaration copied verbatim from the extracted source runtime."})
     array = directory / "Data.Array.fs"
     before = array.read_text()
     after, count = re.subn(r"^[ \t]*open System\.Linq[ \t]*(?:\n|$)", "", before, flags=re.M)
@@ -137,12 +152,11 @@ def adapt_compatibility_sources(directory: Path, runtime: Path) -> list[dict]:
     changes.append({"file": array.name, "action": "remove_unused_open_System_Linq", "count": count})
     tree = directory / "Test.RBTree.fs"
     before = tree.read_text()
-    wrapper = "raise (System.Reflection.TargetInvocationException(ex))"
-    count = before.count(wrapper)
-    if count != 2:
-        raise ValueError(f"Expected exactly 2 reflection exception wrappers in {tree}, found {count}")
-    tree.write_text(before.replace(wrapper, "raise ex"))
-    changes.append({"file": tree.name, "action": "propagate_original_exception", "count": count})
+    after, adapters = propagate_reflection_exceptions(before)
+    tree.write_text(after)
+    changes.append({"file": tree.name, "action": "propagate_original_exception",
+                    "count": len(adapters), "sha256_before": hashlib.sha256(before.encode()).hexdigest(),
+                    "sha256_after": sha256(tree), "adapters": adapters})
     return changes
 
 
