@@ -3,24 +3,25 @@
 #include <memory>
 
 namespace {
-    struct Node;
-    using List = std::shared_ptr<const Node>;
-    struct Node { int head; List tail; };
+    template <class A> struct Node;
+    template <class A> using List = std::shared_ptr<const Node<A>>;
+    template <class A> struct Node { A head; List<A> tail; };
 
-    List cons(int head, List tail) {
-        return std::make_shared<Node>(Node{head, tail});
+    template <class A>
+    List<A> cons(A head, List<A> tail) {
+        return std::make_shared<Node<A>>(Node<A>{head, tail});
     }
 
-    List range(int start, int end) {
-        List result;
+    List<int> range(int start, int end) {
+        List<int> result;
         for (int value = end; value >= start; --value) {
             result = cons(value, result);
         }
         return result;
     }
 
-    List filterEvens(List values) {
-        List evens;
+    List<int> filterEvens(List<int> values) {
+        List<int> evens;
         while (values) {
             if (values->head % 2 == 0) evens = cons(values->head, evens);
             values = values->tail;
@@ -28,7 +29,8 @@ namespace {
         return evens;
     }
 
-    int foldl(const std::function<int(int, int)>& combine, int acc, List values) {
+    template <class A, class B>
+    B foldl(const std::function<B(B, A)>& combine, B acc, List<A> values) {
         while (values) {
             acc = combine(acc, values->head);
             values = values->tail;
@@ -41,7 +43,7 @@ FOREIGN_BEGIN(Test_ListOpsFFI)
 exports["runListOpsFFI"] = [](const boxed& in) -> boxed {
     const auto values = range(1, unbox<int>(in));
     const auto evens = filterEvens(values);
-    const int result = foldl([](int sum, int value) { return sum + value; }, 0, evens);
+    const int result = foldl<int, int>([](int sum, int value) { return sum + value; }, 0, evens);
     return result;
 };
 FOREIGN_END

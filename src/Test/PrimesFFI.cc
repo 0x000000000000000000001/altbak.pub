@@ -3,24 +3,26 @@
 #include <memory>
 
 namespace {
-    struct Node;
-    using List = std::shared_ptr<const Node>;
-    struct Node { int head; List tail; };
+    template <class A> struct Node;
+    template <class A> using List = std::shared_ptr<const Node<A>>;
+    template <class A> struct Node { A head; List<A> tail; };
 
-    List cons(int head, List tail) {
-        return std::make_shared<Node>(Node{head, tail});
+    template <class A>
+    List<A> cons(A head, List<A> tail) {
+        return std::make_shared<Node<A>>(Node<A>{head, tail});
     }
 
-    List range(int start, int end) {
-        List result;
+    List<int> range(int start, int end) {
+        List<int> result;
         for (int value = end; value >= start; --value) {
             result = cons(value, result);
         }
         return result;
     }
 
-    List reverse(List values) {
-        List result;
+    template <class A>
+    List<A> reverse(List<A> values) {
+        List<A> result;
         while (values) {
             result = cons(values->head, result);
             values = values->tail;
@@ -28,8 +30,9 @@ namespace {
         return result;
     }
 
-    List filter(const std::function<bool(int)>& predicate, List values) {
-        List accepted;
+    template <class A>
+    List<A> filter(const std::function<bool(A)>& predicate, List<A> values) {
+        List<A> accepted;
         while (values) {
             if (predicate(values->head)) accepted = cons(values->head, accepted);
             values = values->tail;
@@ -37,14 +40,14 @@ namespace {
         return reverse(accepted);
     }
 
-    List sieve(List values) {
-        if (!values) return List{};
+    List<int> sieve(List<int> values) {
+        if (!values) return List<int>{};
         const int prime = values->head;
-        return cons(prime, sieve(filter(
+        return cons(prime, sieve(filter<int>(
             [prime](int value) { return value % prime != 0; }, values->tail)));
     }
 
-    int sumList(List values) {
+    int sumList(List<int> values) {
         int sum = 0;
         while (values) {
             sum += values->head;

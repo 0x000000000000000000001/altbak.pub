@@ -1,31 +1,41 @@
 package Test_ArrayOpsFFI
 
-func RunArrayOpsFFI(limit int) int {
-	n := int(limit)
-
-	arr := make([]int, 0)
+func arrayRange(start, end int) []int {
 	step := 1
-	if n < 1 {
+	if end < start {
 		step = -1
 	}
-	for i := 1; ; i += step {
+	arr := make([]int, 0)
+	for i := start; ; i += step {
 		arr = append(arr, i)
-		if i == n {
-			break
+		if i == end {
+			return arr
 		}
 	}
+}
 
-	evens := make([]int, 0)
+func arrayFilter[A any](predicate func(A) bool, arr []A) []A {
+	result := make([]A, 0)
 	for _, x := range arr {
-		if x%2 == 0 {
-			evens = append(evens, x)
+		if predicate(x) {
+			result = append(result, x)
 		}
 	}
+	return result
+}
 
-	sum := 0
-	for _, x := range evens {
-		sum += x
+func arrayFoldl[A, B any](f func(B) func(A) B, initial B, arr []A) B {
+	acc := initial
+	for _, x := range arr {
+		acc = f(acc)(x)
 	}
+	return acc
+}
 
-	return (sum)
+func RunArrayOpsFFI(limit int) int {
+	values := arrayRange(1, limit)
+	evens := arrayFilter(func(x int) bool { return x%2 == 0 }, values)
+	return arrayFoldl(func(acc int) func(int) int {
+		return func(x int) int { return acc + x }
+	}, 0, evens)
 }

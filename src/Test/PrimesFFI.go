@@ -1,6 +1,5 @@
 package Test_PrimesFFI
 
-
 type List[A any] interface {
 	isList()
 }
@@ -32,7 +31,7 @@ func filter[A any](p func(A) bool, lst List[A]) List[A] {
 	goFunc = func(list List[A], acc List[A]) List[A] {
 		switch l := list.(type) {
 		case Nil[A]:
-			return reverse(acc)
+			return reverse[A](acc)
 		case Cons[A]:
 			x := l.value0
 			xs := l.value1

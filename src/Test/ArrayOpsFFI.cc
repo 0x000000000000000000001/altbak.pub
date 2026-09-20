@@ -11,21 +11,26 @@ namespace {
         }
     }
 
-    std::vector<int> filterEvens(const std::vector<int>& values) {
-        std::vector<int> evens;
-        for (int value : values) {
-            if (value % 2 == 0) evens.push_back(value);
+    template <class A, class Predicate>
+    std::vector<A> filter(Predicate predicate, const std::vector<A>& values) {
+        std::vector<A> accepted;
+        for (const A& value : values) {
+            if (predicate(value)) accepted.push_back(value);
         }
-        return evens;
+        return accepted;
+    }
+
+    template <class A, class B, class Combine>
+    B foldl(Combine combine, B acc, const std::vector<A>& values) {
+        for (const A& value : values) acc = combine(acc, value);
+        return acc;
     }
 }
 
 FOREIGN_BEGIN(Test_ArrayOpsFFI)
 exports["runArrayOpsFFI"] = [](const boxed& in) -> boxed {
     const auto values = range(1, unbox<int>(in));
-    const auto evens = filterEvens(values);
-    int sum = 0;
-    for (int value : evens) sum += value;
-    return sum;
+    const auto evens = filter([](int value) { return value % 2 == 0; }, values);
+    return foldl([](int sum, int value) { return sum + value; }, 0, evens);
 };
 FOREIGN_END

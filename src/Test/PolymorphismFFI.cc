@@ -2,13 +2,15 @@
 #include <functional>
 
 namespace {
-    using IntFn = std::function<int(int)>;
+    template <class A> using Endo = std::function<A(A)>;
+    template <class A>
     struct Monoidish {
-        int mempty;
-        std::function<IntFn(int)> mappend;
+        A mempty;
+        std::function<Endo<A>(A)> mappend;
     };
 
-    int polyLoop(const Monoidish& dict, int n, int acc) {
+    template <class A>
+    A polyLoop(const Monoidish<A>& dict, int n, A acc) {
         while (n > 0) {
             acc = dict.mappend(acc)(dict.mempty);
             --n;
@@ -19,7 +21,7 @@ namespace {
 
 FOREIGN_BEGIN(Test_PolymorphismFFI)
 exports["runPolymorphismFFI"] = [](const boxed& in) -> boxed {
-    const Monoidish dict{1, [](int x) -> IntFn {
+    const Monoidish<int> dict{1, [](int x) -> Endo<int> {
         return [x](int y) { return x + y; };
     }};
     const int result = polyLoop(dict, unbox<int>(in), 0);

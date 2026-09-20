@@ -1,6 +1,5 @@
 package Test_ChurchFFI
 
-
 type Church[A any] func(func(A) A) func(A) A
 
 func zeroC[A any]() Church[A] {

@@ -1,6 +1,5 @@
 package Test_LazyEvaluationFFI
 
-
 type Lazy[A any] func() A
 
 func force[A any](l Lazy[A]) A {

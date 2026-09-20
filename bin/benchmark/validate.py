@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate core benchmark results and timings, forwarding stdin unchanged."""
+"""Validate benchmark results and timings, forwarding stdin unchanged."""
 import argparse
 import json
 import math
@@ -16,9 +16,17 @@ CASES = dict(zip(
 ROW = re.compile(
     r"\(Test\)\s*\n\s*([^\n]+)\s*\n\s*\(Output & Warm-up\)\s*\n"
     r"(.*?)\(Execution time - best of 10\)\s*\n\s*(\S+)\s+μs", re.S)
-EXTENDED_LABELS = ["File I/O (10k writes/reads):", "STArray Operations:",
-                   "String Operations (1k Regex/Split):", "Aff Operations (Asynchronous Delays)",
-                   "Parallelism (10 x Fib 42)"]
+EXTENDED_CASES = [
+    {"module": "Test.FileOps", "label": "File I/O (10k writes/reads):", "value": "10000"},
+    {"module": "Test.STArray", "label": "STArray Operations:", "value": "10"},
+    {"module": "Test.StringOps", "label": "String Operations (1k Regex/Split):", "value": "2000"},
+    # Timer APIs can round a 10 ms deadline to their millisecond clock tick.
+    # Allow one tick, while rejecting a no-op delay with the correct text output.
+    {"module": "Test.AffOperations", "label": "Aff Operations (Asynchronous Delays)",
+     "value": "10", "minimum_us": 9000.0},
+    {"module": "Test.Parallelism", "label": "Parallelism (10 x Fib 42)",
+     "value": "Checksum: 679142946"},
+]
 
 
 def case_for(module, expected=None):
@@ -44,9 +52,7 @@ def expected_cases(mode, test=None, expected=None):
     if expected is not None or test:
         raise ValueError("--test and --expected require --mode test")
     if mode == "x":
-        # Extended effects have backend/runtime-dependent results. Do not claim
-        # that the core oracle validates these; only their timing structure is checked.
-        return [{"label": label, "value": None} for label in EXTENDED_LABELS]
+        return [dict(case) for case in EXTENDED_CASES]
     if mode not in {"pure", "ffi", "fficc"}:
         raise ValueError(f"Unknown benchmark mode {mode}")
     suffix = {"pure": "", "ffi": "FFI", "fficc": "FFICheatcode"}[mode]
@@ -70,6 +76,8 @@ def validate_output(output, mode="pure", test=None, expected=None):
         duration = float(elapsed)
         if not math.isfinite(duration) or duration < 0:
             raise ValueError(f"Invalid duration for {label}: {elapsed}")
+        if duration < case.get("minimum_us", 0):
+            raise ValueError(f"{label} completed in {duration} μs; expected the 10 ms timer to elapse")
         labels.append(label)
         values.append(value)
         times.append(duration)
@@ -84,7 +92,8 @@ def validate_output(output, mode="pure", test=None, expected=None):
         raise ValueError(f"Printed total {total} ms differs from row sum {summed} ms")
     return {"mode": mode, "labels": labels, "values": values, "times_us": times,
             "total_ms": total, "sum_displayed_lines_ms": summed,
-            "values_validated": mode != "x", "timer_unit": "microseconds"}
+            "values_validated": True, "oracle": "extended" if mode == "x" else "core",
+            "timer_unit": "microseconds"}
 
 
 def main():
@@ -105,8 +114,7 @@ def main():
         if args.output:
             args.output.parent.mkdir(parents=True, exist_ok=True)
             args.output.write_text(json.dumps(result, indent=2) + "\n")
-        message = (f"{len(result['values'])} expected core results and timings verified"
-                   if result["values_validated"] else "extended timing structure checked; core result oracle not applicable")
+        message = f"{len(result['values'])} expected {result['oracle']} results and timings verified"
         print("Benchmark validation: " + message, file=sys.stderr)
     except (ValueError, OSError) as error:
         print("Benchmark validation failed: " + str(error), file=sys.stderr)

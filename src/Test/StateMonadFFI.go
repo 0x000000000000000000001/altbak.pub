@@ -1,54 +1,44 @@
 package Test_StateMonadFFI
 
-
-type stateResult struct {
-	val   interface{}
-	state int
+type stateResult[S, A any] struct {
+	val   A
+	state S
 }
 
-type State func(int) stateResult
+type State[S, A any] func(S) stateResult[S, A]
 
-func runState(s State, init int) stateResult {
-	return s(init)
+func runState[S, A any](action State[S, A], initial S) stateResult[S, A] {
+	return action(initial)
 }
 
-func bindState(s State, g func(interface{}) State) State {
-	return func(state int) stateResult {
-		r1 := s(state)
-		gPrime := g(r1.val)
-		return gPrime(r1.state)
+func bindState[S, A, B any](action State[S, A], next func(A) State[S, B]) State[S, B] {
+	return func(state S) stateResult[S, B] {
+		first := action(state)
+		return next(first.val)(first.state)
 	}
 }
 
-func pureState(a interface{}) State {
-	return func(s int) stateResult {
-		return stateResult{val: a, state: s}
-	}
+func pureState[S, A any](value A) State[S, A] {
+	return func(state S) stateResult[S, A] { return stateResult[S, A]{val: value, state: state} }
 }
 
-func get() State {
-	return func(s int) stateResult {
-		return stateResult{val: s, state: s}
-	}
+func get[S any]() State[S, S] {
+	return func(state S) stateResult[S, S] { return stateResult[S, S]{val: state, state: state} }
 }
 
-func put(s int) State {
-	return func(_ int) stateResult {
-		return stateResult{val: nil, state: s}
-	}
+func put[S any](state S) State[S, struct{}] {
+	return func(_ S) stateResult[S, struct{}] { return stateResult[S, struct{}]{val: struct{}{}, state: state} }
 }
 
-func modify(f func(int) int) State {
-	return bindState(get(), func(s interface{}) State {
-		return put(f(s.(int)))
-	})
+func modify[S any](f func(S) S) State[S, struct{}] {
+	return bindState(get[S](), func(state S) State[S, struct{}] { return put(f(state)) })
 }
 
-func chainModifications(n int) State {
+func chainModifications(n int) State[int, struct{}] {
 	if n == 0 {
-		return pureState(nil)
+		return pureState[int](struct{}{})
 	}
-	return bindState(modify(func(x int) int { return x + 1 }), func(_ interface{}) State {
+	return bindState(modify(func(x int) int { return x + 1 }), func(_ struct{}) State[int, struct{}] {
 		return chainModifications(n - 1)
 	})
 }
@@ -61,6 +51,6 @@ func runManyTimes_StateMonad(n int, depth int, acc int) int {
 }
 
 func RunStateMonadFFI(limit int) int {
-	// The shared FFI wrapper supplies depth 60; the PureScript test uses 20 repetitions.
+	// The shared wrapper supplies depth 60; PureScript performs 20 repetitions.
 	return runManyTimes_StateMonad(20, limit, 0)
 }

@@ -1,34 +1,25 @@
 package Test_PolymorphismFFI
 
-
-type Monoidish interface {
-	mempty_() int
-	mappend_(int) func(int) int
+type Monoidish[A any] struct {
+	Mempty  A
+	Mappend func(A) func(A) A
 }
 
-type IntMonoidish struct{}
-
-func (IntMonoidish) mempty_() int {
-	return 1
-}
-
-func (IntMonoidish) mappend_(x int) func(int) int {
-	return func(y int) int {
-		return x + y
-	}
-}
-
-func polyLoop(dict Monoidish, n_init int, acc_init int) int {
-	n := n_init
-	acc := acc_init
-	for n > 0 {
-		acc = dict.mappend_(acc)(dict.mempty_())
+func polyLoop[A any](dict Monoidish[A], n int, acc A) A {
+	for n != 0 {
+		acc = dict.Mappend(acc)(dict.Mempty)
 		n--
 	}
 	return acc
 }
 
+var intMonoidish = Monoidish[int]{
+	Mempty: 1,
+	Mappend: func(x int) func(int) int {
+		return func(y int) int { return x + y }
+	},
+}
+
 func RunPolymorphismFFI(limit int) int {
-	dummy := limit
-	return (polyLoop(IntMonoidish{}, dummy, 0))
+	return polyLoop(intMonoidish, limit, 0)
 }

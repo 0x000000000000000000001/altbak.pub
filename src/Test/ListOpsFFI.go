@@ -1,15 +1,17 @@
 package Test_ListOpsFFI
 
-
 type ListOpsList[A any] interface {
 	isList()
 }
 type ListOpsNil[A any] struct{}
+
 func (ListOpsNil[A]) isList() {}
+
 type ListOpsCons[A any] struct {
 	value0 A
 	value1 ListOpsList[A]
 }
+
 func (ListOpsCons[A]) isList() {}
 
 func rangeListOps(start int, end int) ListOpsList[int] {
