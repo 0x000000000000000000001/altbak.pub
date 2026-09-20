@@ -1,5 +1,5 @@
 (library (Bench foreign)
-  (export benchNow opaque formatNumber)
+  (export benchNow opaque formatNumber measureBatch)
   (import (except (chezscheme) opaque)
           (prefix (purescm runtime) rt:))
 
@@ -12,6 +12,22 @@
 
   (define (opaque a)
     (lambda () a))
+
+  (define benchmark-result 0)
+  (define (measureBatch iterations)
+    (lambda (expected)
+      (lambda (act)
+        (lambda ()
+          (let ([start (benchNow)])
+            (let loop ([n iterations] [result 0])
+              (if (= n 0)
+                  (let ([elapsed (- (benchNow) start)])
+                    (unless (= result expected)
+                      (error 'measureBatch "Unstable benchmark result" result expected))
+                    elapsed)
+                  (let ([value (act)])
+                    (set! benchmark-result value)
+                    (loop (- n 1) value)))))))))
 
   (define (formatNumber n)
     (rt:string->pstring (number->string n))))

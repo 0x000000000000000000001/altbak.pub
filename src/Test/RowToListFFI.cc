@@ -36,8 +36,8 @@ namespace {
 
 FOREIGN_BEGIN(Test_RowToListFFI)
 exports["runRowToListFFI"] = [](const boxed&) -> boxed {
-    const RowCons<int, RowCons<std::string, RowCons<bool, RowCons<double, RowCons<std::string, RowNil>>>>>
-        record{1, {"two", {true, {4.0, {"five", {}}}}}};
-    return keys(Instances<decltype(record)>::dictionary(), record);
+    using Record = RowCons<int, RowCons<std::string, RowCons<bool, RowCons<double, RowCons<std::string, RowNil>>>>>;
+    const Record record{1, {"two", {true, {4.0, {"five", {}}}}}};
+    return keys(Instances<Record>::dictionary(), record);
 };
 FOREIGN_END

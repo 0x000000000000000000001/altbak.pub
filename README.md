@@ -72,7 +72,7 @@ RowToList               | ~ 0.50 μs                        | ~ 2 μs           
 
 #### Scheme
 
-Scheme Benchmark        | Hand-written PureScript<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>Scheme<br>↓<br>Chez-O3 | Hand-written FP-style Scheme FFI<br>↓<br>Chez-O3<br>(WIP) | Hand-written imperative Scheme FFI<br>↓<br>Chez-O3<br>(WIP) |
+Scheme Benchmark        | Hand-written PureScript<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3 | Hand-written FP-style Scheme FFI<br>↓<br>Chez-O3<br><br>(WIP) | Hand-written imperative Scheme FFI<br>↓<br>Chez-O3<br><br>(WIP) |
 ----------------------- | ----------------| -------------------------- | -------------------------------- |
 AST Evaluation          | ~ 0 μs          | ~ 0 μs           | ~ 0 μs                     |
 Fibonacci               | ~ 0 μs          | ~ 0 μs           | ~ 0 μs                     |
