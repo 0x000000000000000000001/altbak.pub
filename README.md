@@ -19,10 +19,6 @@ To ensure fair and executable comparisons across all backends, the test suite is
 
 ### Core stresstest benchmark results (pure computational)
 
-Command: `./bin/run` (Runs all configured core backends, including Wasm). New tests will gradually be added.
-
-Core measurements use numeric results, observable inputs/outputs and ten calibrated batches per process. Published cells use the median of three independent processes. Formatting and build time are excluded. The FP-style FFI mappings and imperative algorithms have distinct roles, documented in the [methodology](docs/benchmark-methodology.md).
-
 #### JavaScript
 
 JS Benchmark            | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[Arista](https://github.com/aristanetworks/purescript-backend-optimizer)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written FP-style JS FFI<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT<br><br>(WIP) | Hand-written imperative JS FFI<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT<br><br>(WIP) |
