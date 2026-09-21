@@ -1,5 +1,8 @@
 # JSON to typed AST — September 22, 2026
 
+This records the runtime correction. The README now uses the subsequent
+[type-table argument traversal measurement](2026-09-22-resolve-args.md).
+
 The complete Go workload falls from **720.986 ms to 599.956 ms (−16.79%)**
 in a fresh before/after campaign. Allocation falls by **19.98%**. Against the
 [published September 21 baseline](2026-09-21-go-diagnostics.md#json-to-typed-ast)
