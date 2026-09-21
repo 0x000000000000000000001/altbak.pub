@@ -3,16 +3,18 @@ set -uo pipefail
 cd "$(dirname "$0")/.."
 
 MODE=pure
+TEST=""
 ARGS=()
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --clean|-c) ARGS+=(--clean); shift ;;
+    --build-only|--run-only) ARGS+=("$1"); shift ;;
     --ffi|--fficc|--x)
       [[ "$MODE" == pure ]] || { echo 'Choose only one benchmark mode.' >&2; exit 2; }
       MODE="${1#--}"; ARGS+=("$1"); shift ;;
     --test)
       [[ "$MODE" == pure && $# -ge 2 ]] || { echo '--test requires a module and cannot be combined with another mode.' >&2; exit 2; }
-      MODE=test; ARGS+=(--test "$2"); shift 2 ;;
+      MODE=test; TEST="${2#Test.}"; ARGS+=(--test "$2"); shift 2 ;;
     *) echo "Unknown option: $1" >&2; exit 2 ;;
   esac
 done
@@ -25,6 +27,9 @@ case "$MODE" in
   ffi|fficc) BACKENDS+=(java scm erl cpp) ;;
   x) ;;
 esac
+if [[ "$MODE" == test && ( "$TEST" == ArrayIndexing || "$TEST" == JsonTypedAst ) ]]; then
+  BACKENDS=(go js)
+fi
 FAILED=()
 for backend in "${BACKENDS[@]}"; do
   echo "=== $backend / $MODE ==="

@@ -1,0 +1,79 @@
+{
+  "origin": "gopurs-aff 238-module TAST corpus frozen 2026-09-21; selected 12 modules spanning arrays, ADTs, collections, Aff and tests",
+  "modules": [
+    {
+      "module": "Data.Array",
+      "bytes": 609523,
+      "sha256": "218aae45d73c9f3235984dcb168880cb8681b8bad2b9ea29af80b1b4c65367a1",
+      "types": 3298
+    },
+    {
+      "module": "Data.Array.Partial",
+      "bytes": 14429,
+      "sha256": "6388c3676e556851a7dc8502b8941d24afb00868878e5b7a55d94b33c8fe9ab4",
+      "types": 63
+    },
+    {
+      "module": "Data.List",
+      "bytes": 635248,
+      "sha256": "246705477e0b62d9d81a4694d6a7bd9e48acf4cb104ec51ddc5d7501f86e67b0",
+      "types": 2180
+    },
+    {
+      "module": "Data.Map.Internal",
+      "bytes": 1268476,
+      "sha256": "0875e432571b04e3a60a08c6a05e868e71cad2e848c292f6039aad3298340914",
+      "types": 5311
+    },
+    {
+      "module": "Data.Either",
+      "bytes": 185912,
+      "sha256": "71ebc2b87b39a46fa22221ff9ffd0ca0d4313e56621d5139a94bce2a52d4849f",
+      "types": 1025
+    },
+    {
+      "module": "Data.Maybe",
+      "bytes": 162284,
+      "sha256": "b09ecaabd2bf23c7c3353a6075d59d7c6bc18a38bb98cacb900a3a2c0226570c",
+      "types": 793
+    },
+    {
+      "module": "Data.Traversable",
+      "bytes": 473941,
+      "sha256": "506f2174b03ad5c6d5e5782de4554d438f59976eeae63bdf6a0c40abb5dfc68a",
+      "types": 2750
+    },
+    {
+      "module": "Effect.Aff",
+      "bytes": 358576,
+      "sha256": "ef46ddb003fd336145daeefc6fbae4dec9c43c3e1a59927896393532c1d1decf",
+      "types": 2249
+    },
+    {
+      "module": "Effect.Class",
+      "bytes": 7491,
+      "sha256": "8a00d41002380ed61f664f320fff63d284a07e8f1bba2882e06807bbdff1452e",
+      "types": 47
+    },
+    {
+      "module": "Test.Main",
+      "bytes": 1485997,
+      "sha256": "e4de47c30f0c10ba96af32f60849382ee45cf1bca3970171b2223307610e22ab",
+      "types": 2099
+    },
+    {
+      "module": "Control.Monad.ST.Internal",
+      "bytes": 79540,
+      "sha256": "b225809057dd215a1aed535d112b08f8e0af391ce941a8e906f12172a06c6655",
+      "types": 589
+    },
+    {
+      "module": "Data.Tuple",
+      "bytes": 263676,
+      "sha256": "8cdfe18be1e2f87ad47c78cd382a75bc48c31eea55b6c7dc0174def296dc1b54",
+      "types": 1170
+    }
+  ],
+  "total_bytes": 5545093,
+  "compressed_sha256": "10062cfd63d1b5461c335a1ce2c5dc2317e0761b224dfcb66ee996ad60cf965a"
+}

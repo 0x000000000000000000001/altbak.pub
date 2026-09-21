@@ -32,7 +32,12 @@ touch run/bak/go/spago.lock && ln -s run/bak/go/spago.lock spago.lock
 
 mkdir -p test/snapshots/go
 
-cp -r srx/Test/* src/Test/
+for source in srx/Test/*; do
+  case "$(basename "$source")" in
+    JsonTypedAst|JsonTypedAst.purs|JsonTypedAst.go|JsonTypedAst.js) continue ;;
+  esac
+  cp -r "$source" src/Test/
+done
 trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/Test/Parallelism.purs src/AppTest.purs" EXIT
 
 export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"

@@ -1,0 +1,39 @@
+{
+  "date": "2026-09-22",
+  "change": "Relocated sources and exposed existing benchmark protocols through bin/go/run and bin/js/run --test; original published timings retained",
+  "tests": {
+    "diagnostic_dispatch": 6,
+    "publication": 3,
+    "existing_orchestrator": 3,
+    "native_runner": 7
+  },
+  "validated_wrappers": {
+    "json-go": {
+      "result": "var/benchmark/json-diagnostic/structure-validation-go/results.json",
+      "sha256": "9b0641bd6adbc5e34ca699b3293737f20ed6878b5e16f75bfec196eeb680ab39",
+      "processes": 3
+    },
+    "json-js": {
+      "result": "var/benchmark/json-diagnostic/structure-validation-js/results.json",
+      "sha256": "c2c809bc086b228f9eabc8f8fb1da0a349fb9b1327eae15ffa56bf582a38980b",
+      "processes": 3
+    },
+    "array-go": {
+      "result": "var/benchmark/array-indexing/structure-validation-go/results.json",
+      "sha256": "baab5b8c450522b281389c2202e42ee91977819c7fed7d1e3a47fcf45a4a9068",
+      "processes": 3
+    },
+    "array-js": {
+      "result": "var/benchmark/array-indexing/structure-validation-js/results.json",
+      "sha256": "047574841ff609097503ce522453b05b65565078f6946a983b2fddcdcf9a03b4",
+      "processes": 3
+    }
+  },
+  "json_ast_matches_original_oracle_and_both_backends": true,
+  "sources": [
+    "src/Test/ArrayIndexing.purs",
+    "srx/Test/JsonTypedAst.purs",
+    "srx/Test/JsonTypedAst/Fingerprint.purs"
+  ],
+  "old_diagnostics_directory_removed": true
+}

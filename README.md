@@ -37,7 +37,14 @@ State Monad | ~ 48.230633 μs | ~ 10.946736 μs | ~ 46.870770 μs | ~ 0.417788 �
 Lazy Evaluation | ~ 14608.292000 μs | ~ 10604.875000 μs | ~ 17513.125000 μs | ~ 321.477875 μs |
 Array Processing | ~ 7.350688 μs | ~ 3.751200 μs | ~ 3.121460 μs | ~ 0.498405 μs |
 RowToList | ~ 0.041569 μs | ~ 0.017147 μs | ~ 0.059979 μs | ~ 0.020460 μs |
+[Array Indexing (multiple sizes)](docs/benchmark-results/2026-09-21-go-diagnostics.md#array-indexing) | ~ 25.303333 ms | — | — | — |
+[JSON → Typed AST (parse + decode)](docs/benchmark-results/2026-09-21-go-diagnostics.md#json-to-typed-ast) | ~ 83.838958 ms | — | — | — |
 **Total Execution Time** | ~ 129.103274 ms | ~ 66.885327 ms | ~ 48.482643 ms | ~ 30.543090 ms |
+
+These two additional diagnostics use the standard PureScript JS emitter without
+PBO JS optimization and are excluded from the historical 14-case total. Their
+[inputs, timing boundaries and Go comparison](docs/benchmark-results/2026-09-21-go-diagnostics.md)
+are documented separately; “—” means no equivalent measurement was made.
 
 #### Go
 
@@ -57,7 +64,19 @@ State Monad | ~ 150.942383 μs | ~ 303.558594 μs | ~ 52.104168 μs | ~ 0.333684
 Lazy Evaluation | ~ 247.106125 μs | ~ 71378.083000 μs | ~ 13865.375000 μs | ~ 0.268639 μs |
 Array Processing | ~ 19.262085 μs | ~ 43.811848 μs | ~ 4.903117 μs | ~ 0.451534 μs |
 RowToList | ~ 0.151810 μs | ~ 0.504074 μs | ~ 0.072531 μs | ~ 0.031958 μs |
+[Array Indexing (multiple sizes)](docs/benchmark-results/2026-09-21-go-diagnostics.md#array-indexing) | ~ 3.962167 ms | — | — | — |
+[JSON → Typed AST (parse + decode)](docs/benchmark-results/2026-09-21-go-diagnostics.md#json-to-typed-ast) | ~ 717.159500 ms | — | — | — |
 **Total Execution Time** | ~ 13.278496 ms | ~ 1464.743161 ms | ~ 88.991643 ms | ~ 11.344253 ms |
+
+The two additional diagnostics were measured on September 21, 2026 and remain
+excluded from this historical 14-case total. They use different timing boundaries:
+the indexing cell reports a batch of 8,388,608 reads on a boxed array of 16,384
+elements, including loop/checksum overhead; the JSON cell reports the complete
+fixed corpus of 12 modules. [All sizes, phase timings, JS comparisons
+and reproduction commands](docs/benchmark-results/2026-09-21-go-diagnostics.md)
+are recorded separately. Go uses GOMAXPROCS=1 in these diagnostics; JS retains its
+default runtime background threads. “—” means no equivalent measurement was made
+for that column.
 
 #### Scheme
 

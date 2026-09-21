@@ -93,7 +93,10 @@ main :: Effect Unit
 main = void $ runBench Case.describe Case.act
 ''')
     elif args.mode == 'x':
-        shutil.copytree(ROOT / 'srx', directory / 'src', dirs_exist_ok=True)
+        # JsonTypedAst is built separately with its optional PBO dependency.
+        shutil.copytree(ROOT / 'srx', directory / 'src', dirs_exist_ok=True,
+                        ignore=shutil.ignore_patterns('JsonTypedAst', 'JsonTypedAst.purs',
+                                                     'JsonTypedAst.go', 'JsonTypedAst.js'))
         (directory / 'var').mkdir(exist_ok=True)
     source = ROOT / 'run/bak/php/spago.php.yaml'
     config = re.sub(r'(?m)^(\s*(?:path|cmd):\s*)"([^"\n]+)"',

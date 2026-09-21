@@ -22,6 +22,52 @@ folding, conversion to loops, allocation reuse and invariant-code motion.
 A compiler reducing a generic computation to a constant is valid. Replacing that
 computation manually with its expected result in an FP reference is not.
 
+## Additional Go diagnostics
+
+The Go and JS tables include two additional diagnostics, with a [separate measurement
+archive](benchmark-results/2026-09-21-go-diagnostics.md). The existing 14-case
+results and totals remain the published core baseline. These diagnostics do not
+assert that Go must outperform JavaScript.
+
+Sources use `src/Test/ArrayIndexing.purs` and `srx/Test/JsonTypedAst.*`.
+Run them through `bin/go/run --test ArrayIndexing` or `--test JsonTypedAst`,
+and the equivalent `bin/js/run` commands. They are opt-in cases with their
+recorded protocols, not additions to the ordinary fourteen-case or `--x` totals.
+PBO dependencies are resolved only in the JSON test's isolated workspace.
+
+- **Array Indexing (multiple sizes):** repeatedly read elements from arrays of
+  16, 1,024 and 16,384 elements, exercising both native and boxed representations
+  and the generated conversion between them. Obtain inputs through an optimization
+  barrier, consume a checked checksum, and keep input construction outside the
+  indexed-read interval. Report time and allocated bytes per access for each size,
+  rather than hiding the size dependence in one aggregate. Check the generated
+  code actually exercises the intended conversion; allocations must not grow
+  with the entire array length for a single read. Compare the same PureScript
+  workload compiled to Go and JS.
+- **JSON → Typed AST (parse + decode):** use a fixed, versioned corpus of real
+  TAST/tcorefn JSON and the same PBO decoding logic compiled to Go and JS. Measure
+  JSON parsing, decoding of the parsed objects into the typed AST, and their
+  combined duration separately. File reading and compiler optimization/emission
+  are outside these intervals. Preserve and verify the types and decoded
+  structure, and recreate decoded state on every invocation. Report corpus size,
+  time and Go allocations. Use one worker for the sequential comparison; record
+  any parallel variant separately. Parsing includes the selected JSON library
+  and runtime costs, so a parsing-only result cannot explain all AST decoding.
+
+Freeze sources, inputs, binaries and runtime settings, validate outputs, and
+collect three independent processes per configuration after warm-up.
+The measured array protocol uses three warm-ups and ten batches, GOGC=800; JSON
+uses two warm-ups and five corpus samples per phase, GOGC=100. Both report the
+median of three process minima with Go GOMAXPROCS=1. This caps Go runtime execution
+as well as application work; Node retains its default background threads, so the
+comparison does not establish equal total CPU use. Array drivers call generated
+native Go kernels directly; JSON retains generic callback adapters. These
+boundaries are recorded rather than equated to every historical table cell.
+
+Keep per-size and per-phase results alongside the table summary. Compiler-workload
+measurements use a different boundary from the numeric core suite and must remain
+outside its historical total.
+
 ## Core timing boundary
 
 Core entry points return integers. Conversion to text, logging, compilation and
