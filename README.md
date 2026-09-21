@@ -38,7 +38,7 @@ Lazy Evaluation | ~ 14608.292000 μs | ~ 10604.875000 μs | ~ 17513.125000 μs |
 Array Processing | ~ 7.350688 μs | ~ 3.751200 μs | ~ 3.121460 μs | ~ 0.498405 μs |
 RowToList | ~ 0.041569 μs | ~ 0.017147 μs | ~ 0.059979 μs | ~ 0.020460 μs |
 Array Indexing (excluded WIP) | ~ 25.303333 ms | — | — | — |
-JSON to Typed AST (excluded WIP) | ~ 85.855666 ms | — | — | — |
+JSON to Typed AST (excluded WIP) | ~ 75.898834 ms | — | — | — |
 **Total Execution Time** | ~ 129.103274 ms <br>(/C = 13.1x) | ~ 66.885327 ms <br>(/C = 6.8x) | ~ 48.482643 ms <br>(/C = 4.9x) | ~ 30.543090 ms <br>(/C = 3.1x) |
 
 #### Go
@@ -60,7 +60,7 @@ Lazy Evaluation | ~ 247.106125 μs | ~ 71378.083000 μs | ~ 13865.375000 μs | ~
 Array Processing | ~ 19.262085 μs | ~ 43.811848 μs | ~ 4.903117 μs | ~ 0.451534 μs |
 RowToList | ~ 0.151810 μs | ~ 0.504074 μs | ~ 0.072531 μs | ~ 0.031958 μs |
 Array Indexing (excluded WIP) | ~ 3.962167 ms | — | — | — |
-JSON to Typed AST (excluded WIP) | ~ 599.955667 ms | — | — | — |
+JSON to Typed AST (excluded WIP) | ~ 573.630542 ms | — | — | — |
 **Total Execution Time** | ~ 13.278496 ms <br>(/C = 1.3x) | ~ 1464.743161 ms <br>(/C = 148.8x) | ~ 88.991643 ms <br>(/C = 9.0x) | ~ 11.344253 ms <br>(/C = 1.2x) |
 
 #### Scheme
