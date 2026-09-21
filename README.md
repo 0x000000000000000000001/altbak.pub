@@ -139,8 +139,6 @@ Array Processing | ~ 23.612631 μs | ~ 362.148438 μs | ~ 3.133240 μs | ~ 0.579
 RowToList | ~ 0.063045 μs | ~ 1.130124 μs | ~ 0.108747 μs | ~ 0.015588 μs | ~ 0.013889 μs |
 **Total Execution Time** | ~ 9.013064 ms | ~ 2011.762443 ms | ~ 100.111363 ms | ~ 62.460812 ms | ~ 30.761332 ms |
 
-The hand-written [F# reference](tmp/fable_rust/NativeBench.fs) follows the [functional reference contract](tmp/fp_reference_contract.md) and uses unmodified Fable 5.17.2. The sharpurs route requires adapted generated F# and a patched Fable Rust emitter; its result is a compatibility experiment. Both use rustc optimization level 3 and mimalloc. See the [Fable adaptations and build commands](tmp/fable_rust/README.md).
-
 #### C++
 
 C++ Benchmark           | Hand-written PureScript<br>↓<br>[pscpp](https://github.com/purescript-native/purescript)<br>↓<br>C++<br>↓<br>clang++ -O3<br><br>(WIP) | Hand-written FP-style C++ FFI<br>↓<br>[pscpp](https://github.com/purescript-native/purescript)<br>↓<br>C++<br>↓<br>clang++ -O3<br><br>(WIP) | Hand-written imperative C++ FFI<br>↓<br>[pscpp](https://github.com/purescript-native/purescript)<br>↓<br>C++<br>↓<br>clang++ -O3<br><br>(WIP) |
