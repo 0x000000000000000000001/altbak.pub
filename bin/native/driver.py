@@ -157,7 +157,6 @@ def main():
     parser.add_argument('--pgo', action='store_true', help='Go: train and rebuild, using the same GOGC')
     parser.add_argument('--pgo-profile', type=Path, help='Go: use an existing profile; avoids a training run')
     parser.add_argument('--build-dir', type=Path, help='override the isolated workspace directory')
-    parser.add_argument('-n', '--native', action='store_true', help='use the native compiler binary')
     args = parser.parse_args()
     if args.test:
         args.test = args.test.removeprefix('Test.')
@@ -191,8 +190,7 @@ def main():
         fingerprint = inputs(args.language)
         manifest = json.loads(manifest_path.read_text())
         required = {'language': args.language, 'mode': args.mode, 'test': args.test,
-                    'expected': args.expected, 'profile': config, 'inputs': fingerprint,
-                    'native': args.native}
+                    'expected': args.expected, 'profile': config, 'inputs': fingerprint}
         for name, value in required.items():
             if manifest.get(name) != value:
                 raise ValueError(f'Stale or incompatible build ({name}); rebuild without --run-only')
@@ -215,7 +213,7 @@ def main():
     fingerprint = inputs(args.language)
     commands.append(logged(['spago', 'build'], directory, logs / 'spago.log', env))
     if args.language == 'go':
-        backend = ROOT.parent / 'gopurs/gopurs/bin/gopurs-native' if args.native else ROOT.parent / 'gopurs/gopurs/bin/gopurs'
+        backend = ROOT.parent / 'gopurs/gopurs/bin/gopurs'
         commands.append(logged([backend, '--main', entry], directory, logs / 'backend.log', env))
         project = directory / 'output'
         if not (project / 'main/main.go').is_file():
@@ -235,7 +233,7 @@ def main():
                                 '-o', binary, './main'], project, logs / 'build.log', env))
         toolchain = subprocess.check_output(['go', 'version'], text=True, env=env).strip()
     else:
-        backend = ROOT.parent / 'purust/purust/bin/purust-native' if args.native else ROOT.parent / 'purust/purust/bin/purust'
+        backend = ROOT.parent / 'purust/purust/bin/purust'
         command = [backend, '--main', entry, '--source', 'output', '--out', 'output/purust_output']
         if args.mode == 'x':
             command.append('--threaded')
@@ -251,7 +249,7 @@ def main():
     if fingerprint != inputs(args.language):
         raise RuntimeError('Sources changed during build; no executable manifest was accepted')
     manifest = {'language': args.language, 'mode': args.mode, 'test': args.test, 'expected': args.expected,
-                'native': args.native, 'entry': entry, 'profile': config, 'inputs': fingerprint, 'binary_sha256': digest(binary),
+                'entry': entry, 'profile': config, 'inputs': fingerprint, 'binary_sha256': digest(binary),
                 'toolchain': toolchain, 'commands': commands}
     if args.language == 'go' and args.pgo:
         manifest['pgo_profile_sha256'] = digest(profile_path)
