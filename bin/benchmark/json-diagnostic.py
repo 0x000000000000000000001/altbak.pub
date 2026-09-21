@@ -24,7 +24,10 @@ def sha(path):
 def fingerprint():
     paths = list(SOURCE_FILES)
     paths += list(FIXTURES.glob('*')) + [Path(__file__), COMPILER / 'bin/gopurs-native']
-    paths += list((PBO / 'src').rglob('*.purs')) + list((PBO / 'src').rglob('*.go'))
+    # Native library FFI is read during generation, independently of the
+    # compiler binary. A library change must invalidate a previous build.
+    for source_root in [PBO / 'src'] + [p / 'src' for p in COMPILER.parent.glob('gopurs-*') if (p / 'spago.yaml').is_file()]:
+        paths += [p for p in source_root.rglob('*') if p.suffix in {'.purs', '.go', '.js'}]
     return {str(p): sha(p) for p in sorted(paths)}
 
 def environment():

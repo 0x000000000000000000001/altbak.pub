@@ -43,6 +43,9 @@ constitute a comparison with the existing `Array Processing` row, which performs
 
 ## JSON to typed AST
 
+The measurements below are the historical baseline. The README now uses the
+[September 22 runtime correction and new campaign](2026-09-22-json-typed-ast.md).
+
 The versioned fixture contains **12 real TAST/tcorefn modules, 5,545,093 input
 bytes and 21,574 type-table entries**, selected from the frozen gopurs-aff corpus.
 It includes arrays, lists, maps, ADTs, Aff and Test.Main. The archive lists each
