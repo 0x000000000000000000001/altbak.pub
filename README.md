@@ -37,9 +37,9 @@ State Monad | ~ 48.230633 μs | ~ 10.946736 μs | ~ 46.870770 μs | ~ 0.417788 �
 Lazy Evaluation | ~ 14608.292000 μs | ~ 10604.875000 μs | ~ 17513.125000 μs | ~ 321.477875 μs |
 Array Processing | ~ 7.350688 μs | ~ 3.751200 μs | ~ 3.121460 μs | ~ 0.498405 μs |
 RowToList | ~ 0.041569 μs | ~ 0.017147 μs | ~ 0.059979 μs | ~ 0.020460 μs |
-[Array Indexing (multiple sizes)](docs/benchmark-results/2026-09-21-go-diagnostics.md#array-indexing) | ~ 25.303333 ms | — | — | — |
-[JSON → Typed AST (parse + decode)](docs/benchmark-results/2026-09-22-json-typed-ast.md) | ~ 85.855666 ms | — | — | — |
-**Total Execution Time** | ~ 129.103274 ms | ~ 66.885327 ms | ~ 48.482643 ms | ~ 30.543090 ms |
+Array Indexing | ~ 25.303333 ms | — | — | — |
+JSON to Typed AST | ~ 85.855666 ms | — | — | — |
+**Total Execution Time** | ~ 129.103274 ms (/C = 13.1x) | ~ 66.885327 ms (/C = 6.8x) | ~ 48.482643 ms (/C = 4.9x) | ~ 30.543090 ms (/C = 3.1x) |
 
 These two additional diagnostics use the standard PureScript JS emitter without
 PBO JS optimization and are excluded from the historical 14-case total. Their
@@ -64,9 +64,9 @@ State Monad | ~ 150.942383 μs | ~ 303.558594 μs | ~ 52.104168 μs | ~ 0.333684
 Lazy Evaluation | ~ 247.106125 μs | ~ 71378.083000 μs | ~ 13865.375000 μs | ~ 0.268639 μs |
 Array Processing | ~ 19.262085 μs | ~ 43.811848 μs | ~ 4.903117 μs | ~ 0.451534 μs |
 RowToList | ~ 0.151810 μs | ~ 0.504074 μs | ~ 0.072531 μs | ~ 0.031958 μs |
-[Array Indexing (multiple sizes)](docs/benchmark-results/2026-09-21-go-diagnostics.md#array-indexing) | ~ 3.962167 ms | — | — | — |
-[JSON → Typed AST (parse + decode)](docs/benchmark-results/2026-09-22-json-typed-ast.md) | ~ 599.955667 ms | — | — | — |
-**Total Execution Time** | ~ 13.278496 ms | ~ 1464.743161 ms | ~ 88.991643 ms | ~ 11.344253 ms |
+Array Indexing | ~ 3.962167 ms | — | — | — |
+JSON to Typed AST | ~ 599.955667 ms | — | — | — |
+**Total Execution Time** | ~ 13.278496 ms (/C = 1.3x) | ~ 1464.743161 ms (/C = 148.8x) | ~ 88.991643 ms (/C = 9.0x) | ~ 11.344253 ms (/C = 1.2x) |
 
 Array indexing was measured on September 21, 2026; JSON was remeasured on
 September 22 after the [runtime correction](docs/benchmark-results/2026-09-22-json-typed-ast.md).
@@ -97,7 +97,7 @@ State Monad | ~ 1.700684 μs | ~ 2.024170 μs | ~ 0.840210 μs |
 Lazy Evaluation | ~ 2989.500000 μs | ~ 1964.000000 μs | ~ 0.609741 μs |
 Array Processing | ~ 7.291504 μs | ~ 5.041504 μs | ~ 2.793213 μs |
 RowToList | ~ 0.000998 μs | ~ 0.014573 μs | ~ 0.000999 μs |
-**Total Execution Time** | ~ 44.165240 ms | ~ 45.413760 ms | ~ 19.153440 ms |
+**Total Execution Time** | ~ 44.165240 ms (/C = 4.5x) | ~ 45.413760 ms (/C = 4.6x) | ~ 19.153440 ms (/C = 1.9x) |
 
 #### Erlang
 
@@ -117,7 +117,7 @@ State Monad | ~ 20.410482 μs | ~ 14.547241 μs | ~ 7.614156 μs |
 Lazy Evaluation | ~ 8739.062500 μs | ~ 6780.021000 μs | ~ 0.010030 μs |
 Array Processing | ~ 27.824787 μs | ~ 16.206787 μs | ~ 1.043688 μs |
 RowToList | ~ 0.039801 μs | ~ 0.044050 μs | ~ 0.009521 μs |
-**Total Execution Time** | ~ 94.836484 ms | ~ 75.422523 ms | ~ 14.612848 ms |
+**Total Execution Time** | ~ 94.836484 ms (/C = 9.6x) | ~ 75.422523 ms (/C = 7.7x) | ~ 14.612848 ms (/C = 1.5x) |
 
 #### PHP
 
@@ -137,7 +137,7 @@ State Monad | ~ 494.477875 μs | ~ 567.742188 μs | ~ 0.488331 μs |
 Lazy Evaluation | ~ 802.460938 μs | ~ 109586.125000 μs | ~ 328.287750 μs |
 Array Processing | ~ 99.269203 μs | ~ 27.265381 μs | ~ 0.773900 μs |
 RowToList | ~ 0.836090 μs | ~ 0.882133 μs | ~ 0.077305 μs |
-**Total Execution Time** | ~ 262.808642 ms | ~ 1057.501687 ms | ~ 204.817391 ms |
+**Total Execution Time** | ~ 262.808642 ms (/C = 26.7x) | ~ 1057.501687 ms (/C = 107.4x) | ~ 204.817391 ms (/C = 20.8x) |
 
 #### Rust
 
@@ -157,7 +157,7 @@ State Monad | ~ 54.527832 μs | ~ 932.015625 μs | ~ 81.707031 μs | ~ 34.783529
 Lazy Evaluation | ~ 0.000702 μs | ~ 18989.708000 μs | ~ 37387.542000 μs | ~ 22062.083000 μs | ~ 0.014146 μs |
 Array Processing | ~ 23.612631 μs | ~ 362.148438 μs | ~ 3.133240 μs | ~ 0.579601 μs | ~ 0.247798 μs |
 RowToList | ~ 0.063045 μs | ~ 1.130124 μs | ~ 0.108747 μs | ~ 0.015588 μs | ~ 0.013889 μs |
-**Total Execution Time** | ~ 9.013064 ms | ~ 2011.762443 ms | ~ 100.111363 ms | ~ 62.460812 ms | ~ 30.761332 ms |
+**Total Execution Time** | ~ 9.013064 ms (/C = 0.9x) | ~ 2011.762443 ms (/C = 204.4x) | ~ 100.111363 ms (/C = 10.2x) | ~ 62.460812 ms (/C = 6.3x) | ~ 30.761332 ms (/C = 3.1x) |
 
 #### C++
 
@@ -177,7 +177,7 @@ State Monad | ~ 293.296875 μs | ~ 185.699219 μs | ~ 0.022342 μs |
 Lazy Evaluation | ~ 36615.584000 μs | ~ 31474.584000 μs | ~ 0.023396 μs |
 Array Processing | ~ 36.573404 μs | ~ 1.095034 μs | ~ 0.735326 μs |
 RowToList | ~ 0.482352 μs | ~ 0.296592 μs | ~ 0.022392 μs |
-**Total Execution Time** | ~ 923.877473 ms | ~ 130.225508 ms | ~ 22.064083 ms |
+**Total Execution Time** | ~ 923.877473 ms (/C = 93.9x) | ~ 130.225508 ms (/C = 13.2x) | ~ 22.064083 ms (/C = 2.2x) |
 
 #### F#/C#
 
@@ -197,7 +197,7 @@ State Monad | ~ 172.506516 μs | ~ 79.713867 μs | ~ 3.319326 μs |
 Lazy Evaluation | ~ 5992.229000 μs | ~ 10061.000000 μs | ~ 233.031250 μs |
 Array Processing | ~ 53.159340 μs | ~ 31.737305 μs | ~ 16.088583 μs |
 RowToList | ~ 0.257264 μs | ~ 0.059500 μs | ~ 0.025040 μs |
-**Total Execution Time** | ~ 339.778713 ms | ~ 74.565249 ms | ~ 13.274806 ms |
+**Total Execution Time** | ~ 339.778713 ms (/C = 34.5x) | ~ 74.565249 ms (/C = 7.6x) | ~ 13.274806 ms (/C = 1.3x) |
 
 #### Java
 
@@ -217,7 +217,7 @@ State Monad | ~ 6.256673 μs | ~ 17.249023 μs | ~ 0.003258 μs |
 Lazy Evaluation | ~ 5.242452 μs | ~ 8062.000000 μs | ~ 0.036899 μs |
 Array Processing | ~ 2.957743 μs | ~ 3.063232 μs | ~ 0.497445 μs |
 RowToList | ~ 0.012720 μs | ~ 0.006162 μs | ~ 0.002328 μs |
-**Total Execution Time** | ~ 17.277175 ms | ~ 35.214585 ms | ~ 11.879807 ms |
+**Total Execution Time** | ~ 17.277175 ms (/C = 1.8x) | ~ 35.214585 ms (/C = 3.6x) | ~ 11.879807 ms (/C = 1.2x) |
 
 #### Koka
 
@@ -237,7 +237,7 @@ State Monad | ~ 5.206055 μs |
 Lazy Evaluation | ~ 8982.000000 μs |
 Array Processing | ~ 6.578613 μs |
 RowToList | ~ 0.001033 μs |
-**Total Execution Time** | ~ 54.461581 ms |
+**Total Execution Time** | ~ 54.461581 ms (/C = 5.5x) |
 
 #### Haskell
 
@@ -257,7 +257,7 @@ State Monad | ~ 0.015631 μs |
 Lazy Evaluation | ~ 0.456085 μs |
 Array Processing | ~ 4.326660 μs |
 RowToList | ~ 0.004070 μs |
-**Total Execution Time** | ~ 16.693384 ms |
+**Total Execution Time** | ~ 16.693384 ms (/C = 1.7x) |
 
 #### OCaml
 
@@ -277,7 +277,7 @@ State Monad | ~ 10.026367 μs |
 Lazy Evaluation | ~ 5690.000000 μs |
 Array Processing | ~ 5.893066 μs |
 RowToList | ~ 0.004679 μs |
-**Total Execution Time** | ~ 29.183112 ms |
+**Total Execution Time** | ~ 29.183112 ms (/C = 3.0x) |
 
 #### C (reference)
 
@@ -297,7 +297,7 @@ State Monad | ~ 0.000706 μs |
 Lazy Evaluation | ~ 0.000700 μs |
 Array Processing | ~ 0.048042 μs |
 RowToList | ~ 0.000694 μs |
-**Total Execution Time** | ~ 9.843882 ms |
+**Total Execution Time** | ~ 9.843882 ms (/C = 1.0x) |
 
 ### Extended benchmark results (I/O, mutability, async)
 
