@@ -76,8 +76,17 @@ from the historical fourteen-case totals.
 The [archive](2026-09-22-resolve-args.json) retains every final sample, manifests,
 the first prototype's measurements, validation and integration checks. Scripts
 and raw logs are in `../scratch/resolve-args-20260922`; `compare-direct.py`
-reproduces the alternating campaign from the two recorded immutable builds.
-The before/after manifests intentionally identify different PBO decoder sources.
+records the alternating campaign and its two build paths. The before/after
+measurement manifests intentionally identify different PBO decoder sources.
+
+After measurement, the JS and native compilers were rebuilt and the candidate
+workspace was regenerated with the newly installed native compiler. All 503 Go
+source files remained byte-identical. Its executable was then rebuilt and checked
+against the fixed oracle again. That executable has a new hash, and its current
+manifest is recorded separately from the original measured manifest; the table
+does not substitute this final validation for a new performance campaign.
+Rerunning the historical comparison script requires restoring its matching
+builds; use the normal entry points above for a fresh campaign.
 
 This completes the `resolveArgs` substep. Larger remaining candidates are the
 row/constraint traversals, their FFI callback/array adaptations, and generated
