@@ -1,0 +1,437 @@
+--- a/src/Data/Argonaut/Decode/Class.purs
++++ b/src/Data/Argonaut/Decode/Class.purs
+@@ -4,9 +4,9 @@
+ 
+ import Data.Argonaut.Core (Json, toObject)
+ import Data.Argonaut.Decode.Error (JsonDecodeError(..))
++import Data.Argonaut.Decode.Internal.Record (recordConsImpl, recordNilImpl, rightValue)
+ import Data.Array.NonEmpty (NonEmptyArray)
+-import Data.Bifunctor (lmap)
+-import Data.Either (Either(..))
++import Data.Either (Either(..), isRight)
+ import Data.Identity (Identity)
+ import Data.List (List)
+ import Data.List.NonEmpty (NonEmptyList)
+@@ -108,7 +108,7 @@
+   gDecodeJson :: forall proxy. FO.Object Json -> proxy list -> Either JsonDecodeError (Record row)
+ 
+ instance gDecodeJsonNil :: GDecodeJson () RL.Nil where
+-  gDecodeJson _ _ = Right {}
++  gDecodeJson = recordNilImpl Right
+ 
+ instance gDecodeJsonCons ::
+   ( DecodeJsonField value
+@@ -118,22 +118,40 @@
+   , Row.Lacks field rowTail
+   ) =>
+   GDecodeJson row (RL.Cons field value tail) where
+-  gDecodeJson object _ = do
+-    let
+-      _field = Proxy :: Proxy field
+-      fieldName = reflectSymbol _field
+-      fieldValue = FO.lookup fieldName object
++  gDecodeJson = recordConsImpl reflectName step
++    (gDecodeJson :: FO.Object Json -> Proxy tail -> Either JsonDecodeError (Record rowTail))
++    fallback isRight rightValue Right
++    where
++    _field = Proxy :: Proxy field
+ 
+-    case decodeJsonField fieldValue of
+-      Just fieldVal -> do
+-        val <- case fieldVal of
++    reflectName _ = reflectSymbol _field
++
++    step
++      :: String
++      -> FO.Object Json
++      -> Either JsonDecodeError value
++    step fieldName object =
++      case (decodeJsonField (FO.lookup fieldName object) :: Maybe (Either JsonDecodeError value)) of
++        Just fieldValue -> case fieldValue of
+           Left err -> Left (AtKey fieldName err)
+-          Right value -> Right value
+-        rest <- gDecodeJson object (Proxy :: Proxy tail)
+-        Right $ Record.insert _field val rest
++          Right _ -> fieldValue
++        Nothing -> Left (AtKey fieldName MissingValue)
+ 
+-      Nothing ->
+-        Left $ AtKey fieldName MissingValue
++    fallback object _ = do
++      let
++        fieldName = reflectSymbol _field
++        fieldValue = FO.lookup fieldName object
++
++      case decodeJsonField fieldValue of
++        Just fieldVal -> do
++          val <- case fieldVal of
++            Left err -> Left (AtKey fieldName err)
++            Right value -> Right value
++          rest <- gDecodeJson object (Proxy :: Proxy tail)
++          Right $ Record.insert _field val rest
++
++        Nothing ->
++          Left $ AtKey fieldName MissingValue
+ 
+ class DecodeJsonField a where
+   decodeJsonField :: Maybe Json -> Maybe (Either JsonDecodeError a)
+--- a/spago.yaml
++++ b/spago.yaml
+@@ -13,6 +13,7 @@
+     - maybe
+     - nonempty
+     - ordered-collections
++    - partial
+     - prelude
+     - record
+     - strings
+--- /dev/null
++++ b/src/Data/Argonaut/Decode/Internal/Record.purs
+@@ -0,0 +1,43 @@
++module Data.Argonaut.Decode.Internal.Record
++  ( recordNilImpl
++  , recordConsImpl
++  , rightValue
++  ) where
++
++import Data.Argonaut.Core (Json)
++import Data.Argonaut.Decode.Error (JsonDecodeError)
++import Data.Either (Either(..))
++import Foreign.Object (Object)
++import Partial.Unsafe (unsafeCrashWith)
++import Prelude (Unit)
++import Prim.RowList as RL
++
++-- The public GDecodeJson dictionary remains unchanged. Native backends can
++-- attach an immutable construction plan to its ordinary method value.
++foreign import recordNilImpl
++  :: forall proxy
++   . (Record () -> Either JsonDecodeError (Record ()))
++  -> Object Json
++  -> proxy RL.Nil
++  -> Either JsonDecodeError (Record ())
++
++-- Keep ADT inspection in PureScript, and use this extractor only after isRight
++-- has accepted the same result. The FFI never assumes a constructor layout.
++rightValue :: forall a. Either JsonDecodeError a -> a
++rightValue (Right value) = value
++rightValue (Left _) = unsafeCrashWith "Record decoder expected a successful field"
++
++-- A successful step returns its existing Either envelope unchanged. An unknown
++-- tail uses fallback, retaining the behavior of arbitrary GDecodeJson methods.
++foreign import recordConsImpl
++  :: forall value rowTail tail row list proxyTail proxy
++   . (Unit -> String)
++  -> (String -> Object Json -> Either JsonDecodeError value)
++  -> (Object Json -> proxyTail tail -> Either JsonDecodeError (Record rowTail))
++  -> (Object Json -> proxy list -> Either JsonDecodeError (Record row))
++  -> (forall a. Either JsonDecodeError a -> Boolean)
++  -> (forall a. Either JsonDecodeError a -> a)
++  -> (Record row -> Either JsonDecodeError (Record row))
++  -> Object Json
++  -> proxy list
++  -> Either JsonDecodeError (Record row)
+--- /dev/null
++++ b/src/Data/Argonaut/Decode/Internal/Record.js
+@@ -0,0 +1,4 @@
++// Preserve the ordinary PureScript implementation on JavaScript. The native
++// backend uses the same interface to select its shared construction plan.
++export const recordNilImpl = right => _object => _proxy => right({});
++export const recordConsImpl = _reflect => _step => _tail => fallback => _isRight => _rightValue => _right => fallback;
+--- /dev/null
++++ b/src/Data/Argonaut/Decode/Internal/Record.go
+@@ -0,0 +1,73 @@
++package Record
++
++import "gopurs/output/gopurs_runtime"
++
++type recordDecodeField struct {
++	reflectName gopurs_runtime.Value
++	step        gopurs_runtime.Value
++}
++
++// A plan is immutable after construction and shared by every invocation of
++// the dictionary. Custom dictionaries carry no plan and keep their own method.
++type recordDecodePlan struct {
++	fields     []recordDecodeField
++	isRight    gopurs_runtime.Value
++	rightValue gopurs_runtime.Value
++	right      gopurs_runtime.Value
++}
++
++func (plan *recordDecodePlan) decode(object, _ gopurs_runtime.Value) gopurs_runtime.Value {
++	count := len(plan.fields)
++	if count == 0 {
++		return gopurs_runtime.Apply(plan.right, gopurs_runtime.RecordDict0())
++	}
++	decoded := make([]gopurs_runtime.Value, count)
++	for index, field := range plan.fields {
++		key := gopurs_runtime.Apply(field.reflectName, gopurs_runtime.Value{})
++		result := gopurs_runtime.Apply2(field.step, key, object)
++		if !gopurs_runtime.Apply(plan.isRight, result).BoolVal() {
++			return result
++		}
++		decoded[count-1-index] = gopurs_runtime.Apply(plan.rightValue, result)
++	}
++	// Record.insert evaluates each symbol again while recursion unwinds. Keep
++	// that order, and publish only the final record, never a mutable intermediate.
++	keys := make([]string, 0, count)
++	values := decoded[:0]
++	for index := count - 1; index >= 0; index-- {
++		slot := count - 1 - index
++		key := gopurs_runtime.Apply(plan.fields[index].reflectName, gopurs_runtime.Value{}).StrVal()
++		value := decoded[slot]
++		existing := -1
++		for i, previous := range keys {
++			if previous == key {
++				existing = i
++				break
++			}
++		}
++		if existing >= 0 {
++			values[existing] = value
++		} else {
++			keys = append(keys, key)
++			values = append(values, value)
++		}
++	}
++	return gopurs_runtime.Apply(plan.right, gopurs_runtime.RecordDict(keys, values))
++}
++
++func RecordNilImpl(right gopurs_runtime.Value) gopurs_runtime.Value {
++	plan := &recordDecodePlan{right: right}
++	return gopurs_runtime.WithFunctionData(gopurs_runtime.Func2(plan.decode), plan)
++}
++
++func RecordConsImpl(reflectName, step, tail, fallback, isRight, rightValue, right gopurs_runtime.Value) gopurs_runtime.Value {
++	tailPlan, known := gopurs_runtime.FunctionData[*recordDecodePlan](tail)
++	if !known {
++		return fallback
++	}
++	fields := make([]recordDecodeField, 1+len(tailPlan.fields))
++	fields[0] = recordDecodeField{reflectName: reflectName, step: step}
++	copy(fields[1:], tailPlan.fields)
++	plan := &recordDecodePlan{fields: fields, isRight: isRight, rightValue: rightValue, right: right}
++	return gopurs_runtime.WithFunctionData(gopurs_runtime.Func2(plan.decode), plan)
++}
+--- /dev/null
++++ b/test/record-plan.mjs
+@@ -0,0 +1,33 @@
++import assert from "node:assert/strict";
++import { mkdtempSync, mkdirSync, readFileSync, writeFileSync, rmSync } from "node:fs";
++import { tmpdir } from "node:os";
++import { dirname, resolve, join } from "node:path";
++import { fileURLToPath } from "node:url";
++import { spawnSync } from "node:child_process";
++
++const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
++const helper = join(root, "src/Data/Argonaut/Decode/Internal/Record");
++const source = readFileSync(`${helper}.js`, "utf8");
++const js = await import(`data:text/javascript;base64,${Buffer.from(source).toString("base64")}`);
++const right = value => ({ right: value });
++assert.deepEqual(js.recordNilImpl(right)({})(null), { right: {} });
++const fallback = object => proxy => ({ object, proxy });
++const selected = js.recordConsImpl(null)(null)(null)(fallback)(null)(null)(null);
++assert.equal(selected, fallback);
++assert.deepEqual(selected(12)(34), { object: 12, proxy: 34 });
++
++const work = mkdtempSync(join(tmpdir(), "gopurs-record-plan-"));
++try {
++  mkdirSync(join(work, "output/gopurs_runtime"), { recursive: true });
++  mkdirSync(join(work, "record"));
++  const compiler = resolve(root, "../gopurs");
++  writeFileSync(join(work, "go.mod"), "module gopurs\n\ngo 1.27.0\n");
++  writeFileSync(join(work, "output/gopurs_runtime/runtime.go"), readFileSync(join(compiler, "runtime/runtime.go")));
++  writeFileSync(join(work, "record/record.go"), readFileSync(`${helper}.go`));
++  writeFileSync(join(work, "record/record_test.go"), readFileSync(join(root, "test/record-plan_test.go")));
++  const result = spawnSync("go", ["test", "-race", "-count=1", "./record"], { cwd: work, stdio: "inherit", env: { ...process.env, GOWORK: "off" } });
++  if (result.error) throw result.error;
++  if (result.status !== 0) process.exitCode = result.status ?? 1;
++} finally {
++  rmSync(work, { recursive: true, force: true });
++}
+--- /dev/null
++++ b/test/record-plan_test.go
+@@ -0,0 +1,182 @@
++package Record
++
++import (
++	"fmt"
++	"reflect"
++	"runtime"
++	"sync"
++	"testing"
++
++	"gopurs/output/gopurs_runtime"
++)
++
++var testRight = gopurs_runtime.Func(func(value gopurs_runtime.Value) gopurs_runtime.Value {
++	return gopurs_runtime.RecordDict2("ok", "value", gopurs_runtime.Bool(true), value)
++})
++
++var testLeft = gopurs_runtime.Func(func(value gopurs_runtime.Value) gopurs_runtime.Value {
++	return gopurs_runtime.RecordDict2("ok", "value", gopurs_runtime.Bool(false), value)
++})
++
++var testIsRight = gopurs_runtime.Func(func(result gopurs_runtime.Value) gopurs_runtime.Value {
++	return gopurs_runtime.RecordGet(result, "ok")
++})
++
++var testRightValue = gopurs_runtime.Func(func(result gopurs_runtime.Value) gopurs_runtime.Value {
++	if !gopurs_runtime.RecordGet(result, "ok").BoolVal() {
++		panic("extracted an error as a successful field")
++	}
++	return gopurs_runtime.RecordGet(result, "value")
++})
++
++func testField(name string, value int64, tail gopurs_runtime.Value) gopurs_runtime.Value {
++	key := gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value { return gopurs_runtime.Str(name) })
++	step := gopurs_runtime.Func2(func(key, object gopurs_runtime.Value) gopurs_runtime.Value {
++		return gopurs_runtime.Apply(testRight, gopurs_runtime.Int(value))
++	})
++	return RecordConsImpl(key, step, tail, gopurs_runtime.Value{}, testIsRight, testRightValue, testRight)
++}
++
++func testDecode(plan gopurs_runtime.Value) gopurs_runtime.Value {
++	return gopurs_runtime.Apply2(plan, gopurs_runtime.Value{}, gopurs_runtime.Value{})
++}
++
++func TestRecordPlanConstructionAndLifetime(t *testing.T) {
++	for _, count := range []int{0, 1, 2, 5, 6, 32} {
++		plan := RecordNilImpl(testRight)
++		for index := count - 1; index >= 0; index-- {
++			plan = testField(fmt.Sprint(index), int64(index), plan)
++		}
++		runtime.GC()
++		partial := gopurs_runtime.Apply(plan, gopurs_runtime.Value{})
++		result := gopurs_runtime.Apply(partial, gopurs_runtime.Value{})
++		if !gopurs_runtime.RecordGet(result, "ok").BoolVal() {
++			t.Fatal("unexpected error")
++		}
++		record := gopurs_runtime.RecordGet(result, "value")
++		for index := 0; index < count; index++ {
++			if got := gopurs_runtime.RecordGet(record, fmt.Sprint(index)).IntVal; got != int64(index) {
++				t.Fatalf("field %d: got %d", index, got)
++			}
++		}
++		_ = testDecode(plan)
++		runtime.GC()
++		if got := len(gopurs_runtime.RecordToMap(record)); got != count {
++			t.Fatalf("old result changed: got %d fields, want %d", got, count)
++		}
++	}
++}
++
++func TestRecordPlanEvaluationOrderAndFirstError(t *testing.T) {
++	for _, failure := range []string{"", "a", "b"} {
++		var events []string
++		plan := RecordNilImpl(testRight)
++		for _, name := range []string{"b", "a"} {
++			name := name
++			key := gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
++				events = append(events, "symbol:"+name)
++				return gopurs_runtime.Str(name)
++			})
++			step := gopurs_runtime.Func2(func(key, object gopurs_runtime.Value) gopurs_runtime.Value {
++				events = append(events, "decode:"+key.StrVal())
++				if name == failure {
++					return gopurs_runtime.Apply(testLeft, key)
++				}
++				return gopurs_runtime.Apply(testRight, gopurs_runtime.Int(1))
++			})
++			plan = RecordConsImpl(key, step, plan, gopurs_runtime.Value{}, testIsRight, testRightValue, testRight)
++		}
++		if len(events) != 0 {
++			t.Fatal("constructing a plan evaluated a callback")
++		}
++		result := testDecode(plan)
++		want := []string{"symbol:a", "decode:a", "symbol:b", "decode:b", "symbol:b", "symbol:a"}
++		if failure == "a" {
++			want = want[:2]
++		} else if failure == "b" {
++			want = want[:4]
++		}
++		if !reflect.DeepEqual(events, want) {
++			t.Fatalf("failure=%q events=%v want=%v", failure, events, want)
++		}
++		if failure != "" && (gopurs_runtime.RecordGet(result, "ok").BoolVal() || gopurs_runtime.RecordGet(result, "value").StrVal() != failure) {
++			t.Fatal("first error was not retained")
++		}
++	}
++}
++
++func TestRecordPlanUnknownTailUsesOriginalMethod(t *testing.T) {
++	var calls int
++	shared := gopurs_runtime.RecordDict1("existing", gopurs_runtime.Int(42))
++	fallback := gopurs_runtime.Func2(func(object, proxy gopurs_runtime.Value) gopurs_runtime.Value {
++		calls++
++		if object.IntVal != 12 || proxy.IntVal != 34 {
++			t.Fatal("fallback arguments changed")
++		}
++		return gopurs_runtime.RecordSet(shared, "new", gopurs_runtime.Int(7))
++	})
++	unknownTail := gopurs_runtime.Func2(func(_, _ gopurs_runtime.Value) gopurs_runtime.Value { panic("called outside fallback") })
++	plan := RecordConsImpl(gopurs_runtime.Value{}, gopurs_runtime.Value{}, unknownTail, fallback, testIsRight, testRightValue, testRight)
++	partial := gopurs_runtime.Apply(plan, gopurs_runtime.Int(12))
++	result := gopurs_runtime.Apply(partial, gopurs_runtime.Int(34))
++	if calls != 1 || len(gopurs_runtime.RecordToMap(shared)) != 1 || len(gopurs_runtime.RecordToMap(result)) != 2 {
++		t.Fatal("unknown tail behavior or original record changed")
++	}
++}
++
++func TestRecordPlanDuplicateLabelsPreserveInsertPrecedence(t *testing.T) {
++	plan := testField("same", 1, testField("other", 9, testField("same", 2, RecordNilImpl(testRight))))
++	record := gopurs_runtime.RecordGet(testDecode(plan), "value")
++	if got := gopurs_runtime.RecordGet(record, "same").IntVal; got != 1 {
++		t.Fatalf("got tail value %d instead of head value", got)
++	}
++	if got := len(gopurs_runtime.RecordToMap(record)); got != 2 {
++		t.Fatalf("got %d keys", got)
++	}
++}
++
++func TestRecordPlanUsesSecondSymbolEvaluationForInsertion(t *testing.T) {
++	var reflections int
++	key := gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
++		reflections++
++		if reflections == 1 {
++			return gopurs_runtime.Str("lookup")
++		}
++		return gopurs_runtime.Str("insert")
++	})
++	step := gopurs_runtime.Func2(func(key, object gopurs_runtime.Value) gopurs_runtime.Value {
++		if key.StrVal() != "lookup" {
++			t.Fatal("decoder did not receive the first symbol result")
++		}
++		return gopurs_runtime.Apply(testRight, gopurs_runtime.Int(7))
++	})
++	plan := RecordConsImpl(key, step, RecordNilImpl(testRight), gopurs_runtime.Value{}, testIsRight, testRightValue, testRight)
++	record := gopurs_runtime.RecordGet(testDecode(plan), "value")
++	if reflections != 2 || gopurs_runtime.RecordGet(record, "insert").IntVal != 7 {
++		t.Fatal("insertion did not reevaluate the symbol")
++	}
++}
++
++func TestRecordPlanReentrantAndConcurrent(t *testing.T) {
++	inner := testField("nested", 99, RecordNilImpl(testRight))
++	key := gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value { return gopurs_runtime.Str("outer") })
++	step := gopurs_runtime.Func2(func(key, object gopurs_runtime.Value) gopurs_runtime.Value {
++		return gopurs_runtime.Apply(testRight, gopurs_runtime.RecordGet(testDecode(inner), "value"))
++	})
++	plan := RecordConsImpl(key, step, RecordNilImpl(testRight), gopurs_runtime.Value{}, testIsRight, testRightValue, testRight)
++	var wg sync.WaitGroup
++	for worker := 0; worker < 8; worker++ {
++		wg.Add(1)
++		go func() {
++			defer wg.Done()
++			for iteration := 0; iteration < 100; iteration++ {
++				record := gopurs_runtime.RecordGet(testDecode(plan), "value")
++				innerRecord := gopurs_runtime.RecordGet(record, "outer")
++				if got := gopurs_runtime.RecordGet(innerRecord, "nested").IntVal; got != 99 {
++					t.Errorf("shared state corrupted: %d", got)
++				}
++			}
++		}()
++	}
++	wg.Wait()
++}
