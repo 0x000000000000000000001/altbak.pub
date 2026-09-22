@@ -14,10 +14,16 @@ import sys
 ROOT = Path(__file__).resolve().parents[2]
 SOURCES = ROOT / 'src/Test'
 FIXTURES = ROOT / 'test/fixtures/json-typed-ast'
-SOURCE_FILES = [SOURCES / ('JsonTypedAst.' + ext) for ext in ['purs', 'go', 'js']] + [SOURCES / 'JsonTypedAst/Fingerprint.purs']
+SOURCE_FILES = [SOURCES / ('JsonTypedAst.' + ext) for ext in ['purs', 'go', 'js']]
 COMPILER = ROOT.parent / 'gopurs/gopurs'
 PBO = ROOT.parent / 'purescript-backend-optimizer-gopurs'
 SUITES = ['JsonTypedAst', 'JsonDecoding']
+
+def typed_purs():
+    candidates = list((ROOT.parent / 'purescript/.stack-work/dist').glob('*/**/build/purs/purs'))
+    if not candidates:
+        raise ValueError('Build the local TAST fork before running this diagnostic')
+    return max(candidates, key=lambda path: path.stat().st_mtime).resolve()
 
 def source_files(suite):
     if suite == 'JsonTypedAst': return SOURCE_FILES
@@ -58,7 +64,7 @@ def sha(path):
 
 def fingerprint(suite='JsonTypedAst'):
     paths = list(source_files(suite))
-    paths += list(fixtures(suite).glob('*')) + [Path(__file__), COMPILER / 'bin/gopurs-native']
+    paths += list(fixtures(suite).glob('*')) + [Path(__file__), COMPILER / 'bin/gopurs-native', typed_purs()]
     # Native library FFI is read during generation, independently of the
     # compiler binary. A library change must invalidate a previous build.
     for source_root in ([PBO / 'src'] if suite == 'JsonTypedAst' else []) + [p / 'src' for p in COMPILER.parent.glob('gopurs-*') if (p / 'spago.yaml').is_file()]:
@@ -68,7 +74,9 @@ def fingerprint(suite='JsonTypedAst'):
 def environment():
     env = {k:v for k,v in os.environ.items() if not k.startswith(('GOPURS_', 'NEUTRAL_')) and k not in ['PPROF','GODEBUG','GOMEMLIMIT','GOFLAGS','GOEXPERIMENT','NODE_OPTIONS']}
     env.update(GOMAXPROCS='1', GOGC='100', GOWORK='off')
-    env['PATH'] = str(Path.home()/'.local/bin') + os.pathsep + str(COMPILER/'node_modules/.bin') + os.pathsep + env['PATH']
+    # The standard purs can have the same version number without exporting
+    # TAST metadata. Select and fingerprint the actual local fork explicitly.
+    env['PATH'] = str(typed_purs().parent) + os.pathsep + str(COMPILER/'node_modules/.bin') + os.pathsep + env['PATH']
     return env
 
 def call(command, cwd, log, env):

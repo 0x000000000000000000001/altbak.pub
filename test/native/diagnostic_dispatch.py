@@ -146,7 +146,7 @@ class OptionalSources(unittest.TestCase):
             root = Path(temporary) / "repo"
             paths = ["src/App.purs", "srx/AppX.purs", "srx/Test/STArray.purs",
                      "src/Test/JsonTypedAst.purs", "src/Test/JsonTypedAst.go",
-                     "src/Test/JsonTypedAst.js", "src/Test/JsonTypedAst/Fingerprint.purs",
+                     "src/Test/JsonTypedAst.js",
                      "src/Test/JsonDecoding.purs", "src/Test/JsonDecoding.go", "src/Test/JsonDecoding.js"]
             paths += [f"run/bak/{runtime}/spago.{runtime}.yaml" for runtime in ["go", "php"]]
             paths += [f"run/bak/php/{name}" for name in ["composer.json", "composer.lock"]]
@@ -183,7 +183,6 @@ class OptionalSources(unittest.TestCase):
             sources = {
                 'src/Test/Fib.purs': 'module Test.Fib where\n',
                 'src/Test/JsonTypedAst.purs': 'module Test.JsonTypedAst where\n',
-                'src/Test/JsonTypedAst/Fingerprint.purs': 'module Test.JsonTypedAst.Fingerprint where\n',
                 'src/Test/JsonDecoding.purs': 'module Test.JsonDecoding where\n',
                 'src/Test/JsonTypedAst.go': 'typed foreign',
                 'src/Test/JsonDecoding.js': 'general foreign',

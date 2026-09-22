@@ -39,7 +39,7 @@ class OutputValidation(unittest.TestCase):
             root = Path(temporary).resolve()
             paths = ['src/App.purs', 'src/Test/Fibonacci.purs',
                      'src/Test/JsonDecoding.purs', 'src/Test/JsonTypedAst.purs',
-                     'src/Test/JsonTypedAst/Fingerprint.purs', 'deps/prelude/src/Prelude.purs']
+                     'deps/prelude/src/Prelude.purs']
             for relative in paths:
                 path = root / relative
                 path.parent.mkdir(parents=True, exist_ok=True)

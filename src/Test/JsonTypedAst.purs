@@ -1,13 +1,21 @@
 module Test.JsonTypedAst where
 
-import Prelude
+import Prelude hiding (bind)
 import Data.Argonaut.Core (Json, stringify)
+import Data.Argonaut.Core as Json
 import Data.Argonaut.Parser (jsonParser)
 import Data.Argonaut.Decode.Error (printJsonDecodeError)
+import Data.Array as Array
 import Data.Either (Either(..))
+import Data.Int as Int
+import Data.Map as Map
+import Data.Maybe (Maybe(..))
+import Data.String.CodeUnits as CodeUnits
+import Data.Tuple (Tuple(..))
 import Effect (Effect)
 import Partial.Unsafe (unsafeCrashWith)
 import PureScript.Backend.Optimizer.CoreFn (Ann, Module)
+import PureScript.Backend.Optimizer.CoreFn as C
 import PureScript.Backend.Optimizer.CoreFn.Json (decodeModule)
 
 foreign import drive :: forall a b. (String -> a) -> (a -> b) -> (a -> String) -> (b -> String) -> Effect Unit
