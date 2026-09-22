@@ -1,16 +1,29 @@
-module Test.JsonTypedAst.Fingerprint (fingerprint) where
+module Test.JsonTypedAst where
 
-import Prelude hiding (bind)
+import Prelude
+import Data.Argonaut.Core (Json, stringify)
+import Data.Argonaut.Parser (jsonParser)
+import Data.Argonaut.Decode.Error (printJsonDecodeError)
+import Data.Either (Either(..))
+import Effect (Effect)
+import Partial.Unsafe (unsafeCrashWith)
+import PureScript.Backend.Optimizer.CoreFn (Ann, Module)
+import PureScript.Backend.Optimizer.CoreFn.Json (decodeModule)
 
-import Data.Argonaut.Core (Json)
-import Data.Argonaut.Core as Json
-import Data.Array as Array
-import Data.Int as Int
-import Data.Map as Map
-import Data.Maybe (Maybe(..))
-import Data.String.CodeUnits as CodeUnits
-import Data.Tuple (Tuple(..))
-import PureScript.Backend.Optimizer.CoreFn as C
+foreign import drive :: forall a b. (String -> a) -> (a -> b) -> (a -> String) -> (b -> String) -> Effect Unit
+
+parse :: String -> Json
+parse input = case jsonParser input of
+  Left err -> unsafeCrashWith err
+  Right value -> value
+
+decode :: Json -> Module Ann
+decode input = case decodeModule input of
+  Left err -> unsafeCrashWith (printJsonDecodeError err)
+  Right value -> value
+
+main :: Effect Unit
+main = drive parse decode stringify fingerprint
 
 -- | An exhaustive, ordered representation of the decoded module. Arrays avoid
 -- | depending on JSON object iteration order; only the foreign Map is sorted.

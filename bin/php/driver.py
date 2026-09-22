@@ -80,7 +80,12 @@ def prepare(directory, args):
             target.unlink()
         elif target.exists():
             shutil.rmtree(target)
-    shutil.copytree(ROOT / 'src', directory / 'src')
+    # JSON diagnostics use independent workspaces and optional dependencies.
+    shutil.copytree(ROOT / 'src', directory / 'src',
+                    ignore=shutil.ignore_patterns('JsonTypedAst', 'JsonTypedAst.purs',
+                                                 'JsonTypedAst.go', 'JsonTypedAst.js',
+                                                 'JsonDecoding', 'JsonDecoding.purs',
+                                                 'JsonDecoding.go', 'JsonDecoding.js'))
     entry = {'pure': 'App', 'ffi': 'AppFFI', 'fficc': 'AppFFICheatcode', 'test': 'AppX', 'x': 'AppX'}[args.mode]
     if args.mode == 'test':
         # Replace only the isolated copy, preserving the user's AppX.
@@ -93,10 +98,7 @@ main :: Effect Unit
 main = void $ runBench Case.describe Case.act
 ''')
     elif args.mode == 'x':
-        # JsonTypedAst is built separately with its optional PBO dependency.
-        shutil.copytree(ROOT / 'srx', directory / 'src', dirs_exist_ok=True,
-                        ignore=shutil.ignore_patterns('JsonTypedAst', 'JsonTypedAst.purs',
-                                                     'JsonTypedAst.go', 'JsonTypedAst.js'))
+        shutil.copytree(ROOT / 'srx', directory / 'src', dirs_exist_ok=True)
         (directory / 'var').mkdir(exist_ok=True)
     source = ROOT / 'run/bak/php/spago.php.yaml'
     config = re.sub(r'(?m)^(\s*(?:path|cmd):\s*)"([^"\n]+)"',

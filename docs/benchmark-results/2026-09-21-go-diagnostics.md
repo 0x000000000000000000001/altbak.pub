@@ -92,7 +92,7 @@ PBO function or establish that replacing the JSON parser would remove the gap.
 
 The sources follow the existing layout: the PureScript indexing kernel is
 `src/Test/ArrayIndexing.purs`; the extended compiler workload and its FFI are
-`srx/Test/JsonTypedAst.*`, with its fingerprint helper alongside them. Its fixed
+`src/Test/JsonTypedAst.*`, with its fingerprint helper alongside them. Its fixed
 inputs and expected hashes live in `test/fixtures/json-typed-ast`.
 
 Use the existing backend entry points from the repository root, with the local

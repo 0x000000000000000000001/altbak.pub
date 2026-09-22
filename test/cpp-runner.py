@@ -7,6 +7,8 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from types import SimpleNamespace
+from unittest.mock import patch
 
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,6 +30,33 @@ class OutputValidation(unittest.TestCase):
     def test_valid_full_suite(self):
         self.assertEqual(driver.validate_output(self.output, self.expected, False)["total_ms"], 14)
         self.assertEqual(len(driver.validate_output(self.smoke, self.expected, True)["values"]), 14)
+
+    def test_project_snapshot_excludes_json_diagnostics(self):
+        class StopBeforeCompilation(Exception):
+            pass
+
+        with tempfile.TemporaryDirectory(prefix="altbak-cpp-sources-") as temporary:
+            root = Path(temporary).resolve()
+            paths = ['src/App.purs', 'src/Test/Fibonacci.purs',
+                     'src/Test/JsonDecoding.purs', 'src/Test/JsonTypedAst.purs',
+                     'src/Test/JsonTypedAst/Fingerprint.purs', 'deps/prelude/src/Prelude.purs']
+            for relative in paths:
+                path = root / relative
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text('-- source snapshot fixture\n')
+            work = root / 'build'
+            args = SimpleNamespace(dependency_root=root / 'deps', purs='purs')
+
+            def inspect(command, *_):
+                inputs = [Path(value) for value in command if str(value).endswith('.purs')]
+                self.assertIn(work / 'sources/project/Test/Fibonacci.purs', inputs)
+                self.assertFalse(any('JsonTypedAst' in str(path) or 'JsonDecoding' in str(path)
+                                     for path in inputs))
+                raise StopBeforeCompilation
+
+            with patch.object(driver, 'ROOT', root), patch.object(driver, 'version', return_value='0.14.4'), \
+                    patch.object(driver, 'logged', side_effect=inspect), self.assertRaises(StopBeforeCompilation):
+                driver.build(args, 'pure', 'App', self.expected, work)
 
     def test_wrong_result_and_label_are_rejected(self):
         for output in (self.output.replace("\n7\n", "\n999\n", 1),

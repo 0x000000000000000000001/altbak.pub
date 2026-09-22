@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Expose the two diagnostic protocols through the usual Go and JS runners."""
+"""Expose diagnostic protocols through the usual Go and JS runners."""
 import argparse
 from datetime import datetime, timezone
 import json
@@ -9,7 +9,8 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[2]
-DIAGNOSTICS = {"ArrayIndexing": "array-indexing.py", "JsonTypedAst": "json-diagnostic.py"}
+DIAGNOSTICS = {"ArrayIndexing": "array-indexing.py", "JsonTypedAst": "json-diagnostic.py",
+               "JsonDecoding": "json-diagnostic.py"}
 
 
 def diagnostic_name(arguments):
@@ -24,7 +25,7 @@ def diagnostic_name(arguments):
 
 def options(runtime, arguments):
     parser = argparse.ArgumentParser(
-        description="Run ArrayIndexing or JsonTypedAst with its recorded diagnostic protocol.",
+        description="Run ArrayIndexing, JsonTypedAst or JsonDecoding with its recorded diagnostic protocol.",
         allow_abbrev=False)
     parser.add_argument("--test", required=True)
     actions = parser.add_mutually_exclusive_group()
@@ -59,7 +60,7 @@ def run(command):
     subprocess.run([str(part) for part in command], check=True)
 
 
-def json_workspace(base, runtime, run_only):
+def json_workspace(base, runtime, run_only, suite='JsonTypedAst'):
     pointer = base / "latest-build.json"
     if not run_only:
         return base / "builds" / stamp()
@@ -67,7 +68,7 @@ def json_workspace(base, runtime, run_only):
         return base
     previous = json.loads(pointer.read_text())
     relative = Path(previous["workspace"])
-    if (previous.get("runtime") != runtime or len(relative.parts) != 2
+    if (previous.get("runtime") != runtime or previous.get('suite', 'JsonTypedAst') != suite or len(relative.parts) != 2
             or relative.parts[0] != "builds" or relative.parts[1] in {".", ".."}):
         raise ValueError(f"Invalid JSON diagnostic build pointer: {pointer}")
     return base / relative
@@ -85,15 +86,15 @@ def execute(runtime, args):
         if not args.build_only:
             run([*common, "--run-only", "--output", output])
     else:
-        work = json_workspace(base, runtime, args.run_only)
-        common += ["--runtime", runtime, "--workspace", work]
+        work = json_workspace(base, runtime, args.run_only, args.test)
+        common += ["--runtime", runtime, "--suite", args.test, "--workspace", work]
         if not args.run_only:
             # This runner requires a new workspace; retain previous builds and
             # publish the pointer only after the replacement build succeeds.
             run([*common, "build"])
             pointer = base / "latest-build.json"
             temporary = pointer.with_suffix(".tmp")
-            temporary.write_text(json.dumps({"runtime": runtime,
+            temporary.write_text(json.dumps({"runtime": runtime, "suite": args.test,
                 "workspace": str(work.relative_to(base))}, indent=2) + "\n")
             temporary.replace(pointer)
         if not args.build_only:

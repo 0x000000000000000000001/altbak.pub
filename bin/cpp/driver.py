@@ -207,6 +207,9 @@ def build(args, mode, entry, cases, directory):
     for source in sorted((ROOT / 'src').rglob('*.purs')):
         if source.name == 'Main.purs' or (source.name == 'AppX.purs' and entry != 'AppX'):
             continue
+        # JSON diagnostics are compiled in their own Go/JS workspaces.
+        if source.stem in {'JsonTypedAst', 'JsonDecoding'} or 'JsonTypedAst' in source.relative_to(ROOT / 'src').parts:
+            continue
         target = project / source.relative_to(ROOT / 'src')
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, target)

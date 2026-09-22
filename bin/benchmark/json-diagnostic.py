@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build or measure the same PBO JSON/TAST decoder in Go and JavaScript."""
+"""Build or measure JSON decoding diagnostics in Go and JavaScript."""
 import argparse
 import gzip
 import hashlib
@@ -12,21 +12,56 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCES = ROOT / 'srx/Test'
+SOURCES = ROOT / 'src/Test'
 FIXTURES = ROOT / 'test/fixtures/json-typed-ast'
 SOURCE_FILES = [SOURCES / ('JsonTypedAst.' + ext) for ext in ['purs', 'go', 'js']] + [SOURCES / 'JsonTypedAst/Fingerprint.purs']
 COMPILER = ROOT.parent / 'gopurs/gopurs'
 PBO = ROOT.parent / 'purescript-backend-optimizer-gopurs'
+SUITES = ['JsonTypedAst', 'JsonDecoding']
+
+def source_files(suite):
+    if suite == 'JsonTypedAst': return SOURCE_FILES
+    return [SOURCES / (suite + '.' + ext) for ext in ['purs', 'go', 'js']]
+
+def fixtures(suite):
+    return FIXTURES if suite == 'JsonTypedAst' else ROOT / 'test/fixtures/json-decoding'
+
+def dependencies(suite):
+    shared = ['argonaut-core','argonaut-codecs','arrays','effect','either','integers','maybe','ordered-collections','partial','prelude','strings','tuples']
+    return sorted(shared + (['backend-optimizer'] if suite == 'JsonTypedAst' else []))
+
+def check_suite(manifest, suite):
+    # Existing JsonTypedAst manifests predate the suite selector.
+    if manifest.get('suite', 'JsonTypedAst') != suite:
+        raise ValueError('Build belongs to a different JSON diagnostic suite')
+
+def corpus_data(suite):
+    directory = fixtures(suite)
+    if suite == 'JsonTypedAst':
+        return (gzip.decompress((directory/'tast-corpus.json.gz').read_bytes()),
+                json.loads((directory/'tast-corpus.json').read_text()))
+    raw = (directory/'corpus.json').read_bytes()
+    entries = json.loads(raw)
+    return raw, {'modules': len(entries), 'files': [
+        {'name': item['name'], 'benchmark': item['benchmark'],
+         'bytes': len(item['contents'].encode('utf-8'))} for item in entries]}
+
+def validate_result(result, oracle, suite):
+    if result['modules'] != oracle['modules']: raise ValueError('Wrong corpus module count')
+    if suite == 'JsonDecoding' and any(result[key] != oracle[key] for key in ['names', 'timed_cases']):
+        raise ValueError('Wrong JSON decoding corpus order or timed case count')
+    if any(result[key] != oracle[key] for key in ['fingerprints', 'json_fingerprints']):
+        raise ValueError('Different decoded values or JSON across backends/runs')
 
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
-def fingerprint():
-    paths = list(SOURCE_FILES)
-    paths += list(FIXTURES.glob('*')) + [Path(__file__), COMPILER / 'bin/gopurs-native']
+def fingerprint(suite='JsonTypedAst'):
+    paths = list(source_files(suite))
+    paths += list(fixtures(suite).glob('*')) + [Path(__file__), COMPILER / 'bin/gopurs-native']
     # Native library FFI is read during generation, independently of the
     # compiler binary. A library change must invalidate a previous build.
-    for source_root in [PBO / 'src'] + [p / 'src' for p in COMPILER.parent.glob('gopurs-*') if (p / 'spago.yaml').is_file()]:
+    for source_root in ([PBO / 'src'] if suite == 'JsonTypedAst' else []) + [p / 'src' for p in COMPILER.parent.glob('gopurs-*') if (p / 'spago.yaml').is_file()]:
         paths += [p for p in source_root.rglob('*') if p.suffix in {'.purs', '.go', '.js'}]
     return {str(p): sha(p) for p in sorted(paths)}
 
@@ -44,70 +79,75 @@ def call(command, cwd, log, env):
         print(log.read_text()[-10000:],file=sys.stderr)
         raise RuntimeError(f'Failed: {log}')
 
-def copy_sources(destination, native=True):
-    for source in SOURCE_FILES:
+def copy_sources(destination, native=True, suite='JsonTypedAst'):
+    for source in source_files(suite):
         if not native and source.suffix == '.go': continue
         target = destination / 'Test' / source.relative_to(SOURCES)
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, target)
 
-def build_js(work, env):
+def build_js(work, env, suite='JsonTypedAst'):
     js = work / 'js'
     (js / 'src').mkdir(parents=True, exist_ok=True)
-    copy_sources(js / 'src', native=False)
+    copy_sources(js / 'src', native=False, suite=suite)
     config = (work / 'spago.yaml').read_text().split('workspace:')[0] + '    - console\n'
     config += 'workspace:\n  packageSet:\n    registry: 77.10.1\n  extraPackages:\n'
-    for name, path in [('backend-optimizer', PBO), ('st', COMPILER.parent/'gopurs-st'), ('unsafe-coerce', COMPILER.parent/'gopurs-unsafe-coerce')]:
+    packages = [('st', COMPILER.parent/'gopurs-st'), ('unsafe-coerce', COMPILER.parent/'gopurs-unsafe-coerce')]
+    if suite == 'JsonTypedAst': packages.insert(0, ('backend-optimizer', PBO))
+    for name, path in packages:
         config += f'    {name}:\n      path: {json.dumps(str(path))}\n'
     (js / 'spago.yaml').write_text(config)
     call(['spago', 'build'], js, work/'logs/js-purs.log', env)
-    (js/'entry.mjs').write_text("import { main } from './output/Test.JsonTypedAst/index.js'; main();\n")
+    (js/'entry.mjs').write_text(f"import {{ main }} from './output/Test.{suite}/index.js'; main();\n")
     call([COMPILER/'node_modules/.bin/esbuild', js/'entry.mjs', '--bundle', '--platform=node', '--format=esm', '--outfile='+str(work/'benchmark.mjs')], js, work/'logs/bundle.log', env)
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('action',choices=['build','build-js','measure'])
-    p.add_argument('--workspace',type=Path,default=ROOT/'var/benchmark/json-diagnostic')
+    p.add_argument('--suite',choices=SUITES,default='JsonTypedAst')
+    p.add_argument('--workspace',type=Path)
     p.add_argument('--output',type=Path)
     p.add_argument('--runtime', choices=['go', 'js'], help='measure only the selected runtime; builds retain both artifacts')
     p.add_argument('--resume-build',action='store_true',help='resume a failed build in this workspace')
-    args=p.parse_args();work=args.workspace.resolve();env=environment()
+    args=p.parse_args();suite=args.suite;env=environment()
+    work=(args.workspace or ROOT/'var/benchmark'/('json-diagnostic' if suite == 'JsonTypedAst' else 'json-decoding')).resolve()
     if args.action in ['build', 'build-js']:
         env['GOMAXPROCS'] = '14'
     if args.action=='build-js':
         manifest=json.loads((work/'manifest.json').read_text())
-        before=fingerprint()
-        allowed={str(Path(__file__)),str(SOURCES/'JsonTypedAst.js')}
+        check_suite(manifest, suite)
+        before=fingerprint(suite)
+        allowed={str(Path(__file__)),str(SOURCES/(suite + '.js'))}
         if {k:v for k,v in before.items() if k not in allowed}!={k:v for k,v in manifest['sources'].items() if k not in allowed} or sha(work/'benchmark')!=manifest['binary_sha256']:
             raise ValueError('Native build no longer matches sources')
-        build_js(work,env)
-        if before!=fingerprint(): raise ValueError('Sources changed during JS build')
+        build_js(work,env,suite)
+        if before!=fingerprint(suite): raise ValueError('Sources changed during JS build')
         manifest.update(sources=before,js_sha256=sha(work/'benchmark.mjs'))
         (work/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
         return
     if args.action=='build':
         if work.exists() and (not args.resume_build or (work/'manifest.json').exists()): raise ValueError('Use a new workspace, or --resume-build for a failed build')
         (work/'src').mkdir(parents=True,exist_ok=True);(work/'logs').mkdir(exist_ok=True)
-        copy_sources(work / 'src')
-        packages={'backend-optimizer':PBO}
+        copy_sources(work / 'src', suite=suite)
+        packages={'backend-optimizer':PBO} if suite == 'JsonTypedAst' else {}
         packages.update({p.name.removeprefix('gopurs-'):p for p in COMPILER.parent.glob('gopurs-*') if (p/'spago.yaml').is_file()})
         config='package:\n  name: json-diagnostic\n  dependencies:\n'
-        for dep in ['argonaut-core','argonaut-codecs','arrays','backend-optimizer','effect','either','integers','maybe','ordered-collections','partial','prelude','strings','tuples']:
+        for dep in dependencies(suite):
             config+='    - '+dep+'\n'
         config+='workspace:\n  packageSet:\n    registry: 77.10.1\n  extraPackages:\n'
         for name,path in sorted(packages.items()): config+=f'    {name}:\n      path: {json.dumps(str(path))}\n'
         (work/'spago.yaml').write_text(config)
-        before=fingerprint()
+        before=fingerprint(suite)
         call(['spago','build'],work,work/'logs/purs.log',env)
         for f in (work/'output').glob('*/corefn.json'):
             if 'typeTable' not in json.loads(f.read_text()): raise ValueError('Use the TAST fork of purs')
-        call([COMPILER/'bin/gopurs-native','--main','Test.JsonTypedAst'],work,work/'logs/backend.log',env)
+        call([COMPILER/'bin/gopurs-native','--main','Test.' + suite],work,work/'logs/backend.log',env)
         build_env=dict(env,GOMAXPROCS='14')
         call(['go','mod','tidy'],work/'output',work/'logs/modules.log',build_env)
         call(['go','build','-pgo=off','-o',work/'benchmark','./main'],work/'output',work/'logs/go.log',build_env)
-        build_js(work,env)
-        if before!=fingerprint(): raise ValueError('Source changed during build')
-        manifest={'sources':before,'binary_sha256':sha(work/'benchmark'),'js_sha256':sha(work/'benchmark.mjs'),
+        build_js(work,env,suite)
+        if before!=fingerprint(suite): raise ValueError('Source changed during build')
+        manifest={'suite':suite,'sources':before,'binary_sha256':sha(work/'benchmark'),'js_sha256':sha(work/'benchmark.mjs'),
                   'go':subprocess.check_output(['go','version'],env=env,text=True).strip(),
                   'purs':subprocess.check_output(['purs','--version'],env=env,text=True).strip(),
                   'generated_tast':{str(f.relative_to(work)):sha(f) for f in sorted((work/'output').glob('*/corefn.json'))}}
@@ -115,28 +155,27 @@ def main():
         print('Build complete; measurements are a separate command.',flush=True)
         return
     manifest=json.loads((work/'manifest.json').read_text())
-    if manifest['sources']!=fingerprint() or manifest['binary_sha256']!=sha(work/'benchmark') or manifest['js_sha256']!=sha(work/'benchmark.mjs'): raise ValueError('Stale or modified build')
+    check_suite(manifest, suite)
+    if manifest['sources']!=fingerprint(suite) or manifest['binary_sha256']!=sha(work/'benchmark') or manifest['js_sha256']!=sha(work/'benchmark.mjs'): raise ValueError('Stale or modified build')
     if not args.output: p.error('measure requires --output NEW_DIRECTORY')
     out=args.output.resolve();out.mkdir(parents=True,exist_ok=False)
-    corpus=gzip.decompress((FIXTURES/'tast-corpus.json.gz').read_bytes())
+    corpus, corpus_info=corpus_data(suite)
     (out/'corpus.json').write_bytes(corpus);env['DIAG_CORPUS']=str(out/'corpus.json')
     runtimes = [args.runtime] if args.runtime else ['go', 'js']
     results = {runtime: [] for runtime in runtimes}
-    oracle = json.loads((FIXTURES/'expected.json').read_text())
-    expected = (oracle['fingerprints'], oracle['json_fingerprints'])
+    oracle = json.loads((fixtures(suite)/'expected.json').read_text())
     for index,backend in enumerate(['go','js','js','go','go','js']):
         if backend not in runtimes: continue
         log=out/f'{index}-{backend}.log'
         call([work/'benchmark'] if backend=='go' else ['node',work/'benchmark.mjs'],work,log,env)
-        result=json.loads(log.read_text());proof=(result['fingerprints'],result['json_fingerprints'])
-        if result['modules'] != oracle['modules']: raise ValueError('Wrong corpus module count')
-        if proof!=expected: raise ValueError('Different decoded AST/types or JSON across backends/runs')
+        result=json.loads(log.read_text())
+        validate_result(result, oracle, suite)
         results[backend].append(result)
         print(backend,{phase:round(data['time_us']/1000,3) for phase,data in result['phases'].items()},flush=True)
-    if manifest['sources']!=fingerprint(): raise ValueError('Source changed during measurements')
+    if manifest['sources']!=fingerprint(suite): raise ValueError('Source changed during measurements')
     medians={b:{phase:statistics.median(run['phases'][phase]['time_us'] for run in runs) for phase in ['parse','decode','combined']} for b,runs in results.items()}
     allocated={phase:statistics.median(sample['allocated_bytes'] for run in results.get('go', []) for sample in run['phases'][phase]['samples']) for phase in ['parse','decode','combined']} if 'go' in results else {}
-    report={'protocol':{'processes_per_backend':3,'warmups_per_phase':2,'samples_per_phase':5,'cell':'median of process minimum times','GOMAXPROCS':1,'GOGC':100,'file_io_timed':False,'fingerprinting_timed':False},'corpus':json.loads((FIXTURES/'tast-corpus.json').read_text()),'medians_us':medians,'go_allocated_bytes_per_corpus':allocated,'results':results,'build':manifest}
+    report={'suite':suite,'protocol':{'processes_per_backend':3,'warmups_per_phase':2,'samples_per_phase':5,'cell':'median of process minimum times','GOMAXPROCS':1,'GOGC':100,'file_io_timed':False,'fingerprinting_timed':False},'corpus':corpus_info,'medians_us':medians,'go_allocated_bytes_per_corpus':allocated,'results':results,'build':manifest}
     (out/'results.json').write_text(json.dumps(report,indent=2)+'\n')
     (out/'corpus.json').unlink()  # Recreated from the versioned fixture each run.
     print(json.dumps(medians,indent=2))

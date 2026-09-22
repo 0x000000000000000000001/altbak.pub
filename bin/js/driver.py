@@ -74,6 +74,12 @@ def snapshot_sources(work, args):
     suffixes = {".purs", ".js", ".ss", ".erl"}
     for source in (ROOT / "src").rglob("*"):
         if source.is_file() and source.suffix in suffixes:
+            relative = source.relative_to(ROOT / "src")
+            # These diagnostics use independent workspaces and optional dependencies.
+            if any(relative.parts[:2] == ('Test', diagnostic)
+                   or relative.as_posix() in {f'Test/{diagnostic}.{ext}' for ext in ['purs', 'go', 'js']}
+                   for diagnostic in ['JsonTypedAst', 'JsonDecoding']):
+                continue
             target = work / source.relative_to(ROOT)
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(source, target)

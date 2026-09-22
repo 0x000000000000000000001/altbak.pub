@@ -33,9 +33,6 @@ touch run/bak/go/spago.lock && ln -s run/bak/go/spago.lock spago.lock
 mkdir -p test/snapshots/go
 
 for source in srx/Test/*; do
-  case "$(basename "$source")" in
-    JsonTypedAst|JsonTypedAst.purs|JsonTypedAst.go|JsonTypedAst.js) continue ;;
-  esac
   cp -r "$source" src/Test/
 done
 trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/Test/Parallelism.purs src/AppTest.purs" EXIT
@@ -50,6 +47,10 @@ fi
 TEST_MODULES=()
 for f in $(find src/Test -name "*.purs"); do
   mod=$(grep -E '^module ' "$f" | awk '{print $2}')
+  # Separate JSON diagnostics have their own runners and dependency sets.
+  case "$mod" in
+    Test.JsonTypedAst|Test.JsonTypedAst.*|Test.JsonDecoding|Test.JsonDecoding.*) continue ;;
+  esac
   if [[ "$mod" == Test.* ]]; then
     if [ -z "$FILTER" ] || [[ "$mod" == *"$FILTER"* ]]; then
       TEST_MODULES+=("$mod")
@@ -97,7 +98,7 @@ EOF
   # Force recompilation of AppTest to avoid timestamp collision issues in purs cache
   rm -rf output/AppTest
 
-  spago build -q || { echo -e "   \033[0;31m[FAILED]\033[0m spago build failed for $mod"; failed=$((failed+1)); continue; }
+  spago build -q --purs-args '--exclude-files src/Test/JsonTypedAst.purs --exclude-files src/Test/JsonTypedAst/**/*.purs --exclude-files src/Test/JsonDecoding.purs' || { echo -e "   \033[0;31m[FAILED]\033[0m spago build failed for $mod"; failed=$((failed+1)); continue; }
   
   ../gopurs/gopurs/bin/gopurs --main AppTest > /dev/null || { echo -e "   \033[0;31m[FAILED]\033[0m gopurs failed for $mod"; failed=$((failed+1)); continue; }
   

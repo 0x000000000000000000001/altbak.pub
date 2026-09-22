@@ -27,7 +27,7 @@ case "$MODE" in
   ffi|fficc) BACKENDS+=(java scm erl cpp) ;;
   x) ;;
 esac
-if [[ "$MODE" == test && ( "$TEST" == ArrayIndexing || "$TEST" == JsonTypedAst ) ]]; then
+if [[ "$MODE" == test && ( "$TEST" == ArrayIndexing || "$TEST" == JsonTypedAst || "$TEST" == JsonDecoding ) ]]; then
   BACKENDS=(go js)
 fi
 FAILED=()

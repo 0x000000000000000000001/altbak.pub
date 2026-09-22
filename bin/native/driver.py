@@ -91,7 +91,12 @@ def prepare(directory, language, args):
             target.unlink()
         elif target.exists():
             shutil.rmtree(target)
-    shutil.copytree(ROOT / 'src', directory / 'src')
+    # JSON diagnostics use independent workspaces and optional dependencies.
+    shutil.copytree(ROOT / 'src', directory / 'src',
+                    ignore=shutil.ignore_patterns('JsonTypedAst', 'JsonTypedAst.purs',
+                                                 'JsonTypedAst.go', 'JsonTypedAst.js',
+                                                 'JsonDecoding', 'JsonDecoding.purs',
+                                                 'JsonDecoding.go', 'JsonDecoding.js'))
     entry = {'pure': 'App', 'ffi': 'AppFFI', 'fficc': 'AppFFICheatcode', 'test': 'AppX', 'x': 'AppX'}[args.mode]
     if args.mode == 'test':
         # Only the workspace copy is replaced; the user's AppX never changes.
@@ -106,11 +111,6 @@ main = void $ runBench Case.describe Case.act
     elif args.mode == 'x':
         for path in sorted((ROOT / 'srx').rglob('*')):
             if path.is_file():
-                relative = path.relative_to(ROOT / 'srx')
-                # The PBO diagnostic has its own optional dependency workspace.
-                if (relative.as_posix() in {'Test/JsonTypedAst.purs', 'Test/JsonTypedAst.go', 'Test/JsonTypedAst.js'}
-                        or relative.parts[:2] == ('Test', 'JsonTypedAst')):
-                    continue
                 target = directory / 'src' / path.relative_to(ROOT / 'srx')
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(path, target)

@@ -24,16 +24,20 @@ computation manually with its expected result in an FP reference is not.
 
 ## Additional Go diagnostics
 
-The Go and JS tables include two additional diagnostics, with a [separate measurement
+The Go and JS tables include additional diagnostics, with a [separate initial measurement
 archive](benchmark-results/2026-09-21-go-diagnostics.md). The existing 14-case
 results and totals remain the published core baseline. These diagnostics do not
 assert that Go must outperform JavaScript.
 
-Sources use `src/Test/ArrayIndexing.purs` and `srx/Test/JsonTypedAst.*`.
-Run them through `bin/go/run --test ArrayIndexing` or `--test JsonTypedAst`,
+Sources use `src/Test/ArrayIndexing.purs`, `src/Test/JsonTypedAst.*` and
+`src/Test/JsonDecoding.*`.
+Run them through `bin/go/run --test ArrayIndexing`, `--test JsonTypedAst` or `--test JsonDecoding`,
 and the equivalent `bin/js/run` commands. They are opt-in cases with their
 recorded protocols, not additions to the ordinary fourteen-case or `--x` totals.
-PBO dependencies are resolved only in the JSON test's isolated workspace.
+PBO dependencies are resolved only in the `JsonTypedAst` isolated workspace.
+`JsonDecoding` uses ordinary Argonaut codecs without a PBO dependency.
+Historical measurement manifests retain their original source paths; rebuild
+the diagnostics after their relocation from `srx/Test` to `src/Test`.
 
 - **Array Indexing (multiple sizes):** repeatedly read elements from arrays of
   16, 1,024 and 16,384 elements, exercising both native and boxed representations
@@ -53,6 +57,14 @@ PBO dependencies are resolved only in the JSON test's isolated workspace.
   time and Go allocations. Use one worker for the sequential comparison; record
   any parallel variant separately. Parsing includes the selected JSON library
   and runtime costs, so a parsing-only result cannot explain all AST decoding.
+- **JSON Decoding (records and arrays):** compile the same ordinary Argonaut
+  record codecs and a tagged event codec to Go and JS. Exercise nested records,
+  arrays, optional fields, Unicode and numeric values. Measure parsing, decoding
+  of already parsed JSON and their combination separately. Missing fields, wrong
+  types and nested error paths are checked outside timing. A fixed independent
+  oracle verifies every decoded field and complete error message; fast failure
+  cannot improve the timed successful workload. Sources and fixture generation
+  are documented in [the corpus](../test/fixtures/json-decoding/README.md).
 
 Freeze sources, inputs, binaries and runtime settings, validate outputs, and
 collect three independent processes per configuration after warm-up.

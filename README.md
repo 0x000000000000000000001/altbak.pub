@@ -39,6 +39,7 @@ Array Processing | ~ 7.35 μs | ~ 3.75 μs | ~ 3.12 μs | ~ 0.50 μs |
 RowToList | ~ 0.04 μs | ~ 0.02 μs | ~ 0.06 μs | ~ 0.02 μs |
 Array Indexing (excluded WIP) | ~ 25.30 ms | — | — | — |
 JSON to Typed AST (excluded WIP) | ~ 75.90 ms | — | — | — |
+JSON Decoding (excluded WIP) | ~ 8.26 ms | — | — | — |
 **Total Execution Time** | ~ 129.10 ms <br>(/C = 13.1x) | ~ 66.89 ms <br>(/C = 6.8x) | ~ 48.48 ms <br>(/C = 4.9x) | ~ 30.54 ms <br>(/C = 3.1x) |
 
 #### Go
@@ -61,6 +62,7 @@ Array Processing | ~ 19.26 μs | ~ 43.81 μs | ~ 4.90 μs | ~ 0.45 μs |
 RowToList | ~ 0.15 μs | ~ 0.50 μs | ~ 0.07 μs | ~ 0.03 μs |
 Array Indexing (excluded WIP) | ~ 3.96 ms | — | — | — |
 JSON to Typed AST (excluded WIP) | ~ 573.63 ms | — | — | — |
+JSON Decoding (excluded WIP) | ~ 57.43 ms | — | — | — |
 **Total Execution Time** | ~ 13.28 ms <br>(/C = 1.3x) | ~ 1464.74 ms <br>(/C = 148.8x) | ~ 88.99 ms <br>(/C = 9.0x) | ~ 11.34 ms <br>(/C = 1.2x) |
 
 #### Scheme
