@@ -1,0 +1,97 @@
+{
+  "date": "2026-09-22",
+  "change": "argonaut-codecs fork: AtKey/AtIndex wrappers built only on the failure path (gDecodeJsonCons, decodeArray, getField, getFieldOptional, getFieldOptional').",
+  "incremental_paired": {
+    "JsonDecoding": {
+      "decode_before_ms": 26.398,
+      "decode_after_ms": 23.184,
+      "decode_delta_pct": -12.17,
+      "combined_before_ms": 36.501,
+      "combined_after_ms": 32.244,
+      "combined_delta_pct": -11.66,
+      "decode_alloc_before_mib": 33.81,
+      "decode_alloc_after_mib": 29.01
+    },
+    "JsonTypedAst": {
+      "decode_before_ms": 428.097,
+      "decode_after_ms": 426.581,
+      "decode_delta_pct": -0.35,
+      "combined_delta_pct": -2.06
+    },
+    "protocol": "5 alternating processes per version, GOMAXPROCS=1, GOGC=100, oracles every process"
+  },
+  "cumulative_official": {
+    "JsonDecoding": {
+      "go": {
+        "before": [
+          38.870687,
+          30.415542000000002
+        ],
+        "after": [
+          27.874083,
+          19.3719585
+        ]
+      },
+      "js": {
+        "before": [
+          9.036333499999982,
+          7.6798959999999985
+        ],
+        "after": [
+          8.972208500000022,
+          7.191896000000001
+        ]
+      }
+    },
+    "JsonTypedAst": {
+      "go": {
+        "before": [
+          558.941646,
+          452.3418125
+        ],
+        "after": [
+          522.2361875,
+          422.75935450000003
+        ]
+      },
+      "js": {
+        "before": [
+          78.05206250000015,
+          60.08210400000007
+        ],
+        "after": [
+          86.37079150000022,
+          66.30395849999991
+        ]
+      }
+    }
+  },
+  "js_focused_check": {
+    "JsonDecoding": {
+      "before_ms": 9.065,
+      "after_ms": 8.731,
+      "delta_pct": -3.69
+    },
+    "JsonTypedAst": {
+      "before_ms": 83.726,
+      "after_ms": 80.025,
+      "delta_pct": -4.42
+    },
+    "protocol": "3 rounds alternating, 6 processes per version, oracles every process"
+  },
+  "static": {
+    "AtKey_sites_before": 9,
+    "AtKey_sites_after": 1,
+    "AtIndex_sites_before": 3,
+    "AtIndex_sites_after": 1
+  },
+  "sources": {
+    "Class.purs": "49caaeb1a23d9a312b5d0b60dcd1ba00ca2fc16f042ed232b7464c9cf5ff0104",
+    "Decoders.purs": "ede9721122cc4fb3f5cd780a83b3c687fae03bd5b54beeafced4d9a3ddc1a9eb"
+  },
+  "validation": {
+    "oracles": "17 JSON cases and 12 TAST modules matched in every measured process, Go and JS; error-path cases drive AtKey/AtIndex",
+    "modtest_argonaut_core": "10/10",
+    "static_sites": "AtKey 9->1, AtIndex 3->1"
+  }
+}

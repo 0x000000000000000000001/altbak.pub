@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-22",
+  "change": "Dedicated FFI for Data.Argonaut.Core caseJsonNull/Boolean/Number/String/Array/Object; the generic caseJson path built six constant callbacks per call.",
+  "official_campaigns": {
+    "JsonDecoding": {
+      "go_medians_us": {
+        "parse": 7168.208,
+        "decode": 22908.75,
+        "combined": 31579.417
+      },
+      "js_medians_us": {
+        "parse": 1678.8339999999948,
+        "decode": 7492.958000000016,
+        "combined": 9031.499999999995
+      },
+      "go_allocated_bytes": {
+        "parse": 5997744,
+        "decode": 35449168,
+        "combined": 41447440
+      }
+    },
+    "JsonTypedAst": {
+      "go_medians_us": {
+        "parse": 77890.833,
+        "decode": 414726.459,
+        "combined": 505424.125
+      },
+      "js_medians_us": {
+        "parse": 21030.040999999983,
+        "decode": 61944.29200000013,
+        "combined": 80943.1669999999
+      },
+      "go_allocated_bytes": {
+        "parse": 68432280,
+        "decode": 476638264,
+        "combined": 545071392
+      }
+    }
+  },
+  "paired_campaigns": {
+    "JsonDecoding": {
+      "base_decode_ms": 27.606,
+      "new_decode_ms": 22.764,
+      "decode_delta_pct": -17.54,
+      "base_combined_ms": 37.032,
+      "new_combined_ms": 31.875,
+      "combined_delta_pct": -13.93,
+      "base_decode_mib": 41.65,
+      "new_decode_mib": 33.81
+    },
+    "JsonTypedAst": {
+      "base_decode_ms": 440.85,
+      "new_decode_ms": 402.959,
+      "decode_delta_pct": -8.6,
+      "base_decode_mib": 465.45,
+      "new_decode_mib": 454.56
+    },
+    "protocol": "five alternating processes per version, medians of process minima, GOMAXPROCS=1, GOGC=100, oracles checked every process"
+  },
+  "static_evidence": {
+    "Data_Argonaut_Core.go_Func_calls_before": 114,
+    "Data_Argonaut_Core.go_Func_calls_after": 24,
+    "file_bytes_before": 119662,
+    "file_bytes_after": 81696
+  },
+  "validation": {
+    "oracles": "17 JSON cases and 12 TAST modules matched in every measured process on both backends",
+    "modtest_argonaut_core": "10/10 tests pass",
+    "gopurs_node_tests": "170 tests, 168 pass, 0 fail, 2 skipped"
+  },
+  "provenance": {
+    "workspaces": {
+      "new-json-before": "95b4a4a24d33ffe755b2b6701bd536ad210be42ce4858ad74e4806d2647b2f0b",
+      "new-json2-after": "2cdaf3bdb418f2e717830a1bc3aea36238d28b45b22373715235c8af2b4ef515",
+      "final-json-published": "35c915a14e76dc8fabe0b38ad41774c73fa6b7aebc9ee86d60ec92104d846f71",
+      "new-tast-before": "ca8149c63c3e710e9298b520df718abc3f04e271b3366586375a4168a8f68d11",
+      "new-tast2-after": "bf5c2e8992e8f885fc114d1fc4c6637015bb9d757e932d646f93526071f2e948"
+    },
+    "sources": {
+      "Core.purs": "52821ee4f812715f4d2455ba74a69f6ba51b462b9f3b170aaf8017d51a1c0743",
+      "Core.go": "99c4da425f42ce1656f181258b6e05a8bfb02db0a6f679ff30a9e321744f8761",
+      "Core.js": "4a3453692801c24d3a1037bcd7487dacc3d8f25a69d274c60be21a99f7d79a7b"
+    }
+  }
+}

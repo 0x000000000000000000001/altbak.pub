@@ -1,0 +1,1745 @@
+{
+  "date": "2026-09-22",
+  "change": "Packed TypeString payloads in the gopurs runtime (IntVal = byte length, UnsafePtr = immutable data); all runtime and FFI readers use StrValue.",
+  "paired_campaign": {
+    "JsonDecoding": {
+      "parse": {
+        "base": [
+          7.166292,
+          5997904
+        ],
+        "packed": [
+          7.076417,
+          5997744
+        ]
+      },
+      "decode": {
+        "base": [
+          30.916542,
+          46488216
+        ],
+        "packed": [
+          27.5815,
+          43668008
+        ]
+      },
+      "combined": {
+        "base": [
+          39.505207999999996,
+          52491768
+        ],
+        "packed": [
+          37.683125,
+          49671400
+        ]
+      }
+    },
+    "JsonTypedAst": {
+      "parse": {
+        "base": [
+          76.713375,
+          68432664
+        ],
+        "packed": [
+          76.207959,
+          68432160
+        ]
+      },
+      "decode": {
+        "base": [
+          450.454542,
+          511855120
+        ],
+        "packed": [
+          413.47979200000003,
+          487601504
+        ]
+      },
+      "combined": {
+        "base": [
+          548.1609579999999,
+          580288752
+        ],
+        "packed": [
+          524.276042,
+          556034736
+        ]
+      }
+    }
+  },
+  "paired_raw": {
+    "JsonDecoding": {
+      "base": [
+        {
+          "phases": {
+            "parse": {
+              "time_us": 6994.75,
+              "samples": [
+                {
+                  "allocated_bytes": 5997904,
+                  "time_us": 8469.75
+                },
+                {
+                  "allocated_bytes": 5997768,
+                  "time_us": 6994.75
+                },
+                {
+                  "allocated_bytes": 5997920,
+                  "time_us": 8947.834
+                },
+                {
+                  "allocated_bytes": 5997904,
+                  "time_us": 8769.125
+                },
+                {
+                  "allocated_bytes": 5997768,
+                  "time_us": 8125.709
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 29369.625,
+              "samples": [
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 30341.916
+                },
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 30316.375
+                },
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 31449.583
+                },
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 30890.708
+                },
+                {
+                  "allocated_bytes": 46488200,
+                  "time_us": 29369.625
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 37953.375,
+              "samples": [
+                {
+                  "allocated_bytes": 52491768,
+                  "time_us": 39928.958
+                },
+                {
+                  "allocated_bytes": 52497160,
+                  "time_us": 37953.375
+                },
+                {
+                  "allocated_bytes": 52497176,
+                  "time_us": 38521.833
+                },
+                {
+                  "allocated_bytes": 52486648,
+                  "time_us": 39867.667
+                },
+                {
+                  "allocated_bytes": 52486632,
+                  "time_us": 41156.5
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phases": {
+            "parse": {
+              "time_us": 7362.708,
+              "samples": [
+                {
+                  "allocated_bytes": 5997904,
+                  "time_us": 9175.875
+                },
+                {
+                  "allocated_bytes": 5997768,
+                  "time_us": 7562.875
+                },
+                {
+                  "allocated_bytes": 5997904,
+                  "time_us": 7503
+                },
+                {
+                  "allocated_bytes": 5997768,
+                  "time_us": 9770.083
+                },
+                {
+                  "allocated_bytes": 5997768,
+                  "time_us": 7362.708
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 32784.125,
+              "samples": [
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 33888.708
+                },
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 36206.083
+                },
+                {
+                  "allocated_bytes": 46488200,
+                  "time_us": 33706.417
+                },
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 33701.334
+                },
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 32784.125
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 38866.541,
+              "samples": [
+                {
+                  "allocated_bytes": 52491904,
+                  "time_us": 43116.041
+                },
+                {
+                  "allocated_bytes": 52491768,
+                  "time_us": 40824.833
+                },
+                {
+                  "allocated_bytes": 52491920,
+                  "time_us": 38866.541
+                },
+                {
+                  "allocated_bytes": 52491768,
+                  "time_us": 41388.291
+                },
+                {
+                  "allocated_bytes": 52491872,
+                  "time_us": 43900.791
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phases": {
+            "parse": {
+              "time_us": 7166.292,
+              "samples": [
+                {
+                  "allocated_bytes": 5997768,
+                  "time_us": 7166.292
+                },
+                {
+                  "allocated_bytes": 5997912,
+                  "time_us": 9265.166
+                },
+                {
+                  "allocated_bytes": 5997904,
+                  "time_us": 11919.833
+                },
+                {
+                  "allocated_bytes": 5997768,
+                  "time_us": 8168.167
+                },
+                {
+                  "allocated_bytes": 5997904,
+                  "time_us": 9892.542
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 31014.083,
+              "samples": [
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 35293.334
+                },
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 31824.333
+                },
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 31014.083
+                },
+                {
+                  "allocated_bytes": 46488200,
+                  "time_us": 33415.375
+                },
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 42290.333
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 44759.125,
+              "samples": [
+                {
+                  "allocated_bytes": 52497160,
+                  "time_us": 45092.375
+                },
+                {
+                  "allocated_bytes": 52486512,
+                  "time_us": 45042.542
+                },
+                {
+                  "allocated_bytes": 52486528,
+                  "time_us": 46793.583
+                },
+                {
+                  "allocated_bytes": 52497176,
+                  "time_us": 44759.125
+                },
+                {
+                  "allocated_bytes": 52491768,
+                  "time_us": 46762.166
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phases": {
+            "parse": {
+              "time_us": 7156.917,
+              "samples": [
+                {
+                  "allocated_bytes": 5997904,
+                  "time_us": 9531.792
+                },
+                {
+                  "allocated_bytes": 5997904,
+                  "time_us": 8139.083
+                },
+                {
+                  "allocated_bytes": 5997768,
+                  "time_us": 8975.542
+                },
+                {
+                  "allocated_bytes": 5997904,
+                  "time_us": 9404.667
+                },
+                {
+                  "allocated_bytes": 5997768,
+                  "time_us": 7156.917
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 29970.916,
+              "samples": [
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 29970.916
+                },
+                {
+                  "allocated_bytes": 46488200,
+                  "time_us": 31034.584
+                },
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 30992.666
+                },
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 32064.75
+                },
+                {
+                  "allocated_bytes": 46488200,
+                  "time_us": 30989.75
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 39505.208,
+              "samples": [
+                {
+                  "allocated_bytes": 52497176,
+                  "time_us": 39517.75
+                },
+                {
+                  "allocated_bytes": 52486528,
+                  "time_us": 40280.458
+                },
+                {
+                  "allocated_bytes": 52497160,
+                  "time_us": 39659.083
+                },
+                {
+                  "allocated_bytes": 52497176,
+                  "time_us": 39505.208
+                },
+                {
+                  "allocated_bytes": 52486648,
+                  "time_us": 40542.625
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phases": {
+            "parse": {
+              "time_us": 7372.666,
+              "samples": [
+                {
+                  "allocated_bytes": 5997768,
+                  "time_us": 10019.75
+                },
+                {
+                  "allocated_bytes": 5997904,
+                  "time_us": 9057.083
+                },
+                {
+                  "allocated_bytes": 5997904,
+                  "time_us": 7809.667
+                },
+                {
+                  "allocated_bytes": 5997768,
+                  "time_us": 8544.125
+                },
+                {
+                  "allocated_bytes": 5997904,
+                  "time_us": 7372.666
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 30916.542,
+              "samples": [
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 30916.542
+                },
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 32206.375
+                },
+                {
+                  "allocated_bytes": 46488216,
+                  "time_us": 31770.083
+                },
+                {
+                  "allocated_bytes": 46488200,
+                  "time_us": 32076.208
+                },
+                {
+                  "allocated_bytes": 46488200,
+                  "time_us": 32378.292
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 40234.208,
+              "samples": [
+                {
+                  "allocated_bytes": 52486512,
+                  "time_us": 40234.208
+                },
+                {
+                  "allocated_bytes": 52497192,
+                  "time_us": 42028.917
+                },
+                {
+                  "allocated_bytes": 52486648,
+                  "time_us": 40733.834
+                },
+                {
+                  "allocated_bytes": 52486496,
+                  "time_us": 42301.125
+                },
+                {
+                  "allocated_bytes": 52497176,
+                  "time_us": 45707.416
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "packed": [
+        {
+          "phases": {
+            "parse": {
+              "time_us": 6904.583,
+              "samples": [
+                {
+                  "allocated_bytes": 5997608,
+                  "time_us": 6904.583
+                },
+                {
+                  "allocated_bytes": 5997744,
+                  "time_us": 9243.583
+                },
+                {
+                  "allocated_bytes": 5997744,
+                  "time_us": 7634.417
+                },
+                {
+                  "allocated_bytes": 5997608,
+                  "time_us": 9175.25
+                },
+                {
+                  "allocated_bytes": 5997744,
+                  "time_us": 7884.292
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 27581.5,
+              "samples": [
+                {
+                  "allocated_bytes": 43668008,
+                  "time_us": 29167.583
+                },
+                {
+                  "allocated_bytes": 43667992,
+                  "time_us": 28464.792
+                },
+                {
+                  "allocated_bytes": 43668008,
+                  "time_us": 28275.25
+                },
+                {
+                  "allocated_bytes": 43668008,
+                  "time_us": 27581.5
+                },
+                {
+                  "allocated_bytes": 43668008,
+                  "time_us": 27950.417
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 36526,
+              "samples": [
+                {
+                  "allocated_bytes": 49671584,
+                  "time_us": 36790.459
+                },
+                {
+                  "allocated_bytes": 49671400,
+                  "time_us": 36580.792
+                },
+                {
+                  "allocated_bytes": 49676808,
+                  "time_us": 36526
+                },
+                {
+                  "allocated_bytes": 49671384,
+                  "time_us": 37869.041
+                },
+                {
+                  "allocated_bytes": 49671384,
+                  "time_us": 36692.625
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phases": {
+            "parse": {
+              "time_us": 7031.75,
+              "samples": [
+                {
+                  "allocated_bytes": 5997744,
+                  "time_us": 8248.208
+                },
+                {
+                  "allocated_bytes": 5997608,
+                  "time_us": 8452.875
+                },
+                {
+                  "allocated_bytes": 5997608,
+                  "time_us": 7048.125
+                },
+                {
+                  "allocated_bytes": 5997744,
+                  "time_us": 9172.083
+                },
+                {
+                  "allocated_bytes": 5997608,
+                  "time_us": 7031.75
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 27205.208,
+              "samples": [
+                {
+                  "allocated_bytes": 43668024,
+                  "time_us": 28177.833
+                },
+                {
+                  "allocated_bytes": 43668008,
+                  "time_us": 27383.75
+                },
+                {
+                  "allocated_bytes": 43667992,
+                  "time_us": 27205.208
+                },
+                {
+                  "allocated_bytes": 43667992,
+                  "time_us": 27333.125
+                },
+                {
+                  "allocated_bytes": 43668008,
+                  "time_us": 30223.25
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 37683.125,
+              "samples": [
+                {
+                  "allocated_bytes": 49676808,
+                  "time_us": 37683.125
+                },
+                {
+                  "allocated_bytes": 49676792,
+                  "time_us": 43459.167
+                },
+                {
+                  "allocated_bytes": 49666128,
+                  "time_us": 42639.042
+                },
+                {
+                  "allocated_bytes": 49676824,
+                  "time_us": 42521.208
+                },
+                {
+                  "allocated_bytes": 49671536,
+                  "time_us": 41046.416
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phases": {
+            "parse": {
+              "time_us": 7429.958,
+              "samples": [
+                {
+                  "allocated_bytes": 5997608,
+                  "time_us": 8406.292
+                },
+                {
+                  "allocated_bytes": 5997608,
+                  "time_us": 7429.958
+                },
+                {
+                  "allocated_bytes": 5997744,
+                  "time_us": 10284.292
+                },
+                {
+                  "allocated_bytes": 5997744,
+                  "time_us": 9671.958
+                },
+                {
+                  "allocated_bytes": 5997608,
+                  "time_us": 9685.958
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 34056.333,
+              "samples": [
+                {
+                  "allocated_bytes": 43668008,
+                  "time_us": 35572.667
+                },
+                {
+                  "allocated_bytes": 43668008,
+                  "time_us": 37669.166
+                },
+                {
+                  "allocated_bytes": 43667992,
+                  "time_us": 34056.333
+                },
+                {
+                  "allocated_bytes": 43668008,
+                  "time_us": 35448.041
+                },
+                {
+                  "allocated_bytes": 43668008,
+                  "time_us": 34327
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 40228.667,
+              "samples": [
+                {
+                  "allocated_bytes": 49671520,
+                  "time_us": 45602.334
+                },
+                {
+                  "allocated_bytes": 49666144,
+                  "time_us": 41705.25
+                },
+                {
+                  "allocated_bytes": 49666400,
+                  "time_us": 43486.083
+                },
+                {
+                  "allocated_bytes": 49666176,
+                  "time_us": 43910.125
+                },
+                {
+                  "allocated_bytes": 49671384,
+                  "time_us": 40228.667
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phases": {
+            "parse": {
+              "time_us": 7166.375,
+              "samples": [
+                {
+                  "allocated_bytes": 5997744,
+                  "time_us": 9269.75
+                },
+                {
+                  "allocated_bytes": 5997608,
+                  "time_us": 7166.375
+                },
+                {
+                  "allocated_bytes": 5997744,
+                  "time_us": 8799.584
+                },
+                {
+                  "allocated_bytes": 5997608,
+                  "time_us": 8177.75
+                },
+                {
+                  "allocated_bytes": 5997744,
+                  "time_us": 9128.292
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 27554.625,
+              "samples": [
+                {
+                  "allocated_bytes": 43668024,
+                  "time_us": 28968.5
+                },
+                {
+                  "allocated_bytes": 43667992,
+                  "time_us": 27554.625
+                },
+                {
+                  "allocated_bytes": 43667992,
+                  "time_us": 37773.5
+                },
+                {
+                  "allocated_bytes": 43667992,
+                  "time_us": 31364.625
+                },
+                {
+                  "allocated_bytes": 43668008,
+                  "time_us": 33222.5
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 36340,
+              "samples": [
+                {
+                  "allocated_bytes": 49671384,
+                  "time_us": 37364.042
+                },
+                {
+                  "allocated_bytes": 49671416,
+                  "time_us": 36340
+                },
+                {
+                  "allocated_bytes": 49666280,
+                  "time_us": 38644.25
+                },
+                {
+                  "allocated_bytes": 49671400,
+                  "time_us": 38269.375
+                },
+                {
+                  "allocated_bytes": 49666160,
+                  "time_us": 37319.792
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phases": {
+            "parse": {
+              "time_us": 7076.417,
+              "samples": [
+                {
+                  "allocated_bytes": 5997744,
+                  "time_us": 9332.417
+                },
+                {
+                  "allocated_bytes": 5997608,
+                  "time_us": 7159.291
+                },
+                {
+                  "allocated_bytes": 5997744,
+                  "time_us": 9081.333
+                },
+                {
+                  "allocated_bytes": 5997744,
+                  "time_us": 9220.292
+                },
+                {
+                  "allocated_bytes": 5997608,
+                  "time_us": 7076.417
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 28389.875,
+              "samples": [
+                {
+                  "allocated_bytes": 43668008,
+                  "time_us": 29549.375
+                },
+                {
+                  "allocated_bytes": 43668008,
+                  "time_us": 30137.292
+                },
+                {
+                  "allocated_bytes": 43668008,
+                  "time_us": 28480.791
+                },
+                {
+                  "allocated_bytes": 43668008,
+                  "time_us": 29438.959
+                },
+                {
+                  "allocated_bytes": 43667992,
+                  "time_us": 28389.875
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 38189.125,
+              "samples": [
+                {
+                  "allocated_bytes": 49671536,
+                  "time_us": 39199.625
+                },
+                {
+                  "allocated_bytes": 49671384,
+                  "time_us": 38423.958
+                },
+                {
+                  "allocated_bytes": 49671368,
+                  "time_us": 38638.584
+                },
+                {
+                  "allocated_bytes": 49676808,
+                  "time_us": 38189.125
+                },
+                {
+                  "allocated_bytes": 49671536,
+                  "time_us": 39228.416
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "JsonTypedAst": {
+      "base": [
+        {
+          "phases": {
+            "parse": {
+              "time_us": 78018.708,
+              "samples": [
+                {
+                  "allocated_bytes": 68432528,
+                  "time_us": 78018.708
+                },
+                {
+                  "allocated_bytes": 68432664,
+                  "time_us": 113304.625
+                },
+                {
+                  "allocated_bytes": 68432528,
+                  "time_us": 81065.625
+                },
+                {
+                  "allocated_bytes": 68432664,
+                  "time_us": 119826.625
+                },
+                {
+                  "allocated_bytes": 68432528,
+                  "time_us": 89931.833
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 449662.208,
+              "samples": [
+                {
+                  "allocated_bytes": 511855120,
+                  "time_us": 450665.875
+                },
+                {
+                  "allocated_bytes": 511855120,
+                  "time_us": 449662.208
+                },
+                {
+                  "allocated_bytes": 511855120,
+                  "time_us": 458477.292
+                },
+                {
+                  "allocated_bytes": 511855120,
+                  "time_us": 458138.125
+                },
+                {
+                  "allocated_bytes": 511855136,
+                  "time_us": 467986.583
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 555041.5,
+              "samples": [
+                {
+                  "allocated_bytes": 580297056,
+                  "time_us": 579035.958
+                },
+                {
+                  "allocated_bytes": 580288752,
+                  "time_us": 563150.917
+                },
+                {
+                  "allocated_bytes": 580288616,
+                  "time_us": 555041.5
+                },
+                {
+                  "allocated_bytes": 580297176,
+                  "time_us": 572570.334
+                },
+                {
+                  "allocated_bytes": 580288752,
+                  "time_us": 563223.625
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phases": {
+            "parse": {
+              "time_us": 77411.333,
+              "samples": [
+                {
+                  "allocated_bytes": 68432528,
+                  "time_us": 80312.625
+                },
+                {
+                  "allocated_bytes": 68432664,
+                  "time_us": 117066.667
+                },
+                {
+                  "allocated_bytes": 68432528,
+                  "time_us": 77411.333
+                },
+                {
+                  "allocated_bytes": 68432680,
+                  "time_us": 108379
+                },
+                {
+                  "allocated_bytes": 68432664,
+                  "time_us": 114703.834
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 456417,
+              "samples": [
+                {
+                  "allocated_bytes": 511855120,
+                  "time_us": 462533.625
+                },
+                {
+                  "allocated_bytes": 511855152,
+                  "time_us": 470882.125
+                },
+                {
+                  "allocated_bytes": 511855120,
+                  "time_us": 456417
+                },
+                {
+                  "allocated_bytes": 511855152,
+                  "time_us": 470653.334
+                },
+                {
+                  "allocated_bytes": 511855152,
+                  "time_us": 474771.25
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 557096.625,
+              "samples": [
+                {
+                  "allocated_bytes": 580288616,
+                  "time_us": 557096.625
+                },
+                {
+                  "allocated_bytes": 580289280,
+                  "time_us": 611591.25
+                },
+                {
+                  "allocated_bytes": 580288600,
+                  "time_us": 614071.791
+                },
+                {
+                  "allocated_bytes": 580288616,
+                  "time_us": 562689.5
+                },
+                {
+                  "allocated_bytes": 580288752,
+                  "time_us": 572901.208
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phases": {
+            "parse": {
+              "time_us": 75573.792,
+              "samples": [
+                {
+                  "allocated_bytes": 68432528,
+                  "time_us": 77736.916
+                },
+                {
+                  "allocated_bytes": 68432664,
+                  "time_us": 111544.666
+                },
+                {
+                  "allocated_bytes": 68432528,
+                  "time_us": 75573.792
+                },
+                {
+                  "allocated_bytes": 68432664,
+                  "time_us": 88218.667
+                },
+                {
+                  "allocated_bytes": 68432528,
+                  "time_us": 110899.75
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 450454.542,
+              "samples": [
+                {
+                  "allocated_bytes": 511855120,
+                  "time_us": 450454.542
+                },
+                {
+                  "allocated_bytes": 511855152,
+                  "time_us": 468835.625
+                },
+                {
+                  "allocated_bytes": 511855136,
+                  "time_us": 487251.5
+                },
+                {
+                  "allocated_bytes": 511855120,
+                  "time_us": 488222.792
+                },
+                {
+                  "allocated_bytes": 511855120,
+                  "time_us": 492506.875
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 548160.958,
+              "samples": [
+                {
+                  "allocated_bytes": 580297344,
+                  "time_us": 586615.791
+                },
+                {
+                  "allocated_bytes": 580288600,
+                  "time_us": 580009.542
+                },
+                {
+                  "allocated_bytes": 580288736,
+                  "time_us": 567321.125
+                },
+                {
+                  "allocated_bytes": 580288600,
+                  "time_us": 548160.958
+                },
+                {
+                  "allocated_bytes": 580288752,
+                  "time_us": 567004
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phases": {
+            "parse": {
+              "time_us": 76713.375,
+              "samples": [
+                {
+                  "allocated_bytes": 68432528,
+                  "time_us": 110398.292
+                },
+                {
+                  "allocated_bytes": 68432664,
+                  "time_us": 76713.375
+                },
+                {
+                  "allocated_bytes": 68432528,
+                  "time_us": 113199.667
+                },
+                {
+                  "allocated_bytes": 68432664,
+                  "time_us": 76979.167
+                },
+                {
+                  "allocated_bytes": 68432664,
+                  "time_us": 104429.208
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 450637.792,
+              "samples": [
+                {
+                  "allocated_bytes": 511855120,
+                  "time_us": 450637.792
+                },
+                {
+                  "allocated_bytes": 511855120,
+                  "time_us": 476106.625
+                },
+                {
+                  "allocated_bytes": 511855152,
+                  "time_us": 457553.042
+                },
+                {
+                  "allocated_bytes": 511855152,
+                  "time_us": 478386.25
+                },
+                {
+                  "allocated_bytes": 511855136,
+                  "time_us": 505084.417
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 547930.959,
+              "samples": [
+                {
+                  "allocated_bytes": 580297208,
+                  "time_us": 576732.333
+                },
+                {
+                  "allocated_bytes": 580297176,
+                  "time_us": 579827.667
+                },
+                {
+                  "allocated_bytes": 580288768,
+                  "time_us": 565270.541
+                },
+                {
+                  "allocated_bytes": 580288752,
+                  "time_us": 547930.959
+                },
+                {
+                  "allocated_bytes": 580288752,
+                  "time_us": 559826.583
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phases": {
+            "parse": {
+              "time_us": 74875.459,
+              "samples": [
+                {
+                  "allocated_bytes": 68432544,
+                  "time_us": 96772.875
+                },
+                {
+                  "allocated_bytes": 68432528,
+                  "time_us": 77077.584
+                },
+                {
+                  "allocated_bytes": 68432664,
+                  "time_us": 102824.416
+                },
+                {
+                  "allocated_bytes": 68432664,
+                  "time_us": 107510.917
+                },
+                {
+                  "allocated_bytes": 68432664,
+                  "time_us": 74875.459
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 420962.959,
+              "samples": [
+                {
+                  "allocated_bytes": 511855120,
+                  "time_us": 446995.583
+                },
+                {
+                  "allocated_bytes": 511855168,
+                  "time_us": 451379.125
+                },
+                {
+                  "allocated_bytes": 511855120,
+                  "time_us": 420962.959
+                },
+                {
+                  "allocated_bytes": 511855136,
+                  "time_us": 444472.333
+                },
+                {
+                  "allocated_bytes": 511855136,
+                  "time_us": 457439.583
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 545827.333,
+              "samples": [
+                {
+                  "allocated_bytes": 580288736,
+                  "time_us": 563519.292
+                },
+                {
+                  "allocated_bytes": 580288736,
+                  "time_us": 545827.333
+                },
+                {
+                  "allocated_bytes": 580288752,
+                  "time_us": 577862.542
+                },
+                {
+                  "allocated_bytes": 580297208,
+                  "time_us": 577411.625
+                },
+                {
+                  "allocated_bytes": 580297192,
+                  "time_us": 560166.958
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "packed": [
+        {
+          "phases": {
+            "parse": {
+              "time_us": 76630.75,
+              "samples": [
+                {
+                  "allocated_bytes": 68432144,
+                  "time_us": 83425.833
+                },
+                {
+                  "allocated_bytes": 68432280,
+                  "time_us": 76731.584
+                },
+                {
+                  "allocated_bytes": 68432144,
+                  "time_us": 120693.708
+                },
+                {
+                  "allocated_bytes": 68432144,
+                  "time_us": 76630.75
+                },
+                {
+                  "allocated_bytes": 68432280,
+                  "time_us": 110995.625
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 410939.333,
+              "samples": [
+                {
+                  "allocated_bytes": 487601504,
+                  "time_us": 426649.042
+                },
+                {
+                  "allocated_bytes": 487601504,
+                  "time_us": 410939.333
+                },
+                {
+                  "allocated_bytes": 487601504,
+                  "time_us": 414849.666
+                },
+                {
+                  "allocated_bytes": 487601520,
+                  "time_us": 415350.292
+                },
+                {
+                  "allocated_bytes": 487601536,
+                  "time_us": 452822.208
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 522076.125,
+              "samples": [
+                {
+                  "allocated_bytes": 556034752,
+                  "time_us": 536147.625
+                },
+                {
+                  "allocated_bytes": 556034600,
+                  "time_us": 522076.125
+                },
+                {
+                  "allocated_bytes": 556034648,
+                  "time_us": 539715.916
+                },
+                {
+                  "allocated_bytes": 556034752,
+                  "time_us": 540216.708
+                },
+                {
+                  "allocated_bytes": 556034600,
+                  "time_us": 546406.708
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phases": {
+            "parse": {
+              "time_us": 76073.625,
+              "samples": [
+                {
+                  "allocated_bytes": 68432144,
+                  "time_us": 76073.625
+                },
+                {
+                  "allocated_bytes": 68432280,
+                  "time_us": 109806.375
+                },
+                {
+                  "allocated_bytes": 68432280,
+                  "time_us": 100515.541
+                },
+                {
+                  "allocated_bytes": 68432144,
+                  "time_us": 87706.083
+                },
+                {
+                  "allocated_bytes": 68432296,
+                  "time_us": 112654.375
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 413479.792,
+              "samples": [
+                {
+                  "allocated_bytes": 487601504,
+                  "time_us": 413479.792
+                },
+                {
+                  "allocated_bytes": 487601536,
+                  "time_us": 445342.916
+                },
+                {
+                  "allocated_bytes": 487601504,
+                  "time_us": 489980
+                },
+                {
+                  "allocated_bytes": 487601504,
+                  "time_us": 536140.959
+                },
+                {
+                  "allocated_bytes": 487601504,
+                  "time_us": 417227.417
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 532641.792,
+              "samples": [
+                {
+                  "allocated_bytes": 556034752,
+                  "time_us": 532641.792
+                },
+                {
+                  "allocated_bytes": 556034736,
+                  "time_us": 537065.167
+                },
+                {
+                  "allocated_bytes": 556034768,
+                  "time_us": 533420.792
+                },
+                {
+                  "allocated_bytes": 556034768,
+                  "time_us": 544241.416
+                },
+                {
+                  "allocated_bytes": 556034736,
+                  "time_us": 566768.75
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phases": {
+            "parse": {
+              "time_us": 76957.916,
+              "samples": [
+                {
+                  "allocated_bytes": 68432144,
+                  "time_us": 105138.625
+                },
+                {
+                  "allocated_bytes": 68432144,
+                  "time_us": 76957.916
+                },
+                {
+                  "allocated_bytes": 68432280,
+                  "time_us": 87777.875
+                },
+                {
+                  "allocated_bytes": 68432160,
+                  "time_us": 104068.167
+                },
+                {
+                  "allocated_bytes": 68432144,
+                  "time_us": 80109.833
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 410003.208,
+              "samples": [
+                {
+                  "allocated_bytes": 487601504,
+                  "time_us": 451096.375
+                },
+                {
+                  "allocated_bytes": 487601520,
+                  "time_us": 462684.584
+                },
+                {
+                  "allocated_bytes": 487601504,
+                  "time_us": 449914.667
+                },
+                {
+                  "allocated_bytes": 487601520,
+                  "time_us": 410003.208
+                },
+                {
+                  "allocated_bytes": 487601536,
+                  "time_us": 456427.458
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 524276.042,
+              "samples": [
+                {
+                  "allocated_bytes": 556034736,
+                  "time_us": 525070.459
+                },
+                {
+                  "allocated_bytes": 556034736,
+                  "time_us": 532128.042
+                },
+                {
+                  "allocated_bytes": 556034632,
+                  "time_us": 524276.042
+                },
+                {
+                  "allocated_bytes": 556034752,
+                  "time_us": 539502.334
+                },
+                {
+                  "allocated_bytes": 556034616,
+                  "time_us": 529743.5
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phases": {
+            "parse": {
+              "time_us": 73861.542,
+              "samples": [
+                {
+                  "allocated_bytes": 68432144,
+                  "time_us": 111769.375
+                },
+                {
+                  "allocated_bytes": 68432280,
+                  "time_us": 75590.334
+                },
+                {
+                  "allocated_bytes": 68432280,
+                  "time_us": 107736.625
+                },
+                {
+                  "allocated_bytes": 68432280,
+                  "time_us": 105354
+                },
+                {
+                  "allocated_bytes": 68432144,
+                  "time_us": 73861.542
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 434438.75,
+              "samples": [
+                {
+                  "allocated_bytes": 487601504,
+                  "time_us": 437518.667
+                },
+                {
+                  "allocated_bytes": 487601536,
+                  "time_us": 435806.792
+                },
+                {
+                  "allocated_bytes": 487601552,
+                  "time_us": 454694.416
+                },
+                {
+                  "allocated_bytes": 487601520,
+                  "time_us": 453055.375
+                },
+                {
+                  "allocated_bytes": 487601504,
+                  "time_us": 434438.75
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 520735.833,
+              "samples": [
+                {
+                  "allocated_bytes": 556034736,
+                  "time_us": 524172.125
+                },
+                {
+                  "allocated_bytes": 556034752,
+                  "time_us": 552472.417
+                },
+                {
+                  "allocated_bytes": 556034600,
+                  "time_us": 551988.167
+                },
+                {
+                  "allocated_bytes": 556034632,
+                  "time_us": 535195.458
+                },
+                {
+                  "allocated_bytes": 556034632,
+                  "time_us": 520735.833
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phases": {
+            "parse": {
+              "time_us": 76207.959,
+              "samples": [
+                {
+                  "allocated_bytes": 68432144,
+                  "time_us": 76207.959
+                },
+                {
+                  "allocated_bytes": 68432280,
+                  "time_us": 95022.084
+                },
+                {
+                  "allocated_bytes": 68432160,
+                  "time_us": 115088.5
+                },
+                {
+                  "allocated_bytes": 68432144,
+                  "time_us": 79505.166
+                },
+                {
+                  "allocated_bytes": 68432296,
+                  "time_us": 111297.875
+                }
+              ]
+            },
+            "decode": {
+              "time_us": 417062.625,
+              "samples": [
+                {
+                  "allocated_bytes": 487601504,
+                  "time_us": 437372.959
+                },
+                {
+                  "allocated_bytes": 487601520,
+                  "time_us": 417062.625
+                },
+                {
+                  "allocated_bytes": 487601504,
+                  "time_us": 429172.25
+                },
+                {
+                  "allocated_bytes": 487601536,
+                  "time_us": 427553.167
+                },
+                {
+                  "allocated_bytes": 487601520,
+                  "time_us": 461738.834
+                }
+              ]
+            },
+            "combined": {
+              "time_us": 530691.25,
+              "samples": [
+                {
+                  "allocated_bytes": 556035280,
+                  "time_us": 546055
+                },
+                {
+                  "allocated_bytes": 556034904,
+                  "time_us": 562963.916
+                },
+                {
+                  "allocated_bytes": 556034616,
+                  "time_us": 536493.625
+                },
+                {
+                  "allocated_bytes": 556034648,
+                  "time_us": 538273.167
+                },
+                {
+                  "allocated_bytes": 556034752,
+                  "time_us": 530691.25
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "official_single_version": {
+    "json": {
+      "go": {
+        "parse": 7627.125,
+        "decode": 28584,
+        "combined": 37185.709
+      },
+      "js": {
+        "parse": 1636.624999999995,
+        "decode": 7543.082999999968,
+        "combined": 9031.042000000014
+      }
+    },
+    "tast": {
+      "go": {
+        "parse": 76261.75,
+        "decode": 414689.25,
+        "combined": 528473.625
+      },
+      "js": {
+        "parse": 20367.165999999997,
+        "decode": 61196.41600000023,
+        "combined": 79390.79199999923
+      }
+    }
+  },
+  "official_allocated_bytes": {
+    "json": {
+      "parse": 5997744,
+      "decode": 43667992,
+      "combined": 49671400
+    },
+    "tast": {
+      "parse": 68432280,
+      "decode": 487601504,
+      "combined": 556034768
+    }
+  },
+  "provenance": {
+    "compilers": {
+      "baseline": "bfd37bad96ee01c31759a2101ceabb9f17231cb9de77bd70522dd8108a7c39f4",
+      "packed": "ae42e79a284befdf201d484072ada19dfc2622005dbad7d023815bbdb1fa4de3"
+    },
+    "workspaces": {
+      "baseline-json": {
+        "binary_sha256": "4602484d65c9d142b69cf80f2d27059df449d2e3cf9cbcfd7f3fd0da77068be0",
+        "js_sha256": "8239cafc9c9ce4b1370b714b04e2bb3bec59261a0197eb6460fd003c3c01d03b",
+        "purs": "0.15.16 [development build; commit: 319e138cbcbee59b3837f6cba7ca03a680395e67]",
+        "go": "go version go1.27.0 darwin/arm64"
+      },
+      "packed-json": {
+        "binary_sha256": "bd866a516d0fc4744e903b70b5df91d55e10e0ed32ca6e94293f1fc3b8571dce",
+        "js_sha256": "8239cafc9c9ce4b1370b714b04e2bb3bec59261a0197eb6460fd003c3c01d03b",
+        "purs": "0.15.16 [development build; commit: 319e138cbcbee59b3837f6cba7ca03a680395e67]",
+        "go": "go version go1.27.0 darwin/arm64"
+      },
+      "baseline-tast": {
+        "binary_sha256": "da793225afae654653979e1e321d21ff7db82d45c2b9bf88e81d51aa9cdf502a",
+        "js_sha256": "1317a4bda4b9fa3e34985417eddf576ebaf060b7ae9ace1cdd69157c1d7cab9b",
+        "purs": "0.15.16 [development build; commit: 319e138cbcbee59b3837f6cba7ca03a680395e67]",
+        "go": "go version go1.27.0 darwin/arm64"
+      },
+      "packed-tast": {
+        "binary_sha256": "928dfba9f1bf09564e83c8223332b8fbc4b0a6c1ca7ffe2fab5c0345538f4517",
+        "js_sha256": "1317a4bda4b9fa3e34985417eddf576ebaf060b7ae9ace1cdd69157c1d7cab9b",
+        "purs": "0.15.16 [development build; commit: 319e138cbcbee59b3837f6cba7ca03a680395e67]",
+        "go": "go version go1.27.0 darwin/arm64"
+      }
+    },
+    "corpora": {
+      "json-decoding": "0ab72448440c4369dcc8422bf402156ce0c6fa8ebdc93d6f13a127ddbcf8e93a",
+      "json-typed-ast": "ef5ed1bae6ae52d084a4b3fd9d1e9e90a5da2c3a2d1e6e3aa56122007e0b223a"
+    }
+  },
+  "validation": {
+    "oracles": "17 JSON cases and 12 TAST modules matched in every measured process (fingerprints compared before aggregation).",
+    "gopurs_node_tests": "170 tests, 168 pass, 0 fail, 2 skipped (tools/*.test.mjs).",
+    "modtest": "argonaut-core, foreign, foreign-object, node-buffer, prelude, strings-extra pass; gopurs-strings fails on isolated surrogates, reproduced identically with the baseline bundle (pre-existing, matching the StringEdgeCases/StringEscapes exclusions).",
+    "altbak_core": "bin/go/run -c: 14 reference outputs, total 13.138 ms, exit 0.",
+    "js_bundles_identical_between_versions": true
+  }
+}
