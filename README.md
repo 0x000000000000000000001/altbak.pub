@@ -299,5 +299,3 @@ Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 57411
 > [!NOTE]
 > **Hardware Context**
 > Measurements ran on an **Apple M4 Pro with 10 performance cores and 4 efficiency cores**, without explicit CPU affinity. The extended *Parallelism* row compares JavaScript's single-thread scheduler with Go/Rust's multicore runtimes.
-
-[Methodology and comparison limits](docs/benchmark-methodology.md) · [Validated measurements — September 20, 2026](docs/benchmark-results/2026-09-20.json). All 39 columns were recomputed; these figures form a new baseline rather than a compiler speedup comparison with the older protocol.
