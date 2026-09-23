@@ -67,7 +67,7 @@ JSON to Typed AST (excluded WIP) | ~ 48.00 ms | — | — | — |
 JSON Decoding (excluded WIP) | ~ 15.11 ms | — | — | — |
 **Total Execution Time** | ~ 13.28 ms <br>(/C = 1.3x) | ~ 1464.74 ms <br>(/C = 148.8x) | ~ 88.99 ms <br>(/C = 9.0x) | ~ 11.34 ms <br>(/C = 1.2x) |
 
-Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios. Latest campaigns: [native TAST decoding](docs/benchmark-results/2026-09-23-tast-native-decoding.md), [TAST decode profile and value-native ST interface](docs/benchmark-results/2026-09-23-tast-decode-profile.md), [shared JSON record construction](docs/benchmark-results/2026-09-22-json-record-plans.md), [native JSON parser](docs/benchmark-results/2026-09-22-native-json-parser.md), [fused Either traversals](docs/benchmark-results/2026-09-22-fused-json-traversals.md), [deferred error wrappers](docs/benchmark-results/2026-09-22-argonaut-error-paths.md), [dedicated caseJson FFI](docs/benchmark-results/2026-09-22-casejson-ffi.md), [packed string payloads](docs/benchmark-results/2026-09-22-packed-strings.md).
+Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios. Latest campaigns: [native C references for the excluded rows](docs/benchmark-results/2026-09-23-native-c-references.md), [native TAST decoding](docs/benchmark-results/2026-09-23-tast-native-decoding.md), [TAST decode profile and value-native ST interface](docs/benchmark-results/2026-09-23-tast-decode-profile.md), [shared JSON record construction](docs/benchmark-results/2026-09-22-json-record-plans.md), [native JSON parser](docs/benchmark-results/2026-09-22-native-json-parser.md), [fused Either traversals](docs/benchmark-results/2026-09-22-fused-json-traversals.md), [deferred error wrappers](docs/benchmark-results/2026-09-22-argonaut-error-paths.md), [dedicated caseJson FFI](docs/benchmark-results/2026-09-22-casejson-ffi.md), [packed string payloads](docs/benchmark-results/2026-09-22-packed-strings.md).
 
 #### Scheme
 
@@ -287,7 +287,12 @@ State Monad | ~ 0 μs |
 Lazy Evaluation | ~ 0 μs |
 Array Processing | ~ 0.05 μs |
 RowToList | ~ 0 μs |
+Array Indexing (excluded WIP) | ~ 6589.00 μs |
+JSON Decoding (excluded WIP) | ~ 644.96 μs |
+JSON to Typed AST (excluded WIP) | ~ 8758.63 μs |
 **Total Execution Time** | ~ 9.84 ms <br>(/C = 1.0x) |
+
+Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios. The native C/C++ references behind those cells are described in [native C references](docs/benchmark-results/2026-09-23-native-c-references.md).
 
 ### Extended benchmark results (I/O, mutability, async)
 

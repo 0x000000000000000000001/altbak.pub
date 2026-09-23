@@ -118,12 +118,16 @@ def build(directory, env):
     shutil.copy2(DRIVERS / 'driver.mjs', directory / 'driver.mjs')
     commands.append(run_logged(['go', 'build', '-pgo=off', '-o', directory / 'array-benchmark', './array-driver'],
                                directory / 'output', logs / 'go-build.log', env))
+    compiler = env.get('CC', 'clang')
+    commands.append(run_logged([compiler, '-O3', '-o', directory / 'array-benchmark-c', DRIVERS / 'driver.c'],
+                               directory, logs / 'clang.log', env))
     if fingerprints(source_paths) != before:
         raise ValueError('Inputs changed during build')
-    artifacts = [directory / 'array-benchmark', directory / 'driver.mjs', generated,
+    artifacts = [directory / 'array-benchmark', directory / 'array-benchmark-c', directory / 'driver.mjs', generated,
                  *sorted((directory / 'output').rglob('*.js'))]
     versions = {name: subprocess.check_output(command, env=env, text=True).strip() for name, command in {
-        'go': ['go', 'version'], 'node': ['node', '--version'], 'purs': [purs, '--version']}.items()}
+        'go': ['go', 'version'], 'node': ['node', '--version'], 'purs': [purs, '--version'],
+        'clang': [compiler, '--version']}.items()}
     manifest = {'schema': 1, 'sources': before, 'artifacts': fingerprints(artifacts),
                 'commands': commands, 'versions': versions, 'generated_audit': audit,
                 'profile': {key: env.get(key, '') for key in PROFILE_KEYS}}
@@ -177,11 +181,12 @@ def measure(directory, output, args, env):
     output.mkdir(parents=True, exist_ok=False)
     write_json(output / 'build-manifest.json', manifest)
     shutil.copy2(directory / 'output/purescript/Test_ArrayIndexing.go', output / 'ArrayIndexing.generated.go')
-    runtimes = [args.runtime] if args.runtime else ['go', 'js']
+    runtimes = [args.runtime] if args.runtime else ['go', 'js', 'c']
     processes = []
     for process, seed in enumerate([5, 13, 29], 1):
         for runtime in runtimes:
             command = [directory / 'array-benchmark', '-accesses', args.accesses, '-batches', args.batches, '-seed', seed] if runtime == 'go' else [
+                directory / 'array-benchmark-c', '-accesses', args.accesses, '-batches', args.batches, '-seed', seed] if runtime == 'c' else [
                 'node', directory / 'driver.mjs', args.accesses, args.batches, seed]
             command = list(map(str, command))
             result = subprocess.run(command, cwd=directory, env=env, text=True, capture_output=True, timeout=120)
@@ -220,7 +225,7 @@ def main():
     action = parser.add_mutually_exclusive_group(required=True)
     action.add_argument('--build-only', action='store_true')
     action.add_argument('--run-only', action='store_true')
-    parser.add_argument('--runtime', choices=['go', 'js'], help='measure only this runtime; a build prepares both')
+    parser.add_argument('--runtime', choices=['go', 'js', 'c'], help='measure only this runtime; a build prepares all of them')
     parser.add_argument('--build-dir', type=Path)
     parser.add_argument('--output', type=Path, help='new campaign directory, required with --run-only')
     parser.add_argument('--accesses', type=int, default=1 << 23)
