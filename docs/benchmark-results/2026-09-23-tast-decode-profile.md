@@ -24,9 +24,12 @@ this step; all numbers are measurements of the published state.
   `Record_Unsafe` 2.1%, `Partial.Unsafe` 1.3%.
 - **First bounded experiment (scratch probe)**: replacing the ST foreign
   wrappers with `Value`-native helpers on the frozen generated Go gives
-  **−13.4% decode time and −9.1% allocated bytes**, oracles passing. This
-  measures the ceiling of the ST/foreign-interface layer; porting it into
-  gopurs is the next step.
+  **−13.4% decode time and −9.1% allocated bytes**, oracles passing.
+- **Integrated**: the same effect is now obtained from the FFI sources
+  (`Control.Monad.ST.Internal` and `Uncurried` declare callbacks and results
+  as `gopurs_runtime.Value`). Ten paired runs give **decode −11.88%** and
+  **allocations −9.09%**; the official cells move to **358.78 ms Go** and
+  **396.74 ms combined**.
 
 ## Reference measurements
 
@@ -175,10 +178,100 @@ allocation figure is exact (`TotalAlloc`), not sampled. The oracle passes.
 Caveats: this is a **scratch probe on the frozen Go**, not an integrated
 compiler change; it patches only the wrapper bodies, so `Data.Array.ST`
 operations still convert `[]Value` ↔ `[]any` per call and the PBO decoder is
-unchanged. It measures a ceiling for the ST/foreign-interface layer, not a
-promised compiler result. The next step is to obtain the same effect from
-gopurs itself — codegen intrinsics for the ST operations, or a `Value`-native
-foreign ABI — then run the paired campaign and the complete b8x build.
+unchanged. The integrated port is measured below.
+
+## Integrated port: Value-native ST foreign interface
+
+The probe's transformation was then obtained from gopurs itself without new
+codegen machinery: the Go foreign implementations of
+`Control.Monad.ST.Internal` and `Control.Monad.ST.Uncurried` now declare their
+callbacks and results as `gopurs_runtime.Value`. The existing foreign bridge
+already passes such parameters through directly, so the generated wrappers
+lose their `any`-adapter closures and argument/result boxes. Call sites,
+the decoder, PBO and the JS backend are untouched (the JS bundles of the two
+workspaces are byte-identical).
+
+Changed files:
+
+- `gopurs-st/src/Control/Monad/ST/Internal.go`: `map_`, `pure_`, `bind_`,
+  `run`, `while`, `forImpl`, `foreach`, `newImpl`, `read`, `modifyImpl`,
+  `write`.
+- `gopurs-st/src/Control/Monad/ST/Uncurried.go`: `mkSTFn1..9` (identity) and
+  `runSTFn1..9` (direct `Apply`/`ApplyN`).
+
+### Paired campaign (frozen binaries, 10 pairs, two series)
+
+| Phase | Before (median) | After (median) | Paired delta |
+|---|---:|---:|---:|
+| Parse | 27.41 ms | 27.03 ms | −1.89% (noise) |
+| **Decode** | 398.36 ms | **352.75 ms** | **−11.88%** |
+| Combined | 439.72 ms | 399.84 ms | −7.51% |
+| Decode allocations | 442,632,472 B | **402,378,424 B** | **−9.09%** |
+
+Nine of the ten pairs improve between −8.6% and −13.8% on decode; one first
+pair is flat (−0.45%). The allocation figure is exact and identical in every
+run. The JS process was not re-run for the control because the bundle hash is
+unchanged.
+
+Official protocol on the new workspace (three processes per backend, median of
+process minima):
+
+| Cell | Before | After |
+|---|---:|---:|
+| Go parse / decode / combined | 25.24 / 371.00 / 423.14 ms | 28.23 / **358.78** / **396.74 ms** |
+| JS control parse / decode / combined | 20.41 / 56.37 / 79.50 ms | 20.86 / 60.64 / 81.77 ms |
+
+The JS control is the same bundle; its session-to-session variation is not
+attributed to this change. Go decode improves **3.3%** against the earlier
+session's cell and **11.9%** against its paired control.
+
+### Validation
+
+- `gopurs-st/bin/test` (STRef read/write/modify/modify', while, for, foreach,
+  MonadRec, sumOfSquares) passes on the native Go target.
+- The native compiler bootstrap (`npm run build:native`) completes, so the
+  compiler itself runs on the migrated interface.
+- All 12 TAST modules match their fingerprints in every campaign process and
+  in the official measurement.
+- The complete b8x build is recorded below.
+
+### Complete b8x build and compiler A/B
+
+Full `b -c` (the script rebuilds the native compiler, which is deterministic:
+the same sources produce the same binary, `4a10eaf6…` before and `8a90acdc…`
+after):
+
+| Run | Wall | Backend | Load | Prepare | Emit | Peak RSS |
+|---|---:|---:|---:|---:|---:|---:|
+| Before | 250.01 s | 160.21 s | 9.64 s | 38.99 s | 111.58 s | 5.70 GiB |
+| After #1 | 260.94 s | 167.34 s | 10.84 s | 42.48 s | 114.01 s | 5.71 GiB |
+| After #2 | 258.52 s | 170.65 s | 9.19 s | 45.41 s | 116.04 s | 5.95 GiB |
+
+Same-binary drift is documented in previous campaigns (±2–3%), and the
+comparison mixes sessions. A controlled backend-only A/B on the frozen b8x
+TAST (alternating `before`, `after`, `after`, `before`) gives:
+
+| Run | Binary | Wall | User CPU | Backend | Load |
+|---|---|---:|---:|---:|---:|
+| 0 | before | 167.50 s | 706.4 s | 166.95 s | 10.31 s |
+| 1 | after | 174.06 s | 685.5 s | 173.33 s | 9.84 s |
+| 2 | after | 174.51 s | 690.1 s | 174.43 s | 10.19 s |
+| 3 | before | 172.20 s | 696.7 s | 172.11 s | 11.67 s |
+
+A second A/B on the 238-module `gopurs-aff` corpus (8 alternating runs) gives
+backend minima **7009 ms before** and **7242 ms after** (fast runs), with two
+after runs interfered (load 2215 ms). User CPU is consistently lower after
+(32.6–33.5 s vs 33.3–33.7 s on `gopurs-aff`; 685–690 s vs 697–706 s on b8x),
+and the load phase is consistently faster. **No compiler wall-time gain or
+regression is established**: the observed +2–4% is not separated from machine
+drift, while CPU decreases and TAST loading improves. This question stays open
+for point 7.
+
+### Remaining scope
+
+`Data.Array.ST` still converts `[]Value` ↔ `[]any` per operation, and the
+`unsafePartial`/`Array.unsafeIndex` bridges are unchanged. Those are the next
+candidates before the native callback ABI.
 
 ## Provenance
 
@@ -193,9 +286,17 @@ foreign ABI — then run the paired campaign and the complete b8x build.
   allocation profile `cf9323d3…`, live profile `1ccbd59b…`.
 - ST probe: `probe-binary` sha256 `6ec79544…`, built by `build-probe.py`;
   raw A/B reports `probe-ab-cpu.json` and `probe-ab-alloc.json`.
+- Integrated port: workspace
+  `altbak.pub-gopurs/var/benchmark/json-tast-stf-20260923`; official results in
+  `var/benchmark/stf-results-20260923`; paired campaigns in
+  `var/benchmark/stf-campaign-20260923` and `stf-campaign-2-20260923`
+  (aggregation: `scratch/tast-decode-20260923/aggregate.py`).
 - Reproduce:
   1. `python3 altbak.pub-gopurs/bin/benchmark/json-diagnostic.py build --suite JsonTypedAst --workspace <new>`
   2. `python3 … measure --suite JsonTypedAst --workspace <ws> --output <out>`
   3. `scratch/tast-decode-20260923/build-profile.sh` then `run-profile.sh cpu|alloc|validate|live`.
+  4. Paired: `scratch/tast-decode-20260923/campaign.py --suite JsonTypedAst --before <ws> --after <ws> --output <dir> --pairs 5`.
 
-No repository file was modified for these measurements.
+No repository file was modified for the reference, profile and probe
+measurements. The integrated port modifies only
+`gopurs-st/src/Control/Monad/ST/Internal.go` and `Uncurried.go`.
