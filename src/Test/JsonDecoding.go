@@ -7,6 +7,9 @@ import (
 	"fmt"
 	"os"
 	"runtime"
+	"runtime/pprof"
+	"strconv"
+	"strings"
 	"time"
 
 	"gopurs/output/gopurs_runtime"
@@ -26,6 +29,32 @@ func canonicalHash(text string) string {
 	}
 	hash := sha256.Sum256(bytes)
 	return hex.EncodeToString(hash[:])
+}
+
+func envInt(name string, fallback int) int {
+	text := os.Getenv(name)
+	if text == "" {
+		return fallback
+	}
+	value, err := strconv.Atoi(text)
+	if err != nil || value < 0 {
+		panic("invalid " + name)
+	}
+	return value
+}
+
+// phaseList selects the measured phases. DIAG_PHASES is reserved for focused
+// runs; a profile run selects its single phase through DIAG_PROFILE_PHASE.
+func phaseList() []string {
+	requested := os.Getenv("DIAG_PHASES")
+	if requested == "" {
+		return []string{"parse", "decode", "combined"}
+	}
+	phases := []string{}
+	for _, name := range strings.Split(requested, ",") {
+		phases = append(phases, strings.TrimSpace(name))
+	}
+	return phases
 }
 
 func Drive(parse, decode, encode, fingerprint gopurs_runtime.Value) func() any {
@@ -64,29 +93,32 @@ func Drive(parse, decode, encode, fingerprint gopurs_runtime.Value) func() any {
 		if len(indices) == 0 {
 			panic("No timed cases")
 		}
-		phases := map[string]any{}
-		for _, phase := range []string{"parse", "decode", "combined"} {
-			samples := []map[string]float64{}
-			best := 1e100
-			for pass := 0; pass < 7; pass++ {
-				results := make([]gopurs_runtime.Value, len(indices))
-				var before, after runtime.MemStats
-				runtime.ReadMemStats(&before)
-				start := time.Now()
-				for slot, i := range indices {
-					f := files[i]
-					switch phase {
-					case "parse":
-						results[slot] = gopurs_runtime.Apply(parse, gopurs_runtime.Str(f.Contents))
-					case "decode":
-						results[slot] = gopurs_runtime.Apply(decode, parsed[i])
-					case "combined":
-						results[slot] = gopurs_runtime.Apply(decode, gopurs_runtime.Apply(parse, gopurs_runtime.Str(f.Contents)))
-					}
-					diagnosticSink = results[slot]
+		// runPass executes one timed pass and optionally validates the produced
+		// results against the oracle. Validation is outside the timed interval
+		// but part of a plain process profile, so profile runs leave it to the
+		// single pass that precedes the CPU profile.
+		runPass := func(phase string, validate bool) (float64, float64) {
+			results := make([]gopurs_runtime.Value, len(indices))
+			var before, after runtime.MemStats
+			runtime.ReadMemStats(&before)
+			start := time.Now()
+			for slot, i := range indices {
+				f := files[i]
+				switch phase {
+				case "parse":
+					results[slot] = gopurs_runtime.Apply(parse, gopurs_runtime.Str(f.Contents))
+				case "decode":
+					results[slot] = gopurs_runtime.Apply(decode, parsed[i])
+				case "combined":
+					results[slot] = gopurs_runtime.Apply(decode, gopurs_runtime.Apply(parse, gopurs_runtime.Str(f.Contents)))
+				default:
+					panic("unknown phase " + phase)
 				}
-				elapsed := float64(time.Since(start).Nanoseconds()) / 1000
-				runtime.ReadMemStats(&after)
+				diagnosticSink = results[slot]
+			}
+			elapsed := float64(time.Since(start).Nanoseconds()) / 1000
+			runtime.ReadMemStats(&after)
+			if validate {
 				for slot, result := range results {
 					i := indices[slot]
 					callback := fingerprint
@@ -99,16 +131,77 @@ func Drive(parse, decode, encode, fingerprint gopurs_runtime.Value) func() any {
 						panic("Unstable " + phase + " output")
 					}
 				}
+			}
+			return elapsed, float64(after.TotalAlloc - before.TotalAlloc)
+		}
+		profilePhase := os.Getenv("DIAG_PROFILE_PHASE")
+		phases := phaseList()
+		if profilePhase != "" {
+			phases = []string{profilePhase}
+		}
+		phaseReport := map[string]any{}
+		for _, phase := range phases {
+			switch phase {
+			case "parse", "decode", "combined":
+			default:
+				panic("unknown phase " + phase)
+			}
+			if profilePhase != "" {
+				// One validating pass outside the profile, then many unvalidated
+				// passes so the samples describe the timed work, not the oracle.
+				runPass(phase, true)
+				var cpuFile *os.File
+				if cpuPath := os.Getenv("DIAG_CPU_PROFILE"); cpuPath != "" {
+					cpuFile, err = os.Create(cpuPath)
+					if err != nil {
+						panic(err)
+					}
+					if err = pprof.StartCPUProfile(cpuFile); err != nil {
+						panic(err)
+					}
+				}
+				passes := envInt("DIAG_PROFILE_PASSES", 200)
+				best := 1e100
+				for pass := 0; pass < passes; pass++ {
+					elapsed, _ := runPass(phase, false)
+					if elapsed < best {
+						best = elapsed
+					}
+				}
+				if cpuFile != nil {
+					pprof.StopCPUProfile()
+					cpuFile.Close()
+				}
+				if memPath := os.Getenv("DIAG_MEM_PROFILE"); memPath != "" {
+					memFile, err := os.Create(memPath)
+					if err != nil {
+						panic(err)
+					}
+					if err = pprof.WriteHeapProfile(memFile); err != nil {
+						panic(err)
+					}
+					memFile.Close()
+				}
+				phaseReport[phase] = map[string]any{"samples": []map[string]float64{}, "time_us": best}
+				continue
+			}
+			samples := []map[string]float64{}
+			best := 1e100
+			for pass := 0; pass < 7; pass++ {
+				elapsed, allocated := runPass(phase, true)
 				if pass >= 2 {
 					if elapsed < best {
 						best = elapsed
 					}
-					samples = append(samples, map[string]float64{"time_us": elapsed, "allocated_bytes": float64(after.TotalAlloc - before.TotalAlloc)})
+					samples = append(samples, map[string]float64{"time_us": elapsed, "allocated_bytes": allocated})
 				}
 			}
-			phases[phase] = map[string]any{"samples": samples, "time_us": best}
+			phaseReport[phase] = map[string]any{"samples": samples, "time_us": best}
 		}
-		report := map[string]any{"backend": "go", "modules": len(files), "timed_cases": len(indices), "names": names, "fingerprints": expectedAST, "json_fingerprints": expectedJSON, "phases": phases, "go": runtime.Version(), "gomaxprocs": runtime.GOMAXPROCS(0)}
+		report := map[string]any{"backend": "go", "modules": len(files), "timed_cases": len(indices), "names": names, "fingerprints": expectedAST, "json_fingerprints": expectedJSON, "phases": phaseReport, "go": runtime.Version(), "gomaxprocs": runtime.GOMAXPROCS(0)}
+		if profilePhase != "" {
+			report["profile_phase"] = profilePhase
+		}
 		result, err := json.Marshal(report)
 		if err != nil {
 			panic(err)

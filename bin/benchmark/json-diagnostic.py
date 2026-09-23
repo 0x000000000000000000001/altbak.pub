@@ -135,7 +135,9 @@ def sha(path):
 
 def fingerprint(suite='JsonTypedAst'):
     paths = list(source_files(suite))
-    paths += list(fixtures(suite).glob('*')) + [Path(__file__), COMPILER / 'bin/gopurs-native', typed_purs()]
+    # Resolve the runner path so a build recorded from any working directory
+    # compares equal on later invocations.
+    paths += list(fixtures(suite).glob('*')) + [Path(__file__).resolve(), COMPILER / 'bin/gopurs-native', typed_purs()]
     # Native library FFI is read during generation, independently of the
     # compiler binary. A library change must invalidate a previous build.
     for source_root in ([PBO / 'src'] if suite == 'JsonTypedAst' else []) + [p / 'src' for p in COMPILER.parent.glob('gopurs-*') if (p / 'spago.yaml').is_file()]:
@@ -186,7 +188,7 @@ def main():
     p.add_argument('--suite',choices=SUITES,default='JsonTypedAst')
     p.add_argument('--workspace',type=Path)
     p.add_argument('--output',type=Path)
-    p.add_argument('--runtime', choices=['go', 'js'], help='measure only the selected runtime; builds retain both artifacts')
+    p.add_argument('--runtime', choices=['go', 'js', 'c'], help='measure only the selected runtime; builds retain both artifacts')
     p.add_argument('--resume-build',action='store_true',help='resume a failed build in this workspace')
     args=p.parse_args();suite=args.suite;env=environment()
     work=(args.workspace or ROOT/'var/benchmark'/('json-diagnostic' if suite == 'JsonTypedAst' else 'json-decoding')).resolve()
