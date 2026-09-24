@@ -32,6 +32,12 @@ def main():
         hooks['func decodeJsonObjectDirect('] = 'zzCoverage["identity_object"]++'
     if 'func Data_Argonaut_Decode_Internal_Record_TypedObject(' in text:
         hooks['func Data_Argonaut_Decode_Internal_Record_TypedObject('] = 'zzCoverage["object_decoder_construction"]++'
+    if 'func getFieldDirect(' in text:
+        hooks['func getFieldDirect('] = 'zzCoverage["field_accessor_attempt"]++'
+        marker = '\tplan := tag.errors\n'
+        if text.count(marker) != 1:
+            raise SystemExit('Expected exactly one fused accessor body')
+        text = text.replace(marker, marker + '\tzzCoverage["fused_field_accessor"]++\n')
     for marker, statement in hooks.items():
         if text.count(marker) != 1:
             raise SystemExit(f'Expected exactly one instrumentation point: {marker}')

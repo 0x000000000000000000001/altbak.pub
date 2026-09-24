@@ -4,7 +4,7 @@
 // the same parsed Json as the generated Argonaut decoder and producing the
 // same final PureScript values (records, Maybe, the Event ADT, Either).
 //
-// It reads the parser's DOM directly (map[string]any / []any / string /
+// It reads the parser's DOM directly (native/compact objects / []any / string /
 // float64 / bool / nil) and builds the final gopurs values with the runtime
 // constructors. It does not define a new contract: error values, field order
 // and wrappers must match the generated decoder exactly, which the audit
@@ -134,12 +134,37 @@ func zzDecodeBoolean(raw any) (gopurs_runtime.Value, gopurs_runtime.Value, bool)
 
 type zzDecoder func(any) (gopurs_runtime.Value, gopurs_runtime.Value, bool)
 
+// Keep the audit buildable against preserved runtimes that predate compact
+// objects. Both reference builds use this same borrowed-access implementation.
+type zzObject struct {
+	native  map[string]any
+	compact interface{ JSONLookup(string) (any, bool) }
+}
+
+func zzObjectOf(raw any) (zzObject, bool) {
+	switch object := raw.(type) {
+	case map[string]any:
+		return zzObject{native: object}, true
+	case interface{ JSONLookup(string) (any, bool) }:
+		return zzObject{compact: object}, true
+	}
+	return zzObject{}, false
+}
+
+func (object zzObject) lookup(key string) (any, bool) {
+	if object.compact != nil {
+		return object.compact.JSONLookup(key)
+	}
+	value, ok := object.native[key]
+	return value, ok
+}
+
 // ---------------------------------------------------------------------------
 // Field accessors (same wrappers as getField / getFieldOptional' / decodeFieldMaybe)
 // ---------------------------------------------------------------------------
 
-func zzField(obj map[string]any, key string, decode zzDecoder) (gopurs_runtime.Value, gopurs_runtime.Value, bool) {
-	raw, present := obj[key]
+func zzField(obj zzObject, key string, decode zzDecoder) (gopurs_runtime.Value, gopurs_runtime.Value, bool) {
+	raw, present := obj.lookup(key)
 	if !present {
 		return gopurs_runtime.Value{}, zzAtKey(key, zzMissingValue()), false
 	}
@@ -150,8 +175,8 @@ func zzField(obj map[string]any, key string, decode zzDecoder) (gopurs_runtime.V
 	return value, gopurs_runtime.Value{}, true
 }
 
-func zzMaybeField(obj map[string]any, key string, decode zzDecoder) (gopurs_runtime.Value, gopurs_runtime.Value, bool) {
-	raw, present := obj[key]
+func zzMaybeField(obj zzObject, key string, decode zzDecoder) (gopurs_runtime.Value, gopurs_runtime.Value, bool) {
+	raw, present := obj.lookup(key)
 	if !present || raw == nil {
 		return zzNothing(), gopurs_runtime.Value{}, true
 	}
@@ -166,8 +191,8 @@ func zzMaybeField(obj map[string]any, key string, decode zzDecoder) (gopurs_runt
 // TypeMismatch "Array" (the Kleisli composition short-circuits before the
 // Named wrapper), while an element error is wrapped as
 // AtKey (field) over Named "Array" over AtIndex.
-func zzArrayField(obj map[string]any, key string, decode zzDecoder) (gopurs_runtime.Value, gopurs_runtime.Value, bool) {
-	raw, present := obj[key]
+func zzArrayField(obj zzObject, key string, decode zzDecoder) (gopurs_runtime.Value, gopurs_runtime.Value, bool) {
+	raw, present := obj.lookup(key)
 	if !present {
 		return gopurs_runtime.Value{}, zzAtKey(key, zzMissingValue()), false
 	}
@@ -191,7 +216,7 @@ func zzArrayField(obj map[string]any, key string, decode zzDecoder) (gopurs_runt
 // ---------------------------------------------------------------------------
 
 func zzDecodeProfile(raw any) (gopurs_runtime.Value, gopurs_runtime.Value, bool) {
-	obj, ok := raw.(map[string]any)
+	obj, ok := zzObjectOf(raw)
 	if !ok {
 		return gopurs_runtime.Value{}, zzTypeMismatch("Object"), false
 	}
@@ -211,7 +236,7 @@ func zzDecodeProfile(raw any) (gopurs_runtime.Value, gopurs_runtime.Value, bool)
 }
 
 func zzDecodeItem(raw any) (gopurs_runtime.Value, gopurs_runtime.Value, bool) {
-	obj, ok := raw.(map[string]any)
+	obj, ok := zzObjectOf(raw)
 	if !ok {
 		return gopurs_runtime.Value{}, zzTypeMismatch("Object"), false
 	}
@@ -231,7 +256,7 @@ func zzDecodeItem(raw any) (gopurs_runtime.Value, gopurs_runtime.Value, bool) {
 }
 
 func zzDecodeUser(raw any) (gopurs_runtime.Value, gopurs_runtime.Value, bool) {
-	obj, ok := raw.(map[string]any)
+	obj, ok := zzObjectOf(raw)
 	if !ok {
 		return gopurs_runtime.Value{}, zzTypeMismatch("Object"), false
 	}
@@ -259,13 +284,13 @@ func zzDecodeUser(raw any) (gopurs_runtime.Value, gopurs_runtime.Value, bool) {
 }
 
 func zzDecodeEvent(raw any) (gopurs_runtime.Value, gopurs_runtime.Value, bool) {
-	obj, ok := raw.(map[string]any)
+	obj, ok := zzObjectOf(raw)
 	if !ok {
 		// decodeForeignObject short-circuits before Named "ForeignObject", like
 		// decodeArray does before Named "Array".
 		return gopurs_runtime.Value{}, zzTypeMismatch("Object"), false
 	}
-	tagRaw, present := obj["tag"]
+	tagRaw, present := obj.lookup("tag")
 	if !present {
 		return gopurs_runtime.Value{}, zzAtKey("tag", zzMissingValue()), false
 	}
@@ -280,7 +305,7 @@ func zzDecodeEvent(raw any) (gopurs_runtime.Value, gopurs_runtime.Value, bool) {
 			return gopurs_runtime.Value{}, err, false
 		}
 		var duration *Constructor_Data_Maybe_Just[int64]
-		if durationRaw, present := obj["duration"]; present && durationRaw != nil {
+		if durationRaw, present := obj.lookup("duration"); present && durationRaw != nil {
 			value, err, ok := zzDecodeInt(durationRaw)
 			if !ok {
 				return gopurs_runtime.Value{}, zzAtKey("duration", err), false
@@ -312,7 +337,7 @@ func zzDecodeEvent(raw any) (gopurs_runtime.Value, gopurs_runtime.Value, bool) {
 // events, next, users, version for Payload; active, id, name, profile, tags
 // for User; price, quantity, sku for Item; city, note, scores for Profile.
 //
-// Only an object root arrives as TypeAny wrapping map[string]any. An array
+// An object root arrives as TypeAny wrapping a native or compact object. An array
 // root is TypeArray and every scalar root keeps its scalar type; all of them
 // fail like toObject does, with a plain TypeMismatch "Object".
 func ZzSpecializedDecode(json gopurs_runtime.Value) gopurs_runtime.Value {
@@ -328,7 +353,7 @@ func ZzSpecializedDecode(json gopurs_runtime.Value) gopurs_runtime.Value {
 }
 
 func zzDecodePayload(raw any) (gopurs_runtime.Value, gopurs_runtime.Value, bool) {
-	obj, ok := raw.(map[string]any)
+	obj, ok := zzObjectOf(raw)
 	if !ok {
 		// The record instance reports a plain TypeMismatch, without the
 		// Named "ForeignObject" wrapper used for FO.Object fields.
