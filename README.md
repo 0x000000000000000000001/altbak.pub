@@ -113,23 +113,23 @@ RowToList | ~ 0.04 μs | ~ 0.04 μs | ~ 0.01 μs |
 
 PHP Benchmark           | Hand-written PureScript<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) | Hand-written FP-style PHP FFI<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) | Hand-written imperative PHP FFI<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) |
 ----------------------- | ------------------------- | ----------------------- | ----------------------------- |
-AST Evaluation | ~ 2.22 μs | ~ 3.19 μs | ~ 2.11 μs |
-Fibonacci | ~ 1.06 μs | ~ 2.26 μs | ~ 1.27 μs |
-List Processing | ~ 157.34 μs | ~ 174.47 μs | ~ 0.63 μs |
-Tail Call Optimization | ~ 74.87 μs | ~ 49.87 μs | ~ 50.30 μs |
-Deep Record Updates | ~ 1514.41 μs | ~ 1676.49 μs | ~ 491.74 μs |
-Ackermann | ~ 47.99 μs | ~ 100.16 μs | ~ 52.48 μs |
-Church Numerals | ~ 2129.39 μs | ~ 6824.38 μs | ~ 32.84 μs |
-Prime Sieve | ~ 765.26 μs | ~ 1022.38 μs | ~ 1.89 μs |
-Red-Black Tree | ~ 108946.58 μs | ~ 509843.88 μs | ~ 113830.46 μs |
-Polymorphism | ~ 6481.58 μs | ~ 432965.96 μs | ~ 87761.96 μs |
-State Monad | ~ 491.94 μs | ~ 560.06 μs | ~ 0.48 μs |
-Lazy Evaluation | ~ 808.59 μs | ~ 111183.96 μs | ~ 326.09 μs |
-Array Processing | ~ 99.60 μs | ~ 26.94 μs | ~ 0.80 μs |
+AST Evaluation | ~ 2.25 μs | ~ 3.19 μs | ~ 2.11 μs |
+Fibonacci | ~ 1.05 μs | ~ 2.26 μs | ~ 1.27 μs |
+List Processing | ~ 158.37 μs | ~ 174.47 μs | ~ 0.63 μs |
+Tail Call Optimization | ~ 75.06 μs | ~ 49.87 μs | ~ 50.30 μs |
+Deep Record Updates | ~ 1529.18 μs | ~ 1676.49 μs | ~ 491.74 μs |
+Ackermann | ~ 48.18 μs | ~ 100.16 μs | ~ 52.48 μs |
+Church Numerals | ~ 2117.69 μs | ~ 6824.38 μs | ~ 32.84 μs |
+Prime Sieve | ~ 761.38 μs | ~ 1022.38 μs | ~ 1.89 μs |
+Red-Black Tree | ~ 104017.00 μs | ~ 509843.88 μs | ~ 113830.46 μs |
+Polymorphism | ~ 6489.65 μs | ~ 432965.96 μs | ~ 87761.96 μs |
+State Monad | ~ 488.22 μs | ~ 560.06 μs | ~ 0.48 μs |
+Lazy Evaluation | ~ 801.67 μs | ~ 111183.96 μs | ~ 326.09 μs |
+Array Processing | ~ 99.10 μs | ~ 26.94 μs | ~ 0.80 μs |
 RowToList | ~ 0.85 μs | ~ 0.85 μs | ~ 0.08 μs |
-**Total Execution Time** | ~ 121.52 ms <br>(/C = 12.3x) | ~ 1064.43 ms <br>(/C = 108.2x) | ~ 202.55 ms <br>(/C = 20.6x) |
+**Total Execution Time** | ~ 116.59 ms <br>(/C = 11.8x) | ~ 1064.43 ms <br>(/C = 108.2x) | ~ 202.55 ms <br>(/C = 20.6x) |
 
-Latest campaign: [PHP scalar enum regions](docs/benchmark-results/2026-09-24-php-enum-regions.md).
+Latest campaigns: [PHP scalar enum regions](docs/benchmark-results/2026-09-24-php-enum-regions.md), [PHP private tags](docs/benchmark-results/2026-09-24-php-private-tag.md).
 
 #### Rust
 
