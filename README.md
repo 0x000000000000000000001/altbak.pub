@@ -292,7 +292,7 @@ JSON to Typed AST (excluded WIP) | ~ 8758.63 μs |
 JSON Decoding (excluded WIP) | ~ 644.96 μs |
 **Total Execution Time** | ~ 9.84 ms <br>(/C = 1.0x) |
 
-Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios. The native C/C++ references behind those cells are described in [native C references](docs/benchmark-results/2026-09-23-native-c-references.md).
+Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
 
 ### Extended benchmark results (I/O, mutability, async)
 
