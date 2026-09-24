@@ -1,0 +1,259 @@
+Typed [Int, [Test, RBTree, Tree] []] -> [Test, RBTree, Tree] []
+  Abs
+    Tuple
+      Just
+        v
+      0
+    Typed [[Test, RBTree, Tree] []] -> [Test, RBTree, Tree] []
+      Abs
+        Tuple
+          Just
+            v1
+          1
+        Typed [Test, RBTree, Tree] []
+          Branch
+            if PrimOp(Op1(OpIsTag(Test.RBTree.E), Typed([Test, RBTree, Tree] [], Local(v1, 1))))
+              Typed [Test, RBTree, Tree] []
+                Typed [Test, RBTree, Tree] []
+                  CtorSaturated
+                    Qualified
+                      Just
+                        Test.RBTree
+                      T
+                    SumType
+                    Tree
+                    T
+                    Tuple
+                      value0
+                      CtorSaturated
+                        Qualified
+                          Just
+                            Test.RBTree
+                          R
+                        SumType
+                        Color
+                        R
+                    Tuple
+                      value1
+                      CtorSaturated
+                        Qualified
+                          Just
+                            Test.RBTree
+                          E
+                        SumType
+                        Tree
+                        E
+                    Tuple
+                      value2
+                      Typed Int
+                        Local(v, 0)
+                    Tuple
+                      value3
+                      CtorSaturated
+                        Qualified
+                          Just
+                            Test.RBTree
+                          E
+                        SumType
+                        Tree
+                        E
+            if PrimOp(Op1(OpIsTag(Test.RBTree.T), Typed([Test, RBTree, Tree] [], Local(v1, 1))))
+              Typed [Test, RBTree, Tree] []
+                Branch
+                  if Typed(Boolean, Typed(Boolean, Typed(Boolean, PrimOp(Op2(OpIntOrd(OpLt), Typed(Int, Typed(Int, Local(v, 0))), Typed(Int, Accessor(Local(v1, 1), GetCtorField(Test.RBTree.T, SumType, Tree, T, value2, 2))))))))
+                    Typed [Test, RBTree, Tree] []
+                      Typed [Test, RBTree, Tree] []
+                        App Var(Test.RBTree.balance)
+                          Typed [Test, RBTree, Color] []
+                            Accessor
+                              Local(v1, 1)
+                              GetCtorField
+                                Qualified
+                                  Just
+                                    Test.RBTree
+                                  T
+                                SumType
+                                Tree
+                                T
+                                value0
+                                0
+                          Typed [Test, RBTree, Tree] []
+                            Typed [Test, RBTree, Tree] []
+                              App Var(Test.RBTree.ins)
+                                Typed Int
+                                  Typed Int
+                                    Local(v, 0)
+                                Typed [Test, RBTree, Tree] []
+                                  Accessor
+                                    Local(v1, 1)
+                                    GetCtorField
+                                      Qualified
+                                        Just
+                                          Test.RBTree
+                                        T
+                                      SumType
+                                      Tree
+                                      T
+                                      value1
+                                      1
+                          Typed Int
+                            Accessor
+                              Local(v1, 1)
+                              GetCtorField
+                                Qualified
+                                  Just
+                                    Test.RBTree
+                                  T
+                                SumType
+                                Tree
+                                T
+                                value2
+                                2
+                          Typed [Test, RBTree, Tree] []
+                            Accessor
+                              Local(v1, 1)
+                              GetCtorField
+                                Qualified
+                                  Just
+                                    Test.RBTree
+                                  T
+                                SumType
+                                Tree
+                                T
+                                value3
+                                3
+                  else
+                    Typed [Test, RBTree, Tree] []
+                      Branch
+                        if Typed(Boolean, Typed(Boolean, Typed(Boolean, PrimOp(Op2(OpIntOrd(OpGt), Typed(Int, Typed(Int, Local(v, 0))), Typed(Int, Accessor(Local(v1, 1), GetCtorField(Test.RBTree.T, SumType, Tree, T, value2, 2))))))))
+                          Typed [Test, RBTree, Tree] []
+                            Typed [Test, RBTree, Tree] []
+                              App Var(Test.RBTree.balance)
+                                Typed [Test, RBTree, Color] []
+                                  Accessor
+                                    Local(v1, 1)
+                                    GetCtorField
+                                      Qualified
+                                        Just
+                                          Test.RBTree
+                                        T
+                                      SumType
+                                      Tree
+                                      T
+                                      value0
+                                      0
+                                Typed [Test, RBTree, Tree] []
+                                  Accessor
+                                    Local(v1, 1)
+                                    GetCtorField
+                                      Qualified
+                                        Just
+                                          Test.RBTree
+                                        T
+                                      SumType
+                                      Tree
+                                      T
+                                      value1
+                                      1
+                                Typed Int
+                                  Accessor
+                                    Local(v1, 1)
+                                    GetCtorField
+                                      Qualified
+                                        Just
+                                          Test.RBTree
+                                        T
+                                      SumType
+                                      Tree
+                                      T
+                                      value2
+                                      2
+                                Typed [Test, RBTree, Tree] []
+                                  Typed [Test, RBTree, Tree] []
+                                    App Var(Test.RBTree.ins)
+                                      Typed Int
+                                        Typed Int
+                                          Local(v, 0)
+                                      Typed [Test, RBTree, Tree] []
+                                        Accessor
+                                          Local(v1, 1)
+                                          GetCtorField
+                                            Qualified
+                                              Just
+                                                Test.RBTree
+                                              T
+                                            SumType
+                                            Tree
+                                            T
+                                            value3
+                                            3
+                        else
+                          Typed [Test, RBTree, Tree] []
+                            Typed [Test, RBTree, Tree] []
+                              CtorSaturated
+                                Qualified
+                                  Just
+                                    Test.RBTree
+                                  T
+                                SumType
+                                Tree
+                                T
+                                Tuple
+                                  value0
+                                  Accessor
+                                    Local(v1, 1)
+                                    GetCtorField
+                                      Qualified
+                                        Just
+                                          Test.RBTree
+                                        T
+                                      SumType
+                                      Tree
+                                      T
+                                      value0
+                                      0
+                                Tuple
+                                  value1
+                                  Accessor
+                                    Local(v1, 1)
+                                    GetCtorField
+                                      Qualified
+                                        Just
+                                          Test.RBTree
+                                        T
+                                      SumType
+                                      Tree
+                                      T
+                                      value1
+                                      1
+                                Tuple
+                                  value2
+                                  Accessor
+                                    Local(v1, 1)
+                                    GetCtorField
+                                      Qualified
+                                        Just
+                                          Test.RBTree
+                                        T
+                                      SumType
+                                      Tree
+                                      T
+                                      value2
+                                      2
+                                Tuple
+                                  value3
+                                  Accessor
+                                    Local(v1, 1)
+                                    GetCtorField
+                                      Qualified
+                                        Just
+                                          Test.RBTree
+                                        T
+                                      SumType
+                                      Tree
+                                      T
+                                      value3
+                                      3
+            else
+              Fail
+                Failed pattern match

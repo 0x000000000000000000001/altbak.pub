@@ -1,0 +1,36 @@
+{
+  "protocol": "Generated F# changed only in Test.RBTree.fs; both binaries built Release Optimize=true in sibling directories; program runs interleaved; FSI uses --optimize+ with best-of-15 buildTree iterations",
+  "costSplit": {
+    "note": "FSI (optimized), public wrappers, best of 15",
+    "buildTree100k_ms": [31.9, 32.8],
+    "depth_ms": [0.3, 1.0],
+    "allocated_bytes_per_buildTree": 124000000,
+    "t_node_bytes": 48,
+    "nodes_per_insert": "~26 (2.58M nodes for 100k inserts)"
+  },
+  "programAB": {
+    "runs": 6,
+    "before": {"rbtree_ms_median": 40.85, "rbtree_ms_min": 40.43, "total_ms_median": 60.64},
+    "hand_match": {"rbtree_ms_median": 39.26, "rbtree_ms_min": 38.31, "total_ms_median": 58.87}
+  },
+  "fsiBuildTree_ms": {
+    "before": [32.24, 32.83, 32.02, 31.87, 31.64, 32.56],
+    "hand_match": [30.85, 30.49, 29.97, 29.93, 30.12],
+    "hand_match_direct_calls": [29.20, 29.22, 29.31, 29.02, 30.70],
+    "projection_helpers": [34.22, 33.88, 34.94],
+    "projection_helpers_inline": [31.22, 31.91, 33.37],
+    "emitter_nested_matches": [32.52, 32.36]
+  },
+  "emitterExperiment": {
+    "change": "AdtKernel single-tag Branch lowered to an F# match with bound pattern variables; reverted",
+    "generated_balance_bytes": {"before": 59690, "nested_matches": 48994, "hand_match": 1543},
+    "balance_il": {"before_continuation_methods": 34, "nested_matches_continuation_methods": 22, "hand_match_continuation_methods": 0},
+    "program_rbtree_ms_median": {"before": 39.62, "nested_matches": 40.78},
+    "conclusion": "F# still splits balance into continuation methods with nested matches; the hand-written flat patterns compile to a single method and are the source of the gain."
+  },
+  "rejectedVariants": {
+    "direct_native_calls": "Removing _adt_native_apply between native bodies changes the validated exception envelope/depth; kept out.",
+    "projection_helpers": "Replacing inline matches with helper functions is slower (calls are not inlined) or neutral (inline helpers)."
+  },
+  "nextStep": "Emit a flat pattern match per decision tree (pattern-matrix synthesis) so balance/ins compile as single methods; target is the hand-written match shape measured at -3.9% program RBTree and -2.9% total in this workspace."
+}

@@ -1,0 +1,66 @@
+{
+  "module": "Test.RBTree",
+  "recursive": false,
+  "ident": "describe",
+  "expression": {
+    "$tag": "Syntax$Typed",
+    "value0": {
+      "$tag": "CoreFn$ADT",
+      "value0": "Effect.Effect",
+      "value1": [
+        "Effect",
+        "Effect"
+      ],
+      "value2": [
+        {
+          "$tag": "CoreFn$Unit"
+        }
+      ]
+    },
+    "value1": {
+      "$tag": "Syntax$Typed",
+      "value0": {
+        "$tag": "CoreFn$ADT",
+        "value0": "Effect.Effect",
+        "value1": [
+          "Effect",
+          "Effect"
+        ],
+        "value2": [
+          {
+            "$tag": "CoreFn$Unit"
+          }
+        ]
+      },
+      "value1": {
+        "$tag": "Syntax$App",
+        "value0": {
+          "$tag": "Syntax$Var",
+          "value0": {
+            "$tag": "CoreFn$Qualified",
+            "value0": {
+              "$tag": "DataMaybe$Just",
+              "value0": "Effect.Console"
+            },
+            "value1": "log"
+          }
+        },
+        "value1": [
+          {
+            "$tag": "Syntax$Typed",
+            "value0": {
+              "$tag": "CoreFn$String"
+            },
+            "value1": {
+              "$tag": "Syntax$Lit",
+              "value0": {
+                "$tag": "CoreFn$LitString",
+                "value0": "Red-Black Tree (100k Worst-Case Insertions):"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

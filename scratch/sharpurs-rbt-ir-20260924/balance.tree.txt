@@ -1,0 +1,303 @@
+Typed [[Test, RBTree, Color] [], [Test, RBTree, Tree] [], Int, [Test, RBTree, Tree] []] -> [Test, RBTree, Tree] []
+  Abs
+    Tuple
+      Just
+        v
+      0
+    Typed [[Test, RBTree, Tree] [], Int, [Test, RBTree, Tree] []] -> [Test, RBTree, Tree] []
+      Abs
+        Tuple
+          Just
+            v1
+          1
+        Typed [Int, [Test, RBTree, Tree] []] -> [Test, RBTree, Tree] []
+          Abs
+            Tuple
+              Just
+                v2
+              2
+            Typed [[Test, RBTree, Tree] []] -> [Test, RBTree, Tree] []
+              Abs
+                Tuple
+                  Just
+                    v3
+                  3
+                Typed [Test, RBTree, Tree] []
+                  Branch
+                    if PrimOp(Op1(OpIsTag(Test.RBTree.B), Typed([Test, RBTree, Color] [], Local(v, 0))))
+                      Branch
+                        if PrimOp(Op1(OpIsTag(Test.RBTree.T), Typed([Test, RBTree, Tree] [], Local(v1, 1))))
+                          Branch
+                            if PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Local(v1, 1), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))
+                              Branch
+                                if PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v1, 1), GetCtorField(Test.RBTree.T, SumType, Tree, T, value1, 1))))
+                                  Branch
+                                    if PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v1, 1), GetCtorField(Test.RBTree.T, SumType, Tree, T, value1, 1)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))
+                                      Let level=Nothing
+                                        4
+                                        Accessor
+                                          Accessor
+                                            Local(v1, 1)
+                                            GetCtorField
+                                              Qualified
+                                                Just
+                                                  Test.RBTree
+                                                T
+                                              SumType
+                                              Tree
+                                              T
+                                              value1
+                                              1
+                                          GetCtorField
+                                            Qualified
+                                              Just
+                                                Test.RBTree
+                                              T
+                                            SumType
+                                            Tree
+                                            T
+                                            value1
+                                            1
+                                    if PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v1, 1), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3))))
+                                      Branch
+                                        if PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v1, 1), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))
+                                          Let level=Nothing
+                                            4
+                                            Accessor
+                                              Local(v1, 1)
+                                              GetCtorField
+                                                Qualified
+                                                  Just
+                                                    Test.RBTree
+                                                  T
+                                                SumType
+                                                Tree
+                                                T
+                                                value1
+                                                1
+                                        if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Typed([Test, RBTree, Tree] [], Local(v3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                                          Branch
+                                            if PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value1, 1))))
+                                              Branch
+                                                if PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value1, 1)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))
+                                                  Let level=Nothing
+                                                    4
+                                                    Typed [Test, RBTree, Tree] []
+                                                      Local(v1, 1)
+                                                if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                                                  Let level=Nothing
+                                                    4
+                                                    Typed [Test, RBTree, Tree] []
+                                                      Local(v1, 1)
+                                                else
+                                                  Let level=Nothing
+                                                    4
+                                                    Typed [Test, RBTree, Tree] []
+                                                      Local(v1, 1)
+                                            if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                                              Let level=Nothing
+                                                4
+                                                Typed [Test, RBTree, Tree] []
+                                                  Local(v1, 1)
+                                            else
+                                              Let level=Nothing
+                                                4
+                                                Typed [Test, RBTree, Tree] []
+                                                  Local(v1, 1)
+                                        else
+                                          Let level=Nothing
+                                            4
+                                            Typed [Test, RBTree, Tree] []
+                                              Local(v1, 1)
+                                    if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Typed([Test, RBTree, Tree] [], Local(v3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                                      Branch
+                                        if PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value1, 1))))
+                                          Branch
+                                            if PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value1, 1)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))
+                                              Let level=Nothing
+                                                4
+                                                Typed [Test, RBTree, Tree] []
+                                                  Local(v1, 1)
+                                            if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                                              Let level=Nothing
+                                                4
+                                                Typed [Test, RBTree, Tree] []
+                                                  Local(v1, 1)
+                                            else
+                                              Let level=Nothing
+                                                4
+                                                Typed [Test, RBTree, Tree] []
+                                                  Local(v1, 1)
+                                        if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                                          Let level=Nothing
+                                            4
+                                            Typed [Test, RBTree, Tree] []
+                                              Local(v1, 1)
+                                        else
+                                          Let level=Nothing
+                                            4
+                                            Typed [Test, RBTree, Tree] []
+                                              Local(v1, 1)
+                                    else
+                                      Let level=Nothing
+                                        4
+                                        Typed [Test, RBTree, Tree] []
+                                          Local(v1, 1)
+                                if PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v1, 1), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3))))
+                                  Branch
+                                    if PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v1, 1), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))
+                                      Let level=Nothing
+                                        4
+                                        Accessor
+                                          Local(v1, 1)
+                                          GetCtorField
+                                            Qualified
+                                              Just
+                                                Test.RBTree
+                                              T
+                                            SumType
+                                            Tree
+                                            T
+                                            value1
+                                            1
+                                    if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Typed([Test, RBTree, Tree] [], Local(v3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                                      Branch
+                                        if PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value1, 1))))
+                                          Branch
+                                            if PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value1, 1)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))
+                                              Let level=Nothing
+                                                4
+                                                Typed [Test, RBTree, Tree] []
+                                                  Local(v1, 1)
+                                            if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                                              Let level=Nothing
+                                                4
+                                                Typed [Test, RBTree, Tree] []
+                                                  Local(v1, 1)
+                                            else
+                                              Let level=Nothing
+                                                4
+                                                Typed [Test, RBTree, Tree] []
+                                                  Local(v1, 1)
+                                        if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                                          Let level=Nothing
+                                            4
+                                            Typed [Test, RBTree, Tree] []
+                                              Local(v1, 1)
+                                        else
+                                          Let level=Nothing
+                                            4
+                                            Typed [Test, RBTree, Tree] []
+                                              Local(v1, 1)
+                                    else
+                                      Let level=Nothing
+                                        4
+                                        Typed [Test, RBTree, Tree] []
+                                          Local(v1, 1)
+                                if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Typed([Test, RBTree, Tree] [], Local(v3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                                  Branch
+                                    if PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value1, 1))))
+                                      Branch
+                                        if PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value1, 1)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))
+                                          Let level=Nothing
+                                            4
+                                            Typed [Test, RBTree, Tree] []
+                                              Local(v1, 1)
+                                        if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                                          Let level=Nothing
+                                            4
+                                            Typed [Test, RBTree, Tree] []
+                                              Local(v1, 1)
+                                        else
+                                          Let level=Nothing
+                                            4
+                                            Typed [Test, RBTree, Tree] []
+                                              Local(v1, 1)
+                                    if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                                      Let level=Nothing
+                                        4
+                                        Typed [Test, RBTree, Tree] []
+                                          Local(v1, 1)
+                                    else
+                                      Let level=Nothing
+                                        4
+                                        Typed [Test, RBTree, Tree] []
+                                          Local(v1, 1)
+                                else
+                                  Let level=Nothing
+                                    4
+                                    Typed [Test, RBTree, Tree] []
+                                      Local(v1, 1)
+                            if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Typed([Test, RBTree, Tree] [], Local(v3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                              Branch
+                                if PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value1, 1))))
+                                  Branch
+                                    if PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value1, 1)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))
+                                      Let level=Nothing
+                                        4
+                                        Typed [Test, RBTree, Tree] []
+                                          Local(v1, 1)
+                                    if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                                      Let level=Nothing
+                                        4
+                                        Typed [Test, RBTree, Tree] []
+                                          Local(v1, 1)
+                                    else
+                                      Let level=Nothing
+                                        4
+                                        Typed [Test, RBTree, Tree] []
+                                          Local(v1, 1)
+                                if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                                  Let level=Nothing
+                                    4
+                                    Typed [Test, RBTree, Tree] []
+                                      Local(v1, 1)
+                                else
+                                  Let level=Nothing
+                                    4
+                                    Typed [Test, RBTree, Tree] []
+                                      Local(v1, 1)
+                            else
+                              Let level=Nothing
+                                4
+                                Typed [Test, RBTree, Tree] []
+                                  Local(v1, 1)
+                        if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Typed([Test, RBTree, Tree] [], Local(v3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                          Branch
+                            if PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value1, 1))))
+                              Branch
+                                if PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value1, 1)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))
+                                  Let level=Nothing
+                                    4
+                                    Typed [Test, RBTree, Tree] []
+                                      Local(v1, 1)
+                                if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                                  Let level=Nothing
+                                    4
+                                    Typed [Test, RBTree, Tree] []
+                                      Local(v1, 1)
+                                else
+                                  Let level=Nothing
+                                    4
+                                    Typed [Test, RBTree, Tree] []
+                                      Local(v1, 1)
+                            if PrimOp(Op2(OpBooleanAnd, PrimOp(Op1(OpIsTag(Test.RBTree.T), Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)))), PrimOp(Op1(OpIsTag(Test.RBTree.R), Accessor(Accessor(Local(v3, 3), GetCtorField(Test.RBTree.T, SumType, Tree, T, value3, 3)), GetCtorField(Test.RBTree.T, SumType, Tree, T, value0, 0))))))
+                              Let level=Nothing
+                                4
+                                Typed [Test, RBTree, Tree] []
+                                  Local(v1, 1)
+                            else
+                              Let level=Nothing
+                                4
+                                Typed [Test, RBTree, Tree] []
+                                  Local(v1, 1)
+                        else
+                          Let level=Nothing
+                            4
+                            Typed [Test, RBTree, Tree] []
+                              Local(v1, 1)
+                    else
+                      Let level=Nothing
+                        4
+                        Typed [Test, RBTree, Tree] []
+                          Local(v1, 1)

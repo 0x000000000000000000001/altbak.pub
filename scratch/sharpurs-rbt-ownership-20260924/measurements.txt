@@ -1,0 +1,9 @@
+=== compiled Release (persistent / mutable-auto / mutable-fields) ===
+persistent 35.646 / 36.358 / 36.123 ms
+mutable-auto 51.962 / 51.728 / 50.274 ms
+mutable-fields 52.122 / 51.690 / 54.170 ms
+
+=== FSI --optimize+ ===
+depth equivalence mismatches: 0 (n=0..20000, 100000)
+mutable: depth=22 46.237 ms
+persistent: depth=22 37.149 ms

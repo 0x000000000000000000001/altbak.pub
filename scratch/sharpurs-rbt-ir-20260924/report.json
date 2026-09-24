@@ -1,0 +1,136 @@
+{
+  "module": "Test.RBTree",
+  "bindings": {
+    "R": {
+      "recursive": false,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": false,
+        "reason": "unsupported node CtorDef",
+        "where": "root/Typed CtorDef expected=ADT(Test,RBTree,Color, [])"
+      }
+    },
+    "B": {
+      "recursive": false,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": false,
+        "reason": "unsupported node CtorDef",
+        "where": "root/Typed CtorDef expected=ADT(Test,RBTree,Color, [])"
+      }
+    },
+    "E": {
+      "recursive": false,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": false,
+        "reason": "unsupported node CtorDef",
+        "where": "root/Typed CtorDef expected=ADT(Test,RBTree,Tree, [])"
+      }
+    },
+    "T": {
+      "recursive": false,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": false,
+        "reason": "unsupported node CtorDef",
+        "where": "root/Typed CtorDef expected=[ADT(Test,RBTree,Color, []), ADT(Test,RBTree,Tree, []), Int, ADT(Test,RBTree,Tree, [])] -> ADT(Test,RBTree,Tree, [])"
+      }
+    },
+    "max": {
+      "recursive": false,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": false,
+        "reason": "unsupported node Branch",
+        "where": "root/Typed/Abs/Typed/Abs/Typed Branch expected=Int"
+      }
+    },
+    "makeBlack": {
+      "recursive": false,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": false,
+        "reason": "unsupported node Branch",
+        "where": "root/Typed/Abs/Typed Branch expected=ADT(Test,RBTree,Tree, [])"
+      }
+    },
+    "describe": {
+      "recursive": false,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": true,
+        "note": "envelope accepted"
+      }
+    },
+    "depth": {
+      "recursive": true,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": false,
+        "reason": "unsupported node Branch",
+        "where": "root/Typed/Abs/Typed Branch expected=Int"
+      }
+    },
+    "balance": {
+      "recursive": false,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": false,
+        "reason": "unsupported node Branch",
+        "where": "root/Typed/Abs/Typed/Abs/Typed/Abs/Typed/Abs/Typed Branch expected=ADT(Test,RBTree,Tree, [])"
+      }
+    },
+    "ins": {
+      "recursive": true,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": false,
+        "reason": "unsupported node Branch",
+        "where": "root/Typed/Abs/Typed/Abs/Typed Branch expected=ADT(Test,RBTree,Tree, [])"
+      }
+    },
+    "insert": {
+      "recursive": false,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": false,
+        "reason": "Let must be absorbed by IntKernel.fromLocal (whole-binding)",
+        "where": "root/Typed/Abs/Typed/Abs/Typed Let expected=ADT(Test,RBTree,Tree, [])"
+      }
+    },
+    "buildTree": {
+      "recursive": true,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": false,
+        "reason": "unsupported node Branch",
+        "where": "root/Typed/Abs/Typed/Abs/Typed Branch expected=ADT(Test,RBTree,Tree, [])"
+      }
+    },
+    "act": {
+      "recursive": false,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": false,
+        "reason": "App argument 1: App argument 0: App argument 0: App argument 0: App argument 1: unsupported node CtorSaturated",
+        "where": "root/Typed/Typed/arg1/Typed/Abs/Typed/Typed/arg0/Typed/Typed/arg0/Typed/Typed/arg0/Typed/Typed/arg1/Typed CtorSaturated expected=ADT(Test,RBTree,Tree, [])"
+      }
+    }
+  },
+  "thunks": "rejected",
+  "adt": "accepted"
+}

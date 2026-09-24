@@ -1,0 +1,27 @@
+{
+  "module": "Test.RBTree",
+  "recursive": false,
+  "ident": "B",
+  "expression": {
+    "$tag": "Syntax$Typed",
+    "value0": {
+      "$tag": "CoreFn$ADT",
+      "value0": "Test.RBTree.Color",
+      "value1": [
+        "Test",
+        "RBTree",
+        "Color"
+      ],
+      "value2": []
+    },
+    "value1": {
+      "$tag": "Syntax$CtorDef",
+      "value0": {
+        "$tag": "CoreFn$SumType"
+      },
+      "value1": "Color",
+      "value2": "B",
+      "value3": []
+    }
+  }
+}
