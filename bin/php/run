@@ -8,7 +8,7 @@
 # the medians), so the printed numbers are the ones the README publishes.
 # `-c` first rebuilds the phpurs backend with the pinned stock host compiler,
 # like the other backend runners refresh their compiler.
-set -euo pipefail
+set -eo pipefail
 cd "$(dirname "$0")/../.."
 
 CLEAN=0
@@ -65,7 +65,8 @@ if [ "$CLEAN" == "1" ]; then
     exit 1
   fi
   HOST_BIN=$(mktemp -d "${TMPDIR:-/tmp}/phpurs-host.XXXXXX")
-  trap 'rm -rf "$HOST_BIN"' EXIT
+  cleanup() { rm -rf "$HOST_BIN"; }
+  trap cleanup EXIT
   ln -s "$HOST_PURS" "$HOST_BIN/purs"
   ln -s "$PWD/run/bak/js/node_modules/.bin/spago" "$HOST_BIN/spago"
   (
@@ -75,6 +76,8 @@ if [ "$CLEAN" == "1" ]; then
     spago build
     spago bundle --module Main --platform node --outfile bin/phpurs.js --bundle-type app
   )
+  cleanup
+  trap - EXIT
 fi
 
 if [ "$BUILD_ONLY" == "1" ]; then
