@@ -40,8 +40,9 @@ if args.integrated:
     text=text.replace('tcDecodeModule(rt.Value{}, Get_PureScript_Backend_Optimizer_CoreFn_Usage_validateSourceUsageModule(), tcCursor(cursor))','rt.Apply(Get_PureScript_Backend_Optimizer_CoreFn_Json_Text_parseModule(), rt.Str(text))')
     text=text.replace('cursor, ok := directIndex(text)\n\t\tif !ok {\n\t\t\tt.Fatal(file.Name)\n\t\t}', '_, ok := directIndex(text)\n\t\tif !ok {\n\t\t\tt.Fatal(file.Name)\n\t\t}')
     shutil.copy2(root.parents[4]/'purescript-backend-optimizer-gopurs/test/json-text-native_test.go',out/'purescript/json_text_native_test.go')
+    shutil.copy2(root.parents[4]/'purescript-backend-optimizer-gopurs/test/type-table-resolution_test.go',out/'purescript/type_table_resolution_test.go')
 (out/'purescript/typed_cursor_test.go').write_text(text)
 env={**os.environ,'GOWORK':'off','GOMAXPROCS':'1','GOGC':'100','DIAG_CORPUS':str(args.corpus.resolve())}
 with args.log.open('w') as log:
     subprocess.run(['go','test','-count=1','-v','./purescript'],cwd=out,env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-    subprocess.run(['go','test','-race','-count=1','-run','TestDirect|TestTyped|TestPublicModule','-v','./purescript'],cwd=out,env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+    subprocess.run(['go','test','-race','-count=1','-run','TestDirect|TestTyped|TestPublicModule|TestTypeTable','-v','./purescript'],cwd=out,env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
