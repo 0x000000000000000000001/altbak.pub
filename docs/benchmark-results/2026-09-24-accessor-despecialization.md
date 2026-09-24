@@ -42,29 +42,38 @@ Measured on the JSON workspace before the change:
 
 ## Change
 
-`Gopurs.Monomorphization.monomorphizeModulesWith` now excludes the accessor
-family from specialization, next to the existing `sharedRecordWorkers` filter:
+`Gopurs.Monomorphization.monomorphizeModulesWith` now excludes **mechanically
+detected foreign forwarders** from specialization, next to the existing
+`sharedRecordWorkers` filter. `collectForeignForwarders` scans every module's
+bindings for the shape
 
-```purescript
-boxedFfiAccessors = Set.fromFoldable
-  [ "Data.Argonaut.Core.caseJsonNull", "Data.Argonaut.Core.caseJsonBoolean"
-  , "Data.Argonaut.Core.caseJsonNumber", "Data.Argonaut.Core.caseJsonString"
-  , "Data.Argonaut.Core.caseJsonArray", "Data.Argonaut.Core.caseJsonObject"
-  ]
-```
+- an eta-expanded lambda (`\a -> \b -> ...`),
+- whose body applies a foreign import **of the same module** to exactly the
+  lambda's parameters, in order,
+- optionally through `unsafeCoerce` casts; those are polymorphic, so the
+  matcher strips the surrounding type applications before comparing.
 
-A specialization of a thin FFI forwarder cannot unbox anything — the FFI
-boundary is value-level by construction — so the only effect was the
-round trip. With the exclusion, the accessor is a plain pass-through:
+The detection runs on the raw TAST CoreFn, where the `unsafeCoerce` casts are
+still present (PBO erases them later, which is why the accessor bodies become
+plain forwarders by the time codegen runs). A specialization of such a wrapper
+cannot unbox anything — the FFI boundary is value-level by construction — so
+the only effect was rewriting the wrapper's own boundary to native
+representations and adding a boxing round trip. With the exclusion, the
+accessor is a plain pass-through:
 
 ```go
 // worker (after)
 return gopurs_runtime.Apply3(Get_Data_Argonaut_Core__caseJsonNumber(), d_0, f_1, j_2)
 ```
 
-The four specializations (`caseJsonNumber__627409332`,
+On the JSON workspace the mechanical set reproduces the previous, named
+exclusion exactly: the four specializations (`caseJsonNumber__627409332`,
 `caseJsonNumber__1623957941`, `caseJsonString__28168628`,
-`caseJsonString__3780298677`) disappear from the generated workspace.
+`caseJsonString__3780298677`) disappear, the generated tree is **byte-identical**
+to the named-exclusion build (`diff -rq` reports no differing file, 562
+`Call_…__hash` definitions in both) and the measured results below are
+therefore unchanged. Its value is generality: any library or application with
+the same wrapper shape is covered without a name list.
 
 ## Measured effects
 
