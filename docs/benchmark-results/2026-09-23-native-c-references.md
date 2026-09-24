@@ -119,7 +119,11 @@ oracle. The only part it does not reproduce is the *pure* usage-validation
 pass (`validateSourceUsageModule`, which returns `Unit` and cannot change the
 fingerprint): measured on the same Go build, that pass costs **872.8 µs of the
 13,206.6 µs Go decode (6.6%)**, so an equivalent C pass would land near
-**4.8 ms**, still about 3.2× faster than the Go decoder.
+**4.8 ms**, still about 3.2× faster than the Go decoder. **Audit update
+(2026-09-24):** re-measured on the current build with a paired no-op validate,
+that pass costs **≈ 2.1 ms (10–15% of the Go decode)**, and the lazy type-table
+resolution is not a scope advantage — the reference builds 21,574 of 21,574
+entries. See `2026-09-24-comparison-audit.md`.
 
 Reading:
 
