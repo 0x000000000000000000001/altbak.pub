@@ -1,3 +1,109 @@
 #!/usr/bin/env bash
+# PHP benchmark runner for the phpurs backend.
+#
+# `--run-only`, `--build-only` and the diagnostic modes are forwarded to
+# bin/php/driver.py unchanged; bin/benchmark/measure.py drives frozen builds
+# through those contracts. A normal invocation reports the validated
+# three-process campaign from bin/php/campaign.py (median per row, total sums
+# the medians), so the printed numbers are the ones the README publishes.
+# `-c` first rebuilds the phpurs backend with the pinned stock host compiler,
+# like the other backend runners refresh their compiler.
 set -euo pipefail
-exec python3 "$(dirname "$0")/driver.py" "$@"
+cd "$(dirname "$0")/../.."
+
+CLEAN=0
+MODE=pure
+BUILD_ONLY=0
+RUN_ONLY=0
+BUILD_DIR=""
+TEST_NAME=""
+EXPECTED=""
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -c|--clean) CLEAN=1; shift ;;
+    --ffi) MODE=ffi; shift ;;
+    --fficc) MODE=fficc; shift ;;
+    --x) MODE=x; shift ;;
+    --test) MODE=test; TEST_NAME="$2"; shift 2 ;;
+    --expected) EXPECTED="$2"; shift 2 ;;
+    --build-only) BUILD_ONLY=1; shift ;;
+    --run-only) RUN_ONLY=1; shift ;;
+    --build-dir) BUILD_DIR="$2"; shift 2 ;;
+    *) echo "Unknown option: $1" >&2; exit 2 ;;
+  esac
+done
+
+MODE_ARGS=()
+case "$MODE" in
+  pure) ;;
+  ffi) MODE_ARGS=(--ffi) ;;
+  fficc) MODE_ARGS=(--fficc) ;;
+  x) MODE_ARGS=(--x) ;;
+  test)
+    MODE_ARGS=(--test "$TEST_NAME")
+    if [ -n "$EXPECTED" ]; then
+      MODE_ARGS+=(--expected "$EXPECTED")
+    fi
+    ;;
+esac
+
+if [ "$RUN_ONLY" == "1" ]; then
+  if [ -n "$BUILD_DIR" ]; then
+    exec python3 "$PWD/bin/php/driver.py" "${MODE_ARGS[@]}" --run-only --build-dir "$BUILD_DIR"
+  fi
+  exec python3 "$PWD/bin/php/driver.py" "${MODE_ARGS[@]}" --run-only
+fi
+
+if [ "$CLEAN" == "1" ]; then
+  echo '=== Rebuilding phpurs backend ==='
+  # The host tool is JavaScript. Pin its compiler independently of the caller's
+  # PATH and of the TAST compiler used for the benchmark program below.
+  HOST_PURS="$PWD/run/bak/js/node_modules/purescript/purs.bin"
+  if [ ! -x "$HOST_PURS" ]; then
+    echo "Missing host compiler: $HOST_PURS" >&2
+    exit 1
+  fi
+  HOST_BIN=$(mktemp -d "${TMPDIR:-/tmp}/phpurs-host.XXXXXX")
+  trap 'rm -rf "$HOST_BIN"' EXIT
+  ln -s "$HOST_PURS" "$HOST_BIN/purs"
+  ln -s "$PWD/run/bak/js/node_modules/.bin/spago" "$HOST_BIN/spago"
+  (
+    cd ../phpurs/phpurs
+    export PATH="$HOST_BIN:$PWD/node_modules/.bin:$PATH"
+    echo "Host compiler: $HOST_PURS ($(purs --version))"
+    spago build
+    spago bundle --module Main --platform node --outfile bin/phpurs.js --bundle-type app
+  )
+fi
+
+if [ "$BUILD_ONLY" == "1" ]; then
+  ARGS=("${MODE_ARGS[@]}" --build-only)
+  if [ "$CLEAN" == "1" ]; then
+    ARGS+=(--clean)
+  fi
+  if [ -n "$BUILD_DIR" ]; then
+    ARGS+=(--build-dir "$BUILD_DIR")
+  fi
+  exec python3 "$PWD/bin/php/driver.py" "${ARGS[@]}"
+fi
+
+if [ "$MODE" == "x" ] || [ "$MODE" == "test" ]; then
+  ARGS=("${MODE_ARGS[@]}")
+  if [ "$CLEAN" == "1" ]; then
+    ARGS+=(--clean)
+  fi
+  if [ -n "$BUILD_DIR" ]; then
+    ARGS+=(--build-dir "$BUILD_DIR")
+  fi
+  exec python3 "$PWD/bin/php/driver.py" "${ARGS[@]}"
+fi
+
+ARGS=(--mode "$MODE")
+if [ "$CLEAN" == "1" ]; then
+  ARGS+=(--clean)
+fi
+if [ -n "$BUILD_DIR" ]; then
+  ARGS+=(--build-dir "$BUILD_DIR")
+fi
+exec python3 "$PWD/bin/php/campaign.py" "${ARGS[@]}"

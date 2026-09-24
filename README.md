@@ -113,21 +113,23 @@ RowToList | ~ 0.04 μs | ~ 0.04 μs | ~ 0.01 μs |
 
 PHP Benchmark           | Hand-written PureScript<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) | Hand-written FP-style PHP FFI<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) | Hand-written imperative PHP FFI<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) |
 ----------------------- | ------------------------- | ----------------------- | ----------------------------- |
-AST Evaluation | ~ 2.28 μs | ~ 3.20 μs | ~ 2.11 μs |
-Fibonacci | ~ 1.08 μs | ~ 2.26 μs | ~ 1.25 μs |
-List Processing | ~ 162.93 μs | ~ 178.48 μs | ~ 0.63 μs |
-Tail Call Optimization | ~ 74.79 μs | ~ 50.01 μs | ~ 50.14 μs |
-Deep Record Updates | ~ 1495.61 μs | ~ 1721.76 μs | ~ 494.09 μs |
-Ackermann | ~ 48.44 μs | ~ 99.44 μs | ~ 53.38 μs |
-Church Numerals | ~ 2114.47 μs | ~ 6731.15 μs | ~ 32.57 μs |
-Prime Sieve | ~ 467.09 μs | ~ 1017.80 μs | ~ 1.89 μs |
-Red-Black Tree | ~ 250560.25 μs | ~ 508200.12 μs | ~ 115687.75 μs |
-Polymorphism | ~ 6484.65 μs | ~ 429315.46 μs | ~ 88163.96 μs |
-State Monad | ~ 494.48 μs | ~ 567.74 μs | ~ 0.49 μs |
-Lazy Evaluation | ~ 802.46 μs | ~ 109586.12 μs | ~ 328.29 μs |
-Array Processing | ~ 99.27 μs | ~ 27.27 μs | ~ 0.77 μs |
-RowToList | ~ 0.84 μs | ~ 0.88 μs | ~ 0.08 μs |
-**Total Execution Time** | ~ 262.81 ms <br>(/C = 26.7x) | ~ 1057.50 ms <br>(/C = 107.4x) | ~ 204.82 ms <br>(/C = 20.8x) |
+AST Evaluation | ~ 2.22 μs | ~ 3.19 μs | ~ 2.11 μs |
+Fibonacci | ~ 1.06 μs | ~ 2.26 μs | ~ 1.27 μs |
+List Processing | ~ 157.34 μs | ~ 174.47 μs | ~ 0.63 μs |
+Tail Call Optimization | ~ 74.87 μs | ~ 49.87 μs | ~ 50.30 μs |
+Deep Record Updates | ~ 1514.41 μs | ~ 1676.49 μs | ~ 491.74 μs |
+Ackermann | ~ 47.99 μs | ~ 100.16 μs | ~ 52.48 μs |
+Church Numerals | ~ 2129.39 μs | ~ 6824.38 μs | ~ 32.84 μs |
+Prime Sieve | ~ 765.26 μs | ~ 1022.38 μs | ~ 1.89 μs |
+Red-Black Tree | ~ 108946.58 μs | ~ 509843.88 μs | ~ 113830.46 μs |
+Polymorphism | ~ 6481.58 μs | ~ 432965.96 μs | ~ 87761.96 μs |
+State Monad | ~ 491.94 μs | ~ 560.06 μs | ~ 0.48 μs |
+Lazy Evaluation | ~ 808.59 μs | ~ 111183.96 μs | ~ 326.09 μs |
+Array Processing | ~ 99.60 μs | ~ 26.94 μs | ~ 0.80 μs |
+RowToList | ~ 0.85 μs | ~ 0.85 μs | ~ 0.08 μs |
+**Total Execution Time** | ~ 121.52 ms <br>(/C = 12.3x) | ~ 1064.43 ms <br>(/C = 108.2x) | ~ 202.55 ms <br>(/C = 20.6x) |
+
+Latest campaign: [PHP scalar enum regions](docs/benchmark-results/2026-09-24-php-enum-regions.md).
 
 #### Rust
 

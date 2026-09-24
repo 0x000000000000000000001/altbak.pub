@@ -123,26 +123,28 @@ def update_readme(mode, result):
     text = README.read_text()
     original = text
     php = section(text, 'PHP')
-    lines = php.group(1).splitlines()
+    lines = php.group(1).splitlines(keepends=True)
     column = COLUMNS[mode]
     seen = 0
     for index, line in enumerate(lines):
-        label = line.split('|', 1)[0].strip()
+        newline = '\n' if line.endswith('\n') else ''
+        body = line[:-1] if newline else line
+        label = body.split('|', 1)[0].strip()
         if label in ROWS:
             if seen >= len(result['times_us']):
                 raise ValueError('More README rows than measured cells')
             value = result['times_us'][seen]
             seen += 1
-            cells = line.split('|')
+            cells = body.split('|')
             if len(cells) <= column + 1:
                 raise ValueError('Missing timing cell for ' + label)
             cells[column + 1], count = CELL.subn(f'~ {value:.2f} μs', cells[column + 1], count=1)
             if count != 1:
                 raise ValueError('Missing timing cell for ' + label)
-            lines[index] = '|'.join(cells)
+            lines[index] = '|'.join(cells) + newline
         elif label == '**Total Execution Time**':
             reference = float(re.search(r'~\s*([0-9.]+) ms', section(text, 'C (reference)').group(1)).group(1))
-            cells = line.split('|')
+            cells = body.split('|')
             if len(cells) <= column + 1:
                 raise ValueError('Missing total cell for the selected column')
             updated, count = TOTAL.subn(f'~ {result["total_ms"]:.2f} ms', cells[column + 1], count=1)
@@ -152,10 +154,10 @@ def update_readme(mode, result):
             if count != 1:
                 raise ValueError('Missing /C annotation for the selected column')
             cells[column + 1] = updated
-            lines[index] = '|'.join(cells)
+            lines[index] = '|'.join(cells) + newline
     if seen != len(ROWS):
         raise ValueError('Expected ' + str(len(ROWS)) + ' timing rows, found ' + str(seen))
-    text = text[:php.start(1)] + '\n'.join(lines) + text[php.end(1):]
+    text = text[:php.start(1)] + ''.join(lines) + text[php.end(1):]
     if README.read_text() != original:
         raise RuntimeError('README changed while preparing the column')
     README.write_text(text)
@@ -171,8 +173,20 @@ def main():
     parser.add_argument('--build-only', action='store_true')
     parser.add_argument('--update-readme', action='store_true',
                         help='write the measured column, total and /C into README.md')
+    parser.add_argument('--publish-only', action='store_true',
+                        help='update README from an existing --campaign-dir without building or measuring')
     args = parser.parse_args()
     mode = args.mode
+    campaign_dir = (args.campaign_dir or ROOT / 'var/benchmark' / ('php-' + mode + '-' + stamp())).resolve()
+    if args.publish_only:
+        if not args.update_readme:
+            parser.error('--publish-only requires --update-readme')
+        if args.campaign_dir is None:
+            parser.error('--publish-only requires --campaign-dir')
+        result = json.loads((campaign_dir / 'results.json').read_text())['php-' + mode]
+        verify(result, mode)
+        update_readme(mode, result)
+        return
     build_dir = (args.build_dir or ROOT / 'run/bak/php/modes' / ('campaign-' + mode)).resolve()
     if str(build_dir) in {str(ROOT), *map(str, ROOT.parents)}:
         raise ValueError('Unsafe build directory: ' + str(build_dir))
@@ -182,7 +196,6 @@ def main():
     if args.build_only:
         print('Built PHP ' + mode + '; manifest ' + str(build_dir / 'manifest.json'))
         return
-    campaign_dir = (args.campaign_dir or ROOT / 'var/benchmark' / ('php-' + mode + '-' + stamp())).resolve()
     result = measure(mode, build_dir, campaign_dir)
     total = verify(result, mode)
     print('', flush=True)
