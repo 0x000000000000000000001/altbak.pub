@@ -5,6 +5,7 @@ import Prelude
 import Data.Argonaut.Core (Json, stringify)
 import Data.Argonaut.Decode (class DecodeJson, decodeJson, (.:), (.:?))
 import Data.Argonaut.Decode.Error (JsonDecodeError(..), printJsonDecodeError)
+import Data.Argonaut.Decode.Parser (decodeJsonStringWith)
 import Data.Argonaut.Encode (class EncodeJson, encodeJson)
 import Data.Argonaut.Parser (jsonParser)
 import Data.Either (Either(..))
@@ -55,7 +56,7 @@ type Payload =
 
 -- The FFI only supplies inputs, timing, allocation counts and output checks.
 -- Parsing and decoding use the same ordinary Argonaut code in both backends.
-foreign import drive :: forall a b. (String -> a) -> (a -> b) -> (a -> String) -> (b -> String) -> Effect Unit
+foreign import drive :: forall a b. (String -> a) -> (a -> b) -> (String -> b) -> (a -> String) -> (b -> String) -> Effect Unit
 
 parse :: String -> Json
 parse input = case jsonParser input of
@@ -65,10 +66,13 @@ parse input = case jsonParser input of
 decode :: Json -> Either JsonDecodeError Payload
 decode = decodeJson
 
+decodeText :: String -> Either JsonDecodeError Payload
+decodeText = decodeJsonStringWith decode
+
 fingerprint :: Either JsonDecodeError Payload -> String
 fingerprint = case _ of
   Left err -> stringify $ encodeJson { error: printJsonDecodeError err }
   Right value -> stringify $ encodeJson { value }
 
 main :: Effect Unit
-main = drive parse decode stringify fingerprint
+main = drive parse decode decodeText stringify fingerprint

@@ -4,7 +4,7 @@ import { performance } from 'node:perf_hooks';
 const canonical = value => Array.isArray(value) ? value.map(canonical) : value !== null && typeof value === 'object' ? Object.fromEntries(Object.keys(value).sort().map(k => [k, canonical(value[k])])) : value;
 const hash = value => createHash('sha256').update(JSON.stringify(canonical(value)).replace(/[<>&\u2028\u2029]/g, c => '\\u' + c.charCodeAt(0).toString(16).padStart(4, '0'))).digest('hex');
 let sink;
-export const drive = parse => decode => encode => fingerprint => () => {
+export const drive = parse => decode => decodeText => encode => fingerprint => () => {
   const files = JSON.parse(readFileSync(process.env.DIAG_CORPUS, 'utf8'));
   const texts = files.map(x => x.contents);
   const parsed = texts.map(parse);
@@ -21,7 +21,7 @@ export const drive = parse => decode => encode => fingerprint => () => {
       const start = performance.now();
       for (let slot = 0; slot < indices.length; slot++) {
         const i = indices[slot];
-        const result = phase === 'parse' ? parse(texts[i]) : phase === 'decode' ? decode(parsed[i]) : decode(parse(texts[i]));
+        const result = phase === 'parse' ? parse(texts[i]) : phase === 'decode' ? decode(parsed[i]) : decodeText(texts[i]);
         results[slot] = result;
         sink = result;
       }

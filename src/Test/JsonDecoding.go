@@ -57,7 +57,7 @@ func phaseList() []string {
 	return phases
 }
 
-func Drive(parse, decode, encode, fingerprint gopurs_runtime.Value) func() any {
+func Drive(parse, decode, decodeText, encode, fingerprint gopurs_runtime.Value) func() any {
 	return func() any {
 		bytes, err := os.ReadFile(os.Getenv("DIAG_CORPUS"))
 		if err != nil {
@@ -110,7 +110,7 @@ func Drive(parse, decode, encode, fingerprint gopurs_runtime.Value) func() any {
 				case "decode":
 					results[slot] = gopurs_runtime.Apply(decode, parsed[i])
 				case "combined":
-					results[slot] = gopurs_runtime.Apply(decode, gopurs_runtime.Apply(parse, gopurs_runtime.Str(f.Contents)))
+					results[slot] = gopurs_runtime.Apply(decodeText, gopurs_runtime.Str(f.Contents))
 				default:
 					panic("unknown phase " + phase)
 				}
