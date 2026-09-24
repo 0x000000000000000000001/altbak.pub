@@ -32,6 +32,12 @@ def main():
         hooks['func decodeJsonObjectDirect('] = 'zzCoverage["identity_object"]++'
     if 'func Data_Argonaut_Decode_Internal_Record_TypedObject(' in text:
         hooks['func Data_Argonaut_Decode_Internal_Record_TypedObject('] = 'zzCoverage["object_decoder_construction"]++'
+    if 'func Data_Argonaut_Decode_Internal_Record_BorrowObject(' in text:
+        hooks['func Data_Argonaut_Decode_Internal_Record_BorrowObject('] = 'zzCoverage["borrow_object_attempt"]++'
+        marker = 'return gopurs_runtime.Apply(identity.right, json)'
+        if text.count(marker) != 1:
+            raise SystemExit('Expected exactly one borrowed object return')
+        text = text.replace(marker, 'zzCoverage["borrowed_identity_object"]++\n\t\t\t' + marker)
     if 'func getFieldDirect(' in text:
         hooks['func getFieldDirect('] = 'zzCoverage["field_accessor_attempt"]++'
         marker = '\tplan := tag.errors\n'
