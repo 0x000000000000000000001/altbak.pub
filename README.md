@@ -1,4 +1,4 @@
-# 🌈 PureScript universal multi runtime benchmark
+# 🌈 PureScript universal multi-runtime benchmark
 
 ## Project goal
 This project is a proof of concept demonstrating the power of abstraction and portability offered by **PureScript**. The goal is to show how the exact same pure functional code (without any manual FFI) can be compiled and executed natively on radically different ecosystems. Backends consume either standard `CoreFn` or, for the local AOT backends, the typed `TAST/tcorefn` representation exported by a local PureScript fork (may be subject to an official PR soon).
