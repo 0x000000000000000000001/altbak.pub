@@ -113,21 +113,21 @@ RowToList | ~ 0.04 μs | ~ 0.04 μs | ~ 0.01 μs |
 
 PHP Benchmark           | Hand-written PureScript<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) | Hand-written FP-style PHP FFI<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) | Hand-written imperative PHP FFI<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) |
 ----------------------- | ------------------------- | ----------------------- | ----------------------------- |
-AST Evaluation | ~ 2.25 μs | ~ 3.19 μs | ~ 2.11 μs |
-Fibonacci | ~ 1.05 μs | ~ 2.26 μs | ~ 1.27 μs |
-List Processing | ~ 158.37 μs | ~ 174.47 μs | ~ 0.63 μs |
-Tail Call Optimization | ~ 75.06 μs | ~ 49.87 μs | ~ 50.30 μs |
-Deep Record Updates | ~ 1529.18 μs | ~ 1676.49 μs | ~ 491.74 μs |
-Ackermann | ~ 48.18 μs | ~ 100.16 μs | ~ 52.48 μs |
-Church Numerals | ~ 2117.69 μs | ~ 6824.38 μs | ~ 32.84 μs |
-Prime Sieve | ~ 761.38 μs | ~ 1022.38 μs | ~ 1.89 μs |
-Red-Black Tree | ~ 104017.00 μs | ~ 509843.88 μs | ~ 113830.46 μs |
-Polymorphism | ~ 6489.65 μs | ~ 432965.96 μs | ~ 87761.96 μs |
-State Monad | ~ 488.22 μs | ~ 560.06 μs | ~ 0.48 μs |
-Lazy Evaluation | ~ 801.67 μs | ~ 111183.96 μs | ~ 326.09 μs |
-Array Processing | ~ 99.10 μs | ~ 26.94 μs | ~ 0.80 μs |
-RowToList | ~ 0.85 μs | ~ 0.85 μs | ~ 0.08 μs |
-**Total Execution Time** | ~ 116.59 ms <br>(/C = 11.8x) | ~ 1064.43 ms <br>(/C = 108.2x) | ~ 202.55 ms <br>(/C = 20.6x) |
+AST Evaluation | ~ 2.36 μs | ~ 3.19 μs | ~ 2.11 μs |
+Fibonacci | ~ 1.31 μs | ~ 2.26 μs | ~ 1.27 μs |
+List Processing | ~ 163.84 μs | ~ 174.47 μs | ~ 0.63 μs |
+Tail Call Optimization | ~ 78.35 μs | ~ 49.87 μs | ~ 50.30 μs |
+Deep Record Updates | ~ 1534.30 μs | ~ 1676.49 μs | ~ 491.74 μs |
+Ackermann | ~ 50.65 μs | ~ 100.16 μs | ~ 52.48 μs |
+Church Numerals | ~ 2212.03 μs | ~ 6824.38 μs | ~ 32.84 μs |
+Prime Sieve | ~ 805.38 μs | ~ 1022.38 μs | ~ 1.89 μs |
+Red-Black Tree | ~ 59787.67 μs | ~ 509843.88 μs | ~ 113830.46 μs |
+Polymorphism | ~ 6829.65 μs | ~ 432965.96 μs | ~ 87761.96 μs |
+State Monad | ~ 521.47 μs | ~ 560.06 μs | ~ 0.48 μs |
+Lazy Evaluation | ~ 848.67 μs | ~ 111183.96 μs | ~ 326.09 μs |
+Array Processing | ~ 101.26 μs | ~ 26.94 μs | ~ 0.80 μs |
+RowToList | ~ 0.87 μs | ~ 0.85 μs | ~ 0.08 μs |
+**Total Execution Time** | ~ 72.94 ms <br>(/C = 7.4x) | ~ 1064.43 ms <br>(/C = 108.2x) | ~ 202.55 ms <br>(/C = 20.6x) |
 
 #### Rust
 
