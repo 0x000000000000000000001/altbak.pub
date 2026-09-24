@@ -175,21 +175,21 @@ RowToList | ~ 0.48 μs | ~ 0.30 μs | ~ 0.02 μs |
 
 F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) | Hand-written FP-style F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) | Hand-written imperative F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) |
 ----------------------- | ------------------------- | ------------------------- | ------------------------------- |
-AST Evaluation | ~ 0.74 μs | ~ 0.49 μs | ~ 0.50 μs |
-Fibonacci | ~ 1.54 μs | ~ 0.12 μs | ~ 0.12 μs |
-List Processing | ~ 202.77 μs | ~ 16.25 μs | ~ 2.96 μs |
-Tail Call Optimization | ~ 50.34 μs | ~ 38.43 μs | ~ 44.32 μs |
-Deep Record Updates | ~ 2158.47 μs | ~ 91.30 μs | ~ 9.13 μs |
-Ackermann | ~ 109.87 μs | ~ 40.02 μs | ~ 39.78 μs |
-Church Numerals | ~ 1624.31 μs | ~ 352.32 μs | ~ 25.65 μs |
-Prime Sieve | ~ 405.61 μs | ~ 157.57 μs | ~ 15.45 μs |
-Red-Black Tree | ~ 41097.67 μs | ~ 37763.92 μs | ~ 10551.67 μs |
-Polymorphism | ~ 287909.25 μs | ~ 25932.33 μs | ~ 2332.77 μs |
-State Monad | ~ 172.51 μs | ~ 79.71 μs | ~ 3.32 μs |
-Lazy Evaluation | ~ 5992.23 μs | ~ 10061 μs | ~ 233.03 μs |
-Array Processing | ~ 53.16 μs | ~ 31.74 μs | ~ 16.09 μs |
-RowToList | ~ 0.26 μs | ~ 0.06 μs | ~ 0.03 μs |
-**Total Execution Time** | ~ 339.78 ms <br>(/C = 34.5x) | ~ 74.57 ms <br>(/C = 7.6x) | ~ 13.27 ms <br>(/C = 1.3x) |
+AST Evaluation | ~ 1.84 μs | ~ 0.49 μs | ~ 0.50 μs |
+Fibonacci | ~ 2.44 μs | ~ 0.12 μs | ~ 0.12 μs |
+List Processing | ~ 491.87 μs | ~ 16.25 μs | ~ 2.96 μs |
+Tail Call Optimization | ~ 43.41 μs | ~ 38.43 μs | ~ 44.32 μs |
+Deep Record Updates | ~ 3026.21 μs | ~ 91.30 μs | ~ 9.13 μs |
+Ackermann | ~ 173.72 μs | ~ 40.02 μs | ~ 39.78 μs |
+Church Numerals | ~ 1787.07 μs | ~ 352.32 μs | ~ 25.65 μs |
+Prime Sieve | ~ 607.84 μs | ~ 157.57 μs | ~ 15.45 μs |
+Red-Black Tree | ~ 41631.79 μs | ~ 37763.92 μs | ~ 10551.67 μs |
+Polymorphism | ~ 2452.14 μs | ~ 25932.33 μs | ~ 2332.77 μs |
+State Monad | ~ 308.24 μs | ~ 79.71 μs | ~ 3.32 μs |
+Lazy Evaluation | ~ 6758.21 μs | ~ 10061 μs | ~ 233.03 μs |
+Array Processing | ~ 59.64 μs | ~ 31.74 μs | ~ 16.09 μs |
+RowToList | ~ 0.32 μs | ~ 0.06 μs | ~ 0.03 μs |
+**Total Execution Time** | ~ 57.34 ms <br>(/C = 5.8x) | ~ 74.57 ms <br>(/C = 7.6x) | ~ 13.27 ms <br>(/C = 1.3x) |
 
 #### Java
 
