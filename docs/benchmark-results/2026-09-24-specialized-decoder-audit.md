@@ -1,11 +1,17 @@
-# Specialised JSON decoding: measured ceiling for the codegen path
+# Specialised JSON decoding: historical implementation reference
+
+**Protocol correction:** the figures below come from the original runner. It
+validated setup outputs, retained only the last timed output, and did not
+fingerprint the exact timed outputs. They are historical observations, not an
+aligned performance bound. The corrected retained-output comparison is in
+[the follow-up audit](2026-09-24-record-plan-follow-up.md).
 
 The [comparison audit](2026-09-24-comparison-audit.md) left one question
 unmeasured: how much of the 12.74 ms JSON Decoding cell is spent in
 **generated-code overhead** rather than in decoding itself. The hand-written
 Go decoder used there stopped at plain Go structs; it did not produce the
-PureScript values the application actually consumes. This audit closes that
-gap: a hand-written decoder for the same schema that consumes the same parsed
+PureScript values the application actually consumes. This audit investigates
+that gap with a hand-written decoder for the same schema that consumes the same parsed
 `Json` and returns the **same final values** as the generated Argonaut
 decoder, measured A/B in the same process.
 
@@ -22,16 +28,18 @@ decoder, measured A/B in the same process.
 The specialised decoder (`bin/benchmark/json-diagnostic/specialized/decode.go`)
 reads the parser's DOM directly (`map[string]any`, `[]any`, `string`,
 `float64`, `bool`, `nil`) and calls the runtime constructors. It skips the
-generic machinery the generated code has to run for every value: dictionary
-dispatch, `FO.lookup` with its unbox/copy/box pass, intermediate `Either`
-values at every level, `Rebox` conversions at every boundary, and the
-per-record decode plans.
+generic machinery, including dictionary dispatch, intermediate results, and
+per-record plans. `FO.lookup` already has a no-whole-object-copy path through
+`UnboxObject`; copying the whole DOM is not an established explanation of the
+gap. The prototype also uses compact records and hard-coded constructor tags
+and layouts, so this comparison does not isolate dispatch or compiler work.
 
-**Faithfulness is a hard gate.** All seventeen corpus fingerprints — the five
+All seventeen setup corpus fingerprints — the five
 timed cases, two valid optional-field cases and ten malformed cases with their
 exact `JsonDecodeError` values — are validated against
-`test/fixtures/json-decoding/expected.json` in every run, before and after
-timing. Any difference aborts the campaign.
+`test/fixtures/json-decoding/expected.json` in every run before timing. This
+establishes agreement on the frozen cases, including their printed errors;
+it does not establish general Argonaut semantic equivalence.
 
 ## Protocol
 
@@ -40,7 +48,8 @@ timing. Any difference aborts the campaign.
   `stringify` and `fingerprint` are the generated ones.
 - Both decoders run in the same process, in alternating passes, over the same
   pre-parsed documents, so allocator state, caches and background load are
-  shared. Every pass decodes all five timed cases.
+  shared. Every pass decodes all five timed cases, but only its last output is
+  retained. This differs from the official retained-results protocol.
 - 9 processes, 2 warm-up passes per mode and phase, 5 sampled passes, minimum
   per process, median across processes. `GOMAXPROCS=1`, `GOGC=100` unless
   stated, monotonic timing.
@@ -65,36 +74,29 @@ Allocated bytes per corpus (minimum pass):
 | decode | 13.49 MB | 1.84 MB | 7.3× |
 | combined | 18.10 MB | 6.46 MB | 2.8× |
 
-The generated `combined` cell (12.387 ms) reproduces the published campaign
-cell (12.738 ms) and the generated phase split (2.36 parse / 8.76 decode
-official) within normal process spread, which cross-checks the A/B runner
-against the official protocol.
+Numerical proximity to the separately measured official cells does not
+validate the runner's lifetime or output-validation protocol.
 
 ## Reading
 
-1. **The decode work is almost all generated-code overhead.** Reaching the
-   same values through direct field access costs 0.56 ms against 8.18 ms —
-   14.7× less, with 7.3× fewer allocated bytes. The gap is not the language,
-   the parser or the final representation: it is dictionary dispatch, DOM
-   re-boxing and intermediate `Either`/`Maybe` plumbing.
-2. **The collector is a consequence, not the cause.** With `GOGC=off` the
-   generated decoder recovers 1.34 ms (8.18 → 6.84) and the specialised one
-   changes by ~0.01 ms. Cutting the allocation volume removes most of the GC
-   share automatically.
-3. **The complete path lands near 3.4 ms.** `combined` = parse (2.36 ms,
-   unchanged) + specialised decode (0.56 ms) + ~0.5 ms of per-pass effects.
-   The remaining door to 1.5–2.5 ms is the parser, not the decoder: at the
-   measured parse cost the floor is ≈ 2.9 ms even with a free decoder.
-4. **The published ratios now have a bound.** The 20× JSON Decoding ratio
-   against the arena C++ reference is not a Go limit: the same final
-   PureScript values can be produced in 3.4 ms against 0.65 ms C++ (≈ 5×), and
-   that residual is dominated by parsing (2.4 ms Go against 0.4 ms simdjson).
+1. The prototype supplies a concrete implementation reference producing
+   usable gopurs values. Its allocation difference motivates removing
+   intermediate representations and improving record construction.
+2. The separate `GOGC` campaigns show sensitivity to collector settings;
+   their difference is not an isolated measurement of GC's time share.
+   Default `GOGC` remains 100.
+3. This runner did not measure a parse phase. Adding a historical parse
+   timing to its decode timing does not decompose `combined` or establish a
+   2.9–3.0 ms floor. The earlier 1.5–2.5 ms specialization-only prediction is
+   withdrawn; parser improvement or parse/decode fusion would need measurement.
+4. Neither this prototype nor the C++ reference establishes a language limit
+   or a guaranteed compiler target. Retention, validation, ownership and
+   representation costs must be aligned before interpreting the gap.
 
 ## What this means for the compiler
 
-The experiment bounds a concrete codegen transformation: **specialise the
-`DecodeJson` path for the instance actually used at each call site**. The
-ingredients the prototype shows to matter:
+One candidate transformation is to **specialise the `DecodeJson` path for
+known instances**. The prototype suggests these mechanisms to investigate:
 
 - read the parser's DOM directly instead of routing through `toObject` and
   `FO.lookup`;
@@ -102,23 +104,24 @@ ingredients the prototype shows to matter:
   monomorphisation work already computes most of this);
 - construct final records, `Maybe`, ADTs and `Either` directly, without
   intermediate wrappers or `Rebox` round trips;
-- keep the exact evaluation order and error wrappers, which the oracle gate
-  shows is achievable.
+- preserve evaluation order and error wrappers, validating beyond the corpus
+  with custom dictionaries, representations and simultaneous failures.
 
 What the prototype does **not** establish: that the transformation can be
 derived automatically for arbitrary code. It covers one schema, one corpus and
-no custom dictionaries. It is a target and a ceiling, not a working pass.
+no arbitrary custom dictionaries. No general compiler specialization pass has
+been implemented. Library-side propagation and allocation changes remain
+independent opportunities, as the follow-up demonstrates.
 
 ## Limits
 
 - The specialised decoder is hand-written for this schema and reads the DOM
   shape produced by the native parser for an object root; other `Json`
   constructions are out of scope.
-- Same-process A/B shares code pages and caches between the two decoders. The
-  deliberate trade is comparability; the generated side reproduces the
-  official cells within spread.
-- The ~0.5 ms difference between `combined` and `parse + decode` was not
-  decomposed (per-pass parse warming and allocator effects are candidates).
+- Same-process A/B shares code pages and caches between the two decoders.
+  The old runner started generated-first and kept a fixed phase order.
+- The old setup JSON fingerprints hash input text, rather than the encoded
+  parsed result; the corrected runner checks actual parsed values too.
 - Timings were taken on this machine under background load; the deterministic
   allocation totals and the oracle gate are the stable parts.
 

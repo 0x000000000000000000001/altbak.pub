@@ -37,7 +37,7 @@ type zzSample struct {
 }
 
 type zzPhaseResult struct {
-	TimeUS float64    `json:"time_us"`
+	TimeUS  float64    `json:"time_us"`
 	Samples []zzSample `json:"samples"`
 }
 
@@ -56,24 +56,39 @@ func zzReadJSON(path string, target any) {
 	}
 }
 
-func zzRunSegment(phase string, decode, parse gopurs_runtime.Value, files []zzCorpusFile, parsed []gopurs_runtime.Value, indices []int) (float64, float64) {
+func zzRunSegment(phase string, decode, parse, encode, fingerprint gopurs_runtime.Value, files []zzCorpusFile, parsed []gopurs_runtime.Value, indices []int, oracle zzOracle) (float64, float64) {
+	// Match the official runner: allocate the retention buffer before timing,
+	// keep every output alive, and validate those exact outputs after timing.
+	results := make([]gopurs_runtime.Value, len(indices))
 	var before, after runtime.MemStats
 	runtime.ReadMemStats(&before)
 	start := time.Now()
-	for _, i := range indices {
+	for slot, i := range indices {
 		switch phase {
 		case "parse":
-			diagnosticSink = gopurs_runtime.Apply(parse, gopurs_runtime.Str(files[i].Contents))
+			results[slot] = gopurs_runtime.Apply(parse, gopurs_runtime.Str(files[i].Contents))
 		case "decode":
-			diagnosticSink = gopurs_runtime.Apply(decode, parsed[i])
+			results[slot] = gopurs_runtime.Apply(decode, parsed[i])
 		case "combined":
-			diagnosticSink = gopurs_runtime.Apply(decode, gopurs_runtime.Apply(parse, gopurs_runtime.Str(files[i].Contents)))
+			results[slot] = gopurs_runtime.Apply(decode, gopurs_runtime.Apply(parse, gopurs_runtime.Str(files[i].Contents)))
 		default:
 			panic("unknown phase " + phase)
 		}
+		diagnosticSink = results[slot]
 	}
 	elapsed := float64(time.Since(start).Nanoseconds()) / 1000.0
 	runtime.ReadMemStats(&after)
+	for slot, result := range results {
+		i := indices[slot]
+		callback, expected := fingerprint, oracle.Fingerprints[i]
+		if phase == "parse" {
+			callback, expected = encode, oracle.JSONFingerprints[i]
+		}
+		if actual := canonicalHash(gopurs_runtime.Apply(callback, result).StrVal()); actual != expected {
+			panic(fmt.Sprintf("unstable %s output for %s: %s != %s", phase, files[i].Name, actual, expected))
+		}
+	}
+	runtime.KeepAlive(results)
 	return elapsed, float64(after.TotalAlloc - before.TotalAlloc)
 }
 
@@ -85,6 +100,7 @@ func ZzAuditMain() {
 	zzReadJSON(os.Getenv("DIAG_ORACLE"), &oracle)
 
 	parse := Get_Test_JsonDecoding_parse()
+	encode := Get_Data_Argonaut_Core_stringify()
 	fingerprint := Get_Test_JsonDecoding_fingerprint()
 	modes := []zzMode{
 		{Name: "generated", Decode: Get_Test_JsonDecoding_decode()},
@@ -103,7 +119,7 @@ func ZzAuditMain() {
 	hashes := map[string][]string{}
 	for i, file := range files {
 		names[i] = file.Name
-		jsonHashes[i] = canonicalHash(file.Contents)
+		jsonHashes[i] = canonicalHash(gopurs_runtime.Apply(encode, parsed[i]).StrVal())
 		for _, mode := range modes {
 			decoded := gopurs_runtime.Apply(mode.Decode, parsed[i])
 			hashes[mode.Name] = append(hashes[mode.Name], canonicalHash(gopurs_runtime.Apply(fingerprint, decoded).StrVal()))
@@ -147,6 +163,13 @@ func ZzAuditMain() {
 
 	warmups := envInt("DIAG_WARMUPS", 2)
 	samples := envInt("DIAG_SAMPLES", 5)
+	if samples == 0 {
+		panic("DIAG_SAMPLES must be positive")
+	}
+	startMode := envInt("DIAG_START_MODE", 0)
+	if startMode >= len(modes) {
+		panic("invalid DIAG_START_MODE")
+	}
 	phases := []string{}
 	for _, name := range splitPhases(os.Getenv("DIAG_PHASES")) {
 		phases = append(phases, name)
@@ -156,15 +179,20 @@ func ZzAuditMain() {
 	}
 
 	report := map[string]any{
-		"audit":             "specialized-decoder",
-		"backend":           "go",
-		"modules":           len(files),
-		"timed_cases":       len(indices),
-		"names":             names,
-		"json_fingerprints": jsonHashes,
-		"fingerprints":      hashes,
-		"gomaxprocs":        runtime.GOMAXPROCS(0),
-		"go":                runtime.Version(),
+		"audit":                     "specialized-decoder",
+		"backend":                   "go",
+		"modules":                   len(files),
+		"timed_cases":               len(indices),
+		"names":                     names,
+		"json_fingerprints":         jsonHashes,
+		"fingerprints":              hashes,
+		"gomaxprocs":                runtime.GOMAXPROCS(0),
+		"go":                        runtime.Version(),
+		"start_mode":                modes[startMode].Name,
+		"phase_order":               phases,
+		"retained_results_per_pass": len(indices),
+		"validated_timed_results":   len(indices) * samples * len(modes) * len(phases),
+		"validated_warmup_results":  len(indices) * warmups * len(modes) * len(phases),
 	}
 	phaseReport := map[string]any{}
 	for _, phase := range phases {
@@ -176,11 +204,11 @@ func ZzAuditMain() {
 		for pass := 0; pass < warmups+samples; pass++ {
 			for k := 0; k < len(modes); k++ {
 				index := k
-				if pass%2 == 1 {
+				if (pass+startMode)%2 == 1 {
 					index = len(modes) - 1 - k
 				}
 				active := modes[index]
-				elapsed, alloc := zzRunSegment(phase, active.Decode, parse, files, parsed, indices)
+				elapsed, alloc := zzRunSegment(phase, active.Decode, parse, encode, fingerprint, files, parsed, indices, oracle)
 				if pass >= warmups {
 					collected[active.Name] = append(collected[active.Name], zzSample{TimeUS: elapsed, AllocBytes: alloc})
 				}

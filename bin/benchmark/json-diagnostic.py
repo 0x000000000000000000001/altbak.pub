@@ -145,7 +145,7 @@ def fingerprint(suite='JsonTypedAst'):
     return {str(p): sha(p) for p in sorted(paths)}
 
 def environment():
-    env = {k:v for k,v in os.environ.items() if not k.startswith(('GOPURS_', 'NEUTRAL_')) and k not in ['PPROF','GODEBUG','GOMEMLIMIT','GOFLAGS','GOEXPERIMENT','NODE_OPTIONS']}
+    env = {k:v for k,v in os.environ.items() if not k.startswith(('GOPURS_', 'NEUTRAL_', 'DIAG_')) and k not in ['PPROF','GODEBUG','GOMEMLIMIT','GOFLAGS','GOEXPERIMENT','NODE_OPTIONS']}
     env.update(GOMAXPROCS='1', GOGC='100', GOWORK='off')
     # The standard purs can have the same version number without exporting
     # TAST metadata. Select and fingerprint the actual local fork explicitly.
@@ -173,7 +173,10 @@ def build_js(work, env, suite='JsonTypedAst'):
     copy_sources(js / 'src', native=False, suite=suite)
     config = (work / 'spago.yaml').read_text().split('workspace:')[0] + '    - console\n'
     config += 'workspace:\n  packageSet:\n    registry: 77.10.1\n  extraPackages:\n'
-    packages = [('st', COMPILER.parent/'gopurs-st'), ('unsafe-coerce', COMPILER.parent/'gopurs-unsafe-coerce')]
+    # Exercise the same modified codec interface in both backends. Registry
+    # codecs would silently omit the local Record.js implementation.
+    packages = [('argonaut-codecs', COMPILER.parent/'gopurs-argonaut-codecs'),
+                ('st', COMPILER.parent/'gopurs-st'), ('unsafe-coerce', COMPILER.parent/'gopurs-unsafe-coerce')]
     if suite == 'JsonTypedAst': packages.insert(0, ('backend-optimizer', PBO))
     for name, path in packages:
         config += f'    {name}:\n      path: {json.dumps(str(path))}\n'
