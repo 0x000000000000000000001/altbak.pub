@@ -67,7 +67,7 @@ JSON to Typed AST (excluded WIP) | ~ 36.31 ms | — | — | — |
 JSON Decoding (excluded WIP) | ~ 3.91 ms | — | — | — |
 **Total Execution Time** | ~ 13.28 ms <br>(/C = 1.3x) | ~ 1464.74 ms <br>(/C = 148.8x) | ~ 88.99 ms <br>(/C = 9.0x) | ~ 11.34 ms <br>(/C = 1.2x) |
 
-Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios. Latest campaigns: [borrowed event objects and indexed TAST experiment](docs/benchmark-results/2026-09-24-borrowed-event-objects.md), [compact JSON DOM and fused field accessors](docs/benchmark-results/2026-09-24-compact-json-dom.md), [dictionary reuse and immediate callbacks](docs/benchmark-results/2026-09-24-json-codegen-follow-up.md), [record-plan follow-up and aligned comparison](docs/benchmark-results/2026-09-24-record-plan-follow-up.md), [typed record plans](docs/benchmark-results/2026-09-24-typed-record-plans.md), [specialised decoding audit](docs/benchmark-results/2026-09-24-specialized-decoder-audit.md), [comparison audit](docs/benchmark-results/2026-09-24-comparison-audit.md), [closed dictionary caching](docs/benchmark-results/2026-09-23-closed-dictionary-caching.md), [accessor de-specialization](docs/benchmark-results/2026-09-24-accessor-despecialization.md), [general JSON profiling](docs/benchmark-results/2026-09-23-json-general-profiling.md), [native C references for the excluded rows](docs/benchmark-results/2026-09-23-native-c-references.md), [native TAST decoding](docs/benchmark-results/2026-09-23-tast-native-decoding.md), [TAST decode profile and value-native ST interface](docs/benchmark-results/2026-09-23-tast-decode-profile.md), [shared JSON record construction](docs/benchmark-results/2026-09-22-json-record-plans.md), [native JSON parser](docs/benchmark-results/2026-09-22-native-json-parser.md), [fused Either traversals](docs/benchmark-results/2026-09-22-fused-json-traversals.md), [deferred error wrappers](docs/benchmark-results/2026-09-22-argonaut-error-paths.md), [dedicated caseJson FFI](docs/benchmark-results/2026-09-22-casejson-ffi.md), [packed string payloads](docs/benchmark-results/2026-09-22-packed-strings.md).
+Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios. 
 
 #### Scheme
 
@@ -128,8 +128,6 @@ Lazy Evaluation | ~ 801.67 μs | ~ 111183.96 μs | ~ 326.09 μs |
 Array Processing | ~ 99.10 μs | ~ 26.94 μs | ~ 0.80 μs |
 RowToList | ~ 0.85 μs | ~ 0.85 μs | ~ 0.08 μs |
 **Total Execution Time** | ~ 116.59 ms <br>(/C = 11.8x) | ~ 1064.43 ms <br>(/C = 108.2x) | ~ 202.55 ms <br>(/C = 20.6x) |
-
-Latest campaigns: [PHP scalar enum regions](docs/benchmark-results/2026-09-24-php-enum-regions.md), [PHP private tags](docs/benchmark-results/2026-09-24-php-private-tag.md).
 
 #### Rust
 
