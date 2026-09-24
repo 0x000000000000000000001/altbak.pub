@@ -113,21 +113,21 @@ RowToList | ~ 0.04 μs | ~ 0.04 μs | ~ 0.01 μs |
 
 PHP Benchmark           | Hand-written PureScript<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) | Hand-written FP-style PHP FFI<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) | Hand-written imperative PHP FFI<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) |
 ----------------------- | ------------------------- | ----------------------- | ----------------------------- |
-AST Evaluation | ~ 2.36 μs | ~ 3.19 μs | ~ 2.11 μs |
-Fibonacci | ~ 1.31 μs | ~ 2.26 μs | ~ 1.27 μs |
-List Processing | ~ 163.84 μs | ~ 174.47 μs | ~ 0.63 μs |
-Tail Call Optimization | ~ 78.35 μs | ~ 49.87 μs | ~ 50.30 μs |
-Deep Record Updates | ~ 1534.30 μs | ~ 1676.49 μs | ~ 491.74 μs |
-Ackermann | ~ 50.65 μs | ~ 100.16 μs | ~ 52.48 μs |
-Church Numerals | ~ 2212.03 μs | ~ 6824.38 μs | ~ 32.84 μs |
-Prime Sieve | ~ 805.38 μs | ~ 1022.38 μs | ~ 1.89 μs |
-Red-Black Tree | ~ 59787.67 μs | ~ 509843.88 μs | ~ 113830.46 μs |
-Polymorphism | ~ 6829.65 μs | ~ 432965.96 μs | ~ 87761.96 μs |
-State Monad | ~ 521.47 μs | ~ 560.06 μs | ~ 0.48 μs |
-Lazy Evaluation | ~ 848.67 μs | ~ 111183.96 μs | ~ 326.09 μs |
-Array Processing | ~ 101.26 μs | ~ 26.94 μs | ~ 0.80 μs |
+AST Evaluation | ~ 2.30 μs | ~ 3.19 μs | ~ 2.11 μs |
+Fibonacci | ~ 1.27 μs | ~ 2.26 μs | ~ 1.27 μs |
+List Processing | ~ 159.73 μs | ~ 174.47 μs | ~ 0.63 μs |
+Tail Call Optimization | ~ 76.11 μs | ~ 49.87 μs | ~ 50.30 μs |
+Deep Record Updates | ~ 1541.84 μs | ~ 1676.49 μs | ~ 491.74 μs |
+Ackermann | ~ 49.08 μs | ~ 100.16 μs | ~ 52.48 μs |
+Church Numerals | ~ 2161.17 μs | ~ 6824.38 μs | ~ 32.84 μs |
+Prime Sieve | ~ 787.77 μs | ~ 1022.38 μs | ~ 1.89 μs |
+Red-Black Tree | ~ 58291.04 μs | ~ 509843.88 μs | ~ 113830.46 μs |
+Polymorphism | ~ 6615.56 μs | ~ 432965.96 μs | ~ 87761.96 μs |
+State Monad | ~ 501.49 μs | ~ 560.06 μs | ~ 0.48 μs |
+Lazy Evaluation | ~ 810.15 μs | ~ 111183.96 μs | ~ 326.09 μs |
+Array Processing | ~ 101.22 μs | ~ 26.94 μs | ~ 0.80 μs |
 RowToList | ~ 0.87 μs | ~ 0.85 μs | ~ 0.08 μs |
-**Total Execution Time** | ~ 72.94 ms <br>(/C = 7.4x) | ~ 1064.43 ms <br>(/C = 108.2x) | ~ 202.55 ms <br>(/C = 20.6x) |
+**Total Execution Time** | ~ 71.10 ms <br>(/C = 7.2x) | ~ 1064.43 ms <br>(/C = 108.2x) | ~ 202.55 ms <br>(/C = 20.6x) |
 
 #### Rust
 
