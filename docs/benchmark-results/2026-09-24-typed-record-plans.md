@@ -20,11 +20,17 @@ differs only where the new call shapes appear.
 
 | Layer | Change |
 |---|---|
-| runtime | `DecodeKind` tags on decoder values (`WithDecodeKind`, `DecodeKindOf`); never changes behaviour |
+| runtime | `FunctionData` metadata carrier (unchanged); tags are plain package-local types |
 | `Class.purs` | primitive/`Maybe`/`Array` instances and `DecodeJsonField` methods attach tags; `fieldStep` carries the field tag onto the step closure the plan receives |
-| `Record.go` | plans classify each step: primitives, `Maybe`/`Array` (including custom elements), nested record plans; direct decoding from raw Go DOM values **or** boxed `Value` entries |
-| errors | the exact constructors travel in a support record, so direct failures build the same `AtKey`/`Named`/`AtIndex`/`TypeMismatch`/`MissingValue` values |
+| `Record.go` | tags (`typedKind`), plans classify each step: primitives, `Maybe`/`Array` (including custom elements), nested record plans; direct decoding from raw Go DOM values **or** boxed `Value` entries |
+| `Decoders.purs` | `getField`, `getFieldOptional` and `getFieldOptional'` route through `decodeFieldFast`, so every custom decoder using the standard accessors benefits from the same tags |
+| errors | the exact constructors travel in a support record, captured once per decoder or plan, so direct failures build the same `AtKey`/`Named`/`AtIndex`/`TypeMismatch`/`MissingValue` values |
 | contract | typed fields memoize their `reflectSymbol` key; custom fields still evaluate their symbol twice, in the documented order |
+
+One packaging constraint: the native FFI loader keeps only the Go functions
+declared by their own module's `foreign import` list. The tag constructors
+therefore live in `Internal/Record.{purs,go,js}`, the module that declares
+them, instead of a separate helper module.
 
 The direct path activates only when the input is an object value; any other
 input falls back to the original method. `decodeAny` produces errors without
@@ -56,17 +62,20 @@ JSON Decoding, five timed cases, 636 KB, official protocol (3 processes,
 2 warm-up passes, 5 samples, minimum per process, median across processes,
 `GOMAXPROCS=1`, `GOGC=100`):
 
-| phase | before | typed plans | delta |
+| phase | before | typed plans | + typed accessors |
 |---|---:|---:|---:|
-| parse | 2.373 ms | 2.503 ms | noise |
-| decode | **9.134 ms** | **5.666 ms** | **−38.0%** |
-| combined | **12.738 ms** | **9.595 ms** | **−24.7%** |
-| decode allocations | 13.49 MB | **8.99 MB** | **−33.3%** |
-| combined allocations | 18.10 MB | **13.60 MB** | **−24.9%** |
+| parse | 2.373 ms | 2.503 ms | 2.554 ms |
+| decode | **9.134 ms** | 5.666 ms | **5.365 ms** |
+| combined | **12.738 ms** | 9.595 ms | **8.670 ms** |
+| decode allocations | 13.49 MB | 8.99 MB | **8.86 MB** |
+| combined allocations | 18.10 MB | 13.60 MB | **13.47 MB** |
 
-The C reference must remain the same work in the same binary; its cells were
-unchanged (combined 0.640 ms). The JS backend ignores the tags and keeps its
-own timings.
+Cumulative deltas: decode **−41.3%**, combined **−31.9%**, decode allocations
+**−34.3%**. The two increments are separate campaigns on the same machine, so
+read the direction and the deterministic allocation totals rather than third
+decimals. The C reference keeps the same work in the same binary; its cells
+were unchanged (combined 0.640 ms). The JS backend ignores the tags and keeps
+its own timings.
 
 ## Reading
 
@@ -75,18 +84,24 @@ The gain is real and generic, but it is far below the hand-written ceiling:
 | path | decode |
 |---|---:|
 | generic (before) | 9.13 ms |
-| typed plans (this change) | 5.67 ms |
+| typed plans and accessors (this change) | 5.37 ms |
 | hand-written specialised decoder | 0.53 ms |
 
 The remaining factor of ~10 is concentrated where the tags cannot reach yet:
 
-- **custom decoders** (`decodeEvent` in the diagnostic) still call
-  `Data.Argonaut.Decode.Decoders.getField`, which knows nothing about tags, so
-  their primitive fields (`tag`, `path`, `duration`, `orderId`, `items`) keep
-  the generic path; `events` is the largest single field of the workload;
-- the plan machinery itself still allocates per record (decoded slice, key
-  list, dictionary record) and applies `Right` once;
-- nested plans recurse through `decodeValue`, which boxes state per field.
+- the custom decoder body itself (`decodeEvent`) is a compiled PureScript
+  function: its branches, `Either` plumbing and constructor calls stay on the
+  generic path; only its field accesses (`tag`, `path`, `duration`, `orderId`,
+  `items`) are direct now;
+- the plan machinery still allocates per record (decoded slice, key list,
+  dictionary record) and applies `Right` once;
+- `decodeCustom` wraps every custom element with `isRight`/`leftOf`/
+  `rightValue` calls.
+
+Measured with the field accessors in place, decode dropped from 5.67 ms to
+5.37 ms (−5%) and combined from 9.60 ms to 8.67 ms (−10%): the custom
+decoders' field access was a visible but not dominant share. The dominant
+share is the generic representation the compiled decoder body itself carries.
 
 Per-case decode time shows the cost is spread rather than dominated by one
 case: `flat-record-arrays` 1.70 ms, `nested-records-and-variants` 1.77 ms,
@@ -94,11 +109,11 @@ case: `flat-record-arrays` 1.70 ms, `nested-records-and-variants` 1.77 ms,
 
 ## Next steps
 
-1. Make `getField` / `getFieldOptional'` tag-aware through a native FFI. That
-   is where every custom decoder spends its time, and it needs the same error
-   support record the plan already uses.
-2. Trim the plan's own allocations (build the final record without the
+1. Trim the plan's own allocations (build the final record without the
    intermediate slice, or specialize the insertion when labels are unique).
+2. Compile custom decoder bodies through the same discipline: the remaining
+   gap is inside compiled PureScript code (`Either` plumbing, constructor
+   calls), which no library-side tag can remove.
 3. Compare against the TAST decoder: the compile path may benefit from the
    same tag discipline if its native reader keeps dictionaries in the hot
    loop.
@@ -106,10 +121,10 @@ case: `flat-record-arrays` 1.70 ms, `nested-records-and-variants` 1.77 ms,
 ## Provenance
 
 - Libraries: `gopurs/gopurs-argonaut-codecs`
-  (`Class.purs`, `Internal/Record.{purs,go,js}`, `Internal/Typed.{purs,go,js}`,
+  (`Class.purs`, `Decoders.purs`, `Internal/Record.{purs,go,js}`,
   `test/record-plan_test.go`, `test/record-plan.mjs`).
-- Runtime: `gopurs/gopurs/runtime/runtime.go` (`DecodeKind`), regenerated into
-  `src/Gopurs/Runtime.go`.
+- Runtime: `gopurs/gopurs/runtime/runtime.go` (no tag-specific code; the tag
+  types live in `Record.go`).
 - Workspace and results: `var/benchmark/json-dec-typed-20260924`,
   `var/benchmark/json-dec-typed-full-20260924/results.json`; baseline
   `var/benchmark/json-dec-cache7-results-20260923/results.json`.
