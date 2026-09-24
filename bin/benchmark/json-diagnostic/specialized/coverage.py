@@ -2,6 +2,7 @@
 """Count actual typed-plan paths in a disposable, untimed diagnostic build."""
 import argparse
 import json
+import re
 import shutil
 from pathlib import Path
 
@@ -54,6 +55,23 @@ def main():
         raise SystemExit('Expected the direct fallback and generic field calls')
     text = text.replace(marker, 'zzCoverage["untagged_field_step"]++\n\t\t' + marker)
     ffi.write_text(text)
+    # Compiler-emitted workers bypass the generic typed-plan dispatcher. Count
+    # their actual invocations in this untimed copy, including variant branches.
+    for path in (work / 'output/purescript').glob('*.go'):
+        if path == ffi:
+            continue
+        generated = path.read_text()
+        pattern = r'(func (\w+__json_schema_\w+)\(plan \*recordDecodePlan, kind \*fieldKind, raw any\) argonautSchemaResult \{)(.*?)(?=\n\}\n\nfunc \2_accepts\()'
+        def count_worker(match):
+            header, name, body = match.groups()
+            category = ('variant' if '_construct()' in body else
+                        'record' if 'gopurs_runtime.RecordDict' in body else
+                        'array' if 'domArrayValues(raw)' in body else
+                        'optional' if 'domNull(raw)' in body else 'leaf')
+            return header + f'\nzzCoverage["schema_{category}"]++\nzzCoverage["schema_worker:{name}"]++' + body
+        generated, count = re.subn(pattern, count_worker, generated, flags=re.S)
+        if count:
+            path.write_text(generated)
     shutil.copyfile(SPECIALIZED / 'coverage_main.go', work / 'output/purescript/zz_coverage.go')
     (work / 'output/main/main.go').write_text('package main\nimport "gopurs/output/purescript"\nfunc main() { purescript.ZzCoverageMain() }\n')
     env = environment({'GOMAXPROCS': '14'})

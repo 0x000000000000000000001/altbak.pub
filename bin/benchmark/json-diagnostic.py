@@ -237,6 +237,8 @@ def main():
                   'go':subprocess.check_output(['go','version'],env=env,text=True).strip(),
                   'purs':subprocess.check_output(['purs','--version'],env=env,text=True).strip(),
                   'generated_tast':{str(f.relative_to(work)):sha(f) for f in sorted((work/'output').glob('*/corefn.json'))}}
+        if suite == 'JsonTypedAst':
+            manifest['driver_capabilities'] = ['phase-order']
         (work/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
         print('Build complete; measurements are a separate command.',flush=True)
         return

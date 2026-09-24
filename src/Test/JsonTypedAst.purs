@@ -17,8 +17,9 @@ import Partial.Unsafe (unsafeCrashWith)
 import PureScript.Backend.Optimizer.CoreFn (Ann, Module)
 import PureScript.Backend.Optimizer.CoreFn as C
 import PureScript.Backend.Optimizer.CoreFn.Json (decodeModule)
+import PureScript.Backend.Optimizer.CoreFn.Json.Text (parseModule)
 
-foreign import drive :: forall a b. (String -> a) -> (a -> b) -> (a -> String) -> (b -> String) -> Effect Unit
+foreign import drive :: forall a b. (String -> a) -> (a -> b) -> (String -> b) -> (a -> String) -> (b -> String) -> Effect Unit
 
 parse :: String -> Json
 parse input = case jsonParser input of
@@ -30,8 +31,13 @@ decode input = case decodeModule input of
   Left err -> unsafeCrashWith (printJsonDecodeError err)
   Right value -> value
 
+decodeText :: String -> Module Ann
+decodeText input = case parseModule input of
+  Left err -> unsafeCrashWith err
+  Right value -> value
+
 main :: Effect Unit
-main = drive parse decode stringify fingerprint
+main = drive parse decode decodeText stringify fingerprint
 
 -- | An exhaustive, ordered representation of the decoded module. Arrays avoid
 -- | depending on JSON object iteration order; only the foreign Map is sorted.

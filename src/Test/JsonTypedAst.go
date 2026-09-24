@@ -7,6 +7,7 @@ import (
     "fmt"
     "os"
     "runtime"
+    "strings"
     "time"
     "gopurs/output/gopurs_runtime"
 )
@@ -22,7 +23,7 @@ func canonicalHash(text string) string {
     return hex.EncodeToString(hash[:])
 }
 
-func Drive(parse, decode, encode, fingerprint gopurs_runtime.Value) func() any {
+func Drive(parse, decode, decodeText, encode, fingerprint gopurs_runtime.Value) func() any {
  return func() any {
     bytes,err:=os.ReadFile(os.Getenv("DIAG_CORPUS"));if err!=nil {panic(err)}
     var files []struct{Name string `json:"name"`; Contents string `json:"contents"`}
@@ -37,7 +38,14 @@ func Drive(parse, decode, encode, fingerprint gopurs_runtime.Value) func() any {
         expectedAST[i]=canonicalHash(raw)
     }
     phases:=map[string]any{}
-    for _,phase:=range []string{"parse","decode","combined"} {
+    phaseOrder:=[]string{"parse","decode","combined"}
+    if requested:=os.Getenv("DIAG_PHASES");requested!="" {phaseOrder=strings.Split(requested,",")}
+    seen:=map[string]bool{}
+    for _,phase:=range phaseOrder {
+        if seen[phase] || (phase!="parse" && phase!="decode" && phase!="combined") {panic("invalid DIAG_PHASES")}
+        seen[phase]=true
+    }
+    for _,phase:=range phaseOrder {
         samples:=[]map[string]float64{};best:=1e100
         for pass:=0;pass<7;pass++ {
             results:=make([]gopurs_runtime.Value,len(files))
@@ -48,7 +56,7 @@ func Drive(parse, decode, encode, fingerprint gopurs_runtime.Value) func() any {
                 switch phase {
                 case "parse":results[i]=gopurs_runtime.Apply(parse,gopurs_runtime.Str(f.Contents))
                 case "decode":results[i]=gopurs_runtime.Apply(decode,parsed[i])
-                case "combined":results[i]=gopurs_runtime.Apply(decode,gopurs_runtime.Apply(parse,gopurs_runtime.Str(f.Contents)))
+                case "combined":results[i]=gopurs_runtime.Apply(decodeText,gopurs_runtime.Str(f.Contents))
                 }
                 diagnosticSink=results[i]
             }
@@ -66,7 +74,7 @@ func Drive(parse, decode, encode, fingerprint gopurs_runtime.Value) func() any {
         }
         phases[phase]=map[string]any{"samples":samples,"time_us":best}
     }
-    report:=map[string]any{"backend":"go","modules":len(files),"fingerprints":expectedAST,"json_fingerprints":expectedJSON,"phases":phases,"go":runtime.Version(),"gomaxprocs":runtime.GOMAXPROCS(0)}
+    report:=map[string]any{"backend":"go","phase_order":phaseOrder,"modules":len(files),"fingerprints":expectedAST,"json_fingerprints":expectedJSON,"phases":phases,"go":runtime.Version(),"gomaxprocs":runtime.GOMAXPROCS(0)}
     result,err:=json.Marshal(report);if err!=nil {panic(err)};fmt.Println(string(result))
     return nil
  }

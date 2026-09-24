@@ -47,6 +47,8 @@ def main():
         parser.error('processes must be positive')
     workspaces = {'baseline': args.baseline.resolve(), 'current': args.current.resolve()}
     builds = {name: provenance(work, args.suite) for name, work in workspaces.items()}
+    rotate_phases = args.suite == 'JsonDecoding' or all(
+        'phase-order' in build['manifest'].get('driver_capabilities', []) for build in builds.values())
     out = args.output.resolve()
     out.mkdir(parents=True, exist_ok=False)
     corpus, info = diagnostic.corpus_data(args.suite)
@@ -59,9 +61,9 @@ def main():
     schedule = []
     for index in range(args.processes):
         phase_order = phases
-        # JsonTypedAst's preserved driver has a fixed phase order. Do not claim
-        # phase counterbalancing for a binary that ignores DIAG_PHASES.
-        if args.suite == 'JsonDecoding':
+        # Older TAST drivers ignore DIAG_PHASES. Rotate only when both preserved
+        # manifests declare support, and verify that each new driver obeyed it.
+        if rotate_phases:
             offset = index % 3
             phase_order = phases[offset:] + phases[:offset]
             if (index // 3) % 2:
@@ -81,6 +83,8 @@ def main():
                 subprocess.run([work / 'benchmark'], cwd=work, env=env, stdout=stream, check=True)
             observation.update(wall_seconds=time.monotonic() - start, load_after=os.getloadavg())
             report = json.loads(log.read_text())
+            if args.suite == 'JsonTypedAst' and rotate_phases and report.get('phase_order') != phase_order:
+                raise ValueError('TAST driver did not apply the requested phase order')
             diagnostic.validate_result(report, oracle, args.suite)
             for phase in phases:
                 if len(report['phases'][phase]['samples']) != 5:
@@ -101,7 +105,7 @@ def main():
         'processes_per_workspace': args.processes, 'warmups_per_phase': 2, 'samples_per_phase': 5,
         'GOMAXPROCS': 1, 'GOGC': 100, 'cell': 'median of process minima',
         'counterbalanced_workspace_order': True,
-        'rotating_and_reversing_phase_order': args.suite == 'JsonDecoding',
+        'rotating_and_reversing_phase_order': rotate_phases,
         'retained_outputs_validated_after_each_pass': True,
         'fingerprinting_timed': False, 'retention_buffer_allocation_timed': False},
         'builds': builds, 'runs': runs, 'schedule': schedule,
