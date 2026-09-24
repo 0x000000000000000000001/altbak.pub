@@ -119,6 +119,21 @@ def verify(result, mode):
     return total
 
 
+def published(mode):
+    """Return the README total for one PHP column, or None when unreadable."""
+    try:
+        php = section(README.read_text(), 'PHP')
+        total = None
+        for line in php.group(1).splitlines():
+            if line.split('|', 1)[0].strip() == '**Total Execution Time**':
+                cells = line.split('|')
+                match = TOTAL.search(cells[COLUMNS[mode] + 1])
+                total = float(match.group(0).split('~')[1].split('ms')[0]) if match else None
+        return total
+    except (OSError, ValueError):
+        return None
+
+
 def update_readme(mode, result):
     text = README.read_text()
     original = text
@@ -197,11 +212,17 @@ def main():
         print('Built PHP ' + mode + '; manifest ' + str(build_dir / 'manifest.json'))
         return
     result = measure(mode, build_dir, campaign_dir)
+    (campaign_dir / 'toolchain.json').write_text(json.dumps(toolchain(), indent=2) + '\n')
     total = verify(result, mode)
     print('', flush=True)
     for label, value in zip(result['labels'], result['times_us']):
         print(f'  {label:60} ~ {value:14.3f} μs')
     print(f'  {"Total Execution Time":60} ~ {total:14.3f} ms')
+    reference = published(mode)
+    if reference:
+        print(f'  Published README php-{mode} total: {reference:.2f} ms; '
+              f'this campaign: {result["total_ms"]:.2f} ms '
+              f'({100.0 * (result["total_ms"] - reference) / reference:+.1f}%)')
     print('Campaign: ' + str(campaign_dir / 'results.json'), flush=True)
     if args.update_readme:
         update_readme(mode, result)
