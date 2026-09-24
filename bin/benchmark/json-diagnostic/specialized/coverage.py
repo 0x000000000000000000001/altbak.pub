@@ -30,6 +30,8 @@ def main():
         hooks['func (plan *recordDecodePlan) recordSmall('] = 'zzCountSize("compact_record_size", len(plan.fields))'
     if 'func decodeJsonObjectDirect(' in text:
         hooks['func decodeJsonObjectDirect('] = 'zzCoverage["identity_object"]++'
+    if 'func Data_Argonaut_Decode_Internal_Record_TypedObject(' in text:
+        hooks['func Data_Argonaut_Decode_Internal_Record_TypedObject('] = 'zzCoverage["object_decoder_construction"]++'
     for marker, statement in hooks.items():
         if text.count(marker) != 1:
             raise SystemExit(f'Expected exactly one instrumentation point: {marker}')
