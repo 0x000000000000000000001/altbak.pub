@@ -1,0 +1,7 @@
+PASS a declared class member uses its own quantified variable in body annotations
+PASS the member's nested annotations are aligned recursively
+PASS bindings without a declared class member keep every annotation
+PASS a concrete constraint argument does not invent a variable substitution
+PASS recursive groups are aligned member by member
+PASS an unknown class leaves annotations untouched
+Class member scope regression tests: 6 passed, 0 failed (/Users/0x1/Documents/htdocs/sharpurs/sharpurs/output)

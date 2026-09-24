@@ -1,0 +1,74 @@
+diff --git a/src/PureScript/Backend/Optimizer/Convert.purs b/src/PureScript/Backend/Optimizer/Convert.purs
+index 0c60a6b..089770a 100644
+--- a/src/PureScript/Backend/Optimizer/Convert.purs
++++ b/src/PureScript/Backend/Optimizer/Convert.purs
+@@ -48,6 +48,7 @@ module PureScript.Backend.Optimizer.Convert
+   , BackendImplementations
+   , BackendModule
+   , OptimizationSteps
++  , alignClassMemberAnnotations
+   , toBackendModule
+   ) where
+ 
+@@ -82,6 +83,7 @@ import PureScript.Backend.Optimizer.CoreFn (Ann(..), Bind(..), Binder(..), Bindi
+ import PureScript.Backend.Optimizer.Directives (DirectiveHeaderResult, parseDirectiveHeader)
+ import PureScript.Backend.Optimizer.Semantics (BackendExpr(..), BackendSemantics, Ctx(..), DataTypeMeta, Env(..), EvalRef(..), ExternImpl(..), ExternSpine(..), InlineAccessor(..), InlineDirective(..), InlineDirectiveMap, NeutralExpr(..), build, evalExternFromImpl, evalExternRefFromImpl, freeze, optimize, unwrapSemTyped)
+ import PureScript.Backend.Optimizer.Semantics.Foreign (ForeignEval)
++import PureScript.Backend.Optimizer.Substitute (substituteExprType)
+ import PureScript.Backend.Optimizer.Syntax (BackendAccessor(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorOrd(..), BackendSyntax(Var, Local, Lit, App, Abs, UncurriedApp, UncurriedAbs, Accessor, Update, CtorDef, LetRec, Let, Branch, PrimOp, PrimUndefined, Fail, Typed), Level(..), Pair(..))
+ import PureScript.Backend.Optimizer.Syntax as Syn
+ import PureScript.Backend.Optimizer.Utils (foldl1Array)
+@@ -153,7 +155,7 @@ toBackendModule (Module mod) env = do
+       # Map.fromFoldable
+ 
+     moduleBindings :: Accum ConvertEnv (Array (BackendBindingGroup Ident (WithDeps NeutralExpr)))
+-    moduleBindings = toBackendTopLevelBindingGroups mod.decls env
++    moduleBindings = toBackendTopLevelBindingGroups (alignClassMemberAnnotations mod.classDecls mod.decls) env
+       { dataTypes = dataTypes
+       , directives =
+           foldlWithIndex
+@@ -1162,3 +1164,44 @@ getReturnType (Func args ret) = case Array.uncons args of
+   Just { tail } | Array.length tail > 0 -> Just (Func tail ret)
+   _ -> Just ret
+ getReturnType _ = Nothing
++
++-- | Compiler-generated class member accessors annotate their bodies with the
++-- | class declaration's type variable names, while the member binding quantifies
++-- | its own scoped variables (e.g. `a$scope0`). The declared constraint pairs
++-- | the two sets, so the implementation can be instantiated as a whole later on.
++-- | Bindings that are not declared class members stay untouched.
++alignClassMemberAnnotations :: Array ClassDecl -> Array (Bind Ann) -> Array (Bind Ann)
++alignClassMemberAnnotations classDecls = map goBind
++  where
++  goBind = case _ of
++    NonRec binding -> NonRec (goBinding binding)
++    Rec bindings -> Rec (map goBinding bindings)
++
++  goBinding binding@(Binding (Ann ann) ident expr) = case ann.type >>= memberSubstitution classDecls ident of
++    Just substitution -> Binding (Ann ann) ident (map (rewriteAnnotation substitution) expr)
++    Nothing -> binding
++
++  rewriteAnnotation substitution (Ann ann) = Ann (ann { type = map (substituteExprType substitution) ann.type })
++
++-- | Only the member binding's own quantified variables are valid targets for a
++-- | class variable. Any other argument shape keeps the original annotation.
++memberSubstitution :: Array ClassDecl -> Ident -> ExprType -> Maybe (Map String ExprType)
++memberSubstitution classDecls (Ident member) ty = do
++  Tuple decl args <- Array.findMap classOf (constraintsOf ty)
++  let substitution = Map.fromFoldable (Array.mapMaybe scopePair (Array.zip decl.vars args))
++  guard (not (Map.isEmpty substitution))
++  pure substitution
++  where
++  classOf (Tuple path args) = do
++    decl <- Array.find (\d -> Array.last path == Just d.name) classDecls
++    guard (Array.any (\(Tuple name _) -> name == member) decl.methods)
++    pure (Tuple decl args)
++
++  scopePair (Tuple classVar arg) = case arg of
++    TypeVar scoped | scoped /= classVar -> Just (Tuple classVar (TypeVar scoped))
++    _ -> Nothing
++
++  constraintsOf = case _ of
++    ForAll _ body -> constraintsOf body
++    ConstrainedType constraints _ -> constraints
++    _ -> []

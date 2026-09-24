@@ -1,0 +1,30 @@
+{
+  "protocol": "cross-native vs cross-generic, identical generated sources except Test.Polymorphism.fs",
+  "default": {
+    "note": "medians of 5 interleaved runs with 2s pauses",
+    "List Processing": "~480 us vs ~185 us",
+    "Deep Record Updates": "~4765 us vs ~2216 us",
+    "Prime Sieve": "~1131 us vs ~379 us",
+    "Polymorphism": "~2511 us vs ~293368 us"
+  },
+  "DOTNET_TieredCompilation=0": {
+    "note": "medians of 3 runs per variant",
+    "List Processing": [
+      275.6,
+      277.9
+    ],
+    "Deep Record Updates": [
+      2313.9,
+      2389.2
+    ],
+    "Prime Sieve": [
+      513.1,
+      515.9
+    ],
+    "Polymorphism": [
+      2515.6,
+      316695.7
+    ]
+  },
+  "conclusion": "Identical code performs identically without tiered compilation; the per-test gap under default settings is a shared-process JIT warm-up artifact."
+}

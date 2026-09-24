@@ -1,0 +1,65 @@
+{
+  "module": "Test.Polymorphism",
+  "bindings": {
+    "mempty_": {
+      "recursive": false,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": false,
+        "reason": "Abs [0] reached with expected=ForAll",
+        "where": "root/Typed Abs expected=ForAll"
+      }
+    },
+    "mappend_": {
+      "recursive": false,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": false,
+        "reason": "Abs [0] reached with expected=ForAll",
+        "where": "root/Typed Abs expected=ForAll"
+      }
+    },
+    "polyLoop": {
+      "recursive": false,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": false,
+        "reason": "Abs [0] reached with expected=ConstrainedType",
+        "where": "root/Typed/Typed Abs expected=ConstrainedType"
+      }
+    },
+    "intMonoidish": {
+      "recursive": false,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": false,
+        "reason": "literal LitRecord is not in the Optimized subset",
+        "where": "root/Typed/Typed/Typed Lit expected=Record"
+      }
+    },
+    "describe": {
+      "recursive": false,
+      "optimizedAccepted": false,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": true,
+        "note": "envelope accepted"
+      }
+    },
+    "act": {
+      "recursive": false,
+      "optimizedAccepted": true,
+      "globalKernelAccepted": false,
+      "trace": {
+        "ok": true,
+        "note": "envelope accepted"
+      }
+    }
+  },
+  "thunks": "rejected",
+  "adt": "rejected"
+}

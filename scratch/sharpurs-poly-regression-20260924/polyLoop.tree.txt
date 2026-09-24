@@ -1,0 +1,61 @@
+Typed ForAll([a$scope3], ConstrainedType([Tuple([Test, Polymorphism, Monoidish], [TypeVar(a$scope3)])], [Int, TypeVar(a$scope3)] -> TypeVar(a$scope3)))
+  Typed ConstrainedType([Tuple([Test, Polymorphism, Monoidish], [TypeVar(a$scope3)])], [Int, TypeVar(a$scope3)] -> TypeVar(a$scope3))
+    Abs [Tuple(dictMonoidish, 0)]
+      Typed [Int, TypeVar(a$scope3)] -> TypeVar(a$scope3)
+        Abs [Tuple(n_init, 1)]
+          Typed [TypeVar(a$scope3)] -> TypeVar(a$scope3)
+            Abs [Tuple(acc_init, 2)]
+              Typed TypeVar(a$scope3)
+                LetRec level=3
+                  binding go
+                    Typed [Int, TypeVar(a$scope3)] -> TypeVar(a$scope3)
+                      Abs [Tuple(v, 4)]
+                        Typed [TypeVar(a$scope3)] -> TypeVar(a$scope3)
+                          Abs [Tuple(v1, 5)]
+                            Typed TypeVar(a$scope3)
+                              Branch
+                                Pair
+                                  PrimOp
+                                    OpIntOrd(OpEq)
+                                      Typed Int
+                                        Local(v, 4)
+                                      Lit(LitInt(0))
+                                  Typed TypeVar(a$scope3)
+                                    Typed TypeVar(a$scope3)
+                                      Local(v1, 5)
+                                Typed TypeVar(a$scope3)
+                                  Typed TypeVar(a$scope3)
+                                    App
+                                      Local(go, 3)
+                                      Typed Int
+                                        Typed Int
+                                          PrimOp
+                                            OpIntNum(OpSubtract)
+                                              Typed Int
+                                                Local(v, 4)
+                                              Typed Int
+                                                Lit(LitInt(1))
+                                      Typed TypeVar(a$scope3)
+                                        Typed TypeVar(a$scope3)
+                                          App
+                                            Accessor
+                                              Local(dictMonoidish, 0)
+                                              GetProp
+                                                mappend_
+                                            Typed TypeVar(a$scope3)
+                                              Typed TypeVar(a$scope3)
+                                                Local(v1, 5)
+                                            Typed TypeVar(a$scope3)
+                                              Typed TypeVar(a$scope3)
+                                                Accessor
+                                                  Local(dictMonoidish, 0)
+                                                  GetProp
+                                                    mempty_
+                  Typed TypeVar(a$scope3)
+                    Typed TypeVar(a$scope3)
+                      App
+                        Local(go, 3)
+                        Typed Int
+                          Local(n_init, 1)
+                        Typed TypeVar(a$scope3)
+                          Local(acc_init, 2)

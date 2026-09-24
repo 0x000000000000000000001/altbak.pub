@@ -1,0 +1,101 @@
+{
+  "runs": [
+    "pure-xg76xyc3",
+    "pure-imlr2k9h",
+    "pure-1ddnl6px"
+  ],
+  "perRun": {
+    "AST Evaluation": [
+      1.154333,
+      1.140361,
+      1.139768
+    ],
+    "Fibonacci": [
+      2.473094,
+      2.431956,
+      2.494476
+    ],
+    "List Processing (900 elements)": [
+      406.933594,
+      403.566406,
+      370.098969
+    ],
+    "Tail Call Optimization (100k calls)": [
+      50.78418,
+      47.173992,
+      47.129555
+    ],
+    "Deep Record Updates (10k iterations)": [
+      3159.677,
+      3392.2395,
+      3258.47925
+    ],
+    "Ackermann (3, 4)": [
+      177.415375,
+      191.361969,
+      180.359375
+    ],
+    "Church Numerals (100k Closure Applications)": [
+      1759.65625,
+      2418.47925,
+      1740.52075
+    ],
+    "Prime Sieve (sum primes up to 500)": [
+      439.136719,
+      680.453125,
+      453.3685
+    ],
+    "Red-Black Tree (100k Worst-Case Insertions)": [
+      42743.417,
+      45157.875,
+      42891.667
+    ],
+    "Polymorphism (10M Type Class Dict Lookups)": [
+      2535.72925,
+      2523.27075,
+      2522.323
+    ],
+    "State Monad (1.2k Binds, 60 Stack Depth)": [
+      204.139328,
+      211.847656,
+      215.208984
+    ],
+    "Lazy Evaluation (1M Thunks Forced, 1k Depth)": [
+      6495.5625,
+      6662.458,
+      6889.729
+    ],
+    "Array Processing (900 elements)": [
+      57.098473,
+      57.834313,
+      57.185059
+    ],
+    "RowToList (Keys Count)": [
+      0.320468,
+      0.329091,
+      0.320997
+    ]
+  },
+  "medians": {
+    "AST Evaluation": 1.140361,
+    "Fibonacci": 2.473094,
+    "List Processing (900 elements)": 403.566406,
+    "Tail Call Optimization (100k calls)": 47.173992,
+    "Deep Record Updates (10k iterations)": 3258.47925,
+    "Ackermann (3, 4)": 180.359375,
+    "Church Numerals (100k Closure Applications)": 1759.65625,
+    "Prime Sieve (sum primes up to 500)": 453.3685,
+    "Red-Black Tree (100k Worst-Case Insertions)": 42891.667,
+    "Polymorphism (10M Type Class Dict Lookups)": 2523.27075,
+    "State Monad (1.2k Binds, 60 Stack Depth)": 211.847656,
+    "Lazy Evaluation (1M Thunks Forced, 1k Depth)": 6662.458,
+    "Array Processing (900 elements)": 57.185059,
+    "RowToList (Keys Count)": 0.320997
+  },
+  "totals": [
+    58.033498,
+    61.750461,
+    58.630025
+  ],
+  "totalMedian": 58.630025
+}

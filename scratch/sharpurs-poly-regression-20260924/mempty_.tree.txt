@@ -1,0 +1,7 @@
+Typed ForAll([a$scope0], ConstrainedType([Tuple([Test, Polymorphism, Monoidish], [TypeVar(a$scope0)])], TypeVar(a$scope0)))
+  Abs [Tuple(dict, 0)]
+    Typed TypeVar(a$scope0)
+      Accessor
+        Local(dict, 0)
+        GetProp
+          mempty_
