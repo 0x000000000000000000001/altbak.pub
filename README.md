@@ -142,7 +142,7 @@ RowToList | ~ 0.87 μs | ~ 0.85 μs | ~ 0.08 μs |
 
 #### Rust
 
-Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br><br>(WIP) | PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F# (adapted)<br>↓<br>[Fable (patched)](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3<br><br>(WIP) | Hand-written F#<br>↓<br>[Fable](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3 | Hand-written FP-style Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br><br>(WIP) | Hand-written imperative Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br><br>(WIP) |
+Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) | PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F# (adapted)<br>↓<br>[Fable (patched)](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3<br><br>(WIP) | Hand-written F#<br>↓<br>[Fable](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3 | Hand-written FP-style Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br><br>(WIP) | Hand-written imperative Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br><br>(WIP) |
 ----------------------- | ------------------------- | -------------------------- | ------------------------------ | ------------------------ | ------------------------------ |
 AST Evaluation | ~ 0.27 μs | ~ 4.41 μs | ~ 0.26 μs | ~ 0.26 μs | ~ 0.26 μs |
 Fibonacci | ~ 0.10 μs | ~ 12.69 μs | ~ 0.10 μs | ~ 0.10 μs | ~ 0.12 μs |
@@ -156,7 +156,7 @@ Red-Black Tree | ~ 8393.67 μs | ~ 62062.96 μs | ~ 52997.62 μs | ~ 31816.71 μ
 Polymorphism | ~ 0.06 μs | ~ 1903090.88 μs | ~ 7298.33 μs | ~ 7131.50 μs | ~ 0.01 μs |
 State Monad | ~ 52.36 μs | ~ 932.02 μs | ~ 81.71 μs | ~ 34.78 μs | ~ 0.01 μs |
 Lazy Evaluation | ~ 0.01 μs | ~ 18989.71 μs | ~ 37387.54 μs | ~ 22062.08 μs | ~ 0.01 μs |
-Array Processing | ~ 9.45 μs | ~ 362.15 μs | ~ 3.13 μs | ~ 0.58 μs | ~ 0.25 μs |
+Array Processing | ~ 8.08 μs | ~ 362.15 μs | ~ 3.13 μs | ~ 0.58 μs | ~ 0.25 μs |
 RowToList | ~ 0.08 μs | ~ 1.13 μs | ~ 0.11 μs | ~ 0.02 μs | ~ 0.01 μs |
 **Total Execution Time** | ~ 8.89 ms <br>(/C = 0.9x) | ~ 2011.76 ms <br>(/C = 204.4x) | ~ 100.11 ms <br>(/C = 10.2x) | ~ 62.46 ms <br>(/C = 6.3x) | ~ 30.76 ms <br>(/C = 3.1x) |
 
