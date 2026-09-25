@@ -12,6 +12,17 @@ The benchmark suite runs a wide variety of computationally intensive tasks: AST 
 > 
 > In the context of a real-world project, the idea is to provide the best possible performance ratio even when a developer makes a catastrophic design error. This mitigates the impact of such errors and delays as long as possible the need to drop down to FFI or use mutable abstractions for the rare algorithmic *hot paths* of a project.
 
+### Memory-management fairness
+
+Native references use conventional memory management and return owned, usable
+results with the same lifetime requirements as the compiled implementations.
+Hand-written arenas, pools, bulk-lifetime allocation, or cross-iteration storage
+recycling introduced specifically to improve a benchmark score are not allowed.
+Compiler/runtime optimizations that preserve the program's ownership and lifetime
+contract remain valid, including allocation elimination and stack allocation.
+Construction, copying, conversion and eventual reclamation costs must be measured
+and reported; deferred work must not disappear beyond a timing boundary.
+
 ### Core vs extended tests (`srx/`)
 To ensure fair and executable comparisons across all backends, the test suite is split into two parts:
 1. **Core tests (`src/`)**: Pure computational tasks (AST, Fibonacci, recursion) executed on the configured core backends via `./bin/run`.

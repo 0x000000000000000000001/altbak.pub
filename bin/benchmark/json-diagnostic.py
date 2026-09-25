@@ -22,15 +22,17 @@ SUITES = ['JsonTypedAst', 'JsonDecoding']
 # next to the Go and JS artifacts and validated against the same frozen oracle.
 C_DRIVERS = {'JsonDecoding': ROOT / 'bin/benchmark/json-diagnostic/decoding.cc',
              'JsonTypedAst': ROOT / 'bin/benchmark/json-diagnostic/typed-ast.cc'}
-# The typed-AST reference decodes every module with the same type-table and
-# annotation rules as the PureScript decoder, but does not reproduce the pure
-# usage-validation pass (it returns Unit and cannot change the fingerprint).
+# Native references use ordinary owned containers, fresh parsers and separately
+# reported result destruction. The typed reference resolves the complete table
+# and validates lexical source usage before publishing a module.
 C_SCOPES = {
-    'JsonDecoding': ('simdjson parsing, hand-written arena decoding; successful fingerprints '
-                     'validated exactly, malformed inputs only required to fail'),
-    'JsonTypedAst': ('simdjson parsing, hand-written arena decoding of the full typed module; '
-                     'all twelve fingerprints validated exactly; the pure usage-validation '
-                     'pass is not reproduced'),
+    'JsonDecoding': ('fresh simdjson parsing, ordinary owned C++ strings/vectors/optionals; '
+                      'successful fingerprints validated exactly, malformed inputs only '
+                      'required to fail; final result destruction separately reported'),
+    'JsonTypedAst': ('fresh simdjson parsing, ordinary owned C++ strings/vectors/tree nodes '
+                      'and shared type nodes; eager whole-table resolution and lexical '
+                      'source-usage validation; all twelve fingerprints validated exactly; '
+                      'final result destruction separately reported'),
 }
 SIMDJSON_PREFIX = Path(os.environ.get('SIMDJSON_PREFIX', '/opt/homebrew/opt/simdjson'))
 # The C reference validates successful decodes bit for bit. Malformed inputs

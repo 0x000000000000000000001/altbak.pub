@@ -2,11 +2,9 @@
 // JavaScript diagnostics driven by bin/benchmark/json-diagnostic.py.
 //
 // Scope of the comparison:
-//   * parsing uses simdjson (system include), the fastest available native
-//     parser, because the point is to bound what a native implementation can
-//     reach;
-//   * decoding into concrete structures is hand-written, with one monotonic
-//     arena per pass instead of per-value allocation;
+//   * parsing uses a fresh simdjson parser for each owned input document;
+//   * concrete results own ordinary std::string/std::vector/optional storage;
+//     construction and final destruction are reported separately;
 //   * fingerprints are computed canonically in this driver, independently of
 //     the other runtimes, and validated by the caller against the frozen
 //     oracle.
@@ -24,7 +22,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <memory>
-#include <memory_resource>
+#include <optional>
 #include <string>
 #include <string_view>
 #include <vector>
@@ -35,13 +33,7 @@ using simdjson::dom::array;
 using simdjson::dom::element;
 using simdjson::dom::object;
 
-using arena_allocator = std::pmr::polymorphic_allocator<char>;
-
 struct decode_error {};
-
-void assign_string(std::pmr::string &target, std::string_view text) {
-  target.assign(text.data(), text.size());
-}
 
 element require_field(object obj, const char *key) { return obj[key].value(); }
 std::string_view string_of(element value) { return value.get_string().value(); }
@@ -190,69 +182,18 @@ std::string fingerprint_of(element value) {
 }
 
 // --------------------------------------------------------------------------
-// Bump arena: blocks are kept between passes and only their cursors are reset.
+// Owned results. Every container uses its ordinary standard-library allocator.
 // --------------------------------------------------------------------------
 
-class Arena {
- public:
-  explicit Arena(size_t block_size) : block_size_(block_size) {}
+using Str = std::string;
 
-  void reset() {
-    for (Block &block : blocks_) block.used = 0;
-  }
+Str copy_string(std::string_view text) { return Str(text); }
 
-  void *alloc(size_t size) {
-    const size_t alignment = alignof(std::max_align_t);
-    size = (size + alignment - 1) & ~(alignment - 1);
-    for (Block &block : blocks_) {
-      if (block.used + size <= block.size) {
-        void *pointer = block.data.get() + block.used;
-        block.used += size;
-        return pointer;
-      }
-    }
-    Block block;
-    block.size = size > block_size_ ? size : block_size_;
-    block.data = std::make_unique<char[]>(block.size);
-    block.used = size;
-    void *pointer = block.data.get();
-    blocks_.push_back(std::move(block));
-    return pointer;
-  }
-
-  template <class T>
-  T *alloc_array(size_t count) {
-    return static_cast<T *>(alloc(sizeof(T) * count));
-  }
-
- private:
-  struct Block {
-    std::unique_ptr<char[]> data;
-    size_t size = 0;
-    size_t used = 0;
-  };
-  std::vector<Block> blocks_;
-  size_t block_size_;
-};
-
-struct Str {
-  const char *data = nullptr;
-  size_t size = 0;
-};
-
-Str copy_string(Arena &arena, std::string_view text) {
-  char *data = static_cast<char *>(arena.alloc(text.size() == 0 ? 1 : text.size()));
-  memcpy(data, text.data(), text.size());
-  return Str{data, text.size()};
-}
-
-// Same shape the PureScript decoder produces; every dynamic part lives in the
-// arena and is rebuilt from scratch on each pass.
 struct Profile {
   Str city;
   bool has_note = false;
   Str note;
-  double *scores = nullptr;
+  std::vector<double> scores;
   size_t score_count = 0;
 };
 
@@ -260,8 +201,8 @@ struct User {
   int64_t id = 0;
   Str name;
   bool active = false;
-  Profile *profile = nullptr;
-  Str *tags = nullptr;
+  std::optional<Profile> profile;
+  std::vector<Str> tags;
   size_t tag_count = 0;
 };
 
@@ -277,7 +218,7 @@ struct Event {
   bool has_duration = false;
   int64_t duration = 0;
   int64_t order_id = 0;
-  Item *items = nullptr;
+  std::vector<Item> items;
   size_t item_count = 0;
 };
 
@@ -285,57 +226,57 @@ struct Payload {
   int64_t version = 0;
   bool has_next = false;
   Str next;
-  User *users = nullptr;
+  std::vector<User> users;
   size_t user_count = 0;
-  Event *events = nullptr;
+  std::vector<Event> events;
   size_t event_count = 0;
 };
 
-void decode_profile(Arena &arena, element raw, Profile &out) {
+void decode_profile(element raw, Profile &out) {
   object obj = object_of(raw);
-  out.city = copy_string(arena, string_of(require_field(obj, "city")));
+  out.city = copy_string(string_of(require_field(obj, "city")));
   array scores = array_of(require_field(obj, "scores"));
   out.score_count = scores.size();
-  out.scores = arena.alloc_array<double>(out.score_count);
+  out.scores.resize(out.score_count);
   size_t slot = 0;
   for (element score : scores) out.scores[slot++] = double_of(score);
   bool present = false;
   element note = optional_field(obj, "note", present);
   out.has_note = present && !note.is_null();
-  if (out.has_note) out.note = copy_string(arena, string_of(note));
+  if (out.has_note) out.note = copy_string(string_of(note));
 }
 
-void decode_user(Arena &arena, element raw, User &out) {
+void decode_user(element raw, User &out) {
   object obj = object_of(raw);
   out.id = int_of(require_field(obj, "id"));
-  out.name = copy_string(arena, string_of(require_field(obj, "name")));
+  out.name = copy_string(string_of(require_field(obj, "name")));
   out.active = bool_of(require_field(obj, "active"));
   array tags = array_of(require_field(obj, "tags"));
   out.tag_count = tags.size();
-  out.tags = arena.alloc_array<Str>(out.tag_count);
+  out.tags.resize(out.tag_count);
   size_t slot = 0;
-  for (element tag : tags) out.tags[slot++] = copy_string(arena, string_of(tag));
+  for (element tag : tags) out.tags[slot++] = copy_string(string_of(tag));
   bool present = false;
   element profile = optional_field(obj, "profile", present);
   if (present && !profile.is_null()) {
-    out.profile = arena.alloc_array<Profile>(1);
-    decode_profile(arena, profile, *out.profile);
+    out.profile.emplace();
+    decode_profile(profile, *out.profile);
   }
 }
 
-void decode_item(Arena &arena, element raw, Item &out) {
+void decode_item(element raw, Item &out) {
   object obj = object_of(raw);
-  out.sku = copy_string(arena, string_of(require_field(obj, "sku")));
+  out.sku = copy_string(string_of(require_field(obj, "sku")));
   out.quantity = int_of(require_field(obj, "quantity"));
   out.price = double_of(require_field(obj, "price"));
 }
 
-void decode_event(Arena &arena, element raw, Event &out) {
+void decode_event(element raw, Event &out) {
   object obj = object_of(raw);
   std::string_view tag = string_of(require_field(obj, "tag"));
   if (tag == "view") {
     out.kind = 0;
-    out.path = copy_string(arena, string_of(require_field(obj, "path")));
+    out.path = copy_string(string_of(require_field(obj, "path")));
     bool present = false;
     element duration = optional_field(obj, "duration", present);
     out.has_duration = present && !duration.is_null();
@@ -347,31 +288,31 @@ void decode_event(Arena &arena, element raw, Event &out) {
     out.order_id = int_of(require_field(obj, "orderId"));
     array items = array_of(require_field(obj, "items"));
     out.item_count = items.size();
-    out.items = arena.alloc_array<Item>(out.item_count);
+    out.items.resize(out.item_count);
     size_t slot = 0;
-    for (element item : items) decode_item(arena, item, out.items[slot++]);
+    for (element item : items) decode_item(item, out.items[slot++]);
     return;
   }
   throw decode_error{};
 }
 
-void decode_payload(Arena &arena, element root, Payload &out) {
+void decode_payload(element root, Payload &out) {
   object obj = object_of(root);
   out.version = int_of(require_field(obj, "version"));
   array users = array_of(require_field(obj, "users"));
   out.user_count = users.size();
-  out.users = arena.alloc_array<User>(out.user_count);
+  out.users.resize(out.user_count);
   size_t slot = 0;
-  for (element user : users) decode_user(arena, user, out.users[slot++]);
+  for (element user : users) decode_user(user, out.users[slot++]);
   array events = array_of(require_field(obj, "events"));
   out.event_count = events.size();
-  out.events = arena.alloc_array<Event>(out.event_count);
+  out.events.resize(out.event_count);
   slot = 0;
-  for (element event : events) decode_event(arena, event, out.events[slot++]);
+  for (element event : events) decode_event(event, out.events[slot++]);
   bool present = false;
   element next = optional_field(obj, "next", present);
   out.has_next = present && !next.is_null();
-  if (out.has_next) out.next = copy_string(arena, string_of(next));
+  if (out.has_next) out.next = copy_string(string_of(next));
 }
 
 // --------------------------------------------------------------------------
@@ -393,10 +334,10 @@ void append_score_list(std::string &out, const Profile &profile) {
 
 void append_profile(std::string &out, const Profile &profile) {
   out += "{\"city\":";
-  append_escaped(out, std::string_view(profile.city.data, profile.city.size));
+  append_escaped(out, profile.city);
   out += ",\"note\":";
   if (profile.has_note) {
-    append_escaped(out, std::string_view(profile.note.data, profile.note.size));
+    append_escaped(out, profile.note);
   } else {
     out += "null";
   }
@@ -411,9 +352,9 @@ void append_user(std::string &out, const User &user) {
   out += ",\"id\":";
   out += std::to_string(user.id);
   out += ",\"name\":";
-  append_escaped(out, std::string_view(user.name.data, user.name.size));
+  append_escaped(out, user.name);
   out += ",\"profile\":";
-  if (user.profile != nullptr) {
+  if (user.profile) {
     append_profile(out, *user.profile);
   } else {
     out += "null";
@@ -423,7 +364,7 @@ void append_user(std::string &out, const User &user) {
   for (size_t i = 0; i < user.tag_count; i++) {
     if (!first) out.push_back(',');
     first = false;
-    append_escaped(out, std::string_view(user.tags[i].data, user.tags[i].size));
+    append_escaped(out, user.tags[i]);
   }
   out += "]}";
 }
@@ -434,7 +375,7 @@ void append_item(std::string &out, const Item &item) {
   out += ",\"quantity\":";
   out += std::to_string(item.quantity);
   out += ",\"sku\":";
-  append_escaped(out, std::string_view(item.sku.data, item.sku.size));
+  append_escaped(out, item.sku);
   out.push_back('}');
 }
 
@@ -447,7 +388,7 @@ void append_event(std::string &out, const Event &event) {
       out += "null";
     }
     out += ",\"path\":";
-    append_escaped(out, std::string_view(event.path.data, event.path.size));
+    append_escaped(out, event.path);
     out += ",\"tag\":\"view\"}";
     return;
   }
@@ -473,7 +414,7 @@ std::string payload_fingerprint(const Payload &payload) {
   }
   text += "],\"next\":";
   if (payload.has_next) {
-    append_escaped(text, std::string_view(payload.next.data, payload.next.size));
+    append_escaped(text, payload.next);
   } else {
     text += "null";
   }
@@ -521,6 +462,25 @@ bool read_text(const char *path, std::string &out) {
   return true;
 }
 
+std::vector<int> phase_order() {
+  const char *setting = getenv("DIAG_PHASES");
+  if (!setting) return {0, 1, 2};
+  std::vector<int> result;
+  std::string text(setting);
+  size_t start = 0;
+  do {
+    size_t end = text.find(',', start);
+    std::string name = text.substr(start, end == std::string::npos ? end : end - start);
+    if (name == "parse") result.push_back(0);
+    else if (name == "decode") result.push_back(1);
+    else if (name == "combined") result.push_back(2);
+    else throw decode_error{};
+    if (end == std::string::npos) break;
+    start = end + 1;
+  } while (true);
+  return result;
+}
+
 }  // namespace
 
 int main() {
@@ -565,13 +525,11 @@ int main() {
     return 2;
   }
 
-  // Every case keeps one parsed document alive for the decode phase; the parse
-  // and combined phases reuse a separate scratch parser.
+  // Every case keeps one parsed document alive for the decode-only control.
   std::vector<std::unique_ptr<simdjson::dom::parser>> parsers;
   std::vector<element> documents;
   parsers.reserve(cases.size());
   documents.reserve(cases.size());
-  simdjson::dom::parser scratch;
   try {
     for (const auto &item : cases) {
       parsers.push_back(std::make_unique<simdjson::dom::parser>());
@@ -591,11 +549,10 @@ int main() {
   decoded.reserve(cases.size());
   for (size_t index = 0; index < cases.size(); index++) {
     json_fingerprints.push_back(fingerprint_of(documents[index]));
-    Arena arena(8 << 20);
     Payload payload;
     bool ok = true;
     try {
-      decode_payload(arena, documents[index], payload);
+      decode_payload(documents[index], payload);
     } catch (...) {
       ok = false;
     }
@@ -607,34 +564,45 @@ int main() {
   // Go and JavaScript drivers.
   const char *phase_names[3] = {"parse", "decode", "combined"};
   std::string phases = "{";
-  for (int phase = 0; phase < 3; phase++) {
+  auto order = phase_order();
+  for (size_t phase_slot = 0; phase_slot < order.size(); phase_slot++) {
+    int phase = order[phase_slot];
     double best = 0;
     bool have_best = false;
     bool first_entry = true;
     std::string samples = "[";
     for (int pass = 0; pass < 7; pass++) {
-      Arena arena(8 << 20);
       std::vector<Payload> payloads;
+      std::vector<std::unique_ptr<simdjson::dom::parser>> parsed_results;
+      std::vector<element> parsed_values;
       payloads.reserve(timed.size());
+      parsed_results.reserve(timed.size());
+      parsed_values.reserve(timed.size());
       double begin = now_microseconds();
       if (phase == 0) {
-        for (int index : timed) scratch.parse(cases[index].contents).value();
+        for (int index : timed) {
+          auto parser = std::make_unique<simdjson::dom::parser>();
+          parsed_values.push_back(parser->parse(cases[index].contents).value());
+          parsed_results.push_back(std::move(parser));
+        }
       } else if (phase == 1) {
         for (int index : timed) {
           payloads.emplace_back();
-          decode_payload(arena, documents[index], payloads.back());
+          decode_payload(documents[index], payloads.back());
         }
       } else {
         for (int index : timed) {
-          element root = scratch.parse(cases[index].contents).value();
+          simdjson::dom::parser parser;
+          element root = parser.parse(cases[index].contents).value();
           payloads.emplace_back();
-          decode_payload(arena, root, payloads.back());
+          decode_payload(root, payloads.back());
         }
       }
       double elapsed = now_microseconds() - begin;
       if (phase == 0) {
-        for (int index : timed) {
-          element root = scratch.parse(cases[index].contents).value();
+        for (size_t slot = 0; slot < timed.size(); slot++) {
+          int index = timed[slot];
+          element root = parsed_values[slot];
           if (fingerprint_of(root) != json_fingerprints[index]) {
             fprintf(stderr, "unstable parse output\n");
             return 3;
@@ -649,6 +617,10 @@ int main() {
           }
         }
       }
+      double release_begin = now_microseconds();
+      payloads.clear();
+      parsed_results.clear();
+      double release = now_microseconds() - release_begin;
       if (pass >= 2) {
         if (!have_best || elapsed < best) {
           best = elapsed;
@@ -656,13 +628,15 @@ int main() {
         }
         if (!first_entry) samples += ",";
         first_entry = false;
-        samples += "{\"time_us\":" + std::to_string(elapsed) + "}";
+        samples += "{\"time_us\":" + std::to_string(elapsed) +
+                   ",\"release_us\":" + std::to_string(release) +
+                   ",\"lifecycle_us\":" + std::to_string(elapsed + release) + "}";
       }
     }
     samples += "]";
     phases += json_quoted(phase_names[phase]) + ":{\"samples\":" + samples +
               ",\"time_us\":" + std::to_string(best) + "}";
-    if (phase < 2) phases += ",";
+    if (phase_slot + 1 < order.size()) phases += ",";
   }
   phases += "}";
 

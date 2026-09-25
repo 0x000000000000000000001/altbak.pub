@@ -4,16 +4,15 @@
 // Scope of the comparison:
 //   * parsing uses simdjson (system include), as in the JSON decoding
 //     reference;
-//   * the typed module is built into one monotonic arena that is reset per
-//     pass, instead of per-value allocation;
+//   * results use ordinary owned strings, vectors, unique tree nodes and
+//     shared type nodes, with no benchmark-specific allocator;
 //   * the canonical fingerprint is written from the decoded module, exactly as
 //     the PureScript fingerprint does, and validated by the caller against the
 //     frozen oracle for all twelve modules;
 //   * annotation spans are empty (`<internal>`, 0/0), as the PureScript
 //     decoder deliberately does not decode them;
-//   * the pure usage-validation pass of the PureScript decoder is not
-//     reproduced: it returns Unit and cannot change the fingerprint. The
-//     reference therefore measures parsing plus typed decoding.
+//   * the whole type table is resolved before decoding annotations, with the
+//     same ordered cycle fallback, followed by lexical source-usage validation.
 #include <CommonCrypto/CommonDigest.h>
 #include <simdjson.h>
 
@@ -25,8 +24,10 @@
 #include <cstdlib>
 #include <cstring>
 #include <memory>
+#include <optional>
 #include <string>
 #include <string_view>
+#include <unordered_set>
 #include <vector>
 
 namespace {
@@ -38,72 +39,13 @@ using simdjson::dom::object;
 struct decode_error {};
 
 // --------------------------------------------------------------------------
-// Arena and strings.
+// Strings own their storage; recursive trees use unique_ptr, shared types use
+// shared_ptr, and arrays use ordinary std::vector allocations.
 // --------------------------------------------------------------------------
 
-class Arena {
- public:
-  explicit Arena(size_t block_size) : block_size_(block_size) {}
-
-  void reset() {
-    for (Block &block : blocks_) block.used = 0;
-  }
-
-  void *alloc(size_t size) {
-    const size_t alignment = alignof(std::max_align_t);
-    size = (size + alignment - 1) & ~(alignment - 1);
-    for (Block &block : blocks_) {
-      if (block.used + size <= block.size) {
-        void *pointer = block.data.get() + block.used;
-        block.used += size;
-        return pointer;
-      }
-    }
-    Block block;
-    block.size = size > block_size_ ? size : block_size_;
-    block.data = std::make_unique<char[]>(block.size);
-    block.used = size;
-    void *pointer = block.data.get();
-    blocks_.push_back(std::move(block));
-    return pointer;
-  }
-
-  template <class T>
-  T *alloc_array(size_t count) {
-    if (count == 0) return nullptr;
-    T *items = static_cast<T *>(alloc(sizeof(T) * count));
-    for (size_t index = 0; index < count; index++) new (&items[index]) T();
-    return items;
-  }
-
-  template <class T, class... Args>
-  T *make(Args &&...args) {
-    void *pointer = alloc(sizeof(T));
-    return new (pointer) T(std::forward<Args>(args)...);
-  }
-
- private:
-  struct Block {
-    std::unique_ptr<char[]> data;
-    size_t size = 0;
-    size_t used = 0;
-  };
-  std::vector<Block> blocks_;
-  size_t block_size_;
-};
-
-struct Str {
-  const char *data = "";
-  size_t size = 0;
-};
-
-Str copy_string(Arena &arena, std::string_view text) {
-  char *data = static_cast<char *>(arena.alloc(text.size() == 0 ? 1 : text.size()));
-  memcpy(data, text.data(), text.size());
-  return Str{data, text.size()};
-}
-
-std::string_view view_of(const Str &text) { return std::string_view(text.data, text.size); }
+using Str = std::string;
+Str copy_string(std::string_view text) { return Str(text); }
+std::string_view view_of(const Str &text) { return text; }
 
 // --------------------------------------------------------------------------
 // simdjson accessors (the corpus is valid; failures abort the case).
@@ -277,16 +219,17 @@ struct SourceSpan {
 };
 
 struct Type;
+using TypePtr = std::shared_ptr<Type>;
 
 struct RowField {
   Str label;
-  Type *type = nullptr;
+  TypePtr type;
 };
 
 struct Constraint {
-  Str *parts = nullptr;
+  std::vector<Str> parts;
   size_t part_count = 0;
-  Type **args = nullptr;
+  std::vector<TypePtr> args;
   size_t arg_count = 0;
 };
 
@@ -298,15 +241,15 @@ enum class TypeKind {
 struct Type {
   TypeKind kind = TypeKind::Any;
   Str text;                                        // TypeLevelString, TypeVar
-  Str *parts = nullptr; size_t part_count = 0;     // Adt
-  Type **args = nullptr; size_t arg_count = 0;     // Adt, TypeApp, Func
-  Type *constructor = nullptr;                     // TypeApp
-  Type *element = nullptr;                         // Array
-  Type *row = nullptr;                             // Record
-  RowField *fields = nullptr; size_t field_count = 0; Type *tail = nullptr;  // Row
-  Type *body = nullptr;                            // ForAll, ConstrainedType, Func result
-  Str *vars = nullptr; size_t var_count = 0;       // ForAll
-  Constraint *constraints = nullptr; size_t constraint_count = 0;
+  std::vector<Str> parts; size_t part_count = 0;     // Adt
+  std::vector<TypePtr> args; size_t arg_count = 0;   // Adt, TypeApp, Func
+  TypePtr constructor;                             // TypeApp
+  TypePtr element;                                 // Array
+  TypePtr row;                                     // Record
+  std::vector<RowField> fields; size_t field_count = 0; TypePtr tail; // Row
+  TypePtr body;                                    // ForAll, ConstrainedType, Func result
+  std::vector<Str> vars; size_t var_count = 0;       // ForAll
+  std::vector<Constraint> constraints; size_t constraint_count = 0;
 };
 
 struct BindingUsage {
@@ -333,7 +276,7 @@ struct SourceUsage {
 struct Meta {
   int kind = 0;  // 0 IsConstructor, 1 IsNewtype, 2 IsTypeClassConstructor, 3 IsForeign, 4 IsWhere, 5 IsSyntheticApp
   int constructor_type = 0;  // 0 ProductType, 1 SumType
-  Str *idents = nullptr;
+  std::vector<Str> idents;
   size_t ident_count = 0;
 };
 
@@ -342,7 +285,7 @@ struct Ann {
   bool has_meta = false;
   Meta meta;
   bool has_type = false;
-  Type *type = nullptr;
+  TypePtr type;
   bool has_usage = false;
   SourceUsage usage;
 };
@@ -357,8 +300,8 @@ struct Expr;
 struct Binder;
 
 struct LiteralItem {
-  Expr *expr = nullptr;
-  Binder *binder = nullptr;
+  std::unique_ptr<Expr> expr;
+  std::unique_ptr<Binder> binder;
 };
 
 struct LiteralProp {
@@ -372,28 +315,28 @@ struct Literal {
   double number_value = 0;
   Str text;
   bool bool_value = false;
-  LiteralItem *items = nullptr;
+  std::vector<LiteralItem> items;
   size_t item_count = 0;
-  LiteralProp *props = nullptr;
+  std::vector<LiteralProp> props;
   size_t prop_count = 0;
 };
 
 struct Prop {
   Str key;
-  Expr *expr = nullptr;
+  std::unique_ptr<Expr> expr;
 };
 
 struct Guard {
-  Expr *condition = nullptr;
-  Expr *value = nullptr;
+  std::unique_ptr<Expr> condition;
+  std::unique_ptr<Expr> value;
 };
 
 struct CaseAlternative {
-  Binder **binders = nullptr;
+  std::vector<std::unique_ptr<Binder>> binders;
   size_t binder_count = 0;
   bool guarded = false;
-  Expr *expr = nullptr;
-  Guard *guards = nullptr;
+  std::unique_ptr<Expr> expr;
+  std::vector<Guard> guards;
   size_t guard_count = 0;
 };
 
@@ -404,38 +347,38 @@ struct Expr {
                  // 5 Abs, 6 App, 7 Case, 8 Let, 9 TypeApp
   Ann ann;
   Qualified value;          // Var
-  Literal *literal = nullptr;
+  std::unique_ptr<Literal> literal;
   Str type_name;            // Constructor
   Str constructor_name;     // Constructor
-  Str *fields = nullptr;    // Constructor field names
+  std::vector<Str> fields;   // Constructor field names
   size_t field_count = 0;
-  Expr *inner = nullptr;    // Accessor/Update/TypeApp expression
+  std::unique_ptr<Expr> inner; // Accessor/Update/TypeApp expression
   Str key;                  // Accessor field name
-  Prop *props = nullptr;    // Update
+  std::vector<Prop> props;    // Update
   size_t prop_count = 0;
   Str name;                 // Abs argument
-  Expr *body = nullptr;     // Abs body, Let body
-  Expr *fn = nullptr;       // App
-  Expr *arg = nullptr;      // App
-  Expr **values = nullptr;  // Case expressions
+  std::unique_ptr<Expr> body; // Abs body, Let body
+  std::unique_ptr<Expr> fn;   // App
+  std::unique_ptr<Expr> arg;  // App
+  std::vector<std::unique_ptr<Expr>> values; // Case expressions
   size_t value_count = 0;
-  CaseAlternative *alternatives = nullptr;
+  std::vector<CaseAlternative> alternatives;
   size_t alternative_count = 0;
-  Bind *binds = nullptr;    // Let
+  std::vector<Bind> binds;  // Let
   size_t bind_count = 0;
-  Type *type_arg = nullptr;      // TypeApp
+  TypePtr type_arg;        // TypeApp
 };
 
 struct Binding {
   Ann ann;
   Str name;
-  Expr *expr = nullptr;
+  std::unique_ptr<Expr> expr;
 };
 
 struct Bind {
   int kind = 0;  // 0 NonRec, 1 Rec
   Binding single;
-  Binding *group = nullptr;
+  std::vector<Binding> group;
   size_t group_count = 0;
 };
 
@@ -443,11 +386,11 @@ struct Binder {
   int kind = 0;  // 0 Null, 1 Var, 2 Named, 3 Literal, 4 Constructor
   Ann ann;
   Str name;                 // Var, Named
-  Binder *inner = nullptr;  // Named
-  Literal *literal = nullptr;
+  std::unique_ptr<Binder> inner; // Named
+  std::unique_ptr<Literal> literal;
   Qualified proper;         // Constructor type name
   Qualified constructor;    // Constructor ident
-  Binder **fields = nullptr;
+  std::vector<std::unique_ptr<Binder>> fields;
   size_t field_count = 0;
 };
 
@@ -463,30 +406,30 @@ struct ReExport {
 
 struct DataConstructor {
   Str name;
-  Type **fields = nullptr;
+  std::vector<TypePtr> fields;
   size_t field_count = 0;
 };
 
 struct DataDecl {
   Str name;
-  Str *vars = nullptr;
+  std::vector<Str> vars;
   size_t var_count = 0;
-  DataConstructor *constructors = nullptr;
+  std::vector<DataConstructor> constructors;
   size_t constructor_count = 0;
 };
 
 struct ClassMethod {
   Str name;
-  Type *type = nullptr;
+  TypePtr type;
 };
 
 struct ClassDecl {
   Str name;
-  Str *vars = nullptr;
+  std::vector<Str> vars;
   size_t var_count = 0;
-  Constraint *superclasses = nullptr;
+  std::vector<Constraint> superclasses;
   size_t superclass_count = 0;
-  ClassMethod *methods = nullptr;
+  std::vector<ClassMethod> methods;
   size_t method_count = 0;
 };
 
@@ -498,33 +441,33 @@ struct Comment {
 struct ForeignEntry {
   Str ident;
   bool has_type = false;
-  Type *type = nullptr;
+  TypePtr type;
 };
 
 struct Module {
   Str name;  // dotted
   Str path;
   SourceSpan span;
-  Import *imports = nullptr;
+  std::vector<Import> imports;
   size_t import_count = 0;
-  Str *exports = nullptr;
+  std::vector<Str> exports;
   size_t export_count = 0;
-  ReExport *re_exports = nullptr;
+  std::vector<ReExport> re_exports;
   size_t re_export_count = 0;
-  DataDecl *data_decls = nullptr;
+  std::vector<DataDecl> data_decls;
   size_t data_decl_count = 0;
-  ClassDecl *class_decls = nullptr;
+  std::vector<ClassDecl> class_decls;
   size_t class_decl_count = 0;
-  Bind *decls = nullptr;
+  std::vector<Bind> decls;
   size_t decl_count = 0;
-  ForeignEntry *foreign = nullptr;
+  std::vector<ForeignEntry> foreign;
   size_t foreign_count = 0;
-  Comment *comments = nullptr;
+  std::vector<Comment> comments;
   size_t comment_count = 0;
 };
 
 // --------------------------------------------------------------------------
-// Type table: raw entries, then memoized resolution (cycles abort).
+// Type table: eager ordered fixed-point resolution, including unused entries.
 // --------------------------------------------------------------------------
 
 struct RawRowField {
@@ -533,73 +476,108 @@ struct RawRowField {
 };
 
 struct RawConstraint {
-  Str *parts = nullptr;
+  std::vector<Str> parts;
   size_t part_count = 0;
-  int64_t *args = nullptr;
+  std::vector<int64_t> args;
   size_t arg_count = 0;
 };
 
 struct RawType {
   TypeKind kind = TypeKind::Any;
   Str text;
-  Str *parts = nullptr; size_t part_count = 0;
-  int64_t *args = nullptr; size_t arg_count = 0;
+  std::vector<Str> parts; size_t part_count = 0;
+  std::vector<int64_t> args; size_t arg_count = 0;
   int64_t constructor = -1;
   int64_t element = -1;
   int64_t row = -1;
-  RawRowField *fields = nullptr; size_t field_count = 0;
+  std::vector<RawRowField> fields; size_t field_count = 0;
   int64_t tail = -1;
   bool has_tail = false;
   int64_t body = -1;
   bool has_body = false;
-  Str *vars = nullptr; size_t var_count = 0;
-  RawConstraint *constraints = nullptr; size_t constraint_count = 0;
+  std::vector<Str> vars; size_t var_count = 0;
+  std::vector<RawConstraint> constraints; size_t constraint_count = 0;
 };
 
 class TypeTable {
  public:
-  TypeTable(Arena &arena, RawType *entries, size_t count)
-      : arena_(arena), entries_(entries), count_(count),
-        memo_(arena.alloc_array<Type *>(count == 0 ? 1 : count)),
-        state_(arena.alloc_array<uint8_t>(count == 0 ? 1 : count)) {}
+  explicit TypeTable(std::vector<RawType> entries)
+      : entries_(std::move(entries)), count_(entries_.size()),
+        memo_(count_) {
+    std::vector<size_t> pending(count_);
+    for (size_t index = 0; index < count_; index++) pending[index] = index;
+    while (!pending.empty()) {
+      size_t previous = pending.size(), kept = 0;
+      for (size_t index : pending) {
+        if (ready(entries_[index])) memo_[index] = build(entries_[index]);
+        else pending[kept++] = index;
+      }
+      pending.resize(kept);
+      if (kept == previous) {
+        // Force only the first pending entry. Every unresolved dependency is
+        // Any for this construction; subsequent entries see its settled value.
+        size_t first = pending.front();
+        memo_[first] = build(entries_[first]);
+        pending.erase(pending.begin());
+      }
+    }
+  }
 
   size_t size() const { return count_; }
 
-  Type *resolve(int64_t id) {
-    if (id < 0 || static_cast<size_t>(id) >= count_) return any_type();
-    if (state_[id] == 2) return memo_[id];
-    if (state_[id] == 1) throw decode_error{};  // cycle
-    state_[id] = 1;
-    Type *resolved = build(entries_[id]);
-    memo_[id] = resolved;
-    state_[id] = 2;
-    return resolved;
+  TypePtr resolve(int64_t id) {
+    return settled(id) ? memo_[id] : any_type();
   }
 
-  Type *resolve_checked(int64_t id) {
+  TypePtr resolve_checked(int64_t id) {
     if (id < 0 || static_cast<size_t>(id) >= count_) throw decode_error{};
     return resolve(id);
   }
 
-  Type *any_type() {
+  TypePtr any_type() {
     if (any_ == nullptr) {
-      any_ = arena_.make<Type>();
+      any_ = std::make_shared<Type>();
       any_->kind = TypeKind::Any;
     }
     return any_;
   }
 
  private:
-  Type *build(const RawType &raw) {
-    Type *type = arena_.make<Type>();
+  bool settled(int64_t id) const {
+    return id >= 0 && static_cast<size_t>(id) < count_ && memo_[id] != nullptr;
+  }
+
+  bool ready(const RawType &raw) const {
+    auto args_ready = [this](const std::vector<int64_t> &args) {
+      return std::all_of(args.begin(), args.end(), [this](int64_t id) { return settled(id); });
+    };
+    switch (raw.kind) {
+      case TypeKind::Adt: return args_ready(raw.args);
+      case TypeKind::TypeApp: return settled(raw.constructor) && args_ready(raw.args);
+      case TypeKind::Func: return args_ready(raw.args) && settled(raw.body);
+      case TypeKind::Array: return settled(raw.element);
+      case TypeKind::Record: return settled(raw.row);
+      case TypeKind::Row:
+        for (const auto &field : raw.fields) if (!settled(field.type)) return false;
+        return !raw.has_tail || settled(raw.tail);
+      case TypeKind::ForAll: return settled(raw.body);
+      case TypeKind::ConstrainedType:
+        for (const auto &constraint : raw.constraints) if (!args_ready(constraint.args)) return false;
+        return settled(raw.body);
+      default: return true;
+    }
+  }
+
+  TypePtr build(RawType &raw) {
+    TypePtr type = std::make_shared<Type>();
     type->kind = raw.kind;
     switch (raw.kind) {
       case TypeKind::TypeLevelString:
       case TypeKind::TypeVar:
-        type->text = raw.text;
+        type->text = std::move(raw.text);
         break;
       case TypeKind::Adt:
-        type->parts = raw.parts;
+        type->parts = std::move(raw.parts);
         type->part_count = raw.part_count;
         type->args = resolve_args(raw.args, raw.arg_count);
         type->arg_count = raw.arg_count;
@@ -622,25 +600,25 @@ class TypeTable {
         break;
       case TypeKind::Row: {
         type->field_count = raw.field_count;
-        type->fields = arena_.alloc_array<RowField>(raw.field_count);
+        type->fields.resize(raw.field_count);
         for (size_t index = 0; index < raw.field_count; index++) {
-          type->fields[index].label = raw.fields[index].label;
+          type->fields[index].label = std::move(raw.fields[index].label);
           type->fields[index].type = resolve(raw.fields[index].type);
         }
         type->tail = raw.has_tail ? resolve(raw.tail) : nullptr;
         break;
       }
       case TypeKind::ForAll:
-        type->vars = raw.vars;
+        type->vars = std::move(raw.vars);
         type->var_count = raw.var_count;
         type->body = resolve(raw.body);
         break;
       case TypeKind::ConstrainedType: {
         type->constraint_count = raw.constraint_count;
-        type->constraints = arena_.alloc_array<Constraint>(raw.constraint_count);
+        type->constraints.resize(raw.constraint_count);
         for (size_t index = 0; index < raw.constraint_count; index++) {
           Constraint &constraint = type->constraints[index];
-          constraint.parts = raw.constraints[index].parts;
+          constraint.parts = std::move(raw.constraints[index].parts);
           constraint.part_count = raw.constraints[index].part_count;
           constraint.arg_count = raw.constraints[index].arg_count;
           constraint.args = resolve_args(raw.constraints[index].args, raw.constraints[index].arg_count);
@@ -654,20 +632,18 @@ class TypeTable {
     return type;
   }
 
-  Type **resolve_args(const int64_t *ids, size_t count) {
-    Type **types = arena_.alloc_array<Type *>(count);
+  std::vector<TypePtr> resolve_args(const std::vector<int64_t> &ids, size_t count) {
+    std::vector<TypePtr> types(count);
     for (size_t index = 0; index < count; index++) {
-      types[index] = (ids == nullptr) ? any_type() : resolve(ids[index]);
+      types[index] = resolve(ids[index]);
     }
     return types;
   }
 
-  Arena &arena_;
-  RawType *entries_;
+  std::vector<RawType> entries_;
   size_t count_;
-  Type **memo_;
-  uint8_t *state_;
-  Type *any_ = nullptr;
+  std::vector<TypePtr> memo_;
+  TypePtr any_;
 };
 
 // --------------------------------------------------------------------------
@@ -686,17 +662,17 @@ std::vector<int64_t> id_list(element raw) {
   return out;
 }
 
-Str join_parts(Arena &arena, const std::vector<std::string_view> &parts) {
+Str join_parts(const std::vector<std::string_view> &parts) {
   std::string joined;
   for (size_t index = 0; index < parts.size(); index++) {
     if (index) joined.push_back('.');
     joined += parts[index];
   }
-  return copy_string(arena, joined);
+  return joined;
 }
 
-Str decode_module_name(Arena &arena, element raw) {
-  return join_parts(arena, string_list(raw));
+Str decode_module_name(element raw) {
+  return join_parts(string_list(raw));
 }
 
 SourcePos decode_source_pos(element raw) {
@@ -705,21 +681,21 @@ SourcePos decode_source_pos(element raw) {
   return SourcePos{values[0], values[1]};
 }
 
-SourceSpan decode_source_span(Arena &arena, std::string_view path, element raw) {
+SourceSpan decode_source_span(std::string_view path, element raw) {
   object obj = object_of(raw);
-  return SourceSpan{copy_string(arena, path), decode_source_pos(require_field(obj, "start")),
+  return SourceSpan{copy_string(path), decode_source_pos(require_field(obj, "start")),
                     decode_source_pos(require_field(obj, "end"))};
 }
 
-SourceSpan empty_span(Arena &arena) {
+SourceSpan empty_span() {
   SourceSpan span;
-  span.path = copy_string(arena, "<internal>");
+  span.path = copy_string("<internal>");
   return span;
 }
 
 // decodeStringLiteral: a string, or an array of code points.
-Str decode_string_literal(Arena &arena, element raw) {
-  if (raw.is_string()) return copy_string(arena, string_of(raw));
+Str decode_string_literal(element raw) {
+  if (raw.is_string()) return copy_string(string_of(raw));
   std::string text;
   for (int64_t code_point : id_list(raw)) {
     if (code_point < 0 || code_point > 0x10ffff) throw decode_error{};
@@ -739,17 +715,17 @@ Str decode_string_literal(Arena &arena, element raw) {
       text.push_back(static_cast<char>(0x80 | (code_point & 0x3f)));
     }
   }
-  return copy_string(arena, text);
+  return text;
 }
 
 // --------------------------------------------------------------------------
 // Decoders.
 // --------------------------------------------------------------------------
 
-void decode_expr(Arena &arena, TypeTable &table, element raw, Expr &out);
-void decode_binder(Arena &arena, TypeTable &table, element raw, Binder &out);
+void decode_expr(TypeTable &table, element raw, Expr &out);
+void decode_binder(TypeTable &table, element raw, Binder &out);
 
-Meta decode_meta(Arena &arena, element raw) {
+Meta decode_meta(element raw) {
   object obj = object_of(raw);
   std::string_view kind = string_of(require_field(obj, "metaType"));
   Meta meta;
@@ -759,9 +735,9 @@ Meta decode_meta(Arena &arena, element raw) {
     meta.constructor_type = constructor == "SumType" ? 1 : 0;
     array idents = array_of(require_field(obj, "identifiers"));
     meta.ident_count = idents.size();
-    meta.idents = arena.alloc_array<Str>(meta.ident_count);
+    meta.idents.resize(meta.ident_count);
     size_t slot = 0;
-    for (element ident : idents) meta.idents[slot++] = copy_string(arena, string_of(ident));
+    for (element ident : idents) meta.idents[slot++] = copy_string(string_of(ident));
     return meta;
   }
   if (kind == "IsNewtype") meta.kind = 1;
@@ -773,6 +749,12 @@ Meta decode_meta(Arena &arena, element raw) {
   return meta;
 }
 
+int64_t source_binding_id(element raw) {
+  double value = double_of(raw);
+  if (!std::isfinite(value) || value < 0 || value > 2147483647 || std::floor(value) != value) throw decode_error{};
+  return static_cast<int64_t>(value);
+}
+
 SourceUsage decode_source_usage(object obj) {
   SourceUsage usage;
   bool present = false;
@@ -780,12 +762,16 @@ SourceUsage decode_source_usage(object obj) {
   if (present && !binding.is_null()) {
     object binding_obj = object_of(binding);
     usage.has_binding = true;
-    usage.binding.binding_id = int_of(require_field(binding_obj, "bindingId"));
+    usage.binding.binding_id = source_binding_id(require_field(binding_obj, "bindingId"));
     bool has_max = false;
     element max_uses = optional_field(binding_obj, "maxUses", has_max);
     if (has_max && !max_uses.is_null()) {
-      usage.binding.has_max_uses = true;
-      usage.binding.max_uses = int_of(max_uses);
+      double count = double_of(max_uses);
+      if (!std::isfinite(count) || count < 0 || std::floor(count) != count) throw decode_error{};
+      if (count <= 2147483647) {
+        usage.binding.has_max_uses = true;
+        usage.binding.max_uses = static_cast<int64_t>(count);
+      }
     }
     bool has_escaping = false;
     element escaping = optional_field(binding_obj, "hasEscapingUseContext", has_escaping);
@@ -799,26 +785,27 @@ SourceUsage decode_source_usage(object obj) {
   if (has_variable && !variable.is_null()) {
     object variable_obj = object_of(variable);
     usage.has_variable = true;
-    usage.variable.binding_id = int_of(require_field(variable_obj, "bindingId"));
+    usage.variable.binding_id = source_binding_id(require_field(variable_obj, "bindingId"));
     bool has_last = false;
     element last_local = optional_field(variable_obj, "lastLocalUse", has_last);
     if (has_last && !last_local.is_null()) {
       usage.variable.has_last_local = true;
       usage.variable.last_local = bool_of(last_local);
+      if (!usage.variable.last_local) throw decode_error{};
     }
   }
   return usage;
 }
 
-Ann decode_ann(Arena &arena, TypeTable &table, element raw, bool with_usage) {
+Ann decode_ann(TypeTable &table, element raw, bool with_usage) {
   object obj = object_of(raw);
   Ann ann;
-  ann.span = empty_span(arena);
+  ann.span = empty_span();
   bool has_meta = false;
   element meta = optional_field(obj, "meta", has_meta);
   if (has_meta && !meta.is_null()) {
     ann.has_meta = true;
-    ann.meta = decode_meta(arena, meta);
+    ann.meta = decode_meta(meta);
   }
   bool has_type = false;
   element type = optional_field(obj, "type", has_type);
@@ -839,20 +826,20 @@ Ann decode_ann(Arena &arena, TypeTable &table, element raw, bool with_usage) {
   return ann;
 }
 
-Qualified decode_qualified(Arena &arena, element raw) {
+Qualified decode_qualified(element raw) {
   object obj = object_of(raw);
   Qualified qualified;
   bool has_module = false;
   element module = optional_field(obj, "moduleName", has_module);
   if (has_module && !module.is_null()) {
     qualified.has_module = true;
-    qualified.module = decode_module_name(arena, module);
+    qualified.module = decode_module_name(module);
   }
-  qualified.name = copy_string(arena, string_of(require_field(obj, "identifier")));
+  qualified.name = copy_string(string_of(require_field(obj, "identifier")));
   return qualified;
 }
 
-Literal decode_literal(Arena &arena, TypeTable &table, element raw, bool binder_context) {
+Literal decode_literal(TypeTable &table, element raw, bool binder_context) {
   object obj = object_of(raw);
   std::string_view kind = string_of(require_field(obj, "literalType"));
   Literal literal;
@@ -868,12 +855,12 @@ Literal decode_literal(Arena &arena, TypeTable &table, element raw, bool binder_
   }
   if (kind == "StringLiteral") {
     literal.kind = 2;
-    literal.text = decode_string_literal(arena, require_field(obj, "value"));
+    literal.text = decode_string_literal(require_field(obj, "value"));
     return literal;
   }
   if (kind == "CharLiteral") {
     literal.kind = 3;
-    literal.text = decode_string_literal(arena, require_field(obj, "value"));
+    literal.text = decode_string_literal(require_field(obj, "value"));
     return literal;
   }
   if (kind == "BooleanLiteral") {
@@ -885,17 +872,17 @@ Literal decode_literal(Arena &arena, TypeTable &table, element raw, bool binder_
     literal.kind = 5;
     array items = array_of(require_field(obj, "value"));
     literal.item_count = items.size();
-    literal.items = arena.alloc_array<LiteralItem>(literal.item_count);
+    literal.items.resize(literal.item_count);
     size_t slot = 0;
     for (element item : items) {
       if (binder_context) {
-        Binder *binder = arena.make<Binder>();
-        decode_binder(arena, table, item, *binder);
-        literal.items[slot].binder = binder;
+        auto binder = std::make_unique<Binder>();
+        decode_binder(table, item, *binder);
+        literal.items[slot].binder = std::move(binder);
       } else {
-        Expr *expr = arena.make<Expr>();
-        decode_expr(arena, table, item, *expr);
-        literal.items[slot].expr = expr;
+        auto expr = std::make_unique<Expr>();
+        decode_expr(table, item, *expr);
+        literal.items[slot].expr = std::move(expr);
       }
       slot++;
     }
@@ -905,21 +892,21 @@ Literal decode_literal(Arena &arena, TypeTable &table, element raw, bool binder_
     literal.kind = 6;
     array pairs = array_of(require_field(obj, "value"));
     literal.prop_count = pairs.size();
-    literal.props = arena.alloc_array<LiteralProp>(literal.prop_count);
+    literal.props.resize(literal.prop_count);
     size_t slot = 0;
     for (element pair : pairs) {
       std::vector<element> elements;
       for (element item : array_of(pair)) elements.push_back(item);
       if (elements.size() != 2) throw decode_error{};
-      literal.props[slot].key = decode_string_literal(arena, elements[0]);
+      literal.props[slot].key = decode_string_literal(elements[0]);
       if (binder_context) {
-        Binder *binder = arena.make<Binder>();
-        decode_binder(arena, table, elements[1], *binder);
-        literal.props[slot].value.binder = binder;
+        auto binder = std::make_unique<Binder>();
+        decode_binder(table, elements[1], *binder);
+        literal.props[slot].value.binder = std::move(binder);
       } else {
-        Expr *expr = arena.make<Expr>();
-        decode_expr(arena, table, elements[1], *expr);
-        literal.props[slot].value.expr = expr;
+        auto expr = std::make_unique<Expr>();
+        decode_expr(table, elements[1], *expr);
+        literal.props[slot].value.expr = std::move(expr);
       }
       slot++;
     }
@@ -929,175 +916,175 @@ Literal decode_literal(Arena &arena, TypeTable &table, element raw, bool binder_
 }
 
 
-Bind decode_bind(Arena &arena, TypeTable &table, element raw);
+Bind decode_bind(TypeTable &table, element raw);
 
-Binding decode_binding(Arena &arena, TypeTable &table, element raw) {
+Binding decode_binding(TypeTable &table, element raw) {
   object obj = object_of(raw);
   Binding binding;
-  binding.ann = decode_ann(arena, table, require_field(obj, "annotation"), true);
-  binding.name = copy_string(arena, string_of(require_field(obj, "identifier")));
-  Expr *expr = arena.make<Expr>();
-  decode_expr(arena, table, require_field(obj, "expression"), *expr);
-  binding.expr = expr;
+  binding.ann = decode_ann(table, require_field(obj, "annotation"), true);
+  binding.name = copy_string(string_of(require_field(obj, "identifier")));
+  auto expr = std::make_unique<Expr>();
+  decode_expr(table, require_field(obj, "expression"), *expr);
+  binding.expr = std::move(expr);
   return binding;
 }
 
-Bind decode_bind(Arena &arena, TypeTable &table, element raw) {
+Bind decode_bind(TypeTable &table, element raw) {
   object obj = object_of(raw);
   std::string_view kind = string_of(require_field(obj, "bindType"));
   Bind bind;
   if (kind == "NonRec") {
     bind.kind = 0;
-    bind.single = decode_binding(arena, table, raw);
+    bind.single = decode_binding(table, raw);
     return bind;
   }
   if (kind == "Rec") {
     bind.kind = 1;
     array group = array_of(require_field(obj, "binds"));
     bind.group_count = group.size();
-    bind.group = arena.alloc_array<Binding>(bind.group_count);
+    bind.group.resize(bind.group_count);
     size_t slot = 0;
-    for (element item : group) bind.group[slot++] = decode_binding(arena, table, item);
+    for (element item : group) bind.group[slot++] = decode_binding(table, item);
     return bind;
   }
   throw decode_error{};
 }
 
-Guard decode_guard(Arena &arena, TypeTable &table, element raw) {
+Guard decode_guard(TypeTable &table, element raw) {
   object obj = object_of(raw);
   Guard guard;
-  Expr *condition = arena.make<Expr>();
-  decode_expr(arena, table, require_field(obj, "guard"), *condition);
-  Expr *value = arena.make<Expr>();
-  decode_expr(arena, table, require_field(obj, "expression"), *value);
-  guard.condition = condition;
-  guard.value = value;
+  auto condition = std::make_unique<Expr>();
+  decode_expr(table, require_field(obj, "guard"), *condition);
+  auto value = std::make_unique<Expr>();
+  decode_expr(table, require_field(obj, "expression"), *value);
+  guard.condition = std::move(condition);
+  guard.value = std::move(value);
   return guard;
 }
 
-CaseAlternative decode_case_alternative(Arena &arena, TypeTable &table, element raw) {
+CaseAlternative decode_case_alternative(TypeTable &table, element raw) {
   object obj = object_of(raw);
   CaseAlternative alternative;
   array binders = array_of(require_field(obj, "binders"));
   alternative.binder_count = binders.size();
-  alternative.binders = arena.alloc_array<Binder *>(alternative.binder_count);
+  alternative.binders.resize(alternative.binder_count);
   size_t slot = 0;
   for (element item : binders) {
-    Binder *binder = arena.make<Binder>();
-    decode_binder(arena, table, item, *binder);
-    alternative.binders[slot++] = binder;
+    auto binder = std::make_unique<Binder>();
+    decode_binder(table, item, *binder);
+    alternative.binders[slot++] = std::move(binder);
   }
   alternative.guarded = bool_of(require_field(obj, "isGuarded"));
   if (alternative.guarded) {
     array guards = array_of(require_field(obj, "expressions"));
     alternative.guard_count = guards.size();
-    alternative.guards = arena.alloc_array<Guard>(alternative.guard_count);
+    alternative.guards.resize(alternative.guard_count);
     size_t guard_slot = 0;
-    for (element item : guards) alternative.guards[guard_slot++] = decode_guard(arena, table, item);
+    for (element item : guards) alternative.guards[guard_slot++] = decode_guard(table, item);
   } else {
-    Expr *expr = arena.make<Expr>();
-    decode_expr(arena, table, require_field(obj, "expression"), *expr);
-    alternative.expr = expr;
+    auto expr = std::make_unique<Expr>();
+    decode_expr(table, require_field(obj, "expression"), *expr);
+    alternative.expr = std::move(expr);
   }
   return alternative;
 }
 
-void decode_expr(Arena &arena, TypeTable &table, element raw, Expr &out) {
+void decode_expr(TypeTable &table, element raw, Expr &out) {
   object obj = object_of(raw);
-  out.ann = decode_ann(arena, table, require_field(obj, "annotation"), true);
+  out.ann = decode_ann(table, require_field(obj, "annotation"), true);
   std::string_view kind = string_of(require_field(obj, "type"));
   if (kind == "Var") {
     out.kind = 0;
-    out.value = decode_qualified(arena, require_field(obj, "value"));
+    out.value = decode_qualified(require_field(obj, "value"));
     return;
   }
   if (kind == "Literal") {
     out.kind = 1;
-    out.literal = arena.make<Literal>();
-    *out.literal = decode_literal(arena, table, require_field(obj, "value"), false);
+    out.literal = std::make_unique<Literal>();
+    *out.literal = decode_literal(table, require_field(obj, "value"), false);
     return;
   }
   if (kind == "Constructor") {
     out.kind = 2;
-    out.type_name = copy_string(arena, string_of(require_field(obj, "typeName")));
+    out.type_name = copy_string(string_of(require_field(obj, "typeName")));
     bool has_name = false;
     element name = optional_field(obj, "name", has_name);
     element constructor = (has_name && !name.is_null()) ? name : require_field(obj, "constructorName");
-    out.constructor_name = copy_string(arena, string_of(constructor));
+    out.constructor_name = copy_string(string_of(constructor));
     bool has_fields = false;
     element fields = optional_field(obj, "fields", has_fields);
     if (!has_fields || fields.is_null()) fields = require_field(obj, "fieldNames");
     array names = array_of(fields);
     out.field_count = names.size();
-    out.fields = arena.alloc_array<Str>(out.field_count);
+    out.fields.resize(out.field_count);
     size_t slot = 0;
-    for (element item : names) out.fields[slot++] = decode_string_literal(arena, item);
+    for (element item : names) out.fields[slot++] = decode_string_literal(item);
     return;
   }
   if (kind == "Accessor") {
     out.kind = 3;
-    Expr *inner = arena.make<Expr>();
-    decode_expr(arena, table, require_field(obj, "expression"), *inner);
-    out.inner = inner;
-    out.key = decode_string_literal(arena, require_field(obj, "fieldName"));
+    auto inner = std::make_unique<Expr>();
+    decode_expr(table, require_field(obj, "expression"), *inner);
+    out.inner = std::move(inner);
+    out.key = decode_string_literal(require_field(obj, "fieldName"));
     return;
   }
   if (kind == "ObjectUpdate") {
     out.kind = 4;
-    Expr *inner = arena.make<Expr>();
-    decode_expr(arena, table, require_field(obj, "expression"), *inner);
-    out.inner = inner;
+    auto inner = std::make_unique<Expr>();
+    decode_expr(table, require_field(obj, "expression"), *inner);
+    out.inner = std::move(inner);
     array pairs = array_of(require_field(obj, "updates"));
     out.prop_count = pairs.size();
-    out.props = arena.alloc_array<Prop>(out.prop_count);
+    out.props.resize(out.prop_count);
     size_t slot = 0;
     for (element pair : pairs) {
       std::vector<element> elements;
       for (element item : array_of(pair)) elements.push_back(item);
       if (elements.size() != 2) throw decode_error{};
-      out.props[slot].key = decode_string_literal(arena, elements[0]);
-      Expr *value = arena.make<Expr>();
-      decode_expr(arena, table, elements[1], *value);
-      out.props[slot].expr = value;
+      out.props[slot].key = decode_string_literal(elements[0]);
+      auto value = std::make_unique<Expr>();
+      decode_expr(table, elements[1], *value);
+      out.props[slot].expr = std::move(value);
       slot++;
     }
     return;
   }
   if (kind == "Abs") {
     out.kind = 5;
-    out.name = copy_string(arena, string_of(require_field(obj, "argument")));
-    Expr *body = arena.make<Expr>();
-    decode_expr(arena, table, require_field(obj, "body"), *body);
-    out.body = body;
+    out.name = copy_string(string_of(require_field(obj, "argument")));
+    auto body = std::make_unique<Expr>();
+    decode_expr(table, require_field(obj, "body"), *body);
+    out.body = std::move(body);
     return;
   }
   if (kind == "App") {
     out.kind = 6;
-    Expr *fn = arena.make<Expr>();
-    decode_expr(arena, table, require_field(obj, "abstraction"), *fn);
-    Expr *arg = arena.make<Expr>();
-    decode_expr(arena, table, require_field(obj, "argument"), *arg);
-    out.fn = fn;
-    out.arg = arg;
+    auto fn = std::make_unique<Expr>();
+    decode_expr(table, require_field(obj, "abstraction"), *fn);
+    auto arg = std::make_unique<Expr>();
+    decode_expr(table, require_field(obj, "argument"), *arg);
+    out.fn = std::move(fn);
+    out.arg = std::move(arg);
     return;
   }
   if (kind == "Case") {
     out.kind = 7;
     array values = array_of(require_field(obj, "caseExpressions"));
     out.value_count = values.size();
-    out.values = arena.alloc_array<Expr *>(out.value_count);
+    out.values.resize(out.value_count);
     size_t slot = 0;
     for (element item : values) {
-      Expr *value = arena.make<Expr>();
-      decode_expr(arena, table, item, *value);
-      out.values[slot++] = value;
+      auto value = std::make_unique<Expr>();
+      decode_expr(table, item, *value);
+      out.values[slot++] = std::move(value);
     }
     array alternatives = array_of(require_field(obj, "caseAlternatives"));
     out.alternative_count = alternatives.size();
-    out.alternatives = arena.alloc_array<CaseAlternative>(out.alternative_count);
+    out.alternatives.resize(out.alternative_count);
     size_t alternative_slot = 0;
     for (element item : alternatives) {
-      out.alternatives[alternative_slot++] = decode_case_alternative(arena, table, item);
+      out.alternatives[alternative_slot++] = decode_case_alternative(table, item);
     }
     return;
   }
@@ -1105,28 +1092,28 @@ void decode_expr(Arena &arena, TypeTable &table, element raw, Expr &out) {
     out.kind = 8;
     array binds = array_of(require_field(obj, "binds"));
     out.bind_count = binds.size();
-    out.binds = arena.alloc_array<Bind>(out.bind_count);
+    out.binds.resize(out.bind_count);
     size_t slot = 0;
-    for (element item : binds) out.binds[slot++] = decode_bind(arena, table, item);
-    Expr *body = arena.make<Expr>();
-    decode_expr(arena, table, require_field(obj, "expression"), *body);
-    out.body = body;
+    for (element item : binds) out.binds[slot++] = decode_bind(table, item);
+    auto body = std::make_unique<Expr>();
+    decode_expr(table, require_field(obj, "expression"), *body);
+    out.body = std::move(body);
     return;
   }
   if (kind == "TypeApp") {
     out.kind = 9;
-    Expr *inner = arena.make<Expr>();
-    decode_expr(arena, table, require_field(obj, "expression"), *inner);
-    out.inner = inner;
+    auto inner = std::make_unique<Expr>();
+    decode_expr(table, require_field(obj, "expression"), *inner);
+    out.inner = std::move(inner);
     out.type_arg = table.resolve_checked(int_of(require_field(obj, "typeArgument")));
     return;
   }
   throw decode_error{};
 }
 
-void decode_binder(Arena &arena, TypeTable &table, element raw, Binder &out) {
+void decode_binder(TypeTable &table, element raw, Binder &out) {
   object obj = object_of(raw);
-  out.ann = decode_ann(arena, table, require_field(obj, "annotation"), true);
+  out.ann = decode_ann(table, require_field(obj, "annotation"), true);
   std::string_view kind = string_of(require_field(obj, "binderType"));
   if (kind == "NullBinder") {
     out.kind = 0;
@@ -1134,161 +1121,161 @@ void decode_binder(Arena &arena, TypeTable &table, element raw, Binder &out) {
   }
   if (kind == "VarBinder") {
     out.kind = 1;
-    out.name = copy_string(arena, string_of(require_field(obj, "identifier")));
+    out.name = copy_string(string_of(require_field(obj, "identifier")));
     return;
   }
   if (kind == "NamedBinder") {
     out.kind = 2;
-    out.name = copy_string(arena, string_of(require_field(obj, "identifier")));
-    Binder *inner = arena.make<Binder>();
-    decode_binder(arena, table, require_field(obj, "binder"), *inner);
-    out.inner = inner;
+    out.name = copy_string(string_of(require_field(obj, "identifier")));
+    auto inner = std::make_unique<Binder>();
+    decode_binder(table, require_field(obj, "binder"), *inner);
+    out.inner = std::move(inner);
     return;
   }
   if (kind == "LiteralBinder") {
     out.kind = 3;
-    out.literal = arena.make<Literal>();
-    *out.literal = decode_literal(arena, table, require_field(obj, "literal"), true);
+    out.literal = std::make_unique<Literal>();
+    *out.literal = decode_literal(table, require_field(obj, "literal"), true);
     return;
   }
   if (kind == "ConstructorBinder") {
     out.kind = 4;
-    out.proper = decode_qualified(arena, require_field(obj, "typeName"));
+    out.proper = decode_qualified(require_field(obj, "typeName"));
     bool has_name = false;
     element name = optional_field(obj, "name", has_name);
     element constructor = (has_name && !name.is_null()) ? name : require_field(obj, "constructorName");
-    out.constructor = decode_qualified(arena, constructor);
+    out.constructor = decode_qualified(constructor);
     array binders = array_of(require_field(obj, "binders"));
     out.field_count = binders.size();
-    out.fields = arena.alloc_array<Binder *>(out.field_count);
+    out.fields.resize(out.field_count);
     size_t slot = 0;
     for (element item : binders) {
-      Binder *binder = arena.make<Binder>();
-      decode_binder(arena, table, item, *binder);
-      out.fields[slot++] = binder;
+      auto binder = std::make_unique<Binder>();
+      decode_binder(table, item, *binder);
+      out.fields[slot++] = std::move(binder);
     }
     return;
   }
   throw decode_error{};
 }
 
-Import decode_import(Arena &arena, TypeTable &table, element raw) {
+Import decode_import(TypeTable &table, element raw) {
   object obj = object_of(raw);
   Import entry;
-  entry.ann = decode_ann(arena, table, require_field(obj, "annotation"), true);
-  entry.module = decode_module_name(arena, require_field(obj, "moduleName"));
+  entry.ann = decode_ann(table, require_field(obj, "annotation"), true);
+  entry.module = decode_module_name(require_field(obj, "moduleName"));
   return entry;
 }
 
-DataConstructor decode_data_constructor(Arena &arena, TypeTable &table, element raw) {
+DataConstructor decode_data_constructor(TypeTable &table, element raw) {
   object obj = object_of(raw);
   DataConstructor constructor;
   bool has_name = false;
   element name = optional_field(obj, "name", has_name);
   element resolved = (has_name && !name.is_null()) ? name : require_field(obj, "constructorName");
-  constructor.name = copy_string(arena, string_of(resolved));
+  constructor.name = copy_string(string_of(resolved));
   bool has_fields = false;
   element fields = optional_field(obj, "fields", has_fields);
   if (!has_fields || fields.is_null()) fields = require_field(obj, "fieldTypes");
   std::vector<int64_t> ids = id_list(fields);
   constructor.field_count = ids.size();
-  constructor.fields = arena.alloc_array<Type *>(constructor.field_count);
+  constructor.fields.resize(constructor.field_count);
   for (size_t index = 0; index < ids.size(); index++) {
     constructor.fields[index] = table.resolve_checked(ids[index]);
   }
   return constructor;
 }
 
-DataDecl decode_data_decl(Arena &arena, TypeTable &table, element raw) {
+DataDecl decode_data_decl(TypeTable &table, element raw) {
   object obj = object_of(raw);
   DataDecl decl;
   bool has_name = false;
   element name = optional_field(obj, "name", has_name);
   element resolved = (has_name && !name.is_null()) ? name : require_field(obj, "typeName");
-  decl.name = copy_string(arena, string_of(resolved));
+  decl.name = copy_string(string_of(resolved));
   bool has_vars = false;
   element vars = optional_field(obj, "vars", has_vars);
   if (!has_vars || vars.is_null()) vars = optional_field(obj, "typeVars");
   if (!vars.is_null()) {
     std::vector<std::string_view> list = string_list(vars);
     decl.var_count = list.size();
-    decl.vars = arena.alloc_array<Str>(decl.var_count);
+    decl.vars.resize(decl.var_count);
     size_t slot = 0;
-    for (std::string_view item : list) decl.vars[slot++] = copy_string(arena, item);
+    for (std::string_view item : list) decl.vars[slot++] = copy_string(item);
   }
   array constructors = array_of(require_field(obj, "constructors"));
   decl.constructor_count = constructors.size();
-  decl.constructors = arena.alloc_array<DataConstructor>(decl.constructor_count);
+  decl.constructors.resize(decl.constructor_count);
   size_t slot = 0;
   for (element item : constructors) {
-    decl.constructors[slot++] = decode_data_constructor(arena, table, item);
+    decl.constructors[slot++] = decode_data_constructor(table, item);
   }
   return decl;
 }
 
-Constraint decode_constraint(Arena &arena, TypeTable &table, element raw) {
+Constraint decode_constraint(TypeTable &table, element raw) {
   object obj = object_of(raw);
   Constraint constraint;
   std::vector<std::string_view> parts = string_list(require_field(obj, "fqn"));
   constraint.part_count = parts.size();
-  constraint.parts = arena.alloc_array<Str>(constraint.part_count);
+  constraint.parts.resize(constraint.part_count);
   size_t slot = 0;
-  for (std::string_view part : parts) constraint.parts[slot++] = copy_string(arena, part);
+  for (std::string_view part : parts) constraint.parts[slot++] = copy_string(part);
   std::vector<int64_t> ids = id_list(require_field(obj, "args"));
   constraint.arg_count = ids.size();
-  constraint.args = arena.alloc_array<Type *>(constraint.arg_count);
+  constraint.args.resize(constraint.arg_count);
   for (size_t index = 0; index < ids.size(); index++) {
     constraint.args[index] = table.resolve_checked(ids[index]);
   }
   return constraint;
 }
 
-ClassDecl decode_class_decl(Arena &arena, TypeTable &table, element raw) {
+ClassDecl decode_class_decl(TypeTable &table, element raw) {
   object obj = object_of(raw);
   ClassDecl decl;
-  decl.name = copy_string(arena, string_of(require_field(obj, "name")));
+  decl.name = copy_string(string_of(require_field(obj, "name")));
   bool has_vars = false;
   element vars = optional_field(obj, "vars", has_vars);
   if (has_vars && !vars.is_null()) {
     std::vector<std::string_view> list = string_list(vars);
     decl.var_count = list.size();
-    decl.vars = arena.alloc_array<Str>(decl.var_count);
+    decl.vars.resize(decl.var_count);
     size_t slot = 0;
-    for (std::string_view item : list) decl.vars[slot++] = copy_string(arena, item);
+    for (std::string_view item : list) decl.vars[slot++] = copy_string(item);
   }
   array superclasses = array_of(require_field(obj, "superclasses"));
   decl.superclass_count = superclasses.size();
-  decl.superclasses = arena.alloc_array<Constraint>(decl.superclass_count);
+  decl.superclasses.resize(decl.superclass_count);
   size_t superclass_slot = 0;
   for (element item : superclasses) {
-    decl.superclasses[superclass_slot++] = decode_constraint(arena, table, item);
+    decl.superclasses[superclass_slot++] = decode_constraint(table, item);
   }
   array methods = array_of(require_field(obj, "methods"));
   decl.method_count = methods.size();
-  decl.methods = arena.alloc_array<ClassMethod>(decl.method_count);
+  decl.methods.resize(decl.method_count);
   size_t method_slot = 0;
   for (element item : methods) {
     object method = object_of(item);
-    decl.methods[method_slot].name = copy_string(arena, string_of(require_field(method, "name")));
+    decl.methods[method_slot].name = copy_string(string_of(require_field(method, "name")));
     decl.methods[method_slot].type = table.resolve_checked(int_of(require_field(method, "type")));
     method_slot++;
   }
   return decl;
 }
 
-Comment decode_comment(Arena &arena, element raw) {
+Comment decode_comment(element raw) {
   object obj = object_of(raw);
   Comment comment;
   bool has_line = false;
   element line = optional_field(obj, "LineComment", has_line);
   if (has_line && !line.is_null()) {
     comment.kind = 0;
-    comment.text = copy_string(arena, string_of(line));
+    comment.text = copy_string(string_of(line));
     return comment;
   }
   element block = require_field(obj, "BlockComment");
   comment.kind = 1;
-  comment.text = copy_string(arena, string_of(block));
+  comment.text = copy_string(string_of(block));
   return comment;
 }
 
@@ -1296,7 +1283,7 @@ Comment decode_comment(Arena &arena, element raw) {
 // Type table parsing.
 // --------------------------------------------------------------------------
 
-RawType parse_raw_type(Arena &arena, element raw) {
+RawType parse_raw_type(element raw) {
   RawType entry;
   if (raw.is_string()) {
     std::string_view name = string_of(raw);
@@ -1311,17 +1298,27 @@ RawType parse_raw_type(Arena &arena, element raw) {
     return entry;
   }
   object obj = object_of(raw);
-  std::string_view kind = string_of(require_field(obj, "type"));
+  bool has_type = false;
+  element type_tag = optional_field(obj, "type", has_type);
+  if (!has_type || !type_tag.is_string()) {
+    bool has_var = false;
+    element var = optional_field(obj, "TypeVar", has_var);
+    if (!has_var) throw decode_error{};
+    entry.kind = TypeKind::TypeVar;
+    entry.text = copy_string(string_of(var));
+    return entry;
+  }
+  std::string_view kind = string_of(type_tag);
   if (kind == "Adt") {
     entry.kind = TypeKind::Adt;
     std::vector<std::string_view> parts = string_list(require_field(obj, "fqn"));
     entry.part_count = parts.size();
-    entry.parts = arena.alloc_array<Str>(entry.part_count);
+    entry.parts.resize(entry.part_count);
     size_t slot = 0;
-    for (std::string_view part : parts) entry.parts[slot++] = copy_string(arena, part);
+    for (std::string_view part : parts) entry.parts[slot++] = copy_string(part);
     std::vector<int64_t> ids = id_list(require_field(obj, "args"));
     entry.arg_count = ids.size();
-    entry.args = arena.alloc_array<int64_t>(entry.arg_count);
+    entry.args.resize(entry.arg_count);
     for (size_t index = 0; index < ids.size(); index++) entry.args[index] = ids[index];
     return entry;
   }
@@ -1330,7 +1327,7 @@ RawType parse_raw_type(Arena &arena, element raw) {
     entry.constructor = int_of(require_field(obj, "constructor"));
     std::vector<int64_t> ids = id_list(require_field(obj, "args"));
     entry.arg_count = ids.size();
-    entry.args = arena.alloc_array<int64_t>(entry.arg_count);
+    entry.args.resize(entry.arg_count);
     for (size_t index = 0; index < ids.size(); index++) entry.args[index] = ids[index];
     return entry;
   }
@@ -1338,7 +1335,7 @@ RawType parse_raw_type(Arena &arena, element raw) {
     entry.kind = TypeKind::Func;
     std::vector<int64_t> ids = id_list(require_field(obj, "args"));
     entry.arg_count = ids.size();
-    entry.args = arena.alloc_array<int64_t>(entry.arg_count);
+    entry.args.resize(entry.arg_count);
     for (size_t index = 0; index < ids.size(); index++) entry.args[index] = ids[index];
     entry.body = int_of(require_field(obj, "ret"));
     entry.has_body = true;
@@ -1351,7 +1348,7 @@ RawType parse_raw_type(Arena &arena, element raw) {
   }
   if (kind == "TypeVar") {
     entry.kind = TypeKind::TypeVar;
-    entry.text = copy_string(arena, string_of(require_field(obj, "name")));
+    entry.text = copy_string(string_of(require_field(obj, "name")));
     return entry;
   }
   if (kind == "Record") {
@@ -1363,11 +1360,11 @@ RawType parse_raw_type(Arena &arena, element raw) {
     entry.kind = TypeKind::Row;
     array fields = array_of(require_field(obj, "fields"));
     entry.field_count = fields.size();
-    entry.fields = arena.alloc_array<RawRowField>(entry.field_count);
+    entry.fields.resize(entry.field_count);
     size_t slot = 0;
     for (element item : fields) {
       object field = object_of(item);
-      entry.fields[slot].label = copy_string(arena, string_of(require_field(field, "label")));
+      entry.fields[slot].label = copy_string(string_of(require_field(field, "label")));
       entry.fields[slot].type = int_of(require_field(field, "type"));
       slot++;
     }
@@ -1383,9 +1380,9 @@ RawType parse_raw_type(Arena &arena, element raw) {
     entry.kind = TypeKind::ForAll;
     std::vector<std::string_view> vars = string_list(require_field(obj, "vars"));
     entry.var_count = vars.size();
-    entry.vars = arena.alloc_array<Str>(entry.var_count);
+    entry.vars.resize(entry.var_count);
     size_t slot = 0;
-    for (std::string_view item : vars) entry.vars[slot++] = copy_string(arena, item);
+    for (std::string_view item : vars) entry.vars[slot++] = copy_string(item);
     entry.body = int_of(require_field(obj, "body"));
     entry.has_body = true;
     return entry;
@@ -1394,19 +1391,19 @@ RawType parse_raw_type(Arena &arena, element raw) {
     entry.kind = TypeKind::ConstrainedType;
     array constraints = array_of(require_field(obj, "constraints"));
     entry.constraint_count = constraints.size();
-    entry.constraints = arena.alloc_array<RawConstraint>(entry.constraint_count);
+    entry.constraints.resize(entry.constraint_count);
     size_t constraint_slot = 0;
     for (element item : constraints) {
       object constraint = object_of(item);
       RawConstraint &target = entry.constraints[constraint_slot++];
       std::vector<std::string_view> parts = string_list(require_field(constraint, "fqn"));
       target.part_count = parts.size();
-      target.parts = arena.alloc_array<Str>(target.part_count);
+      target.parts.resize(target.part_count);
       size_t part_slot = 0;
-      for (std::string_view part : parts) target.parts[part_slot++] = copy_string(arena, part);
+      for (std::string_view part : parts) target.parts[part_slot++] = copy_string(part);
       std::vector<int64_t> ids = id_list(require_field(constraint, "args"));
       target.arg_count = ids.size();
-      target.args = arena.alloc_array<int64_t>(target.arg_count);
+      target.args.resize(target.arg_count);
       for (size_t index = 0; index < ids.size(); index++) target.args[index] = ids[index];
     }
     entry.body = int_of(require_field(obj, "body"));
@@ -1415,7 +1412,7 @@ RawType parse_raw_type(Arena &arena, element raw) {
   }
   if (kind == "TypeLevelString") {
     entry.kind = TypeKind::TypeLevelString;
-    entry.text = copy_string(arena, string_of(require_field(obj, "value")));
+    entry.text = copy_string(string_of(require_field(obj, "value")));
     return entry;
   }
   if (kind == "Int") entry.kind = TypeKind::Int;
@@ -1490,7 +1487,7 @@ void write_source_span(std::string &out, const SourceSpan &span) {
   close_tag(out);
 }
 
-void write_expr_type(std::string &out, const Type *type);
+void write_expr_type(std::string &out, const TypePtr &type);
 
 void write_meta(std::string &out, const Meta &meta) {
   switch (meta.kind) {
@@ -1529,7 +1526,7 @@ void write_optional_meta(std::string &out, const Ann &ann) {
   close_tag(out);
 }
 
-void write_optional_type(std::string &out, bool has, const Type *type) {
+void write_optional_type(std::string &out, bool has, const TypePtr &type) {
   if (has && type != nullptr) {
     open_tag(out, "Just");
     out.push_back(',');
@@ -1651,7 +1648,7 @@ void write_constraint(std::string &out, const Constraint &constraint) {
   out.push_back(']');
 }
 
-void write_expr_type(std::string &out, const Type *type) {
+void write_expr_type(std::string &out, const TypePtr &type) {
   if (type == nullptr) {
     open_tag(out, "Any");
     close_tag(out);
@@ -2265,16 +2262,134 @@ std::string module_fingerprint(const Module &module) {
 }
 
 // --------------------------------------------------------------------------
+// Lexical source-usage validation (CoreFn.Usage.validateSourceUsageModule).
+// The decoder supplies the enclosing module provenance to every numeric ID.
+// A missing binding fact still shadows an annotated outer variable.
+// --------------------------------------------------------------------------
+
+class UsageValidator {
+  struct Local { std::string_view name; std::optional<int64_t> identity; };
+  using Scope = std::vector<Local>;
+  std::unordered_set<int64_t> seen;
+
+  static void plain(const Ann &ann) {
+    if (ann.usage.has_binding || ann.usage.has_variable) throw decode_error{};
+  }
+  void register_local(Scope &scope, const Ann &ann, const Str &name) {
+    if (ann.usage.has_variable) throw decode_error{};
+    std::optional<int64_t> identity;
+    if (ann.usage.has_binding) {
+      identity = ann.usage.binding.binding_id;
+      if (!seen.insert(*identity).second) throw decode_error{};
+    }
+    scope.push_back(Local{name, identity});
+  }
+  void expression(Scope &scope, const Expr &expr) {
+    size_t outer = scope.size();
+    switch (expr.kind) {
+      case 0: {
+        if (expr.ann.usage.has_binding) throw decode_error{};
+        if (expr.ann.usage.has_variable) {
+          std::optional<int64_t> target;
+          if (!expr.value.has_module) {
+            for (auto it = scope.rbegin(); it != scope.rend(); ++it) {
+              if (it->name == expr.value.name) { target = it->identity; break; }
+            }
+          }
+          if (!target || *target != expr.ann.usage.variable.binding_id) throw decode_error{};
+        }
+        break;
+      }
+      case 1:
+        plain(expr.ann);
+        for (const auto &item : expr.literal->items) expression(scope, *item.expr);
+        for (const auto &prop : expr.literal->props) expression(scope, *prop.value.expr);
+        break;
+      case 2: plain(expr.ann); break;
+      case 3: case 9:
+        plain(expr.ann); expression(scope, *expr.inner); break;
+      case 4:
+        plain(expr.ann); expression(scope, *expr.inner);
+        for (const auto &prop : expr.props) expression(scope, *prop.expr);
+        break;
+      case 5:
+        register_local(scope, expr.ann, expr.name); expression(scope, *expr.body); break;
+      case 6:
+        plain(expr.ann); expression(scope, *expr.fn); expression(scope, *expr.arg); break;
+      case 7:
+        plain(expr.ann);
+        for (const auto &value : expr.values) expression(scope, *value);
+        for (const auto &alternative : expr.alternatives) {
+          for (const auto &pattern : alternative.binders) binder(scope, *pattern);
+          if (alternative.guarded) {
+            for (const auto &guard : alternative.guards) {
+              expression(scope, *guard.condition); expression(scope, *guard.value);
+            }
+          } else expression(scope, *alternative.expr);
+          scope.resize(outer);
+        }
+        break;
+      case 8:
+        plain(expr.ann);
+        for (const auto &bind : expr.binds) {
+          if (bind.kind == 0) {
+            expression(scope, *bind.single.expr);
+            register_local(scope, bind.single.ann, bind.single.name);
+          } else {
+            for (const auto &binding : bind.group) register_local(scope, binding.ann, binding.name);
+            for (const auto &binding : bind.group) expression(scope, *binding.expr);
+          }
+        }
+        expression(scope, *expr.body);
+        break;
+      default: throw decode_error{};
+    }
+    scope.resize(outer);
+  }
+  void binder(Scope &scope, const Binder &pattern) {
+    switch (pattern.kind) {
+      case 0: plain(pattern.ann); break;
+      case 1: register_local(scope, pattern.ann, pattern.name); break;
+      case 2:
+        register_local(scope, pattern.ann, pattern.name); binder(scope, *pattern.inner); break;
+      case 3:
+        plain(pattern.ann);
+        for (const auto &item : pattern.literal->items) binder(scope, *item.binder);
+        for (const auto &prop : pattern.literal->props) binder(scope, *prop.value.binder);
+        break;
+      case 4:
+        plain(pattern.ann);
+        for (const auto &child : pattern.fields) binder(scope, *child);
+        break;
+      default: throw decode_error{};
+    }
+  }
+ public:
+  void validate(const Module &module) {
+    for (const auto &entry : module.imports) plain(entry.ann);
+    for (const auto &bind : module.decls) {
+      auto top = [this](const Binding &binding) {
+        plain(binding.ann);
+        Scope scope;
+        expression(scope, *binding.expr);
+      };
+      if (bind.kind == 0) top(bind.single);
+      else for (const auto &binding : bind.group) top(binding);
+    }
+  }
+};
+
+// --------------------------------------------------------------------------
 // Module decoder.
 // --------------------------------------------------------------------------
 
-Module decode_module(Arena &arena, element root, std::string_view debug_name) {
+Module decode_module(element root, std::string_view debug_name) {
   (void)debug_name;
   object obj = object_of(root);
   Module module;
-  module.name = decode_module_name(arena, require_field(obj, "moduleName"));
-  module.path = copy_string(arena, string_of(require_field(obj, "modulePath")));
-  module.span = decode_source_span(arena, view_of(module.path), require_field(obj, "sourceSpan"));
+  module.name = decode_module_name(require_field(obj, "moduleName"));
+  module.path = copy_string(string_of(require_field(obj, "modulePath")));
+  module.span = decode_source_span(view_of(module.path), require_field(obj, "sourceSpan"));
 
   // Type table first: annotations resolve against it.
   bool has_table = false;
@@ -2283,27 +2398,25 @@ Module decode_module(Arena &arena, element root, std::string_view debug_name) {
   if (has_table && !raw_table.is_null()) {
     array entries = array_of(raw_table);
     raw_entries.reserve(entries.size());
-    for (element entry : entries) raw_entries.push_back(parse_raw_type(arena, entry));
+    for (element entry : entries) raw_entries.push_back(parse_raw_type(entry));
   }
-  RawType *raw_array = arena.alloc_array<RawType>(raw_entries.size());
-  for (size_t index = 0; index < raw_entries.size(); index++) raw_array[index] = raw_entries[index];
-  TypeTable table(arena, raw_array, raw_entries.size());
+  TypeTable table(std::move(raw_entries));
 
   // Imports.
   array imports = array_of(require_field(obj, "imports"));
   module.import_count = imports.size();
-  module.imports = arena.alloc_array<Import>(module.import_count);
+  module.imports.resize(module.import_count);
   for (size_t index = 0; index < imports.size(); index++) {
-    module.imports[index] = decode_import(arena, table, imports.at(index));
+    module.imports[index] = decode_import(table, imports.at(index));
   }
 
   // Exports.
   array exports = array_of(require_field(obj, "exports"));
   module.export_count = exports.size();
-  module.exports = arena.alloc_array<Str>(module.export_count);
+  module.exports.resize(module.export_count);
   {
     size_t slot = 0;
-    for (element item : exports) module.exports[slot++] = copy_string(arena, string_of(item));
+    for (element item : exports) module.exports[slot++] = copy_string(string_of(item));
   }
 
   // Re-exports: object of module name -> identifiers, sorted by module name.
@@ -2315,14 +2428,14 @@ Module decode_module(Arena &arena, element root, std::string_view debug_name) {
               [](const auto &left, const auto &right) { return left.first < right.first; });
     size_t total = 0;
     for (const auto &entry : entries) total += array_of(entry.second).size();
-    module.re_exports = arena.alloc_array<ReExport>(total);
+    module.re_exports.resize(total);
     module.re_export_count = total;
     size_t slot = 0;
     for (const auto &entry : entries) {
-      Str module_name = copy_string(arena, entry.first);
+      Str module_name = copy_string(entry.first);
       for (element ident : array_of(entry.second)) {
         module.re_exports[slot].module = module_name;
-        module.re_exports[slot].ident = copy_string(arena, string_of(ident));
+        module.re_exports[slot].ident = copy_string(string_of(ident));
         slot++;
       }
     }
@@ -2335,9 +2448,9 @@ Module decode_module(Arena &arena, element root, std::string_view debug_name) {
     if (present && !raw.is_null()) {
       array decls = array_of(raw);
       module.data_decl_count = decls.size();
-      module.data_decls = arena.alloc_array<DataDecl>(module.data_decl_count);
+      module.data_decls.resize(module.data_decl_count);
       size_t slot = 0;
-      for (element item : decls) module.data_decls[slot++] = decode_data_decl(arena, table, item);
+      for (element item : decls) module.data_decls[slot++] = decode_data_decl(table, item);
     }
   }
 
@@ -2348,18 +2461,18 @@ Module decode_module(Arena &arena, element root, std::string_view debug_name) {
     if (present && !raw.is_null()) {
       array decls = array_of(raw);
       module.class_decl_count = decls.size();
-      module.class_decls = arena.alloc_array<ClassDecl>(module.class_decl_count);
+      module.class_decls.resize(module.class_decl_count);
       size_t slot = 0;
-      for (element item : decls) module.class_decls[slot++] = decode_class_decl(arena, table, item);
+      for (element item : decls) module.class_decls[slot++] = decode_class_decl(table, item);
     }
   }
 
   // Declarations.
   array decls = array_of(require_field(obj, "decls"));
   module.decl_count = decls.size();
-  module.decls = arena.alloc_array<Bind>(module.decl_count);
+  module.decls.resize(module.decl_count);
   for (size_t index = 0; index < decls.size(); index++) {
-    module.decls[index] = decode_bind(arena, table, decls.at(index));
+    module.decls[index] = decode_bind(table, decls.at(index));
   }
 
   // Foreign entries, with their annotation type when present. The fingerprint
@@ -2369,23 +2482,23 @@ Module decode_module(Arena &arena, element root, std::string_view debug_name) {
     bool has_annotations = false;
     element raw_annotations = optional_field(obj, "foreignAnnotations", has_annotations);
     module.foreign_count = foreign.size();
-    module.foreign = arena.alloc_array<ForeignEntry>(module.foreign_count);
+    module.foreign.resize(module.foreign_count);
     size_t slot = 0;
     for (element item : foreign) {
       std::string_view ident = string_of(item);
-      module.foreign[slot].ident = copy_string(arena, ident);
+      module.foreign[slot].ident = copy_string(ident);
       if (has_annotations && !raw_annotations.is_null()) {
         object annotations = object_of(raw_annotations);
         element annotation;
         if (annotations[ident].get(annotation) == simdjson::SUCCESS) {
-          Ann ann = decode_ann(arena, table, annotation, false);
+          Ann ann = decode_ann(table, annotation, false);
           module.foreign[slot].has_type = ann.has_type;
           module.foreign[slot].type = ann.type;
         }
       }
       slot++;
     }
-    std::sort(module.foreign, module.foreign + module.foreign_count,
+    std::sort(module.foreign.begin(), module.foreign.end(),
               [](const ForeignEntry &left, const ForeignEntry &right) {
                 return view_of(left.ident) < view_of(right.ident);
               });
@@ -2394,10 +2507,11 @@ Module decode_module(Arena &arena, element root, std::string_view debug_name) {
   // Comments.
   array comments = array_of(require_field(obj, "comments"));
   module.comment_count = comments.size();
-  module.comments = arena.alloc_array<Comment>(module.comment_count);
+  module.comments.resize(module.comment_count);
   size_t comment_slot = 0;
-  for (element item : comments) module.comments[comment_slot++] = decode_comment(arena, item);
+  for (element item : comments) module.comments[comment_slot++] = decode_comment(item);
 
+  UsageValidator{}.validate(module);
   return module;
 }
 
@@ -2429,6 +2543,25 @@ bool read_text(const char *path, std::string &out) {
   while ((read = fread(buffer, 1, sizeof(buffer), handle)) > 0) out.append(buffer, read);
   fclose(handle);
   return true;
+}
+
+std::vector<int> phase_order() {
+  const char *setting = getenv("DIAG_PHASES");
+  if (!setting) return {0, 1, 2};
+  std::vector<int> result;
+  std::string text(setting);
+  size_t start = 0;
+  do {
+    size_t end = text.find(',', start);
+    std::string name = text.substr(start, end == std::string::npos ? end : end - start);
+    if (name == "parse") result.push_back(0);
+    else if (name == "decode") result.push_back(1);
+    else if (name == "combined") result.push_back(2);
+    else throw decode_error{};
+    if (end == std::string::npos) break;
+    start = end + 1;
+  } while (true);
+  return result;
 }
 
 }  // namespace
@@ -2468,12 +2601,11 @@ int main() {
   }
 
   // One parser per case keeps every parsed document alive for the decode
-  // phase; the parse and combined phases reuse a scratch parser.
+  // phase; parse and combined use a fresh parser per document.
   std::vector<std::unique_ptr<simdjson::dom::parser>> parsers;
   std::vector<element> documents;
   parsers.reserve(cases.size());
   documents.reserve(cases.size());
-  simdjson::dom::parser scratch;
   try {
     for (const auto &item : cases) {
       parsers.push_back(std::make_unique<simdjson::dom::parser>());
@@ -2493,9 +2625,8 @@ int main() {
   fingerprints.reserve(cases.size());
   for (size_t index = 0; index < cases.size(); index++) {
     json_fingerprints.push_back(fingerprint_of(documents[index]));
-    Arena arena(32 << 20);
     try {
-      Module module = decode_module(arena, documents[index], cases[index].name);
+      Module module = decode_module(documents[index], cases[index].name);
       std::string text = module_fingerprint(module);
       if (print_fingerprints) {
         fprintf(stderr, "=== %s ===\n%s\n", cases[index].name.c_str(), text.c_str());
@@ -2509,30 +2640,40 @@ int main() {
 
   const char *phase_names[3] = {"parse", "decode", "combined"};
   std::string phases = "{";
-  for (int phase = 0; phase < 3; phase++) {
+  auto order = phase_order();
+  for (size_t phase_slot = 0; phase_slot < order.size(); phase_slot++) {
+    int phase = order[phase_slot];
     double best = 0;
     bool have_best = false;
     bool first_entry = true;
     std::string samples = "[";
     for (int pass = 0; pass < 7; pass++) {
-      Arena arena(32 << 20);
       std::vector<Module> modules;
+      std::vector<std::unique_ptr<simdjson::dom::parser>> parsed_results;
+      std::vector<element> parsed_values;
+      parsed_results.reserve(cases.size());
+      parsed_values.reserve(cases.size());
       modules.reserve(cases.size());
       double begin = now_microseconds();
       if (phase == 0) {
-        for (const auto &item : cases) scratch.parse(item.contents).value();
+        for (const auto &item : cases) {
+          auto parser = std::make_unique<simdjson::dom::parser>();
+          parsed_values.push_back(parser->parse(item.contents).value());
+          parsed_results.push_back(std::move(parser));
+        }
       } else if (phase == 1) {
-        for (auto &item : documents) modules.push_back(decode_module(arena, item, ""));
+        for (auto &item : documents) modules.push_back(decode_module(item, ""));
       } else {
         for (const auto &item : cases) {
-          element root = scratch.parse(item.contents).value();
-          modules.push_back(decode_module(arena, root, ""));
+          simdjson::dom::parser parser;
+          element root = parser.parse(item.contents).value();
+          modules.push_back(decode_module(root, ""));
         }
       }
       double elapsed = now_microseconds() - begin;
       for (size_t index = 0; index < cases.size(); index++) {
         if (phase == 0) {
-          element root = scratch.parse(cases[index].contents).value();
+          element root = parsed_values[index];
           if (fingerprint_of(root) != json_fingerprints[index]) {
             fprintf(stderr, "unstable parse output\n");
             return 3;
@@ -2542,6 +2683,10 @@ int main() {
           return 3;
         }
       }
+      double release_begin = now_microseconds();
+      modules.clear();
+      parsed_results.clear();
+      double release = now_microseconds() - release_begin;
       if (pass >= 2) {
         if (!have_best || elapsed < best) {
           best = elapsed;
@@ -2549,13 +2694,15 @@ int main() {
         }
         if (!first_entry) samples += ",";
         first_entry = false;
-        samples += "{\"time_us\":" + std::to_string(elapsed) + "}";
+        samples += "{\"time_us\":" + std::to_string(elapsed) +
+                   ",\"release_us\":" + std::to_string(release) +
+                   ",\"lifecycle_us\":" + std::to_string(elapsed + release) + "}";
       }
     }
     samples += "]";
     phases += json_quoted(phase_names[phase]) + ":{\"samples\":" + samples +
               ",\"time_us\":" + std::to_string(best) + "}";
-    if (phase < 2) phases += ",";
+    if (phase_slot + 1 < order.size()) phases += ",";
   }
   phases += "}";
 
