@@ -74,15 +74,15 @@ Lazy Evaluation | ~ 247.11 μs | ~ 71378.08 μs | ~ 13865.38 μs | ~ 0.27 μs |
 Array Processing | ~ 19.26 μs | ~ 43.81 μs | ~ 4.90 μs | ~ 0.45 μs |
 RowToList | ~ 0.15 μs | ~ 0.50 μs | ~ 0.07 μs | ~ 0.03 μs |
 Array Indexing (excluded WIP) | ~ 3.96 ms | — | — | — |
-JSON to Typed AST (excluded WIP) | ~ 21.57 ms | — | — | — |
-JSON Decoding (excluded WIP) | ~ 2.63 ms | — | — | — |
+JSON to Typed AST (excluded WIP) | ~ 19.98 ms | — | — | — |
+JSON Decoding (excluded WIP) | ~ 2.24 ms | — | — | — |
 **Total Execution Time** | ~ 13.28 ms <br>(/C = 1.3x) | ~ 1464.74 ms <br>(/C = 148.8x) | ~ 88.99 ms <br>(/C = 9.0x) | ~ 11.34 ms <br>(/C = 1.2x) |
 
 Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
 
 #### Scheme
 
-Scheme Benchmark        | Hand-written PureScript<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3 | Hand-written FP-style Scheme FFI<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3<br><br>(WIP) | Hand-written imperative Scheme FFI<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3<br><br>(WIP) |
+Scheme Benchmark        | Hand-written PureScript<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3 | Hand-written FP-style Scheme FFI<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3<br><br>(WIP) | Hand-written Scheme FFI<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3<br><br>(WIP) |
 ----------------------- | ----------------| -------------------------- | -------------------------------- |
 AST Evaluation | ~ 0.07 μs | ~ 0.08 μs | ~ 0.07 μs |
 Fibonacci | ~ 0.15 μs | ~ 0.15 μs | ~ 0.14 μs |
@@ -182,7 +182,7 @@ RowToList | ~ 0.48 μs | ~ 0.30 μs | ~ 0.02 μs |
 
 #### F#/C#
 
-F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) | Hand-written FP-style F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) | Hand-written imperative F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) |
+F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) | Hand-written FP-style F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) | Hand-written F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) |
 ----------------------- | ------------------------- | ------------------------- | ------------------------------- |
 AST Evaluation | ~ 1.84 μs | ~ 0.49 μs | ~ 0.50 μs |
 Fibonacci | ~ 2.44 μs | ~ 0.12 μs | ~ 0.12 μs |
@@ -299,11 +299,21 @@ Lazy Evaluation | ~ 0 μs |
 Array Processing | ~ 0.05 μs |
 RowToList | ~ 0 μs |
 Array Indexing (excluded WIP) | ~ 6589.00 μs |
-JSON to Typed AST (excluded WIP) | ~ 8758.63 μs |
-JSON Decoding (excluded WIP) | ~ 644.96 μs |
+JSON to Typed AST (excluded WIP) | ~ 10823.13 μs |
+JSON Decoding (excluded WIP) | ~ 657.69 μs |
 **Total Execution Time** | ~ 9.84 ms <br>(/C = 1.0x) |
 
 Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
+
+The two JSON references are **C++/simdjson**, using ordinary owned containers
+and nodes. Their cells measure complete text-to-owned-result construction;
+TAST includes whole-table resolution and source-usage validation. Paired Go/C++
+construction ratios are **1.85× / 3.41×** (TAST/application). A separate
+fresh-process audit including decoder construction, two retained decodes,
+deferred garbage collection and final release gives **2.32× / 4.09×**.
+See the [owned-reference report](docs/benchmark-results/2026-09-25-json-owned-references.md)
+for timing boundaries, validation and reclamation costs. The Go cells are a
+measurement refresh of the same production binaries.
 
 ### Extended benchmark results (I/O, mutability, async)
 
