@@ -301,9 +301,7 @@ RowToList | ~ 0 μs |
 Array Indexing (excluded WIP) | ~ 6589.00 μs |
 JSON to Typed AST (excluded WIP) | ~ 10823.13 μs |
 JSON Decoding (excluded WIP) | ~ 657.69 μs |
-**Total Execution Time** | ~ 9.84 ms <br>(/C = 1.0x) |
-
-Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
+**Total Execution Time** | ~ 9.84 ms |
 
 ### Extended benchmark results (I/O, mutability, async)
 
