@@ -305,16 +305,6 @@ JSON Decoding (excluded WIP) | ~ 657.69 μs |
 
 Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
 
-The two JSON references are **C++/simdjson**, using ordinary owned containers
-and nodes. Their cells measure complete text-to-owned-result construction;
-TAST includes whole-table resolution and source-usage validation. Paired Go/C++
-construction ratios are **1.85× / 3.41×** (TAST/application). A separate
-fresh-process audit including decoder construction, two retained decodes,
-deferred garbage collection and final release gives **2.32× / 4.09×**.
-See the [owned-reference report](docs/benchmark-results/2026-09-25-json-owned-references.md)
-for timing boundaries, validation and reclamation costs. The Go cells are a
-measurement refresh of the same production binaries.
-
 ### Extended benchmark results (I/O, mutability, async)
 
 #### Extended Results
