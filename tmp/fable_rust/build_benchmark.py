@@ -209,6 +209,7 @@ mimalloc = "0.1.32"
 [profile.release]
 opt-level = 3
 debug = false
+lto = "thin"
 ''')
     build.run("06-cargo-release", ["cargo", "build", "--offline", "--release", "--manifest-path", root / "Cargo.toml"], root, 600)
     executable = root / "target" / "release" / ("altbak-fable.exe" if os.name == "nt" else "altbak-fable")

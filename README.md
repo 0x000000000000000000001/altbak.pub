@@ -142,23 +142,23 @@ RowToList | ~ 0.87 μs | ~ 0.85 μs | ~ 0.08 μs |
 
 #### Rust
 
-Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) | PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F# (adapted)<br>↓<br>[Fable (patched)](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3<br><br>(WIP) | Hand-written F#<br>↓<br>[Fable](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3 | Hand-written FP-style Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br><br>(WIP) | Hand-written imperative Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br><br>(WIP) |
+Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) | PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F# (adapted)<br>↓<br>[Fable (patched)](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) | Hand-written F#<br>↓<br>[Fable](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO | Hand-written FP-style Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) | Hand-written imperative Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) |
 ----------------------- | ------------------------- | -------------------------- | ------------------------------ | ------------------------ | ------------------------------ |
-AST Evaluation | ~ 0.25 μs | ~ 4.41 μs | ~ 0.26 μs | ~ 0.26 μs | ~ 0.26 μs |
-Fibonacci | ~ 0.10 μs | ~ 12.69 μs | ~ 0.10 μs | ~ 0.10 μs | ~ 0.12 μs |
-List Processing | ~ 18.57 μs | ~ 546.45 μs | ~ 16.27 μs | ~ 11.38 μs | ~ 0.49 μs |
-Tail Call Optimization | ~ 30.24 μs | ~ 15.89 μs | ~ 10.68 μs | ~ 33.67 μs | ~ 34.15 μs |
-Deep Record Updates | ~ 3.27 μs | ~ 10530.50 μs | ~ 116.57 μs | ~ 115.09 μs | ~ 3.42 μs |
-Ackermann | ~ 16.66 μs | ~ 757.78 μs | ~ 15.44 μs | ~ 17.58 μs | ~ 16.75 μs |
-Church Numerals | ~ 169.57 μs | ~ 11906.75 μs | ~ 2068.12 μs | ~ 1154.71 μs | ~ 0.01 μs |
-Prime Sieve | ~ 146.47 μs | ~ 2549.14 μs | ~ 115.48 μs | ~ 82.35 μs | ~ 0.75 μs |
-Red-Black Tree | ~ 8449.35 μs | ~ 62062.96 μs | ~ 52997.62 μs | ~ 31816.71 μs | ~ 30705.08 μs |
-Polymorphism | ~ 0.05 μs | ~ 1903090.88 μs | ~ 7298.33 μs | ~ 7131.50 μs | ~ 0.01 μs |
-State Monad | ~ 46.91 μs | ~ 932.02 μs | ~ 81.71 μs | ~ 34.78 μs | ~ 0.01 μs |
-Lazy Evaluation | ~ 0.01 μs | ~ 18989.71 μs | ~ 37387.54 μs | ~ 22062.08 μs | ~ 0.01 μs |
-Array Processing | ~ 0.04 μs | ~ 362.15 μs | ~ 3.13 μs | ~ 0.58 μs | ~ 0.25 μs |
-RowToList | ~ 0.07 μs | ~ 1.13 μs | ~ 0.11 μs | ~ 0.02 μs | ~ 0.01 μs |
-**Total Execution Time** | ~ 8.88 ms <br>(/C = 0.9x) | ~ 2011.76 ms <br>(/C = 204.4x) | ~ 100.11 ms <br>(/C = 10.2x) | ~ 62.46 ms <br>(/C = 6.3x) | ~ 30.76 ms <br>(/C = 3.1x) |
+AST Evaluation | ~ 0.25 μs | ~ 3.68 μs | ~ 0.23 μs | ~ 0.22 μs | ~ 0.23 μs |
+Fibonacci | ~ 0.10 μs | ~ 11.78 μs | ~ 0.09 μs | ~ 0.12 μs | ~ 0.10 μs |
+List Processing | ~ 18.57 μs | ~ 459.33 μs | ~ 17.07 μs | ~ 11.05 μs | ~ 0.51 μs |
+Tail Call Optimization | ~ 30.24 μs | ~ 23547.50 μs | ~ 10.93 μs | ~ 34.70 μs | ~ 34.63 μs |
+Deep Record Updates | ~ 3.27 μs | ~ 8728.98 μs | ~ 114.96 μs | ~ 107.97 μs | ~ 3.47 μs |
+Ackermann | ~ 16.66 μs | ~ 625.00 μs | ~ 15.60 μs | ~ 18.59 μs | ~ 18.36 μs |
+Church Numerals | ~ 169.57 μs | ~ 11792.17 μs | ~ 2249.51 μs | ~ 1033.78 μs | ~ 0.01 μs |
+Prime Sieve | ~ 146.47 μs | ~ 2194.96 μs | ~ 120.43 μs | ~ 78.88 μs | ~ 0.78 μs |
+Red-Black Tree | ~ 8449.35 μs | ~ 659207.04 μs | ~ 50862.42 μs | ~ 28737.38 μs | ~ 28247.96 μs |
+Polymorphism | ~ 0.05 μs | ~ 1588595.46 μs | ~ 7471.33 μs | ~ 0.01 μs | ~ 0.01 μs |
+State Monad | ~ 46.91 μs | ~ 826.12 μs | ~ 73.12 μs | ~ 27.36 μs | ~ 0.01 μs |
+Lazy Evaluation | ~ 0.01 μs | ~ 159056.38 μs | ~ 38342.83 μs | ~ 23675.83 μs | ~ 0.01 μs |
+Array Processing | ~ 0.04 μs | ~ 298.70 μs | ~ 3.28 μs | ~ 0.58 μs | ~ 0.25 μs |
+RowToList | ~ 0.07 μs | ~ 0.95 μs | ~ 0.10 μs | ~ 0.02 μs | ~ 0.01 μs |
+**Total Execution Time** | ~ 8.88 ms <br>(/C = 0.9x) | ~ 2455.35 ms <br>(/C = 249.5x) | ~ 99.28 ms <br>(/C = 10.1x) | ~ 53.73 ms <br>(/C = 5.5x) | ~ 28.31 ms <br>(/C = 2.9x) |
 
 #### C++
 
@@ -307,14 +307,14 @@ JSON Decoding (excluded WIP) | ~ 657.69 μs |
 
 #### Extended Results
 
-Benchmark               | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[Arista](https://github.com/aristanetworks/purescript-backend-optimizer)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br><br>(WIP)
+Benchmark               | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[Arista](https://github.com/aristanetworks/purescript-backend-optimizer)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP)
 ----------------------- | ------------- | -------------- | --------------- | ---------------
-File I/O | ~ 466899.83 μs | ~ 477117.79 μs | ~ 442703.25 μs | ~ 468566.46 μs |
-STArray Operations | ~ 0.92 μs | ~ 0.54 μs | ~ 0.54 μs | ~ 0.33 μs |
-String Operations | ~ 256.71 μs | ~ 232.50 μs | ~ 507.08 μs | ~ 445.08 μs |
-Aff Operations | ~ 10125.21 μs | ~ 11581.83 μs | ~ 11009.25 μs | ~ 12510.79 μs |
-Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 574110.17 μs |
-**Total Execution Time** | ~ 14752.33 ms | ~ 14767.19 ms | ~ 1636.37 ms | ~ 1055.63 ms |
+File I/O | ~ 466899.83 μs | ~ 477117.79 μs | ~ 442703.25 μs | ~ 542377.75 μs |
+STArray Operations | ~ 0.92 μs | ~ 0.54 μs | ~ 0.54 μs | ~ 0.29 μs |
+String Operations | ~ 256.71 μs | ~ 232.50 μs | ~ 507.08 μs | ~ 414.58 μs |
+Aff Operations | ~ 10125.21 μs | ~ 11581.83 μs | ~ 11009.25 μs | ~ 10903.21 μs |
+Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 478303.67 μs |
+**Total Execution Time** | ~ 14752.33 ms | ~ 14767.19 ms | ~ 1636.37 ms | ~ 1032.00 ms |
 
 > [!NOTE]
 > **Hardware Context**

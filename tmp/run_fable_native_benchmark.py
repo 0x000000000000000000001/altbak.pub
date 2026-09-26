@@ -109,6 +109,7 @@ mimalloc = "0.1.32"
 [profile.release]
 opt-level = 3
 debug = false
+lto = "thin"
 ''')
     build.run('02-cargo-release', ['cargo', 'build', '--offline', '--release',
               '--manifest-path', root / 'Cargo.toml'], root, 600)
