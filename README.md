@@ -334,9 +334,6 @@ Benchmark   | gopurs.js | gopurs Go compiled
 [gopurs-avar](https://github.com/0x000000000000000000001/gopurs-avar)  | ~ 6713 ms | ~ 3524 ms
 **Total Time** | ~ 28949 ms | ~ 16287 ms <br>(/JS = 0.6x)
 
-> [!NOTE]
-> On `gopurs-arrays`, the `gopurs.js` compiler crashes with `RangeError: Maximum call stack size exceeded` during `optimize + emit`; the Go-compiled compiler completes the same build. The reported time is the backend total at failure and is included in **Total Time**.
-
 #### [purust](https://github.com/0x000000000000000000001/purust)
 
 Benchmark   | purust.js | purust Rust compiled
