@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 DRIVERS = ROOT / 'bin/benchmark/array-indexing'
 KERNEL = ROOT / 'src/Test/ArrayIndexing.purs'
 BACKEND = ROOT.parent / 'gopurs/gopurs/bin/gopurs'
+RUST_BACKEND = ROOT.parent / 'purust/purust/bin/purust'
 
 
 def digest(path):
@@ -39,14 +40,9 @@ def run_logged(command, cwd, log, env):
     return command
 
 
-def dependency_sources():
-    # Resolve only the imported modules from the already installed Go package
-    # set. No registry update, root symlink mutation or compiler rebuild occurs.
-    config = ROOT / 'run/bak/go/spago.go.yaml'
-    candidates = list((ROOT / 'run/bak/go/spago/p').glob('*/src/**/*.purs'))
-    for relative in re.findall(r'path: "([^"\n]+)"', config.read_text()):
-        candidates.extend((ROOT / relative / 'src').glob('**/*.purs'))
-    candidates.append(KERNEL)
+def module_closure(candidates):
+    # Resolve only the imported modules from an already installed package set.
+    # No registry update, root symlink mutation or compiler rebuild occurs.
     modules = {}
     for path in candidates:
         match = re.search(r'^module\s+([A-Z][\w.]*)', path.read_text(), re.MULTILINE)
@@ -58,11 +54,33 @@ def dependency_sources():
         if name in selected or name == 'Prim' or name.startswith('Prim.'):
             continue
         if name not in modules:
-            raise ValueError(f'Missing installed module {name}; prepare the normal Go dependency set first')
+            raise ValueError(f'Missing installed module {name}; prepare the normal dependency set first')
         path = modules[name]
         selected[name] = path
         pending.extend(re.findall(r'^import\s+([A-Z][\w.]*)', path.read_text(), re.MULTILINE))
     return sorted(selected.values())
+
+
+def dependency_sources():
+    config = ROOT / 'run/bak/go/spago.go.yaml'
+    candidates = list((ROOT / 'run/bak/go/spago/p').glob('*/src/**/*.purs'))
+    for relative in re.findall(r'path: "([^"\n]+)"', config.read_text()):
+        candidates.extend((ROOT / relative / 'src').glob('**/*.purs'))
+    candidates.append(KERNEL)
+    return module_closure(candidates)
+
+
+def rust_dependency_sources():
+    # The same kernel compiled against the purust library ports, so the TAST
+    # carries Rust module paths and purust resolves the matching `.rs` FFI.
+    # Ports declare their own dependencies, so the whole port directory is
+    # scanned; gopurs packages come first so purust ports win any overlap.
+    candidates = list((ROOT / 'run/bak/rust/modes/pure/.spago/p').glob('*/src/**/*.purs'))
+    for name in ['gopurs-st', 'gopurs-unsafe-coerce', 'gopurs-assert']:
+        candidates.extend((ROOT.parent / 'gopurs' / name / 'src').glob('**/*.purs'))
+    candidates.extend((ROOT.parent / 'purust').glob('purust-*/src/**/*.purs'))
+    candidates.append(KERNEL)
+    return module_closure(candidates)
 
 
 def audit_generated(path):
@@ -83,6 +101,23 @@ def audit_generated(path):
             'whole_array_copy_in_kernel': False, 'sha256': digest(path)}
 
 
+def audit_rust_generated(path):
+    text = path.read_text()
+    native = text.split('pub fn Test_ArrayIndexing_nativeReads(', 1)[1].split('\npub fn ', 1)[0]
+    boxed = text.split('pub fn Test_ArrayIndexing_boxedReads(', 1)[1].split('\npub fn ', 1)[0]
+    for name, body in [('native', native), ('boxed', boxed)]:
+        if '.array_get(' not in body:
+            raise ValueError(f'{name} generated loop no longer reads through the borrowing accessor')
+        for forbidden in ['unwrap_array()', 'to_vec()', 'collect::<', 'mk_array(']:
+            if forbidden in body:
+                raise ValueError(f'{name} generated loop needs review: {forbidden} appears in the kernel')
+    if 'array_get' not in boxed:
+        raise ValueError('Boxed source must index the shared array without converting it')
+    return {'native': 'Rc<Vec<Value>> indexed through Value::array_get inside the generated loop',
+            'boxed': 'opaque BoxedArray is the same Value array; Value::array_get inside the generated loop',
+            'whole_array_copy_in_kernel': False, 'sha256': digest(path)}
+
+
 def build(directory, env):
     directory.mkdir(parents=True, exist_ok=True)
     marker = directory / '.array-indexing-workspace'
@@ -95,13 +130,17 @@ def build(directory, env):
     logs = directory / 'logs'
     logs.mkdir(exist_ok=True)
     deps = dependency_sources()
+    rust_deps = rust_dependency_sources()
     purs = shutil.which('purs', path=env['PATH'])
     if not purs:
         raise ValueError('The TAST PureScript fork must be available on PATH')
-    source_paths = [Path(__file__), ROOT / 'run/bak/go/spago.go.yaml', *DRIVERS.glob('*'), *deps]
+    source_paths = [Path(__file__), ROOT / 'run/bak/go/spago.go.yaml', ROOT / 'run/bak/rust/spago.rust.yaml',
+                    *DRIVERS.glob('*'), *deps, *rust_deps]
     for path in deps:
         source_paths.extend([path.with_suffix('.js'), path.with_suffix('.go')])
-    source_paths += [Path(purs), BACKEND, BACKEND.with_suffix('.js')]
+    for path in rust_deps:
+        source_paths.extend([path.with_suffix('.rs'), path.with_suffix('.rs.cargo.json')])
+    source_paths += [Path(purs), BACKEND, BACKEND.with_suffix('.js'), RUST_BACKEND, RUST_BACKEND.parent / 'purust.js']
     before = fingerprints(source_paths)
     commands = []
     commands.append(run_logged([purs, 'compile', *deps, '--codegen', 'corefn,js', '--output', directory / 'output'],
@@ -121,15 +160,31 @@ def build(directory, env):
     compiler = env.get('CC', 'clang')
     commands.append(run_logged([compiler, '-O3', '-o', directory / 'array-benchmark-c', DRIVERS / 'driver.c'],
                                directory, logs / 'clang.log', env))
+    rust_output = directory / 'rust-output'
+    commands.append(run_logged([purs, 'compile', *rust_deps, '--codegen', 'corefn', '--output', rust_output],
+                               ROOT, logs / 'rust-purs.log', env))
+    rust_project = directory / 'rust-project'
+    commands.append(run_logged([RUST_BACKEND, '--main', 'Test.ArrayIndexing', '--source', rust_output,
+                                '--out', rust_project], directory, logs / 'purust.log', env))
+    # The diagnostic drives the generated kernel directly; replace the
+    # application entrypoint with the timing/input harness.
+    shutil.copy2(DRIVERS / 'driver.rs', rust_project / 'src/main.rs')
+    rust_env = dict(env, CARGO_PROFILE_RELEASE_OPT_LEVEL='3', CARGO_PROFILE_RELEASE_DEBUG='false')
+    rust_binary = rust_project / 'target/release/purust_output'
+    commands.append(run_logged(['cargo', 'build', '--release', '--manifest-path', rust_project / 'Cargo.toml',
+                                '--bin', 'purust_output'], directory, logs / 'rust-cargo.log', rust_env))
+    rust_audit = audit_rust_generated(rust_project / 'Purs_Test_ArrayIndexing/src/lib.rs')
     if fingerprints(source_paths) != before:
         raise ValueError('Inputs changed during build')
-    artifacts = [directory / 'array-benchmark', directory / 'array-benchmark-c', directory / 'driver.mjs', generated,
+    artifacts = [directory / 'array-benchmark', directory / 'array-benchmark-c', rust_binary, directory / 'driver.mjs',
+                 generated, rust_project / 'Purs_Test_ArrayIndexing/src/lib.rs',
                  *sorted((directory / 'output').rglob('*.js'))]
     versions = {name: subprocess.check_output(command, env=env, text=True).strip() for name, command in {
         'go': ['go', 'version'], 'node': ['node', '--version'], 'purs': [purs, '--version'],
-        'clang': [compiler, '--version']}.items()}
+        'clang': [compiler, '--version'], 'rustc': ['rustc', '--version'], 'cargo': ['cargo', '--version']}.items()}
     manifest = {'schema': 1, 'sources': before, 'artifacts': fingerprints(artifacts),
-                'commands': commands, 'versions': versions, 'generated_audit': audit,
+                'commands': commands, 'versions': versions,
+                'generated_audit': {**audit, 'rust': rust_audit},
                 'profile': {key: env.get(key, '') for key in PROFILE_KEYS}}
     write_json(directory / 'manifest.json', manifest)
     print(f'Built and audited {directory}; run with --run-only after all compilation has stopped.')
@@ -158,6 +213,12 @@ def validate_rows(text, runtime, accesses, batches, seed):
                 raise ValueError('Go allocation regression')
             if not 0 <= row['probe_bytes_per_access'] <= 256:
                 raise ValueError('Go allocation preflight regression')
+        elif runtime == 'rust':
+            values = row['bytes_per_access']
+            if len(values) != batches or any(not 0 <= n <= 256 for n in values):
+                raise ValueError('Rust allocation regression')
+            if not 0 <= row['probe_bytes_per_access'] <= 256:
+                raise ValueError('Rust allocation preflight regression')
         elif row['bytes_per_access'] is not None:
             raise ValueError('JS allocation data is not available')
     if runtime == 'go':
@@ -181,12 +242,13 @@ def measure(directory, output, args, env):
     output.mkdir(parents=True, exist_ok=False)
     write_json(output / 'build-manifest.json', manifest)
     shutil.copy2(directory / 'output/purescript/Test_ArrayIndexing.go', output / 'ArrayIndexing.generated.go')
-    runtimes = [args.runtime] if args.runtime else ['go', 'js', 'c']
+    runtimes = [args.runtime] if args.runtime else ['go', 'js', 'c', 'rust']
     processes = []
     for process, seed in enumerate([5, 13, 29], 1):
         for runtime in runtimes:
             command = [directory / 'array-benchmark', '-accesses', args.accesses, '-batches', args.batches, '-seed', seed] if runtime == 'go' else [
                 directory / 'array-benchmark-c', '-accesses', args.accesses, '-batches', args.batches, '-seed', seed] if runtime == 'c' else [
+                directory / 'rust-project/target/release/purust_output', '-accesses', args.accesses, '-batches', args.batches, '-seed', seed] if runtime == 'rust' else [
                 'node', directory / 'driver.mjs', args.accesses, args.batches, seed]
             command = list(map(str, command))
             result = subprocess.run(command, cwd=directory, env=env, text=True, capture_output=True, timeout=120)
@@ -225,7 +287,7 @@ def main():
     action = parser.add_mutually_exclusive_group(required=True)
     action.add_argument('--build-only', action='store_true')
     action.add_argument('--run-only', action='store_true')
-    parser.add_argument('--runtime', choices=['go', 'js', 'c'], help='measure only this runtime; a build prepares all of them')
+    parser.add_argument('--runtime', choices=['go', 'js', 'c', 'rust'], help='measure only this runtime; a build prepares all of them')
     parser.add_argument('--build-dir', type=Path)
     parser.add_argument('--output', type=Path, help='new campaign directory, required with --run-only')
     parser.add_argument('--accesses', type=int, default=1 << 23)
