@@ -144,21 +144,21 @@ RowToList | ~ 0.87 μs | ~ 0.85 μs | ~ 0.08 μs |
 
 Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) | PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F# (adapted)<br>↓<br>[Fable (patched)](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) | Hand-written F#<br>↓<br>[Fable](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO | Hand-written FP-style Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) | Hand-written imperative Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) |
 ----------------------- | ------------------------- | -------------------------- | ------------------------------ | ------------------------ | ------------------------------ |
-AST Evaluation | ~ 0.25 μs | ~ 3.68 μs | ~ 0.23 μs | ~ 0.22 μs | ~ 0.23 μs |
-Fibonacci | ~ 0.10 μs | ~ 11.78 μs | ~ 0.09 μs | ~ 0.12 μs | ~ 0.10 μs |
-List Processing | ~ 18.57 μs | ~ 459.33 μs | ~ 17.07 μs | ~ 11.05 μs | ~ 0.51 μs |
-Tail Call Optimization | ~ 30.24 μs | ~ 23547.50 μs | ~ 10.93 μs | ~ 34.70 μs | ~ 34.63 μs |
-Deep Record Updates | ~ 3.27 μs | ~ 8728.98 μs | ~ 114.96 μs | ~ 107.97 μs | ~ 3.47 μs |
-Ackermann | ~ 16.66 μs | ~ 625.00 μs | ~ 15.60 μs | ~ 18.59 μs | ~ 18.36 μs |
-Church Numerals | ~ 169.57 μs | ~ 11792.17 μs | ~ 2249.51 μs | ~ 1033.78 μs | ~ 0.01 μs |
-Prime Sieve | ~ 146.47 μs | ~ 2194.96 μs | ~ 120.43 μs | ~ 78.88 μs | ~ 0.78 μs |
-Red-Black Tree | ~ 8449.35 μs | ~ 659207.04 μs | ~ 50862.42 μs | ~ 28737.38 μs | ~ 28247.96 μs |
-Polymorphism | ~ 0.05 μs | ~ 1588595.46 μs | ~ 7471.33 μs | ~ 0.01 μs | ~ 0.01 μs |
-State Monad | ~ 46.91 μs | ~ 826.12 μs | ~ 73.12 μs | ~ 27.36 μs | ~ 0.01 μs |
-Lazy Evaluation | ~ 0.01 μs | ~ 159056.38 μs | ~ 38342.83 μs | ~ 23675.83 μs | ~ 0.01 μs |
-Array Processing | ~ 0.04 μs | ~ 298.70 μs | ~ 3.28 μs | ~ 0.58 μs | ~ 0.25 μs |
-RowToList | ~ 0.07 μs | ~ 0.95 μs | ~ 0.10 μs | ~ 0.02 μs | ~ 0.01 μs |
-**Total Execution Time** | ~ 8.88 ms <br>(/C = 0.9x) | ~ 2455.35 ms <br>(/C = 249.5x) | ~ 99.28 ms <br>(/C = 10.1x) | ~ 53.73 ms <br>(/C = 5.5x) | ~ 28.31 ms <br>(/C = 2.9x) |
+AST Evaluation | ~ 0.239 μs | ~ 3.68 μs | ~ 0.23 μs | ~ 0.22 μs | ~ 0.23 μs |
+Fibonacci | ~ 0.107 μs | ~ 11.78 μs | ~ 0.09 μs | ~ 0.12 μs | ~ 0.10 μs |
+List Processing | ~ 0.133 μs | ~ 459.33 μs | ~ 17.07 μs | ~ 11.05 μs | ~ 0.51 μs |
+Tail Call Optimization | ~ 30.446 μs | ~ 23547.50 μs | ~ 10.93 μs | ~ 34.70 μs | ~ 34.63 μs |
+Deep Record Updates | ~ 3.272 μs | ~ 8728.98 μs | ~ 114.96 μs | ~ 107.97 μs | ~ 3.47 μs |
+Ackermann | ~ 18.473 μs | ~ 625.00 μs | ~ 15.60 μs | ~ 18.59 μs | ~ 18.36 μs |
+Church Numerals | ~ 178.626 μs | ~ 11792.17 μs | ~ 2249.51 μs | ~ 1033.78 μs | ~ 0.01 μs |
+Prime Sieve | ~ 148.579 μs | ~ 2194.96 μs | ~ 120.43 μs | ~ 78.88 μs | ~ 0.78 μs |
+Red-Black Tree | ~ 8532.771 μs | ~ 659207.04 μs | ~ 50862.42 μs | ~ 28737.38 μs | ~ 28247.96 μs |
+Polymorphism | ~ 0.037 μs | ~ 1588595.46 μs | ~ 7471.33 μs | ~ 0.01 μs | ~ 0.01 μs |
+State Monad | ~ 47.611 μs | ~ 826.12 μs | ~ 73.12 μs | ~ 27.36 μs | ~ 0.01 μs |
+Lazy Evaluation | ~ 0.001 μs | ~ 159056.38 μs | ~ 38342.83 μs | ~ 23675.83 μs | ~ 0.01 μs |
+Array Processing | ~ 0.034 μs | ~ 298.70 μs | ~ 3.28 μs | ~ 0.58 μs | ~ 0.25 μs |
+RowToList | ~ 0.057 μs | ~ 0.95 μs | ~ 0.10 μs | ~ 0.02 μs | ~ 0.01 μs |
+**Total Execution Time** | ~ 8.96 ms <br>(/C = 0.9x) | ~ 2455.35 ms <br>(/C = 249.5x) | ~ 99.28 ms <br>(/C = 10.1x) | ~ 53.73 ms <br>(/C = 5.5x) | ~ 28.31 ms <br>(/C = 2.9x) |
 
 #### C++
 
@@ -284,24 +284,24 @@ RowToList | ~ 0 μs |
 
 C Benchmark             | Hand-written imperative C<br>↓<br>clang -O3<br><br>(WIP) |
 ----------------------- | -------------------- |
-AST Evaluation | ~ 0.10 μs |
-Fibonacci | ~ 0.08 μs |
-List Processing | ~ 0.05 μs |
-Tail Call Optimization | ~ 33.78 μs |
-Deep Record Updates | ~ 3.41 μs |
-Ackermann | ~ 17.35 μs |
-Church Numerals | ~ 0 μs |
-Prime Sieve | ~ 1.07 μs |
-Red-Black Tree | ~ 9788 μs |
-Polymorphism | ~ 0 μs |
-State Monad | ~ 0 μs |
-Lazy Evaluation | ~ 0 μs |
-Array Processing | ~ 0.05 μs |
-RowToList | ~ 0 μs |
+AST Evaluation | ~ 0.097 μs |
+Fibonacci | ~ 0.084 μs |
+List Processing | ~ 0.051 μs |
+Tail Call Optimization | ~ 34.363 μs |
+Deep Record Updates | ~ 3.440 μs |
+Ackermann | ~ 18.461 μs |
+Church Numerals | ~ 0.001 μs |
+Prime Sieve | ~ 1.103 μs |
+Red-Black Tree | ~ 9862.000 μs |
+Polymorphism | ~ 0.001 μs |
+State Monad | ~ 0.001 μs |
+Lazy Evaluation | ~ 0.001 μs |
+Array Processing | ~ 0.051 μs |
+RowToList | ~ 0.001 μs |
 Array Indexing (excluded WIP) | ~ 6589.00 μs |
 JSON to Typed AST (excluded WIP) | ~ 10823.13 μs |
 JSON Decoding (excluded WIP) | ~ 657.69 μs |
-**Total Execution Time** | ~ 9.84 ms |
+**Total Execution Time** | ~ 9.92 ms |
 
 ### Extended benchmark results (I/O, mutability, async)
 

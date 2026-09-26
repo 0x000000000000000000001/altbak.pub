@@ -77,24 +77,46 @@ def aggregate(samples):
 
 
 def render_readme(original, results):
-    """Replace only the numeric cells of the four validated reference tables."""
+    """Replace only the numeric cells of the four validated reference tables.
+
+    A section may carry extra diagnostic rows (the C reference keeps excluded
+    `Array Indexing` and JSON cases measured by another campaign); they are
+    preserved verbatim because this runner never measures them.
+    """
     updated = original
     for name, result in results.items():
-        pattern = r"(#### " + re.escape(name) + r"\n)(.*?)(?=\n#### |\n> |\Z)"
+        pattern = r"(#### " + re.escape(name) + r"\n)(.*?)(?=\n#|\n> |\Z)"
         matches = list(re.finditer(pattern, updated, re.S))
         if len(matches) != 1:
             raise ValueError(f"Expected one README section for {name}")
         match = matches[0]
-        section = match[2]
-        labels = re.findall(r"^([^|\n]+)\|\s*~\s*[0-9.]+ μs", section, re.M)
-        if [label.strip() for label in labels] != TABLE_ROWS:
-            raise ValueError(f"Unexpected timing rows or order in README section {name}")
+        lines = match[2].splitlines(keepends=True)
         times = iter(result["times_us"])
-        section = re.sub(r"\|\s*~\s*[0-9.]+ μs", lambda _: f"| ~ {next(times):.3f} μs", section)
-        section, count = re.subn(r"\|\s*~\s*[0-9.]+ ms",
-                                 f"| ~ {result['sum_displayed_lines_ms']:.2f} ms", section)
-        if count != 1:
+        seen = []
+        totals = 0
+        for index, line in enumerate(lines):
+            if "|" not in line:
+                continue
+            label = line.split("|", 1)[0].strip()
+            if label in TABLE_ROWS:
+                line, count = re.subn(r"\|\s*~\s*[0-9.]+ μs",
+                                      lambda _: f"| ~ {next(times):.3f} μs", line, count=1)
+                if count != 1:
+                    raise ValueError(f"Missing timing cell for {label} in README section {name}")
+                seen.append(label)
+                lines[index] = line
+            elif label == "**Total Execution Time**":
+                line, count = re.subn(r"\|\s*~\s*[0-9.]+ ms",
+                                      f"| ~ {result['sum_displayed_lines_ms']:.2f} ms", line, count=1)
+                if count != 1:
+                    raise ValueError(f"Expected one total in README section {name}")
+                lines[index] = line
+                totals += 1
+        if seen != TABLE_ROWS:
+            raise ValueError(f"Unexpected timing rows or order in README section {name}")
+        if totals != 1:
             raise ValueError(f"Expected one total in README section {name}")
+        section = "".join(lines)
         updated = updated[:match.start(2)] + section + updated[match.end(2):]
     return updated
 
