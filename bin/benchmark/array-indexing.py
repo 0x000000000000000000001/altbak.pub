@@ -106,15 +106,19 @@ def audit_rust_generated(path):
     native = text.split('pub fn Test_ArrayIndexing_nativeReads(', 1)[1].split('\npub fn ', 1)[0]
     boxed = text.split('pub fn Test_ArrayIndexing_boxedReads(', 1)[1].split('\npub fn ', 1)[0]
     for name, body in [('native', native), ('boxed', boxed)]:
-        if '.array_get(' not in body:
-            raise ValueError(f'{name} generated loop no longer reads through the borrowing accessor')
+        if 'array_get_int(' not in body and '.array_get(' not in body:
+            raise ValueError(f'{name} generated loop no longer reads through a borrowing accessor')
         for forbidden in ['unwrap_array()', 'to_vec()', 'collect::<', 'mk_array(']:
             if forbidden in body:
                 raise ValueError(f'{name} generated loop needs review: {forbidden} appears in the kernel')
-    if 'array_get' not in boxed:
+    if 'array_get_int(' in boxed:
+        representation = 'Rc<Vec<Value>> read through Value::array_get_int (Int elements copied, not cloned)'
+    elif 'array_get(' in boxed:
+        representation = 'Rc<Vec<Value>> read through Value::array_get (boxed element cloned)'
+    else:
         raise ValueError('Boxed source must index the shared array without converting it')
-    return {'native': 'Rc<Vec<Value>> indexed through Value::array_get inside the generated loop',
-            'boxed': 'opaque BoxedArray is the same Value array; Value::array_get inside the generated loop',
+    return {'native': representation,
+            'boxed': 'opaque BoxedArray is the same Value array; ' + representation.split(' ', 1)[1],
             'whole_array_copy_in_kernel': False, 'sha256': digest(path)}
 
 
