@@ -3,7 +3,7 @@ use std::alloc::{GlobalAlloc, Layout};
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::time::Instant;
 
-use purust_core::{mk_array, UnknownType, Value};
+use purust_core::{mk_array, mk_int_array, UnknownType, Value};
 use Purs_Test_ArrayIndexing::{Test_ArrayIndexing_boxedReads, Test_ArrayIndexing_nativeReads};
 
 // Count requested bytes so the collector sees the same allocation signal as
@@ -47,9 +47,10 @@ fn main() {
 
     for size in [16i64, 1024, 16384] {
         let values: Vec<i64> = (0..size).map(|i| (i * 17 + seed * 31) % 251 + 1).collect();
-        let elements: Vec<UnknownType> = values.iter().map(|v| Value::Int(*v)).collect();
-        let native = mk_array(elements);
-        let boxed = native.clone();
+        // The native representation keeps the integers unboxed; the boxed
+        // representation stores one Value per element.
+        let native = mk_int_array(values.clone());
+        let boxed = mk_array(values.iter().map(|v| Value::Int(*v)).collect());
         let start = seed % size;
         let oracle = |count: i64| -> i64 {
             let total: i64 = values.iter().sum();
