@@ -319,3 +319,19 @@ Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 47830
 > [!NOTE]
 > **Hardware Context**
 > Measurements ran on an **Apple M4 Pro with 10 performance cores and 4 efficiency cores**, without explicit CPU affinity. The extended *Parallelism* row compares JavaScript's single-thread scheduler with Go/Rust's multicore runtimes.
+
+### Compilation times (totals)
+
+#### gopurs
+
+Benchmark   | gopurs.js | gopurs Go compiled
+----------- | --------- | ------------------
+b8x         | (WIP)     | (WIP)
+gopurs-aff  | ~ 7511 ms | ~ 4321 ms
+
+#### purust
+
+Benchmark   | purust.js | purust Rust compiled
+----------- | --------- | ---------------------
+b8x         | (WIP)     | (WIP)
+gopurs-aff  | (WIP)     | (WIP)
