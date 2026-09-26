@@ -326,12 +326,12 @@ Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 47830
 
 Benchmark   | gopurs.js | gopurs Go compiled
 ----------- | --------- | ------------------
-b8x         | (WIP)     | (WIP)
-gopurs-aff  | ~ 7511 ms | ~ 4321 ms
+[b8x](https://github.com/0x000000000000000000001/b8x.pub) | (WIP)     | (WIP)
+[gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 7511 ms | ~ 4321 ms
 
 #### purust
 
 Benchmark   | purust.js | purust Rust compiled
 ----------- | --------- | ---------------------
-b8x         | (WIP)     | (WIP)
-gopurs-aff  | (WIP)     | (WIP)
+[b8x](https://github.com/0x000000000000000000001/b8x.pub) | (WIP)     | (WIP)
+[purust-aff](https://github.com/0x000000000000000000001/purust-aff)  | (WIP)     | (WIP)
