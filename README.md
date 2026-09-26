@@ -48,9 +48,9 @@ State Monad | ~ 48.23 μs | ~ 10.95 μs | ~ 46.87 μs | ~ 0.42 μs |
 Lazy Evaluation | ~ 14608.29 μs | ~ 10604.88 μs | ~ 17513.12 μs | ~ 321.48 μs |
 Array Processing | ~ 7.35 μs | ~ 3.75 μs | ~ 3.12 μs | ~ 0.50 μs |
 RowToList | ~ 0.04 μs | ~ 0.02 μs | ~ 0.06 μs | ~ 0.02 μs |
-Array Indexing (excluded WIP) | ~ 25.30 ms | — | — | — |
-JSON to Typed AST (excluded WIP) | ~ 78.19 ms | — | — | — |
-JSON Decoding (excluded WIP) | ~ 9.28 ms | — | — | — |
+Array Indexing (excluded WIP) | ~ 25303.33 μs | — | — | — |
+JSON to Typed AST (excluded WIP) | ~ 78190.00 μs | — | — | — |
+JSON Decoding (excluded WIP) | ~ 9283.94 μs | — | — | — |
 **Total Execution Time** | ~ 129.10 ms <br>(/C = 13.1x) | ~ 66.89 ms <br>(/C = 6.8x) | ~ 48.48 ms <br>(/C = 4.9x) | ~ 30.54 ms <br>(/C = 3.1x) |
 
 Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
@@ -73,9 +73,9 @@ State Monad | ~ 150.94 μs | ~ 303.56 μs | ~ 52.10 μs | ~ 0.33 μs |
 Lazy Evaluation | ~ 247.11 μs | ~ 71378.08 μs | ~ 13865.38 μs | ~ 0.27 μs |
 Array Processing | ~ 19.26 μs | ~ 43.81 μs | ~ 4.90 μs | ~ 0.45 μs |
 RowToList | ~ 0.15 μs | ~ 0.50 μs | ~ 0.07 μs | ~ 0.03 μs |
-Array Indexing (excluded WIP) | ~ 3.96 ms | — | — | — |
-JSON to Typed AST (excluded WIP) | ~ 19.98 ms | — | — | — |
-JSON Decoding (excluded WIP) | ~ 2.24 ms | — | — | — |
+Array Indexing (excluded WIP) | ~ 3962.17 μs | — | — | — |
+JSON to Typed AST (excluded WIP) | ~ 19977.96 μs | — | — | — |
+JSON Decoding (excluded WIP) | ~ 2241.42 μs | — | — | — |
 **Total Execution Time** | ~ 13.28 ms <br>(/C = 1.3x) | ~ 1464.74 ms <br>(/C = 148.8x) | ~ 88.99 ms <br>(/C = 9.0x) | ~ 11.34 ms <br>(/C = 1.2x) |
 
 Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
