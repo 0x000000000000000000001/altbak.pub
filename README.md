@@ -364,7 +364,20 @@ Benchmark   | gopurs.js | gopurs Go compiled
 [gopurs-ordered-collections](https://github.com/0x000000000000000000001/gopurs-ordered-collections)  | ~ 8361 ms | ~ 2892 ms
 [gopurs-partial](https://github.com/0x000000000000000000001/gopurs-partial)  | ~ 4802 ms | ~ 999 ms
 [gopurs-prelude](https://github.com/0x000000000000000000001/gopurs-prelude)  | ~ 5329 ms | ~ 1376 ms
-**Total Time** | ~ 230315 ms | ~ 69244 ms <br>(/JS = 0.3x)
+[gopurs-random](https://github.com/0x000000000000000000001/gopurs-random)  | ~ 4776 ms | ~ 1189 ms
+[gopurs-record](https://github.com/0x000000000000000000001/gopurs-record)  | ~ 5003 ms | ~ 1112 ms
+[gopurs-refs](https://github.com/0x000000000000000000001/gopurs-refs)  | ~ 4887 ms | ~ 1137 ms
+[gopurs-run](https://github.com/0x000000000000000000001/gopurs-run)  | ~ 8056 ms | ~ 2378 ms
+[gopurs-spec](https://github.com/0x000000000000000000001/gopurs-spec)  | ~ 14836 ms | ~ 6819 ms
+[gopurs-st](https://github.com/0x000000000000000000001/gopurs-st)  | ~ 4876 ms | ~ 1068 ms
+[gopurs-strings](https://github.com/0x000000000000000000001/gopurs-strings)  | ~ 6421 ms | ~ 1933 ms
+[gopurs-strings-extra](https://github.com/0x000000000000000000001/gopurs-strings-extra)  | ~ 6677 ms | ~ 3330 ms
+[gopurs-unfoldable](https://github.com/0x000000000000000000001/gopurs-unfoldable)  | ~ 4891 ms | ~ 1070 ms
+[gopurs-unsafe-coerce](https://github.com/0x000000000000000000001/gopurs-unsafe-coerce)  | ~ 4902 ms | ~ 1015 ms
+[gopurs-uuid](https://github.com/0x000000000000000000001/gopurs-uuid)  | ~ 10000 ms | ~ 3916 ms
+[gopurs-variant](https://github.com/0x000000000000000000001/gopurs-variant)  | ~ 5431 ms | ~ 1806 ms
+[gopurs-yoga-json](https://github.com/0x000000000000000000001/gopurs-yoga-json)  | ~ 18107 ms | ~ 9760 ms
+**Total Time** | ~ 329178 ms | ~ 105777 ms <br>(/JS = 0.3x)
 
 #### [purust](https://github.com/0x000000000000000000001/purust)
 
