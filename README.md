@@ -377,7 +377,7 @@ Benchmark   | gopurs.js | gopurs Go compiled
 [gopurs-uuid](https://github.com/0x000000000000000000001/gopurs-uuid)  | ~ 10000 ms | ~ 3916 ms
 [gopurs-variant](https://github.com/0x000000000000000000001/gopurs-variant)  | ~ 5431 ms | ~ 1806 ms
 [gopurs-yoga-json](https://github.com/0x000000000000000000001/gopurs-yoga-json)  | ~ 18107 ms | ~ 9760 ms
-**Total Time** | ~ 329178 ms | ~ 105777 ms <br>(/JS = 0.3x)
+**Total Time** | ~ 329.18 s | ~ 105.78 s <br>(/JS = 0.3x)
 
 #### [purust](https://github.com/0x000000000000000000001/purust)
 
