@@ -332,7 +332,18 @@ Benchmark   | gopurs.js | gopurs Go compiled
 [gopurs-arrays](https://github.com/0x000000000000000000001/gopurs-arrays)  | ~ 6714 ms (failed) | ~ 4782 ms
 [gopurs-assert](https://github.com/0x000000000000000000001/gopurs-assert)  | ~ 600 ms | ~ 316 ms
 [gopurs-avar](https://github.com/0x000000000000000000001/gopurs-avar)  | ~ 6713 ms | ~ 3524 ms
-**Total Time** | ~ 28949 ms | ~ 16287 ms <br>(/JS = 0.6x)
+[gopurs-catenable-lists](https://github.com/0x000000000000000000001/gopurs-catenable-lists)  | ~ 5380 ms | ~ 2341 ms
+[gopurs-console](https://github.com/0x000000000000000000001/gopurs-console)  | ~ 4576 ms | ~ 1467 ms
+[gopurs-datetime](https://github.com/0x000000000000000000001/gopurs-datetime)  | ~ 6711 ms | ~ 2753 ms
+[gopurs-effect](https://github.com/0x000000000000000000001/gopurs-effect)  | ~ 2176 ms | ~ 254 ms
+[gopurs-enums](https://github.com/0x000000000000000000001/gopurs-enums)  | ~ 5895 ms | ~ 1445 ms
+[gopurs-exceptions](https://github.com/0x000000000000000000001/gopurs-exceptions)  | ~ 2396 ms | ~ 358 ms
+[gopurs-foldable-traversable](https://github.com/0x000000000000000000001/gopurs-foldable-traversable)  | ~ 5690 ms | ~ 1605 ms
+[gopurs-foreign](https://github.com/0x000000000000000000001/gopurs-foreign)  | ~ 5857 ms | ~ 2516 ms
+[gopurs-foreign-object](https://github.com/0x000000000000000000001/gopurs-foreign-object)  | ~ 8879 ms | ~ 2970 ms
+[gopurs-free](https://github.com/0x000000000000000000001/gopurs-free)  | ~ 5566 ms | ~ 1565 ms
+[gopurs-functions](https://github.com/0x000000000000000000001/gopurs-functions)  | ~ 2094 ms | ~ 289 ms
+**Total Time** | ~ 84169 ms | ~ 33850 ms <br>(/JS = 0.4x)
 
 #### [purust](https://github.com/0x000000000000000000001/purust)
 
