@@ -4,7 +4,13 @@ module Test.WorkloadMap where
 -- Replay: --test WorkloadMap --expected 400040000
 -- (about 59856 us on the current compiler).
 --
--- The shipped Data.Map: a real library on the same balanced-tree shape as the Red-Black Tree kernel.
+-- The shipped Data.Map. Measured: ~2.7 us per insert into a 20k map, with
+-- ~161 allocations (8 for an empty map), while lookups stay ~170 ns. The
+-- library stores sizes, so its algorithm is O(log n); the cost comes from
+-- erasure boxing around its polymorphic helpers (`unsafeBalancedNode`,
+-- `insertWith`): every node boxes subtrees into Value::Class and applies
+-- eta closures. Removing that needs specialization (the monomorphisation
+-- pass), not codegen cleanup: clone/dispatch tidy-ups measured flat.
 
 import Prelude
 
