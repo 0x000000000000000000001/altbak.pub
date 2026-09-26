@@ -34,9 +34,10 @@ representations.
 `Array Int` values may also keep their elements unboxed (`Value::IntArray`).
 When a self-recursive loop captures such an array and reads it by index, the
 generator emits the loop twice: the generic one, and one over a borrowed
-`&[i64]` slice that is selected once per loop call. The native row materializes
-its input as `IntArray`, so it measures the slice path, while the boxed row
-passes a boxed array and keeps the accessor path.
+`&[i64]` slice that is selected once per loop call. `Array Int` reads are typed
+as `Int`, so the integer is only boxed where a consumer needs a `Value`. The
+native row materializes its input as `IntArray`, so it measures the slice path,
+while the boxed row passes a boxed array and keeps the accessor path.
 
 Each kernel reads a runtime-created array of 16, 1,024 or 16,384 integers,
 wrapping its index and accumulating a checked checksum. Input creation is
