@@ -328,6 +328,13 @@ Benchmark   | gopurs.js | gopurs Go compiled
 ----------- | --------- | ------------------
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) | (WIP)     | (WIP)
 [gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 7511 ms | ~ 4321 ms
+[gopurs-argonaut-core](https://github.com/0x000000000000000000001/gopurs-argonaut-core)  | ~ 7411 ms | ~ 3344 ms
+[gopurs-arrays](https://github.com/0x000000000000000000001/gopurs-arrays)  | ~ 6714 ms (failed) | ~ 4782 ms
+[gopurs-assert](https://github.com/0x000000000000000000001/gopurs-assert)  | ~ 600 ms | ~ 316 ms
+[gopurs-avar](https://github.com/0x000000000000000000001/gopurs-avar)  | ~ 6713 ms | ~ 3524 ms
+
+> [!NOTE]
+> On `gopurs-arrays`, the `gopurs.js` compiler crashes with `RangeError: Maximum call stack size exceeded` during `optimize + emit`; the Go-compiled compiler completes the same build. The reported time is the backend total at failure.
 
 #### [purust](https://github.com/0x000000000000000000001/purust)
 
