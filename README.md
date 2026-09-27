@@ -324,7 +324,7 @@ Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 47830
 
 #### [gopurs](https://github.com/0x000000000000000000001/gopurs)
 
-Benchmark   | gopurs.js | gopurs Go compiled
+Benchmark   | gopurs.js (WIP) | gopurs Go compiled (WIP)
 ----------- | --------- | ------------------
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 77.4 s | ~ 57.5 s <br>(/JS = 0.74x)
 [gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 7784 ms | ~ 2553 ms
@@ -380,11 +380,9 @@ Benchmark   | gopurs.js | gopurs Go compiled
 **Total gopurs-*** | ~ 329.18 s | ~ 105.78 s <br>(/JS = 0.3x)
 **Total** | ~ 406.6 s | ~ 163.3 s <br>(/JS = 0.4x)
 
-> *b8x* : temps du **backend gopurs seul** (`backend total`), hors frontend purs (htdocs/purescript, identique dans les deux colonnes) et hors construction du compilateur. Go mesuré avec `GOPURS_PBO_JOBS=8`, `GOGC=off`, `GOMEMLIMIT=10GiB`. Sortie générée identique entre les deux backends (2 974 fichiers Go).
-
 #### [purust](https://github.com/0x000000000000000000001/purust)
 
-Benchmark   | purust.js | purust Rust compiled
+Benchmark   | purust.js (WIP) | purust Rust compiled (WIP)
 ----------- | --------- | ---------------------
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) | (WIP)     | (WIP)
 [purust-aff](https://github.com/0x000000000000000000001/purust-aff)  | (WIP)     | (WIP)
