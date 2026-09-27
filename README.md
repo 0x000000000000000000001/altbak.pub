@@ -326,7 +326,7 @@ Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 47830
 
 Benchmark   | gopurs.js | gopurs Go compiled
 ----------- | --------- | ------------------
-[b8x](https://github.com/0x000000000000000000001/b8x.pub) | (WIP)     | (WIP)
+[b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 77.4 s | ~ 57.5 s <br>(/JS = 0.74x)
 [gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 7784 ms | ~ 2553 ms
 [gopurs-argonaut-core](https://github.com/0x000000000000000000001/gopurs-argonaut-core)  | ~ 7777 ms | ~ 2000 ms
 [gopurs-arrays](https://github.com/0x000000000000000000001/gopurs-arrays)  | ~ 6771 ms (failed) | ~ 3903 ms
@@ -377,7 +377,10 @@ Benchmark   | gopurs.js | gopurs Go compiled
 [gopurs-uuid](https://github.com/0x000000000000000000001/gopurs-uuid)  | ~ 10000 ms | ~ 3916 ms
 [gopurs-variant](https://github.com/0x000000000000000000001/gopurs-variant)  | ~ 5431 ms | ~ 1806 ms
 [gopurs-yoga-json](https://github.com/0x000000000000000000001/gopurs-yoga-json)  | ~ 18107 ms | ~ 9760 ms
-**Total Time** | ~ 329.18 s | ~ 105.78 s <br>(/JS = 0.3x)
+**Total gopurs-*** | ~ 329.18 s | ~ 105.78 s <br>(/JS = 0.3x)
+**Total** | ~ 406.6 s | ~ 163.3 s <br>(/JS = 0.4x)
+
+> *b8x* : temps du **backend gopurs seul** (`backend total`), hors frontend purs (htdocs/purescript, identique dans les deux colonnes) et hors construction du compilateur. Go mesuré avec `GOPURS_PBO_JOBS=8`, `GOGC=off`, `GOMEMLIMIT=10GiB`. Sortie générée identique entre les deux backends (2 974 fichiers Go).
 
 #### [purust](https://github.com/0x000000000000000000001/purust)
 
