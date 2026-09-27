@@ -380,8 +380,6 @@ Benchmark   | gopurs.js (WIP) | gopurs Go compiled (WIP)
 **Total gopurs-*** | ~ 329.18 s | ~ 105.78 s <br>(/JS = 0.3x)
 **Total** | ~ 406.6 s | ~ 154.5 s <br>(/JS = 0.38x)
 
-> *b8x* : temps du backend gopurs seul (`backend total`), hors frontend purs (htdocs/purescript, identique dans les deux colonnes) et hors construction du compilateur. Go mesuré avec les défauts du lanceur : `GOPURS_PBO_JOBS=8`, `GOPURS_PREPARE_JOBS=8`, `GOGC=off`, `GOMEMLIMIT=10GiB`. Sortie générée identique entre les deux backends (2 974 fichiers Go).
-
 #### [purust](https://github.com/0x000000000000000000001/purust)
 
 Benchmark   | purust.js (WIP) | purust Rust compiled (WIP)
