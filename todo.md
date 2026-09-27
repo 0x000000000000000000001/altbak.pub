@@ -36,7 +36,7 @@ The headers link to each backend's evidence and limitations. **JS** refers to th
 | 9 | Keeping numeric parameters and locals unboxed | 🟡 | 🟡 | ⚪ | 🟡 | 🟡 | 🔴 | ⚪ | ⚪ | ⚪ | ⚪ | 🟡 |
 | 10 | Direct emission of primitive operations | 🟡 (PBO) | 🟢 (PBO) | 🟡 (PBO) | 🟢 (PBO) | 🟡 (PBO) | 🟡 | 🟢 | 🟢 (PBO) | 🟢 (PBO) | 🟡 | 🟢 |
 | 11 | Native foreign-call lowering / FFI bridge specialization | 🟡 | 🟡 | ⚪ | 🟡 | 🔴 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | 🟡 |
-| 12 | String / Char payload representation selected by the backend | ⚪ | 🟡 | 🔴 | 🟢 | ⚪ | 🔴 | ⚪ | ⚪ | 🔴 | 🔴 | 🔴 |
+| 12 | String / Char payload representation selected by the backend | ⚪ | 🟡 | 🔴 | 🟢 | ⚪ | 🔴 | ⚪ | ⚪ | 🟡 | 🔴 | 🔴 |
 | 13 | ADT fields specialized by payload type | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🟡 |
 | 14 | Memory reuse after proving ownership / uniqueness (FBIP) | ⚪ | 🟡 | 🟡 | 🟡 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
 | 15 | ADT reuse specialization: write only changed fields | ⚪ | 🟡 | 🟡 | 🔴 | 🟡 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
