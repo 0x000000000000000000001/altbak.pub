@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Build or measure JSON decoding diagnostics in Go and JavaScript."""
+"""Build or measure JSON decoding diagnostics in Go, JavaScript, C and Rust."""
 import argparse
 import gzip
 import hashlib
 import json
 import os
 from pathlib import Path
+import re
 import shutil
 import statistics
 import subprocess
@@ -17,6 +18,7 @@ FIXTURES = ROOT / 'test/fixtures/json-typed-ast'
 SOURCE_FILES = [SOURCES / ('JsonTypedAst.' + ext) for ext in ['purs', 'go', 'js']]
 COMPILER = ROOT.parent / 'gopurs/gopurs'
 PBO = ROOT.parent / 'purescript-backend-optimizer-gopurs'
+RUST_BACKEND = ROOT.parent / 'purust/purust/bin/purust'
 SUITES = ['JsonTypedAst', 'JsonDecoding']
 # Native C/C++ references exist for the JSON diagnostics only; they are built
 # next to the Go and JS artifacts and validated against the same frozen oracle.
@@ -39,7 +41,7 @@ SIMDJSON_PREFIX = Path(os.environ.get('SIMDJSON_PREFIX', '/opt/homebrew/opt/simd
 # only have to be rejected: the exact Argonaut messages are a PureScript
 # library contract and the fixture excludes error cases from timing anyway.
 C_EXTRA_SUCCESSES = {'optional-fields-missing', 'optional-fields-null'}
-C_SEQUENCE = ['go', 'c', 'js', 'js', 'c', 'go', 'go', 'c', 'js']
+C_SEQUENCE = ['go', 'rust', 'c', 'js', 'js', 'c', 'rust', 'go', 'go', 'c', 'js', 'rust']
 
 def typed_purs():
     candidates = list((ROOT.parent / 'purescript/.stack-work/dist').glob('*/**/build/purs/purs'))
@@ -49,7 +51,7 @@ def typed_purs():
 
 def source_files(suite):
     if suite == 'JsonTypedAst': return SOURCE_FILES
-    return [SOURCES / (suite + '.' + ext) for ext in ['purs', 'go', 'js']]
+    return [SOURCES / (suite + '.' + ext) for ext in ['purs', 'go', 'js', 'rs']]
 
 def fixtures(suite):
     return FIXTURES if suite == 'JsonTypedAst' else ROOT / 'test/fixtures/json-decoding'
@@ -144,7 +146,11 @@ def fingerprint(suite='JsonTypedAst'):
     # compiler binary. A library change must invalidate a previous build.
     for source_root in ([PBO / 'src'] if suite == 'JsonTypedAst' else []) + [p / 'src' for p in COMPILER.parent.glob('gopurs-*') if (p / 'spago.yaml').is_file()]:
         paths += [p for p in source_root.rglob('*') if p.suffix in {'.purs', '.go', '.js'}]
-    return {str(p): sha(p) for p in sorted(paths)}
+    # The Rust runtime compiles the same sources against the purust ports.
+    paths += [RUST_BACKEND, RUST_BACKEND.with_suffix('.js')]
+    for source_root in [p / 'src' for p in (ROOT.parent / 'purust').glob('purust-*') if (p / 'spago.yaml').is_file()]:
+        paths += [p for p in source_root.rglob('*') if p.suffix in {'.purs', '.rs'}]
+    return {str(p): sha(p) for p in sorted(set(paths)) if p.is_file()}
 
 def environment():
     env = {k:v for k,v in os.environ.items() if not k.startswith(('GOPURS_', 'NEUTRAL_', 'DIAG_')) and k not in ['PPROF','GODEBUG','GOMEMLIMIT','GOFLAGS','GOEXPERIMENT','NODE_OPTIONS']}
@@ -164,10 +170,62 @@ def call(command, cwd, log, env):
 
 def copy_sources(destination, native=True, suite='JsonTypedAst'):
     for source in source_files(suite):
+        # Rust FFI is consumed by the purust build only.
+        if source.suffix == '.rs': continue
         if not native and source.suffix == '.go': continue
         target = destination / 'Test' / source.relative_to(SOURCES)
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, target)
+
+def rust_packages():
+    packages = {}
+    for directory in (ROOT.parent / 'purust').glob('purust-*'):
+        config = directory / 'spago.yaml'
+        if not config.is_file(): continue
+        match = re.search(r'name:\s*"?([A-Za-z0-9_.-]+)"?\s*$', config.read_text(), re.MULTILINE)
+        if match: packages[match.group(1)] = directory
+    return packages
+
+
+def build_rust(work, env, suite):
+    rust = work / 'rust'
+    (rust / 'src/Test').mkdir(parents=True, exist_ok=True)
+    for source in source_files(suite):
+        # purs still requires the JS FFI module to typecheck; purust resolves
+        # the Rust implementation next to the source.
+        if source.suffix not in ['.purs', '.rs', '.js']: continue
+        shutil.copy2(source, rust / 'src/Test' / source.name)
+    config = 'package:\n  name: json-diagnostic-rust\n  dependencies:\n'
+    for dep in dependencies(suite): config += '    - ' + dep + '\n'
+    config += 'workspace:\n  packageSet:\n    registry: 77.10.1\n  extraPackages:\n'
+    for name, path in sorted(rust_packages().items()):
+        config += f'    {name}:\n      path: {json.dumps(str(path))}\n'
+    (rust / 'spago.yaml').write_text(config)
+    call(['spago', 'build'], rust, work/'logs/rust-purs.log', env)
+    project = rust / 'rust-project'
+    call([RUST_BACKEND, '--main', 'Test.' + suite, '--source', 'output', '--out', str(project)],
+         rust, work/'logs/rust-purust.log', env)
+    rust_env = dict(env, CARGO_PROFILE_RELEASE_OPT_LEVEL='3', CARGO_PROFILE_RELEASE_DEBUG='false')
+    call(['cargo', 'build', '--release', '--manifest-path', str(project / 'Cargo.toml'),
+          '--bin', 'purust_output'], rust, work/'logs/rust-cargo.log', rust_env)
+    binary = project / 'target/release/purust_output'
+    sources = {str(path): sha(path) for path in sorted((rust/'src/Test').glob('*'))}
+    sources[str(rust/'spago.yaml')] = sha(rust/'spago.yaml')
+    return {'suite': suite, 'binary_sha256': sha(binary), 'sources': sources,
+            'rustc': subprocess.check_output(['rustc', '--version'], env=env, text=True).strip()}
+
+
+def check_rust(work, manifest, suite):
+    section = manifest.get('rust')
+    if not section or section['suite'] != suite:
+        raise ValueError('Build has no Rust runtime for this suite')
+    for path, expected in section['sources'].items():
+        if sha(Path(path)) != expected:
+            raise ValueError(f'Stale Rust source: {path}')
+    if sha(work / 'rust/rust-project/target/release/purust_output') != section['binary_sha256']:
+        raise ValueError('Stale Rust binary')
+    return section
+
 
 def build_js(work, env, suite='JsonTypedAst'):
     js = work / 'js'
@@ -193,7 +251,7 @@ def main():
     p.add_argument('--suite',choices=SUITES,default='JsonTypedAst')
     p.add_argument('--workspace',type=Path)
     p.add_argument('--output',type=Path)
-    p.add_argument('--runtime', choices=['go', 'js', 'c'], help='measure only the selected runtime; builds retain both artifacts')
+    p.add_argument('--runtime', choices=['go', 'js', 'c', 'rust'], help='measure only the selected runtime; builds retain both artifacts')
     p.add_argument('--resume-build',action='store_true',help='resume a failed build in this workspace')
     args=p.parse_args();suite=args.suite;env=environment()
     work=(args.workspace or ROOT/'var/benchmark'/('json-diagnostic' if suite == 'JsonTypedAst' else 'json-decoding')).resolve()
@@ -233,9 +291,10 @@ def main():
         call(['go','build','-pgo=off','-o',work/'benchmark','./main'],work/'output',work/'logs/go.log',build_env)
         build_js(work,env,suite)
         c_build=build_c(work,env,suite)
+        rust_build=build_rust(work,env,suite) if suite == 'JsonDecoding' else None
         if before!=fingerprint(suite): raise ValueError('Source changed during build')
         manifest={'suite':suite,'sources':before,'binary_sha256':sha(work/'benchmark'),'js_sha256':sha(work/'benchmark.mjs'),
-                  'c':c_build,
+                  'c':c_build, 'rust':rust_build,
                   'go':subprocess.check_output(['go','version'],env=env,text=True).strip(),
                   'purs':subprocess.check_output(['purs','--version'],env=env,text=True).strip(),
                   'generated_tast':{str(f.relative_to(work)):sha(f) for f in sorted((work/'output').glob('*/corefn.json'))}}
@@ -251,16 +310,19 @@ def main():
     out=args.output.resolve();out.mkdir(parents=True,exist_ok=False)
     corpus, corpus_info=corpus_data(suite)
     (out/'corpus.json').write_bytes(corpus);env['DIAG_CORPUS']=str(out/'corpus.json')
-    default_runtimes = ['go', 'js'] + (['c'] if suite in C_DRIVERS else [])
+    default_runtimes = ['go', 'js'] + (['c'] if suite in C_DRIVERS else []) + (['rust'] if manifest.get('rust') else [])
     runtimes = [args.runtime] if args.runtime else default_runtimes
     results = {runtime: [] for runtime in runtimes}
     c_reference = check_c(work, manifest, env, suite) if 'c' in runtimes else None
+    if 'rust' in runtimes: check_rust(work, manifest, suite)
     oracle = json.loads((fixtures(suite)/'expected.json').read_text())
     for index,backend in enumerate(C_SEQUENCE):
         if backend not in runtimes: continue
         log=out/f'{index}-{backend}.log'
         if backend == 'c':
             call([work/'benchmark-c'], work, log, env)
+        elif backend == 'rust':
+            call([work/'rust/rust-project/target/release/purust_output'], work, log, env)
         else:
             call([work/'benchmark'] if backend=='go' else ['node',work/'benchmark.mjs'],work,log,env)
         result=json.loads(log.read_text())
