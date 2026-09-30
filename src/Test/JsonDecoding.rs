@@ -86,7 +86,17 @@ pub fn Test_JsonDecoding_drive(
             report.push_str(&driver_json_string(hash));
         }
         report.push_str("],\"phases\":{");
-        let phases = ["parse", "decode", "combined"];
+        // The Go and C drivers select the measured phases and their order
+        // through DIAG_PHASES; keep the same protocol for paired campaigns.
+        let requested = std::env::var("DIAG_PHASES").unwrap_or_else(|_| "parse,decode,combined".into());
+        let phases: Vec<String> = requested.split(',').map(|name| name.trim().to_owned()).collect();
+        for name in &phases {
+            assert!(
+                ["parse", "decode", "combined"].contains(&name.as_str()),
+                "Data.JsonDecoding: unknown phase {}",
+                name
+            );
+        }
         for (phase_index, phase) in phases.iter().enumerate() {
             if phase_index > 0 {
                 report.push(',');
@@ -100,7 +110,7 @@ pub fn Test_JsonDecoding_drive(
                 let start = Instant::now();
                 let mut results: Vec<crate::UnknownType> = Vec::with_capacity(indices.len());
                 for index in &indices {
-                    let result = match *phase {
+                    let result = match phase.as_str() {
                         "parse" => parse(contents[*index].clone()),
                         "decode" => decode(parsed[*index].clone()),
                         _ => decode_text(contents[*index].clone()),
@@ -110,7 +120,7 @@ pub fn Test_JsonDecoding_drive(
                 let elapsed = start.elapsed().as_nanos() as f64 / 1000.0;
                 for (slot, result) in results.into_iter().enumerate() {
                     let index = indices[slot];
-                    let (raw, expected) = if *phase == "parse" {
+                    let (raw, expected) = if phase.as_str() == "parse" {
                         (encode(result), &expected_json[index])
                     } else {
                         (fingerprint(result), &expected_ast[index])
