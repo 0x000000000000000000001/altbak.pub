@@ -1,5 +1,10 @@
 # Native plans and shared dictionaries for purust JSON decoding
 
+This is the initial 6 817.98 µs milestone. The subsequent
+[generated-decoder/native-record cycle](2026-09-30-rust-json-native.md) publishes
+**1 372.79 µs** with the preserved optimized Go/C references and the corrected
+single-threaded Go measurement environment.
+
 The Rust benchmark table had no JSON Decoding cell. The Go and C cells were
 produced by the preserved-build protocol of
 `var/benchmark/json-reference-owned-20260925` (six phase-order permutations,
@@ -68,11 +73,12 @@ dependencies resolved).
 
 ## Remaining gap
 
-The decode profile is now flat: small `Rc<Either>`/`Rc<Maybe>` results, one
-string copy per decoded string value and one `Mutex` acquisition per object
-lookup. Closing the rest would need an ABI-level representation change
-(unboxed sums, shared `Value::String`) or the gopurs-style per-schema native
-decoders that took the published Go build from 7.6 ms to 0.67 ms.
+The allocation counters did not establish a precise cost attribution: their
+regions overlap, and the attempted backtrace capture produced no usable
+stacks. Closures, boxed results and string copies were hypotheses, not a
+measured partition of the remaining cost. The follow-up work therefore uses
+generated decoder workers, concrete record carriers and a validated text
+cursor, with each stage measured independently.
 
 ## Commits
 
