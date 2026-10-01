@@ -3109,9 +3109,193 @@
       "stdout": "Generating Rust code for Test.Main\nSuccessfully generated Rust code.\n",
       "stderr": "[purust] load TAST + sort: 2026 ms\n[purust] prepare: 1009 ms\n[purust] optimize + generate: 11633 ms\n[purust] finalize + emit: 2474 ms\n[purust] backend total: 17288 ms\n",
       "identical_generated_files": 496
+    },
+    {
+      "label": "run-4-js",
+      "backend": "js",
+      "warmup": false,
+      "round": 4,
+      "command": [
+        "/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/compiler/bin/purust",
+        "--source",
+        "output",
+        "--main",
+        "Test.Main",
+        "--threaded",
+        "--out",
+        "/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-4-js"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "wall_ms": 6651.954500000007,
+      "phases_ms": {
+        "load TAST + sort": 659,
+        "prepare": 40,
+        "optimize + generate": 4950,
+        "finalize + emit": 855,
+        "backend total": 6561
+      },
+      "load_average_before": [
+        6.0625,
+        4.330078125,
+        5.9462890625
+      ],
+      "stdout": "Generating Rust code for Test.Main\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\nSuccessfully generated Rust code.\n",
+      "stderr": "[purust] load TAST + sort: 659 ms\n[purust] prepare: 40 ms\n[purust] optimize + generate: 4950 ms\n[purust] finalize + emit: 855 ms\n[purust] backend total: 6561 ms\n",
+      "identical_generated_files": 496
+    },
+    {
+      "label": "run-4-native",
+      "backend": "native",
+      "warmup": false,
+      "round": 4,
+      "command": [
+        "/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/compiler/bin/purust",
+        "--source",
+        "output",
+        "--main",
+        "Test.Main",
+        "--threaded",
+        "--out",
+        "/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-4-native"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "wall_ms": 17265.421208,
+      "phases_ms": {
+        "load TAST + sort": 1985,
+        "prepare": 1002,
+        "optimize + generate": 11554,
+        "finalize + emit": 2529,
+        "backend total": 17214
+      },
+      "load_average_before": [
+        7.89892578125,
+        4.7392578125,
+        6.0810546875
+      ],
+      "stdout": "Generating Rust code for Test.Main\nSuccessfully generated Rust code.\n",
+      "stderr": "[purust] load TAST + sort: 1985 ms\n[purust] prepare: 1002 ms\n[purust] optimize + generate: 11554 ms\n[purust] finalize + emit: 2529 ms\n[purust] backend total: 17214 ms\n",
+      "identical_generated_files": 496
+    },
+    {
+      "label": "run-5-js",
+      "backend": "js",
+      "warmup": false,
+      "round": 5,
+      "command": [
+        "/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/compiler/bin/purust",
+        "--source",
+        "output",
+        "--main",
+        "Test.Main",
+        "--threaded",
+        "--out",
+        "/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-js"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "wall_ms": 6577.485916999998,
+      "phases_ms": {
+        "load TAST + sort": 637,
+        "prepare": 40,
+        "optimize + generate": 4895,
+        "finalize + emit": 848,
+        "backend total": 6480
+      },
+      "load_average_before": [
+        6.462890625,
+        4.60986328125,
+        6.0029296875
+      ],
+      "stdout": "Generating Rust code for Test.Main\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\nSuccessfully generated Rust code.\n",
+      "stderr": "[purust] load TAST + sort: 637 ms\n[purust] prepare: 40 ms\n[purust] optimize + generate: 4895 ms\n[purust] finalize + emit: 848 ms\n[purust] backend total: 6480 ms\n",
+      "identical_generated_files": 496
+    },
+    {
+      "label": "run-5-native",
+      "backend": "native",
+      "warmup": false,
+      "round": 5,
+      "command": [
+        "/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/compiler/bin/purust",
+        "--source",
+        "output",
+        "--main",
+        "Test.Main",
+        "--threaded",
+        "--out",
+        "/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "wall_ms": 17454.378041999997,
+      "phases_ms": {
+        "load TAST + sort": 1986,
+        "prepare": 1018,
+        "optimize + generate": 11715,
+        "finalize + emit": 2529,
+        "backend total": 17401
+      },
+      "load_average_before": [
+        6.345703125,
+        4.6162109375,
+        5.99658203125
+      ],
+      "stdout": "Generating Rust code for Test.Main\nSuccessfully generated Rust code.\n",
+      "stderr": "[purust] load TAST + sort: 1986 ms\n[purust] prepare: 1018 ms\n[purust] optimize + generate: 11715 ms\n[purust] finalize + emit: 2529 ms\n[purust] backend total: 17401 ms\n",
+      "identical_generated_files": 496
     }
   ],
   "validation": {
-    "status": "pending"
-  }
+    "status": "passed",
+    "command": [
+      "cargo",
+      "build",
+      "--offline",
+      "--manifest-path",
+      "/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Cargo.toml"
+    ],
+    "cargo_exit_code": 0,
+    "cargo_stdout": "",
+    "cargo_stderr": "     Locking 19 packages to latest compatible versions\n   Compiling proc-macro2 v1.0.107\n   Compiling quote v1.0.47\n   Compiling unicode-ident v1.0.26\n   Compiling memchr v2.8.3\n   Compiling regex-syntax v0.8.11\n   Compiling bit-vec v0.6.3\n   Compiling pin-project-lite v0.2.17\n   Compiling perceus_ptr v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/perceus_ptr)\n   Compiling shlex v2.0.1\n   Compiling find-msvc-tools v0.1.14\n   Compiling bit-set v0.5.3\n   Compiling cc v1.5.1\n   Compiling aho-corasick v1.1.5\n   Compiling libmimalloc-sys v0.1.49\n   Compiling regex-automata v0.4.18\n   Compiling syn v3.0.6\n   Compiling fancy-regex v0.13.0\n   Compiling mimalloc v0.1.52\n   Compiling tokio-macros v2.7.2\n   Compiling tokio v1.53.1\n   Compiling purust_core v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/purust_core)\n   Compiling Purs_Record_Unsafe v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Record_Unsafe)\n   Compiling Purs_Type_Proxy v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Type_Proxy)\n   Compiling Purs_Data_Unit v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Unit)\n   Compiling Purs_Data_Void v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Void)\n   Compiling Purs_Data_Boolean v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Boolean)\n   Compiling Purs_Unsafe_Coerce v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Unsafe_Coerce)\n   Compiling Purs_Partial v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Partial)\n   Compiling Purs_Data_Function_Uncurried v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Function_Uncurried)\n   Compiling Purs_Effect_Unsafe v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Effect_Unsafe)\n   Compiling Purs_Control_Monad_ST_Uncurried v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad_ST_Uncurried)\n   Compiling Purs_Data_Int_Bits v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Int_Bits)\n   Compiling Purs_Data_Symbol v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Symbol)\n   Compiling Purs_Control_Semigroupoid v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Semigroupoid)\n   Compiling Purs_Safe_Coerce v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Safe_Coerce)\n   Compiling Purs_Control_Lazy v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Lazy)\n   Compiling Purs_Partial_Unsafe v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Partial_Unsafe)\n   Compiling Purs_Control_Monad_ST_Global v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad_ST_Global)\n   Compiling Purs_Type_Equality v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Type_Equality)\n   Compiling Purs_Data_Newtype v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Newtype)\n   Compiling Purs_Data_HeytingAlgebra v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_HeytingAlgebra)\n   Compiling Purs_Data_Semiring v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Semiring)\n   Compiling Purs_Data_Semigroup v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Semigroup)\n   Compiling Purs_Control_Category v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Category)\n   Compiling Purs_Data_Show v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Show)\n   Compiling Purs_Data_Profunctor v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Profunctor)\n   Compiling Purs_Data_Eq v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Eq)\n   Compiling Purs_Data_BooleanAlgebra v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_BooleanAlgebra)\n   Compiling Purs_Data_Ring v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Ring)\n   Compiling Purs_Data_Generic_Rep v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Generic_Rep)\n   Compiling Purs_Data_Profunctor_Closed v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Profunctor_Closed)\n   Compiling Purs_Data_Ordering v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Ordering)\n   Compiling Purs_Data_Ord v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Ord)\n   Compiling Purs_Data_CommutativeRing v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_CommutativeRing)\n   Compiling Purs_Data_EuclideanRing v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_EuclideanRing)\n   Compiling Purs_Data_Function v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Function)\n   Compiling Purs_Data_Bounded v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Bounded)\n   Compiling Purs_Data_Functor v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Functor)\n   Compiling Purs_Data_Monoid v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Monoid)\n   Compiling Purs_Data_DivisionRing v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_DivisionRing)\n   Compiling Purs_Control_Apply v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Apply)\n   Compiling Purs_Control_Alt v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Alt)\n   Compiling Purs_Control_Extend v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Extend)\n   Compiling Purs_Data_Monoid_Endo v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Monoid_Endo)\n   Compiling Purs_Data_Ord_Min v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Ord_Min)\n   Compiling Purs_Data_Ord_Max v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Ord_Max)\n   Compiling Purs_Control_Plus v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Plus)\n   Compiling Purs_Control_Comonad v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Comonad)\n   Compiling Purs_Data_Time_Duration v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Time_Duration)\n   Compiling Purs_Control_Applicative v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Applicative)\n   Compiling Purs_Control_Bind v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Bind)\n   Compiling Purs_Control_Alternative v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Alternative)\n   Compiling Purs_Data_Traversable_Accum_Internal v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Traversable_Accum_Internal)\n   Compiling Purs_Control_Monad v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad)\n   Compiling Purs_Data_Monoid_Disj v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Monoid_Disj)\n   Compiling Purs_Data_Monoid_Additive v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Monoid_Additive)\n   Compiling Purs_Data_Monoid_Dual v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Monoid_Dual)\n   Compiling Purs_Data_Monoid_Conj v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Monoid_Conj)\n   Compiling Purs_Data_Monoid_Multiplicative v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Monoid_Multiplicative)\n   Compiling Purs_Data_Monoid_Alternate v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Monoid_Alternate)\n   Compiling Purs_Effect v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Effect)\n   Compiling Purs_Control_MonadPlus v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_MonadPlus)\n   Compiling Purs_Control_Monad_Trans_Class v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad_Trans_Class)\n   Compiling Purs_Control_Monad_Cont_Class v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad_Cont_Class)\n   Compiling Purs_Data_Functor_App v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Functor_App)\n   Compiling Purs_Data_Functor_Invariant v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Functor_Invariant)\n   Compiling Purs_Effect_Ref v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Effect_Ref)\n   Compiling Purs_Effect_Class v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Effect_Class)\n   Compiling Purs_Control_Monad_Reader_Class v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad_Reader_Class)\n   Compiling Purs_Data_Maybe v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Maybe)\n   Compiling Purs_Data_Tuple v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Tuple)\n   Compiling Purs_Data_Const v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Const)\n   Compiling Purs_Data_Identity v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Identity)\n   Compiling Purs_Data_Functor_Compose v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Functor_Compose)\n   Compiling Purs_Effect_Uncurried v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Effect_Uncurried)\n   Compiling Purs_Effect_Console v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Effect_Console)\n   Compiling Purs_Data_Functor_Contravariant v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Functor_Contravariant)\n   Compiling Purs_Test_Assert v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Test_Assert)\n   Compiling Purs_Data_Either v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Either)\n   Compiling Purs_Data_Maybe_First v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Maybe_First)\n   Compiling Purs_Data_Maybe_Last v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Maybe_Last)\n   Compiling Purs_Data_Number v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Number)\n   Compiling Purs_Control_Monad_State_Class v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad_State_Class)\n   Compiling Purs_Control_Monad_Writer_Class v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad_Writer_Class)\n   Compiling Purs_Data_Distributive v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Distributive)\n   Compiling Purs_Data_Profunctor_Strong v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Profunctor_Strong)\n   Compiling Purs_Data_Int v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Int)\n   Compiling Purs_Data_Bifunctor v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Bifunctor)\n   Compiling Purs_Effect_Exception v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Effect_Exception)\n   Compiling Purs_Data_Profunctor_Choice v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Profunctor_Choice)\n   Compiling Purs_Effect_AVar v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Effect_AVar)\n   Compiling Purs_Data_Functor_Product v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Functor_Product)\n   Compiling Purs_Control_Monad_Rec_Class v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad_Rec_Class)\n   Compiling Purs_Data_Functor_Coproduct v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Functor_Coproduct)\n   Compiling Purs_Control_Monad_Error_Class v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad_Error_Class)\n   Compiling Purs_Data_Profunctor_Star v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Profunctor_Star)\n   Compiling Purs_Data_Functor_Costar v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Functor_Costar)\n   Compiling Purs_Data_Foldable v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Foldable)\n   Compiling Purs_Data_FunctorWithIndex v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_FunctorWithIndex)\n   Compiling Purs_Control_Monad_ST_Internal v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad_ST_Internal)\n   Compiling Purs_Control_Monad_ST_Class v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad_ST_Class)\n   Compiling Purs_Data_Array_ST v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Array_ST)\n   Compiling Purs_Control_Monad_Reader_Trans v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad_Reader_Trans)\n   Compiling Purs_Control_Monad_Writer_Trans v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad_Writer_Trans)\n   Compiling Purs_Control_Monad_Cont_Trans v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad_Cont_Trans)\n   Compiling Purs_Control_Monad_Maybe_Trans v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad_Maybe_Trans)\n   Compiling Purs_Control_Monad_Except_Trans v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Monad_Except_Trans)\n   Compiling Purs_Data_Array_ST_Iterator v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Array_ST_Iterator)\n   Compiling Purs_Data_Traversable v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Traversable)\n   Compiling Purs_Data_Semigroup_Foldable v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Semigroup_Foldable)\n   Compiling Purs_Data_FoldableWithIndex v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_FoldableWithIndex)\n   Compiling Purs_Control_Parallel_Class v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Parallel_Class)\n   Compiling Purs_Data_Semigroup_Traversable v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Semigroup_Traversable)\n   Compiling Purs_Data_Unfoldable1 v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Unfoldable1)\n   Compiling Purs_Control_Parallel v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Control_Parallel)\n   Compiling Purs_Data_Unfoldable v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Unfoldable)\n   Compiling Purs_Data_TraversableWithIndex v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_TraversableWithIndex)\n   Compiling Purs_Effect_Aff v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Effect_Aff)\n   Compiling Purs_Data_Array_NonEmpty_Internal v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Array_NonEmpty_Internal)\n   Compiling Purs_Data_Array v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Data_Array)\n   Compiling Purs_Effect_Aff_AVar v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Effect_Aff_AVar)\n   Compiling Purs_Effect_Aff_Compat v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Effect_Aff_Compat)\n   Compiling Purs_Test_Main v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/Purs_Test_Main)\n   Compiling purust_output v0.1.0 (/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native)\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 14.18s\n",
+    "application": "/private/var/folders/w9/l8bnb22d6c75c401f71djbt00000gn/T/opencode/purust-aff-compilation-SFt1MK/generated/run-5-native/target/debug/purust_output",
+    "application_sha256": "1bf9ccdda3df5f014c964378b0225ee3fffeae7ca0265161761a46e567ae27b8",
+    "exit_code": 0,
+    "stdout": "[OK] pure\n[OK] bind\n[OK] try\n[OK] try/throw\n[OK] liftEffect\n[OK] delay\n[OK] fork\n[OK] join\n[OK] join/throw\n[OK] join/throw/sync\n[OK] join/multi\n[OK] suspend\n[OK] makeAff\n[OK] bracket\n[OK] bracket/nested\n[OK] bracket/general\n[OK] supervise\n[OK] kill\n[OK] kill/canceler\n[OK] kill/bracket\n[OK] kill/bracket/nested\n[OK] kill/bracket/general/nested\n[OK] kill/supervise\n[OK] kill/finalizer/catch\n[OK] kill/finalizer/bracket\n[OK] parallel\n[OK] parallel/throw\n[OK] kill/parallel\n[OK] parallel/alt\n[OK] parallel/alt/throw\n[OK] parallel/alt/sync\n[OK] parallel/mixed\n[OK] kill/parallel/alt\n[OK] kill/parallel/alt/finalizer\n[OK] Lazy Aff\n[OK] efffn\n[OK] fiber/map\n[OK] fiber/apply\n[OK] scheduler\n[OK] par/traverse-order\n[OK] parallel/stack\n[OK] regression/return-fork\n[OK] regression/par-apply-async-canceler\n[OK] regression/bracket-catch-cleanup\n[OK] regression/kill-sync-async\n[OK] regression/kill-bracket-mask\n[OK] regression/kill-empty-supervisor\n",
+    "stderr": "",
+    "expected_stdout_sha256": "bdac5079d39dc4ba3f7fe20d4ac624ff6f5fe110ed3643c1c178bb0ab573a3dd",
+    "aff_checks": 47,
+    "identical_generated_files": 496,
+    "frozen_inputs_unchanged": true
+  },
+  "summary": {
+    "js": {
+      "samples_ms": [
+        6401,
+        6427,
+        6964,
+        6561,
+        6480
+      ],
+      "median_ms": 6480,
+      "min_ms": 6401,
+      "max_ms": 6964
+    },
+    "native": {
+      "samples_ms": [
+        16467,
+        16696,
+        17288,
+        17214,
+        17401
+      ],
+      "median_ms": 17214,
+      "min_ms": 16467,
+      "max_ms": 17401
+    },
+    "native_over_js": 2.6564814814814817
+  },
+  "measurement_finished_at": "2026-10-01T19:58:55.229Z",
+  "finished_at": "2026-10-01T19:59:14.752Z"
 }
