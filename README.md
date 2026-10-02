@@ -165,14 +165,6 @@ JSON Decoding (excluded WIP) | ~ 1130.69 μs | — | — | — | — |
 
 Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
 
-Rust JSON Decoding: [dense results, allocation-guided optimization, protocol and validation](docs/benchmark-results/2026-09-30-rust-json-packed.md).
-
-‡ JSON to Typed AST uses the twelve-module fixture and reports the complete
-text-to-TAST path. Rust uses **O3 without LTO, threaded Arc and mimalloc**;
-the JS/Go/C reference cells were also refreshed. The controlled Rust comparison
-reduces this time by **19.6%**.
-[Measurements, allocations and compiler qualification](docs/benchmark-results/2026-10-02-rust-json-typed-ast.md).
-
 #### C++
 
 C++ Benchmark           | Hand-written PureScript<br>↓<br>[pscpp](https://github.com/purescript-native/purescript)<br>↓<br>C++<br>↓<br>clang++ -O3<br><br>(WIP) | Hand-written FP-style C++ FFI<br>↓<br>[pscpp](https://github.com/purescript-native/purescript)<br>↓<br>C++<br>↓<br>clang++ -O3<br><br>(WIP) | Hand-written imperative C++ FFI<br>↓<br>[pscpp](https://github.com/purescript-native/purescript)<br>↓<br>C++<br>↓<br>clang++ -O3<br><br>(WIP) |
