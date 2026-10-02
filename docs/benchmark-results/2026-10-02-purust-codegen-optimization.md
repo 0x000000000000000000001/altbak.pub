@@ -23,7 +23,14 @@ Retained changes:
    is half the budget, up to 4 generation slots: **4 PBO + 4 codegen workers** on
    this host. JavaScript and TAST loading remain sequential by default.
 
-Final self-reconstruction and the five-pair JS/native comparison are in progress.
+The self-rebuilt stage-2 compiler is installed and passes the full Aff suite.
+The [final five-pair benchmark](2026-10-02-purust-aff-codegen-compilation.md)
+measures **6,463 ms JavaScript / 8,247 ms native**, ratio **1.28×**. All 12 outputs
+match exactly and the generated application passes 47 Aff checks. Both backends
+slow down in the last two pairs; every sample is retained in the published data.
+
+The [raw campaign archive](2026-10-02-purust-codegen-optimization.json) includes
+the comparisons below, compiler/source hashes, regression and self-hosting logs.
 
 ## Protocol and provenance
 
@@ -76,6 +83,24 @@ supplementary characters, keywords, punctuation, deterministic mixed strings,
 long inputs and reuse of the original ASCII buffer. Purust strings encode one
 Rust scalar per UTF-16 unit; escaping uses `purust_char_to_code_unit`, preserving
 the original CodeUnits semantics.
+
+## Final controlled before/after comparison
+
+After the final JS/native campaign and its application validation, the published
+first-lot native compiler and installed second-lot stage 2 were compared directly
+on the restored input snapshot. One warm-up per artifact, then **five measured
+rounds**, alternating which compiler runs first. All 12 outputs have the same
+496 files. Raw campaign: `before-after.json` in the archive.
+
+| Native compiler | Five samples (ms) | Median total (ms) | Maximum RSS (MiB) |
+|---|---|---:|---:|
+| Published first-lot stage 2 | 10,553 / 10,557 / 10,395 / 10,419 / 10,321 | **10,419** | 465 |
+| Second-lot stage 2 | 8,707 / 8,160 / 8,249 / 8,189 / 8,007 | **8,189** | 498 |
+
+This lot reduces time by **21.4%**, a **1.27× speedup**, with higher maximum RSS.
+These measurements isolate the second lot against its predecessor. They do not
+combine sanitizer and parallel speedups from separate exploratory campaigns.
+The README uses the final JS/native campaign's **8,247 ms** native median.
 
 ## Stateless and parallel generation
 
@@ -132,3 +157,35 @@ from completed earlier experiments were cleaned after preserving executables;
 generated sources, measurements and logs remain available. The corrected
 bootstrap succeeded in a new workspace. This failed build contributes no timing
 samples to the comparisons above.
+
+## Self-reconstruction and full Aff qualification
+
+The compiler's **452 TAST modules and 282,280 type-table entries** were generated
+with the typed frontend. JavaScript emitted stage 1, compiled at O3 without LTO.
+Stage 1, at the new default **4 PBO + 4 codegen workers**, regenerated all **912
+Rust sources/Cargo manifests byte for byte**. Cargo then built stage 2.
+
+Stage 2 passed the independent fresh-project smoke test: **152 modules, 312
+identical files and `PURUST_NATIVE_OK 42`**. The first smoke run's assertions all
+passed, but directory cleanup returned `ENOTEMPTY`. The bootstrap now forwards
+`--keep-workspace` to its smoke test, and temporary cleanup allows retries.
+The completed stage 2 was smoke-tested again with its workspace retained, then
+atomically installed. The original failure and successful recovery logs are
+retained; neither compiler stage needed to be rebuilt for this cleanup issue.
+
+The installed compiler passes `purust-aff/bin/test`: **47 Aff checks, 5 Rust unit
+tests**, concurrent timer/Ref/AVar integration, child lifetime checks, and **9
+error-reporting scenarios**. Native execution remains the default; `PURUST_JS=1`
+selects the JavaScript compiler explicitly.
+
+Installed native SHA-256:
+`0a0f2afe52159a3c272beeaee625e68d100d5855bd3d99dc18ab6f353eca875e`.
+
+## Archive verification
+
+A separate archive pass rechecked all compiler/frozen-input hashes and total
+medians, the **544 identical application inputs**, the **912 self-hosted files**,
+and all **52 application outputs** across the sanitizer, emission, before/after
+and final JS/native campaigns. Every output has the same **496 source/manifests**.
+The installed executable's hash matches the native artifact measured in the
+final campaign. Results are recorded in the archive's `verification` section.

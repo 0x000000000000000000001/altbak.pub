@@ -1,0 +1,3301 @@
+{
+  "schema": 1,
+  "benchmark": "purust-aff backend compilation",
+  "started_at": "2026-10-02T11:04:11.689Z",
+  "workspace": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI",
+  "host": {
+    "model": "Apple M4 Pro",
+    "logical_cpus": 14,
+    "memory_bytes": 51539607552,
+    "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.1\nBuildVersion:\t\t25B78",
+    "architecture": "arm64",
+    "node": "v24.8.0",
+    "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+    "cargo": "cargo 1.96.0 (30a34c682 2026-05-25)"
+  },
+  "repositories_at_snapshot": {
+    "compiler": {
+      "directory": "/Users/0x1/Documents/htdocs/purust/purust",
+      "commit": "f842990ec9769df49d6c18de9d3b25d6e070450c",
+      "status": "M README.md\n M tools/build-native.mjs\n M tools/test-native.mjs"
+    },
+    "project": {
+      "directory": "/Users/0x1/Documents/htdocs/purust/purust-aff",
+      "commit": "823ebc23d529af9a124f382431ab7a2eee893b93",
+      "status": ""
+    },
+    "optimizer": {
+      "directory": "/Users/0x1/Documents/htdocs/purescript-backend-optimizer-purust",
+      "commit": "0f41544464ec0f42e6cb0dd77b206852813f904f",
+      "status": "M src/PureScript/Backend/Optimizer/Builder.purs\n?? src/PureScript/Backend/Optimizer/App.rs\n?? src/PureScript/Backend/Optimizer/BoundedMemo.rs\n?? src/PureScript/Backend/Optimizer/Cache.rs\n?? src/PureScript/Backend/Optimizer/CoreFn/Json.rs\n?? src/PureScript/Backend/Optimizer/CoreFn/Json/Text.rs\n?? src/PureScript/Backend/Optimizer/CoreFn/Usage.rs\n?? src/PureScript/Backend/Optimizer/FfiSupport.rs\n?? src/PureScript/Backend/Optimizer/Monomorphize.rs\n?? src/PureScript/Backend/Optimizer/NativeMaps.rs"
+    }
+  },
+  "compiler_artifacts": {
+    "purust": {
+      "bytes": 647,
+      "sha256": "28b9ad0bb3a2a50b1ad204b3a87284c4fcae24dff0d2a0931eed2d682903149a",
+      "origin": "/Users/0x1/Documents/htdocs/purust/purust/bin/purust"
+    },
+    "purust.js": {
+      "bytes": 2204314,
+      "sha256": "68922e52446516e0739f791c9a24df03ce8153a3c266e7d3a7f4b17c8c9c7735",
+      "origin": "/Users/0x1/Documents/htdocs/purust/purust/bin/purust.js"
+    },
+    "purust-native": {
+      "bytes": 42137872,
+      "sha256": "0a0f2afe52159a3c272beeaee625e68d100d5855bd3d99dc18ab6f353eca875e",
+      "origin": "/Users/0x1/Documents/htdocs/purust/purust/bin/purust-native"
+    }
+  },
+  "inputs": {
+    "modules": 244,
+    "types": 138448,
+    "tast_bytes": 27122224,
+    "built_with": [
+      "0.15.16"
+    ],
+    "tast_sha256": "b05785ab746528af700ab808066550cbd13df059aa2c7773ff5560d10ede0786",
+    "all_frozen_files_sha256": "e7f69157a2d47606db0d8b737f39360d7e972c176b353342729632f512e62cc3",
+    "files": [
+      {
+        "path": "compiler/bin/purust",
+        "bytes": 647,
+        "sha256": "28b9ad0bb3a2a50b1ad204b3a87284c4fcae24dff0d2a0931eed2d682903149a"
+      },
+      {
+        "path": "compiler/bin/purust-native",
+        "bytes": 42137872,
+        "sha256": "0a0f2afe52159a3c272beeaee625e68d100d5855bd3d99dc18ab6f353eca875e"
+      },
+      {
+        "path": "compiler/bin/purust.js",
+        "bytes": 2204314,
+        "sha256": "68922e52446516e0739f791c9a24df03ce8153a3c266e7d3a7f4b17c8c9c7735"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/BuildInfo.purs",
+        "bytes": 309,
+        "sha256": "5be999b6147ed3a9a4bf2ca0a5a731970527a4960c7a97aaaba598c996e2040c"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/bifunctors-6.1.0/src/Control/Biapplicative.purs",
+        "bytes": 425,
+        "sha256": "5c3baecdf32b1e0eb8c871de70eac69aa558b2dca8710b7b3d84badb20ef00bb"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/bifunctors-6.1.0/src/Control/Biapply.purs",
+        "bytes": 1613,
+        "sha256": "e2adb06728bb1a789579e3876c0a3894f1cd3ee7e5acef3268a13023a1733de0"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/bifunctors-6.1.0/src/Data/Bifunctor.purs",
+        "bytes": 1593,
+        "sha256": "00c91e7e32934e59b1196a793247218670ed5ad6c69acb8ef4eec27db63a8e1a"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/bifunctors-6.1.0/src/Data/Bifunctor/Join.purs",
+        "bytes": 1007,
+        "sha256": "5db9d1533e678809804465de95637fa980d264314428d25f18e10b673bba1308"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/const-6.0.0/src/Data/Const.purs",
+        "bytes": 2131,
+        "sha256": "a6e5d9429e810f5b834720a35e3103c4f271ca6401b19e7f7f8250e96cb04828"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/contravariant-6.0.0/src/Data/Comparison.purs",
+        "bytes": 857,
+        "sha256": "b94e588dbd3b667ef023394842ed4d0e2afb10b8b315173f5e1095fc3094fc02"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/contravariant-6.0.0/src/Data/Decidable.purs",
+        "bytes": 879,
+        "sha256": "d3260262715019947e3db7351810c3af103bd86cc4e94dcca3a28c22a3d3072a"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/contravariant-6.0.0/src/Data/Decide.purs",
+        "bytes": 1299,
+        "sha256": "0301661ba4052b57c193b57cac94dd78ebdb40ae91eb1d182637e6a68d8c9718"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/contravariant-6.0.0/src/Data/Divide.purs",
+        "bytes": 1526,
+        "sha256": "cc9f771f056da1b686569a299b46fd0d09be4544bda5e95a01551ce4e0f2d021"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/contravariant-6.0.0/src/Data/Divisible.purs",
+        "bytes": 734,
+        "sha256": "fe939175ea5070c0233b11fbf6dd035bae54a6e590dc47253977bbfba7beae82"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/contravariant-6.0.0/src/Data/Equivalence.purs",
+        "bytes": 1135,
+        "sha256": "82d547469f77f4be0ba5c8f151d623a12a2a3edaa3d7b65c7f01110ed696932f"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/contravariant-6.0.0/src/Data/Functor/Contravariant.purs",
+        "bytes": 1255,
+        "sha256": "ecb01e255618d9b446bc72d042d10c44a84ce7b10df14f838e50fa49a8ddd4ab"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/contravariant-6.0.0/src/Data/Op.purs",
+        "bytes": 638,
+        "sha256": "400182c9f9c76ef9eaab32377405195986d70d1f4a4a04cc4833fba0e035cec6"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/contravariant-6.0.0/src/Data/Predicate.purs",
+        "bytes": 589,
+        "sha256": "75e1d24c5f0eecc0d11f7664bd38edd641f5fcb039577d11213eac1a819a2d1c"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/control-6.0.0/src/Control/Alt.purs",
+        "bytes": 1361,
+        "sha256": "f02098c849efebd9eaeff8340215637a6152db97b10743a86dec6fae149061a1"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/control-6.0.0/src/Control/Alternative.purs",
+        "bytes": 1460,
+        "sha256": "86e1c20be4b0d570377b607f53fdbce0c642065973b79b9211883dc2b9d9b329"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/control-6.0.0/src/Control/Comonad.purs",
+        "bytes": 666,
+        "sha256": "8ddf03de6841c4e570432c7186445ef912d9a63d1eb272e668657ab73d981521"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/control-6.0.0/src/Control/Extend.purs",
+        "bytes": 1787,
+        "sha256": "20d5e8394e1e755187e594cda0a3f63147fa69f703e18d8b99244d59c55d2900"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/control-6.0.0/src/Control/Lazy.purs",
+        "bytes": 653,
+        "sha256": "05fce3e86c1c1b409f863368edb7991894c2c0d83ce99cdf7a3f84cdc30e9d0a"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/control-6.0.0/src/Control/MonadPlus.purs",
+        "bytes": 1134,
+        "sha256": "4a5f2eeb965af319ffb1427c1571235ca3de44881e19aa83f2cb12e8404df68f"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/control-6.0.0/src/Control/Plus.purs",
+        "bytes": 823,
+        "sha256": "308ba7c0a3a65e9b81cf2cc6f0a7d8e4f77043c1c2c481c04b5ab22ccf991f19"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/control-6.0.0/src/Data/Monoid/Alternate.purs",
+        "bytes": 2171,
+        "sha256": "fb6b0d43a0c82f6028d64d957fad49d9ce48eb8a213ea8d2f0498d4be8f2de8d"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/distributive-6.0.0/src/Data/Distributive.purs",
+        "bytes": 1949,
+        "sha256": "47bf3b62d71dbeef667007924b75ea18cc4179ef1f111a359d19463e1fa49279"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/either-6.1.0/src/Data/Either.purs",
+        "bytes": 10059,
+        "sha256": "047a8ae72c32cd064fddb773a739dc130c0cce615270d403491898fbf6c6f5d9"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/either-6.1.0/src/Data/Either/Inject.purs",
+        "bytes": 493,
+        "sha256": "95f071e80bf9658d34b08093bc03ee3fbbb9ef6af3457ad4f203c396ea507e41"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/either-6.1.0/src/Data/Either/Nested.purs",
+        "bytes": 9602,
+        "sha256": "fa22a911e6c9f62dd7f1bfabfb98962824f75a7f5291e6fafc628dba658cb274"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/exists-6.0.0/src/Data/Exists.purs",
+        "bytes": 2236,
+        "sha256": "74aec7e155ecd0bac49cacb3f87506223193a5f0ff4ae1dd0a8e134775d7794d"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/functors-5.0.0/src/Data/Functor/App.purs",
+        "bytes": 2288,
+        "sha256": "2c90077463cc2deb82dc888dd7c6fc10fa465d444c7b48fa042b4a2d4e834711"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/functors-5.0.0/src/Data/Functor/Clown.purs",
+        "bytes": 1599,
+        "sha256": "9e0ee4050d69d24a0965026576288b9742f1e77941b819d510e1317bbe1ca1c2"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/functors-5.0.0/src/Data/Functor/Compose.purs",
+        "bytes": 2052,
+        "sha256": "1ea6725c558c1d8424b8e8bf03331879bcc589ec95ef0208dea7dcb90861d202"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/functors-5.0.0/src/Data/Functor/Coproduct.purs",
+        "bytes": 2609,
+        "sha256": "bdef394de4a506431d3397ed765e861daf47989882f1f8d97419edb312a62637"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/functors-5.0.0/src/Data/Functor/Coproduct/Inject.purs",
+        "bytes": 689,
+        "sha256": "dfccf4433db792b3a1246b72b7aab69d39a593750c242a741a4adc92a012b743"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/functors-5.0.0/src/Data/Functor/Coproduct/Nested.purs",
+        "bytes": 13203,
+        "sha256": "efd0e04c36996fd958425c21f3c6748cf3c08abf4ff014b09eca3687937e193c"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/functors-5.0.0/src/Data/Functor/Costar.purs",
+        "bytes": 2450,
+        "sha256": "3bde423fa6f47a635e62c4a55fa4eb1ebbd32dcb5776b748bb4bc59b892c77b5"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/functors-5.0.0/src/Data/Functor/Flip.purs",
+        "bytes": 1572,
+        "sha256": "b3d31bfa23a05a6ed6c4185775bb45ff2e0c562cd9c95c711b1cf636459c153b"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/functors-5.0.0/src/Data/Functor/Joker.purs",
+        "bytes": 2147,
+        "sha256": "3c32235123a30b6e38273bbfcf6cf50cef94d9a11e7da16e7ee3d7e0ed98cac4"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/functors-5.0.0/src/Data/Functor/Product.purs",
+        "bytes": 2133,
+        "sha256": "c43e912ffe484cfd0e01cafa143474e140f06a85c7177c9f2cc6b59b51d18a37"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/functors-5.0.0/src/Data/Functor/Product/Nested.purs",
+        "bytes": 7121,
+        "sha256": "eabec66003663a5e64b64e6abf317a27e8660d5c09475bbd38d9219db0834580"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/functors-5.0.0/src/Data/Functor/Product2.purs",
+        "bytes": 1843,
+        "sha256": "80763924484595b34488d8cca7bd8e5d399aebc7a79442e1625d7ddbebec9c7c"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/gen-4.0.0/src/Control/Monad/Gen.purs",
+        "bytes": 4590,
+        "sha256": "1af7bc60432e7fb6f3e6e75da3b78be19bc2d1ad7e9cfcdcfcba4446ec317f1b"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/gen-4.0.0/src/Control/Monad/Gen/Class.purs",
+        "bytes": 876,
+        "sha256": "88fc916494c75e3309471a0852d0c740691570d68dd9dbb92ed4547e9e20f17a"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/gen-4.0.0/src/Control/Monad/Gen/Common.purs",
+        "bytes": 2818,
+        "sha256": "d31ab1b6246acefd0e92f320483d413861e5727de6429d1b4ca391f8120e89a4"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/identity-6.0.0/src/Data/Identity.purs",
+        "bytes": 2242,
+        "sha256": "65f7f8ca763a00e78b46453c480a22e41e43dcda5a582cfea9eecd4b4448f87d"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/invariant-6.0.0/src/Data/Functor/Invariant.purs",
+        "bytes": 2006,
+        "sha256": "070d432e594b5423ebd865d101dbddaf1bd64690917a6ebeabd559393c152f26"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/lists-7.0.0/src/Data/List.purs",
+        "bytes": 27602,
+        "sha256": "fde72dc9da24f67efb446f57806890e95b3b40a4f0389ee313072de4cc2d56aa"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/lists-7.0.0/src/Data/List/Internal.purs",
+        "bytes": 2516,
+        "sha256": "9b542dbc4823476b26b6912cd0dbd47c3af97bc35f66f11b421aa59f28d6fc42"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/lists-7.0.0/src/Data/List/Lazy.purs",
+        "bytes": 25046,
+        "sha256": "69f373e427611ef8124b9a49f4c02638aca287bc48bf095371da8afe090fe9b8"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/lists-7.0.0/src/Data/List/Lazy/NonEmpty.purs",
+        "bytes": 2571,
+        "sha256": "5b06d7bdbb485fa4766134635b43d22f1e148f0e4bbc61f7c4e78710686b2586"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/lists-7.0.0/src/Data/List/Lazy/Types.purs",
+        "bytes": 9663,
+        "sha256": "68fa44b813560d340230fd122e965568c2920600c8153fd22219e27ab7307d64"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/lists-7.0.0/src/Data/List/NonEmpty.purs",
+        "bytes": 9980,
+        "sha256": "2b0911320ac74ddc1a80957592c965b370ee81de740f9c24f048d4f7d5c4b0d7"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/lists-7.0.0/src/Data/List/Partial.purs",
+        "bytes": 790,
+        "sha256": "95e40bb55ef84403901b6a19ac9367bae5cce79330703a8d4db60d57bf6fab4b"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/lists-7.0.0/src/Data/List/Types.purs",
+        "bytes": 8938,
+        "sha256": "8a7d87397d8edc746e7fa1459d67e90ef9e2dd09bf7bd55baa9a4b549e316dd3"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/lists-7.0.0/src/Data/List/ZipList.purs",
+        "bytes": 1994,
+        "sha256": "09acb25d60dd823ee7ce94d33e5ac9bb46aee527638dd69ccf82f1532da13719"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/maybe-6.0.0/src/Data/Maybe.purs",
+        "bytes": 9891,
+        "sha256": "dd49326b74a5ba9c5d0e0aaca7c05226aadb9b9bf851d9a3fdbc34df23319fa8"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/maybe-6.0.0/src/Data/Maybe/First.purs",
+        "bytes": 1885,
+        "sha256": "7cfcf5744a424bc512fd7e7e04a71484c609a52cf94ef5552bcf7afa8f967abf"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/maybe-6.0.0/src/Data/Maybe/Last.purs",
+        "bytes": 1833,
+        "sha256": "cc86da8e91615e04b7973bdc5f7467db4adc8df722eb509bc2cf0e735cbb93ab"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/minibench-4.0.1/src/Performance/Minibench.purs",
+        "bytes": 3083,
+        "sha256": "f99f6f996d519da2904b85abff708e42353496c53a0ce2495707e7394c41ee34"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/newtype-5.0.0/src/Data/Newtype.purs",
+        "bytes": 8461,
+        "sha256": "572911ec613a337d30004c92120afea496af97d34b63617d884d4a96f03d8304"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/nonempty-7.0.0/src/Data/NonEmpty.purs",
+        "bytes": 5857,
+        "sha256": "c48366ad44cc7b4311d5032ef27ae8d2ea39f603d7bb33f03d51536758976d7e"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/ordered-collections-3.2.0/src/Data/Map.purs",
+        "bytes": 3381,
+        "sha256": "8a999f683cf7f64950707e6cdc8e9a735974725e98b72c7a6d891f5f801e6242"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/ordered-collections-3.2.0/src/Data/Map/Gen.purs",
+        "bytes": 636,
+        "sha256": "9f2671c0a0a1efbad92a52b4e02517c06e08df9f741f59a9d8ae290d002a19e9"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/ordered-collections-3.2.0/src/Data/Map/Internal.purs",
+        "bytes": 31150,
+        "sha256": "03608bed5db4804aa898eff034bb5b2feab0676948b19aefa606dc927eeb5cc9"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/ordered-collections-3.2.0/src/Data/Set.purs",
+        "bytes": 5807,
+        "sha256": "8281a67c595c3948a64b00cb3cb21d26c8b5f7a80c686e77320c85fdea46aee7"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/ordered-collections-3.2.0/src/Data/Set/NonEmpty.purs",
+        "bytes": 6356,
+        "sha256": "45a49dc49087f55b9c3c315a1fa68e62313a55bf6aab9f8df2bba52ccf7a4dd5"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/orders-6.0.0/src/Data/Ord/Down.purs",
+        "bytes": 677,
+        "sha256": "1c1ac8c739112884f86076eaae7ebe1a24c533892c044940813ceee796d840bc"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/orders-6.0.0/src/Data/Ord/Max.purs",
+        "bytes": 805,
+        "sha256": "0ba5b99631c3d19685c2ff3141d8e7701933e53828ca4277c0060cdb010b6255"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/orders-6.0.0/src/Data/Ord/Min.purs",
+        "bytes": 802,
+        "sha256": "2ff841d2cdab3ddacb446d4562a49b7e17a76bfa23441188f02a77a65db4a6f1"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/parallel-7.0.0/src/Control/Parallel.purs",
+        "bytes": 1892,
+        "sha256": "36d52451b324efca7a67c60551c79b045ad5bd353d77b0e6082b6b598e12184f"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/parallel-7.0.0/src/Control/Parallel/Class.purs",
+        "bytes": 4451,
+        "sha256": "39d2a7217f3e58c6a5c99a70758184ed30f41ca484d59d639322cf2665158bf6"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/profunctor-6.0.1/src/Data/Profunctor.purs",
+        "bytes": 1613,
+        "sha256": "f0e9030ebb6252131618dcbc5e181d98dab01020126bbcedd0344d78cea8c9e1"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/profunctor-6.0.1/src/Data/Profunctor/Choice.purs",
+        "bytes": 3406,
+        "sha256": "687391e4819de27fda58acb18be86fdd99bf52166b1ca736525fa4c3310d752a"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/profunctor-6.0.1/src/Data/Profunctor/Closed.purs",
+        "bytes": 334,
+        "sha256": "2ebbae569682f0bb828e69417c6b991eb6ac54ae0c439e1da9a44064a613d01d"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/profunctor-6.0.1/src/Data/Profunctor/Cochoice.purs",
+        "bytes": 354,
+        "sha256": "d04b01c617f374356eba5358777bf945f6e41c274b7c8c58cd4327d2d6cfe117"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/profunctor-6.0.1/src/Data/Profunctor/Costrong.purs",
+        "bytes": 350,
+        "sha256": "7d7eb115e194c2d8518b070a3b39809b1b9bc0bdcfe3e48a29b40e9bd6748513"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/profunctor-6.0.1/src/Data/Profunctor/Join.purs",
+        "bytes": 963,
+        "sha256": "acbfbd68ca96516e42a4416e1c587b8db4cfae572f7814fa9784cbfeaf286c9f"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/profunctor-6.0.1/src/Data/Profunctor/Split.purs",
+        "bytes": 1171,
+        "sha256": "32b0f17f7d2140c6f7ed3e536d0ec5220b504017deedcb798df586e4c61ca909"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/profunctor-6.0.1/src/Data/Profunctor/Star.purs",
+        "bytes": 2889,
+        "sha256": "52953a97b7701dbe8619f61bf2bc0b13d2606efbf85d201527dbda5348c05b40"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/profunctor-6.0.1/src/Data/Profunctor/Strong.purs",
+        "bytes": 3244,
+        "sha256": "7ce15c8be67cd563c7d611891e73be2018fae763e26b9b10d790cab4110cc1cb"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/safe-coerce-2.0.0/src/Safe/Coerce.purs",
+        "bytes": 1122,
+        "sha256": "67ab89bd8194231b886591fb03a5d8cd1cbb91e68e384a7e768c4405fa6d959e"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/tailrec-6.1.0/src/Control/Monad/Rec/Class.purs",
+        "bytes": 5840,
+        "sha256": "fd2ea9d0000c0194b78949bcaf9c931dfc12c92de322f0cadf73d566c994ea2f"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Comonad/Env.purs",
+        "bytes": 1107,
+        "sha256": "ea3c9b8af6868ed68850f75310e96960994e5f197445d3dfa02648cdf387c644"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Comonad/Env/Class.purs",
+        "bytes": 2201,
+        "sha256": "bc920bb7eae6eb0b763b8a5701902c9b829ceddd7009a3c24efaff955ae85020"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Comonad/Env/Trans.purs",
+        "bytes": 3129,
+        "sha256": "9364d5d74bcf4557ac73cc9ca79436e0e815e5f6da727e60fbb4d62d2aba360b"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Comonad/Store.purs",
+        "bytes": 914,
+        "sha256": "eef9d748a684180a4f38ac7da284c9455bdb9875c777280013cf3035e320350e"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Comonad/Store/Class.purs",
+        "bytes": 2303,
+        "sha256": "20812b362809efacf4819c292aa46bde954a255ca1331f3539b96f3a7b8cf22f"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Comonad/Store/Trans.purs",
+        "bytes": 1378,
+        "sha256": "36464e6eaf5623449ef50d078ee19ef35a0a4628d393f6999d613b7e485b98b0"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Comonad/Traced.purs",
+        "bytes": 856,
+        "sha256": "2b3a000a710c0a0d75e7a48281369d4c31c021788aac1410d7c777981026decc"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Comonad/Traced/Class.purs",
+        "bytes": 2539,
+        "sha256": "b495151244f69b510fd6365820835b3f36d756a76524d89b50008248dd38e3fb"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Comonad/Traced/Trans.purs",
+        "bytes": 1381,
+        "sha256": "fdc916055579c26a847234bdc83bd11b2757cd45d4afd5eeb94e99a0b770d5b7"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Comonad/Trans/Class.purs",
+        "bytes": 1051,
+        "sha256": "df366cc4abd8bb769594a7eb68b4dd9d3e336f2f3c95157566c6090506d7ad93"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/Cont.purs",
+        "bytes": 1288,
+        "sha256": "78fa7d82d7243b223f4bee20935d8ee32a8cc320aee40e23b7f9b18593224239"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/Cont/Class.purs",
+        "bytes": 861,
+        "sha256": "9610076bad302404be4600bd5691e3b7eb12537c1d890f958c249a50a5bd969f"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/Cont/Trans.purs",
+        "bytes": 3018,
+        "sha256": "e987db63180a56f036953669472bc397c294ea86c838ab113a1b0d4215a3bb54"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/Error/Class.purs",
+        "bytes": 3435,
+        "sha256": "14a3cc6448b17740e4e44fbd29d574890bc49bbd1264d41864d550b972154fa0"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/Except.purs",
+        "bytes": 1985,
+        "sha256": "d5857f9f1bf759b40a79d3d21143ea48f48c31e911cb97709de220b14944f910"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/Except/Trans.purs",
+        "bytes": 5548,
+        "sha256": "fb836d128c7ed8d312eedc0cd1985ede261efafab48c89330241e734f1284ae6"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/Identity/Trans.purs",
+        "bytes": 4075,
+        "sha256": "3066009f903327940272282a407d57d2b4b966b6e0eb244bd2024b4b04d0c28c"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/List/Trans.purs",
+        "bytes": 11448,
+        "sha256": "32a56f35498edcedc8bdf7a6bf1af1d95beacadb0d576c74eeca4ba4e6e452eb"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/Maybe/Trans.purs",
+        "bytes": 4514,
+        "sha256": "c9f082a0b6df9735cab3cf43a9c3cd9016580b2a2620092615ab42cb9962c4ae"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/RWS.purs",
+        "bytes": 1991,
+        "sha256": "9751dd15dbc6d88d5cda26ae6a0bf99dddb0a6eaf68ea9f1768ee10f41c51dd7"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/RWS/Trans.purs",
+        "bytes": 6115,
+        "sha256": "2a65701490d8650c03a15f5f461f585710bbe5a6bf4aead4b83bfd08dbb95130"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/Reader.purs",
+        "bytes": 1114,
+        "sha256": "4bc9d525af73dc7ce1e3aeee9ecf66fff7ba47391d94c6190f024e0067f11902"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/Reader/Class.purs",
+        "bytes": 1383,
+        "sha256": "d056a0e063107ea3454aac094c00e4241559c7a3316e31fd39773e85a1e2b189"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/Reader/Trans.purs",
+        "bytes": 4871,
+        "sha256": "22369e0a59024b89b44b94d96a167d827fe22cdd3b72241987b282219108cb1f"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/State.purs",
+        "bytes": 1515,
+        "sha256": "a862baddb4520033efd66c3e9967acb12dcea0e709c8a91530b2d472bd871a2b"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/State/Class.purs",
+        "bytes": 1437,
+        "sha256": "d007a7e4683e98d7558222ea361010e0de695d599df9d2f3210c946d93c8055c"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/State/Trans.purs",
+        "bytes": 5592,
+        "sha256": "6080bdee4638763858b2e9805562e1f6d4a1d9ef78ad754106d14554b0898671"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/Trans/Class.purs",
+        "bytes": 844,
+        "sha256": "ed6fcccf237b1ef4507e16b5b18f7bc4d1ae6b55e910d124d9f3903b002ea9f7"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/Writer.purs",
+        "bytes": 1319,
+        "sha256": "20a8f9da7d4936619598b58db8afe9d98bc671ce26c51d084e59b34b74032596"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/Writer/Class.purs",
+        "bytes": 1738,
+        "sha256": "610dbe70ed473d4528b878cdf8c3078e2cdf154273e4ddc3817335bc2b9f2ef6"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/transformers-6.1.0/src/Control/Monad/Writer/Trans.purs",
+        "bytes": 5339,
+        "sha256": "7dd5cc5aac36d6d6c6ffb959cb28ec564325e5d6694815bdab254ec016ce11e0"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/tuples-7.0.0/src/Data/Tuple.purs",
+        "bytes": 5221,
+        "sha256": "dc2ef1a90e52e851e02de1e8bb3bbbe9bfdbff8fe821473cbfda1998a82bc0d7"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/tuples-7.0.0/src/Data/Tuple/Nested.purs",
+        "bytes": 13244,
+        "sha256": "6747d4c125c506fb22b831142513c54112fb3bf5908697534b540ce8e4cb0a4e"
+      },
+      {
+        "path": "inputs/purust-aff/.spago/p/type-equality-4.0.1/src/Type/Equality.purs",
+        "bytes": 923,
+        "sha256": "ac672615fd3612b596eda3ab9f2472006e7ee954c7880cc91ac4865f7c120f56"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Alt/corefn.json",
+        "bytes": 6774,
+        "sha256": "ed4d16f905092650e207bf87a56ce0faf5c049acfd6376723b201ec5893f4485"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Alternative/corefn.json",
+        "bytes": 11113,
+        "sha256": "08f08430365827352e8ea685fdae8c5dbc9b508da718bdf80f9ed86e16df1806"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Applicative/corefn.json",
+        "bytes": 27926,
+        "sha256": "e8f4519dd6b58e90dc672c8e1c71bd8890ae159c4a0f65312fb18acffd01475a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Apply/corefn.json",
+        "bytes": 77348,
+        "sha256": "9e94abe41d8e5840b5045806b8d414b5ebe31261a4a731f49f1a2a6cd7748122"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Biapplicative/corefn.json",
+        "bytes": 7000,
+        "sha256": "7a63ffb79dace7549122f321bc29acec8e75cb898427174373067911d5969742"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Biapply/corefn.json",
+        "bytes": 66383,
+        "sha256": "1cf3d3c7947918200f9beb4843f701bc2b527197abe4f74975a6c959b0cce76a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Bind/corefn.json",
+        "bytes": 47830,
+        "sha256": "f7365f4f6f07213e8fea62fea025e5b7dffd234c45a563eff12331d59f3e887b"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Category/corefn.json",
+        "bytes": 6911,
+        "sha256": "701f3d363472156da396bc7399c139f0792884b4fdd3a11cb8fe9ef311f05913"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Comonad.Env.Class/corefn.json",
+        "bytes": 91685,
+        "sha256": "418b8b95159ea28de9bf170f767237e3b5889eb7c4d43c9706a8e07963738fd6"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Comonad.Env.Trans/corefn.json",
+        "bytes": 192883,
+        "sha256": "14dfa43cf211dd1e6df12f35ef659c354adbe29348c56f6e5324535f1b602dba"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Comonad.Env/corefn.json",
+        "bytes": 14886,
+        "sha256": "a9dbd895e681371d4aa8bfa23e16051d70242264c99526a5d21b1992e8763550"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Comonad.Store.Class/corefn.json",
+        "bytes": 87564,
+        "sha256": "c7d90fd985e942e2971691560b59eb6055e280287f3a48d531fbae35c44a5e62"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Comonad.Store.Trans/corefn.json",
+        "bytes": 59134,
+        "sha256": "a2d84e6821b5dd95d98d6624db375dabab2625fbcc463eb5b9c5ee4f54c7a5bc"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Comonad.Store/corefn.json",
+        "bytes": 13318,
+        "sha256": "f49ecd7a0598a96eecbb7a6da53bc2d5cd583254241dc43aeb1fdb433de02232"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Comonad.Traced.Class/corefn.json",
+        "bytes": 81640,
+        "sha256": "e4f2190611a9977fe225424f658dec9f72f1f70339343538a445c11f9ffa5673"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Comonad.Traced.Trans/corefn.json",
+        "bytes": 59040,
+        "sha256": "a80031d819d96aa32ef5a386ef30f4b9a47c3efc717c5642d15366c4dc7ec92f"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Comonad.Traced/corefn.json",
+        "bytes": 8782,
+        "sha256": "2db22f1655d970e60365c4bcf65acba2ab9532ddaa00b79bc28abe93aa318ccf"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Comonad.Trans.Class/corefn.json",
+        "bytes": 7155,
+        "sha256": "fd7263ad863c0ac9d361662c7e7ca05443d40d44ea3ccbcb276c7d5a9bbefc86"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Comonad/corefn.json",
+        "bytes": 4111,
+        "sha256": "69e06b7a2e940f568b5e585a4e9b5b3fe4b7ec2f9eb87807b8e28653fac19f0f"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Extend/corefn.json",
+        "bytes": 30864,
+        "sha256": "ab0f4480be0d5f72dc7f2244113dca5f716793dabd49351a380ddbfd04880f46"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Lazy/corefn.json",
+        "bytes": 11066,
+        "sha256": "57b1e4f835889eea23b76f39ca9f445f718c96f5d06a3a99eec5f3a9fa445d40"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Cont.Class/corefn.json",
+        "bytes": 4516,
+        "sha256": "a08e6569c32fdaeb700ee2b6cbe70e39c27a6dbb5fd20ea4b2efc16b31ffb037"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Cont.Trans/corefn.json",
+        "bytes": 164645,
+        "sha256": "a23d58f317dc55f28f9c5afa110102792157e31e8ddc74691548132df91440d5"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Cont/corefn.json",
+        "bytes": 36827,
+        "sha256": "8cf7a8d2402d59d70007acc648e700db72229222a7d4004610733c23de285eeb"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Error.Class/corefn.json",
+        "bytes": 96464,
+        "sha256": "0ec422e6ded281df95315a14ca6da46a6ef932b2c307fd2e4e9ced786a616965"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Except.Trans/corefn.json",
+        "bytes": 340506,
+        "sha256": "7585bbe9c525cade1253f03196580a569ac2cf1c2556bf89f7dfd51f59d0f053"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Except/corefn.json",
+        "bytes": 16387,
+        "sha256": "57981bd0d8698eec1035792870a1bc06f80073b8b3ef809e0f416eeeadfeff8c"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Gen.Class/corefn.json",
+        "bytes": 12631,
+        "sha256": "59d1b32fd72cb6ce6d62bc22ae4ef185c578a8d5b89b8615410b02db3b3a980b"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Gen.Common/corefn.json",
+        "bytes": 73167,
+        "sha256": "4a303eca0a6830d160340c16f763896e2fac5bddc5e7b0095040de38630476bd"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Gen/corefn.json",
+        "bytes": 173758,
+        "sha256": "e059ffa91c74ba0332c5a53ef9ade609449b853e5f86720afe1057d9f76f4d36"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Identity.Trans/corefn.json",
+        "bytes": 89817,
+        "sha256": "ef816b6576c1febbecd5c8bbcc3205643b1e7ad95080977ff502a1163d5ec29a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.List.Trans/corefn.json",
+        "bytes": 639071,
+        "sha256": "92e901c30cfef624ebf43822a676cdaf7aa88f9f393c82ee59847f17515a3fce"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Maybe.Trans/corefn.json",
+        "bytes": 281493,
+        "sha256": "99bca1f3517734fd98329b8a8304c98ee186e0872eedb1369c8533210000c72a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.RWS.Trans/corefn.json",
+        "bytes": 427410,
+        "sha256": "856e4f80f74fa554de81274d8ca1fcee7cfc54ce99ea44d55e9f80c1698f51cd"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.RWS/corefn.json",
+        "bytes": 42715,
+        "sha256": "7e0d191cd818f78b177b16a8c5d1bb58b72adbd8c8f4682d012c101ed8da66a7"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Reader.Class/corefn.json",
+        "bytes": 22043,
+        "sha256": "8cf6db2e5fb498c6cb3279eaa21e13d3ac2252882aad65fedc7596bea314a182"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Reader.Trans/corefn.json",
+        "bytes": 278172,
+        "sha256": "f81a29c19d6e88120fe2717b7d8198b959afd6582d941e3461d1c9020effbe9a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Reader/corefn.json",
+        "bytes": 16299,
+        "sha256": "50d6458f3d57855034d6ca1f9d42a3f05cb306572f69d0756c16a9abbc004312"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Rec.Class/corefn.json",
+        "bytes": 183527,
+        "sha256": "a53f5c40dcbf69cd5e2d5d2d539581d306e903c102bc3cdef6588762b6afc11b"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.ST.Class/corefn.json",
+        "bytes": 11912,
+        "sha256": "e12bc7b60e4739c32bf065adb55f9d0e9077a767e94854224ba7280341a01697"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.ST.Global/corefn.json",
+        "bytes": 1535,
+        "sha256": "97f711bf615f2d4eaba4ef4cb5188ce64fd02914adb97594531735231790e85a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.ST.Internal/corefn.json",
+        "bytes": 76153,
+        "sha256": "88bb36d71b223029a81f8cf012b38b90231604e07e3b0441ea110f59cd6e2437"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.ST.Ref/corefn.json",
+        "bytes": 621,
+        "sha256": "0b988d049a5a092152f4ea1a77571d8983c5a84d5e231d9532d0b7d92a93a0c4"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.ST.Uncurried/corefn.json",
+        "bytes": 7986,
+        "sha256": "1c612c47f58f7c199f9d86a097a14cc121c4098bb7490fb17affad3b8d6928e4"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.ST/corefn.json",
+        "bytes": 601,
+        "sha256": "29c8a25c7253995ac17d7bf31223120057c1d72eb2eb3acf810b5054b4486f60"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.State.Class/corefn.json",
+        "bytes": 30413,
+        "sha256": "e4331a85852fa58527076454e2c6599c06a22a9227bfa55f8f9f173636f1c1f8"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.State.Trans/corefn.json",
+        "bytes": 336074,
+        "sha256": "a558e38ad946184593a07010445fc7d9043c825f1ba098a7f538bf2475a854a9"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.State/corefn.json",
+        "bytes": 27305,
+        "sha256": "41e31061dd1498f3b2e15497a9d42483dbd5bb394ff765b7f727b1f84c426d80"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Trans.Class/corefn.json",
+        "bytes": 4219,
+        "sha256": "c3bfcad40cdc9aed4a3ae3a9dc70897a18f7494c91f1918495cb643f789209d7"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Writer.Class/corefn.json",
+        "bytes": 37601,
+        "sha256": "19541dad85e01498da4de7c4134f69d7808dc191a4fb91c81594ba9e26f04b3b"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Writer.Trans/corefn.json",
+        "bytes": 350640,
+        "sha256": "efe76e9bd9a925f233cde1987de1f52307775417c205e9dc3f912550d6c22407"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad.Writer/corefn.json",
+        "bytes": 21546,
+        "sha256": "f1889107ee7f37619e1cfe4853369f8890d275556073383ebdf21bbf945934e3"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Monad/corefn.json",
+        "bytes": 42644,
+        "sha256": "885422dfb1cd80968c49872541f18033045f8ea79f42efeaebbb1c094758fce8"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.MonadPlus/corefn.json",
+        "bytes": 5600,
+        "sha256": "7464d9dca59309b710c4bd4aaf6006a6f0a22e1f255f42f7263b5e7da79fbc54"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Parallel.Class/corefn.json",
+        "bytes": 255568,
+        "sha256": "63307c28d288177cf148a6f6b809743f8d34b337320f49da8cd56e63c83a6542"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Parallel/corefn.json",
+        "bytes": 80581,
+        "sha256": "edc4a1de6c2c93217dbccc9cbb064155328e44c96b1e948e766c7769f3331d08"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Plus/corefn.json",
+        "bytes": 6242,
+        "sha256": "1789f0e2a78d2a71508d7b2f0636555881b5ce045d90ea597cd1ed7f2879e5f9"
+      },
+      {
+        "path": "inputs/purust-aff/output/Control.Semigroupoid/corefn.json",
+        "bytes": 12787,
+        "sha256": "64aaca007a8cf14e9eb9003b9ae2efa77bc7ae33b70468f8837534018bd3dc12"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Array.NonEmpty.Internal/corefn.json",
+        "bytes": 43587,
+        "sha256": "27767a0b4510ba08df9a6e99cbb125f74bddbecf59ce35208b8ea74cb923f133"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Array.NonEmpty/corefn.json",
+        "bytes": 371507,
+        "sha256": "3928b55a36b3d2b8485ac2f025a9540576a2dac8fadd39084444378c5c14c7a2"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Array.Partial/corefn.json",
+        "bytes": 13894,
+        "sha256": "14e0b93a4d090aaebd05d153483b8fb4d0c08264cbb5d9eb44a3278624b47993"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Array.ST.Iterator/corefn.json",
+        "bytes": 85081,
+        "sha256": "733e8de4dbb75e1207081497c668f02b43ab83bcab333f0d5ef89b941cf2fab5"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Array.ST.Partial/corefn.json",
+        "bytes": 8849,
+        "sha256": "e4ddb245c5fbc0b87adc5e6838f288c61988c10d2268a986152f91d73d64c6e1"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Array.ST/corefn.json",
+        "bytes": 99736,
+        "sha256": "b6e242a95d058bb13a1561bf2db13d812e9f76e3b1c752aa624e221bc8408586"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Array/corefn.json",
+        "bytes": 600994,
+        "sha256": "68121249f21cb7e78972d59ae7f62bc513033d7af481b6c1c1f1aec4c7f85f2a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Bifoldable/corefn.json",
+        "bytes": 292291,
+        "sha256": "381df223c3edb969e19aa2ac9d1424180596007016dff85453741b2504aa4ff4"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Bifunctor.Join/corefn.json",
+        "bytes": 46281,
+        "sha256": "0056d33b4d56dcb9b948e0c77cfc53a2bfa0cff00b4418c4d6943cd221b70931"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Bifunctor/corefn.json",
+        "bytes": 43389,
+        "sha256": "63c3d80a357f3ebb6f0b427e4328538a9375eec816bbb930d8c65fcd970be1d8"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Bitraversable/corefn.json",
+        "bytes": 273307,
+        "sha256": "12799da9ca7818edeb89cc7b4ce167f1c24402b891a8d1278b9566dffa903dda"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Boolean/corefn.json",
+        "bytes": 727,
+        "sha256": "8dc0d1838cc0a5b6fc9ada8244171a500d78bec430068d0868e408f25936266c"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.BooleanAlgebra/corefn.json",
+        "bytes": 32535,
+        "sha256": "36c0bc440cd4aa05d0f68062116a3c3c343545337537d54923ba0a4133820ed2"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Bounded.Generic/corefn.json",
+        "bytes": 49171,
+        "sha256": "f6cf5c194c7dbdc5dcb313a3d7b42d1349074f97e5cc0e0d42d40e3ebf97987b"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Bounded/corefn.json",
+        "bytes": 71307,
+        "sha256": "46820decccc3c3c798aaa952c41c5480e38393a144e95d67706c6a5a7388d1e0"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.CommutativeRing/corefn.json",
+        "bytes": 33730,
+        "sha256": "ac49fd33d385cbd821f632fa13ed60f24f3c3c7b87673f49abbbb8eba344b50b"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Comparison/corefn.json",
+        "bytes": 23293,
+        "sha256": "0cf62312f878219aa8aa99efa3f19871edfb449efc464d4ec34430756b80a3b0"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Const/corefn.json",
+        "bytes": 64319,
+        "sha256": "2d7970543b87c3a3548db192ac41b15d9ab80b4dd7d12fb9ba069ea22f4780bb"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Date.Component.Gen/corefn.json",
+        "bytes": 18593,
+        "sha256": "690cd22415ddc4f083cd00a1bdad58a673f93184491943173684db621abb5244"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Date.Component/corefn.json",
+        "bytes": 251955,
+        "sha256": "5124838ff9b02a5c10720ab5b6354a8df412232194a71f5f66e3ed090b3d58b5"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Date.Gen/corefn.json",
+        "bytes": 31710,
+        "sha256": "b438166022bcd38e447129d8174e252742ec274ad69b944d6363c5c69e536e29"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Date/corefn.json",
+        "bytes": 216660,
+        "sha256": "da84d351817657e68c6c7d8e2160cd8b2c48bd338f703b4a3f422fdd5cfa379a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.DateTime.Gen/corefn.json",
+        "bytes": 11240,
+        "sha256": "ec83dc7b3b2e9b5847d9e6faaeb77ea8067d8ff3a2db5c5c81e6400566011f7b"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.DateTime.Instant/corefn.json",
+        "bytes": 62050,
+        "sha256": "5c55c9ede8fec00312194f174aedbecbf75dcd04a88cd63554ab5bd6088551fa"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.DateTime/corefn.json",
+        "bytes": 113032,
+        "sha256": "bbaa677747a007ec31a67eb41eef5bef561ca6fa7fd8271b2a8576bd0921a95a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Decidable/corefn.json",
+        "bytes": 31449,
+        "sha256": "0feb63c10f8ad7a65b374873980021968c92a9c656f9055bbb6b75d42d7a3eab"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Decide/corefn.json",
+        "bytes": 67056,
+        "sha256": "3ac0c71b80a2fb6775fd2005d4c4f276b2d7660555c3d74652b6dbcfb1ebd42e"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Distributive/corefn.json",
+        "bytes": 78925,
+        "sha256": "11d0844e6da1b7154c61eb69824b9bc6cc7219a11363f6dc9abac05f51643a1e"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Divide/corefn.json",
+        "bytes": 61181,
+        "sha256": "105236020fdea410012ad0d3eb07838c963f5bac69e4383576b45c75397de7f2"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Divisible/corefn.json",
+        "bytes": 23571,
+        "sha256": "9f45b67f1c2130954783f173a9a9619f4d8860c4d9456c71b614fac0169574b9"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.DivisionRing/corefn.json",
+        "bytes": 17676,
+        "sha256": "b0e4c2258ec5b5680828500bba82d9be90d2ce01b5d4f5317a4a159057b601e3"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Either.Inject/corefn.json",
+        "bytes": 25302,
+        "sha256": "6adc2a79802148da72bd8f74d271ac75b49df8ec6c8b9ed75f41be6750977f1f"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Either.Nested/corefn.json",
+        "bytes": 301271,
+        "sha256": "ccc9b211f4406b1c34cfbb171ac4131fe6dbe601420d3e75b4f5e8e577c7c3a6"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Either/corefn.json",
+        "bytes": 179883,
+        "sha256": "7530b3c3864d7cdd1eaf9469e88b46937123cbe15fc1d231485abf4151dd84de"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Enum.Gen/corefn.json",
+        "bytes": 21623,
+        "sha256": "5cedb0b6f566924ba378a42c344fc998594bd724df692f6e0ad0dbd7e17bba41"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Enum.Generic/corefn.json",
+        "bytes": 218883,
+        "sha256": "21025f6e8915f9f761be2c560a1b539cad33c5fd0615be12f1f43732b3fc464b"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Enum/corefn.json",
+        "bytes": 326444,
+        "sha256": "5b6fde358fdbc9321fb375f64dea11af91f2e9aec987c13e443484ba5ce0b921"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Eq.Generic/corefn.json",
+        "bytes": 43643,
+        "sha256": "07a3fec96787e34031815c79629c50707592ba5d1a1ee57d08c4026a9ec55e69"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Eq/corefn.json",
+        "bytes": 60718,
+        "sha256": "09c9ac0134d4525573600ab6dfcdd0cc4aea3cceedb5fd29d4383aafb90c40c3"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Equivalence/corefn.json",
+        "bytes": 29510,
+        "sha256": "6bf707fb580d791d2fb5ad37e99a65ae889a2174a6639ee2a4373d998307ef5e"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.EuclideanRing/corefn.json",
+        "bytes": 38067,
+        "sha256": "c31fd5be743121a3e265ed837090ac534fe7a2b2a31023837e62b59fae773c8a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Exists/corefn.json",
+        "bytes": 2188,
+        "sha256": "d3369a87be675aff9c1a069f5446bf61ada64f34adb36b16454954c65693403c"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Field/corefn.json",
+        "bytes": 5975,
+        "sha256": "fb47cb9897c5b988c1c9e1a67c9033fc8849c8f7ddb8a50a5bd49a94240a3411"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Foldable/corefn.json",
+        "bytes": 602781,
+        "sha256": "467adcdb1071da901078cf44f09587b137a05c81602a8472f4dcd7ae09ed8252"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.FoldableWithIndex/corefn.json",
+        "bytes": 538305,
+        "sha256": "1704533cd988093a9e9cca29e879dc60c2d676169c7bd6b66d91fe51f8cdf81e"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Function.Uncurried/corefn.json",
+        "bytes": 8416,
+        "sha256": "f2b5ae0c5eb6ca9b666e58b4b5427a6c9f4b941636af831a95e65e3580e73295"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Function/corefn.json",
+        "bytes": 17093,
+        "sha256": "de6fd75ba6b597e6e86c76a85b34444bf2f1a18a0439b7ecaf662f52fb4a8968"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Functor.App/corefn.json",
+        "bytes": 80172,
+        "sha256": "a4e0dbb4a3728c52e0c12bde7ca2792fbe800e66d12e5127e3cc0aa5d5363f0c"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Functor.Clown/corefn.json",
+        "bytes": 62464,
+        "sha256": "de30978d9d058024ac423a6728d74d3e8f810d6dbba64a4401b92f929d6099dc"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Functor.Compose/corefn.json",
+        "bytes": 138380,
+        "sha256": "79c50ec9a826219266f262297bc52663afe5c078a27452287bbf12a6976fdf3d"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Functor.Contravariant/corefn.json",
+        "bytes": 24401,
+        "sha256": "5b60c3759cedb286ad9eaf76f22ab08ee9f9f29dc0e100156e29eba4c736fbde"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Functor.Coproduct.Inject/corefn.json",
+        "bytes": 37022,
+        "sha256": "58199470d6968865f44b9af1a449ed9a848a12803f686429d8cd44f14bf95239"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Functor.Coproduct.Nested/corefn.json",
+        "bytes": 404885,
+        "sha256": "a5dc68a42170c436f12aa82f43e4edd2c0aaf9ce55456951f4dde06c74f0120d"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Functor.Coproduct/corefn.json",
+        "bytes": 149234,
+        "sha256": "772e1b1dc9550ff772519d88a227cf912854a235b75f8a1a5486c4e09aace5cf"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Functor.Costar/corefn.json",
+        "bytes": 152137,
+        "sha256": "3a20985c05e7bf3ed462f9fbf8ea584520e77de8760511b22cfad400e16898a1"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Functor.Flip/corefn.json",
+        "bytes": 88099,
+        "sha256": "38f79b8699c70f11fc1375854f0c343b23b797b91fdd6e22b3352daa8fa66454"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Functor.Invariant/corefn.json",
+        "bytes": 61726,
+        "sha256": "8c6631e0d696f71e73c28433c091b6b6a8bf3f8db6e5e35153c7477775233e4c"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Functor.Joker/corefn.json",
+        "bytes": 118511,
+        "sha256": "d2bc2d6e22a5ea192a3b7d1a2f28e7488b33d9712c55a6ba4ee6cbdc3d5b27fa"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Functor.Product.Nested/corefn.json",
+        "bytes": 221014,
+        "sha256": "4e10fa12c0c65bf8113cf53286bf78cd4063c9a5916efc76d7e4dfeb0fefdd1c"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Functor.Product/corefn.json",
+        "bytes": 159191,
+        "sha256": "270f0d0765549c920bc6766aa65b3340a40644a927230663c43653dbfcbf25c6"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Functor.Product2/corefn.json",
+        "bytes": 120266,
+        "sha256": "722ff518f03471c7909b8b6f003b1509a1eb8ddff988e584184eddb8c4c59250"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Functor/corefn.json",
+        "bytes": 32672,
+        "sha256": "e67b7d6a4a9791068f2c215de89d9871330ba1380a150c073b417f738c5cc9ce"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.FunctorWithIndex/corefn.json",
+        "bytes": 170104,
+        "sha256": "1e1b675e2da7ee29ca2f51d15de1bc76416b36d72be2a6e2327c4510a78001dc"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Generic.Rep/corefn.json",
+        "bytes": 51492,
+        "sha256": "d02013ef896882ab00984f2a13d7d819d387badd5492ad9ed31f5c12489d5cfa"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.HeytingAlgebra.Generic/corefn.json",
+        "bytes": 129809,
+        "sha256": "b788a90853abf5af266e4114d0f93e3fc0d6af8c1e5cccb90cb88b85895d50f0"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.HeytingAlgebra/corefn.json",
+        "bytes": 147787,
+        "sha256": "1531252e05694356f7b9f92ab93745bf23b5fbc9c57a02a139730206f7baeb80"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Identity/corefn.json",
+        "bytes": 61918,
+        "sha256": "2e1e0798de2ca17570dd9ef8242074caf51398a5e2e39361304a199334aa53a9"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Int.Bits/corefn.json",
+        "bytes": 1449,
+        "sha256": "eb7ab4d365c1de7c5a5dafd8d81321e2cf6d2624ec4c1d76a2e91caa63f8b869"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Int/corefn.json",
+        "bytes": 80317,
+        "sha256": "fda085bebd4e4a5f4b2c1dc2df50c6be767781b674f74baf2f38ec61f4da52b4"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Interval.Duration.Iso/corefn.json",
+        "bytes": 140820,
+        "sha256": "e4586e848bad84417f3e4c11504489d5770bfae34a4ae98100e2b31c544281cc"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Interval.Duration/corefn.json",
+        "bytes": 87576,
+        "sha256": "68ae5051a59d2d597408de0bbe508e8e8dd8a5c6d1b58630ea10b8607d50c736"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Interval/corefn.json",
+        "bytes": 386246,
+        "sha256": "2f188aec2203886bff0b0670a8d86be247c84b698e1a662592837f5fe6bcd105"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Lazy/corefn.json",
+        "bytes": 243897,
+        "sha256": "fb8e18ad09721ed18f82b5f369ff18515d4327d3c407d917d670221495035324"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.List.Internal/corefn.json",
+        "bytes": 108186,
+        "sha256": "cacc937e8b97fe79f21eeba753a30d9099d37f74bee21c589da91b398e21383b"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.List.Lazy.NonEmpty/corefn.json",
+        "bytes": 102818,
+        "sha256": "21da236ed07024458a7aa9ebf75a17901dea690a81a0155a2d5d8c3fcb044df2"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.List.Lazy.Types/corefn.json",
+        "bytes": 610121,
+        "sha256": "0eb6dc8bb8afcda8c3b2d02a951c665504b4ca4e973ed1cef0288e9ef0699f73"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.List.Lazy/corefn.json",
+        "bytes": 637175,
+        "sha256": "3826f7c642c29c3ed4b517327f2722a5f21245343dfd21f1561bec25a4e530e8"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.List.NonEmpty/corefn.json",
+        "bytes": 343966,
+        "sha256": "7fdd3b1a5d4fea7ef4f7a72161259acee1505cd9f5f346c028b4d9efadf96c6f"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.List.Partial/corefn.json",
+        "bytes": 17609,
+        "sha256": "b0c5695e507aaab0bc3d11f4ee845ee81111c30e241868e8dcbb8262ba50a648"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.List.Types/corefn.json",
+        "bytes": 534377,
+        "sha256": "35a4548655962773c5983a087303cfbcca774befecb8c0046488cdfb280d608d"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.List.ZipList/corefn.json",
+        "bytes": 52952,
+        "sha256": "d3747e8ee7beb40ee35a1ef9bfdbd4f5905cd56005d31df5941526cd9df7c18f"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.List/corefn.json",
+        "bytes": 611257,
+        "sha256": "b2884d9523729107fb65f90279560b0dcc7c7bbcdd9f1f7d4f26599542d4f6ad"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Map.Gen/corefn.json",
+        "bytes": 31836,
+        "sha256": "4264c92e2e714c2d5a1402bfa3a63c7d1d3071fa48033c8a353894561f42633e"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Map.Internal/corefn.json",
+        "bytes": 1229666,
+        "sha256": "982f08ef5461c4cd5b7cec29320788fcd69bb6e4e1427f9391579892a828cf8e"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Map/corefn.json",
+        "bytes": 45946,
+        "sha256": "2d33706cd19f22feb115bf3cbb21e95241fddd44203483fca24a7680adecb304"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Maybe.First/corefn.json",
+        "bytes": 35759,
+        "sha256": "ba44f7e208281c317b39aa60ffb7e495510f60f92d34f99e2e15430435ef5c65"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Maybe.Last/corefn.json",
+        "bytes": 36331,
+        "sha256": "76aefbaccc40c70a3a850d62a9e64b899650777dfa02ddc79951dc63e4579c9a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Maybe/corefn.json",
+        "bytes": 156644,
+        "sha256": "94dedee3259b7e87cea6f361a3926ad3cb83c05103815f824015767defb76ee0"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Monoid.Additive/corefn.json",
+        "bytes": 48736,
+        "sha256": "002294aadc9eaeeb3c339966d5f39b03b7641296cc1bb1733fad719af33703b1"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Monoid.Alternate/corefn.json",
+        "bytes": 41443,
+        "sha256": "fdab6d2df44e4de2982c03a1873b18c4507a4777cbb63c277af9450c6a5b84b2"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Monoid.Conj/corefn.json",
+        "bytes": 61656,
+        "sha256": "48ffb611a433097399e6ac564b351f2786e0a38bee4221a3d2eb3b622f8e7322"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Monoid.Disj/corefn.json",
+        "bytes": 61656,
+        "sha256": "9b031c1d326081a130a1887e26219c0532989ce7e6a8bd69a424c3e8713b4d6c"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Monoid.Dual/corefn.json",
+        "bytes": 48273,
+        "sha256": "a788bf382961ad7a20b82ec95ba9e565e36638f343366d6126a13a16f22232f2"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Monoid.Endo/corefn.json",
+        "bytes": 28358,
+        "sha256": "67506bdccd4497f25beb5fcec14eed7b044187de34b7dfd7b44c9de1940b1e4e"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Monoid.Generic/corefn.json",
+        "bytes": 21089,
+        "sha256": "822a5e457a4408546f97c62cc3d0ca586f7e5bdd6fafd7a8eaf6f6b101227923"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Monoid.Multiplicative/corefn.json",
+        "bytes": 49278,
+        "sha256": "b7c4c8d9eee2aa65140506a965b8937aea76a7215612c84d3348e08351e05823"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Monoid/corefn.json",
+        "bytes": 73412,
+        "sha256": "dbec09038cf2a0cfa5d4d66d15c3bd54ee1312f5be46952a04ea2a06035f73d3"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.NaturalTransformation/corefn.json",
+        "bytes": 565,
+        "sha256": "22429d067f127db1e5f7f9f05bf9948c7ccdb724944d526827f2b6a95f45d8db"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Newtype/corefn.json",
+        "bytes": 76043,
+        "sha256": "18a17209ba63288f4bcb59064eb531ac1c28ebc8adaa2a5bfd543f059a3a00c8"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.NonEmpty/corefn.json",
+        "bytes": 285038,
+        "sha256": "25fc6cd07ca65e492c0cbee321447ca3d4c5541eaf87b17404748ac514b4187c"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Number.Approximate/corefn.json",
+        "bytes": 27050,
+        "sha256": "6528a778d020b0def9cc00172b61977460f67b66225e0725b443b57d18d46159"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Number.Format/corefn.json",
+        "bytes": 19400,
+        "sha256": "57ca2a6b325c92021f7c8e030b4c19b26c3ae97e32ae5c27d2df9f6b512166e5"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Number/corefn.json",
+        "bytes": 11870,
+        "sha256": "e280d252aecd6cbeedefbf992015343855032ceb9708bf696b71516f157d8e44"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Op/corefn.json",
+        "bytes": 28260,
+        "sha256": "eb7b2d37d88953e86d7a1fafb452d49d59a977d364dbf3b89f6699358d607f2e"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Ord.Down/corefn.json",
+        "bytes": 26324,
+        "sha256": "f1e476a2f6b12d6517f60cc234ddd521ab51926f3df0c5661d2ee6babca46a1d"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Ord.Generic/corefn.json",
+        "bytes": 46533,
+        "sha256": "236ffcbb8d359e770e56c7eb2bbf1669db8fccc89740004e6c884e0f90a8973d"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Ord.Max/corefn.json",
+        "bytes": 30648,
+        "sha256": "9a53d0ec726a35193ab7643b8d5029934fe1ed2448027fe422c9ceeaa4a6b389"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Ord.Min/corefn.json",
+        "bytes": 30643,
+        "sha256": "81ddad2db737d6716f2500ea929b43f23653e35931a4d404eec600464b77f11e"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Ord/corefn.json",
+        "bytes": 151250,
+        "sha256": "db6340746763d08af67ddc7674eef248affe8a6fb6125079c7aa728d5e5ac893"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Ordering/corefn.json",
+        "bytes": 18746,
+        "sha256": "c914a3591e6e886709b12c0183677e85ec42d0b8eded513e7b3d5e0e73f1587c"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Predicate/corefn.json",
+        "bytes": 14554,
+        "sha256": "aad40c5b5be2ae33aac5e93752669879cfa4591597eed1b77c317f9b3d162452"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Profunctor.Choice/corefn.json",
+        "bytes": 42782,
+        "sha256": "549ddf1ee2aafae82ee1ddba6b1cdce88bc0aa1063d2b4c27bb4a8f526a3966a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Profunctor.Closed/corefn.json",
+        "bytes": 7898,
+        "sha256": "295de8bbd48257bae77fd7a0a38ec1bbb72670f438a5e4d4211543006edd1460"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Profunctor.Cochoice/corefn.json",
+        "bytes": 7213,
+        "sha256": "d55238bc5007e273adc9aaa6e95701c1d1a03866366595d2a43c7b1b2543acd1"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Profunctor.Costrong/corefn.json",
+        "bytes": 7208,
+        "sha256": "e423115da63bfc2104fdce80d526a83c00f596273c3fb05c0de69610c69cdc3a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Profunctor.Join/corefn.json",
+        "bytes": 41192,
+        "sha256": "1520681859a6c4dd24cebdfb27a15da8d85736062da2643cbf4ddcc3b99e958f"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Profunctor.Split/corefn.json",
+        "bytes": 62886,
+        "sha256": "2976cbd3898776c765cf7c4014fc7966f0b2353ad9ace35b838b15358dff8d3a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Profunctor.Star/corefn.json",
+        "bytes": 235010,
+        "sha256": "37aafd03b25f11384787179574c0ea9cbe040c6075751123dd6a0ab3b6d504f9"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Profunctor.Strong/corefn.json",
+        "bytes": 40355,
+        "sha256": "80bf209f1c597e6b0cbda89551876b8a9404caed64044ddbaaa4fa9645fe4edd"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Profunctor/corefn.json",
+        "bytes": 42430,
+        "sha256": "36d56fad9b33dd70d837df730903ac7ac1d23cda67030b75b43e534ee2d3357f"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Reflectable/corefn.json",
+        "bytes": 15422,
+        "sha256": "1689dc8dad11d07d929c67fd27f42a596b6e086a0013544e13fc03ae8a8c5c1a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Ring.Generic/corefn.json",
+        "bytes": 35672,
+        "sha256": "4bf0a9cdba210511b113ec73eee821aef30aafa428c085a3edaab6578604a207"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Ring/corefn.json",
+        "bytes": 63007,
+        "sha256": "e0143b647b1804e7c8976d9fe99c7140dce368d112caf57c43d32fc3ac99868f"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Semigroup.First/corefn.json",
+        "bytes": 39362,
+        "sha256": "9016a65aced04038739b89da5864f82d4b633972b75cceae0e1bdec61d2e8c49"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Semigroup.Foldable/corefn.json",
+        "bytes": 205567,
+        "sha256": "a51a65248e656801f7d9605166e86959dbc66a7fe10e872ec5c7ebec0e6e5a8a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Semigroup.Generic/corefn.json",
+        "bytes": 37680,
+        "sha256": "d35474ba945b01a6ce026a663823d9017c1041b4233a3416e67800974c42396c"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Semigroup.Last/corefn.json",
+        "bytes": 39277,
+        "sha256": "7e2dc0a55df525a9a33d1b47e9f40eb46eea31c67a81ef06bd273fee1840dd59"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Semigroup.Traversable/corefn.json",
+        "bytes": 80065,
+        "sha256": "c37e69da71dd39fe7531843578c9bf32a9ab840b7f5aa21d4b2d1fd0b3034e86"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Semigroup/corefn.json",
+        "bytes": 48601,
+        "sha256": "196c82509a8766c1cb00e84cde93b0bb7052b0f800de67ba211b968c39f4b2e1"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Semiring.Generic/corefn.json",
+        "bytes": 83844,
+        "sha256": "521a043baebaa84f1e603850bc5f26fc2bfd0d9b85dc675af5deacbf659c5ba2"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Semiring/corefn.json",
+        "bytes": 103423,
+        "sha256": "8bd269883097c7a10d60815617605650ca64f1c2642e45005d83116d93cfb962"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Set.NonEmpty/corefn.json",
+        "bytes": 138987,
+        "sha256": "8b5386ca5a562e31256fe2f25234c46078746450a193db6526d86bc32f9419ef"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Set/corefn.json",
+        "bytes": 156616,
+        "sha256": "fdf99c4c5dc4305667469d1dec8e96e9ac8fb557995d8fcc92715e00654f7140"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Show.Generic/corefn.json",
+        "bytes": 47324,
+        "sha256": "a9c43059fc18377db4f5a67d81dc16c03535bc34a1cc562b2e2ec261b69a5f98"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Show/corefn.json",
+        "bytes": 64576,
+        "sha256": "f3b76f3c9d97d90ef028b2493e391bdddcd4f48931c51249912dec7410b5abfd"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Symbol/corefn.json",
+        "bytes": 8447,
+        "sha256": "92db9aa5060b67da0736ea7e559bc68546c103226d73f1d9c723a23b3e390051"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Time.Component.Gen/corefn.json",
+        "bytes": 6692,
+        "sha256": "5614cd110da75f9aa2e57fda99ef97270a2206ca8f0d6a638fb42f6a69d818be"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Time.Component/corefn.json",
+        "bytes": 134036,
+        "sha256": "1251baaad2895cc59fc8fc592c0f5d15b889c4db3a0e1e57f4855fda3ce330c3"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Time.Duration.Gen/corefn.json",
+        "bytes": 31040,
+        "sha256": "7f531f9d70b65ddcc1c732dad5155d372ebccc9785e4479d48f9f1ae83c5ef15"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Time.Duration/corefn.json",
+        "bytes": 134630,
+        "sha256": "aa0dc2ca2b56c1da62c7b386d4ad63152a5e451ae76d40617f18663a9c8efff1"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Time.Gen/corefn.json",
+        "bytes": 15227,
+        "sha256": "c10078bfeb37268b936bfd5d0a2847b82d3cbe562f37f961343c4ce3a1482f5d"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Time/corefn.json",
+        "bytes": 164382,
+        "sha256": "66ee328da90cea2da3aefb8a78146ab7a08bd4ed6135c0d66f7b419ba1039b0c"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Traversable.Accum.Internal/corefn.json",
+        "bytes": 58594,
+        "sha256": "3414b241e0978ceac91f2192490c684d2ebbb948abd557827610cbaa9e413fcd"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Traversable.Accum/corefn.json",
+        "bytes": 440,
+        "sha256": "46ad6d1420e73cd884be011e9f034c42e987bae7f1f210f073d7d4784a94e955"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Traversable/corefn.json",
+        "bytes": 460290,
+        "sha256": "ab2ba886ed1056ef9fa1dd767e68024b4ad9742cef87c26534c58c0cb6e48cc1"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.TraversableWithIndex/corefn.json",
+        "bytes": 353006,
+        "sha256": "b01d25b5abff94489951ca7fedb7233258f09d83c92b1c4ef522e58ad2a87452"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Tuple.Nested/corefn.json",
+        "bytes": 536986,
+        "sha256": "101b93c4aa4951bd4a2a52f32e781003863b9d07792108899c7644f9b34cce5a"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Tuple/corefn.json",
+        "bytes": 254028,
+        "sha256": "95ca692d2bfb57bcca628bf39e27962cc7ae4d227b3e5d74d75877903aca894d"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Unfoldable/corefn.json",
+        "bytes": 52118,
+        "sha256": "f33be8ce88f7ba704fe3afb037697a8f5c4a9c0f91c9a1bd014e9fb4418ad389"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Unfoldable1/corefn.json",
+        "bytes": 76170,
+        "sha256": "c08247c13187c32c3f2c121447e36f831f25d00f4d7e9f848ed17c09cf763374"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Unit/corefn.json",
+        "bytes": 521,
+        "sha256": "96e6ced5b7231dc537870b331d7166cbe3770c9b48c904ae053e95eccf7cbc42"
+      },
+      {
+        "path": "inputs/purust-aff/output/Data.Void/corefn.json",
+        "bytes": 4074,
+        "sha256": "a488e8abe824d14f5601976e59a41baccad52a312999338c42b60c4946028783"
+      },
+      {
+        "path": "inputs/purust-aff/output/Effect.AVar/corefn.json",
+        "bytes": 58910,
+        "sha256": "ccaa927095a9069b8ad7b6906095b660185edd1c8826395c54bade37aa9cb72b"
+      },
+      {
+        "path": "inputs/purust-aff/output/Effect.Aff.AVar/corefn.json",
+        "bytes": 47772,
+        "sha256": "0517cdedb257ea6d2bb5ba7d6335093577bb546ebe46d4a12bd66f1af1776eea"
+      },
+      {
+        "path": "inputs/purust-aff/output/Effect.Aff.Class/corefn.json",
+        "bytes": 91225,
+        "sha256": "5fe697365c09c6e37b946e79b656c7e6d364ec995192ac5e8a74fffcba50ed31"
+      },
+      {
+        "path": "inputs/purust-aff/output/Effect.Aff.Compat/corefn.json",
+        "bytes": 39935,
+        "sha256": "d6d92d4303f8c5a072ecd3dc0b983f8c4fe24c1baf666aab3d5da96ef5046a2b"
+      },
+      {
+        "path": "inputs/purust-aff/output/Effect.Aff/corefn.json",
+        "bytes": 323860,
+        "sha256": "8ad09ab574a2d105e560ca6353e5dbd951aeee49317eeb3d6064fb103a627785"
+      },
+      {
+        "path": "inputs/purust-aff/output/Effect.Class.Console/corefn.json",
+        "bytes": 79962,
+        "sha256": "8de7c232d50436f939f5eff3599ad15000f039e78d5cd56e14698576b6d860a9"
+      },
+      {
+        "path": "inputs/purust-aff/output/Effect.Class/corefn.json",
+        "bytes": 7138,
+        "sha256": "cf065c928879bcd60966d89771cad336779af72afe4ab58b492ab15aae81500f"
+      },
+      {
+        "path": "inputs/purust-aff/output/Effect.Console/corefn.json",
+        "bytes": 24503,
+        "sha256": "dc18f466c5e71f0570e022a07f41d5879b38a9b2c5f1cbe2554f3f1e6ee0a114"
+      },
+      {
+        "path": "inputs/purust-aff/output/Effect.Exception.Unsafe/corefn.json",
+        "bytes": 7878,
+        "sha256": "e0aea2c7c4cb134a70721b95b321d66b014f15f4dfb55f3de41b64993c3a2ba4"
+      },
+      {
+        "path": "inputs/purust-aff/output/Effect.Exception/corefn.json",
+        "bytes": 17923,
+        "sha256": "d161364c75954f14d3ad7fd2800f82f96203cbac25a19d2f8c589729856f589f"
+      },
+      {
+        "path": "inputs/purust-aff/output/Effect.Ref/corefn.json",
+        "bytes": 13332,
+        "sha256": "c9ec4984ec35b5e96991710f38b2c50c92df7fe98442c66a699ffd1e6d12160d"
+      },
+      {
+        "path": "inputs/purust-aff/output/Effect.Uncurried/corefn.json",
+        "bytes": 327325,
+        "sha256": "d7f73afc4248341df14639f5046336a5d8f3ec3f32a114e9bcdd3b77c61c2593"
+      },
+      {
+        "path": "inputs/purust-aff/output/Effect.Unsafe/corefn.json",
+        "bytes": 817,
+        "sha256": "9a4ec97925d25eda6fe0dd32faac8a7702126108f15e21195c9d8794210e94e1"
+      },
+      {
+        "path": "inputs/purust-aff/output/Effect/corefn.json",
+        "bytes": 26765,
+        "sha256": "f4b62d2d90cdcc1733c79a6be67fb089d849fc9889d2c7131027e5458187ac5d"
+      },
+      {
+        "path": "inputs/purust-aff/output/Partial.Unsafe/corefn.json",
+        "bytes": 4195,
+        "sha256": "7c0970acd8091efe5bcba82452ac7e140c3c9699585bb47736c06a4e97d817cb"
+      },
+      {
+        "path": "inputs/purust-aff/output/Partial/corefn.json",
+        "bytes": 3259,
+        "sha256": "b674e7788c4e3cad3e29612caae46bf33094c722f48a5ce21863b2ec900f9d38"
+      },
+      {
+        "path": "inputs/purust-aff/output/Performance.Minibench/corefn.json",
+        "bytes": 93311,
+        "sha256": "35324411e0e12f234fa325cad3526f7fa5058447bf15569c08bf189c49f47abb"
+      },
+      {
+        "path": "inputs/purust-aff/output/Prelude/corefn.json",
+        "bytes": 5165,
+        "sha256": "39e7b2d37acb23d42696802efda57f24fba5cceed9a8904fb224ee4b13779d63"
+      },
+      {
+        "path": "inputs/purust-aff/output/Record.Unsafe/corefn.json",
+        "bytes": 2092,
+        "sha256": "ac5ea1b28441b4d856d041c4583c8d1d95f2aee833b3258280e8085fb90e2537"
+      },
+      {
+        "path": "inputs/purust-aff/output/Safe.Coerce/corefn.json",
+        "bytes": 1634,
+        "sha256": "fcd3b4c8318e4384309dd9ce71c10d98ce780a398e4fa8bc4c7596a8aaacfb6f"
+      },
+      {
+        "path": "inputs/purust-aff/output/Spago.Generated.BuildInfo/corefn.json",
+        "bytes": 1748,
+        "sha256": "fb5ecbd22ca61252d6093fbd68fe3ea2e6f6f3fbcde602b25638abc12c1abff9"
+      },
+      {
+        "path": "inputs/purust-aff/output/Test.Assert/corefn.json",
+        "bytes": 43241,
+        "sha256": "1dc20bab981f58f8535d81c414f0a8bded3109aee925e202590ec0afb4019f07"
+      },
+      {
+        "path": "inputs/purust-aff/output/Test.Bench/corefn.json",
+        "bytes": 95344,
+        "sha256": "896d629c8ee9e0bf36a51d574dee475902e9d33219a0fbd70c2651ff67005bff"
+      },
+      {
+        "path": "inputs/purust-aff/output/Test.Concurrency/corefn.json",
+        "bytes": 219923,
+        "sha256": "e3cd28279f35ddf5d68ad1d6719bc66f935f65af24dafaddebb2cf0e5a069829"
+      },
+      {
+        "path": "inputs/purust-aff/output/Test.ErrorReporting/corefn.json",
+        "bytes": 54549,
+        "sha256": "f56b3908f79835bd28c9978e714598b979b515bd756efea5fa4dcb99988480ac"
+      },
+      {
+        "path": "inputs/purust-aff/output/Test.Lifetime/corefn.json",
+        "bytes": 69778,
+        "sha256": "797ccea4f0e07ecae638946aac520d2adf28086284bec565f6fec990f09ca145"
+      },
+      {
+        "path": "inputs/purust-aff/output/Test.Main/corefn.json",
+        "bytes": 1547101,
+        "sha256": "0bcaf6e05d44f4b8c748cee048a2771bd58b842c7dcab78ba028a66905d6d8cc"
+      },
+      {
+        "path": "inputs/purust-aff/output/Test.NativeIO/corefn.json",
+        "bytes": 9503,
+        "sha256": "564195fd72097b15736d0ef37564732fac6efaf425dc184362fecf08f3bdedf1"
+      },
+      {
+        "path": "inputs/purust-aff/output/Test.ParBench/corefn.json",
+        "bytes": 32466,
+        "sha256": "ab06405b74df338a568d812ea79f4c1f54747ee4666c7ea799a701c1b0bb1a23"
+      },
+      {
+        "path": "inputs/purust-aff/output/Test.Smoke/corefn.json",
+        "bytes": 56432,
+        "sha256": "7ec0ea254c7c87b66d676b5b760650dbde8bcdd81205e8fa0b11a8916abaa72c"
+      },
+      {
+        "path": "inputs/purust-aff/output/Test.Stress/corefn.json",
+        "bytes": 63782,
+        "sha256": "0a78474c30a7b9d4f13a9234686f633b1718326e7e4b1228bc8ecc01147a1cbe"
+      },
+      {
+        "path": "inputs/purust-aff/output/Type.Equality/corefn.json",
+        "bytes": 20572,
+        "sha256": "0e8565ff0500906d50a8af5475a659d1bca8b89f8d5d17fa6ec543b2d17bbc40"
+      },
+      {
+        "path": "inputs/purust-aff/output/Type.Proxy/corefn.json",
+        "bytes": 3880,
+        "sha256": "6b053c872178e7cb58715d2012110a8ee50d31d50ff98f78cd7524aa31b72ea8"
+      },
+      {
+        "path": "inputs/purust-aff/output/Unsafe.Coerce/corefn.json",
+        "bytes": 682,
+        "sha256": "cf426ee8c1ea5fa2cb61d088f97fee409375a9b0d1b98db42ee3180d7ded1b54"
+      },
+      {
+        "path": "inputs/purust-aff/spago.lock",
+        "bytes": 35882,
+        "sha256": "0b06a191ac767ff81e9a52cf27286a82e48e32f295cadb61b08227bae22e6dd9"
+      },
+      {
+        "path": "inputs/purust-aff/spago.yaml",
+        "bytes": 2885,
+        "sha256": "faf4b5f563359921db84ca648fbb2649e6e4835b66d8ebea3ca4436ea2e37b55"
+      },
+      {
+        "path": "inputs/purust-aff/src/Effect/Aff.purs",
+        "bytes": 14078,
+        "sha256": "6cf6fdf0e05c53fa210c449bffc0d5b8383ecb2163a3dcfe39b18303044ed7f9"
+      },
+      {
+        "path": "inputs/purust-aff/src/Effect/Aff.rs",
+        "bytes": 60122,
+        "sha256": "91d2699bba0e8be43d0e83c8a67494187734c86da827584fb791dca98c145dd9"
+      },
+      {
+        "path": "inputs/purust-aff/src/Effect/Aff/Class.purs",
+        "bytes": 1421,
+        "sha256": "622ce459e71b0b8862185fc9a8e9ca44304545c41d6383e78a8fc1cdae49374f"
+      },
+      {
+        "path": "inputs/purust-aff/src/Effect/Aff/Compat.purs",
+        "bytes": 1828,
+        "sha256": "73bc1722d4ad05c802b65eb653fefef52e9aa61ebe505f3214138a2d3ac545f8"
+      },
+      {
+        "path": "inputs/purust-aff/test/Test/Bench.purs",
+        "bytes": 1641,
+        "sha256": "76dc29eeccf66e1caea96f76d014ab29f3ea0b5881fcc03218e82725dfba5586"
+      },
+      {
+        "path": "inputs/purust-aff/test/Test/Concurrency.purs",
+        "bytes": 4974,
+        "sha256": "393a1d12922cd365515cd87d2d3af5ba60b7b649baf04da914dcbe0696f3cf18"
+      },
+      {
+        "path": "inputs/purust-aff/test/Test/Concurrency.rs",
+        "bytes": 3232,
+        "sha256": "3e6a88b3afc5e0a6290e9396d9e8fb5b639fc9fcec0874d8f6025c449d11c063"
+      },
+      {
+        "path": "inputs/purust-aff/test/Test/ErrorReporting.purs",
+        "bytes": 1423,
+        "sha256": "404cbab241cd3e892356b38e346cc45cedcc8eba9e5f66f055a540085b505cd2"
+      },
+      {
+        "path": "inputs/purust-aff/test/Test/ErrorReporting.rs",
+        "bytes": 176,
+        "sha256": "69c7989b07fe9a32240f8f9d850863bd0a29d8a56d054e905c32b897d9e30a01"
+      },
+      {
+        "path": "inputs/purust-aff/test/Test/Lifetime.purs",
+        "bytes": 1729,
+        "sha256": "53ba6b9afe1bcb90ab61b47b0fa4bd42cc89f8247b9f2d271073b92efe60d60c"
+      },
+      {
+        "path": "inputs/purust-aff/test/Test/Lifetime.rs",
+        "bytes": 330,
+        "sha256": "2ff3b73ecaea2ff5d68ff4d5a27896ae6e76a3e1732ed60d0bf3b9f87b5bb688"
+      },
+      {
+        "path": "inputs/purust-aff/test/Test/Main.purs",
+        "bytes": 25174,
+        "sha256": "083835b068a76f53bcafe2a26cf0bb6882724bd36cf5d893df62cb2c7faf2bb1"
+      },
+      {
+        "path": "inputs/purust-aff/test/Test/NativeIO.purs",
+        "bytes": 308,
+        "sha256": "83e045ee2c8522bf4338528dfb80a441d45705f0ab850b0b9e3f0e55e64be9b3"
+      },
+      {
+        "path": "inputs/purust-aff/test/Test/NativeIO.rs",
+        "bytes": 1101,
+        "sha256": "92b2c238fe23ad918821deeb28b8b9143521e694f753cb1ee8d0a58764a4ff4e"
+      },
+      {
+        "path": "inputs/purust-aff/test/Test/ParBench.purs",
+        "bytes": 762,
+        "sha256": "f3e16f42016d13d7588f5863f39c919351752974e80674c6e5c540f4130f0c50"
+      },
+      {
+        "path": "inputs/purust-aff/test/Test/Smoke.purs",
+        "bytes": 893,
+        "sha256": "cb316cf0d684f579e6eea22c26b16703c9066596500b5ed4d3d48ecda34d1a35"
+      },
+      {
+        "path": "inputs/purust-aff/test/Test/Stress.purs",
+        "bytes": 1027,
+        "sha256": "11de8cf3d857a9be16fdab466bceb0ab8c5214b304ec23e61bd4f323b30a20cc"
+      },
+      {
+        "path": "inputs/purust-aff/test/expected-main.stdout",
+        "bytes": 939,
+        "sha256": "bdac5079d39dc4ba3f7fe20d4ac624ff6f5fe110ed3643c1c178bb0ab573a3dd"
+      },
+      {
+        "path": "inputs/purust-arrays/src/Data/Array.purs",
+        "bytes": 41634,
+        "sha256": "d336825bf660ee79f03c559eaa1a22f41ec5a194b8cce79c5b24877160c32455"
+      },
+      {
+        "path": "inputs/purust-arrays/src/Data/Array.rs",
+        "bytes": 10901,
+        "sha256": "8bd3625d100251b342582cd336130449529adbf77ebc6a9331e1db5e21888ce1"
+      },
+      {
+        "path": "inputs/purust-arrays/src/Data/Array/NonEmpty.purs",
+        "bytes": 17329,
+        "sha256": "4e42eb0655fef616939cdf91f8e87b8c5e3581f34a538a2066cd9a644302b8d4"
+      },
+      {
+        "path": "inputs/purust-arrays/src/Data/Array/NonEmpty/Internal.purs",
+        "bytes": 3464,
+        "sha256": "59ce6b9e860ccdd2a089fb055008b629cd9362bb3a7f703e6bd1fb2f7a642ae6"
+      },
+      {
+        "path": "inputs/purust-arrays/src/Data/Array/NonEmpty/Internal.rs",
+        "bytes": 3648,
+        "sha256": "ca210a29fdac48aa7902cb7ceabc056da9f1c8c22ebf5dc3d143abec28d35c48"
+      },
+      {
+        "path": "inputs/purust-arrays/src/Data/Array/Partial.purs",
+        "bytes": 937,
+        "sha256": "21c2d565d728a650e1f0e3521570c518434a97aaad087893237d20c18fda8184"
+      },
+      {
+        "path": "inputs/purust-arrays/src/Data/Array/ST.purs",
+        "bytes": 7417,
+        "sha256": "4af1b59e242a89e3e5aa427c4486fce587173b3008f369d9d00de398a84ea4dc"
+      },
+      {
+        "path": "inputs/purust-arrays/src/Data/Array/ST.rs",
+        "bytes": 6912,
+        "sha256": "801d495f0cef890c7bb777054bdd91483a323f5215603ac02d4774ac53aeb7e7"
+      },
+      {
+        "path": "inputs/purust-arrays/src/Data/Array/ST/Iterator.purs",
+        "bytes": 2636,
+        "sha256": "96dd803b0c983a56714d1dbbf6d86193c245660e6acb4faffa2cec6f6e1d2583"
+      },
+      {
+        "path": "inputs/purust-arrays/src/Data/Array/ST/Partial.purs",
+        "bytes": 847,
+        "sha256": "dd9dfaae9bd0942eb341324035ed96880dcf2e167033ef8164d700270af5957a"
+      },
+      {
+        "path": "inputs/purust-arrays/src/Data/Array/ST/Partial.rs",
+        "bytes": 905,
+        "sha256": "88f693b4a02b790b5a7cfbc2b64a64030371d2c6881260df62b2a088868e33ff"
+      },
+      {
+        "path": "inputs/purust-assert/src/Test/Assert.purs",
+        "bytes": 3942,
+        "sha256": "666601c3d459503802027dca698b9bd05bacd42f48f7d320a834196ed4cb4127"
+      },
+      {
+        "path": "inputs/purust-assert/src/Test/Assert.rs",
+        "bytes": 604,
+        "sha256": "a726b171c32427abd5a2d6ce1db88e6c883a8230f86bd08755d1071e4dc447ad"
+      },
+      {
+        "path": "inputs/purust-avar/src/Effect/AVar.purs",
+        "bytes": 4465,
+        "sha256": "4917796cc572084d9caa773f4cf9163f6d6be529d11ad2679ae2d1c3caec316e"
+      },
+      {
+        "path": "inputs/purust-avar/src/Effect/AVar.rs",
+        "bytes": 10292,
+        "sha256": "50e501b15c945018f4b48309d37dcb55235680c0560e67447c9810662421406f"
+      },
+      {
+        "path": "inputs/purust-avar/src/Effect/Aff/AVar.purs",
+        "bytes": 2571,
+        "sha256": "206092e619c3aba81a462115c017bc12fd463f93e3a703f67a03170270193863"
+      },
+      {
+        "path": "inputs/purust-console/src/Effect/Class/Console.purs",
+        "bytes": 2076,
+        "sha256": "403ec72831a8c4d9be2c8aa26ddba0bfa499ec49022ef03236bf35dcdbced873"
+      },
+      {
+        "path": "inputs/purust-console/src/Effect/Console.purs",
+        "bytes": 2521,
+        "sha256": "556100bd2ba1b9ce87c543c2f7d9bbd4a1c4ba8f48bda28e52683d018c232b75"
+      },
+      {
+        "path": "inputs/purust-console/src/Effect/Console.rs",
+        "bytes": 4242,
+        "sha256": "42889e5213d045468fcfdc653c10f6e324ef708f263681e105e22ccad5714356"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/Date.purs",
+        "bytes": 5049,
+        "sha256": "c3eea8586788f99feca194f923ef18d8a8d28b8c731b7a7daea52c96032a5fc4"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/Date.rs",
+        "bytes": 4341,
+        "sha256": "00b271978dc0199c71be535ef6486d6ef6c67323ff90b2e316feb54e191ba115"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/Date/Component.purs",
+        "bytes": 4644,
+        "sha256": "d71af0ef35b7b8882b3580da85f1470890e01b6ad0ff0253c6fda2c2d787c858"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/Date/Component/Gen.purs",
+        "bytes": 811,
+        "sha256": "7f15a53d511d085d8a176ab4f301c68b1fdf6881762b4bc28c0e9a82fc66d3e9"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/Date/Gen.purs",
+        "bytes": 777,
+        "sha256": "dc842c785a7d3a88f3593f71b2321c549c2615cac60ea35ea0a4a83e46e82e5e"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/DateTime.purs",
+        "bytes": 3069,
+        "sha256": "ddc249195d4fc6e1365d67c97a54df5189672d0da289d0ded6a27feaa40fcb0b"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/DateTime.rs",
+        "bytes": 2422,
+        "sha256": "d6197efd637d201d5befd86e8ea572a6248c64073038ee1bb1623a4659b22e1d"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/DateTime/Gen.purs",
+        "bytes": 550,
+        "sha256": "5862b930026da7914472d35c930ca05493d38656461ea92667cc093f981b3f22"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/DateTime/Instant.purs",
+        "bytes": 3338,
+        "sha256": "e93e85807ce06bb33da863916733f105f1574b7c6f622b09ec4a9d5861a28a3a"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/DateTime/Instant.rs",
+        "bytes": 1313,
+        "sha256": "97c68568f3f79925e85b3a33c6805efbfd3483eba0317918ed249d22c6931972"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/Interval.purs",
+        "bytes": 4990,
+        "sha256": "981bc3df177c3ea147b0f934db18a04d37a15708d0572fe48639cd036ab2ebf3"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/Interval/Duration.purs",
+        "bytes": 1834,
+        "sha256": "f99fec2c28272e9a098a2d86783b5a9ad6b93302e4c5e51605b9e3a0d1d45755"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/Interval/Duration/Iso.purs",
+        "bytes": 3291,
+        "sha256": "bf49d10f0bd0f1a292b0bb65432fcdc6b27247afdffa2adcee574c278a23ea9d"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/Time.purs",
+        "bytes": 4086,
+        "sha256": "f8a5db121aaf7f3d5f914d158eeed10fbe84cb1f31891ab15790e98378886bb9"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/Time/Component.purs",
+        "bytes": 4139,
+        "sha256": "9b83db345d96dfb2ecb678368d1f0f0daca839e130c5afa64a346f7034be0753"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/Time/Component/Gen.purs",
+        "bytes": 665,
+        "sha256": "b9c7d462d9965fb920a521639b2a6195e679706689af54daa00db4435a49c2f7"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/Time/Duration.purs",
+        "bytes": 3829,
+        "sha256": "5498f3a422b2775906fde5fa9491541d8d327d71a87696ad8f252b48ce429e30"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/Time/Duration/Gen.purs",
+        "bytes": 1023,
+        "sha256": "eb0ffae6f1024d50630607e45c24e7e87e0799dede18d01ae7163d50224dc7e6"
+      },
+      {
+        "path": "inputs/purust-datetime/src/Data/Time/Gen.purs",
+        "bytes": 433,
+        "sha256": "315fca8ae88eb0b49188119b2d50fd4789bd368b126cf397883e333b3d37f593"
+      },
+      {
+        "path": "inputs/purust-effect/src/Effect.purs",
+        "bytes": 2587,
+        "sha256": "f5738a67511e72894c3784e44a334c94a6aa8e504fd3a29ddccc3617416b6f40"
+      },
+      {
+        "path": "inputs/purust-effect/src/Effect.rs",
+        "bytes": 1964,
+        "sha256": "bc2afe4e68f754655d5f3daf18d6e285f1da5fdeafd7741b6f01897e3c68505d"
+      },
+      {
+        "path": "inputs/purust-effect/src/Effect/Class.purs",
+        "bytes": 598,
+        "sha256": "a78c5876b0aad1123e30ca8a37cd79ca2a837fbccc3a9e92bea3793033cc5a03"
+      },
+      {
+        "path": "inputs/purust-effect/src/Effect/Uncurried.purs",
+        "bytes": 12497,
+        "sha256": "0c6db8591d2519d9b18bf2c5ec56f33b6c25ee6f69d3edfbce8482d48771214b"
+      },
+      {
+        "path": "inputs/purust-effect/src/Effect/Uncurried.rs",
+        "bytes": 8059,
+        "sha256": "1143040936176440dcedfd8a1d96bc907d95e523a7f72e4c4cf9386a97094e78"
+      },
+      {
+        "path": "inputs/purust-effect/src/Effect/Unsafe.purs",
+        "bytes": 226,
+        "sha256": "e20339c8aed22f342fa8d452dd186079b4324cd00933b9e9f4eeb59d3313cac0"
+      },
+      {
+        "path": "inputs/purust-effect/src/Effect/Unsafe.rs",
+        "bytes": 120,
+        "sha256": "f2aefeff6050bf3c685557425d6dba7607250d2fb96354c6e64fb31e7966acfa"
+      },
+      {
+        "path": "inputs/purust-enums/src/Data/Enum.purs",
+        "bytes": 11271,
+        "sha256": "a7ffaa7a8cc15c362852409f1aba80a5b7792d89353635d54317d43e864e5e9c"
+      },
+      {
+        "path": "inputs/purust-enums/src/Data/Enum.rs",
+        "bytes": 301,
+        "sha256": "e3f8373ed1fccb921d95528418e7a21b92ef1e0640187001e64831c794c72bdd"
+      },
+      {
+        "path": "inputs/purust-enums/src/Data/Enum/Gen.purs",
+        "bytes": 518,
+        "sha256": "3d7234b9dd417d2a31510cf22c691da3cfd0bb4a7bc2265c68cbae019dbcdc13"
+      },
+      {
+        "path": "inputs/purust-enums/src/Data/Enum/Generic.purs",
+        "bytes": 5325,
+        "sha256": "1c9eea073e25c24c7cca9455487ebec47f0072b1ecba7e2076e7da56fa473846"
+      },
+      {
+        "path": "inputs/purust-exceptions/src/Effect/Exception.purs",
+        "bytes": 2722,
+        "sha256": "ceccd3f261586c55f085727f34c4bad1f6d871b96cb32e61cf9cb8f0bd623218"
+      },
+      {
+        "path": "inputs/purust-exceptions/src/Effect/Exception.rs",
+        "bytes": 3629,
+        "sha256": "f53d933f1d9c65eb4a7ce1d31313697b948e481f64d418f5f480118358db9064"
+      },
+      {
+        "path": "inputs/purust-exceptions/src/Effect/Exception/Unsafe.purs",
+        "bytes": 548,
+        "sha256": "8cc11776f0fb907a571c1242e990c840d36562955f1e946f68a7eeb3add10d12"
+      },
+      {
+        "path": "inputs/purust-foldable-traversable/src/Data/Bifoldable.purs",
+        "bytes": 6011,
+        "sha256": "ba0f8f91040f1e49a0ef10ad012eb9be475fa820332eb3d6bca9345c1a3c4446"
+      },
+      {
+        "path": "inputs/purust-foldable-traversable/src/Data/Bitraversable.purs",
+        "bytes": 4129,
+        "sha256": "1f6eae4a9fb4457664d7fa4c822b451d15a1d320a28b12f81010622885e2cb84"
+      },
+      {
+        "path": "inputs/purust-foldable-traversable/src/Data/Foldable.purs",
+        "bytes": 16298,
+        "sha256": "288e8e95ac7ce4cb2c7dc2f68468927363ada5458658f0b144e1751d3ed56b1e"
+      },
+      {
+        "path": "inputs/purust-foldable-traversable/src/Data/Foldable.rs",
+        "bytes": 555,
+        "sha256": "2d33c55bf2aaad410e7b6a4c10d950fa6faa6aff7a1be261d396b850efda9498"
+      },
+      {
+        "path": "inputs/purust-foldable-traversable/src/Data/FoldableWithIndex.purs",
+        "bytes": 12422,
+        "sha256": "2e10b31b454a84f9597ddb15e43fcfa5bfa84cae8cc5e8b6bbbc5a2018755944"
+      },
+      {
+        "path": "inputs/purust-foldable-traversable/src/Data/FunctorWithIndex.purs",
+        "bytes": 3694,
+        "sha256": "cdffaeb5485f7a5a12796b5db2a9a81b7212d50dacd6405a87bc3f57fbc15f6c"
+      },
+      {
+        "path": "inputs/purust-foldable-traversable/src/Data/FunctorWithIndex.rs",
+        "bytes": 362,
+        "sha256": "7433def32a0829dd156d38fa0ae183f2e1af62646a971a2642cedcc975dbd57f"
+      },
+      {
+        "path": "inputs/purust-foldable-traversable/src/Data/Semigroup/Foldable.purs",
+        "bytes": 6312,
+        "sha256": "7bbb43d0a9354e63d409e6b01f4ee634f0e900c6516ff17734eee0e0cbb03629"
+      },
+      {
+        "path": "inputs/purust-foldable-traversable/src/Data/Semigroup/Traversable.purs",
+        "bytes": 2399,
+        "sha256": "361841e1f1960110c9bdaebdbdd8637742f626a26942e61fe7a8ee91fcf8b447"
+      },
+      {
+        "path": "inputs/purust-foldable-traversable/src/Data/Traversable.purs",
+        "bytes": 8657,
+        "sha256": "605c2e3c31d3531ce3674d5fb48ab608981b1553f9272c234ad9ca792108bf77"
+      },
+      {
+        "path": "inputs/purust-foldable-traversable/src/Data/Traversable.rs",
+        "bytes": 3061,
+        "sha256": "7688245d0cb168b5a9921804d891c96a83d4379bbade6f8c2e383ccec87201ca"
+      },
+      {
+        "path": "inputs/purust-foldable-traversable/src/Data/Traversable/Accum.purs",
+        "bytes": 95,
+        "sha256": "a37609f85d2dc1e527a2cd969302f0bf0bd5c8735226f5fbc874f67a6f4b646d"
+      },
+      {
+        "path": "inputs/purust-foldable-traversable/src/Data/Traversable/Accum/Internal.purs",
+        "bytes": 1332,
+        "sha256": "03a2322dd8920092618ad5a9ef8bab31e740b384af88b2e9816abd25d34d1755"
+      },
+      {
+        "path": "inputs/purust-foldable-traversable/src/Data/TraversableWithIndex.purs",
+        "bytes": 7925,
+        "sha256": "aa2f2406e9ffbf49bb8b07a74b5c044eef9f4e3cef21b8cf7ba18a0edddc23ac"
+      },
+      {
+        "path": "inputs/purust-functions/src/Data/Function/Uncurried.purs",
+        "bytes": 5680,
+        "sha256": "4e210a49f64e1862cc8530bcbe661c350c964568bbfa2f79bbb1fbe394152d02"
+      },
+      {
+        "path": "inputs/purust-functions/src/Data/Function/Uncurried.rs",
+        "bytes": 4976,
+        "sha256": "933f793ab9cd0ec3601d4b33aa37ee8aede1026c3ca0da53828fe6a6ec0d474e"
+      },
+      {
+        "path": "inputs/purust-integers/src/Data/Int.purs",
+        "bytes": 6981,
+        "sha256": "53a7c199f384719a5f615faf6141e9b0ffa2fa9f66b9806d30a0f196be074eec"
+      },
+      {
+        "path": "inputs/purust-integers/src/Data/Int.rs",
+        "bytes": 2495,
+        "sha256": "bf4faf4b859568c147bb3d69ed9b7e0450342bf178d591b89b89302891ae5145"
+      },
+      {
+        "path": "inputs/purust-integers/src/Data/Int/Bits.purs",
+        "bytes": 689,
+        "sha256": "6377bce107895b0021264a30a35c8e50867b084349407009061728bb42c436de"
+      },
+      {
+        "path": "inputs/purust-lazy/src/Data/Lazy.purs",
+        "bytes": 4624,
+        "sha256": "f90ec9cbdf4fcc04d982eaae674e9b72837217c567f0ed1c78dc7b2df4a2393b"
+      },
+      {
+        "path": "inputs/purust-lazy/src/Data/Lazy.rs",
+        "bytes": 3125,
+        "sha256": "ad0ee57acc45e594b7e096dbecb9d86be4c108255c25c84bcee01d49daee161f"
+      },
+      {
+        "path": "inputs/purust-numbers/src/Data/Number.purs",
+        "bytes": 7540,
+        "sha256": "13c04cf0d293c54825fc95b5b3d543379a8d913e110d9e5056ca5388a31afc87"
+      },
+      {
+        "path": "inputs/purust-numbers/src/Data/Number.rs",
+        "bytes": 2721,
+        "sha256": "513fdabb8ffae09aca541b89c48eeb325510eaad4680027a35c522034b34a361"
+      },
+      {
+        "path": "inputs/purust-numbers/src/Data/Number/Approximate.purs",
+        "bytes": 2733,
+        "sha256": "fbd544b15b42845be1a3fa11f1ec3c61d290baa300d41b7e41e3aacf707eacff"
+      },
+      {
+        "path": "inputs/purust-numbers/src/Data/Number/Format.purs",
+        "bytes": 2141,
+        "sha256": "0922126e6d31ecc361a00b265ecf302fb1f6449ca11d2cc2331a0ae174d9f83f"
+      },
+      {
+        "path": "inputs/purust-numbers/src/Data/Number/Format.rs",
+        "bytes": 5829,
+        "sha256": "46ac14980aa03f8029dd50363001c2e488c9c38121650e06067dacca29c0f218"
+      },
+      {
+        "path": "inputs/purust-partial/src/Partial.purs",
+        "bytes": 485,
+        "sha256": "33ec6baf7de02292b40b97ed63f91402ec09ebf49c97392bb77ea78680177cd6"
+      },
+      {
+        "path": "inputs/purust-partial/src/Partial.rs",
+        "bytes": 166,
+        "sha256": "81a2c023571f24d258ebcb54afb58ff891f18f3c48553a061de92e2ab0ba3fd4"
+      },
+      {
+        "path": "inputs/purust-partial/src/Partial/Unsafe.purs",
+        "bytes": 817,
+        "sha256": "d3d70727652d25459d19f812d186cf24583de1be5eb1decd87b6bf4afc36a4bd"
+      },
+      {
+        "path": "inputs/purust-partial/src/Partial/Unsafe.rs",
+        "bytes": 215,
+        "sha256": "0c892d611eea760c9784cfed87662cb2a151be67e1668e7db96ce2abcd229d16"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Control/Applicative.purs",
+        "bytes": 2429,
+        "sha256": "4cf9abb5b98e7569c66375a725ce3815c57f020f1dc0513fc4bd853cd70b567b"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Control/Apply.purs",
+        "bytes": 3486,
+        "sha256": "02712ac645e851672d659d9b21171514b6d727efa7de08461399d3e7e581859b"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Control/Apply.rs",
+        "bytes": 454,
+        "sha256": "680c946570182a90dfd738bd047188ec65e2507f185fdf303bfa84965f8453cb"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Control/Bind.purs",
+        "bytes": 4220,
+        "sha256": "ea03e5ffa8c55c101018ceb9bf19fca9af792b49113a73be4a85867ef2c022f7"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Control/Bind.rs",
+        "bytes": 457,
+        "sha256": "c210e95faa892c6fe9f05d7c41db8ade5744bd7af95924fee382bc5f55183cf8"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Control/Category.purs",
+        "bytes": 711,
+        "sha256": "9cd6a331c6e9a7e17f35adb8fd11ba9fbe4fd2034eed34979d9cfbef68fe4230"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Control/Monad.purs",
+        "bytes": 2705,
+        "sha256": "0bad91df889b370157f300b5e5e0241272d9149380a6c5322a81af58a6fdc67c"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Control/Semigroupoid.purs",
+        "bytes": 892,
+        "sha256": "aefe8332e035b2f990e25981ac56abb63a71efed5d5e986657483dd51c04834a"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Boolean.purs",
+        "bytes": 220,
+        "sha256": "cbffb99db81cebc7626ab43b43f785f62ffe8c59b3781174907b05d8fb171eb2"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/BooleanAlgebra.purs",
+        "bytes": 1691,
+        "sha256": "cc5bcc84af3a96675d3b8ee03b7754a818dd0dd49d20248cf0e17c4793f5ba96"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Bounded.purs",
+        "bytes": 3129,
+        "sha256": "f67cb72dce353b0eecdd53214a76f879e52eba6335f1305c2ea744063c913d0a"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Bounded.rs",
+        "bytes": 409,
+        "sha256": "68dd03b13afb3b9823ab6456cc9c428a3088430764857be0de9aa9a02a36da0c"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Bounded/Generic.purs",
+        "bytes": 1901,
+        "sha256": "110cac55f2eadb6a6614397a31b5c167e20983d3ccdce89647ee975e24058f3f"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/CommutativeRing.purs",
+        "bytes": 1653,
+        "sha256": "bcb4f94840a1544d53287ef6d44e51f8af66119f12910d3678f101a78a7fea05"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/DivisionRing.purs",
+        "bytes": 2156,
+        "sha256": "be3721f83db50d4d1bcc6f2cba1cb30e2be39b376440e215c79ab0e0d7b688f5"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Eq.purs",
+        "bytes": 3229,
+        "sha256": "53036679ea014e3c452fce0ee8ce26f58de222cd88eed2586d6dd7dcea3fd872"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Eq.rs",
+        "bytes": 831,
+        "sha256": "0252d348e1a4db259616e819a45408ef18d34d6d47bcb2abb610644884b288c2"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Eq/Generic.purs",
+        "bytes": 1237,
+        "sha256": "9cd6184fb35329e232a2b593e1e3404e89692b36b99104f800bfe23894627373"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/EuclideanRing.purs",
+        "bytes": 4059,
+        "sha256": "15d83e118a173ae91fff5b12152afdacc549c12da0a541602d0cf5d702fae863"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/EuclideanRing.rs",
+        "bytes": 551,
+        "sha256": "6782bc690199b4a71bde4d9a9fdc38ed662d9affad5ec4f5e1ec6c65f455cd65"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Field.purs",
+        "bytes": 2066,
+        "sha256": "a27a8bb18ff139cd8eb5c7512c9aa999050faad79f02727e285360b2cda5f06d"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Function.purs",
+        "bytes": 3309,
+        "sha256": "2142b200f60953ac4fe648b765da7cf6cfb046e8600ffef3484a7f3e4f8f03b7"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Functor.purs",
+        "bytes": 2766,
+        "sha256": "fc5b0cc22a6c4d96a5779eb629cb304cebaa910f03a77192628c131a867bbeb8"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Functor.rs",
+        "bytes": 308,
+        "sha256": "91b40510c2b9b7b6bd96d9e3f8c0c5e45767417480058977688489aaa662efd3"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Generic/Rep.purs",
+        "bytes": 1970,
+        "sha256": "fc1e17e76bf53bf8dc86593ca2d27a77f921e8aa67bffcb6265fdc473736862d"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/HeytingAlgebra.purs",
+        "bytes": 5489,
+        "sha256": "797b9e8358e10691e93c8b1552723507fd12647441f90db11b01e35850bce75b"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/HeytingAlgebra.rs",
+        "bytes": 239,
+        "sha256": "b105018fe4c69e7eee5ab469334d98bd8d0b870216b88500fda176af5a95e8d8"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/HeytingAlgebra/Generic.purs",
+        "bytes": 3494,
+        "sha256": "c5022ab44881b51e4b62d06994d92f04b037ce97ff2c50054e4b90d91a463bbe"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Monoid.purs",
+        "bytes": 4084,
+        "sha256": "a1bf093434dc1d8f162a19369f3376516f3f899e17875711be3d7164fb20e605"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Monoid/Additive.purs",
+        "bytes": 1301,
+        "sha256": "9b44eba5a733dbd6f7e908ea1c4eb44b61694f5a3d1d1e157c7c81300eb7417a"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Monoid/Conj.purs",
+        "bytes": 1345,
+        "sha256": "0e3bedf55635d1c04225ff1a756bc55b94afafa8fb8d327f118e4c1f58f40858"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Monoid/Disj.purs",
+        "bytes": 1347,
+        "sha256": "e1eb141917201b0b866c433e19e68a6b0d80705d8fb6ea3d61d103d4a01c735f"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Monoid/Dual.purs",
+        "bytes": 1097,
+        "sha256": "83c40da0d7125aa11225efe267713892ecaa044d66da05d048a1194ac0c48f6c"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Monoid/Endo.purs",
+        "bytes": 910,
+        "sha256": "aa5b2bc60841651e0bf54a683e6d6d99f4aca932bf583691b3fdd71a32aa5594"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Monoid/Generic.purs",
+        "bytes": 930,
+        "sha256": "a3df423b6bc60580e9e80612ae7c1682445853c55086363ceed129e43c72bf70"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Monoid/Multiplicative.purs",
+        "bytes": 1575,
+        "sha256": "0d01fac2de65e733c640b045e00f60422e1b776010ee69e7714dd659bb8c7796"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/NaturalTransformation.purs",
+        "bytes": 893,
+        "sha256": "3196072783cdc7135047788ad6e58073e1cfeb50d284f038b79b65db2df9eb7e"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Ord.purs",
+        "bytes": 6654,
+        "sha256": "ba132ffbd2784283842f3e5c0b8a47be006968229bcd70abce0764a21b8a47ae"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Ord.rs",
+        "bytes": 2438,
+        "sha256": "ec7b50d8c354e6be6a5883005bfe54f035695bc742ddb3af12be84c1f91b372f"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Ord/Generic.purs",
+        "bytes": 1465,
+        "sha256": "f1a8a7f58a29e0d22087de7acb3e7eb4a7e159fa5cb589d127274efcb91246ca"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Ordering.purs",
+        "bytes": 950,
+        "sha256": "9a53fe2e7bd7afb11b8db093b1511bc210fc88c1661a78fe4d89800b20cae0a1"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Reflectable.purs",
+        "bytes": 1611,
+        "sha256": "3335b7b50707e01e8fe217afa89c1ccc3d9b1c9323329bd153094079a6890bfc"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Reflectable.rs",
+        "bytes": 100,
+        "sha256": "01e19fb7f082f9c1d35b8956ac83476c280cd838ab4edec06848043244c855c0"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Ring.purs",
+        "bytes": 2411,
+        "sha256": "1abcaa302136c9731ec2d89ee1fe29f3acbec0dd32da45d30a8d46cc6fb87b7d"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Ring.rs",
+        "bytes": 139,
+        "sha256": "506c55eaa758ad8f189f446799c6430f6fd318607cd35fb7697b5c78d4acd455"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Ring/Generic.purs",
+        "bytes": 1022,
+        "sha256": "4aec6adf51e6cb9e63f3004968d2bda3801d31cbc60e8ffff183307393eabee4"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Semigroup.purs",
+        "bytes": 2925,
+        "sha256": "e14ab5200a3ba533334c3d06cbeac9bd9fdb3428c64a9d59926f69284ce4f9a8"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Semigroup.rs",
+        "bytes": 341,
+        "sha256": "878c29fc7256ddbba01bb7ec722cf17128af921043b56ce0f009c6ec422ba55c"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Semigroup/First.purs",
+        "bytes": 1003,
+        "sha256": "9df1dca916c4a4d344ddf580f2a3d3a1cb270dc8df91044147d590e8bc315347"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Semigroup/Generic.purs",
+        "bytes": 1255,
+        "sha256": "c33f0a8dea5d46a2c7ac0b7805840a443b2ed3d82d226319c243ff0b29ded7bd"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Semigroup/Last.purs",
+        "bytes": 967,
+        "sha256": "f3aadefc2e6687234ad3d4690dd61e436bfa3aca9b57e0a1a4da7328738f7c11"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Semiring.purs",
+        "bytes": 4538,
+        "sha256": "6e588bb9736b230b5bd6410ce86f9e9e4d4326ab250a66fa239a7c5f822e7072"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Semiring.rs",
+        "bytes": 295,
+        "sha256": "2eb6f29c2e45267ea47a14eb6460caf6ecc44a9f4c3e69dac18ecf6dd5de14eb"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Semiring/Generic.purs",
+        "bytes": 2308,
+        "sha256": "13e146664e64d99ebe5d942ef3bd897ed78c85e2ab737374d1976b37c36b8601"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Show.purs",
+        "bytes": 2871,
+        "sha256": "4422b4bbe3d67f1f85575937fb7b9127af4443fe951926a95f6ecf0822032e6c"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Show.rs",
+        "bytes": 4022,
+        "sha256": "18d9978ef0f6f0818290ac92b671c6905859cb3ac07a11f76a478cbacbd88530"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Show/Generic.purs",
+        "bytes": 1712,
+        "sha256": "bd4a82c3cb1e734f775ff6a40fae47b053d336313faf47efb8b4b5d78895376f"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Show/Generic.rs",
+        "bytes": 248,
+        "sha256": "55ec3d116f2e444a9e3d293ba8cba64f4ba81d23d38a91a42380c1502a3ff4b0"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Symbol.purs",
+        "bytes": 631,
+        "sha256": "8302d378edfcd58fbe1aadcf95c22f8637533de188b99ca2a0e43147e8957ec4"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Symbol.rs",
+        "bytes": 95,
+        "sha256": "5fc86940a2dcf4f65bfaef50ec5f9ff267c4293a45edd7592f0ecccec1b54dce"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Unit.purs",
+        "bytes": 554,
+        "sha256": "ce9f2d8fba25b6b392e5e9e81afe0fe33968dc15420765ab19bac8adb948e64f"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Unit.rs",
+        "bytes": 28,
+        "sha256": "5845cb8e85dbec435a0ff0b4cc6c30adf2488d41d91823fb2e1f433b1a42c605"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Data/Void.purs",
+        "bytes": 1152,
+        "sha256": "bf2d7931a857b5aeafc4e3a27c1425010c8c7710772b4e3ff8c102f5c3f84564"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Prelude.purs",
+        "bytes": 2695,
+        "sha256": "af6b069885f179a179cc805e6ff7920e1c791dba6fc4d07cd2f52c5e7b91e59f"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Record/Unsafe.purs",
+        "bytes": 1393,
+        "sha256": "21acab8a811f760d56be569f4e8c2ae30705b34711b26de1cc39b16f96ba3ac1"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Record/Unsafe.rs",
+        "bytes": 886,
+        "sha256": "ea4d02347bc2bd16441d05a347374c8443258ef80dac1332063ecf4a0730cb67"
+      },
+      {
+        "path": "inputs/purust-prelude/src/Type/Proxy.purs",
+        "bytes": 2160,
+        "sha256": "e823c48b15006447de763d42a9f6b8c9e6913a3bd4b49b5e3b7cdce78d7d9b7c"
+      },
+      {
+        "path": "inputs/purust-refs/src/Effect/Ref.purs",
+        "bytes": 2968,
+        "sha256": "d1e4e9c7037152b73f39a9a1369e9d6c00ca0d6ce6c437abe7ea457adb6d8774"
+      },
+      {
+        "path": "inputs/purust-refs/src/Effect/Ref.rs",
+        "bytes": 1999,
+        "sha256": "65da2bc7c3906f491d3902e92929bcd51696a3eb80f1b1a3dd9c2826abdeda9e"
+      },
+      {
+        "path": "inputs/purust-st/src/Control/Monad/ST.purs",
+        "bytes": 133,
+        "sha256": "316ee75613cd7960cdaefdf6c26613c14badcc8a06ee2405617ed089072598a0"
+      },
+      {
+        "path": "inputs/purust-st/src/Control/Monad/ST/Class.purs",
+        "bytes": 401,
+        "sha256": "227bf813cc68b69b167ade39f2531d0ba45dc259252001bb97758e08bc93247d"
+      },
+      {
+        "path": "inputs/purust-st/src/Control/Monad/ST/Global.purs",
+        "bytes": 467,
+        "sha256": "4cb7ab62ecd6c6dfacfce32920bf5d9a3dc0f7ce7d9a25a16b453d0a4fc0f9e3"
+      },
+      {
+        "path": "inputs/purust-st/src/Control/Monad/ST/Internal.purs",
+        "bytes": 4427,
+        "sha256": "00159fcd8f3fa41d7ba5b50c596043bc46859f95f8d877b9ff18dbc37c7fad99"
+      },
+      {
+        "path": "inputs/purust-st/src/Control/Monad/ST/Internal.rs",
+        "bytes": 3506,
+        "sha256": "978fae425cc2a3687f0d13cf36383954b34e03b0d917eec8cf41c665ede5ff58"
+      },
+      {
+        "path": "inputs/purust-st/src/Control/Monad/ST/Ref.purs",
+        "bytes": 141,
+        "sha256": "cd155ad39db037f2b26d422461da697bc3b7b5fe9bfc93702df55cba38158d3a"
+      },
+      {
+        "path": "inputs/purust-st/src/Control/Monad/ST/Uncurried.purs",
+        "bytes": 5338,
+        "sha256": "bd2411e5e23d8b446ef2f6b924422071eb99c6c629395df21eb9821a341988a6"
+      },
+      {
+        "path": "inputs/purust-st/src/Control/Monad/ST/Uncurried.rs",
+        "bytes": 8316,
+        "sha256": "605548c76437e04019c32e9bd5ff295575c2bb8f4a4995af6c7355c6bd5447ee"
+      },
+      {
+        "path": "inputs/purust-unfoldable/src/Data/Unfoldable.purs",
+        "bytes": 3154,
+        "sha256": "c36722cb427b94e8d20b6a4df3afd8163ebf71cf88502cc20e68d8e3cad773f7"
+      },
+      {
+        "path": "inputs/purust-unfoldable/src/Data/Unfoldable.rs",
+        "bytes": 967,
+        "sha256": "77b6ad72afd91baa6833d67bffbce16081472166275b4a0dff98c1a008692d28"
+      },
+      {
+        "path": "inputs/purust-unfoldable/src/Data/Unfoldable1.purs",
+        "bytes": 4670,
+        "sha256": "7e5bf042a5c7d47bc6b5c57bcbfec7eadfd72d2f33979fa0d5ab7c4605f8edc1"
+      },
+      {
+        "path": "inputs/purust-unfoldable/src/Data/Unfoldable1.rs",
+        "bytes": 969,
+        "sha256": "2f0e1397c028172ffc075624fe94803e7d9d2771baa994ead7506b47dcc4cc4c"
+      },
+      {
+        "path": "inputs/purust-unsafe-coerce/src/Unsafe/Coerce.purs",
+        "bytes": 1058,
+        "sha256": "f0d052e7b2e2431860e6e995a91824c0d6437e2de773fd51c2324f626e10ed19"
+      },
+      {
+        "path": "inputs/purust-unsafe-coerce/src/Unsafe/Coerce.rs",
+        "bytes": 300,
+        "sha256": "557da5e061ce96590639762297b7d1ef890636223c350bf16716036012d92cbd"
+      },
+      {
+        "path": "native-workspace.mjs",
+        "bytes": 4383,
+        "sha256": "7c4fd1f55df22a1bca6bcac6392af771c5f313aa2ed8e76b05ea0dc87905fdb9"
+      }
+    ]
+  },
+  "protocol": {
+    "metric": "[purust] backend total (rounded monotonic milliseconds)",
+    "includes": [
+      "TAST loading and sorting",
+      "preparation",
+      "PBO optimization",
+      "Rust generation and emission"
+    ],
+    "excludes": [
+      "process startup and exit",
+      "purs frontend",
+      "compiler bootstrap",
+      "Cargo",
+      "application tests"
+    ],
+    "flags": [
+      "--source",
+      "output",
+      "--main",
+      "Test.Main",
+      "--threaded"
+    ],
+    "warmups_per_backend": 1,
+    "measured_runs_per_backend": 5,
+    "order": "JS, native, repeated",
+    "process": "fresh process per run",
+    "cache": "fresh output and no .purmeta before each run; OS file cache not flushed",
+    "statistic": "median",
+    "cpu_affinity": "unset",
+    "environment_variables_removed": [],
+    "js_selection": "PURUST_JS=1",
+    "native_selection": "PURUST_JS=0",
+    "node_flags": [
+      "--expose-gc",
+      "--stack-size=65536",
+      "--max-old-space-size=16384"
+    ]
+  },
+  "runs": [
+    {
+      "label": "warmup-js",
+      "backend": "js",
+      "warmup": true,
+      "round": 0,
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/compiler/bin/purust",
+        "--source",
+        "output",
+        "--main",
+        "Test.Main",
+        "--threaded",
+        "--out",
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/warmup-js"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "wall_ms": 6855.4556250000005,
+      "phases_ms": {
+        "load TAST + sort": 587,
+        "prepare": 38,
+        "optimize + generate": 4868,
+        "finalize + emit": 835,
+        "backend total": 6383
+      },
+      "load_average_before": [
+        7.64453125,
+        11.16748046875,
+        18.103515625
+      ],
+      "stdout": "Generating Rust code for Test.Main\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\nSuccessfully generated Rust code.\n",
+      "stderr": "[purust] load TAST + sort: 587 ms\n[purust] prepare: 38 ms\n[purust] optimize + generate: 4868 ms\n[purust] finalize + emit: 835 ms\n[purust] backend total: 6383 ms\n",
+      "identical_generated_files": 496
+    },
+    {
+      "label": "warmup-native",
+      "backend": "native",
+      "warmup": true,
+      "round": 0,
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/compiler/bin/purust",
+        "--source",
+        "output",
+        "--main",
+        "Test.Main",
+        "--threaded",
+        "--out",
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/warmup-native"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "wall_ms": 8248.460958,
+      "phases_ms": {
+        "load TAST + sort": 1696,
+        "prepare": 693,
+        "optimize + generate": 3784,
+        "finalize + emit": 1389,
+        "backend total": 7689
+      },
+      "load_average_before": [
+        7.31103515625,
+        10.98046875,
+        17.95556640625
+      ],
+      "stdout": "Generating Rust code for Test.Main\nSuccessfully generated Rust code.\n",
+      "stderr": "[purust] load TAST + sort: 1696 ms\n[purust] prepare: 693 ms\n[purust] PBO jobs=4 dispatched=133 fallback=181 deferred=70 attempts-ms=7170.4556280000015 codegen-ms=1730.667460000002 codegen-jobs=4 budget=8\n[purust] optimize + generate: 3784 ms\n[purust] finalize + emit: 1389 ms\n[purust] backend total: 7689 ms\n",
+      "identical_generated_files": 496
+    },
+    {
+      "label": "run-1-js",
+      "backend": "js",
+      "warmup": false,
+      "round": 1,
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/compiler/bin/purust",
+        "--source",
+        "output",
+        "--main",
+        "Test.Main",
+        "--threaded",
+        "--out",
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-1-js"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "wall_ms": 6564.882458999999,
+      "phases_ms": {
+        "load TAST + sort": 601,
+        "prepare": 42,
+        "optimize + generate": 4897,
+        "finalize + emit": 868,
+        "backend total": 6463
+      },
+      "load_average_before": [
+        7.28564453125,
+        10.9140625,
+        17.89111328125
+      ],
+      "stdout": "Generating Rust code for Test.Main\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\nSuccessfully generated Rust code.\n",
+      "stderr": "[purust] load TAST + sort: 601 ms\n[purust] prepare: 42 ms\n[purust] optimize + generate: 4897 ms\n[purust] finalize + emit: 868 ms\n[purust] backend total: 6463 ms\n",
+      "identical_generated_files": 496
+    },
+    {
+      "label": "run-1-native",
+      "backend": "native",
+      "warmup": false,
+      "round": 1,
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/compiler/bin/purust",
+        "--source",
+        "output",
+        "--main",
+        "Test.Main",
+        "--threaded",
+        "--out",
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-1-native"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "wall_ms": 7790.815708000002,
+      "phases_ms": {
+        "load TAST + sort": 1707,
+        "prepare": 704,
+        "optimize + generate": 3815,
+        "finalize + emit": 1395,
+        "backend total": 7749
+      },
+      "load_average_before": [
+        7.2607421875,
+        10.78515625,
+        17.763671875
+      ],
+      "stdout": "Generating Rust code for Test.Main\nSuccessfully generated Rust code.\n",
+      "stderr": "[purust] load TAST + sort: 1707 ms\n[purust] prepare: 704 ms\n[purust] PBO jobs=4 dispatched=130 fallback=178 deferred=64 attempts-ms=7025.588869999996 codegen-ms=1769.7601170000025 codegen-jobs=4 budget=8\n[purust] optimize + generate: 3815 ms\n[purust] finalize + emit: 1395 ms\n[purust] backend total: 7749 ms\n",
+      "identical_generated_files": 496
+    },
+    {
+      "label": "run-2-js",
+      "backend": "js",
+      "warmup": false,
+      "round": 2,
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/compiler/bin/purust",
+        "--source",
+        "output",
+        "--main",
+        "Test.Main",
+        "--threaded",
+        "--out",
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-2-js"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "wall_ms": 6506.979582999997,
+      "phases_ms": {
+        "load TAST + sort": 596,
+        "prepare": 39,
+        "optimize + generate": 4855,
+        "finalize + emit": 856,
+        "backend total": 6400
+      },
+      "load_average_before": [
+        7.07958984375,
+        10.68896484375,
+        17.6884765625
+      ],
+      "stdout": "Generating Rust code for Test.Main\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\nSuccessfully generated Rust code.\n",
+      "stderr": "[purust] load TAST + sort: 596 ms\n[purust] prepare: 39 ms\n[purust] optimize + generate: 4855 ms\n[purust] finalize + emit: 856 ms\n[purust] backend total: 6400 ms\n",
+      "identical_generated_files": 496
+    },
+    {
+      "label": "run-2-native",
+      "backend": "native",
+      "warmup": false,
+      "round": 2,
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/compiler/bin/purust",
+        "--source",
+        "output",
+        "--main",
+        "Test.Main",
+        "--threaded",
+        "--out",
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-2-native"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "wall_ms": 7752.4960409999985,
+      "phases_ms": {
+        "load TAST + sort": 1692,
+        "prepare": 685,
+        "optimize + generate": 3815,
+        "finalize + emit": 1390,
+        "backend total": 7708
+      },
+      "load_average_before": [
+        6.97998046875,
+        10.55029296875,
+        17.55712890625
+      ],
+      "stdout": "Generating Rust code for Test.Main\nSuccessfully generated Rust code.\n",
+      "stderr": "[purust] load TAST + sort: 1692 ms\n[purust] prepare: 685 ms\n[purust] PBO jobs=4 dispatched=134 fallback=180 deferred=70 attempts-ms=7050.345500999993 codegen-ms=1773.7168770000048 codegen-jobs=4 budget=8\n[purust] optimize + generate: 3815 ms\n[purust] finalize + emit: 1390 ms\n[purust] backend total: 7708 ms\n",
+      "identical_generated_files": 496
+    },
+    {
+      "label": "run-3-js",
+      "backend": "js",
+      "warmup": false,
+      "round": 3,
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/compiler/bin/purust",
+        "--source",
+        "output",
+        "--main",
+        "Test.Main",
+        "--threaded",
+        "--out",
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-3-js"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "wall_ms": 6524.892832999998,
+      "phases_ms": {
+        "load TAST + sort": 593,
+        "prepare": 39,
+        "optimize + generate": 4874,
+        "finalize + emit": 860,
+        "backend total": 6421
+      },
+      "load_average_before": [
+        6.8212890625,
+        10.4580078125,
+        17.4833984375
+      ],
+      "stdout": "Generating Rust code for Test.Main\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\nSuccessfully generated Rust code.\n",
+      "stderr": "[purust] load TAST + sort: 593 ms\n[purust] prepare: 39 ms\n[purust] optimize + generate: 4874 ms\n[purust] finalize + emit: 860 ms\n[purust] backend total: 6421 ms\n",
+      "identical_generated_files": 496
+    },
+    {
+      "label": "run-3-native",
+      "backend": "native",
+      "warmup": false,
+      "round": 3,
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/compiler/bin/purust",
+        "--source",
+        "output",
+        "--main",
+        "Test.Main",
+        "--threaded",
+        "--out",
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-3-native"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "wall_ms": 8301.111209000002,
+      "phases_ms": {
+        "load TAST + sort": 1714,
+        "prepare": 689,
+        "optimize + generate": 4191,
+        "finalize + emit": 1526,
+        "backend total": 8247
+      },
+      "load_average_before": [
+        6.83544921875,
+        10.400390625,
+        17.421875
+      ],
+      "stdout": "Generating Rust code for Test.Main\nSuccessfully generated Rust code.\n",
+      "stderr": "[purust] load TAST + sort: 1714 ms\n[purust] prepare: 689 ms\n[purust] PBO jobs=4 dispatched=141 fallback=171 deferred=68 attempts-ms=7536.096706000002 codegen-ms=1883.7103270000011 codegen-jobs=4 budget=8\n[purust] optimize + generate: 4191 ms\n[purust] finalize + emit: 1526 ms\n[purust] backend total: 8247 ms\n",
+      "identical_generated_files": 496
+    },
+    {
+      "label": "run-4-js",
+      "backend": "js",
+      "warmup": false,
+      "round": 4,
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/compiler/bin/purust",
+        "--source",
+        "output",
+        "--main",
+        "Test.Main",
+        "--threaded",
+        "--out",
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-4-js"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "wall_ms": 7582.739749999993,
+      "phases_ms": {
+        "load TAST + sort": 723,
+        "prepare": 43,
+        "optimize + generate": 5692,
+        "finalize + emit": 939,
+        "backend total": 7457
+      },
+      "load_average_before": [
+        7.10693359375,
+        10.337890625,
+        17.31689453125
+      ],
+      "stdout": "Generating Rust code for Test.Main\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\nSuccessfully generated Rust code.\n",
+      "stderr": "[purust] load TAST + sort: 723 ms\n[purust] prepare: 43 ms\n[purust] optimize + generate: 5692 ms\n[purust] finalize + emit: 939 ms\n[purust] backend total: 7457 ms\n",
+      "identical_generated_files": 496
+    },
+    {
+      "label": "run-4-native",
+      "backend": "native",
+      "warmup": false,
+      "round": 4,
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/compiler/bin/purust",
+        "--source",
+        "output",
+        "--main",
+        "Test.Main",
+        "--threaded",
+        "--out",
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-4-native"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "wall_ms": 9465.161041,
+      "phases_ms": {
+        "load TAST + sort": 2097,
+        "prepare": 872,
+        "optimize + generate": 4564,
+        "finalize + emit": 1572,
+        "backend total": 9297
+      },
+      "load_average_before": [
+        9.1044921875,
+        10.66943359375,
+        17.353515625
+      ],
+      "stdout": "Generating Rust code for Test.Main\nSuccessfully generated Rust code.\n",
+      "stderr": "[purust] load TAST + sort: 2097 ms\n[purust] prepare: 872 ms\n[purust] PBO jobs=4 dispatched=134 fallback=174 deferred=64 attempts-ms=8333.426127999997 codegen-ms=2050.424129999995 codegen-jobs=4 budget=8\n[purust] optimize + generate: 4564 ms\n[purust] finalize + emit: 1572 ms\n[purust] backend total: 9297 ms\n",
+      "identical_generated_files": 496
+    },
+    {
+      "label": "run-5-js",
+      "backend": "js",
+      "warmup": false,
+      "round": 5,
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/compiler/bin/purust",
+        "--source",
+        "output",
+        "--main",
+        "Test.Main",
+        "--threaded",
+        "--out",
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-js"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "wall_ms": 8266.008209000007,
+      "phases_ms": {
+        "load TAST + sort": 827,
+        "prepare": 50,
+        "optimize + generate": 6116,
+        "finalize + emit": 938,
+        "backend total": 7995
+      },
+      "load_average_before": [
+        10.98095703125,
+        11.0244140625,
+        17.4013671875
+      ],
+      "stdout": "Generating Rust code for Test.Main\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Other\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\ngenApp renames valueEnums runSTFn3 arg 1: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 arg 2: expectedTy=TypeVar, argTy=Func\ngenApp renames valueEnums runSTFn3 fnTy: ForAll(Func) expectedArgTys len: 4\ngenApp renames valueEnums runSTFn3 arg 0: expectedTy=Other, argTy=Other\nSuccessfully generated Rust code.\n",
+      "stderr": "[purust] load TAST + sort: 827 ms\n[purust] prepare: 50 ms\n[purust] optimize + generate: 6116 ms\n[purust] finalize + emit: 938 ms\n[purust] backend total: 7995 ms\n",
+      "identical_generated_files": 496
+    },
+    {
+      "label": "run-5-native",
+      "backend": "native",
+      "warmup": false,
+      "round": 5,
+      "command": [
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/compiler/bin/purust",
+        "--source",
+        "output",
+        "--main",
+        "Test.Main",
+        "--threaded",
+        "--out",
+        "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "wall_ms": 9856.265749999991,
+      "phases_ms": {
+        "load TAST + sort": 2024,
+        "prepare": 849,
+        "optimize + generate": 5081,
+        "finalize + emit": 1600,
+        "backend total": 9769
+      },
+      "load_average_before": [
+        11.22265625,
+        11.07373046875,
+        17.38134765625
+      ],
+      "stdout": "Generating Rust code for Test.Main\nSuccessfully generated Rust code.\n",
+      "stderr": "[purust] load TAST + sort: 2024 ms\n[purust] prepare: 849 ms\n[purust] PBO jobs=4 dispatched=134 fallback=184 deferred=74 attempts-ms=8906.301082999998 codegen-ms=2115.211049999997 codegen-jobs=4 budget=8\n[purust] optimize + generate: 5081 ms\n[purust] finalize + emit: 1600 ms\n[purust] backend total: 9769 ms\n",
+      "identical_generated_files": 496
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "command": [
+      "cargo",
+      "build",
+      "--offline",
+      "--manifest-path",
+      "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Cargo.toml"
+    ],
+    "cargo_exit_code": 0,
+    "cargo_stdout": "",
+    "cargo_stderr": "     Locking 19 packages to latest compatible versions\n   Compiling proc-macro2 v1.0.107\n   Compiling quote v1.0.47\n   Compiling unicode-ident v1.0.26\n   Compiling memchr v2.8.3\n   Compiling regex-syntax v0.8.11\n   Compiling bit-vec v0.6.3\n   Compiling pin-project-lite v0.2.17\n   Compiling perceus_ptr v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/perceus_ptr)\n   Compiling shlex v2.0.1\n   Compiling find-msvc-tools v0.1.14\n   Compiling bit-set v0.5.3\n   Compiling cc v1.5.1\n   Compiling aho-corasick v1.1.5\n   Compiling libmimalloc-sys v0.1.49\n   Compiling syn v3.0.6\n   Compiling regex-automata v0.4.18\n   Compiling tokio-macros v2.7.2\n   Compiling mimalloc v0.1.52\n   Compiling fancy-regex v0.13.0\n   Compiling tokio v1.53.1\n   Compiling purust_core v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/purust_core)\n   Compiling Purs_Record_Unsafe v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Record_Unsafe)\n   Compiling Purs_Type_Proxy v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Type_Proxy)\n   Compiling Purs_Data_Unit v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Unit)\n   Compiling Purs_Data_Void v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Void)\n   Compiling Purs_Data_Boolean v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Boolean)\n   Compiling Purs_Unsafe_Coerce v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Unsafe_Coerce)\n   Compiling Purs_Partial v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Partial)\n   Compiling Purs_Data_Function_Uncurried v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Function_Uncurried)\n   Compiling Purs_Control_Monad_ST_Uncurried v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad_ST_Uncurried)\n   Compiling Purs_Effect_Unsafe v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Effect_Unsafe)\n   Compiling Purs_Data_Int_Bits v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Int_Bits)\n   Compiling Purs_Partial_Unsafe v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Partial_Unsafe)\n   Compiling Purs_Data_Symbol v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Symbol)\n   Compiling Purs_Control_Semigroupoid v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Semigroupoid)\n   Compiling Purs_Safe_Coerce v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Safe_Coerce)\n   Compiling Purs_Control_Lazy v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Lazy)\n   Compiling Purs_Control_Monad_ST_Global v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad_ST_Global)\n   Compiling Purs_Type_Equality v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Type_Equality)\n   Compiling Purs_Data_HeytingAlgebra v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_HeytingAlgebra)\n   Compiling Purs_Data_Semiring v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Semiring)\n   Compiling Purs_Data_Semigroup v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Semigroup)\n   Compiling Purs_Control_Category v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Category)\n   Compiling Purs_Data_Newtype v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Newtype)\n   Compiling Purs_Data_Show v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Show)\n   Compiling Purs_Data_Eq v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Eq)\n   Compiling Purs_Data_Ring v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Ring)\n   Compiling Purs_Data_BooleanAlgebra v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_BooleanAlgebra)\n   Compiling Purs_Data_Generic_Rep v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Generic_Rep)\n   Compiling Purs_Data_Ordering v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Ordering)\n   Compiling Purs_Data_Ord v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Ord)\n   Compiling Purs_Data_CommutativeRing v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_CommutativeRing)\n   Compiling Purs_Data_Profunctor v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Profunctor)\n   Compiling Purs_Data_Function v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Function)\n   Compiling Purs_Data_EuclideanRing v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_EuclideanRing)\n   Compiling Purs_Data_Monoid v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Monoid)\n   Compiling Purs_Data_Functor v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Functor)\n   Compiling Purs_Data_Bounded v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Bounded)\n   Compiling Purs_Control_Apply v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Apply)\n   Compiling Purs_Control_Alt v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Alt)\n   Compiling Purs_Control_Extend v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Extend)\n   Compiling Purs_Data_Monoid_Endo v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Monoid_Endo)\n   Compiling Purs_Control_Plus v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Plus)\n   Compiling Purs_Control_Comonad v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Comonad)\n   Compiling Purs_Control_Applicative v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Applicative)\n   Compiling Purs_Control_Bind v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Bind)\n   Compiling Purs_Data_Profunctor_Closed v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Profunctor_Closed)\n   Compiling Purs_Data_Ord_Max v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Ord_Max)\n   Compiling Purs_Data_Ord_Min v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Ord_Min)\n   Compiling Purs_Control_Alternative v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Alternative)\n   Compiling Purs_Data_Traversable_Accum_Internal v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Traversable_Accum_Internal)\n   Compiling Purs_Control_Monad v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad)\n   Compiling Purs_Data_Time_Duration v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Time_Duration)\n   Compiling Purs_Data_DivisionRing v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_DivisionRing)\n   Compiling Purs_Data_Monoid_Disj v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Monoid_Disj)\n   Compiling Purs_Data_Monoid_Alternate v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Monoid_Alternate)\n   Compiling Purs_Data_Monoid_Conj v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Monoid_Conj)\n   Compiling Purs_Data_Monoid_Multiplicative v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Monoid_Multiplicative)\n   Compiling Purs_Data_Monoid_Additive v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Monoid_Additive)\n   Compiling Purs_Data_Monoid_Dual v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Monoid_Dual)\n   Compiling Purs_Effect v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Effect)\n   Compiling Purs_Data_Functor_Invariant v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Functor_Invariant)\n   Compiling Purs_Control_MonadPlus v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_MonadPlus)\n   Compiling Purs_Data_Maybe v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Maybe)\n   Compiling Purs_Data_Tuple v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Tuple)\n   Compiling Purs_Data_Const v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Const)\n   Compiling Purs_Data_Identity v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Identity)\n   Compiling Purs_Data_Functor_App v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Functor_App)\n   Compiling Purs_Effect_Ref v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Effect_Ref)\n   Compiling Purs_Effect_Class v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Effect_Class)\n   Compiling Purs_Control_Monad_Reader_Class v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad_Reader_Class)\n   Compiling Purs_Data_Functor_Compose v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Functor_Compose)\n   Compiling Purs_Control_Monad_Cont_Class v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad_Cont_Class)\n   Compiling Purs_Data_Either v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Either)\n   Compiling Purs_Data_Maybe_First v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Maybe_First)\n   Compiling Purs_Data_Maybe_Last v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Maybe_Last)\n   Compiling Purs_Control_Monad_Trans_Class v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad_Trans_Class)\n   Compiling Purs_Data_Functor_Contravariant v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Functor_Contravariant)\n   Compiling Purs_Data_Number v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Number)\n   Compiling Purs_Effect_Console v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Effect_Console)\n   Compiling Purs_Effect_Uncurried v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Effect_Uncurried)\n   Compiling Purs_Data_Int v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Int)\n   Compiling Purs_Control_Monad_State_Class v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad_State_Class)\n   Compiling Purs_Control_Monad_Writer_Class v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad_Writer_Class)\n   Compiling Purs_Data_Distributive v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Distributive)\n   Compiling Purs_Data_Profunctor_Strong v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Profunctor_Strong)\n   Compiling Purs_Test_Assert v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Test_Assert)\n   Compiling Purs_Data_Bifunctor v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Bifunctor)\n   Compiling Purs_Effect_Exception v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Effect_Exception)\n   Compiling Purs_Data_Profunctor_Choice v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Profunctor_Choice)\n   Compiling Purs_Effect_AVar v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Effect_AVar)\n   Compiling Purs_Data_Functor_Coproduct v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Functor_Coproduct)\n   Compiling Purs_Control_Monad_Rec_Class v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad_Rec_Class)\n   Compiling Purs_Data_Functor_Product v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Functor_Product)\n   Compiling Purs_Control_Monad_Error_Class v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad_Error_Class)\n   Compiling Purs_Data_Profunctor_Star v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Profunctor_Star)\n   Compiling Purs_Data_Functor_Costar v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Functor_Costar)\n   Compiling Purs_Data_Foldable v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Foldable)\n   Compiling Purs_Data_FunctorWithIndex v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_FunctorWithIndex)\n   Compiling Purs_Control_Monad_ST_Internal v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad_ST_Internal)\n   Compiling Purs_Control_Monad_ST_Class v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad_ST_Class)\n   Compiling Purs_Data_Array_ST v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Array_ST)\n   Compiling Purs_Control_Monad_Writer_Trans v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad_Writer_Trans)\n   Compiling Purs_Control_Monad_Except_Trans v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad_Except_Trans)\n   Compiling Purs_Control_Monad_Cont_Trans v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad_Cont_Trans)\n   Compiling Purs_Control_Monad_Maybe_Trans v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad_Maybe_Trans)\n   Compiling Purs_Control_Monad_Reader_Trans v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Monad_Reader_Trans)\n   Compiling Purs_Data_Array_ST_Iterator v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Array_ST_Iterator)\n   Compiling Purs_Control_Parallel_Class v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Parallel_Class)\n   Compiling Purs_Data_Traversable v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Traversable)\n   Compiling Purs_Data_Semigroup_Foldable v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Semigroup_Foldable)\n   Compiling Purs_Data_FoldableWithIndex v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_FoldableWithIndex)\n   Compiling Purs_Data_Semigroup_Traversable v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Semigroup_Traversable)\n   Compiling Purs_Control_Parallel v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Control_Parallel)\n   Compiling Purs_Data_Unfoldable1 v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Unfoldable1)\n   Compiling Purs_Effect_Aff v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Effect_Aff)\n   Compiling Purs_Data_Unfoldable v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Unfoldable)\n   Compiling Purs_Data_TraversableWithIndex v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_TraversableWithIndex)\n   Compiling Purs_Data_Array_NonEmpty_Internal v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Array_NonEmpty_Internal)\n   Compiling Purs_Data_Array v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Data_Array)\n   Compiling Purs_Effect_Aff_AVar v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Effect_Aff_AVar)\n   Compiling Purs_Effect_Aff_Compat v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Effect_Aff_Compat)\n   Compiling Purs_Test_Main v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/Purs_Test_Main)\n   Compiling purust_output v0.1.0 (/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native)\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 19.89s\n",
+    "application": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-codegen-20261002/purust-aff-compilation-n5wyEI/generated/run-5-native/target/debug/purust_output",
+    "application_sha256": "3a29f40c16fbd49c6ce6cc189e6435ce21315ebba616c7a87078c485ca6bc05b",
+    "exit_code": 0,
+    "stdout": "[OK] pure\n[OK] bind\n[OK] try\n[OK] try/throw\n[OK] liftEffect\n[OK] delay\n[OK] fork\n[OK] join\n[OK] join/throw\n[OK] join/throw/sync\n[OK] join/multi\n[OK] suspend\n[OK] makeAff\n[OK] bracket\n[OK] bracket/nested\n[OK] bracket/general\n[OK] supervise\n[OK] kill\n[OK] kill/canceler\n[OK] kill/bracket\n[OK] kill/bracket/nested\n[OK] kill/bracket/general/nested\n[OK] kill/supervise\n[OK] kill/finalizer/catch\n[OK] kill/finalizer/bracket\n[OK] parallel\n[OK] parallel/throw\n[OK] kill/parallel\n[OK] parallel/alt\n[OK] parallel/alt/throw\n[OK] parallel/alt/sync\n[OK] parallel/mixed\n[OK] kill/parallel/alt\n[OK] kill/parallel/alt/finalizer\n[OK] Lazy Aff\n[OK] efffn\n[OK] fiber/map\n[OK] fiber/apply\n[OK] scheduler\n[OK] par/traverse-order\n[OK] parallel/stack\n[OK] regression/return-fork\n[OK] regression/par-apply-async-canceler\n[OK] regression/bracket-catch-cleanup\n[OK] regression/kill-sync-async\n[OK] regression/kill-bracket-mask\n[OK] regression/kill-empty-supervisor\n",
+    "stderr": "",
+    "expected_stdout_sha256": "bdac5079d39dc4ba3f7fe20d4ac624ff6f5fe110ed3643c1c178bb0ab573a3dd",
+    "aff_checks": 47,
+    "identical_generated_files": 496,
+    "frozen_inputs_unchanged": true
+  },
+  "summary": {
+    "js": {
+      "samples_ms": [
+        6463,
+        6400,
+        6421,
+        7457,
+        7995
+      ],
+      "median_ms": 6463,
+      "min_ms": 6400,
+      "max_ms": 7995
+    },
+    "native": {
+      "samples_ms": [
+        7749,
+        7708,
+        8247,
+        9297,
+        9769
+      ],
+      "median_ms": 8247,
+      "min_ms": 7708,
+      "max_ms": 9769
+    },
+    "native_over_js": 1.276032802104286
+  },
+  "measurement_finished_at": "2026-10-02T11:05:46.655Z",
+  "finished_at": "2026-10-02T11:06:13.216Z"
+}
