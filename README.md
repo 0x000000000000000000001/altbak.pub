@@ -392,10 +392,12 @@ Benchmark   | gopurs.js (WIP) | gopurs Go compiled (WIP)
 Benchmark   | purust.js (WIP) | purust Rust compiled (WIP)
 ----------- | --------- | ---------------------
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) | (WIP)     | (WIP)
-[purust-aff](https://github.com/0x000000000000000000001/purust-aff)  | ~ 6480 ms | ~ 17214 ms <br>(/JS = 2.66x)
+[purust-aff](https://github.com/0x000000000000000000001/purust-aff)  | ~ 6774 ms | ~ 10328 ms <br>(/JS = 1.52x)
 
 `purust-aff`: median of five alternating JS/native runs after one warm-up per
 backend, using the same 244-module TAST with `--main Test.Main --threaded`.
+Measured 2026-10-02: native stage 2, optimization level 3, 8 PBO workers;
+JavaScript PBO is sequential. All 496 Rust sources/manifests match exactly.
 Times cover TAST loading, optimization and Rust generation (`backend total`);
 the `purs` frontend, Cargo and application tests are outside this measurement.
-[Protocol, validation and raw measurements](docs/benchmark-results/2026-10-01-purust-aff-compilation.md).
+[Protocol, validation and raw measurements](docs/benchmark-results/2026-10-02-purust-aff-compilation.md).

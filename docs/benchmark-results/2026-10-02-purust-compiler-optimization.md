@@ -7,6 +7,10 @@ inputs from the [2026-10-01 benchmark](2026-10-01-purust-aff-compilation.md):
 244 TAST modules, 138,448 type-table entries, 27,122,224 TAST bytes, and
 `--main Test.Main --threaded`.
 
+The [final five-pair benchmark](2026-10-02-purust-aff-compilation.md) measures
+**6,774 ms JavaScript / 10,328 ms native**, a native/JS ratio of **1.52×**.
+All generated files match, and the generated application passes its 47 Aff checks.
+
 Retained changes:
 
 1. Build the native compiler at **`opt-level=3`**, with **LTO disabled**.
@@ -69,6 +73,23 @@ Level 3 reduces the median by **13.2%** relative to level 1. All 12 invocations,
 including warm-ups, produced 496 identical Rust sources/manifests.
 `PURUST_NATIVE_OPT_LEVEL=1|2|3` overrides the new bootstrap default of 3;
 `PURUST_NATIVE_OUTPUT` selects a separate executable destination for experiments.
+
+## Final controlled old/new comparison
+
+After the final JS/native campaign, the original native artifact and the
+installed stage-2 artifact were compared directly on the restored input snapshot.
+One warm-up per artifact was followed by **five measured rounds**, alternating
+which compiler runs first. All 12 outputs contain the same 496 files.
+
+| Native compiler | Five samples (ms) | Median (ms) | Maximum RSS (MiB) |
+|---|---|---:|---:|
+| Original artifact | 17,074 / 17,111 / 17,110 / 18,715 / 17,899 | **17,111** | 312 |
+| Optimized stage 2 | 9,928 / 9,975 / 9,935 / 9,880 / 10,004 | **9,935** | 458 |
+
+The optimized compiler is **1.72× faster**, taking **41.9% less time**, with
+higher peak memory. The old/new figures belong to this separate controlled
+campaign. The README uses the final paired JS/native campaign's **10,328 ms**
+native median; it does not substitute the lower median from this comparison.
 
 ## Scanner and native Maps
 
@@ -174,6 +195,28 @@ The eight-worker diagnostic has 116 deferred attempts: **15.7% more requests**
 and **13.1% more requested bytes**. These counts describe the recorded
 instrumented schedule; retries vary with scheduling. Both instrumented
 comparisons preserve the 496 generated files exactly.
+
+## Self-reconstruction and regression checks
+
+The optimized compiler was rebuilt through the complete Node → native stage 1 →
+native stage 2 chain. The compiler input contains **451 TAST modules and 281,964
+type-table entries**. With 8 PBO workers, stage 1 produced **910 Rust sources and
+Cargo manifests byte-identical to JavaScript**. Cargo compiled stage 2 at level 3
+with LTO disabled. Stage 2 then passed the fresh-project smoke test: 152 modules,
+312 identical files, and executable result **`PURUST_NATIVE_OK 42`**. That stage 2
+was atomically installed as `bin/purust-native`.
+
+The codegen checks comprise **86 tests**, including the scanner and scheduler
+regressions. Four initially failed because their Docker test container was
+stopped; all four passed when rerun after starting it. The **43 TAST tests** also
+pass after updating the list-pipeline assertion: it had required the recursive
+closure self-capture removed by the earlier compiler fix. It now verifies a
+direct worker call without that capture, followed by compilation and execution
+of the pipeline fixtures.
+
+The full `purust-aff/bin/test` suite passes using the installed native compiler:
+47 Aff checks, 5 Rust unit tests, concurrent timer/Ref/AVar checks, child lifetime
+checks, and 9 error-reporting scenarios. The archive retains the full log.
 
 ## Next measured targets
 
