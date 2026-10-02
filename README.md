@@ -159,7 +159,7 @@ Lazy Evaluation | ~ 0.011 μs | ~ 159056.38 μs | ~ 38342.83 μs | ~ 23675.83 μ
 Array Processing | ~ 0.034 μs | ~ 298.70 μs | ~ 3.28 μs | ~ 0.58 μs | ~ 0.25 μs |
 RowToList | ~ 0.068 μs | ~ 0.95 μs | ~ 0.10 μs | ~ 0.02 μs | ~ 0.01 μs |
 Array Indexing (excluded WIP) | ~ 6387.79 μs | — | — | — | — |
-JSON to Typed AST (excluded WIP) | ~ 116850.71 μs‡ | — | — | — | — |
+JSON to Typed AST (excluded WIP) | ~ 116850.71 μs | — | — | — | — |
 JSON Decoding (excluded WIP) | ~ 1130.69 μs | — | — | — | — |
 **Total Execution Time** | ~ 8.54 ms <br>(/C = 0.9x) | ~ 2455.35 ms <br>(/C = 249.5x) | ~ 99.28 ms <br>(/C = 10.1x) | ~ 53.73 ms <br>(/C = 5.5x) | ~ 28.31 ms <br>(/C = 2.9x) |
 
