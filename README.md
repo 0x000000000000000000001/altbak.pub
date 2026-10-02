@@ -340,7 +340,7 @@ Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 47830
 Benchmark   | gopurs.js (WIP) | gopurs Go compiled (WIP) | purust Rust compiled (WIP)
 ----------- | --------- | ------------------ | ---------------------
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 77.4 s | ~ 46.4 s <br>(/JS = 0.60x) | not measured
-[gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 7630 ms | ~ 2146 ms | ~ 5495 ms† <br>(/Go = 2.56x)
+[gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 7630 ms | ~ 2146 ms | ~ 5495 ms <br>(/Go = 2.56x)
 [gopurs-argonaut-core](https://github.com/0x000000000000000000001/gopurs-argonaut-core)  | ~ 7777 ms | ~ 2000 ms | not measured
 [gopurs-arrays](https://github.com/0x000000000000000000001/gopurs-arrays)  | ~ 6771 ms (failed) | ~ 3903 ms | not measured
 [gopurs-assert](https://github.com/0x000000000000000000001/gopurs-assert)  | ~ 660 ms | ~ 227 ms | not measured
@@ -393,48 +393,9 @@ Benchmark   | gopurs.js (WIP) | gopurs Go compiled (WIP) | purust Rust compiled 
 **Total gopurs-*** | ~ 329.02 s | ~ 105.37 s <br>(/JS = 0.3x) | — (incomplete)
 **Total** | ~ 406.4 s | ~ 151.8 s <br>(/JS = 0.37x) | — (incomplete)
 
-`gopurs-aff` was remeasured on 2026-10-02: median of five runs per variant after
-one warm-up, rotating order, using the **same original 238-module TAST** and
-`--main Test.Main` (plus `--threaded` for Rust). Times cover the backend through
-source emission, excluding `purs`, `go build`, Cargo and application execution.
-Rust uses local FFI adapters for the gopurs library interfaces. All 12 Go outputs
-(294 files each) and all 12 Rust outputs (484 files each) match their respective
-JS/native references exactly. Purust JS measured **6238 ms** on this corpus;
-native Rust takes **11.9% less time than Purust JS**, but **2.56× the native Go time**.
-
-† The original application suite passed **5/5 in Go and 2/5 in Rust**, with
-scheduling-sensitive test failures. A separate validation suite with explicit
-synchronization passed **5/5 on each target**: 45 Aff checks plus the 1000-item
-AVar stress assertion per run. The timed TAST was not modified.
-[Protocol, FFI adapters, validation and raw measurements](docs/benchmark-results/2026-10-02-gopurs-aff-go-rust-compilation.md).
-Other package timings are historical; JS/Go totals sum the displayed values
-across campaigns. Other Rust entries are not measured yet.
-The four-way Aff comparison above predates the TAST decoder optimization.
-Its separate Rust before/after confirmation is recorded below.
-
 #### [purust](https://github.com/0x000000000000000000001/purust)
 
 Benchmark   | purust.js (WIP) | purust Rust compiled (WIP)
 ----------- | --------- | ---------------------
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) | (WIP)     | (WIP)
 [purust-aff](https://github.com/0x000000000000000000001/purust-aff)  | ~ 6181 ms | ~ 5399 ms <br>(/JS = 0.87x)
-
-`purust-aff`: median of five runs per variant in rotating order after one warm-up per
-backend, using the same 244-module TAST with `--main Test.Main --threaded`.
-Measured 2026-10-02: native stage 2, optimization level 3, 4 PBO + 4 codegen workers;
-JavaScript PBO/codegen is sequential. Native takes **12.7% less time than JS**
-and **2.5% less than the previous native compiler** (5540 → 5399 ms) in this campaign.
-All 496 Rust sources/manifests match exactly.
-Times cover TAST loading, optimization and Rust generation (`backend total`);
-the `purs` frontend, Cargo and application tests are outside this measurement.
-[TAST optimization, validation and raw measurements](docs/benchmark-results/2026-10-02-rust-json-typed-ast.md).
-The [preceding pipeline campaign](docs/benchmark-results/2026-10-02-purust-aff-pipeline-compilation.md)
-remains available with its own frozen inputs and samples.
-
-On the separate **238-module gopurs-aff** corpus, the TAST lot's extended
-confirmation gives **5342 → 5189 ms (−2.9%)**, median of **21 pairs**;
-the mean falls 2.7%, and the candidate is faster in 16 pairs. An initial five-run
-campaign had reported an 8.2% regression alongside variable speculative PBO
-work. That campaign and the single-worker/same-binary diagnostics are retained
-in the report. The isolated JSON → TAST path improves **18.3%** on this corpus;
-all generated sources and manifests remain identical.
