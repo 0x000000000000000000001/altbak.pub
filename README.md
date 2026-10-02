@@ -333,11 +333,11 @@ Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 47830
 > **Hardware Context**
 > Measurements ran on an **Apple M4 Pro with 10 performance cores and 4 efficiency cores**, without explicit CPU affinity. The extended *Parallelism* row compares JavaScript's single-thread scheduler with Go/Rust's multicore runtimes.
 
-### Compilation times
+### Compilation times...
 
-#### [gopurs](https://github.com/0x000000000000000000001/gopurs) / [purust](https://github.com/0x000000000000000000001/purust)
+#### ... to Go
 
-Benchmark   | gopurs JS binary (WIP) | gopurs Go binary (WIP) | purust Rust binary (WIP)
+Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS binary (WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Go binary (WIP) | [purust](https://github.com/0x000000000000000000001/purust) Rust binary (WIP)
 ----------- | --------- | ------------------ | ---------------------
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 77.4 s | ~ 46.4 s <br>(/JS = 0.60x) | (WIP)
 [gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 7630 ms | ~ 2146 ms | ~ 5495 ms <br>(/Go = 2.56x) (WIP)
@@ -393,9 +393,9 @@ Benchmark   | gopurs JS binary (WIP) | gopurs Go binary (WIP) | purust Rust bina
 **Total gopurs-*** | ~ 329.02 s | ~ 105.37 s <br>(/JS = 0.3x) | (WIP)
 **Total** | ~ 406.4 s | ~ 151.8 s <br>(/JS = 0.37x) | (WIP)
 
-#### [purust](https://github.com/0x000000000000000000001/purust)
+#### ... to Rust
 
-Benchmark   | purust JS binary (WIP) | purust Rust binary (WIP)
+Benchmark   | [purust](https://github.com/0x000000000000000000001/purust) JS binary (WIP) | [purust](https://github.com/0x000000000000000000001/purust) Rust binary (WIP)
 ----------- | --------- | ---------------------
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) | (WIP)     | (WIP)
 [purust-aff](https://github.com/0x000000000000000000001/purust-aff)  | ~ 6181 ms | ~ 5399 ms <br>(/JS = 0.87x)
