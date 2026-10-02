@@ -187,6 +187,52 @@ accept `--build-only`. Source fidelity has separate native tests in `test/native
 `test/benchmark-batches.py` checks deferred execution, exact invocation counts,
 recomputation and rejection of incorrect results.
 
+### PHP dependency preparation
+
+`bin/php/driver.py` prepares Composer dependencies after code generation and
+before the generated-code checks or benchmark execution. It uses the committed
+`run/bak/php/composer.lock` and pinned `bin/php/composer.phar` with `install
+--no-plugins --no-scripts --no-interaction --no-progress --prefer-dist --no-dev`.
+The ordinary runner never resolves an update or creates a missing lock.
+
+Each isolated workspace keeps `.composer-prepared.json`. A later build reuses
+`vendor` when the root and generated Composer manifests, lock, preparation code,
+PHP executable/platform, Composer configuration/environment and installed file
+hashes still match. The `vendor/phpurs/lib-deps` link must target this workspace's
+current `output`; PHP regeneration alone does not invalidate the dependencies.
+Missing/modified dependencies or an invalid preparation stamp cause a fresh
+locked installation. `manifest.json` records `composer.status` (`installed` or
+`reused`) and the actual installer commands. A cache hit still reads and hashes
+dependencies and runs a small PHP platform/lock probe; it does not run the
+Composer installer or rewrite the autoloader.
+
+```sh
+./bin/php/run --build-only --build-dir run/bak/php/modes/pure
+./bin/php/run --run-only --build-dir run/bak/php/modes/pure
+```
+
+`--run-only` verifies the frozen manifest, dependency bytes and links, then runs
+PHP without dependency preparation. Use it for measurements. A clean workspace
+requires preparation again.
+
+The runner rejects both an outdated root lock and generated `phpurs/lib-deps`
+requirements that differ from the locked path package. When changing FFI
+dependencies, first generate the workspace (the build stops at that check), then
+explicitly refresh its lock, inspect the changes and copy it back:
+
+```sh
+php bin/php/composer.phar --working-dir=run/bak/php/modes/pure update \
+  --no-install --no-plugins --no-scripts --no-interaction
+cp run/bak/php/modes/pure/composer.lock run/bak/php/composer.lock
+git diff -- run/bak/php/composer.json run/bak/php/composer.lock
+./bin/php/run --build-only --build-dir run/bak/php/modes/pure
+```
+
+Offline preparation/repair regressions use a local path-only dependency graph:
+`python3 -B test/php-composer.py`.
+
+### Running the configured backends
+
 `./bin/run` and `./bin/run --x` run the configured backends. They do not alone
 produce all the published native references or aggregate three processes.
 After collecting the core and extended plans from the same frozen sources,

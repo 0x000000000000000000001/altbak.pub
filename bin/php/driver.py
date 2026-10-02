@@ -18,6 +18,8 @@ from validate import expected_cases, validate_output
 PHP_FLAGS = ['-d', 'xdebug.mode=off', '-d', 'opcache.enable_cli=1',
              '-d', 'opcache.file_update_protection=0',
              '-d', 'opcache.jit_buffer_size=128M', '-d', 'opcache.jit=1255']
+COMPOSER_FLAGS = ['--no-plugins', '--no-scripts', '--no-interaction',
+                  '--no-progress', '--prefer-dist', '--no-dev']
 
 
 def digest(path):
@@ -35,7 +37,8 @@ def inputs():
              if p.is_file() and p.suffix in {'.purs', '.php'}]
     backend = ROOT.parent / 'phpurs/phpurs/bin'
     paths += [backend / 'phpurs', backend / 'phpurs.js', Path(__file__),
-              ROOT / 'bin/php/run', ROOT / 'bin/php/composer.phar', ROOT / 'bin/benchmark/validate.py',
+              ROOT / 'bin/php/run', ROOT / 'bin/php/composer.phar', ROOT / 'bin/php/composer-state.php',
+              ROOT / 'bin/benchmark/validate.py',
               ROOT / 'test/native/php/generated.py', ROOT / 'test/native/oracle.py',
               ROOT / 'run/bak/php/spago.php.yaml', ROOT / 'run/bak/php/composer.json',
               ROOT / 'run/bak/php/composer.lock']
@@ -60,6 +63,101 @@ def logged(command, directory, log, env):
         print('\n'.join(log.read_text(errors='replace').splitlines()[-40:]), file=sys.stderr)
         raise RuntimeError(f'Command failed ({result.returncode}); full log: {log}')
     return command
+
+
+def composer_inputs(directory, php, env):
+    lock_path = directory / 'composer.lock'
+    if not lock_path.is_file():
+        raise ValueError('Missing composer.lock; prepare and review the benchmark lock before building')
+    lock = json.loads(lock_path.read_text())
+    generated = json.loads((directory / 'output/composer.json').read_text())
+    packages = [p for p in lock.get('packages', []) if p.get('name') == 'phpurs/lib-deps']
+    if (generated.get('name') != 'phpurs/lib-deps' or len(packages) != 1
+            or packages[0].get('dist', {}).get('type') != 'path'
+            or packages[0]['dist'].get('url') != 'output'):
+        raise ValueError('composer.lock must pin the generated phpurs/lib-deps path package at output')
+    # Composer install checks the root lock, but does not refresh a path
+    # package's requirements. Refuse that stale lock instead of solving here.
+    defaults = {key: {} for key in ['require', 'require-dev', 'conflict', 'replace',
+                                   'provide', 'autoload', 'autoload-dev', 'extra']}
+    defaults.update({'type': 'library', 'bin': [], 'include-path': [], 'target-dir': None})
+    for key, default in defaults.items():
+        if generated.get(key, default) != packages[0].get(key, default):
+            raise ValueError(f'Generated Composer {key} differs from composer.lock; '
+                             'refresh and review the benchmark lock explicitly')
+    phar = ROOT / 'bin/php/composer.phar'
+    probe = ROOT / 'bin/php/composer-state.php'
+    context = json.loads(subprocess.check_output(
+        [php, '-d', 'xdebug.mode=off', str(probe), str(phar), str(directory / 'composer.json')],
+        cwd=directory, env=env, text=True))
+    if lock.get('content-hash') != context['content-hash']:
+        raise ValueError('composer.lock is stale for composer.json; refresh and review the lock explicitly')
+    # Hash environment/configuration rather than recording credentials. The
+    # PHP platform includes extensions and library versions as seen by Composer.
+    settings = {key: value for key, value in env.items()
+                if key.startswith('COMPOSER_') or key in {'COMPOSER', 'PHPRC', 'PHP_INI_SCAN_DIR'}}
+    return {'version': 1, 'context': context, 'flags': COMPOSER_FLAGS,
+            'environment': hashlib.sha256(json.dumps(settings, sort_keys=True).encode()).hexdigest(),
+            'files': {str(p): digest(p) for p in [directory / 'composer.json', lock_path,
+                      directory / 'output/composer.json', Path(php), phar, probe, Path(__file__)]}}
+
+
+def vendor_artifacts(directory):
+    vendor = directory / 'vendor'
+    package = vendor / 'phpurs/lib-deps'
+    if (vendor.is_symlink() or not (vendor / 'autoload.php').is_file()
+            or not (vendor / 'composer/installed.json').is_file()
+            or not package.is_symlink() or package.resolve() != directory / 'output'):
+        return None
+    files = {}
+    # The generated path package is a link to the current output, not a cached
+    # copy of PHP. Do not follow directory links while inventorying dependencies.
+    for root, dirs, names in os.walk(vendor, followlinks=False):
+        for name in sorted(dirs + names):
+            path = Path(root) / name
+            relative = str(path.relative_to(vendor))
+            if path.is_symlink():
+                value = {'link': os.readlink(path)}
+                if path != package:
+                    if not path.is_file():
+                        return None
+                    value['sha256'] = digest(path)
+                files[relative] = value
+            elif path.is_file():
+                files[relative] = {'sha256': digest(path)}
+    return files
+
+
+def prepare_composer(directory, php, env, log):
+    env = dict(env, COMPOSER='composer.json', COMPOSER_VENDOR_DIR='vendor',
+               COMPOSER_MIRROR_PATH_REPOS='0')
+    required = composer_inputs(directory, php, env)
+    stamp = directory / '.composer-prepared.json'
+    try:
+        previous = json.loads(stamp.read_text())
+    except (OSError, ValueError):
+        previous = None
+    current = vendor_artifacts(directory)
+    if current is not None and previous == {'inputs': required, 'vendor': current}:
+        print('Composer: reusing verified locked dependencies', flush=True)
+        return {'status': 'reused', 'commands': []}
+    stamp.unlink(missing_ok=True)
+    vendor = directory / 'vendor'
+    # install alone does not repair edited package files. Recreate this isolated
+    # workspace's dependency tree on a miss, using the committed lock only.
+    if vendor.is_symlink():
+        vendor.unlink()
+    elif vendor.exists():
+        shutil.rmtree(vendor)
+    command = logged([php, '-d', 'xdebug.mode=off', ROOT / 'bin/php/composer.phar',
+                      'install', *COMPOSER_FLAGS], directory, log, env)
+    if required != composer_inputs(directory, php, env):
+        raise RuntimeError('Composer inputs changed during preparation; no reusable state was accepted')
+    current = vendor_artifacts(directory)
+    if current is None:
+        raise RuntimeError('Composer must install vendor with phpurs/lib-deps linked to output')
+    write_json(stamp, {'inputs': required, 'vendor': current})
+    return {'status': 'installed', 'commands': [command]}
 
 
 def prepare(directory, args):
@@ -176,6 +274,9 @@ def main():
                 raise ValueError(f'Stale or incompatible build ({name}); rebuild without --run-only')
         if manifest['artifacts'] != artifacts(directory):
             raise ValueError('PHP/dependency artifacts differ from the build manifest')
+        vendor = vendor_artifacts(directory)
+        if vendor is None or manifest.get('composer_vendor') != vendor:
+            raise ValueError('Composer dependency files or links differ from the build manifest')
         execute(php, manifest['entry'], directory, env, args)
         return
     entry = prepare(directory, args)
@@ -185,16 +286,17 @@ def main():
                        directory, logs / 'spago.log', env)]
     if not (directory / 'output' / entry / 'main.mod.php').is_file():
         raise RuntimeError(f'Phpurs did not generate {entry}/main.mod.php')
-    commands.append(logged([php, ROOT / 'bin/php/composer.phar', 'install', '--no-plugins',
-                            '--no-interaction', '--no-progress', '--prefer-dist', '--no-dev'],
-                           directory, logs / 'composer.log', env))
+    composer = prepare_composer(directory, php, env, logs / 'composer.log')
+    commands.extend(composer['commands'])
     if args.mode in {'pure', 'ffi', 'fficc', 'x'}:
         commands.append(logged([sys.executable, '-B', ROOT / 'test/native/php/generated.py', directory,
                                 '--mode', args.mode, '--php', php], directory,
                                logs / 'generated-contracts.log', env))
     if fingerprint != inputs():
         raise RuntimeError('Sources changed during build; no manifest was accepted')
-    write_json(manifest_path, dict(required, entry=entry, commands=commands, artifacts=artifacts(directory)))
+    write_json(manifest_path, dict(required, entry=entry, commands=commands,
+                                   composer=composer, composer_vendor=vendor_artifacts(directory),
+                                   artifacts=artifacts(directory)))
     print(f'Built PHP {args.mode}; manifest {manifest_path}', flush=True)
     if not args.build_only:
         execute(php, entry, directory, env, args)
