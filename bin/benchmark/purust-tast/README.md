@@ -76,7 +76,8 @@ again after the campaign.
 campaign. The latter remains in `aff-before-after.json`. The extended result
 also records the mean and all paired deltas, alongside the median.
 The `before` and optional `js` variants must match the compiler hashes in the
-original campaign. When `after` has an adjacent `qualification.json`, its hash
+original campaign, unless an explicit configuration binds a newer native
+baseline to its successful stage-2 `qualification.json`. When `after` has an adjacent `qualification.json`, its hash
 must match that qualified stage 2. A configuration JSON can provide explicit
 `sha256` and `qualification` fields; the latter is relative to that config.
 

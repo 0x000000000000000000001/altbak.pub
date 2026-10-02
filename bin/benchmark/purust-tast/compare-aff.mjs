@@ -41,12 +41,12 @@ const variants = variantArgs.map(value => {
   const sha256 = hash(readFileSync(binary));
   if (config.sha256) assert.equal(sha256, config.sha256, label);
   let qualification;
-  if (label === 'after') {
+   if (label === 'after' || config.qualification) {
     const qualificationPath = config.qualification ? resolve(dirname(path), config.qualification) : join(dirname(binary), 'qualification.json');
     if (existsSync(qualificationPath)) {
       const data = JSON.parse(readFileSync(qualificationPath, 'utf8'));
       assert.equal(data.status, 'passed');
-      assert.equal(sha256, data.stage2.sha256, 'Candidate differs from the qualified stage 2');
+       assert.equal(sha256, data.stage2.sha256, `${label} differs from the qualified stage 2`);
       qualification = { path: qualificationPath, sha256: hash(readFileSync(qualificationPath)), stage2_sha256: data.stage2.sha256 };
     } else assert(!config.qualification, qualificationPath);
   }
@@ -57,7 +57,7 @@ assert(variants.some(value => value.label === 'before') && variants.some(value =
   'The before and after variants are required');
 for (const [label, name] of [['before', 'purust-native'], ['js', 'purust.js']]) {
   const variant = variants.find(value => value.label === label);
-  if (variant) assert.equal(variant.sha256, prior.inputs.artifacts.purust.files.find(value => value.name === name).sha256,
+   if (variant && !variant.qualification) assert.equal(variant.sha256, prior.inputs.artifacts.purust.files.find(value => value.name === name).sha256,
     `${label} differs from the previously qualified compiler`);
 }
 mkdirSync(workspace, { recursive: true });

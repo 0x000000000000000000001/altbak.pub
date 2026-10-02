@@ -398,4 +398,6 @@ Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS bin
 Benchmark   | [purust](https://github.com/0x000000000000000000001/purust) JS binary (WIP) | [purust](https://github.com/0x000000000000000000001/purust) Rust binary (WIP)
 ----------- | --------- | ---------------------
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) | (WIP)     | (WIP)
-[purust-aff](https://github.com/0x000000000000000000001/purust-aff)  | ~ 6181 ms | ~ 5399 ms <br>(/JS = 0.87x)
+[purust-aff](https://github.com/0x000000000000000000001/purust-aff)  | ~ 6181 ms | ~ 5399 ms <br>(/JS = 0.87x) (/JS = 0.87x)
+
+More to come...
