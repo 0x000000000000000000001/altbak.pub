@@ -124,44 +124,44 @@ RowToList | ~ 0.04 μs | ~ 0.04 μs | ~ 0.01 μs |
 
 PHP Benchmark           | Hand-written PureScript<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) | Hand-written FP-style PHP FFI<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) | Hand-written imperative PHP FFI<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) |
 ----------------------- | ------------------------- | ----------------------- | ----------------------------- |
-AST Evaluation | ~ 2.30 μs | ~ 3.19 μs | ~ 2.11 μs |
-Fibonacci | ~ 1.27 μs | ~ 2.26 μs | ~ 1.27 μs |
-List Processing | ~ 159.73 μs | ~ 174.47 μs | ~ 0.63 μs |
-Tail Call Optimization | ~ 76.11 μs | ~ 49.87 μs | ~ 50.30 μs |
-Deep Record Updates | ~ 1541.84 μs | ~ 1676.49 μs | ~ 491.74 μs |
-Ackermann | ~ 49.08 μs | ~ 100.16 μs | ~ 52.48 μs |
-Church Numerals | ~ 2161.17 μs | ~ 6824.38 μs | ~ 32.84 μs |
-Prime Sieve | ~ 787.77 μs | ~ 1022.38 μs | ~ 1.89 μs |
-Red-Black Tree | ~ 58291.04 μs | ~ 509843.88 μs | ~ 113830.46 μs |
-Polymorphism | ~ 6615.56 μs | ~ 432965.96 μs | ~ 87761.96 μs |
-State Monad | ~ 501.49 μs | ~ 560.06 μs | ~ 0.48 μs |
-Lazy Evaluation | ~ 810.15 μs | ~ 111183.96 μs | ~ 326.09 μs |
-Array Processing | ~ 101.22 μs | ~ 26.94 μs | ~ 0.80 μs |
-RowToList | ~ 0.87 μs | ~ 0.85 μs | ~ 0.08 μs |
-**Total Execution Time** | ~ 71.10 ms <br>(/C = 7.2x) | ~ 1064.43 ms <br>(/C = 108.2x) | ~ 202.55 ms <br>(/C = 20.6x) |
+AST Evaluation | ~ 2.13 μs | ~ 3.19 μs | ~ 2.11 μs |
+Fibonacci | ~ 1.08 μs | ~ 2.26 μs | ~ 1.27 μs |
+List Processing | ~ 137.53 μs | ~ 174.47 μs | ~ 0.63 μs |
+Tail Call Optimization | ~ 72.18 μs | ~ 49.87 μs | ~ 50.30 μs |
+Deep Record Updates | ~ 1413.71 μs | ~ 1676.49 μs | ~ 491.74 μs |
+Ackermann | ~ 45.89 μs | ~ 100.16 μs | ~ 52.48 μs |
+Church Numerals | ~ 1941.41 μs | ~ 6824.38 μs | ~ 32.84 μs |
+Prime Sieve | ~ 698.16 μs | ~ 1022.38 μs | ~ 1.89 μs |
+Red-Black Tree | ~ 53877.92 μs | ~ 509843.88 μs | ~ 113830.46 μs |
+Polymorphism | ~ 6237.63 μs | ~ 432965.96 μs | ~ 87761.96 μs |
+State Monad | ~ 467.12 μs | ~ 560.06 μs | ~ 0.48 μs |
+Lazy Evaluation | ~ 791.27 μs | ~ 111183.96 μs | ~ 326.09 μs |
+Array Processing | ~ 89.94 μs | ~ 26.94 μs | ~ 0.80 μs |
+RowToList | ~ 0.84 μs | ~ 0.85 μs | ~ 0.08 μs |
+**Total Execution Time** | ~ 65.78 ms <br>(/C = 6.8x) | ~ 1064.43 ms <br>(/C = 108.2x) | ~ 202.55 ms <br>(/C = 20.6x) |
 
 #### Rust
 
 Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) | PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F# (adapted)<br>↓<br>[Fable (patched)](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) | Hand-written F#<br>↓<br>[Fable](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO | Hand-written FP-style Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) | Hand-written imperative Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) |
 ----------------------- | ------------------------- | -------------------------- | ------------------------------ | ------------------------ | ------------------------------ |
-AST Evaluation | ~ 0.234 μs | ~ 3.68 μs | ~ 0.23 μs | ~ 0.22 μs | ~ 0.23 μs |
-Fibonacci | ~ 0.104 μs | ~ 11.78 μs | ~ 0.09 μs | ~ 0.12 μs | ~ 0.10 μs |
-List Processing | ~ 0.128 μs | ~ 459.33 μs | ~ 17.07 μs | ~ 11.05 μs | ~ 0.51 μs |
-Tail Call Optimization | ~ 30.262 μs | ~ 23547.50 μs | ~ 10.93 μs | ~ 34.70 μs | ~ 34.63 μs |
-Deep Record Updates | ~ 3.248 μs | ~ 8728.98 μs | ~ 114.96 μs | ~ 107.97 μs | ~ 3.47 μs |
-Ackermann | ~ 16.871 μs | ~ 625.00 μs | ~ 15.60 μs | ~ 18.59 μs | ~ 18.36 μs |
-Church Numerals | ~ 176.572 μs | ~ 11792.17 μs | ~ 2249.51 μs | ~ 1033.78 μs | ~ 0.01 μs |
-Prime Sieve | ~ 119.954 μs | ~ 2194.96 μs | ~ 120.43 μs | ~ 78.88 μs | ~ 0.78 μs |
-Red-Black Tree | ~ 8391.771 μs | ~ 659207.04 μs | ~ 50862.42 μs | ~ 28737.38 μs | ~ 28247.96 μs |
-Polymorphism | ~ 0.036 μs | ~ 1588595.46 μs | ~ 7471.33 μs | ~ 0.01 μs | ~ 0.01 μs |
-State Monad | ~ 47.405 μs | ~ 826.12 μs | ~ 73.12 μs | ~ 27.36 μs | ~ 0.01 μs |
-Lazy Evaluation | ~ 0.001 μs | ~ 159056.38 μs | ~ 38342.83 μs | ~ 23675.83 μs | ~ 0.01 μs |
-Array Processing | ~ 0.033 μs | ~ 298.70 μs | ~ 3.28 μs | ~ 0.58 μs | ~ 0.25 μs |
-RowToList | ~ 0.056 μs | ~ 0.95 μs | ~ 0.10 μs | ~ 0.02 μs | ~ 0.01 μs |
+AST Evaluation | ~ 0.236 μs | ~ 3.68 μs | ~ 0.23 μs | ~ 0.22 μs | ~ 0.23 μs |
+Fibonacci | ~ 0.087 μs | ~ 11.78 μs | ~ 0.09 μs | ~ 0.12 μs | ~ 0.10 μs |
+List Processing | ~ 0.114 μs | ~ 459.33 μs | ~ 17.07 μs | ~ 11.05 μs | ~ 0.51 μs |
+Tail Call Optimization | ~ 29.880 μs | ~ 23547.50 μs | ~ 10.93 μs | ~ 34.70 μs | ~ 34.63 μs |
+Deep Record Updates | ~ 3.140 μs | ~ 8728.98 μs | ~ 114.96 μs | ~ 107.97 μs | ~ 3.47 μs |
+Ackermann | ~ 16.451 μs | ~ 625.00 μs | ~ 15.60 μs | ~ 18.59 μs | ~ 18.36 μs |
+Church Numerals | ~ 159.524 μs | ~ 11792.17 μs | ~ 2249.51 μs | ~ 1033.78 μs | ~ 0.01 μs |
+Prime Sieve | ~ 144.000 μs | ~ 2194.96 μs | ~ 120.43 μs | ~ 78.88 μs | ~ 0.78 μs |
+Red-Black Tree | ~ 8136.979 μs | ~ 659207.04 μs | ~ 50862.42 μs | ~ 28737.38 μs | ~ 28247.96 μs |
+Polymorphism | ~ 0.032 μs | ~ 1588595.46 μs | ~ 7471.33 μs | ~ 0.01 μs | ~ 0.01 μs |
+State Monad | ~ 44.568 μs | ~ 826.12 μs | ~ 73.12 μs | ~ 27.36 μs | ~ 0.01 μs |
+Lazy Evaluation | ~ 0.011 μs | ~ 159056.38 μs | ~ 38342.83 μs | ~ 23675.83 μs | ~ 0.01 μs |
+Array Processing | ~ 0.034 μs | ~ 298.70 μs | ~ 3.28 μs | ~ 0.58 μs | ~ 0.25 μs |
+RowToList | ~ 0.068 μs | ~ 0.95 μs | ~ 0.10 μs | ~ 0.02 μs | ~ 0.01 μs |
 Array Indexing (excluded WIP) | ~ 6387.79 μs | — | — | — | — |
 JSON to Typed AST (excluded WIP) | ~ 116850.71 μs‡ | — | — | — | — |
 JSON Decoding (excluded WIP) | ~ 1130.69 μs | — | — | — | — |
-**Total Execution Time** | ~ 8.79 ms <br>(/C = 0.9x) | ~ 2455.35 ms <br>(/C = 249.5x) | ~ 99.28 ms <br>(/C = 10.1x) | ~ 53.73 ms <br>(/C = 5.5x) | ~ 28.31 ms <br>(/C = 2.9x) |
+**Total Execution Time** | ~ 8.54 ms <br>(/C = 0.9x) | ~ 2455.35 ms <br>(/C = 249.5x) | ~ 99.28 ms <br>(/C = 10.1x) | ~ 53.73 ms <br>(/C = 5.5x) | ~ 28.31 ms <br>(/C = 2.9x) |
 
 Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
 
@@ -197,21 +197,21 @@ RowToList | ~ 0.48 μs | ~ 0.30 μs | ~ 0.02 μs |
 
 F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) | Hand-written FP-style F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) | Hand-written F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) |
 ----------------------- | ------------------------- | ------------------------- | ------------------------------- |
-AST Evaluation | ~ 1.84 μs | ~ 0.49 μs | ~ 0.50 μs |
-Fibonacci | ~ 2.44 μs | ~ 0.12 μs | ~ 0.12 μs |
-List Processing | ~ 491.87 μs | ~ 16.25 μs | ~ 2.96 μs |
-Tail Call Optimization | ~ 43.41 μs | ~ 38.43 μs | ~ 44.32 μs |
-Deep Record Updates | ~ 3026.21 μs | ~ 91.30 μs | ~ 9.13 μs |
-Ackermann | ~ 173.72 μs | ~ 40.02 μs | ~ 39.78 μs |
-Church Numerals | ~ 1787.07 μs | ~ 352.32 μs | ~ 25.65 μs |
-Prime Sieve | ~ 607.84 μs | ~ 157.57 μs | ~ 15.45 μs |
-Red-Black Tree | ~ 41631.79 μs | ~ 37763.92 μs | ~ 10551.67 μs |
-Polymorphism | ~ 2452.14 μs | ~ 25932.33 μs | ~ 2332.77 μs |
-State Monad | ~ 308.24 μs | ~ 79.71 μs | ~ 3.32 μs |
-Lazy Evaluation | ~ 6758.21 μs | ~ 10061 μs | ~ 233.03 μs |
-Array Processing | ~ 59.64 μs | ~ 31.74 μs | ~ 16.09 μs |
-RowToList | ~ 0.32 μs | ~ 0.06 μs | ~ 0.03 μs |
-**Total Execution Time** | ~ 57.34 ms <br>(/C = 5.8x) | ~ 74.57 ms <br>(/C = 7.6x) | ~ 13.27 ms <br>(/C = 1.3x) |
+AST Evaluation | ~ 1.08 μs | ~ 0.49 μs | ~ 0.50 μs |
+Fibonacci | ~ 1.52 μs | ~ 0.12 μs | ~ 0.12 μs |
+List Processing | ~ 429.02 μs | ~ 16.25 μs | ~ 2.96 μs |
+Tail Call Optimization | ~ 46.37 μs | ~ 38.43 μs | ~ 44.32 μs |
+Deep Record Updates | ~ 2224.15 μs | ~ 91.30 μs | ~ 9.13 μs |
+Ackermann | ~ 165.55 μs | ~ 40.02 μs | ~ 39.78 μs |
+Church Numerals | ~ 1758.51 μs | ~ 352.32 μs | ~ 25.65 μs |
+Prime Sieve | ~ 517.20 μs | ~ 157.57 μs | ~ 15.45 μs |
+Red-Black Tree | ~ 39096.17 μs | ~ 37763.92 μs | ~ 10551.67 μs |
+Polymorphism | ~ 2287.20 μs | ~ 25932.33 μs | ~ 2332.77 μs |
+State Monad | ~ 171.22 μs | ~ 79.71 μs | ~ 3.32 μs |
+Lazy Evaluation | ~ 5789.42 μs | ~ 10061 μs | ~ 233.03 μs |
+Array Processing | ~ 61.98 μs | ~ 31.74 μs | ~ 16.09 μs |
+RowToList | ~ 0.22 μs | ~ 0.06 μs | ~ 0.03 μs |
+**Total Execution Time** | ~ 52.55 ms <br>(/C = 5.5x) | ~ 74.57 ms <br>(/C = 7.6x) | ~ 13.27 ms <br>(/C = 1.3x) |
 
 #### Java
 
