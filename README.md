@@ -74,7 +74,7 @@ Lazy Evaluation | ~ 247.11 μs | ~ 71378.08 μs | ~ 13865.38 μs | ~ 0.27 μs |
 Array Processing | ~ 19.26 μs | ~ 43.81 μs | ~ 4.90 μs | ~ 0.45 μs |
 RowToList | ~ 0.15 μs | ~ 0.50 μs | ~ 0.07 μs | ~ 0.03 μs |
 Array Indexing (excluded WIP) | ~ 3962.17 μs | — | — | — |
-JSON to Typed AST (excluded WIP) | [~ 20002.75 μs](docs/benchmark-results/2026-10-03-purust-native-optimization.md#json--typed-ast-gorust) | — | — | — |
+JSON to Typed AST (excluded WIP) | ~ 20002.75 μs | — | — | — |
 JSON Decoding (excluded WIP) | ~ 2241.42 μs | — | — | — |
 **Total Execution Time** | ~ 13.28 ms <br>(/C = 1.3x) | ~ 1464.74 ms <br>(/C = 148.8x) | ~ 88.99 ms <br>(/C = 9.0x) | ~ 11.34 ms <br>(/C = 1.2x) |
 
@@ -390,6 +390,6 @@ Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS bin
 Benchmark   | [purust](https://github.com/0x000000000000000000001/purust) JS binary (WIP) | [purust](https://github.com/0x000000000000000000001/purust) Rust binary (WIP)
 ----------- | --------- | ---------------------
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) | (WIP)     | (WIP)
-[purust-aff](https://github.com/0x000000000000000000001/purust-aff)  | ~ 6389 ms | [~ 2632 ms](docs/benchmark-results/2026-10-03-purust-native-optimization.md#confirmation-sur-les-244-modules-distincts) <br>(/JS = 0.41x) (WIP)
+[purust-aff](https://github.com/0x000000000000000000001/purust-aff)  | ~ 6389 ms | ~ 2632 ms <br>(/JS = 0.41x) (WIP)
 
 More to come...
