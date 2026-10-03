@@ -332,7 +332,7 @@ Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 47830
 Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS binary (WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Go binary (WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Rust binary (WIP)
 ----------- | --------- | ------------------ | ---------------------
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 77.4 s | ~ 46.4 s <br>(/JS = 0.60x) | (WIP)
-[gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 7364 ms | ~ 1997 ms | [~ 3414 ms](docs/benchmark-results/2026-10-03-gopurs-rust-allocation.md) <br>(/Go = 1.71x) (WIP)
+[gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 7364 ms | ~ 1997 ms | ~ 3414 ms<br>(/Go = 1.71x) (WIP)
 [gopurs-argonaut-core](https://github.com/0x000000000000000000001/gopurs-argonaut-core)  | ~ 7777 ms | ~ 2000 ms | (WIP)
 [gopurs-arrays](https://github.com/0x000000000000000000001/gopurs-arrays)  | ~ 6771 ms (failed) | ~ 3903 ms | (WIP)
 [gopurs-assert](https://github.com/0x000000000000000000001/gopurs-assert)  | ~ 660 ms | ~ 227 ms | (WIP)
