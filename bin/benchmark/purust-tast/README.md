@@ -57,6 +57,8 @@ runtime sources are refreshed before their snapshot is taken.
 The optional `--discard-stage1-cache` frees this build's stage-1 Cargo cache
 after stage 2 and the smoke pass; it retains both executables, all generated
 sources and logs, and records the cleanup in `qualification.json`.
+`--offline` makes Cargo use its already populated local dependency cache during
+both bootstrap stages and the smoke; it avoids registry access for repeated builds.
 `qualify-aff.mjs` copies the Aff project to a fresh sibling-package layout and
 runs its existing complete `bin/test` with the qualified compiler: 47 printed
 checks, Rust unit tests, concurrency/lifetime tests and nine error-reporting

@@ -74,7 +74,7 @@ Lazy Evaluation | ~ 247.11 μs | ~ 71378.08 μs | ~ 13865.38 μs | ~ 0.27 μs |
 Array Processing | ~ 19.26 μs | ~ 43.81 μs | ~ 4.90 μs | ~ 0.45 μs |
 RowToList | ~ 0.15 μs | ~ 0.50 μs | ~ 0.07 μs | ~ 0.03 μs |
 Array Indexing (excluded WIP) | ~ 3962.17 μs | — | — | — |
-JSON to Typed AST (excluded WIP) | ~ 20236.79 μs | — | — | — |
+JSON to Typed AST (excluded WIP) | [~ 20002.75 μs](docs/benchmark-results/2026-10-03-purust-native-optimization.md#json--typed-ast-gorust) | — | — | — |
 JSON Decoding (excluded WIP) | ~ 2241.42 μs | — | — | — |
 **Total Execution Time** | ~ 13.28 ms <br>(/C = 1.3x) | ~ 1464.74 ms <br>(/C = 148.8x) | ~ 88.99 ms <br>(/C = 9.0x) | ~ 11.34 ms <br>(/C = 1.2x) |
 
@@ -159,7 +159,7 @@ Lazy Evaluation | ~ 0.011 μs | ~ 159056.38 μs | ~ 38342.83 μs | ~ 23675.83 μ
 Array Processing | ~ 0.034 μs | ~ 298.70 μs | ~ 3.28 μs | ~ 0.58 μs | ~ 0.25 μs |
 RowToList | ~ 0.068 μs | ~ 0.95 μs | ~ 0.10 μs | ~ 0.02 μs | ~ 0.01 μs |
 Array Indexing (excluded WIP) | ~ 6387.79 μs | — | — | — | — |
-JSON to Typed AST (excluded WIP) | ~ 116850.71 μs | — | — | — | — |
+JSON to Typed AST (excluded WIP) | [~ 35351.17 μs](docs/benchmark-results/2026-10-03-purust-native-optimization.md#json--typed-ast-gorust) (O3, no LTO) | — | — | — | — |
 JSON Decoding (excluded WIP) | ~ 1130.69 μs | — | — | — | — |
 **Total Execution Time** | ~ 8.54 ms <br>(/C = 0.9x) | ~ 2455.35 ms <br>(/C = 249.5x) | ~ 99.28 ms <br>(/C = 10.1x) | ~ 53.73 ms <br>(/C = 5.5x) | ~ 28.31 ms <br>(/C = 2.9x) |
 
@@ -332,7 +332,7 @@ Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 47830
 Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS binary (WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Go binary (WIP) | [purust](https://github.com/0x000000000000000000001/purust) Rust binary (WIP)
 ----------- | --------- | ------------------ | ---------------------
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 77.4 s | ~ 46.4 s <br>(/JS = 0.60x) | (WIP)
-[gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 7630 ms | ~ 2146 ms | ~ 5495 ms <br>(/Go = 2.56x) (WIP)
+[gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 7750 ms | ~ 2109 ms | [~ 2569 ms](docs/benchmark-results/2026-10-03-purust-native-optimization.md#comparaison-commune-gorust) <br>(/Go = 1.22x) (WIP)
 [gopurs-argonaut-core](https://github.com/0x000000000000000000001/gopurs-argonaut-core)  | ~ 7777 ms | ~ 2000 ms | (WIP)
 [gopurs-arrays](https://github.com/0x000000000000000000001/gopurs-arrays)  | ~ 6771 ms (failed) | ~ 3903 ms | (WIP)
 [gopurs-assert](https://github.com/0x000000000000000000001/gopurs-assert)  | ~ 660 ms | ~ 227 ms | (WIP)
@@ -382,14 +382,14 @@ Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS bin
 [gopurs-uuid](https://github.com/0x000000000000000000001/gopurs-uuid)  | ~ 10000 ms | ~ 3916 ms | (WIP)
 [gopurs-variant](https://github.com/0x000000000000000000001/gopurs-variant)  | ~ 5431 ms | ~ 1806 ms | (WIP)
 [gopurs-yoga-json](https://github.com/0x000000000000000000001/gopurs-yoga-json)  | ~ 18107 ms | ~ 9760 ms | (WIP)
-**Total gopurs-*** | ~ 329.02 s | ~ 105.37 s <br>(/JS = 0.3x) | (WIP)
-**Total** | ~ 406.4 s | ~ 151.8 s <br>(/JS = 0.37x) | (WIP)
+**Total gopurs-*** | ~ 329.14 s | ~ 105.33 s <br>(/JS = 0.3x) | (WIP)
+**Total** | ~ 406.5 s | ~ 151.8 s <br>(/JS = 0.37x) | (WIP)
 
 #### ... to Rust
 
 Benchmark   | [purust](https://github.com/0x000000000000000000001/purust) JS binary (WIP) | [purust](https://github.com/0x000000000000000000001/purust) Rust binary (WIP)
 ----------- | --------- | ---------------------
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) | (WIP)     | (WIP)
-[purust-aff](https://github.com/0x000000000000000000001/purust-aff)  | ~ 6181 ms | ~ 5399 ms <br>(/JS = 0.87x) (WIP)
+[purust-aff](https://github.com/0x000000000000000000001/purust-aff)  | ~ 6389 ms | [~ 2632 ms](docs/benchmark-results/2026-10-03-purust-native-optimization.md#confirmation-sur-les-244-modules-distincts) <br>(/JS = 0.41x) (WIP)
 
 More to come...

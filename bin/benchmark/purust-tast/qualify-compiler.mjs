@@ -10,8 +10,8 @@ import { environment, hash, manifest, run, writeJson } from '../gopurs-aff/commo
 import { findTypedCompiler } from '../../../../purust/purust/tools/native-workspace.mjs';
 
 const [archiveArg, ...flags] = process.argv.slice(2);
-assert(archiveArg && flags.every(flag => flag === '--discard-stage1-cache'),
-  'Usage: qualify-compiler.mjs NEW_ARCHIVE_DIRECTORY [--discard-stage1-cache]');
+assert(archiveArg && flags.every(flag => ['--discard-stage1-cache', '--offline'].includes(flag)),
+  'Usage: qualify-compiler.mjs NEW_ARCHIVE_DIRECTORY [--discard-stage1-cache] [--offline]');
 const archive = resolve(archiveArg);
 assert(!existsSync(archive), archive);
 mkdirSync(archive, { recursive: true });
@@ -70,7 +70,8 @@ try {
   const buildRoot = join(archive, 'build'); mkdirSync(buildRoot);
   const binary = join(archive, 'compiler-final');
   const env = { ...environment(), PURUST_PURS: frontend.path, PURUST_NATIVE_OUTPUT: binary, PURUST_NATIVE_TMPDIR: buildRoot,
-    PURUST_NATIVE_OPT_LEVEL: '3', CARGO_BUILD_JOBS: '8', CARGO_INCREMENTAL: '0', GHCRTS: '-N2' };
+    PURUST_NATIVE_OPT_LEVEL: '3', CARGO_BUILD_JOBS: '8', CARGO_INCREMENTAL: '0', GHCRTS: '-N2',
+    ...(flags.includes('--offline') ? { CARGO_NET_OFFLINE: 'true' } : {}) };
   result.build = run(archive, 'self-host', process.execPath,
     [join(root, 'tools/build-native.mjs'), '--self-host', '--keep-workspace'], root, env, 3600000);
   save();

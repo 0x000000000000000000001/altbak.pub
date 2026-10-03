@@ -58,7 +58,7 @@ save();
 try {
   const env = { ...environment(), PURS: compiler.frontend.path, PURUST_JS: '0',
     PURUST_AFF_ERRORS_KEEP_OUTPUT: join(archive, 'errors'),
-    CARGO_BUILD_JOBS: '8', CARGO_INCREMENTAL: '0', CARGO_PROFILE_DEV_DEBUG: '0',
+    CARGO_BUILD_JOBS: '8', CARGO_INCREMENTAL: '0', CARGO_NET_OFFLINE: 'true', CARGO_PROFILE_DEV_DEBUG: '0',
     CARGO_PROFILE_TEST_DEBUG: '0', GHCRTS: '-N2' };
   result.commands.push(run(archive, 'aff-full-suite', 'bash', ['bin/test'], app, env, 1800000));
   const output = readFileSync(result.commands[0].stdout, 'utf8');
