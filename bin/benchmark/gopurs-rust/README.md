@@ -25,12 +25,16 @@ exécutable, commandes et diagnostics ; un workspace Cargo réutilisable garde
 les dates des sources inchangées. Il ne publie pas de binaire de production.
 Le profil est O3, sans LTO ni debug, Arc et mimalloc.
 
-`relink.mjs ARCHIVE SOURCE_CANDIDATE NEW_CANDIDATE thin|false` isole un
+`relink.mjs ARCHIVE SOURCE_CANDIDATE NEW_CANDIDATE thin|false [--rust-lld]` isole un
 changement de profil Cargo : il reprend exactement le Rust généré du candidat
 source, fige les fichiers et conserve son propre binaire et ses logs. Chaque
 reprise après échec utilise un nouveau nom. Un profil sélectionné doit ensuite
 être appliqué au build de production ; `qualify.mjs` vérifie le réglage Cargo
 effectif en plus de l'identité des sources générées.
+Sur macOS, `--rust-lld` sélectionne le linker Mach-O livré avec la toolchain
+Rust, dont le chemin et l'empreinte sont archivés. L'argument de liaison ne
+s'applique qu'au binaire principal via `cargo rustc` ; il permet de qualifier
+ThinLTO quand le linker Apple ne sait pas lire le bitcode de cette toolchain.
 
 Exemple de sélection, chemins relatifs au JSON :
 
@@ -119,6 +123,7 @@ corrigés. `finish-allocation.mjs ARCHIVE selection` exécute les replis Go/JS,
 les suites PBO et la sélection composée ; le mode `confirm`, après qualification
 de production, enchaîne quinze paires principales, dix tours communs, cinq
 tours aux défauts publics et trois paires de ressources. Les processus sont
-inventoriés entre campagnes ; la vérification finale relit tous les dossiers
+inventoriés entre campagnes ; les profils finaux (backend entier puis
+PBO/émission) suivent les mesures. La vérification finale relit tous les dossiers
 `*-runs`, y compris les essais de profil de liaison. `publish-allocation.mjs`
 publie ensuite les preuves vérifiées et la seule ligne `gopurs-aff` du tableau.

@@ -50,6 +50,12 @@ try {
         join(archive, 'deduplication-' + name + '.json'), join(archive, 'baseline'),
         join(archive, 'native-delete-runs'), join(archive, name + '-runs')]);
     }
+    for (const phase of ['all', 'optimize']) {
+      const output = join(archive, 'profile-final-' + phase);
+      command('profile-final-' + phase, 'python3', [join(here, 'profile.py'),
+        join(root, 'bin/gopurs-rust'), snapshot, output, '--phase', phase]);
+      command('attribute-final-' + phase, 'python3', [join(here, 'attribute.py'), join(output, 'sample.txt')]);
+    }
     command('verify-final', process.execPath, [join(here, 'verify.mjs'), join(archive, 'verification-final.json'),
       ...readdirSync(archive, { withFileTypes: true })
         .filter(entry => entry.isDirectory() && entry.name.endsWith('-runs'))

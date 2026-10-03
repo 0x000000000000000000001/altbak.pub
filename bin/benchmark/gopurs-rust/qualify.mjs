@@ -29,7 +29,7 @@ assert.deepEqual(state.gopurs, manifest(join(candidate, 'sources/0/src')));
 assert.deepEqual(state.optimizer, manifest(join(candidate, 'sources/1/src')));
 const result = resumeArg ? JSON.parse(readFileSync(join(directory, 'results.json'), 'utf8'))
   : { status: 'pending', started_at: new Date().toISOString(), candidate, sources: state,
-    frontend_sha256: hash(readFileSync(frontend)), build_profile: profile,
+    frontend_sha256: hash(readFileSync(frontend)), build_profile: profile, linker: candidateBuild.linker ?? null,
     build_rust_sha256: hash(readFileSync(join(root, 'tools/build-rust.mjs'))), commands: [] };
 const suffix = resumeArg ? '-resume-' + Date.now() : '';
 if (resumeArg) {
@@ -37,6 +37,7 @@ if (resumeArg) {
   assert.deepEqual(result.sources, state);
   assert.equal(result.candidate, candidate);
   assert.deepEqual(result.build_profile, profile);
+  assert.deepEqual(result.linker, candidateBuild.linker ?? null);
   assert.equal(result.build_rust_sha256, hash(readFileSync(join(root, 'tools/build-rust.mjs'))));
   copyFileSync(join(directory, 'results.json'), join(directory, 'failed-results' + suffix + '.json'));
   result.status = 'pending'; result.resumed_at = new Date().toISOString(); delete result.failure;
@@ -71,6 +72,10 @@ try {
   assert(result.cargo_command);
   for (const setting of ['profile.release.opt-level=3', 'profile.release.debug=false',
     `profile.release.lto=${JSON.stringify(profile.lto)}`]) assert(result.cargo_command.includes(setting), setting);
+  if (result.linker) {
+    assert(result.cargo_command.includes('link-arg=' + result.linker.option));
+    assert.equal(hash(readFileSync(result.linker.path)), result.linker.sha256);
+  }
   assert(result.rust_bootstrap);
   const generated = directory => manifest(directory, file => /\.(rs|toml)$/.test(file));
   assert.deepEqual(generated(join(result.rust_bootstrap, 'rust')), generated(join(candidate, 'rust')),
