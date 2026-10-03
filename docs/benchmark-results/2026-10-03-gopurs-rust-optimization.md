@@ -5,6 +5,14 @@ passe de **5 886 à 3 592 ms (−39 %)** sur les
 238 modules Aff figés. Confirmation sur **15 paires**, dont **15 favorables**.
 Le compilateur optimisé est installé et la commande **`GOPURS_RUST=1 ./bin/test`** passe.
 
+**Réglages de cette campagne :** les mesures ci-dessous fixent explicitement les
+workers à 8/8/8/8. Le launcher Rust conservait alors préparation 2 / PBO 1 sans
+ces variables ; la commande ordinaire avait été validée fonctionnellement.
+La [correction ultérieure des valeurs par défaut](2026-10-03-gopurs-host-defaults.md)
+est maintenant installée : elle aligne le parallélisme et qualifie la commande
+exacte sans réglages supplémentaires à **3 683 ms**, avec une médiane figée de
+**3 701 ms** sur cinq tours.
+
 ## Comparaison commune : trois hôtes, une cible Go
 
 | Hôte de gopurs | Médiane | Moyenne | Min–max |
@@ -149,8 +157,9 @@ Diagnostic séparé `/usr/bin/time -l`, trois paires après chauffe, processus e
   génération/émission Go, points d'entrée et attente finale des workers inclus.
   Frontend, bootstrap, builds et exécution applicative, démarrage/sortie exclus.
 - Jobs chargement/préparation/PBO/émission : **8/8/8/8**, `GOPURS_PIPELINE=1`
-  pour tous les hôtes. Ces paramètres explicites diffèrent du défaut PBO Rust
-  séquentiel, également testé lors de la qualification.
+  pour tous les hôtes. Lors de cette campagne, le launcher Rust gardait encore
+  un défaut PBO séquentiel, testé fonctionnellement lors de la qualification.
+  La correction liée en tête de rapport a ensuite aligné ce défaut sur Go.
 - Rust : **O3 sans LTO ni debug, Arc et mimalloc**. Go garde le launcher de
   production, `GOGC=off` / `GOMEMLIMIT=10GiB` sur cette machine ; le parseur Go
   embarqué dans Rust garde son GC ordinaire.

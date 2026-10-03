@@ -1,0 +1,247 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-03T19:51:26.451Z",
+  "archive": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-host-defaults-20261003",
+  "scope": "Go-target gopurs, public launcher defaults; frozen Aff and separate live Aff execution",
+  "protocol": {
+    "metric": "[gopurs] backend total",
+    "target": "Go for every variant",
+    "warmups": 1,
+    "rounds": 5,
+    "order": "serialized processes, rotating first variant",
+    "jobs": "launcher defaults; explicit per-variant overrides recorded below",
+    "includes": "load/sort, prepare, PBO, Go generation/emission, drain and entrypoints",
+    "excludes": "frontend, compiler and application builds, application execution, process startup/exit",
+    "cache": "fresh outputs and .purmeta/.cache per process, warm OS file cache",
+    "comparison": "every Go file and go.mod byte-identical to original frozen oracle",
+    "resource_diagnostic": false
+  },
+  "host": {
+    "cpu": "Apple M4 Pro",
+    "logical_cpus": 14,
+    "memory_bytes": 51539607552,
+    "node": "v24.8.0"
+  },
+  "summary": {
+    "rust-before-default": {
+      "samples_ms": [
+        5181,
+        5772,
+        5975,
+        5892,
+        5505
+      ],
+      "median_ms": 5772,
+      "mean_ms": 5665,
+      "min_ms": 5181,
+      "max_ms": 5975,
+      "phases_median_ms": {
+        "load TAST + sort": 217,
+        "transitive specializations": 642,
+        "prepare + monomorphize": 1271,
+        "runtime": 4,
+        "optimize + emit": 4261,
+        "entry points": 18,
+        "backend total": 5772
+      }
+    },
+    "rust-default": {
+      "samples_ms": [
+        3624,
+        3698,
+        3825,
+        3898,
+        3701
+      ],
+      "median_ms": 3701,
+      "mean_ms": 3749.2,
+      "min_ms": 3624,
+      "max_ms": 3898,
+      "phases_median_ms": {
+        "load TAST + sort": 220,
+        "transitive specializations": 501,
+        "prepare + monomorphize": 1128,
+        "runtime": 7,
+        "optimize + emit": 2352,
+        "entry points": 18,
+        "backend total": 3701
+      }
+    },
+    "rust-explicit-eight": {
+      "samples_ms": [
+        3574,
+        3714,
+        3787,
+        3913,
+        3784
+      ],
+      "median_ms": 3784,
+      "mean_ms": 3754.4,
+      "min_ms": 3574,
+      "max_ms": 3913,
+      "phases_median_ms": {
+        "load TAST + sort": 221,
+        "transitive specializations": 503,
+        "prepare + monomorphize": 1148,
+        "runtime": 7,
+        "optimize + emit": 2382,
+        "entry points": 18,
+        "backend total": 3784
+      }
+    },
+    "go-default": {
+      "samples_ms": [
+        2194,
+        2100,
+        2242,
+        2402,
+        2164
+      ],
+      "median_ms": 2194,
+      "mean_ms": 2220.4,
+      "min_ms": 2100,
+      "max_ms": 2402,
+      "phases_median_ms": {
+        "load TAST + sort": 57,
+        "transitive specializations": 253,
+        "prepare + monomorphize": 729,
+        "runtime": 0,
+        "optimize + emit": 1379,
+        "entry points": 0,
+        "backend total": 2194
+      }
+    },
+    "js-default": {
+      "samples_ms": [
+        7387,
+        7268,
+        7555,
+        7542,
+        7641
+      ],
+      "median_ms": 7542,
+      "mean_ms": 7478.6,
+      "min_ms": 7268,
+      "max_ms": 7641,
+      "phases_median_ms": {
+        "load TAST + sort": 647,
+        "transitive specializations": 209,
+        "prepare + monomorphize": 504,
+        "runtime": 1,
+        "optimize + emit": 6386,
+        "entry points": 1,
+        "backend total": 7542
+      }
+    }
+  },
+  "default_rust_reduction_percent": 35.880110880110884,
+  "paired_deltas_ms": [
+    -1557,
+    -2074,
+    -2150,
+    -1994,
+    -1804
+  ],
+  "favorable_pairs": 5,
+  "live": {
+    "rust": {
+      "load TAST + sort": 210,
+      "transitive specializations": 523,
+      "prepare + monomorphize": 1150,
+      "runtime": 7,
+      "optimize + emit": 2297,
+      "entry points": 19,
+      "backend total": 3683
+    },
+    "go": {
+      "load TAST + sort": 73,
+      "transitive specializations": 271,
+      "prepare + monomorphize": 783,
+      "runtime": 1,
+      "optimize + emit": 1390,
+      "entry points": 0,
+      "backend total": 2248
+    },
+    "js": {
+      "load TAST + sort": 575,
+      "transitive specializations": 202,
+      "prepare + monomorphize": 477,
+      "runtime": 1,
+      "optimize + emit": 5889,
+      "entry points": 1,
+      "backend total": 6943
+    }
+  },
+  "rebuild_rust_default": {
+    "load TAST + sort": 227,
+    "transitive specializations": 528,
+    "prepare + monomorphize": 1177,
+    "runtime": 7,
+    "optimize + emit": 2397,
+    "entry points": 19,
+    "backend total": 3828
+  },
+  "executables": {
+    "gopurs.js": {
+      "path": "/Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs.js",
+      "sha256": "2efaee7a40cc0df12ce17bdb821bd5c6f531093524846517fa1529fc29c3f673"
+    },
+    "gopurs-native": {
+      "path": "/Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs-native",
+      "sha256": "d0c2c63b563e589176fe181da4c3664234a2f60a1719a536927f6a7d710a3b02"
+    },
+    "gopurs-rust": {
+      "path": "/Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs-rust",
+      "sha256": "cf7a066084a8a154312fed6e7df6c9deb3a08f0588d0c9c3e7c1bf9f51d62615"
+    }
+  },
+  "launcher_sha256": "a2f198ace9ee575e3528b4f2f64f7a149cd0f9d2c9e53c0ffc3b83103d6e50dd",
+  "qualification": {
+    "node_tests": 43,
+    "old_launcher_failed_contracts": 3,
+    "aff_checks": 45,
+    "avar_stress_items": 1000,
+    "bootstrap": {
+      "compiler": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/frontend/purs",
+      "modules": 500,
+      "types": 290702
+    },
+    "identical_rust_files": 1008,
+    "verification": {
+      "status": "passed",
+      "verified_at": "2026-10-03T19:50:19.817Z",
+      "campaigns": [
+        {
+          "directory": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-host-defaults-20261003/default-runs",
+          "results_sha256": "9df375c4672fa25d638f0bd2c1c887f79b08522b8c31d35658246c5c06bf4a4f",
+          "generations": 30,
+          "identical_files": 8820
+        }
+      ],
+      "generations": 30,
+      "identical_files": 8820
+    }
+  },
+  "source_records": [
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-host-defaults-20261003/baseline.json",
+      "sha256": "50df8e4a473c189d1cb90444a4d7cc0566b18c8d3f902f2d10b675d3ccf38c6d"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-host-defaults-20261003/qualification.json",
+      "sha256": "e547aa2b371154a43c21b20c5d8847fb37f895ff099906919fccdeb970ba4a4e"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-host-defaults-20261003/hosts/results.json",
+      "sha256": "e358ce960eff78fe59e57372c10ce7003b113d460bc49f3e09acc07173af8e1a"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-host-defaults-20261003/default-runs/results.json",
+      "sha256": "9df375c4672fa25d638f0bd2c1c887f79b08522b8c31d35658246c5c06bf4a4f"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-host-defaults-20261003/verification.json",
+      "sha256": "de62d8dd3fac57b675bdc51cc22c39820a9cc365a9fd8b9418b685691631c954"
+    }
+  ]
+}

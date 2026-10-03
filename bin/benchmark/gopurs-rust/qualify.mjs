@@ -15,18 +15,29 @@ mkdirSync(directory, { recursive: true });
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../../../gopurs/gopurs');
 const pbo = resolve(root, '../../purescript-backend-optimizer-gopurs'), aff = resolve(root, '../gopurs-aff');
 const frontend = join(archive, 'frontend/purs');
+const candidateBuild = JSON.parse(readFileSync(join(candidate, 'build.json'), 'utf8'));
+assert.equal(candidateBuild.status, 'passed');
+const candidateCargo = candidateBuild.commands.find(record => record.label === 'cargo').command;
+const profile = { opt_level: 3, debug: false,
+  lto: JSON.parse(candidateCargo.find(arg => arg.startsWith('profile.release.lto=')).split('=')[1]),
+  threaded: true, allocator: 'mimalloc' };
+assert(candidateCargo.includes('profile.release.opt-level=3'));
+assert(candidateCargo.includes('profile.release.debug=false'));
 const sources = () => ({ gopurs: manifest(join(root, 'src')), optimizer: manifest(join(pbo, 'src')) });
 const state = sources();
 assert.deepEqual(state.gopurs, manifest(join(candidate, 'sources/0/src')));
 assert.deepEqual(state.optimizer, manifest(join(candidate, 'sources/1/src')));
 const result = resumeArg ? JSON.parse(readFileSync(join(directory, 'results.json'), 'utf8'))
   : { status: 'pending', started_at: new Date().toISOString(), candidate, sources: state,
-    frontend_sha256: hash(readFileSync(frontend)), commands: [] };
+    frontend_sha256: hash(readFileSync(frontend)), build_profile: profile,
+    build_rust_sha256: hash(readFileSync(join(root, 'tools/build-rust.mjs'))), commands: [] };
 const suffix = resumeArg ? '-resume-' + Date.now() : '';
 if (resumeArg) {
   assert.equal(result.status, 'failed');
   assert.deepEqual(result.sources, state);
   assert.equal(result.candidate, candidate);
+  assert.deepEqual(result.build_profile, profile);
+  assert.equal(result.build_rust_sha256, hash(readFileSync(join(root, 'tools/build-rust.mjs'))));
   copyFileSync(join(directory, 'results.json'), join(directory, 'failed-results' + suffix + '.json'));
   result.status = 'pending'; result.resumed_at = new Date().toISOString(); delete result.failure;
 }
@@ -40,6 +51,7 @@ function command(label, cmd, args, cwd, extra = {}) {
   result.commands.push(record); save(); return record;
 }
 copyFileSync(fileURLToPath(import.meta.url), join(directory, 'qualify' + suffix + '.mjs'));
+copyFileSync(join(root, 'tools/build-rust.mjs'), join(directory, 'build-rust' + suffix + '.mjs'));
 save();
 try {
   if (!result.go_bootstrap) {
@@ -53,7 +65,12 @@ try {
     'tools/build-native.test.mjs', 'tools/embed-runtime.test.mjs'], root);
   // Exact public -c path, with ordinary runtime defaults (no worker overrides).
   const rust = command('aff-rust-rebuild-default', './bin/test', ['-c'], aff, { GOPURS_RUST: '1' });
-  result.rust_bootstrap = readFileSync(rust.stdout, 'utf8').match(/^Rust-hosted gopurs workspace: (.+)$/m)?.[1];
+  const rustLog = readFileSync(rust.stdout, 'utf8');
+  result.rust_bootstrap = rustLog.match(/^Rust-hosted gopurs workspace: (.+)$/m)?.[1];
+  result.cargo_command = rustLog.match(/^\[cargo-build\] (cargo .+)$/m)?.[1];
+  assert(result.cargo_command);
+  for (const setting of ['profile.release.opt-level=3', 'profile.release.debug=false',
+    `profile.release.lto=${JSON.stringify(profile.lto)}`]) assert(result.cargo_command.includes(setting), setting);
   assert(result.rust_bootstrap);
   const generated = directory => manifest(directory, file => /\.(rs|toml)$/.test(file));
   assert.deepEqual(generated(join(result.rust_bootstrap, 'rust')), generated(join(candidate, 'rust')),
@@ -66,6 +83,7 @@ try {
   // These tests exercise the generic/native map FFI bridge and its Go race contract.
   command('go-memo-contract', process.execPath, [join(pbo, 'test/bounded-memo-native.mjs'), root], pbo);
   assert.deepEqual(sources(), state);
+  assert.equal(result.build_rust_sha256, hash(readFileSync(join(root, 'tools/build-rust.mjs'))));
   result.executables = Object.fromEntries(['gopurs.js', 'gopurs-native', 'gopurs-rust'].map(name =>
     [name, { path: join(root, 'bin', name), sha256: hash(readFileSync(join(root, 'bin', name))) }]));
   result.status = 'passed'; result.finished_at = new Date().toISOString(); save();

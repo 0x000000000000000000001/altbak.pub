@@ -1,6 +1,6 @@
 // Frozen experimental builds of gopurs's Go generator on the Rust host.
 import assert from 'node:assert/strict';
-import { chmodSync, copyFileSync, cpSync, existsSync, mkdirSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { chmodSync, constants, copyFileSync, cpSync, existsSync, mkdirSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { delimiter, dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { environment, hash, manifest, run, writeJson } from '../gopurs-aff/common.mjs';
@@ -10,9 +10,10 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../../../gopur
 const pbo = resolve(root, '../../purescript-backend-optimizer-gopurs');
 const purust = resolve(root, '../../purust/purust');
 const [mode, archiveArg, label] = process.argv.slice(2);
-assert(['init', 'build'].includes(mode) && archiveArg, 'experiment.mjs init ARCHIVE | build ARCHIVE LABEL');
+assert(['init', 'build'].includes(mode) && archiveArg,
+  'experiment.mjs init ARCHIVE EXPECTED_RUST_SHA256 | build ARCHIVE LABEL');
 const archive = resolve(archiveArg), work = join(archive, 'work'), frontend = join(archive, 'frontend/purs');
-function copy(from, to) { mkdirSync(dirname(to), { recursive: true }); copyFileSync(from, to); }
+function copy(from, to) { mkdirSync(dirname(to), { recursive: true }); copyFileSync(from, to, constants.COPYFILE_FICLONE); }
 function sources(roots = [root, pbo]) {
   return roots.map(path => ({ path, files: [
     ...manifest(join(path, 'src')).map(file => ({ ...file, path: 'src/' + file.path })),
@@ -28,6 +29,8 @@ const env = { ...environment(), GHCRTS: '-N2', CARGO_BUILD_JOBS: '8', CARGO_INCR
   CARGO_NET_OFFLINE: 'true', GOWORK: 'off',
   PATH: [dirname(frontend), join(root, 'node_modules/.bin'), process.env.PATH].join(delimiter) };
 if (mode === 'init') {
+  assert(label && /^[a-f0-9]{64}$/.test(label), 'Supply the qualified Rust baseline SHA-256');
+  assert.equal(hash(readFileSync(join(root, 'bin/gopurs-rust'))), label);
   assert(!existsSync(join(archive, 'baseline')));
   mkdirSync(work, { recursive: true });
   const purs = findTypedCompiler(root, process.env.GOPURS_PURS);
@@ -42,8 +45,9 @@ if (mode === 'init') {
     compiler: manifest(join(archive, 'baseline/compiler')), bootstrap: manifest(join(archive, 'bootstrap')),
     frontend: { origin: purs, sha256: hash(readFileSync(frontend)) },
     profile: 'O3, no LTO, no debug, threaded Arc, mimalloc, CARGO_INCREMENTAL=0, eight build jobs' };
-  assert.equal(hash(readFileSync(join(archive, 'baseline/compiler/bin/gopurs-rust'))),
-    'ad7fd6a9592ccef0e5a33615c1b79ede669589898aa3742f0bba184de07e7e8e');
+  assert.equal(hash(readFileSync(join(archive, 'baseline/compiler/bin/gopurs-rust'))), label);
+  baseline.rust_sha256 = label;
+  copy(fileURLToPath(import.meta.url), join(archive, 'experiment.mjs'));
   writeJson(join(archive, 'baseline.json'), baseline);
   console.log('Frozen gopurs hosts, source trees, bootstrap compilers and frontend');
 } else {

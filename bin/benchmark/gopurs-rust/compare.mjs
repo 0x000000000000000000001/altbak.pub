@@ -1,6 +1,6 @@
 // Serialized, rotating gopurs host/candidate comparison on original frozen Aff.
 import assert from 'node:assert/strict';
-import { chmodSync, copyFileSync, existsSync, mkdirSync, readFileSync, renameSync, rmSync } from 'node:fs';
+import { chmodSync, constants, copyFileSync, existsSync, mkdirSync, readFileSync, renameSync, rmSync } from 'node:fs';
 import { cpus, totalmem } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -10,11 +10,14 @@ const [snapshotArg, outArg, selectionArg] = process.argv.slice(2);
 assert(snapshotArg && outArg && selectionArg, 'compare.mjs SNAPSHOT NEW_DIRECTORY VARIANTS.json');
 const snapshot = resolve(snapshotArg), out = resolve(outArg), selectionFile = resolve(selectionArg);
 const selection = JSON.parse(readFileSync(selectionFile, 'utf8'));
+const workerEnvironment = selection.launcherDefaults ? {} : {
+  GOPURS_JOBS: '8', GOPURS_PREPARE_JOBS: '8', GOPURS_PBO_JOBS: '8', GOPURS_EMIT_JOBS: '8', GOPURS_PIPELINE: '1',
+};
 const rounds = selection.rounds ?? 5;
 assert(Number.isInteger(rounds) && rounds > 0 && selection.variants.length >= 1);
 assert(!existsSync(out)); mkdirSync(out, { recursive: true });
 const original = JSON.parse(readFileSync(join(snapshot, 'results.json'), 'utf8'));
-function copy(from, to) { mkdirSync(dirname(to), { recursive: true }); copyFileSync(from, to); }
+function copy(from, to) { mkdirSync(dirname(to), { recursive: true }); copyFileSync(from, to, constants.COPYFILE_FICLONE); }
 for (const file of original.frozen_files.inputs) {
   const path = join(snapshot, 'inputs', file.path);
   assert.equal(hash(readFileSync(path)), file.sha256);
@@ -52,7 +55,9 @@ const result = { status: 'pending', started_at: new Date().toISOString(), snapsh
   selection, variants, host: { cpu: cpus()[0].model, logical_cpus: cpus().length, memory_bytes: totalmem(), node: process.version },
   frozen: { inputs: inputManifest(), compilers: manifest(join(out, 'compilers')) },
   protocol: { metric: '[gopurs] backend total', target: 'Go for every variant', warmups: 1, rounds,
-    order: 'serialized processes, rotating first variant', jobs: { load: 8, prepare: 8, pbo: 8, emit: 8, pipeline: true },
+    order: 'serialized processes, rotating first variant',
+    jobs: selection.launcherDefaults ? 'launcher defaults; explicit per-variant overrides recorded below'
+      : { load: 8, prepare: 8, pbo: 8, emit: 8, pipeline: true },
     includes: 'load/sort, prepare, PBO, Go generation/emission, drain and entrypoints',
     excludes: 'frontend, compiler and application builds, application execution, process startup/exit',
     cache: 'fresh outputs and .purmeta/.cache per process, warm OS file cache',
@@ -69,8 +74,7 @@ try {
       const paths = ['purescript', 'gopurs_runtime', 'main', 'Test.Main/main', 'go.mod'];
       for (const path of [...paths, 'go.sum']) rmSync(join(output, path), { recursive: true, force: true });
       for (const path of ['.purmeta', '.cache']) rmSync(join(cwd, path), { recursive: true, force: true });
-      const env = { ...environment(), GOPURS_JOBS: '8', GOPURS_PREPARE_JOBS: '8', GOPURS_PBO_JOBS: '8',
-        GOPURS_EMIT_JOBS: '8', GOPURS_PIPELINE: '1', ...variant.environment };
+      const env = { ...environment(), ...workerEnvironment, ...variant.environment };
       const command = selection.resources ? '/usr/bin/time' : variant.command;
       const args = selection.resources ? ['-l', variant.command, '--main', 'Test.Main'] : ['--main', 'Test.Main'];
       const record = run(out, label, command, args, cwd, env);
