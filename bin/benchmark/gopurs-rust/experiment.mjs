@@ -5,13 +5,14 @@ import { delimiter, dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { environment, hash, manifest, run, writeJson } from '../gopurs-aff/common.mjs';
 import { findTypedCompiler, nativeWorkspaceConfig, verifyTypedOutput } from '../../../../gopurs/gopurs/tools/native-workspace.mjs';
+import { cargoProfile, readProfile } from './cargo-profile.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../../../gopurs/gopurs');
 const pbo = resolve(root, '../../purescript-backend-optimizer-gopurs');
 const purust = resolve(root, '../../purust/purust');
-const [mode, archiveArg, label] = process.argv.slice(2);
+const [mode, archiveArg, label, profileArg] = process.argv.slice(2);
 assert(['init', 'build'].includes(mode) && archiveArg,
-  'experiment.mjs init ARCHIVE EXPECTED_RUST_SHA256 | build ARCHIVE LABEL');
+  'experiment.mjs init ARCHIVE EXPECTED_RUST_SHA256 [PROFILE.json] | build ARCHIVE LABEL [PROFILE.json]');
 const archive = resolve(archiveArg), work = join(archive, 'work'), frontend = join(archive, 'frontend/purs');
 function copy(from, to) { mkdirSync(dirname(to), { recursive: true }); copyFileSync(from, to, constants.COPYFILE_FICLONE); }
 function sources(roots = [root, pbo]) {
@@ -28,6 +29,7 @@ function snapshot(out, state) {
 const env = { ...environment(), GHCRTS: '-N2', CARGO_BUILD_JOBS: '8', CARGO_INCREMENTAL: '0',
   CARGO_NET_OFFLINE: 'true', GOWORK: 'off',
   PATH: [dirname(frontend), join(root, 'node_modules/.bin'), process.env.PATH].join(delimiter) };
+const configuration = readProfile(profileArg);
 if (mode === 'init') {
   assert(label && /^[a-f0-9]{64}$/.test(label), 'Supply the qualified Rust baseline SHA-256');
   assert.equal(hash(readFileSync(join(root, 'bin/gopurs-rust'))), label);
@@ -44,16 +46,19 @@ if (mode === 'init') {
   const baseline = { started_at: new Date().toISOString(), sources: state,
     compiler: manifest(join(archive, 'baseline/compiler')), bootstrap: manifest(join(archive, 'bootstrap')),
     frontend: { origin: purs, sha256: hash(readFileSync(frontend)) },
-    profile: 'O3, no LTO, no debug, threaded Arc, mimalloc, CARGO_INCREMENTAL=0, eight build jobs' };
+    profile: `O3, LTO=${configuration.lto}, no debug, threaded Arc, mimalloc, CARGO_INCREMENTAL=0, eight build jobs`,
+    profile_configuration: configuration };
   assert.equal(hash(readFileSync(join(archive, 'baseline/compiler/bin/gopurs-rust'))), label);
   baseline.rust_sha256 = label;
   copy(fileURLToPath(import.meta.url), join(archive, 'experiment.mjs'));
+  copy(fileURLToPath(new URL('./cargo-profile.mjs', import.meta.url)), join(archive, 'cargo-profile.mjs'));
   writeJson(join(archive, 'baseline.json'), baseline);
   console.log('Frozen gopurs hosts, source trees, bootstrap compilers and frontend');
 } else {
   assert(label && /^[a-z0-9-]+$/.test(label));
   const out = join(archive, 'candidates', label); assert(!existsSync(out)); mkdirSync(out, { recursive: true });
   copy(fileURLToPath(import.meta.url), join(out, 'build-harness.mjs'));
+  copy(fileURLToPath(new URL('./cargo-profile.mjs', import.meta.url)), join(out, 'cargo-profile.mjs'));
   const state = sources(); snapshot(out, state);
   for (const i of [0, 1]) {
     const destination = join(work, 'sources', String(i));
@@ -91,9 +96,9 @@ if (mode === 'init') {
     if (!existsSync(parser)) command('parser', 'go', ['build', '-trimpath', '-tags=carchive',
       '-buildmode=c-archive', '-o', parser, '.'], join(root, 'tools/ffi-gen'));
     result.parser_sha256 = hash(readFileSync(parser));
-    command('cargo', 'cargo', ['build', '--release', '--target-dir', join(work, 'target'),
-      '--config', 'profile.release.lto=false', '--config', 'profile.release.opt-level=3',
-      '--config', 'profile.release.debug=false', '--manifest-path', join(rust, 'Cargo.toml')]);
+    const cargo = cargoProfile(configuration, env, rust, join(work, 'target'));
+    Object.assign(result, { profile: cargo.profile, linker: cargo.linker, rustflags: cargo.rustflags }); save();
+    result.commands.push(run(out, 'cargo', 'cargo', cargo.args, work, cargo.env, 3600000)); save();
     copy(join(work, 'target/release/purust_output'), join(out, 'gopurs-rust'));
     chmodSync(join(out, 'gopurs-rust'), 0o755);
     // Compilation reads the frozen copy, so later live edits may prepare the
