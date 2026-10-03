@@ -329,10 +329,10 @@ Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 47830
 
 #### ... to Go
 
-Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS binary (WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Go binary (WIP) | [purust](https://github.com/0x000000000000000000001/purust) Rust binary (WIP)
+Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS binary (WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Go binary (WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Rust binary (WIP)
 ----------- | --------- | ------------------ | ---------------------
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 77.4 s | ~ 46.4 s <br>(/JS = 0.60x) | (WIP)
-[gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 7750 ms | ~ 2109 ms | [~ 2569 ms](docs/benchmark-results/2026-10-03-purust-native-optimization.md#comparaison-commune-gorust) <br>(/Go = 1.22x) (WIP)
+[gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 7549 ms | ~ 2166 ms | [~ 3781 ms](docs/benchmark-results/2026-10-03-gopurs-rust-optimization.md) <br>(/Go = 1.75x) (WIP)
 [gopurs-argonaut-core](https://github.com/0x000000000000000000001/gopurs-argonaut-core)  | ~ 7777 ms | ~ 2000 ms | (WIP)
 [gopurs-arrays](https://github.com/0x000000000000000000001/gopurs-arrays)  | ~ 6771 ms (failed) | ~ 3903 ms | (WIP)
 [gopurs-assert](https://github.com/0x000000000000000000001/gopurs-assert)  | ~ 660 ms | ~ 227 ms | (WIP)
@@ -382,7 +382,7 @@ Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS bin
 [gopurs-uuid](https://github.com/0x000000000000000000001/gopurs-uuid)  | ~ 10000 ms | ~ 3916 ms | (WIP)
 [gopurs-variant](https://github.com/0x000000000000000000001/gopurs-variant)  | ~ 5431 ms | ~ 1806 ms | (WIP)
 [gopurs-yoga-json](https://github.com/0x000000000000000000001/gopurs-yoga-json)  | ~ 18107 ms | ~ 9760 ms | (WIP)
-**Total gopurs-*** | ~ 329.14 s | ~ 105.33 s <br>(/JS = 0.3x) | (WIP)
+**Total gopurs-*** | ~ 329.11 s | ~ 105.34 s <br>(/JS = 0.3x) | (WIP)
 **Total** | ~ 406.5 s | ~ 151.8 s <br>(/JS = 0.37x) | (WIP)
 
 #### ... to Rust

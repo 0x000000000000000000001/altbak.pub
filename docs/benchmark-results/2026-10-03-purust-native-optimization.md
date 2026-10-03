@@ -5,7 +5,13 @@ Le stage 2 qualifié réduit le temps de compilation native de **52,5 % sur
 238 modules** et de **53,0 % sur 244 modules**. Le gain principal est confirmé
 sur **15 paires, toutes favorables**, avec les fichiers générés identiques.
 Le stage 2 mesuré est **installé**, avec son empreinte vérifiée. Dans la campagne
-commune, Rust est à **2 569 ms contre 2 109 ms pour Go** : **1,218×** le temps Go.
+commune, **Purust natif générant du Rust** est à **2 569 ms**, contre **2 109 ms
+pour gopurs natif générant du Go** : **1,218×** le temps gopurs.
+
+**Périmètre corrigé :** ce rapport mesure l'optimisation de Purust et une
+comparaison entre deux générateurs. La comparaison de **gopurs exécuté en
+JavaScript, Go et Rust**, produisant du Go dans les trois cas, fait l'objet de
+la [qualification des hôtes gopurs](2026-10-03-gopurs-rust-host.md).
 
 ## Compilation native avant/après
 

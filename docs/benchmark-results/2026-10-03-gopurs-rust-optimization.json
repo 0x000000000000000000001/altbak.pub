@@ -1,0 +1,3009 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-03T19:18:28.015Z",
+  "compiler": "gopurs",
+  "target": "Go for every host",
+  "archive": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003",
+  "host": {
+    "cpu": "Apple M4 Pro",
+    "logical_cpus": 14,
+    "memory_bytes": 51539607552,
+    "node": "v24.8.0"
+  },
+  "tast": {
+    "modules": 238,
+    "types": 136604,
+    "bytes": 26606491,
+    "sha256": "6a30fb919f104df813feb7f6a884fca0a7f768e44a99f1129884d8992b832149",
+    "files": [
+      {
+        "module": "Control.Alt",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Alt/corefn.json",
+        "bytes": 6774,
+        "sha256": "ed4d16f905092650e207bf87a56ce0faf5c049acfd6376723b201ec5893f4485",
+        "source": ".spago/p/control-6.0.0/src/Control/Alt.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Alternative",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Alternative/corefn.json",
+        "bytes": 11113,
+        "sha256": "08f08430365827352e8ea685fdae8c5dbc9b508da718bdf80f9ed86e16df1806",
+        "source": ".spago/p/control-6.0.0/src/Control/Alternative.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Applicative",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Applicative/corefn.json",
+        "bytes": 27926,
+        "sha256": "ec6e64e0b3ace19630720304a42ca5be49a23083d1963ce73d7dc9bd36f86167",
+        "source": "../gopurs-prelude/src/Control/Applicative.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Apply",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Apply/corefn.json",
+        "bytes": 77348,
+        "sha256": "e2740f4892c85b4f970435440e5da3bdcdfa03bf5096381b0c8b767581836763",
+        "source": "../gopurs-prelude/src/Control/Apply.purs",
+        "foreign": [
+          "arrayApply"
+        ]
+      },
+      {
+        "module": "Control.Biapplicative",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Biapplicative/corefn.json",
+        "bytes": 7000,
+        "sha256": "7a63ffb79dace7549122f321bc29acec8e75cb898427174373067911d5969742",
+        "source": ".spago/p/bifunctors-6.1.0/src/Control/Biapplicative.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Biapply",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Biapply/corefn.json",
+        "bytes": 66383,
+        "sha256": "1cf3d3c7947918200f9beb4843f701bc2b527197abe4f74975a6c959b0cce76a",
+        "source": ".spago/p/bifunctors-6.1.0/src/Control/Biapply.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Bind",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Bind/corefn.json",
+        "bytes": 47830,
+        "sha256": "1b2992a7642083e0663c0d5d9466b503345fb616e25902fe38ab8a76d82033f2",
+        "source": "../gopurs-prelude/src/Control/Bind.purs",
+        "foreign": [
+          "arrayBind"
+        ]
+      },
+      {
+        "module": "Control.Category",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Category/corefn.json",
+        "bytes": 6911,
+        "sha256": "4129c5975cad5ae1d1413e191c06b26dfc8561e381881329fd04ee3c8ee1562f",
+        "source": "../gopurs-prelude/src/Control/Category.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Comonad",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Comonad/corefn.json",
+        "bytes": 4111,
+        "sha256": "69e06b7a2e940f568b5e585a4e9b5b3fe4b7ec2f9eb87807b8e28653fac19f0f",
+        "source": ".spago/p/control-6.0.0/src/Control/Comonad.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Comonad.Env",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Comonad.Env/corefn.json",
+        "bytes": 14886,
+        "sha256": "a9dbd895e681371d4aa8bfa23e16051d70242264c99526a5d21b1992e8763550",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Comonad/Env.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Comonad.Env.Class",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Comonad.Env.Class/corefn.json",
+        "bytes": 91685,
+        "sha256": "418b8b95159ea28de9bf170f767237e3b5889eb7c4d43c9706a8e07963738fd6",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Comonad/Env/Class.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Comonad.Env.Trans",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Comonad.Env.Trans/corefn.json",
+        "bytes": 192883,
+        "sha256": "14dfa43cf211dd1e6df12f35ef659c354adbe29348c56f6e5324535f1b602dba",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Comonad/Env/Trans.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Comonad.Store",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Comonad.Store/corefn.json",
+        "bytes": 13318,
+        "sha256": "f49ecd7a0598a96eecbb7a6da53bc2d5cd583254241dc43aeb1fdb433de02232",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Comonad/Store.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Comonad.Store.Class",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Comonad.Store.Class/corefn.json",
+        "bytes": 87564,
+        "sha256": "c7d90fd985e942e2971691560b59eb6055e280287f3a48d531fbae35c44a5e62",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Comonad/Store/Class.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Comonad.Store.Trans",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Comonad.Store.Trans/corefn.json",
+        "bytes": 59134,
+        "sha256": "a2d84e6821b5dd95d98d6624db375dabab2625fbcc463eb5b9c5ee4f54c7a5bc",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Comonad/Store/Trans.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Comonad.Traced",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Comonad.Traced/corefn.json",
+        "bytes": 8782,
+        "sha256": "2db22f1655d970e60365c4bcf65acba2ab9532ddaa00b79bc28abe93aa318ccf",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Comonad/Traced.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Comonad.Traced.Class",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Comonad.Traced.Class/corefn.json",
+        "bytes": 81640,
+        "sha256": "e4f2190611a9977fe225424f658dec9f72f1f70339343538a445c11f9ffa5673",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Comonad/Traced/Class.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Comonad.Traced.Trans",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Comonad.Traced.Trans/corefn.json",
+        "bytes": 59040,
+        "sha256": "a80031d819d96aa32ef5a386ef30f4b9a47c3efc717c5642d15366c4dc7ec92f",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Comonad/Traced/Trans.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Comonad.Trans.Class",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Comonad.Trans.Class/corefn.json",
+        "bytes": 7155,
+        "sha256": "fd7263ad863c0ac9d361662c7e7ca05443d40d44ea3ccbcb276c7d5a9bbefc86",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Comonad/Trans/Class.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Extend",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Extend/corefn.json",
+        "bytes": 30864,
+        "sha256": "ab0f4480be0d5f72dc7f2244113dca5f716793dabd49351a380ddbfd04880f46",
+        "source": ".spago/p/control-6.0.0/src/Control/Extend.purs",
+        "foreign": [
+          "arrayExtend"
+        ]
+      },
+      {
+        "module": "Control.Lazy",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Lazy/corefn.json",
+        "bytes": 11066,
+        "sha256": "57b1e4f835889eea23b76f39ca9f445f718c96f5d06a3a99eec5f3a9fa445d40",
+        "source": ".spago/p/control-6.0.0/src/Control/Lazy.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad/corefn.json",
+        "bytes": 42644,
+        "sha256": "06a9275f725b9e0642b2d6df8a17523b9bcfbf81fa9e0b223e63afbd470936eb",
+        "source": "../gopurs-prelude/src/Control/Monad.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Cont",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Cont/corefn.json",
+        "bytes": 36827,
+        "sha256": "8cf7a8d2402d59d70007acc648e700db72229222a7d4004610733c23de285eeb",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/Cont.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Cont.Class",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Cont.Class/corefn.json",
+        "bytes": 4516,
+        "sha256": "a08e6569c32fdaeb700ee2b6cbe70e39c27a6dbb5fd20ea4b2efc16b31ffb037",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/Cont/Class.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Cont.Trans",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Cont.Trans/corefn.json",
+        "bytes": 164645,
+        "sha256": "a23d58f317dc55f28f9c5afa110102792157e31e8ddc74691548132df91440d5",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/Cont/Trans.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Error.Class",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Error.Class/corefn.json",
+        "bytes": 96464,
+        "sha256": "0ec422e6ded281df95315a14ca6da46a6ef932b2c307fd2e4e9ced786a616965",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/Error/Class.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Except",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Except/corefn.json",
+        "bytes": 16387,
+        "sha256": "57981bd0d8698eec1035792870a1bc06f80073b8b3ef809e0f416eeeadfeff8c",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/Except.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Except.Trans",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Except.Trans/corefn.json",
+        "bytes": 340506,
+        "sha256": "7585bbe9c525cade1253f03196580a569ac2cf1c2556bf89f7dfd51f59d0f053",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/Except/Trans.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Gen",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Gen/corefn.json",
+        "bytes": 173758,
+        "sha256": "e059ffa91c74ba0332c5a53ef9ade609449b853e5f86720afe1057d9f76f4d36",
+        "source": ".spago/p/gen-4.0.0/src/Control/Monad/Gen.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Gen.Class",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Gen.Class/corefn.json",
+        "bytes": 12631,
+        "sha256": "59d1b32fd72cb6ce6d62bc22ae4ef185c578a8d5b89b8615410b02db3b3a980b",
+        "source": ".spago/p/gen-4.0.0/src/Control/Monad/Gen/Class.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Gen.Common",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Gen.Common/corefn.json",
+        "bytes": 73167,
+        "sha256": "4a303eca0a6830d160340c16f763896e2fac5bddc5e7b0095040de38630476bd",
+        "source": ".spago/p/gen-4.0.0/src/Control/Monad/Gen/Common.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Identity.Trans",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Identity.Trans/corefn.json",
+        "bytes": 89817,
+        "sha256": "ef816b6576c1febbecd5c8bbcc3205643b1e7ad95080977ff502a1163d5ec29a",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/Identity/Trans.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.List.Trans",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.List.Trans/corefn.json",
+        "bytes": 639071,
+        "sha256": "92e901c30cfef624ebf43822a676cdaf7aa88f9f393c82ee59847f17515a3fce",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/List/Trans.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Maybe.Trans",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Maybe.Trans/corefn.json",
+        "bytes": 281493,
+        "sha256": "99bca1f3517734fd98329b8a8304c98ee186e0872eedb1369c8533210000c72a",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/Maybe/Trans.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.RWS",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.RWS/corefn.json",
+        "bytes": 42715,
+        "sha256": "7e0d191cd818f78b177b16a8c5d1bb58b72adbd8c8f4682d012c101ed8da66a7",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/RWS.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.RWS.Trans",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.RWS.Trans/corefn.json",
+        "bytes": 427410,
+        "sha256": "856e4f80f74fa554de81274d8ca1fcee7cfc54ce99ea44d55e9f80c1698f51cd",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/RWS/Trans.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Reader",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Reader/corefn.json",
+        "bytes": 16299,
+        "sha256": "50d6458f3d57855034d6ca1f9d42a3f05cb306572f69d0756c16a9abbc004312",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/Reader.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Reader.Class",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Reader.Class/corefn.json",
+        "bytes": 22043,
+        "sha256": "8cf6db2e5fb498c6cb3279eaa21e13d3ac2252882aad65fedc7596bea314a182",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/Reader/Class.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Reader.Trans",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Reader.Trans/corefn.json",
+        "bytes": 278172,
+        "sha256": "f81a29c19d6e88120fe2717b7d8198b959afd6582d941e3461d1c9020effbe9a",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/Reader/Trans.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Rec.Class",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Rec.Class/corefn.json",
+        "bytes": 183527,
+        "sha256": "a53f5c40dcbf69cd5e2d5d2d539581d306e903c102bc3cdef6588762b6afc11b",
+        "source": ".spago/p/tailrec-6.1.0/src/Control/Monad/Rec/Class.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.ST",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.ST/corefn.json",
+        "bytes": 601,
+        "sha256": "ba4a33002f2a7581b6b2b5160298025a8df203dd046cecbe17bdd6ee0c2f0754",
+        "source": "../gopurs-st/src/Control/Monad/ST.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.ST.Class",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.ST.Class/corefn.json",
+        "bytes": 11912,
+        "sha256": "68adac401971485c45d2aca47cd985653db3491ce30a1addf1b47bfd74189ffd",
+        "source": "../gopurs-st/src/Control/Monad/ST/Class.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.ST.Global",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.ST.Global/corefn.json",
+        "bytes": 1535,
+        "sha256": "d062a2152b6888d0ca228c2a202f9459ccf909c2ed5b7468b4ba9fc0a6dc5f8a",
+        "source": "../gopurs-st/src/Control/Monad/ST/Global.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.ST.Internal",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.ST.Internal/corefn.json",
+        "bytes": 77990,
+        "sha256": "39e5849246e5f1d7ab4be6cab19d1de12794faf543509ccaee61845698510385",
+        "source": "../gopurs-st/src/Control/Monad/ST/Internal.purs",
+        "foreign": [
+          "map_",
+          "pure_",
+          "bind_",
+          "run",
+          "while",
+          "forImpl",
+          "foreach",
+          "newImpl",
+          "read",
+          "modifyImpl",
+          "write"
+        ]
+      },
+      {
+        "module": "Control.Monad.ST.Ref",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.ST.Ref/corefn.json",
+        "bytes": 621,
+        "sha256": "57d8441ed478dc068710d2a19b69d659664bc4967db2becfeb5d70aa290893bd",
+        "source": "../gopurs-st/src/Control/Monad/ST/Ref.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.ST.Uncurried",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.ST.Uncurried/corefn.json",
+        "bytes": 7986,
+        "sha256": "f390d87ae4d4c5984731a77f8724af304f36795a8898ad4c15b05885e36ba33c",
+        "source": "../gopurs-st/src/Control/Monad/ST/Uncurried.purs",
+        "foreign": [
+          "mkSTFn1",
+          "mkSTFn2",
+          "mkSTFn3",
+          "mkSTFn4",
+          "mkSTFn5",
+          "mkSTFn6",
+          "mkSTFn7",
+          "mkSTFn8",
+          "mkSTFn9",
+          "mkSTFn10",
+          "runSTFn1",
+          "runSTFn2",
+          "runSTFn3",
+          "runSTFn4",
+          "runSTFn5",
+          "runSTFn6",
+          "runSTFn7",
+          "runSTFn8",
+          "runSTFn9",
+          "runSTFn10"
+        ]
+      },
+      {
+        "module": "Control.Monad.State",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.State/corefn.json",
+        "bytes": 27305,
+        "sha256": "41e31061dd1498f3b2e15497a9d42483dbd5bb394ff765b7f727b1f84c426d80",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/State.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.State.Class",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.State.Class/corefn.json",
+        "bytes": 30413,
+        "sha256": "e4331a85852fa58527076454e2c6599c06a22a9227bfa55f8f9f173636f1c1f8",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/State/Class.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.State.Trans",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.State.Trans/corefn.json",
+        "bytes": 336074,
+        "sha256": "a558e38ad946184593a07010445fc7d9043c825f1ba098a7f538bf2475a854a9",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/State/Trans.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Trans.Class",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Trans.Class/corefn.json",
+        "bytes": 4219,
+        "sha256": "c3bfcad40cdc9aed4a3ae3a9dc70897a18f7494c91f1918495cb643f789209d7",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/Trans/Class.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Writer",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Writer/corefn.json",
+        "bytes": 21546,
+        "sha256": "f1889107ee7f37619e1cfe4853369f8890d275556073383ebdf21bbf945934e3",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/Writer.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Writer.Class",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Writer.Class/corefn.json",
+        "bytes": 37601,
+        "sha256": "19541dad85e01498da4de7c4134f69d7808dc191a4fb91c81594ba9e26f04b3b",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/Writer/Class.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Monad.Writer.Trans",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Monad.Writer.Trans/corefn.json",
+        "bytes": 350640,
+        "sha256": "efe76e9bd9a925f233cde1987de1f52307775417c205e9dc3f912550d6c22407",
+        "source": ".spago/p/transformers-6.1.0/src/Control/Monad/Writer/Trans.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.MonadPlus",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.MonadPlus/corefn.json",
+        "bytes": 5600,
+        "sha256": "7464d9dca59309b710c4bd4aaf6006a6f0a22e1f255f42f7263b5e7da79fbc54",
+        "source": ".spago/p/control-6.0.0/src/Control/MonadPlus.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Parallel",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Parallel/corefn.json",
+        "bytes": 80581,
+        "sha256": "edc4a1de6c2c93217dbccc9cbb064155328e44c96b1e948e766c7769f3331d08",
+        "source": ".spago/p/parallel-7.0.0/src/Control/Parallel.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Parallel.Class",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Parallel.Class/corefn.json",
+        "bytes": 255568,
+        "sha256": "63307c28d288177cf148a6f6b809743f8d34b337320f49da8cd56e63c83a6542",
+        "source": ".spago/p/parallel-7.0.0/src/Control/Parallel/Class.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Plus",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Plus/corefn.json",
+        "bytes": 6242,
+        "sha256": "1789f0e2a78d2a71508d7b2f0636555881b5ce045d90ea597cd1ed7f2879e5f9",
+        "source": ".spago/p/control-6.0.0/src/Control/Plus.purs",
+        "foreign": []
+      },
+      {
+        "module": "Control.Semigroupoid",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Control.Semigroupoid/corefn.json",
+        "bytes": 12787,
+        "sha256": "53d91ad2b65a5b1e0939972fc83d332f689067b30b6e6e7baddd754f3aefb931",
+        "source": "../gopurs-prelude/src/Control/Semigroupoid.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Array",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Array/corefn.json",
+        "bytes": 595645,
+        "sha256": "0647538337f0396d4f2c46404b22a54f24928723237c679c653dca805167d967",
+        "source": "../gopurs-arrays/src/Data/Array.purs",
+        "foreign": [
+          "fromFoldableImpl",
+          "rangeImpl",
+          "replicateImpl",
+          "length",
+          "unconsImpl",
+          "indexImpl",
+          "findMapImpl",
+          "findIndexImpl",
+          "findLastIndexImpl",
+          "_insertAt",
+          "_deleteAt",
+          "_updateAt",
+          "reverse",
+          "concat",
+          "filterImpl",
+          "partitionImpl",
+          "scanlImpl",
+          "scanrImpl",
+          "sortByImpl",
+          "sliceImpl",
+          "zipWithImpl",
+          "anyImpl",
+          "allImpl",
+          "unsafeIndexImpl"
+        ]
+      },
+      {
+        "module": "Data.Array.NonEmpty",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Array.NonEmpty/corefn.json",
+        "bytes": 371594,
+        "sha256": "4b230fc5bd0f10297b984c3754c6959e4ed1c09defafd88bf982088313ee9361",
+        "source": "../gopurs-arrays/src/Data/Array/NonEmpty.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Array.NonEmpty.Internal",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Array.NonEmpty.Internal/corefn.json",
+        "bytes": 43587,
+        "sha256": "5e7e384a359c9a64fe9cee318c4c7316142985f1a7011bf01a25a6d734201833",
+        "source": "../gopurs-arrays/src/Data/Array/NonEmpty/Internal.purs",
+        "foreign": [
+          "foldr1Impl",
+          "foldl1Impl",
+          "traverse1Impl"
+        ]
+      },
+      {
+        "module": "Data.Array.Partial",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Array.Partial/corefn.json",
+        "bytes": 13894,
+        "sha256": "c538cf2917a4ebaa5a8e8e7fd8988a4368d0a868bf962e11ed53890f10a2aa78",
+        "source": "../gopurs-arrays/src/Data/Array/Partial.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Array.ST",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Array.ST/corefn.json",
+        "bytes": 100546,
+        "sha256": "6331c2e3448f9e235f00349f7065b2606af61ea7616c4eba010747d63d43c067",
+        "source": "../gopurs-arrays/src/Data/Array/ST.purs",
+        "foreign": [
+          "unsafeFreezeImpl",
+          "unsafeThawImpl",
+          "newImpl",
+          "thawImpl",
+          "cloneImpl",
+          "shiftImpl",
+          "sortByImpl",
+          "freezeImpl",
+          "peekImpl",
+          "pokeImpl",
+          "lengthImpl",
+          "popImpl",
+          "pushImpl",
+          "pushAllImpl",
+          "unshiftAllImpl",
+          "spliceImpl",
+          "toAssocArrayImpl"
+        ]
+      },
+      {
+        "module": "Data.Array.ST.Iterator",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Array.ST.Iterator/corefn.json",
+        "bytes": 84184,
+        "sha256": "437c8f569e753b7854c124f611a16d9c804365a90cb9c97899d3ce7ecf800c22",
+        "source": "../gopurs-arrays/src/Data/Array/ST/Iterator.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Array.ST.Partial",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Array.ST.Partial/corefn.json",
+        "bytes": 8849,
+        "sha256": "75f92ea2e6b671f784f70b2819ba12d922e901f00039e336edc0f082883196ed",
+        "source": "../gopurs-arrays/src/Data/Array/ST/Partial.purs",
+        "foreign": [
+          "peekImpl",
+          "pokeImpl"
+        ]
+      },
+      {
+        "module": "Data.Bifoldable",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Bifoldable/corefn.json",
+        "bytes": 292291,
+        "sha256": "a3d32feeeb1ea529b59e22f0018237fc9d42baf87bb947c7fcb0c30966fc2a00",
+        "source": "../gopurs-foldable-traversable/src/Data/Bifoldable.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Bifunctor",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Bifunctor/corefn.json",
+        "bytes": 43389,
+        "sha256": "63c3d80a357f3ebb6f0b427e4328538a9375eec816bbb930d8c65fcd970be1d8",
+        "source": ".spago/p/bifunctors-6.1.0/src/Data/Bifunctor.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Bifunctor.Join",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Bifunctor.Join/corefn.json",
+        "bytes": 46281,
+        "sha256": "0056d33b4d56dcb9b948e0c77cfc53a2bfa0cff00b4418c4d6943cd221b70931",
+        "source": ".spago/p/bifunctors-6.1.0/src/Data/Bifunctor/Join.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Bitraversable",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Bitraversable/corefn.json",
+        "bytes": 273307,
+        "sha256": "20ad608ab373100c9f488ebb1ac6c70353c110f318acd397b1d100f6b022d1d3",
+        "source": "../gopurs-foldable-traversable/src/Data/Bitraversable.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Boolean",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Boolean/corefn.json",
+        "bytes": 727,
+        "sha256": "ac83ba15cfca016f5df1502c18e5464860d61ff8029e939411ce12e43abd339e",
+        "source": "../gopurs-prelude/src/Data/Boolean.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.BooleanAlgebra",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.BooleanAlgebra/corefn.json",
+        "bytes": 32535,
+        "sha256": "59bdfc709eef6bd3a730d745a04be71ecd1675f0871dca0a9edbd3d815bbffa3",
+        "source": "../gopurs-prelude/src/Data/BooleanAlgebra.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Bounded",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Bounded/corefn.json",
+        "bytes": 71307,
+        "sha256": "7974719859dcdf25382d7b1673b27a2a384abd25e24c1503030b16e6379a2c15",
+        "source": "../gopurs-prelude/src/Data/Bounded.purs",
+        "foreign": [
+          "topInt",
+          "bottomInt",
+          "topChar",
+          "bottomChar",
+          "topNumber",
+          "bottomNumber"
+        ]
+      },
+      {
+        "module": "Data.Bounded.Generic",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Bounded.Generic/corefn.json",
+        "bytes": 49171,
+        "sha256": "429d99bd565aa70a7e4cce2fa5c6d8548bc0dd10edf158034dca708a577b354e",
+        "source": "../gopurs-prelude/src/Data/Bounded/Generic.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.CommutativeRing",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.CommutativeRing/corefn.json",
+        "bytes": 33730,
+        "sha256": "30bac6ac36a7b7d83704407bd82d3dcd69693ba4f64731b2efc0fa138ee3f6cd",
+        "source": "../gopurs-prelude/src/Data/CommutativeRing.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Comparison",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Comparison/corefn.json",
+        "bytes": 23293,
+        "sha256": "0cf62312f878219aa8aa99efa3f19871edfb449efc464d4ec34430756b80a3b0",
+        "source": ".spago/p/contravariant-6.0.0/src/Data/Comparison.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Const",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Const/corefn.json",
+        "bytes": 64319,
+        "sha256": "2d7970543b87c3a3548db192ac41b15d9ab80b4dd7d12fb9ba069ea22f4780bb",
+        "source": ".spago/p/const-6.0.0/src/Data/Const.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Date",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Date/corefn.json",
+        "bytes": 216660,
+        "sha256": "cc3f1722d7ded81e6d916052f4249254e44e335d12f97472ed4591d016851b59",
+        "source": "../gopurs-datetime/src/Data/Date.purs",
+        "foreign": [
+          "canonicalDateImpl",
+          "calcWeekday",
+          "calcDiff"
+        ]
+      },
+      {
+        "module": "Data.Date.Component",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Date.Component/corefn.json",
+        "bytes": 251955,
+        "sha256": "8668881893311637d3bbe9385cd2cbf54a5cf06768581567ac85159803410e88",
+        "source": "../gopurs-datetime/src/Data/Date/Component.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Date.Component.Gen",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Date.Component.Gen/corefn.json",
+        "bytes": 18593,
+        "sha256": "93a0c22a82a4f5cec5f0f997de41009b2f5e9a29fd173abcd66b6ab312d73fe4",
+        "source": "../gopurs-datetime/src/Data/Date/Component/Gen.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Date.Gen",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Date.Gen/corefn.json",
+        "bytes": 31710,
+        "sha256": "423fd2c7c10d150568e1c40403696882f0d508fb992fb432ca2f04f579db611c",
+        "source": "../gopurs-datetime/src/Data/Date/Gen.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.DateTime",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.DateTime/corefn.json",
+        "bytes": 113032,
+        "sha256": "3d3ffa2d3c4e426971f7a01860a2d30768b713c46d43adfd114a2bebd9bf3d8a",
+        "source": "../gopurs-datetime/src/Data/DateTime.purs",
+        "foreign": [
+          "calcDiff",
+          "adjustImpl"
+        ]
+      },
+      {
+        "module": "Data.DateTime.Gen",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.DateTime.Gen/corefn.json",
+        "bytes": 11240,
+        "sha256": "9790b800c1c0227811225885d77e0015dd1a283b2b6ccf4672ee735a8318f643",
+        "source": "../gopurs-datetime/src/Data/DateTime/Gen.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.DateTime.Instant",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.DateTime.Instant/corefn.json",
+        "bytes": 62050,
+        "sha256": "2028fd6ad93fb5e121e84ab8b25e9476e07484e3dcc6344a80f63d7c059bee33",
+        "source": "../gopurs-datetime/src/Data/DateTime/Instant.purs",
+        "foreign": [
+          "fromDateTimeImpl",
+          "toDateTimeImpl"
+        ]
+      },
+      {
+        "module": "Data.Decidable",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Decidable/corefn.json",
+        "bytes": 31449,
+        "sha256": "0feb63c10f8ad7a65b374873980021968c92a9c656f9055bbb6b75d42d7a3eab",
+        "source": ".spago/p/contravariant-6.0.0/src/Data/Decidable.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Decide",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Decide/corefn.json",
+        "bytes": 67056,
+        "sha256": "3ac0c71b80a2fb6775fd2005d4c4f276b2d7660555c3d74652b6dbcfb1ebd42e",
+        "source": ".spago/p/contravariant-6.0.0/src/Data/Decide.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Distributive",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Distributive/corefn.json",
+        "bytes": 78925,
+        "sha256": "11d0844e6da1b7154c61eb69824b9bc6cc7219a11363f6dc9abac05f51643a1e",
+        "source": ".spago/p/distributive-6.0.0/src/Data/Distributive.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Divide",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Divide/corefn.json",
+        "bytes": 61181,
+        "sha256": "105236020fdea410012ad0d3eb07838c963f5bac69e4383576b45c75397de7f2",
+        "source": ".spago/p/contravariant-6.0.0/src/Data/Divide.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Divisible",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Divisible/corefn.json",
+        "bytes": 23571,
+        "sha256": "9f45b67f1c2130954783f173a9a9619f4d8860c4d9456c71b614fac0169574b9",
+        "source": ".spago/p/contravariant-6.0.0/src/Data/Divisible.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.DivisionRing",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.DivisionRing/corefn.json",
+        "bytes": 17676,
+        "sha256": "a727c71e713072b3805a10f842f6e2196f259ee127bfbb5dc91f01ae459b0ef7",
+        "source": "../gopurs-prelude/src/Data/DivisionRing.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Either",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Either/corefn.json",
+        "bytes": 179883,
+        "sha256": "7530b3c3864d7cdd1eaf9469e88b46937123cbe15fc1d231485abf4151dd84de",
+        "source": ".spago/p/either-6.1.0/src/Data/Either.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Either.Inject",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Either.Inject/corefn.json",
+        "bytes": 25302,
+        "sha256": "6adc2a79802148da72bd8f74d271ac75b49df8ec6c8b9ed75f41be6750977f1f",
+        "source": ".spago/p/either-6.1.0/src/Data/Either/Inject.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Either.Nested",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Either.Nested/corefn.json",
+        "bytes": 301271,
+        "sha256": "ccc9b211f4406b1c34cfbb171ac4131fe6dbe601420d3e75b4f5e8e577c7c3a6",
+        "source": ".spago/p/either-6.1.0/src/Data/Either/Nested.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Enum",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Enum/corefn.json",
+        "bytes": 326444,
+        "sha256": "12a8fb1671a5818092b21f114d397f0c05aee3ae1391c9c787e7a460526cfec2",
+        "source": "../gopurs-enums/src/Data/Enum.purs",
+        "foreign": [
+          "toCharCode",
+          "fromCharCode"
+        ]
+      },
+      {
+        "module": "Data.Enum.Gen",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Enum.Gen/corefn.json",
+        "bytes": 21623,
+        "sha256": "18ade05db845032d19469488eef6025107cd94620b20f987cd029ba75d1bd090",
+        "source": "../gopurs-enums/src/Data/Enum/Gen.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Enum.Generic",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Enum.Generic/corefn.json",
+        "bytes": 218883,
+        "sha256": "0044129b03cc740f416452d5ab892db83f34e5531b6f931ce0c26ef182666b37",
+        "source": "../gopurs-enums/src/Data/Enum/Generic.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Eq",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Eq/corefn.json",
+        "bytes": 60718,
+        "sha256": "a765290c6af8d20a9a68d0b2c6a554b4e28c9825bcf826e4d104fbdc1c9d947a",
+        "source": "../gopurs-prelude/src/Data/Eq.purs",
+        "foreign": [
+          "eqBooleanImpl",
+          "eqIntImpl",
+          "eqNumberImpl",
+          "eqCharImpl",
+          "eqStringImpl",
+          "eqArrayImpl"
+        ]
+      },
+      {
+        "module": "Data.Eq.Generic",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Eq.Generic/corefn.json",
+        "bytes": 43643,
+        "sha256": "43361c7ecd5277d5b2e12b5c6b29ea7857b04a44f3e68a9dafd241f530085881",
+        "source": "../gopurs-prelude/src/Data/Eq/Generic.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Equivalence",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Equivalence/corefn.json",
+        "bytes": 29510,
+        "sha256": "6bf707fb580d791d2fb5ad37e99a65ae889a2174a6639ee2a4373d998307ef5e",
+        "source": ".spago/p/contravariant-6.0.0/src/Data/Equivalence.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.EuclideanRing",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.EuclideanRing/corefn.json",
+        "bytes": 38067,
+        "sha256": "4cc2b7e8111eaa3416c7fdc42329f7d888cfea09373782257037ea54f7c7c93a",
+        "source": "../gopurs-prelude/src/Data/EuclideanRing.purs",
+        "foreign": [
+          "intDegree",
+          "intDiv",
+          "intMod",
+          "numDiv"
+        ]
+      },
+      {
+        "module": "Data.Exists",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Exists/corefn.json",
+        "bytes": 2188,
+        "sha256": "d3369a87be675aff9c1a069f5446bf61ada64f34adb36b16454954c65693403c",
+        "source": ".spago/p/exists-6.0.0/src/Data/Exists.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Field",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Field/corefn.json",
+        "bytes": 5975,
+        "sha256": "62e692c362858d99400db08a25715d64e5dd85193a4486080cdd3281310048e5",
+        "source": "../gopurs-prelude/src/Data/Field.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Foldable",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Foldable/corefn.json",
+        "bytes": 602781,
+        "sha256": "cef13b0210e6b5f2a262bf422394f583579b71374cdba7a70aed558df035d070",
+        "source": "../gopurs-foldable-traversable/src/Data/Foldable.purs",
+        "foreign": [
+          "foldrArray",
+          "foldlArray"
+        ]
+      },
+      {
+        "module": "Data.FoldableWithIndex",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.FoldableWithIndex/corefn.json",
+        "bytes": 538305,
+        "sha256": "cdf5c599d8fa83c75eebbaaacff43b356883b80f00c98ce0726cc26acfeb29c7",
+        "source": "../gopurs-foldable-traversable/src/Data/FoldableWithIndex.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Function",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Function/corefn.json",
+        "bytes": 17093,
+        "sha256": "447d4f33bda520e24d9963436a1b1a9453b3a3d5796432fdcb95f26d5f4d9b84",
+        "source": "../gopurs-prelude/src/Data/Function.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Function.Uncurried",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Function.Uncurried/corefn.json",
+        "bytes": 8416,
+        "sha256": "2e0edc13897cf2ad64451f1d863be8eb5044c0558d4e67882c3fa147582984fd",
+        "source": "../gopurs-functions/src/Data/Function/Uncurried.purs",
+        "foreign": [
+          "mkFn0",
+          "mkFn2",
+          "mkFn3",
+          "mkFn4",
+          "mkFn5",
+          "mkFn6",
+          "mkFn7",
+          "mkFn8",
+          "mkFn9",
+          "mkFn10",
+          "runFn0",
+          "runFn2",
+          "runFn3",
+          "runFn4",
+          "runFn5",
+          "runFn6",
+          "runFn7",
+          "runFn8",
+          "runFn9",
+          "runFn10"
+        ]
+      },
+      {
+        "module": "Data.Functor",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Functor/corefn.json",
+        "bytes": 32672,
+        "sha256": "cc849e1af6611575f79b678480757e5a17b3817b4f363185bde52d47d7e55c20",
+        "source": "../gopurs-prelude/src/Data/Functor.purs",
+        "foreign": [
+          "arrayMap"
+        ]
+      },
+      {
+        "module": "Data.Functor.App",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Functor.App/corefn.json",
+        "bytes": 80172,
+        "sha256": "a4e0dbb4a3728c52e0c12bde7ca2792fbe800e66d12e5127e3cc0aa5d5363f0c",
+        "source": ".spago/p/functors-5.0.0/src/Data/Functor/App.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Functor.Clown",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Functor.Clown/corefn.json",
+        "bytes": 62464,
+        "sha256": "de30978d9d058024ac423a6728d74d3e8f810d6dbba64a4401b92f929d6099dc",
+        "source": ".spago/p/functors-5.0.0/src/Data/Functor/Clown.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Functor.Compose",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Functor.Compose/corefn.json",
+        "bytes": 138380,
+        "sha256": "79c50ec9a826219266f262297bc52663afe5c078a27452287bbf12a6976fdf3d",
+        "source": ".spago/p/functors-5.0.0/src/Data/Functor/Compose.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Functor.Contravariant",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Functor.Contravariant/corefn.json",
+        "bytes": 24401,
+        "sha256": "5b60c3759cedb286ad9eaf76f22ab08ee9f9f29dc0e100156e29eba4c736fbde",
+        "source": ".spago/p/contravariant-6.0.0/src/Data/Functor/Contravariant.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Functor.Coproduct",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Functor.Coproduct/corefn.json",
+        "bytes": 149234,
+        "sha256": "772e1b1dc9550ff772519d88a227cf912854a235b75f8a1a5486c4e09aace5cf",
+        "source": ".spago/p/functors-5.0.0/src/Data/Functor/Coproduct.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Functor.Coproduct.Inject",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Functor.Coproduct.Inject/corefn.json",
+        "bytes": 37022,
+        "sha256": "58199470d6968865f44b9af1a449ed9a848a12803f686429d8cd44f14bf95239",
+        "source": ".spago/p/functors-5.0.0/src/Data/Functor/Coproduct/Inject.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Functor.Coproduct.Nested",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Functor.Coproduct.Nested/corefn.json",
+        "bytes": 404885,
+        "sha256": "a5dc68a42170c436f12aa82f43e4edd2c0aaf9ce55456951f4dde06c74f0120d",
+        "source": ".spago/p/functors-5.0.0/src/Data/Functor/Coproduct/Nested.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Functor.Costar",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Functor.Costar/corefn.json",
+        "bytes": 152137,
+        "sha256": "3a20985c05e7bf3ed462f9fbf8ea584520e77de8760511b22cfad400e16898a1",
+        "source": ".spago/p/functors-5.0.0/src/Data/Functor/Costar.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Functor.Flip",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Functor.Flip/corefn.json",
+        "bytes": 88099,
+        "sha256": "38f79b8699c70f11fc1375854f0c343b23b797b91fdd6e22b3352daa8fa66454",
+        "source": ".spago/p/functors-5.0.0/src/Data/Functor/Flip.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Functor.Invariant",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Functor.Invariant/corefn.json",
+        "bytes": 61726,
+        "sha256": "8c6631e0d696f71e73c28433c091b6b6a8bf3f8db6e5e35153c7477775233e4c",
+        "source": ".spago/p/invariant-6.0.0/src/Data/Functor/Invariant.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Functor.Joker",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Functor.Joker/corefn.json",
+        "bytes": 118511,
+        "sha256": "d2bc2d6e22a5ea192a3b7d1a2f28e7488b33d9712c55a6ba4ee6cbdc3d5b27fa",
+        "source": ".spago/p/functors-5.0.0/src/Data/Functor/Joker.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Functor.Product",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Functor.Product/corefn.json",
+        "bytes": 159191,
+        "sha256": "270f0d0765549c920bc6766aa65b3340a40644a927230663c43653dbfcbf25c6",
+        "source": ".spago/p/functors-5.0.0/src/Data/Functor/Product.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Functor.Product.Nested",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Functor.Product.Nested/corefn.json",
+        "bytes": 221014,
+        "sha256": "4e10fa12c0c65bf8113cf53286bf78cd4063c9a5916efc76d7e4dfeb0fefdd1c",
+        "source": ".spago/p/functors-5.0.0/src/Data/Functor/Product/Nested.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Functor.Product2",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Functor.Product2/corefn.json",
+        "bytes": 120266,
+        "sha256": "722ff518f03471c7909b8b6f003b1509a1eb8ddff988e584184eddb8c4c59250",
+        "source": ".spago/p/functors-5.0.0/src/Data/Functor/Product2.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.FunctorWithIndex",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.FunctorWithIndex/corefn.json",
+        "bytes": 170104,
+        "sha256": "910d32d77576e152118d4ea38d74551106a8c20a7f80ccb5f3ae5240dd12ea37",
+        "source": "../gopurs-foldable-traversable/src/Data/FunctorWithIndex.purs",
+        "foreign": [
+          "mapWithIndexArray"
+        ]
+      },
+      {
+        "module": "Data.Generic.Rep",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Generic.Rep/corefn.json",
+        "bytes": 51492,
+        "sha256": "b100ced0b66140a30997be717c034b438cf4af3cc0715a68a42d0c2090fc245f",
+        "source": "../gopurs-prelude/src/Data/Generic/Rep.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.HeytingAlgebra",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.HeytingAlgebra/corefn.json",
+        "bytes": 147787,
+        "sha256": "d8639bf8158aca809b4798ff8b6138a8b4ddb67344d79ab6da083063f8cf6ee7",
+        "source": "../gopurs-prelude/src/Data/HeytingAlgebra.purs",
+        "foreign": [
+          "boolConj",
+          "boolDisj",
+          "boolNot"
+        ]
+      },
+      {
+        "module": "Data.HeytingAlgebra.Generic",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.HeytingAlgebra.Generic/corefn.json",
+        "bytes": 129809,
+        "sha256": "cf60cb0579f13285cfe976ee57a4ae343b9f53d465c85df61784b8cecd2c9daa",
+        "source": "../gopurs-prelude/src/Data/HeytingAlgebra/Generic.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Identity",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Identity/corefn.json",
+        "bytes": 61918,
+        "sha256": "2e1e0798de2ca17570dd9ef8242074caf51398a5e2e39361304a199334aa53a9",
+        "source": ".spago/p/identity-6.0.0/src/Data/Identity.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Int",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Int/corefn.json",
+        "bytes": 80317,
+        "sha256": "90dd587f6b0532fdd98c10a7cca6fa3a7c91fbbf81e69e7127dbc20bc54c4123",
+        "source": "../gopurs-integers/src/Data/Int.purs",
+        "foreign": [
+          "fromNumberImpl",
+          "toNumber",
+          "quot",
+          "rem",
+          "pow",
+          "fromStringAsImpl",
+          "toStringAs"
+        ]
+      },
+      {
+        "module": "Data.Int.Bits",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Int.Bits/corefn.json",
+        "bytes": 1449,
+        "sha256": "65deb5f5c4d8433748a82a1cc629767f949b7643700ba1ac25561dee95ea069d",
+        "source": "../gopurs-integers/src/Data/Int/Bits.purs",
+        "foreign": [
+          "and",
+          "or",
+          "xor",
+          "shl",
+          "shr",
+          "zshr",
+          "complement"
+        ]
+      },
+      {
+        "module": "Data.Interval",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Interval/corefn.json",
+        "bytes": 386246,
+        "sha256": "41e85aa52a7cc32e63400e635c2b1ad01eef1a0fec42738702e8ea55595a7ac6",
+        "source": "../gopurs-datetime/src/Data/Interval.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Interval.Duration",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Interval.Duration/corefn.json",
+        "bytes": 87576,
+        "sha256": "eeaaca8a0b7caec7182adac16d4e66471b2c00898fd55a9be78233dc8fed3881",
+        "source": "../gopurs-datetime/src/Data/Interval/Duration.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Interval.Duration.Iso",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Interval.Duration.Iso/corefn.json",
+        "bytes": 140820,
+        "sha256": "0e22dae85d900dacbc4d8347feee8b0a44df3fa3f67a180bfc3aa10bd949d3ab",
+        "source": "../gopurs-datetime/src/Data/Interval/Duration/Iso.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Lazy",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Lazy/corefn.json",
+        "bytes": 243815,
+        "sha256": "88b1b35449366efe06829b3428bd725b60857c12937692fa583025bbd70d07ff",
+        "source": "../gopurs-lazy/src/Data/Lazy.purs",
+        "foreign": [
+          "defer",
+          "force"
+        ]
+      },
+      {
+        "module": "Data.List",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.List/corefn.json",
+        "bytes": 611257,
+        "sha256": "b2884d9523729107fb65f90279560b0dcc7c7bbcdd9f1f7d4f26599542d4f6ad",
+        "source": ".spago/p/lists-7.0.0/src/Data/List.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.List.Internal",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.List.Internal/corefn.json",
+        "bytes": 108186,
+        "sha256": "cacc937e8b97fe79f21eeba753a30d9099d37f74bee21c589da91b398e21383b",
+        "source": ".spago/p/lists-7.0.0/src/Data/List/Internal.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.List.Lazy",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.List.Lazy/corefn.json",
+        "bytes": 637175,
+        "sha256": "3826f7c642c29c3ed4b517327f2722a5f21245343dfd21f1561bec25a4e530e8",
+        "source": ".spago/p/lists-7.0.0/src/Data/List/Lazy.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.List.Lazy.NonEmpty",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.List.Lazy.NonEmpty/corefn.json",
+        "bytes": 102818,
+        "sha256": "21da236ed07024458a7aa9ebf75a17901dea690a81a0155a2d5d8c3fcb044df2",
+        "source": ".spago/p/lists-7.0.0/src/Data/List/Lazy/NonEmpty.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.List.Lazy.Types",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.List.Lazy.Types/corefn.json",
+        "bytes": 610121,
+        "sha256": "0eb6dc8bb8afcda8c3b2d02a951c665504b4ca4e973ed1cef0288e9ef0699f73",
+        "source": ".spago/p/lists-7.0.0/src/Data/List/Lazy/Types.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.List.NonEmpty",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.List.NonEmpty/corefn.json",
+        "bytes": 343966,
+        "sha256": "7fdd3b1a5d4fea7ef4f7a72161259acee1505cd9f5f346c028b4d9efadf96c6f",
+        "source": ".spago/p/lists-7.0.0/src/Data/List/NonEmpty.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.List.Partial",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.List.Partial/corefn.json",
+        "bytes": 17609,
+        "sha256": "b0c5695e507aaab0bc3d11f4ee845ee81111c30e241868e8dcbb8262ba50a648",
+        "source": ".spago/p/lists-7.0.0/src/Data/List/Partial.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.List.Types",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.List.Types/corefn.json",
+        "bytes": 534377,
+        "sha256": "35a4548655962773c5983a087303cfbcca774befecb8c0046488cdfb280d608d",
+        "source": ".spago/p/lists-7.0.0/src/Data/List/Types.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.List.ZipList",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.List.ZipList/corefn.json",
+        "bytes": 52952,
+        "sha256": "d3747e8ee7beb40ee35a1ef9bfdbd4f5905cd56005d31df5941526cd9df7c18f",
+        "source": ".spago/p/lists-7.0.0/src/Data/List/ZipList.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Map",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Map/corefn.json",
+        "bytes": 45946,
+        "sha256": "2d33706cd19f22feb115bf3cbb21e95241fddd44203483fca24a7680adecb304",
+        "source": ".spago/p/ordered-collections-3.2.0/src/Data/Map.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Map.Gen",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Map.Gen/corefn.json",
+        "bytes": 31836,
+        "sha256": "4264c92e2e714c2d5a1402bfa3a63c7d1d3071fa48033c8a353894561f42633e",
+        "source": ".spago/p/ordered-collections-3.2.0/src/Data/Map/Gen.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Map.Internal",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Map.Internal/corefn.json",
+        "bytes": 1229666,
+        "sha256": "982f08ef5461c4cd5b7cec29320788fcd69bb6e4e1427f9391579892a828cf8e",
+        "source": ".spago/p/ordered-collections-3.2.0/src/Data/Map/Internal.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Maybe",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Maybe/corefn.json",
+        "bytes": 156644,
+        "sha256": "94dedee3259b7e87cea6f361a3926ad3cb83c05103815f824015767defb76ee0",
+        "source": ".spago/p/maybe-6.0.0/src/Data/Maybe.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Maybe.First",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Maybe.First/corefn.json",
+        "bytes": 35759,
+        "sha256": "ba44f7e208281c317b39aa60ffb7e495510f60f92d34f99e2e15430435ef5c65",
+        "source": ".spago/p/maybe-6.0.0/src/Data/Maybe/First.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Maybe.Last",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Maybe.Last/corefn.json",
+        "bytes": 36331,
+        "sha256": "76aefbaccc40c70a3a850d62a9e64b899650777dfa02ddc79951dc63e4579c9a",
+        "source": ".spago/p/maybe-6.0.0/src/Data/Maybe/Last.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Monoid",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Monoid/corefn.json",
+        "bytes": 73412,
+        "sha256": "b106c46d488d317d9ca2f9b0ae0f9f4b64898039282f334ec0216b98b8de12b3",
+        "source": "../gopurs-prelude/src/Data/Monoid.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Monoid.Additive",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Monoid.Additive/corefn.json",
+        "bytes": 48736,
+        "sha256": "a70585821af947daa392cc3d24f337bcf4a6034c20e14b64cdb741c38d4d3b0a",
+        "source": "../gopurs-prelude/src/Data/Monoid/Additive.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Monoid.Alternate",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Monoid.Alternate/corefn.json",
+        "bytes": 41443,
+        "sha256": "fdab6d2df44e4de2982c03a1873b18c4507a4777cbb63c277af9450c6a5b84b2",
+        "source": ".spago/p/control-6.0.0/src/Data/Monoid/Alternate.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Monoid.Conj",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Monoid.Conj/corefn.json",
+        "bytes": 61656,
+        "sha256": "288302d1840a7c590621a423f6d3d30e22aeb4906c494bedba802b7166e8820d",
+        "source": "../gopurs-prelude/src/Data/Monoid/Conj.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Monoid.Disj",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Monoid.Disj/corefn.json",
+        "bytes": 61656,
+        "sha256": "a9cb6892e5e7c8aa56f89f5b6095781ca02cbd4e3a54995d51e3419b82868125",
+        "source": "../gopurs-prelude/src/Data/Monoid/Disj.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Monoid.Dual",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Monoid.Dual/corefn.json",
+        "bytes": 48273,
+        "sha256": "6f82dfd3cc7a09edd01588d901fd2be0ded054d2b8e180100d21b66bb6392366",
+        "source": "../gopurs-prelude/src/Data/Monoid/Dual.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Monoid.Endo",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Monoid.Endo/corefn.json",
+        "bytes": 28358,
+        "sha256": "d4565ad18b79b8dcb727a3bab7ae2b1854ec21165a42888ac9d469d23954d9f7",
+        "source": "../gopurs-prelude/src/Data/Monoid/Endo.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Monoid.Generic",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Monoid.Generic/corefn.json",
+        "bytes": 21089,
+        "sha256": "7240a5baf61673850afa02588979a1c1d9953d8d7bb304bd4694290b853b5328",
+        "source": "../gopurs-prelude/src/Data/Monoid/Generic.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Monoid.Multiplicative",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Monoid.Multiplicative/corefn.json",
+        "bytes": 49278,
+        "sha256": "e37147ef6aed2cfbe63a51ebea6eec23af24682968970d8cbf0ef7ff39ac6240",
+        "source": "../gopurs-prelude/src/Data/Monoid/Multiplicative.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.NaturalTransformation",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.NaturalTransformation/corefn.json",
+        "bytes": 565,
+        "sha256": "458d4c730168dcb1b2812fdfa1a977677a3a83bff7033eda99b084b3ee244d57",
+        "source": "../gopurs-prelude/src/Data/NaturalTransformation.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Newtype",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Newtype/corefn.json",
+        "bytes": 76043,
+        "sha256": "18a17209ba63288f4bcb59064eb531ac1c28ebc8adaa2a5bfd543f059a3a00c8",
+        "source": ".spago/p/newtype-5.0.0/src/Data/Newtype.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.NonEmpty",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.NonEmpty/corefn.json",
+        "bytes": 285038,
+        "sha256": "25fc6cd07ca65e492c0cbee321447ca3d4c5541eaf87b17404748ac514b4187c",
+        "source": ".spago/p/nonempty-7.0.0/src/Data/NonEmpty.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Number",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Number/corefn.json",
+        "bytes": 11870,
+        "sha256": "7c54545e3f37c191cbc27c67e5ebda1a045ff82d1f3ca50e4d07a86cca0d1c5d",
+        "source": "../gopurs-numbers/src/Data/Number.purs",
+        "foreign": [
+          "nan",
+          "isNaN",
+          "infinity",
+          "isFinite",
+          "fromStringImpl",
+          "abs",
+          "acos",
+          "asin",
+          "atan",
+          "atan2",
+          "ceil",
+          "cos",
+          "exp",
+          "floor",
+          "log",
+          "max",
+          "min",
+          "pow",
+          "remainder",
+          "round",
+          "sign",
+          "sin",
+          "sqrt",
+          "tan",
+          "trunc"
+        ]
+      },
+      {
+        "module": "Data.Number.Approximate",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Number.Approximate/corefn.json",
+        "bytes": 27050,
+        "sha256": "b96a3dde93da820e2168d2c5a5f2956f343da0543fd470d765640e86ee44014b",
+        "source": "../gopurs-numbers/src/Data/Number/Approximate.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Number.Format",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Number.Format/corefn.json",
+        "bytes": 19400,
+        "sha256": "6e2b1f93004f8c4d5bbe7336df9d0397fa3152a563dc0f6ce2bad65bec650096",
+        "source": "../gopurs-numbers/src/Data/Number/Format.purs",
+        "foreign": [
+          "toPrecisionNative",
+          "toFixedNative",
+          "toExponentialNative",
+          "toString"
+        ]
+      },
+      {
+        "module": "Data.Op",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Op/corefn.json",
+        "bytes": 28260,
+        "sha256": "eb7b2d37d88953e86d7a1fafb452d49d59a977d364dbf3b89f6699358d607f2e",
+        "source": ".spago/p/contravariant-6.0.0/src/Data/Op.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Ord",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Ord/corefn.json",
+        "bytes": 151250,
+        "sha256": "f2e50c9114a4960fcc54d14195113a445cc20cfc94c83ac2c70f1e987321f808",
+        "source": "../gopurs-prelude/src/Data/Ord.purs",
+        "foreign": [
+          "ordBooleanImpl",
+          "ordIntImpl",
+          "ordNumberImpl",
+          "ordStringImpl",
+          "ordCharImpl",
+          "ordArrayImpl"
+        ]
+      },
+      {
+        "module": "Data.Ord.Down",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Ord.Down/corefn.json",
+        "bytes": 26324,
+        "sha256": "f1e476a2f6b12d6517f60cc234ddd521ab51926f3df0c5661d2ee6babca46a1d",
+        "source": ".spago/p/orders-6.0.0/src/Data/Ord/Down.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Ord.Generic",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Ord.Generic/corefn.json",
+        "bytes": 46533,
+        "sha256": "84139173a5a8434aaa07117d10466dee1a889c55ce875e66773b2de92d58579a",
+        "source": "../gopurs-prelude/src/Data/Ord/Generic.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Ord.Max",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Ord.Max/corefn.json",
+        "bytes": 30648,
+        "sha256": "9a53d0ec726a35193ab7643b8d5029934fe1ed2448027fe422c9ceeaa4a6b389",
+        "source": ".spago/p/orders-6.0.0/src/Data/Ord/Max.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Ord.Min",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Ord.Min/corefn.json",
+        "bytes": 30643,
+        "sha256": "81ddad2db737d6716f2500ea929b43f23653e35931a4d404eec600464b77f11e",
+        "source": ".spago/p/orders-6.0.0/src/Data/Ord/Min.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Ordering",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Ordering/corefn.json",
+        "bytes": 18746,
+        "sha256": "2a05c2927aadd9222fe1a740cdda382474e5c85402ae172180f55ac98d5e8e16",
+        "source": "../gopurs-prelude/src/Data/Ordering.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Predicate",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Predicate/corefn.json",
+        "bytes": 14554,
+        "sha256": "aad40c5b5be2ae33aac5e93752669879cfa4591597eed1b77c317f9b3d162452",
+        "source": ".spago/p/contravariant-6.0.0/src/Data/Predicate.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Profunctor",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Profunctor/corefn.json",
+        "bytes": 42430,
+        "sha256": "36d56fad9b33dd70d837df730903ac7ac1d23cda67030b75b43e534ee2d3357f",
+        "source": ".spago/p/profunctor-6.0.1/src/Data/Profunctor.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Profunctor.Choice",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Profunctor.Choice/corefn.json",
+        "bytes": 42782,
+        "sha256": "549ddf1ee2aafae82ee1ddba6b1cdce88bc0aa1063d2b4c27bb4a8f526a3966a",
+        "source": ".spago/p/profunctor-6.0.1/src/Data/Profunctor/Choice.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Profunctor.Closed",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Profunctor.Closed/corefn.json",
+        "bytes": 7898,
+        "sha256": "295de8bbd48257bae77fd7a0a38ec1bbb72670f438a5e4d4211543006edd1460",
+        "source": ".spago/p/profunctor-6.0.1/src/Data/Profunctor/Closed.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Profunctor.Cochoice",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Profunctor.Cochoice/corefn.json",
+        "bytes": 7213,
+        "sha256": "d55238bc5007e273adc9aaa6e95701c1d1a03866366595d2a43c7b1b2543acd1",
+        "source": ".spago/p/profunctor-6.0.1/src/Data/Profunctor/Cochoice.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Profunctor.Costrong",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Profunctor.Costrong/corefn.json",
+        "bytes": 7208,
+        "sha256": "e423115da63bfc2104fdce80d526a83c00f596273c3fb05c0de69610c69cdc3a",
+        "source": ".spago/p/profunctor-6.0.1/src/Data/Profunctor/Costrong.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Profunctor.Join",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Profunctor.Join/corefn.json",
+        "bytes": 41192,
+        "sha256": "1520681859a6c4dd24cebdfb27a15da8d85736062da2643cbf4ddcc3b99e958f",
+        "source": ".spago/p/profunctor-6.0.1/src/Data/Profunctor/Join.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Profunctor.Split",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Profunctor.Split/corefn.json",
+        "bytes": 62886,
+        "sha256": "2976cbd3898776c765cf7c4014fc7966f0b2353ad9ace35b838b15358dff8d3a",
+        "source": ".spago/p/profunctor-6.0.1/src/Data/Profunctor/Split.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Profunctor.Star",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Profunctor.Star/corefn.json",
+        "bytes": 235010,
+        "sha256": "37aafd03b25f11384787179574c0ea9cbe040c6075751123dd6a0ab3b6d504f9",
+        "source": ".spago/p/profunctor-6.0.1/src/Data/Profunctor/Star.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Profunctor.Strong",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Profunctor.Strong/corefn.json",
+        "bytes": 40355,
+        "sha256": "80bf209f1c597e6b0cbda89551876b8a9404caed64044ddbaaa4fa9645fe4edd",
+        "source": ".spago/p/profunctor-6.0.1/src/Data/Profunctor/Strong.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Reflectable",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Reflectable/corefn.json",
+        "bytes": 15422,
+        "sha256": "72268e36a7867688a2b4763492589eccb31390f8c0c7d01469adb2289806643c",
+        "source": "../gopurs-prelude/src/Data/Reflectable.purs",
+        "foreign": [
+          "unsafeCoerce"
+        ]
+      },
+      {
+        "module": "Data.Ring",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Ring/corefn.json",
+        "bytes": 63007,
+        "sha256": "e85e5f235aa57a5238293216656163c5cd676adc7731f9a9e1d2df8ee116b306",
+        "source": "../gopurs-prelude/src/Data/Ring.purs",
+        "foreign": [
+          "intSub",
+          "numSub"
+        ]
+      },
+      {
+        "module": "Data.Ring.Generic",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Ring.Generic/corefn.json",
+        "bytes": 35672,
+        "sha256": "def16daca892c02cabfd245c005b5f95070b07f242ba8bbebd4c93f00571e58f",
+        "source": "../gopurs-prelude/src/Data/Ring/Generic.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Semigroup",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Semigroup/corefn.json",
+        "bytes": 48601,
+        "sha256": "ef0c125cb7eb3d92187a1bbdcd79a40012bdfbefb5c3ecc6cef41b3031b59355",
+        "source": "../gopurs-prelude/src/Data/Semigroup.purs",
+        "foreign": [
+          "concatString",
+          "concatArray"
+        ]
+      },
+      {
+        "module": "Data.Semigroup.First",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Semigroup.First/corefn.json",
+        "bytes": 39362,
+        "sha256": "b8ff6ffef542bd020e1688ccb92f55dc3190cd2131a986a7371218c786042551",
+        "source": "../gopurs-prelude/src/Data/Semigroup/First.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Semigroup.Foldable",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Semigroup.Foldable/corefn.json",
+        "bytes": 205567,
+        "sha256": "6289a8ea26a5ab5d7b014929dcc54007c7f3fc5952ffdbc30412c505a1fe5aae",
+        "source": "../gopurs-foldable-traversable/src/Data/Semigroup/Foldable.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Semigroup.Generic",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Semigroup.Generic/corefn.json",
+        "bytes": 37680,
+        "sha256": "ded4052a71342b6f317de1077f72315ffde513dfb0c52bb09575490a913d4671",
+        "source": "../gopurs-prelude/src/Data/Semigroup/Generic.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Semigroup.Last",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Semigroup.Last/corefn.json",
+        "bytes": 39277,
+        "sha256": "59ad0474dceeff2774d99fe08e0dfd8cfa9cbed53b2ebfe5bdfc23ff2d8b5aa5",
+        "source": "../gopurs-prelude/src/Data/Semigroup/Last.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Semigroup.Traversable",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Semigroup.Traversable/corefn.json",
+        "bytes": 80065,
+        "sha256": "ede1435539c9704e95c8a1b7fe62a5461cdebc1719f3e0c814013a4cf53fa776",
+        "source": "../gopurs-foldable-traversable/src/Data/Semigroup/Traversable.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Semiring",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Semiring/corefn.json",
+        "bytes": 103423,
+        "sha256": "d1560e00d28e3f34f2f7492735c13e04060bd31d223c1048866b52fa933861aa",
+        "source": "../gopurs-prelude/src/Data/Semiring.purs",
+        "foreign": [
+          "intAdd",
+          "intMul",
+          "numAdd",
+          "numMul"
+        ]
+      },
+      {
+        "module": "Data.Semiring.Generic",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Semiring.Generic/corefn.json",
+        "bytes": 83844,
+        "sha256": "0e24a059094591c5047992adb191f4f7e88be89da39eea9165eff8e62c89c26c",
+        "source": "../gopurs-prelude/src/Data/Semiring/Generic.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Set",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Set/corefn.json",
+        "bytes": 156616,
+        "sha256": "fdf99c4c5dc4305667469d1dec8e96e9ac8fb557995d8fcc92715e00654f7140",
+        "source": ".spago/p/ordered-collections-3.2.0/src/Data/Set.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Set.NonEmpty",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Set.NonEmpty/corefn.json",
+        "bytes": 138987,
+        "sha256": "8b5386ca5a562e31256fe2f25234c46078746450a193db6526d86bc32f9419ef",
+        "source": ".spago/p/ordered-collections-3.2.0/src/Data/Set/NonEmpty.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Show",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Show/corefn.json",
+        "bytes": 64576,
+        "sha256": "ba5ebc1c0196ecb7b54f4dc740f333b4264d88e5a6f445d020a471ef2ac8249f",
+        "source": "../gopurs-prelude/src/Data/Show.purs",
+        "foreign": [
+          "showIntImpl",
+          "showNumberImpl",
+          "showCharImpl",
+          "showStringImpl",
+          "showArrayImpl"
+        ]
+      },
+      {
+        "module": "Data.Show.Generic",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Show.Generic/corefn.json",
+        "bytes": 47324,
+        "sha256": "d31d03b4de27f1ed4b57b19ec00ab698ea4227d15348f2f697905cf5eda92ee6",
+        "source": "../gopurs-prelude/src/Data/Show/Generic.purs",
+        "foreign": [
+          "intercalate"
+        ]
+      },
+      {
+        "module": "Data.Symbol",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Symbol/corefn.json",
+        "bytes": 8447,
+        "sha256": "52ccac93c19affc42a90f6521e4af7d9d70169e6065866f1fc8780667eabc2d8",
+        "source": "../gopurs-prelude/src/Data/Symbol.purs",
+        "foreign": [
+          "unsafeCoerce"
+        ]
+      },
+      {
+        "module": "Data.Time",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Time/corefn.json",
+        "bytes": 164382,
+        "sha256": "89cc07bb510ecd79cbfbb2001f520fdfed6a550ecc7afa134c57e5777f3a4a3a",
+        "source": "../gopurs-datetime/src/Data/Time.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Time.Component",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Time.Component/corefn.json",
+        "bytes": 134036,
+        "sha256": "0890ca937a440b396e909be2415411c7bccb6e30fbda684b4f7e8c6ce685ad47",
+        "source": "../gopurs-datetime/src/Data/Time/Component.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Time.Component.Gen",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Time.Component.Gen/corefn.json",
+        "bytes": 6692,
+        "sha256": "840a192a15e27f2b48beae1fbc7affb876f2c2508a69ee1bd2ad4b7ec2756293",
+        "source": "../gopurs-datetime/src/Data/Time/Component/Gen.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Time.Duration",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Time.Duration/corefn.json",
+        "bytes": 134630,
+        "sha256": "9a23ca3d9cd46344a9e542cb75badb3162a60d696e3be0f8a595f461d9f77cfd",
+        "source": "../gopurs-datetime/src/Data/Time/Duration.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Time.Duration.Gen",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Time.Duration.Gen/corefn.json",
+        "bytes": 31040,
+        "sha256": "5e1e2dba44c169b4bb290e39337b2e4f295170a61328f31cc20a272000be6498",
+        "source": "../gopurs-datetime/src/Data/Time/Duration/Gen.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Time.Gen",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Time.Gen/corefn.json",
+        "bytes": 15227,
+        "sha256": "4e0789752165361b1fdc4046e23e7610c5a10021d760891c28f30a9aa33f07e6",
+        "source": "../gopurs-datetime/src/Data/Time/Gen.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Traversable",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Traversable/corefn.json",
+        "bytes": 461542,
+        "sha256": "90efe2393332244f7116fa1a11eb767fb7cb6a5dbed1a99acb0325f3bd4582ed",
+        "source": "../gopurs-foldable-traversable/src/Data/Traversable.purs",
+        "foreign": [
+          "traverseArrayImpl"
+        ]
+      },
+      {
+        "module": "Data.Traversable.Accum",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Traversable.Accum/corefn.json",
+        "bytes": 440,
+        "sha256": "a19096c875a2029b63a4fbf2a58669ae542c2d03009229d25f7cf759e3ce93ae",
+        "source": "../gopurs-foldable-traversable/src/Data/Traversable/Accum.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Traversable.Accum.Internal",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Traversable.Accum.Internal/corefn.json",
+        "bytes": 58594,
+        "sha256": "4a17ecd02db7b5c9c5d4a54865e4f62feaf2351461882480eae70dd275478bbc",
+        "source": "../gopurs-foldable-traversable/src/Data/Traversable/Accum/Internal.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.TraversableWithIndex",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.TraversableWithIndex/corefn.json",
+        "bytes": 353006,
+        "sha256": "e10b0a2ecf83266ec61f4a0fc4cb4abc40f958310a627125ec1ca3ecb608e61d",
+        "source": "../gopurs-foldable-traversable/src/Data/TraversableWithIndex.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Tuple",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Tuple/corefn.json",
+        "bytes": 254028,
+        "sha256": "95ca692d2bfb57bcca628bf39e27962cc7ae4d227b3e5d74d75877903aca894d",
+        "source": ".spago/p/tuples-7.0.0/src/Data/Tuple.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Tuple.Nested",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Tuple.Nested/corefn.json",
+        "bytes": 536986,
+        "sha256": "101b93c4aa4951bd4a2a52f32e781003863b9d07792108899c7644f9b34cce5a",
+        "source": ".spago/p/tuples-7.0.0/src/Data/Tuple/Nested.purs",
+        "foreign": []
+      },
+      {
+        "module": "Data.Unfoldable",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Unfoldable/corefn.json",
+        "bytes": 52118,
+        "sha256": "2f59a16a0fb14989cda96ae6ecca7fb95df4d5f2ae5713ea7b637d0235f62306",
+        "source": "../gopurs-unfoldable/src/Data/Unfoldable.purs",
+        "foreign": [
+          "unfoldrArrayImpl"
+        ]
+      },
+      {
+        "module": "Data.Unfoldable1",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Unfoldable1/corefn.json",
+        "bytes": 76170,
+        "sha256": "01de96997a6bd72b88df55df85fdff401f1f47f7d00baf56a714b4b082f44e36",
+        "source": "../gopurs-unfoldable/src/Data/Unfoldable1.purs",
+        "foreign": [
+          "unfoldr1ArrayImpl"
+        ]
+      },
+      {
+        "module": "Data.Unit",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Unit/corefn.json",
+        "bytes": 521,
+        "sha256": "6765d74301be5d4b4a4317a9714263fcc80395653cad65a76e662cf02cc1b174",
+        "source": "../gopurs-prelude/src/Data/Unit.purs",
+        "foreign": [
+          "unit"
+        ]
+      },
+      {
+        "module": "Data.Void",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Data.Void/corefn.json",
+        "bytes": 4074,
+        "sha256": "61a76eb1ac3adf46396cd6b740f9b0faa35093d7d5937ac064a63833ce3a092b",
+        "source": "../gopurs-prelude/src/Data/Void.purs",
+        "foreign": []
+      },
+      {
+        "module": "Effect",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Effect/corefn.json",
+        "bytes": 26765,
+        "sha256": "c27cb2c1f9fd0e42494d071b5cd26fb24a4373f5d409077c1d0c887a8e4713b5",
+        "source": "../gopurs-effect/src/Effect.purs",
+        "foreign": [
+          "pureE",
+          "bindE",
+          "untilE",
+          "whileE",
+          "forE",
+          "foreachE"
+        ]
+      },
+      {
+        "module": "Effect.AVar",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Effect.AVar/corefn.json",
+        "bytes": 48506,
+        "sha256": "b27561e4296b2a5a319458353553f0eced01b3ec1e8c9452021a18ad43c19c6f",
+        "source": "../gopurs-avar/src/Effect/AVar.purs",
+        "foreign": [
+          "empty",
+          "_newVar",
+          "_killVar",
+          "_putVar",
+          "_tryPutVar",
+          "_takeVar",
+          "_tryTakeVar",
+          "_readVar",
+          "_tryReadVar",
+          "_status"
+        ]
+      },
+      {
+        "module": "Effect.Aff",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Effect.Aff/corefn.json",
+        "bytes": 351485,
+        "sha256": "5b2f72464afce96cef112b3a252a82c1c15b230b3da2c63125032b75418d8f0b",
+        "source": "src/Effect/Aff.purs",
+        "foreign": [
+          "_forkAffNative",
+          "_pure",
+          "_throwError",
+          "_catchError",
+          "_map",
+          "_bind",
+          "_delay",
+          "_liftEffect",
+          "_parAffMap",
+          "_parAffApply",
+          "_parAffAlt",
+          "_makeFiberNative",
+          "_killFiber",
+          "_joinFiber",
+          "_onCompleteFiber",
+          "_isSuspendedFiber",
+          "_runFiber",
+          "_makeSupervisedFiber",
+          "_killAll",
+          "_sequential",
+          "generalBracket",
+          "_makeAffImpl"
+        ]
+      },
+      {
+        "module": "Effect.Aff.AVar",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Effect.Aff.AVar/corefn.json",
+        "bytes": 47158,
+        "sha256": "bb64c2e78caad2bc50b3a9fbfeb53429eca094119660430f11868d7af518c18a",
+        "source": "../gopurs-avar/src/Effect/Aff/AVar.purs",
+        "foreign": []
+      },
+      {
+        "module": "Effect.Aff.Class",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Effect.Aff.Class/corefn.json",
+        "bytes": 91225,
+        "sha256": "5fe697365c09c6e37b946e79b656c7e6d364ec995192ac5e8a74fffcba50ed31",
+        "source": "src/Effect/Aff/Class.purs",
+        "foreign": []
+      },
+      {
+        "module": "Effect.Aff.Compat",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Effect.Aff.Compat/corefn.json",
+        "bytes": 39576,
+        "sha256": "a57de969debb786873973affd59a35c5aea25ee7ba016f09225a90fdbe81b746",
+        "source": "src/Effect/Aff/Compat.purs",
+        "foreign": []
+      },
+      {
+        "module": "Effect.Class",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Effect.Class/corefn.json",
+        "bytes": 7138,
+        "sha256": "dc72ac444ea8b8d230529b090be74bd12c57e6291b0531cf133a45631443978a",
+        "source": "../gopurs-effect/src/Effect/Class.purs",
+        "foreign": []
+      },
+      {
+        "module": "Effect.Class.Console",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Effect.Class.Console/corefn.json",
+        "bytes": 79962,
+        "sha256": "6650f33eb79058cbc9a3326bab3c17559efc06b8c13b58f0eedf9c776fa5c6ad",
+        "source": "../gopurs-console/src/Effect/Class/Console.purs",
+        "foreign": []
+      },
+      {
+        "module": "Effect.Console",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Effect.Console/corefn.json",
+        "bytes": 24503,
+        "sha256": "9b296c278c58bc1c010bb145ec6f70c790a15193fd6b2ac8255c01253f7b42fb",
+        "source": "../gopurs-console/src/Effect/Console.purs",
+        "foreign": [
+          "log",
+          "warn",
+          "error",
+          "info",
+          "debug",
+          "time",
+          "timeLog",
+          "timeEnd",
+          "clear",
+          "group",
+          "groupCollapsed",
+          "groupEnd"
+        ]
+      },
+      {
+        "module": "Effect.Exception",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Effect.Exception/corefn.json",
+        "bytes": 17923,
+        "sha256": "28d9baa9c127c818e019794e09827ab584fc11bb45603a498a42f4845e45ca69",
+        "source": "../gopurs-exceptions/src/Effect/Exception.purs",
+        "foreign": [
+          "showErrorImpl",
+          "error",
+          "errorWithCause",
+          "errorWithName",
+          "message",
+          "name",
+          "stackImpl",
+          "throwException",
+          "catchException"
+        ]
+      },
+      {
+        "module": "Effect.Exception.Unsafe",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Effect.Exception.Unsafe/corefn.json",
+        "bytes": 7878,
+        "sha256": "78d2e59d313746051fde2f629bcc98050c4384babce0f2df9ad5dce7fcb8b1f6",
+        "source": "../gopurs-exceptions/src/Effect/Exception/Unsafe.purs",
+        "foreign": []
+      },
+      {
+        "module": "Effect.Ref",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Effect.Ref/corefn.json",
+        "bytes": 9355,
+        "sha256": "fe3cac4b668d5462f049cdbefca8607e14c8a44a3b15061759a66c3e0ecfdd9f",
+        "source": "../gopurs-refs/src/Effect/Ref.purs",
+        "foreign": [
+          "_new",
+          "newWithSelf",
+          "read",
+          "modifyImpl",
+          "modify_",
+          "write"
+        ]
+      },
+      {
+        "module": "Effect.Uncurried",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Effect.Uncurried/corefn.json",
+        "bytes": 327325,
+        "sha256": "b98354956216804d1541bf98b4d45d4784ecc5bd80033e23c4abe0a780c486ad",
+        "source": "../gopurs-effect/src/Effect/Uncurried.purs",
+        "foreign": [
+          "mkEffectFn1",
+          "mkEffectFn2",
+          "mkEffectFn3",
+          "mkEffectFn4",
+          "mkEffectFn5",
+          "mkEffectFn6",
+          "mkEffectFn7",
+          "mkEffectFn8",
+          "mkEffectFn9",
+          "mkEffectFn10",
+          "runEffectFn1",
+          "runEffectFn2",
+          "runEffectFn3",
+          "runEffectFn4",
+          "runEffectFn5",
+          "runEffectFn6",
+          "runEffectFn7",
+          "runEffectFn8",
+          "runEffectFn9",
+          "runEffectFn10"
+        ]
+      },
+      {
+        "module": "Effect.Unsafe",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Effect.Unsafe/corefn.json",
+        "bytes": 817,
+        "sha256": "4048070b54dd8379907d9cf8a1017c2d6662f3c559c6407f054d2f3e30e380c5",
+        "source": "../gopurs-effect/src/Effect/Unsafe.purs",
+        "foreign": [
+          "unsafePerformEffect"
+        ]
+      },
+      {
+        "module": "Partial",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Partial/corefn.json",
+        "bytes": 3259,
+        "sha256": "9636d3f7a6d444d3de98ec775c541f63a737799e29b4038263ab7893330630c0",
+        "source": "../gopurs-partial/src/Partial.purs",
+        "foreign": [
+          "_crashWith"
+        ]
+      },
+      {
+        "module": "Partial.Unsafe",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Partial.Unsafe/corefn.json",
+        "bytes": 4195,
+        "sha256": "d049270ca48361fb0e722e4379ac65f0b4d7b11966a04f60cbc057cac4575116",
+        "source": "../gopurs-partial/src/Partial/Unsafe.purs",
+        "foreign": [
+          "_unsafePartial"
+        ]
+      },
+      {
+        "module": "Performance.Minibench",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Performance.Minibench/corefn.json",
+        "bytes": 93311,
+        "sha256": "35324411e0e12f234fa325cad3526f7fa5058447bf15569c08bf189c49f47abb",
+        "source": ".spago/p/minibench-4.0.1/src/Performance/Minibench.purs",
+        "foreign": [
+          "timeNs",
+          "gc",
+          "toFixed"
+        ]
+      },
+      {
+        "module": "Prelude",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Prelude/corefn.json",
+        "bytes": 5165,
+        "sha256": "be6cbcfcb8a31aee841c5dbfede160900788c65f835f96d400aea290d58cede2",
+        "source": "../gopurs-prelude/src/Prelude.purs",
+        "foreign": []
+      },
+      {
+        "module": "Record.Unsafe",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Record.Unsafe/corefn.json",
+        "bytes": 2092,
+        "sha256": "0c2f8338fd0f0369f23192afcafd6c9ce1c58d132416478c6bff10979f89843d",
+        "source": "../gopurs-prelude/src/Record/Unsafe.purs",
+        "foreign": [
+          "unsafeHas",
+          "unsafeGet",
+          "unsafeSet",
+          "unsafeDelete"
+        ]
+      },
+      {
+        "module": "Safe.Coerce",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Safe.Coerce/corefn.json",
+        "bytes": 1634,
+        "sha256": "fcd3b4c8318e4384309dd9ce71c10d98ce780a398e4fa8bc4c7596a8aaacfb6f",
+        "source": ".spago/p/safe-coerce-2.0.0/src/Safe/Coerce.purs",
+        "foreign": []
+      },
+      {
+        "module": "Spago.Generated.BuildInfo",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Spago.Generated.BuildInfo/corefn.json",
+        "bytes": 1748,
+        "sha256": "fb5ecbd22ca61252d6093fbd68fe3ea2e6f6f3fbcde602b25638abc12c1abff9",
+        "source": ".spago/BuildInfo.purs",
+        "foreign": []
+      },
+      {
+        "module": "Test.Assert",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Test.Assert/corefn.json",
+        "bytes": 43241,
+        "sha256": "a6dbceadb49ec3495e6bcb60e35e0581855b2a871397013dc795b8d2ccee2084",
+        "source": "../gopurs-assert/src/Test/Assert.purs",
+        "foreign": [
+          "assertImpl",
+          "checkThrows"
+        ]
+      },
+      {
+        "module": "Test.Bench",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Test.Bench/corefn.json",
+        "bytes": 95180,
+        "sha256": "87e7076a88566c5399d1bd8371aecea2f9cff255de98c5c976ba02e48dc53e3d",
+        "source": "test/Test/Bench.purs",
+        "foreign": []
+      },
+      {
+        "module": "Test.Main",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Test.Main/corefn.json",
+        "bytes": 1464235,
+        "sha256": "14ad3dfbc6662799386fa1b42f869e5d17a9d0e42f3a87ffcaab76081ffb56da",
+        "source": "test/Test/Main.purs",
+        "foreign": []
+      },
+      {
+        "module": "Test.Stress",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Test.Stress/corefn.json",
+        "bytes": 63801,
+        "sha256": "96f7d03a412844db4d8f8086f34851ac83b2849736a96b51df2cc44970e1b5dc",
+        "source": "test/Test/Stress.purs",
+        "foreign": []
+      },
+      {
+        "module": "Type.Equality",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Type.Equality/corefn.json",
+        "bytes": 20572,
+        "sha256": "0e8565ff0500906d50a8af5475a659d1bca8b89f8d5d17fa6ec543b2d17bbc40",
+        "source": ".spago/p/type-equality-4.0.1/src/Type/Equality.purs",
+        "foreign": []
+      },
+      {
+        "module": "Type.Proxy",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Type.Proxy/corefn.json",
+        "bytes": 3880,
+        "sha256": "2c6c472accc3a333faa9d4268f27665cf36a870f99afc1017f35fe3a3071c721",
+        "source": "../gopurs-prelude/src/Type/Proxy.purs",
+        "foreign": []
+      },
+      {
+        "module": "Unsafe.Coerce",
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-purust-aff-20261002/inputs/gopurs-aff/output/Unsafe.Coerce/corefn.json",
+        "bytes": 682,
+        "sha256": "82b47abeb053660e41a4bf05e4cca2b9c5dcf7e4d5a9abc9daba9357951b7f68",
+        "source": "../gopurs-unsafe-coerce/src/Unsafe/Coerce.purs",
+        "foreign": [
+          "unsafeCoerce"
+        ]
+      }
+    ]
+  },
+  "protocol": {
+    "metric": "[gopurs] backend total",
+    "target": "Go for every variant",
+    "warmups": 1,
+    "rounds": 10,
+    "order": "serialized processes, rotating first variant",
+    "jobs": {
+      "load": 8,
+      "prepare": 8,
+      "pbo": 8,
+      "emit": 8,
+      "pipeline": true
+    },
+    "includes": "load/sort, prepare, PBO, Go generation/emission, drain and entrypoints",
+    "excludes": "frontend, compiler and application builds, application execution, process startup/exit",
+    "cache": "fresh outputs and .purmeta/.cache per process, warm OS file cache",
+    "comparison": "every Go file and go.mod byte-identical to original frozen oracle",
+    "resource_diagnostic": false
+  },
+  "executables": {
+    "gopurs.js": {
+      "path": "/Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs.js",
+      "sha256": "20aedc162a4de8cd6ddb8beeaf7ddad577e38c3fec8aefbcfe29b12bff37d6a6"
+    },
+    "gopurs-native": {
+      "path": "/Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs-native",
+      "sha256": "20a537798879f6a19f8716a06986649a207afc189d8ef9bd79bea6f9772dd0d1"
+    },
+    "gopurs-rust": {
+      "path": "/Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs-rust",
+      "sha256": "f099077b7f6daf4fa0606e3b66919046f5fa205c17c5f3f09449a71e0ff23478"
+    }
+  },
+  "primary": {
+    "rust-before": {
+      "samples_ms": [
+        5640,
+        6068,
+        6342,
+        6178,
+        6304,
+        5886,
+        5687,
+        5863,
+        5885,
+        5776,
+        5807,
+        6077,
+        5872,
+        6433,
+        6254
+      ],
+      "median_ms": 5886,
+      "mean_ms": 6004.8,
+      "min_ms": 5640,
+      "max_ms": 6433,
+      "phases_median_ms": {
+        "load TAST + sort": 809,
+        "transitive specializations": 508,
+        "prepare + monomorphize": 1743,
+        "runtime": 7,
+        "optimize + emit": 3432,
+        "entry points": 19,
+        "backend total": 5886
+      }
+    },
+    "rust": {
+      "samples_ms": [
+        3531,
+        3562,
+        3694,
+        3822,
+        3592,
+        3684,
+        3626,
+        3527,
+        3536,
+        3549,
+        3581,
+        3527,
+        3622,
+        3699,
+        3766
+      ],
+      "median_ms": 3592,
+      "mean_ms": 3621.2,
+      "min_ms": 3527,
+      "max_ms": 3822,
+      "phases_median_ms": {
+        "load TAST + sort": 212,
+        "transitive specializations": 497,
+        "prepare + monomorphize": 1122,
+        "runtime": 7,
+        "optimize + emit": 2221,
+        "entry points": 18,
+        "backend total": 3592
+      }
+    },
+    "paired": {
+      "deltas_ms": [
+        -2109,
+        -2506,
+        -2648,
+        -2356,
+        -2712,
+        -2202,
+        -2061,
+        -2336,
+        -2349,
+        -2227,
+        -2226,
+        -2550,
+        -2250,
+        -2734,
+        -2488
+      ],
+      "median_delta_ms": -2349,
+      "mean_delta_ms": -2383.6,
+      "favorable": 15,
+      "rounds": 15
+    },
+    "improvement_percent": 38.97383622154265
+  },
+  "common": {
+    "js": {
+      "samples_ms": [
+        7031,
+        7671,
+        7605,
+        7494,
+        7629,
+        7676,
+        7498,
+        7600,
+        7106,
+        7416
+      ],
+      "median_ms": 7549,
+      "mean_ms": 7472.6,
+      "min_ms": 7031,
+      "max_ms": 7676,
+      "phases_median_ms": {
+        "load TAST + sort": 571.5,
+        "transitive specializations": 209,
+        "prepare + monomorphize": 504.5,
+        "runtime": 1,
+        "optimize + emit": 6441.5,
+        "entry points": 1,
+        "backend total": 7549
+      }
+    },
+    "go": {
+      "samples_ms": [
+        2136,
+        2052,
+        2175,
+        2184,
+        2130,
+        2184,
+        2033,
+        2163,
+        2217,
+        2168
+      ],
+      "median_ms": 2165.5,
+      "mean_ms": 2144.2,
+      "min_ms": 2033,
+      "max_ms": 2217,
+      "phases_median_ms": {
+        "load TAST + sort": 58,
+        "transitive specializations": 256.5,
+        "prepare + monomorphize": 743.5,
+        "runtime": 0,
+        "optimize + emit": 1368,
+        "entry points": 0,
+        "backend total": 2165.5
+      }
+    },
+    "rust-before": {
+      "samples_ms": [
+        6175,
+        5981,
+        6177,
+        6353,
+        6174,
+        6210,
+        5921,
+        6238,
+        6288,
+        5794
+      ],
+      "median_ms": 6176,
+      "mean_ms": 6131.1,
+      "min_ms": 5794,
+      "max_ms": 6353,
+      "phases_median_ms": {
+        "load TAST + sort": 813.5,
+        "transitive specializations": 511,
+        "prepare + monomorphize": 1771,
+        "runtime": 7,
+        "optimize + emit": 3549,
+        "entry points": 20,
+        "backend total": 6176
+      }
+    },
+    "rust": {
+      "samples_ms": [
+        3526,
+        3780,
+        3527,
+        3785,
+        3828,
+        3739,
+        3820,
+        3814,
+        3781,
+        3539
+      ],
+      "median_ms": 3780.5,
+      "mean_ms": 3713.9,
+      "min_ms": 3526,
+      "max_ms": 3828,
+      "phases_median_ms": {
+        "load TAST + sort": 224,
+        "transitive specializations": 507,
+        "prepare + monomorphize": 1156,
+        "runtime": 7,
+        "optimize + emit": 2368.5,
+        "entry points": 18.5,
+        "backend total": 3780.5
+      }
+    }
+  },
+  "rust_to_go_ratio": 1.7457861925652274,
+  "before_rust_to_go_ratio": 2.8519972292773033,
+  "absolute_gap_reduction_percent": 59.730706894402196,
+  "resources": {
+    "rust-before": {
+      "records": [
+        {
+          "real_s": 6.27,
+          "user_s": 13.01,
+          "sys_s": 0.27,
+          "cpu_s": 13.28,
+          "rss_bytes": 623247360
+        },
+        {
+          "real_s": 6.15,
+          "user_s": 13.15,
+          "sys_s": 0.24,
+          "cpu_s": 13.39,
+          "rss_bytes": 612958208
+        },
+        {
+          "real_s": 6.2,
+          "user_s": 13.1,
+          "sys_s": 0.24,
+          "cpu_s": 13.34,
+          "rss_bytes": 625426432
+        }
+      ],
+      "medians": {
+        "real_s": 6.2,
+        "cpu_s": 13.34,
+        "rss_bytes": 623247360
+      }
+    },
+    "rust": {
+      "records": [
+        {
+          "real_s": 3.82,
+          "user_s": 7.33,
+          "sys_s": 0.22,
+          "cpu_s": 7.55,
+          "rss_bytes": 597573632
+        },
+        {
+          "real_s": 3.79,
+          "user_s": 7.34,
+          "sys_s": 0.21,
+          "cpu_s": 7.55,
+          "rss_bytes": 588988416
+        },
+        {
+          "real_s": 3.67,
+          "user_s": 7.19,
+          "sys_s": 0.19,
+          "cpu_s": 7.380000000000001,
+          "rss_bytes": 594100224
+        }
+      ],
+      "medians": {
+        "real_s": 3.79,
+        "cpu_s": 7.55,
+        "rss_bytes": 594100224
+      }
+    }
+  },
+  "pbo_attempts": {
+    "rust-before": [
+      {
+        "attempts": 352,
+        "codegen": 238,
+        "deferred": 114
+      },
+      {
+        "attempts": 356,
+        "codegen": 238,
+        "deferred": 118
+      },
+      {
+        "attempts": 354,
+        "codegen": 238,
+        "deferred": 116
+      },
+      {
+        "attempts": 359,
+        "codegen": 238,
+        "deferred": 121
+      },
+      {
+        "attempts": 354,
+        "codegen": 238,
+        "deferred": 116
+      },
+      {
+        "attempts": 355,
+        "codegen": 238,
+        "deferred": 117
+      },
+      {
+        "attempts": 356,
+        "codegen": 238,
+        "deferred": 118
+      },
+      {
+        "attempts": 357,
+        "codegen": 238,
+        "deferred": 119
+      },
+      {
+        "attempts": 358,
+        "codegen": 238,
+        "deferred": 120
+      },
+      {
+        "attempts": 359,
+        "codegen": 238,
+        "deferred": 121
+      },
+      {
+        "attempts": 358,
+        "codegen": 238,
+        "deferred": 120
+      },
+      {
+        "attempts": 355,
+        "codegen": 238,
+        "deferred": 117
+      },
+      {
+        "attempts": 358,
+        "codegen": 238,
+        "deferred": 120
+      },
+      {
+        "attempts": 356,
+        "codegen": 238,
+        "deferred": 118
+      },
+      {
+        "attempts": 357,
+        "codegen": 238,
+        "deferred": 119
+      },
+      {
+        "attempts": 359,
+        "codegen": 238,
+        "deferred": 121
+      }
+    ],
+    "rust": [
+      {
+        "attempts": 238,
+        "codegen": 238,
+        "deferred": 0
+      },
+      {
+        "attempts": 238,
+        "codegen": 238,
+        "deferred": 0
+      },
+      {
+        "attempts": 238,
+        "codegen": 238,
+        "deferred": 0
+      },
+      {
+        "attempts": 238,
+        "codegen": 238,
+        "deferred": 0
+      },
+      {
+        "attempts": 238,
+        "codegen": 238,
+        "deferred": 0
+      },
+      {
+        "attempts": 238,
+        "codegen": 238,
+        "deferred": 0
+      },
+      {
+        "attempts": 238,
+        "codegen": 238,
+        "deferred": 0
+      },
+      {
+        "attempts": 238,
+        "codegen": 238,
+        "deferred": 0
+      },
+      {
+        "attempts": 238,
+        "codegen": 238,
+        "deferred": 0
+      },
+      {
+        "attempts": 238,
+        "codegen": 238,
+        "deferred": 0
+      },
+      {
+        "attempts": 238,
+        "codegen": 238,
+        "deferred": 0
+      },
+      {
+        "attempts": 238,
+        "codegen": 238,
+        "deferred": 0
+      },
+      {
+        "attempts": 238,
+        "codegen": 238,
+        "deferred": 0
+      },
+      {
+        "attempts": 238,
+        "codegen": 238,
+        "deferred": 0
+      },
+      {
+        "attempts": 238,
+        "codegen": 238,
+        "deferred": 0
+      },
+      {
+        "attempts": 238,
+        "codegen": 238,
+        "deferred": 0
+      }
+    ]
+  },
+  "historical_json_preserved": {
+    "path": "/Users/0x1/Documents/htdocs/altbak.pub/docs/benchmark-results/2026-10-03-purust-native-optimization.json",
+    "sha256": "a275404028d5318cf0d538e6c16395db3857861528c997612d148dfbf6369d59",
+    "corpora": {
+      "fixture12": {
+        "modules": 12,
+        "processes": 9,
+        "structural_fingerprints_sha256": "213de1f26177e7ba79ad15846dfa24b319d8d6342556c02d7975d6a4df018e45",
+        "binaries": {
+          "go": {
+            "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-pbo-20261002/json-final-12/binaries/go",
+            "sha256": "2978e94c4d1081d56d25661e3aee9ccb5e63255af1206d31e7785eedf0a35a45"
+          },
+          "before": {
+            "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-pbo-20261002/json-final-12/binaries/before",
+            "sha256": "f67b5dadd6e0d4b8534e4b32d6a67d7f584b00f79a0c81db64c390c89f0549da"
+          },
+          "after": {
+            "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-pbo-20261002/json-final-12/binaries/after",
+            "sha256": "6816620a78028b4fdbd9f20b306340b1a1661620b5d8a8d1283cffcd99a688b1"
+          }
+        }
+      },
+      "gopurs238": {
+        "modules": 238,
+        "processes": 9,
+        "structural_fingerprints_sha256": "355892ee300881c265e8cd4a63cd3cdbeaf8f43760ef0f13a48dfeb17a12822d",
+        "binaries": {
+          "go": {
+            "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-pbo-20261002/json-final-238/binaries/go",
+            "sha256": "2978e94c4d1081d56d25661e3aee9ccb5e63255af1206d31e7785eedf0a35a45"
+          },
+          "before": {
+            "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-pbo-20261002/json-final-238/binaries/before",
+            "sha256": "f67b5dadd6e0d4b8534e4b32d6a67d7f584b00f79a0c81db64c390c89f0549da"
+          },
+          "after": {
+            "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-pbo-20261002/json-final-238/binaries/after",
+            "sha256": "6816620a78028b4fdbd9f20b306340b1a1661620b5d8a8d1283cffcd99a688b1"
+          }
+        }
+      }
+    }
+  },
+  "ast_index_confirmation": {
+    "summary": {
+      "tast": {
+        "samples_ms": [
+          3734,
+          3726,
+          3720,
+          3748,
+          3756,
+          3539,
+          3545,
+          3616,
+          3811,
+          3538,
+          3763,
+          3765,
+          3799,
+          3747,
+          3762
+        ],
+        "median_ms": 3747,
+        "mean_ms": 3704.6,
+        "min_ms": 3538,
+        "max_ms": 3811,
+        "phases_median_ms": {
+          "load TAST + sort": 212,
+          "transitive specializations": 497,
+          "prepare + monomorphize": 1140,
+          "runtime": 7,
+          "optimize + emit": 2356,
+          "entry points": 18,
+          "backend total": 3747
+        }
+      },
+      "ast-index": {
+        "samples_ms": [
+          3756,
+          3533,
+          3719,
+          3731,
+          3635,
+          3576,
+          3503,
+          3567,
+          3772,
+          3586,
+          3592,
+          3596,
+          3622,
+          3536,
+          3800
+        ],
+        "median_ms": 3596,
+        "mean_ms": 3634.9333333333334,
+        "min_ms": 3503,
+        "max_ms": 3800,
+        "phases_median_ms": {
+          "load TAST + sort": 218,
+          "transitive specializations": 493,
+          "prepare + monomorphize": 1124,
+          "runtime": 7,
+          "optimize + emit": 2250,
+          "entry points": 18,
+          "backend total": 3596
+        }
+      }
+    },
+    "paired": {
+      "deltas_ms": [
+        22,
+        -193,
+        -1,
+        -17,
+        -121,
+        37,
+        -42,
+        -49,
+        -39,
+        48,
+        -171,
+        -169,
+        -177,
+        -211,
+        38
+      ],
+      "median_delta_ms": -42,
+      "mean_delta_ms": -69.66666666666667,
+      "favorable": 11,
+      "rounds": 15
+    }
+  },
+  "qualification": {
+    "bootstrap": {
+      "compiler": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/frontend/purs",
+      "modules": 500,
+      "types": 290647
+    },
+    "bootstrap_identical_files": 1008,
+    "identical_candidate_rust_files": 1009,
+    "aff_checks_per_host": 45,
+    "avar_stress_items": 1000,
+    "aff_identical_files": 294,
+    "node_tests": 37,
+    "preparation_bootstrap_tests": 19,
+    "pbo_suites": 15,
+    "native_suites": 7,
+    "default_rust_rebuild_aff": "passed",
+    "parser_race": "passed",
+    "verification": {
+      "status": "passed",
+      "verified_at": "2026-10-03T19:17:53.452Z",
+      "campaigns": [
+        {
+          "directory": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/baseline-aa-runs",
+          "results_sha256": "6453b58921932bf6941b9fc1bf2e9239e5e99221c436f3899a6eb839c19d2853",
+          "generations": 8,
+          "identical_files": 2352
+        },
+        {
+          "directory": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/scheduler-runs",
+          "results_sha256": "c9143e0f9cee0099acda492ad0f2f777316abc6826f9910571a2574c3a08535c",
+          "generations": 12,
+          "identical_files": 3528
+        },
+        {
+          "directory": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/memo-runs",
+          "results_sha256": "e856b01c6e354d44e397a29afd6cb3d7348b6f4d073cf2490c9187b04dca383b",
+          "generations": 18,
+          "identical_files": 5292
+        },
+        {
+          "directory": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/directives-runs",
+          "results_sha256": "2b350e16c2dbfe296d637b89bf50ceb687488bc82b55c600d021d729360acabf",
+          "generations": 18,
+          "identical_files": 5292
+        },
+        {
+          "directory": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/tast-runs",
+          "results_sha256": "5765ec8b953091efb65cf5c65f29468e261ad065ece60240087f7971fb9be468",
+          "generations": 18,
+          "identical_files": 5292
+        },
+        {
+          "directory": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/ast-index-runs",
+          "results_sha256": "c3eb8e281deb18ea20a99035c744172cae412c665609f096e040e4617f215e84",
+          "generations": 18,
+          "identical_files": 5292
+        },
+        {
+          "directory": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/ast-index-confirmation-runs",
+          "results_sha256": "1134c12ee8fd4aa394b70f2ae50a268db1da233104e076e686ed949f132c0827",
+          "generations": 32,
+          "identical_files": 9408
+        },
+        {
+          "directory": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/primary-runs",
+          "results_sha256": "d6e969abd55a8afde44dea6c4b39216a89911b61e5af62efcad61fbef170c650",
+          "generations": 32,
+          "identical_files": 9408
+        },
+        {
+          "directory": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/common-runs",
+          "results_sha256": "f60bd55ad22786095f36c67dc428ab7af2f9aefdce69d39c649c80d66f0c037f",
+          "generations": 44,
+          "identical_files": 12936
+        },
+        {
+          "directory": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/resources-runs",
+          "results_sha256": "5747e2aee91ebe0b794202e9c1ddc4ca4b0c105471cb68e4d0c9006e36f3c26b",
+          "generations": 8,
+          "identical_files": 2352
+        }
+      ],
+      "generations": 208,
+      "identical_files": 61152
+    }
+  },
+  "source_records": [
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/production/results.json",
+      "sha256": "6bdb260d4087f50c7c4bd82014e1704223ed241aaa3ca157fa69140bf3dc7e4e"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/production/hosts/results.json",
+      "sha256": "93c65bce26a5af471c4378a4cfa533491a4bcbc49d703374534277ed0083d545"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/primary-runs/results.json",
+      "sha256": "d6e969abd55a8afde44dea6c4b39216a89911b61e5af62efcad61fbef170c650"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/common-runs/results.json",
+      "sha256": "f60bd55ad22786095f36c67dc428ab7af2f9aefdce69d39c649c80d66f0c037f"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/resources-runs/results.json",
+      "sha256": "5747e2aee91ebe0b794202e9c1ddc4ca4b0c105471cb68e4d0c9006e36f3c26b"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/pbo-tests/results.json",
+      "sha256": "9624c3d09bc0169c477ed71efc5c4a476294a4c3575779d88de81d1fce15097a"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/native-tests/summary.json",
+      "sha256": "d37a99da42a3f6a41fc671385e77dde04ce8a4ff1157ce7fd44617ec0e800a0f"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/native-maps/summary.json",
+      "sha256": "353397f22fb9a386110bc503af0743a74581213e0d5339acc3b6b9b23fa282ab"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/verification-final.json",
+      "sha256": "3a126ee326bcc310690707ef048713af86c793b1df7cfabbdc3138b7ae28e954"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/ast-index-confirmation-runs/results.json",
+      "sha256": "1134c12ee8fd4aa394b70f2ae50a268db1da233104e076e686ed949f132c0827"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-optimization-20261003/confirmation-protocol.json",
+      "sha256": "84d603d84c3bbd094d46d39be349e4153fb8e771d73fbb2f7dba7835583851a0"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-03T17:00:01.023Z",
+  "compiler": "gopurs",
+  "target": "Go for every host",
+  "archive": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-host-20261003",
+  "host": {
+    "cpu": "Apple M4 Pro",
+    "logical_cpus": 14,
+    "memory_bytes": 51539607552,
+    "node": "v24.8.0"
+  },
+  "protocol": {
+    "metric": "[gopurs] backend total",
+    "target": "Go for all three hosts",
+    "warmups": 1,
+    "rounds": 10,
+    "order": "serial processes, rotating first host",
+    "includes": "TAST loading/sort, preparation, runtime, PBO, Go generation/emission, worker drain, entrypoints",
+    "excludes": "frontend, bootstrap, application build/execution, process startup/exit",
+    "jobs": {
+      "load": 8,
+      "prepare": 8,
+      "pbo": 8,
+      "emit": 8,
+      "pipeline": true
+    },
+    "cache": "new generated output and .purmeta/.cache per process; warm OS file cache",
+    "comparison": "each generated Go file and go.mod must match the original frozen gopurs oracle byte-for-byte"
+  },
+  "source_records": [
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-host-20261003/qualification/results.json",
+      "sha256": "dec2cc289e0213077f7f36e296f654f994d7d5284059066681e87138f415e1fa"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-rust-host-20261003/timings/results.json",
+      "sha256": "9a508760b8e8b782322cd665c76a2b8bfc97bdb1ae9fe3f528b31934d25403d6"
+    }
+  ],
+  "executables": {
+    "gopurs.js": {
+      "path": "/Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs.js",
+      "sha256": "b21ddc47cc5cc6f48a830c355812d3be328301363a7f8db695679e65e9e534ac"
+    },
+    "gopurs-native": {
+      "path": "/Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs-native",
+      "sha256": "bae4835bdb63ee802f172253f6a5e88ef03bc141bb15330318ba4d1a54674c16"
+    },
+    "gopurs-rust": {
+      "path": "/Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs-rust",
+      "sha256": "ad7fd6a9592ccef0e5a33615c1b79ede669589898aa3742f0bba184de07e7e8e"
+    }
+  },
+  "bootstrap": {
+    "compiler": "/Users/0x1/Documents/htdocs/purescript/.stack-work/dist/aarch64-osx/ghc-9.8.4/build/purs/purs",
+    "modules": 500,
+    "types": 290636,
+    "identical_generated_files": 1008,
+    "installed_sha256": "ad7fd6a9592ccef0e5a33615c1b79ede669589898aa3742f0bba184de07e7e8e",
+    "purust_native_sha256": "d170ad6a1b2b18627a70dfd873d35105b947835e03f32da998f218206cbcd703",
+    "purust_js_sha256": "df995c72762c1bdcb2cbb1c3c49d2cb59bfc8e7192724748c771a1dea956c181"
+  },
+  "validation": {
+    "node_tests_passed": 37,
+    "aff_checks_per_host": 45,
+    "avar_stress_items": 1000,
+    "aff_identical_go_files": 294,
+    "parser_race_checks": "passed",
+    "timed_generations": 33,
+    "timed_files_reverified": 9702
+  },
+  "summary": {
+    "js": {
+      "samples_ms": [
+        7744,
+        7588,
+        7701,
+        7613,
+        7794,
+        7632,
+        7600,
+        7789,
+        7736,
+        7919
+      ],
+      "median_ms": 7718.5,
+      "mean_ms": 7711.6,
+      "min_ms": 7588,
+      "max_ms": 7919,
+      "phases_median_ms": {
+        "load TAST + sort": 532.5,
+        "transitive specializations": 192.5,
+        "prepare + monomorphize": 462,
+        "runtime": 2,
+        "optimize + emit": 6714,
+        "entry points": 1,
+        "backend total": 7718.5
+      }
+    },
+    "go": {
+      "samples_ms": [
+        2126,
+        2113,
+        2122,
+        2184,
+        2146,
+        2077,
+        2115,
+        2118,
+        2111,
+        2103
+      ],
+      "median_ms": 2116.5,
+      "mean_ms": 2121.5,
+      "min_ms": 2077,
+      "max_ms": 2184,
+      "phases_median_ms": {
+        "load TAST + sort": 55,
+        "transitive specializations": 237.5,
+        "prepare + monomorphize": 694.5,
+        "runtime": 1,
+        "optimize + emit": 1359.5,
+        "entry points": 0,
+        "backend total": 2116.5
+      }
+    },
+    "rust": {
+      "samples_ms": [
+        5770,
+        5634,
+        5577,
+        5847,
+        5797,
+        5795,
+        5740,
+        5885,
+        5737,
+        5857
+      ],
+      "median_ms": 5782.5,
+      "mean_ms": 5763.9,
+      "min_ms": 5577,
+      "max_ms": 5885,
+      "phases_median_ms": {
+        "load TAST + sort": 730,
+        "transitive specializations": 483,
+        "prepare + monomorphize": 1646.5,
+        "runtime": 7,
+        "optimize + emit": 3345,
+        "entry points": 18,
+        "backend total": 5782.5
+      }
+    }
+  },
+  "rust_to_go_ratio": 2.7321048901488307,
+  "rust_to_js_ratio": 0.7491740623178078,
+  "retained_diagnostics": [
+    {
+      "path": "bootstrap-first.log",
+      "issue": "Ambiguous Rust Value import in Main FFI; fixed by qualifying purust_core."
+    },
+    {
+      "path": "regressions-candidate.log",
+      "issue": "Pre-existing JS/Go constant-folding mismatch for unused loneSurrogates in StringEscapes. Targeted live-string regression passes on all three hosts."
+    }
+  ]
+}
