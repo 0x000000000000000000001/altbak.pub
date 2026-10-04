@@ -392,6 +392,4 @@ Benchmark   | [purust](https://github.com/0x000000000000000000001/purust) JS bin
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) | (WIP)     | (WIP)
 [purust-aff](https://github.com/0x000000000000000000001/purust-aff)  | ~ 6316 ms | ~ 2173 ms <br>(/JS = 0.34x)
 
-> Compilation timings refreshed on **4 October 2026**: median of five backend-only runs per host after one warmup, with frozen inputs and byte-exact generated-output checks. Totals sum the displayed project medians. [Protocol and full results](docs/benchmark-results/2026-10-04-compilation-refresh.md).
-
 More to come...
