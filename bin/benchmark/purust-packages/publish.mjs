@@ -90,7 +90,7 @@ const table = [
   'Benchmark   | ' + link('purust') + ' JS binary (WIP) | ' + link('purust') + ' Rust binary (WIP)',
   '----------- | --------- | ---------------------',
   `[b8x — Rust test profile](https://github.com/0x000000000000000000001/b8x.pub) | ~ ${(b8x.summary.js.median_ms / 1000).toFixed(3)} s | ~ ${(b8x.summary.rust.median_ms / 1000).toFixed(3)} s <br>(/JS = ${ratio(b8x.summary.rust.median_ms, b8x.summary.js.median_ms)}x)`,
-  ...libraries.map(result => `${link(result.name)} | ~ ${result.summary.js.median_ms} ms | ~ ${result.summary.rust.median_ms} ms <br>(/JS = ${ratio(result.summary.rust.median_ms, result.summary.js.median_ms)}x)`),
+  ...libraries.map(result => `${link(result.name)} | ~ ${result.summary.js.median_ms} ms | ~ ${result.summary.rust.median_ms} ms`),
   `**Total purust-*** | ~ ${seconds(subtotal.js)} s | ~ ${seconds(subtotal.rust)} s <br>(/JS = ${ratio(subtotal.rust, subtotal.js)}x)`,
   `**Total** | ~ ${seconds(total.js)} s | ~ ${seconds(total.rust)} s <br>(/JS = ${ratio(total.rust, total.js)}x)`,
 ].join('\n');

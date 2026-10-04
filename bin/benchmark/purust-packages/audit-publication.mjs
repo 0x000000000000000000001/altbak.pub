@@ -77,7 +77,7 @@ for (let index = 0; index < rows.length; index++) {
   for (const [hostIndex, host] of hosts.entries()) {
     const time = index === 0 ? `${(values[host] / 1000).toFixed(3)} s`
       : index < 58 ? `${values[host]} ms` : `${(Math.round(values[host] / 10) / 100).toFixed(2)} s`;
-    const expected = `~ ${time}` + (host === 'rust' ? ` <br>(/JS = ${(values.rust / values.js).toFixed(2)}x)` : '');
+    const expected = `~ ${time}` + (host === 'rust' && (index === 0 || index >= 58) ? ` <br>(/JS = ${(values.rust / values.js).toFixed(2)}x)` : '');
     assert.equal(cells[hostIndex], expected, `${name} ${host}`);
   }
   checks.push({ name, median_ms: values, rust_js_ratio: (values.rust / values.js).toFixed(2) });
@@ -85,11 +85,12 @@ for (let index = 0; index < rows.length; index++) {
 assert(section.includes('Totals are sums of medians.'));
 assert(section.includes('Rust Core/Infra/Util test profile'));
 assert(section.includes(`docs/benchmark-results/${report.date}-purust-packages.md`));
+assert.equal((section.match(/\(\/JS = /g) ?? []).length, 3);
 assert.equal(report.publication.project_cells, 116); assert.equal(report.publication.total_cells, 4);
 const audit = { status: 'passed', checked_at: new Date().toISOString(), archive,
   script: { path: script, sha256: hash(readFileSync(script)) },
   readme: { path: readmePath, sha256: hash(readme), preceding_sections_sha256: hash(readme.split(marker)[0]) },
   reports: [reportPath, publicJson, publicMarkdown].map(path => ({ path, sha256: hash(readFileSync(path)) })),
-  coverage: report.coverage, project_cells: 116, total_cells: 4, ratios: 60, rows: checks };
+  coverage: report.coverage, project_cells: 116, total_cells: 4, ratios: 3, rows: checks };
 writeJson(output, audit);
-console.log(JSON.stringify({ status: audit.status, project_cells: 116, total_cells: 4, ratios: 60, subtotal, total, audit: output }, null, 2));
+console.log(JSON.stringify({ status: audit.status, project_cells: 116, total_cells: 4, ratios: 3, subtotal, total, audit: output }, null, 2));

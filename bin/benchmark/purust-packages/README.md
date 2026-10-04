@@ -87,7 +87,8 @@ application evidence. It writes the public report and an archived
 table and totals against `publication.json`.
 
 After applying the reviewed candidate, audit all 116 project cells, four total
-cells and 60 ratios against the retained phase logs and measurement records:
+cells and three displayed ratios (b8x, library subtotal and total) against the
+retained phase logs and measurement records:
 
 ```sh
 node bin/benchmark/purust-packages/audit-publication.mjs "$ARCHIVE"
