@@ -1,0 +1,3249 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "date": "2026-10-04",
+  "archive": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3",
+  "protocol": {
+    "rounds": 5,
+    "warmups_per_host": 1,
+    "metric": "backend total",
+    "statistic": "median",
+    "includes": "TAST loading/sorting, preparation, PBO/generation, final emission and drain",
+    "excludes": "frontend, compiler/application builds, application execution and process startup/exit",
+    "order": "Serialized projects; JS/Rust and Rust/JS alternate over warmup and five measured rounds",
+    "cache": "Fresh generated output and PBO caches; warm OS filesystem cache; fresh process per run",
+    "purust_jobs": "Public defaults: JS 1/1; native worker budget 8 split into 4 PBO and 4 codegen workers",
+    "output_mode": "Primary package runner flags; threaded where requested by the package",
+    "exact_output": "Per-run manifests and byte comparisons; canonical identical output retained once per project"
+  },
+  "host": {
+    "cpu": "Apple M4 Pro",
+    "logical_cpus": 14,
+    "memory_bytes": 51539607552,
+    "node": "v24.8.0"
+  },
+  "compilers": {
+    "purust": {
+      "directory": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/compilers/purust",
+      "origin": "/Users/0x1/Documents/htdocs/purust/purust",
+      "files": [
+        {
+          "path": "bin/purust",
+          "bytes": 647,
+          "sha256": "28b9ad0bb3a2a50b1ad204b3a87284c4fcae24dff0d2a0931eed2d682903149a"
+        },
+        {
+          "path": "bin/purust-native",
+          "bytes": 42120688,
+          "sha256": "9ee2db92c36000446b74f81569bd353af5df38c0a4d8af06f74b8e5a0df05936"
+        },
+        {
+          "path": "bin/purust.js",
+          "bytes": 2214667,
+          "sha256": "6aad259f4c81e9e197b3d56833f6eb520092bbd368ec09a5b5103d364dc2d1ce"
+        }
+      ]
+    }
+  },
+  "qualification": {
+    "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/unicode-bootstrap/qualification.json",
+    "sha256": "7eafe89fbec0526bcea68392eee0502ca7503fad1b83e6f8802985c47e1fcd47"
+  },
+  "rerun": {
+    "previous_archive": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision1",
+    "evidence": [
+      {
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision1/libraries-final-results.json",
+        "sha256": "765f84292e63a952c1215887598e7f9fea22f84cd0316266fec3ee2c85831549"
+      },
+      {
+        "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision1/b8x-results.json",
+        "sha256": "6693630e8d9ef96545b00c10cd5138d0a8c5aa5be35f37147822bb6b32bba4ce"
+      }
+    ],
+    "reason": "A native HTTP application exposed a truncated primed foreign identifier; all projects are re-measured with the corrected qualified hosts.",
+    "changed_output_cases": [
+      {
+        "name": "purust-node-http",
+        "sources": [
+          "sources/Node.HTTP.Types/Types.purs"
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/libraries-results.json",
+      "sha256": "c0b6df1d7c92d76c4f83e601bf2bbe97fadc20e296b2d8b39605e40b60f6eb0f"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/b8x-results.json",
+      "sha256": "96ebaacb9107fbcc0d4401a50845d10efa914c7587ac4143320a12d333eded7c"
+    }
+  ],
+  "validation": [
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/validation/results.json",
+      "sha256": "5dc12758e9ebdc85584da15f31a567aefd8998e4a9326b05b3ba38235736511b"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/b8x-validation/results.json",
+      "sha256": "e28207a35e20a0c6e1c1608d5f6192f47aa821e83eef006dad6e36c89d2e06d5"
+    }
+  ],
+  "coverage": {
+    "libraries": 57,
+    "projects": 58,
+    "generations": 696,
+    "measured_generations": 580,
+    "exact_files": 323712
+  },
+  "subtotal_ms": {
+    "js": 304025,
+    "rust": 120115
+  },
+  "total_ms": {
+    "js": 348340,
+    "rust": 140734
+  },
+  "results": [
+    {
+      "name": "b8x",
+      "scope": "Existing Rust default test profile: Core, Infra and Util (286 tests), selected import closure; distinct from the full Go-target corpus.",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            44465,
+            44150,
+            44315,
+            44166,
+            44627
+          ],
+          "median_ms": 44315,
+          "min_ms": 44150,
+          "max_ms": 44627,
+          "phases_median_ms": {
+            "load TAST + sort": 2124,
+            "prepare": 161,
+            "optimize + generate": 28176,
+            "finalize + emit": 13239,
+            "backend total": 44315
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            20589,
+            20467,
+            20619,
+            20667,
+            20743
+          ],
+          "median_ms": 20619,
+          "min_ms": 20467,
+          "max_ms": 20743,
+          "phases_median_ms": {
+            "load TAST + sort": 801,
+            "prepare": 116,
+            "optimize + generate": 13818,
+            "finalize + emit": 2092,
+            "backend total": 20619
+          }
+        }
+      },
+      "input": {
+        "modules": 1404,
+        "types": 426499,
+        "tast_bytes": 111282877,
+        "tast_sha256": "342d47470cf31de0f07e95c08e23967fdb090f2817a3fd9f6ebbda56419f10fe"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/b8x/definition.json",
+      "definition_sha256": "7989af9fa733dfb409e47de7443298af46818175be21186d80727dd73390d3df",
+      "generated_sha256": "34f3d1f98710b41a359e5d878cee51f76c1ec9ee469a952a764688cce58ee250",
+      "generated_files": 2816
+    },
+    {
+      "name": "purust-aff",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6218,
+            6264,
+            6214,
+            6221,
+            6177
+          ],
+          "median_ms": 6218,
+          "min_ms": 6177,
+          "max_ms": 6264,
+          "phases_median_ms": {
+            "load TAST + sort": 562,
+            "prepare": 45,
+            "optimize + generate": 4754,
+            "finalize + emit": 804,
+            "backend total": 6218
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2077,
+            2076,
+            2039,
+            2138,
+            2041
+          ],
+          "median_ms": 2076,
+          "min_ms": 2039,
+          "max_ms": 2138,
+          "phases_median_ms": {
+            "load TAST + sort": 188,
+            "prepare": 24,
+            "optimize + generate": 1524,
+            "finalize + emit": 227,
+            "backend total": 2076
+          }
+        }
+      },
+      "input": {
+        "modules": 243,
+        "types": 138550,
+        "tast_bytes": 27140536,
+        "tast_sha256": "886f2552f02ce92fa6fec03ec79e84a6566cb6c7e29adf5cd6ba6a222b4a8f72"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-aff/definition.json",
+      "definition_sha256": "5a8cfbf7f60d9f8f1fa26cfa67bd172251b4452d595447b8a756695896756743",
+      "generated_sha256": "9fc875e5a93224f45da9c10486f5ccdd85bd2347fb9dd58a059d38e2d026b071",
+      "generated_files": 494
+    },
+    {
+      "name": "purust-argonaut-codecs",
+      "scope": "Existing typed JSON decoding plans fixture",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6077,
+            6063,
+            6097,
+            6090,
+            6128
+          ],
+          "median_ms": 6090,
+          "min_ms": 6063,
+          "max_ms": 6128,
+          "phases_median_ms": {
+            "load TAST + sort": 548,
+            "prepare": 47,
+            "optimize + generate": 4781,
+            "finalize + emit": 646,
+            "backend total": 6090
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2113,
+            2131,
+            2127,
+            2120,
+            2112
+          ],
+          "median_ms": 2120,
+          "min_ms": 2112,
+          "max_ms": 2131,
+          "phases_median_ms": {
+            "load TAST + sort": 182,
+            "prepare": 26,
+            "optimize + generate": 1625,
+            "finalize + emit": 196,
+            "backend total": 2120
+          }
+        }
+      },
+      "input": {
+        "modules": 262,
+        "types": 137872,
+        "tast_bytes": 25907623,
+        "tast_sha256": "71a1c95180b9c3d4dbcf71b54a48ad576a1453caef3d17b4c3a4595591f3b3ff"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-argonaut-codecs/definition.json",
+      "definition_sha256": "e2c941ede42c212c5536a137b74ada9f33d4136acd27df9235d926174340bb50",
+      "generated_sha256": "3d2580c35458f263fc2d2c0bf00b37749cfa1bb3f63f4f6ea7e3cd2ad12102b8",
+      "generated_files": 532
+    },
+    {
+      "name": "purust-argonaut-core",
+      "scope": "Existing compact-DOM fixture; the legacy Test.Main foreign constants have no Rust implementation",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            5025,
+            5143,
+            5122,
+            5127,
+            5089
+          ],
+          "median_ms": 5122,
+          "min_ms": 5025,
+          "max_ms": 5143,
+          "phases_median_ms": {
+            "load TAST + sort": 519,
+            "prepare": 43,
+            "optimize + generate": 3916,
+            "finalize + emit": 592,
+            "backend total": 5122
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1694,
+            1682,
+            1671,
+            1683,
+            1675
+          ],
+          "median_ms": 1682,
+          "min_ms": 1671,
+          "max_ms": 1694,
+          "phases_median_ms": {
+            "load TAST + sort": 162,
+            "prepare": 25,
+            "optimize + generate": 1218,
+            "finalize + emit": 185,
+            "backend total": 1682
+          }
+        }
+      },
+      "input": {
+        "modules": 252,
+        "types": 129390,
+        "tast_bytes": 23791657,
+        "tast_sha256": "e32a0f4a1a436b51e5ac8035926abe95d18eca15ff519eaa72ac43d9be3d43a3"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-argonaut-core/definition.json",
+      "definition_sha256": "3288d7f0add995c43a34c6f7fede1676836384b946b7e8a9ac3e60b9dece1cfb",
+      "generated_sha256": "6692d286e171495044457f37865786640400fef1e9db57ba2e9e8bd35be305c8",
+      "generated_files": 512
+    },
+    {
+      "name": "purust-arraybuffer-types",
+      "scope": "Foreign-type-only library with an explicit minimal executable harness",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            596,
+            588,
+            589,
+            591,
+            591
+          ],
+          "median_ms": 591,
+          "min_ms": 588,
+          "max_ms": 596,
+          "phases_median_ms": {
+            "load TAST + sort": 91,
+            "prepare": 9,
+            "optimize + generate": 399,
+            "finalize + emit": 81,
+            "backend total": 591
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            158,
+            155,
+            160,
+            159,
+            157
+          ],
+          "median_ms": 158,
+          "min_ms": 155,
+          "max_ms": 160,
+          "phases_median_ms": {
+            "load TAST + sort": 19,
+            "prepare": 6,
+            "optimize + generate": 95,
+            "finalize + emit": 29,
+            "backend total": 158
+          }
+        }
+      },
+      "input": {
+        "modules": 56,
+        "types": 13062,
+        "tast_bytes": 2525771,
+        "tast_sha256": "13d1e03da131cae6d141efc81d04e15ad30ecae6cdac5341969e513d00af1de6"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-arraybuffer-types/definition.json",
+      "definition_sha256": "6f14ee8277fdc40c98a336e7ba47f19d4cd9b1e8f4b9bdb8bbe36958b1cd9ad6",
+      "generated_sha256": "c34e1ea28ae6b59e35bd379f3e7ef06c9cf944567ba5ca1506060ae1a0f37516",
+      "generated_files": 120
+    },
+    {
+      "name": "purust-arrays",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            15268,
+            15035,
+            15134,
+            15150,
+            14889
+          ],
+          "median_ms": 15134,
+          "min_ms": 14889,
+          "max_ms": 15268,
+          "phases_median_ms": {
+            "load TAST + sort": 381,
+            "prepare": 28,
+            "optimize + generate": 14363,
+            "finalize + emit": 336,
+            "backend total": 15134
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            4301,
+            4305,
+            4291,
+            4285,
+            4290
+          ],
+          "median_ms": 4291,
+          "min_ms": 4285,
+          "max_ms": 4305,
+          "phases_median_ms": {
+            "load TAST + sort": 119,
+            "prepare": 16,
+            "optimize + generate": 3991,
+            "finalize + emit": 114,
+            "backend total": 4291
+          }
+        }
+      },
+      "input": {
+        "modules": 169,
+        "types": 79880,
+        "tast_bytes": 16871100,
+        "tast_sha256": "288ca0cc146ef6ffb05155c40ace225c80ea1146205178055755d19436d81c38"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-arrays/definition.json",
+      "definition_sha256": "fd69ec12602c9ae1bdd35ca5d549e2e2483d6e9013e23aeb3ed83e27ac87a9a4",
+      "generated_sha256": "41c2a404f3600269dd0514881f15404a42cea2bee32836863d0443fc8ab999aa",
+      "generated_files": 346
+    },
+    {
+      "name": "purust-assert",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            630,
+            635,
+            631,
+            631,
+            636
+          ],
+          "median_ms": 631,
+          "min_ms": 630,
+          "max_ms": 636,
+          "phases_median_ms": {
+            "load TAST + sort": 94,
+            "prepare": 9,
+            "optimize + generate": 436,
+            "finalize + emit": 80,
+            "backend total": 631
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            171,
+            170,
+            168,
+            170,
+            167
+          ],
+          "median_ms": 170,
+          "min_ms": 167,
+          "max_ms": 171,
+          "phases_median_ms": {
+            "load TAST + sort": 20,
+            "prepare": 5,
+            "optimize + generate": 103,
+            "finalize + emit": 31,
+            "backend total": 170
+          }
+        }
+      },
+      "input": {
+        "modules": 58,
+        "types": 13756,
+        "tast_bytes": 2721503,
+        "tast_sha256": "b234a607446607192ddf3bb5159262bc4a0eccf91f898a76188b08aab37881c5"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-assert/definition.json",
+      "definition_sha256": "c19f2df7b344bae5ffdd0092759270bb40ed2a0b599ceef8432e060df8f39606",
+      "generated_sha256": "fcf3f97224f4aa928aad61f04614c700c89d1e19b825aac195569b646831f26f",
+      "generated_files": 124
+    },
+    {
+      "name": "purust-avar",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            5935,
+            5949,
+            5930,
+            6010,
+            5942
+          ],
+          "median_ms": 5942,
+          "min_ms": 5930,
+          "max_ms": 6010,
+          "phases_median_ms": {
+            "load TAST + sort": 542,
+            "prepare": 43,
+            "optimize + generate": 4554,
+            "finalize + emit": 756,
+            "backend total": 5942
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1921,
+            1951,
+            1917,
+            1938,
+            1947
+          ],
+          "median_ms": 1938,
+          "min_ms": 1917,
+          "max_ms": 1951,
+          "phases_median_ms": {
+            "load TAST + sort": 174,
+            "prepare": 23,
+            "optimize + generate": 1430,
+            "finalize + emit": 210,
+            "backend total": 1938
+          }
+        }
+      },
+      "input": {
+        "modules": 237,
+        "types": 134884,
+        "tast_bytes": 25690823,
+        "tast_sha256": "3cc5538f7b5754186ba93fb094af7234e4f5174fccc840e0029b92b1be9bd258"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-avar/definition.json",
+      "definition_sha256": "50742fdbd7b2d059d43235fb7140292490cbf87def99be01efe78b102aa111b1",
+      "generated_sha256": "3ae0e1b8fdb740521175bd6089b10a7baf6dbcc895babc50141697327ee53f7e",
+      "generated_files": 482
+    },
+    {
+      "name": "purust-catenable-lists",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            3497,
+            3473,
+            3474,
+            3457,
+            3483
+          ],
+          "median_ms": 3474,
+          "min_ms": 3457,
+          "max_ms": 3497,
+          "phases_median_ms": {
+            "load TAST + sort": 350,
+            "prepare": 28,
+            "optimize + generate": 2750,
+            "finalize + emit": 312,
+            "backend total": 3474
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1177,
+            1182,
+            1166,
+            1163,
+            1198
+          ],
+          "median_ms": 1177,
+          "min_ms": 1163,
+          "max_ms": 1198,
+          "phases_median_ms": {
+            "load TAST + sort": 103,
+            "prepare": 13,
+            "optimize + generate": 889,
+            "finalize + emit": 111,
+            "backend total": 1177
+          }
+        }
+      },
+      "input": {
+        "modules": 152,
+        "types": 81922,
+        "tast_bytes": 15250017,
+        "tast_sha256": "53b2468e3911caebef7d974716849632f3c98ff68133f1c988b8e655f647d12e"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-catenable-lists/definition.json",
+      "definition_sha256": "5826e630b1142059fcfbeaa3c64e497ee00874c9cd2c125d8a61e90cc684e350",
+      "generated_sha256": "89fba0a998e15b1d9f19c58367cb4763f97a419dcd6ca2f60ac9457ae7c102c9",
+      "generated_files": 312
+    },
+    {
+      "name": "purust-console",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            665,
+            674,
+            663,
+            658,
+            664
+          ],
+          "median_ms": 664,
+          "min_ms": 658,
+          "max_ms": 674,
+          "phases_median_ms": {
+            "load TAST + sort": 96,
+            "prepare": 9,
+            "optimize + generate": 464,
+            "finalize + emit": 83,
+            "backend total": 664
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            182,
+            184,
+            186,
+            183,
+            182
+          ],
+          "median_ms": 183,
+          "min_ms": 182,
+          "max_ms": 186,
+          "phases_median_ms": {
+            "load TAST + sort": 21,
+            "prepare": 5,
+            "optimize + generate": 113,
+            "finalize + emit": 33,
+            "backend total": 183
+          }
+        }
+      },
+      "input": {
+        "modules": 59,
+        "types": 13972,
+        "tast_bytes": 2843068,
+        "tast_sha256": "368380b6f7541810bc914fcf890145fd4c96afce64100f6f4dcd6769ad89537c"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-console/definition.json",
+      "definition_sha256": "17b26a41bc92115f6d4ba2196f5b255861b34b9fc4a5bf7fb020373beffe6625",
+      "generated_sha256": "07ee45f38cfc500ff14c9361a6b32586b6a9cf794794648d3a0f196b6f6f25d2",
+      "generated_files": 126
+    },
+    {
+      "name": "purust-datetime",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            5682,
+            5659,
+            5642,
+            5623,
+            5686
+          ],
+          "median_ms": 5659,
+          "min_ms": 5623,
+          "max_ms": 5686,
+          "phases_median_ms": {
+            "load TAST + sort": 443,
+            "prepare": 38,
+            "optimize + generate": 4700,
+            "finalize + emit": 439,
+            "backend total": 5659
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1911,
+            1888,
+            1902,
+            1826,
+            1969
+          ],
+          "median_ms": 1902,
+          "min_ms": 1826,
+          "max_ms": 1969,
+          "phases_median_ms": {
+            "load TAST + sort": 140,
+            "prepare": 21,
+            "optimize + generate": 1524,
+            "finalize + emit": 142,
+            "backend total": 1902
+          }
+        }
+      },
+      "input": {
+        "modules": 197,
+        "types": 105447,
+        "tast_bytes": 20946582,
+        "tast_sha256": "2d806c005bebdc39ba60a5044e5086dc5b8492103c4b2a58ed163e4be244ebbb"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-datetime/definition.json",
+      "definition_sha256": "ac78351f4944cdc71f2a4db958c3199186c28f4cb2d60f591bc89a10c64b7f53",
+      "generated_sha256": "82d402f00c44183ad2d0415c7715c2ea3f2f635664972416404aa8cde7b6267a",
+      "generated_files": 402
+    },
+    {
+      "name": "purust-effect",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            1231,
+            1244,
+            1240,
+            1239,
+            1240
+          ],
+          "median_ms": 1240,
+          "min_ms": 1231,
+          "max_ms": 1244,
+          "phases_median_ms": {
+            "load TAST + sort": 128,
+            "prepare": 11,
+            "optimize + generate": 998,
+            "finalize + emit": 89,
+            "backend total": 1240
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            474,
+            477,
+            478,
+            475,
+            474
+          ],
+          "median_ms": 475,
+          "min_ms": 474,
+          "max_ms": 478,
+          "phases_median_ms": {
+            "load TAST + sort": 32,
+            "prepare": 6,
+            "optimize + generate": 388,
+            "finalize + emit": 36,
+            "backend total": 475
+          }
+        }
+      },
+      "input": {
+        "modules": 64,
+        "types": 17656,
+        "tast_bytes": 4373733,
+        "tast_sha256": "ba5ccd875bbac58f7f1cd25254693f747c6c0ed411858f5c2076e1cdaa08a309"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-effect/definition.json",
+      "definition_sha256": "620120b1f6b6c500a14647a87f9cbf5cde7f1bceb4b525ebd95080c5fdaecf6f",
+      "generated_sha256": "7533fbb10272c432f8f6603201779ffc6be6f70ddbd44112fc99e52041b45922",
+      "generated_files": 136
+    },
+    {
+      "name": "purust-enums",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            2940,
+            3091,
+            2950,
+            2980,
+            2909
+          ],
+          "median_ms": 2950,
+          "min_ms": 2909,
+          "max_ms": 3091,
+          "phases_median_ms": {
+            "load TAST + sort": 331,
+            "prepare": 26,
+            "optimize + generate": 2212,
+            "finalize + emit": 363,
+            "backend total": 2950
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            923,
+            920,
+            916,
+            969,
+            945
+          ],
+          "median_ms": 923,
+          "min_ms": 916,
+          "max_ms": 969,
+          "phases_median_ms": {
+            "load TAST + sort": 101,
+            "prepare": 17,
+            "optimize + generate": 643,
+            "finalize + emit": 114,
+            "backend total": 923
+          }
+        }
+      },
+      "input": {
+        "modules": 168,
+        "types": 78160,
+        "tast_bytes": 14269882,
+        "tast_sha256": "8c6dc0f8b80fbe7f983706bed9de0bbfa4585279360a79bc63500581aa7def38"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-enums/definition.json",
+      "definition_sha256": "f5800e8682589082fecb510266b627b7218dd73dff318795841db72357514c40",
+      "generated_sha256": "dc56416b8a1a268d43283dbbae03d83fd617fd92b5466de7f6738682130c34a5",
+      "generated_files": 344
+    },
+    {
+      "name": "purust-exceptions",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            929,
+            923,
+            924,
+            927,
+            924
+          ],
+          "median_ms": 924,
+          "min_ms": 923,
+          "max_ms": 929,
+          "phases_median_ms": {
+            "load TAST + sort": 118,
+            "prepare": 13,
+            "optimize + generate": 665,
+            "finalize + emit": 116,
+            "backend total": 924
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            275,
+            276,
+            277,
+            274,
+            277
+          ],
+          "median_ms": 276,
+          "min_ms": 274,
+          "max_ms": 277,
+          "phases_median_ms": {
+            "load TAST + sort": 29,
+            "prepare": 7,
+            "optimize + generate": 181,
+            "finalize + emit": 44,
+            "backend total": 276
+          }
+        }
+      },
+      "input": {
+        "modules": 82,
+        "types": 20217,
+        "tast_bytes": 4014714,
+        "tast_sha256": "88c5070946c63e05566f1f44b6df90ebf8e02568998c9c5154fca4891294fd2b"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-exceptions/definition.json",
+      "definition_sha256": "9bb01c2b2c3dd058eb94ce3d4e5d55aa6803c4d0c64d991abbf818d4c96035ff",
+      "generated_sha256": "7b44d966ec1158a705c1fcfdeb649562596087f89d47c141c82ccc9131e9e4ca",
+      "generated_files": 172
+    },
+    {
+      "name": "purust-exists",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            623,
+            633,
+            630,
+            625,
+            629
+          ],
+          "median_ms": 629,
+          "min_ms": 623,
+          "max_ms": 633,
+          "phases_median_ms": {
+            "load TAST + sort": 95,
+            "prepare": 10,
+            "optimize + generate": 432,
+            "finalize + emit": 81,
+            "backend total": 629
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            171,
+            171,
+            170,
+            173,
+            184
+          ],
+          "median_ms": 171,
+          "min_ms": 170,
+          "max_ms": 184,
+          "phases_median_ms": {
+            "load TAST + sort": 20,
+            "prepare": 5,
+            "optimize + generate": 103,
+            "finalize + emit": 32,
+            "backend total": 171
+          }
+        }
+      },
+      "input": {
+        "modules": 60,
+        "types": 13938,
+        "tast_bytes": 2716868,
+        "tast_sha256": "a8234e241a3953cf13d7b2842a30cc61a68acd2ecc84a00149b479540c81bd1d"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-exists/definition.json",
+      "definition_sha256": "8ab82b0690398de3c7064a7873b6a0eaec3638ff9a8a719cdffa9b8fe1752f76",
+      "generated_sha256": "f60abf58262d18d4527fd8b43d08320cef807746cbb0d8a75d4718f612b3aea8",
+      "generated_files": 128
+    },
+    {
+      "name": "purust-foldable-traversable",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            3616,
+            3593,
+            3577,
+            3586,
+            3594
+          ],
+          "median_ms": 3593,
+          "min_ms": 3577,
+          "max_ms": 3616,
+          "phases_median_ms": {
+            "load TAST + sort": 328,
+            "prepare": 27,
+            "optimize + generate": 2877,
+            "finalize + emit": 316,
+            "backend total": 3593
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1220,
+            1225,
+            1263,
+            1210,
+            1205
+          ],
+          "median_ms": 1220,
+          "min_ms": 1205,
+          "max_ms": 1263,
+          "phases_median_ms": {
+            "load TAST + sort": 101,
+            "prepare": 16,
+            "optimize + generate": 936,
+            "finalize + emit": 108,
+            "backend total": 1220
+          }
+        }
+      },
+      "input": {
+        "modules": 162,
+        "types": 78854,
+        "tast_bytes": 14568696,
+        "tast_sha256": "2b79788899fe0932a76240959ac9034cbdcda6b3158c11f1f1bb2a31fe09e081"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-foldable-traversable/definition.json",
+      "definition_sha256": "d1c99308c803c56318f4902d83f00e947e634207c98214fd20948cb5ccd9da76",
+      "generated_sha256": "b08e881e6c4917bc91e1779938203ec1c462d5f5477a7a0e1a4118c39518cd89",
+      "generated_files": 332
+    },
+    {
+      "name": "purust-foreign",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4974,
+            5144,
+            4925,
+            4945,
+            4949
+          ],
+          "median_ms": 4949,
+          "min_ms": 4925,
+          "max_ms": 5144,
+          "phases_median_ms": {
+            "load TAST + sort": 476,
+            "prepare": 39,
+            "optimize + generate": 3883,
+            "finalize + emit": 509,
+            "backend total": 4949
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1647,
+            1757,
+            1657,
+            1630,
+            1617
+          ],
+          "median_ms": 1647,
+          "min_ms": 1617,
+          "max_ms": 1757,
+          "phases_median_ms": {
+            "load TAST + sort": 151,
+            "prepare": 22,
+            "optimize + generate": 1224,
+            "finalize + emit": 161,
+            "backend total": 1647
+          }
+        }
+      },
+      "input": {
+        "modules": 227,
+        "types": 118882,
+        "tast_bytes": 22057313,
+        "tast_sha256": "3e0c566df5ebeaba1d5b612713eaf6be79e859c0ce91c0f81383d62e74bfbb36"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-foreign/definition.json",
+      "definition_sha256": "8bb50a7e5505f9143b81c09d5556ace6c8f6ca3316077497934a4a2b57939ee2",
+      "generated_sha256": "42343d9d027bc628baee9f7a597364e8de9b8d5f21c998ba83a70906127c361e",
+      "generated_files": 462
+    },
+    {
+      "name": "purust-foreign-object",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6295,
+            6320,
+            6314,
+            6499,
+            6589
+          ],
+          "median_ms": 6320,
+          "min_ms": 6295,
+          "max_ms": 6589,
+          "phases_median_ms": {
+            "load TAST + sort": 561,
+            "prepare": 47,
+            "optimize + generate": 5078,
+            "finalize + emit": 588,
+            "backend total": 6320
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2062,
+            2125,
+            2217,
+            2451,
+            2232
+          ],
+          "median_ms": 2217,
+          "min_ms": 2062,
+          "max_ms": 2451,
+          "phases_median_ms": {
+            "load TAST + sort": 177,
+            "prepare": 25,
+            "optimize + generate": 1732,
+            "finalize + emit": 184,
+            "backend total": 2217
+          }
+        }
+      },
+      "input": {
+        "modules": 252,
+        "types": 136611,
+        "tast_bytes": 25732208,
+        "tast_sha256": "d433d495da969691b04abcdc79984dd8e4c55fabbcd30ccf5c9f0f507e1b2858"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-foreign-object/definition.json",
+      "definition_sha256": "16c883f172ccdc1068a29f25a41650147acf7dd330593217cb1d6c91bf113c61",
+      "generated_sha256": "c80dbe35570171dfcb1c77d809a34aa053201ad6de0151b5d630d85a40232f40",
+      "generated_files": 512
+    },
+    {
+      "name": "purust-free",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4554,
+            4570,
+            4567,
+            4666,
+            4759
+          ],
+          "median_ms": 4570,
+          "min_ms": 4554,
+          "max_ms": 4759,
+          "phases_median_ms": {
+            "load TAST + sort": 457,
+            "prepare": 35,
+            "optimize + generate": 3514,
+            "finalize + emit": 532,
+            "backend total": 4570
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1516,
+            1506,
+            1520,
+            1575,
+            1574
+          ],
+          "median_ms": 1520,
+          "min_ms": 1506,
+          "max_ms": 1575,
+          "phases_median_ms": {
+            "load TAST + sort": 146,
+            "prepare": 18,
+            "optimize + generate": 1128,
+            "finalize + emit": 160,
+            "backend total": 1520
+          }
+        }
+      },
+      "input": {
+        "modules": 198,
+        "types": 115364,
+        "tast_bytes": 20245636,
+        "tast_sha256": "7d0b9689d54e182c35580f6a28d0a8c6d420ce0b82518f3607fcc1e82489fd3f"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-free/definition.json",
+      "definition_sha256": "25644b94ec953b2c3a9aa43c07c98a02e70cdaa5a426584ab88aa248b376b0e4",
+      "generated_sha256": "4af978c151f85b9e111fb758d22e76cc034a00d718e4bac493e271380de7a06f",
+      "generated_files": 404
+    },
+    {
+      "name": "purust-functions",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            1361,
+            1365,
+            1342,
+            1366,
+            1411
+          ],
+          "median_ms": 1365,
+          "min_ms": 1342,
+          "max_ms": 1411,
+          "phases_median_ms": {
+            "load TAST + sort": 116,
+            "prepare": 10,
+            "optimize + generate": 1141,
+            "finalize + emit": 87,
+            "backend total": 1365
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            503,
+            520,
+            522,
+            508,
+            498
+          ],
+          "median_ms": 508,
+          "min_ms": 498,
+          "max_ms": 522,
+          "phases_median_ms": {
+            "load TAST + sort": 27,
+            "prepare": 6,
+            "optimize + generate": 431,
+            "finalize + emit": 32,
+            "backend total": 508
+          }
+        }
+      },
+      "input": {
+        "modules": 61,
+        "types": 16316,
+        "tast_bytes": 3690684,
+        "tast_sha256": "1ff751bc13bc4b4d009f283d7193df0d3cb7ee9f294a21f7a4e2a95c985aa290"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-functions/definition.json",
+      "definition_sha256": "f4db7be7127c6849918727ba5789836910149ce1bf2e9853b5e7b6a6c7896eb1",
+      "generated_sha256": "50b1dfa6a40944a64ef25d77a3bfe36f2c95d1cd3b6fc16baf4c8e4b7eb64c7c",
+      "generated_files": 130
+    },
+    {
+      "name": "purust-integers",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4330,
+            4420,
+            4414,
+            4328,
+            4359
+          ],
+          "median_ms": 4359,
+          "min_ms": 4328,
+          "max_ms": 4420,
+          "phases_median_ms": {
+            "load TAST + sort": 323,
+            "prepare": 26,
+            "optimize + generate": 3637,
+            "finalize + emit": 321,
+            "backend total": 4359
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1410,
+            1356,
+            1353,
+            1398,
+            1409
+          ],
+          "median_ms": 1398,
+          "min_ms": 1353,
+          "max_ms": 1410,
+          "phases_median_ms": {
+            "load TAST + sort": 91,
+            "prepare": 15,
+            "optimize + generate": 1144,
+            "finalize + emit": 103,
+            "backend total": 1398
+          }
+        }
+      },
+      "input": {
+        "modules": 161,
+        "types": 73198,
+        "tast_bytes": 13161292,
+        "tast_sha256": "51178e88478b6e253b7ce039cdfa956aeafeddc764a428ecb63e2b0aac98510e"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-integers/definition.json",
+      "definition_sha256": "9983e96d271d3b84c14fca70882cd51ea8f8d54803908c4f5bdcaf2d16913626",
+      "generated_sha256": "362eb9a988695d735b525054b037d8ddc055d2a1ca774c76f5b04756f756e248",
+      "generated_files": 330
+    },
+    {
+      "name": "purust-js-bigints",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6665,
+            6619,
+            6575,
+            6620,
+            6977
+          ],
+          "median_ms": 6620,
+          "min_ms": 6575,
+          "max_ms": 6977,
+          "phases_median_ms": {
+            "load TAST + sort": 531,
+            "prepare": 45,
+            "optimize + generate": 5397,
+            "finalize + emit": 596,
+            "backend total": 6620
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2320,
+            2336,
+            2260,
+            2361,
+            2431
+          ],
+          "median_ms": 2336,
+          "min_ms": 2260,
+          "max_ms": 2431,
+          "phases_median_ms": {
+            "load TAST + sort": 175,
+            "prepare": 25,
+            "optimize + generate": 1869,
+            "finalize + emit": 191,
+            "backend total": 2336
+          }
+        }
+      },
+      "input": {
+        "modules": 266,
+        "types": 129675,
+        "tast_bytes": 24991152,
+        "tast_sha256": "30d92e857a1cb1872e9ce62b07dfed547904b44169564c537713a34a0c49f309"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-js-bigints/definition.json",
+      "definition_sha256": "8df955fa3d9258a8b1e6f3baefd392d2de29174085ab78222ca9182837ddc597",
+      "generated_sha256": "b5a0872342a0b93d6f61e2ddcc4360a47f7bef1ba6db0559316f5e7a0b805c62",
+      "generated_files": 540
+    },
+    {
+      "name": "purust-js-date",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            5962,
+            5729,
+            5633,
+            5642,
+            5576
+          ],
+          "median_ms": 5642,
+          "min_ms": 5576,
+          "max_ms": 5962,
+          "phases_median_ms": {
+            "load TAST + sort": 540,
+            "prepare": 46,
+            "optimize + generate": 4449,
+            "finalize + emit": 562,
+            "backend total": 5642
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2035,
+            1933,
+            1948,
+            1908,
+            1933
+          ],
+          "median_ms": 1933,
+          "min_ms": 1908,
+          "max_ms": 2035,
+          "phases_median_ms": {
+            "load TAST + sort": 175,
+            "prepare": 24,
+            "optimize + generate": 1469,
+            "finalize + emit": 179,
+            "backend total": 1933
+          }
+        }
+      },
+      "input": {
+        "modules": 249,
+        "types": 132606,
+        "tast_bytes": 25500662,
+        "tast_sha256": "05176050d22e0f458b14457749163a302b3ecbe939444b1f49b4076fdd423426"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-js-date/definition.json",
+      "definition_sha256": "903a9d8aa22a77508c337296b8c9872efb94a6de41671ffd1885fe11c24dc809",
+      "generated_sha256": "b34828f2168335f4a88bc752503f7286521d96cc2667c187812348623cfdde7a",
+      "generated_files": 506
+    },
+    {
+      "name": "purust-js-promise",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6144,
+            6091,
+            6029,
+            6010,
+            6029
+          ],
+          "median_ms": 6029,
+          "min_ms": 6010,
+          "max_ms": 6144,
+          "phases_median_ms": {
+            "load TAST + sort": 550,
+            "prepare": 47,
+            "optimize + generate": 4597,
+            "finalize + emit": 795,
+            "backend total": 6029
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2032,
+            2018,
+            1953,
+            2025,
+            1954
+          ],
+          "median_ms": 2018,
+          "min_ms": 1953,
+          "max_ms": 2032,
+          "phases_median_ms": {
+            "load TAST + sort": 183,
+            "prepare": 25,
+            "optimize + generate": 1491,
+            "finalize + emit": 224,
+            "backend total": 2018
+          }
+        }
+      },
+      "input": {
+        "modules": 258,
+        "types": 139265,
+        "tast_bytes": 26525126,
+        "tast_sha256": "c4a03c2c83e8eff3d4f336dbd17acf5536505347b52edb38834ce64fb217201a"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-js-promise/definition.json",
+      "definition_sha256": "d6f6e36259a18f5631fd9cb8ccc966ad9f26e120616c6d9b8e6129901ac80169",
+      "generated_sha256": "08339f4bb8bef2b4557c406e097d38e5fdc7911e94f6ca7b2e6566150f1e39e6",
+      "generated_files": 524
+    },
+    {
+      "name": "purust-js-promise-aff",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6074,
+            6228,
+            6100,
+            6165,
+            6463
+          ],
+          "median_ms": 6165,
+          "min_ms": 6074,
+          "max_ms": 6463,
+          "phases_median_ms": {
+            "load TAST + sort": 564,
+            "prepare": 47,
+            "optimize + generate": 4669,
+            "finalize + emit": 815,
+            "backend total": 6165
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2042,
+            2144,
+            2078,
+            2191,
+            2057
+          ],
+          "median_ms": 2078,
+          "min_ms": 2042,
+          "max_ms": 2191,
+          "phases_median_ms": {
+            "load TAST + sort": 185,
+            "prepare": 27,
+            "optimize + generate": 1536,
+            "finalize + emit": 228,
+            "backend total": 2078
+          }
+        }
+      },
+      "input": {
+        "modules": 272,
+        "types": 143081,
+        "tast_bytes": 26997108,
+        "tast_sha256": "4c1edc6c1ba2c18266715084b34b51b116f40b6c9eb1ac23538425499832e91c"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-js-promise-aff/definition.json",
+      "definition_sha256": "8b5273b9d2bd00ae6e352146d4b0633b55c8b0082821e884a723334f0f621b84",
+      "generated_sha256": "5a5547d9c038c9b79b9ce4017eee73298bd1616161326783988dfbe7f4e1fae7",
+      "generated_files": 552
+    },
+    {
+      "name": "purust-lazy",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            2140,
+            2129,
+            2184,
+            2162,
+            2130
+          ],
+          "median_ms": 2140,
+          "min_ms": 2129,
+          "max_ms": 2184,
+          "phases_median_ms": {
+            "load TAST + sort": 275,
+            "prepare": 22,
+            "optimize + generate": 1569,
+            "finalize + emit": 255,
+            "backend total": 2140
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            693,
+            707,
+            701,
+            692,
+            690
+          ],
+          "median_ms": 693,
+          "min_ms": 690,
+          "max_ms": 707,
+          "phases_median_ms": {
+            "load TAST + sort": 75,
+            "prepare": 11,
+            "optimize + generate": 484,
+            "finalize + emit": 85,
+            "backend total": 693
+          }
+        }
+      },
+      "input": {
+        "modules": 133,
+        "types": 62314,
+        "tast_bytes": 10831122,
+        "tast_sha256": "991e01593cccc3463203f2c7641557884186f312825d4a881d9e2803049f027d"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-lazy/definition.json",
+      "definition_sha256": "18456ddc5548e9229e136482edb0b99443ec058c33ce684955354cc3eb9d1e6d",
+      "generated_sha256": "21fb75da86ee7aca27f0fa4b32b45c39da93ee9257f23595e190b4456d810f8a",
+      "generated_files": 274
+    },
+    {
+      "name": "purust-node-buffer",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4788,
+            4894,
+            4972,
+            4767,
+            5307
+          ],
+          "median_ms": 4894,
+          "min_ms": 4767,
+          "max_ms": 5307,
+          "phases_median_ms": {
+            "load TAST + sort": 497,
+            "prepare": 40,
+            "optimize + generate": 3718,
+            "finalize + emit": 596,
+            "backend total": 4894
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1593,
+            1631,
+            1651,
+            1586,
+            1601
+          ],
+          "median_ms": 1601,
+          "min_ms": 1586,
+          "max_ms": 1651,
+          "phases_median_ms": {
+            "load TAST + sort": 155,
+            "prepare": 25,
+            "optimize + generate": 1171,
+            "finalize + emit": 176,
+            "backend total": 1601
+          }
+        }
+      },
+      "input": {
+        "modules": 240,
+        "types": 121502,
+        "tast_bytes": 22583973,
+        "tast_sha256": "43c1f26f4333f1c0c310bbde3ba58faa87605c6e00de9bd3af075f1dbcd24ae7"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-node-buffer/definition.json",
+      "definition_sha256": "b6fa2475c9bfbcf41ee2828493450e2b04d815be554e5f84b316afd9530f74e4",
+      "generated_sha256": "63d54810048b9ec3e01fa867ba63cc5e9d07fb1afc9952f890f481c554d00572",
+      "generated_files": 488
+    },
+    {
+      "name": "purust-node-child-process",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            7740,
+            7434,
+            7587,
+            7651,
+            7763
+          ],
+          "median_ms": 7651,
+          "min_ms": 7434,
+          "max_ms": 7763,
+          "phases_median_ms": {
+            "load TAST + sort": 650,
+            "prepare": 53,
+            "optimize + generate": 5473,
+            "finalize + emit": 1406,
+            "backend total": 7651
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2529,
+            2475,
+            2625,
+            2666,
+            2609
+          ],
+          "median_ms": 2609,
+          "min_ms": 2475,
+          "max_ms": 2666,
+          "phases_median_ms": {
+            "load TAST + sort": 212,
+            "prepare": 35,
+            "optimize + generate": 1907,
+            "finalize + emit": 323,
+            "backend total": 2609
+          }
+        }
+      },
+      "input": {
+        "modules": 299,
+        "types": 153890,
+        "tast_bytes": 30160433,
+        "tast_sha256": "f61ab30e2fe7754951aa7c6938614e05058166ab76e9b2277a28bb49b761bbb1"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-node-child-process/definition.json",
+      "definition_sha256": "9b70dabeb12de94bef5ec5390a62f33620d99104bac2bab5594c3d3c1478c0ba",
+      "generated_sha256": "40ff0c40f2b9aa32b65bc5ab59dac621214d7095f68f00024ece1741de68fd4d",
+      "generated_files": 606
+    },
+    {
+      "name": "purust-node-event-emitter",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            8361,
+            7978,
+            8202,
+            8350,
+            8170
+          ],
+          "median_ms": 8202,
+          "min_ms": 7978,
+          "max_ms": 8361,
+          "phases_median_ms": {
+            "load TAST + sort": 679,
+            "prepare": 55,
+            "optimize + generate": 6240,
+            "finalize + emit": 1133,
+            "backend total": 8202
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2925,
+            2777,
+            2778,
+            2862,
+            2809
+          ],
+          "median_ms": 2809,
+          "min_ms": 2777,
+          "max_ms": 2925,
+          "phases_median_ms": {
+            "load TAST + sort": 234,
+            "prepare": 31,
+            "optimize + generate": 2093,
+            "finalize + emit": 294,
+            "backend total": 2809
+          }
+        }
+      },
+      "input": {
+        "modules": 299,
+        "types": 179888,
+        "tast_bytes": 34531624,
+        "tast_sha256": "75a4bb1203920cdab520996c61dee75b44f2fe34c7813ad1287bedb21149ef09"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-node-event-emitter/definition.json",
+      "definition_sha256": "195476e49688f5d5d5fe11110dcb56886dc7a5b82244879eb39de01bb03a6f82",
+      "generated_sha256": "7b09c410ca3f1e9df075658617f03d94746c8b6e72971c5ec868659bccf40277",
+      "generated_files": 606
+    },
+    {
+      "name": "purust-node-fs",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            7430,
+            7425,
+            7539,
+            7607,
+            7288
+          ],
+          "median_ms": 7430,
+          "min_ms": 7288,
+          "max_ms": 7607,
+          "phases_median_ms": {
+            "load TAST + sort": 594,
+            "prepare": 48,
+            "optimize + generate": 5713,
+            "finalize + emit": 1008,
+            "backend total": 7430
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2508,
+            2528,
+            2548,
+            2403,
+            2416
+          ],
+          "median_ms": 2508,
+          "min_ms": 2403,
+          "max_ms": 2548,
+          "phases_median_ms": {
+            "load TAST + sort": 198,
+            "prepare": 32,
+            "optimize + generate": 1897,
+            "finalize + emit": 263,
+            "backend total": 2508
+          }
+        }
+      },
+      "input": {
+        "modules": 283,
+        "types": 147767,
+        "tast_bytes": 29101821,
+        "tast_sha256": "76f406c325fe2c221d1394e1d6b832c64938ccc21541163716210c511f3cb4b5"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-node-fs/definition.json",
+      "definition_sha256": "c733855317407a831a5d4af5b2037c0ad5409167dfa88e1bb069ded050960c85",
+      "generated_sha256": "b52069de302b87661b07c8d07805352641cdd85e6567730be24bbb07c6dc357c",
+      "generated_files": 574
+    },
+    {
+      "name": "purust-node-http",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            7076,
+            7126,
+            7105,
+            7134,
+            7075
+          ],
+          "median_ms": 7105,
+          "min_ms": 7075,
+          "max_ms": 7134,
+          "phases_median_ms": {
+            "load TAST + sort": 614,
+            "prepare": 56,
+            "optimize + generate": 5181,
+            "finalize + emit": 1195,
+            "backend total": 7105
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2452,
+            2457,
+            2481,
+            2435,
+            2433
+          ],
+          "median_ms": 2452,
+          "min_ms": 2433,
+          "max_ms": 2481,
+          "phases_median_ms": {
+            "load TAST + sort": 208,
+            "prepare": 37,
+            "optimize + generate": 1790,
+            "finalize + emit": 300,
+            "backend total": 2452
+          }
+        }
+      },
+      "input": {
+        "modules": 310,
+        "types": 156924,
+        "tast_bytes": 30366239,
+        "tast_sha256": "93ce5e0160bd456576cb369bd499dcb83a122a171aa32cedcee6558b5bd75925"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-node-http/definition.json",
+      "definition_sha256": "d3f977ef492deb99b1bda76d730d9741f41ddecb1cb379c154ec8c36615ce379",
+      "generated_sha256": "0f4d687598bb286ad99550fee33b2e403a9c83b3e790edb127da92823c14d62d",
+      "generated_files": 628
+    },
+    {
+      "name": "purust-node-net",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6830,
+            6793,
+            6777,
+            6835,
+            6805
+          ],
+          "median_ms": 6805,
+          "min_ms": 6777,
+          "max_ms": 6835,
+          "phases_median_ms": {
+            "load TAST + sort": 594,
+            "prepare": 50,
+            "optimize + generate": 5039,
+            "finalize + emit": 1077,
+            "backend total": 6805
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2322,
+            2310,
+            2281,
+            2309,
+            2312
+          ],
+          "median_ms": 2310,
+          "min_ms": 2281,
+          "max_ms": 2322,
+          "phases_median_ms": {
+            "load TAST + sort": 201,
+            "prepare": 33,
+            "optimize + generate": 1689,
+            "finalize + emit": 278,
+            "backend total": 2310
+          }
+        }
+      },
+      "input": {
+        "modules": 296,
+        "types": 152177,
+        "tast_bytes": 29351610,
+        "tast_sha256": "9ecff7433fe9c0a30a8779136c0560b95251c40f0aa547bb158da42b63f4e028"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-node-net/definition.json",
+      "definition_sha256": "fd548d063a54a9e593a9136f95c0472c06771e545f20182fbc9043007e7eee66",
+      "generated_sha256": "33acda7c7a89286ae5e6f0d571b6afccb78be5208aa72a99c11bf36d0b17e7b6",
+      "generated_files": 600
+    },
+    {
+      "name": "purust-node-os",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6000,
+            5980,
+            6032,
+            6054,
+            6283
+          ],
+          "median_ms": 6032,
+          "min_ms": 5980,
+          "max_ms": 6283,
+          "phases_median_ms": {
+            "load TAST + sort": 552,
+            "prepare": 49,
+            "optimize + generate": 4657,
+            "finalize + emit": 726,
+            "backend total": 6032
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2055,
+            2086,
+            2067,
+            2119,
+            2146
+          ],
+          "median_ms": 2086,
+          "min_ms": 2055,
+          "max_ms": 2146,
+          "phases_median_ms": {
+            "load TAST + sort": 185,
+            "prepare": 28,
+            "optimize + generate": 1554,
+            "finalize + emit": 215,
+            "backend total": 2086
+          }
+        }
+      },
+      "input": {
+        "modules": 274,
+        "types": 138644,
+        "tast_bytes": 26634306,
+        "tast_sha256": "9161a83d77e44e54b94c91f00a22c51bb51dcd56af0a31e84c2c152b23111a0a"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-node-os/definition.json",
+      "definition_sha256": "7cc6f3c42ea33829265c0c05e4d6790b4fea9b07da19c94c5859238a689f349f",
+      "generated_sha256": "185f08e4b634de61ccefd9fe6a932b5add260cee0f23b8fe0e767034bca3495b",
+      "generated_files": 556
+    },
+    {
+      "name": "purust-node-path",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            639,
+            652,
+            665,
+            650,
+            643
+          ],
+          "median_ms": 650,
+          "min_ms": 639,
+          "max_ms": 665,
+          "phases_median_ms": {
+            "load TAST + sort": 94,
+            "prepare": 9,
+            "optimize + generate": 444,
+            "finalize + emit": 88,
+            "backend total": 650
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            177,
+            175,
+            175,
+            177,
+            173
+          ],
+          "median_ms": 175,
+          "min_ms": 173,
+          "max_ms": 177,
+          "phases_median_ms": {
+            "load TAST + sort": 20,
+            "prepare": 5,
+            "optimize + generate": 108,
+            "finalize + emit": 32,
+            "backend total": 175
+          }
+        }
+      },
+      "input": {
+        "modules": 59,
+        "types": 13795,
+        "tast_bytes": 2751071,
+        "tast_sha256": "21bd3cfbcad4b66427dbdbac8264ac85bfade7c85602485a38c506eeecca0ed5"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-node-path/definition.json",
+      "definition_sha256": "e44a411d28ec32904fb22314f904fdc598d6138290d9e43ddd5496d64ad60901",
+      "generated_sha256": "0c593cd5b62e947798abe676cccc78c66a9df929f90383d68c4892158d1c45e6",
+      "generated_files": 126
+    },
+    {
+      "name": "purust-node-process",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            7196,
+            7113,
+            7188,
+            7213,
+            7254
+          ],
+          "median_ms": 7196,
+          "min_ms": 7113,
+          "max_ms": 7254,
+          "phases_median_ms": {
+            "load TAST + sort": 602,
+            "prepare": 52,
+            "optimize + generate": 5457,
+            "finalize + emit": 1033,
+            "backend total": 7196
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2464,
+            2391,
+            2392,
+            2449,
+            2443
+          ],
+          "median_ms": 2443,
+          "min_ms": 2391,
+          "max_ms": 2464,
+          "phases_median_ms": {
+            "load TAST + sort": 197,
+            "prepare": 31,
+            "optimize + generate": 1850,
+            "finalize + emit": 268,
+            "backend total": 2443
+          }
+        }
+      },
+      "input": {
+        "modules": 284,
+        "types": 148060,
+        "tast_bytes": 28788427,
+        "tast_sha256": "42a08c78ead5368aa03ea04ade52adcad38fc6ab491afdc282a10f181ee8ab2e"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-node-process/definition.json",
+      "definition_sha256": "0bcc5246dccc3d3f649f9d75beed38cbffb0ccb4a93e86e56bca5ca44ee5b69c",
+      "generated_sha256": "307b7c8cf34d28387d51173023e1aa460aac91a986371d327380e9bff97f5a2e",
+      "generated_files": 576
+    },
+    {
+      "name": "purust-node-streams",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            9253,
+            9197,
+            9188,
+            8989,
+            9407
+          ],
+          "median_ms": 9197,
+          "min_ms": 8989,
+          "max_ms": 9407,
+          "phases_median_ms": {
+            "load TAST + sort": 780,
+            "prepare": 62,
+            "optimize + generate": 6925,
+            "finalize + emit": 1367,
+            "backend total": 9197
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            3491,
+            3559,
+            3489,
+            3382,
+            3465
+          ],
+          "median_ms": 3489,
+          "min_ms": 3382,
+          "max_ms": 3559,
+          "phases_median_ms": {
+            "load TAST + sort": 267,
+            "prepare": 38,
+            "optimize + generate": 2653,
+            "finalize + emit": 345,
+            "backend total": 3489
+          }
+        }
+      },
+      "input": {
+        "modules": 340,
+        "types": 194528,
+        "tast_bytes": 38286610,
+        "tast_sha256": "55be19f15000f7351bd0c89e52af8a3bfe5d368281d3972a2da17e40f83b26fb"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-node-streams/definition.json",
+      "definition_sha256": "9c9336acf10e4d7e31e0858386213ff5e7b7ea6887f5e51664ae2e94049c2765",
+      "generated_sha256": "3bf018269a01301c30466bfeee747df658d782fd5ed87bb5c0b993a2c6829811",
+      "generated_files": 688
+    },
+    {
+      "name": "purust-now",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6784,
+            6643,
+            6774,
+            6935,
+            6780
+          ],
+          "median_ms": 6780,
+          "min_ms": 6643,
+          "max_ms": 6935,
+          "phases_median_ms": {
+            "load TAST + sort": 602,
+            "prepare": 48,
+            "optimize + generate": 5121,
+            "finalize + emit": 960,
+            "backend total": 6780
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2269,
+            2277,
+            2520,
+            2371,
+            2310
+          ],
+          "median_ms": 2310,
+          "min_ms": 2269,
+          "max_ms": 2520,
+          "phases_median_ms": {
+            "load TAST + sort": 198,
+            "prepare": 32,
+            "optimize + generate": 1713,
+            "finalize + emit": 263,
+            "backend total": 2310
+          }
+        }
+      },
+      "input": {
+        "modules": 286,
+        "types": 148033,
+        "tast_bytes": 28598524,
+        "tast_sha256": "90718a366bb2561e0727f678cfef1eec4d0b9b7c7032f6bd466eb4314f5ff415"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-now/definition.json",
+      "definition_sha256": "bd683fb28335e6451925653c8739d0fbb22b3af2ca65cc2d7ebd2acceee17018",
+      "generated_sha256": "d3f87bc2ec94bbd7bcfc099cf0a05a740b9db410348f46cc26ad1c88bf976048",
+      "generated_files": 580
+    },
+    {
+      "name": "purust-nullable",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4599,
+            4850,
+            4586,
+            4977,
+            4653
+          ],
+          "median_ms": 4653,
+          "min_ms": 4586,
+          "max_ms": 4977,
+          "phases_median_ms": {
+            "load TAST + sort": 486,
+            "prepare": 39,
+            "optimize + generate": 3576,
+            "finalize + emit": 520,
+            "backend total": 4653
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1597,
+            1518,
+            1590,
+            1509,
+            1557
+          ],
+          "median_ms": 1557,
+          "min_ms": 1509,
+          "max_ms": 1597,
+          "phases_median_ms": {
+            "load TAST + sort": 151,
+            "prepare": 22,
+            "optimize + generate": 1144,
+            "finalize + emit": 170,
+            "backend total": 1557
+          }
+        }
+      },
+      "input": {
+        "modules": 229,
+        "types": 119097,
+        "tast_bytes": 21863561,
+        "tast_sha256": "e202131f3db9d6159b60b563fc8860dcd7d63e3d6bd84bc868ab2b383a975529"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-nullable/definition.json",
+      "definition_sha256": "cec56ab95edf7f040fc89290cccc5e26a1a75f4bbf12bef2aa8aa93b1956e2db",
+      "generated_sha256": "f85ea8ede4582bd9ea6a3bdab46c3afabfe2b574c8746b92d222d392b156d013",
+      "generated_files": 466
+    },
+    {
+      "name": "purust-numbers",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4305,
+            4376,
+            4401,
+            4498,
+            4511
+          ],
+          "median_ms": 4401,
+          "min_ms": 4305,
+          "max_ms": 4511,
+          "phases_median_ms": {
+            "load TAST + sort": 321,
+            "prepare": 26,
+            "optimize + generate": 3695,
+            "finalize + emit": 316,
+            "backend total": 4401
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1377,
+            1484,
+            1471,
+            1393,
+            1408
+          ],
+          "median_ms": 1408,
+          "min_ms": 1377,
+          "max_ms": 1484,
+          "phases_median_ms": {
+            "load TAST + sort": 96,
+            "prepare": 16,
+            "optimize + generate": 1144,
+            "finalize + emit": 105,
+            "backend total": 1408
+          }
+        }
+      },
+      "input": {
+        "modules": 160,
+        "types": 73162,
+        "tast_bytes": 13422553,
+        "tast_sha256": "ab48b7576481592ee42664735b406854635927d03fa961af1513926e821beed7"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-numbers/definition.json",
+      "definition_sha256": "1382ddb01534d49cf58456bab8c18520e01eb854bb333743e03afe0c6d73c841",
+      "generated_sha256": "bce1f0d2322de6f7d5d65527fbeeee49082924de16383042ff27bb98ee2ea0fd",
+      "generated_files": 328
+    },
+    {
+      "name": "purust-ordered-collections",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            8165,
+            8217,
+            8293,
+            8239,
+            8054
+          ],
+          "median_ms": 8217,
+          "min_ms": 8054,
+          "max_ms": 8293,
+          "phases_median_ms": {
+            "load TAST + sort": 566,
+            "prepare": 47,
+            "optimize + generate": 6979,
+            "finalize + emit": 587,
+            "backend total": 8217
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2880,
+            2986,
+            2961,
+            3004,
+            2988
+          ],
+          "median_ms": 2986,
+          "min_ms": 2880,
+          "max_ms": 3004,
+          "phases_median_ms": {
+            "load TAST + sort": 183,
+            "prepare": 25,
+            "optimize + generate": 2504,
+            "finalize + emit": 185,
+            "backend total": 2986
+          }
+        }
+      },
+      "input": {
+        "modules": 240,
+        "types": 133531,
+        "tast_bytes": 25850618,
+        "tast_sha256": "50de5dde8edfddc8615a70c69816db695c2b26b8f425c11013d6420bfcb6542e"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-ordered-collections/definition.json",
+      "definition_sha256": "aeee7b535a7280a3069097a7b70bc3ec3af7236fe99c7cb3b5fdf202fd4456e8",
+      "generated_sha256": "adfad15509a2142755aca72b84d2ceae3cfc25559c7a8ba42328d5362f7e032f",
+      "generated_files": 488
+    },
+    {
+      "name": "purust-partial",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            877,
+            874,
+            867,
+            867,
+            871
+          ],
+          "median_ms": 871,
+          "min_ms": 867,
+          "max_ms": 877,
+          "phases_median_ms": {
+            "load TAST + sort": 114,
+            "prepare": 12,
+            "optimize + generate": 618,
+            "finalize + emit": 115,
+            "backend total": 871
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            272,
+            271,
+            267,
+            268,
+            268
+          ],
+          "median_ms": 268,
+          "min_ms": 267,
+          "max_ms": 272,
+          "phases_median_ms": {
+            "load TAST + sort": 29,
+            "prepare": 7,
+            "optimize + generate": 176,
+            "finalize + emit": 42,
+            "backend total": 268
+          }
+        }
+      },
+      "input": {
+        "modules": 83,
+        "types": 19863,
+        "tast_bytes": 3810630,
+        "tast_sha256": "ef52a6acef64dd7bf01240797837a03c694277594e4c652690d7dc087e072d7a"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-partial/definition.json",
+      "definition_sha256": "ee316b7ffcce38b3ade908861e5f5fe93f64e192a5b5e98954c92581ab76ba9f",
+      "generated_sha256": "20b8f3e0ce949b800a0785eeaea4a6c757f04c6b67b1eadfb6f01a5324477a84",
+      "generated_files": 174
+    },
+    {
+      "name": "purust-prelude",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            2807,
+            2793,
+            2767,
+            2766,
+            2853
+          ],
+          "median_ms": 2793,
+          "min_ms": 2766,
+          "max_ms": 2853,
+          "phases_median_ms": {
+            "load TAST + sort": 313,
+            "prepare": 27,
+            "optimize + generate": 2067,
+            "finalize + emit": 317,
+            "backend total": 2793
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            986,
+            980,
+            987,
+            985,
+            978
+          ],
+          "median_ms": 985,
+          "min_ms": 978,
+          "max_ms": 987,
+          "phases_median_ms": {
+            "load TAST + sort": 94,
+            "prepare": 16,
+            "optimize + generate": 712,
+            "finalize + emit": 107,
+            "backend total": 985
+          }
+        }
+      },
+      "input": {
+        "modules": 162,
+        "types": 75454,
+        "tast_bytes": 13892299,
+        "tast_sha256": "bbb5c23bf0585cf64078052852d16b6eae8879f928ae7d111012e9ad63a20af2"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-prelude/definition.json",
+      "definition_sha256": "34271f86c40ab523b83099826cce27355c6900863dd07b277614dbe74b8441a6",
+      "generated_sha256": "0d808fe73cae201c1acff95af7d741b75c9f9570b34ef90ca2e2599e22b9eeab",
+      "generated_files": 332
+    },
+    {
+      "name": "purust-quickcheck",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4744,
+            4753,
+            4750,
+            4814,
+            4843
+          ],
+          "median_ms": 4753,
+          "min_ms": 4744,
+          "max_ms": 4843,
+          "phases_median_ms": {
+            "load TAST + sort": 494,
+            "prepare": 37,
+            "optimize + generate": 3622,
+            "finalize + emit": 557,
+            "backend total": 4753
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1690,
+            1627,
+            1600,
+            1610,
+            1624
+          ],
+          "median_ms": 1624,
+          "min_ms": 1600,
+          "max_ms": 1690,
+          "phases_median_ms": {
+            "load TAST + sort": 157,
+            "prepare": 23,
+            "optimize + generate": 1186,
+            "finalize + emit": 173,
+            "backend total": 1624
+          }
+        }
+      },
+      "input": {
+        "modules": 232,
+        "types": 123935,
+        "tast_bytes": 22850083,
+        "tast_sha256": "34ae49244561c86af86309e4d9103cba2945e61dbb2a4a80b7edad79537b77a1"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-quickcheck/definition.json",
+      "definition_sha256": "44d9aa7dd0662fea0a3d3a856d03c8a4f863ec265183f5262fe9a16423bfd5b7",
+      "generated_sha256": "d600b501fccb23ca24c37b6ebcab790e5df8275fc8c35af33f2859280d12642c",
+      "generated_files": 472
+    },
+    {
+      "name": "purust-random",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            2611,
+            2660,
+            2709,
+            2720,
+            2528
+          ],
+          "median_ms": 2660,
+          "min_ms": 2528,
+          "max_ms": 2720,
+          "phases_median_ms": {
+            "load TAST + sort": 321,
+            "prepare": 26,
+            "optimize + generate": 1947,
+            "finalize + emit": 320,
+            "backend total": 2660
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            883,
+            905,
+            898,
+            900,
+            883
+          ],
+          "median_ms": 898,
+          "min_ms": 883,
+          "max_ms": 905,
+          "phases_median_ms": {
+            "load TAST + sort": 90,
+            "prepare": 16,
+            "optimize + generate": 643,
+            "finalize + emit": 106,
+            "backend total": 898
+          }
+        }
+      },
+      "input": {
+        "modules": 161,
+        "types": 73279,
+        "tast_bytes": 12837374,
+        "tast_sha256": "0338fe290a8601f548184bc92ca670c9b6a5388e38f98dbe74c35402a8b34c67"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-random/definition.json",
+      "definition_sha256": "2ae4c11711249b6d530c20848e64b1700bccb83396ddf4d4e912e1642d4d1228",
+      "generated_sha256": "763ba9edb860f4288d80af7f635c7fca27926a0489ef5de52edfabad04cad56d",
+      "generated_files": 330
+    },
+    {
+      "name": "purust-record",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            2601,
+            2641,
+            2617,
+            2743,
+            2739
+          ],
+          "median_ms": 2641,
+          "min_ms": 2601,
+          "max_ms": 2743,
+          "phases_median_ms": {
+            "load TAST + sort": 313,
+            "prepare": 26,
+            "optimize + generate": 1940,
+            "finalize + emit": 333,
+            "backend total": 2641
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            920,
+            896,
+            883,
+            946,
+            894
+          ],
+          "median_ms": 896,
+          "min_ms": 883,
+          "max_ms": 946,
+          "phases_median_ms": {
+            "load TAST + sort": 91,
+            "prepare": 16,
+            "optimize + generate": 636,
+            "finalize + emit": 108,
+            "backend total": 896
+          }
+        }
+      },
+      "input": {
+        "modules": 164,
+        "types": 74962,
+        "tast_bytes": 13109620,
+        "tast_sha256": "d891a7ce81387ae988074a063a315bd4c3f7e8f329d330464ee3f0888ce5567e"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-record/definition.json",
+      "definition_sha256": "6ca544d5e8902e18462da3c852f119055eac1a14e8dd9ad34d177f34818b770f",
+      "generated_sha256": "829e1a1a23fb5cd18d364609e92286e6df377c0552fe6b1dcb5617911baee627",
+      "generated_files": 336
+    },
+    {
+      "name": "purust-refs",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            720,
+            729,
+            718,
+            688,
+            713
+          ],
+          "median_ms": 718,
+          "min_ms": 688,
+          "max_ms": 729,
+          "phases_median_ms": {
+            "load TAST + sort": 101,
+            "prepare": 9,
+            "optimize + generate": 499,
+            "finalize + emit": 89,
+            "backend total": 718
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            190,
+            206,
+            211,
+            196,
+            196
+          ],
+          "median_ms": 196,
+          "min_ms": 190,
+          "max_ms": 211,
+          "phases_median_ms": {
+            "load TAST + sort": 22,
+            "prepare": 5,
+            "optimize + generate": 123,
+            "finalize + emit": 34,
+            "backend total": 196
+          }
+        }
+      },
+      "input": {
+        "modules": 61,
+        "types": 14381,
+        "tast_bytes": 2990649,
+        "tast_sha256": "007c37a554da886d8ef37c97618ec4011417b5ccaa229cc1fac39619e4810af4"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-refs/definition.json",
+      "definition_sha256": "fde8397bd5e34d5e2e1b41e8509d47ffb47cb2f737576e580db693e0c777d4ab",
+      "generated_sha256": "a1629aa229ba560bdd3a7809a3cffe5659e957af83cac30c3b30e7513ac5886c",
+      "generated_files": 130
+    },
+    {
+      "name": "purust-run",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6789,
+            6943,
+            7022,
+            6914,
+            6665
+          ],
+          "median_ms": 6914,
+          "min_ms": 6665,
+          "max_ms": 7022,
+          "phases_median_ms": {
+            "load TAST + sort": 650,
+            "prepare": 53,
+            "optimize + generate": 5178,
+            "finalize + emit": 939,
+            "backend total": 6914
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2276,
+            2262,
+            2310,
+            2218,
+            2246
+          ],
+          "median_ms": 2262,
+          "min_ms": 2218,
+          "max_ms": 2310,
+          "phases_median_ms": {
+            "load TAST + sort": 206,
+            "prepare": 27,
+            "optimize + generate": 1671,
+            "finalize + emit": 255,
+            "backend total": 2262
+          }
+        }
+      },
+      "input": {
+        "modules": 265,
+        "types": 161007,
+        "tast_bytes": 29579386,
+        "tast_sha256": "196e422bbe2cc8a3f10ee6e17687b04e20edbff737e4afba5df3a0371ef09a88"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-run/definition.json",
+      "definition_sha256": "b8597763f4ece6f1d784acf0f1f3e0276540a96a6327b100e78a42f0b2b25a93",
+      "generated_sha256": "96d46833c09adb9dbcaf89404cc12d79e39bc39684cca7f15f22fcb1f966a3d9",
+      "generated_files": 538
+    },
+    {
+      "name": "purust-spec",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            12777,
+            12623,
+            12505,
+            12717,
+            13088
+          ],
+          "median_ms": 12717,
+          "min_ms": 12505,
+          "max_ms": 13088,
+          "phases_median_ms": {
+            "load TAST + sort": 961,
+            "prepare": 80,
+            "optimize + generate": 8748,
+            "finalize + emit": 2853,
+            "backend total": 12717
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            4731,
+            4561,
+            4633,
+            4593,
+            4696
+          ],
+          "median_ms": 4633,
+          "min_ms": 4561,
+          "max_ms": 4731,
+          "phases_median_ms": {
+            "load TAST + sort": 331,
+            "prepare": 49,
+            "optimize + generate": 3330,
+            "finalize + emit": 589,
+            "backend total": 4633
+          }
+        }
+      },
+      "input": {
+        "modules": 391,
+        "types": 236592,
+        "tast_bytes": 47598889,
+        "tast_sha256": "3141a7da4eb77d9702ca13cb4a4ef08eb00c4ae5c4b95ec16887f9fa95e50c61"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-spec/definition.json",
+      "definition_sha256": "d44d5e00bfee87dd4cd611e1cc4f6a793ab69945dbf298f6ebd8b21aeff3f8ce",
+      "generated_sha256": "a41b4f0ec5a7521c5e6c995ec3ae23f7da4762d6b12e80885b944b6ea1eef1c5",
+      "generated_files": 790
+    },
+    {
+      "name": "purust-spec-discovery",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            11401,
+            11295,
+            11265,
+            11504,
+            11937
+          ],
+          "median_ms": 11401,
+          "min_ms": 11265,
+          "max_ms": 11937,
+          "phases_median_ms": {
+            "load TAST + sort": 881,
+            "prepare": 75,
+            "optimize + generate": 8183,
+            "finalize + emit": 2142,
+            "backend total": 11401
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            4318,
+            4211,
+            4192,
+            4337,
+            4416
+          ],
+          "median_ms": 4318,
+          "min_ms": 4192,
+          "max_ms": 4416,
+          "phases_median_ms": {
+            "load TAST + sort": 315,
+            "prepare": 46,
+            "optimize + generate": 3145,
+            "finalize + emit": 512,
+            "backend total": 4318
+          }
+        }
+      },
+      "input": {
+        "modules": 380,
+        "types": 229754,
+        "tast_bytes": 45557332,
+        "tast_sha256": "2d7ea62c01d6714e52e188f34544a5e3b980cf9776736e920030cbbb0a715aae"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-spec-discovery/definition.json",
+      "definition_sha256": "66804e9733e9256d606348600165c8e50cdba6a03f0e18ae23d64bc609ae5be1",
+      "generated_sha256": "5a488af586227d72fc3219296177b0a321861e6a7a072abd4f8c01fee6d3a846",
+      "generated_files": 768
+    },
+    {
+      "name": "purust-spec-node",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            12155,
+            11931,
+            11942,
+            11931,
+            11924
+          ],
+          "median_ms": 11931,
+          "min_ms": 11924,
+          "max_ms": 12155,
+          "phases_median_ms": {
+            "load TAST + sort": 889,
+            "prepare": 78,
+            "optimize + generate": 8169,
+            "finalize + emit": 2692,
+            "backend total": 11931
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            4292,
+            4307,
+            4307,
+            4539,
+            4301
+          ],
+          "median_ms": 4307,
+          "min_ms": 4292,
+          "max_ms": 4539,
+          "phases_median_ms": {
+            "load TAST + sort": 316,
+            "prepare": 46,
+            "optimize + generate": 3063,
+            "finalize + emit": 557,
+            "backend total": 4307
+          }
+        }
+      },
+      "input": {
+        "modules": 382,
+        "types": 232926,
+        "tast_bytes": 46574946,
+        "tast_sha256": "d40c846da1b533af33db69df0ea7eec380f48ca923042888261728bf4a07aca3"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-spec-node/definition.json",
+      "definition_sha256": "957aa8c1143af518c47d896cf2b79b6d9e74890d8862cb33c080758bd2d8c8d4",
+      "generated_sha256": "965f9eefb1e96999576e83b51cb7ad2755cbf5af0c01ee0b1afa04304d0cebd3",
+      "generated_files": 772
+    },
+    {
+      "name": "purust-st",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            2558,
+            2500,
+            2518,
+            2554,
+            2565
+          ],
+          "median_ms": 2554,
+          "min_ms": 2500,
+          "max_ms": 2565,
+          "phases_median_ms": {
+            "load TAST + sort": 306,
+            "prepare": 26,
+            "optimize + generate": 1868,
+            "finalize + emit": 324,
+            "backend total": 2554
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            865,
+            866,
+            865,
+            883,
+            875
+          ],
+          "median_ms": 866,
+          "min_ms": 865,
+          "max_ms": 883,
+          "phases_median_ms": {
+            "load TAST + sort": 89,
+            "prepare": 16,
+            "optimize + generate": 611,
+            "finalize + emit": 105,
+            "backend total": 866
+          }
+        }
+      },
+      "input": {
+        "modules": 160,
+        "types": 73691,
+        "tast_bytes": 12872947,
+        "tast_sha256": "3f0d314ec947e7de8be208bb35378a1918bf4969617917a389554712ffa2caa7"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-st/definition.json",
+      "definition_sha256": "547d2c31e5b8a6491366cbf8fc5e94fbfe784f81630d6f5a38dad8f5e36b5cb7",
+      "generated_sha256": "29d11c4b54e3d7775dd37e70bcefbdc514d379663dee7146b0fde2fddd63ad9a",
+      "generated_files": 328
+    },
+    {
+      "name": "purust-strings",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6671,
+            6589,
+            6555,
+            6541,
+            6758
+          ],
+          "median_ms": 6589,
+          "min_ms": 6541,
+          "max_ms": 6758,
+          "phases_median_ms": {
+            "load TAST + sort": 368,
+            "prepare": 30,
+            "optimize + generate": 5757,
+            "finalize + emit": 396,
+            "backend total": 6589
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1849,
+            1835,
+            1860,
+            1861,
+            1851
+          ],
+          "median_ms": 1851,
+          "min_ms": 1835,
+          "max_ms": 1861,
+          "phases_median_ms": {
+            "load TAST + sort": 123,
+            "prepare": 18,
+            "optimize + generate": 1510,
+            "finalize + emit": 130,
+            "backend total": 1851
+          }
+        }
+      },
+      "input": {
+        "modules": 192,
+        "types": 81426,
+        "tast_bytes": 17249954,
+        "tast_sha256": "160a1221764771e1032725cf9ee3a888ac183ce009462ebac4780596b2148864"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-strings/definition.json",
+      "definition_sha256": "e6d2319f09b016bc3d4588695060eaccdd38f5ed186b112f3a9c89f789da4963",
+      "generated_sha256": "7332856ab209e67a2a382b9a3e1b9318a548d9b964dc912bf0a71cd2c24ca508",
+      "generated_files": 392
+    },
+    {
+      "name": "purust-strings-extra",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            8025,
+            8012,
+            7588,
+            7666,
+            7637
+          ],
+          "median_ms": 7666,
+          "min_ms": 7588,
+          "max_ms": 8025,
+          "phases_median_ms": {
+            "load TAST + sort": 445,
+            "prepare": 47,
+            "optimize + generate": 5562,
+            "finalize + emit": 422,
+            "backend total": 7666
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            11028,
+            11087,
+            11020,
+            11090,
+            11011
+          ],
+          "median_ms": 11028,
+          "min_ms": 11011,
+          "max_ms": 11090,
+          "phases_median_ms": {
+            "load TAST + sort": 160,
+            "prepare": 20,
+            "optimize + generate": 4501,
+            "finalize + emit": 134,
+            "backend total": 11028
+          }
+        }
+      },
+      "input": {
+        "modules": 186,
+        "types": 79484,
+        "tast_bytes": 22767776,
+        "tast_sha256": "0684516441c5046215bb9b87f5742172500645250cd5915d110af292d7931de4"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-strings-extra/definition.json",
+      "definition_sha256": "9a6f40b7fcf0720109fbabc7290f2a2b85b351e714b05e2a85937c8f8d3df68e",
+      "generated_sha256": "93eb58685772810dc333c7c98d6cf7c0ad90392607216fba249416a9a738e986",
+      "generated_files": 380
+    },
+    {
+      "name": "purust-unfoldable",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            2652,
+            2651,
+            2623,
+            2621,
+            2667
+          ],
+          "median_ms": 2651,
+          "min_ms": 2621,
+          "max_ms": 2667,
+          "phases_median_ms": {
+            "load TAST + sort": 296,
+            "prepare": 26,
+            "optimize + generate": 1959,
+            "finalize + emit": 320,
+            "backend total": 2651
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            928,
+            908,
+            908,
+            920,
+            926
+          ],
+          "median_ms": 920,
+          "min_ms": 908,
+          "max_ms": 928,
+          "phases_median_ms": {
+            "load TAST + sort": 89,
+            "prepare": 15,
+            "optimize + generate": 665,
+            "finalize + emit": 105,
+            "backend total": 920
+          }
+        }
+      },
+      "input": {
+        "modules": 162,
+        "types": 74226,
+        "tast_bytes": 13160122,
+        "tast_sha256": "be2cedf92daad4dd32d851b866d202b6539e323eb5396748656953f60e761f68"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-unfoldable/definition.json",
+      "definition_sha256": "09ca045b000c69653815a2ab0ac9974b8482ea8bc3e1914ebb313724788b01e4",
+      "generated_sha256": "712f3e5f15d03e9d33e0f0dc0c5fa1ddda92c6c753106269cd4d62d14a913cd3",
+      "generated_files": 332
+    },
+    {
+      "name": "purust-unsafe-coerce",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            2088,
+            2097,
+            2093,
+            2089,
+            2070
+          ],
+          "median_ms": 2089,
+          "min_ms": 2070,
+          "max_ms": 2097,
+          "phases_median_ms": {
+            "load TAST + sort": 263,
+            "prepare": 22,
+            "optimize + generate": 1521,
+            "finalize + emit": 256,
+            "backend total": 2089
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            664,
+            663,
+            669,
+            672,
+            676
+          ],
+          "median_ms": 669,
+          "min_ms": 663,
+          "max_ms": 676,
+          "phases_median_ms": {
+            "load TAST + sort": 75,
+            "prepare": 11,
+            "optimize + generate": 457,
+            "finalize + emit": 86,
+            "backend total": 669
+          }
+        }
+      },
+      "input": {
+        "modules": 135,
+        "types": 60889,
+        "tast_bytes": 10652064,
+        "tast_sha256": "89a80f5fb4a70c6a5a153c63a9579864c3f4add09e2a932dc317fdcb86dbdf9d"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-unsafe-coerce/definition.json",
+      "definition_sha256": "4e24d4fbedd2afd3387f28846d975fe4e91ddfc48240e0b16de6a13f8f03e77e",
+      "generated_sha256": "75ad989927d8148b1e2c2a1921373263ffb88434064c38a564ecbb34ca75acfe",
+      "generated_files": 278
+    },
+    {
+      "name": "purust-uuid",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            7660,
+            7574,
+            7616,
+            7613,
+            7608
+          ],
+          "median_ms": 7613,
+          "min_ms": 7574,
+          "max_ms": 7660,
+          "phases_median_ms": {
+            "load TAST + sort": 647,
+            "prepare": 53,
+            "optimize + generate": 5795,
+            "finalize + emit": 1052,
+            "backend total": 7613
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2587,
+            2588,
+            2591,
+            2572,
+            2590
+          ],
+          "median_ms": 2588,
+          "min_ms": 2572,
+          "max_ms": 2591,
+          "phases_median_ms": {
+            "load TAST + sort": 224,
+            "prepare": 28,
+            "optimize + generate": 1910,
+            "finalize + emit": 280,
+            "backend total": 2588
+          }
+        }
+      },
+      "input": {
+        "modules": 289,
+        "types": 176135,
+        "tast_bytes": 33334262,
+        "tast_sha256": "da4da81443997e9d3934dafb45a0b70859897f03b548bc1a4d9be3159a381d46"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-uuid/definition.json",
+      "definition_sha256": "20478190d90afe48180a8dd7aa00370e753266c880acd1d03617d4060e72af43",
+      "generated_sha256": "b11993f3f3d32fd2ee24deb317b16767047cbec39742f2d841d7ef4a20fc3060",
+      "generated_files": 586
+    },
+    {
+      "name": "purust-variant",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4537,
+            4665,
+            4526,
+            4708,
+            4478
+          ],
+          "median_ms": 4537,
+          "min_ms": 4478,
+          "max_ms": 4708,
+          "phases_median_ms": {
+            "load TAST + sort": 390,
+            "prepare": 28,
+            "optimize + generate": 3541,
+            "finalize + emit": 566,
+            "backend total": 4537
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1382,
+            1435,
+            1361,
+            1433,
+            1405
+          ],
+          "median_ms": 1405,
+          "min_ms": 1361,
+          "max_ms": 1435,
+          "phases_median_ms": {
+            "load TAST + sort": 117,
+            "prepare": 16,
+            "optimize + generate": 1044,
+            "finalize + emit": 154,
+            "backend total": 1405
+          }
+        }
+      },
+      "input": {
+        "modules": 164,
+        "types": 91522,
+        "tast_bytes": 17408964,
+        "tast_sha256": "bfbdda9f2e9ad424490b86a036f193babfbc483fe8225e449b502a4b2b55b518"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-variant/definition.json",
+      "definition_sha256": "c906cf2bde21534736dc803b92bfca1bb68b2d80f913e4ad372086b01801ed16",
+      "generated_sha256": "b46212a56155dbfc8ce5215e1c0997ad7fad44bdf32ca7d015a3e179475189ea",
+      "generated_files": 336
+    },
+    {
+      "name": "purust-yoga-json",
+      "scope": "Package sources and primary test entry point",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            16921,
+            16864,
+            16566,
+            16694,
+            16558
+          ],
+          "median_ms": 16694,
+          "min_ms": 16558,
+          "max_ms": 16921,
+          "phases_median_ms": {
+            "load TAST + sort": 993,
+            "prepare": 91,
+            "optimize + generate": 11900,
+            "finalize + emit": 2409,
+            "backend total": 16694
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            14548,
+            14733,
+            14581,
+            14302,
+            14274
+          ],
+          "median_ms": 14548,
+          "min_ms": 14274,
+          "max_ms": 14733,
+          "phases_median_ms": {
+            "load TAST + sort": 372,
+            "prepare": 49,
+            "optimize + generate": 7021,
+            "finalize + emit": 543,
+            "backend total": 14548
+          }
+        }
+      },
+      "input": {
+        "modules": 386,
+        "types": 233689,
+        "tast_bytes": 55200247,
+        "tast_sha256": "86f332f6949171856b67341c5317a98d5a3400d6a5bb607c6136a321dc36feaa"
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/purust-packages-20261004/revision3/cases/purust-yoga-json/definition.json",
+      "definition_sha256": "03d611daf7c97ae4f7895b92e90e8f67bad2a5c3240762372a4592e70e63ed03",
+      "generated_sha256": "bbe4d359dce1b9dce976ff82e68458bdbfa1e20aea7eb036d4b9da8be994e64a",
+      "generated_files": 780
+    }
+  ],
+  "publication": {
+    "readme_before_sha256": "8770ad3c81542c3a5887941b2a91c577e59eb4abf742ecee8ba2b91b177c612f",
+    "readme_after_sha256": "6e682804067e83d97773562efe7000a4448cdc2de38740c37d1b5fa5f93e6f5b",
+    "project_cells": 116,
+    "total_cells": 4
+  }
+}
