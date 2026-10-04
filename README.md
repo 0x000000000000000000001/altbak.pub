@@ -331,7 +331,7 @@ Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 47830
 
 Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS binary (WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Go binary (WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Rust binary (WIP)
 ----------- | --------- | ------------------ | ---------------------
-[b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 62.481 s | ~ 39.565 s <br>(/JS = 0.63x) | ~ 31.018 s
+[b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 62.481 s | ~ 39.565 s <br>(/JS = 0.63x) | ~ 31.018 s <br>(/JS = 0.50x)
 [gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 7520 ms | ~ 1940 ms | ~ 1528 ms
 [gopurs-argonaut-core](https://github.com/0x000000000000000000001/gopurs-argonaut-core)  | ~ 7702 ms | ~ 1518 ms | ~ 1264 ms
 [gopurs-arrays](https://github.com/0x000000000000000000001/gopurs-arrays)  | ~ 6732 ms | ~ 3393 ms | ~ 3373 ms
@@ -382,8 +382,8 @@ Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS bin
 [gopurs-uuid](https://github.com/0x000000000000000000001/gopurs-uuid)  | ~ 9044 ms | ~ 2785 ms | ~ 2422 ms
 [gopurs-variant](https://github.com/0x000000000000000000001/gopurs-variant)  | ~ 4937 ms | ~ 1221 ms | ~ 902 ms
 [gopurs-yoga-json](https://github.com/0x000000000000000000001/gopurs-yoga-json)  | ~ 15562 ms | ~ 6403 ms | ~ 5233 ms
-**Total gopurs-*** | ~ 304.78 s | ~ 74.02 s <br>(/JS = 0.24x) | ~ 61.20 s
-**Total** | ~ 367.27 s | ~ 113.58 s <br>(/JS = 0.31x) | ~ 92.22 s
+**Total gopurs-*** | ~ 304.78 s | ~ 74.02 s <br>(/JS = 0.24x) | ~ 61.20 s <br>(/JS = 0.20x)
+**Total** | ~ 367.27 s | ~ 113.58 s <br>(/JS = 0.31x) | ~ 92.22 s <br>(/JS = 0.25x)
 
 #### ... to Rust
 

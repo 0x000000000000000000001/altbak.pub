@@ -82,11 +82,11 @@ const replace = (pattern, render) => {
 for (const result of libraries) replace(new RegExp(`^(\\[${result.name}\\]\\([^\\n]+?\\))[^\\n]*$`),
   (_, link) => `${link}  | ${hosts.map(host => `~ ${result.summary[host].median_ms} ms`).join(' | ')}`);
 replace(/^(\[b8x\]\([^\n]+?\)) \| ~[^\n]*$/,
-  (_, link) => `${link} | ~ ${(b8x.summary.js.median_ms / 1000).toFixed(3)} s | ~ ${(b8x.summary.go.median_ms / 1000).toFixed(3)} s <br>(/JS = ${ratio(b8x.summary.go.median_ms, b8x.summary.js.median_ms)}x) | ~ ${(b8x.summary.rust.median_ms / 1000).toFixed(3)} s`);
+  (_, link) => `${link} | ~ ${(b8x.summary.js.median_ms / 1000).toFixed(3)} s | ~ ${(b8x.summary.go.median_ms / 1000).toFixed(3)} s <br>(/JS = ${ratio(b8x.summary.go.median_ms, b8x.summary.js.median_ms)}x) | ~ ${(b8x.summary.rust.median_ms / 1000).toFixed(3)} s <br>(/JS = ${ratio(b8x.summary.rust.median_ms, b8x.summary.js.median_ms)}x)`);
 replace(/^\*\*Total gopurs-\*\*\*[^\n]*$/,
-  `**Total gopurs-*** | ~ ${seconds(subtotal.js)} s | ~ ${seconds(subtotal.go)} s <br>(/JS = ${ratio(subtotal.go, subtotal.js)}x) | ~ ${seconds(subtotal.rust)} s`);
+  `**Total gopurs-*** | ~ ${seconds(subtotal.js)} s | ~ ${seconds(subtotal.go)} s <br>(/JS = ${ratio(subtotal.go, subtotal.js)}x) | ~ ${seconds(subtotal.rust)} s <br>(/JS = ${ratio(subtotal.rust, subtotal.js)}x)`);
 replace(/^\*\*Total\*\* \| ~[^\n]*$/,
-  `**Total** | ~ ${seconds(total.js)} s | ~ ${seconds(total.go)} s <br>(/JS = ${ratio(total.go, total.js)}x) | ~ ${seconds(total.rust)} s`);
+  `**Total** | ~ ${seconds(total.js)} s | ~ ${seconds(total.go)} s <br>(/JS = ${ratio(total.go, total.js)}x) | ~ ${seconds(total.rust)} s <br>(/JS = ${ratio(total.rust, total.js)}x)`);
 replace(/^(\[purust-aff\]\([^\n]+?\))[^\n]*$/,
   (_, link) => `${link}  | ~ ${purust.summary.js.median_ms} ms | ~ ${purust.summary.rust.median_ms} ms <br>(/JS = ${ratio(purust.summary.rust.median_ms, purust.summary.js.median_ms)}x)`);
 const note = '> Compilation timings refreshed on **4 October 2026**: median of five backend-only runs per host after one warmup, with frozen inputs and byte-exact generated-output checks. Totals sum the displayed project medians. [Protocol and full results](docs/benchmark-results/2026-10-04-compilation-refresh.md).';
