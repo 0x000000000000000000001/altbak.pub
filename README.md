@@ -449,7 +449,3 @@ Benchmark   | [purust](https://github.com/0x000000000000000000001/purust) JS bin
 [purust-yoga-json](https://github.com/0x000000000000000000001/purust-yoga-json) | ~ 16694 ms | ~ 14548 ms
 **Total purust-*** | ~ 304.03 s | ~ 120.12 s <br>(/JS = 0.40x)
 **Total** | ~ 348.34 s | ~ 140.73 s <br>(/JS = 0.40x)
-
-> Purust timings: median of five backend-only runs per host after one warmup, on frozen inputs with byte-identical Rust/Cargo output. Totals are sums of medians. b8x uses the Rust Core/Infra/Util test profile (1,404 modules), a different corpus from the full Go-target row. [Protocol, scopes and validation](docs/benchmark-results/2026-10-04-purust-packages.md).
-
-More to come...
