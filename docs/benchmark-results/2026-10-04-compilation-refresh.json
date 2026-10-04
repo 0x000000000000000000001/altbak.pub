@@ -1,0 +1,5405 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "date": "2026-10-04",
+  "archive": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004",
+  "protocol": {
+    "rounds": 5,
+    "warmups_per_host": 1,
+    "metric": "backend total",
+    "statistic": "median",
+    "includes": "loading, preparation, PBO, generation/emission and drain",
+    "excludes": "frontend, compiler/application builds, application execution and process startup/exit",
+    "cache": "fresh generated files and PBO caches; warm OS filesystem cache; fresh process each invocation",
+    "order": "serialized cases; six host permutations over warmup and five measured rounds",
+    "gopurs_jobs": {
+      "GOPURS_JOBS": "8",
+      "GOPURS_PREPARE_JOBS": "8",
+      "GOPURS_PBO_JOBS": "8",
+      "GOPURS_EMIT_JOBS": "8",
+      "GOPURS_PIPELINE": "1"
+    },
+    "purust_jobs": "public defaults: JS 1/1; Rust PBO 8 and codegen 4",
+    "go_gc": "public launcher: GOGC=off and GOMEMLIMIT=10GiB on this 48-GiB host",
+    "exact_output": "all generated sources and manifests compared byte-for-byte; each run retains a manifest, canonical identical output retained once per case",
+    "phases": "overlapping producer, cumulative generation/write batches and drain are reported separately, never added"
+  },
+  "host": {
+    "cpu": "Apple M4 Pro",
+    "logical_cpus": 14,
+    "memory_bytes": 51539607552,
+    "node": "v24.8.0"
+  },
+  "compilers": {
+    "gopurs": {
+      "directory": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/compilers/gopurs",
+      "origin": "/Users/0x1/Documents/htdocs/gopurs/gopurs",
+      "files": [
+        {
+          "path": "bin/gopurs",
+          "bytes": 1967,
+          "sha256": "a2f198ace9ee575e3528b4f2f64f7a149cd0f9d2c9e53c0ffc3b83103d6e50dd"
+        },
+        {
+          "path": "bin/gopurs-native",
+          "bytes": 29947346,
+          "sha256": "1a2aca1185e98885da9e4580efab252754a41f326e5d46eb162a8ee9c7b04d4e"
+        },
+        {
+          "path": "bin/gopurs-rust",
+          "bytes": 82685200,
+          "sha256": "e3fa820c4e78fb0f0c5f4d8d7ed91314c73e5b6c0e0b7e3b0e780ec8401a9aa1"
+        },
+        {
+          "path": "bin/gopurs.js",
+          "bytes": 2010779,
+          "sha256": "c8c5572aa2e02e96b243bf548df5e6f80f214bb929a1590872cf06a2aeb2a1ff"
+        },
+        {
+          "path": "package.json",
+          "bytes": 1066,
+          "sha256": "e1db04ca364b36189f058f6e5ffc1d24de8590a88d4c9ce42a47418f54b0a4e1"
+        },
+        {
+          "path": "tools/ffi-runner.mjs",
+          "bytes": 1251,
+          "sha256": "7809f59971f1cdc8bf013ef6a5d8584d229dfb68223c56959a5e573d15f5d91b"
+        },
+        {
+          "path": "tools/ffi_gen.wasm",
+          "bytes": 5686864,
+          "sha256": "9ff753ad005f649f9dbe53d30c50f807b8c7b5118555da63a5577ba8cdc45fff"
+        },
+        {
+          "path": "tools/wasm_exec.js",
+          "bytes": 16992,
+          "sha256": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14"
+        }
+      ]
+    },
+    "purust": {
+      "directory": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/compilers/purust",
+      "origin": "/Users/0x1/Documents/htdocs/purust/purust",
+      "files": [
+        {
+          "path": "bin/purust",
+          "bytes": 647,
+          "sha256": "28b9ad0bb3a2a50b1ad204b3a87284c4fcae24dff0d2a0931eed2d682903149a"
+        },
+        {
+          "path": "bin/purust-native",
+          "bytes": 38825248,
+          "sha256": "e32f3f12e42da37b34b404e86c9bd64db32c9a911346b55f1db3cbf07c9bc010"
+        },
+        {
+          "path": "bin/purust.js",
+          "bytes": 2214549,
+          "sha256": "0cbf3f2c583d903dad866c22e27a063e6a447fb62c29513fcbfca77ff61cbbc6"
+        },
+        {
+          "path": "package.json",
+          "bytes": 764,
+          "sha256": "439e2e749809a259916980ae0d87b2108c1b5d50fb9a901d7ed67f064db59d65"
+        }
+      ]
+    }
+  },
+  "qualification": {
+    "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/build-results.json",
+    "sha256": "2bd8f4ba5b8a8d57a0d3fbcb3a9d667deecd71bb5da5591dec62ad0b2e0f310e",
+    "libraries": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/final-results.json",
+    "libraries_sha256": "98fc6aac7ddf17852601180486f7efa74690f2b7d16fd1476a057c0b51114e41"
+  },
+  "evidence": [
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/libraries-results.json",
+      "sha256": "14a8c445dc294d485d8ad17490826d17ac7e4664d081868d03eaf9230dc8c895"
+    },
+    {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/extra-results.json",
+      "sha256": "39ce5d76899b7b2ac85e0f9927ede737547162cb35117d5a7dd247f4ab57946b"
+    }
+  ],
+  "validation": {
+    "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/results.json",
+    "sha256": "322ca799f175e0b742b6c0eb10453f814e5c7662b6bb478ec4a85807b01b8963",
+    "status": "passed",
+    "started_at": "2026-10-04T13:28:18.305Z",
+    "applications": [
+      {
+        "name": "gopurs-aff",
+        "status": "passed",
+        "generated_sha256": "b363013477126779f86b6206b3c74a09cfe500965c9d7fd3209453cda7568e51",
+        "commands": [
+          {
+            "label": "go-build",
+            "command": [
+              "go",
+              "build",
+              "-o",
+              "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-aff/tests",
+              "./main"
+            ],
+            "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-aff/generated",
+            "exit_code": 0,
+            "signal": null,
+            "wall_ms": 3618.8332920000003,
+            "load_average_before": [
+              9.12646484375,
+              10.845703125,
+              9.21044921875
+            ],
+            "explicit_environment": {
+              "GOGC": "1000",
+              "CARGO_BUILD_JOBS": "8",
+              "CARGO_INCREMENTAL": "0",
+              "CARGO_PROFILE_DEV_DEBUG": "0"
+            },
+            "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-aff/logs/go-build.stdout",
+            "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-aff/logs/go-build.stderr"
+          },
+          {
+            "label": "go-execute",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-aff/tests"
+            ],
+            "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-aff/input",
+            "exit_code": 0,
+            "signal": null,
+            "wall_ms": 2504.264208,
+            "load_average_before": [
+              8.5556640625,
+              10.69873046875,
+              9.16796875
+            ],
+            "explicit_environment": {
+              "GOGC": "1000",
+              "CARGO_BUILD_JOBS": "8",
+              "CARGO_INCREMENTAL": "0",
+              "CARGO_PROFILE_DEV_DEBUG": "0"
+            },
+            "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-aff/logs/go-execute.stdout",
+            "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-aff/logs/go-execute.stderr"
+          }
+        ],
+        "binary_sha256": "38bbacd65f063c97f230427abc6e79a32e3bc35ff404fa3bcd0ff26f54380340",
+        "expected_stdout_sha256": "5c214d208e0105e35c0dbd563438029223cf7a6883440c6ee033635e48aeff18",
+        "aff_checks": 45,
+        "finished_at": "2026-10-04T13:28:24.515Z"
+      },
+      {
+        "name": "gopurs-arrays",
+        "status": "passed",
+        "generated_sha256": "e5c90a805f1bade11a4c3af1d269b2eb4304fee2f416927d74a9cf5ddceee7ef",
+        "commands": [
+          {
+            "label": "go-build",
+            "command": [
+              "go",
+              "build",
+              "-o",
+              "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-arrays/tests",
+              "./main"
+            ],
+            "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-arrays/generated",
+            "exit_code": 0,
+            "signal": null,
+            "wall_ms": 5233.2875,
+            "load_average_before": [
+              8.5556640625,
+              10.69873046875,
+              9.16796875
+            ],
+            "explicit_environment": {
+              "GOGC": "1000",
+              "CARGO_BUILD_JOBS": "8",
+              "CARGO_INCREMENTAL": "0",
+              "CARGO_PROFILE_DEV_DEBUG": "0"
+            },
+            "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-arrays/logs/go-build.stdout",
+            "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-arrays/logs/go-build.stderr"
+          },
+          {
+            "label": "go-execute",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-arrays/tests"
+            ],
+            "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-arrays/input",
+            "exit_code": 0,
+            "signal": null,
+            "wall_ms": 450.57366700000057,
+            "load_average_before": [
+              8.2705078125,
+              10.60400390625,
+              9.14306640625
+            ],
+            "explicit_environment": {
+              "GOGC": "1000",
+              "CARGO_BUILD_JOBS": "8",
+              "CARGO_INCREMENTAL": "0",
+              "CARGO_PROFILE_DEV_DEBUG": "0"
+            },
+            "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-arrays/logs/go-execute.stdout",
+            "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-arrays/logs/go-execute.stderr"
+          }
+        ],
+        "binary_sha256": "dfb4fe266f0d218781fb82283c56a7393ba262ea5afb8cd058280179f0a50491",
+        "finished_at": "2026-10-04T13:28:30.266Z"
+      },
+      {
+        "name": "gopurs-enums",
+        "status": "passed",
+        "generated_sha256": "8bbaa5fced4b758b2e60f5ee01f555bda44ae04269b055652cf5bd515c389717",
+        "commands": [
+          {
+            "label": "go-build",
+            "command": [
+              "go",
+              "build",
+              "-o",
+              "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-enums/tests",
+              "./main"
+            ],
+            "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-enums/generated",
+            "exit_code": 0,
+            "signal": null,
+            "wall_ms": 2226.3596670000006,
+            "load_average_before": [
+              8.2705078125,
+              10.60400390625,
+              9.14306640625
+            ],
+            "explicit_environment": {
+              "GOGC": "1000",
+              "CARGO_BUILD_JOBS": "8",
+              "CARGO_INCREMENTAL": "0",
+              "CARGO_PROFILE_DEV_DEBUG": "0"
+            },
+            "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-enums/logs/go-build.stdout",
+            "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-enums/logs/go-build.stderr"
+          },
+          {
+            "label": "go-execute",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-enums/tests"
+            ],
+            "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-enums/input",
+            "exit_code": 0,
+            "signal": null,
+            "wall_ms": 370.4667499999996,
+            "load_average_before": [
+              9.77001953125,
+              10.8759765625,
+              9.24755859375
+            ],
+            "explicit_environment": {
+              "GOGC": "1000",
+              "CARGO_BUILD_JOBS": "8",
+              "CARGO_INCREMENTAL": "0",
+              "CARGO_PROFILE_DEV_DEBUG": "0"
+            },
+            "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-enums/logs/go-execute.stdout",
+            "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-enums/logs/go-execute.stderr"
+          }
+        ],
+        "binary_sha256": "35ec9037b2ca0a1c88c6ca07519f462ae5d6bcbefc11a55901207ca7e1938bf0",
+        "finished_at": "2026-10-04T13:28:32.925Z"
+      },
+      {
+        "name": "gopurs-js-promise",
+        "status": "passed",
+        "generated_sha256": "47f5258fd15dd81173fb97d34ecf71daaa4aaf065b1653c445218bf26c074b09",
+        "commands": [
+          {
+            "label": "go-build",
+            "command": [
+              "go",
+              "build",
+              "-o",
+              "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-js-promise/tests",
+              "./main"
+            ],
+            "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-js-promise/generated",
+            "exit_code": 0,
+            "signal": null,
+            "wall_ms": 1490.121541999999,
+            "load_average_before": [
+              9.77001953125,
+              10.8759765625,
+              9.24755859375
+            ],
+            "explicit_environment": {
+              "GOGC": "1000",
+              "CARGO_BUILD_JOBS": "8",
+              "CARGO_INCREMENTAL": "0",
+              "CARGO_PROFILE_DEV_DEBUG": "0"
+            },
+            "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-js-promise/logs/go-build.stdout",
+            "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-js-promise/logs/go-build.stderr"
+          },
+          {
+            "label": "go-execute",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-js-promise/tests"
+            ],
+            "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-js-promise/input",
+            "exit_code": 0,
+            "signal": null,
+            "wall_ms": 364.82208399999945,
+            "load_average_before": [
+              9.77001953125,
+              10.8759765625,
+              9.24755859375
+            ],
+            "explicit_environment": {
+              "GOGC": "1000",
+              "CARGO_BUILD_JOBS": "8",
+              "CARGO_INCREMENTAL": "0",
+              "CARGO_PROFILE_DEV_DEBUG": "0"
+            },
+            "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-js-promise/logs/go-execute.stdout",
+            "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-js-promise/logs/go-execute.stderr"
+          }
+        ],
+        "binary_sha256": "780f6406f2deeb93a5124d1409696b8a7ad6db45875b9c3a552839339338f5f9",
+        "finished_at": "2026-10-04T13:28:34.842Z"
+      },
+      {
+        "name": "gopurs-prelude",
+        "status": "passed",
+        "generated_sha256": "8d60df1bd845c309962d3963a5a305da3dbc30bae3c6e3140bdd373b7ddebd58",
+        "commands": [
+          {
+            "label": "go-build",
+            "command": [
+              "go",
+              "build",
+              "-o",
+              "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-prelude/tests",
+              "./main"
+            ],
+            "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-prelude/generated",
+            "exit_code": 0,
+            "signal": null,
+            "wall_ms": 1975.0165830000005,
+            "load_average_before": [
+              9.77001953125,
+              10.8759765625,
+              9.24755859375
+            ],
+            "explicit_environment": {
+              "GOGC": "1000",
+              "CARGO_BUILD_JOBS": "8",
+              "CARGO_INCREMENTAL": "0",
+              "CARGO_PROFILE_DEV_DEBUG": "0"
+            },
+            "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-prelude/logs/go-build.stdout",
+            "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-prelude/logs/go-build.stderr"
+          },
+          {
+            "label": "go-execute",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-prelude/tests"
+            ],
+            "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-prelude/input",
+            "exit_code": 0,
+            "signal": null,
+            "wall_ms": 344.48491600000125,
+            "load_average_before": [
+              10.9892578125,
+              11.1103515625,
+              9.33984375
+            ],
+            "explicit_environment": {
+              "GOGC": "1000",
+              "CARGO_BUILD_JOBS": "8",
+              "CARGO_INCREMENTAL": "0",
+              "CARGO_PROFILE_DEV_DEBUG": "0"
+            },
+            "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-prelude/logs/go-execute.stdout",
+            "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-prelude/logs/go-execute.stderr"
+          }
+        ],
+        "binary_sha256": "85db6fe0dc9ea5656873d9b8f37134935ac7cb30bf53a18a56ab04c4e43bd967",
+        "finished_at": "2026-10-04T13:28:37.246Z"
+      },
+      {
+        "name": "gopurs-strings",
+        "status": "passed",
+        "generated_sha256": "0f657d7cbf8df98131dc649e39b3b22514a51e3f0654b90ffe707c6100d40aca",
+        "commands": [
+          {
+            "label": "go-build",
+            "command": [
+              "go",
+              "build",
+              "-o",
+              "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-strings/tests",
+              "./main"
+            ],
+            "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-strings/generated",
+            "exit_code": 0,
+            "signal": null,
+            "wall_ms": 3460.5489579999994,
+            "load_average_before": [
+              10.9892578125,
+              11.1103515625,
+              9.33984375
+            ],
+            "explicit_environment": {
+              "GOGC": "1000",
+              "CARGO_BUILD_JOBS": "8",
+              "CARGO_INCREMENTAL": "0",
+              "CARGO_PROFILE_DEV_DEBUG": "0"
+            },
+            "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-strings/logs/go-build.stdout",
+            "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-strings/logs/go-build.stderr"
+          },
+          {
+            "label": "go-execute",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-strings/tests"
+            ],
+            "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-strings/input",
+            "exit_code": 0,
+            "signal": null,
+            "wall_ms": 370.3354999999974,
+            "load_average_before": [
+              10.18896484375,
+              10.9423828125,
+              9.29052734375
+            ],
+            "explicit_environment": {
+              "GOGC": "1000",
+              "CARGO_BUILD_JOBS": "8",
+              "CARGO_INCREMENTAL": "0",
+              "CARGO_PROFILE_DEV_DEBUG": "0"
+            },
+            "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-strings/logs/go-execute.stdout",
+            "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/gopurs-strings/logs/go-execute.stderr"
+          }
+        ],
+        "binary_sha256": "a3d36d6308092c829881c4c5ace5d91d6631323464231edd48e69bcbe80ce3f7",
+        "finished_at": "2026-10-04T13:28:41.178Z"
+      },
+      {
+        "name": "b8x",
+        "status": "passed",
+        "generated_sha256": "b4df8c3e6c9345cab33deedd3428ad602dc2c881eb6c0b3ecca3405275498f27",
+        "commands": [
+          {
+            "label": "go-mod-tidy",
+            "command": [
+              "go",
+              "mod",
+              "tidy"
+            ],
+            "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/b8x/generated",
+            "exit_code": 0,
+            "signal": null,
+            "wall_ms": 4558.105667,
+            "load_average_before": [
+              10.18896484375,
+              10.9423828125,
+              9.29052734375
+            ],
+            "explicit_environment": {
+              "GOGC": "1000",
+              "CARGO_BUILD_JOBS": "8",
+              "CARGO_INCREMENTAL": "0",
+              "CARGO_PROFILE_DEV_DEBUG": "0"
+            },
+            "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/b8x/logs/go-mod-tidy.stdout",
+            "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/b8x/logs/go-mod-tidy.stderr"
+          },
+          {
+            "label": "go-build",
+            "command": [
+              "go",
+              "build",
+              "./..."
+            ],
+            "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/b8x/generated",
+            "exit_code": 0,
+            "signal": null,
+            "wall_ms": 49776.787832999995,
+            "load_average_before": [
+              12.095703125,
+              11.32470703125,
+              9.43505859375
+            ],
+            "explicit_environment": {
+              "GOGC": "1000",
+              "CARGO_BUILD_JOBS": "8",
+              "CARGO_INCREMENTAL": "0",
+              "CARGO_PROFILE_DEV_DEBUG": "0"
+            },
+            "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/b8x/logs/go-build.stdout",
+            "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/b8x/logs/go-build.stderr"
+          }
+        ],
+        "validation": "All generated packages and executable entry points build.",
+        "finished_at": "2026-10-04T13:29:36.281Z"
+      },
+      {
+        "name": "purust-aff",
+        "status": "passed",
+        "generated_sha256": "333ea0b60860d3f8496cae5435b63ba5f25814f1494fe8ac90ac5f23d2db5b9a",
+        "commands": [
+          {
+            "label": "cargo-build",
+            "command": [
+              "cargo",
+              "build",
+              "--offline",
+              "--manifest-path",
+              "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/purust-aff/generated/Cargo.toml"
+            ],
+            "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/purust-aff/input",
+            "exit_code": 0,
+            "signal": null,
+            "wall_ms": 10824.946415999992,
+            "load_average_before": [
+              16.3125,
+              12.71728515625,
+              10.0654296875
+            ],
+            "explicit_environment": {
+              "GOGC": "1000",
+              "CARGO_BUILD_JOBS": "8",
+              "CARGO_INCREMENTAL": "0",
+              "CARGO_PROFILE_DEV_DEBUG": "0"
+            },
+            "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/purust-aff/logs/cargo-build.stdout",
+            "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/purust-aff/logs/cargo-build.stderr"
+          },
+          {
+            "label": "aff-execute",
+            "command": [
+              "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/purust-aff/aff-tests"
+            ],
+            "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/purust-aff/input",
+            "exit_code": 0,
+            "signal": null,
+            "wall_ms": 4596.294957999999,
+            "load_average_before": [
+              14.1787109375,
+              12.3798828125,
+              9.9765625
+            ],
+            "explicit_environment": {
+              "GOGC": "1000",
+              "CARGO_BUILD_JOBS": "8",
+              "CARGO_INCREMENTAL": "0",
+              "CARGO_PROFILE_DEV_DEBUG": "0"
+            },
+            "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/purust-aff/logs/aff-execute.stdout",
+            "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/validation/purust-aff/logs/aff-execute.stderr"
+          }
+        ],
+        "binary_sha256": "ec25cdab4730e715b00f1d8af6c11db5d73250d3af2883b9b5979f213e5ea4a8",
+        "expected_stdout_sha256": "bdac5079d39dc4ba3f7fe20d4ac624ff6f5fe110ed3643c1c178bb0ab573a3dd",
+        "aff_checks": 47,
+        "finished_at": "2026-10-04T13:29:51.862Z"
+      }
+    ],
+    "compilers_unchanged": true,
+    "finished_at": "2026-10-04T13:29:52.052Z"
+  },
+  "coverage": {
+    "gopurs_libraries": 50,
+    "gopurs_projects": 51,
+    "purust_projects": 1,
+    "generations": 930,
+    "measured_generations": 775,
+    "exact_files": 290766
+  },
+  "subtotal_ms": {
+    "js": 304784,
+    "go": 74016,
+    "rust": 61200
+  },
+  "total_ms": {
+    "js": 367265,
+    "go": 113581,
+    "rust": 92218
+  },
+  "results": [
+    {
+      "name": "b8x",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            61048,
+            62481,
+            63554,
+            63212,
+            61313
+          ],
+          "median_ms": 62481,
+          "min_ms": 61048,
+          "max_ms": 63554,
+          "phases_median_ms": {
+            "load TAST + sort": 4119,
+            "transitive specializations": 9646,
+            "prepare + monomorphize": 12641,
+            "runtime": 2,
+            "PBO producer": 45392,
+            "emitter drain": 169,
+            "generation + writes (cumulative batches)": 45320,
+            "optimize + emit": 45559,
+            "entry points": 2,
+            "backend total": 62481
+          }
+        },
+        "go": {
+          "samples_ms": [
+            38580,
+            39565,
+            38800,
+            39571,
+            40123
+          ],
+          "median_ms": 39565,
+          "min_ms": 38580,
+          "max_ms": 40123,
+          "phases_median_ms": {
+            "load TAST + sort": 1148,
+            "transitive specializations": 9122,
+            "prepare + monomorphize": 12803,
+            "runtime": 0,
+            "PBO producer": 25348,
+            "emitter drain": 23,
+            "generation + writes (cumulative batches)": 22377,
+            "optimize + emit": 25370,
+            "entry points": 1,
+            "backend total": 39565
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            30835,
+            31018,
+            31499,
+            31097,
+            30678
+          ],
+          "median_ms": 31018,
+          "min_ms": 30678,
+          "max_ms": 31499,
+          "phases_median_ms": {
+            "load TAST + sort": 658,
+            "transitive specializations": 8886,
+            "prepare + monomorphize": 12320,
+            "runtime": 1,
+            "PBO producer": 17877,
+            "emitter drain": 22,
+            "generation + writes (cumulative batches)": 14025,
+            "optimize + emit": 17914,
+            "entry points": 188,
+            "backend total": 31018
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/b8x-restart/definition.json",
+      "definition_sha256": "caea01f636707bab1cbcdf1f097a71a23061a5432f5b6d80a780e8817f566de4",
+      "input": {
+        "modules": 2685,
+        "tast_bytes": 213766947,
+        "tast_sha256": "8f0887cbdfe4c49515d626162a91e6d9cef2f02de32b77d1ddb7dab6a8e509ed"
+      },
+      "generated_sha256": "b4df8c3e6c9345cab33deedd3428ad602dc2c881eb6c0b3ecca3405275498f27",
+      "generated_files": 2992
+    },
+    {
+      "name": "gopurs-aff",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            7234,
+            7362,
+            7579,
+            7520,
+            7566
+          ],
+          "median_ms": 7520,
+          "min_ms": 7234,
+          "max_ms": 7579,
+          "phases_median_ms": {
+            "load TAST + sort": 566,
+            "transitive specializations": 183,
+            "prepare + monomorphize": 476,
+            "runtime": 2,
+            "PBO producer": 5223,
+            "emitter drain": 1144,
+            "generation + writes (cumulative batches)": 6303,
+            "optimize + emit": 6386,
+            "entry points": 1,
+            "backend total": 7520
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1856,
+            1925,
+            1976,
+            1940,
+            1992
+          ],
+          "median_ms": 1940,
+          "min_ms": 1856,
+          "max_ms": 1992,
+          "phases_median_ms": {
+            "load TAST + sort": 58,
+            "transitive specializations": 210,
+            "prepare + monomorphize": 519,
+            "runtime": 0,
+            "PBO producer": 983,
+            "emitter drain": 374,
+            "generation + writes (cumulative batches)": 1223,
+            "optimize + emit": 1358,
+            "entry points": 0,
+            "backend total": 1940
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1491,
+            1533,
+            1528,
+            1532,
+            1521
+          ],
+          "median_ms": 1528,
+          "min_ms": 1491,
+          "max_ms": 1533,
+          "phases_median_ms": {
+            "load TAST + sort": 60,
+            "transitive specializations": 177,
+            "prepare + monomorphize": 461,
+            "runtime": 1,
+            "PBO producer": 642,
+            "emitter drain": 348,
+            "generation + writes (cumulative batches)": 901,
+            "optimize + emit": 991,
+            "entry points": 12,
+            "backend total": 1528
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-aff/definition.json",
+      "definition_sha256": "a18d99197835347a8c77e8cdec565c047a72ebab26f1d010b5bc091e01e72747",
+      "input": {
+        "modules": 238,
+        "tast_bytes": 26606491,
+        "tast_sha256": "ec1f3de15eeb26ab68cd9b6d78fb096109502276aa9d23c8dd2cdd5ae419cc50"
+      },
+      "generated_sha256": "b363013477126779f86b6206b3c74a09cfe500965c9d7fd3209453cda7568e51",
+      "generated_files": 294
+    },
+    {
+      "name": "gopurs-argonaut-core",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            7761,
+            7514,
+            7593,
+            7710,
+            7702
+          ],
+          "median_ms": 7702,
+          "min_ms": 7514,
+          "max_ms": 7761,
+          "phases_median_ms": {
+            "load TAST + sort": 525,
+            "transitive specializations": 109,
+            "prepare + monomorphize": 366,
+            "runtime": 1,
+            "PBO producer": 5364,
+            "emitter drain": 1440,
+            "generation + writes (cumulative batches)": 6725,
+            "optimize + emit": 6804,
+            "entry points": 0,
+            "backend total": 7702
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1602,
+            1518,
+            1518,
+            1509,
+            1526
+          ],
+          "median_ms": 1518,
+          "min_ms": 1509,
+          "max_ms": 1602,
+          "phases_median_ms": {
+            "load TAST + sort": 53,
+            "transitive specializations": 96,
+            "prepare + monomorphize": 355,
+            "runtime": 0,
+            "PBO producer": 933,
+            "emitter drain": 175,
+            "generation + writes (cumulative batches)": 962,
+            "optimize + emit": 1112,
+            "entry points": 0,
+            "backend total": 1518
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1286,
+            1276,
+            1264,
+            1245,
+            1259
+          ],
+          "median_ms": 1264,
+          "min_ms": 1245,
+          "max_ms": 1286,
+          "phases_median_ms": {
+            "load TAST + sort": 51,
+            "transitive specializations": 84,
+            "prepare + monomorphize": 328,
+            "runtime": 1,
+            "PBO producer": 649,
+            "emitter drain": 223,
+            "generation + writes (cumulative batches)": 779,
+            "optimize + emit": 868,
+            "entry points": 11,
+            "backend total": 1264
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-argonaut-core/definition.json",
+      "definition_sha256": "e0a72065631f15695d99d519bb797037c087a1853c8cb32b751ca0276ba3fc2e",
+      "input": {
+        "modules": 254,
+        "tast_bytes": 24036625,
+        "tast_sha256": "dc6bc11c99b71946191c5f87850b1f1d97208171eb4cc33f869f9b2c1540040e"
+      },
+      "generated_sha256": "a694c15343dd86d14061ccab717d9bd89bb73b24a0d998d95fc4afc6c165ec07",
+      "generated_files": 324
+    },
+    {
+      "name": "gopurs-arrays",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6765,
+            6732,
+            6843,
+            6675,
+            6680
+          ],
+          "median_ms": 6732,
+          "min_ms": 6675,
+          "max_ms": 6843,
+          "phases_median_ms": {
+            "load TAST + sort": 369,
+            "transitive specializations": 447,
+            "prepare + monomorphize": 673,
+            "runtime": 1,
+            "PBO producer": 3463,
+            "emitter drain": 2216,
+            "generation + writes (cumulative batches)": 5578,
+            "optimize + emit": 5641,
+            "entry points": 0,
+            "backend total": 6732
+          }
+        },
+        "go": {
+          "samples_ms": [
+            3422,
+            3372,
+            3435,
+            3389,
+            3393
+          ],
+          "median_ms": 3393,
+          "min_ms": 3372,
+          "max_ms": 3435,
+          "phases_median_ms": {
+            "load TAST + sort": 38,
+            "transitive specializations": 646,
+            "prepare + monomorphize": 913,
+            "runtime": 0,
+            "PBO producer": 860,
+            "emitter drain": 1582,
+            "generation + writes (cumulative batches)": 2057,
+            "optimize + emit": 2440,
+            "entry points": 0,
+            "backend total": 3393
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            3430,
+            3354,
+            3342,
+            3426,
+            3373
+          ],
+          "median_ms": 3373,
+          "min_ms": 3342,
+          "max_ms": 3430,
+          "phases_median_ms": {
+            "load TAST + sort": 56,
+            "transitive specializations": 559,
+            "prepare + monomorphize": 774,
+            "runtime": 1,
+            "PBO producer": 576,
+            "emitter drain": 1960,
+            "generation + writes (cumulative batches)": 2310,
+            "optimize + emit": 2537,
+            "entry points": 10,
+            "backend total": 3373
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-arrays/definition.json",
+      "definition_sha256": "7f1f407aa980d35d8555bbdc55082e1e010b5463755a8770d855b89f19bf9b6c",
+      "input": {
+        "modules": 167,
+        "tast_bytes": 16574841,
+        "tast_sha256": "3db768cd312645c26c42a0ff8520f4faaac063afd471f71ae0e86f2be0ba2918"
+      },
+      "generated_sha256": "e5c90a805f1bade11a4c3af1d269b2eb4304fee2f416927d74a9cf5ddceee7ef",
+      "generated_files": 217
+    },
+    {
+      "name": "gopurs-assert",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            565,
+            574,
+            566,
+            582,
+            570
+          ],
+          "median_ms": 570,
+          "min_ms": 565,
+          "max_ms": 582,
+          "phases_median_ms": {
+            "load TAST + sort": 95,
+            "transitive specializations": 13,
+            "prepare + monomorphize": 63,
+            "runtime": 1,
+            "PBO producer": 189,
+            "emitter drain": 219,
+            "generation + writes (cumulative batches)": 385,
+            "optimize + emit": 408,
+            "entry points": 0,
+            "backend total": 570
+          }
+        },
+        "go": {
+          "samples_ms": [
+            163,
+            169,
+            164,
+            166,
+            167
+          ],
+          "median_ms": 166,
+          "min_ms": 163,
+          "max_ms": 169,
+          "phases_median_ms": {
+            "load TAST + sort": 7,
+            "transitive specializations": 6,
+            "prepare + monomorphize": 60,
+            "runtime": 0,
+            "PBO producer": 85,
+            "emitter drain": 13,
+            "generation + writes (cumulative batches)": 64,
+            "optimize + emit": 98,
+            "entry points": 0,
+            "backend total": 166
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            117,
+            117,
+            115,
+            114,
+            115
+          ],
+          "median_ms": 115,
+          "min_ms": 114,
+          "max_ms": 117,
+          "phases_median_ms": {
+            "load TAST + sort": 8,
+            "transitive specializations": 6,
+            "prepare + monomorphize": 35,
+            "runtime": 1,
+            "PBO producer": 56,
+            "emitter drain": 15,
+            "generation + writes (cumulative batches)": 51,
+            "optimize + emit": 71,
+            "entry points": 1,
+            "backend total": 115
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-assert/definition.json",
+      "definition_sha256": "f22cb66eb845343680a4b97084b88286c0f9e57c141575bd237efc190dd3e66b",
+      "input": {
+        "modules": 58,
+        "tast_bytes": 2671037,
+        "tast_sha256": "f6ebd5f3bf7bb46b559b6ceb13a44116b75363b26fdb8588f1f882c5f2fc74ea"
+      },
+      "generated_sha256": "0b762df62e9aefa05483b7092dc7768e04348815a1929eeab2c6ae16c74bbcd0",
+      "generated_files": 82
+    },
+    {
+      "name": "gopurs-avar",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            7171,
+            7190,
+            7149,
+            6990,
+            7207
+          ],
+          "median_ms": 7171,
+          "min_ms": 6990,
+          "max_ms": 7207,
+          "phases_median_ms": {
+            "load TAST + sort": 558,
+            "transitive specializations": 97,
+            "prepare + monomorphize": 359,
+            "runtime": 1,
+            "PBO producer": 5171,
+            "emitter drain": 1072,
+            "generation + writes (cumulative batches)": 6158,
+            "optimize + emit": 6237,
+            "entry points": 0,
+            "backend total": 7171
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1634,
+            1631,
+            1626,
+            1626,
+            1628
+          ],
+          "median_ms": 1628,
+          "min_ms": 1626,
+          "max_ms": 1634,
+          "phases_median_ms": {
+            "load TAST + sort": 54,
+            "transitive specializations": 80,
+            "prepare + monomorphize": 366,
+            "runtime": 0,
+            "PBO producer": 906,
+            "emitter drain": 302,
+            "generation + writes (cumulative batches)": 1063,
+            "optimize + emit": 1207,
+            "entry points": 0,
+            "backend total": 1628
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1291,
+            1314,
+            1278,
+            1300,
+            1291
+          ],
+          "median_ms": 1291,
+          "min_ms": 1278,
+          "max_ms": 1314,
+          "phases_median_ms": {
+            "load TAST + sort": 56,
+            "transitive specializations": 72,
+            "prepare + monomorphize": 338,
+            "runtime": 1,
+            "PBO producer": 616,
+            "emitter drain": 268,
+            "generation + writes (cumulative batches)": 798,
+            "optimize + emit": 885,
+            "entry points": 11,
+            "backend total": 1291
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-avar/definition.json",
+      "definition_sha256": "b41c8a68767b1fa93abd6acf1fc0cb07300fc99505e604b6c2eac7100749b393",
+      "input": {
+        "modules": 236,
+        "tast_bytes": 25441478,
+        "tast_sha256": "634ac564b6e00258e32b1753aa1c012ead3f25d38f9981c7e0294faf0a63bcce"
+      },
+      "generated_sha256": "f171f68c49beeb74800f29b48a65fb562daef57ae80466427aef8c1ba2b97681",
+      "generated_files": 292
+    },
+    {
+      "name": "gopurs-catenable-lists",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4490,
+            4474,
+            4420,
+            4488,
+            4442
+          ],
+          "median_ms": 4474,
+          "min_ms": 4420,
+          "max_ms": 4490,
+          "phases_median_ms": {
+            "load TAST + sort": 366,
+            "transitive specializations": 91,
+            "prepare + monomorphize": 257,
+            "runtime": 1,
+            "PBO producer": 3023,
+            "emitter drain": 815,
+            "generation + writes (cumulative batches)": 3808,
+            "optimize + emit": 3845,
+            "entry points": 0,
+            "backend total": 4474
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1182,
+            1232,
+            1182,
+            1171,
+            1166
+          ],
+          "median_ms": 1182,
+          "min_ms": 1166,
+          "max_ms": 1232,
+          "phases_median_ms": {
+            "load TAST + sort": 33,
+            "transitive specializations": 86,
+            "prepare + monomorphize": 262,
+            "runtime": 0,
+            "PBO producer": 679,
+            "emitter drain": 205,
+            "generation + writes (cumulative batches)": 585,
+            "optimize + emit": 885,
+            "entry points": 0,
+            "backend total": 1182
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            898,
+            911,
+            893,
+            907,
+            897
+          ],
+          "median_ms": 898,
+          "min_ms": 893,
+          "max_ms": 911,
+          "phases_median_ms": {
+            "load TAST + sort": 34,
+            "transitive specializations": 72,
+            "prepare + monomorphize": 224,
+            "runtime": 1,
+            "PBO producer": 436,
+            "emitter drain": 197,
+            "generation + writes (cumulative batches)": 480,
+            "optimize + emit": 634,
+            "entry points": 7,
+            "backend total": 898
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-catenable-lists/definition.json",
+      "definition_sha256": "e76ea07dbb2191083eca3ae49613c869c316c072c431142ada633cf90353297d",
+      "input": {
+        "modules": 153,
+        "tast_bytes": 15249012,
+        "tast_sha256": "cd5053673a818b94b99c4cdf8e3034e56a82dd23c8b799dd5b7f542ee0476d69"
+      },
+      "generated_sha256": "098acb2d2556c1671eab3f15f765a77369e76625884a62533603ec55e2f1d113",
+      "generated_files": 190
+    },
+    {
+      "name": "gopurs-console",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4737,
+            4644,
+            4618,
+            4649,
+            4648
+          ],
+          "median_ms": 4648,
+          "min_ms": 4618,
+          "max_ms": 4737,
+          "phases_median_ms": {
+            "load TAST + sort": 325,
+            "transitive specializations": 31,
+            "prepare + monomorphize": 167,
+            "runtime": 2,
+            "PBO producer": 2831,
+            "emitter drain": 1322,
+            "generation + writes (cumulative batches)": 4113,
+            "optimize + emit": 4154,
+            "entry points": 0,
+            "backend total": 4648
+          }
+        },
+        "go": {
+          "samples_ms": [
+            788,
+            770,
+            793,
+            783,
+            789
+          ],
+          "median_ms": 788,
+          "min_ms": 770,
+          "max_ms": 793,
+          "phases_median_ms": {
+            "load TAST + sort": 29,
+            "transitive specializations": 23,
+            "prepare + monomorphize": 165,
+            "runtime": 0,
+            "PBO producer": 450,
+            "emitter drain": 143,
+            "generation + writes (cumulative batches)": 413,
+            "optimize + emit": 593,
+            "entry points": 0,
+            "backend total": 788
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            622,
+            609,
+            593,
+            600,
+            600
+          ],
+          "median_ms": 600,
+          "min_ms": 593,
+          "max_ms": 622,
+          "phases_median_ms": {
+            "load TAST + sort": 32,
+            "transitive specializations": 21,
+            "prepare + monomorphize": 137,
+            "runtime": 1,
+            "PBO producer": 293,
+            "emitter drain": 132,
+            "generation + writes (cumulative batches)": 335,
+            "optimize + emit": 426,
+            "entry points": 5,
+            "backend total": 600
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-console/definition.json",
+      "definition_sha256": "adfa20d073d494d77628acdfae018d601dd4d611287cd90f6a026e28770937c1",
+      "input": {
+        "modules": 161,
+        "tast_bytes": 12723862,
+        "tast_sha256": "f0bc1b26608c5b317d84636acc7df4ba80f307616050c371c3c36c3418d3f180"
+      },
+      "generated_sha256": "7442e70078a6dc4c13e11a5126628aa8e41e658b079c0912024ec34cd4cdfbd3",
+      "generated_files": 210
+    },
+    {
+      "name": "gopurs-datetime",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6640,
+            6828,
+            6555,
+            6833,
+            6678
+          ],
+          "median_ms": 6678,
+          "min_ms": 6555,
+          "max_ms": 6833,
+          "phases_median_ms": {
+            "load TAST + sort": 468,
+            "transitive specializations": 121,
+            "prepare + monomorphize": 366,
+            "runtime": 1,
+            "PBO producer": 4690,
+            "emitter drain": 1169,
+            "generation + writes (cumulative batches)": 5803,
+            "optimize + emit": 5853,
+            "entry points": 0,
+            "backend total": 6678
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1789,
+            1780,
+            1785,
+            1788,
+            1799
+          ],
+          "median_ms": 1788,
+          "min_ms": 1780,
+          "max_ms": 1799,
+          "phases_median_ms": {
+            "load TAST + sort": 45,
+            "transitive specializations": 98,
+            "prepare + monomorphize": 349,
+            "runtime": 0,
+            "PBO producer": 1001,
+            "emitter drain": 393,
+            "generation + writes (cumulative batches)": 1171,
+            "optimize + emit": 1395,
+            "entry points": 0,
+            "backend total": 1788
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1466,
+            1479,
+            1469,
+            1473,
+            1447
+          ],
+          "median_ms": 1469,
+          "min_ms": 1447,
+          "max_ms": 1479,
+          "phases_median_ms": {
+            "load TAST + sort": 51,
+            "transitive specializations": 85,
+            "prepare + monomorphize": 314,
+            "runtime": 1,
+            "PBO producer": 643,
+            "emitter drain": 451,
+            "generation + writes (cumulative batches)": 980,
+            "optimize + emit": 1095,
+            "entry points": 10,
+            "backend total": 1469
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-datetime/definition.json",
+      "definition_sha256": "31de498b5d1b373160469247eb215cea60135cda6b6d979a76c18acac1db1f36",
+      "input": {
+        "modules": 198,
+        "tast_bytes": 20921265,
+        "tast_sha256": "a1dfc5f09525d371a5eac009a35989c7a663f641ccd392216475f965a991e563"
+      },
+      "generated_sha256": "394ccfbc0d823a1aa601ba3f26d0370078deb69e16b1c322001f8c19d3dc4c56",
+      "generated_files": 252
+    },
+    {
+      "name": "gopurs-effect",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            2026,
+            2020,
+            1987,
+            1983,
+            2012
+          ],
+          "median_ms": 2012,
+          "min_ms": 1983,
+          "max_ms": 2026,
+          "phases_median_ms": {
+            "load TAST + sort": 100,
+            "transitive specializations": 13,
+            "prepare + monomorphize": 64,
+            "runtime": 1,
+            "PBO producer": 198,
+            "emitter drain": 1633,
+            "generation + writes (cumulative batches)": 1816,
+            "optimize + emit": 1845,
+            "entry points": 0,
+            "backend total": 2012
+          }
+        },
+        "go": {
+          "samples_ms": [
+            173,
+            171,
+            170,
+            174,
+            171
+          ],
+          "median_ms": 171,
+          "min_ms": 170,
+          "max_ms": 174,
+          "phases_median_ms": {
+            "load TAST + sort": 7,
+            "transitive specializations": 6,
+            "prepare + monomorphize": 61,
+            "runtime": 0,
+            "PBO producer": 87,
+            "emitter drain": 16,
+            "generation + writes (cumulative batches)": 70,
+            "optimize + emit": 102,
+            "entry points": 0,
+            "backend total": 171
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            120,
+            124,
+            122,
+            118,
+            120
+          ],
+          "median_ms": 120,
+          "min_ms": 118,
+          "max_ms": 124,
+          "phases_median_ms": {
+            "load TAST + sort": 8,
+            "transitive specializations": 6,
+            "prepare + monomorphize": 35,
+            "runtime": 1,
+            "PBO producer": 56,
+            "emitter drain": 18,
+            "generation + writes (cumulative batches)": 56,
+            "optimize + emit": 75,
+            "entry points": 1,
+            "backend total": 120
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-effect/definition.json",
+      "definition_sha256": "54aefdbdcad0c06b26747901e8e0f03b6732dcef1c7900186787a0a1c4bc61c2",
+      "input": {
+        "modules": 60,
+        "tast_bytes": 2755017,
+        "tast_sha256": "92b2c29b0650528fd2fe0daaa1efbe0534665ff741048c1da0dd28325571f2f3"
+      },
+      "generated_sha256": "97aea8d16efe7208364c96f2becfd2d5278e00aaae17e0a039e8c5d6a205cfcf",
+      "generated_files": 87
+    },
+    {
+      "name": "gopurs-enums",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            5193,
+            5182,
+            5140,
+            5216,
+            5279
+          ],
+          "median_ms": 5193,
+          "min_ms": 5140,
+          "max_ms": 5279,
+          "phases_median_ms": {
+            "load TAST + sort": 357,
+            "transitive specializations": 115,
+            "prepare + monomorphize": 283,
+            "runtime": 1,
+            "PBO producer": 3414,
+            "emitter drain": 1139,
+            "generation + writes (cumulative batches)": 4510,
+            "optimize + emit": 4549,
+            "entry points": 0,
+            "backend total": 5193
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1052,
+            1039,
+            1055,
+            1055,
+            1046
+          ],
+          "median_ms": 1052,
+          "min_ms": 1039,
+          "max_ms": 1055,
+          "phases_median_ms": {
+            "load TAST + sort": 30,
+            "transitive specializations": 111,
+            "prepare + monomorphize": 277,
+            "runtime": 0,
+            "PBO producer": 568,
+            "emitter drain": 173,
+            "generation + writes (cumulative batches)": 571,
+            "optimize + emit": 743,
+            "entry points": 0,
+            "backend total": 1052
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            835,
+            813,
+            823,
+            835,
+            821
+          ],
+          "median_ms": 823,
+          "min_ms": 813,
+          "max_ms": 835,
+          "phases_median_ms": {
+            "load TAST + sort": 34,
+            "transitive specializations": 91,
+            "prepare + monomorphize": 235,
+            "runtime": 1,
+            "PBO producer": 366,
+            "emitter drain": 179,
+            "generation + writes (cumulative batches)": 454,
+            "optimize + emit": 549,
+            "entry points": 7,
+            "backend total": 823
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-enums/definition.json",
+      "definition_sha256": "a84183c739b678e775da0b53ce336fd87a980a42e0418946c2f81dba3cc41b8d",
+      "input": {
+        "modules": 169,
+        "tast_bytes": 14265427,
+        "tast_sha256": "9d1b54438a958ed5cc0d6b35145abd26642cf5c084ceb1b8b5562c2392d38edc"
+      },
+      "generated_sha256": "8bbaa5fced4b758b2e60f5ee01f555bda44ae04269b055652cf5bd515c389717",
+      "generated_files": 219
+    },
+    {
+      "name": "gopurs-exceptions",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            2196,
+            2145,
+            2167,
+            2141,
+            2181
+          ],
+          "median_ms": 2167,
+          "min_ms": 2141,
+          "max_ms": 2196,
+          "phases_median_ms": {
+            "load TAST + sort": 122,
+            "transitive specializations": 13,
+            "prepare + monomorphize": 73,
+            "runtime": 1,
+            "PBO producer": 1129,
+            "emitter drain": 843,
+            "generation + writes (cumulative batches)": 1937,
+            "optimize + emit": 1969,
+            "entry points": 0,
+            "backend total": 2167
+          }
+        },
+        "go": {
+          "samples_ms": [
+            257,
+            258,
+            252,
+            261,
+            255
+          ],
+          "median_ms": 257,
+          "min_ms": 252,
+          "max_ms": 261,
+          "phases_median_ms": {
+            "load TAST + sort": 9,
+            "transitive specializations": 7,
+            "prepare + monomorphize": 69,
+            "runtime": 0,
+            "PBO producer": 143,
+            "emitter drain": 35,
+            "generation + writes (cumulative batches)": 115,
+            "optimize + emit": 179,
+            "entry points": 0,
+            "backend total": 257
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            187,
+            184,
+            184,
+            184,
+            183
+          ],
+          "median_ms": 184,
+          "min_ms": 183,
+          "max_ms": 187,
+          "phases_median_ms": {
+            "load TAST + sort": 11,
+            "transitive specializations": 7,
+            "prepare + monomorphize": 45,
+            "runtime": 1,
+            "PBO producer": 96,
+            "emitter drain": 31,
+            "generation + writes (cumulative batches)": 94,
+            "optimize + emit": 127,
+            "entry points": 2,
+            "backend total": 184
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-exceptions/definition.json",
+      "definition_sha256": "e7bc7e739ec0d85cbae1be599d77328865d82ebf72e348fdafcf0948f4a8538a",
+      "input": {
+        "modules": 79,
+        "tast_bytes": 3747123,
+        "tast_sha256": "806884bb6617c49bd78baa6c9e460374446136ab6a5398bac50277470cb036d6"
+      },
+      "generated_sha256": "1d59990d4a4520b6371fa306e7f4071c1aa6b54f798c5277b01513509fd01a74",
+      "generated_files": 108
+    },
+    {
+      "name": "gopurs-foldable-traversable",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            5146,
+            5096,
+            5083,
+            5114,
+            5129
+          ],
+          "median_ms": 5114,
+          "min_ms": 5083,
+          "max_ms": 5146,
+          "phases_median_ms": {
+            "load TAST + sort": 351,
+            "transitive specializations": 49,
+            "prepare + monomorphize": 210,
+            "runtime": 1,
+            "PBO producer": 3163,
+            "emitter drain": 1377,
+            "generation + writes (cumulative batches)": 4500,
+            "optimize + emit": 4538,
+            "entry points": 0,
+            "backend total": 5114
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1043,
+            1039,
+            1040,
+            1045,
+            1042
+          ],
+          "median_ms": 1042,
+          "min_ms": 1039,
+          "max_ms": 1045,
+          "phases_median_ms": {
+            "load TAST + sort": 35,
+            "transitive specializations": 42,
+            "prepare + monomorphize": 212,
+            "runtime": 0,
+            "PBO producer": 567,
+            "emitter drain": 226,
+            "generation + writes (cumulative batches)": 601,
+            "optimize + emit": 793,
+            "entry points": 0,
+            "backend total": 1042
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            851,
+            874,
+            862,
+            859,
+            871
+          ],
+          "median_ms": 862,
+          "min_ms": 851,
+          "max_ms": 874,
+          "phases_median_ms": {
+            "load TAST + sort": 44,
+            "transitive specializations": 37,
+            "prepare + monomorphize": 180,
+            "runtime": 1,
+            "PBO producer": 361,
+            "emitter drain": 267,
+            "generation + writes (cumulative batches)": 528,
+            "optimize + emit": 631,
+            "entry points": 6,
+            "backend total": 862
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-foldable-traversable/definition.json",
+      "definition_sha256": "b39e94fdd5f771b0576708f6bd0cc6620f2cef7eb4126aa2ccbd53646dd13253",
+      "input": {
+        "modules": 161,
+        "tast_bytes": 14248623,
+        "tast_sha256": "9b798f038eb175817dfccab5db310811914af1060bb28e83e032d6bf5b42e6e3"
+      },
+      "generated_sha256": "d4d2a42e89b98cb59d96f1b62b47c6a48773132eaaf4ac81d48218f7c0922e3c",
+      "generated_files": 211
+    },
+    {
+      "name": "gopurs-foreign",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            5406,
+            5259,
+            5446,
+            5265,
+            5230
+          ],
+          "median_ms": 5265,
+          "min_ms": 5230,
+          "max_ms": 5446,
+          "phases_median_ms": {
+            "load TAST + sort": 485,
+            "transitive specializations": 65,
+            "prepare + monomorphize": 294,
+            "runtime": 1,
+            "PBO producer": 3137,
+            "emitter drain": 1338,
+            "generation + writes (cumulative batches)": 4423,
+            "optimize + emit": 4476,
+            "entry points": 0,
+            "backend total": 5265
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1322,
+            1330,
+            1331,
+            1339,
+            1327
+          ],
+          "median_ms": 1330,
+          "min_ms": 1322,
+          "max_ms": 1339,
+          "phases_median_ms": {
+            "load TAST + sort": 48,
+            "transitive specializations": 56,
+            "prepare + monomorphize": 290,
+            "runtime": 0,
+            "PBO producer": 805,
+            "emitter drain": 185,
+            "generation + writes (cumulative batches)": 851,
+            "optimize + emit": 989,
+            "entry points": 0,
+            "backend total": 1330
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1068,
+            1066,
+            1076,
+            1069,
+            1064
+          ],
+          "median_ms": 1068,
+          "min_ms": 1064,
+          "max_ms": 1076,
+          "phases_median_ms": {
+            "load TAST + sort": 49,
+            "transitive specializations": 49,
+            "prepare + monomorphize": 267,
+            "runtime": 1,
+            "PBO producer": 556,
+            "emitter drain": 184,
+            "generation + writes (cumulative batches)": 660,
+            "optimize + emit": 742,
+            "entry points": 9,
+            "backend total": 1068
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-foreign/definition.json",
+      "definition_sha256": "34868deee86dcdb903c09a3fe582132aa957c0fe30d2931d01b545b954deb831",
+      "input": {
+        "modules": 228,
+        "tast_bytes": 21888765,
+        "tast_sha256": "788525bb0b8659074d83e3b83eeff042f04ea1f4ca8be1fa688cfdb2e0522ccd"
+      },
+      "generated_sha256": "3e4c257b5fe61d1e98eebe0961d592f220b71c3443337ab5dddfde92ab55f4fb",
+      "generated_files": 286
+    },
+    {
+      "name": "gopurs-foreign-object",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            7692,
+            7502,
+            7396,
+            7528,
+            7391
+          ],
+          "median_ms": 7502,
+          "min_ms": 7391,
+          "max_ms": 7692,
+          "phases_median_ms": {
+            "load TAST + sort": 533,
+            "transitive specializations": 133,
+            "prepare + monomorphize": 398,
+            "runtime": 1,
+            "PBO producer": 5131,
+            "emitter drain": 1468,
+            "generation + writes (cumulative batches)": 6506,
+            "optimize + emit": 6586,
+            "entry points": 0,
+            "backend total": 7502
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1881,
+            1785,
+            1770,
+            1774,
+            1792
+          ],
+          "median_ms": 1785,
+          "min_ms": 1770,
+          "max_ms": 1881,
+          "phases_median_ms": {
+            "load TAST + sort": 53,
+            "transitive specializations": 131,
+            "prepare + monomorphize": 407,
+            "runtime": 0,
+            "PBO producer": 983,
+            "emitter drain": 341,
+            "generation + writes (cumulative batches)": 1180,
+            "optimize + emit": 1325,
+            "entry points": 0,
+            "backend total": 1785
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1564,
+            1567,
+            1531,
+            1538,
+            1537
+          ],
+          "median_ms": 1538,
+          "min_ms": 1531,
+          "max_ms": 1567,
+          "phases_median_ms": {
+            "load TAST + sort": 58,
+            "transitive specializations": 117,
+            "prepare + monomorphize": 372,
+            "runtime": 1,
+            "PBO producer": 728,
+            "emitter drain": 369,
+            "generation + writes (cumulative batches)": 996,
+            "optimize + emit": 1097,
+            "entry points": 12,
+            "backend total": 1538
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-foreign-object/definition.json",
+      "definition_sha256": "6d1a36d59b540d272cb95c7dbc79a8859b67cb71ac2aaa23bdcc5c37bf6b5cf7",
+      "input": {
+        "modules": 253,
+        "tast_bytes": 24824026,
+        "tast_sha256": "955fee8d78c35804a61afa49bccbfbdde03fb9cebad4a6171d3c85a3ed33c8fc"
+      },
+      "generated_sha256": "eea3a3d80625c5390d81eae7545f8ac8d86aaf03e4333f46a312f302e9917f64",
+      "generated_files": 318
+    },
+    {
+      "name": "gopurs-free",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4926,
+            4908,
+            4870,
+            4887,
+            4882
+          ],
+          "median_ms": 4887,
+          "min_ms": 4870,
+          "max_ms": 4926,
+          "phases_median_ms": {
+            "load TAST + sort": 447,
+            "transitive specializations": 42,
+            "prepare + monomorphize": 237,
+            "runtime": 2,
+            "PBO producer": 3551,
+            "emitter drain": 655,
+            "generation + writes (cumulative batches)": 4170,
+            "optimize + emit": 4206,
+            "entry points": 0,
+            "backend total": 4887
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1108,
+            1086,
+            1104,
+            1106,
+            1112
+          ],
+          "median_ms": 1106,
+          "min_ms": 1086,
+          "max_ms": 1112,
+          "phases_median_ms": {
+            "load TAST + sort": 44,
+            "transitive specializations": 36,
+            "prepare + monomorphize": 232,
+            "runtime": 0,
+            "PBO producer": 629,
+            "emitter drain": 200,
+            "generation + writes (cumulative batches)": 670,
+            "optimize + emit": 829,
+            "entry points": 0,
+            "backend total": 1106
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            911,
+            925,
+            892,
+            910,
+            893
+          ],
+          "median_ms": 910,
+          "min_ms": 892,
+          "max_ms": 925,
+          "phases_median_ms": {
+            "load TAST + sort": 44,
+            "transitive specializations": 31,
+            "prepare + monomorphize": 209,
+            "runtime": 1,
+            "PBO producer": 412,
+            "emitter drain": 232,
+            "generation + writes (cumulative batches)": 544,
+            "optimize + emit": 643,
+            "entry points": 8,
+            "backend total": 910
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-free/definition.json",
+      "definition_sha256": "4a4b7d8c5b2d002e35e0c314884bbd4a1be5487b76234f329c3c44d31959a386",
+      "input": {
+        "modules": 199,
+        "tast_bytes": 20182506,
+        "tast_sha256": "c5d3fdf91c7b419c7b941e0ff89b7bf2123b99a100951344a0879599b04008d5"
+      },
+      "generated_sha256": "aed89a88cf2afcb1d90a827de23d59abb23260772873561f197a9b8a0e8c932f",
+      "generated_files": 239
+    },
+    {
+      "name": "gopurs-functions",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            1992,
+            1962,
+            1937,
+            1940,
+            1944
+          ],
+          "median_ms": 1944,
+          "min_ms": 1937,
+          "max_ms": 1992,
+          "phases_median_ms": {
+            "load TAST + sort": 93,
+            "transitive specializations": 14,
+            "prepare + monomorphize": 63,
+            "runtime": 1,
+            "PBO producer": 197,
+            "emitter drain": 1587,
+            "generation + writes (cumulative batches)": 1765,
+            "optimize + emit": 1787,
+            "entry points": 0,
+            "backend total": 1944
+          }
+        },
+        "go": {
+          "samples_ms": [
+            193,
+            187,
+            186,
+            186,
+            191
+          ],
+          "median_ms": 187,
+          "min_ms": 186,
+          "max_ms": 193,
+          "phases_median_ms": {
+            "load TAST + sort": 7,
+            "transitive specializations": 7,
+            "prepare + monomorphize": 62,
+            "runtime": 0,
+            "PBO producer": 107,
+            "emitter drain": 11,
+            "generation + writes (cumulative batches)": 69,
+            "optimize + emit": 117,
+            "entry points": 0,
+            "backend total": 187
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            131,
+            127,
+            126,
+            126,
+            128
+          ],
+          "median_ms": 127,
+          "min_ms": 126,
+          "max_ms": 131,
+          "phases_median_ms": {
+            "load TAST + sort": 8,
+            "transitive specializations": 7,
+            "prepare + monomorphize": 37,
+            "runtime": 1,
+            "PBO producer": 70,
+            "emitter drain": 10,
+            "generation + writes (cumulative batches)": 57,
+            "optimize + emit": 80,
+            "entry points": 2,
+            "backend total": 127
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-functions/definition.json",
+      "definition_sha256": "571475d02f67c1915854e1f0c99f8429ba90d23952f0daa03bb50544feda6402",
+      "input": {
+        "modules": 60,
+        "tast_bytes": 2888782,
+        "tast_sha256": "1ae05d76547dbad09a0918529ba491650d02cda5df7ac350df6af865f8733a8a"
+      },
+      "generated_sha256": "799eb7d310757141ac12fca054972334f4d7fdec00aa2087fa769f9bada3320c",
+      "generated_files": 87
+    },
+    {
+      "name": "gopurs-integers",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4774,
+            4767,
+            4731,
+            4779,
+            4784
+          ],
+          "median_ms": 4774,
+          "min_ms": 4731,
+          "max_ms": 4784,
+          "phases_median_ms": {
+            "load TAST + sort": 318,
+            "transitive specializations": 56,
+            "prepare + monomorphize": 195,
+            "runtime": 1,
+            "PBO producer": 3080,
+            "emitter drain": 1177,
+            "generation + writes (cumulative batches)": 4203,
+            "optimize + emit": 4258,
+            "entry points": 0,
+            "backend total": 4774
+          }
+        },
+        "go": {
+          "samples_ms": [
+            941,
+            947,
+            954,
+            947,
+            948
+          ],
+          "median_ms": 947,
+          "min_ms": 941,
+          "max_ms": 954,
+          "phases_median_ms": {
+            "load TAST + sort": 31,
+            "transitive specializations": 66,
+            "prepare + monomorphize": 213,
+            "runtime": 0,
+            "PBO producer": 434,
+            "emitter drain": 269,
+            "generation + writes (cumulative batches)": 531,
+            "optimize + emit": 703,
+            "entry points": 0,
+            "backend total": 947
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            790,
+            792,
+            760,
+            786,
+            787
+          ],
+          "median_ms": 787,
+          "min_ms": 760,
+          "max_ms": 792,
+          "phases_median_ms": {
+            "load TAST + sort": 36,
+            "transitive specializations": 50,
+            "prepare + monomorphize": 175,
+            "runtime": 1,
+            "PBO producer": 293,
+            "emitter drain": 276,
+            "generation + writes (cumulative batches)": 477,
+            "optimize + emit": 569,
+            "entry points": 6,
+            "backend total": 787
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-integers/definition.json",
+      "definition_sha256": "b637b54690387d9ad71d6424b9d99b8df50844b4c26e3706f0fc2a3942c19465",
+      "input": {
+        "modules": 162,
+        "tast_bytes": 13157280,
+        "tast_sha256": "f6c424f5e1f96ed7146703481f714ace1a91d3075eddaefa4a60780d34bb2f4a"
+      },
+      "generated_sha256": "fb966101015e013c84410c1de2d6e96717cac8abc5463d013f61f65e7916d5d0",
+      "generated_files": 211
+    },
+    {
+      "name": "gopurs-js-bigints",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            2136,
+            2099,
+            2113,
+            2148,
+            2106
+          ],
+          "median_ms": 2113,
+          "min_ms": 2099,
+          "max_ms": 2148,
+          "phases_median_ms": {
+            "load TAST + sort": 103,
+            "transitive specializations": 16,
+            "prepare + monomorphize": 70,
+            "runtime": 2,
+            "PBO producer": 1072,
+            "emitter drain": 867,
+            "generation + writes (cumulative batches)": 1907,
+            "optimize + emit": 1937,
+            "entry points": 0,
+            "backend total": 2113
+          }
+        },
+        "go": {
+          "samples_ms": [
+            209,
+            200,
+            198,
+            196,
+            201
+          ],
+          "median_ms": 200,
+          "min_ms": 196,
+          "max_ms": 209,
+          "phases_median_ms": {
+            "load TAST + sort": 8,
+            "transitive specializations": 8,
+            "prepare + monomorphize": 67,
+            "runtime": 0,
+            "PBO producer": 106,
+            "emitter drain": 17,
+            "generation + writes (cumulative batches)": 91,
+            "optimize + emit": 124,
+            "entry points": 0,
+            "backend total": 200
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            154,
+            152,
+            150,
+            149,
+            150
+          ],
+          "median_ms": 150,
+          "min_ms": 149,
+          "max_ms": 154,
+          "phases_median_ms": {
+            "load TAST + sort": 10,
+            "transitive specializations": 8,
+            "prepare + monomorphize": 43,
+            "runtime": 1,
+            "PBO producer": 73,
+            "emitter drain": 21,
+            "generation + writes (cumulative batches)": 75,
+            "optimize + emit": 95,
+            "entry points": 2,
+            "backend total": 150
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-js-bigints/definition.json",
+      "definition_sha256": "c84475e1b4e782bf4e138811c22215873aad2291c2439ef932b2cbad0537533b",
+      "input": {
+        "modules": 80,
+        "tast_bytes": 3321206,
+        "tast_sha256": "9317a768c5fe1c7460ca8ad46e3d8edef176394ae7f4fa624e531211968955a7"
+      },
+      "generated_sha256": "357a638c12434c31e573144b3420e96e657a08e8768e7bc72c0c6b163643041a",
+      "generated_files": 113
+    },
+    {
+      "name": "gopurs-js-date",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            7410,
+            7408,
+            7252,
+            7504,
+            7464
+          ],
+          "median_ms": 7410,
+          "min_ms": 7252,
+          "max_ms": 7504,
+          "phases_median_ms": {
+            "load TAST + sort": 527,
+            "transitive specializations": 104,
+            "prepare + monomorphize": 367,
+            "runtime": 2,
+            "PBO producer": 5278,
+            "emitter drain": 1244,
+            "generation + writes (cumulative batches)": 6434,
+            "optimize + emit": 6516,
+            "entry points": 0,
+            "backend total": 7410
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1584,
+            1544,
+            1591,
+            1580,
+            1581
+          ],
+          "median_ms": 1581,
+          "min_ms": 1544,
+          "max_ms": 1591,
+          "phases_median_ms": {
+            "load TAST + sort": 53,
+            "transitive specializations": 81,
+            "prepare + monomorphize": 351,
+            "runtime": 0,
+            "PBO producer": 928,
+            "emitter drain": 250,
+            "generation + writes (cumulative batches)": 1057,
+            "optimize + emit": 1177,
+            "entry points": 0,
+            "backend total": 1581
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1285,
+            1290,
+            1284,
+            1287,
+            1256
+          ],
+          "median_ms": 1285,
+          "min_ms": 1256,
+          "max_ms": 1290,
+          "phases_median_ms": {
+            "load TAST + sort": 55,
+            "transitive specializations": 74,
+            "prepare + monomorphize": 328,
+            "runtime": 1,
+            "PBO producer": 687,
+            "emitter drain": 201,
+            "generation + writes (cumulative batches)": 802,
+            "optimize + emit": 892,
+            "entry points": 11,
+            "backend total": 1285
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-js-date/definition.json",
+      "definition_sha256": "981db885f58e6eb7a371b4073fb9bfe9afa0e0e0683329c0e8624011d523ea90",
+      "input": {
+        "modules": 250,
+        "tast_bytes": 25465714,
+        "tast_sha256": "45361131c5dc7ccd474b23cf0e212cf850cd9964297387fe54f1f657d69b5037"
+      },
+      "generated_sha256": "dfa973029f04a1c3ac6f28329cebffc0c2012557fd0b4c6291b58a9296a5b2b0",
+      "generated_files": 313
+    },
+    {
+      "name": "gopurs-js-promise",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            3514,
+            3519,
+            3506,
+            3640,
+            3517
+          ],
+          "median_ms": 3517,
+          "min_ms": 3506,
+          "max_ms": 3640,
+          "phases_median_ms": {
+            "load TAST + sort": 284,
+            "transitive specializations": 30,
+            "prepare + monomorphize": 148,
+            "runtime": 1,
+            "PBO producer": 1813,
+            "emitter drain": 1275,
+            "generation + writes (cumulative batches)": 3057,
+            "optimize + emit": 3089,
+            "entry points": 0,
+            "backend total": 3517
+          }
+        },
+        "go": {
+          "samples_ms": [
+            576,
+            561,
+            573,
+            575,
+            565
+          ],
+          "median_ms": 573,
+          "min_ms": 561,
+          "max_ms": 576,
+          "phases_median_ms": {
+            "load TAST + sort": 25,
+            "transitive specializations": 22,
+            "prepare + monomorphize": 138,
+            "runtime": 0,
+            "PBO producer": 367,
+            "emitter drain": 41,
+            "generation + writes (cumulative batches)": 302,
+            "optimize + emit": 409,
+            "entry points": 0,
+            "backend total": 573
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            454,
+            438,
+            438,
+            452,
+            445
+          ],
+          "median_ms": 445,
+          "min_ms": 438,
+          "max_ms": 454,
+          "phases_median_ms": {
+            "load TAST + sort": 26,
+            "transitive specializations": 21,
+            "prepare + monomorphize": 116,
+            "runtime": 1,
+            "PBO producer": 235,
+            "emitter drain": 62,
+            "generation + writes (cumulative batches)": 234,
+            "optimize + emit": 294,
+            "entry points": 4,
+            "backend total": 445
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-js-promise/definition.json",
+      "definition_sha256": "f9a0372bc07bd00df2d2677ce189560dd1d2349a89df46589c9303e4a36c4c73",
+      "input": {
+        "modules": 140,
+        "tast_bytes": 10956144,
+        "tast_sha256": "73cac93c815bc6216ecd2d8f8482ef4be0059da780df33fc5bc9ce62666b07c9"
+      },
+      "generated_sha256": "47f5258fd15dd81173fb97d34ecf71daaa4aaf065b1653c445218bf26c074b09",
+      "generated_files": 177
+    },
+    {
+      "name": "gopurs-js-promise-aff",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            7626,
+            7531,
+            7645,
+            7778,
+            7718
+          ],
+          "median_ms": 7645,
+          "min_ms": 7531,
+          "max_ms": 7778,
+          "phases_median_ms": {
+            "load TAST + sort": 545,
+            "transitive specializations": 113,
+            "prepare + monomorphize": 380,
+            "runtime": 1,
+            "PBO producer": 5382,
+            "emitter drain": 1350,
+            "generation + writes (cumulative batches)": 6649,
+            "optimize + emit": 6732,
+            "entry points": 1,
+            "backend total": 7645
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1633,
+            1602,
+            1664,
+            1630,
+            1630
+          ],
+          "median_ms": 1630,
+          "min_ms": 1602,
+          "max_ms": 1664,
+          "phases_median_ms": {
+            "load TAST + sort": 58,
+            "transitive specializations": 88,
+            "prepare + monomorphize": 366,
+            "runtime": 0,
+            "PBO producer": 1022,
+            "emitter drain": 183,
+            "generation + writes (cumulative batches)": 1084,
+            "optimize + emit": 1206,
+            "entry points": 0,
+            "backend total": 1630
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1352,
+            1344,
+            1353,
+            1343,
+            1316
+          ],
+          "median_ms": 1344,
+          "min_ms": 1316,
+          "max_ms": 1353,
+          "phases_median_ms": {
+            "load TAST + sort": 57,
+            "transitive specializations": 81,
+            "prepare + monomorphize": 347,
+            "runtime": 1,
+            "PBO producer": 745,
+            "emitter drain": 179,
+            "generation + writes (cumulative batches)": 833,
+            "optimize + emit": 928,
+            "entry points": 12,
+            "backend total": 1344
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-js-promise-aff/definition.json",
+      "definition_sha256": "84c33c484047e4f69575fa02c51c3b7377852b564974d02490ec384963ab81ca",
+      "input": {
+        "modules": 259,
+        "tast_bytes": 26359780,
+        "tast_sha256": "d05ad339aee089e030386a9b5c03242d44c7e11c00be56be90b03df068de0d52"
+      },
+      "generated_sha256": "f7f5ae063c4a63643d66d860fb555f5bde6f4909bedfb0945be45637249b5487",
+      "generated_files": 324
+    },
+    {
+      "name": "gopurs-js-uri",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4645,
+            4562,
+            4567,
+            4573,
+            4576
+          ],
+          "median_ms": 4573,
+          "min_ms": 4562,
+          "max_ms": 4645,
+          "phases_median_ms": {
+            "load TAST + sort": 315,
+            "transitive specializations": 28,
+            "prepare + monomorphize": 163,
+            "runtime": 1,
+            "PBO producer": 2923,
+            "emitter drain": 1172,
+            "generation + writes (cumulative batches)": 4059,
+            "optimize + emit": 4093,
+            "entry points": 0,
+            "backend total": 4573
+          }
+        },
+        "go": {
+          "samples_ms": [
+            760,
+            741,
+            757,
+            752,
+            738
+          ],
+          "median_ms": 752,
+          "min_ms": 738,
+          "max_ms": 760,
+          "phases_median_ms": {
+            "load TAST + sort": 29,
+            "transitive specializations": 21,
+            "prepare + monomorphize": 159,
+            "runtime": 0,
+            "PBO producer": 423,
+            "emitter drain": 139,
+            "generation + writes (cumulative batches)": 393,
+            "optimize + emit": 563,
+            "entry points": 0,
+            "backend total": 752
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            599,
+            595,
+            580,
+            593,
+            570
+          ],
+          "median_ms": 593,
+          "min_ms": 570,
+          "max_ms": 599,
+          "phases_median_ms": {
+            "load TAST + sort": 31,
+            "transitive specializations": 20,
+            "prepare + monomorphize": 136,
+            "runtime": 1,
+            "PBO producer": 287,
+            "emitter drain": 129,
+            "generation + writes (cumulative batches)": 323,
+            "optimize + emit": 418,
+            "entry points": 5,
+            "backend total": 593
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-js-uri/definition.json",
+      "definition_sha256": "f4b646d08b305baa786293af8ea8fb93905e331a2cd669dadadee837a7a4a9d4",
+      "input": {
+        "modules": 162,
+        "tast_bytes": 12750877,
+        "tast_sha256": "b926ff4fc0f051cb9cc6a2f545790cc8a2e818dec5ef916ab8772705946d18ef"
+      },
+      "generated_sha256": "82c3d04a15b9dc2b9ee5fb3270e0bdddec7d4e0c1519554077648ab9b39a9666",
+      "generated_files": 212
+    },
+    {
+      "name": "gopurs-lazy",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            3182,
+            3149,
+            3163,
+            3186,
+            3156
+          ],
+          "median_ms": 3163,
+          "min_ms": 3149,
+          "max_ms": 3186,
+          "phases_median_ms": {
+            "load TAST + sort": 276,
+            "transitive specializations": 21,
+            "prepare + monomorphize": 134,
+            "runtime": 1,
+            "PBO producer": 1709,
+            "emitter drain": 1055,
+            "generation + writes (cumulative batches)": 2715,
+            "optimize + emit": 2751,
+            "entry points": 0,
+            "backend total": 3163
+          }
+        },
+        "go": {
+          "samples_ms": [
+            563,
+            545,
+            553,
+            551,
+            542
+          ],
+          "median_ms": 551,
+          "min_ms": 542,
+          "max_ms": 563,
+          "phases_median_ms": {
+            "load TAST + sort": 25,
+            "transitive specializations": 13,
+            "prepare + monomorphize": 127,
+            "runtime": 0,
+            "PBO producer": 328,
+            "emitter drain": 71,
+            "generation + writes (cumulative batches)": 295,
+            "optimize + emit": 398,
+            "entry points": 0,
+            "backend total": 551
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            439,
+            430,
+            429,
+            437,
+            424
+          ],
+          "median_ms": 430,
+          "min_ms": 424,
+          "max_ms": 439,
+          "phases_median_ms": {
+            "load TAST + sort": 26,
+            "transitive specializations": 12,
+            "prepare + monomorphize": 106,
+            "runtime": 1,
+            "PBO producer": 212,
+            "emitter drain": 82,
+            "generation + writes (cumulative batches)": 229,
+            "optimize + emit": 295,
+            "entry points": 4,
+            "backend total": 430
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-lazy/definition.json",
+      "definition_sha256": "832cf31b1172854da971a1be5e78bb960bc500aac81e1aa2c4058bbc382154e5",
+      "input": {
+        "modules": 134,
+        "tast_bytes": 10848887,
+        "tast_sha256": "4c8775541a2949d45005150c67ab816583f466f67b1030b0f527cccd578c2f84"
+      },
+      "generated_sha256": "3bae2bc5f3d1361f14cbaece20f073ba70dc0bcff643307dcfc9b09cdcbd8d46",
+      "generated_files": 167
+    },
+    {
+      "name": "gopurs-node-buffer",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6858,
+            6896,
+            6790,
+            6881,
+            6852
+          ],
+          "median_ms": 6858,
+          "min_ms": 6790,
+          "max_ms": 6896,
+          "phases_median_ms": {
+            "load TAST + sort": 486,
+            "transitive specializations": 86,
+            "prepare + monomorphize": 317,
+            "runtime": 1,
+            "PBO producer": 4677,
+            "emitter drain": 1367,
+            "generation + writes (cumulative batches)": 5988,
+            "optimize + emit": 6056,
+            "entry points": 0,
+            "backend total": 6858
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1346,
+            1351,
+            1350,
+            1351,
+            1354
+          ],
+          "median_ms": 1351,
+          "min_ms": 1346,
+          "max_ms": 1354,
+          "phases_median_ms": {
+            "load TAST + sort": 50,
+            "transitive specializations": 72,
+            "prepare + monomorphize": 314,
+            "runtime": 0,
+            "PBO producer": 872,
+            "emitter drain": 114,
+            "generation + writes (cumulative batches)": 841,
+            "optimize + emit": 986,
+            "entry points": 0,
+            "backend total": 1351
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1122,
+            1120,
+            1086,
+            1118,
+            1125
+          ],
+          "median_ms": 1120,
+          "min_ms": 1086,
+          "max_ms": 1125,
+          "phases_median_ms": {
+            "load TAST + sort": 49,
+            "transitive specializations": 66,
+            "prepare + monomorphize": 294,
+            "runtime": 1,
+            "PBO producer": 657,
+            "emitter drain": 107,
+            "generation + writes (cumulative batches)": 672,
+            "optimize + emit": 765,
+            "entry points": 9,
+            "backend total": 1120
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-node-buffer/definition.json",
+      "definition_sha256": "a4552a11e5275ef3794757f39c4048668f5d2f50f1d76bb249e7bc48d699b508",
+      "input": {
+        "modules": 241,
+        "tast_bytes": 22583660,
+        "tast_sha256": "93c5af5f9e76c7f7d75e73c83ae490ca58d22880fc08e097b348cae33c9b5700"
+      },
+      "generated_sha256": "51cb34ba37c30adc1fffafb01272189d2aaaba07b5e4b4030ef7125af680e4ab",
+      "generated_files": 305
+    },
+    {
+      "name": "gopurs-node-event-emitter",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            9547,
+            9425,
+            9545,
+            9520,
+            9505
+          ],
+          "median_ms": 9520,
+          "min_ms": 9425,
+          "max_ms": 9547,
+          "phases_median_ms": {
+            "load TAST + sort": 663,
+            "transitive specializations": 622,
+            "prepare + monomorphize": 1012,
+            "runtime": 2,
+            "PBO producer": 6692,
+            "emitter drain": 1135,
+            "generation + writes (cumulative batches)": 7775,
+            "optimize + emit": 7844,
+            "entry points": 0,
+            "backend total": 9520
+          }
+        },
+        "go": {
+          "samples_ms": [
+            2849,
+            2833,
+            2890,
+            2890,
+            2817
+          ],
+          "median_ms": 2849,
+          "min_ms": 2817,
+          "max_ms": 2890,
+          "phases_median_ms": {
+            "load TAST + sort": 75,
+            "transitive specializations": 634,
+            "prepare + monomorphize": 1005,
+            "runtime": 0,
+            "PBO producer": 1631,
+            "emitter drain": 133,
+            "generation + writes (cumulative batches)": 1521,
+            "optimize + emit": 1765,
+            "entry points": 0,
+            "backend total": 2849
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2527,
+            2468,
+            2447,
+            2522,
+            2465
+          ],
+          "median_ms": 2468,
+          "min_ms": 2447,
+          "max_ms": 2527,
+          "phases_median_ms": {
+            "load TAST + sort": 70,
+            "transitive specializations": 588,
+            "prepare + monomorphize": 939,
+            "runtime": 1,
+            "PBO producer": 1277,
+            "emitter drain": 157,
+            "generation + writes (cumulative batches)": 1192,
+            "optimize + emit": 1437,
+            "entry points": 21,
+            "backend total": 2468
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-node-event-emitter/definition.json",
+      "definition_sha256": "e388b1610615afaeea885474d7965089be8f483d48b10b8c61a9d311b5eacec0",
+      "input": {
+        "modules": 300,
+        "tast_bytes": 34050385,
+        "tast_sha256": "0006c017cc06cb81ff250e18b39bb3f0450b6deb996abf535583cbdf72f3ac3e"
+      },
+      "generated_sha256": "4081980d6eb7b5d7a0a776924f5995b10e16d10aedc0762592458e0907accb51",
+      "generated_files": 372
+    },
+    {
+      "name": "gopurs-node-fs",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            8892,
+            8839,
+            8709,
+            8837,
+            8814
+          ],
+          "median_ms": 8837,
+          "min_ms": 8709,
+          "max_ms": 8892,
+          "phases_median_ms": {
+            "load TAST + sort": 596,
+            "transitive specializations": 181,
+            "prepare + monomorphize": 487,
+            "runtime": 1,
+            "PBO producer": 5895,
+            "emitter drain": 1862,
+            "generation + writes (cumulative batches)": 7641,
+            "optimize + emit": 7760,
+            "entry points": 0,
+            "backend total": 8837
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1915,
+            1890,
+            1920,
+            1908,
+            1916
+          ],
+          "median_ms": 1915,
+          "min_ms": 1890,
+          "max_ms": 1920,
+          "phases_median_ms": {
+            "load TAST + sort": 64,
+            "transitive specializations": 159,
+            "prepare + monomorphize": 490,
+            "runtime": 0,
+            "PBO producer": 1191,
+            "emitter drain": 168,
+            "generation + writes (cumulative batches)": 1218,
+            "optimize + emit": 1359,
+            "entry points": 0,
+            "backend total": 1915
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1587,
+            1592,
+            1563,
+            1585,
+            1551
+          ],
+          "median_ms": 1585,
+          "min_ms": 1551,
+          "max_ms": 1592,
+          "phases_median_ms": {
+            "load TAST + sort": 64,
+            "transitive specializations": 143,
+            "prepare + monomorphize": 456,
+            "runtime": 1,
+            "PBO producer": 866,
+            "emitter drain": 183,
+            "generation + writes (cumulative batches)": 943,
+            "optimize + emit": 1049,
+            "entry points": 14,
+            "backend total": 1585
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-node-fs/definition.json",
+      "definition_sha256": "c555edf45da04642462825508fd76471bc5375562abeb9fb893171eaf54ebf0a",
+      "input": {
+        "modules": 283,
+        "tast_bytes": 28841793,
+        "tast_sha256": "5ce51e6ea9a71e18900b4e61c071a1aed7356de754ba975636cfb4bbb9e7cc6d"
+      },
+      "generated_sha256": "fb1dace11cb2f62b6e6528e1235c0ffb8194dd12038afb6b701c4b8d08dd2b08",
+      "generated_files": 361
+    },
+    {
+      "name": "gopurs-node-http",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            9915,
+            9984,
+            9802,
+            9946,
+            9943
+          ],
+          "median_ms": 9943,
+          "min_ms": 9802,
+          "max_ms": 9984,
+          "phases_median_ms": {
+            "load TAST + sort": 603,
+            "transitive specializations": 183,
+            "prepare + monomorphize": 508,
+            "runtime": 1,
+            "PBO producer": 6322,
+            "emitter drain": 2500,
+            "generation + writes (cumulative batches)": 8721,
+            "optimize + emit": 8822,
+            "entry points": 0,
+            "backend total": 9943
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1934,
+            1918,
+            1941,
+            1939,
+            1943
+          ],
+          "median_ms": 1939,
+          "min_ms": 1918,
+          "max_ms": 1943,
+          "phases_median_ms": {
+            "load TAST + sort": 69,
+            "transitive specializations": 154,
+            "prepare + monomorphize": 488,
+            "runtime": 0,
+            "PBO producer": 1244,
+            "emitter drain": 137,
+            "generation + writes (cumulative batches)": 1241,
+            "optimize + emit": 1381,
+            "entry points": 0,
+            "backend total": 1939
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1629,
+            1649,
+            1593,
+            1626,
+            1593
+          ],
+          "median_ms": 1626,
+          "min_ms": 1593,
+          "max_ms": 1649,
+          "phases_median_ms": {
+            "load TAST + sort": 66,
+            "transitive specializations": 138,
+            "prepare + monomorphize": 461,
+            "runtime": 1,
+            "PBO producer": 918,
+            "emitter drain": 160,
+            "generation + writes (cumulative batches)": 952,
+            "optimize + emit": 1081,
+            "entry points": 14,
+            "backend total": 1626
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-node-http/definition.json",
+      "definition_sha256": "3a7f6f455960f8391ab1c8d5aef4756017486e167331e40ea1f564dd21090523",
+      "input": {
+        "modules": 312,
+        "tast_bytes": 30247059,
+        "tast_sha256": "b8a9ab2b9e33dda99d972d66b196a88751f81dbd5d544941bf93b30c51c645b3"
+      },
+      "generated_sha256": "93b323f0b16a5d956235ac81f219e7217180700dd021136862206c5aac26824e",
+      "generated_files": 411
+    },
+    {
+      "name": "gopurs-node-net",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            9130,
+            9120,
+            9038,
+            9112,
+            9109
+          ],
+          "median_ms": 9112,
+          "min_ms": 9038,
+          "max_ms": 9130,
+          "phases_median_ms": {
+            "load TAST + sort": 610,
+            "transitive specializations": 158,
+            "prepare + monomorphize": 467,
+            "runtime": 2,
+            "PBO producer": 6107,
+            "emitter drain": 1917,
+            "generation + writes (cumulative batches)": 7920,
+            "optimize + emit": 8034,
+            "entry points": 0,
+            "backend total": 9112
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1899,
+            1965,
+            1890,
+            1899,
+            1902
+          ],
+          "median_ms": 1899,
+          "min_ms": 1890,
+          "max_ms": 1965,
+          "phases_median_ms": {
+            "load TAST + sort": 67,
+            "transitive specializations": 124,
+            "prepare + monomorphize": 457,
+            "runtime": 0,
+            "PBO producer": 1246,
+            "emitter drain": 130,
+            "generation + writes (cumulative batches)": 1235,
+            "optimize + emit": 1377,
+            "entry points": 0,
+            "backend total": 1899
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1576,
+            1589,
+            1544,
+            1578,
+            1573
+          ],
+          "median_ms": 1576,
+          "min_ms": 1544,
+          "max_ms": 1589,
+          "phases_median_ms": {
+            "load TAST + sort": 63,
+            "transitive specializations": 115,
+            "prepare + monomorphize": 434,
+            "runtime": 1,
+            "PBO producer": 914,
+            "emitter drain": 149,
+            "generation + writes (cumulative batches)": 947,
+            "optimize + emit": 1065,
+            "entry points": 14,
+            "backend total": 1576
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-node-net/definition.json",
+      "definition_sha256": "b6e73dea6d8a4e0e6312bea516bd247846622203a8d53708e53b302b86c73885",
+      "input": {
+        "modules": 299,
+        "tast_bytes": 29335546,
+        "tast_sha256": "98efb1dd5777ec16448d01a9133186358e1bf7e1ace327d36404a1d56b54df8e"
+      },
+      "generated_sha256": "fb8430f68766a9dd22419841862757e695f524a2cad519d8b6082ed37084984b",
+      "generated_files": 386
+    },
+    {
+      "name": "gopurs-node-path",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            1988,
+            1987,
+            1984,
+            1982,
+            1943
+          ],
+          "median_ms": 1984,
+          "min_ms": 1943,
+          "max_ms": 1988,
+          "phases_median_ms": {
+            "load TAST + sort": 100,
+            "transitive specializations": 13,
+            "prepare + monomorphize": 64,
+            "runtime": 1,
+            "PBO producer": 193,
+            "emitter drain": 1627,
+            "generation + writes (cumulative batches)": 1796,
+            "optimize + emit": 1818,
+            "entry points": 0,
+            "backend total": 1984
+          }
+        },
+        "go": {
+          "samples_ms": [
+            170,
+            171,
+            168,
+            169,
+            165
+          ],
+          "median_ms": 169,
+          "min_ms": 165,
+          "max_ms": 171,
+          "phases_median_ms": {
+            "load TAST + sort": 7,
+            "transitive specializations": 6,
+            "prepare + monomorphize": 60,
+            "runtime": 0,
+            "PBO producer": 90,
+            "emitter drain": 12,
+            "generation + writes (cumulative batches)": 68,
+            "optimize + emit": 102,
+            "entry points": 0,
+            "backend total": 169
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            122,
+            120,
+            121,
+            119,
+            118
+          ],
+          "median_ms": 120,
+          "min_ms": 118,
+          "max_ms": 122,
+          "phases_median_ms": {
+            "load TAST + sort": 8,
+            "transitive specializations": 6,
+            "prepare + monomorphize": 36,
+            "runtime": 1,
+            "PBO producer": 56,
+            "emitter drain": 17,
+            "generation + writes (cumulative batches)": 55,
+            "optimize + emit": 74,
+            "entry points": 1,
+            "backend total": 120
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-node-path/definition.json",
+      "definition_sha256": "2c9d3c6e678ae8b1f33a123e880aee1c3dee57f334d220d580f0903548b38f68",
+      "input": {
+        "modules": 60,
+        "tast_bytes": 2755024,
+        "tast_sha256": "128e662069831ecf4db9dda9b927df2d58942a6413a9ad5b0715dff285f04d89"
+      },
+      "generated_sha256": "aee1390bcbbdcee60063e8e8dd8f6f6f07ad1f4309fbb4c297564e6d800e99c7",
+      "generated_files": 87
+    },
+    {
+      "name": "gopurs-node-process",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            8342,
+            8301,
+            8308,
+            8262,
+            8317
+          ],
+          "median_ms": 8308,
+          "min_ms": 8262,
+          "max_ms": 8342,
+          "phases_median_ms": {
+            "load TAST + sort": 588,
+            "transitive specializations": 129,
+            "prepare + monomorphize": 425,
+            "runtime": 2,
+            "PBO producer": 5898,
+            "emitter drain": 1401,
+            "generation + writes (cumulative batches)": 7208,
+            "optimize + emit": 7295,
+            "entry points": 0,
+            "backend total": 8308
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1799,
+            1810,
+            1819,
+            1817,
+            1817
+          ],
+          "median_ms": 1817,
+          "min_ms": 1799,
+          "max_ms": 1819,
+          "phases_median_ms": {
+            "load TAST + sort": 63,
+            "transitive specializations": 107,
+            "prepare + monomorphize": 425,
+            "runtime": 0,
+            "PBO producer": 1240,
+            "emitter drain": 83,
+            "generation + writes (cumulative batches)": 1201,
+            "optimize + emit": 1325,
+            "entry points": 0,
+            "backend total": 1817
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1500,
+            1509,
+            1459,
+            1492,
+            1499
+          ],
+          "median_ms": 1499,
+          "min_ms": 1459,
+          "max_ms": 1509,
+          "phases_median_ms": {
+            "load TAST + sort": 63,
+            "transitive specializations": 96,
+            "prepare + monomorphize": 401,
+            "runtime": 1,
+            "PBO producer": 915,
+            "emitter drain": 102,
+            "generation + writes (cumulative batches)": 914,
+            "optimize + emit": 1022,
+            "entry points": 13,
+            "backend total": 1499
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-node-process/definition.json",
+      "definition_sha256": "487abfc37bbee7d60ed795931d8454364c45375bbbb72170c815f8a089df7dd2",
+      "input": {
+        "modules": 285,
+        "tast_bytes": 28431011,
+        "tast_sha256": "beda7b7b20ec67f6d6c94116620ddf5246d12354190dc0af1343fa40f07e9921"
+      },
+      "generated_sha256": "9a288c882141994d75b73c05d36b245cf7f436f531fdff0dce16e3574b333a7e",
+      "generated_files": 360
+    },
+    {
+      "name": "gopurs-node-streams",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            10645,
+            10386,
+            10387,
+            10553,
+            10318
+          ],
+          "median_ms": 10387,
+          "min_ms": 10318,
+          "max_ms": 10645,
+          "phases_median_ms": {
+            "load TAST + sort": 694,
+            "transitive specializations": 748,
+            "prepare + monomorphize": 1182,
+            "runtime": 1,
+            "PBO producer": 7387,
+            "emitter drain": 1141,
+            "generation + writes (cumulative batches)": 8439,
+            "optimize + emit": 8511,
+            "entry points": 0,
+            "backend total": 10387
+          }
+        },
+        "go": {
+          "samples_ms": [
+            3167,
+            3137,
+            3217,
+            3197,
+            3122
+          ],
+          "median_ms": 3167,
+          "min_ms": 3122,
+          "max_ms": 3217,
+          "phases_median_ms": {
+            "load TAST + sort": 78,
+            "transitive specializations": 752,
+            "prepare + monomorphize": 1186,
+            "runtime": 0,
+            "PBO producer": 1746,
+            "emitter drain": 147,
+            "generation + writes (cumulative batches)": 1662,
+            "optimize + emit": 1895,
+            "entry points": 0,
+            "backend total": 3167
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2840,
+            2781,
+            2773,
+            2813,
+            2760
+          ],
+          "median_ms": 2781,
+          "min_ms": 2760,
+          "max_ms": 2840,
+          "phases_median_ms": {
+            "load TAST + sort": 76,
+            "transitive specializations": 701,
+            "prepare + monomorphize": 1097,
+            "runtime": 1,
+            "PBO producer": 1392,
+            "emitter drain": 196,
+            "generation + writes (cumulative batches)": 1327,
+            "optimize + emit": 1592,
+            "entry points": 24,
+            "backend total": 2781
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-node-streams/definition.json",
+      "definition_sha256": "05835c5f010a18774f3ecbc9d45fb99ed78e3d5b28ae02b5ae32e7dd36c5461c",
+      "input": {
+        "modules": 313,
+        "tast_bytes": 35894380,
+        "tast_sha256": "c78ddad94ccb4a7ce502bcc02114db6b0939e2f329f0b5b483de05c577db396e"
+      },
+      "generated_sha256": "af144bb449289a7e33265f67c2d501adac2a313b59514a852ebc57a68605b238",
+      "generated_files": 394
+    },
+    {
+      "name": "gopurs-now",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            8422,
+            8384,
+            8351,
+            8563,
+            8350
+          ],
+          "median_ms": 8384,
+          "min_ms": 8350,
+          "max_ms": 8563,
+          "phases_median_ms": {
+            "load TAST + sort": 616,
+            "transitive specializations": 132,
+            "prepare + monomorphize": 430,
+            "runtime": 1,
+            "PBO producer": 5889,
+            "emitter drain": 1469,
+            "generation + writes (cumulative batches)": 7269,
+            "optimize + emit": 7361,
+            "entry points": 0,
+            "backend total": 8384
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1822,
+            1826,
+            1820,
+            1817,
+            1842
+          ],
+          "median_ms": 1822,
+          "min_ms": 1817,
+          "max_ms": 1842,
+          "phases_median_ms": {
+            "load TAST + sort": 64,
+            "transitive specializations": 105,
+            "prepare + monomorphize": 426,
+            "runtime": 0,
+            "PBO producer": 1246,
+            "emitter drain": 87,
+            "generation + writes (cumulative batches)": 1204,
+            "optimize + emit": 1333,
+            "entry points": 0,
+            "backend total": 1822
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1531,
+            1515,
+            1512,
+            1506,
+            1517
+          ],
+          "median_ms": 1515,
+          "min_ms": 1506,
+          "max_ms": 1531,
+          "phases_median_ms": {
+            "load TAST + sort": 65,
+            "transitive specializations": 99,
+            "prepare + monomorphize": 409,
+            "runtime": 1,
+            "PBO producer": 919,
+            "emitter drain": 105,
+            "generation + writes (cumulative batches)": 920,
+            "optimize + emit": 1026,
+            "entry points": 12,
+            "backend total": 1515
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-now/definition.json",
+      "definition_sha256": "ff204ad340d32dbf7fd02bdbbd9186aba5017ad6748585add3c7b9b544d9c398",
+      "input": {
+        "modules": 287,
+        "tast_bytes": 28555328,
+        "tast_sha256": "a9232b4c0c131ab11e97161d00014d727908b9b8aa7112407761d07a25e13f38"
+      },
+      "generated_sha256": "bd50d590258c4d84d69ae2e75a24a692b90d1a9b34396d5a53ca98c3840e8e10",
+      "generated_files": 364
+    },
+    {
+      "name": "gopurs-nullable",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6492,
+            6458,
+            6447,
+            6421,
+            6586
+          ],
+          "median_ms": 6458,
+          "min_ms": 6421,
+          "max_ms": 6586,
+          "phases_median_ms": {
+            "load TAST + sort": 477,
+            "transitive specializations": 66,
+            "prepare + monomorphize": 288,
+            "runtime": 1,
+            "PBO producer": 4178,
+            "emitter drain": 1515,
+            "generation + writes (cumulative batches)": 5643,
+            "optimize + emit": 5694,
+            "entry points": 0,
+            "backend total": 6458
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1265,
+            1257,
+            1261,
+            1264,
+            1267
+          ],
+          "median_ms": 1264,
+          "min_ms": 1257,
+          "max_ms": 1267,
+          "phases_median_ms": {
+            "load TAST + sort": 46,
+            "transitive specializations": 57,
+            "prepare + monomorphize": 285,
+            "runtime": 0,
+            "PBO producer": 715,
+            "emitter drain": 215,
+            "generation + writes (cumulative batches)": 795,
+            "optimize + emit": 931,
+            "entry points": 0,
+            "backend total": 1264
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1039,
+            1061,
+            1044,
+            1040,
+            1037
+          ],
+          "median_ms": 1040,
+          "min_ms": 1037,
+          "max_ms": 1061,
+          "phases_median_ms": {
+            "load TAST + sort": 48,
+            "transitive specializations": 49,
+            "prepare + monomorphize": 260,
+            "runtime": 1,
+            "PBO producer": 502,
+            "emitter drain": 221,
+            "generation + writes (cumulative batches)": 638,
+            "optimize + emit": 724,
+            "entry points": 9,
+            "backend total": 1040
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-nullable/definition.json",
+      "definition_sha256": "432be0cbe2f240cfe353ececfb2bfe5ccc2a3df8a35ce70ef9843cdb1c48ad48",
+      "input": {
+        "modules": 230,
+        "tast_bytes": 21863124,
+        "tast_sha256": "94aa6d964c5bf8a880f47c0d358844fc402517ce88caa173818ab8049762a77b"
+      },
+      "generated_sha256": "a81d23b562d8445d4c3c0b9d658d47034ac7ae4ac95a0140522339b5153e8a03",
+      "generated_files": 290
+    },
+    {
+      "name": "gopurs-numbers",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4768,
+            4745,
+            4693,
+            4720,
+            4761
+          ],
+          "median_ms": 4745,
+          "min_ms": 4693,
+          "max_ms": 4768,
+          "phases_median_ms": {
+            "load TAST + sort": 323,
+            "transitive specializations": 65,
+            "prepare + monomorphize": 211,
+            "runtime": 1,
+            "PBO producer": 2993,
+            "emitter drain": 1204,
+            "generation + writes (cumulative batches)": 4162,
+            "optimize + emit": 4198,
+            "entry points": 0,
+            "backend total": 4745
+          }
+        },
+        "go": {
+          "samples_ms": [
+            982,
+            924,
+            915,
+            923,
+            915
+          ],
+          "median_ms": 923,
+          "min_ms": 915,
+          "max_ms": 982,
+          "phases_median_ms": {
+            "load TAST + sort": 32,
+            "transitive specializations": 77,
+            "prepare + monomorphize": 232,
+            "runtime": 0,
+            "PBO producer": 446,
+            "emitter drain": 211,
+            "generation + writes (cumulative batches)": 481,
+            "optimize + emit": 662,
+            "entry points": 0,
+            "backend total": 923
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            735,
+            726,
+            726,
+            733,
+            731
+          ],
+          "median_ms": 731,
+          "min_ms": 726,
+          "max_ms": 735,
+          "phases_median_ms": {
+            "load TAST + sort": 36,
+            "transitive specializations": 64,
+            "prepare + monomorphize": 192,
+            "runtime": 1,
+            "PBO producer": 297,
+            "emitter drain": 196,
+            "generation + writes (cumulative batches)": 395,
+            "optimize + emit": 495,
+            "entry points": 6,
+            "backend total": 731
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-numbers/definition.json",
+      "definition_sha256": "46a98147e596217f8e67be73f32b3455a4ede43424ba7af50ae6fecdb54c09d0",
+      "input": {
+        "modules": 161,
+        "tast_bytes": 13418102,
+        "tast_sha256": "0f8c8781ad7b3990c490ed00e78dcaec07ef35ff6ec2fbd2771110e30f123ade"
+      },
+      "generated_sha256": "65113b74128a57bf8d60e7b27a7aa628b39f12422fd17c5f2788cfa07a3a3cd9",
+      "generated_files": 210
+    },
+    {
+      "name": "gopurs-ordered-collections",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            7709,
+            7625,
+            7471,
+            7752,
+            7603
+          ],
+          "median_ms": 7625,
+          "min_ms": 7471,
+          "max_ms": 7752,
+          "phases_median_ms": {
+            "load TAST + sort": 532,
+            "transitive specializations": 186,
+            "prepare + monomorphize": 465,
+            "runtime": 1,
+            "PBO producer": 5059,
+            "emitter drain": 1571,
+            "generation + writes (cumulative batches)": 6531,
+            "optimize + emit": 6613,
+            "entry points": 0,
+            "backend total": 7625
+          }
+        },
+        "go": {
+          "samples_ms": [
+            2173,
+            2170,
+            2176,
+            2187,
+            2156
+          ],
+          "median_ms": 2173,
+          "min_ms": 2156,
+          "max_ms": 2187,
+          "phases_median_ms": {
+            "load TAST + sort": 52,
+            "transitive specializations": 195,
+            "prepare + monomorphize": 489,
+            "runtime": 0,
+            "PBO producer": 1159,
+            "emitter drain": 478,
+            "generation + writes (cumulative batches)": 1491,
+            "optimize + emit": 1637,
+            "entry points": 0,
+            "backend total": 2173
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1949,
+            1907,
+            1937,
+            1943,
+            1922
+          ],
+          "median_ms": 1937,
+          "min_ms": 1907,
+          "max_ms": 1949,
+          "phases_median_ms": {
+            "load TAST + sort": 61,
+            "transitive specializations": 165,
+            "prepare + monomorphize": 423,
+            "runtime": 1,
+            "PBO producer": 724,
+            "emitter drain": 698,
+            "generation + writes (cumulative batches)": 1330,
+            "optimize + emit": 1422,
+            "entry points": 12,
+            "backend total": 1937
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-ordered-collections/definition.json",
+      "definition_sha256": "5b883894f680a08b10156bd6e55a9d40dbd7406a73947aa650eb71ff8e94e8c0",
+      "input": {
+        "modules": 241,
+        "tast_bytes": 25000091,
+        "tast_sha256": "515a39dae0231c1d84f957cd3013b2fcebca337bd5756c095270f1a344879365"
+      },
+      "generated_sha256": "e94f4f1776745760ddcd6c2737495b75262edf0753d96696cdc0919205ba4afb",
+      "generated_files": 302
+    },
+    {
+      "name": "gopurs-partial",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4551,
+            4520,
+            4512,
+            4600,
+            4506
+          ],
+          "median_ms": 4520,
+          "min_ms": 4506,
+          "max_ms": 4600,
+          "phases_median_ms": {
+            "load TAST + sort": 307,
+            "transitive specializations": 28,
+            "prepare + monomorphize": 162,
+            "runtime": 1,
+            "PBO producer": 2781,
+            "emitter drain": 1254,
+            "generation + writes (cumulative batches)": 4002,
+            "optimize + emit": 4036,
+            "entry points": 0,
+            "backend total": 4520
+          }
+        },
+        "go": {
+          "samples_ms": [
+            757,
+            731,
+            750,
+            751,
+            732
+          ],
+          "median_ms": 750,
+          "min_ms": 731,
+          "max_ms": 757,
+          "phases_median_ms": {
+            "load TAST + sort": 29,
+            "transitive specializations": 20,
+            "prepare + monomorphize": 160,
+            "runtime": 0,
+            "PBO producer": 421,
+            "emitter drain": 136,
+            "generation + writes (cumulative batches)": 388,
+            "optimize + emit": 559,
+            "entry points": 0,
+            "backend total": 750
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            589,
+            600,
+            574,
+            593,
+            574
+          ],
+          "median_ms": 589,
+          "min_ms": 574,
+          "max_ms": 600,
+          "phases_median_ms": {
+            "load TAST + sort": 32,
+            "transitive specializations": 20,
+            "prepare + monomorphize": 136,
+            "runtime": 1,
+            "PBO producer": 287,
+            "emitter drain": 127,
+            "generation + writes (cumulative batches)": 323,
+            "optimize + emit": 415,
+            "entry points": 5,
+            "backend total": 589
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-partial/definition.json",
+      "definition_sha256": "70dead057710579c922b055aa290779c79084715e3b86f7b4afc918991e0dde8",
+      "input": {
+        "modules": 161,
+        "tast_bytes": 12695797,
+        "tast_sha256": "59223e165f34aa3f29da5364c35d76f1570840a0496c859fca15aa456b1492ac"
+      },
+      "generated_sha256": "bea7e5c7e01a454bd7c58af5ae6ed61901e40758ca0fb02813d554683fdb22d3",
+      "generated_files": 210
+    },
+    {
+      "name": "gopurs-prelude",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            5017,
+            5060,
+            5021,
+            5027,
+            4918
+          ],
+          "median_ms": 5021,
+          "min_ms": 4918,
+          "max_ms": 5060,
+          "phases_median_ms": {
+            "load TAST + sort": 334,
+            "transitive specializations": 107,
+            "prepare + monomorphize": 260,
+            "runtime": 1,
+            "PBO producer": 3117,
+            "emitter drain": 1273,
+            "generation + writes (cumulative batches)": 4375,
+            "optimize + emit": 4424,
+            "entry points": 0,
+            "backend total": 5021
+          }
+        },
+        "go": {
+          "samples_ms": [
+            976,
+            958,
+            972,
+            977,
+            974
+          ],
+          "median_ms": 974,
+          "min_ms": 958,
+          "max_ms": 977,
+          "phases_median_ms": {
+            "load TAST + sort": 32,
+            "transitive specializations": 124,
+            "prepare + monomorphize": 289,
+            "runtime": 0,
+            "PBO producer": 485,
+            "emitter drain": 168,
+            "generation + writes (cumulative batches)": 473,
+            "optimize + emit": 653,
+            "entry points": 0,
+            "backend total": 974
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            762,
+            750,
+            746,
+            773,
+            747
+          ],
+          "median_ms": 750,
+          "min_ms": 746,
+          "max_ms": 773,
+          "phases_median_ms": {
+            "load TAST + sort": 33,
+            "transitive specializations": 99,
+            "prepare + monomorphize": 235,
+            "runtime": 1,
+            "PBO producer": 321,
+            "emitter drain": 156,
+            "generation + writes (cumulative batches)": 373,
+            "optimize + emit": 476,
+            "entry points": 6,
+            "backend total": 750
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-prelude/definition.json",
+      "definition_sha256": "0aaa501765287c1935b97fc197b9d1b00a0b0dc3e3b6799ea3db0fd8e894a1c9",
+      "input": {
+        "modules": 163,
+        "tast_bytes": 13887848,
+        "tast_sha256": "813673a621272ea9d6901254667c82c2f10880188bd763c00b4bb24d00551d94"
+      },
+      "generated_sha256": "8d60df1bd845c309962d3963a5a305da3dbc30bae3c6e3140bdd373b7ddebd58",
+      "generated_files": 214
+    },
+    {
+      "name": "gopurs-random",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4636,
+            4637,
+            4551,
+            4705,
+            4572
+          ],
+          "median_ms": 4636,
+          "min_ms": 4551,
+          "max_ms": 4705,
+          "phases_median_ms": {
+            "load TAST + sort": 315,
+            "transitive specializations": 28,
+            "prepare + monomorphize": 163,
+            "runtime": 1,
+            "PBO producer": 2930,
+            "emitter drain": 1224,
+            "generation + writes (cumulative batches)": 4122,
+            "optimize + emit": 4155,
+            "entry points": 0,
+            "backend total": 4636
+          }
+        },
+        "go": {
+          "samples_ms": [
+            760,
+            741,
+            760,
+            758,
+            766
+          ],
+          "median_ms": 760,
+          "min_ms": 741,
+          "max_ms": 766,
+          "phases_median_ms": {
+            "load TAST + sort": 29,
+            "transitive specializations": 21,
+            "prepare + monomorphize": 162,
+            "runtime": 0,
+            "PBO producer": 430,
+            "emitter drain": 139,
+            "generation + writes (cumulative batches)": 396,
+            "optimize + emit": 568,
+            "entry points": 0,
+            "backend total": 760
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            594,
+            607,
+            583,
+            590,
+            582
+          ],
+          "median_ms": 590,
+          "min_ms": 582,
+          "max_ms": 607,
+          "phases_median_ms": {
+            "load TAST + sort": 32,
+            "transitive specializations": 21,
+            "prepare + monomorphize": 138,
+            "runtime": 1,
+            "PBO producer": 285,
+            "emitter drain": 128,
+            "generation + writes (cumulative batches)": 324,
+            "optimize + emit": 414,
+            "entry points": 5,
+            "backend total": 590
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-random/definition.json",
+      "definition_sha256": "6cec8ab32f0c6aa0c529034c325f4c324d8c75cb2e96bf42cbf0216f5c280412",
+      "input": {
+        "modules": 162,
+        "tast_bytes": 12760400,
+        "tast_sha256": "f1b4f369e71066a8438f5469672ee2025ddec15becd3233fcefa41a2b3801015"
+      },
+      "generated_sha256": "d9c6ebd4717b994b30b85845ac9bee9e74c230048636108ff311eb5e762ddd0d",
+      "generated_files": 212
+    },
+    {
+      "name": "gopurs-record",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4764,
+            4668,
+            4700,
+            4682,
+            4728
+          ],
+          "median_ms": 4700,
+          "min_ms": 4668,
+          "max_ms": 4764,
+          "phases_median_ms": {
+            "load TAST + sort": 311,
+            "transitive specializations": 30,
+            "prepare + monomorphize": 167,
+            "runtime": 1,
+            "PBO producer": 3147,
+            "emitter drain": 1054,
+            "generation + writes (cumulative batches)": 4168,
+            "optimize + emit": 4201,
+            "entry points": 0,
+            "backend total": 4700
+          }
+        },
+        "go": {
+          "samples_ms": [
+            785,
+            803,
+            784,
+            785,
+            767
+          ],
+          "median_ms": 785,
+          "min_ms": 767,
+          "max_ms": 803,
+          "phases_median_ms": {
+            "load TAST + sort": 31,
+            "transitive specializations": 22,
+            "prepare + monomorphize": 165,
+            "runtime": 0,
+            "PBO producer": 458,
+            "emitter drain": 127,
+            "generation + writes (cumulative batches)": 408,
+            "optimize + emit": 586,
+            "entry points": 0,
+            "backend total": 785
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            616,
+            615,
+            602,
+            620,
+            598
+          ],
+          "median_ms": 615,
+          "min_ms": 598,
+          "max_ms": 620,
+          "phases_median_ms": {
+            "load TAST + sort": 32,
+            "transitive specializations": 22,
+            "prepare + monomorphize": 143,
+            "runtime": 1,
+            "PBO producer": 313,
+            "emitter drain": 119,
+            "generation + writes (cumulative batches)": 338,
+            "optimize + emit": 431,
+            "entry points": 5,
+            "backend total": 615
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-record/definition.json",
+      "definition_sha256": "179c572f762dbff8281d980163bf51f2b7a6cc6b25133602e53915820e068180",
+      "input": {
+        "modules": 165,
+        "tast_bytes": 13110120,
+        "tast_sha256": "f4faa52771e91489f8976b91d20bbc68b5a801a0a16aeb610057ca05df00d263"
+      },
+      "generated_sha256": "9989a15875d42ed4bc51724a3f4118d0b838202f7062ce2b8ccea82b3fc6052f",
+      "generated_files": 216
+    },
+    {
+      "name": "gopurs-refs",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4655,
+            4554,
+            4498,
+            4599,
+            4476
+          ],
+          "median_ms": 4554,
+          "min_ms": 4476,
+          "max_ms": 4655,
+          "phases_median_ms": {
+            "load TAST + sort": 313,
+            "transitive specializations": 30,
+            "prepare + monomorphize": 164,
+            "runtime": 1,
+            "PBO producer": 2914,
+            "emitter drain": 1144,
+            "generation + writes (cumulative batches)": 4018,
+            "optimize + emit": 4051,
+            "entry points": 0,
+            "backend total": 4554
+          }
+        },
+        "go": {
+          "samples_ms": [
+            763,
+            761,
+            759,
+            755,
+            744
+          ],
+          "median_ms": 759,
+          "min_ms": 744,
+          "max_ms": 763,
+          "phases_median_ms": {
+            "load TAST + sort": 29,
+            "transitive specializations": 23,
+            "prepare + monomorphize": 164,
+            "runtime": 0,
+            "PBO producer": 424,
+            "emitter drain": 139,
+            "generation + writes (cumulative batches)": 396,
+            "optimize + emit": 565,
+            "entry points": 0,
+            "backend total": 759
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            598,
+            598,
+            583,
+            597,
+            586
+          ],
+          "median_ms": 597,
+          "min_ms": 583,
+          "max_ms": 598,
+          "phases_median_ms": {
+            "load TAST + sort": 32,
+            "transitive specializations": 21,
+            "prepare + monomorphize": 139,
+            "runtime": 1,
+            "PBO producer": 285,
+            "emitter drain": 129,
+            "generation + writes (cumulative batches)": 325,
+            "optimize + emit": 417,
+            "entry points": 5,
+            "backend total": 597
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-refs/definition.json",
+      "definition_sha256": "981b35f2cbaa32932d1c791374dc81e0db3e48fd429cce432a13e594c4865761",
+      "input": {
+        "modules": 161,
+        "tast_bytes": 12763740,
+        "tast_sha256": "30d989411983554de784c04a535f82f47286b9c43478d555aca6161cba09e205"
+      },
+      "generated_sha256": "febdaf3e7b856b5ea352d1986857af636aac97f7dbbe36b4c328895fb83b6714",
+      "generated_files": 210
+    },
+    {
+      "name": "gopurs-run",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            7677,
+            7720,
+            7572,
+            7726,
+            7746
+          ],
+          "median_ms": 7720,
+          "min_ms": 7572,
+          "max_ms": 7746,
+          "phases_median_ms": {
+            "load TAST + sort": 630,
+            "transitive specializations": 114,
+            "prepare + monomorphize": 406,
+            "runtime": 1,
+            "PBO producer": 5606,
+            "emitter drain": 1077,
+            "generation + writes (cumulative batches)": 6602,
+            "optimize + emit": 6678,
+            "entry points": 0,
+            "backend total": 7720
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1775,
+            1781,
+            1776,
+            1772,
+            1781
+          ],
+          "median_ms": 1776,
+          "min_ms": 1772,
+          "max_ms": 1781,
+          "phases_median_ms": {
+            "load TAST + sort": 61,
+            "transitive specializations": 87,
+            "prepare + monomorphize": 391,
+            "runtime": 0,
+            "PBO producer": 1093,
+            "emitter drain": 230,
+            "generation + writes (cumulative batches)": 1159,
+            "optimize + emit": 1323,
+            "entry points": 0,
+            "backend total": 1776
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1440,
+            1439,
+            1440,
+            1450,
+            1446
+          ],
+          "median_ms": 1440,
+          "min_ms": 1439,
+          "max_ms": 1450,
+          "phases_median_ms": {
+            "load TAST + sort": 63,
+            "transitive specializations": 76,
+            "prepare + monomorphize": 364,
+            "runtime": 1,
+            "PBO producer": 781,
+            "emitter drain": 223,
+            "generation + writes (cumulative batches)": 885,
+            "optimize + emit": 1008,
+            "entry points": 13,
+            "backend total": 1440
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-run/definition.json",
+      "definition_sha256": "95dff3809e4952763ee46fb537ce686d04b5cc0ea63d5e6402c9f62f20bb9dea",
+      "input": {
+        "modules": 266,
+        "tast_bytes": 29519367,
+        "tast_sha256": "ac572697f45814aa267397d646804ffee59058ec79c3698e84c7d0d705e54c0e"
+      },
+      "generated_sha256": "d69374087fc9d58e091a9f5b196b3674273735e0112a77d5d2bcd86c4268d2f7",
+      "generated_files": 326
+    },
+    {
+      "name": "gopurs-spec",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            13384,
+            13365,
+            13188,
+            13361,
+            13246
+          ],
+          "median_ms": 13361,
+          "min_ms": 13188,
+          "max_ms": 13384,
+          "phases_median_ms": {
+            "load TAST + sort": 896,
+            "transitive specializations": 962,
+            "prepare + monomorphize": 1554,
+            "runtime": 1,
+            "PBO producer": 10236,
+            "emitter drain": 645,
+            "generation + writes (cumulative batches)": 10759,
+            "optimize + emit": 10896,
+            "entry points": 0,
+            "backend total": 13361
+          }
+        },
+        "go": {
+          "samples_ms": [
+            4447,
+            4434,
+            4494,
+            4385,
+            4422
+          ],
+          "median_ms": 4434,
+          "min_ms": 4385,
+          "max_ms": 4494,
+          "phases_median_ms": {
+            "load TAST + sort": 103,
+            "transitive specializations": 1057,
+            "prepare + monomorphize": 1595,
+            "runtime": 0,
+            "PBO producer": 2525,
+            "emitter drain": 196,
+            "generation + writes (cumulative batches)": 2584,
+            "optimize + emit": 2722,
+            "entry points": 0,
+            "backend total": 4434
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            3893,
+            3837,
+            3801,
+            3868,
+            3799
+          ],
+          "median_ms": 3837,
+          "min_ms": 3799,
+          "max_ms": 3893,
+          "phases_median_ms": {
+            "load TAST + sort": 95,
+            "transitive specializations": 943,
+            "prepare + monomorphize": 1488,
+            "runtime": 1,
+            "PBO producer": 1994,
+            "emitter drain": 224,
+            "generation + writes (cumulative batches)": 1905,
+            "optimize + emit": 2222,
+            "entry points": 31,
+            "backend total": 3837
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-spec/definition.json",
+      "definition_sha256": "18d7fadc831407bbdf2e6166e2e48418f8d589d80c4c72db6aa9a021577f378b",
+      "input": {
+        "modules": 390,
+        "tast_bytes": 45763832,
+        "tast_sha256": "4337316218092680b899f359f9d7f4d0d8f3cf0e2b122b9675609ae7a16db0ff"
+      },
+      "generated_sha256": "7e05279636841b77fde77ffd49f999875123d34610b4e56eb0ea966cf9d70dd7",
+      "generated_files": 490
+    },
+    {
+      "name": "gopurs-st",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4574,
+            4614,
+            4625,
+            4569,
+            4574
+          ],
+          "median_ms": 4574,
+          "min_ms": 4569,
+          "max_ms": 4625,
+          "phases_median_ms": {
+            "load TAST + sort": 314,
+            "transitive specializations": 32,
+            "prepare + monomorphize": 168,
+            "runtime": 1,
+            "PBO producer": 2942,
+            "emitter drain": 1146,
+            "generation + writes (cumulative batches)": 4054,
+            "optimize + emit": 4092,
+            "entry points": 0,
+            "backend total": 4574
+          }
+        },
+        "go": {
+          "samples_ms": [
+            773,
+            770,
+            772,
+            773,
+            756
+          ],
+          "median_ms": 772,
+          "min_ms": 756,
+          "max_ms": 773,
+          "phases_median_ms": {
+            "load TAST + sort": 30,
+            "transitive specializations": 25,
+            "prepare + monomorphize": 166,
+            "runtime": 0,
+            "PBO producer": 431,
+            "emitter drain": 142,
+            "generation + writes (cumulative batches)": 402,
+            "optimize + emit": 574,
+            "entry points": 0,
+            "backend total": 772
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            607,
+            610,
+            596,
+            609,
+            590
+          ],
+          "median_ms": 607,
+          "min_ms": 590,
+          "max_ms": 610,
+          "phases_median_ms": {
+            "load TAST + sort": 32,
+            "transitive specializations": 24,
+            "prepare + monomorphize": 143,
+            "runtime": 1,
+            "PBO producer": 287,
+            "emitter drain": 134,
+            "generation + writes (cumulative batches)": 332,
+            "optimize + emit": 423,
+            "entry points": 5,
+            "backend total": 607
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-st/definition.json",
+      "definition_sha256": "73bf8bfdcdf2e881566d583592d4fa8230eb8fe73d5b803b1d40785b36249af0",
+      "input": {
+        "modules": 161,
+        "tast_bytes": 12865665,
+        "tast_sha256": "c015c007958aeca1ef2ffce53301bf67c5a4e54cf9b05b398cdfad30e3937b06"
+      },
+      "generated_sha256": "0bb78c70f897ddf6ee542f6330650860dc466f60467ea090ff6f48678123a58c",
+      "generated_files": 210
+    },
+    {
+      "name": "gopurs-strings",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6235,
+            6101,
+            6004,
+            6078,
+            6047
+          ],
+          "median_ms": 6078,
+          "min_ms": 6004,
+          "max_ms": 6235,
+          "phases_median_ms": {
+            "load TAST + sort": 378,
+            "transitive specializations": 154,
+            "prepare + monomorphize": 358,
+            "runtime": 2,
+            "PBO producer": 3689,
+            "emitter drain": 1646,
+            "generation + writes (cumulative batches)": 5292,
+            "optimize + emit": 5340,
+            "entry points": 0,
+            "backend total": 6078
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1459,
+            1433,
+            1446,
+            1461,
+            1447
+          ],
+          "median_ms": 1447,
+          "min_ms": 1433,
+          "max_ms": 1461,
+          "phases_median_ms": {
+            "load TAST + sort": 38,
+            "transitive specializations": 197,
+            "prepare + monomorphize": 425,
+            "runtime": 0,
+            "PBO producer": 624,
+            "emitter drain": 361,
+            "generation + writes (cumulative batches)": 815,
+            "optimize + emit": 987,
+            "entry points": 0,
+            "backend total": 1447
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1277,
+            1274,
+            1258,
+            1288,
+            1266
+          ],
+          "median_ms": 1274,
+          "min_ms": 1258,
+          "max_ms": 1288,
+          "phases_median_ms": {
+            "load TAST + sort": 56,
+            "transitive specializations": 179,
+            "prepare + monomorphize": 369,
+            "runtime": 1,
+            "PBO producer": 427,
+            "emitter drain": 417,
+            "generation + writes (cumulative batches)": 739,
+            "optimize + emit": 842,
+            "entry points": 9,
+            "backend total": 1274
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-strings/definition.json",
+      "definition_sha256": "f498e6fa9d10af7de6d4ac7d02a8cb11750a6a27e1177a5c5f64b68ad5a57e84",
+      "input": {
+        "modules": 193,
+        "tast_bytes": 17216002,
+        "tast_sha256": "99d8cc44410f9b416c92343ef04b3cc30d735998e7a297098495e50a06898105"
+      },
+      "generated_sha256": "0f657d7cbf8df98131dc649e39b3b22514a51e3f0654b90ffe707c6100d40aca",
+      "generated_files": 248
+    },
+    {
+      "name": "gopurs-strings-extra",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6037,
+            6042,
+            6074,
+            6046,
+            6034
+          ],
+          "median_ms": 6042,
+          "min_ms": 6034,
+          "max_ms": 6074,
+          "phases_median_ms": {
+            "load TAST + sort": 443,
+            "transitive specializations": 190,
+            "prepare + monomorphize": 450,
+            "runtime": 1,
+            "PBO producer": 4014,
+            "emitter drain": 1124,
+            "generation + writes (cumulative batches)": 5083,
+            "optimize + emit": 5139,
+            "entry points": 0,
+            "backend total": 6042
+          }
+        },
+        "go": {
+          "samples_ms": [
+            2847,
+            2756,
+            2735,
+            2763,
+            2755
+          ],
+          "median_ms": 2756,
+          "min_ms": 2735,
+          "max_ms": 2847,
+          "phases_median_ms": {
+            "load TAST + sort": 49,
+            "transitive specializations": 239,
+            "prepare + monomorphize": 569,
+            "runtime": 0,
+            "PBO producer": 916,
+            "emitter drain": 1236,
+            "generation + writes (cumulative batches)": 1710,
+            "optimize + emit": 2150,
+            "entry points": 0,
+            "backend total": 2756
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            1960,
+            1925,
+            1944,
+            1932,
+            1943
+          ],
+          "median_ms": 1943,
+          "min_ms": 1925,
+          "max_ms": 1960,
+          "phases_median_ms": {
+            "load TAST + sort": 53,
+            "transitive specializations": 197,
+            "prepare + monomorphize": 470,
+            "runtime": 1,
+            "PBO producer": 588,
+            "emitter drain": 817,
+            "generation + writes (cumulative batches)": 1167,
+            "optimize + emit": 1406,
+            "entry points": 10,
+            "backend total": 1943
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-strings-extra/definition.json",
+      "definition_sha256": "5f81128be43d8654e61c5f9abd4ecc7f5ff81ceb67faf5b2422785d509e5a049",
+      "input": {
+        "modules": 187,
+        "tast_bytes": 22598985,
+        "tast_sha256": "6d3d3bd7ce978d1650c4e6690098adb12949d0c4418d1ff159116ecbf7f81d4b"
+      },
+      "generated_sha256": "66631280adf2bff1280a3e00d6a5359007d6332e3d38891406ba309287b9aab1",
+      "generated_files": 241
+    },
+    {
+      "name": "gopurs-unfoldable",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4622,
+            4561,
+            4587,
+            4558,
+            4552
+          ],
+          "median_ms": 4561,
+          "min_ms": 4552,
+          "max_ms": 4622,
+          "phases_median_ms": {
+            "load TAST + sort": 317,
+            "transitive specializations": 35,
+            "prepare + monomorphize": 172,
+            "runtime": 1,
+            "PBO producer": 2942,
+            "emitter drain": 1125,
+            "generation + writes (cumulative batches)": 4042,
+            "optimize + emit": 4076,
+            "entry points": 0,
+            "backend total": 4561
+          }
+        },
+        "go": {
+          "samples_ms": [
+            784,
+            762,
+            782,
+            782,
+            759
+          ],
+          "median_ms": 782,
+          "min_ms": 759,
+          "max_ms": 784,
+          "phases_median_ms": {
+            "load TAST + sort": 30,
+            "transitive specializations": 27,
+            "prepare + monomorphize": 173,
+            "runtime": 0,
+            "PBO producer": 429,
+            "emitter drain": 146,
+            "generation + writes (cumulative batches)": 406,
+            "optimize + emit": 576,
+            "entry points": 0,
+            "backend total": 782
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            610,
+            615,
+            592,
+            611,
+            592
+          ],
+          "median_ms": 610,
+          "min_ms": 592,
+          "max_ms": 615,
+          "phases_median_ms": {
+            "load TAST + sort": 32,
+            "transitive specializations": 24,
+            "prepare + monomorphize": 145,
+            "runtime": 1,
+            "PBO producer": 289,
+            "emitter drain": 136,
+            "generation + writes (cumulative batches)": 336,
+            "optimize + emit": 427,
+            "entry points": 5,
+            "backend total": 610
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-unfoldable/definition.json",
+      "definition_sha256": "4627e4e7995c71aebf8980b7ef73597cfb679afbbc4dbd70cc84102b3aed844b",
+      "input": {
+        "modules": 161,
+        "tast_bytes": 12872310,
+        "tast_sha256": "58546317b69b3a15b9b4651b1e8bdf4bb078e5190a06d91f9451eb8d1a7264cc"
+      },
+      "generated_sha256": "c90e1353485864fd3742378c5e7053a63e0da81fff40514c1e51055562276d72",
+      "generated_files": 210
+    },
+    {
+      "name": "gopurs-unsafe-coerce",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4624,
+            4458,
+            4539,
+            4609,
+            4495
+          ],
+          "median_ms": 4539,
+          "min_ms": 4458,
+          "max_ms": 4624,
+          "phases_median_ms": {
+            "load TAST + sort": 315,
+            "transitive specializations": 28,
+            "prepare + monomorphize": 163,
+            "runtime": 1,
+            "PBO producer": 2806,
+            "emitter drain": 1253,
+            "generation + writes (cumulative batches)": 4014,
+            "optimize + emit": 4059,
+            "entry points": 0,
+            "backend total": 4539
+          }
+        },
+        "go": {
+          "samples_ms": [
+            763,
+            748,
+            760,
+            757,
+            756
+          ],
+          "median_ms": 757,
+          "min_ms": 748,
+          "max_ms": 763,
+          "phases_median_ms": {
+            "load TAST + sort": 29,
+            "transitive specializations": 21,
+            "prepare + monomorphize": 162,
+            "runtime": 0,
+            "PBO producer": 426,
+            "emitter drain": 139,
+            "generation + writes (cumulative batches)": 395,
+            "optimize + emit": 565,
+            "entry points": 0,
+            "backend total": 757
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            589,
+            593,
+            575,
+            593,
+            579
+          ],
+          "median_ms": 589,
+          "min_ms": 575,
+          "max_ms": 593,
+          "phases_median_ms": {
+            "load TAST + sort": 32,
+            "transitive specializations": 20,
+            "prepare + monomorphize": 136,
+            "runtime": 1,
+            "PBO producer": 285,
+            "emitter drain": 129,
+            "generation + writes (cumulative batches)": 324,
+            "optimize + emit": 415,
+            "entry points": 5,
+            "backend total": 589
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-unsafe-coerce/definition.json",
+      "definition_sha256": "fc479c630f34b6a050a0f54301668d841f7edd7bf596a03d2067b1a0d5db7779",
+      "input": {
+        "modules": 161,
+        "tast_bytes": 12703864,
+        "tast_sha256": "d18f5c7fc55c7782631f3646685aa6020b83d578ccf9396bc53565764d73d382"
+      },
+      "generated_sha256": "de4f5317b344c02457145c4bdb80e38857d759407b955ba80ececc86ee934a48",
+      "generated_files": 210
+    },
+    {
+      "name": "gopurs-uuid",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            9061,
+            9025,
+            9044,
+            9167,
+            8984
+          ],
+          "median_ms": 9044,
+          "min_ms": 8984,
+          "max_ms": 9167,
+          "phases_median_ms": {
+            "load TAST + sort": 655,
+            "transitive specializations": 638,
+            "prepare + monomorphize": 1014,
+            "runtime": 1,
+            "PBO producer": 6190,
+            "emitter drain": 1155,
+            "generation + writes (cumulative batches)": 7282,
+            "optimize + emit": 7346,
+            "entry points": 0,
+            "backend total": 9044
+          }
+        },
+        "go": {
+          "samples_ms": [
+            2795,
+            2759,
+            2785,
+            2838,
+            2758
+          ],
+          "median_ms": 2785,
+          "min_ms": 2758,
+          "max_ms": 2838,
+          "phases_median_ms": {
+            "load TAST + sort": 73,
+            "transitive specializations": 623,
+            "prepare + monomorphize": 981,
+            "runtime": 0,
+            "PBO producer": 1585,
+            "emitter drain": 145,
+            "generation + writes (cumulative batches)": 1482,
+            "optimize + emit": 1729,
+            "entry points": 0,
+            "backend total": 2785
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2429,
+            2376,
+            2422,
+            2431,
+            2364
+          ],
+          "median_ms": 2422,
+          "min_ms": 2364,
+          "max_ms": 2431,
+          "phases_median_ms": {
+            "load TAST + sort": 71,
+            "transitive specializations": 593,
+            "prepare + monomorphize": 941,
+            "runtime": 1,
+            "PBO producer": 1225,
+            "emitter drain": 161,
+            "generation + writes (cumulative batches)": 1148,
+            "optimize + emit": 1389,
+            "entry points": 20,
+            "backend total": 2422
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-uuid/definition.json",
+      "definition_sha256": "66b01509a1a7775d7be6afe905af584780e403aaa4340f0b286d09c9f4258970",
+      "input": {
+        "modules": 290,
+        "tast_bytes": 33321835,
+        "tast_sha256": "a5eea7e8beaf1e66ee7bd33a92e78ae6fe4bf923e059804eb4c5c7b572cf179f"
+      },
+      "generated_sha256": "63a9f81e150e8f05f89cf0640fdb609990b7ba8842745ffe68ecd72292d1430c",
+      "generated_files": 355
+    },
+    {
+      "name": "gopurs-variant",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            4898,
+            4947,
+            4935,
+            4961,
+            4937
+          ],
+          "median_ms": 4937,
+          "min_ms": 4898,
+          "max_ms": 4961,
+          "phases_median_ms": {
+            "load TAST + sort": 391,
+            "transitive specializations": 114,
+            "prepare + monomorphize": 301,
+            "runtime": 1,
+            "PBO producer": 3114,
+            "emitter drain": 1099,
+            "generation + writes (cumulative batches)": 4202,
+            "optimize + emit": 4246,
+            "entry points": 0,
+            "backend total": 4937
+          }
+        },
+        "go": {
+          "samples_ms": [
+            1221,
+            1196,
+            1222,
+            1218,
+            1223
+          ],
+          "median_ms": 1221,
+          "min_ms": 1196,
+          "max_ms": 1223,
+          "phases_median_ms": {
+            "load TAST + sort": 35,
+            "transitive specializations": 157,
+            "prepare + monomorphize": 350,
+            "runtime": 0,
+            "PBO producer": 772,
+            "emitter drain": 60,
+            "generation + writes (cumulative batches)": 622,
+            "optimize + emit": 832,
+            "entry points": 0,
+            "backend total": 1221
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            919,
+            891,
+            902,
+            915,
+            894
+          ],
+          "median_ms": 902,
+          "min_ms": 891,
+          "max_ms": 919,
+          "phases_median_ms": {
+            "load TAST + sort": 37,
+            "transitive specializations": 108,
+            "prepare + monomorphize": 272,
+            "runtime": 1,
+            "PBO producer": 488,
+            "emitter drain": 97,
+            "generation + writes (cumulative batches)": 492,
+            "optimize + emit": 584,
+            "entry points": 8,
+            "backend total": 902
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-variant/definition.json",
+      "definition_sha256": "0f0414adcb7e5561d03d00d6ef4220d0beff5f3a25ba634017df195fea92504a",
+      "input": {
+        "modules": 165,
+        "tast_bytes": 17410813,
+        "tast_sha256": "0a2136aaac7cc8c6ef97e679b7ef5a942782c11f64367dceb99f9a47b80cbcdb"
+      },
+      "generated_sha256": "c9c49dafb200649efc4a3dcf81812f09d0bd8f7a01daa661c912b297cee331af",
+      "generated_files": 206
+    },
+    {
+      "name": "gopurs-yoga-json",
+      "family": "gopurs",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            15612,
+            15530,
+            15562,
+            15554,
+            15642
+          ],
+          "median_ms": 15562,
+          "min_ms": 15530,
+          "max_ms": 15642,
+          "phases_median_ms": {
+            "load TAST + sort": 1013,
+            "transitive specializations": 1251,
+            "prepare + monomorphize": 2065,
+            "runtime": 1,
+            "PBO producer": 11606,
+            "emitter drain": 888,
+            "generation + writes (cumulative batches)": 12349,
+            "optimize + emit": 12494,
+            "entry points": 0,
+            "backend total": 15562
+          }
+        },
+        "go": {
+          "samples_ms": [
+            6435,
+            6410,
+            6403,
+            6392,
+            6399
+          ],
+          "median_ms": 6403,
+          "min_ms": 6392,
+          "max_ms": 6435,
+          "phases_median_ms": {
+            "load TAST + sort": 128,
+            "transitive specializations": 1410,
+            "prepare + monomorphize": 2124,
+            "runtime": 0,
+            "PBO producer": 3808,
+            "emitter drain": 355,
+            "generation + writes (cumulative batches)": 3994,
+            "optimize + emit": 4169,
+            "entry points": 0,
+            "backend total": 6403
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            5215,
+            5233,
+            5242,
+            5207,
+            5272
+          ],
+          "median_ms": 5233,
+          "min_ms": 5207,
+          "max_ms": 5272,
+          "phases_median_ms": {
+            "load TAST + sort": 114,
+            "transitive specializations": 1241,
+            "prepare + monomorphize": 1907,
+            "runtime": 1,
+            "PBO producer": 2787,
+            "emitter drain": 374,
+            "generation + writes (cumulative batches)": 2850,
+            "optimize + emit": 3166,
+            "entry points": 41,
+            "backend total": 5233
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/gopurs-yoga-json/definition.json",
+      "definition_sha256": "8c24e896b22eb5daa78706d7501f11b2bec92516e3991d5560db8341e20688d2",
+      "input": {
+        "modules": 400,
+        "tast_bytes": 55872360,
+        "tast_sha256": "57383b0fef92b88dd127f3eb9feebfafc1575f952038e6fcc3b0eeebea4f09d2"
+      },
+      "generated_sha256": "7f9a528bff226b55162c3c342d8a18d3da7435399daf60d07ad0016bc483f4b2",
+      "generated_files": 498
+    },
+    {
+      "name": "purust-aff",
+      "family": "purust",
+      "summary": {
+        "js": {
+          "samples_ms": [
+            6612,
+            6460,
+            6219,
+            6264,
+            6316
+          ],
+          "median_ms": 6316,
+          "min_ms": 6219,
+          "max_ms": 6612,
+          "phases_median_ms": {
+            "load TAST + sort": 588,
+            "prepare": 45,
+            "optimize + generate": 4834,
+            "finalize + emit": 795,
+            "backend total": 6316
+          }
+        },
+        "rust": {
+          "samples_ms": [
+            2191,
+            2239,
+            2127,
+            2173,
+            2157
+          ],
+          "median_ms": 2173,
+          "min_ms": 2127,
+          "max_ms": 2239,
+          "phases_median_ms": {
+            "load TAST + sort": 187,
+            "prepare": 65,
+            "optimize + generate": 1585,
+            "finalize + emit": 224,
+            "backend total": 2173
+          }
+        }
+      },
+      "definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/purust-aff/definition.json",
+      "definition_sha256": "b23420abdbbf399fd7c61b3c2d21a03d6f2580a8f156f0f5a2de63b7c7843ac3",
+      "input": {
+        "modules": 244,
+        "tast_bytes": 27123593,
+        "tast_sha256": "92999bac296dfabee926d291e3ee56b3f4c206896dbfdd898eeacb5df4dd346f"
+      },
+      "generated_sha256": "333ea0b60860d3f8496cae5435b63ba5f25814f1494fe8ac90ac5f23d2db5b9a",
+      "generated_files": 496
+    }
+  ],
+  "restart": {
+    "at": "2026-10-04T13:13:44.171Z",
+    "interrupted": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/attempts/extra-interrupted-results.json",
+    "interrupted_sha256": "a40cc7f2e5cc4974daffdeb4f3a87d1f4f2b8049194d71dabe80d4e882a0ed78",
+    "retained_checked_generations": 16,
+    "new_definition": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/compilation-refresh-20261004/cases/b8x-restart/definition.json",
+    "boot": "kern.boottime: { sec = 1791117522, usec = 128897 } Sun Oct  4 14:38:42 2026",
+    "power": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22020195)\t80%; charging; 0:47 remaining present: true",
+    "vm": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                             1116587.\nPages active:                            902280.\nPages inactive:                          686424.\nPages speculative:                       224119.\nPages throttled:                              0.\nPages wired down:                        171383.\nPages purgeable:                          57814.\n\"Translation faults\":                  18536799.\nPages copy-on-write:                    1021601.\nPages zero filled:                      6619989.\nPages reactivated:                         4035.\nPages purged:                             36312.\nFile-backed pages:                       615726.\nAnonymous pages:                        1197097.\nPages stored in compressor:                   0.\nPages occupied by compressor:                 0.\nDecompressions:                               0.\nCompressions:                                 0.\nPageins:                                 844448.\nPageouts:                                     0.\nSwapins:                                      0.\nSwapouts:                                     0.\n"
+  },
+  "publication": {
+    "readme_before_sha256": "58bf5bcfdcf5b005e70b89842368c3da792dae49b336b9bf49f198cfe15df949",
+    "readme_after_sha256": "35448e61d8f62a3cf826e51217c156aa75fa243d105b86d71a627959305c7c16",
+    "changed_table_lines": [
+      {
+        "line": 334,
+        "before": "[b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 77.4 s | ~ 46.4 s <br>(/JS = 0.60x) | (WIP)",
+        "after": "[b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 62.481 s | ~ 39.565 s <br>(/JS = 0.63x) | ~ 31.018 s"
+      },
+      {
+        "line": 335,
+        "before": "[gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 6893 ms | ~ 1787 ms | ~ 1508 ms",
+        "after": "[gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 7520 ms | ~ 1940 ms | ~ 1528 ms"
+      },
+      {
+        "line": 336,
+        "before": "[gopurs-argonaut-core](https://github.com/0x000000000000000000001/gopurs-argonaut-core)  | ~ 7777 ms | ~ 2000 ms | ~ 1213 ms",
+        "after": "[gopurs-argonaut-core](https://github.com/0x000000000000000000001/gopurs-argonaut-core)  | ~ 7702 ms | ~ 1518 ms | ~ 1264 ms"
+      },
+      {
+        "line": 337,
+        "before": "[gopurs-arrays](https://github.com/0x000000000000000000001/gopurs-arrays)  | ~ 6771 ms (failed) | ~ 3903 ms | ~ 3298 ms",
+        "after": "[gopurs-arrays](https://github.com/0x000000000000000000001/gopurs-arrays)  | ~ 6732 ms | ~ 3393 ms | ~ 3373 ms"
+      },
+      {
+        "line": 338,
+        "before": "[gopurs-assert](https://github.com/0x000000000000000000001/gopurs-assert)  | ~ 660 ms | ~ 227 ms | ~ 110 ms",
+        "after": "[gopurs-assert](https://github.com/0x000000000000000000001/gopurs-assert)  | ~ 570 ms | ~ 166 ms | ~ 115 ms"
+      },
+      {
+        "line": 339,
+        "before": "[gopurs-avar](https://github.com/0x000000000000000000001/gopurs-avar)  | ~ 7865 ms | ~ 2190 ms | ~ 1328 ms",
+        "after": "[gopurs-avar](https://github.com/0x000000000000000000001/gopurs-avar)  | ~ 7171 ms | ~ 1628 ms | ~ 1291 ms"
+      },
+      {
+        "line": 340,
+        "before": "[gopurs-catenable-lists](https://github.com/0x000000000000000000001/gopurs-catenable-lists)  | ~ 5380 ms | ~ 2341 ms | ~ 827 ms",
+        "after": "[gopurs-catenable-lists](https://github.com/0x000000000000000000001/gopurs-catenable-lists)  | ~ 4474 ms | ~ 1182 ms | ~ 898 ms"
+      },
+      {
+        "line": 341,
+        "before": "[gopurs-console](https://github.com/0x000000000000000000001/gopurs-console)  | ~ 4576 ms | ~ 1467 ms | ~ 579 ms",
+        "after": "[gopurs-console](https://github.com/0x000000000000000000001/gopurs-console)  | ~ 4648 ms | ~ 788 ms | ~ 600 ms"
+      },
+      {
+        "line": 342,
+        "before": "[gopurs-datetime](https://github.com/0x000000000000000000001/gopurs-datetime)  | ~ 6711 ms | ~ 2753 ms | ~ 1531 ms",
+        "after": "[gopurs-datetime](https://github.com/0x000000000000000000001/gopurs-datetime)  | ~ 6678 ms | ~ 1788 ms | ~ 1469 ms"
+      },
+      {
+        "line": 343,
+        "before": "[gopurs-effect](https://github.com/0x000000000000000000001/gopurs-effect)  | ~ 2176 ms | ~ 254 ms | ~ 123 ms",
+        "after": "[gopurs-effect](https://github.com/0x000000000000000000001/gopurs-effect)  | ~ 2012 ms | ~ 171 ms | ~ 120 ms"
+      },
+      {
+        "line": 344,
+        "before": "[gopurs-enums](https://github.com/0x000000000000000000001/gopurs-enums)  | ~ 5895 ms | ~ 1445 ms | ~ 814 ms",
+        "after": "[gopurs-enums](https://github.com/0x000000000000000000001/gopurs-enums)  | ~ 5193 ms | ~ 1052 ms | ~ 823 ms"
+      },
+      {
+        "line": 345,
+        "before": "[gopurs-exceptions](https://github.com/0x000000000000000000001/gopurs-exceptions)  | ~ 2396 ms | ~ 358 ms | ~ 185 ms",
+        "after": "[gopurs-exceptions](https://github.com/0x000000000000000000001/gopurs-exceptions)  | ~ 2167 ms | ~ 257 ms | ~ 184 ms"
+      },
+      {
+        "line": 346,
+        "before": "[gopurs-foldable-traversable](https://github.com/0x000000000000000000001/gopurs-foldable-traversable)  | ~ 5690 ms | ~ 1605 ms | ~ 852 ms",
+        "after": "[gopurs-foldable-traversable](https://github.com/0x000000000000000000001/gopurs-foldable-traversable)  | ~ 5114 ms | ~ 1042 ms | ~ 862 ms"
+      },
+      {
+        "line": 347,
+        "before": "[gopurs-foreign](https://github.com/0x000000000000000000001/gopurs-foreign)  | ~ 5857 ms | ~ 2516 ms | ~ 1020 ms",
+        "after": "[gopurs-foreign](https://github.com/0x000000000000000000001/gopurs-foreign)  | ~ 5265 ms | ~ 1330 ms | ~ 1068 ms"
+      },
+      {
+        "line": 348,
+        "before": "[gopurs-foreign-object](https://github.com/0x000000000000000000001/gopurs-foreign-object)  | ~ 8879 ms | ~ 2970 ms | ~ 1554 ms",
+        "after": "[gopurs-foreign-object](https://github.com/0x000000000000000000001/gopurs-foreign-object)  | ~ 7502 ms | ~ 1785 ms | ~ 1538 ms"
+      },
+      {
+        "line": 349,
+        "before": "[gopurs-free](https://github.com/0x000000000000000000001/gopurs-free)  | ~ 5566 ms | ~ 1565 ms | ~ 930 ms",
+        "after": "[gopurs-free](https://github.com/0x000000000000000000001/gopurs-free)  | ~ 4887 ms | ~ 1106 ms | ~ 910 ms"
+      },
+      {
+        "line": 350,
+        "before": "[gopurs-functions](https://github.com/0x000000000000000000001/gopurs-functions)  | ~ 2094 ms | ~ 289 ms | ~ 135 ms",
+        "after": "[gopurs-functions](https://github.com/0x000000000000000000001/gopurs-functions)  | ~ 1944 ms | ~ 187 ms | ~ 127 ms"
+      },
+      {
+        "line": 351,
+        "before": "[gopurs-integers](https://github.com/0x000000000000000000001/gopurs-integers)  | ~ 4817 ms | ~ 1412 ms | ~ 765 ms",
+        "after": "[gopurs-integers](https://github.com/0x000000000000000000001/gopurs-integers)  | ~ 4774 ms | ~ 947 ms | ~ 787 ms"
+      },
+      {
+        "line": 352,
+        "before": "[gopurs-js-bigints](https://github.com/0x000000000000000000001/gopurs-js-bigints)  | ~ 2234 ms | ~ 278 ms | ~ 159 ms",
+        "after": "[gopurs-js-bigints](https://github.com/0x000000000000000000001/gopurs-js-bigints)  | ~ 2113 ms | ~ 200 ms | ~ 150 ms"
+      },
+      {
+        "line": 353,
+        "before": "[gopurs-js-date](https://github.com/0x000000000000000000001/gopurs-js-date)  | ~ 7837 ms | ~ 2134 ms | ~ 1353 ms",
+        "after": "[gopurs-js-date](https://github.com/0x000000000000000000001/gopurs-js-date)  | ~ 7410 ms | ~ 1581 ms | ~ 1285 ms"
+      },
+      {
+        "line": 354,
+        "before": "[gopurs-js-promise](https://github.com/0x000000000000000000001/gopurs-js-promise)  | ~ 3669 ms | ~ 798 ms | ~ 454 ms",
+        "after": "[gopurs-js-promise](https://github.com/0x000000000000000000001/gopurs-js-promise)  | ~ 3517 ms | ~ 573 ms | ~ 445 ms"
+      },
+      {
+        "line": 355,
+        "before": "[gopurs-js-promise-aff](https://github.com/0x000000000000000000001/gopurs-js-promise-aff)  | ~ 8609 ms | ~ 2245 ms | ~ 1402 ms",
+        "after": "[gopurs-js-promise-aff](https://github.com/0x000000000000000000001/gopurs-js-promise-aff)  | ~ 7645 ms | ~ 1630 ms | ~ 1344 ms"
+      },
+      {
+        "line": 356,
+        "before": "[gopurs-js-uri](https://github.com/0x000000000000000000001/gopurs-js-uri)  | ~ 4886 ms | ~ 1017 ms | ~ 577 ms",
+        "after": "[gopurs-js-uri](https://github.com/0x000000000000000000001/gopurs-js-uri)  | ~ 4573 ms | ~ 752 ms | ~ 593 ms"
+      },
+      {
+        "line": 357,
+        "before": "[gopurs-lazy](https://github.com/0x000000000000000000001/gopurs-lazy)  | ~ 3311 ms | ~ 839 ms | ~ 473 ms",
+        "after": "[gopurs-lazy](https://github.com/0x000000000000000000001/gopurs-lazy)  | ~ 3163 ms | ~ 551 ms | ~ 430 ms"
+      },
+      {
+        "line": 358,
+        "before": "[gopurs-node-buffer](https://github.com/0x000000000000000000001/gopurs-node-buffer)  | ~ 7491 ms | ~ 1935 ms | ~ 1188 ms",
+        "after": "[gopurs-node-buffer](https://github.com/0x000000000000000000001/gopurs-node-buffer)  | ~ 6858 ms | ~ 1351 ms | ~ 1120 ms"
+      },
+      {
+        "line": 359,
+        "before": "[gopurs-node-event-emitter](https://github.com/0x000000000000000000001/gopurs-node-event-emitter)  | ~ 10309 ms | ~ 4105 ms | ~ 2379 ms",
+        "after": "[gopurs-node-event-emitter](https://github.com/0x000000000000000000001/gopurs-node-event-emitter)  | ~ 9520 ms | ~ 2849 ms | ~ 2468 ms"
+      },
+      {
+        "line": 360,
+        "before": "[gopurs-node-fs](https://github.com/0x000000000000000000001/gopurs-node-fs)  | ~ 9220 ms | ~ 2654 ms | ~ 1711 ms",
+        "after": "[gopurs-node-fs](https://github.com/0x000000000000000000001/gopurs-node-fs)  | ~ 8837 ms | ~ 1915 ms | ~ 1585 ms"
+      },
+      {
+        "line": 361,
+        "before": "[gopurs-node-http](https://github.com/0x000000000000000000001/gopurs-node-http)  | ~ 10563 ms | ~ 2642 ms | ~ 1728 ms",
+        "after": "[gopurs-node-http](https://github.com/0x000000000000000000001/gopurs-node-http)  | ~ 9943 ms | ~ 1939 ms | ~ 1626 ms"
+      },
+      {
+        "line": 362,
+        "before": "[gopurs-node-net](https://github.com/0x000000000000000000001/gopurs-node-net)  | ~ 9543 ms | ~ 2737 ms | ~ 1684 ms",
+        "after": "[gopurs-node-net](https://github.com/0x000000000000000000001/gopurs-node-net)  | ~ 9112 ms | ~ 1899 ms | ~ 1576 ms"
+      },
+      {
+        "line": 363,
+        "before": "[gopurs-node-path](https://github.com/0x000000000000000000001/gopurs-node-path)  | ~ 2025 ms | ~ 238 ms | ~ 122 ms",
+        "after": "[gopurs-node-path](https://github.com/0x000000000000000000001/gopurs-node-path)  | ~ 1984 ms | ~ 169 ms | ~ 120 ms"
+      },
+      {
+        "line": 364,
+        "before": "[gopurs-node-process](https://github.com/0x000000000000000000001/gopurs-node-process)  | ~ 8680 ms | ~ 2450 ms | ~ 1591 ms",
+        "after": "[gopurs-node-process](https://github.com/0x000000000000000000001/gopurs-node-process)  | ~ 8308 ms | ~ 1817 ms | ~ 1499 ms"
+      },
+      {
+        "line": 365,
+        "before": "[gopurs-node-streams](https://github.com/0x000000000000000000001/gopurs-node-streams)  | ~ 11545 ms | ~ 4547 ms | ~ 2737 ms",
+        "after": "[gopurs-node-streams](https://github.com/0x000000000000000000001/gopurs-node-streams)  | ~ 10387 ms | ~ 3167 ms | ~ 2781 ms"
+      },
+      {
+        "line": 366,
+        "before": "[gopurs-now](https://github.com/0x000000000000000000001/gopurs-now)  | ~ 9277 ms | ~ 2396 ms | ~ 1619 ms",
+        "after": "[gopurs-now](https://github.com/0x000000000000000000001/gopurs-now)  | ~ 8384 ms | ~ 1822 ms | ~ 1515 ms"
+      },
+      {
+        "line": 367,
+        "before": "[gopurs-nullable](https://github.com/0x000000000000000000001/gopurs-nullable)  | ~ 6741 ms | ~ 1726 ms | ~ 1095 ms",
+        "after": "[gopurs-nullable](https://github.com/0x000000000000000000001/gopurs-nullable)  | ~ 6458 ms | ~ 1264 ms | ~ 1040 ms"
+      },
+      {
+        "line": 368,
+        "before": "[gopurs-numbers](https://github.com/0x000000000000000000001/gopurs-numbers)  | ~ 4989 ms | ~ 1388 ms | ~ 716 ms",
+        "after": "[gopurs-numbers](https://github.com/0x000000000000000000001/gopurs-numbers)  | ~ 4745 ms | ~ 923 ms | ~ 731 ms"
+      },
+      {
+        "line": 369,
+        "before": "[gopurs-ordered-collections](https://github.com/0x000000000000000000001/gopurs-ordered-collections)  | ~ 8361 ms | ~ 2892 ms | ~ 2040 ms",
+        "after": "[gopurs-ordered-collections](https://github.com/0x000000000000000000001/gopurs-ordered-collections)  | ~ 7625 ms | ~ 2173 ms | ~ 1937 ms"
+      },
+      {
+        "line": 370,
+        "before": "[gopurs-partial](https://github.com/0x000000000000000000001/gopurs-partial)  | ~ 4802 ms | ~ 999 ms | ~ 568 ms",
+        "after": "[gopurs-partial](https://github.com/0x000000000000000000001/gopurs-partial)  | ~ 4520 ms | ~ 750 ms | ~ 589 ms"
+      },
+      {
+        "line": 371,
+        "before": "[gopurs-prelude](https://github.com/0x000000000000000000001/gopurs-prelude)  | ~ 5329 ms | ~ 1376 ms | ~ 775 ms",
+        "after": "[gopurs-prelude](https://github.com/0x000000000000000000001/gopurs-prelude)  | ~ 5021 ms | ~ 974 ms | ~ 750 ms"
+      },
+      {
+        "line": 372,
+        "before": "[gopurs-random](https://github.com/0x000000000000000000001/gopurs-random)  | ~ 4776 ms | ~ 1189 ms | ~ 576 ms",
+        "after": "[gopurs-random](https://github.com/0x000000000000000000001/gopurs-random)  | ~ 4636 ms | ~ 760 ms | ~ 590 ms"
+      },
+      {
+        "line": 373,
+        "before": "[gopurs-record](https://github.com/0x000000000000000000001/gopurs-record)  | ~ 5003 ms | ~ 1112 ms | ~ 591 ms",
+        "after": "[gopurs-record](https://github.com/0x000000000000000000001/gopurs-record)  | ~ 4700 ms | ~ 785 ms | ~ 615 ms"
+      },
+      {
+        "line": 374,
+        "before": "[gopurs-refs](https://github.com/0x000000000000000000001/gopurs-refs)  | ~ 4887 ms | ~ 1137 ms | ~ 581 ms",
+        "after": "[gopurs-refs](https://github.com/0x000000000000000000001/gopurs-refs)  | ~ 4554 ms | ~ 759 ms | ~ 597 ms"
+      },
+      {
+        "line": 375,
+        "before": "[gopurs-run](https://github.com/0x000000000000000000001/gopurs-run)  | ~ 8056 ms | ~ 2378 ms | ~ 1547 ms",
+        "after": "[gopurs-run](https://github.com/0x000000000000000000001/gopurs-run)  | ~ 7720 ms | ~ 1776 ms | ~ 1440 ms"
+      },
+      {
+        "line": 376,
+        "before": "[gopurs-spec](https://github.com/0x000000000000000000001/gopurs-spec)  | ~ 14836 ms | ~ 6819 ms | ~ 3807 ms",
+        "after": "[gopurs-spec](https://github.com/0x000000000000000000001/gopurs-spec)  | ~ 13361 ms | ~ 4434 ms | ~ 3837 ms"
+      },
+      {
+        "line": 377,
+        "before": "[gopurs-st](https://github.com/0x000000000000000000001/gopurs-st)  | ~ 4876 ms | ~ 1068 ms | ~ 583 ms",
+        "after": "[gopurs-st](https://github.com/0x000000000000000000001/gopurs-st)  | ~ 4574 ms | ~ 772 ms | ~ 607 ms"
+      },
+      {
+        "line": 378,
+        "before": "[gopurs-strings](https://github.com/0x000000000000000000001/gopurs-strings)  | ~ 6421 ms | ~ 1933 ms | ~ 1286 ms",
+        "after": "[gopurs-strings](https://github.com/0x000000000000000000001/gopurs-strings)  | ~ 6078 ms | ~ 1447 ms | ~ 1274 ms"
+      },
+      {
+        "line": 379,
+        "before": "[gopurs-strings-extra](https://github.com/0x000000000000000000001/gopurs-strings-extra)  | ~ 6677 ms | ~ 3330 ms | ~ 2008 ms",
+        "after": "[gopurs-strings-extra](https://github.com/0x000000000000000000001/gopurs-strings-extra)  | ~ 6042 ms | ~ 2756 ms | ~ 1943 ms"
+      },
+      {
+        "line": 380,
+        "before": "[gopurs-unfoldable](https://github.com/0x000000000000000000001/gopurs-unfoldable)  | ~ 4891 ms | ~ 1070 ms | ~ 599 ms",
+        "after": "[gopurs-unfoldable](https://github.com/0x000000000000000000001/gopurs-unfoldable)  | ~ 4561 ms | ~ 782 ms | ~ 610 ms"
+      },
+      {
+        "line": 381,
+        "before": "[gopurs-unsafe-coerce](https://github.com/0x000000000000000000001/gopurs-unsafe-coerce)  | ~ 4902 ms | ~ 1015 ms | ~ 578 ms",
+        "after": "[gopurs-unsafe-coerce](https://github.com/0x000000000000000000001/gopurs-unsafe-coerce)  | ~ 4539 ms | ~ 757 ms | ~ 589 ms"
+      },
+      {
+        "line": 382,
+        "before": "[gopurs-uuid](https://github.com/0x000000000000000000001/gopurs-uuid)  | ~ 10000 ms | ~ 3916 ms | ~ 2338 ms",
+        "after": "[gopurs-uuid](https://github.com/0x000000000000000000001/gopurs-uuid)  | ~ 9044 ms | ~ 2785 ms | ~ 2422 ms"
+      },
+      {
+        "line": 383,
+        "before": "[gopurs-variant](https://github.com/0x000000000000000000001/gopurs-variant)  | ~ 5431 ms | ~ 1806 ms | ~ 949 ms",
+        "after": "[gopurs-variant](https://github.com/0x000000000000000000001/gopurs-variant)  | ~ 4937 ms | ~ 1221 ms | ~ 902 ms"
+      },
+      {
+        "line": 384,
+        "before": "[gopurs-yoga-json](https://github.com/0x000000000000000000001/gopurs-yoga-json)  | ~ 18107 ms | ~ 9760 ms | ~ 5402 ms",
+        "after": "[gopurs-yoga-json](https://github.com/0x000000000000000000001/gopurs-yoga-json)  | ~ 15562 ms | ~ 6403 ms | ~ 5233 ms"
+      },
+      {
+        "line": 385,
+        "before": "**Total gopurs-*** | ~ 329.11 s | ~ 105.34 s <br>(/JS = 0.3x) | ~ 61.99 s",
+        "after": "**Total gopurs-*** | ~ 304.78 s | ~ 74.02 s <br>(/JS = 0.24x) | ~ 61.20 s"
+      },
+      {
+        "line": 386,
+        "before": "**Total** | ~ 406.5 s | ~ 151.8 s <br>(/JS = 0.37x) | (WIP)",
+        "after": "**Total** | ~ 367.27 s | ~ 113.58 s <br>(/JS = 0.31x) | ~ 92.22 s"
+      },
+      {
+        "line": 393,
+        "before": "[purust-aff](https://github.com/0x000000000000000000001/purust-aff)  | ~ 6389 ms | ~ 2632 ms <br>(/JS = 0.41x) (WIP)",
+        "after": "[purust-aff](https://github.com/0x000000000000000000001/purust-aff)  | ~ 6316 ms | ~ 2173 ms <br>(/JS = 0.34x)"
+      }
+    ]
+  }
+}

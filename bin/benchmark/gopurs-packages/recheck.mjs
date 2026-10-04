@@ -16,6 +16,8 @@ const previous = JSON.parse(readFileSync(join(original, 'results.json')));
 const followups = JSON.parse(readFileSync(join(original, 'followups/results.json')));
 const build = JSON.parse(readFileSync(join(archive, 'build-results.json')));
 assert.equal(build.status, 'passed'); assert.deepEqual(manifest(join(archive, 'bin')), build.binaries);
+const correctionsPath = join(archive, 'oracle-corrections.json');
+const corrections = existsSync(correctionsPath) ? JSON.parse(readFileSync(correctionsPath)) : [];
 const destination = join(archive, 'recheck'); assert(!existsSync(destination)); mkdirSync(destination);
 const copy = (from, to) => { mkdirSync(dirname(to), { recursive: true }); copyFileSync(from, to, constants.COPYFILE_FICLONE); };
 copy(fileURLToPath(import.meta.url), join(destination, 'recheck.mjs'));
@@ -39,8 +41,23 @@ const aff = JSON.parse(readFileSync(join(affArchive, 'results.json')));
 const affOracle = aff.reference_generations.find(record => record.variant === 'gopurs-native');
 cases.push({ name: 'gopurs-aff', input_source: join(affArchive, 'inputs/gopurs-aff'),
   inputs: aff.frozen_files.inputs.filter(file => file.path.startsWith('gopurs-aff/')).map(file => ({ ...file, path: file.path.slice('gopurs-aff/'.length) })),
+  sibling_source: join(affArchive, 'inputs'),
+  sibling_inputs: aff.frozen_files.inputs.filter(file => !file.path.startsWith('gopurs-aff/')),
   invocation: ['--main', 'Test.Main'], measured: false,
   oracle: { ...affOracle, generated: JSON.parse(readFileSync(affOracle.generated_manifest)) } });
+for (const correction of corrections) {
+  assert.equal(correction.package, 'gopurs-prelude');
+  const item = cases.find(item => item.name === correction.package);
+  assert.deepEqual(item.oracle.generated, correction.previous_oracle.generated);
+  const changed = correction.oracle.generated.filter(file => item.oracle.generated.find(old => old.path === file.path)?.sha256 !== file.sha256);
+  assert.deepEqual(changed.map(file => file.path), ['purescript/Test_Main.go']);
+  const old = readFileSync(join(item.oracle.output, changed[0].path), 'utf8');
+  const corrected = readFileSync(join(correction.oracle.output, changed[0].path), 'utf8');
+  const literal = 'Call_Data_Ord_signum__2002100468(0.0)';
+  assert.equal(old.split(literal).length, 2);
+  assert.equal(corrected, old.replace(literal, 'Call_Data_Ord_signum__2002100468(gopurs_runtime.NegativeZero())'));
+  item.previous_oracle = item.oracle; item.oracle = correction.oracle; item.oracle_correction = correction.reason;
+}
 assert.equal(cases.length, 50); assert.equal(cases.filter(item => item.measured).length, 4);
 cases.sort((a, b) => Number(b.measured) - Number(a.measured) || a.name.localeCompare(b.name));
 const state = { status: 'running', started_at: new Date().toISOString(),
@@ -48,9 +65,9 @@ const state = { status: 'running', started_at: new Date().toISOString(),
   compiler: manifest(compiler), host: { cpu: cpus()[0].model, logical_cpus: cpus().length, memory_bytes: totalmem(), node: process.version },
   protocol: { ...previous.protocol, rounds: 5,
     scope: 'Four corrected rows measured; all 50 packages checked against their retained Go-output oracle.',
-    oracle: 'Byte-exact retained Go-host output; corrected Go and JS hosts additionally checked on the four corrected rows.',
+    oracle: 'Byte-exact retained Go-host output, with any independently diagnosed correction explicitly recorded; corrected Go and JS hosts additionally checked on the four corrected rows.',
     validation: 'Corrected rows also checked with sequential Rust workers, then their generated Go applications built and executed outside timing.' },
-  results: [] };
+  oracle_corrections: corrections, results: [] };
 const save = () => writeJson(join(destination, 'results.json'), state);
 const clean = input => {
   for (const path of walk(join(input, 'output'))) if (path.endsWith('.go') || ['go.mod', 'go.sum'].includes(basename(path))) rmSync(path);
@@ -62,7 +79,13 @@ for (const item of cases) {
   const result = { ...item, status: 'running', runs: [], applications: [] };
   state.results.push(result); save();
   try {
-    assert.deepEqual(manifest(item.oracle.output), item.oracle.generated);
+    assert.deepEqual(manifest(item.oracle.output, path => path.endsWith('.go') || basename(path) === 'go.mod'), item.oracle.generated);
+    // The historical Aff corpus keeps modulePath references to ../gopurs-*.
+    // Keep its entire frozen sibling family when relocating the project.
+    for (const file of item.sibling_inputs ?? []) {
+      const source = join(item.sibling_source, file.path);
+      assert.equal(hash(readFileSync(source)), file.sha256); copy(source, join(directory, file.path));
+    }
     for (const file of item.inputs) {
       const source = join(item.input_source, file.path);
       assert.equal(hash(readFileSync(source)), file.sha256); copy(source, join(input, file.path));
@@ -109,6 +132,11 @@ for (const item of cases) {
       }
     }
     clean(input); assert.deepEqual(manifest(input), item.inputs);
+    for (const family of new Set((item.sibling_inputs ?? []).map(file => file.path.split('/')[0]))) {
+      const prefix = family + '/';
+      assert.deepEqual(manifest(join(directory, family)).map(file => ({ ...file, path: prefix + file.path })),
+        item.sibling_inputs.filter(file => file.path.startsWith(prefix)));
+    }
     result.status = 'passed';
   } catch (error) {
     result.status = 'failed'; result.error = error.stack; console.error(`${item.name}: ${error.message}`);

@@ -1,7 +1,7 @@
 // Publish corrected cells only after re-reading the complete qualification.
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
-import { dirname, join, resolve } from 'node:path';
+import { basename, dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { hash, manifest, writeJson } from '../gopurs-aff/common.mjs';
 
@@ -10,9 +10,11 @@ const site = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
 const read = path => JSON.parse(readFileSync(path));
 const evidence = path => ({ path, sha256: hash(readFileSync(path)) });
 const build = read(join(archive, 'build-results.json'));
-const verification = read(join(archive, 'verification.json'));
+const verificationPath = join(archive, existsSync(join(archive, 'verification-final.json')) ? 'verification-final.json' : 'verification.json');
+const verification = read(verificationPath);
 const hosts = read(join(archive, 'hosts/results.json'));
-const recheckPath = join(archive, 'recheck/results.json'), recheck = read(recheckPath);
+const recheckPath = join(archive, existsSync(join(archive, 'recheck/final-results.json')) ? 'recheck/final-results.json' : 'recheck/results.json');
+const recheck = read(recheckPath);
 const performancePath = join(archive, 'aff-performance/results.json'), performance = read(performancePath);
 for (const result of [build, verification, hosts, recheck, performance]) assert.equal(result.status, 'passed');
 assert.deepEqual(manifest(join(archive, 'bin')), build.binaries);
@@ -45,7 +47,12 @@ const rows = [];
 for (const result of recheck.results) {
   assert.equal(result.status, 'passed');
   assert.deepEqual(manifest(join(archive, 'recheck', result.name, 'input')), result.inputs);
-  assert.deepEqual(manifest(result.oracle.output), result.oracle.generated);
+  for (const family of new Set((result.sibling_inputs ?? []).map(file => file.path.split('/')[0]))) {
+    const prefix = family + '/';
+    assert.deepEqual(manifest(join(archive, 'recheck', result.name, family)).map(file => ({ ...file, path: prefix + file.path })),
+      result.sibling_inputs.filter(file => file.path.startsWith(prefix)));
+  }
+  assert.deepEqual(manifest(result.oracle.output, path => path.endsWith('.go') || basename(path) === 'go.mod'), result.oracle.generated);
   const samples = [];
   for (const run of result.runs) {
     assert.equal(run.exit_code, 0);
@@ -92,14 +99,16 @@ const report = { schema: 'gopurs-packages-fixes-1', status: 'passed', verified_a
   causes: {
     prelude: 'Purust lowered OpIntNum OpDivide to truncating, partial Rust division. Checked Euclidean division now matches Prelude, including zero divisors.',
     output_mismatches: 'Filesystem-dependent module enumeration changed topological ranks and therefore predecessor visibility/inlining. PBO now visits root modules in module-name order.',
+    negative_zero: 'The wider three-host check exposed a pre-existing signed-zero bug in both native hosts: bootstrapping the constant evaluator specialized generic negate to zero-minus-value. A primitive FFI negation now preserves IEEE signed zero. Prelude has an explicit one-line oracle correction independently checked against JS and application execution.',
   },
   protocol: recheck.protocol, host: recheck.host, compiler: recheck.compiler, rows,
   verified: { packages: 50, newly_measured_packages: 4, generations, identical_generated_files: identicalFiles, applications: 4,
     rust_bootstrap_identical_files: hosts.bootstrap.identical_files, pbo_suites: build.stages.filter(run => run.label.startsWith('pbo-')).length,
     division_cases_per_build: 612, modulo_cases_per_build: 12, rust_test_profiles: ['debug', 'optimized'], module_permutations: 720 },
-  qualification: { build: evidence(join(archive, 'build-results.json')), verification: evidence(join(archive, 'verification.json')),
+  qualification: { build: evidence(join(archive, 'build-results.json')), verification: evidence(verificationPath),
     hosts: evidence(join(archive, 'hosts/results.json')), recheck: evidence(recheckPath), pgo: evidence(pgoPath) },
   pgo: { training_modules: pgo.training.modules.length, passes: pgo.passes, sha256: pgo.profile.merged.sha256 },
+  oracle_corrections: recheck.oracle_corrections,
   aff_performance: { evidence: evidence(performancePath), protocol: performance.protocol, ...performance.summary },
   aggregate: { packages: 50, successful_packages: 50, sum_of_displayed_rust_medians_ms: total,
     note: 'Sum of displayed medians from their respective campaigns, including these four corrected rows; not a timed multi-package invocation.' },
@@ -114,13 +123,14 @@ writeFileSync(destination + '.md', `# gopurs : correction des quatre cellules Ru
   `## Causes et corrections\n\n` +
   `- **Prelude** : la primitive de division entière de Purust utilisait \`/\` en Rust, qui panique sur zéro et tronque les quotients négatifs. Elle utilise désormais une division euclidienne contrôlée, avec zéro pour un diviseur nul. Les deux opérandes sont évalués une seule fois.\n` +
   `- **Enums, Promise et Strings** : l'ordre des répertoires différait entre hôtes. Le tri topologique conservait cet ordre pour les racines indépendantes, modifiant les rangs visibles par PBO et ses décisions d'inlining. Le tri part désormais d'un index ordonné par nom de module.\n\n` +
+  `- **Zéro signé** : la comparaison supplémentaire avec JavaScript a révélé que les deux hôtes natifs transformaient la négation de zéro en soustraction à zéro lors du bootstrap de l'évaluateur PBO. Une négation primitive FFI conserve désormais le signe IEEE. L'oracle Prelude est corrigé explicitement sur une seule ligne de \`Test_Main.go\`, validée contre JavaScript et par exécution ; l'ancien oracle reste archivé. Le nouveau projet frais \`CompilerHostNumbers\` vérifie les zéros constants et dynamiques sous les trois hôtes.\n\n` +
   `## Validation\n\n` +
   `- Régressions reproduites avant correction ; **612 divisions** comparées à Prelude JavaScript et **12 cas modulo**, en Rust debug et optimisé.\n` +
   `- Tri vérifié sur **720 permutations**, imports propres/Prim et cycles ; **${report.verified.pbo_suites} suites PBO** réussies.\n` +
   `- Purust reconstruit par bootstrap indépendant avec auto-compilation et projet frais. Gopurs reconstruit dans ses trois hôtes ; **${hosts.bootstrap.identical_files} fichiers Rust/Cargo identiques** entre générateurs Purust JS et natif.\n` +
   `- PGO réentraîné sur **${pgo.training.modules.length} modules** de compilation du compilateur, en trois passes exactes ; \`Test.Main\` exclu.\n` +
   `- Qualification des hôtes, projets frais, Aff/AVar, tests du compilateur, helpers et parser Go sous détecteur de courses réussis ; détails et logs référencés dans le JSON.\n` +
-  `- **50/50 paquets** revérifiés : **${generations} générations / ${identicalFiles} fichiers Go exacts** à leurs oracles Go archivés. Les quatre cas corrigés passent aussi les hôtes JS/Go et le mode Rust séquentiel. Leurs quatre applications Go sont compilées et exécutées avec succès, hors chronomètre.\n\n` +
+  `- **50/50 paquets** revérifiés : **${generations} générations / ${identicalFiles} fichiers Go exacts** aux oracles archivés, avec la correction explicite du zéro signé de Prelude ci-dessus. Les quatre cas corrigés passent aussi les hôtes JS/Go et le mode Rust séquentiel. Leurs quatre applications Go sont compilées et exécutées avec succès, hors chronomètre.\n\n` +
   `## Nouvelles mesures\n\n` +
   `Mêmes entrées TAST/FFI figées que la campagne initiale ; une chauffe Rust puis cinq mesures sérialisées, workers **8/8/8/8**, pipeline actif. Médiane de \`backend total\` : chargement, préparation, PBO, génération/écritures et drain. Frontend, construction des compilateurs/applications, exécution des applications et démarrage/arrêt des processus exclus.\n\n` +
   `| Paquet | Rust médian | Min–max | Fichiers exacts par génération |\n| --- | ---: | ---: | ---: |\n` +

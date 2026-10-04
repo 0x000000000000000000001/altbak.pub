@@ -1,0 +1,3521 @@
+{
+  "schema": "gopurs-packages-fixes-1",
+  "status": "passed",
+  "verified_at": "2026-10-04T11:01:40.521Z",
+  "archive": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2",
+  "causes": {
+    "prelude": "Purust lowered OpIntNum OpDivide to truncating, partial Rust division. Checked Euclidean division now matches Prelude, including zero divisors.",
+    "output_mismatches": "Filesystem-dependent module enumeration changed topological ranks and therefore predecessor visibility/inlining. PBO now visits root modules in module-name order.",
+    "negative_zero": "The wider three-host check exposed a pre-existing signed-zero bug in both native hosts: bootstrapping the constant evaluator specialized generic negate to zero-minus-value. A primitive FFI negation now preserves IEEE signed zero. Prelude has an explicit one-line oracle correction independently checked against JS and application execution."
+  },
+  "protocol": {
+    "metric": "[gopurs] backend total",
+    "target": "Go",
+    "rounds": 5,
+    "rust_warmups": 1,
+    "jobs": {
+      "GOPURS_JOBS": "8",
+      "GOPURS_PREPARE_JOBS": "8",
+      "GOPURS_PBO_JOBS": "8",
+      "GOPURS_EMIT_JOBS": "8",
+      "GOPURS_PIPELINE": "1"
+    },
+    "oracle": "Byte-exact retained Go-host output, with any independently diagnosed correction explicitly recorded; corrected Go and JS hosts additionally checked on the four corrected rows.",
+    "statistic": "median of successful Rust backend generations, each byte-exact to the oracle",
+    "order": "serialized packages, frontend outside timing, one oracle and one Rust warmup before measured Rust runs",
+    "excludes": "frontend, compiler/application builds, application execution and process startup/exit",
+    "cache": "fresh generated output and PBO caches for each process, warm OS filesystem cache",
+    "scope": "Four corrected rows measured; all 50 packages checked against their retained Go-output oracle.",
+    "validation": "Corrected rows also checked with sequential Rust workers, then their generated Go applications built and executed outside timing."
+  },
+  "host": {
+    "cpu": "Apple M4 Pro",
+    "logical_cpus": 14,
+    "memory_bytes": 51539607552,
+    "node": "v24.8.0"
+  },
+  "compiler": [
+    {
+      "path": "bin/gopurs",
+      "bytes": 1967,
+      "sha256": "a2f198ace9ee575e3528b4f2f64f7a149cd0f9d2c9e53c0ffc3b83103d6e50dd"
+    },
+    {
+      "path": "bin/gopurs-native",
+      "bytes": 29947346,
+      "sha256": "1a2aca1185e98885da9e4580efab252754a41f326e5d46eb162a8ee9c7b04d4e"
+    },
+    {
+      "path": "bin/gopurs-rust",
+      "bytes": 82685200,
+      "sha256": "e3fa820c4e78fb0f0c5f4d8d7ed91314c73e5b6c0e0b7e3b0e780ec8401a9aa1"
+    },
+    {
+      "path": "bin/gopurs.js",
+      "bytes": 2010779,
+      "sha256": "c8c5572aa2e02e96b243bf548df5e6f80f214bb929a1590872cf06a2aeb2a1ff"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1066,
+      "sha256": "e1db04ca364b36189f058f6e5ffc1d24de8590a88d4c9ce42a47418f54b0a4e1"
+    },
+    {
+      "path": "tools/ffi-runner.mjs",
+      "bytes": 1251,
+      "sha256": "7809f59971f1cdc8bf013ef6a5d8584d229dfb68223c56959a5e573d15f5d91b"
+    },
+    {
+      "path": "tools/ffi_gen.wasm",
+      "bytes": 5686864,
+      "sha256": "9ff753ad005f649f9dbe53d30c50f807b8c7b5118555da63a5577ba8cdc45fff"
+    },
+    {
+      "path": "tools/wasm_exec.js",
+      "bytes": 16992,
+      "sha256": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14"
+    }
+  ],
+  "rows": [
+    {
+      "package": "gopurs-enums",
+      "samples_ms": [
+        825,
+        811,
+        804,
+        814,
+        826
+      ],
+      "median_ms": 814,
+      "min_ms": 804,
+      "max_ms": 826,
+      "identical_files_per_generation": 219,
+      "runs": [
+        {
+          "label": "go",
+          "host": "go",
+          "measured": false,
+          "phases_ms": {
+            "load TAST + sort": 51,
+            "transitive specializations": 107,
+            "prepare + monomorphize": 272,
+            "runtime": 0,
+            "PBO producer": 548,
+            "emitter drain": 165,
+            "generation + writes (cumulative batches)": 545,
+            "optimize + emit": 714,
+            "entry points": 0,
+            "backend total": 1038
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/go.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/go.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/generated/go",
+          "identical_files": 219
+        },
+        {
+          "label": "js",
+          "host": "js",
+          "measured": false,
+          "phases_ms": {
+            "load TAST + sort": 340,
+            "transitive specializations": 111,
+            "prepare + monomorphize": 279,
+            "runtime": 1,
+            "PBO producer": 3270,
+            "emitter drain": 1086,
+            "generation + writes (cumulative batches)": 4319,
+            "optimize + emit": 4357,
+            "entry points": 0,
+            "backend total": 4979
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/js.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/js.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/generated/js",
+          "identical_files": 219
+        },
+        {
+          "label": "rust-sequential",
+          "host": "rust",
+          "measured": false,
+          "phases_ms": {
+            "load TAST + sort": 78,
+            "transitive specializations": 155,
+            "prepare + monomorphize": 368,
+            "runtime": 1,
+            "PBO producer": 1493,
+            "emitter drain": 0,
+            "generation + writes (cumulative batches)": 662,
+            "optimize + emit": 1494,
+            "entry points": 7,
+            "backend total": 1949
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/rust-sequential.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/rust-sequential.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/generated/rust-sequential",
+          "identical_files": 219
+        },
+        {
+          "label": "rust-warmup",
+          "host": "rust",
+          "measured": false,
+          "phases_ms": {
+            "load TAST + sort": 34,
+            "transitive specializations": 88,
+            "prepare + monomorphize": 226,
+            "runtime": 1,
+            "PBO producer": 356,
+            "emitter drain": 174,
+            "generation + writes (cumulative batches)": 440,
+            "optimize + emit": 532,
+            "entry points": 7,
+            "backend total": 798
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/rust-warmup.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/rust-warmup.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/generated/rust-warmup",
+          "identical_files": 219
+        },
+        {
+          "label": "rust-1",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 34,
+            "transitive specializations": 94,
+            "prepare + monomorphize": 240,
+            "runtime": 1,
+            "PBO producer": 367,
+            "emitter drain": 176,
+            "generation + writes (cumulative batches)": 455,
+            "optimize + emit": 544,
+            "entry points": 7,
+            "backend total": 825
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/rust-1.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/rust-1.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/generated/rust-1",
+          "identical_files": 219
+        },
+        {
+          "label": "rust-2",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 35,
+            "transitive specializations": 90,
+            "prepare + monomorphize": 232,
+            "runtime": 1,
+            "PBO producer": 359,
+            "emitter drain": 177,
+            "generation + writes (cumulative batches)": 450,
+            "optimize + emit": 537,
+            "entry points": 7,
+            "backend total": 811
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/rust-2.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/rust-2.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/generated/rust-2",
+          "identical_files": 219
+        },
+        {
+          "label": "rust-3",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 35,
+            "transitive specializations": 92,
+            "prepare + monomorphize": 234,
+            "runtime": 0,
+            "PBO producer": 354,
+            "emitter drain": 172,
+            "generation + writes (cumulative batches)": 445,
+            "optimize + emit": 528,
+            "entry points": 7,
+            "backend total": 804
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/rust-3.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/rust-3.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/generated/rust-3",
+          "identical_files": 219
+        },
+        {
+          "label": "rust-4",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 34,
+            "transitive specializations": 92,
+            "prepare + monomorphize": 236,
+            "runtime": 1,
+            "PBO producer": 358,
+            "emitter drain": 177,
+            "generation + writes (cumulative batches)": 452,
+            "optimize + emit": 536,
+            "entry points": 7,
+            "backend total": 814
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/rust-4.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/rust-4.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/generated/rust-4",
+          "identical_files": 219
+        },
+        {
+          "label": "rust-5",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 34,
+            "transitive specializations": 91,
+            "prepare + monomorphize": 234,
+            "runtime": 1,
+            "PBO producer": 372,
+            "emitter drain": 176,
+            "generation + writes (cumulative batches)": 458,
+            "optimize + emit": 549,
+            "entry points": 7,
+            "backend total": 826
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/rust-5.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/rust-5.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/generated/rust-5",
+          "identical_files": 219
+        }
+      ],
+      "applications": [
+        {
+          "label": "go-build",
+          "command": [
+            "go",
+            "build",
+            "-o",
+            "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/application/tests",
+            "./main"
+          ],
+          "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/input/output",
+          "exit_code": 0,
+          "signal": null,
+          "wall_ms": 2368.4437909999997,
+          "load_average_before": [
+            4.74462890625,
+            6.587890625,
+            6.51220703125
+          ],
+          "explicit_environment": {
+            "GOPURS_JOBS": "8",
+            "GOPURS_PREPARE_JOBS": "8",
+            "GOPURS_PBO_JOBS": "8",
+            "GOPURS_EMIT_JOBS": "8",
+            "GOPURS_PIPELINE": "1",
+            "GOGC": "1000"
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/go-build.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/go-build.stderr"
+        },
+        {
+          "label": "go-execute",
+          "command": [
+            "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/application/tests"
+          ],
+          "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/input",
+          "exit_code": 0,
+          "signal": null,
+          "wall_ms": 332.21429200000057,
+          "load_average_before": [
+            4.74462890625,
+            6.587890625,
+            6.51220703125
+          ],
+          "explicit_environment": {
+            "GOPURS_JOBS": "8",
+            "GOPURS_PREPARE_JOBS": "8",
+            "GOPURS_PBO_JOBS": "8",
+            "GOPURS_EMIT_JOBS": "8",
+            "GOPURS_PIPELINE": "1",
+            "GOGC": "1000"
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/go-execute.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-enums/logs/go-execute.stderr"
+        }
+      ]
+    },
+    {
+      "package": "gopurs-js-promise",
+      "samples_ms": [
+        454,
+        457,
+        456,
+        453,
+        453
+      ],
+      "median_ms": 454,
+      "min_ms": 453,
+      "max_ms": 457,
+      "identical_files_per_generation": 177,
+      "runs": [
+        {
+          "label": "go",
+          "host": "go",
+          "measured": false,
+          "phases_ms": {
+            "load TAST + sort": 25,
+            "transitive specializations": 23,
+            "prepare + monomorphize": 142,
+            "runtime": 0,
+            "PBO producer": 382,
+            "emitter drain": 42,
+            "generation + writes (cumulative batches)": 314,
+            "optimize + emit": 425,
+            "entry points": 0,
+            "backend total": 593
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/go.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/go.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/generated/go",
+          "identical_files": 177
+        },
+        {
+          "label": "js",
+          "host": "js",
+          "measured": false,
+          "phases_ms": {
+            "load TAST + sort": 281,
+            "transitive specializations": 30,
+            "prepare + monomorphize": 148,
+            "runtime": 1,
+            "PBO producer": 1860,
+            "emitter drain": 1336,
+            "generation + writes (cumulative batches)": 3165,
+            "optimize + emit": 3197,
+            "entry points": 0,
+            "backend total": 3628
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/js.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/js.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/generated/js",
+          "identical_files": 177
+        },
+        {
+          "label": "rust-sequential",
+          "host": "rust",
+          "measured": false,
+          "phases_ms": {
+            "load TAST + sort": 48,
+            "transitive specializations": 28,
+            "prepare + monomorphize": 154,
+            "runtime": 0,
+            "PBO producer": 946,
+            "emitter drain": 0,
+            "generation + writes (cumulative batches)": 401,
+            "optimize + emit": 947,
+            "entry points": 3,
+            "backend total": 1153
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/rust-sequential.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/rust-sequential.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/generated/rust-sequential",
+          "identical_files": 177
+        },
+        {
+          "label": "rust-warmup",
+          "host": "rust",
+          "measured": false,
+          "phases_ms": {
+            "load TAST + sort": 27,
+            "transitive specializations": 21,
+            "prepare + monomorphize": 126,
+            "runtime": 1,
+            "PBO producer": 245,
+            "emitter drain": 62,
+            "generation + writes (cumulative batches)": 241,
+            "optimize + emit": 307,
+            "entry points": 5,
+            "backend total": 466
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/rust-warmup.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/rust-warmup.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/generated/rust-warmup",
+          "identical_files": 177
+        },
+        {
+          "label": "rust-1",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 26,
+            "transitive specializations": 22,
+            "prepare + monomorphize": 121,
+            "runtime": 1,
+            "PBO producer": 239,
+            "emitter drain": 61,
+            "generation + writes (cumulative batches)": 241,
+            "optimize + emit": 301,
+            "entry points": 4,
+            "backend total": 454
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/rust-1.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/rust-1.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/generated/rust-1",
+          "identical_files": 177
+        },
+        {
+          "label": "rust-2",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 26,
+            "transitive specializations": 22,
+            "prepare + monomorphize": 120,
+            "runtime": 1,
+            "PBO producer": 243,
+            "emitter drain": 62,
+            "generation + writes (cumulative batches)": 239,
+            "optimize + emit": 305,
+            "entry points": 4,
+            "backend total": 457
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/rust-2.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/rust-2.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/generated/rust-2",
+          "identical_files": 177
+        },
+        {
+          "label": "rust-3",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 26,
+            "transitive specializations": 22,
+            "prepare + monomorphize": 122,
+            "runtime": 1,
+            "PBO producer": 243,
+            "emitter drain": 59,
+            "generation + writes (cumulative batches)": 241,
+            "optimize + emit": 302,
+            "entry points": 5,
+            "backend total": 456
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/rust-3.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/rust-3.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/generated/rust-3",
+          "identical_files": 177
+        },
+        {
+          "label": "rust-4",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 26,
+            "transitive specializations": 21,
+            "prepare + monomorphize": 119,
+            "runtime": 1,
+            "PBO producer": 240,
+            "emitter drain": 63,
+            "generation + writes (cumulative batches)": 239,
+            "optimize + emit": 303,
+            "entry points": 4,
+            "backend total": 453
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/rust-4.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/rust-4.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/generated/rust-4",
+          "identical_files": 177
+        },
+        {
+          "label": "rust-5",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 26,
+            "transitive specializations": 20,
+            "prepare + monomorphize": 117,
+            "runtime": 1,
+            "PBO producer": 245,
+            "emitter drain": 60,
+            "generation + writes (cumulative batches)": 243,
+            "optimize + emit": 305,
+            "entry points": 4,
+            "backend total": 453
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/rust-5.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/rust-5.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/generated/rust-5",
+          "identical_files": 177
+        }
+      ],
+      "applications": [
+        {
+          "label": "go-build",
+          "command": [
+            "go",
+            "build",
+            "-o",
+            "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/application/tests",
+            "./main"
+          ],
+          "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/input/output",
+          "exit_code": 0,
+          "signal": null,
+          "wall_ms": 1523.8216250000005,
+          "load_average_before": [
+            4.54296875,
+            6.4853515625,
+            6.47607421875
+          ],
+          "explicit_environment": {
+            "GOPURS_JOBS": "8",
+            "GOPURS_PREPARE_JOBS": "8",
+            "GOPURS_PBO_JOBS": "8",
+            "GOPURS_EMIT_JOBS": "8",
+            "GOPURS_PIPELINE": "1",
+            "GOGC": "1000"
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/go-build.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/go-build.stderr"
+        },
+        {
+          "label": "go-execute",
+          "command": [
+            "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/application/tests"
+          ],
+          "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/input",
+          "exit_code": 0,
+          "signal": null,
+          "wall_ms": 300.1807090000002,
+          "load_average_before": [
+            4.2587890625,
+            6.39404296875,
+            6.44384765625
+          ],
+          "explicit_environment": {
+            "GOPURS_JOBS": "8",
+            "GOPURS_PREPARE_JOBS": "8",
+            "GOPURS_PBO_JOBS": "8",
+            "GOPURS_EMIT_JOBS": "8",
+            "GOPURS_PIPELINE": "1",
+            "GOGC": "1000"
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/go-execute.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-js-promise/logs/go-execute.stderr"
+        }
+      ]
+    },
+    {
+      "package": "gopurs-prelude",
+      "samples_ms": [
+        768,
+        775,
+        768,
+        775,
+        782
+      ],
+      "median_ms": 775,
+      "min_ms": 768,
+      "max_ms": 782,
+      "identical_files_per_generation": 214,
+      "runs": [
+        {
+          "label": "go",
+          "host": "go",
+          "measured": false,
+          "phases_ms": {
+            "load TAST + sort": 32,
+            "transitive specializations": 118,
+            "prepare + monomorphize": 278,
+            "runtime": 0,
+            "PBO producer": 487,
+            "emitter drain": 170,
+            "generation + writes (cumulative batches)": 475,
+            "optimize + emit": 657,
+            "entry points": 0,
+            "backend total": 967
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/go.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/go.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/generated/go",
+          "identical_files": 214
+        },
+        {
+          "label": "js",
+          "host": "js",
+          "measured": false,
+          "phases_ms": {
+            "load TAST + sort": 334,
+            "transitive specializations": 103,
+            "prepare + monomorphize": 260,
+            "runtime": 1,
+            "PBO producer": 3088,
+            "emitter drain": 1258,
+            "generation + writes (cumulative batches)": 4312,
+            "optimize + emit": 4347,
+            "entry points": 0,
+            "backend total": 4945
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/js.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/js.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/generated/js",
+          "identical_files": 214
+        },
+        {
+          "label": "rust-sequential",
+          "host": "rust",
+          "measured": false,
+          "phases_ms": {
+            "load TAST + sort": 59,
+            "transitive specializations": 120,
+            "prepare + monomorphize": 302,
+            "runtime": 1,
+            "PBO producer": 1373,
+            "emitter drain": 0,
+            "generation + writes (cumulative batches)": 568,
+            "optimize + emit": 1374,
+            "entry points": 8,
+            "backend total": 1743
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/rust-sequential.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/rust-sequential.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/generated/rust-sequential",
+          "identical_files": 214
+        },
+        {
+          "label": "rust-warmup",
+          "host": "rust",
+          "measured": false,
+          "phases_ms": {
+            "load TAST + sort": 33,
+            "transitive specializations": 106,
+            "prepare + monomorphize": 243,
+            "runtime": 1,
+            "PBO producer": 317,
+            "emitter drain": 156,
+            "generation + writes (cumulative batches)": 371,
+            "optimize + emit": 474,
+            "entry points": 6,
+            "backend total": 757
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/rust-warmup.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/rust-warmup.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/generated/rust-warmup",
+          "identical_files": 214
+        },
+        {
+          "label": "rust-1",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 33,
+            "transitive specializations": 105,
+            "prepare + monomorphize": 245,
+            "runtime": 1,
+            "PBO producer": 326,
+            "emitter drain": 155,
+            "generation + writes (cumulative batches)": 377,
+            "optimize + emit": 483,
+            "entry points": 6,
+            "backend total": 768
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/rust-1.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/rust-1.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/generated/rust-1",
+          "identical_files": 214
+        },
+        {
+          "label": "rust-2",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 33,
+            "transitive specializations": 107,
+            "prepare + monomorphize": 249,
+            "runtime": 1,
+            "PBO producer": 331,
+            "emitter drain": 155,
+            "generation + writes (cumulative batches)": 388,
+            "optimize + emit": 487,
+            "entry points": 6,
+            "backend total": 775
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/rust-2.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/rust-2.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/generated/rust-2",
+          "identical_files": 214
+        },
+        {
+          "label": "rust-3",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 33,
+            "transitive specializations": 102,
+            "prepare + monomorphize": 244,
+            "runtime": 1,
+            "PBO producer": 323,
+            "emitter drain": 160,
+            "generation + writes (cumulative batches)": 381,
+            "optimize + emit": 484,
+            "entry points": 6,
+            "backend total": 768
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/rust-3.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/rust-3.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/generated/rust-3",
+          "identical_files": 214
+        },
+        {
+          "label": "rust-4",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 34,
+            "transitive specializations": 104,
+            "prepare + monomorphize": 248,
+            "runtime": 1,
+            "PBO producer": 319,
+            "emitter drain": 166,
+            "generation + writes (cumulative batches)": 387,
+            "optimize + emit": 486,
+            "entry points": 7,
+            "backend total": 775
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/rust-4.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/rust-4.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/generated/rust-4",
+          "identical_files": 214
+        },
+        {
+          "label": "rust-5",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 35,
+            "transitive specializations": 103,
+            "prepare + monomorphize": 241,
+            "runtime": 1,
+            "PBO producer": 339,
+            "emitter drain": 159,
+            "generation + writes (cumulative batches)": 393,
+            "optimize + emit": 499,
+            "entry points": 6,
+            "backend total": 782
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/rust-5.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/rust-5.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/generated/rust-5",
+          "identical_files": 214
+        }
+      ],
+      "applications": [
+        {
+          "label": "go-build",
+          "command": [
+            "go",
+            "build",
+            "-o",
+            "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/application/tests",
+            "./main"
+          ],
+          "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/input/output",
+          "exit_code": 0,
+          "signal": null,
+          "wall_ms": 2196.5833339999954,
+          "load_average_before": [
+            4.599609375,
+            6.39697265625,
+            6.44384765625
+          ],
+          "explicit_environment": {
+            "GOPURS_JOBS": "8",
+            "GOPURS_PREPARE_JOBS": "8",
+            "GOPURS_PBO_JOBS": "8",
+            "GOPURS_EMIT_JOBS": "8",
+            "GOPURS_PIPELINE": "1",
+            "GOGC": "1000"
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/go-build.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/go-build.stderr"
+        },
+        {
+          "label": "go-execute",
+          "command": [
+            "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/application/tests"
+          ],
+          "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/input",
+          "exit_code": 0,
+          "signal": null,
+          "wall_ms": 323.19008299999405,
+          "load_average_before": [
+            4.63134765625,
+            6.37353515625,
+            6.43505859375
+          ],
+          "explicit_environment": {
+            "GOPURS_JOBS": "8",
+            "GOPURS_PREPARE_JOBS": "8",
+            "GOPURS_PBO_JOBS": "8",
+            "GOPURS_EMIT_JOBS": "8",
+            "GOPURS_PIPELINE": "1",
+            "GOGC": "1000"
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/go-execute.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-prelude/logs/go-execute.stderr"
+        }
+      ]
+    },
+    {
+      "package": "gopurs-strings",
+      "samples_ms": [
+        1286,
+        1299,
+        1275,
+        1277,
+        1295
+      ],
+      "median_ms": 1286,
+      "min_ms": 1275,
+      "max_ms": 1299,
+      "identical_files_per_generation": 248,
+      "runs": [
+        {
+          "label": "go",
+          "host": "go",
+          "measured": false,
+          "phases_ms": {
+            "load TAST + sort": 37,
+            "transitive specializations": 198,
+            "prepare + monomorphize": 427,
+            "runtime": 0,
+            "PBO producer": 640,
+            "emitter drain": 382,
+            "generation + writes (cumulative batches)": 857,
+            "optimize + emit": 1022,
+            "entry points": 0,
+            "backend total": 1487
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/go.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/go.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/generated/go",
+          "identical_files": 248
+        },
+        {
+          "label": "js",
+          "host": "js",
+          "measured": false,
+          "phases_ms": {
+            "load TAST + sort": 365,
+            "transitive specializations": 154,
+            "prepare + monomorphize": 356,
+            "runtime": 1,
+            "PBO producer": 3713,
+            "emitter drain": 1686,
+            "generation + writes (cumulative batches)": 5336,
+            "optimize + emit": 5399,
+            "entry points": 0,
+            "backend total": 6123
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/js.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/js.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/generated/js",
+          "identical_files": 248
+        },
+        {
+          "label": "rust-sequential",
+          "host": "rust",
+          "measured": false,
+          "phases_ms": {
+            "load TAST + sort": 89,
+            "transitive specializations": 198,
+            "prepare + monomorphize": 449,
+            "runtime": 1,
+            "PBO producer": 2374,
+            "emitter drain": 0,
+            "generation + writes (cumulative batches)": 1390,
+            "optimize + emit": 2375,
+            "entry points": 9,
+            "backend total": 2921
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/rust-sequential.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/rust-sequential.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/generated/rust-sequential",
+          "identical_files": 248
+        },
+        {
+          "label": "rust-warmup",
+          "host": "rust",
+          "measured": false,
+          "phases_ms": {
+            "load TAST + sort": 56,
+            "transitive specializations": 168,
+            "prepare + monomorphize": 351,
+            "runtime": 1,
+            "PBO producer": 413,
+            "emitter drain": 435,
+            "generation + writes (cumulative batches)": 749,
+            "optimize + emit": 849,
+            "entry points": 10,
+            "backend total": 1267
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/rust-warmup.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/rust-warmup.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/generated/rust-warmup",
+          "identical_files": 248
+        },
+        {
+          "label": "rust-1",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 57,
+            "transitive specializations": 182,
+            "prepare + monomorphize": 373,
+            "runtime": 1,
+            "PBO producer": 426,
+            "emitter drain": 419,
+            "generation + writes (cumulative batches)": 748,
+            "optimize + emit": 846,
+            "entry points": 9,
+            "backend total": 1286
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/rust-1.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/rust-1.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/generated/rust-1",
+          "identical_files": 248
+        },
+        {
+          "label": "rust-2",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 55,
+            "transitive specializations": 181,
+            "prepare + monomorphize": 378,
+            "runtime": 1,
+            "PBO producer": 424,
+            "emitter drain": 431,
+            "generation + writes (cumulative batches)": 760,
+            "optimize + emit": 856,
+            "entry points": 10,
+            "backend total": 1299
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/rust-2.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/rust-2.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/generated/rust-2",
+          "identical_files": 248
+        },
+        {
+          "label": "rust-3",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 57,
+            "transitive specializations": 179,
+            "prepare + monomorphize": 373,
+            "runtime": 1,
+            "PBO producer": 417,
+            "emitter drain": 418,
+            "generation + writes (cumulative batches)": 741,
+            "optimize + emit": 836,
+            "entry points": 9,
+            "backend total": 1275
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/rust-3.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/rust-3.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/generated/rust-3",
+          "identical_files": 248
+        },
+        {
+          "label": "rust-4",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 57,
+            "transitive specializations": 177,
+            "prepare + monomorphize": 368,
+            "runtime": 1,
+            "PBO producer": 428,
+            "emitter drain": 412,
+            "generation + writes (cumulative batches)": 739,
+            "optimize + emit": 841,
+            "entry points": 10,
+            "backend total": 1277
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/rust-4.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/rust-4.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/generated/rust-4",
+          "identical_files": 248
+        },
+        {
+          "label": "rust-5",
+          "host": "rust",
+          "measured": true,
+          "phases_ms": {
+            "load TAST + sort": 56,
+            "transitive specializations": 177,
+            "prepare + monomorphize": 372,
+            "runtime": 1,
+            "PBO producer": 411,
+            "emitter drain": 446,
+            "generation + writes (cumulative batches)": 765,
+            "optimize + emit": 858,
+            "entry points": 9,
+            "backend total": 1295
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/rust-5.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/rust-5.stderr",
+          "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/generated/rust-5",
+          "identical_files": 248
+        }
+      ],
+      "applications": [
+        {
+          "label": "go-build",
+          "command": [
+            "go",
+            "build",
+            "-o",
+            "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/application/tests",
+            "./main"
+          ],
+          "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/input/output",
+          "exit_code": 0,
+          "signal": null,
+          "wall_ms": 3757.394665999993,
+          "load_average_before": [
+            4.86572265625,
+            6.31591796875,
+            6.412109375
+          ],
+          "explicit_environment": {
+            "GOPURS_JOBS": "8",
+            "GOPURS_PREPARE_JOBS": "8",
+            "GOPURS_PBO_JOBS": "8",
+            "GOPURS_EMIT_JOBS": "8",
+            "GOPURS_PIPELINE": "1",
+            "GOGC": "1000"
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/go-build.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/go-build.stderr"
+        },
+        {
+          "label": "go-execute",
+          "command": [
+            "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/application/tests"
+          ],
+          "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/input",
+          "exit_code": 0,
+          "signal": null,
+          "wall_ms": 345.1169169999921,
+          "load_average_before": [
+            5.75732421875,
+            6.4765625,
+            6.46826171875
+          ],
+          "explicit_environment": {
+            "GOPURS_JOBS": "8",
+            "GOPURS_PREPARE_JOBS": "8",
+            "GOPURS_PBO_JOBS": "8",
+            "GOPURS_EMIT_JOBS": "8",
+            "GOPURS_PIPELINE": "1",
+            "GOGC": "1000"
+          },
+          "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/go-execute.stdout",
+          "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/gopurs-strings/logs/go-execute.stderr"
+        }
+      ]
+    }
+  ],
+  "verified": {
+    "packages": 50,
+    "newly_measured_packages": 4,
+    "generations": 84,
+    "identical_generated_files": 20283,
+    "applications": 4,
+    "rust_bootstrap_identical_files": 1008,
+    "pbo_suites": 17,
+    "division_cases_per_build": 612,
+    "modulo_cases_per_build": 12,
+    "rust_test_profiles": [
+      "debug",
+      "optimized"
+    ],
+    "module_permutations": 720
+  },
+  "qualification": {
+    "build": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/build-results.json",
+      "sha256": "2bd8f4ba5b8a8d57a0d3fbcb3a9d667deecd71bb5da5591dec62ad0b2e0f310e"
+    },
+    "verification": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/verification-final.json",
+      "sha256": "33c596acc6797f1c64a1e3bbe475a07ecd3c1d135cc2be60b4a07d56c8dddf5d"
+    },
+    "hosts": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/hosts/results.json",
+      "sha256": "b188620673ee5a185e9765152563da9373ded547d42e23524005057ab7797620"
+    },
+    "recheck": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/recheck/final-results.json",
+      "sha256": "98fc6aac7ddf17852601180486f7efa74690f2b7d16fd1476a057c0b51114e41"
+    },
+    "pgo": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/gopurs-rust-build-yJznhT/pgo-profile.json",
+      "sha256": "0dd6f520735e29ddf94082a35acf1a659cde6ade172e4dc139cd5ade89ff4bed"
+    }
+  },
+  "pgo": {
+    "training_modules": 500,
+    "passes": [
+      {
+        "round": 1,
+        "jobs": {
+          "GOPURS_JOBS": "8",
+          "GOPURS_PREPARE_JOBS": "8",
+          "GOPURS_PBO_JOBS": "8",
+          "GOPURS_EMIT_JOBS": "8",
+          "GOPURS_PIPELINE": "1"
+        },
+        "files": 613,
+        "sha256": "33ab8457dd29aa940158fd057f177877388c2a0a2116f660b969756b4b99dc9d"
+      },
+      {
+        "round": 2,
+        "jobs": {
+          "GOPURS_JOBS": "8",
+          "GOPURS_PREPARE_JOBS": "8",
+          "GOPURS_PBO_JOBS": "8",
+          "GOPURS_EMIT_JOBS": "8",
+          "GOPURS_PIPELINE": "1"
+        },
+        "files": 613,
+        "sha256": "33ab8457dd29aa940158fd057f177877388c2a0a2116f660b969756b4b99dc9d"
+      },
+      {
+        "round": 3,
+        "jobs": {
+          "GOPURS_JOBS": "8",
+          "GOPURS_PREPARE_JOBS": "1",
+          "GOPURS_PBO_JOBS": "1",
+          "GOPURS_EMIT_JOBS": "1",
+          "GOPURS_PIPELINE": "1"
+        },
+        "files": 613,
+        "sha256": "33ab8457dd29aa940158fd057f177877388c2a0a2116f660b969756b4b99dc9d"
+      }
+    ],
+    "sha256": "339a3d9ec826a92eb9e537196cd172a36d021e38face33ac2c039a2acdd7f11e"
+  },
+  "oracle_corrections": [
+    {
+      "package": "gopurs-prelude",
+      "previous_oracle": {
+        "label": "0-go",
+        "command": [
+          "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/compiler/bin/gopurs",
+          "--main",
+          "Test.Main"
+        ],
+        "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/followups/gopurs-prelude/input",
+        "exit_code": 0,
+        "signal": null,
+        "wall_ms": 1055.6343340000003,
+        "load_average_before": [
+          25.7587890625,
+          23.0615234375,
+          17.7587890625
+        ],
+        "explicit_environment": {
+          "GOPURS_JOBS": "8",
+          "GOPURS_PREPARE_JOBS": "8",
+          "GOPURS_PBO_JOBS": "8",
+          "GOPURS_EMIT_JOBS": "8",
+          "GOPURS_PIPELINE": "1",
+          "GOPURS_RUST": "0",
+          "GOPURS_JS": "0",
+          "RUST_BACKTRACE": "1"
+        },
+        "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/followups/gopurs-prelude/logs/0-go.stdout",
+        "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/followups/gopurs-prelude/logs/0-go.stderr",
+        "host": "go",
+        "warmup": true,
+        "phases_ms": {
+          "load TAST + sort": 31,
+          "transitive specializations": 127,
+          "prepare + monomorphize": 295,
+          "runtime": 0,
+          "PBO producer": 506,
+          "emitter drain": 167,
+          "generation + writes (cumulative batches)": 498,
+          "optimize + emit": 673,
+          "entry points": 0,
+          "backend total": 1000
+        },
+        "generated": [
+          {
+            "path": "Test.Main/main/main.go",
+            "bytes": 540,
+            "sha256": "a54040cfb1ac96958e17b5551d6f8dec367b256d491779b99bbe732463ca2642"
+          },
+          {
+            "path": "go.mod",
+            "bytes": 30,
+            "sha256": "fbf6569b070f7ffd53297d0a8d7f077134eb9b9df97e3c1044c816b8a78407ff"
+          },
+          {
+            "path": "gopurs_runtime/runtime.go",
+            "bytes": 53176,
+            "sha256": "48efff27d31ccef371785501904292b46b3928f66bca4d8910bf2a635a662530"
+          },
+          {
+            "path": "main/main.go",
+            "bytes": 540,
+            "sha256": "a54040cfb1ac96958e17b5551d6f8dec367b256d491779b99bbe732463ca2642"
+          },
+          {
+            "path": "purescript/Control_Alt.go",
+            "bytes": 3346,
+            "sha256": "3f18ca7595425c807b28c84e73b8771e5571761e2a1475bac9c8120f4277d81a"
+          },
+          {
+            "path": "purescript/Control_Alternative.go",
+            "bytes": 8965,
+            "sha256": "d36d26ffcc2ee3ee9394e1de3fb37dbc8e0cccf6eee20258cf483dd70ffda569"
+          },
+          {
+            "path": "purescript/Control_Applicative.go",
+            "bytes": 15719,
+            "sha256": "7b3fb8dee49d672bab8714d9342f8b58a3777b8009c812b6fde2e0922fce58b9"
+          },
+          {
+            "path": "purescript/Control_Apply.go",
+            "bytes": 14724,
+            "sha256": "24802bd9318e1847fa338f4b9bbd8593fff8bee39a43df47d7acfeaa4611097e"
+          },
+          {
+            "path": "purescript/Control_Apply_ffi.go",
+            "bytes": 1213,
+            "sha256": "7177b0958e58be1e8358cabd19d04ff475c4d8f36e24f0ceb2ff43d3b8037ce1"
+          },
+          {
+            "path": "purescript/Control_Biapplicative.go",
+            "bytes": 5288,
+            "sha256": "ccf9f9ffa10afc15f7aa99c2ed510542670f21309281215d935f30252a16fdcb"
+          },
+          {
+            "path": "purescript/Control_Biapply.go",
+            "bytes": 13334,
+            "sha256": "6f6bd61cccc20f555655d453ae92541cf1aa481ac5f5c4e2622f965796235e0f"
+          },
+          {
+            "path": "purescript/Control_Bind.go",
+            "bytes": 43769,
+            "sha256": "2a0e93833086f098a30c6ed090c78b79de1a10537d230947d7a9b0b63d34bc5a"
+          },
+          {
+            "path": "purescript/Control_Bind_ffi.go",
+            "bytes": 1121,
+            "sha256": "a438171e73a2d7a9ff32559e5f92d4772da42c6037514e80e4d38761ec4d554f"
+          },
+          {
+            "path": "purescript/Control_Category.go",
+            "bytes": 5442,
+            "sha256": "d84b885f6ae75733904e0e70417b68f97212d96583562221696449dea8f09b0c"
+          },
+          {
+            "path": "purescript/Control_Comonad.go",
+            "bytes": 2842,
+            "sha256": "333473ddfec3e34ee12f569196a5f5356f2abfb532aa12f80ec2c31e317d87a7"
+          },
+          {
+            "path": "purescript/Control_Extend.go",
+            "bytes": 10205,
+            "sha256": "b0415c97dd03914e9139929aa62fc573a7cf1887131cc5f4456f64f873fabfee"
+          },
+          {
+            "path": "purescript/Control_Extend_ffi.go",
+            "bytes": 247,
+            "sha256": "70d17b23d1b802e467af61e35d564eca50b042e791d12096cd52e5999022f140"
+          },
+          {
+            "path": "purescript/Control_Lazy.go",
+            "bytes": 6086,
+            "sha256": "913e56fd030d66253c1f1252e84f588a97e0a02f50c918f4bf892e9ba0a942a9"
+          },
+          {
+            "path": "purescript/Control_Monad.go",
+            "bytes": 20677,
+            "sha256": "ce8975cb6a1a23e0f5315404f5f5867d1793392eb1db0aac22c808a142d764ce"
+          },
+          {
+            "path": "purescript/Control_MonadPlus.go",
+            "bytes": 4991,
+            "sha256": "a6bd3d2056c0c68d3ee050abacf5a44acf0e001595ce448539372002b4300357"
+          },
+          {
+            "path": "purescript/Control_Monad_Rec_Class.go",
+            "bytes": 43496,
+            "sha256": "2ae53bc4d1dfa28246befa3c82ce70ad8068afba32665dac52d985e0842efa01"
+          },
+          {
+            "path": "purescript/Control_Monad_ST.go",
+            "bytes": 38,
+            "sha256": "148ec052de2bb51f078fba4a21acd091943765eced457a563b41225d0240122b"
+          },
+          {
+            "path": "purescript/Control_Monad_ST_Class.go",
+            "bytes": 4873,
+            "sha256": "0c62743b2e2c6e51ead3ad3107d48b3703f83921dfad7d5f8e72a2e45835fba7"
+          },
+          {
+            "path": "purescript/Control_Monad_ST_Global.go",
+            "bytes": 459,
+            "sha256": "d69522d7a9df03f86ce2e48b6caae60fe0721a3c94f057461afc795b6438c53d"
+          },
+          {
+            "path": "purescript/Control_Monad_ST_Internal.go",
+            "bytes": 15324,
+            "sha256": "5e0a6aa1b05ad533859b5b7dc657463ea45403414667aafdc27e4d21ed541e0f"
+          },
+          {
+            "path": "purescript/Control_Monad_ST_Internal_ffi.go",
+            "bytes": 8231,
+            "sha256": "8e6c56a13aa48c1323dbd8743e15d3b2256c559780199b184c32d9b590fa8adb"
+          },
+          {
+            "path": "purescript/Control_Monad_ST_Ref.go",
+            "bytes": 38,
+            "sha256": "148ec052de2bb51f078fba4a21acd091943765eced457a563b41225d0240122b"
+          },
+          {
+            "path": "purescript/Control_Monad_ST_Uncurried.go",
+            "bytes": 2566,
+            "sha256": "28b1286c2a0d41ec94e51b5c0b95d264c6fb4467418f9aa21dc9dc103f5b77ad"
+          },
+          {
+            "path": "purescript/Control_Monad_ST_Uncurried_ffi.go",
+            "bytes": 17008,
+            "sha256": "e82ba044932399a2203fbb81720b814917fcac4fa1bef0937fa73999abe5c5e0"
+          },
+          {
+            "path": "purescript/Control_Plus.go",
+            "bytes": 3351,
+            "sha256": "5493ab686a89bcd37667fe3eeb1835a8058f8fc029596b74b12db4a336746d64"
+          },
+          {
+            "path": "purescript/Control_Semigroupoid.go",
+            "bytes": 28959,
+            "sha256": "57e0b7d6eb6205ea25d94ce45b100e788517b7cbed68dd7ceb856686b88f045c"
+          },
+          {
+            "path": "purescript/Data_Array.go",
+            "bytes": 186914,
+            "sha256": "099c1919a4f7e1c8d517f89e84d81b90150fb8c0f4289e4fa2783f237164d2b2"
+          },
+          {
+            "path": "purescript/Data_Array_NonEmpty.go",
+            "bytes": 109876,
+            "sha256": "9667d74597529ad634acfc74758d62fff6b375f3cca0a57c4b08d14f499f6559"
+          },
+          {
+            "path": "purescript/Data_Array_NonEmpty_Internal.go",
+            "bytes": 27790,
+            "sha256": "603308549114e16a6fc10755f5a30344ccaed83bfc8620f321ec02a73322b149"
+          },
+          {
+            "path": "purescript/Data_Array_NonEmpty_Internal_ffi.go",
+            "bytes": 5278,
+            "sha256": "9074f6fe822f71ca6258de3f714ffe712a34ec2478c5e9eb5705b30cdcac6ba1"
+          },
+          {
+            "path": "purescript/Data_Array_Partial.go",
+            "bytes": 4341,
+            "sha256": "734002ac2bdca7207d07b046ca1a2b8504d369a3e750e94b96e14543c25a1776"
+          },
+          {
+            "path": "purescript/Data_Array_ST.go",
+            "bytes": 17052,
+            "sha256": "0a65e74ce68a789cd06567614e22488102926ebb9e437e56edae5f15f7ff59c9"
+          },
+          {
+            "path": "purescript/Data_Array_ST_Iterator.go",
+            "bytes": 15564,
+            "sha256": "7b95e38668d5cb53a69f44028600a5293e59934f84700c3226b32b54adf9e595"
+          },
+          {
+            "path": "purescript/Data_Array_ST_Partial.go",
+            "bytes": 1851,
+            "sha256": "f4028e688b142e9b357a91267cbda9c891c1d0d73e882b777593db21b21eaeb9"
+          },
+          {
+            "path": "purescript/Data_Array_ST_Partial_ffi.go",
+            "bytes": 1415,
+            "sha256": "59fc22fce5ebceb4ab45a0af6fdffe9ee1db8a07412d87be26045ad92546e00a"
+          },
+          {
+            "path": "purescript/Data_Array_ST_ffi.go",
+            "bytes": 13420,
+            "sha256": "c9db385054f2936bab9e01f32ea771ba0bc8b4f4d2700f03f7863388376920a5"
+          },
+          {
+            "path": "purescript/Data_Array_ffi.go",
+            "bytes": 26239,
+            "sha256": "2d38c817c8b6fbca9cc3fe4902f22bf67461157fff37386166f102a1a6752ba0"
+          },
+          {
+            "path": "purescript/Data_Bifoldable.go",
+            "bytes": 49342,
+            "sha256": "773f94988a4a2f24342316d1d38a0d12745939c4852a82a48a73b6c6b8a1f44d"
+          },
+          {
+            "path": "purescript/Data_Bifunctor.go",
+            "bytes": 11378,
+            "sha256": "ddf484057c655736dd14e23400ace6cc45298232d79cf075d00bbfa26015ab70"
+          },
+          {
+            "path": "purescript/Data_Bifunctor_Join.go",
+            "bytes": 8223,
+            "sha256": "340d7e8401d4d2dae64216ef465fd55aac463f1997fea289817aec921ea1b853"
+          },
+          {
+            "path": "purescript/Data_Bitraversable.go",
+            "bytes": 51577,
+            "sha256": "c8d5339de0026503580ea61968d9579d4661053cd736e6c91d9fc2cf112620a4"
+          },
+          {
+            "path": "purescript/Data_Boolean.go",
+            "bytes": 392,
+            "sha256": "be56d8dfacb8fa52e61885a779de6a5a32e1450cacc9d84c2c0fa66e567cbf0e"
+          },
+          {
+            "path": "purescript/Data_BooleanAlgebra.go",
+            "bytes": 22615,
+            "sha256": "496074a336a3c6f12de54e5229f5cc8cef891ce9108a0f9878830ea63ca45c95"
+          },
+          {
+            "path": "purescript/Data_Bounded.go",
+            "bytes": 49801,
+            "sha256": "e48f5aadb2009de350604e677ba9155b97459e546b55c35ce0fcdb7395da90eb"
+          },
+          {
+            "path": "purescript/Data_Bounded_Generic.go",
+            "bytes": 26543,
+            "sha256": "601a431279173a08d92f3af9ebefe01a2109d84ff84936a130a5f1192206a894"
+          },
+          {
+            "path": "purescript/Data_Bounded_ffi.go",
+            "bytes": 934,
+            "sha256": "246b314d118acaa5bb9dfb6965f6939b5d907b5899a384e0e033c575bb9e34d5"
+          },
+          {
+            "path": "purescript/Data_CommutativeRing.go",
+            "bytes": 23939,
+            "sha256": "d69315e9551624338df17b350b710f30a13cbb16d399586ba4776b132d14fe63"
+          },
+          {
+            "path": "purescript/Data_Comparison.go",
+            "bytes": 6388,
+            "sha256": "942f70db2becf2c9dfabd0205c1eac02ca10f142ed341b96615811c6ba6cd987"
+          },
+          {
+            "path": "purescript/Data_Const.go",
+            "bytes": 18246,
+            "sha256": "1121c02e74c641f00f0073a9f74aa8c13b90bbcaf3bc7992104864dd8ddecbe4"
+          },
+          {
+            "path": "purescript/Data_Decidable.go",
+            "bytes": 15855,
+            "sha256": "21dc91a91d39c54313bc4011a26f130534ec6c6cb86a0202e17092ed2bbcea17"
+          },
+          {
+            "path": "purescript/Data_Decide.go",
+            "bytes": 14884,
+            "sha256": "d16a3332020e77f2cb67c0d103bbc52fd8c6663d42515d78046cf6330a6694c7"
+          },
+          {
+            "path": "purescript/Data_Distributive.go",
+            "bytes": 18386,
+            "sha256": "196749f2f8ce2a2305b4c3d751bdd6693840a6a19fa24a7ecb19c139a8ba6fec"
+          },
+          {
+            "path": "purescript/Data_Divide.go",
+            "bytes": 12136,
+            "sha256": "130c283eeff8d6e3ac5910ef5e852b7db462afdc413eb845cd8b76c41d2fc74a"
+          },
+          {
+            "path": "purescript/Data_Divisible.go",
+            "bytes": 7085,
+            "sha256": "49505fff598432e466451664f467ce9ef32256970249ddc95323438aca1537b8"
+          },
+          {
+            "path": "purescript/Data_DivisionRing.go",
+            "bytes": 11378,
+            "sha256": "37f13f57de1937254bb3be2d1dd64e4e460bdcc6ad901035f5008e06a7fcd691"
+          },
+          {
+            "path": "purescript/Data_Either.go",
+            "bytes": 50256,
+            "sha256": "fbbd2839a6389eac5e396cf3b2613985d6ce3cc94fe7e45e2e6cc1994c062311"
+          },
+          {
+            "path": "purescript/Data_Either_Inject.go",
+            "bytes": 8174,
+            "sha256": "3f70d84df6128e1d57d2534295dcb1a0e1dafb8526138e2c614c3185a3752c94"
+          },
+          {
+            "path": "purescript/Data_Either_Nested.go",
+            "bytes": 162220,
+            "sha256": "fd54b52cc563596dd10aa1647d7de209d47c9e0e0428cab4426207b03db64a5a"
+          },
+          {
+            "path": "purescript/Data_Eq.go",
+            "bytes": 123315,
+            "sha256": "19a7c68d3248d1fb71edaabaaaf3be38f107563a7105d392cf8369e5347ac65b"
+          },
+          {
+            "path": "purescript/Data_Eq_Generic.go",
+            "bytes": 23835,
+            "sha256": "2a8dd30da9240c51abdf9a47328b3bdcf5c8d445e9399bb0024dae0bb8603556"
+          },
+          {
+            "path": "purescript/Data_Eq_ffi.go",
+            "bytes": 3409,
+            "sha256": "3fe3b889189c4935726565a434cb4d33ca9acd6f0f3da05fa3b8eebb74169f3e"
+          },
+          {
+            "path": "purescript/Data_Equivalence.go",
+            "bytes": 5767,
+            "sha256": "aa9cba0279c5aeb7a4881abadad6d8dccb1a2f5cd0b65ed10df72ec450b2a584"
+          },
+          {
+            "path": "purescript/Data_EuclideanRing.go",
+            "bytes": 25992,
+            "sha256": "dbf7c4918348597baa415e4cc5178e295d441aecd4ace8ba9962e589d527ed43"
+          },
+          {
+            "path": "purescript/Data_EuclideanRing_ffi.go",
+            "bytes": 2033,
+            "sha256": "35ea6798636762394e2c3f6fee1a7c744d89ef64a41ce1f855b396f42bf5634f"
+          },
+          {
+            "path": "purescript/Data_Exists.go",
+            "bytes": 685,
+            "sha256": "66f675f11b4569592e616bdf884fadde378f069f35d308886141b872e40e85ca"
+          },
+          {
+            "path": "purescript/Data_Field.go",
+            "bytes": 3649,
+            "sha256": "47145799dac2f91f8ea31dd0b3bc5ecb7035a30d9e94e19601dcb2f0ff62882b"
+          },
+          {
+            "path": "purescript/Data_Foldable.go",
+            "bytes": 120512,
+            "sha256": "265d41e3ab2104d60b121908a495efa3b40a8c938d4128cff2e94fe1d95f2c76"
+          },
+          {
+            "path": "purescript/Data_FoldableWithIndex.go",
+            "bytes": 133387,
+            "sha256": "05f28de96dd4914643c9bd4cf32b6c2171d6c7c35a82d6bf71f9b61e0529adeb"
+          },
+          {
+            "path": "purescript/Data_Foldable_ffi.go",
+            "bytes": 1909,
+            "sha256": "6ad9c296c9c6a1d20a61b396f0553a56dbe870ae899a68d13c4f8a7f6c51a24a"
+          },
+          {
+            "path": "purescript/Data_Function.go",
+            "bytes": 36968,
+            "sha256": "9e4c74f043ce32b64ce6ce68d92c2ba650f0ab9f5df44a0d3c54fd3a6a4b9eb2"
+          },
+          {
+            "path": "purescript/Data_Function_Uncurried.go",
+            "bytes": 3585,
+            "sha256": "9b5fabe9abd804781e15bbf7701b5ebec6833a008881a0ce0cd03ed2977ac91b"
+          },
+          {
+            "path": "purescript/Data_Function_Uncurried_ffi.go",
+            "bytes": 8591,
+            "sha256": "71504fa1d67fbae8c5c30c4e5ead01b5cce3a9bc3582ae3b853b4a2513d340ce"
+          },
+          {
+            "path": "purescript/Data_Functor.go",
+            "bytes": 9657,
+            "sha256": "4470824e84af252cd6842bceb00f9558f1f77d49be4c6538b2dcdbe9f2b8a892"
+          },
+          {
+            "path": "purescript/Data_FunctorWithIndex.go",
+            "bytes": 61237,
+            "sha256": "7793be06ab46239e0543bf190cd729d6fea775110a4f988531eb779914d7103d"
+          },
+          {
+            "path": "purescript/Data_FunctorWithIndex_ffi.go",
+            "bytes": 1165,
+            "sha256": "db268683018187fed43eede92c5f06eee636bdffcd415f911341e0ecd13ad774"
+          },
+          {
+            "path": "purescript/Data_Functor_App.go",
+            "bytes": 22810,
+            "sha256": "05fea5bc6c5290f31aef1edaa67d9a0b9046f902b182263c61273f6e2d35654e"
+          },
+          {
+            "path": "purescript/Data_Functor_Clown.go",
+            "bytes": 10609,
+            "sha256": "ab07eb3529a7d5076ba0e57bf3bda9b886d348a79e292e1c825269a1681076ab"
+          },
+          {
+            "path": "purescript/Data_Functor_Compose.go",
+            "bytes": 25664,
+            "sha256": "17d31f3f3dfcf9ec96dc6722091fdca6c5b95830330745d27875c1aca239f1ec"
+          },
+          {
+            "path": "purescript/Data_Functor_Contravariant.go",
+            "bytes": 7580,
+            "sha256": "ff2c57e5e601e9633df10ba7bcb71c706c2ff57e679040f3674d68959a639351"
+          },
+          {
+            "path": "purescript/Data_Functor_Coproduct.go",
+            "bytes": 30589,
+            "sha256": "8eedcae5a067f5a1eafb06729f143a4deed333fa5bc347044fde032f580179f5"
+          },
+          {
+            "path": "purescript/Data_Functor_Coproduct_Inject.go",
+            "bytes": 8302,
+            "sha256": "af66043e8f357206d6aa4e5047ea1d0b66c325bc75bb4d3811b2398aa7ddba19"
+          },
+          {
+            "path": "purescript/Data_Functor_Coproduct_Nested.go",
+            "bytes": 197229,
+            "sha256": "6abb6d251e3f844f532fae7f2a176dacd155d2407168cf1d1cfdd0d36f94acec"
+          },
+          {
+            "path": "purescript/Data_Functor_Costar.go",
+            "bytes": 20700,
+            "sha256": "7d26fea18ef35add8f3326d24e54f357a8792df4d40f2383f28c4dec051b1f71"
+          },
+          {
+            "path": "purescript/Data_Functor_Flip.go",
+            "bytes": 13182,
+            "sha256": "98724fd2d74989971094baf1a525158ae5594c6d849cd4487d9d3115c0cf3844"
+          },
+          {
+            "path": "purescript/Data_Functor_Invariant.go",
+            "bytes": 10819,
+            "sha256": "3487eba740dc4298f739924298f92020014201b5c9a0abbc6577f1325fd24ed8"
+          },
+          {
+            "path": "purescript/Data_Functor_Joker.go",
+            "bytes": 20047,
+            "sha256": "2a108df5685f71be7ac2a9025e0c1ad759f14c9d5623cbd4180aa2ecfd5ae04e"
+          },
+          {
+            "path": "purescript/Data_Functor_Product.go",
+            "bytes": 40651,
+            "sha256": "2a7559f0cae5c051c8310117766b10800961aca134bc1303f24ca1c703fa798e"
+          },
+          {
+            "path": "purescript/Data_Functor_Product2.go",
+            "bytes": 25082,
+            "sha256": "d482756788787f9c36c18df46edad35b910e2f01264f7732f89cf93493e0e1d5"
+          },
+          {
+            "path": "purescript/Data_Functor_Product_Nested.go",
+            "bytes": 75409,
+            "sha256": "5541c67c8d31ee81747a39d3b20646d1722343aa4ea2c5b8a475fd4ed7873ea7"
+          },
+          {
+            "path": "purescript/Data_Functor_ffi.go",
+            "bytes": 1053,
+            "sha256": "d4a989162d838967d123a340d8668c8afacf0bf2f2f2f772e2a93e6998c39578"
+          },
+          {
+            "path": "purescript/Data_Generic_Rep.go",
+            "bytes": 52922,
+            "sha256": "36aa0710fe68d92e297e6eae5aee7c1e39cd3694fc54f813c490c8d98e59f103"
+          },
+          {
+            "path": "purescript/Data_HeytingAlgebra.go",
+            "bytes": 72520,
+            "sha256": "7de2fb82211c8cd9dc0a1787da3ebe9bbe78ba1e45b4f52d1528fbd9ed186b51"
+          },
+          {
+            "path": "purescript/Data_HeytingAlgebra_Generic.go",
+            "bytes": 45433,
+            "sha256": "e91b7c47bf543c6de73f6780d219c180ded95d58330dd7a1720f886592f41c47"
+          },
+          {
+            "path": "purescript/Data_HeytingAlgebra_ffi.go",
+            "bytes": 1348,
+            "sha256": "70946d578843b230916dc75193e6af8fba6a0d2946718ef7cb6f3d5156212b9a"
+          },
+          {
+            "path": "purescript/Data_Identity.go",
+            "bytes": 21556,
+            "sha256": "9a233f4be23751b6532b7215294e214db73604a26ca8d8ff92cdbfe687f40af6"
+          },
+          {
+            "path": "purescript/Data_Int.go",
+            "bytes": 30177,
+            "sha256": "f196ecf57cfb586d6b6d6912649c6a265aea75b7aa89ae3a4a223d6dfdf85eab"
+          },
+          {
+            "path": "purescript/Data_Int_Bits.go",
+            "bytes": 719,
+            "sha256": "a6d692c4632ec09be062c27923cc643787bb13af42dd286f34373a7ff1514b85"
+          },
+          {
+            "path": "purescript/Data_Int_Bits_ffi.go",
+            "bytes": 2896,
+            "sha256": "d357f67d93043c67dadedf5fafdb3db31ccb210ff6dd0f247082a9c2f7c1db22"
+          },
+          {
+            "path": "purescript/Data_Int_ffi.go",
+            "bytes": 4855,
+            "sha256": "050911807abcbe38d53ab086b503e4ab04c1f08454cd69b684e575124e4ea819"
+          },
+          {
+            "path": "purescript/Data_Maybe.go",
+            "bytes": 69955,
+            "sha256": "cd64c0f46c65f7c3a293188550972e07bafa8fce65ef18b7c4b32b07c05120b8"
+          },
+          {
+            "path": "purescript/Data_Maybe_First.go",
+            "bytes": 30480,
+            "sha256": "599fbffaf3f4e2bed78aa0afccf13c338fa38a18c9b8ce1a146bfa2cd4975680"
+          },
+          {
+            "path": "purescript/Data_Maybe_Last.go",
+            "bytes": 30562,
+            "sha256": "325f1b3df6396e2b2328b3bf7de9ebe0f268f5cb8f290b04f119574f658556cc"
+          },
+          {
+            "path": "purescript/Data_Monoid.go",
+            "bytes": 30353,
+            "sha256": "bb34ffa37b19bd924e6246a109ac0b567df2d53f1839eeaf167f1a0764b62319"
+          },
+          {
+            "path": "purescript/Data_Monoid_Additive.go",
+            "bytes": 12842,
+            "sha256": "b9f6d7402ddf633e79dbd4b058649d93d3b3bb6f5de757bc09241cce634cba10"
+          },
+          {
+            "path": "purescript/Data_Monoid_Alternate.go",
+            "bytes": 18278,
+            "sha256": "db4c54d28e1f3e1b6db6573e16a2ca63295539cc9db8642c0010fa92d0e48929"
+          },
+          {
+            "path": "purescript/Data_Monoid_Conj.go",
+            "bytes": 13414,
+            "sha256": "907f97fa9abc900a15d24c8da2b40d5ac205b3bdf29da20812dede66f9f14022"
+          },
+          {
+            "path": "purescript/Data_Monoid_Disj.go",
+            "bytes": 13414,
+            "sha256": "a8d7dc0833a78b18853772db1cdc720e02b8923957cfb2dfd46bb2bb6197672b"
+          },
+          {
+            "path": "purescript/Data_Monoid_Dual.go",
+            "bytes": 12056,
+            "sha256": "125a9f3151bd799179e13e56828f3d72858a83d09168b055c324f70c187fe6fa"
+          },
+          {
+            "path": "purescript/Data_Monoid_Endo.go",
+            "bytes": 6578,
+            "sha256": "d8a976cc11f60a2b64d1b577b69ae51741b0618b317fafb216ef7c15f9600e1c"
+          },
+          {
+            "path": "purescript/Data_Monoid_Generic.go",
+            "bytes": 10411,
+            "sha256": "29fc5ea1ba11c404a966dde78b22d09a99bf4fdd97da100b557f064cdc50a67a"
+          },
+          {
+            "path": "purescript/Data_Monoid_Multiplicative.go",
+            "bytes": 14143,
+            "sha256": "e55a5d959eea4d97b9803538fd283e7f081973854e1429199c5e0eff5b57cd91"
+          },
+          {
+            "path": "purescript/Data_NaturalTransformation.go",
+            "bytes": 38,
+            "sha256": "148ec052de2bb51f078fba4a21acd091943765eced457a563b41225d0240122b"
+          },
+          {
+            "path": "purescript/Data_Newtype.go",
+            "bytes": 34573,
+            "sha256": "638ef1e2e2a46f1af75c0639b3093b0005839e765560f8038ef13c611aaf5732"
+          },
+          {
+            "path": "purescript/Data_NonEmpty.go",
+            "bytes": 62151,
+            "sha256": "e0a18722fafaec28dcbdf1eeb58cc2e36121c75d8e944aa1483d9a568fbbcfc3"
+          },
+          {
+            "path": "purescript/Data_Number.go",
+            "bytes": 7459,
+            "sha256": "95268a09e63c286882700068abf7f75c130acb4230080b8dfd6aa14f23929587"
+          },
+          {
+            "path": "purescript/Data_Number_Approximate.go",
+            "bytes": 6095,
+            "sha256": "463241ac84909347e64789f172926e3d38fdf10e078756114719f0aa31099bbe"
+          },
+          {
+            "path": "purescript/Data_Number_Format.go",
+            "bytes": 5836,
+            "sha256": "95030ac7b0986464b568297019730f4c15194db7be343b548fc3aa4d959aa761"
+          },
+          {
+            "path": "purescript/Data_Number_Format_ffi.go",
+            "bytes": 2177,
+            "sha256": "48c4f4835d17a51179b9b53b23809a62d79fbcd08d4a1d19f3a353fcb483bfbc"
+          },
+          {
+            "path": "purescript/Data_Number_ffi.go",
+            "bytes": 10026,
+            "sha256": "1ea1f08c41f66e74f800e029341aa119e3b5a0b1f44e5fa5233e1c34e1ffa251"
+          },
+          {
+            "path": "purescript/Data_Op.go",
+            "bytes": 4928,
+            "sha256": "5c4cfb2023e554ec076f77a09d8b47898e2aa55f3ef0a9f93c7d9ce7295f5e0e"
+          },
+          {
+            "path": "purescript/Data_Ord.go",
+            "bytes": 126575,
+            "sha256": "32e1bd53d09ba38559ccd5bd1b0d0607a0174a50f92f9e46b10c87bcf626051c"
+          },
+          {
+            "path": "purescript/Data_Ord_Down.go",
+            "bytes": 6192,
+            "sha256": "7341571a73fc384ca0839b148e2f665fe87a9adc4af2277caed0925c33662c81"
+          },
+          {
+            "path": "purescript/Data_Ord_Generic.go",
+            "bytes": 20687,
+            "sha256": "3eef975c34ac9a7a03bc91701f34ef80ec2823498d152a75b36322ac847368dd"
+          },
+          {
+            "path": "purescript/Data_Ord_Max.go",
+            "bytes": 6988,
+            "sha256": "b85278b70daf1b5eb788f7529771b1c19116e19878478ad70a3f3d6e5d064c88"
+          },
+          {
+            "path": "purescript/Data_Ord_Min.go",
+            "bytes": 6985,
+            "sha256": "be23276f82ff59eb5e6f8d89f129f891cf63a1bc85da6a4e50b88afaa4f400f7"
+          },
+          {
+            "path": "purescript/Data_Ord_ffi.go",
+            "bytes": 6465,
+            "sha256": "43401852d3f2bf91a8b3a9f20145219ca6a991cc2053ba74da079f2deb926c35"
+          },
+          {
+            "path": "purescript/Data_Ordering.go",
+            "bytes": 6461,
+            "sha256": "fcf74300b9e9a89796008ec41186c5a01fdd1a5e3d1a51cd4bd36f496c78be49"
+          },
+          {
+            "path": "purescript/Data_Predicate.go",
+            "bytes": 5394,
+            "sha256": "0e0e425361389c9486111b066dbc4a437a767016d0134f490fcb52f3f691842a"
+          },
+          {
+            "path": "purescript/Data_Profunctor.go",
+            "bytes": 13164,
+            "sha256": "c44617a19d1841993218a8df919ad207bc1f44fe9b929fc94fb9176bd8e03de4"
+          },
+          {
+            "path": "purescript/Data_Profunctor_Choice.go",
+            "bytes": 12774,
+            "sha256": "130e5755a8bccb69dbcd3614bcc7d61172c93939faa469ce110870edbc8d0c54"
+          },
+          {
+            "path": "purescript/Data_Profunctor_Closed.go",
+            "bytes": 3971,
+            "sha256": "c3d6ad3ae85499b6c8e1ae2da1e5b810cecadda04bc21ca8ad252de1b3d820dd"
+          },
+          {
+            "path": "purescript/Data_Profunctor_Cochoice.go",
+            "bytes": 4221,
+            "sha256": "080b7315a30337b6d938c0c3f2d353d42d7723904b56808ecaff042c5037f7b5"
+          },
+          {
+            "path": "purescript/Data_Profunctor_Costrong.go",
+            "bytes": 4255,
+            "sha256": "a43e88afa3aa3110785a5b0b9e9b7716be68b313424419837a96680ff0f3d32c"
+          },
+          {
+            "path": "purescript/Data_Profunctor_Join.go",
+            "bytes": 7655,
+            "sha256": "adee7443101fe7028013994a467ae2c2ea82940d8f1b4982a3ad0bd81d0179b9"
+          },
+          {
+            "path": "purescript/Data_Profunctor_Split.go",
+            "bytes": 13096,
+            "sha256": "2d94c73cd5b38ae7f0d4074b8d0e449d7ae7b618c29c0003559baac5d2c70a38"
+          },
+          {
+            "path": "purescript/Data_Profunctor_Star.go",
+            "bytes": 38165,
+            "sha256": "f66cfd5b32199620614186f3fd19c223f479a3c53e4b01d513113a8a5e826794"
+          },
+          {
+            "path": "purescript/Data_Profunctor_Strong.go",
+            "bytes": 10580,
+            "sha256": "70d04920ee626be12adf8409cb10fe3bea38c25ada5b198e94f6edf1564b354a"
+          },
+          {
+            "path": "purescript/Data_Reflectable.go",
+            "bytes": 17514,
+            "sha256": "407aea6dbc7cd5b795b06dabb8e304f7efd17c8b7f50061e418cae1b9f3aa4ea"
+          },
+          {
+            "path": "purescript/Data_Reflectable_ffi.go",
+            "bytes": 456,
+            "sha256": "48e58c3a26feabb0887bee75eb1a751249ea9f15ffd90652bd7f1bbb18f38b2a"
+          },
+          {
+            "path": "purescript/Data_Ring.go",
+            "bytes": 35950,
+            "sha256": "7a6abff86761624a1b896dd3851400d9d8ab7e2f7e592e4792933758d485ff55"
+          },
+          {
+            "path": "purescript/Data_Ring_Generic.go",
+            "bytes": 14451,
+            "sha256": "53dae23cfff4fb64be6bc010d86064537e3cc2a1803fd27d37f2abfb90dc8365"
+          },
+          {
+            "path": "purescript/Data_Ring_ffi.go",
+            "bytes": 928,
+            "sha256": "a3095941f2f149541b395a5044f7f2a9eaaa8fc1100e80d4638b36ecaaa20d81"
+          },
+          {
+            "path": "purescript/Data_Semigroup.go",
+            "bytes": 37172,
+            "sha256": "ca53f9b0a9667d235b63a2dd11040777474255202851c349f8ff1b8b14065c84"
+          },
+          {
+            "path": "purescript/Data_Semigroup_First.go",
+            "bytes": 10678,
+            "sha256": "e871dee856873a62c769b92c6db4eebba955dff0ac7fce3b4006e7f693e055e1"
+          },
+          {
+            "path": "purescript/Data_Semigroup_Foldable.go",
+            "bytes": 49249,
+            "sha256": "0163ca66bdec64b6aa813538a9ec3d1c635d367197edf3415530e9a995ab1b35"
+          },
+          {
+            "path": "purescript/Data_Semigroup_Generic.go",
+            "bytes": 15257,
+            "sha256": "2d615442e50d0f8499b1bb9418c4bdcb3516bf851e0d886686492723f458bacf"
+          },
+          {
+            "path": "purescript/Data_Semigroup_Last.go",
+            "bytes": 10487,
+            "sha256": "3f9d012597f622b2f2f7ca68021bcdacc5ac46c32fdbc5ac9ce6eebe291ebf97"
+          },
+          {
+            "path": "purescript/Data_Semigroup_Traversable.go",
+            "bytes": 20936,
+            "sha256": "5dea1d23a6a7c64389eda9afb54bd7ffd240da5701243a25b16b050058f51c35"
+          },
+          {
+            "path": "purescript/Data_Semigroup_ffi.go",
+            "bytes": 1611,
+            "sha256": "284a2211e3d67d17e56a4004c79786aa49336ba3762580bac1e1465a702fd7b8"
+          },
+          {
+            "path": "purescript/Data_Semiring.go",
+            "bytes": 52782,
+            "sha256": "1e71e22435db51808ee6d2a39ffc14dd0f379362998dfddae2e71d2ac67f676d"
+          },
+          {
+            "path": "purescript/Data_Semiring_Generic.go",
+            "bytes": 29994,
+            "sha256": "f364794448c0a25f69899537b870277a69bc8997720d8f7c8dd7502fe651a091"
+          },
+          {
+            "path": "purescript/Data_Semiring_ffi.go",
+            "bytes": 1813,
+            "sha256": "8901d8eccc75bc80cbe64e5e0a240bcf82ee7a446086c6db20966eda87ee1761"
+          },
+          {
+            "path": "purescript/Data_Show.go",
+            "bytes": 58063,
+            "sha256": "24106a7b71d0169a1aece9b650f006d99471cd6be523e3bbe74da17a75969282"
+          },
+          {
+            "path": "purescript/Data_Show_Generic.go",
+            "bytes": 28417,
+            "sha256": "924ea53d16831ba80ec789d3cda24e02a9947355af133fcd99b2d4ffb38c7299"
+          },
+          {
+            "path": "purescript/Data_Show_Generic_ffi.go",
+            "bytes": 745,
+            "sha256": "98c53c1ffbd0f956c72bc3a731097e7f6cfaec362f570cd44a3602c195cdca0c"
+          },
+          {
+            "path": "purescript/Data_Show_ffi.go",
+            "bytes": 2849,
+            "sha256": "1b7eb239c16e13450ee51a2f38529d3097055c9cf4c8d6a7f8a4ffd07a753f91"
+          },
+          {
+            "path": "purescript/Data_Symbol.go",
+            "bytes": 3892,
+            "sha256": "5ff3c88d12f4befa8a42acedfd55e924b56ca326792de5eea4da48da5288421d"
+          },
+          {
+            "path": "purescript/Data_Symbol_ffi.go",
+            "bytes": 441,
+            "sha256": "028a12c6cfe0c5b03793a3116c0c687a0586cd6c6fa35d5cbd88864037f173c9"
+          },
+          {
+            "path": "purescript/Data_Traversable.go",
+            "bytes": 87030,
+            "sha256": "795872f86b0e01d2cb3a4fcad506360a08f25a96e510d7f5be1e26be31679973"
+          },
+          {
+            "path": "purescript/Data_TraversableWithIndex.go",
+            "bytes": 113785,
+            "sha256": "9aafa0f8b33f142744eace142bf8bb45382dc3427f257c800cc5304e15b2b76f"
+          },
+          {
+            "path": "purescript/Data_Traversable_Accum.go",
+            "bytes": 38,
+            "sha256": "148ec052de2bb51f078fba4a21acd091943765eced457a563b41225d0240122b"
+          },
+          {
+            "path": "purescript/Data_Traversable_Accum_Internal.go",
+            "bytes": 12789,
+            "sha256": "042a26c94cda979e904af0cb2647f18a3bcc6ce6639a88e6c5e3f511005574ad"
+          },
+          {
+            "path": "purescript/Data_Traversable_ffi.go",
+            "bytes": 3759,
+            "sha256": "f0ed54a81a8ed85b51be8cfe940860a9fe8346f403cee343ee1b2006aeac7b02"
+          },
+          {
+            "path": "purescript/Data_Tuple.go",
+            "bytes": 76970,
+            "sha256": "b89c0fae04a7b01ffe3b806f735eb4553719392cbe18d6e56bdcd8ad5946b7cf"
+          },
+          {
+            "path": "purescript/Data_Tuple_Nested.go",
+            "bytes": 138424,
+            "sha256": "4d23ac46377aa9cf451faeba2d5d4b8c256b528fb48010d6f38d0b1e806212c3"
+          },
+          {
+            "path": "purescript/Data_Unfoldable.go",
+            "bytes": 20542,
+            "sha256": "7aecfcf618cd2163891eb65d653750d94a67505f10703815729a728fed21bd4f"
+          },
+          {
+            "path": "purescript/Data_Unfoldable1.go",
+            "bytes": 28177,
+            "sha256": "726a6a86815f15fe963cd5aec0ee71cf3cc0dfaedd559b83b28d4b92f02e42c2"
+          },
+          {
+            "path": "purescript/Data_Unfoldable1_ffi.go",
+            "bytes": 2225,
+            "sha256": "1be84f89783ba00711ddd5f4785653d16672b0990e95db62a3db6ba20a8cf828"
+          },
+          {
+            "path": "purescript/Data_Unfoldable_ffi.go",
+            "bytes": 2272,
+            "sha256": "ef3f22aa36f2c14c66ee4b3c5763e4a9c18b4cdd2e4c99cff7992f78bb5c0837"
+          },
+          {
+            "path": "purescript/Data_Unit.go",
+            "bytes": 165,
+            "sha256": "5e63e5ac10b0695c6ce495fb4847f100d520a6b439baaac5a4e846226e62aeef"
+          },
+          {
+            "path": "purescript/Data_Unit_ffi.go",
+            "bytes": 214,
+            "sha256": "8ec934fc78186d2b74d3095bb3176dc7c5ff9c17de7be21df9164d8a8122eaf5"
+          },
+          {
+            "path": "purescript/Data_Void.go",
+            "bytes": 6532,
+            "sha256": "8c2ae25a9df589b256bb50480d784085a1036b7858824103e8dea1b0f4f8d439"
+          },
+          {
+            "path": "purescript/Effect.go",
+            "bytes": 7479,
+            "sha256": "9a9d3ca480c095061ee23473a72826bb10e9338cade3598df57bbe56873b9f8e"
+          },
+          {
+            "path": "purescript/Effect_Class.go",
+            "bytes": 3715,
+            "sha256": "c166e2ab1e43d66fa2b86b77abdb0cedc05bcb849396aeadc01dabf576763cb4"
+          },
+          {
+            "path": "purescript/Effect_Class_Console.go",
+            "bytes": 22876,
+            "sha256": "692b9e80c1ceaf458cbf948a2c93b0dc5bc1da4b9b842592fa8f0a0721e1a866"
+          },
+          {
+            "path": "purescript/Effect_Console.go",
+            "bytes": 7375,
+            "sha256": "9b04f8f79e694ec48035863f378b492fc686edb2765abbb69af197b0208d4553"
+          },
+          {
+            "path": "purescript/Effect_Console_ffi.go",
+            "bytes": 5814,
+            "sha256": "2543e818943be6f55bf7c64405da436863ed2d5099515e3ae39e7da873071bae"
+          },
+          {
+            "path": "purescript/Effect_Exception.go",
+            "bytes": 4335,
+            "sha256": "1df0130ba29bfcb0f0c83a3cc30876743fe8dc8d1584b58527f509a09597c783"
+          },
+          {
+            "path": "purescript/Effect_Exception_Unsafe.go",
+            "bytes": 1409,
+            "sha256": "a259b5371a8bae22edeab06c1254fc2641434c6bb9ab70b076bf07a5808960d9"
+          },
+          {
+            "path": "purescript/Effect_Exception_ffi.go",
+            "bytes": 5555,
+            "sha256": "c1fb1f9b4c796b597d882c673f90a73f608394315ca5c910803ef479654f6e2e"
+          },
+          {
+            "path": "purescript/Effect_Ref.go",
+            "bytes": 6322,
+            "sha256": "7736b3b2e3f2b74289a40521fc5d028eed32ad08d8716cf2c5d06c7ba70b73e3"
+          },
+          {
+            "path": "purescript/Effect_Ref_ffi.go",
+            "bytes": 4150,
+            "sha256": "ce0610a67971fe38e3f1eed8d3bbf49e9f577bc64889c5c09907c1048b443e29"
+          },
+          {
+            "path": "purescript/Effect_Uncurried.go",
+            "bytes": 43616,
+            "sha256": "23a9f0948399ea7ce0d1d668c7fb3177577b6e665b57d780938f1c856f95d3fa"
+          },
+          {
+            "path": "purescript/Effect_Uncurried_ffi.go",
+            "bytes": 21346,
+            "sha256": "d0ca2491f3122de4909b0136d75e7ff48dfa7bbc115f828c5d76bd8fa254c698"
+          },
+          {
+            "path": "purescript/Effect_Unsafe.go",
+            "bytes": 203,
+            "sha256": "0a4adad04ca5eb592975c0cf4fd6aa655edd3ced01a7b9a1e808c8cde0989ecb"
+          },
+          {
+            "path": "purescript/Effect_Unsafe_ffi.go",
+            "bytes": 606,
+            "sha256": "a06b5cb22b142e2e2c3b699138dad399e5a80e85f7f6791b7d63fa6addb5ec29"
+          },
+          {
+            "path": "purescript/Effect_ffi.go",
+            "bytes": 4585,
+            "sha256": "4f709d1ac2c962894e7c3f073c826cc6774bf21ec617ab58d3bf06d22e53fd6d"
+          },
+          {
+            "path": "purescript/Partial.go",
+            "bytes": 1459,
+            "sha256": "201b90f3e040014657b25b51d8e3f773551e9b6812ea1cd0a29e513b411da304"
+          },
+          {
+            "path": "purescript/Partial_Unsafe.go",
+            "bytes": 1219,
+            "sha256": "4a8a9b17c54ac3fdd2bc49621e590bd969f146ea5a9a99c66bd40f16de350cbc"
+          },
+          {
+            "path": "purescript/Partial_Unsafe_ffi.go",
+            "bytes": 563,
+            "sha256": "36e10485e7f5924f969f0467037543318e72be2abc6038a12e5cadcf387c5049"
+          },
+          {
+            "path": "purescript/Partial_ffi.go",
+            "bytes": 445,
+            "sha256": "105c227a7e3cf9e9dd3dd75e8451e169607dcfbe9f36d7e46ac3e4671b0eb4d8"
+          },
+          {
+            "path": "purescript/Performance_Minibench.go",
+            "bytes": 11518,
+            "sha256": "d26e668b4322db59fa52092a7b9aba4f482fb6427a9e5f7e0d4fbff2ed6c1b00"
+          },
+          {
+            "path": "purescript/Performance_Minibench_ffi.go",
+            "bytes": 610,
+            "sha256": "725d6ef20091de2146fb1417fe72c0aada2a9bc069714b73ef67a9bb82ff98a1"
+          },
+          {
+            "path": "purescript/Prelude.go",
+            "bytes": 38,
+            "sha256": "148ec052de2bb51f078fba4a21acd091943765eced457a563b41225d0240122b"
+          },
+          {
+            "path": "purescript/Record_Unsafe.go",
+            "bytes": 492,
+            "sha256": "91006f7d4e062d894fdb0000868b47a900622ef190f5e0856a638eccd08c1b9a"
+          },
+          {
+            "path": "purescript/Record_Unsafe_ffi.go",
+            "bytes": 2601,
+            "sha256": "b35c18c0e5a9d0850e08432b9479ae2ff3e0ce6b2bd088d106434bd8b21dbcc4"
+          },
+          {
+            "path": "purescript/Safe_Coerce.go",
+            "bytes": 725,
+            "sha256": "7815e3a6d08e4ed4bcc86406cdaff2401dd8bda8d87888f00ebd3c786f2f30b0"
+          },
+          {
+            "path": "purescript/Spago_Generated_BuildInfo.go",
+            "bytes": 1407,
+            "sha256": "29eb4711f0e8b42efdae38ad202f13690d9e029b85b6486e93ce5967c3a4af8a"
+          },
+          {
+            "path": "purescript/Test_Assert.go",
+            "bytes": 15952,
+            "sha256": "bec986fec143aa7f6dea301b1083536c160134160fe74b08e1287d1267a5cae3"
+          },
+          {
+            "path": "purescript/Test_Assert_ffi.go",
+            "bytes": 1367,
+            "sha256": "05b7d7e6db42084f4dc012aa738482d4cd1c6963e15911cebaeba671e6f4503e"
+          },
+          {
+            "path": "purescript/Test_Data_Generic_Rep.go",
+            "bytes": 222969,
+            "sha256": "776e11df90a64939aec8a43b89bc068dd869bfda06e3249285688423282b5982"
+          },
+          {
+            "path": "purescript/Test_Main.go",
+            "bytes": 124331,
+            "sha256": "58415614d0d83ef31c77242d480130ee7626971d42a249a78174a9c5a33f838a"
+          },
+          {
+            "path": "purescript/Test_Main_ffi.go",
+            "bytes": 2443,
+            "sha256": "ca3b744b9da2c2c01ca8c9d803b7f3cf5ae7205f0772beb07964cee7d5b1ae2f"
+          },
+          {
+            "path": "purescript/Test_Utils.go",
+            "bytes": 1104,
+            "sha256": "707d1fbd8a1127533d9189e6e3d1926700c3fbfd99e67e667203d1bfa69b21e6"
+          },
+          {
+            "path": "purescript/Test_Utils_ffi.go",
+            "bytes": 615,
+            "sha256": "c83988c9d76dc4b76868c4facb87e6d587531183eeb09c3b76b963465409a8b6"
+          },
+          {
+            "path": "purescript/Type_Equality.go",
+            "bytes": 6546,
+            "sha256": "ba47ced304fe9ce47505bf8f73cc6680728a209541ec04bdf1087a786a20c54e"
+          },
+          {
+            "path": "purescript/Type_Proxy.go",
+            "bytes": 467,
+            "sha256": "855f278c610db46cc8a03c09363546cf997fc5a86189f3401db1d4ef012fd186"
+          },
+          {
+            "path": "purescript/Unsafe_Coerce.go",
+            "bytes": 189,
+            "sha256": "2e58010857fb7cc531b5ad074212cc4c7fb9329fff41aae10cafa588f507d2fe"
+          },
+          {
+            "path": "purescript/Unsafe_Coerce_ffi.go",
+            "bytes": 448,
+            "sha256": "14eaac1bc03afdc000bfa14ac1505841f9eb88097eccc9f0eb0b8fef519f1a37"
+          }
+        ],
+        "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/followups/gopurs-prelude/generated/0-go"
+      },
+      "oracle": {
+        "label": "js",
+        "command": [
+          "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/recheck/compiler/bin/gopurs",
+          "--main",
+          "Test.Main"
+        ],
+        "cwd": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/recheck/gopurs-prelude/input",
+        "exit_code": 0,
+        "signal": null,
+        "wall_ms": 5282.837959000004,
+        "load_average_before": [
+          4.09521484375,
+          6.56787109375,
+          7.3828125
+        ],
+        "explicit_environment": {
+          "GOPURS_JOBS": "8",
+          "GOPURS_PREPARE_JOBS": "8",
+          "GOPURS_PBO_JOBS": "8",
+          "GOPURS_EMIT_JOBS": "8",
+          "GOPURS_PIPELINE": "1",
+          "GOPURS_RUST": "0",
+          "GOPURS_JS": "1"
+        },
+        "stdout": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/recheck/gopurs-prelude/logs/js.stdout",
+        "stderr": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/recheck/gopurs-prelude/logs/js.stderr",
+        "phases_ms": {
+          "load TAST + sort": 360,
+          "transitive specializations": 108,
+          "prepare + monomorphize": 271,
+          "runtime": 1,
+          "PBO producer": 3204,
+          "emitter drain": 1343,
+          "generation + writes (cumulative batches)": 4511,
+          "optimize + emit": 4547,
+          "entry points": 0,
+          "backend total": 5180
+        },
+        "host": "js",
+        "measured": false,
+        "generated": [
+          {
+            "path": "Test.Main/main/main.go",
+            "bytes": 540,
+            "sha256": "a54040cfb1ac96958e17b5551d6f8dec367b256d491779b99bbe732463ca2642"
+          },
+          {
+            "path": "go.mod",
+            "bytes": 30,
+            "sha256": "fbf6569b070f7ffd53297d0a8d7f077134eb9b9df97e3c1044c816b8a78407ff"
+          },
+          {
+            "path": "gopurs_runtime/runtime.go",
+            "bytes": 53176,
+            "sha256": "48efff27d31ccef371785501904292b46b3928f66bca4d8910bf2a635a662530"
+          },
+          {
+            "path": "main/main.go",
+            "bytes": 540,
+            "sha256": "a54040cfb1ac96958e17b5551d6f8dec367b256d491779b99bbe732463ca2642"
+          },
+          {
+            "path": "purescript/Control_Alt.go",
+            "bytes": 3346,
+            "sha256": "3f18ca7595425c807b28c84e73b8771e5571761e2a1475bac9c8120f4277d81a"
+          },
+          {
+            "path": "purescript/Control_Alternative.go",
+            "bytes": 8965,
+            "sha256": "d36d26ffcc2ee3ee9394e1de3fb37dbc8e0cccf6eee20258cf483dd70ffda569"
+          },
+          {
+            "path": "purescript/Control_Applicative.go",
+            "bytes": 15719,
+            "sha256": "7b3fb8dee49d672bab8714d9342f8b58a3777b8009c812b6fde2e0922fce58b9"
+          },
+          {
+            "path": "purescript/Control_Apply.go",
+            "bytes": 14724,
+            "sha256": "24802bd9318e1847fa338f4b9bbd8593fff8bee39a43df47d7acfeaa4611097e"
+          },
+          {
+            "path": "purescript/Control_Apply_ffi.go",
+            "bytes": 1213,
+            "sha256": "7177b0958e58be1e8358cabd19d04ff475c4d8f36e24f0ceb2ff43d3b8037ce1"
+          },
+          {
+            "path": "purescript/Control_Biapplicative.go",
+            "bytes": 5288,
+            "sha256": "ccf9f9ffa10afc15f7aa99c2ed510542670f21309281215d935f30252a16fdcb"
+          },
+          {
+            "path": "purescript/Control_Biapply.go",
+            "bytes": 13334,
+            "sha256": "6f6bd61cccc20f555655d453ae92541cf1aa481ac5f5c4e2622f965796235e0f"
+          },
+          {
+            "path": "purescript/Control_Bind.go",
+            "bytes": 43769,
+            "sha256": "2a0e93833086f098a30c6ed090c78b79de1a10537d230947d7a9b0b63d34bc5a"
+          },
+          {
+            "path": "purescript/Control_Bind_ffi.go",
+            "bytes": 1121,
+            "sha256": "a438171e73a2d7a9ff32559e5f92d4772da42c6037514e80e4d38761ec4d554f"
+          },
+          {
+            "path": "purescript/Control_Category.go",
+            "bytes": 5442,
+            "sha256": "d84b885f6ae75733904e0e70417b68f97212d96583562221696449dea8f09b0c"
+          },
+          {
+            "path": "purescript/Control_Comonad.go",
+            "bytes": 2842,
+            "sha256": "333473ddfec3e34ee12f569196a5f5356f2abfb532aa12f80ec2c31e317d87a7"
+          },
+          {
+            "path": "purescript/Control_Extend.go",
+            "bytes": 10205,
+            "sha256": "b0415c97dd03914e9139929aa62fc573a7cf1887131cc5f4456f64f873fabfee"
+          },
+          {
+            "path": "purescript/Control_Extend_ffi.go",
+            "bytes": 247,
+            "sha256": "70d17b23d1b802e467af61e35d564eca50b042e791d12096cd52e5999022f140"
+          },
+          {
+            "path": "purescript/Control_Lazy.go",
+            "bytes": 6086,
+            "sha256": "913e56fd030d66253c1f1252e84f588a97e0a02f50c918f4bf892e9ba0a942a9"
+          },
+          {
+            "path": "purescript/Control_Monad.go",
+            "bytes": 20677,
+            "sha256": "ce8975cb6a1a23e0f5315404f5f5867d1793392eb1db0aac22c808a142d764ce"
+          },
+          {
+            "path": "purescript/Control_MonadPlus.go",
+            "bytes": 4991,
+            "sha256": "a6bd3d2056c0c68d3ee050abacf5a44acf0e001595ce448539372002b4300357"
+          },
+          {
+            "path": "purescript/Control_Monad_Rec_Class.go",
+            "bytes": 43496,
+            "sha256": "2ae53bc4d1dfa28246befa3c82ce70ad8068afba32665dac52d985e0842efa01"
+          },
+          {
+            "path": "purescript/Control_Monad_ST.go",
+            "bytes": 38,
+            "sha256": "148ec052de2bb51f078fba4a21acd091943765eced457a563b41225d0240122b"
+          },
+          {
+            "path": "purescript/Control_Monad_ST_Class.go",
+            "bytes": 4873,
+            "sha256": "0c62743b2e2c6e51ead3ad3107d48b3703f83921dfad7d5f8e72a2e45835fba7"
+          },
+          {
+            "path": "purescript/Control_Monad_ST_Global.go",
+            "bytes": 459,
+            "sha256": "d69522d7a9df03f86ce2e48b6caae60fe0721a3c94f057461afc795b6438c53d"
+          },
+          {
+            "path": "purescript/Control_Monad_ST_Internal.go",
+            "bytes": 15324,
+            "sha256": "5e0a6aa1b05ad533859b5b7dc657463ea45403414667aafdc27e4d21ed541e0f"
+          },
+          {
+            "path": "purescript/Control_Monad_ST_Internal_ffi.go",
+            "bytes": 8231,
+            "sha256": "8e6c56a13aa48c1323dbd8743e15d3b2256c559780199b184c32d9b590fa8adb"
+          },
+          {
+            "path": "purescript/Control_Monad_ST_Ref.go",
+            "bytes": 38,
+            "sha256": "148ec052de2bb51f078fba4a21acd091943765eced457a563b41225d0240122b"
+          },
+          {
+            "path": "purescript/Control_Monad_ST_Uncurried.go",
+            "bytes": 2566,
+            "sha256": "28b1286c2a0d41ec94e51b5c0b95d264c6fb4467418f9aa21dc9dc103f5b77ad"
+          },
+          {
+            "path": "purescript/Control_Monad_ST_Uncurried_ffi.go",
+            "bytes": 17008,
+            "sha256": "e82ba044932399a2203fbb81720b814917fcac4fa1bef0937fa73999abe5c5e0"
+          },
+          {
+            "path": "purescript/Control_Plus.go",
+            "bytes": 3351,
+            "sha256": "5493ab686a89bcd37667fe3eeb1835a8058f8fc029596b74b12db4a336746d64"
+          },
+          {
+            "path": "purescript/Control_Semigroupoid.go",
+            "bytes": 28959,
+            "sha256": "57e0b7d6eb6205ea25d94ce45b100e788517b7cbed68dd7ceb856686b88f045c"
+          },
+          {
+            "path": "purescript/Data_Array.go",
+            "bytes": 186914,
+            "sha256": "099c1919a4f7e1c8d517f89e84d81b90150fb8c0f4289e4fa2783f237164d2b2"
+          },
+          {
+            "path": "purescript/Data_Array_NonEmpty.go",
+            "bytes": 109876,
+            "sha256": "9667d74597529ad634acfc74758d62fff6b375f3cca0a57c4b08d14f499f6559"
+          },
+          {
+            "path": "purescript/Data_Array_NonEmpty_Internal.go",
+            "bytes": 27790,
+            "sha256": "603308549114e16a6fc10755f5a30344ccaed83bfc8620f321ec02a73322b149"
+          },
+          {
+            "path": "purescript/Data_Array_NonEmpty_Internal_ffi.go",
+            "bytes": 5278,
+            "sha256": "9074f6fe822f71ca6258de3f714ffe712a34ec2478c5e9eb5705b30cdcac6ba1"
+          },
+          {
+            "path": "purescript/Data_Array_Partial.go",
+            "bytes": 4341,
+            "sha256": "734002ac2bdca7207d07b046ca1a2b8504d369a3e750e94b96e14543c25a1776"
+          },
+          {
+            "path": "purescript/Data_Array_ST.go",
+            "bytes": 17052,
+            "sha256": "0a65e74ce68a789cd06567614e22488102926ebb9e437e56edae5f15f7ff59c9"
+          },
+          {
+            "path": "purescript/Data_Array_ST_Iterator.go",
+            "bytes": 15564,
+            "sha256": "7b95e38668d5cb53a69f44028600a5293e59934f84700c3226b32b54adf9e595"
+          },
+          {
+            "path": "purescript/Data_Array_ST_Partial.go",
+            "bytes": 1851,
+            "sha256": "f4028e688b142e9b357a91267cbda9c891c1d0d73e882b777593db21b21eaeb9"
+          },
+          {
+            "path": "purescript/Data_Array_ST_Partial_ffi.go",
+            "bytes": 1415,
+            "sha256": "59fc22fce5ebceb4ab45a0af6fdffe9ee1db8a07412d87be26045ad92546e00a"
+          },
+          {
+            "path": "purescript/Data_Array_ST_ffi.go",
+            "bytes": 13420,
+            "sha256": "c9db385054f2936bab9e01f32ea771ba0bc8b4f4d2700f03f7863388376920a5"
+          },
+          {
+            "path": "purescript/Data_Array_ffi.go",
+            "bytes": 26239,
+            "sha256": "2d38c817c8b6fbca9cc3fe4902f22bf67461157fff37386166f102a1a6752ba0"
+          },
+          {
+            "path": "purescript/Data_Bifoldable.go",
+            "bytes": 49342,
+            "sha256": "773f94988a4a2f24342316d1d38a0d12745939c4852a82a48a73b6c6b8a1f44d"
+          },
+          {
+            "path": "purescript/Data_Bifunctor.go",
+            "bytes": 11378,
+            "sha256": "ddf484057c655736dd14e23400ace6cc45298232d79cf075d00bbfa26015ab70"
+          },
+          {
+            "path": "purescript/Data_Bifunctor_Join.go",
+            "bytes": 8223,
+            "sha256": "340d7e8401d4d2dae64216ef465fd55aac463f1997fea289817aec921ea1b853"
+          },
+          {
+            "path": "purescript/Data_Bitraversable.go",
+            "bytes": 51577,
+            "sha256": "c8d5339de0026503580ea61968d9579d4661053cd736e6c91d9fc2cf112620a4"
+          },
+          {
+            "path": "purescript/Data_Boolean.go",
+            "bytes": 392,
+            "sha256": "be56d8dfacb8fa52e61885a779de6a5a32e1450cacc9d84c2c0fa66e567cbf0e"
+          },
+          {
+            "path": "purescript/Data_BooleanAlgebra.go",
+            "bytes": 22615,
+            "sha256": "496074a336a3c6f12de54e5229f5cc8cef891ce9108a0f9878830ea63ca45c95"
+          },
+          {
+            "path": "purescript/Data_Bounded.go",
+            "bytes": 49801,
+            "sha256": "e48f5aadb2009de350604e677ba9155b97459e546b55c35ce0fcdb7395da90eb"
+          },
+          {
+            "path": "purescript/Data_Bounded_Generic.go",
+            "bytes": 26543,
+            "sha256": "601a431279173a08d92f3af9ebefe01a2109d84ff84936a130a5f1192206a894"
+          },
+          {
+            "path": "purescript/Data_Bounded_ffi.go",
+            "bytes": 934,
+            "sha256": "246b314d118acaa5bb9dfb6965f6939b5d907b5899a384e0e033c575bb9e34d5"
+          },
+          {
+            "path": "purescript/Data_CommutativeRing.go",
+            "bytes": 23939,
+            "sha256": "d69315e9551624338df17b350b710f30a13cbb16d399586ba4776b132d14fe63"
+          },
+          {
+            "path": "purescript/Data_Comparison.go",
+            "bytes": 6388,
+            "sha256": "942f70db2becf2c9dfabd0205c1eac02ca10f142ed341b96615811c6ba6cd987"
+          },
+          {
+            "path": "purescript/Data_Const.go",
+            "bytes": 18246,
+            "sha256": "1121c02e74c641f00f0073a9f74aa8c13b90bbcaf3bc7992104864dd8ddecbe4"
+          },
+          {
+            "path": "purescript/Data_Decidable.go",
+            "bytes": 15855,
+            "sha256": "21dc91a91d39c54313bc4011a26f130534ec6c6cb86a0202e17092ed2bbcea17"
+          },
+          {
+            "path": "purescript/Data_Decide.go",
+            "bytes": 14884,
+            "sha256": "d16a3332020e77f2cb67c0d103bbc52fd8c6663d42515d78046cf6330a6694c7"
+          },
+          {
+            "path": "purescript/Data_Distributive.go",
+            "bytes": 18386,
+            "sha256": "196749f2f8ce2a2305b4c3d751bdd6693840a6a19fa24a7ecb19c139a8ba6fec"
+          },
+          {
+            "path": "purescript/Data_Divide.go",
+            "bytes": 12136,
+            "sha256": "130c283eeff8d6e3ac5910ef5e852b7db462afdc413eb845cd8b76c41d2fc74a"
+          },
+          {
+            "path": "purescript/Data_Divisible.go",
+            "bytes": 7085,
+            "sha256": "49505fff598432e466451664f467ce9ef32256970249ddc95323438aca1537b8"
+          },
+          {
+            "path": "purescript/Data_DivisionRing.go",
+            "bytes": 11378,
+            "sha256": "37f13f57de1937254bb3be2d1dd64e4e460bdcc6ad901035f5008e06a7fcd691"
+          },
+          {
+            "path": "purescript/Data_Either.go",
+            "bytes": 50256,
+            "sha256": "fbbd2839a6389eac5e396cf3b2613985d6ce3cc94fe7e45e2e6cc1994c062311"
+          },
+          {
+            "path": "purescript/Data_Either_Inject.go",
+            "bytes": 8174,
+            "sha256": "3f70d84df6128e1d57d2534295dcb1a0e1dafb8526138e2c614c3185a3752c94"
+          },
+          {
+            "path": "purescript/Data_Either_Nested.go",
+            "bytes": 162220,
+            "sha256": "fd54b52cc563596dd10aa1647d7de209d47c9e0e0428cab4426207b03db64a5a"
+          },
+          {
+            "path": "purescript/Data_Eq.go",
+            "bytes": 123315,
+            "sha256": "19a7c68d3248d1fb71edaabaaaf3be38f107563a7105d392cf8369e5347ac65b"
+          },
+          {
+            "path": "purescript/Data_Eq_Generic.go",
+            "bytes": 23835,
+            "sha256": "2a8dd30da9240c51abdf9a47328b3bdcf5c8d445e9399bb0024dae0bb8603556"
+          },
+          {
+            "path": "purescript/Data_Eq_ffi.go",
+            "bytes": 3409,
+            "sha256": "3fe3b889189c4935726565a434cb4d33ca9acd6f0f3da05fa3b8eebb74169f3e"
+          },
+          {
+            "path": "purescript/Data_Equivalence.go",
+            "bytes": 5767,
+            "sha256": "aa9cba0279c5aeb7a4881abadad6d8dccb1a2f5cd0b65ed10df72ec450b2a584"
+          },
+          {
+            "path": "purescript/Data_EuclideanRing.go",
+            "bytes": 25992,
+            "sha256": "dbf7c4918348597baa415e4cc5178e295d441aecd4ace8ba9962e589d527ed43"
+          },
+          {
+            "path": "purescript/Data_EuclideanRing_ffi.go",
+            "bytes": 2033,
+            "sha256": "35ea6798636762394e2c3f6fee1a7c744d89ef64a41ce1f855b396f42bf5634f"
+          },
+          {
+            "path": "purescript/Data_Exists.go",
+            "bytes": 685,
+            "sha256": "66f675f11b4569592e616bdf884fadde378f069f35d308886141b872e40e85ca"
+          },
+          {
+            "path": "purescript/Data_Field.go",
+            "bytes": 3649,
+            "sha256": "47145799dac2f91f8ea31dd0b3bc5ecb7035a30d9e94e19601dcb2f0ff62882b"
+          },
+          {
+            "path": "purescript/Data_Foldable.go",
+            "bytes": 120512,
+            "sha256": "265d41e3ab2104d60b121908a495efa3b40a8c938d4128cff2e94fe1d95f2c76"
+          },
+          {
+            "path": "purescript/Data_FoldableWithIndex.go",
+            "bytes": 133387,
+            "sha256": "05f28de96dd4914643c9bd4cf32b6c2171d6c7c35a82d6bf71f9b61e0529adeb"
+          },
+          {
+            "path": "purescript/Data_Foldable_ffi.go",
+            "bytes": 1909,
+            "sha256": "6ad9c296c9c6a1d20a61b396f0553a56dbe870ae899a68d13c4f8a7f6c51a24a"
+          },
+          {
+            "path": "purescript/Data_Function.go",
+            "bytes": 36968,
+            "sha256": "9e4c74f043ce32b64ce6ce68d92c2ba650f0ab9f5df44a0d3c54fd3a6a4b9eb2"
+          },
+          {
+            "path": "purescript/Data_Function_Uncurried.go",
+            "bytes": 3585,
+            "sha256": "9b5fabe9abd804781e15bbf7701b5ebec6833a008881a0ce0cd03ed2977ac91b"
+          },
+          {
+            "path": "purescript/Data_Function_Uncurried_ffi.go",
+            "bytes": 8591,
+            "sha256": "71504fa1d67fbae8c5c30c4e5ead01b5cce3a9bc3582ae3b853b4a2513d340ce"
+          },
+          {
+            "path": "purescript/Data_Functor.go",
+            "bytes": 9657,
+            "sha256": "4470824e84af252cd6842bceb00f9558f1f77d49be4c6538b2dcdbe9f2b8a892"
+          },
+          {
+            "path": "purescript/Data_FunctorWithIndex.go",
+            "bytes": 61237,
+            "sha256": "7793be06ab46239e0543bf190cd729d6fea775110a4f988531eb779914d7103d"
+          },
+          {
+            "path": "purescript/Data_FunctorWithIndex_ffi.go",
+            "bytes": 1165,
+            "sha256": "db268683018187fed43eede92c5f06eee636bdffcd415f911341e0ecd13ad774"
+          },
+          {
+            "path": "purescript/Data_Functor_App.go",
+            "bytes": 22810,
+            "sha256": "05fea5bc6c5290f31aef1edaa67d9a0b9046f902b182263c61273f6e2d35654e"
+          },
+          {
+            "path": "purescript/Data_Functor_Clown.go",
+            "bytes": 10609,
+            "sha256": "ab07eb3529a7d5076ba0e57bf3bda9b886d348a79e292e1c825269a1681076ab"
+          },
+          {
+            "path": "purescript/Data_Functor_Compose.go",
+            "bytes": 25664,
+            "sha256": "17d31f3f3dfcf9ec96dc6722091fdca6c5b95830330745d27875c1aca239f1ec"
+          },
+          {
+            "path": "purescript/Data_Functor_Contravariant.go",
+            "bytes": 7580,
+            "sha256": "ff2c57e5e601e9633df10ba7bcb71c706c2ff57e679040f3674d68959a639351"
+          },
+          {
+            "path": "purescript/Data_Functor_Coproduct.go",
+            "bytes": 30589,
+            "sha256": "8eedcae5a067f5a1eafb06729f143a4deed333fa5bc347044fde032f580179f5"
+          },
+          {
+            "path": "purescript/Data_Functor_Coproduct_Inject.go",
+            "bytes": 8302,
+            "sha256": "af66043e8f357206d6aa4e5047ea1d0b66c325bc75bb4d3811b2398aa7ddba19"
+          },
+          {
+            "path": "purescript/Data_Functor_Coproduct_Nested.go",
+            "bytes": 197229,
+            "sha256": "6abb6d251e3f844f532fae7f2a176dacd155d2407168cf1d1cfdd0d36f94acec"
+          },
+          {
+            "path": "purescript/Data_Functor_Costar.go",
+            "bytes": 20700,
+            "sha256": "7d26fea18ef35add8f3326d24e54f357a8792df4d40f2383f28c4dec051b1f71"
+          },
+          {
+            "path": "purescript/Data_Functor_Flip.go",
+            "bytes": 13182,
+            "sha256": "98724fd2d74989971094baf1a525158ae5594c6d849cd4487d9d3115c0cf3844"
+          },
+          {
+            "path": "purescript/Data_Functor_Invariant.go",
+            "bytes": 10819,
+            "sha256": "3487eba740dc4298f739924298f92020014201b5c9a0abbc6577f1325fd24ed8"
+          },
+          {
+            "path": "purescript/Data_Functor_Joker.go",
+            "bytes": 20047,
+            "sha256": "2a108df5685f71be7ac2a9025e0c1ad759f14c9d5623cbd4180aa2ecfd5ae04e"
+          },
+          {
+            "path": "purescript/Data_Functor_Product.go",
+            "bytes": 40651,
+            "sha256": "2a7559f0cae5c051c8310117766b10800961aca134bc1303f24ca1c703fa798e"
+          },
+          {
+            "path": "purescript/Data_Functor_Product2.go",
+            "bytes": 25082,
+            "sha256": "d482756788787f9c36c18df46edad35b910e2f01264f7732f89cf93493e0e1d5"
+          },
+          {
+            "path": "purescript/Data_Functor_Product_Nested.go",
+            "bytes": 75409,
+            "sha256": "5541c67c8d31ee81747a39d3b20646d1722343aa4ea2c5b8a475fd4ed7873ea7"
+          },
+          {
+            "path": "purescript/Data_Functor_ffi.go",
+            "bytes": 1053,
+            "sha256": "d4a989162d838967d123a340d8668c8afacf0bf2f2f2f772e2a93e6998c39578"
+          },
+          {
+            "path": "purescript/Data_Generic_Rep.go",
+            "bytes": 52922,
+            "sha256": "36aa0710fe68d92e297e6eae5aee7c1e39cd3694fc54f813c490c8d98e59f103"
+          },
+          {
+            "path": "purescript/Data_HeytingAlgebra.go",
+            "bytes": 72520,
+            "sha256": "7de2fb82211c8cd9dc0a1787da3ebe9bbe78ba1e45b4f52d1528fbd9ed186b51"
+          },
+          {
+            "path": "purescript/Data_HeytingAlgebra_Generic.go",
+            "bytes": 45433,
+            "sha256": "e91b7c47bf543c6de73f6780d219c180ded95d58330dd7a1720f886592f41c47"
+          },
+          {
+            "path": "purescript/Data_HeytingAlgebra_ffi.go",
+            "bytes": 1348,
+            "sha256": "70946d578843b230916dc75193e6af8fba6a0d2946718ef7cb6f3d5156212b9a"
+          },
+          {
+            "path": "purescript/Data_Identity.go",
+            "bytes": 21556,
+            "sha256": "9a233f4be23751b6532b7215294e214db73604a26ca8d8ff92cdbfe687f40af6"
+          },
+          {
+            "path": "purescript/Data_Int.go",
+            "bytes": 30177,
+            "sha256": "f196ecf57cfb586d6b6d6912649c6a265aea75b7aa89ae3a4a223d6dfdf85eab"
+          },
+          {
+            "path": "purescript/Data_Int_Bits.go",
+            "bytes": 719,
+            "sha256": "a6d692c4632ec09be062c27923cc643787bb13af42dd286f34373a7ff1514b85"
+          },
+          {
+            "path": "purescript/Data_Int_Bits_ffi.go",
+            "bytes": 2896,
+            "sha256": "d357f67d93043c67dadedf5fafdb3db31ccb210ff6dd0f247082a9c2f7c1db22"
+          },
+          {
+            "path": "purescript/Data_Int_ffi.go",
+            "bytes": 4855,
+            "sha256": "050911807abcbe38d53ab086b503e4ab04c1f08454cd69b684e575124e4ea819"
+          },
+          {
+            "path": "purescript/Data_Maybe.go",
+            "bytes": 69955,
+            "sha256": "cd64c0f46c65f7c3a293188550972e07bafa8fce65ef18b7c4b32b07c05120b8"
+          },
+          {
+            "path": "purescript/Data_Maybe_First.go",
+            "bytes": 30480,
+            "sha256": "599fbffaf3f4e2bed78aa0afccf13c338fa38a18c9b8ce1a146bfa2cd4975680"
+          },
+          {
+            "path": "purescript/Data_Maybe_Last.go",
+            "bytes": 30562,
+            "sha256": "325f1b3df6396e2b2328b3bf7de9ebe0f268f5cb8f290b04f119574f658556cc"
+          },
+          {
+            "path": "purescript/Data_Monoid.go",
+            "bytes": 30353,
+            "sha256": "bb34ffa37b19bd924e6246a109ac0b567df2d53f1839eeaf167f1a0764b62319"
+          },
+          {
+            "path": "purescript/Data_Monoid_Additive.go",
+            "bytes": 12842,
+            "sha256": "b9f6d7402ddf633e79dbd4b058649d93d3b3bb6f5de757bc09241cce634cba10"
+          },
+          {
+            "path": "purescript/Data_Monoid_Alternate.go",
+            "bytes": 18278,
+            "sha256": "db4c54d28e1f3e1b6db6573e16a2ca63295539cc9db8642c0010fa92d0e48929"
+          },
+          {
+            "path": "purescript/Data_Monoid_Conj.go",
+            "bytes": 13414,
+            "sha256": "907f97fa9abc900a15d24c8da2b40d5ac205b3bdf29da20812dede66f9f14022"
+          },
+          {
+            "path": "purescript/Data_Monoid_Disj.go",
+            "bytes": 13414,
+            "sha256": "a8d7dc0833a78b18853772db1cdc720e02b8923957cfb2dfd46bb2bb6197672b"
+          },
+          {
+            "path": "purescript/Data_Monoid_Dual.go",
+            "bytes": 12056,
+            "sha256": "125a9f3151bd799179e13e56828f3d72858a83d09168b055c324f70c187fe6fa"
+          },
+          {
+            "path": "purescript/Data_Monoid_Endo.go",
+            "bytes": 6578,
+            "sha256": "d8a976cc11f60a2b64d1b577b69ae51741b0618b317fafb216ef7c15f9600e1c"
+          },
+          {
+            "path": "purescript/Data_Monoid_Generic.go",
+            "bytes": 10411,
+            "sha256": "29fc5ea1ba11c404a966dde78b22d09a99bf4fdd97da100b557f064cdc50a67a"
+          },
+          {
+            "path": "purescript/Data_Monoid_Multiplicative.go",
+            "bytes": 14143,
+            "sha256": "e55a5d959eea4d97b9803538fd283e7f081973854e1429199c5e0eff5b57cd91"
+          },
+          {
+            "path": "purescript/Data_NaturalTransformation.go",
+            "bytes": 38,
+            "sha256": "148ec052de2bb51f078fba4a21acd091943765eced457a563b41225d0240122b"
+          },
+          {
+            "path": "purescript/Data_Newtype.go",
+            "bytes": 34573,
+            "sha256": "638ef1e2e2a46f1af75c0639b3093b0005839e765560f8038ef13c611aaf5732"
+          },
+          {
+            "path": "purescript/Data_NonEmpty.go",
+            "bytes": 62151,
+            "sha256": "e0a18722fafaec28dcbdf1eeb58cc2e36121c75d8e944aa1483d9a568fbbcfc3"
+          },
+          {
+            "path": "purescript/Data_Number.go",
+            "bytes": 7459,
+            "sha256": "95268a09e63c286882700068abf7f75c130acb4230080b8dfd6aa14f23929587"
+          },
+          {
+            "path": "purescript/Data_Number_Approximate.go",
+            "bytes": 6095,
+            "sha256": "463241ac84909347e64789f172926e3d38fdf10e078756114719f0aa31099bbe"
+          },
+          {
+            "path": "purescript/Data_Number_Format.go",
+            "bytes": 5836,
+            "sha256": "95030ac7b0986464b568297019730f4c15194db7be343b548fc3aa4d959aa761"
+          },
+          {
+            "path": "purescript/Data_Number_Format_ffi.go",
+            "bytes": 2177,
+            "sha256": "48c4f4835d17a51179b9b53b23809a62d79fbcd08d4a1d19f3a353fcb483bfbc"
+          },
+          {
+            "path": "purescript/Data_Number_ffi.go",
+            "bytes": 10026,
+            "sha256": "1ea1f08c41f66e74f800e029341aa119e3b5a0b1f44e5fa5233e1c34e1ffa251"
+          },
+          {
+            "path": "purescript/Data_Op.go",
+            "bytes": 4928,
+            "sha256": "5c4cfb2023e554ec076f77a09d8b47898e2aa55f3ef0a9f93c7d9ce7295f5e0e"
+          },
+          {
+            "path": "purescript/Data_Ord.go",
+            "bytes": 126575,
+            "sha256": "32e1bd53d09ba38559ccd5bd1b0d0607a0174a50f92f9e46b10c87bcf626051c"
+          },
+          {
+            "path": "purescript/Data_Ord_Down.go",
+            "bytes": 6192,
+            "sha256": "7341571a73fc384ca0839b148e2f665fe87a9adc4af2277caed0925c33662c81"
+          },
+          {
+            "path": "purescript/Data_Ord_Generic.go",
+            "bytes": 20687,
+            "sha256": "3eef975c34ac9a7a03bc91701f34ef80ec2823498d152a75b36322ac847368dd"
+          },
+          {
+            "path": "purescript/Data_Ord_Max.go",
+            "bytes": 6988,
+            "sha256": "b85278b70daf1b5eb788f7529771b1c19116e19878478ad70a3f3d6e5d064c88"
+          },
+          {
+            "path": "purescript/Data_Ord_Min.go",
+            "bytes": 6985,
+            "sha256": "be23276f82ff59eb5e6f8d89f129f891cf63a1bc85da6a4e50b88afaa4f400f7"
+          },
+          {
+            "path": "purescript/Data_Ord_ffi.go",
+            "bytes": 6465,
+            "sha256": "43401852d3f2bf91a8b3a9f20145219ca6a991cc2053ba74da079f2deb926c35"
+          },
+          {
+            "path": "purescript/Data_Ordering.go",
+            "bytes": 6461,
+            "sha256": "fcf74300b9e9a89796008ec41186c5a01fdd1a5e3d1a51cd4bd36f496c78be49"
+          },
+          {
+            "path": "purescript/Data_Predicate.go",
+            "bytes": 5394,
+            "sha256": "0e0e425361389c9486111b066dbc4a437a767016d0134f490fcb52f3f691842a"
+          },
+          {
+            "path": "purescript/Data_Profunctor.go",
+            "bytes": 13164,
+            "sha256": "c44617a19d1841993218a8df919ad207bc1f44fe9b929fc94fb9176bd8e03de4"
+          },
+          {
+            "path": "purescript/Data_Profunctor_Choice.go",
+            "bytes": 12774,
+            "sha256": "130e5755a8bccb69dbcd3614bcc7d61172c93939faa469ce110870edbc8d0c54"
+          },
+          {
+            "path": "purescript/Data_Profunctor_Closed.go",
+            "bytes": 3971,
+            "sha256": "c3d6ad3ae85499b6c8e1ae2da1e5b810cecadda04bc21ca8ad252de1b3d820dd"
+          },
+          {
+            "path": "purescript/Data_Profunctor_Cochoice.go",
+            "bytes": 4221,
+            "sha256": "080b7315a30337b6d938c0c3f2d353d42d7723904b56808ecaff042c5037f7b5"
+          },
+          {
+            "path": "purescript/Data_Profunctor_Costrong.go",
+            "bytes": 4255,
+            "sha256": "a43e88afa3aa3110785a5b0b9e9b7716be68b313424419837a96680ff0f3d32c"
+          },
+          {
+            "path": "purescript/Data_Profunctor_Join.go",
+            "bytes": 7655,
+            "sha256": "adee7443101fe7028013994a467ae2c2ea82940d8f1b4982a3ad0bd81d0179b9"
+          },
+          {
+            "path": "purescript/Data_Profunctor_Split.go",
+            "bytes": 13096,
+            "sha256": "2d94c73cd5b38ae7f0d4074b8d0e449d7ae7b618c29c0003559baac5d2c70a38"
+          },
+          {
+            "path": "purescript/Data_Profunctor_Star.go",
+            "bytes": 38165,
+            "sha256": "f66cfd5b32199620614186f3fd19c223f479a3c53e4b01d513113a8a5e826794"
+          },
+          {
+            "path": "purescript/Data_Profunctor_Strong.go",
+            "bytes": 10580,
+            "sha256": "70d04920ee626be12adf8409cb10fe3bea38c25ada5b198e94f6edf1564b354a"
+          },
+          {
+            "path": "purescript/Data_Reflectable.go",
+            "bytes": 17514,
+            "sha256": "407aea6dbc7cd5b795b06dabb8e304f7efd17c8b7f50061e418cae1b9f3aa4ea"
+          },
+          {
+            "path": "purescript/Data_Reflectable_ffi.go",
+            "bytes": 456,
+            "sha256": "48e58c3a26feabb0887bee75eb1a751249ea9f15ffd90652bd7f1bbb18f38b2a"
+          },
+          {
+            "path": "purescript/Data_Ring.go",
+            "bytes": 35950,
+            "sha256": "7a6abff86761624a1b896dd3851400d9d8ab7e2f7e592e4792933758d485ff55"
+          },
+          {
+            "path": "purescript/Data_Ring_Generic.go",
+            "bytes": 14451,
+            "sha256": "53dae23cfff4fb64be6bc010d86064537e3cc2a1803fd27d37f2abfb90dc8365"
+          },
+          {
+            "path": "purescript/Data_Ring_ffi.go",
+            "bytes": 928,
+            "sha256": "a3095941f2f149541b395a5044f7f2a9eaaa8fc1100e80d4638b36ecaaa20d81"
+          },
+          {
+            "path": "purescript/Data_Semigroup.go",
+            "bytes": 37172,
+            "sha256": "ca53f9b0a9667d235b63a2dd11040777474255202851c349f8ff1b8b14065c84"
+          },
+          {
+            "path": "purescript/Data_Semigroup_First.go",
+            "bytes": 10678,
+            "sha256": "e871dee856873a62c769b92c6db4eebba955dff0ac7fce3b4006e7f693e055e1"
+          },
+          {
+            "path": "purescript/Data_Semigroup_Foldable.go",
+            "bytes": 49249,
+            "sha256": "0163ca66bdec64b6aa813538a9ec3d1c635d367197edf3415530e9a995ab1b35"
+          },
+          {
+            "path": "purescript/Data_Semigroup_Generic.go",
+            "bytes": 15257,
+            "sha256": "2d615442e50d0f8499b1bb9418c4bdcb3516bf851e0d886686492723f458bacf"
+          },
+          {
+            "path": "purescript/Data_Semigroup_Last.go",
+            "bytes": 10487,
+            "sha256": "3f9d012597f622b2f2f7ca68021bcdacc5ac46c32fdbc5ac9ce6eebe291ebf97"
+          },
+          {
+            "path": "purescript/Data_Semigroup_Traversable.go",
+            "bytes": 20936,
+            "sha256": "5dea1d23a6a7c64389eda9afb54bd7ffd240da5701243a25b16b050058f51c35"
+          },
+          {
+            "path": "purescript/Data_Semigroup_ffi.go",
+            "bytes": 1611,
+            "sha256": "284a2211e3d67d17e56a4004c79786aa49336ba3762580bac1e1465a702fd7b8"
+          },
+          {
+            "path": "purescript/Data_Semiring.go",
+            "bytes": 52782,
+            "sha256": "1e71e22435db51808ee6d2a39ffc14dd0f379362998dfddae2e71d2ac67f676d"
+          },
+          {
+            "path": "purescript/Data_Semiring_Generic.go",
+            "bytes": 29994,
+            "sha256": "f364794448c0a25f69899537b870277a69bc8997720d8f7c8dd7502fe651a091"
+          },
+          {
+            "path": "purescript/Data_Semiring_ffi.go",
+            "bytes": 1813,
+            "sha256": "8901d8eccc75bc80cbe64e5e0a240bcf82ee7a446086c6db20966eda87ee1761"
+          },
+          {
+            "path": "purescript/Data_Show.go",
+            "bytes": 58063,
+            "sha256": "24106a7b71d0169a1aece9b650f006d99471cd6be523e3bbe74da17a75969282"
+          },
+          {
+            "path": "purescript/Data_Show_Generic.go",
+            "bytes": 28417,
+            "sha256": "924ea53d16831ba80ec789d3cda24e02a9947355af133fcd99b2d4ffb38c7299"
+          },
+          {
+            "path": "purescript/Data_Show_Generic_ffi.go",
+            "bytes": 745,
+            "sha256": "98c53c1ffbd0f956c72bc3a731097e7f6cfaec362f570cd44a3602c195cdca0c"
+          },
+          {
+            "path": "purescript/Data_Show_ffi.go",
+            "bytes": 2849,
+            "sha256": "1b7eb239c16e13450ee51a2f38529d3097055c9cf4c8d6a7f8a4ffd07a753f91"
+          },
+          {
+            "path": "purescript/Data_Symbol.go",
+            "bytes": 3892,
+            "sha256": "5ff3c88d12f4befa8a42acedfd55e924b56ca326792de5eea4da48da5288421d"
+          },
+          {
+            "path": "purescript/Data_Symbol_ffi.go",
+            "bytes": 441,
+            "sha256": "028a12c6cfe0c5b03793a3116c0c687a0586cd6c6fa35d5cbd88864037f173c9"
+          },
+          {
+            "path": "purescript/Data_Traversable.go",
+            "bytes": 87030,
+            "sha256": "795872f86b0e01d2cb3a4fcad506360a08f25a96e510d7f5be1e26be31679973"
+          },
+          {
+            "path": "purescript/Data_TraversableWithIndex.go",
+            "bytes": 113785,
+            "sha256": "9aafa0f8b33f142744eace142bf8bb45382dc3427f257c800cc5304e15b2b76f"
+          },
+          {
+            "path": "purescript/Data_Traversable_Accum.go",
+            "bytes": 38,
+            "sha256": "148ec052de2bb51f078fba4a21acd091943765eced457a563b41225d0240122b"
+          },
+          {
+            "path": "purescript/Data_Traversable_Accum_Internal.go",
+            "bytes": 12789,
+            "sha256": "042a26c94cda979e904af0cb2647f18a3bcc6ce6639a88e6c5e3f511005574ad"
+          },
+          {
+            "path": "purescript/Data_Traversable_ffi.go",
+            "bytes": 3759,
+            "sha256": "f0ed54a81a8ed85b51be8cfe940860a9fe8346f403cee343ee1b2006aeac7b02"
+          },
+          {
+            "path": "purescript/Data_Tuple.go",
+            "bytes": 76970,
+            "sha256": "b89c0fae04a7b01ffe3b806f735eb4553719392cbe18d6e56bdcd8ad5946b7cf"
+          },
+          {
+            "path": "purescript/Data_Tuple_Nested.go",
+            "bytes": 138424,
+            "sha256": "4d23ac46377aa9cf451faeba2d5d4b8c256b528fb48010d6f38d0b1e806212c3"
+          },
+          {
+            "path": "purescript/Data_Unfoldable.go",
+            "bytes": 20542,
+            "sha256": "7aecfcf618cd2163891eb65d653750d94a67505f10703815729a728fed21bd4f"
+          },
+          {
+            "path": "purescript/Data_Unfoldable1.go",
+            "bytes": 28177,
+            "sha256": "726a6a86815f15fe963cd5aec0ee71cf3cc0dfaedd559b83b28d4b92f02e42c2"
+          },
+          {
+            "path": "purescript/Data_Unfoldable1_ffi.go",
+            "bytes": 2225,
+            "sha256": "1be84f89783ba00711ddd5f4785653d16672b0990e95db62a3db6ba20a8cf828"
+          },
+          {
+            "path": "purescript/Data_Unfoldable_ffi.go",
+            "bytes": 2272,
+            "sha256": "ef3f22aa36f2c14c66ee4b3c5763e4a9c18b4cdd2e4c99cff7992f78bb5c0837"
+          },
+          {
+            "path": "purescript/Data_Unit.go",
+            "bytes": 165,
+            "sha256": "5e63e5ac10b0695c6ce495fb4847f100d520a6b439baaac5a4e846226e62aeef"
+          },
+          {
+            "path": "purescript/Data_Unit_ffi.go",
+            "bytes": 214,
+            "sha256": "8ec934fc78186d2b74d3095bb3176dc7c5ff9c17de7be21df9164d8a8122eaf5"
+          },
+          {
+            "path": "purescript/Data_Void.go",
+            "bytes": 6532,
+            "sha256": "8c2ae25a9df589b256bb50480d784085a1036b7858824103e8dea1b0f4f8d439"
+          },
+          {
+            "path": "purescript/Effect.go",
+            "bytes": 7479,
+            "sha256": "9a9d3ca480c095061ee23473a72826bb10e9338cade3598df57bbe56873b9f8e"
+          },
+          {
+            "path": "purescript/Effect_Class.go",
+            "bytes": 3715,
+            "sha256": "c166e2ab1e43d66fa2b86b77abdb0cedc05bcb849396aeadc01dabf576763cb4"
+          },
+          {
+            "path": "purescript/Effect_Class_Console.go",
+            "bytes": 22876,
+            "sha256": "692b9e80c1ceaf458cbf948a2c93b0dc5bc1da4b9b842592fa8f0a0721e1a866"
+          },
+          {
+            "path": "purescript/Effect_Console.go",
+            "bytes": 7375,
+            "sha256": "9b04f8f79e694ec48035863f378b492fc686edb2765abbb69af197b0208d4553"
+          },
+          {
+            "path": "purescript/Effect_Console_ffi.go",
+            "bytes": 5814,
+            "sha256": "2543e818943be6f55bf7c64405da436863ed2d5099515e3ae39e7da873071bae"
+          },
+          {
+            "path": "purescript/Effect_Exception.go",
+            "bytes": 4335,
+            "sha256": "1df0130ba29bfcb0f0c83a3cc30876743fe8dc8d1584b58527f509a09597c783"
+          },
+          {
+            "path": "purescript/Effect_Exception_Unsafe.go",
+            "bytes": 1409,
+            "sha256": "a259b5371a8bae22edeab06c1254fc2641434c6bb9ab70b076bf07a5808960d9"
+          },
+          {
+            "path": "purescript/Effect_Exception_ffi.go",
+            "bytes": 5555,
+            "sha256": "c1fb1f9b4c796b597d882c673f90a73f608394315ca5c910803ef479654f6e2e"
+          },
+          {
+            "path": "purescript/Effect_Ref.go",
+            "bytes": 6322,
+            "sha256": "7736b3b2e3f2b74289a40521fc5d028eed32ad08d8716cf2c5d06c7ba70b73e3"
+          },
+          {
+            "path": "purescript/Effect_Ref_ffi.go",
+            "bytes": 4150,
+            "sha256": "ce0610a67971fe38e3f1eed8d3bbf49e9f577bc64889c5c09907c1048b443e29"
+          },
+          {
+            "path": "purescript/Effect_Uncurried.go",
+            "bytes": 43616,
+            "sha256": "23a9f0948399ea7ce0d1d668c7fb3177577b6e665b57d780938f1c856f95d3fa"
+          },
+          {
+            "path": "purescript/Effect_Uncurried_ffi.go",
+            "bytes": 21346,
+            "sha256": "d0ca2491f3122de4909b0136d75e7ff48dfa7bbc115f828c5d76bd8fa254c698"
+          },
+          {
+            "path": "purescript/Effect_Unsafe.go",
+            "bytes": 203,
+            "sha256": "0a4adad04ca5eb592975c0cf4fd6aa655edd3ced01a7b9a1e808c8cde0989ecb"
+          },
+          {
+            "path": "purescript/Effect_Unsafe_ffi.go",
+            "bytes": 606,
+            "sha256": "a06b5cb22b142e2e2c3b699138dad399e5a80e85f7f6791b7d63fa6addb5ec29"
+          },
+          {
+            "path": "purescript/Effect_ffi.go",
+            "bytes": 4585,
+            "sha256": "4f709d1ac2c962894e7c3f073c826cc6774bf21ec617ab58d3bf06d22e53fd6d"
+          },
+          {
+            "path": "purescript/Partial.go",
+            "bytes": 1459,
+            "sha256": "201b90f3e040014657b25b51d8e3f773551e9b6812ea1cd0a29e513b411da304"
+          },
+          {
+            "path": "purescript/Partial_Unsafe.go",
+            "bytes": 1219,
+            "sha256": "4a8a9b17c54ac3fdd2bc49621e590bd969f146ea5a9a99c66bd40f16de350cbc"
+          },
+          {
+            "path": "purescript/Partial_Unsafe_ffi.go",
+            "bytes": 563,
+            "sha256": "36e10485e7f5924f969f0467037543318e72be2abc6038a12e5cadcf387c5049"
+          },
+          {
+            "path": "purescript/Partial_ffi.go",
+            "bytes": 445,
+            "sha256": "105c227a7e3cf9e9dd3dd75e8451e169607dcfbe9f36d7e46ac3e4671b0eb4d8"
+          },
+          {
+            "path": "purescript/Performance_Minibench.go",
+            "bytes": 11518,
+            "sha256": "d26e668b4322db59fa52092a7b9aba4f482fb6427a9e5f7e0d4fbff2ed6c1b00"
+          },
+          {
+            "path": "purescript/Performance_Minibench_ffi.go",
+            "bytes": 610,
+            "sha256": "725d6ef20091de2146fb1417fe72c0aada2a9bc069714b73ef67a9bb82ff98a1"
+          },
+          {
+            "path": "purescript/Prelude.go",
+            "bytes": 38,
+            "sha256": "148ec052de2bb51f078fba4a21acd091943765eced457a563b41225d0240122b"
+          },
+          {
+            "path": "purescript/Record_Unsafe.go",
+            "bytes": 492,
+            "sha256": "91006f7d4e062d894fdb0000868b47a900622ef190f5e0856a638eccd08c1b9a"
+          },
+          {
+            "path": "purescript/Record_Unsafe_ffi.go",
+            "bytes": 2601,
+            "sha256": "b35c18c0e5a9d0850e08432b9479ae2ff3e0ce6b2bd088d106434bd8b21dbcc4"
+          },
+          {
+            "path": "purescript/Safe_Coerce.go",
+            "bytes": 725,
+            "sha256": "7815e3a6d08e4ed4bcc86406cdaff2401dd8bda8d87888f00ebd3c786f2f30b0"
+          },
+          {
+            "path": "purescript/Spago_Generated_BuildInfo.go",
+            "bytes": 1407,
+            "sha256": "29eb4711f0e8b42efdae38ad202f13690d9e029b85b6486e93ce5967c3a4af8a"
+          },
+          {
+            "path": "purescript/Test_Assert.go",
+            "bytes": 15952,
+            "sha256": "bec986fec143aa7f6dea301b1083536c160134160fe74b08e1287d1267a5cae3"
+          },
+          {
+            "path": "purescript/Test_Assert_ffi.go",
+            "bytes": 1367,
+            "sha256": "05b7d7e6db42084f4dc012aa738482d4cd1c6963e15911cebaeba671e6f4503e"
+          },
+          {
+            "path": "purescript/Test_Data_Generic_Rep.go",
+            "bytes": 222969,
+            "sha256": "776e11df90a64939aec8a43b89bc068dd869bfda06e3249285688423282b5982"
+          },
+          {
+            "path": "purescript/Test_Main.go",
+            "bytes": 124357,
+            "sha256": "09f67264773fc564bfbb0c9f2ebe2f055eccf5b7fb4579b7abad95192fd8b9dd"
+          },
+          {
+            "path": "purescript/Test_Main_ffi.go",
+            "bytes": 2443,
+            "sha256": "ca3b744b9da2c2c01ca8c9d803b7f3cf5ae7205f0772beb07964cee7d5b1ae2f"
+          },
+          {
+            "path": "purescript/Test_Utils.go",
+            "bytes": 1104,
+            "sha256": "707d1fbd8a1127533d9189e6e3d1926700c3fbfd99e67e667203d1bfa69b21e6"
+          },
+          {
+            "path": "purescript/Test_Utils_ffi.go",
+            "bytes": 615,
+            "sha256": "c83988c9d76dc4b76868c4facb87e6d587531183eeb09c3b76b963465409a8b6"
+          },
+          {
+            "path": "purescript/Type_Equality.go",
+            "bytes": 6546,
+            "sha256": "ba47ced304fe9ce47505bf8f73cc6680728a209541ec04bdf1087a786a20c54e"
+          },
+          {
+            "path": "purescript/Type_Proxy.go",
+            "bytes": 467,
+            "sha256": "855f278c610db46cc8a03c09363546cf997fc5a86189f3401db1d4ef012fd186"
+          },
+          {
+            "path": "purescript/Unsafe_Coerce.go",
+            "bytes": 189,
+            "sha256": "2e58010857fb7cc531b5ad074212cc4c7fb9329fff41aae10cafa588f507d2fe"
+          },
+          {
+            "path": "purescript/Unsafe_Coerce_ffi.go",
+            "bytes": 448,
+            "sha256": "14eaac1bc03afdc000bfa14ac1505841f9eb88097eccc9f0eb0b8fef519f1a37"
+          }
+        ],
+        "output": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/recheck/gopurs-prelude/generated/js",
+        "different_files": [
+          "purescript/Test_Main.go"
+        ]
+      },
+      "reason": "The original Go and Rust compiler hosts lost the sign of folded negative zero. JS preserves -0.0; the focused host fixture passes JS and fails both native hosts. The only corrected source line is Test.Main signum(-0.0)."
+    }
+  ],
+  "aff_performance": {
+    "evidence": {
+      "path": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-fixes-20261004/revision2/aff-performance/results.json",
+      "sha256": "c9d7a683780594a35a9c6444a72590a64591a9977e5eefe1c8fd00a51dfb8bcd"
+    },
+    "protocol": "One warmup per host, then ten alternating-order Go/Rust pairs; backend total with 8/8/8/8 workers on the frozen Aff corpus, exact original Go output.",
+    "go_ms": [
+      1844,
+      1851,
+      1942,
+      1979,
+      1849,
+      1935,
+      1862,
+      1912,
+      1895,
+      1898
+    ],
+    "rust_ms": [
+      1491,
+      1493,
+      1526,
+      1516,
+      1489,
+      1504,
+      1505,
+      1497,
+      1505,
+      1499
+    ],
+    "go_median_ms": 1896.5,
+    "rust_median_ms": 1501.5,
+    "favorable_pairs": 10,
+    "ratio_of_medians": 0.7917215924070656
+  },
+  "aggregate": {
+    "packages": 50,
+    "successful_packages": 50,
+    "sum_of_displayed_rust_medians_ms": 61988,
+    "note": "Sum of displayed medians from their respective campaigns, including these four corrected rows; not a timed multi-package invocation."
+  },
+  "previous_report": {
+    "path": "/Users/0x1/Documents/htdocs/altbak.pub/docs/benchmark-results/2026-10-04-gopurs-packages-rust.json",
+    "sha256": "03a2f9ab05ad3d3695b80e6b09a4214dcdf1a247c123c3ec810bb536444ecb16"
+  },
+  "readme": {
+    "before_sha256": "8c2a81921c1f397065ef07cd1bbaa7882f8f1f353f30c39c473729e92bbeac99",
+    "after_sha256": "58bf5bcfdcf5b005e70b89842368c3da792dae49b336b9bf49f198cfe15df949",
+    "edits": [
+      {
+        "line": 344,
+        "before": "[gopurs-enums](https://github.com/0x000000000000000000001/gopurs-enums)  | ~ 5895 ms | ~ 1445 ms | output mismatch",
+        "after": "[gopurs-enums](https://github.com/0x000000000000000000001/gopurs-enums)  | ~ 5895 ms | ~ 1445 ms | ~ 814 ms"
+      },
+      {
+        "line": 354,
+        "before": "[gopurs-js-promise](https://github.com/0x000000000000000000001/gopurs-js-promise)  | ~ 3669 ms | ~ 798 ms | output mismatch",
+        "after": "[gopurs-js-promise](https://github.com/0x000000000000000000001/gopurs-js-promise)  | ~ 3669 ms | ~ 798 ms | ~ 454 ms"
+      },
+      {
+        "line": 371,
+        "before": "[gopurs-prelude](https://github.com/0x000000000000000000001/gopurs-prelude)  | ~ 5329 ms | ~ 1376 ms | failed (division by zero)",
+        "after": "[gopurs-prelude](https://github.com/0x000000000000000000001/gopurs-prelude)  | ~ 5329 ms | ~ 1376 ms | ~ 775 ms"
+      },
+      {
+        "line": 378,
+        "before": "[gopurs-strings](https://github.com/0x000000000000000000001/gopurs-strings)  | ~ 6421 ms | ~ 1933 ms | output mismatch",
+        "after": "[gopurs-strings](https://github.com/0x000000000000000000001/gopurs-strings)  | ~ 6421 ms | ~ 1933 ms | ~ 1286 ms"
+      },
+      {
+        "line": 385,
+        "before": "**Total gopurs-*** | ~ 329.11 s | ~ 105.34 s <br>(/JS = 0.3x) | ~ 58.66 s (46/50)",
+        "after": "**Total gopurs-*** | ~ 329.11 s | ~ 105.34 s <br>(/JS = 0.3x) | ~ 61.99 s"
+      }
+    ]
+  }
+}
