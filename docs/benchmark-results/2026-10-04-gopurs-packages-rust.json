@@ -1,0 +1,1463 @@
+{
+  "schema": "gopurs-packages-rust-1",
+  "status": "completed_with_failures",
+  "verified_at": "2026-10-04T09:43:39.344Z",
+  "archive": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004",
+  "source_sha256": "ec54cfd5bdb4d18c1b521c85582084e8a80f30ae9df783bc82faf76609f597ab",
+  "protocol": {
+    "metric": "[gopurs] backend total",
+    "target": "Go",
+    "rounds": 5,
+    "rust_warmups": 1,
+    "jobs": {
+      "GOPURS_JOBS": "8",
+      "GOPURS_PREPARE_JOBS": "8",
+      "GOPURS_PBO_JOBS": "8",
+      "GOPURS_EMIT_JOBS": "8",
+      "GOPURS_PIPELINE": "1"
+    },
+    "oracle": "Go host on the same frozen inputs; JavaScript fallback if Go generation fails",
+    "statistic": "median of successful Rust backend generations, each byte-exact to the oracle",
+    "order": "serialized packages, frontend outside timing, one oracle and one Rust warmup before measured Rust runs",
+    "excludes": "frontend, compiler/application builds, application execution and process startup/exit",
+    "cache": "fresh generated output and PBO caches for each process, warm OS filesystem cache",
+    "scope": "Only unmeasured gopurs-* Rust cells; existing JS/Go and gopurs-aff cells keep their previous campaigns. No new cross-host speed-ratio claim."
+  },
+  "host": {
+    "cpu": "Apple M4 Pro",
+    "logical_cpus": 14,
+    "memory_bytes": 51539607552,
+    "node": "v24.8.0"
+  },
+  "compiler": [
+    {
+      "path": "bin/gopurs",
+      "bytes": 1967,
+      "sha256": "a2f198ace9ee575e3528b4f2f64f7a149cd0f9d2c9e53c0ffc3b83103d6e50dd"
+    },
+    {
+      "path": "bin/gopurs-native",
+      "bytes": 29948194,
+      "sha256": "73b2afc91528bb60b269cd5f6e511b4b05b282c20b904b17b91be351db48b393"
+    },
+    {
+      "path": "bin/gopurs-rust",
+      "bytes": 82799888,
+      "sha256": "ca8015b88a494dfd0b301ef0d0d23aa968f1ca74633752145e4f0da54bc8a42f"
+    },
+    {
+      "path": "bin/gopurs.js",
+      "bytes": 2010660,
+      "sha256": "22934fd20a98bb83a748d0c69f197eda3b9bde3da1fd189b835defc9d0b578c1"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1066,
+      "sha256": "e1db04ca364b36189f058f6e5ffc1d24de8590a88d4c9ce42a47418f54b0a4e1"
+    },
+    {
+      "path": "tools/ffi-runner.mjs",
+      "bytes": 1251,
+      "sha256": "7809f59971f1cdc8bf013ef6a5d8584d229dfb68223c56959a5e573d15f5d91b"
+    },
+    {
+      "path": "tools/ffi_gen.wasm",
+      "bytes": 5686864,
+      "sha256": "9ff753ad005f649f9dbe53d30c50f807b8c7b5118555da63a5577ba8cdc45fff"
+    },
+    {
+      "path": "tools/wasm_exec.js",
+      "bytes": 16992,
+      "sha256": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14"
+    }
+  ],
+  "frontend_sha256": "efac5816a482d5581cfc990892f8b24f1d3343f8df1798572ea1a0a96bd07991",
+  "rows": [
+    {
+      "package": "gopurs-argonaut-core",
+      "status": "passed",
+      "modules": 254,
+      "types": 129932,
+      "median_ms": 1213,
+      "samples_ms": [
+        1205,
+        1202,
+        1222,
+        1213,
+        1234
+      ],
+      "min_ms": 1202,
+      "max_ms": 1234,
+      "identical_files_per_generation": 324,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-argonaut-core/results.json",
+      "evidence_sha256": "5b8402e2202484135a50e009b21b581a82315eef69c5453530602040ba45e667"
+    },
+    {
+      "package": "gopurs-arrays",
+      "status": "passed",
+      "modules": 167,
+      "types": 79038,
+      "median_ms": 3298,
+      "samples_ms": [
+        3396,
+        3258,
+        3298,
+        3335,
+        3243
+      ],
+      "min_ms": 3243,
+      "max_ms": 3396,
+      "identical_files_per_generation": 217,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-arrays/results.json",
+      "evidence_sha256": "37f402b06a74e8ba38bdb27e62efbf1c8db97a9a9b5b4607ef5cb32dfd24eed7"
+    },
+    {
+      "package": "gopurs-assert",
+      "status": "passed",
+      "modules": 58,
+      "types": 13674,
+      "median_ms": 110,
+      "samples_ms": [
+        111,
+        110,
+        110,
+        110,
+        111
+      ],
+      "min_ms": 110,
+      "max_ms": 111,
+      "identical_files_per_generation": 82,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(modules.some(module => module.name === 'Test.Main'))\n\n    at freeze (file:///Users/0x1/Documents/htdocs/altbak.pub/bin/benchmark/gopurs-packages/measure.mjs:81:3)\n    at file:///Users/0x1/Documents/htdocs/altbak.pub/bin/benchmark/gopurs-packages/measure.mjs:117:21\n    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/followups/results.json",
+      "evidence_sha256": "382d4afc0dd4b9e061c62aa111c7cb22e1c7dbb87cfb1208881cd5a65bb1b238"
+    },
+    {
+      "package": "gopurs-avar",
+      "status": "passed",
+      "modules": 236,
+      "types": 134408,
+      "median_ms": 1328,
+      "samples_ms": [
+        1332,
+        1328,
+        1335,
+        1323,
+        1326
+      ],
+      "min_ms": 1323,
+      "max_ms": 1335,
+      "identical_files_per_generation": 292,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-avar/results.json",
+      "evidence_sha256": "31f57601486e5ff8b674b814f2d08f2e328f84fc6a158b5aea373e5b4425d4ec"
+    },
+    {
+      "package": "gopurs-catenable-lists",
+      "status": "passed",
+      "modules": 153,
+      "types": 81907,
+      "median_ms": 827,
+      "samples_ms": [
+        827,
+        823,
+        827,
+        822,
+        832
+      ],
+      "min_ms": 822,
+      "max_ms": 832,
+      "identical_files_per_generation": 190,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-catenable-lists/results.json",
+      "evidence_sha256": "b1d25089dd7829d06b7e24980eaf21185bbc9edce9486df0715dec8efc961818"
+    },
+    {
+      "package": "gopurs-console",
+      "status": "passed",
+      "modules": 161,
+      "types": 73059,
+      "median_ms": 579,
+      "samples_ms": [
+        576,
+        586,
+        579,
+        577,
+        602
+      ],
+      "min_ms": 576,
+      "max_ms": 602,
+      "identical_files_per_generation": 210,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-console/results.json",
+      "evidence_sha256": "d0b9e34ddae5e1d3649a7793fe8575d774e471c1ef201e6c28f30a19038ef62a"
+    },
+    {
+      "package": "gopurs-datetime",
+      "status": "passed",
+      "modules": 198,
+      "types": 105334,
+      "median_ms": 1531,
+      "samples_ms": [
+        1531,
+        1527,
+        1534,
+        1524,
+        1535
+      ],
+      "min_ms": 1524,
+      "max_ms": 1535,
+      "identical_files_per_generation": 252,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-datetime/results.json",
+      "evidence_sha256": "0ebb07d81684af786995f3aa29e913dcb9e0f70b242f6b73638d7f90054a4b29"
+    },
+    {
+      "package": "gopurs-effect",
+      "status": "passed",
+      "modules": 60,
+      "types": 13929,
+      "median_ms": 123,
+      "samples_ms": [
+        123,
+        122,
+        129,
+        125,
+        122
+      ],
+      "min_ms": 122,
+      "max_ms": 129,
+      "identical_files_per_generation": 87,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-effect/results.json",
+      "evidence_sha256": "8b439e7c92324717ac3a2be16ad347b70fd511c3717904ec20a644a600919f74"
+    },
+    {
+      "package": "gopurs-enums",
+      "status": "output_mismatch",
+      "modules": 169,
+      "types": 78152,
+      "median_ms": null,
+      "samples_ms": [],
+      "min_ms": null,
+      "max_ms": null,
+      "identical_files_per_generation": null,
+      "oracle_host": "go",
+      "readme_cell": "output mismatch",
+      "different_files": [
+        "purescript/Control_Bind.go"
+      ],
+      "original_failure": "AssertionError [ERR_ASSERTION]: gopurs-enums: rust generated different Go\n+ actual - expected\n... Skipped lines\n\n  [\n    {\n      bytes: 540,\n      path: 'Test.Main/main/main.go',\n      sha256: 'a54040cfb1ac96958e17b5551d6f8dec367b256d491779b99bbe732463ca2642'\n...\n    {\n+     bytes: 85873,\n-     bytes: 89431,\n      path: 'purescript/Control_Bind.go',\n+     sha256: 'c91b1b24d1f1ec68f14aa3e98341e10a1fba6ef8ce3fe6cc6f46acdcb6a328a8'\n-     sha256: 'a9d19273bbc58fd3ca90bf5a3d6ddf65f6d0f311d91f4009b4b187151defeea3'\n    },\n    {\n      bytes: 1121,\n      path: 'purescript/Control_Bind_ffi.go',\n      sha256: 'a438171e73a2d7a9ff32559e5f92d4772da42c6037514e80e4d38761ec4d554f'\n\n    at generate (file:///Users/0x1/Documents/htdocs/altbak.pub/bin/benchmark/gopurs-packages/measure.mjs:107:31)\n    at file:///Users/0x1/Documents/htdocs/altbak.pub/bin/benchmark/gopurs-packages/measure.mjs:121:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/followups/results.json",
+      "evidence_sha256": "382d4afc0dd4b9e061c62aa111c7cb22e1c7dbb87cfb1208881cd5a65bb1b238"
+    },
+    {
+      "package": "gopurs-exceptions",
+      "status": "passed",
+      "modules": 79,
+      "types": 19638,
+      "median_ms": 185,
+      "samples_ms": [
+        185,
+        187,
+        187,
+        185,
+        185
+      ],
+      "min_ms": 185,
+      "max_ms": 187,
+      "identical_files_per_generation": 108,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-exceptions/results.json",
+      "evidence_sha256": "96948935b0f21519abe787c31452faee8bdc9ab70dd445bdf2b11070585b5ddc"
+    },
+    {
+      "package": "gopurs-foldable-traversable",
+      "status": "passed",
+      "modules": 161,
+      "types": 77931,
+      "median_ms": 852,
+      "samples_ms": [
+        851,
+        867,
+        863,
+        851,
+        852
+      ],
+      "min_ms": 851,
+      "max_ms": 867,
+      "identical_files_per_generation": 211,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-foldable-traversable/results.json",
+      "evidence_sha256": "1922fd9f19324582b8eda02b1c3927b053c56257962937d6609eef0edd507199"
+    },
+    {
+      "package": "gopurs-foreign",
+      "status": "passed",
+      "modules": 228,
+      "types": 118639,
+      "median_ms": 1020,
+      "samples_ms": [
+        1042,
+        1008,
+        1020,
+        1011,
+        1209
+      ],
+      "min_ms": 1008,
+      "max_ms": 1209,
+      "identical_files_per_generation": 286,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-foreign/results.json",
+      "evidence_sha256": "18cc1d434d4417c3e71744e0a39139e657ed5929db7f02ad0cf98463f98164a5"
+    },
+    {
+      "package": "gopurs-foreign-object",
+      "status": "passed",
+      "modules": 253,
+      "types": 133370,
+      "median_ms": 1554,
+      "samples_ms": [
+        1555,
+        1543,
+        1554,
+        1554,
+        1548
+      ],
+      "min_ms": 1543,
+      "max_ms": 1555,
+      "identical_files_per_generation": 318,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-foreign-object/results.json",
+      "evidence_sha256": "ae39f2cb23994308b5de3785d00a81b705baf31ee3c5e2d4d1b54b98ec064d80"
+    },
+    {
+      "package": "gopurs-free",
+      "status": "passed",
+      "modules": 199,
+      "types": 115212,
+      "median_ms": 930,
+      "samples_ms": [
+        933,
+        930,
+        918,
+        936,
+        927
+      ],
+      "min_ms": 918,
+      "max_ms": 936,
+      "identical_files_per_generation": 239,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-free/results.json",
+      "evidence_sha256": "094c93a0dfbfd0100d05256a6b7a6fb64f9f64344f73632c63c60701887cb8c8"
+    },
+    {
+      "package": "gopurs-functions",
+      "status": "passed",
+      "modules": 60,
+      "types": 14451,
+      "median_ms": 135,
+      "samples_ms": [
+        133,
+        135,
+        136,
+        134,
+        136
+      ],
+      "min_ms": 133,
+      "max_ms": 136,
+      "identical_files_per_generation": 87,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-functions/results.json",
+      "evidence_sha256": "8b12f95a0602104b7d9029ef7933e74120cf64fc57bd5cde1965f4405a24fe1f"
+    },
+    {
+      "package": "gopurs-integers",
+      "status": "passed",
+      "modules": 162,
+      "types": 73190,
+      "median_ms": 765,
+      "samples_ms": [
+        760,
+        766,
+        761,
+        769,
+        765
+      ],
+      "min_ms": 760,
+      "max_ms": 769,
+      "identical_files_per_generation": 211,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-integers/results.json",
+      "evidence_sha256": "0855d46509e0d701401056972d60ce6f8c75af1c4888c5474b5b35f7bbf81f28"
+    },
+    {
+      "package": "gopurs-js-bigints",
+      "status": "passed",
+      "modules": 80,
+      "types": 17221,
+      "median_ms": 159,
+      "samples_ms": [
+        156,
+        163,
+        159,
+        158,
+        190
+      ],
+      "min_ms": 156,
+      "max_ms": 190,
+      "identical_files_per_generation": 113,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-js-bigints/results.json",
+      "evidence_sha256": "8d9683ed77f080addcbcb34eba851a46cad13dd7a2a762faeae8dfcb77cf3e48"
+    },
+    {
+      "package": "gopurs-js-date",
+      "status": "passed",
+      "modules": 250,
+      "types": 132520,
+      "median_ms": 1353,
+      "samples_ms": [
+        1362,
+        1359,
+        1353,
+        1330,
+        1345
+      ],
+      "min_ms": 1330,
+      "max_ms": 1362,
+      "identical_files_per_generation": 313,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-js-date/results.json",
+      "evidence_sha256": "76727b0f5169d01451886fd886be96b48a4e40bcb5df4ad7050d6af03ddb8e8d"
+    },
+    {
+      "package": "gopurs-js-promise",
+      "status": "output_mismatch",
+      "modules": 140,
+      "types": 62679,
+      "median_ms": null,
+      "samples_ms": [],
+      "min_ms": null,
+      "max_ms": null,
+      "identical_files_per_generation": null,
+      "oracle_host": "go",
+      "readme_cell": "output mismatch",
+      "different_files": [
+        "purescript/Data_Traversable.go",
+        "purescript/Promise_Lazy.go",
+        "purescript/Test_Main.go"
+      ],
+      "original_failure": "AssertionError [ERR_ASSERTION]: gopurs-js-promise: rust generated different Go\n+ actual - expected\n... Skipped lines\n\n  [\n    {\n      bytes: 540,\n      path: 'Test.Main/main/main.go',\n      sha256: 'a54040cfb1ac96958e17b5551d6f8dec367b256d491779b99bbe732463ca2642'\n...\n    {\n+     bytes: 88443,\n-     bytes: 88878,\n      path: 'purescript/Data_Traversable.go',\n+     sha256: '635fe8cc2d562e8eab755e2d3a143274f657519a49c4d09ec9f11e4f00b79671'\n-     sha256: '869b1476a1e3ad96ea8558de684d3f39eafd4002beb5c0896ce74137982c28ca'\n    },\n    {\n      bytes: 113785,\n      path: 'purescript/Data_TraversableWithIndex.go',\n      sha256: '9aafa0f8b33f142744eace142bf8bb45382dc3427f257c800cc5304e15b2b76f'\n...\n    {\n+     bytes: 43127,\n-     bytes: 42891,\n      path: 'purescript/Promise_Lazy.go',\n+     sha256: '0fc107be4e23f6720d634ef04f57b1b986438959943c30be21a0dd965c17dd49'\n-     sha256: '87fc3f91a00cfc35f41a95e76339efa0ab292e2bb4652ed0a5f2f79bba3d4e81'\n    },\n    {\n      bytes: 2250,\n      path: 'purescript/Promise_Rejection.go',\n      sha256: '18e6998b67a312508f984a909ee70f54d6569080646146e41a2311d3e82a9f2a'\n...\n    {\n+     bytes: 34864,\n-     bytes: 34401,\n      path: 'purescript/Test_Main.go',\n+     sha256: '4050ee52fd9018d2f8f7347d7c0f1ae5d685a0c0ace102c0ebab5b20c34902ca'\n-     sha256: 'b042a41005b0907fb8519834d78941cfe2801d04dbd8097b849aabacd720f05a'\n    },\n    {\n      bytes: 1257,\n      path: 'purescript/Test_Main_ffi.go',\n      sha256: '997e1e3ab1802653f3bd40c6ea2cc0ff65284f930958439a9d2ac80933a820c7'\n\n    at generate (file:///Users/0x1/Documents/htdocs/altbak.pub/bin/benchmark/gopurs-packages/measure.mjs:107:31)\n    at file:///Users/0x1/Documents/htdocs/altbak.pub/bin/benchmark/gopurs-packages/measure.mjs:121:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/followups/results.json",
+      "evidence_sha256": "382d4afc0dd4b9e061c62aa111c7cb22e1c7dbb87cfb1208881cd5a65bb1b238"
+    },
+    {
+      "package": "gopurs-js-promise-aff",
+      "status": "passed",
+      "modules": 259,
+      "types": 139038,
+      "median_ms": 1402,
+      "samples_ms": [
+        1382,
+        1403,
+        1402,
+        1389,
+        1408
+      ],
+      "min_ms": 1382,
+      "max_ms": 1408,
+      "identical_files_per_generation": 324,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-js-promise-aff/results.json",
+      "evidence_sha256": "882f8182136179ca8efc6cb26ccf7e4d7928726cfc66f726a3eba26dda2a2a29"
+    },
+    {
+      "package": "gopurs-js-uri",
+      "status": "passed",
+      "modules": 162,
+      "types": 73181,
+      "median_ms": 577,
+      "samples_ms": [
+        577,
+        580,
+        576,
+        581,
+        571
+      ],
+      "min_ms": 571,
+      "max_ms": 581,
+      "identical_files_per_generation": 212,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-js-uri/results.json",
+      "evidence_sha256": "d70d309e4decc8313d0f1b330d944158567c72603fe49a5ff8e3a12ab9b1ef0b"
+    },
+    {
+      "package": "gopurs-lazy",
+      "status": "passed",
+      "modules": 134,
+      "types": 62320,
+      "median_ms": 473,
+      "samples_ms": [
+        478,
+        465,
+        473,
+        470,
+        476
+      ],
+      "min_ms": 465,
+      "max_ms": 478,
+      "identical_files_per_generation": 167,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-lazy/results.json",
+      "evidence_sha256": "fbb1a1bf1d442701b61e4ff370360e252559919733e032bda0438c27513e7a6f"
+    },
+    {
+      "package": "gopurs-node-buffer",
+      "status": "passed",
+      "modules": 241,
+      "types": 121585,
+      "median_ms": 1188,
+      "samples_ms": [
+        1188,
+        1190,
+        1195,
+        1178,
+        1186
+      ],
+      "min_ms": 1178,
+      "max_ms": 1195,
+      "identical_files_per_generation": 305,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-node-buffer/results.json",
+      "evidence_sha256": "2e66813030f166efbaa73b10fc9931d4c502a056ad37dbce9fcbd894d676c60e"
+    },
+    {
+      "package": "gopurs-node-event-emitter",
+      "status": "passed",
+      "modules": 300,
+      "types": 179138,
+      "median_ms": 2379,
+      "samples_ms": [
+        2438,
+        2379,
+        2393,
+        2371,
+        2356
+      ],
+      "min_ms": 2356,
+      "max_ms": 2438,
+      "identical_files_per_generation": 372,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-node-event-emitter/results.json",
+      "evidence_sha256": "1a3e031300979508320bd61192202d4b7c46533acc82054f80b8eef8ba58bd94"
+    },
+    {
+      "package": "gopurs-node-fs",
+      "status": "passed",
+      "modules": 283,
+      "types": 147570,
+      "median_ms": 1711,
+      "samples_ms": [
+        1714,
+        1703,
+        1711,
+        1730,
+        1696
+      ],
+      "min_ms": 1696,
+      "max_ms": 1730,
+      "identical_files_per_generation": 361,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-node-fs/results.json",
+      "evidence_sha256": "d4548d4a58e8bdad7eb040cbb4c68545cc9a02b415a5145305a5f02d1fda3fa5"
+    },
+    {
+      "package": "gopurs-node-http",
+      "status": "passed",
+      "modules": 312,
+      "types": 157371,
+      "median_ms": 1728,
+      "samples_ms": [
+        1732,
+        1783,
+        1728,
+        1709,
+        1723
+      ],
+      "min_ms": 1709,
+      "max_ms": 1783,
+      "identical_files_per_generation": 411,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-node-http/results.json",
+      "evidence_sha256": "d8fb427ee457186595e06fd8babac8f107edd0a75d86b4d63a7fdb5523947a38"
+    },
+    {
+      "package": "gopurs-node-net",
+      "status": "passed",
+      "modules": 299,
+      "types": 152727,
+      "median_ms": 1684,
+      "samples_ms": [
+        1688,
+        1693,
+        1684,
+        1668,
+        1661
+      ],
+      "min_ms": 1661,
+      "max_ms": 1693,
+      "identical_files_per_generation": 386,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-node-net/results.json",
+      "evidence_sha256": "a0a6fb5fd7209ce1f5455eeae28ad2da9c48ecc422724d7aa5a28cf23f2821f4"
+    },
+    {
+      "package": "gopurs-node-path",
+      "status": "passed",
+      "modules": 60,
+      "types": 13798,
+      "median_ms": 122,
+      "samples_ms": [
+        124,
+        119,
+        122,
+        121,
+        122
+      ],
+      "min_ms": 119,
+      "max_ms": 124,
+      "identical_files_per_generation": 87,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-node-path/results.json",
+      "evidence_sha256": "7a40022bffc88ba897eda9a38edc11799b070f182007f5e4cf715f3edbc7c64c"
+    },
+    {
+      "package": "gopurs-node-process",
+      "status": "passed",
+      "modules": 285,
+      "types": 147900,
+      "median_ms": 1591,
+      "samples_ms": [
+        1596,
+        1581,
+        1591,
+        1599,
+        1584
+      ],
+      "min_ms": 1581,
+      "max_ms": 1599,
+      "identical_files_per_generation": 360,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-node-process/results.json",
+      "evidence_sha256": "03c734e7d1c19cf5ed1976a2bc48c7e82a8af88c11a98c47e46d6d566cc8c4a8"
+    },
+    {
+      "package": "gopurs-node-streams",
+      "status": "passed",
+      "modules": 313,
+      "types": 185333,
+      "median_ms": 2737,
+      "samples_ms": [
+        2734,
+        2763,
+        2737,
+        2782,
+        2730
+      ],
+      "min_ms": 2730,
+      "max_ms": 2782,
+      "identical_files_per_generation": 394,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-node-streams/results.json",
+      "evidence_sha256": "3c456fcced003150cf797e3eb4c7b4b2f0d555e90ba9046ff756ce04c9df672c"
+    },
+    {
+      "package": "gopurs-now",
+      "status": "passed",
+      "modules": 287,
+      "types": 148368,
+      "median_ms": 1619,
+      "samples_ms": [
+        1612,
+        1628,
+        1608,
+        1620,
+        1619
+      ],
+      "min_ms": 1608,
+      "max_ms": 1628,
+      "identical_files_per_generation": 364,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-now/results.json",
+      "evidence_sha256": "31235ec88e790eea9b1150f4b2b7b07bfbf0da391beb388bb1d8bfc617e8dcd5"
+    },
+    {
+      "package": "gopurs-nullable",
+      "status": "passed",
+      "modules": 230,
+      "types": 119180,
+      "median_ms": 1095,
+      "samples_ms": [
+        1095,
+        1085,
+        1090,
+        1100,
+        1103
+      ],
+      "min_ms": 1085,
+      "max_ms": 1103,
+      "identical_files_per_generation": 290,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-nullable/results.json",
+      "evidence_sha256": "b8b7a2a64d35e4129f6f6fd34982a69d9eace0811de33f069e4c52e201c74f8a"
+    },
+    {
+      "package": "gopurs-numbers",
+      "status": "passed",
+      "modules": 161,
+      "types": 73154,
+      "median_ms": 716,
+      "samples_ms": [
+        716,
+        745,
+        731,
+        709,
+        716
+      ],
+      "min_ms": 709,
+      "max_ms": 745,
+      "identical_files_per_generation": 210,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-numbers/results.json",
+      "evidence_sha256": "e0a3a4ab45805e87f0b04a0e2391fb298c1d4149b9052dc25309b55135328ef3"
+    },
+    {
+      "package": "gopurs-ordered-collections",
+      "status": "passed",
+      "modules": 241,
+      "types": 130500,
+      "median_ms": 2040,
+      "samples_ms": [
+        2035,
+        2051,
+        2040,
+        2065,
+        2031
+      ],
+      "min_ms": 2031,
+      "max_ms": 2065,
+      "identical_files_per_generation": 302,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-ordered-collections/results.json",
+      "evidence_sha256": "6420f679ecb62181baed893f84f7aecd522af26b39144a8039db712185a4698b"
+    },
+    {
+      "package": "gopurs-partial",
+      "status": "passed",
+      "modules": 161,
+      "types": 72998,
+      "median_ms": 568,
+      "samples_ms": [
+        573,
+        564,
+        568,
+        569,
+        565
+      ],
+      "min_ms": 564,
+      "max_ms": 573,
+      "identical_files_per_generation": 210,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-partial/results.json",
+      "evidence_sha256": "7904f09114fa08456b1ea67f58c1c5425d5d8522c1d12eb82313ab9f93dcc88e"
+    },
+    {
+      "package": "gopurs-prelude",
+      "status": "backend_failed",
+      "modules": 163,
+      "types": 75446,
+      "median_ms": null,
+      "samples_ms": [],
+      "min_ms": null,
+      "max_ms": null,
+      "identical_files_per_generation": null,
+      "oracle_host": "go",
+      "readme_cell": "failed (division by zero)",
+      "different_files": [],
+      "original_failure": "AssertionError [ERR_ASSERTION]: Failed warmup-rust; see /Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-prelude/logs/warmup-rust.stderr\n[gopurs] workers: prepare=8, pbo=8, emit=8, pipeline=true\n[gopurs] load TAST + sort: 34 ms\n[gopurs] transitive specializations: 105 ms\n[gopurs] prepare + monomorphize: 241 ms\n[gopurs] runtime: 1 ms\n[gopurs] optimize + emit: module 1/163 (Data.Unit)\n[gopurs] optimize + emit: module 101/163 (Data.Either.Nested)\n\nthread 'purust-aff-6' (18936728) panicked at Purs_PureScript_Backend_Optimizer_Semantics/src/lib.rs:3320:280:\nattempt to divide by zero\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n\n\n101 !== 0\n\n    at run (file:///Users/0x1/Documents/htdocs/altbak.pub/bin/benchmark/gopurs-aff/common.mjs:35:10)\n    at execute (file:///Users/0x1/Documents/htdocs/altbak.pub/bin/benchmark/gopurs-packages/measure.mjs:91:20)\n    at generate (file:///Users/0x1/Documents/htdocs/altbak.pub/bin/benchmark/gopurs-packages/measure.mjs:96:20)\n    at file:///Users/0x1/Documents/htdocs/altbak.pub/bin/benchmark/gopurs-packages/measure.mjs:121:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/followups/results.json",
+      "evidence_sha256": "382d4afc0dd4b9e061c62aa111c7cb22e1c7dbb87cfb1208881cd5a65bb1b238"
+    },
+    {
+      "package": "gopurs-random",
+      "status": "passed",
+      "modules": 162,
+      "types": 73215,
+      "median_ms": 576,
+      "samples_ms": [
+        577,
+        576,
+        575,
+        575,
+        578
+      ],
+      "min_ms": 575,
+      "max_ms": 578,
+      "identical_files_per_generation": 212,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-random/results.json",
+      "evidence_sha256": "dfa0ab5b0757c07fc92d893490f285562f9c6ef83d49e963f4afb1325b051fa2"
+    },
+    {
+      "package": "gopurs-record",
+      "status": "passed",
+      "modules": 165,
+      "types": 74983,
+      "median_ms": 591,
+      "samples_ms": [
+        593,
+        589,
+        614,
+        588,
+        591
+      ],
+      "min_ms": 588,
+      "max_ms": 614,
+      "identical_files_per_generation": 216,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-record/results.json",
+      "evidence_sha256": "e87617452068837c47e55e379539781cb6ca1d9d589566b4f7fed8f7d5bd10ea"
+    },
+    {
+      "package": "gopurs-refs",
+      "status": "passed",
+      "modules": 161,
+      "types": 73232,
+      "median_ms": 581,
+      "samples_ms": [
+        582,
+        584,
+        580,
+        581,
+        580
+      ],
+      "min_ms": 580,
+      "max_ms": 584,
+      "identical_files_per_generation": 210,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-refs/results.json",
+      "evidence_sha256": "34194b3edff90d51b176745e96c0ce19c987c183b194a68eba1a7fc0cbf6029a"
+    },
+    {
+      "package": "gopurs-run",
+      "status": "passed",
+      "modules": 266,
+      "types": 160844,
+      "median_ms": 1547,
+      "samples_ms": [
+        1547,
+        1526,
+        1545,
+        1557,
+        1549
+      ],
+      "min_ms": 1526,
+      "max_ms": 1557,
+      "identical_files_per_generation": 326,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-run/results.json",
+      "evidence_sha256": "c2459aea1dd23041ec51a29765ad97604d2baac46d81d24c0a0f55334d46e7ff"
+    },
+    {
+      "package": "gopurs-spec",
+      "status": "passed",
+      "modules": 390,
+      "types": 227763,
+      "median_ms": 3807,
+      "samples_ms": [
+        3820,
+        3807,
+        3926,
+        3767,
+        3794
+      ],
+      "min_ms": 3767,
+      "max_ms": 3926,
+      "identical_files_per_generation": 490,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-spec/results.json",
+      "evidence_sha256": "2fcac800cb32028867c2029e5585eefbaad3415cfebf4308035289a4101eb671"
+    },
+    {
+      "package": "gopurs-st",
+      "status": "passed",
+      "modules": 161,
+      "types": 73636,
+      "median_ms": 583,
+      "samples_ms": [
+        586,
+        582,
+        578,
+        583,
+        589
+      ],
+      "min_ms": 578,
+      "max_ms": 589,
+      "identical_files_per_generation": 210,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-st/results.json",
+      "evidence_sha256": "79949dabf66b2adfcc34f4576c0bb20035213f3e2b1fd5583745fd22deed7596"
+    },
+    {
+      "package": "gopurs-strings",
+      "status": "output_mismatch",
+      "modules": 193,
+      "types": 81414,
+      "median_ms": null,
+      "samples_ms": [],
+      "min_ms": null,
+      "max_ms": null,
+      "identical_files_per_generation": null,
+      "oracle_host": "go",
+      "readme_cell": "output mismatch",
+      "different_files": [
+        "purescript/Test_Assert.go"
+      ],
+      "original_failure": "AssertionError [ERR_ASSERTION]: gopurs-strings: rust generated different Go\n+ actual - expected\n... Skipped lines\n\n  [\n    {\n      bytes: 540,\n      path: 'Test.Main/main/main.go',\n      sha256: 'a54040cfb1ac96958e17b5551d6f8dec367b256d491779b99bbe732463ca2642'\n...\n    {\n+     bytes: 207972,\n-     bytes: 206415,\n      path: 'purescript/Test_Assert.go',\n+     sha256: 'b8306e4110420932e0fd78403b1b6a82dbd5a3ec4a71492b4fd0b0118d2b85c6'\n-     sha256: '541d9830946ac68dcf7cb6981da87b8ecaaa59b55413f9259f15fc2b9974e21b'\n    },\n    {\n      bytes: 1367,\n      path: 'purescript/Test_Assert_ffi.go',\n      sha256: '05b7d7e6db42084f4dc012aa738482d4cd1c6963e15911cebaeba671e6f4503e'\n\n    at generate (file:///Users/0x1/Documents/htdocs/altbak.pub/bin/benchmark/gopurs-packages/measure.mjs:107:31)\n    at file:///Users/0x1/Documents/htdocs/altbak.pub/bin/benchmark/gopurs-packages/measure.mjs:121:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:702:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/followups/results.json",
+      "evidence_sha256": "382d4afc0dd4b9e061c62aa111c7cb22e1c7dbb87cfb1208881cd5a65bb1b238"
+    },
+    {
+      "package": "gopurs-strings-extra",
+      "status": "passed",
+      "modules": 187,
+      "types": 79322,
+      "median_ms": 2008,
+      "samples_ms": [
+        2004,
+        1998,
+        2008,
+        2010,
+        2015
+      ],
+      "min_ms": 1998,
+      "max_ms": 2015,
+      "identical_files_per_generation": 241,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-strings-extra/results.json",
+      "evidence_sha256": "5fb6f38f9e813ad54bcf120d595a7459b2d99fd6781fd4c3ff85ae9a84e45322"
+    },
+    {
+      "package": "gopurs-unfoldable",
+      "status": "passed",
+      "modules": 161,
+      "types": 73511,
+      "median_ms": 599,
+      "samples_ms": [
+        599,
+        595,
+        600,
+        592,
+        602
+      ],
+      "min_ms": 592,
+      "max_ms": 602,
+      "identical_files_per_generation": 210,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-unfoldable/results.json",
+      "evidence_sha256": "a769f1051ab4e3a62ac361373bddc04a764ce42e8a469d38a47a1fb9292d134e"
+    },
+    {
+      "package": "gopurs-unsafe-coerce",
+      "status": "passed",
+      "modules": 161,
+      "types": 73035,
+      "median_ms": 578,
+      "samples_ms": [
+        574,
+        578,
+        574,
+        578,
+        578
+      ],
+      "min_ms": 574,
+      "max_ms": 578,
+      "identical_files_per_generation": 210,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-unsafe-coerce/results.json",
+      "evidence_sha256": "94735c7c2f94f4e46a39d9af3600e334345f9ad7e5a37fc952c1e9e5f3908316"
+    },
+    {
+      "package": "gopurs-uuid",
+      "status": "passed",
+      "modules": 290,
+      "types": 175873,
+      "median_ms": 2338,
+      "samples_ms": [
+        2324,
+        2338,
+        2309,
+        2339,
+        2358
+      ],
+      "min_ms": 2309,
+      "max_ms": 2358,
+      "identical_files_per_generation": 355,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-uuid/results.json",
+      "evidence_sha256": "f6031c1b6628886bb07fbda523a00b9ad888a45686ef5fffbacb2971cfc78cfa"
+    },
+    {
+      "package": "gopurs-variant",
+      "status": "passed",
+      "modules": 165,
+      "types": 91537,
+      "median_ms": 949,
+      "samples_ms": [
+        949,
+        949,
+        959,
+        948,
+        959
+      ],
+      "min_ms": 948,
+      "max_ms": 959,
+      "identical_files_per_generation": 206,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-variant/results.json",
+      "evidence_sha256": "54bd391a93fa8b1b647f1f300325b9ebfa6a07bcb2b4049ce101903d94d152bf"
+    },
+    {
+      "package": "gopurs-yoga-json",
+      "status": "passed",
+      "modules": 400,
+      "types": 238424,
+      "median_ms": 5402,
+      "samples_ms": [
+        5402,
+        5367,
+        5358,
+        5434,
+        5405
+      ],
+      "min_ms": 5358,
+      "max_ms": 5434,
+      "identical_files_per_generation": 498,
+      "oracle_host": "go",
+      "readme_cell": null,
+      "different_files": [],
+      "original_failure": null,
+      "evidence": "/Users/0x1/Documents/htdocs/altbak.pub/var/benchmark/gopurs-packages-rust-20261004/packages/gopurs-yoga-json/results.json",
+      "evidence_sha256": "e33938a043167bdd96ac1cd3372842b03f393c400dd9d18365b25a5bf7b04ca7"
+    }
+  ],
+  "verified": {
+    "packages": 49,
+    "measured_packages": 45,
+    "failed_packages": [
+      "gopurs-enums",
+      "gopurs-js-promise",
+      "gopurs-prelude",
+      "gopurs-strings"
+    ],
+    "generations": 315,
+    "identical_generated_files": 81753,
+    "diagnostic_runs": 8
+  },
+  "aggregate": {
+    "packages": 50,
+    "successful_packages": 46,
+    "sum_of_displayed_rust_medians_ms": 58659,
+    "note": "Subtotal of successful package medians, including the previously qualified gopurs-aff README value; failed rows excluded. Not a measured multi-package invocation."
+  },
+  "readme": {
+    "before_sha256": "38b88e772fdd593246f6c74f1f14541f74cb9035ff1d4f186e6d61240ab65c76",
+    "after_sha256": "8c2a81921c1f397065ef07cd1bbaa7882f8f1f353f30c39c473729e92bbeac99",
+    "edits": [
+      {
+        "line": 336,
+        "before": "[gopurs-argonaut-core](https://github.com/0x000000000000000000001/gopurs-argonaut-core)  | ~ 7777 ms | ~ 2000 ms | (WIP)",
+        "after": "[gopurs-argonaut-core](https://github.com/0x000000000000000000001/gopurs-argonaut-core)  | ~ 7777 ms | ~ 2000 ms | ~ 1213 ms"
+      },
+      {
+        "line": 337,
+        "before": "[gopurs-arrays](https://github.com/0x000000000000000000001/gopurs-arrays)  | ~ 6771 ms (failed) | ~ 3903 ms | (WIP)",
+        "after": "[gopurs-arrays](https://github.com/0x000000000000000000001/gopurs-arrays)  | ~ 6771 ms (failed) | ~ 3903 ms | ~ 3298 ms"
+      },
+      {
+        "line": 338,
+        "before": "[gopurs-assert](https://github.com/0x000000000000000000001/gopurs-assert)  | ~ 660 ms | ~ 227 ms | (WIP)",
+        "after": "[gopurs-assert](https://github.com/0x000000000000000000001/gopurs-assert)  | ~ 660 ms | ~ 227 ms | ~ 110 ms"
+      },
+      {
+        "line": 339,
+        "before": "[gopurs-avar](https://github.com/0x000000000000000000001/gopurs-avar)  | ~ 7865 ms | ~ 2190 ms | (WIP)",
+        "after": "[gopurs-avar](https://github.com/0x000000000000000000001/gopurs-avar)  | ~ 7865 ms | ~ 2190 ms | ~ 1328 ms"
+      },
+      {
+        "line": 340,
+        "before": "[gopurs-catenable-lists](https://github.com/0x000000000000000000001/gopurs-catenable-lists)  | ~ 5380 ms | ~ 2341 ms | (WIP)",
+        "after": "[gopurs-catenable-lists](https://github.com/0x000000000000000000001/gopurs-catenable-lists)  | ~ 5380 ms | ~ 2341 ms | ~ 827 ms"
+      },
+      {
+        "line": 341,
+        "before": "[gopurs-console](https://github.com/0x000000000000000000001/gopurs-console)  | ~ 4576 ms | ~ 1467 ms | (WIP)",
+        "after": "[gopurs-console](https://github.com/0x000000000000000000001/gopurs-console)  | ~ 4576 ms | ~ 1467 ms | ~ 579 ms"
+      },
+      {
+        "line": 342,
+        "before": "[gopurs-datetime](https://github.com/0x000000000000000000001/gopurs-datetime)  | ~ 6711 ms | ~ 2753 ms | (WIP)",
+        "after": "[gopurs-datetime](https://github.com/0x000000000000000000001/gopurs-datetime)  | ~ 6711 ms | ~ 2753 ms | ~ 1531 ms"
+      },
+      {
+        "line": 343,
+        "before": "[gopurs-effect](https://github.com/0x000000000000000000001/gopurs-effect)  | ~ 2176 ms | ~ 254 ms | (WIP)",
+        "after": "[gopurs-effect](https://github.com/0x000000000000000000001/gopurs-effect)  | ~ 2176 ms | ~ 254 ms | ~ 123 ms"
+      },
+      {
+        "line": 344,
+        "before": "[gopurs-enums](https://github.com/0x000000000000000000001/gopurs-enums)  | ~ 5895 ms | ~ 1445 ms | (WIP)",
+        "after": "[gopurs-enums](https://github.com/0x000000000000000000001/gopurs-enums)  | ~ 5895 ms | ~ 1445 ms | output mismatch"
+      },
+      {
+        "line": 345,
+        "before": "[gopurs-exceptions](https://github.com/0x000000000000000000001/gopurs-exceptions)  | ~ 2396 ms | ~ 358 ms | (WIP)",
+        "after": "[gopurs-exceptions](https://github.com/0x000000000000000000001/gopurs-exceptions)  | ~ 2396 ms | ~ 358 ms | ~ 185 ms"
+      },
+      {
+        "line": 346,
+        "before": "[gopurs-foldable-traversable](https://github.com/0x000000000000000000001/gopurs-foldable-traversable)  | ~ 5690 ms | ~ 1605 ms | (WIP)",
+        "after": "[gopurs-foldable-traversable](https://github.com/0x000000000000000000001/gopurs-foldable-traversable)  | ~ 5690 ms | ~ 1605 ms | ~ 852 ms"
+      },
+      {
+        "line": 347,
+        "before": "[gopurs-foreign](https://github.com/0x000000000000000000001/gopurs-foreign)  | ~ 5857 ms | ~ 2516 ms | (WIP)",
+        "after": "[gopurs-foreign](https://github.com/0x000000000000000000001/gopurs-foreign)  | ~ 5857 ms | ~ 2516 ms | ~ 1020 ms"
+      },
+      {
+        "line": 348,
+        "before": "[gopurs-foreign-object](https://github.com/0x000000000000000000001/gopurs-foreign-object)  | ~ 8879 ms | ~ 2970 ms | (WIP)",
+        "after": "[gopurs-foreign-object](https://github.com/0x000000000000000000001/gopurs-foreign-object)  | ~ 8879 ms | ~ 2970 ms | ~ 1554 ms"
+      },
+      {
+        "line": 349,
+        "before": "[gopurs-free](https://github.com/0x000000000000000000001/gopurs-free)  | ~ 5566 ms | ~ 1565 ms | (WIP)",
+        "after": "[gopurs-free](https://github.com/0x000000000000000000001/gopurs-free)  | ~ 5566 ms | ~ 1565 ms | ~ 930 ms"
+      },
+      {
+        "line": 350,
+        "before": "[gopurs-functions](https://github.com/0x000000000000000000001/gopurs-functions)  | ~ 2094 ms | ~ 289 ms | (WIP)",
+        "after": "[gopurs-functions](https://github.com/0x000000000000000000001/gopurs-functions)  | ~ 2094 ms | ~ 289 ms | ~ 135 ms"
+      },
+      {
+        "line": 351,
+        "before": "[gopurs-integers](https://github.com/0x000000000000000000001/gopurs-integers)  | ~ 4817 ms | ~ 1412 ms | (WIP)",
+        "after": "[gopurs-integers](https://github.com/0x000000000000000000001/gopurs-integers)  | ~ 4817 ms | ~ 1412 ms | ~ 765 ms"
+      },
+      {
+        "line": 352,
+        "before": "[gopurs-js-bigints](https://github.com/0x000000000000000000001/gopurs-js-bigints)  | ~ 2234 ms | ~ 278 ms | (WIP)",
+        "after": "[gopurs-js-bigints](https://github.com/0x000000000000000000001/gopurs-js-bigints)  | ~ 2234 ms | ~ 278 ms | ~ 159 ms"
+      },
+      {
+        "line": 353,
+        "before": "[gopurs-js-date](https://github.com/0x000000000000000000001/gopurs-js-date)  | ~ 7837 ms | ~ 2134 ms | (WIP)",
+        "after": "[gopurs-js-date](https://github.com/0x000000000000000000001/gopurs-js-date)  | ~ 7837 ms | ~ 2134 ms | ~ 1353 ms"
+      },
+      {
+        "line": 354,
+        "before": "[gopurs-js-promise](https://github.com/0x000000000000000000001/gopurs-js-promise)  | ~ 3669 ms | ~ 798 ms | (WIP)",
+        "after": "[gopurs-js-promise](https://github.com/0x000000000000000000001/gopurs-js-promise)  | ~ 3669 ms | ~ 798 ms | output mismatch"
+      },
+      {
+        "line": 355,
+        "before": "[gopurs-js-promise-aff](https://github.com/0x000000000000000000001/gopurs-js-promise-aff)  | ~ 8609 ms | ~ 2245 ms | (WIP)",
+        "after": "[gopurs-js-promise-aff](https://github.com/0x000000000000000000001/gopurs-js-promise-aff)  | ~ 8609 ms | ~ 2245 ms | ~ 1402 ms"
+      },
+      {
+        "line": 356,
+        "before": "[gopurs-js-uri](https://github.com/0x000000000000000000001/gopurs-js-uri)  | ~ 4886 ms | ~ 1017 ms | (WIP)",
+        "after": "[gopurs-js-uri](https://github.com/0x000000000000000000001/gopurs-js-uri)  | ~ 4886 ms | ~ 1017 ms | ~ 577 ms"
+      },
+      {
+        "line": 357,
+        "before": "[gopurs-lazy](https://github.com/0x000000000000000000001/gopurs-lazy)  | ~ 3311 ms | ~ 839 ms | (WIP)",
+        "after": "[gopurs-lazy](https://github.com/0x000000000000000000001/gopurs-lazy)  | ~ 3311 ms | ~ 839 ms | ~ 473 ms"
+      },
+      {
+        "line": 358,
+        "before": "[gopurs-node-buffer](https://github.com/0x000000000000000000001/gopurs-node-buffer)  | ~ 7491 ms | ~ 1935 ms | (WIP)",
+        "after": "[gopurs-node-buffer](https://github.com/0x000000000000000000001/gopurs-node-buffer)  | ~ 7491 ms | ~ 1935 ms | ~ 1188 ms"
+      },
+      {
+        "line": 359,
+        "before": "[gopurs-node-event-emitter](https://github.com/0x000000000000000000001/gopurs-node-event-emitter)  | ~ 10309 ms | ~ 4105 ms | (WIP)",
+        "after": "[gopurs-node-event-emitter](https://github.com/0x000000000000000000001/gopurs-node-event-emitter)  | ~ 10309 ms | ~ 4105 ms | ~ 2379 ms"
+      },
+      {
+        "line": 360,
+        "before": "[gopurs-node-fs](https://github.com/0x000000000000000000001/gopurs-node-fs)  | ~ 9220 ms | ~ 2654 ms | (WIP)",
+        "after": "[gopurs-node-fs](https://github.com/0x000000000000000000001/gopurs-node-fs)  | ~ 9220 ms | ~ 2654 ms | ~ 1711 ms"
+      },
+      {
+        "line": 361,
+        "before": "[gopurs-node-http](https://github.com/0x000000000000000000001/gopurs-node-http)  | ~ 10563 ms | ~ 2642 ms | (WIP)",
+        "after": "[gopurs-node-http](https://github.com/0x000000000000000000001/gopurs-node-http)  | ~ 10563 ms | ~ 2642 ms | ~ 1728 ms"
+      },
+      {
+        "line": 362,
+        "before": "[gopurs-node-net](https://github.com/0x000000000000000000001/gopurs-node-net)  | ~ 9543 ms | ~ 2737 ms | (WIP)",
+        "after": "[gopurs-node-net](https://github.com/0x000000000000000000001/gopurs-node-net)  | ~ 9543 ms | ~ 2737 ms | ~ 1684 ms"
+      },
+      {
+        "line": 363,
+        "before": "[gopurs-node-path](https://github.com/0x000000000000000000001/gopurs-node-path)  | ~ 2025 ms | ~ 238 ms | (WIP)",
+        "after": "[gopurs-node-path](https://github.com/0x000000000000000000001/gopurs-node-path)  | ~ 2025 ms | ~ 238 ms | ~ 122 ms"
+      },
+      {
+        "line": 364,
+        "before": "[gopurs-node-process](https://github.com/0x000000000000000000001/gopurs-node-process)  | ~ 8680 ms | ~ 2450 ms | (WIP)",
+        "after": "[gopurs-node-process](https://github.com/0x000000000000000000001/gopurs-node-process)  | ~ 8680 ms | ~ 2450 ms | ~ 1591 ms"
+      },
+      {
+        "line": 365,
+        "before": "[gopurs-node-streams](https://github.com/0x000000000000000000001/gopurs-node-streams)  | ~ 11545 ms | ~ 4547 ms | (WIP)",
+        "after": "[gopurs-node-streams](https://github.com/0x000000000000000000001/gopurs-node-streams)  | ~ 11545 ms | ~ 4547 ms | ~ 2737 ms"
+      },
+      {
+        "line": 366,
+        "before": "[gopurs-now](https://github.com/0x000000000000000000001/gopurs-now)  | ~ 9277 ms | ~ 2396 ms | (WIP)",
+        "after": "[gopurs-now](https://github.com/0x000000000000000000001/gopurs-now)  | ~ 9277 ms | ~ 2396 ms | ~ 1619 ms"
+      },
+      {
+        "line": 367,
+        "before": "[gopurs-nullable](https://github.com/0x000000000000000000001/gopurs-nullable)  | ~ 6741 ms | ~ 1726 ms | (WIP)",
+        "after": "[gopurs-nullable](https://github.com/0x000000000000000000001/gopurs-nullable)  | ~ 6741 ms | ~ 1726 ms | ~ 1095 ms"
+      },
+      {
+        "line": 368,
+        "before": "[gopurs-numbers](https://github.com/0x000000000000000000001/gopurs-numbers)  | ~ 4989 ms | ~ 1388 ms | (WIP)",
+        "after": "[gopurs-numbers](https://github.com/0x000000000000000000001/gopurs-numbers)  | ~ 4989 ms | ~ 1388 ms | ~ 716 ms"
+      },
+      {
+        "line": 369,
+        "before": "[gopurs-ordered-collections](https://github.com/0x000000000000000000001/gopurs-ordered-collections)  | ~ 8361 ms | ~ 2892 ms | (WIP)",
+        "after": "[gopurs-ordered-collections](https://github.com/0x000000000000000000001/gopurs-ordered-collections)  | ~ 8361 ms | ~ 2892 ms | ~ 2040 ms"
+      },
+      {
+        "line": 370,
+        "before": "[gopurs-partial](https://github.com/0x000000000000000000001/gopurs-partial)  | ~ 4802 ms | ~ 999 ms | (WIP)",
+        "after": "[gopurs-partial](https://github.com/0x000000000000000000001/gopurs-partial)  | ~ 4802 ms | ~ 999 ms | ~ 568 ms"
+      },
+      {
+        "line": 371,
+        "before": "[gopurs-prelude](https://github.com/0x000000000000000000001/gopurs-prelude)  | ~ 5329 ms | ~ 1376 ms | (WIP)",
+        "after": "[gopurs-prelude](https://github.com/0x000000000000000000001/gopurs-prelude)  | ~ 5329 ms | ~ 1376 ms | failed (division by zero)"
+      },
+      {
+        "line": 372,
+        "before": "[gopurs-random](https://github.com/0x000000000000000000001/gopurs-random)  | ~ 4776 ms | ~ 1189 ms | (WIP)",
+        "after": "[gopurs-random](https://github.com/0x000000000000000000001/gopurs-random)  | ~ 4776 ms | ~ 1189 ms | ~ 576 ms"
+      },
+      {
+        "line": 373,
+        "before": "[gopurs-record](https://github.com/0x000000000000000000001/gopurs-record)  | ~ 5003 ms | ~ 1112 ms | (WIP)",
+        "after": "[gopurs-record](https://github.com/0x000000000000000000001/gopurs-record)  | ~ 5003 ms | ~ 1112 ms | ~ 591 ms"
+      },
+      {
+        "line": 374,
+        "before": "[gopurs-refs](https://github.com/0x000000000000000000001/gopurs-refs)  | ~ 4887 ms | ~ 1137 ms | (WIP)",
+        "after": "[gopurs-refs](https://github.com/0x000000000000000000001/gopurs-refs)  | ~ 4887 ms | ~ 1137 ms | ~ 581 ms"
+      },
+      {
+        "line": 375,
+        "before": "[gopurs-run](https://github.com/0x000000000000000000001/gopurs-run)  | ~ 8056 ms | ~ 2378 ms | (WIP)",
+        "after": "[gopurs-run](https://github.com/0x000000000000000000001/gopurs-run)  | ~ 8056 ms | ~ 2378 ms | ~ 1547 ms"
+      },
+      {
+        "line": 376,
+        "before": "[gopurs-spec](https://github.com/0x000000000000000000001/gopurs-spec)  | ~ 14836 ms | ~ 6819 ms | (WIP)",
+        "after": "[gopurs-spec](https://github.com/0x000000000000000000001/gopurs-spec)  | ~ 14836 ms | ~ 6819 ms | ~ 3807 ms"
+      },
+      {
+        "line": 377,
+        "before": "[gopurs-st](https://github.com/0x000000000000000000001/gopurs-st)  | ~ 4876 ms | ~ 1068 ms | (WIP)",
+        "after": "[gopurs-st](https://github.com/0x000000000000000000001/gopurs-st)  | ~ 4876 ms | ~ 1068 ms | ~ 583 ms"
+      },
+      {
+        "line": 378,
+        "before": "[gopurs-strings](https://github.com/0x000000000000000000001/gopurs-strings)  | ~ 6421 ms | ~ 1933 ms | (WIP)",
+        "after": "[gopurs-strings](https://github.com/0x000000000000000000001/gopurs-strings)  | ~ 6421 ms | ~ 1933 ms | output mismatch"
+      },
+      {
+        "line": 379,
+        "before": "[gopurs-strings-extra](https://github.com/0x000000000000000000001/gopurs-strings-extra)  | ~ 6677 ms | ~ 3330 ms | (WIP)",
+        "after": "[gopurs-strings-extra](https://github.com/0x000000000000000000001/gopurs-strings-extra)  | ~ 6677 ms | ~ 3330 ms | ~ 2008 ms"
+      },
+      {
+        "line": 380,
+        "before": "[gopurs-unfoldable](https://github.com/0x000000000000000000001/gopurs-unfoldable)  | ~ 4891 ms | ~ 1070 ms | (WIP)",
+        "after": "[gopurs-unfoldable](https://github.com/0x000000000000000000001/gopurs-unfoldable)  | ~ 4891 ms | ~ 1070 ms | ~ 599 ms"
+      },
+      {
+        "line": 381,
+        "before": "[gopurs-unsafe-coerce](https://github.com/0x000000000000000000001/gopurs-unsafe-coerce)  | ~ 4902 ms | ~ 1015 ms | (WIP)",
+        "after": "[gopurs-unsafe-coerce](https://github.com/0x000000000000000000001/gopurs-unsafe-coerce)  | ~ 4902 ms | ~ 1015 ms | ~ 578 ms"
+      },
+      {
+        "line": 382,
+        "before": "[gopurs-uuid](https://github.com/0x000000000000000000001/gopurs-uuid)  | ~ 10000 ms | ~ 3916 ms | (WIP)",
+        "after": "[gopurs-uuid](https://github.com/0x000000000000000000001/gopurs-uuid)  | ~ 10000 ms | ~ 3916 ms | ~ 2338 ms"
+      },
+      {
+        "line": 383,
+        "before": "[gopurs-variant](https://github.com/0x000000000000000000001/gopurs-variant)  | ~ 5431 ms | ~ 1806 ms | (WIP)",
+        "after": "[gopurs-variant](https://github.com/0x000000000000000000001/gopurs-variant)  | ~ 5431 ms | ~ 1806 ms | ~ 949 ms"
+      },
+      {
+        "line": 384,
+        "before": "[gopurs-yoga-json](https://github.com/0x000000000000000000001/gopurs-yoga-json)  | ~ 18107 ms | ~ 9760 ms | (WIP)",
+        "after": "[gopurs-yoga-json](https://github.com/0x000000000000000000001/gopurs-yoga-json)  | ~ 18107 ms | ~ 9760 ms | ~ 5402 ms"
+      },
+      {
+        "line": 385,
+        "before": "**Total gopurs-*** | ~ 329.11 s | ~ 105.34 s <br>(/JS = 0.3x) | (WIP)",
+        "after": "**Total gopurs-*** | ~ 329.11 s | ~ 105.34 s <br>(/JS = 0.3x) | ~ 58.66 s (46/50)"
+      }
+    ]
+  }
+}
