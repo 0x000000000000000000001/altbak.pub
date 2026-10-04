@@ -31,13 +31,21 @@ const sortedLines = text => text.trimEnd().split(/\r?\n/).sort();
 for (const path of ['qualify-hosts.mjs', 'common.mjs']) copy(join(dirname(fileURLToPath(import.meta.url)), path), join(directory, 'harness', path));
 save();
 try {
-  assert.equal(hash(readFileSync(join(bootstrap, 'target/release/purust_output'))), result.executables['gopurs-rust'].sha256);
+  const pgoPath = join(bootstrap, 'pgo-profile.json');
+  const pgo = existsSync(pgoPath) ? JSON.parse(readFileSync(pgoPath)) : null;
+  if (pgo) {
+    assert.equal(pgo.status, 'passed');
+    assert.equal(pgo.binary.sha256, result.executables['gopurs-rust'].sha256);
+  }
+  assert.equal(hash(readFileSync(resolve(bootstrap, pgo?.binary.path ?? 'target/release/purust_output'))), result.executables['gopurs-rust'].sha256);
   assert.equal(readFileSync(join(bootstrap, 'smoke-go-run.log'), 'utf8').trim(), 'Done');
   result.bootstrap = { directory: bootstrap, frontend,
     binary_sha256: result.executables['gopurs-rust'].sha256,
     native_generation: generatedRust(join(bootstrap, 'rust')),
     purust_native_sha256: hash(readFileSync(join(purust, 'bin/purust-native'))),
     purust_js_sha256: hash(readFileSync(join(purust, 'bin/purust.js'))),
+    pgo: pgo ? { path: pgoPath, sha256: hash(readFileSync(pgoPath)), binary_sha256: pgo.binary.sha256,
+      profile_sha256: pgo.profile.merged.sha256, training_sha256: pgo.training.sha256 } : null,
   };
   const javascript = join(directory, 'bootstrap-js');
   check('bootstrap-js', join(purust, 'bin/purust'), ['--source', join(bootstrap, 'output'), '--out', javascript,

@@ -59,15 +59,25 @@ if (mode === 'init') {
   const out = join(archive, 'candidates', label); assert(!existsSync(out)); mkdirSync(out, { recursive: true });
   copy(fileURLToPath(import.meta.url), join(out, 'build-harness.mjs'));
   copy(fileURLToPath(new URL('./cargo-profile.mjs', import.meta.url)), join(out, 'cargo-profile.mjs'));
-  const state = sources(); snapshot(out, state);
+  const inputRoots = process.env.GOPURS_EXPERIMENT_SOURCE_ROOTS
+    ? JSON.parse(process.env.GOPURS_EXPERIMENT_SOURCE_ROOTS).map(path => resolve(path)) : [root, pbo];
+  assert.equal(inputRoots.length, 2);
+  const state = sources(inputRoots); snapshot(out, state);
   for (const i of [0, 1]) {
     const destination = join(work, 'sources', String(i));
     rmSync(destination, { recursive: true, force: true });
     cpSync(join(out, 'sources', String(i)), destination, { recursive: true });
   }
   if (!existsSync(join(work, 'src'))) symlinkSync(join(work, 'sources/0/src'), join(work, 'src'), 'dir');
-  writeFileSync(join(work, 'spago.yaml'), nativeWorkspaceConfig(root, { runtime: 'rust', purust })
-    .replace(JSON.stringify(pbo), JSON.stringify(join(work, 'sources/1'))));
+  let workspaceConfig = nativeWorkspaceConfig(root, { runtime: 'rust', purust });
+  for (const [from, to] of Object.entries(JSON.parse(process.env.GOPURS_EXPERIMENT_RUNTIME_OVERRIDES ?? '{}'))) {
+    const original = 'path: ' + JSON.stringify(resolve(from));
+    assert(workspaceConfig.includes(original), 'Unknown runtime override: ' + from);
+    workspaceConfig = workspaceConfig.replace(original, 'path: ' + JSON.stringify(resolve(to)));
+  }
+  workspaceConfig = workspaceConfig.replace(JSON.stringify(pbo), JSON.stringify(join(work, 'sources/1')));
+  writeFileSync(join(work, 'spago.yaml'), workspaceConfig);
+  writeFileSync(join(out, 'spago.yaml'), workspaceConfig);
   const result = { status: 'pending', label, started_at: new Date().toISOString(), sources: state, commands: [] };
   const save = () => writeJson(join(out, 'build.json'), result);
   const command = (name, cmd, args, cwd = work) => {
@@ -79,8 +89,23 @@ if (mode === 'init') {
     command('tast', 'spago', ['build']);
     result.tast = verifyTypedOutput(join(work, 'output'), frontend); save();
     const rust = join(work, 'rust'), generated = join(out, 'rust');
-    command('generate', join(archive, 'bootstrap/purust-native'), ['--source', join(work, 'output'),
-      '--out', generated, '--main', 'Main', '--threaded']);
+    const generatorSource = resolve(process.env.GOPURS_EXPERIMENT_GENERATOR ?? join(archive, 'bootstrap/purust-native'));
+    const javascriptGenerator = generatorSource.endsWith('.js');
+    const generator = join(out, javascriptGenerator ? 'generator.js' : 'generator');
+    copy(generatorSource, generator); chmodSync(generator, 0o755);
+    result.generator = { origin: generatorSource, path: generator, sha256: hash(readFileSync(generator)) };
+    const runtimeInputs = [...workspaceConfig.matchAll(/^      path: (.+)$/gm)]
+      .map(match => JSON.parse(match[1])).filter(path => path !== join(work, 'sources/1'));
+    const runtimeState = sources(runtimeInputs);
+    snapshot(join(out, 'runtime'), runtimeState);
+    result.runtime_sources = runtimeState;
+    result.purust_sources = manifest(join(purust, 'src'));
+    for (const file of result.purust_sources) copy(join(purust, 'src', file.path), join(out, 'purust-sources', file.path));
+    save();
+    command('generate', javascriptGenerator ? process.execPath : generator,
+      [...(javascriptGenerator ? ['--stack-size=65536', generator] : []), '--source', join(work, 'output'),
+        '--out', generated, '--main', 'Main', '--threaded']);
+    assert.deepEqual(sources(runtimeInputs), runtimeState, 'Runtime source changed during generation');
     copy(join(root, 'tools/ffi-gen/rust-build.rs'), join(generated, 'Purs_Gopurs_FfiSupport/build.rs'));
     result.generated = manifest(generated, path => /\.(rs|toml)$/.test(path));
     const next = new Set(result.generated.map(file => file.path));
