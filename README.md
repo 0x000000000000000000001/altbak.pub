@@ -385,8 +385,6 @@ Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS bin
 **Total gopurs-*** | ~ 285.27 s | ~ 64.55 s <br>(/JS = 0.23x) | ~ 51.79 s <br>(/JS = 0.18x)
 **Total** | ~ 341.04 s | ~ 97.58 s <br>(/JS = 0.29x) | ~ 74.19 s <br>(/JS = 0.22x)
 
-> Refreshed on **5 October 2026** after the Rust-host optimization campaign. Median of five backend-only runs per host after one warmup; totals sum project medians. All hosts generate byte-identical Go. [Protocol, qualification and results](docs/benchmark-results/2026-10-05-gopurs-rust-saturation.md).
-
 #### ... to Rust
 
 Benchmark   | [purust](https://github.com/0x000000000000000000001/purust) JS binary (WIP) | [purust](https://github.com/0x000000000000000000001/purust) Rust binary (WIP)
