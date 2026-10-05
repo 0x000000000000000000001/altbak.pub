@@ -1,5 +1,6 @@
 """Attribute sampled collection/copy costs to their nearest application caller."""
 import collections
+import gzip
 import json
 from pathlib import Path
 import re
@@ -35,10 +36,11 @@ def finish():
             operation = re.sub(r'::h[a-f0-9]+$', '', frames[first]).split('::_$u7b$$u7b$closure')[0]
             operations[caller + ' -> ' + operation] += count
 
-for line in source.read_text().splitlines():
+profile = gzip.open(source, 'rt') if source.suffix == '.gz' else source.open()
+for line in profile:
     if line.startswith('Total number in stack'):
         break
-    match = re.match(r'^([ +!:|]*)(\d+) (.+)$', line)
+    match = re.match(r'^([ +!:|]*)(\d+) (.+)$', line.rstrip('\n'))
     if not match:
         continue
     prefix, count, name = match.groups()
@@ -50,5 +52,6 @@ for line in source.read_text().splitlines():
     stack.append([depth, count, name, 0])
 while stack:
     finish()
+profile.close()
 print(json.dumps({**{name: values.most_common(30) for name, values in callers.items()},
                   'collection operations': operations.most_common(50)}, indent=2))

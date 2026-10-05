@@ -331,59 +331,61 @@ Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 47830
 
 Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS binary (WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Go binary (WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Rust binary (WIP)
 ----------- | --------- | ------------------ | ---------------------
-[b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 62.481 s | ~ 39.565 s <br>(/JS = 0.63x) | ~ 31.018 s <br>(/JS = 0.50x)
-[gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 7520 ms | ~ 1940 ms | ~ 1528 ms
-[gopurs-argonaut-core](https://github.com/0x000000000000000000001/gopurs-argonaut-core)  | ~ 7702 ms | ~ 1518 ms | ~ 1264 ms
-[gopurs-arrays](https://github.com/0x000000000000000000001/gopurs-arrays)  | ~ 6732 ms | ~ 3393 ms | ~ 3373 ms
-[gopurs-assert](https://github.com/0x000000000000000000001/gopurs-assert)  | ~ 570 ms | ~ 166 ms | ~ 115 ms
-[gopurs-avar](https://github.com/0x000000000000000000001/gopurs-avar)  | ~ 7171 ms | ~ 1628 ms | ~ 1291 ms
-[gopurs-catenable-lists](https://github.com/0x000000000000000000001/gopurs-catenable-lists)  | ~ 4474 ms | ~ 1182 ms | ~ 898 ms
-[gopurs-console](https://github.com/0x000000000000000000001/gopurs-console)  | ~ 4648 ms | ~ 788 ms | ~ 600 ms
-[gopurs-datetime](https://github.com/0x000000000000000000001/gopurs-datetime)  | ~ 6678 ms | ~ 1788 ms | ~ 1469 ms
-[gopurs-effect](https://github.com/0x000000000000000000001/gopurs-effect)  | ~ 2012 ms | ~ 171 ms | ~ 120 ms
-[gopurs-enums](https://github.com/0x000000000000000000001/gopurs-enums)  | ~ 5193 ms | ~ 1052 ms | ~ 823 ms
-[gopurs-exceptions](https://github.com/0x000000000000000000001/gopurs-exceptions)  | ~ 2167 ms | ~ 257 ms | ~ 184 ms
-[gopurs-foldable-traversable](https://github.com/0x000000000000000000001/gopurs-foldable-traversable)  | ~ 5114 ms | ~ 1042 ms | ~ 862 ms
-[gopurs-foreign](https://github.com/0x000000000000000000001/gopurs-foreign)  | ~ 5265 ms | ~ 1330 ms | ~ 1068 ms
-[gopurs-foreign-object](https://github.com/0x000000000000000000001/gopurs-foreign-object)  | ~ 7502 ms | ~ 1785 ms | ~ 1538 ms
-[gopurs-free](https://github.com/0x000000000000000000001/gopurs-free)  | ~ 4887 ms | ~ 1106 ms | ~ 910 ms
-[gopurs-functions](https://github.com/0x000000000000000000001/gopurs-functions)  | ~ 1944 ms | ~ 187 ms | ~ 127 ms
-[gopurs-integers](https://github.com/0x000000000000000000001/gopurs-integers)  | ~ 4774 ms | ~ 947 ms | ~ 787 ms
-[gopurs-js-bigints](https://github.com/0x000000000000000000001/gopurs-js-bigints)  | ~ 2113 ms | ~ 200 ms | ~ 150 ms
-[gopurs-js-date](https://github.com/0x000000000000000000001/gopurs-js-date)  | ~ 7410 ms | ~ 1581 ms | ~ 1285 ms
-[gopurs-js-promise](https://github.com/0x000000000000000000001/gopurs-js-promise)  | ~ 3517 ms | ~ 573 ms | ~ 445 ms
-[gopurs-js-promise-aff](https://github.com/0x000000000000000000001/gopurs-js-promise-aff)  | ~ 7645 ms | ~ 1630 ms | ~ 1344 ms
-[gopurs-js-uri](https://github.com/0x000000000000000000001/gopurs-js-uri)  | ~ 4573 ms | ~ 752 ms | ~ 593 ms
-[gopurs-lazy](https://github.com/0x000000000000000000001/gopurs-lazy)  | ~ 3163 ms | ~ 551 ms | ~ 430 ms
-[gopurs-node-buffer](https://github.com/0x000000000000000000001/gopurs-node-buffer)  | ~ 6858 ms | ~ 1351 ms | ~ 1120 ms
-[gopurs-node-event-emitter](https://github.com/0x000000000000000000001/gopurs-node-event-emitter)  | ~ 9520 ms | ~ 2849 ms | ~ 2468 ms
-[gopurs-node-fs](https://github.com/0x000000000000000000001/gopurs-node-fs)  | ~ 8837 ms | ~ 1915 ms | ~ 1585 ms
-[gopurs-node-http](https://github.com/0x000000000000000000001/gopurs-node-http)  | ~ 9943 ms | ~ 1939 ms | ~ 1626 ms
-[gopurs-node-net](https://github.com/0x000000000000000000001/gopurs-node-net)  | ~ 9112 ms | ~ 1899 ms | ~ 1576 ms
-[gopurs-node-path](https://github.com/0x000000000000000000001/gopurs-node-path)  | ~ 1984 ms | ~ 169 ms | ~ 120 ms
-[gopurs-node-process](https://github.com/0x000000000000000000001/gopurs-node-process)  | ~ 8308 ms | ~ 1817 ms | ~ 1499 ms
-[gopurs-node-streams](https://github.com/0x000000000000000000001/gopurs-node-streams)  | ~ 10387 ms | ~ 3167 ms | ~ 2781 ms
-[gopurs-now](https://github.com/0x000000000000000000001/gopurs-now)  | ~ 8384 ms | ~ 1822 ms | ~ 1515 ms
-[gopurs-nullable](https://github.com/0x000000000000000000001/gopurs-nullable)  | ~ 6458 ms | ~ 1264 ms | ~ 1040 ms
-[gopurs-numbers](https://github.com/0x000000000000000000001/gopurs-numbers)  | ~ 4745 ms | ~ 923 ms | ~ 731 ms
-[gopurs-ordered-collections](https://github.com/0x000000000000000000001/gopurs-ordered-collections)  | ~ 7625 ms | ~ 2173 ms | ~ 1937 ms
-[gopurs-partial](https://github.com/0x000000000000000000001/gopurs-partial)  | ~ 4520 ms | ~ 750 ms | ~ 589 ms
-[gopurs-prelude](https://github.com/0x000000000000000000001/gopurs-prelude)  | ~ 5021 ms | ~ 974 ms | ~ 750 ms
-[gopurs-random](https://github.com/0x000000000000000000001/gopurs-random)  | ~ 4636 ms | ~ 760 ms | ~ 590 ms
-[gopurs-record](https://github.com/0x000000000000000000001/gopurs-record)  | ~ 4700 ms | ~ 785 ms | ~ 615 ms
-[gopurs-refs](https://github.com/0x000000000000000000001/gopurs-refs)  | ~ 4554 ms | ~ 759 ms | ~ 597 ms
-[gopurs-run](https://github.com/0x000000000000000000001/gopurs-run)  | ~ 7720 ms | ~ 1776 ms | ~ 1440 ms
-[gopurs-spec](https://github.com/0x000000000000000000001/gopurs-spec)  | ~ 13361 ms | ~ 4434 ms | ~ 3837 ms
-[gopurs-st](https://github.com/0x000000000000000000001/gopurs-st)  | ~ 4574 ms | ~ 772 ms | ~ 607 ms
-[gopurs-strings](https://github.com/0x000000000000000000001/gopurs-strings)  | ~ 6078 ms | ~ 1447 ms | ~ 1274 ms
-[gopurs-strings-extra](https://github.com/0x000000000000000000001/gopurs-strings-extra)  | ~ 6042 ms | ~ 2756 ms | ~ 1943 ms
-[gopurs-unfoldable](https://github.com/0x000000000000000000001/gopurs-unfoldable)  | ~ 4561 ms | ~ 782 ms | ~ 610 ms
-[gopurs-unsafe-coerce](https://github.com/0x000000000000000000001/gopurs-unsafe-coerce)  | ~ 4539 ms | ~ 757 ms | ~ 589 ms
-[gopurs-uuid](https://github.com/0x000000000000000000001/gopurs-uuid)  | ~ 9044 ms | ~ 2785 ms | ~ 2422 ms
-[gopurs-variant](https://github.com/0x000000000000000000001/gopurs-variant)  | ~ 4937 ms | ~ 1221 ms | ~ 902 ms
-[gopurs-yoga-json](https://github.com/0x000000000000000000001/gopurs-yoga-json)  | ~ 15562 ms | ~ 6403 ms | ~ 5233 ms
-**Total gopurs-*** | ~ 304.78 s | ~ 74.02 s <br>(/JS = 0.24x) | ~ 61.20 s <br>(/JS = 0.20x)
-**Total** | ~ 367.27 s | ~ 113.58 s <br>(/JS = 0.31x) | ~ 92.22 s <br>(/JS = 0.25x)
+[b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 55.775 s | ~ 33.037 s <br>(/JS = 0.59x) | ~ 22.404 s <br>(/JS = 0.40x)
+[gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff)  | ~ 6716 ms | ~ 1581 ms | ~ 1253 ms
+[gopurs-argonaut-core](https://github.com/0x000000000000000000001/gopurs-argonaut-core)  | ~ 7096 ms | ~ 1375 ms | ~ 1113 ms
+[gopurs-arrays](https://github.com/0x000000000000000000001/gopurs-arrays)  | ~ 5533 ms | ~ 1624 ms | ~ 1281 ms
+[gopurs-assert](https://github.com/0x000000000000000000001/gopurs-assert)  | ~ 537 ms | ~ 150 ms | ~ 106 ms
+[gopurs-avar](https://github.com/0x000000000000000000001/gopurs-avar)  | ~ 6552 ms | ~ 1382 ms | ~ 1124 ms
+[gopurs-catenable-lists](https://github.com/0x000000000000000000001/gopurs-catenable-lists)  | ~ 4105 ms | ~ 1025 ms | ~ 791 ms
+[gopurs-console](https://github.com/0x000000000000000000001/gopurs-console)  | ~ 4345 ms | ~ 707 ms | ~ 554 ms
+[gopurs-datetime](https://github.com/0x000000000000000000001/gopurs-datetime)  | ~ 6113 ms | ~ 1449 ms | ~ 1127 ms
+[gopurs-effect](https://github.com/0x000000000000000000001/gopurs-effect)  | ~ 1880 ms | ~ 158 ms | ~ 113 ms
+[gopurs-enums](https://github.com/0x000000000000000000001/gopurs-enums)  | ~ 4800 ms | ~ 922 ms | ~ 732 ms
+[gopurs-exceptions](https://github.com/0x000000000000000000001/gopurs-exceptions)  | ~ 2032 ms | ~ 241 ms | ~ 173 ms
+[gopurs-foldable-traversable](https://github.com/0x000000000000000000001/gopurs-foldable-traversable)  | ~ 4683 ms | ~ 872 ms | ~ 694 ms
+[gopurs-foreign](https://github.com/0x000000000000000000001/gopurs-foreign)  | ~ 4814 ms | ~ 1159 ms | ~ 949 ms
+[gopurs-foreign-object](https://github.com/0x000000000000000000001/gopurs-foreign-object)  | ~ 6914 ms | ~ 1488 ms | ~ 1227 ms
+[gopurs-free](https://github.com/0x000000000000000000001/gopurs-free)  | ~ 4695 ms | ~ 1035 ms | ~ 830 ms
+[gopurs-functions](https://github.com/0x000000000000000000001/gopurs-functions)  | ~ 1895 ms | ~ 183 ms | ~ 124 ms
+[gopurs-integers](https://github.com/0x000000000000000000001/gopurs-integers)  | ~ 4451 ms | ~ 823 ms | ~ 642 ms
+[gopurs-js-bigints](https://github.com/0x000000000000000000001/gopurs-js-bigints)  | ~ 2047 ms | ~ 195 ms | ~ 144 ms
+[gopurs-js-date](https://github.com/0x000000000000000000001/gopurs-js-date)  | ~ 7051 ms | ~ 1450 ms | ~ 1166 ms
+[gopurs-js-promise](https://github.com/0x000000000000000000001/gopurs-js-promise)  | ~ 3431 ms | ~ 542 ms | ~ 427 ms
+[gopurs-js-promise-aff](https://github.com/0x000000000000000000001/gopurs-js-promise-aff)  | ~ 7188 ms | ~ 1498 ms | ~ 1201 ms
+[gopurs-js-uri](https://github.com/0x000000000000000000001/gopurs-js-uri)  | ~ 4368 ms | ~ 710 ms | ~ 557 ms
+[gopurs-lazy](https://github.com/0x000000000000000000001/gopurs-lazy)  | ~ 3031 ms | ~ 523 ms | ~ 413 ms
+[gopurs-node-buffer](https://github.com/0x000000000000000000001/gopurs-node-buffer)  | ~ 6490 ms | ~ 1239 ms | ~ 1011 ms
+[gopurs-node-event-emitter](https://github.com/0x000000000000000000001/gopurs-node-event-emitter)  | ~ 9012 ms | ~ 2589 ms | ~ 2204 ms
+[gopurs-node-fs](https://github.com/0x000000000000000000001/gopurs-node-fs)  | ~ 8371 ms | ~ 1731 ms | ~ 1406 ms
+[gopurs-node-http](https://github.com/0x000000000000000000001/gopurs-node-http)  | ~ 9304 ms | ~ 1768 ms | ~ 1460 ms
+[gopurs-node-net](https://github.com/0x000000000000000000001/gopurs-node-net)  | ~ 8542 ms | ~ 1722 ms | ~ 1396 ms
+[gopurs-node-path](https://github.com/0x000000000000000000001/gopurs-node-path)  | ~ 1881 ms | ~ 161 ms | ~ 113 ms
+[gopurs-node-process](https://github.com/0x000000000000000000001/gopurs-node-process)  | ~ 7713 ms | ~ 1649 ms | ~ 1330 ms
+[gopurs-node-streams](https://github.com/0x000000000000000000001/gopurs-node-streams)  | ~ 9772 ms | ~ 2784 ms | ~ 2401 ms
+[gopurs-now](https://github.com/0x000000000000000000001/gopurs-now)  | ~ 7796 ms | ~ 1652 ms | ~ 1340 ms
+[gopurs-nullable](https://github.com/0x000000000000000000001/gopurs-nullable)  | ~ 6102 ms | ~ 1155 ms | ~ 951 ms
+[gopurs-numbers](https://github.com/0x000000000000000000001/gopurs-numbers)  | ~ 4457 ms | ~ 837 ms | ~ 656 ms
+[gopurs-ordered-collections](https://github.com/0x000000000000000000001/gopurs-ordered-collections)  | ~ 7054 ms | ~ 1720 ms | ~ 1346 ms
+[gopurs-partial](https://github.com/0x000000000000000000001/gopurs-partial)  | ~ 4320 ms | ~ 706 ms | ~ 552 ms
+[gopurs-prelude](https://github.com/0x000000000000000000001/gopurs-prelude)  | ~ 4742 ms | ~ 860 ms | ~ 675 ms
+[gopurs-random](https://github.com/0x000000000000000000001/gopurs-random)  | ~ 4388 ms | ~ 710 ms | ~ 556 ms
+[gopurs-record](https://github.com/0x000000000000000000001/gopurs-record)  | ~ 4525 ms | ~ 732 ms | ~ 573 ms
+[gopurs-refs](https://github.com/0x000000000000000000001/gopurs-refs)  | ~ 4360 ms | ~ 710 ms | ~ 558 ms
+[gopurs-run](https://github.com/0x000000000000000000001/gopurs-run)  | ~ 7198 ms | ~ 1621 ms | ~ 1300 ms
+[gopurs-spec](https://github.com/0x000000000000000000001/gopurs-spec)  | ~ 12510 ms | ~ 3826 ms | ~ 3269 ms
+[gopurs-st](https://github.com/0x000000000000000000001/gopurs-st)  | ~ 4352 ms | ~ 717 ms | ~ 564 ms
+[gopurs-strings](https://github.com/0x000000000000000000001/gopurs-strings)  | ~ 5555 ms | ~ 1090 ms | ~ 924 ms
+[gopurs-strings-extra](https://github.com/0x000000000000000000001/gopurs-strings-extra)  | ~ 5879 ms | ~ 2598 ms | ~ 1794 ms
+[gopurs-unfoldable](https://github.com/0x000000000000000000001/gopurs-unfoldable)  | ~ 4372 ms | ~ 725 ms | ~ 569 ms
+[gopurs-unsafe-coerce](https://github.com/0x000000000000000000001/gopurs-unsafe-coerce)  | ~ 4340 ms | ~ 710 ms | ~ 553 ms
+[gopurs-uuid](https://github.com/0x000000000000000000001/gopurs-uuid)  | ~ 8612 ms | ~ 2591 ms | ~ 2174 ms
+[gopurs-variant](https://github.com/0x000000000000000000001/gopurs-variant)  | ~ 4541 ms | ~ 1101 ms | ~ 811 ms
+[gopurs-yoga-json](https://github.com/0x000000000000000000001/gopurs-yoga-json)  | ~ 14801 ms | ~ 5751 ms | ~ 4558 ms
+**Total gopurs-*** | ~ 285.27 s | ~ 64.55 s <br>(/JS = 0.23x) | ~ 51.79 s <br>(/JS = 0.18x)
+**Total** | ~ 341.04 s | ~ 97.58 s <br>(/JS = 0.29x) | ~ 74.19 s <br>(/JS = 0.22x)
+
+> Refreshed on **5 October 2026** after the Rust-host optimization campaign. Median of five backend-only runs per host after one warmup; totals sum project medians. All hosts generate byte-identical Go. [Protocol, qualification and results](docs/benchmark-results/2026-10-05-gopurs-rust-saturation.md).
 
 #### ... to Rust
 
