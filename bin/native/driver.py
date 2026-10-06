@@ -212,9 +212,17 @@ def main():
     if args.clean:
         backend_name = 'gopurs' if args.language == 'go' else 'purust'
         backend_directory = ROOT.parent / backend_name / backend_name
-        commands.append(logged(['npm', 'run', 'build', '--silent'], backend_directory,
+        build_script = 'build'
+        if args.language == 'go':
+            # bin/gopurs defaults to native Go; rebuilding JS alone leaves its
+            # embedded runtime stale when the sibling Go FFI has changed.
+            if env.get('GOPURS_RUST') == '1':
+                build_script = 'build:rust'
+            elif env.get('GOPURS_JS') != '1':
+                build_script = 'build:native'
+        commands.append(logged(['npm', 'run', build_script, '--silent'], backend_directory,
                                logs / 'compiler-build.log', env))
-    # --clean changes the compiler bundle; record the compiler actually used below.
+    # --clean changes the compiler artifacts; record them after rebuilding.
     fingerprint = inputs(args.language)
     commands.append(logged(['spago', 'build'], directory, logs / 'spago.log', env))
     if args.language == 'go':

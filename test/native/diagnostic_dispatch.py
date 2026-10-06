@@ -221,6 +221,7 @@ class JsonSuites(unittest.TestCase):
             root, compiler, pbo = base / 'repo', base / 'gopurs/gopurs', base / 'pbo'
             sources = root / 'src/Test'
             paths = [compiler / 'bin/gopurs-native', pbo / 'src/Resolver.purs',
+                     base / 'purescript/.stack-work/dist/test/build/purs/purs',
                      compiler.parent / 'gopurs-argonaut-core/spago.yaml',
                      compiler.parent / 'gopurs-argonaut-core/src/Json.go']
             typed_sources = [sources / ('JsonTypedAst.' + ext) for ext in ['purs', 'go', 'js']]

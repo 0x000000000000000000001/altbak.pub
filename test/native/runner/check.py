@@ -113,32 +113,44 @@ class RunnerContracts(unittest.TestCase):
                 inputs.assert_not_called()
 
     def test_clean_rebuilds_compiler_before_snapshot_and_executable(self):
-        for language in ['go', 'rust']:
+        for language, selectors, script, host in [
+            ('go', {}, 'build:native', 'native'),
+            ('go', {'GOPURS_JS': '1'}, 'build', 'js'),
+            ('go', {'GOPURS_RUST': '1'}, 'build:rust', 'rust'),
+            ('rust', {}, 'build', 'js'),
+        ]:
             for clean in [False, True]:
-                with self.subTest(language=language, clean=clean):
-                    directory = self.root / f'{language}-{clean}'
+                with self.subTest(language=language, host=host, clean=clean):
+                    directory = self.root / f'{language}-{host}-{clean}'
                     driver.prepare(directory, language, self.args())
                     (directory / 'old-artifact').write_text('cached')
-                    version = ['old bundle']
+                    versions = {'js': 'old', 'native': 'old', 'rust': 'old'}
                     events = []
                     backend_name = 'gopurs' if language == 'go' else 'purust'
                     backend_directory = self.root.parent / backend_name / backend_name
+                    compiler_command = ['npm', 'run', script, '--silent']
 
                     def inputs(selected):
                         self.assertEqual(selected, language)
-                        events.append(('snapshot', version[0]))
-                        return {'compiler': version[0], 'source': 'unchanged'}
+                        events.append(('snapshot', versions[host]))
+                        return {'compiler': dict(versions), 'source': 'unchanged'}
 
                     def tools(command, working_directory, log, env):
                         command = list(map(str, command))
                         events.append(('command', command))
                         if command[0] == 'npm':
-                            self.assertEqual(command, ['npm', 'run', 'build', '--silent'])
                             self.assertEqual(working_directory, backend_directory)
                             self.assertEqual(log, (directory / 'logs/compiler-build.log').resolve())
                             self.assertFalse((directory / 'old-artifact').exists())
-                            version[0] = 'rebuilt bundle'
+                            # Rebuilding JS does not refresh either native executable.
+                            versions['js'] = 'rebuilt'
+                            if command[2] == 'build:native':
+                                versions['native'] = 'rebuilt'
+                            elif command[2] == 'build:rust':
+                                versions['rust'] = 'rebuilt'
                         elif Path(command[0]).name == 'gopurs':
+                            self.assertEqual(versions[host], 'rebuilt' if clean else 'old',
+                                             'the selected compiler still embeds the old runtime')
                             target = directory / 'output/main/main.go'
                             target.parent.mkdir(parents=True)
                             target.write_text('generated')
@@ -158,7 +170,8 @@ class RunnerContracts(unittest.TestCase):
                     argv = ['driver.py', language, '--build-only', '--build-dir', str(directory)]
                     if clean:
                         argv.append('--clean')
-                    with patch.object(sys, 'argv', argv), patch.object(driver, 'expected_cases'), \
+                    with patch.dict(os.environ, {'GOPURS_JS': '0', 'GOPURS_RUST': '0', **selectors}), \
+                         patch.object(sys, 'argv', argv), patch.object(driver, 'expected_cases'), \
                          patch.object(driver, 'inputs', side_effect=inputs), \
                          patch.object(driver, 'logged', side_effect=tools), \
                          patch.object(driver.subprocess, 'check_output', return_value='simulated toolchain'), \
@@ -167,12 +180,12 @@ class RunnerContracts(unittest.TestCase):
                         execute.assert_not_called()
                     manifest = json.loads((directory / 'manifest.json').read_text())
                     commands = manifest['commands']
-                    self.assertEqual(manifest['inputs']['compiler'], version[0])
+                    self.assertEqual(manifest['inputs']['compiler'], versions)
                     self.assertEqual(sum(command[0] == 'npm' for command in commands), int(clean))
                     self.assertEqual((directory / 'old-artifact').exists(), not clean)
                     if clean:
-                        self.assertEqual(events[0], ('command', ['npm', 'run', 'build', '--silent']))
-                        self.assertEqual(events[1], ('snapshot', 'rebuilt bundle'))
+                        self.assertEqual(events[0], ('command', compiler_command))
+                        self.assertEqual(events[1], ('snapshot', 'rebuilt'))
                         self.assertEqual(commands[1], ['spago', 'build'])
                     else:
                         self.assertEqual(commands[0], ['spago', 'build'])
@@ -190,13 +203,15 @@ class RunnerContracts(unittest.TestCase):
                     raise RuntimeError('compiler failed')
 
                 argv = ['driver.py', language, '--clean', '--build-only', '--build-dir', str(directory)]
-                with patch.object(sys, 'argv', argv), patch.object(driver, 'expected_cases'), \
+                with patch.dict(os.environ, {'GOPURS_JS': '0', 'GOPURS_RUST': '0'}), \
+                     patch.object(sys, 'argv', argv), patch.object(driver, 'expected_cases'), \
                      patch.object(driver, 'logged', side_effect=tools), \
                      patch.object(driver, 'inputs', return_value={}) as inputs, \
                      patch.object(driver, 'execute') as execute:
                     with self.assertRaisesRegex(RuntimeError, 'compiler failed'):
                         driver.main()
-                    self.assertEqual(commands, [['npm', 'run', 'build', '--silent']])
+                    script = 'build:native' if language == 'go' else 'build'
+                    self.assertEqual(commands, [['npm', 'run', script, '--silent']])
                     inputs.assert_not_called()
                     execute.assert_not_called()
                 self.assertFalse((directory / 'manifest.json').exists())

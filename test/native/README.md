@@ -12,7 +12,13 @@ Rust also checks that list filtering reverses the selected cells, Church numeral
 
 `bin/go/run --build-only`, `bin/go/run --ffi --build-only`, and `bin/go/run --fficc --build-only` build three independent workspaces under `run/bak/go/modes/`. Rust has the same options under `run/bak/rust/modes/`. Add `--build-dir PATH` to select another isolated workspace. Source copies, dependencies, generated output, logs and executable stay there; the repository's AppX, output symlink, Spago files and neighbouring compilers are untouched.
 
-Replace `--build-only` with `--run-only` to execute the corresponding saved binary. The manifest verifies mode, input source hashes, backend bundle, profile and executable SHA before execution; all output then passes the shared `bin/benchmark/validate.py` validator. A failed build invalidates its old manifest. `--clean` affects only that marked workspace. `--test MODULE [--expected VALUE]` generates an AppX inside its workspace. `--x` copies the extended `srx` suite there; the shared validator checks its output structure, not a core value oracle.
+Replace `--build-only` with `--run-only` to execute the corresponding saved binary. The manifest verifies mode, input source hashes, backend bundle, profile and executable SHA before execution; all output then passes the shared `bin/benchmark/validate.py` validator. A failed build invalidates its old manifest. Workspace cleanup with `--clean` affects only that marked workspace. `--test MODULE [--expected VALUE]` generates an AppX inside its workspace. `--x` copies the extended `srx` suite there; the shared validator checks its output structure, not a core value oracle.
+
+`--clean` also rebuilds the backend compiler before recording its artifacts.
+For Go, it follows `bin/gopurs` host selection: `build:native` by default,
+`build` with `GOPURS_JS=1`, and `build:rust` with `GOPURS_RUST=1`.
+This refreshes the embedded runtime along with the selected compiler when the
+sibling FFI libraries start using new runtime helpers.
 
 Rust release builds explicitly use `CARGO_PROFILE_RELEASE_OPT_LEVEL=3 CARGO_PROFILE_RELEASE_DEBUG=false` for all three columns. The generated Cargo manifest still declares O1 and debug=true; those were the former runner defaults. Setting these environment variables explicitly can reproduce that profile. The effective profile and toolchain are saved in `manifest.json`; O1 historical measurements are not interchangeable with new O3 results. No neighbouring compiler source is changed.
 
