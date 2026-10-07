@@ -1,7 +1,0 @@
-/build/
-/tast/
-/rust/
-/.purmeta/
-/*.purmeta
-/decoded-tast.json
-/pbo-trace.json

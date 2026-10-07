@@ -1,7 +1,0 @@
-*.dSYM/
-*-o1
-*-o3
-*-counts
-/lazy-generated
-/lazy-one-thunk
-/lazy-cached-unit

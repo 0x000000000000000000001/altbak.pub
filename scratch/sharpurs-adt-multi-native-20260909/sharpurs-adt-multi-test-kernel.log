@@ -1,5 +1,0 @@
-
-> sharpurs@0.1.0 test:kernel
-> node tests/int-kernel.mjs
-
-int-kernel: 695 checks passed

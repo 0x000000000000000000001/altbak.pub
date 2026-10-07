@@ -1,5 +1,0 @@
-{
-  "buildFresh": "Call_Test_RBTree___gopurs_owned_buildTree_0",
-  "insertFresh": "Call_Test_RBTree___gopurs_owned_insert_0",
-  "precondition": "buildFresh starts from nil; insertFresh accepts only exclusively constructed, unretained nodes"
-}
