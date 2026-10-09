@@ -187,6 +187,22 @@ accept `--build-only`. Source fidelity has separate native tests in `test/native
 `test/benchmark-batches.py` checks deferred execution, exact invocation counts,
 recomputation and rejection of incorrect results.
 
+### Java workspace output
+
+`bin/java/run` uses Javapurs' `output/java/` destination inside each isolated
+workspace (`run/bak/java/modes/<mode>/` by default). `javac` writes to
+`output/java/classes/`, and `jar` packages those classes into `benchmark.jar` at
+the workspace root. Shared preparation removes `output/` before each build,
+including previous Java sources and bytecode. `--run-only` executes the saved
+JAR after checking its manifest and SHA-256.
+
+For a targeted build and execution with the Fibonacci result oracle:
+
+```sh
+./bin/java/run --test Fib
+./bin/java/run --test Fib --run-only
+```
+
 ### PHP dependency preparation
 
 `bin/php/driver.py` prepares Composer dependencies after code generation and

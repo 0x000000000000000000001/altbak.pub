@@ -104,23 +104,19 @@ def main():
     entry=common.prepare(directory,'java',args)
     # Use the shared entry directly: Java aliases add no work and currently
     # expose a backend Supplier<Void>/Supplier<Object> cast incompatibility.
-    # Neither old Java classes nor old generated sources may survive a rebuild.
-    for name in ['java_output','classes']:
-        target=directory/name
-        if target.is_symlink(): target.unlink()
-        elif target.exists(): shutil.rmtree(target)
-        target.mkdir()
+    # prepare clears output, including the generated Java and compiled classes.
+    generated=directory/'output/java'
+    classes=generated/'classes'
     logs=directory/'logs'; logs.mkdir(exist_ok=True)
     commands=[common.logged(['spago','build'],directory,logs/'spago.log',env)]
     backend=ROOT.parent/'javapurs/javapurs/bin/javapurs'
     commands.append(common.logged([backend,'--main',entry],directory,logs/'backend.log',env))
-    generated=directory/'java_output'
     if not (generated/'MainRun.java').is_file():
-        raise RuntimeError('Javapurs did not generate java_output/MainRun.java')
-    commands.append(common.logged([profile['javac'],*profile['javac_flags'],'-d',directory/'classes',
+        raise RuntimeError('Javapurs did not generate output/java/MainRun.java')
+    commands.append(common.logged([profile['javac'],*profile['javac_flags'],'-d',classes,
                                     '-sourcepath',generated,generated/'MainRun.java'],directory,logs/'javac.log',env))
     commands.append(common.logged([profile['jar'],'cfe',directory/'benchmark.jar','MainRun',
-                                    '-C',directory/'classes','.'],directory,logs/'jar.log',env))
+                                    '-C',classes,'.'],directory,logs/'jar.log',env))
     if fingerprint!=inputs():
         raise RuntimeError('Sources changed during build; no manifest was accepted')
     toolchain=subprocess.check_output([profile['java'],'-version'],text=True,stderr=subprocess.STDOUT,env=env).strip()
