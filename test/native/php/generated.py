@@ -33,16 +33,16 @@ $calls = 0;
 $action = function() use (&$calls) { $calls++; return 7; };
 $batch = \Bench\majBench_measuremajBatch(3, 7, $action);
 if ($calls !== 0) throw new RuntimeException('constructing a batch executed its Effect');
-$elapsed = \Bench\phpurs_execute_effect($batch);
+$elapsed = \phpurs_execute_effect($batch);
 if (!is_float($elapsed) || !is_finite($elapsed) || $elapsed < 0 || $calls !== 3) {
     throw new RuntimeException('generated batch ABI: expected a float and exactly three action calls');
 }
 if ($GLOBALS['altbak_benchmark_result'] !== 7) throw new RuntimeException('batch result was not consumed');
-\Bench\phpurs_execute_effect($batch);
+\phpurs_execute_effect($batch);
 if ($calls !== 6) throw new RuntimeException('reusing a batch must execute it again');
 $partial = ($GLOBALS['Bench_measureBatch'])(2)(7)($action);
 if ($calls !== 6) throw new RuntimeException('partial application executed its Effect');
-$elapsed = \Bench\phpurs_execute_effect($partial);
+$elapsed = \phpurs_execute_effect($partial);
 if (!is_float($elapsed) || $calls !== 8) throw new RuntimeException('generated curried wrapper ABI');
 ''']
     if mode == 'x':
@@ -51,13 +51,13 @@ $GLOBALS['altbak_extended_result'] = null;
 $consume = $GLOBALS['Bench_Extended_consumeResult'];
 $effect = $consume('value', 'value');
 if ($GLOBALS['altbak_extended_result'] !== null) throw new RuntimeException('extended sink ran before its Effect');
-\Bench\phpurs_execute_effect($effect);
+\phpurs_execute_effect($effect);
 if ($GLOBALS['altbak_extended_result'] !== 'value') throw new RuntimeException('extended grouped wrapper ABI');
-\Bench\phpurs_execute_effect($consume('other')('other'));
+\phpurs_execute_effect($consume('other')('other'));
 if ($GLOBALS['altbak_extended_result'] !== 'other') throw new RuntimeException('extended curried wrapper ABI');
 $bad = $consume('expected', 'actual');
 $rejected = false;
-try { \Bench\phpurs_execute_effect($bad); } catch (RuntimeException $error) { $rejected = true; }
+try { \phpurs_execute_effect($bad); } catch (RuntimeException $error) { $rejected = true; }
 if (!$rejected) throw new RuntimeException('extended sink accepted an unstable result');
 ''')
         detail = 'extended String Effect ABI and unstable-result rejection'
@@ -65,7 +65,7 @@ if (!$rejected) throw new RuntimeException('extended sink accepted an unstable r
         suffix = {'pure': '', 'ffi': 'FFI', 'fficc': 'FFICheatcode'}[mode]
         for name, (_argument, expected) in NOMINAL.items():
             key = f'Test_{name}{suffix}_act'
-            probes += [f'$actual = \\Bench\\phpurs_execute_effect($GLOBALS[{json.dumps(key)}]);',
+            probes += [f'$actual = \\phpurs_execute_effect($GLOBALS[{json.dumps(key)}]);',
                        f'if ($actual !== {expected}) throw new RuntimeException({json.dumps(key)} . ": wrong result " . var_export($actual, true));']
         detail = '14 core results'
     probes.append(f'echo "PASS generated PHP {mode}: numeric Effect ABI, grouped/curried calls, sink, {detail}; no benchmark timing\\n";')
