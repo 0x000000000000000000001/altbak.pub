@@ -323,7 +323,7 @@ Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 47830
 
 > [!NOTE]
 > **Hardware Context**
-> Measurements ran on an **Apple M4 Pro with 10 performance cores and 4 efficiency cores**, without explicit CPU affinity. The extended *Parallelism* row compares JavaScript's single-thread scheduler with the Go and Rust multicore runtimes, and with Sharpurs/.NET's bounded `Aff` worker scheduler. Sharpurs uses the same `srx/` PureScript workloads; the File I/O adapter is a native F# implementation of the existing foreign imports, not a benchmark-specific compiler path. `fib 42` is emitted as native `int -> int` recursion, so the row no longer measures boxed allocation.
+> Measurements ran on an **Apple M4 Pro with 10 performance cores and 4 efficiency cores**, without explicit CPU affinity. The extended *Parallelism* row compares JavaScript's single-thread scheduler with the Go and Rust multicore runtimes, and with Sharpurs/.NET's bounded `Aff` worker scheduler. Sharpurs uses the same `srx/` PureScript workloads; the File I/O adapter is a native F# implementation of the existing foreign imports, not a benchmark-specific compiler path. `fib 42` is emitted as native `int -> int` recursion, reducing Sharpurs Parallelism from ~64.36 s to ~0.49 s; the row no longer measures boxed allocation.
 
 ### Compilation times...
 
