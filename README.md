@@ -189,21 +189,25 @@ RowToList | ~ 0.48 μs | ~ 0.30 μs | ~ 0.02 μs |
 
 F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) | Hand-written FP-style F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) | Hand-written F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) |
 ----------------------- | ------------------------- | ------------------------- | ------------------------------- |
-AST Evaluation | ~ 1.08 μs | ~ 0.49 μs | ~ 0.50 μs |
-Fibonacci | ~ 1.52 μs | ~ 0.12 μs | ~ 0.12 μs |
-List Processing | ~ 429.02 μs | ~ 16.25 μs | ~ 2.96 μs |
-Tail Call Optimization | ~ 46.37 μs | ~ 38.43 μs | ~ 44.32 μs |
-Deep Record Updates | ~ 2224.15 μs | ~ 91.30 μs | ~ 9.13 μs |
-Ackermann | ~ 165.55 μs | ~ 40.02 μs | ~ 39.78 μs |
-Church Numerals | ~ 1758.51 μs | ~ 352.32 μs | ~ 25.65 μs |
-Prime Sieve | ~ 517.20 μs | ~ 157.57 μs | ~ 15.45 μs |
-Red-Black Tree | ~ 39096.17 μs | ~ 37763.92 μs | ~ 10551.67 μs |
-Polymorphism | ~ 2287.20 μs | ~ 25932.33 μs | ~ 2332.77 μs |
-State Monad | ~ 171.22 μs | ~ 79.71 μs | ~ 3.32 μs |
-Lazy Evaluation | ~ 5789.42 μs | ~ 10061 μs | ~ 233.03 μs |
-Array Processing | ~ 61.98 μs | ~ 31.74 μs | ~ 16.09 μs |
-RowToList | ~ 0.22 μs | ~ 0.06 μs | ~ 0.03 μs |
-**Total Execution Time** | ~ 52.55 ms <br>(/C = 5.5x) | ~ 74.57 ms <br>(/C = 7.6x) | ~ 13.27 ms <br>(/C = 1.3x) |
+AST Evaluation | ~ 1.09 μs | ~ 0.50 μs | ~ 0.50 μs |
+Fibonacci | ~ 0.33 μs | ~ 0.12 μs | ~ 0.11 μs |
+List Processing | ~ 489.57 μs | ~ 16.05 μs | ~ 3.05 μs |
+Tail Call Optimization | ~ 44.34 μs | ~ 37.60 μs | ~ 49.49 μs |
+Deep Record Updates | ~ 2533.49 μs | ~ 87.33 μs | ~ 7.21 μs |
+Ackermann | ~ 7.70 μs | ~ 7.70 μs | ~ 7.66 μs |
+Church Numerals | ~ 2192.89 μs | ~ 342.79 μs | ~ 25.24 μs |
+Prime Sieve | ~ 594.22 μs | ~ 45.26 μs | ~ 1.80 μs |
+Red-Black Tree | ~ 38666.25 μs | ~ 36659.92 μs | ~ 9499.96 μs |
+Polymorphism | ~ 2262.85 μs | ~ 23242.04 μs | ~ 2254.54 μs |
+State Monad | ~ 174.48 μs | ~ 78.22 μs | ~ 3.21 μs |
+Lazy Evaluation | ~ 5749.54 μs | ~ 9665.58 μs | ~ 235.04 μs |
+Array Processing | ~ 64.02 μs | ~ 29.54 μs | ~ 15.63 μs |
+RowToList | ~ 0.23 μs | ~ 0.06 μs | ~ 0.02 μs |
+**Total Execution Time** | ~ 52.78 ms <br>(/C = 5.5x) | ~ 70.21 ms <br>(/C = 7.3x) | ~ 12.10 ms <br>(/C = 1.3x) |
+
+> Sharpurs core measurements were refreshed on 20 October 2026 after native
+> `int` recursion was enabled for non-tail self calls; `Fibonacci` and `Ackermann`
+> now use that path.
 
 #### Java
 
