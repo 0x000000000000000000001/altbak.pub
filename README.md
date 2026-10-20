@@ -312,18 +312,18 @@ JSON Decoding (excluded WIP) | ~ 657.69 μs |
 
 #### Extended Results
 
-Benchmark               | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[Arista](https://github.com/aristanetworks/purescript-backend-optimizer)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP)
------------------------ | ------------- | -------------- | --------------- | ---------------
-File I/O | ~ 466899.83 μs | ~ 477117.79 μs | ~ 442703.25 μs | ~ 542377.75 μs |
-STArray Operations | ~ 0.92 μs | ~ 0.54 μs | ~ 0.54 μs | ~ 0.29 μs |
-String Operations | ~ 256.71 μs | ~ 232.50 μs | ~ 507.08 μs | ~ 414.58 μs |
-Aff Operations | ~ 10125.21 μs | ~ 11581.83 μs | ~ 11009.25 μs | ~ 10903.21 μs |
-Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 478303.67 μs |
-**Total Execution Time** | ~ 14752.33 ms | ~ 14767.19 ms | ~ 1636.37 ms | ~ 1032.00 ms |
+Benchmark               | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[Arista](https://github.com/aristanetworks/purescript-backend-optimizer)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) | Hand-written PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#<br>↓<br>dotnet -Release<br><br>(WIP)
+----------------------- | ------------- | -------------- | --------------- | --------------- | ---------------------
+File I/O | ~ 466899.83 μs | ~ 477117.79 μs | ~ 442703.25 μs | ~ 542377.75 μs | ~ 757612.92 μs |
+STArray Operations | ~ 0.92 μs | ~ 0.54 μs | ~ 0.54 μs | ~ 0.29 μs | ~ 1.96 μs |
+String Operations | ~ 256.71 μs | ~ 232.50 μs | ~ 507.08 μs | ~ 414.58 μs | ~ 3442.29 μs |
+Aff Operations | ~ 10125.21 μs | ~ 11581.83 μs | ~ 11009.25 μs | ~ 10903.21 μs | ~ 10100.50 μs |
+Parallelism | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 1182150.08 μs | ~ 478303.67 μs | ~ 78912631.62 μs |
+**Total Execution Time** | ~ 14752.33 ms | ~ 14767.19 ms | ~ 1636.37 ms | ~ 1032.00 ms | ~ 79683.79 ms |
 
 > [!NOTE]
 > **Hardware Context**
-> Measurements ran on an **Apple M4 Pro with 10 performance cores and 4 efficiency cores**, without explicit CPU affinity. The extended *Parallelism* row compares JavaScript's single-thread scheduler with Go/Rust's multicore runtimes.
+> Measurements ran on an **Apple M4 Pro with 10 performance cores and 4 efficiency cores**, without explicit CPU affinity. The extended *Parallelism* row compares JavaScript's single-thread scheduler with the Go and Rust multicore runtimes, and with Sharpurs/.NET's current single-threaded `Aff` scheduler. Sharpurs uses the same `srx/` PureScript workloads; the File I/O adapter is a native F# implementation of the existing foreign imports, not a benchmark-specific compiler path.
 
 ### Compilation times...
 
