@@ -80,7 +80,7 @@ if [ "$CLEAN" == "1" ]; then
     export PATH="$HOST_BIN:$PWD/node_modules/.bin:$PATH"
     echo "Host compiler: $HOST_PURS ($(purs --version))"
     spago build
-    spago bundle --module Main --platform node --outfile bin/phpurs.js --bundle-type app
+    node tools/bundle.mjs
   )
   cleanup
   trap - EXIT
