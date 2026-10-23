@@ -205,10 +205,6 @@ Array Processing | ~ 64.02 μs | ~ 29.54 μs | ~ 15.63 μs |
 RowToList | ~ 0.23 μs | ~ 0.06 μs | ~ 0.02 μs |
 **Total Execution Time** | ~ 52.78 ms <br>(/C = 5.5x) | ~ 70.21 ms <br>(/C = 7.3x) | ~ 12.10 ms <br>(/C = 1.3x) |
 
-> Sharpurs core measurements were refreshed on 20 October 2026 after native
-> `int` recursion was enabled for non-tail self calls; `Fibonacci` and `Ackermann`
-> now use that path.
-
 #### Java
 
 Java Benchmark          | Hand-written PureScript<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>↓<br>Java<br>↓<br>HotSpot JIT<br><br>(WIP) | Hand-written FP-style Java FFI<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>↓<br>Java<br>↓<br>HotSpot JIT<br><br>(WIP) | Hand-written imperative Java FFI<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>↓<br>Java<br>↓<br>HotSpot JIT<br><br>(WIP) |
