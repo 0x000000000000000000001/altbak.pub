@@ -38,7 +38,7 @@ class RunnerContracts(unittest.TestCase):
         self.addCleanup(self.temporary.cleanup)
 
     def args(self, **kwargs):
-        return argparse.Namespace(clean=False, mode='test', test='Fib', **kwargs)
+        return argparse.Namespace(clean=False, mode='test', test='Fib', dev=False, **kwargs)
 
     def test_workspace_preserves_appx_and_absolutizes_package_paths(self):
         driver.prepare(self.directory, 'go', self.args())
@@ -102,7 +102,7 @@ class RunnerContracts(unittest.TestCase):
 
     def test_cli_rejects_incompatible_modes_before_build(self):
         for arguments in [['go','--ffi','--fficc'], ['go','--test','bad/name'],
-                          ['rust','--pgo'], ['go','--pgo','--build-only'],
+                          ['rust','--pgo'], ['rust', '--dev'], ['go','--pgo','--build-only'],
                           ['go','--run-only','--clean'], ['rust','--run-only','--clean']]:
             with self.subTest(arguments=arguments), patch.object(sys,'argv',['driver.py']+arguments), \
                  patch.object(driver,'expected_cases'), patch.object(driver,'prepare') as prepare, \
@@ -113,15 +113,18 @@ class RunnerContracts(unittest.TestCase):
                 inputs.assert_not_called()
 
     def test_clean_rebuilds_compiler_before_snapshot_and_executable(self):
-        for language, selectors, script, host in [
-            ('go', {}, 'build:native', 'native'),
-            ('go', {'GOPURS_JS': '1'}, 'build', 'js'),
-            ('go', {'GOPURS_RUST': '1'}, 'build:rust', 'rust'),
-            ('rust', {}, 'build', 'js'),
+        for language, selectors, script, host, dev in [
+            ('go', {}, 'build:native', 'native', False),
+            ('go', {'GOPURS_JS': '1'}, 'build', 'js', False),
+            ('go', {'GOPURS_RUST': '1'}, 'build:rust', 'rust', False),
+            ('go', {}, 'build:native', 'native', True),
+            ('go', {'GOPURS_JS': '1'}, 'build', 'js', True),
+            ('go', {'GOPURS_RUST': '1'}, 'build:rust', 'rust', True),
+            ('rust', {}, 'build', 'js', False),
         ]:
             for clean in [False, True]:
-                with self.subTest(language=language, host=host, clean=clean):
-                    directory = self.root / f'{language}-{host}-{clean}'
+                with self.subTest(language=language, host=host, clean=clean, dev=dev):
+                    directory = self.root / f'{language}-{host}-{clean}-{dev}'
                     driver.prepare(directory, language, self.args())
                     (directory / 'old-artifact').write_text('cached')
                     versions = {'js': 'old', 'native': 'old', 'rust': 'old'}
@@ -149,6 +152,7 @@ class RunnerContracts(unittest.TestCase):
                             elif command[2] == 'build:rust':
                                 versions['rust'] = 'rebuilt'
                         elif Path(command[0]).name == 'gopurs':
+                            self.assertEqual(command[1:], ['--main', 'App', *(['--dev'] if dev else [])])
                             self.assertEqual(versions[host], 'rebuilt' if clean else 'old',
                                              'the selected compiler still embeds the old runtime')
                             target = directory / 'output/main/main.go'
@@ -170,6 +174,8 @@ class RunnerContracts(unittest.TestCase):
                     argv = ['driver.py', language, '--build-only', '--build-dir', str(directory)]
                     if clean:
                         argv.append('--clean')
+                    if dev:
+                        argv.append('-d')
                     with patch.dict(os.environ, {'GOPURS_JS': '0', 'GOPURS_RUST': '0', **selectors}), \
                          patch.object(sys, 'argv', argv), patch.object(driver, 'expected_cases'), \
                          patch.object(driver, 'inputs', side_effect=inputs), \
@@ -189,6 +195,43 @@ class RunnerContracts(unittest.TestCase):
                         self.assertEqual(commands[1], ['spago', 'build'])
                     else:
                         self.assertEqual(commands[0], ['spago', 'build'])
+
+    def test_dev_aliases_modes_and_saved_profile(self):
+        def tools(command, directory, log, env):
+            command = list(map(str, command))
+            if Path(command[0]).name == 'gopurs':
+                self.assertEqual(command[-1], '--dev')
+                target = directory / 'output/main/main.go'
+                target.parent.mkdir(parents=True)
+                target.write_text('generated')
+            if command[:2] == ['go', 'build']:
+                self.assertNotIn('--dev', command)
+                Path(command[command.index('-o') + 1]).write_text('compiled')
+            return command
+
+        for flag in ['-d', '--dev']:
+            for mode, key in [([], 'pure'), (['--ffi'], 'ffi'), (['--fficc'], 'fficc'),
+                              (['--x'], 'x'), (['--test', 'Test.Fib'], 'test-Fib')]:
+                with self.subTest(flag=flag, mode=mode):
+                    argv = ['driver.py', 'go', flag, *mode, '--build-only']
+                    directory = self.root / 'run/bak/go/modes' / (key + '-dev')
+                    with patch.object(sys, 'argv', argv), patch.object(driver, 'expected_cases'), \
+                         patch.object(driver, 'inputs', return_value={'source': 'abc'}), \
+                         patch.object(driver, 'logged', side_effect=tools), \
+                         patch.object(driver.subprocess, 'check_output', return_value='go test'), \
+                         patch.object(driver, 'execute') as execute:
+                        driver.main()
+                        execute.assert_not_called()
+                        manifest = json.loads((directory / 'manifest.json').read_text())
+                        self.assertEqual(manifest['profile']['backend_profile'], 'dev')
+                        argv[argv.index('--build-only')] = '--run-only'
+                        driver.main()
+                        execute.assert_called_once()
+                        argv.remove(flag)
+                        argv.extend(['--build-dir', str(directory)])
+                        with self.assertRaisesRegex(ValueError, 'profile'):
+                            driver.main()
+                        execute.assert_called_once()
 
     def test_failed_compiler_rebuild_stops_before_frontend_and_manifest(self):
         for language in ['go', 'rust']:

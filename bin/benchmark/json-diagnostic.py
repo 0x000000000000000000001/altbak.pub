@@ -420,6 +420,7 @@ def main():
     p.add_argument('--workspace',type=Path)
     p.add_argument('--output',type=Path)
     p.add_argument('--runtime', choices=['go', 'js', 'c', 'rust'], help='measure only the selected runtime; builds retain both artifacts')
+    p.add_argument('-d', '--dev', action='store_true', help='use the gopurs development profile')
     p.add_argument('--runtimes', help='comma-separated runtimes measured in the shared protocol order, e.g. go,js,rust')
     p.add_argument('--corpus', choices=['fixture12', 'gopurs238'], default='fixture12', help='typed-AST corpus; gopurs238 is the frozen 238-module corpus')
     p.add_argument('--corpus-source', type=Path, help='override the gopurs238 output directory')
@@ -433,6 +434,8 @@ def main():
     if args.action=='build-js':
         manifest=json.loads((work/'manifest.json').read_text())
         check_suite(manifest, suite)
+        if manifest.get('go_backend_profile', 'release') != ('dev' if args.dev else 'release'):
+            raise ValueError('Gopurs development/release profile changed since build')
         before=fingerprint(suite)
         allowed={str(Path(__file__)),str(SOURCES/(suite + '.js'))}
         if {k:v for k,v in before.items() if k not in allowed}!={k:v for k,v in manifest['sources'].items() if k not in allowed} or sha(work/'benchmark')!=manifest['binary_sha256']:
@@ -458,7 +461,8 @@ def main():
         call(['spago','build'],work,work/'logs/purs.log',env)
         for f in (work/'output').glob('*/corefn.json'):
             if 'typeTable' not in json.loads(f.read_text()): raise ValueError('Use the TAST fork of purs')
-        call([COMPILER/'bin/gopurs-native','--main','Test.' + suite],work,work/'logs/backend.log',env)
+        call([COMPILER/'bin/gopurs-native','--main','Test.' + suite, *(['--dev'] if args.dev else [])],
+             work,work/'logs/backend.log',env)
         build_env=dict(env,GOMAXPROCS='14')
         call(['go','mod','tidy'],work/'output',work/'logs/modules.log',build_env)
         call(['go','build','-pgo=off','-o',work/'benchmark','./main'],work/'output',work/'logs/go.log',build_env)
@@ -467,6 +471,7 @@ def main():
         rust_build=build_rust(work,env,suite)
         if before!=fingerprint(suite): raise ValueError('Source changed during build')
         manifest={'suite':suite,'sources':before,'binary_sha256':sha(work/'benchmark'),'js_sha256':sha(work/'benchmark.mjs'),
+                  'go_backend_profile':'dev' if args.dev else 'release',
                   'c':c_build, 'rust':rust_build,
                   'go':subprocess.check_output(['go','version'],env=env,text=True).strip(),
                   'purs':subprocess.check_output(['purs','--version'],env=env,text=True).strip(),
@@ -478,6 +483,8 @@ def main():
         return
     manifest=json.loads((work/'manifest.json').read_text())
     check_suite(manifest, suite)
+    if manifest.get('go_backend_profile', 'release') != ('dev' if args.dev else 'release'):
+        raise ValueError('Gopurs development/release profile changed since build')
     if manifest['sources']!=fingerprint(suite) or manifest['binary_sha256']!=sha(work/'benchmark') or manifest['js_sha256']!=sha(work/'benchmark.mjs'): raise ValueError('Stale or modified build')
     if not args.output: p.error('measure requires --output NEW_DIRECTORY')
     if suite == 'JsonDecoding' and args.corpus != 'fixture12': p.error('alternate corpora are only available for JsonTypedAst')
