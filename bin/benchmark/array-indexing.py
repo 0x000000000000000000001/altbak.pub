@@ -124,7 +124,7 @@ def audit_rust_generated(path):
             'whole_array_copy_in_kernel': False, 'sha256': digest(path)}
 
 
-def build(directory, env):
+def build(directory, env, dev=False):
     directory.mkdir(parents=True, exist_ok=True)
     marker = directory / '.array-indexing-workspace'
     if any(directory.iterdir()) and not marker.exists():
@@ -154,7 +154,8 @@ def build(directory, env):
     tast = json.loads((directory / 'output/Test.ArrayIndexing/corefn.json').read_text())
     if 'dataDecls' not in tast or 'classDecls' not in tast:
         raise ValueError('The selected purs does not produce the required TAST; use the local fork')
-    commands.append(run_logged([BACKEND, '--main', 'Test.ArrayIndexing'], directory, logs / 'gopurs.log', env))
+    commands.append(run_logged([BACKEND, '--main', 'Test.ArrayIndexing', *(['--dev'] if dev else [])],
+                               directory, logs / 'gopurs.log', env))
     generated = directory / 'output/purescript/Test_ArrayIndexing.go'
     audit = audit_generated(generated)
     driver = directory / 'output/array-driver'
@@ -189,6 +190,7 @@ def build(directory, env):
         'go': ['go', 'version'], 'node': ['node', '--version'], 'purs': [purs, '--version'],
         'clang': [compiler, '--version'], 'rustc': ['rustc', '--version'], 'cargo': ['cargo', '--version']}.items()}
     manifest = {'schema': 1, 'sources': before, 'artifacts': fingerprints(artifacts),
+                'go_backend_profile': 'dev' if dev else 'release',
                 'commands': commands, 'versions': versions,
                 'generated_audit': {**audit, 'rust': rust_audit},
                 'profile': {key: env.get(key, '') for key in PROFILE_KEYS}}
@@ -237,6 +239,8 @@ def validate_rows(text, runtime, accesses, batches, seed):
 
 def measure(directory, output, args, env):
     manifest = json.loads((directory / 'manifest.json').read_text())
+    if manifest.get('go_backend_profile', 'release') != ('dev' if args.dev else 'release'):
+        raise ValueError('Gopurs development/release profile changed since build')
     def check_frozen():
         for section in ['sources', 'artifacts']:
             for path, expected in manifest[section].items():
@@ -294,6 +298,7 @@ def main():
     action.add_argument('--build-only', action='store_true')
     action.add_argument('--run-only', action='store_true')
     parser.add_argument('--runtime', choices=['go', 'js', 'c', 'rust'], help='measure only this runtime; a build prepares all of them')
+    parser.add_argument('-d', '--dev', action='store_true', help='use the gopurs development profile')
     parser.add_argument('--build-dir', type=Path)
     parser.add_argument('--output', type=Path, help='new campaign directory, required with --run-only')
     parser.add_argument('--accesses', type=int, default=1 << 23)
@@ -303,14 +308,15 @@ def main():
         parser.error('accesses must be 16384..8388608, batches must be at least 3')
     if args.run_only and not args.output:
         parser.error('--run-only requires --output')
-    args.build_dir = args.build_dir or ROOT / f'run/bak/{args.runtime or "go"}/modes/test-ArrayIndexing'
+    suffix = '-dev' if args.dev else ''
+    args.build_dir = args.build_dir or ROOT / f'run/bak/{args.runtime or "go"}/modes/test-ArrayIndexing{suffix}'
     directory = args.build_dir.resolve()
     if directory == ROOT or directory in ROOT.parents or args.build_dir.is_symlink():
         parser.error('unsafe build directory')
     env = dict(os.environ, GOGC='800', GOMAXPROCS='1', GOWORK='off', GOPURS_JS='1')
     env['PATH'] = str(Path.home() / '.local/bin') + os.pathsep + env['PATH']
     if args.build_only:
-        build(directory, env)
+        build(directory, env, args.dev)
     else:
         measure(directory, args.output.resolve(), args, env)
 

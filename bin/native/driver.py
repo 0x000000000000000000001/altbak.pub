@@ -61,7 +61,7 @@ def profile(language, args, env):
         env['GOGC'] = env.get('GOGC', '800')
         env['GOWORK'] = 'off'
         env.pop('PPROF', None)
-        return {'GOGC': env['GOGC'], 'pgo': args.pgo,
+        return {'GOGC': env['GOGC'], 'pgo': args.pgo, 'backend_profile': 'dev' if args.dev else 'release',
                 'GOFLAGS': env.get('GOFLAGS', ''), 'GOEXPERIMENT': env.get('GOEXPERIMENT', '')}
     # Override the generated O1/debug=true release profile without editing Purust.
     env.setdefault('CARGO_PROFILE_RELEASE_OPT_LEVEL', '3')
@@ -159,6 +159,7 @@ def main():
     actions.add_argument('--run-only', action='store_true')
     parser.add_argument('-c', '--clean', action='store_true',
                         help='rebuild the backend compiler and clean this isolated workspace')
+    parser.add_argument('-d', '--dev', action='store_true', help='Go: use the faster gopurs development profile')
     parser.add_argument('--pgo', action='store_true', help='Go: train and rebuild, using the same GOGC')
     parser.add_argument('--pgo-profile', type=Path, help='Go: use an existing profile; avoids a training run')
     parser.add_argument('--build-dir', type=Path, help='override the isolated workspace directory')
@@ -173,6 +174,8 @@ def main():
         parser.error('--run-only is incompatible with --clean (requires a compiler and executable rebuild)')
     if args.language != 'go' and (args.pgo or args.pgo_profile):
         parser.error('PGO options are Go-only')
+    if args.language != 'go' and args.dev:
+        parser.error('--dev is Go-only')
     if args.pgo_profile:
         args.pgo = True
         args.pgo_profile = args.pgo_profile.resolve(strict=True)
@@ -181,6 +184,8 @@ def main():
     key = args.mode + ('-' + args.test.replace('.', '-') if args.test else '')
     if args.pgo:
         key += '-pgo'
+    if args.dev:
+        key += '-dev'
     selected_directory = args.build_dir or ROOT / f'run/bak/{args.language}/modes/{key}'
     if selected_directory.is_symlink():
         raise ValueError('Build directory must not be a symlink')
@@ -188,6 +193,8 @@ def main():
     env = os.environ.copy()
     env['PATH'] = str(ROOT / 'run/bak/js/node_modules/.bin') + os.pathsep + env['PATH']
     config = profile(args.language, args, env)
+    if args.dev:
+        print('[altbak/go] Build mode: DEV (--dev).', flush=True)
     print(f'{args.language}: mode={args.mode}, profile={json.dumps(config, sort_keys=True)}', flush=True)
     binary = directory / 'benchmark'
     manifest_path = directory / 'manifest.json'
@@ -227,7 +234,8 @@ def main():
     commands.append(logged(['spago', 'build'], directory, logs / 'spago.log', env))
     if args.language == 'go':
         backend = ROOT.parent / 'gopurs/gopurs/bin/gopurs'
-        commands.append(logged([backend, '--main', entry], directory, logs / 'backend.log', env))
+        commands.append(logged([backend, '--main', entry, *(['--dev'] if args.dev else [])],
+                               directory, logs / 'backend.log', env))
         project = directory / 'output'
         if not (project / 'main/main.go').is_file():
             raise RuntimeError('Gopurs did not generate main/main.go')

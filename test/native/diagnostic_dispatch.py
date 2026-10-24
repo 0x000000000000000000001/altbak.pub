@@ -30,9 +30,41 @@ native = load("native_driver", "bin/native/driver.py")
 php = load("php_driver", "bin/php/driver.py")
 js = load("js_driver", "bin/js/driver.py")
 json_diagnostic = load("json_diagnostic", "bin/benchmark/json-diagnostic.py")
+array_diagnostic = load("array_diagnostic", "bin/benchmark/array-indexing.py")
 
 
 class Routing(unittest.TestCase):
+    def test_dev_aliases_reach_all_go_routes_and_isolate_workspaces(self):
+        for flag in ['-d', '--dev']:
+            arguments = ['--test', 'Fib', '-c', flag, '--']
+            with patch.object(sys, 'argv', ['dispatch', 'go', *arguments]), \
+                    patch.object(dispatch.os, 'execv', side_effect=SystemExit) as launch:
+                with self.assertRaises(SystemExit):
+                    dispatch.main()
+            self.assertEqual(launch.call_args.args[1][2:], ['go', *arguments])
+            for suite in ['ArrayIndexing', 'JsonTypedAst', 'JsonDecoding']:
+                with self.subTest(flag=flag, suite=suite), tempfile.TemporaryDirectory() as temporary:
+                    with patch.object(dispatch, 'ROOT', Path(temporary)):
+                        release = dispatch.options('go', ['--test', suite, '--build-only'])
+                        dev = dispatch.options('go', ['--test', suite, flag, '--build-only'])
+                        self.assertEqual(dev.build_dir.name, release.build_dir.name + '-dev')
+
+                        def run(command):
+                            if 'build' in command:
+                                command[command.index('--workspace') + 1].mkdir(parents=True)
+
+                        with patch.object(dispatch, 'run', side_effect=run) as launch:
+                            dispatch.execute('go', dev)
+                            self.assertIn('--dev', launch.call_args.args[0])
+                            dev.build_only, dev.run_only = False, True
+                            dispatch.execute('go', dev)
+                            self.assertIn('--dev', launch.call_args.args[0])
+                        if suite != 'ArrayIndexing':
+                            with self.assertRaisesRegex(ValueError, 'pointer'):
+                                dispatch.json_workspace(dev.build_dir, 'go', True, suite)
+            with redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                dispatch.options('js', ['--test', 'ArrayIndexing', flag])
+
     def test_detection_preserves_regular_tests(self):
         self.assertIsNone(dispatch.diagnostic_name(["--test", "Fib", "--pgo"]))
         self.assertEqual(dispatch.diagnostic_name(["--test=Test.JsonTypedAst"]), "JsonTypedAst")
@@ -269,6 +301,57 @@ class JsonSuites(unittest.TestCase):
         for manifest, suite in [({}, 'JsonDecoding'), ({'suite': 'JsonDecoding'}, 'JsonTypedAst')]:
             with self.subTest(manifest=manifest, suite=suite), self.assertRaises(ValueError):
                 json_diagnostic.check_suite(manifest, suite)
+
+    def test_json_dev_reaches_backend_and_rejects_other_saved_profile(self):
+        for flag in ['-d', '--dev']:
+            for suite in ['JsonTypedAst', 'JsonDecoding']:
+                with self.subTest(flag=flag, suite=suite), tempfile.TemporaryDirectory() as temporary:
+                    work = Path(temporary) / 'build'
+                    commands = []
+
+                    def call(command, *unused):
+                        commands.append(list(map(str, command)))
+                        if Path(command[0]).name == 'gopurs-native':
+                            raise RuntimeError('backend captured')
+
+                    argv = ['json-diagnostic', 'build', '--suite', suite, '--workspace', str(work), flag]
+                    with patch.object(sys, 'argv', argv), \
+                         patch.object(json_diagnostic, 'environment', return_value={}), \
+                         patch.object(json_diagnostic, 'copy_sources'), \
+                         patch.object(json_diagnostic, 'fingerprint', return_value={}), \
+                         patch.object(json_diagnostic, 'call', side_effect=call):
+                        with self.assertRaisesRegex(RuntimeError, 'backend captured'):
+                            json_diagnostic.main()
+                        self.assertEqual(commands[-1][1:], ['--main', 'Test.' + suite, '--dev'])
+                        (work / 'manifest.json').write_text(json.dumps({'suite': suite, 'go_backend_profile': 'release'}))
+                        argv[1] = 'measure'
+                        with self.assertRaisesRegex(ValueError, 'profile changed'):
+                            json_diagnostic.main()
+
+    def test_array_dev_reaches_backend_and_rejects_other_saved_profile(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            work = Path(temporary) / 'build'
+            commands = []
+
+            def call(command, *unused):
+                commands.append(list(map(str, command)))
+                if Path(command[0]).name == 'gopurs':
+                    raise RuntimeError('backend captured')
+                tast = work / 'output/Test.ArrayIndexing/corefn.json'
+                tast.parent.mkdir(parents=True)
+                tast.write_text(json.dumps({'dataDecls': [], 'classDecls': []}))
+
+            with patch.object(array_diagnostic, 'dependency_sources', return_value=[]), \
+                 patch.object(array_diagnostic, 'rust_dependency_sources', return_value=[]), \
+                 patch.object(array_diagnostic.shutil, 'which', return_value='/tmp/purs'), \
+                 patch.object(array_diagnostic, 'fingerprints', return_value={}), \
+                 patch.object(array_diagnostic, 'run_logged', side_effect=call):
+                with self.assertRaisesRegex(RuntimeError, 'backend captured'):
+                    array_diagnostic.build(work, {'PATH': ''}, True)
+            self.assertEqual(commands[-1][1:], ['--main', 'Test.ArrayIndexing', '--dev'])
+            (work / 'manifest.json').write_text(json.dumps({'go_backend_profile': 'release'}))
+            with self.assertRaisesRegex(ValueError, 'profile changed'):
+                array_diagnostic.measure(work, work / 'results', argparse.Namespace(dev=True), {})
 
     def test_general_results_validate_case_identity_and_correctness_before_timing(self):
         oracle = {'modules': 2, 'names': ['valid', 'wrong-field'], 'timed_cases': 1,

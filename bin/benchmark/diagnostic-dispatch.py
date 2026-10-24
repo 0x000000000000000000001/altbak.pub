@@ -28,18 +28,22 @@ def options(runtime, arguments):
         description="Run ArrayIndexing, JsonTypedAst or JsonDecoding with its recorded diagnostic protocol.",
         allow_abbrev=False)
     parser.add_argument("--test", required=True)
+    parser.add_argument('-d', '--dev', action='store_true', help='Go: use the gopurs development profile')
     actions = parser.add_mutually_exclusive_group()
     actions.add_argument("--build-only", action="store_true")
     actions.add_argument("--run-only", action="store_true")
     parser.add_argument("--build-dir", type=Path, help="isolated build and campaign directory")
     parser.add_argument("--output", type=Path, help="new measurement campaign directory")
     args = parser.parse_args(arguments)
+    if args.dev and runtime != 'go':
+        parser.error('--dev is Go-only')
     args.test = args.test.removeprefix("Test.")
     if args.test not in DIAGNOSTICS:
         parser.error("choose exactly one diagnostic test")
     if args.build_only and args.output:
         parser.error("--output requires a measurement, not --build-only")
-    selected = args.build_dir or ROOT / f"run/bak/{runtime}/modes/test-{args.test}"
+    suffix = '-dev' if args.dev else ''
+    selected = args.build_dir or ROOT / f"run/bak/{runtime}/modes/test-{args.test}{suffix}"
     args.build_dir = selected.resolve()
     if selected.is_symlink() or args.build_dir == ROOT or args.build_dir in ROOT.parents:
         parser.error("unsafe build directory")
@@ -60,7 +64,7 @@ def run(command):
     subprocess.run([str(part) for part in command], check=True)
 
 
-def json_workspace(base, runtime, run_only, suite='JsonTypedAst'):
+def json_workspace(base, runtime, run_only, suite='JsonTypedAst', dev=False):
     pointer = base / "latest-build.json"
     if not run_only:
         return base / "builds" / stamp()
@@ -68,16 +72,22 @@ def json_workspace(base, runtime, run_only, suite='JsonTypedAst'):
         return base
     previous = json.loads(pointer.read_text())
     relative = Path(previous["workspace"])
-    if (previous.get("runtime") != runtime or previous.get('suite', 'JsonTypedAst') != suite or len(relative.parts) != 2
+    if (previous.get("runtime") != runtime or previous.get('suite', 'JsonTypedAst') != suite
+            or previous.get('go_backend_profile', 'release') != ('dev' if dev else 'release')
+            or len(relative.parts) != 2
             or relative.parts[0] != "builds" or relative.parts[1] in {".", ".."}):
         raise ValueError(f"Invalid JSON diagnostic build pointer: {pointer}")
     return base / relative
 
 
 def execute(runtime, args):
+    if args.dev:
+        print('[altbak/go] Build mode: DEV (--dev).', flush=True)
     base = args.build_dir
     script = ROOT / "bin/benchmark" / DIAGNOSTICS[args.test]
     common = [sys.executable, script]
+    if args.dev:
+        common.append('--dev')
     output = args.output or base / "campaigns" / stamp()
     if args.test == "ArrayIndexing":
         common += ["--runtime", runtime, "--build-dir", base]
@@ -86,7 +96,7 @@ def execute(runtime, args):
         if not args.build_only:
             run([*common, "--run-only", "--output", output])
     else:
-        work = json_workspace(base, runtime, args.run_only, args.test)
+        work = json_workspace(base, runtime, args.run_only, args.test, args.dev)
         common += ["--runtime", runtime, "--suite", args.test, "--workspace", work]
         if not args.run_only:
             # This runner requires a new workspace; retain previous builds and
@@ -95,6 +105,7 @@ def execute(runtime, args):
             pointer = base / "latest-build.json"
             temporary = pointer.with_suffix(".tmp")
             temporary.write_text(json.dumps({"runtime": runtime, "suite": args.test,
+                "go_backend_profile": 'dev' if args.dev else 'release',
                 "workspace": str(work.relative_to(base))}, indent=2) + "\n")
             temporary.replace(pointer)
         if not args.build_only:
