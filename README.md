@@ -205,14 +205,6 @@ Array Processing | ~ 62.07 μs | ~ 29.54 μs | ~ 15.63 μs |
 RowToList | ~ 0.24 μs | ~ 0.06 μs | ~ 0.02 μs |
 **Total Execution Time** | ~ 33.79 ms <br>(/C = 3.6x) | ~ 70.21 ms <br>(/C = 7.3x) | ~ 12.10 ms <br>(/C = 1.3x) |
 
-> Sharpurs core measurements were refreshed on 23 October 2026. The native
-> lowerer now performs destination-passing rotations for the red-black tree;
-> `Red-Black Tree` dropped from ~38.7 ms to ~19.1 ms. The row values above come
-> from a separate-process run whose 14 values were fully validated. A second
-> three-process campaign measured a 36.09 ms median total on a loaded host
-> (`load average` 11–14); the 13 unchanged lines generate byte-identical F#
-> apart from `Test.RBTree.fs`.
-
 #### Java
 
 Java Benchmark          | Hand-written PureScript<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>↓<br>Java<br>↓<br>HotSpot JIT<br><br>(WIP) | Hand-written FP-style Java FFI<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>↓<br>Java<br>↓<br>HotSpot JIT<br><br>(WIP) | Hand-written imperative Java FFI<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>↓<br>Java<br>↓<br>HotSpot JIT<br><br>(WIP) |
