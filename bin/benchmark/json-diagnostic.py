@@ -18,6 +18,7 @@ import shutil
 import statistics
 import subprocess
 import sys
+from go_profile import go_build_flags
 
 ROOT = Path(__file__).resolve().parents[2]
 SOURCES = ROOT / 'src/Test'
@@ -206,7 +207,8 @@ def fingerprint(suite='JsonTypedAst'):
     paths = list(source_files(suite))
     # Resolve the runner path so a build recorded from any working directory
     # compares equal on later invocations.
-    paths += list(fixtures(suite).glob('*')) + [Path(__file__).resolve(), COMPILER / 'bin/gopurs-native', typed_purs()]
+    paths += list(fixtures(suite).glob('*')) + [Path(__file__).resolve(), ROOT / 'bin/benchmark/go_profile.py',
+                                             COMPILER / 'bin/gopurs-native', typed_purs()]
     # Native library FFI is read during generation, independently of the
     # compiler binary. A library change must invalidate a previous build.
     for source_root in ([PBO / 'src'] if suite == 'JsonTypedAst' else []) + [p / 'src' for p in COMPILER.parent.glob('gopurs-*') if (p / 'spago.yaml').is_file()]:
@@ -436,6 +438,8 @@ def main():
         check_suite(manifest, suite)
         if manifest.get('go_backend_profile', 'release') != ('dev' if args.dev else 'release'):
             raise ValueError('Gopurs development/release profile changed since build')
+        if manifest.get('go_build_flags', []) != go_build_flags(args.dev):
+            raise ValueError('Go build flags changed since build')
         before=fingerprint(suite)
         allowed={str(Path(__file__)),str(SOURCES/(suite + '.js'))}
         if {k:v for k,v in before.items() if k not in allowed}!={k:v for k,v in manifest['sources'].items() if k not in allowed} or sha(work/'benchmark')!=manifest['binary_sha256']:
@@ -465,13 +469,15 @@ def main():
              work,work/'logs/backend.log',env)
         build_env=dict(env,GOMAXPROCS='14')
         call(['go','mod','tidy'],work/'output',work/'logs/modules.log',build_env)
-        call(['go','build','-pgo=off','-o',work/'benchmark','./main'],work/'output',work/'logs/go.log',build_env)
+        call(['go','build',*go_build_flags(args.dev),'-pgo=off','-o',work/'benchmark','./main'],
+             work/'output',work/'logs/go.log',build_env)
         build_js(work,env,suite)
         c_build=build_c(work,env,suite)
         rust_build=build_rust(work,env,suite)
         if before!=fingerprint(suite): raise ValueError('Source changed during build')
         manifest={'suite':suite,'sources':before,'binary_sha256':sha(work/'benchmark'),'js_sha256':sha(work/'benchmark.mjs'),
                   'go_backend_profile':'dev' if args.dev else 'release',
+                  'go_build_flags':go_build_flags(args.dev),
                   'c':c_build, 'rust':rust_build,
                   'go':subprocess.check_output(['go','version'],env=env,text=True).strip(),
                   'purs':subprocess.check_output(['purs','--version'],env=env,text=True).strip(),
@@ -485,6 +491,8 @@ def main():
     check_suite(manifest, suite)
     if manifest.get('go_backend_profile', 'release') != ('dev' if args.dev else 'release'):
         raise ValueError('Gopurs development/release profile changed since build')
+    if manifest.get('go_build_flags', []) != go_build_flags(args.dev):
+        raise ValueError('Go build flags changed since build')
     if manifest['sources']!=fingerprint(suite) or manifest['binary_sha256']!=sha(work/'benchmark') or manifest['js_sha256']!=sha(work/'benchmark.mjs'): raise ValueError('Stale or modified build')
     if not args.output: p.error('measure requires --output NEW_DIRECTORY')
     if suite == 'JsonDecoding' and args.corpus != 'fixture12': p.error('alternate corpora are only available for JsonTypedAst')

@@ -69,6 +69,12 @@ class RunnerContracts(unittest.TestCase):
         second = driver.profile('go', args, pgo)
         self.assertEqual(first['GOGC'], second['GOGC'])
         self.assertEqual(first['GOGC'], '800')
+        self.assertEqual(first['go_build_flags'], [])
+        args.dev = True
+        dev_env = {'GOFLAGS': '-trimpath'}
+        dev = driver.profile('go', args, dev_env)
+        self.assertEqual(dev['go_build_flags'], ['-gcflags=gopurs/output/...=-N -l'])
+        self.assertEqual(dev_env['GOFLAGS'], '-trimpath')
         self.assertNotIn('PPROF', normal)
         env = {}; result = driver.profile('rust', args, env)
         self.assertEqual(result['CARGO_PROFILE_RELEASE_OPT_LEVEL'], '3')
@@ -142,6 +148,8 @@ class RunnerContracts(unittest.TestCase):
                         command = list(map(str, command))
                         events.append(('command', command))
                         if command[0] == 'npm':
+                            self.assertFalse(any('gcflags' in arg for arg in command))
+                            self.assertEqual(env.get('GOFLAGS'), '-trimpath')
                             self.assertEqual(working_directory, backend_directory)
                             self.assertEqual(log, (directory / 'logs/compiler-build.log').resolve())
                             self.assertFalse((directory / 'old-artifact').exists())
@@ -164,6 +172,8 @@ class RunnerContracts(unittest.TestCase):
                             (project / 'Cargo.toml').write_text('generated')
                             (project / 'src/main.rs').write_text('generated')
                         elif command[:2] == ['go', 'build']:
+                            self.assertEqual([arg for arg in command if arg.startswith('-gcflags=')],
+                                             ['-gcflags=gopurs/output/...=-N -l'] if dev else [])
                             Path(command[command.index('-o') + 1]).write_text('compiled')
                         elif command[:2] == ['cargo', 'build']:
                             target = directory / 'target/release/purust_output'
@@ -176,7 +186,8 @@ class RunnerContracts(unittest.TestCase):
                         argv.append('--clean')
                     if dev:
                         argv.append('-d')
-                    with patch.dict(os.environ, {'GOPURS_JS': '0', 'GOPURS_RUST': '0', **selectors}), \
+                    with patch.dict(os.environ, {'GOPURS_JS': '0', 'GOPURS_RUST': '0',
+                                                 'GOFLAGS': '-trimpath', **selectors}), \
                          patch.object(sys, 'argv', argv), patch.object(driver, 'expected_cases'), \
                          patch.object(driver, 'inputs', side_effect=inputs), \
                          patch.object(driver, 'logged', side_effect=tools), \
@@ -206,6 +217,7 @@ class RunnerContracts(unittest.TestCase):
                 target.write_text('generated')
             if command[:2] == ['go', 'build']:
                 self.assertNotIn('--dev', command)
+                self.assertIn('-gcflags=gopurs/output/...=-N -l', command)
                 Path(command[command.index('-o') + 1]).write_text('compiled')
             return command
 
@@ -224,14 +236,68 @@ class RunnerContracts(unittest.TestCase):
                         execute.assert_not_called()
                         manifest = json.loads((directory / 'manifest.json').read_text())
                         self.assertEqual(manifest['profile']['backend_profile'], 'dev')
+                        self.assertEqual(manifest['profile']['go_build_flags'],
+                                         ['-gcflags=gopurs/output/...=-N -l'])
                         argv[argv.index('--build-only')] = '--run-only'
                         driver.main()
+                        execute.assert_called_once()
+                        del manifest['profile']['go_build_flags']
+                        (directory / 'manifest.json').write_text(json.dumps(manifest))
+                        with self.assertRaisesRegex(ValueError, 'profile'):
+                            driver.main()
                         execute.assert_called_once()
                         argv.remove(flag)
                         argv.extend(['--build-dir', str(directory)])
                         with self.assertRaisesRegex(ValueError, 'profile'):
                             driver.main()
                         execute.assert_called_once()
+
+    def test_dev_pgo_training_and_final_share_go_flags(self):
+        for supplied_profile in [False, True]:
+            with self.subTest(supplied_profile=supplied_profile):
+                directory = self.root / ('pgo-profile' if supplied_profile else 'pgo-training')
+                commands = []
+
+                def tools(command, working_directory, log, env):
+                    command = list(map(str, command))
+                    commands.append(command)
+                    self.assertEqual(env['GOFLAGS'], '-trimpath')
+                    if Path(command[0]).name == 'gopurs':
+                        target = directory / 'output/main/main.go'
+                        target.parent.mkdir(parents=True)
+                        target.write_text('generated')
+                    if command[:2] == ['go', 'build']:
+                        Path(command[command.index('-o') + 1]).write_text('compiled')
+                    return command
+
+                def execute(binary, working_directory, env, args, name='results'):
+                    if name == 'training-results':
+                        self.assertEqual(env['PPROF'], '1')
+                        (directory / 'cpu.prof').write_text('trained profile')
+
+                argv = ['driver.py', 'go', '--dev', '--pgo', '--build-dir', str(directory)]
+                if supplied_profile:
+                    source_profile = self.root / 'existing.prof'
+                    source_profile.write_text('existing profile')
+                    argv.extend(['--pgo-profile', str(source_profile), '--build-only'])
+                with patch.object(sys, 'argv', argv), patch.dict(os.environ, {'GOFLAGS': '-trimpath'}), \
+                     patch.object(driver, 'expected_cases'), \
+                     patch.object(driver, 'inputs', return_value={'source': 'abc'}), \
+                     patch.object(driver, 'logged', side_effect=tools), \
+                     patch.object(driver.subprocess, 'check_output', return_value='go test'), \
+                     patch.object(driver, 'execute', side_effect=execute) as run:
+                    driver.main()
+                    self.assertEqual(run.call_count, 0 if supplied_profile else 2)
+                builds = [command for command in commands if command[:2] == ['go', 'build']]
+                self.assertEqual(len(builds), 1 if supplied_profile else 2)
+                for command in builds:
+                    self.assertIn('-gcflags=gopurs/output/...=-N -l', command)
+                if not supplied_profile:
+                    self.assertIn('-pgo=off', builds[0])
+                profile_path = source_profile if supplied_profile else directory / 'cpu.prof'
+                self.assertIn('-pgo=' + str(profile_path.resolve()), builds[-1])
+                manifest = json.loads((directory / 'manifest.json').read_text())
+                self.assertEqual(manifest['pgo_profile_sha256'], driver.digest(profile_path))
 
     def test_failed_compiler_rebuild_stops_before_frontend_and_manifest(self):
         for language in ['go', 'rust']:

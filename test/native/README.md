@@ -20,6 +20,15 @@ For Go, it follows `bin/gopurs` host selection: `build:native` by default,
 This refreshes the embedded runtime along with the selected compiler when the
 sibling FFI libraries start using new runtime helpers.
 
+Go runners accept `-d` / `--dev`: gopurs uses its development profile, and
+the final Go build uses `-gcflags='gopurs/output/...=-N -l'` to disable
+optimization and inlining for generated packages. This reduces compilation
+work at the cost of runtime performance; omit `--dev` for performance comparisons.
+The flags also apply to diagnostic Go builds and PGO training/final builds.
+They are recorded in the build manifest and checked by `--run-only`.
+The standard library, external modules and the backend compiler rebuilt by
+`--clean` retain their normal optimization settings.
+
 Rust release builds explicitly use `CARGO_PROFILE_RELEASE_OPT_LEVEL=3 CARGO_PROFILE_RELEASE_DEBUG=false` for all three columns. The generated Cargo manifest still declares O1 and debug=true; those were the former runner defaults. Setting these environment variables explicitly can reproduce that profile. The effective profile and toolchain are saved in `manifest.json`; O1 historical measurements are not interchangeable with new O3 results. No neighbouring compiler source is changed.
 
 Go uses GOGC=800 by default for ordinary execution, PGO training and PGO execution alike; an explicit GOGC overrides all three. Ordinary builds pass `-pgo=off`. `--pgo` validates a training run before rebuilding with its CPU profile. `--build-only --pgo` requires `--pgo-profile FILE`, so build-only cannot silently execute a benchmark. PGO modes have separate default workspaces. Profiles and build commands are recorded; final performance comparisons still require controlled, separately coordinated runs.

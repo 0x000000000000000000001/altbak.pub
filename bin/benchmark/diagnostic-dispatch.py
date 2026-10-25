@@ -82,7 +82,7 @@ def json_workspace(base, runtime, run_only, suite='JsonTypedAst', dev=False):
 
 def execute(runtime, args):
     if args.dev:
-        print('[altbak/go] Build mode: DEV (--dev).', flush=True)
+        print('[altbak/go] Build mode: DEV (--dev); generated Go packages use -N -l.', flush=True)
     base = args.build_dir
     script = ROOT / "bin/benchmark" / DIAGNOSTICS[args.test]
     common = [sys.executable, script]

@@ -10,6 +10,7 @@ import shutil
 import statistics
 import subprocess
 import sys
+from go_profile import go_build_flags
 
 ROOT = Path(__file__).resolve().parents[2]
 DRIVERS = ROOT / 'bin/benchmark/array-indexing'
@@ -140,7 +141,8 @@ def build(directory, env, dev=False):
     purs = shutil.which('purs', path=env['PATH'])
     if not purs:
         raise ValueError('The TAST PureScript fork must be available on PATH')
-    source_paths = [Path(__file__), ROOT / 'run/bak/go/spago.go.yaml', ROOT / 'run/bak/rust/spago.rust.yaml',
+    source_paths = [Path(__file__), ROOT / 'bin/benchmark/go_profile.py',
+                    ROOT / 'run/bak/go/spago.go.yaml', ROOT / 'run/bak/rust/spago.rust.yaml',
                     *DRIVERS.glob('*'), *deps, *rust_deps]
     for path in deps:
         source_paths.extend([path.with_suffix('.js'), path.with_suffix('.go')])
@@ -162,7 +164,8 @@ def build(directory, env, dev=False):
     driver.mkdir(exist_ok=True)
     shutil.copy2(DRIVERS / 'driver.go', driver / 'main.go')
     shutil.copy2(DRIVERS / 'driver.mjs', directory / 'driver.mjs')
-    commands.append(run_logged(['go', 'build', '-pgo=off', '-o', directory / 'array-benchmark', './array-driver'],
+    commands.append(run_logged(['go', 'build', *go_build_flags(dev), '-pgo=off',
+                                '-o', directory / 'array-benchmark', './array-driver'],
                                directory / 'output', logs / 'go-build.log', env))
     compiler = env.get('CC', 'clang')
     commands.append(run_logged([compiler, '-O3', '-o', directory / 'array-benchmark-c', DRIVERS / 'driver.c'],
@@ -191,6 +194,7 @@ def build(directory, env, dev=False):
         'clang': [compiler, '--version'], 'rustc': ['rustc', '--version'], 'cargo': ['cargo', '--version']}.items()}
     manifest = {'schema': 1, 'sources': before, 'artifacts': fingerprints(artifacts),
                 'go_backend_profile': 'dev' if dev else 'release',
+                'go_build_flags': go_build_flags(dev),
                 'commands': commands, 'versions': versions,
                 'generated_audit': {**audit, 'rust': rust_audit},
                 'profile': {key: env.get(key, '') for key in PROFILE_KEYS}}
@@ -241,6 +245,8 @@ def measure(directory, output, args, env):
     manifest = json.loads((directory / 'manifest.json').read_text())
     if manifest.get('go_backend_profile', 'release') != ('dev' if args.dev else 'release'):
         raise ValueError('Gopurs development/release profile changed since build')
+    if manifest.get('go_build_flags', []) != go_build_flags(args.dev):
+        raise ValueError('Go build flags changed since build')
     def check_frozen():
         for section in ['sources', 'artifacts']:
             for path, expected in manifest[section].items():

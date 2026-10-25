@@ -14,6 +14,7 @@ sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'bin/benchmark'))
 from validate import expected_cases, validate_output
+from go_profile import go_build_flags
 
 
 def digest(path):
@@ -38,7 +39,8 @@ def inputs(language):
         if path.is_file():
             result[str(path)] = digest(path)
     for path in [ROOT / f'run/bak/{language}/spago.{language}.yaml',
-                 Path(__file__), ROOT / f'bin/{language}/run', ROOT / 'bin/benchmark/validate.py']:
+                 Path(__file__), ROOT / f'bin/{language}/run', ROOT / 'bin/benchmark/validate.py',
+                 ROOT / 'bin/benchmark/go_profile.py']:
         result[str(path.relative_to(ROOT))] = digest(path)
     return result
 
@@ -62,6 +64,7 @@ def profile(language, args, env):
         env['GOWORK'] = 'off'
         env.pop('PPROF', None)
         return {'GOGC': env['GOGC'], 'pgo': args.pgo, 'backend_profile': 'dev' if args.dev else 'release',
+                'go_build_flags': go_build_flags(args.dev),
                 'GOFLAGS': env.get('GOFLAGS', ''), 'GOEXPERIMENT': env.get('GOEXPERIMENT', '')}
     # Override the generated O1/debug=true release profile without editing Purust.
     env.setdefault('CARGO_PROFILE_RELEASE_OPT_LEVEL', '3')
@@ -159,7 +162,8 @@ def main():
     actions.add_argument('--run-only', action='store_true')
     parser.add_argument('-c', '--clean', action='store_true',
                         help='rebuild the backend compiler and clean this isolated workspace')
-    parser.add_argument('-d', '--dev', action='store_true', help='Go: use the faster gopurs development profile')
+    parser.add_argument('-d', '--dev', action='store_true',
+                        help='Go: use gopurs Dev and disable Go optimization/inlining for generated packages')
     parser.add_argument('--pgo', action='store_true', help='Go: train and rebuild, using the same GOGC')
     parser.add_argument('--pgo-profile', type=Path, help='Go: use an existing profile; avoids a training run')
     parser.add_argument('--build-dir', type=Path, help='override the isolated workspace directory')
@@ -194,7 +198,7 @@ def main():
     env['PATH'] = str(ROOT / 'run/bak/js/node_modules/.bin') + os.pathsep + env['PATH']
     config = profile(args.language, args, env)
     if args.dev:
-        print('[altbak/go] Build mode: DEV (--dev).', flush=True)
+        print('[altbak/go] Build mode: DEV (--dev); generated Go packages use -N -l.', flush=True)
     print(f'{args.language}: mode={args.mode}, profile={json.dumps(config, sort_keys=True)}', flush=True)
     binary = directory / 'benchmark'
     manifest_path = directory / 'manifest.json'
@@ -242,7 +246,8 @@ def main():
         commands.append(logged(['go', 'mod', 'tidy'], project, logs / 'modules.log', env))
         profile_path = args.pgo_profile
         if args.pgo and profile_path is None:
-            commands.append(logged(['go', 'build', '-pgo=off', '-o', directory / 'training', './main'], project,
+            commands.append(logged(['go', 'build', *config['go_build_flags'], '-pgo=off',
+                                    '-o', directory / 'training', './main'], project,
                                    logs / 'training-build.log', env))
             profile_path = directory / 'cpu.prof'
             profile_path.unlink(missing_ok=True)
@@ -250,7 +255,8 @@ def main():
             execute(directory / 'training', directory, training_env, args, 'training-results')
             if not profile_path.is_file() or not profile_path.stat().st_size:
                 raise RuntimeError('PGO training produced no profile')
-        commands.append(logged(['go', 'build', '-pgo=' + (str(profile_path) if profile_path else 'off'),
+        commands.append(logged(['go', 'build', *config['go_build_flags'],
+                                '-pgo=' + (str(profile_path) if profile_path else 'off'),
                                 '-o', binary, './main'], project, logs / 'build.log', env))
         toolchain = subprocess.check_output(['go', 'version'], text=True, env=env).strip()
     else:

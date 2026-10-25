@@ -311,8 +311,8 @@ class JsonSuites(unittest.TestCase):
 
                     def call(command, *unused):
                         commands.append(list(map(str, command)))
-                        if Path(command[0]).name == 'gopurs-native':
-                            raise RuntimeError('backend captured')
+                        if command[:2] == ['go', 'build']:
+                            raise RuntimeError('Go build captured')
 
                     argv = ['json-diagnostic', 'build', '--suite', suite, '--workspace', str(work), flag]
                     with patch.object(sys, 'argv', argv), \
@@ -320,13 +320,20 @@ class JsonSuites(unittest.TestCase):
                          patch.object(json_diagnostic, 'copy_sources'), \
                          patch.object(json_diagnostic, 'fingerprint', return_value={}), \
                          patch.object(json_diagnostic, 'call', side_effect=call):
-                        with self.assertRaisesRegex(RuntimeError, 'backend captured'):
+                        with self.assertRaisesRegex(RuntimeError, 'Go build captured'):
                             json_diagnostic.main()
-                        self.assertEqual(commands[-1][1:], ['--main', 'Test.' + suite, '--dev'])
+                        backend = next(command for command in commands if Path(command[0]).name == 'gopurs-native')
+                        self.assertEqual(backend[1:], ['--main', 'Test.' + suite, '--dev'])
+                        self.assertIn('-gcflags=gopurs/output/...=-N -l', commands[-1])
                         (work / 'manifest.json').write_text(json.dumps({'suite': suite, 'go_backend_profile': 'release'}))
                         argv[1] = 'measure'
                         with self.assertRaisesRegex(ValueError, 'profile changed'):
                             json_diagnostic.main()
+                        (work / 'manifest.json').write_text(json.dumps({'suite': suite, 'go_backend_profile': 'dev'}))
+                        for action in ['measure', 'build-js']:
+                            argv[1] = action
+                            with self.assertRaisesRegex(ValueError, 'Go build flags changed'):
+                                json_diagnostic.main()
 
     def test_array_dev_reaches_backend_and_rejects_other_saved_profile(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -335,22 +342,29 @@ class JsonSuites(unittest.TestCase):
 
             def call(command, *unused):
                 commands.append(list(map(str, command)))
-                if Path(command[0]).name == 'gopurs':
-                    raise RuntimeError('backend captured')
-                tast = work / 'output/Test.ArrayIndexing/corefn.json'
-                tast.parent.mkdir(parents=True)
-                tast.write_text(json.dumps({'dataDecls': [], 'classDecls': []}))
+                if command[:2] == ['go', 'build']:
+                    raise RuntimeError('Go build captured')
+                if command[1] == 'compile':
+                    tast = work / 'output/Test.ArrayIndexing/corefn.json'
+                    tast.parent.mkdir(parents=True)
+                    tast.write_text(json.dumps({'dataDecls': [], 'classDecls': []}))
 
             with patch.object(array_diagnostic, 'dependency_sources', return_value=[]), \
                  patch.object(array_diagnostic, 'rust_dependency_sources', return_value=[]), \
                  patch.object(array_diagnostic.shutil, 'which', return_value='/tmp/purs'), \
                  patch.object(array_diagnostic, 'fingerprints', return_value={}), \
+                 patch.object(array_diagnostic, 'audit_generated', return_value={}), \
                  patch.object(array_diagnostic, 'run_logged', side_effect=call):
-                with self.assertRaisesRegex(RuntimeError, 'backend captured'):
+                with self.assertRaisesRegex(RuntimeError, 'Go build captured'):
                     array_diagnostic.build(work, {'PATH': ''}, True)
-            self.assertEqual(commands[-1][1:], ['--main', 'Test.ArrayIndexing', '--dev'])
+            backend = next(command for command in commands if Path(command[0]).name == 'gopurs')
+            self.assertEqual(backend[1:], ['--main', 'Test.ArrayIndexing', '--dev'])
+            self.assertIn('-gcflags=gopurs/output/...=-N -l', commands[-1])
             (work / 'manifest.json').write_text(json.dumps({'go_backend_profile': 'release'}))
             with self.assertRaisesRegex(ValueError, 'profile changed'):
+                array_diagnostic.measure(work, work / 'results', argparse.Namespace(dev=True), {})
+            (work / 'manifest.json').write_text(json.dumps({'go_backend_profile': 'dev'}))
+            with self.assertRaisesRegex(ValueError, 'Go build flags changed'):
                 array_diagnostic.measure(work, work / 'results', argparse.Namespace(dev=True), {})
 
     def test_general_results_validate_case_identity_and_correctness_before_timing(self):
