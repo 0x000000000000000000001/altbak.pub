@@ -1,0 +1,2603 @@
+{
+  "date": "2026-10-25",
+  "schema": 3,
+  "campaign_revision": "native-explicit-gc-v3",
+  "campaign_sha256": "94db64a7a8fcb40bb0a861410eafa5a2de927af639111b1fb0e0562a81a6c448",
+  "native_gc_correction": {
+    "harness_source": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/measure-current-v3.mjs",
+    "harness_source_sha256": "7b8c5699f9115c7210a9995425fb23bd872cd5b6ee6f4249cd904bb3ae70ccf3",
+    "excluded_archive": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/excluded-attempts/native-gc-implicit-v2",
+    "proof": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/native-gc-launcher-proof-v3.json",
+    "proof_sha256": "480c94ec90de747cb03236a1c91b15f687f3165eb8bd815efdba1d95744999e9",
+    "environment_source": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/campaign-environment-v3.mjs",
+    "environment_source_sha256": "9d142c82312c1145398c91fbc4d8bef87e01e3e1b3abe276bbbd6ab1bbab333e",
+    "previous_publication_sha256": "5309b9efe4a993e746dd2624f45504bc7054f5a95e1b3d63b3fd03a0fa250875",
+    "retained_js_generations": 204,
+    "replaced_native_generations": 408
+  },
+  "protocol": {
+    "metric": "backend total",
+    "rounds": 3,
+    "warmups": 1,
+    "cache": "fresh backend/output caches each run; warm OS filesystem cache; fixed TAST",
+    "variants": [
+      "js",
+      "go",
+      "dev"
+    ],
+    "dev_host": "go",
+    "jobs": 8,
+    "packages": true,
+    "overlay": true,
+    "build_manifest": true,
+    "excludes": [
+      "frontend",
+      "compiler bootstrap",
+      "final Go compilation",
+      "application execution",
+      "process startup/exit"
+    ],
+    "comparison": "Release generated Go file hashes equal between JS and Go hosts; Dev stable independently; no application test suite rerun",
+    "rust": "Not measured. User requested estimates from per-project historical Rust/Go ratios after cancelling Rust bootstrap.",
+    "go_dependencies": {
+      "seeded_case": "b8x",
+      "module_manifests": "same pinned go.mod/go.sum as normal b8x runner",
+      "module_cache": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/go-mod-cache",
+      "module_cache_source": "/private/tmp/gopurs-cold-full-modcache",
+      "go_export_cache": "shared between runs, warmed by warmup; backend caches empty each run"
+    },
+    "warmup_order": [
+      "go",
+      "js",
+      "dev"
+    ],
+    "measured_orders": [
+      [
+        "go",
+        "dev",
+        "js"
+      ],
+      [
+        "dev",
+        "js",
+        "go"
+      ],
+      [
+        "js",
+        "go",
+        "dev"
+      ]
+    ],
+    "revision": "All Go/Dev invocations rerun with explicit GOGC=off/GOMEMLIMIT=16GiB; all corrected JS invocations retained unchanged from v2. Native rounds retain the Go/Dev relative order from v2, with JS entries skipped.",
+    "native_gc": {
+      "GOGC": "off",
+      "GOMEMLIMIT": "16GiB"
+    }
+  },
+  "machine": {
+    "cpu": "Apple M4 Pro",
+    "cpus": 14,
+    "memory": 51539607552,
+    "node": "v24.8.0"
+  },
+  "compiler_commit": "e4f7c22c0bc7eed3ca96950ffeb496e4ae938d7b",
+  "compiler_by_variant": {
+    "js": {
+      "kind": "js-file-stdin",
+      "root": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/compilers/js-file-stdin",
+      "launcher_sha256": "c8d25dfb6fb26211e82d84adaae105cc1845c183fa9a9101699a3d036de19d25",
+      "executable": "bin/gopurs.js",
+      "executable_sha256": "116a991f7bff46d5cecc38a268eebb31f39e6763b2738d17334489e7a760c938",
+      "files_sha256": "057ee238b3b478902e0f5298a21a8539e7c20adaf119491d5a450c4a94646683"
+    },
+    "go": {
+      "kind": "go-original",
+      "root": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/compilers/current",
+      "launcher_sha256": "c8d25dfb6fb26211e82d84adaae105cc1845c183fa9a9101699a3d036de19d25",
+      "executable": "bin/gopurs-native",
+      "executable_sha256": "42bc5a5dd8363b397860973a9ac4647aed84e40ba812a6266c617a8b0f30d482",
+      "files_sha256": "ca8e9b8f4491e4fee2f17595ddd1c9f747129bbc7597fb788cabea44bc095194"
+    },
+    "dev": {
+      "kind": "go-original",
+      "root": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/compilers/current",
+      "launcher_sha256": "c8d25dfb6fb26211e82d84adaae105cc1845c183fa9a9101699a3d036de19d25",
+      "executable": "bin/gopurs-native",
+      "executable_sha256": "42bc5a5dd8363b397860973a9ac4647aed84e40ba812a6266c617a8b0f30d482",
+      "files_sha256": "ca8e9b8f4491e4fee2f17595ddd1c9f747129bbc7597fb788cabea44bc095194"
+    }
+  },
+  "js_transport_correction": {
+    "record": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/js-file-stdin-compiler.json",
+    "record_sha256": "5ff8043a604cf6fcbcefa19731e4634342f6eb579d084c1497c2f694bc790b89",
+    "changed_paths": [
+      "bin/gopurs.js",
+      "src/Gopurs/FfiSupport.js",
+      "tools/go-packages-transport.test.mjs"
+    ],
+    "ffi_diff": {
+      "path": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/js-file-stdin-source.diff",
+      "sha256": "df47d6a7b2a0cf1e9e32d875ccfba4f41414e6d9b486d7db314cba53c33035d6"
+    },
+    "excluded_archive": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/failed-attempts/js-pipe-transport-v1"
+  },
+  "original_native_compiler_files": [
+    {
+      "path": "bin/gopurs",
+      "bytes": 5765,
+      "sha256": "c8d25dfb6fb26211e82d84adaae105cc1845c183fa9a9101699a3d036de19d25"
+    },
+    {
+      "path": "bin/gopurs-native",
+      "bytes": 42296242,
+      "sha256": "42bc5a5dd8363b397860973a9ac4647aed84e40ba812a6266c617a8b0f30d482"
+    }
+  ],
+  "measured_variants": [
+    "js",
+    "go",
+    "dev"
+  ],
+  "estimated_variants": [
+    "rust"
+  ],
+  "results": {
+    "b8x": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          147136,
+          146048,
+          146389
+        ],
+        "median_ms": 146389
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          78458,
+          78037,
+          77772
+        ],
+        "median_ms": 78037
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          54409,
+          53611,
+          53373
+        ],
+        "median_ms": 53611
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 52920.6934043648,
+        "historical_rust_go_ratio": 0.6781487423192178,
+        "historical_go_ms": 33037,
+        "historical_rust_ms": 22404
+      }
+    },
+    "gopurs-aff": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          16127,
+          16023,
+          15872
+        ],
+        "median_ms": 16023
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          6311,
+          6312,
+          6317
+        ],
+        "median_ms": 6312
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          5440,
+          5437,
+          5431
+        ],
+        "median_ms": 5437
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 5002.489563567362,
+        "historical_rust_go_ratio": 0.7925363693864642,
+        "historical_go_ms": 1581,
+        "historical_rust_ms": 1253
+      }
+    },
+    "gopurs-argonaut-core": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          16128,
+          15672,
+          15553
+        ],
+        "median_ms": 15672
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          5914,
+          5952,
+          5930
+        ],
+        "median_ms": 5930
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          5017,
+          4962,
+          4900
+        ],
+        "median_ms": 4962
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 4800.0654545454545,
+        "historical_rust_go_ratio": 0.8094545454545454,
+        "historical_go_ms": 1375,
+        "historical_rust_ms": 1113
+      }
+    },
+    "gopurs-arrays": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          12150,
+          12883,
+          12758
+        ],
+        "median_ms": 12758
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          5090,
+          4982,
+          5072
+        ],
+        "median_ms": 5072
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          3732,
+          3800,
+          3782
+        ],
+        "median_ms": 3782
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 4000.7586206896553,
+        "historical_rust_go_ratio": 0.7887931034482759,
+        "historical_go_ms": 1624,
+        "historical_rust_ms": 1281
+      }
+    },
+    "gopurs-assert": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          2516,
+          2476,
+          2514
+        ],
+        "median_ms": 2514
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          1305,
+          1370,
+          1289
+        ],
+        "median_ms": 1305
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          1187,
+          1161,
+          1194
+        ],
+        "median_ms": 1187
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 922.2,
+        "historical_rust_go_ratio": 0.7066666666666667,
+        "historical_go_ms": 150,
+        "historical_rust_ms": 106
+      }
+    },
+    "gopurs-avar": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          15173,
+          15097,
+          15033
+        ],
+        "median_ms": 15097
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          5877,
+          5802,
+          5865
+        ],
+        "median_ms": 5865
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          4975,
+          4971,
+          4934
+        ],
+        "median_ms": 4971
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 4770.086830680174,
+        "historical_rust_go_ratio": 0.8133140376266281,
+        "historical_go_ms": 1382,
+        "historical_rust_ms": 1124
+      }
+    },
+    "gopurs-catenable-lists": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          10188,
+          10219,
+          10103
+        ],
+        "median_ms": 10188
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          3927,
+          3888,
+          3918
+        ],
+        "median_ms": 3918
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          3405,
+          3387,
+          3365
+        ],
+        "median_ms": 3387
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 3023.549268292683,
+        "historical_rust_go_ratio": 0.7717073170731708,
+        "historical_go_ms": 1025,
+        "historical_rust_ms": 791
+      }
+    },
+    "gopurs-console": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          9394,
+          9736,
+          9476
+        ],
+        "median_ms": 9476
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          3205,
+          3233,
+          3207
+        ],
+        "median_ms": 3207
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          2880,
+          2872,
+          2910
+        ],
+        "median_ms": 2880
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 2512.981612446959,
+        "historical_rust_go_ratio": 0.7835926449787836,
+        "historical_go_ms": 707,
+        "historical_rust_ms": 554
+      }
+    },
+    "gopurs-datetime": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          14946,
+          13991,
+          14497
+        ],
+        "median_ms": 14497
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          5428,
+          5560,
+          5589
+        ],
+        "median_ms": 5560
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          4744,
+          4768,
+          4852
+        ],
+        "median_ms": 4768
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 4324.444444444444,
+        "historical_rust_go_ratio": 0.7777777777777778,
+        "historical_go_ms": 1449,
+        "historical_rust_ms": 1127
+      }
+    },
+    "gopurs-effect": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          4156,
+          4161,
+          4177
+        ],
+        "median_ms": 4161
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          1400,
+          1390,
+          1371
+        ],
+        "median_ms": 1390
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          1292,
+          1296,
+          1302
+        ],
+        "median_ms": 1296
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 994.1139240506329,
+        "historical_rust_go_ratio": 0.7151898734177216,
+        "historical_go_ms": 158,
+        "historical_rust_ms": 113
+      }
+    },
+    "gopurs-enums": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          10974,
+          10858,
+          10507
+        ],
+        "median_ms": 10858
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          3940,
+          3936,
+          3924
+        ],
+        "median_ms": 3936
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          3309,
+          3281,
+          3300
+        ],
+        "median_ms": 3300
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 3124.893709327549,
+        "historical_rust_go_ratio": 0.7939262472885033,
+        "historical_go_ms": 922,
+        "historical_rust_ms": 732
+      }
+    },
+    "gopurs-exceptions": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          4696,
+          4669,
+          4671
+        ],
+        "median_ms": 4671
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          1684,
+          1655,
+          1665
+        ],
+        "median_ms": 1665
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          1491,
+          1519,
+          1519
+        ],
+        "median_ms": 1519
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 1195.207468879668,
+        "historical_rust_go_ratio": 0.7178423236514523,
+        "historical_go_ms": 241,
+        "historical_rust_ms": 173
+      }
+    },
+    "gopurs-foldable-traversable": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          10499,
+          10189,
+          10511
+        ],
+        "median_ms": 10499
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          3837,
+          3841,
+          3867
+        ],
+        "median_ms": 3841
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          3330,
+          3357,
+          3360
+        ],
+        "median_ms": 3357
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 3056.9426605504586,
+        "historical_rust_go_ratio": 0.7958715596330275,
+        "historical_go_ms": 872,
+        "historical_rust_ms": 694
+      }
+    },
+    "gopurs-foreign": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          12846,
+          12293,
+          12873
+        ],
+        "median_ms": 12846
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          5338,
+          5298,
+          5309
+        ],
+        "median_ms": 5309
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          4621,
+          4600,
+          4624
+        ],
+        "median_ms": 4621
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 4347.058671268334,
+        "historical_rust_go_ratio": 0.818809318377912,
+        "historical_go_ms": 1159,
+        "historical_rust_ms": 949
+      }
+    },
+    "gopurs-foreign-object": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          16861,
+          15874,
+          15758
+        ],
+        "median_ms": 15874
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          6228,
+          6233,
+          6210
+        ],
+        "median_ms": 6228
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          5186,
+          5079,
+          5090
+        ],
+        "median_ms": 5090
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 5135.5887096774195,
+        "historical_rust_go_ratio": 0.8245967741935484,
+        "historical_go_ms": 1488,
+        "historical_rust_ms": 1227
+      }
+    },
+    "gopurs-free": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          11593,
+          12074,
+          11960
+        ],
+        "median_ms": 11960
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          4840,
+          4832,
+          4900
+        ],
+        "median_ms": 4840
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          4278,
+          4238,
+          4252
+        ],
+        "median_ms": 4252
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 3881.352657004831,
+        "historical_rust_go_ratio": 0.8019323671497585,
+        "historical_go_ms": 1035,
+        "historical_rust_ms": 830
+      }
+    },
+    "gopurs-functions": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          4293,
+          4221,
+          4231
+        ],
+        "median_ms": 4231
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          1448,
+          1405,
+          1417
+        ],
+        "median_ms": 1417
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          1297,
+          1325,
+          1299
+        ],
+        "median_ms": 1299
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 960.1530054644809,
+        "historical_rust_go_ratio": 0.6775956284153005,
+        "historical_go_ms": 183,
+        "historical_rust_ms": 124
+      }
+    },
+    "gopurs-integers": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          10082,
+          9961,
+          10024
+        ],
+        "median_ms": 10024
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          3470,
+          3467,
+          3491
+        ],
+        "median_ms": 3470
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          3112,
+          3074,
+          3098
+        ],
+        "median_ms": 3098
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 2706.8529769137303,
+        "historical_rust_go_ratio": 0.7800729040097205,
+        "historical_go_ms": 823,
+        "historical_rust_ms": 642
+      }
+    },
+    "gopurs-js-bigints": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          4645,
+          4625,
+          4551
+        ],
+        "median_ms": 4625
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          1601,
+          1578,
+          1596
+        ],
+        "median_ms": 1596
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          1443,
+          1438,
+          1450
+        ],
+        "median_ms": 1443
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 1178.5846153846153,
+        "historical_rust_go_ratio": 0.7384615384615385,
+        "historical_go_ms": 195,
+        "historical_rust_ms": 144
+      }
+    },
+    "gopurs-js-date": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          16044,
+          15953,
+          16057
+        ],
+        "median_ms": 16044
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          6224,
+          6256,
+          6227
+        ],
+        "median_ms": 6227
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          5297,
+          5256,
+          5421
+        ],
+        "median_ms": 5297
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 5007.3668965517245,
+        "historical_rust_go_ratio": 0.8041379310344827,
+        "historical_go_ms": 1450,
+        "historical_rust_ms": 1166
+      }
+    },
+    "gopurs-js-promise": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          8021,
+          8239,
+          8189
+        ],
+        "median_ms": 8189
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          2795,
+          2771,
+          2787
+        ],
+        "median_ms": 2787
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          2559,
+          2525,
+          2531
+        ],
+        "median_ms": 2531
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 2195.662361623616,
+        "historical_rust_go_ratio": 0.7878228782287823,
+        "historical_go_ms": 542,
+        "historical_rust_ms": 427
+      }
+    },
+    "gopurs-js-promise-aff": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          16843,
+          16617,
+          16598
+        ],
+        "median_ms": 16617
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          6427,
+          6434,
+          6450
+        ],
+        "median_ms": 6434
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          5491,
+          5511,
+          5520
+        ],
+        "median_ms": 5511
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 5158.367156208277,
+        "historical_rust_go_ratio": 0.80173564753004,
+        "historical_go_ms": 1498,
+        "historical_rust_ms": 1201
+      }
+    },
+    "gopurs-js-uri": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          9638,
+          9871,
+          9730
+        ],
+        "median_ms": 9730
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          3286,
+          3259,
+          3275
+        ],
+        "median_ms": 3275
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          2942,
+          2948,
+          2974
+        ],
+        "median_ms": 2948
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 2569.260563380282,
+        "historical_rust_go_ratio": 0.7845070422535211,
+        "historical_go_ms": 710,
+        "historical_rust_ms": 557
+      }
+    },
+    "gopurs-lazy": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          7721,
+          7446,
+          7605
+        ],
+        "median_ms": 7605
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          2768,
+          2720,
+          2758
+        ],
+        "median_ms": 2758
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          2526,
+          2542,
+          2521
+        ],
+        "median_ms": 2526
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 2177.923518164436,
+        "historical_rust_go_ratio": 0.7896749521988528,
+        "historical_go_ms": 523,
+        "historical_rust_ms": 413
+      }
+    },
+    "gopurs-node-buffer": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          15169,
+          14716,
+          14608
+        ],
+        "median_ms": 14716
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          5328,
+          5351,
+          5420
+        ],
+        "median_ms": 5351
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          4756,
+          4688,
+          4743
+        ],
+        "median_ms": 4743
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 4366.312348668281,
+        "historical_rust_go_ratio": 0.8159806295399515,
+        "historical_go_ms": 1239,
+        "historical_rust_ms": 1011
+      }
+    },
+    "gopurs-node-event-emitter": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          21931,
+          21845,
+          21842
+        ],
+        "median_ms": 21845
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          8936,
+          8919,
+          8971
+        ],
+        "median_ms": 8936
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          6632,
+          6631,
+          6597
+        ],
+        "median_ms": 6631
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 7607.162611046736,
+        "historical_rust_go_ratio": 0.8512939358825802,
+        "historical_go_ms": 2589,
+        "historical_rust_ms": 2204
+      }
+    },
+    "gopurs-node-fs": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          18678,
+          18846,
+          18796
+        ],
+        "median_ms": 18796
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          8738,
+          6982,
+          6999
+        ],
+        "median_ms": 6999
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          6179,
+          5912,
+          5899
+        ],
+        "median_ms": 5912
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 5684.918544194107,
+        "historical_rust_go_ratio": 0.8122472559214327,
+        "historical_go_ms": 1731,
+        "historical_rust_ms": 1406
+      }
+    },
+    "gopurs-node-http": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          20650,
+          20660,
+          20459
+        ],
+        "median_ms": 20650
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          7391,
+          7538,
+          7475
+        ],
+        "median_ms": 7475
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          6248,
+          6279,
+          6221
+        ],
+        "median_ms": 6248
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 6172.794117647059,
+        "historical_rust_go_ratio": 0.8257918552036199,
+        "historical_go_ms": 1768,
+        "historical_rust_ms": 1460
+      }
+    },
+    "gopurs-node-net": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          19206,
+          19390,
+          19243
+        ],
+        "median_ms": 19243
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          6949,
+          6944,
+          6945
+        ],
+        "median_ms": 6945
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          5858,
+          5865,
+          5879
+        ],
+        "median_ms": 5865
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 5630.20905923345,
+        "historical_rust_go_ratio": 0.81068524970964,
+        "historical_go_ms": 1722,
+        "historical_rust_ms": 1396
+      }
+    },
+    "gopurs-node-path": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          4257,
+          4272,
+          4188
+        ],
+        "median_ms": 4257
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          1302,
+          1300,
+          1324
+        ],
+        "median_ms": 1302
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          1204,
+          1194,
+          1218
+        ],
+        "median_ms": 1204
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 913.8260869565217,
+        "historical_rust_go_ratio": 0.7018633540372671,
+        "historical_go_ms": 161,
+        "historical_rust_ms": 113
+      }
+    },
+    "gopurs-node-process": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          17942,
+          18012,
+          17792
+        ],
+        "median_ms": 17942
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          6638,
+          6684,
+          6692
+        ],
+        "median_ms": 6684
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          5685,
+          5830,
+          5649
+        ],
+        "median_ms": 5685
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 5390.976349302608,
+        "historical_rust_go_ratio": 0.8065494238932687,
+        "historical_go_ms": 1649,
+        "historical_rust_ms": 1330
+      }
+    },
+    "gopurs-node-streams": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          23385,
+          23419,
+          23296
+        ],
+        "median_ms": 23385
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          9097,
+          9204,
+          9325
+        ],
+        "median_ms": 9204
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          6884,
+          6815,
+          6951
+        ],
+        "median_ms": 6884
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 7937.788793103448,
+        "historical_rust_go_ratio": 0.8624281609195402,
+        "historical_go_ms": 2784,
+        "historical_rust_ms": 2401
+      }
+    },
+    "gopurs-now": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          18317,
+          17907,
+          18036
+        ],
+        "median_ms": 18036
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          6875,
+          6686,
+          6756
+        ],
+        "median_ms": 6756
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          5749,
+          5772,
+          5788
+        ],
+        "median_ms": 5772
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 5480.0484261501215,
+        "historical_rust_go_ratio": 0.8111380145278451,
+        "historical_go_ms": 1652,
+        "historical_rust_ms": 1340
+      }
+    },
+    "gopurs-nullable": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          14076,
+          14597,
+          14155
+        ],
+        "median_ms": 14155
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          5334,
+          5343,
+          5380
+        ],
+        "median_ms": 5343
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          4648,
+          4672,
+          4659
+        ],
+        "median_ms": 4659
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 4399.301298701299,
+        "historical_rust_go_ratio": 0.8233766233766234,
+        "historical_go_ms": 1155,
+        "historical_rust_ms": 951
+      }
+    },
+    "gopurs-numbers": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          10142,
+          10161,
+          10116
+        ],
+        "median_ms": 10142
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          3502,
+          3507,
+          3531
+        ],
+        "median_ms": 3507
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          3143,
+          3267,
+          3170
+        ],
+        "median_ms": 3170
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 2748.6164874551973,
+        "historical_rust_go_ratio": 0.7837514934289128,
+        "historical_go_ms": 837,
+        "historical_rust_ms": 656
+      }
+    },
+    "gopurs-ordered-collections": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          16381,
+          16371,
+          16392
+        ],
+        "median_ms": 16381
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          6464,
+          6449,
+          6434
+        ],
+        "median_ms": 6449
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          5141,
+          5125,
+          5138
+        ],
+        "median_ms": 5138
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 5046.717441860465,
+        "historical_rust_go_ratio": 0.7825581395348837,
+        "historical_go_ms": 1720,
+        "historical_rust_ms": 1346
+      }
+    },
+    "gopurs-partial": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          9581,
+          9504,
+          9519
+        ],
+        "median_ms": 9519
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          3188,
+          3165,
+          3201
+        ],
+        "median_ms": 3188
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          2859,
+          2858,
+          2863
+        ],
+        "median_ms": 2859
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 2492.6005665722378,
+        "historical_rust_go_ratio": 0.7818696883852692,
+        "historical_go_ms": 706,
+        "historical_rust_ms": 552
+      }
+    },
+    "gopurs-prelude": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          10498,
+          10756,
+          10711
+        ],
+        "median_ms": 10711
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          3557,
+          3658,
+          3552
+        ],
+        "median_ms": 3557
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          3054,
+          3029,
+          3053
+        ],
+        "median_ms": 3053
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 2791.8313953488373,
+        "historical_rust_go_ratio": 0.7848837209302325,
+        "historical_go_ms": 860,
+        "historical_rust_ms": 675
+      }
+    },
+    "gopurs-random": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          9902,
+          10034,
+          9713
+        ],
+        "median_ms": 9902
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          3217,
+          3224,
+          3230
+        ],
+        "median_ms": 3224
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          2870,
+          2907,
+          2880
+        ],
+        "median_ms": 2880
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 2524.7098591549297,
+        "historical_rust_go_ratio": 0.7830985915492957,
+        "historical_go_ms": 710,
+        "historical_rust_ms": 556
+      }
+    },
+    "gopurs-record": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          10133,
+          10168,
+          9820
+        ],
+        "median_ms": 10133
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          3370,
+          3356,
+          3349
+        ],
+        "median_ms": 3356
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          3019,
+          3023,
+          3011
+        ],
+        "median_ms": 3019
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 2627.032786885246,
+        "historical_rust_go_ratio": 0.7827868852459017,
+        "historical_go_ms": 732,
+        "historical_rust_ms": 573
+      }
+    },
+    "gopurs-refs": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          9881,
+          9925,
+          9854
+        ],
+        "median_ms": 9881
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          3314,
+          3293,
+          3300
+        ],
+        "median_ms": 3300
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          2957,
+          2960,
+          2976
+        ],
+        "median_ms": 2960
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 2593.521126760563,
+        "historical_rust_go_ratio": 0.7859154929577464,
+        "historical_go_ms": 710,
+        "historical_rust_ms": 558
+      }
+    },
+    "gopurs-run": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          17541,
+          17699,
+          17665
+        ],
+        "median_ms": 17665
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          6775,
+          6804,
+          6723
+        ],
+        "median_ms": 6775
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          5837,
+          5775,
+          5776
+        ],
+        "median_ms": 5776
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 5433.374460209747,
+        "historical_rust_go_ratio": 0.8019740900678594,
+        "historical_go_ms": 1621,
+        "historical_rust_ms": 1300
+      }
+    },
+    "gopurs-spec": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          30258,
+          30416,
+          30602
+        ],
+        "median_ms": 30416
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          12821,
+          12805,
+          12874
+        ],
+        "median_ms": 12821
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          8740,
+          8640,
+          8658
+        ],
+        "median_ms": 8658
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 10954.482226868793,
+        "historical_rust_go_ratio": 0.8544171458442237,
+        "historical_go_ms": 3826,
+        "historical_rust_ms": 3269
+      }
+    },
+    "gopurs-st": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          9673,
+          9659,
+          9657
+        ],
+        "median_ms": 9659
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          3343,
+          3294,
+          3302
+        ],
+        "median_ms": 3302
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          3003,
+          2980,
+          2970
+        ],
+        "median_ms": 2980
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 2597.389121338912,
+        "historical_rust_go_ratio": 0.7866108786610879,
+        "historical_go_ms": 717,
+        "historical_rust_ms": 564
+      }
+    },
+    "gopurs-strings": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          12759,
+          12680,
+          12175
+        ],
+        "median_ms": 12680
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          4476,
+          4489,
+          4527
+        ],
+        "median_ms": 4489
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          3824,
+          3814,
+          3882
+        ],
+        "median_ms": 3824
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 3805.354128440367,
+        "historical_rust_go_ratio": 0.8477064220183487,
+        "historical_go_ms": 1090,
+        "historical_rust_ms": 924
+      }
+    },
+    "gopurs-strings-extra": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          13905,
+          13757,
+          13757
+        ],
+        "median_ms": 13757
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          6990,
+          7008,
+          6941
+        ],
+        "median_ms": 6990
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          6343,
+          6371,
+          6294
+        ],
+        "median_ms": 6343
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 4826.812933025404,
+        "historical_rust_go_ratio": 0.6905311778290993,
+        "historical_go_ms": 2598,
+        "historical_rust_ms": 1794
+      }
+    },
+    "gopurs-unfoldable": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          9531,
+          9877,
+          9565
+        ],
+        "median_ms": 9565
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          3328,
+          3322,
+          3306
+        ],
+        "median_ms": 3322
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          2972,
+          2979,
+          3007
+        ],
+        "median_ms": 2979
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 2607.1972413793105,
+        "historical_rust_go_ratio": 0.7848275862068965,
+        "historical_go_ms": 725,
+        "historical_rust_ms": 569
+      }
+    },
+    "gopurs-unsafe-coerce": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          9841,
+          9766,
+          9924
+        ],
+        "median_ms": 9841
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          3300,
+          3286,
+          3290
+        ],
+        "median_ms": 3290
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          2941,
+          2932,
+          2973
+        ],
+        "median_ms": 2941
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 2562.492957746479,
+        "historical_rust_go_ratio": 0.7788732394366197,
+        "historical_go_ms": 710,
+        "historical_rust_ms": 553
+      }
+    },
+    "gopurs-uuid": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          20961,
+          20972,
+          21002
+        ],
+        "median_ms": 20972
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          8745,
+          8748,
+          8767
+        ],
+        "median_ms": 8748
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          6505,
+          6508,
+          6470
+        ],
+        "median_ms": 6505
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 7340.081821690467,
+        "historical_rust_go_ratio": 0.8390582786568892,
+        "historical_go_ms": 2591,
+        "historical_rust_ms": 2174
+      }
+    },
+    "gopurs-variant": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          11455,
+          11177,
+          11665
+        ],
+        "median_ms": 11455
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          4451,
+          4451,
+          4444
+        ],
+        "median_ms": 4451
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          3901,
+          3881,
+          3877
+        ],
+        "median_ms": 3881
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 3278.620345140781,
+        "historical_rust_go_ratio": 0.7366030881017257,
+        "historical_go_ms": 1101,
+        "historical_rust_ms": 811
+      }
+    },
+    "gopurs-yoga-json": {
+      "js": {
+        "kind": "measured",
+        "samples_ms": [
+          35962,
+          36226,
+          36378
+        ],
+        "median_ms": 36226
+      },
+      "go": {
+        "kind": "measured",
+        "samples_ms": [
+          16509,
+          16618,
+          16572
+        ],
+        "median_ms": 16572
+      },
+      "dev": {
+        "kind": "measured",
+        "samples_ms": [
+          11991,
+          11995,
+          11962
+        ],
+        "median_ms": 11991
+      },
+      "rust": {
+        "kind": "estimated",
+        "estimate_ms": 13134.268127282212,
+        "historical_rust_go_ratio": 0.7925578160319945,
+        "historical_go_ms": 5751,
+        "historical_rust_ms": 4558
+      }
+    }
+  },
+  "totals_ms": {
+    "libraries": {
+      "js": 666089,
+      "go": 254678,
+      "rust": 203994.3453512804,
+      "dev": 212022
+    },
+    "all": {
+      "js": 812478,
+      "go": 332715,
+      "rust": 256915.03875564516,
+      "dev": 265633
+    }
+  },
+  "total_kinds": {
+    "js": "sum_of_measured_medians",
+    "go": "sum_of_measured_medians",
+    "rust": "estimated",
+    "dev": "sum_of_measured_medians"
+  },
+  "rust_estimation": {
+    "formula": "new Go Release median_ms * historical Rust ms / historical Go ms, independently per project",
+    "totals": "sums of unrounded per-project estimates; no global historical ratio",
+    "assumption": "The historical Rust/Go relative compilation speed remains applicable to the current compiler.",
+    "historical_source": {
+      "captured_at": "2026-10-25T09:29:15.223573+00:00",
+      "source_readme": "/Users/0x1/Documents/htdocs/altbak.pub/README.md",
+      "source_readme_sha256": "c5c818bfcd0272f7cd30bbb5145cf050ac5e38c92d94a17592e8fcfe3337e258",
+      "source_git_commit": "5ad44df49ff6e7f49420286a4aa91075217f9bac",
+      "table_sha256": "9360cae8a516d50cbf881e692c99357963d14912aa8b1f4d170fdd365158d258"
+    },
+    "historical_ratios_file": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/historical-gopurs-compilation-ratios.json",
+    "historical_ratios_sha256": "446e6f2a724bd43734985d5de1c6c6368921198454dbeed5929c0cd9ff67ff48",
+    "historical_rows": [
+      {
+        "name": "b8x",
+        "historical_js_ms": 55775,
+        "historical_go_ms": 33037,
+        "historical_rust_ms": 22404,
+        "historical_rust_go_ratio": 0.6781487423192178,
+        "ratio_numerator_ms": 22404,
+        "ratio_denominator_ms": 33037
+      },
+      {
+        "name": "gopurs-aff",
+        "historical_js_ms": 6716,
+        "historical_go_ms": 1581,
+        "historical_rust_ms": 1253,
+        "historical_rust_go_ratio": 0.7925363693864642,
+        "ratio_numerator_ms": 1253,
+        "ratio_denominator_ms": 1581
+      },
+      {
+        "name": "gopurs-argonaut-core",
+        "historical_js_ms": 7096,
+        "historical_go_ms": 1375,
+        "historical_rust_ms": 1113,
+        "historical_rust_go_ratio": 0.8094545454545454,
+        "ratio_numerator_ms": 1113,
+        "ratio_denominator_ms": 1375
+      },
+      {
+        "name": "gopurs-arrays",
+        "historical_js_ms": 5533,
+        "historical_go_ms": 1624,
+        "historical_rust_ms": 1281,
+        "historical_rust_go_ratio": 0.7887931034482759,
+        "ratio_numerator_ms": 1281,
+        "ratio_denominator_ms": 1624
+      },
+      {
+        "name": "gopurs-assert",
+        "historical_js_ms": 537,
+        "historical_go_ms": 150,
+        "historical_rust_ms": 106,
+        "historical_rust_go_ratio": 0.7066666666666667,
+        "ratio_numerator_ms": 106,
+        "ratio_denominator_ms": 150
+      },
+      {
+        "name": "gopurs-avar",
+        "historical_js_ms": 6552,
+        "historical_go_ms": 1382,
+        "historical_rust_ms": 1124,
+        "historical_rust_go_ratio": 0.8133140376266281,
+        "ratio_numerator_ms": 1124,
+        "ratio_denominator_ms": 1382
+      },
+      {
+        "name": "gopurs-catenable-lists",
+        "historical_js_ms": 4105,
+        "historical_go_ms": 1025,
+        "historical_rust_ms": 791,
+        "historical_rust_go_ratio": 0.7717073170731708,
+        "ratio_numerator_ms": 791,
+        "ratio_denominator_ms": 1025
+      },
+      {
+        "name": "gopurs-console",
+        "historical_js_ms": 4345,
+        "historical_go_ms": 707,
+        "historical_rust_ms": 554,
+        "historical_rust_go_ratio": 0.7835926449787836,
+        "ratio_numerator_ms": 554,
+        "ratio_denominator_ms": 707
+      },
+      {
+        "name": "gopurs-datetime",
+        "historical_js_ms": 6113,
+        "historical_go_ms": 1449,
+        "historical_rust_ms": 1127,
+        "historical_rust_go_ratio": 0.7777777777777778,
+        "ratio_numerator_ms": 1127,
+        "ratio_denominator_ms": 1449
+      },
+      {
+        "name": "gopurs-effect",
+        "historical_js_ms": 1880,
+        "historical_go_ms": 158,
+        "historical_rust_ms": 113,
+        "historical_rust_go_ratio": 0.7151898734177216,
+        "ratio_numerator_ms": 113,
+        "ratio_denominator_ms": 158
+      },
+      {
+        "name": "gopurs-enums",
+        "historical_js_ms": 4800,
+        "historical_go_ms": 922,
+        "historical_rust_ms": 732,
+        "historical_rust_go_ratio": 0.7939262472885033,
+        "ratio_numerator_ms": 732,
+        "ratio_denominator_ms": 922
+      },
+      {
+        "name": "gopurs-exceptions",
+        "historical_js_ms": 2032,
+        "historical_go_ms": 241,
+        "historical_rust_ms": 173,
+        "historical_rust_go_ratio": 0.7178423236514523,
+        "ratio_numerator_ms": 173,
+        "ratio_denominator_ms": 241
+      },
+      {
+        "name": "gopurs-foldable-traversable",
+        "historical_js_ms": 4683,
+        "historical_go_ms": 872,
+        "historical_rust_ms": 694,
+        "historical_rust_go_ratio": 0.7958715596330275,
+        "ratio_numerator_ms": 694,
+        "ratio_denominator_ms": 872
+      },
+      {
+        "name": "gopurs-foreign",
+        "historical_js_ms": 4814,
+        "historical_go_ms": 1159,
+        "historical_rust_ms": 949,
+        "historical_rust_go_ratio": 0.818809318377912,
+        "ratio_numerator_ms": 949,
+        "ratio_denominator_ms": 1159
+      },
+      {
+        "name": "gopurs-foreign-object",
+        "historical_js_ms": 6914,
+        "historical_go_ms": 1488,
+        "historical_rust_ms": 1227,
+        "historical_rust_go_ratio": 0.8245967741935484,
+        "ratio_numerator_ms": 1227,
+        "ratio_denominator_ms": 1488
+      },
+      {
+        "name": "gopurs-free",
+        "historical_js_ms": 4695,
+        "historical_go_ms": 1035,
+        "historical_rust_ms": 830,
+        "historical_rust_go_ratio": 0.8019323671497585,
+        "ratio_numerator_ms": 830,
+        "ratio_denominator_ms": 1035
+      },
+      {
+        "name": "gopurs-functions",
+        "historical_js_ms": 1895,
+        "historical_go_ms": 183,
+        "historical_rust_ms": 124,
+        "historical_rust_go_ratio": 0.6775956284153005,
+        "ratio_numerator_ms": 124,
+        "ratio_denominator_ms": 183
+      },
+      {
+        "name": "gopurs-integers",
+        "historical_js_ms": 4451,
+        "historical_go_ms": 823,
+        "historical_rust_ms": 642,
+        "historical_rust_go_ratio": 0.7800729040097205,
+        "ratio_numerator_ms": 642,
+        "ratio_denominator_ms": 823
+      },
+      {
+        "name": "gopurs-js-bigints",
+        "historical_js_ms": 2047,
+        "historical_go_ms": 195,
+        "historical_rust_ms": 144,
+        "historical_rust_go_ratio": 0.7384615384615385,
+        "ratio_numerator_ms": 144,
+        "ratio_denominator_ms": 195
+      },
+      {
+        "name": "gopurs-js-date",
+        "historical_js_ms": 7051,
+        "historical_go_ms": 1450,
+        "historical_rust_ms": 1166,
+        "historical_rust_go_ratio": 0.8041379310344827,
+        "ratio_numerator_ms": 1166,
+        "ratio_denominator_ms": 1450
+      },
+      {
+        "name": "gopurs-js-promise",
+        "historical_js_ms": 3431,
+        "historical_go_ms": 542,
+        "historical_rust_ms": 427,
+        "historical_rust_go_ratio": 0.7878228782287823,
+        "ratio_numerator_ms": 427,
+        "ratio_denominator_ms": 542
+      },
+      {
+        "name": "gopurs-js-promise-aff",
+        "historical_js_ms": 7188,
+        "historical_go_ms": 1498,
+        "historical_rust_ms": 1201,
+        "historical_rust_go_ratio": 0.80173564753004,
+        "ratio_numerator_ms": 1201,
+        "ratio_denominator_ms": 1498
+      },
+      {
+        "name": "gopurs-js-uri",
+        "historical_js_ms": 4368,
+        "historical_go_ms": 710,
+        "historical_rust_ms": 557,
+        "historical_rust_go_ratio": 0.7845070422535211,
+        "ratio_numerator_ms": 557,
+        "ratio_denominator_ms": 710
+      },
+      {
+        "name": "gopurs-lazy",
+        "historical_js_ms": 3031,
+        "historical_go_ms": 523,
+        "historical_rust_ms": 413,
+        "historical_rust_go_ratio": 0.7896749521988528,
+        "ratio_numerator_ms": 413,
+        "ratio_denominator_ms": 523
+      },
+      {
+        "name": "gopurs-node-buffer",
+        "historical_js_ms": 6490,
+        "historical_go_ms": 1239,
+        "historical_rust_ms": 1011,
+        "historical_rust_go_ratio": 0.8159806295399515,
+        "ratio_numerator_ms": 1011,
+        "ratio_denominator_ms": 1239
+      },
+      {
+        "name": "gopurs-node-event-emitter",
+        "historical_js_ms": 9012,
+        "historical_go_ms": 2589,
+        "historical_rust_ms": 2204,
+        "historical_rust_go_ratio": 0.8512939358825802,
+        "ratio_numerator_ms": 2204,
+        "ratio_denominator_ms": 2589
+      },
+      {
+        "name": "gopurs-node-fs",
+        "historical_js_ms": 8371,
+        "historical_go_ms": 1731,
+        "historical_rust_ms": 1406,
+        "historical_rust_go_ratio": 0.8122472559214327,
+        "ratio_numerator_ms": 1406,
+        "ratio_denominator_ms": 1731
+      },
+      {
+        "name": "gopurs-node-http",
+        "historical_js_ms": 9304,
+        "historical_go_ms": 1768,
+        "historical_rust_ms": 1460,
+        "historical_rust_go_ratio": 0.8257918552036199,
+        "ratio_numerator_ms": 1460,
+        "ratio_denominator_ms": 1768
+      },
+      {
+        "name": "gopurs-node-net",
+        "historical_js_ms": 8542,
+        "historical_go_ms": 1722,
+        "historical_rust_ms": 1396,
+        "historical_rust_go_ratio": 0.81068524970964,
+        "ratio_numerator_ms": 1396,
+        "ratio_denominator_ms": 1722
+      },
+      {
+        "name": "gopurs-node-path",
+        "historical_js_ms": 1881,
+        "historical_go_ms": 161,
+        "historical_rust_ms": 113,
+        "historical_rust_go_ratio": 0.7018633540372671,
+        "ratio_numerator_ms": 113,
+        "ratio_denominator_ms": 161
+      },
+      {
+        "name": "gopurs-node-process",
+        "historical_js_ms": 7713,
+        "historical_go_ms": 1649,
+        "historical_rust_ms": 1330,
+        "historical_rust_go_ratio": 0.8065494238932687,
+        "ratio_numerator_ms": 1330,
+        "ratio_denominator_ms": 1649
+      },
+      {
+        "name": "gopurs-node-streams",
+        "historical_js_ms": 9772,
+        "historical_go_ms": 2784,
+        "historical_rust_ms": 2401,
+        "historical_rust_go_ratio": 0.8624281609195402,
+        "ratio_numerator_ms": 2401,
+        "ratio_denominator_ms": 2784
+      },
+      {
+        "name": "gopurs-now",
+        "historical_js_ms": 7796,
+        "historical_go_ms": 1652,
+        "historical_rust_ms": 1340,
+        "historical_rust_go_ratio": 0.8111380145278451,
+        "ratio_numerator_ms": 1340,
+        "ratio_denominator_ms": 1652
+      },
+      {
+        "name": "gopurs-nullable",
+        "historical_js_ms": 6102,
+        "historical_go_ms": 1155,
+        "historical_rust_ms": 951,
+        "historical_rust_go_ratio": 0.8233766233766234,
+        "ratio_numerator_ms": 951,
+        "ratio_denominator_ms": 1155
+      },
+      {
+        "name": "gopurs-numbers",
+        "historical_js_ms": 4457,
+        "historical_go_ms": 837,
+        "historical_rust_ms": 656,
+        "historical_rust_go_ratio": 0.7837514934289128,
+        "ratio_numerator_ms": 656,
+        "ratio_denominator_ms": 837
+      },
+      {
+        "name": "gopurs-ordered-collections",
+        "historical_js_ms": 7054,
+        "historical_go_ms": 1720,
+        "historical_rust_ms": 1346,
+        "historical_rust_go_ratio": 0.7825581395348837,
+        "ratio_numerator_ms": 1346,
+        "ratio_denominator_ms": 1720
+      },
+      {
+        "name": "gopurs-partial",
+        "historical_js_ms": 4320,
+        "historical_go_ms": 706,
+        "historical_rust_ms": 552,
+        "historical_rust_go_ratio": 0.7818696883852692,
+        "ratio_numerator_ms": 552,
+        "ratio_denominator_ms": 706
+      },
+      {
+        "name": "gopurs-prelude",
+        "historical_js_ms": 4742,
+        "historical_go_ms": 860,
+        "historical_rust_ms": 675,
+        "historical_rust_go_ratio": 0.7848837209302325,
+        "ratio_numerator_ms": 675,
+        "ratio_denominator_ms": 860
+      },
+      {
+        "name": "gopurs-random",
+        "historical_js_ms": 4388,
+        "historical_go_ms": 710,
+        "historical_rust_ms": 556,
+        "historical_rust_go_ratio": 0.7830985915492957,
+        "ratio_numerator_ms": 556,
+        "ratio_denominator_ms": 710
+      },
+      {
+        "name": "gopurs-record",
+        "historical_js_ms": 4525,
+        "historical_go_ms": 732,
+        "historical_rust_ms": 573,
+        "historical_rust_go_ratio": 0.7827868852459017,
+        "ratio_numerator_ms": 573,
+        "ratio_denominator_ms": 732
+      },
+      {
+        "name": "gopurs-refs",
+        "historical_js_ms": 4360,
+        "historical_go_ms": 710,
+        "historical_rust_ms": 558,
+        "historical_rust_go_ratio": 0.7859154929577464,
+        "ratio_numerator_ms": 558,
+        "ratio_denominator_ms": 710
+      },
+      {
+        "name": "gopurs-run",
+        "historical_js_ms": 7198,
+        "historical_go_ms": 1621,
+        "historical_rust_ms": 1300,
+        "historical_rust_go_ratio": 0.8019740900678594,
+        "ratio_numerator_ms": 1300,
+        "ratio_denominator_ms": 1621
+      },
+      {
+        "name": "gopurs-spec",
+        "historical_js_ms": 12510,
+        "historical_go_ms": 3826,
+        "historical_rust_ms": 3269,
+        "historical_rust_go_ratio": 0.8544171458442237,
+        "ratio_numerator_ms": 3269,
+        "ratio_denominator_ms": 3826
+      },
+      {
+        "name": "gopurs-st",
+        "historical_js_ms": 4352,
+        "historical_go_ms": 717,
+        "historical_rust_ms": 564,
+        "historical_rust_go_ratio": 0.7866108786610879,
+        "ratio_numerator_ms": 564,
+        "ratio_denominator_ms": 717
+      },
+      {
+        "name": "gopurs-strings",
+        "historical_js_ms": 5555,
+        "historical_go_ms": 1090,
+        "historical_rust_ms": 924,
+        "historical_rust_go_ratio": 0.8477064220183487,
+        "ratio_numerator_ms": 924,
+        "ratio_denominator_ms": 1090
+      },
+      {
+        "name": "gopurs-strings-extra",
+        "historical_js_ms": 5879,
+        "historical_go_ms": 2598,
+        "historical_rust_ms": 1794,
+        "historical_rust_go_ratio": 0.6905311778290993,
+        "ratio_numerator_ms": 1794,
+        "ratio_denominator_ms": 2598
+      },
+      {
+        "name": "gopurs-unfoldable",
+        "historical_js_ms": 4372,
+        "historical_go_ms": 725,
+        "historical_rust_ms": 569,
+        "historical_rust_go_ratio": 0.7848275862068965,
+        "ratio_numerator_ms": 569,
+        "ratio_denominator_ms": 725
+      },
+      {
+        "name": "gopurs-unsafe-coerce",
+        "historical_js_ms": 4340,
+        "historical_go_ms": 710,
+        "historical_rust_ms": 553,
+        "historical_rust_go_ratio": 0.7788732394366197,
+        "ratio_numerator_ms": 553,
+        "ratio_denominator_ms": 710
+      },
+      {
+        "name": "gopurs-uuid",
+        "historical_js_ms": 8612,
+        "historical_go_ms": 2591,
+        "historical_rust_ms": 2174,
+        "historical_rust_go_ratio": 0.8390582786568892,
+        "ratio_numerator_ms": 2174,
+        "ratio_denominator_ms": 2591
+      },
+      {
+        "name": "gopurs-variant",
+        "historical_js_ms": 4541,
+        "historical_go_ms": 1101,
+        "historical_rust_ms": 811,
+        "historical_rust_go_ratio": 0.7366030881017257,
+        "ratio_numerator_ms": 811,
+        "ratio_denominator_ms": 1101
+      },
+      {
+        "name": "gopurs-yoga-json",
+        "historical_js_ms": 14801,
+        "historical_go_ms": 5751,
+        "historical_rust_ms": 4558,
+        "historical_rust_go_ratio": 0.7925578160319945,
+        "ratio_numerator_ms": 4558,
+        "ratio_denominator_ms": 5751
+      }
+    ]
+  },
+  "raw_archive": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025",
+  "excluded_attempts": [
+    "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/failed-attempts/b8x-missing-go-dependencies",
+    {
+      "case": "gopurs-datetime",
+      "reason": "Warmup JS failed after SIGQUIT of helper blocked in io.ReadAll(stdin); Node parent waiting in spawnSync. No timing retained. Exact-request replay passed 8 times; frozen compiler unchanged.",
+      "archive": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/failed-attempts/datetime-stdin-stall",
+      "diagnostics": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/datetime-stall-20261025T1013Z",
+      "capture": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/datetime-transport-capture"
+    },
+    {
+      "reason": "All old JS pipe-transport runs replaced after two intermittent stdin waits; successful Go/Dev runs retained unchanged.",
+      "archive": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/failed-attempts/js-pipe-transport-v1",
+      "replaced": [
+        {
+          "name": "gopurs-assert",
+          "old_js_runs": 4,
+          "retained_go_dev_runs": 8
+        },
+        {
+          "name": "b8x",
+          "old_js_runs": 4,
+          "retained_go_dev_runs": 8
+        },
+        {
+          "name": "gopurs-aff",
+          "old_js_runs": 4,
+          "retained_go_dev_runs": 8
+        },
+        {
+          "name": "gopurs-argonaut-core",
+          "old_js_runs": 4,
+          "retained_go_dev_runs": 8
+        },
+        {
+          "name": "gopurs-arrays",
+          "old_js_runs": 4,
+          "retained_go_dev_runs": 8
+        },
+        {
+          "name": "gopurs-avar",
+          "old_js_runs": 4,
+          "retained_go_dev_runs": 8
+        },
+        {
+          "name": "gopurs-catenable-lists",
+          "old_js_runs": 4,
+          "retained_go_dev_runs": 8
+        },
+        {
+          "name": "gopurs-console",
+          "old_js_runs": 4,
+          "retained_go_dev_runs": 8
+        },
+        {
+          "name": "gopurs-datetime",
+          "old_js_runs": 4,
+          "retained_go_dev_runs": 8
+        },
+        {
+          "name": "gopurs-effect",
+          "old_js_runs": 4,
+          "retained_go_dev_runs": 8
+        },
+        {
+          "name": "gopurs-enums",
+          "old_js_runs": 4,
+          "retained_go_dev_runs": 8
+        },
+        {
+          "name": "gopurs-exceptions",
+          "old_js_runs": 4,
+          "retained_go_dev_runs": 8
+        },
+        {
+          "name": "gopurs-foldable-traversable",
+          "old_js_runs": 4,
+          "retained_go_dev_runs": 8
+        },
+        {
+          "name": "gopurs-foreign-object",
+          "old_js_runs": 4,
+          "retained_go_dev_runs": 8
+        },
+        {
+          "name": "gopurs-foreign",
+          "old_js_runs": 4,
+          "retained_go_dev_runs": 8
+        },
+        {
+          "name": "gopurs-free",
+          "old_js_runs": 4,
+          "retained_go_dev_runs": 6
+        }
+      ]
+    },
+    {
+      "reason": "All 408 prior Go/Dev invocations replaced because launcher hardware detection can be unavailable in the sandbox, leaving GC policy unverified. V3 explicitly sets GOGC=off and GOMEMLIMIT=16GiB. The 204 corrected JS invocations are retained unchanged.",
+      "archive": "/Users/0x1/Documents/htdocs/.gopurs-evidence/compilation-readme-20261025/excluded-attempts/native-gc-implicit-v2",
+      "successful_generations_excluded": 408,
+      "measured_generations_excluded": 306,
+      "warmup_generations_excluded": 102
+    }
+  ],
+  "validation": {
+    "cases": 51,
+    "successful_generations": 612,
+    "measured_generations": 459,
+    "warmup_generations": 153,
+    "release_output_equal_hosts": [
+      "js",
+      "go"
+    ],
+    "dev_output_stable": true,
+    "frozen_inputs_checked": true,
+    "rust_estimates_validated_by_new_rust_runs": false
+  },
+  "limitations": [
+    "Rust values are calculated estimates; no new Rust timings or output validation support this column.",
+    "Historical ratios come from approximate published values and may not transfer to the current compiler.",
+    "The historical 4\u20135 October backend timings and this campaign cover different work: current cold builds also prepare Go dependency exports and packages, and publish persistent incremental caches and source proofs. The historical difference does not isolate a compiler regression or quantify the cost of incremental support.",
+    "Compiler revisions, input corpora, Go-host memory policy and sample counts also differ from the historical campaign; no controlled old/new comparison under one protocol was performed.",
+    "No application test suite rerun for this measurement campaign.",
+    "Warm operating-system filesystem cache; no explicit CPU affinity.",
+    "All JS invocations use the transport-only corrected bundle and are retained from v2. All Go/Dev invocations were then replaced under explicit GOGC=off/GOMEMLIMIT=16GiB because sandboxed hardware detection left the previous memory policy unverified. The hosts were not measured in one uninterrupted interleaved run."
+  ]
+}
