@@ -57,28 +57,33 @@ Rows marked **excluded WIP** are not included in **Total Execution Time** or the
 
 #### Go
 
-Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[psgo](https://github.com/i-am-the-slime/purescript-native)<br>↓<br>Go<br>↓<br>go-build | Hand-written FP-style Go FFI<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(WIP) | Hand-written imperative Go FFI<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(WIP) |
------------------------ | -------------------------------- | ------------------------------------- | ---------------------- | ---------------------------- |
-AST Evaluation | ~ 0.33 μs | ~ 4.17 μs | ~ 0.32 μs | ~ 0.32 μs |
-Fibonacci | ~ 0.25 μs | ~ 5.41 μs | ~ 0.16 μs | ~ 0.16 μs |
-List Processing | ~ 17.19 μs | ~ 236.01 μs | ~ 24.39 μs | ~ 0.45 μs |
-Tail Call Optimization | ~ 57.18 μs | ~ 6281.96 μs | ~ 35.98 μs | ~ 35.50 μs |
-Deep Record Updates | ~ 6.63 μs | ~ 5461.52 μs | ~ 40.43 μs | ~ 14.87 μs |
-Ackermann | ~ 15.93 μs | ~ 402.04 μs | ~ 20.85 μs | ~ 19.87 μs |
-Church Numerals | ~ 230.56 μs | ~ 3811.48 μs | ~ 1044.60 μs | ~ 22.45 μs |
-Prime Sieve | ~ 79.35 μs | ~ 1340.99 μs | ~ 110.87 μs | ~ 0.62 μs |
-Red-Black Tree | ~ 10161.25 μs | ~ 870404.62 μs | ~ 24630.67 μs | ~ 9004.48 μs |
-Polymorphism | ~ 2292.36 μs | ~ 505069 μs | ~ 49160.92 μs | ~ 2244.45 μs |
-State Monad | ~ 150.94 μs | ~ 303.56 μs | ~ 52.10 μs | ~ 0.33 μs |
-Lazy Evaluation | ~ 247.11 μs | ~ 71378.08 μs | ~ 13865.38 μs | ~ 0.27 μs |
-Array Processing | ~ 19.26 μs | ~ 43.81 μs | ~ 4.90 μs | ~ 0.45 μs |
-RowToList | ~ 0.15 μs | ~ 0.50 μs | ~ 0.07 μs | ~ 0.03 μs |
-Array Indexing (excluded WIP) | ~ 3962.17 μs | — | — | — |
-JSON to Typed AST (excluded WIP) | ~ 20002.75 μs | — | — | — |
-JSON Decoding (excluded WIP) | ~ 2241.42 μs | — | — | — |
-**Total Execution Time** | ~ 13.28 ms <br>(/C = 1.3x) | ~ 1464.74 ms <br>(/C = 148.8x) | ~ 88.99 ms <br>(/C = 9.0x) | ~ 11.34 ms <br>(/C = 1.2x) |
+Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs) `--dev`<br>↓<br>Go<br>↓<br>go-build `-N -l`<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[psgo](https://github.com/i-am-the-slime/purescript-native)<br>↓<br>Go<br>↓<br>go-build | Hand-written FP-style Go FFI<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(WIP) | Hand-written imperative Go FFI<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(WIP) |
+----------------------- | -------------------------------- | -------------------------------- | ------------------------------------- | ---------------------- | ---------------------------- |
+AST Evaluation | ~ 0.33 μs | ~ 0.52 μs | ~ 4.17 μs | ~ 0.32 μs | ~ 0.32 μs |
+Fibonacci | ~ 0.25 μs | ~ 0.54 μs | ~ 5.41 μs | ~ 0.16 μs | ~ 0.16 μs |
+List Processing | ~ 17.19 μs | ~ 28.86 μs | ~ 236.01 μs | ~ 24.39 μs | ~ 0.45 μs |
+Tail Call Optimization | ~ 57.18 μs | ~ 355.46 μs | ~ 6281.96 μs | ~ 35.98 μs | ~ 35.50 μs |
+Deep Record Updates | ~ 6.63 μs | ~ 186.36 μs | ~ 5461.52 μs | ~ 40.43 μs | ~ 14.87 μs |
+Ackermann | ~ 15.93 μs | ~ 35.56 μs | ~ 402.04 μs | ~ 20.85 μs | ~ 19.87 μs |
+Church Numerals | ~ 230.56 μs | ~ 1296.16 μs | ~ 3811.48 μs | ~ 1044.60 μs | ~ 22.45 μs |
+Prime Sieve | ~ 79.35 μs | ~ 76.41 μs | ~ 1340.99 μs | ~ 110.87 μs | ~ 0.62 μs |
+Red-Black Tree | ~ 10161.25 μs | ~ 31239.75 μs | ~ 870404.62 μs | ~ 24630.67 μs | ~ 9004.48 μs |
+Polymorphism | ~ 2292.36 μs | ~ 15617.54 μs | ~ 505069 μs | ~ 49160.92 μs | ~ 2244.45 μs |
+State Monad | ~ 150.94 μs | ~ 110.57 μs | ~ 303.56 μs | ~ 52.10 μs | ~ 0.33 μs |
+Lazy Evaluation | ~ 247.11 μs | ~ 1566.95 μs | ~ 71378.08 μs | ~ 13865.38 μs | ~ 0.27 μs |
+Array Processing | ~ 19.26 μs | ~ 32.70 μs | ~ 43.81 μs | ~ 4.90 μs | ~ 0.45 μs |
+RowToList | ~ 0.15 μs | ~ 0.30 μs | ~ 0.50 μs | ~ 0.07 μs | ~ 0.03 μs |
+Array Indexing (excluded WIP) | ~ 3962.17 μs | — | — | — | — |
+JSON to Typed AST (excluded WIP) | ~ 20002.75 μs | — | — | — | — |
+JSON Decoding (excluded WIP) | ~ 2241.42 μs | — | — | — | — |
+**Total Execution Time** | ~ 13.28 ms <br>(/C = 1.3x) | ~ 50.55 ms <br>(/C = 5.3x) | ~ 1464.74 ms <br>(/C = 148.8x) | ~ 88.99 ms <br>(/C = 9.0x) | ~ 11.34 ms <br>(/C = 1.2x) |
 
 Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
+
+The gopurs `--dev` column comes from a user-provided `rungd` run (best of 10
+per benchmark), with `GOGC=800`, PGO disabled, and
+`-gcflags='gopurs/output/...=-N -l'` applied to generated Go packages. Its reported
+total is 50.547703 ms. The other columns retain their existing measurements.
 
 #### Scheme
 
