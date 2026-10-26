@@ -385,8 +385,6 @@ Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS bin
 **Total gopurs-*** | ~ 666.09 s | ~ 254.68 s <br>(/JS = 0.38x) | ~ 203.99 s (est.) <br>(/JS = 0.31x) | ~ 212.02 s <br>(/JS = 0.32x)
 **Total** | ~ 812.48 s | ~ 332.71 s <br>(/JS = 0.41x) | ~ 256.92 s (est.) <br>(/JS = 0.32x) | ~ 265.63 s <br>(/JS = 0.33x)
 
-JS Release, Go Release and Go Dev are backend-only cold-build measurements: one warmup and the median of three fresh runs per cell, with fixed TAST inputs and empty backend caches. **Rust values are estimates, not new measurements:** each row is the new Go Release median multiplied by that row's Rust/Go ratio from the previous table. Rust totals sum these row estimates; they do not use a single overall ratio. This assumes the historical relative speed still applies. Frontend compilation and final Go compilation are excluded; the final Go build speedup from `-N -l` is not included. The fourth timing column uses the Go-hosted compiler with `--dev`. JS samples use the corrected helper-input transport; all Go/Dev samples were subsequently rerun with explicit `GOGC=off` and `GOMEMLIMIT=16GiB`. [Protocol, measured samples and estimation inputs](docs/benchmark-results/2026-10-25-gopurs-compilation-refresh.md).
-
 #### ... to Rust
 
 Benchmark   | [purust](https://github.com/0x000000000000000000001/purust) JS binary<br>(official compiler)<br>(WIP) | [purust](https://github.com/0x000000000000000000001/purust) Rust binary<br>(compiled by [purust](https://github.com/0x000000000000000000001/purust))<br>(WIP)
