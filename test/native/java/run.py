@@ -63,7 +63,7 @@ with tempfile.TemporaryDirectory(prefix='altbak-native-java-') as directory:
         for suffix in ['FFI', 'FFICheatcode']:
             stem = name+suffix; names.append(stem)
             probe = '\npublic static void functionalChecks() {\n' + PROBES[stem] + '\n}\n' if stem in PROBES else ''
-            (folder/(stem+'.java')).write_text('public final class '+stem+' {\n'+(ROOT/f'src/Test/{stem}.java').read_text()+probe+'\n}\n')
+            (folder/(stem+'.java')).write_text('public final class '+stem+' {\n'+(ROOT/f'src/Test/{name}/{stem}.java').read_text()+probe+'\n}\n')
     lines = ['public final class NativeCheck {', 'public static void main(String[] args) {']
     lines += [stem + '.functionalChecks();' for stem in PROBES]
     for name, argument, expected in CASES:

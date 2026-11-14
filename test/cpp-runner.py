@@ -37,8 +37,8 @@ class OutputValidation(unittest.TestCase):
 
         with tempfile.TemporaryDirectory(prefix="altbak-cpp-sources-") as temporary:
             root = Path(temporary).resolve()
-            paths = ['src/App.purs', 'src/Test/Fibonacci.purs',
-                     'src/Test/JsonDecoding.purs', 'src/Test/JsonTypedAst.purs',
+            paths = ['src/App.purs', 'src/Test/Fib/Fib.purs',
+                     'src/Test/JsonDecoding/JsonDecoding.purs', 'src/Test/JsonTypedAst/JsonTypedAst.purs',
                      'deps/prelude/src/Prelude.purs']
             for relative in paths:
                 path = root / relative
@@ -49,7 +49,7 @@ class OutputValidation(unittest.TestCase):
 
             def inspect(command, *_):
                 inputs = [Path(value) for value in command if str(value).endswith('.purs')]
-                self.assertIn(work / 'sources/project/Test/Fibonacci.purs', inputs)
+                self.assertIn(work / 'sources/project/Test/Fib/Fib.purs', inputs)
                 self.assertFalse(any('JsonTypedAst' in str(path) or 'JsonDecoding' in str(path)
                                      for path in inputs))
                 raise StopBeforeCompilation

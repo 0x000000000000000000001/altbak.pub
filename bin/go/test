@@ -44,10 +44,43 @@ if [ "$CLEAN" == "1" ]; then
   (cd ../gopurs/gopurs && npm run build --silent)
 fi
 
+EXCLUDED_SOURCE_PATHS=$(python3 - <<'PY'
+from pathlib import Path
+import sys
+
+sys.dont_write_bytecode = True
+sys.path.insert(0, str(Path("bin/benchmark").resolve()))
+from library_suite import is_library_source
+
+for source in sorted(Path("src").rglob("*.purs")):
+    relative = source.relative_to("src")
+    if is_library_source(relative) or relative.parts[:2] in {
+        ("Test", "JsonTypedAst"), ("Test", "JsonDecoding"),
+    }:
+        print(source.as_posix())
+PY
+)
+EXCLUDED_SOURCES=()
+PURS_EXCLUSION_ARGS=""
+while IFS= read -r source; do
+  [[ -n "$source" ]] || continue
+  EXCLUDED_SOURCES+=("$source")
+  PURS_EXCLUSION_ARGS+=" --exclude-files $source"
+done <<< "$EXCLUDED_SOURCE_PATHS"
+
+is_excluded_source() {
+  for excluded_source in "${EXCLUDED_SOURCES[@]}"; do
+    [[ "$1" != "$excluded_source" ]] || return 0
+  done
+  return 1
+}
+
 TEST_MODULES=()
 for f in $(find src/Test -name "*.purs"); do
+  is_excluded_source "$f" && continue
   mod=$(grep -E '^module ' "$f" | awk '{print $2}')
-  # Separate JSON diagnostics have their own runners and dependency sets.
+  # Separate diagnostics have their own runners and dependency sets. Library
+  # WIP cases expose prepare functions, not the snapshot act/describe contract.
   case "$mod" in
     Test.JsonTypedAst|Test.JsonTypedAst.*|Test.JsonDecoding|Test.JsonDecoding.*) continue ;;
   esac
@@ -98,7 +131,9 @@ EOF
   # Force recompilation of AppTest to avoid timestamp collision issues in purs cache
   rm -rf output/AppTest
 
-  spago build -q --purs-args '--exclude-files src/Test/JsonTypedAst.purs --exclude-files src/Test/JsonTypedAst/**/*.purs --exclude-files src/Test/JsonDecoding.purs' || { echo -e "   \033[0;31m[FAILED]\033[0m spago build failed for $mod"; failed=$((failed+1)); continue; }
+  # The shared WIP manifest also excludes its entry points and fixture helpers,
+  # so the frontend compiles the same source set selected by the scanner.
+  spago build -q --purs-args "$PURS_EXCLUSION_ARGS" || { echo -e "   \033[0;31m[FAILED]\033[0m spago build failed for $mod"; failed=$((failed+1)); continue; }
   
   ../gopurs/gopurs/bin/gopurs --main AppTest > /dev/null || { echo -e "   \033[0;31m[FAILED]\033[0m gopurs failed for $mod"; failed=$((failed+1)); continue; }
   

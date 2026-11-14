@@ -165,7 +165,7 @@ def main():
                              capture_output=True, text=True)
         manifest["cpu"] = cpu.stdout.strip() if cpu.returncode == 0 else "unavailable"
     paths = [Path(__file__), ROOT / "bin/benchmark/validate.py"]
-    paths += [ROOT / "src/Test" / (name + ".purs") for name in CASES]
+    paths += [ROOT / "src/Test" / name / (name + ".purs") for name in CASES]
     paths += [ROOT / "tmp" / filename for _, files, _ in selected.values() for filename in files]
     for path in paths:
         manifest["sources"][str(path.relative_to(ROOT))] = sha256(path)
@@ -176,7 +176,7 @@ def main():
     pure_snapshot = directory / "purescript"
     pure_snapshot.mkdir()
     for name in CASES:
-        shutil.copy2(ROOT / "src/Test" / (name + ".purs"), pure_snapshot)
+        shutil.copy2(ROOT / "src/Test" / name / (name + ".purs"), pure_snapshot)
     save_manifest()
     # Compile every executable before any measurements, using fresh directories.
     for name, (compiler, files, command) in selected.items():

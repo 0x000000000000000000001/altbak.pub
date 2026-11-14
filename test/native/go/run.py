@@ -82,7 +82,7 @@ with tempfile.TemporaryDirectory(prefix='altbak-native-go-') as temporary:
             module = name + suffix
             target = folder / module
             target.mkdir()
-            shutil.copy2(ROOT / f'src/Test/{module}.go', target / 'kernel.go')
+            shutil.copy2(ROOT / f'src/Test/{name}/{module}.go', target / 'kernel.go')
             if suffix == 'FFI' and name in PROBES:
                 (target / 'generic_test.go').write_text(
                     f'package Test_{module}\nimport "testing"\n' + PROBES[name] + '\n')

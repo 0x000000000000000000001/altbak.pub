@@ -50,7 +50,7 @@ lines = ['<?php', 'error_reporting(E_ALL);', 'set_error_handler(function($level,
 for name in ORACLE['NOMINAL']:
     for suffix in ['FFI', 'FFICheatcode']:
         stem = name + suffix
-        path = ROOT / f'src/Test/{stem}.php'
+        path = ROOT / f'src/Test/{name}/{stem}.php'
         lines += ['$exports = [];', f'$module = require {json.dumps(str(path))};', f'$kernels[{json.dumps(stem)}] = $module[{json.dumps("run"+stem)}];']
         if stem in PROBES:
             # Instrument only this test copy, after validating the actual helper

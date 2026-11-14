@@ -14,6 +14,8 @@ import time
 sys.dont_write_bytecode = True
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
+sys.path.insert(0, str(ROOT / 'bin/benchmark'))
+from library_suite import is_library_source
 CASES = dict(zip(
     ['AstTree', 'Fib', 'ListOps', 'TCO', 'Records', 'Ackermann', 'Church',
      'Primes', 'RBTree', 'Polymorphism', 'StateMonad', 'LazyEvaluation', 'ArrayOps', 'RowToList'],
@@ -55,12 +57,13 @@ def version(executable):
 
 
 def expectation(module, override=None):
-    source = ROOT / 'src' / (module.replace('.', '/') + '.purs')
+    name = module.removeprefix('Test.')
+    base = name.removesuffix('FFICheatcode').removesuffix('FFI')
+    source = ROOT / 'src/Test' / base.replace('.', '/') / (name.rsplit('.', 1)[-1] + '.purs')
     if not source.is_file():
         fail(f'No source module: {source}')
     label = re.search(r'(?m)^describe\s*=\s*log\s+"([^"\n]+)"', source.read_text())
-    name = module.removeprefix('Test.').removesuffix('FFICheatcode').removesuffix('FFI')
-    expected = override if override is not None else CASES.get(name)
+    expected = override if override is not None else CASES.get(base)
     if expected is None or label is None:
         fail(f'{module} needs a literal describe label and --expected VALUE')
     return {'module': module, 'label': label.group(1), 'value': expected}
@@ -149,7 +152,8 @@ def install_ffi(directory, selected, ffi_root, entry):
     namespaces = {name.replace('.', '_') for name in selected}
     providers = {}
     candidates = sorted(p for p in ffi_root.rglob('*') if p.suffix in {'.cpp', '.cc', '.c', '.mm'})
-    candidates += sorted((ROOT / 'src/Test').glob('*.cc'))
+    candidates += sorted(source for source in (ROOT / 'src/Test').rglob('*.cc')
+                         if not is_library_source(source.relative_to(ROOT / 'src')))
     candidates += [HERE / 'bench_ffi.cc']
     if entry != 'AppX':
         candidates += [HERE / 'main_ffi.cc']
@@ -205,6 +209,8 @@ def build(args, mode, entry, cases, directory):
     project = directory / 'sources/project'
     project.mkdir(parents=True)
     for source in sorted((ROOT / 'src').rglob('*.purs')):
+        if is_library_source(source.relative_to(ROOT / 'src')):
+            continue
         if source.name == 'Main.purs' or (source.name == 'AppX.purs' and entry != 'AppX'):
             continue
         # JSON diagnostics are compiled in their own Go/JS workspaces.

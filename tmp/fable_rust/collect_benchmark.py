@@ -207,7 +207,7 @@ def main() -> int:
     spec = importlib.util.spec_from_file_location('altbak_fable_validator', validator_path)
     validator = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(validator)
-    oracle_files = [root/'src/Test'/f'{name}.purs' for name in validator.CASES]
+    oracle_files = [root/'src/Test'/name/f'{name}.purs' for name in validator.CASES]
     watched = {p: snapshot(p) for p in [binary, validator_path, Path(__file__).resolve(), *oracle_files]}
     build_manifest = args.build_manifest.resolve() if args.build_manifest else None
     build_provenance = None

@@ -14,7 +14,7 @@ dotnet = os.environ.get('DOTNET') or shutil.which('dotnet') or str(Path.home()/'
 lines = []
 for name in ORACLE['NOMINAL']:
     for suffix in ['FFI', 'FFICheatcode']:
-        lines.append('#load @"'+str(ROOT/f'src/Test/{name}{suffix}.fs')+'"')
+        lines.append('#load @"'+str(ROOT/f'src/Test/{name}/{name}{suffix}.fs')+'"')
 lines += ['#load @"'+str(ROOT/'src/Bench.fs')+'"', 'let check label expected (actual: obj) =', '    let value = unbox<int> actual', '    if value <> expected then failwithf "%s: expected %d, got %d" label expected value']
 for name, argument, expected in CASES:
     for suffix in ['FFI', 'FFICheatcode']:

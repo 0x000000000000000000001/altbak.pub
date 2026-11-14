@@ -4,16 +4,39 @@ import json
 from pathlib import Path
 import re
 import shutil
+from functools import lru_cache
 
 ROOT = Path(__file__).resolve().parents[2]
-LIBRARY_ROOT = ROOT / "benchmarks/library"
+SOURCE_ROOT = ROOT / "src"
+MANIFEST = ROOT / "bin/benchmark/library-cases.json"
+SUPPORT_SOURCES = ("AppAll.purs", "AppLibrary.purs",
+                   "Bench/ArrayFixtures.purs", "Bench/StringFixtures.purs")
 DEPENDENCIES = ("foldable-traversable", "refs", "enums")
 
 
+def is_library_source(path):
+    """Identify optional WIP files by their path relative to src/."""
+    path = Path(path)
+    return path.as_posix() in SUPPORT_SOURCES or (
+        len(path.parts) >= 2 and path.parts[0] == "Test"
+        and path.parts[1] in library_test_names())
+
+
+@lru_cache(maxsize=1)
+def library_test_names():
+    return frozenset(case["module"].removeprefix("Test.") for case in library_cases())
+
+
+def library_sources():
+    return [*(SOURCE_ROOT / name for name in SUPPORT_SOURCES),
+            *(path for name in sorted(library_test_names())
+              for path in (SOURCE_ROOT / "Test" / name).rglob("*") if path.is_file())]
+
+
 def library_cases():
-    manifest = json.loads((LIBRARY_ROOT / "cases.json").read_text())
+    manifest = json.loads(MANIFEST.read_text())
     if not isinstance(manifest, list) or not manifest:
-        raise ValueError("Library cases.json must contain a nonempty list")
+        raise ValueError("library-cases.json must contain a nonempty list")
     cases = []
     labels = set()
     for case in manifest:
@@ -23,7 +46,7 @@ def library_cases():
         prepare = case.get("prepare", "")
         label = case.get("label", "")
         expected = case.get("expected")
-        if not isinstance(module, str) or not re.fullmatch(r"Test\.Library\.[A-Z][A-Za-z0-9_]*(?:\.[A-Z][A-Za-z0-9_]*)*", module):
+        if not isinstance(module, str) or not re.fullmatch(r"Test\.[A-Z][A-Za-z0-9_]*", module):
             raise ValueError(f"Invalid library module: {module!r}")
         if not isinstance(prepare, str) or not re.fullmatch(r"[a-z][A-Za-z0-9_]*", prepare):
             raise ValueError(f"Invalid library preparation function: {prepare!r}")
@@ -37,13 +60,16 @@ def library_cases():
 
 
 def library_inputs():
-    paths = [LIBRARY_ROOT / "cases.json", *(LIBRARY_ROOT / "src").rglob("*.purs")]
+    paths = [MANIFEST, *library_sources()]
     return {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
             for path in sorted(paths)}
 
 
 def copy_library_sources(destination):
-    shutil.copytree(LIBRARY_ROOT / "src", destination, dirs_exist_ok=True)
+    for source in library_sources():
+        target = Path(destination) / source.relative_to(SOURCE_ROOT)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, target)
 
 
 def library_config(config):

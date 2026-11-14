@@ -23,7 +23,7 @@ from go_profile import go_build_flags
 ROOT = Path(__file__).resolve().parents[2]
 SOURCES = ROOT / 'src/Test'
 FIXTURES = ROOT / 'test/fixtures/json-typed-ast'
-SOURCE_FILES = [SOURCES / ('JsonTypedAst.' + ext) for ext in ['purs', 'go', 'js', 'rs']]
+SOURCE_FILES = [SOURCES / 'JsonTypedAst' / ('JsonTypedAst.' + ext) for ext in ['purs', 'go', 'js', 'rs']]
 COMPILER = ROOT.parent / 'gopurs/gopurs'
 PBO = ROOT.parent / 'purescript-backend-optimizer-gopurs'
 PBO_PURUST = ROOT.parent / 'purescript-backend-optimizer-purust'
@@ -73,7 +73,7 @@ def typed_purs():
 
 def source_files(suite):
     if suite == 'JsonTypedAst': return SOURCE_FILES
-    return [SOURCES / (suite + '.' + ext) for ext in ['purs', 'go', 'js', 'rs']]
+    return [SOURCES / suite / (suite + '.' + ext) for ext in ['purs', 'go', 'js', 'rs']]
 
 def fixtures(suite):
     return FIXTURES if suite == 'JsonTypedAst' else ROOT / 'test/fixtures/json-decoding'
@@ -293,7 +293,9 @@ def build_rust(work, env, suite):
         # purs still requires the JS FFI module to typecheck; purust resolves
         # the Rust implementation next to the source.
         if source.suffix not in ['.purs', '.rs', '.js']: continue
-        shutil.copy2(source, rust / 'src/Test' / source.name)
+        target = rust / 'src/Test' / source.relative_to(SOURCES)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, target)
     config = 'package:\n  name: json-diagnostic-rust\n  dependencies:\n'
     for dep in dependencies(suite): config += '    - ' + dep + '\n'
     config += 'workspace:\n  packageSet:\n    registry: 77.10.1\n  extraPackages:\n'
@@ -339,7 +341,7 @@ def build_rust(work, env, suite):
                                             'CARGO_PROFILE_RELEASE_LTO': 'false',
                                             'CARGO_PROFILE_RELEASE_CODEGEN_UNITS': '16',
                                             'RUSTFLAGS': '--cfg diag_alloc'}})
-    sources = {str(path): sha(path) for path in sorted((rust/'src/Test').glob('*'))}
+    sources = {str(path): sha(path) for path in sorted((rust/'src/Test').rglob('*')) if path.is_file()}
     sources[str(rust/'spago.yaml')] = sha(rust/'spago.yaml')
     result = {'suite': suite, 'binary_sha256': sha(binary), 'binary': str(binary), 'sources': sources,
               'rustc': subprocess.check_output(['rustc', '--version'], env=env, text=True).strip()}
@@ -441,7 +443,7 @@ def main():
         if manifest.get('go_build_flags', []) != go_build_flags(args.dev):
             raise ValueError('Go build flags changed since build')
         before=fingerprint(suite)
-        allowed={str(Path(__file__)),str(SOURCES/(suite + '.js'))}
+        allowed={str(Path(__file__)),str(SOURCES/suite/(suite + '.js'))}
         if {k:v for k,v in before.items() if k not in allowed}!={k:v for k,v in manifest['sources'].items() if k not in allowed} or sha(work/'benchmark')!=manifest['binary_sha256']:
             raise ValueError('Native build no longer matches sources')
         build_js(work,env,suite)

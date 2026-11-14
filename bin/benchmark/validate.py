@@ -37,7 +37,7 @@ def case_for(module, expected=None):
     value = CASES.get(base) if expected is None else expected
     if value is None:
         raise ValueError(f"No core oracle for {module}; supply --expected VALUE for a custom --test")
-    source = ROOT / "src/Test" / (name.replace(".", "/") + ".purs")
+    source = ROOT / "src/Test" / base.replace(".", "/") / (name.rsplit(".", 1)[-1] + ".purs")
     if not source.is_file():
         raise ValueError(f"Missing source for {module}: {source}")
     label = re.search(r'(?m)^describe\s*=\s*(?:\w+\.)?log\s+"([^"\n]+)"', source.read_text())

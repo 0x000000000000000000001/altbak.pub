@@ -1,6 +1,6 @@
 // Structural checks for the handwritten Okasaki implementation. This is a
 // separate translation unit: including the kernel exposes its private helpers.
-#include "../src/Test/RBTreeFFICheatcode.cc"
+#include "../src/Test/RBTree/RBTreeFFICheatcode.cc"
 #include <cstdint>
 #include <iostream>
 #include <limits>

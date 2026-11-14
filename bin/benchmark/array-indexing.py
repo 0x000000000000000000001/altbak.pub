@@ -14,7 +14,7 @@ from go_profile import go_build_flags
 
 ROOT = Path(__file__).resolve().parents[2]
 DRIVERS = ROOT / 'bin/benchmark/array-indexing'
-KERNEL = ROOT / 'src/Test/ArrayIndexing.purs'
+KERNEL = ROOT / 'src/Test/ArrayIndexing/ArrayIndexing.purs'
 BACKEND = ROOT.parent / 'gopurs/gopurs/bin/gopurs'
 RUST_BACKEND = ROOT.parent / 'purust/purust/bin/purust'
 

@@ -23,7 +23,7 @@ class RunnerContracts(unittest.TestCase):
         self.root = Path(self.temporary.name) / 'project'
         self.root.mkdir()
         for path, contents in {
-            'src/AppX.purs': 'user-owned AppX', 'src/Test/Fib.purs': 'source',
+            'src/AppX.purs': 'user-owned AppX', 'src/Test/Fib/Fib.purs': 'source',
             'srx/AppX.purs': 'extended entry', 'srx/Test/Extended.purs': 'extended source',
             'run/bak/go/spago.go.yaml': 'package:\n  dependencies:\n    - prelude\npath: "../gopurs/gopurs-prelude"\n',
             'run/bak/rust/spago.rust.yaml': 'package:\n  dependencies:\n    - prelude\npath: "../purust/purust-prelude"\n',

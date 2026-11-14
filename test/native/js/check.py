@@ -38,7 +38,7 @@ def check(language):
                 stem = name + suffix
                 function = "run" + stem
                 if language == "js":
-                    shutil.copyfile(ROOT / "src/Test" / (stem + ".js"), tmp / "kernel.mjs")
+                    shutil.copyfile(ROOT / "src/Test" / name / (stem + ".js"), tmp / "kernel.mjs")
                     if suffix == "FFI":
                         probes = {
                             "ListOps": '''
@@ -70,7 +70,7 @@ if (keys(dictNil,{}) !== 0 || keys(dictCons(dictCons(dictNil)),{name:"value",fla
                         '}\n')
                     result = run(["node", "check.mjs"], tmp)
                 elif language == "scheme":
-                    source = ROOT / "src/Test" / (stem + ".ss")
+                    source = ROOT / "src/Test" / name / (stem + ".ss")
                     assertions = "\n".join(
                         f'(unless (= ({function} {n}) {expected}) '
                         f'(error "{stem}" "wrong result" {n} ({function} {n}) {expected}))'
@@ -80,7 +80,7 @@ if (keys(dictNil,{}) !== 0 || keys(dictCons(dictCons(dictNil)),{name:"value",fla
                         f'(import (chezscheme) (Test.{stem} foreign))\n{assertions}\n')
                     result = run(["chez", "--optimize-level", "3", "--script", "check.ss"], tmp)
                 else:
-                    source = (ROOT / "src/Test" / (stem + ".erl")).read_text()
+                    source = (ROOT / "src/Test" / name / (stem + ".erl")).read_text()
                     module = re.search(r"-module\(([^)]+)\)", source)[1]
                     (tmp / (module + ".erl")).write_text(source)
                     result = run(["erlc", "+warnings_as_errors", module + ".erl"], tmp)

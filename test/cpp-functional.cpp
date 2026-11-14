@@ -13,7 +13,7 @@ void require(bool condition, const char* message) {
 }
 
 namespace list_checks {
-#include "../src/Test/ListOpsFFI.cc"
+#include "../src/Test/ListOps/ListOpsFFI.cc"
 void check() {
     const auto words = cons(std::string("a"), cons(std::string("b"), List<std::string>{}));
     require(foldl<std::string, std::string>([](std::string a, std::string b) { return a + b; }, "!", words) == "!ab",
@@ -23,7 +23,7 @@ void check() {
 }
 }
 namespace prime_checks {
-#include "../src/Test/PrimesFFI.cc"
+#include "../src/Test/Primes/PrimesFFI.cc"
 void check() {
     const auto words = cons(std::string("a"), cons(std::string("skip"), cons(std::string("b"), List<std::string>{})));
     const auto selected = filter<std::string>([](std::string value) { return value != "skip"; }, words);
@@ -31,7 +31,7 @@ void check() {
 }
 }
 namespace church_checks {
-#include "../src/Test/ChurchFFI.cc"
+#include "../src/Test/Church/ChurchFFI.cc"
 void check() {
     const auto two = successor<std::string>(successor<std::string>(zero<std::string>()));
     int calls = 0;
@@ -43,7 +43,7 @@ void check() {
 }
 }
 namespace polymorphism_checks {
-#include "../src/Test/PolymorphismFFI.cc"
+#include "../src/Test/Polymorphism/PolymorphismFFI.cc"
 void check() {
     const Monoidish<std::string> dictionary{"x", [](std::string left) -> Endo<std::string> {
         return [left](std::string right) { return left + right; };
@@ -52,7 +52,7 @@ void check() {
 }
 }
 namespace state_checks {
-#include "../src/Test/StateMonadFFI.cc"
+#include "../src/Test/StateMonad/StateMonadFFI.cc"
 void check() {
     const auto action = bindState<std::string, std::string, int>(get<std::string>(), [](std::string initial) {
         return bindState<std::string, Unit, int>(put<std::string>(initial + "!"), [initial](Unit) {
@@ -64,7 +64,7 @@ void check() {
 }
 }
 namespace lazy_checks {
-#include "../src/Test/LazyEvaluationFFI.cc"
+#include "../src/Test/LazyEvaluation/LazyEvaluationFFI.cc"
 void check() {
     int calls = 0;
     const auto value = defer<std::string>([&calls]() { ++calls; return std::string("word"); });
@@ -73,7 +73,7 @@ void check() {
 }
 }
 namespace array_checks {
-#include "../src/Test/ArrayOpsFFI.cc"
+#include "../src/Test/ArrayOps/ArrayOpsFFI.cc"
 void check() {
     const std::vector<std::string> words{"a", "skip", "b"};
     const auto selected = filter([](std::string value) { return value != "skip"; }, words);
@@ -83,7 +83,7 @@ void check() {
 }
 }
 namespace row_checks {
-#include "../src/Test/RowToListFFI.cc"
+#include "../src/Test/RowToList/RowToListFFI.cc"
 void check() {
     const RowNil empty{};
     const RowCons<std::string, RowNil> single{"one", empty};

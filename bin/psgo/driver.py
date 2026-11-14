@@ -61,8 +61,10 @@ def main():
         modules = list(validator.CASES) if not args.test else [args.test.removeprefix('Test.')]
         # Compile only core modules: native .go files are not JS foreigns.
         for name in modules:
-            source = ROOT / 'src/Test' / (name.replace('.', '/') + '.purs')
-            target = work / 'src/Test' / (name.replace('.', '/') + '.purs')
+            base_name = name.removesuffix('FFICheatcode').removesuffix('FFI')
+            relative = Path(base_name.replace('.', '/')) / (name.rsplit('.', 1)[-1] + '.purs')
+            source = ROOT / 'src/Test' / relative
+            target = work / 'src/Test' / relative
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(source, target)
         if args.test:

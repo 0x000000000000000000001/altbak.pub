@@ -15,7 +15,8 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'bin/benchmark'))
 from validate import expected_cases, validate_output
 from go_profile import go_build_flags
-from library_suite import copy_library_sources, library_cases, library_config, library_inputs
+from library_suite import (copy_library_sources, is_library_source,
+                           library_cases, library_config, library_inputs)
 
 
 def digest(path):
@@ -33,6 +34,8 @@ def inputs(language, mode="pure", include_library=False):
     for base in ['src', 'srx']:
         for path in sorted((ROOT / base).rglob('*')):
             if path.is_file() and path.suffix in {'.purs', '.' + ('go' if language == 'go' else 'rs')}:
+                if base == 'src' and is_library_source(path.relative_to(ROOT / 'src')):
+                    continue  # WIP inputs are included separately when selected.
                 result[str(path.relative_to(ROOT))] = digest(path)
     backend = ROOT.parent / ('gopurs/gopurs/bin' if language == 'go' else 'purust/purust/bin')
     backend_name = 'gopurs' if language == 'go' else 'purust'
@@ -41,10 +44,10 @@ def inputs(language, mode="pure", include_library=False):
             result[str(path)] = digest(path)
     for path in [ROOT / f'run/bak/{language}/spago.{language}.yaml',
                  Path(__file__), ROOT / f'bin/{language}/run', ROOT / 'bin/benchmark/validate.py',
-                 ROOT / 'bin/benchmark/go_profile.py']:
+                 ROOT / 'bin/benchmark/go_profile.py', ROOT / 'bin/benchmark/library_suite.py',
+                 ROOT / 'bin/benchmark/library-cases.json']:
         result[str(path.relative_to(ROOT))] = digest(path)
     if include_library:
-        result['bin/benchmark/library_suite.py'] = digest(ROOT / 'bin/benchmark/library_suite.py')
         result.update(library_inputs())
     return result
 
@@ -99,12 +102,15 @@ def prepare(directory, language, args):
             target.unlink()
         elif target.exists():
             shutil.rmtree(target)
-    # JSON diagnostics use independent workspaces and optional dependencies.
+    # WIP sources are selected explicitly; JSON diagnostics have separate workspaces.
+    ignore_json = shutil.ignore_patterns('JsonTypedAst', 'JsonTypedAst.purs',
+                                         'JsonTypedAst.go', 'JsonTypedAst.js',
+                                         'JsonDecoding', 'JsonDecoding.purs',
+                                         'JsonDecoding.go', 'JsonDecoding.js')
     shutil.copytree(ROOT / 'src', directory / 'src',
-                    ignore=shutil.ignore_patterns('JsonTypedAst', 'JsonTypedAst.purs',
-                                                 'JsonTypedAst.go', 'JsonTypedAst.js',
-                                                 'JsonDecoding', 'JsonDecoding.purs',
-                                                 'JsonDecoding.go', 'JsonDecoding.js'))
+                    ignore=lambda source, names: ignore_json(source, names) | {
+                        name for name in names
+                        if is_library_source((Path(source) / name).relative_to(ROOT / 'src'))})
     entry = {'pure': 'App', 'ffi': 'AppFFI', 'fficc': 'AppFFICheatcode',
              'test': 'AppX', 'x': 'AppX'}[args.mode]
     if include_library:

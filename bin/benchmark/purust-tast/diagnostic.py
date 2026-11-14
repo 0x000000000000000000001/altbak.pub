@@ -73,7 +73,10 @@ def measure(args):
     assert original_build['rust']['profile'] == candidate_manifest['profile'], 'Build profiles differ'
     assert original_build['rust']['rustc'] == candidate_manifest['rust']['rustc'], 'Rust compiler versions differ'
     original_driver = baseline / 'artifacts/sources/JsonTypedAst.rs'
-    candidate_driver = candidate / 'sources/altbak.pub/src/Test/JsonTypedAst.rs'
+    candidate_driver = candidate / 'sources' / diag.ROOT.name / 'src/Test/JsonTypedAst/JsonTypedAst.rs'
+    if not candidate_driver.is_file():
+        # Existing frozen campaigns keep their original flat layout.
+        candidate_driver = candidate / 'sources/altbak.pub/src/Test/JsonTypedAst.rs'
     assert original_driver.read_bytes() == candidate_driver.read_bytes(), 'Benchmark driver changed'
     if args.corpus == 'gopurs238':
         corpus = (baseline / 'campaign-238/corpus.json').read_bytes()

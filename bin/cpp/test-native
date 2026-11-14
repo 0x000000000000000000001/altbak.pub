@@ -16,7 +16,7 @@ args = parser.parse_args()
 runtime = args.runtime.resolve()
 if not (runtime / "purescript.cpp").is_file():
     parser.error("runtime missing; build with bin/cpp/run --build-only, then pass --runtime BUILD_DIR/output/src")
-sources = sorted((ROOT / "src/Test").glob("*FFI.cc")) + sorted((ROOT / "src/Test").glob("*FFICheatcode.cc"))
+sources = sorted((ROOT / "src/Test").rglob("*FFI.cc")) + sorted((ROOT / "src/Test").rglob("*FFICheatcode.cc"))
 if len(sources) != 28:
     parser.error(f"expected 28 native kernels, found {len(sources)}")
 flags = ["-std=c++11", "-Wall", "-Wextra", "-DNDEBUG"]

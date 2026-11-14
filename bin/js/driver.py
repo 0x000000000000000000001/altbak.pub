@@ -17,7 +17,8 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[2]
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(ROOT / "bin/benchmark"))
-from library_suite import copy_library_sources, library_cases, library_config, library_inputs
+from library_suite import (copy_library_sources, is_library_source,
+                           library_cases, library_config, library_inputs)
 
 
 def options():
@@ -86,6 +87,8 @@ def snapshot_sources(work, args):
     for source in (ROOT / "src").rglob("*"):
         if source.is_file() and source.suffix in suffixes:
             relative = source.relative_to(ROOT / "src")
+            if is_library_source(relative):
+                continue
             # These diagnostics use independent workspaces and optional dependencies.
             if any(relative.parts[:2] == ('Test', diagnostic)
                    or relative.as_posix() in {f'Test/{diagnostic}.{ext}' for ext in ['purs', 'go', 'js']}

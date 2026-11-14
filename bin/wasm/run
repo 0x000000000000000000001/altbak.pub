@@ -99,7 +99,8 @@ cp "$ROOT/bin/wasm/spago.yaml" "$WORK/spago.yaml"
 cp "$ROOT/src/Bench.purs" "$ROOT/src/Bench.js" "$ROOT/src/App.purs" "$WORK/src/"
 python3 "$ROOT/bin/wasm/adapt-batch.py" "$WORK/src/Bench.purs" "$WORK/src/Bench.js"
 for name in AstTree Fib ListOps TCO Records Ackermann Church Primes RBTree Polymorphism StateMonad LazyEvaluation ArrayOps RowToList; do
-  cp "$ROOT/src/Test/$name.purs" "$WORK/src/Test/"
+  mkdir -p "$WORK/src/Test/$name"
+  cp "$ROOT/src/Test/$name/$name.purs" "$WORK/src/Test/$name/"
 done
 
 ENTRY_POINT=App

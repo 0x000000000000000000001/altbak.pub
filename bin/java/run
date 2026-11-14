@@ -15,6 +15,7 @@ sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'bin/native'))
 import driver as common
+from library_suite import is_library_source
 
 
 def java_tool(name):
@@ -29,8 +30,12 @@ def java_tool(name):
 def inputs():
     paths = []
     for base in ['src', 'srx']:
-        paths.extend(path for path in (ROOT / base).rglob('*') if path.is_file() and path.suffix in {'.purs', '.java'})
+        paths.extend(path for path in (ROOT / base).rglob('*')
+                     if path.is_file() and path.suffix in {'.purs', '.java'}
+                     and (base != 'src' or not is_library_source(path.relative_to(ROOT / 'src'))))
     paths += [Path(__file__).resolve(), ROOT / 'bin/native/driver.py', ROOT / 'bin/benchmark/validate.py',
+              ROOT / 'bin/benchmark/library_suite.py',
+              ROOT / 'bin/benchmark/library-cases.json',
               ROOT / 'run/bak/java/spago.java.yaml', ROOT.parent / 'javapurs/javapurs/bin/javapurs',
               ROOT.parent / 'javapurs/javapurs/bin/javapurs.js']
     return {str(path):common.digest(path) for path in sorted(paths)}

@@ -15,6 +15,7 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[2]
 HELPERS = runpy.run_path(str(ROOT / "bin/js/driver.py"))
 VALIDATOR = runpy.run_path(str(ROOT / "bin/benchmark/validate.py"))
+from library_suite import is_library_source
 
 
 def digest(path):
@@ -51,6 +52,8 @@ def snapshot(work, args):
     for directory in directories:
         for source in (ROOT / directory).rglob("*"):
             if source.is_file() and source.suffix in {".fs", ".cs"}:
+                if directory == "src" and is_library_source(source.relative_to(ROOT / directory)):
+                    continue
                 target = work / "src" / source.relative_to(ROOT / directory)
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(source, target)

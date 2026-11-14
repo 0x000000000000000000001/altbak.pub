@@ -44,7 +44,7 @@ To include the new library cases and the three existing WIP diagnostics as well:
 ```
 
 On Go, JS and Rust, `--wip-included` runs the 14 core cases, these 23 new cases,
-and the three diagnostics already marked excluded WIP in the main README:
+and the three diagnostics already marked excluded WIP in the [main README](../README.md):
 Array Indexing, JSON to Typed AST and JSON Decoding. The latter retain their independent workspaces, protocols and
 campaign results. They can also be selected individually with `--test`.
 JS/PBO currently runs the 14 core cases plus the 23 library cases.
@@ -71,7 +71,7 @@ and `validated.json` in the artifact directory. Go/Rust use
 describe one process, not the median of three independent processes.
 
 For a publication campaign, use the existing frozen-plan protocol in
-[`docs/benchmark-methodology.md`](../../docs/benchmark-methodology.md), with
+[`docs/benchmark-methodology.md`](benchmark-methodology.md), with
 `"mode": "pure"` for a normal run-only command. `measure.py` validates the core
 and WIP sections separately and aggregates medians per case over three
 processes. The core result keeps its original shape; the new result is nested
@@ -88,7 +88,7 @@ different measurement boundaries. WIP results have no aggregate score.
 
 ## Measurement boundary
 
-`src/AppLibrary.purs` prepares all fixtures before the three global warm-ups.
+[`src/AppLibrary.purs`](../src/AppLibrary.purs) prepares all fixtures before the three global warm-ups.
 Each preparation returns an `Effect Int`; the operation is performed inside that
 action on every invocation. Inputs pass through `Bench.opaque` inside the action.
 `Bench.runBench` provides the three local warm-ups, calibrated batches targeting
@@ -109,7 +109,7 @@ management and normal compiler optimizations remain enabled. This protocol does
 not force a final collection after each invocation or measure peak memory.
 
 The external validator compares outputs to the independent integer oracles in
-`cases.json`, in exact label order. The batch driver also checks consistency
+[`library-cases.json`](../bin/benchmark/library-cases.json), in exact label order. The batch driver also checks consistency
 against the warm-up result. These checksums are benchmark contracts, not a
 replacement for each library's full correctness tests.
 
@@ -122,29 +122,29 @@ For `[1 .. 2m]`, the sum is `3m² + 2m`. All intermediate sums fit signed Int32.
 
 | Case | Measured operation and consumer | Expected |
 | --- | --- | ---: |
-| [`array/map-10000`](src/Test/Library/Arrays.purs) | Map `+1` over `[1..10000]`, weighted checksum | 75025000 |
-| [`array/filter-10000`](src/Test/Library/Arrays.purs) | Keep even elements, weighted checksum | 37510000 |
-| [`array/foldl-sum-10000`](src/Test/Library/Arrays.purs) | Sum `[1..10000]` | 50005000 |
-| [`array/sort-descending-10000`](src/Test/Library/Arrays.purs) | Sort `[10000..1]` ascending, weighted checksum | 75010000 |
-| [`array/eq-neq-last-10000`](src/Test/Library/Arrays.purs) | Compare distinct arrays differing only at the last element; false → 0 | 0 |
-| [`array/append-1000`](src/Test/Library/Arrays.purs) | Append `[1..1000]` and `[1001..2000]`, weighted checksum | 3002000 |
-| [`foldable/traverse-maybe-1000`](src/Test/Library/Traversal.purs) | Traverse `[1..1000]` with `Just (x+1)`, weighted checksum | 752500 |
-| [`foldable/traverse-maybe-fail-first-1000`](src/Test/Library/Traversal.purs) | Reject value 1; `Nothing` → −1 | -1 |
-| [`foldable/traverse-maybe-fail-last-1000`](src/Test/Library/Traversal.purs) | Reject value 1000; `Nothing` → −1 | -1 |
-| [`string/cu-length-unicode-1000`](src/Test/Library/Strings.purs) | UTF-16 code-unit length of `"a😀é"` repeated 1000 times | 4000 |
-| [`string/cp-length-unicode-1000`](src/Test/Library/Strings.purs) | Code-point length of the same recipe | 3000 |
-| [`string/indexOf-hit-10000`](src/Test/Library/Strings.purs) | Find `"needle"` in 10000 `a` characters followed by `"needle"` | 10000 |
-| [`string/indexOf-miss-10000`](src/Test/Library/Strings.purs) | Find `"absent"` in that recipe; `Nothing` → −1 | -1 |
-| [`string/cp-take-unicode-1500`](src/Test/Library/Strings.purs) | Take 1500 code points, sum their scalar values | 64421000 |
-| [`string/split-1000`](src/Test/Library/Strings.purs) | Split 1000 comma-separated `"abc"` parts, count parts plus all scalar values | 295000 |
-| [`string/concat-1000`](src/Test/Library/Strings.purs) | Left-fold append over 1000 `"ab"` fragments, sum all scalar values | 195000 |
-| [`record/set-small-1000`](src/Test/Library/Records.purs) | 1000 immutable updates to the last of 2 fields, sum original and final fields | 1006 |
-| [`record/set-medium-1000`](src/Test/Library/Records.purs) | Same with 8 fields | 1072 |
-| [`record/set-large-1000`](src/Test/Library/Records.purs) | Same with 16 fields | 1272 |
-| [`st/ref-write-10000`](src/Test/Library/Refs.purs) | New ST ref, writes 1 through 10000, final read | 10000 |
-| [`st/ref-modify-10000`](src/Test/Library/Refs.purs) | New ST ref at 0, 10000 increments, final read | 10000 |
-| [`effect/ref-write-10000`](src/Test/Library/Refs.purs) | New Effect ref, writes 1 through 10000, final read | 10000 |
-| [`effect/ref-modify-10000`](src/Test/Library/Refs.purs) | New Effect ref at 0, 10000 increments, final read | 10000 |
+| [`array/map-10000`](../src/Test/ArrayMap10000/ArrayMap10000.purs) | Map `+1` over `[1..10000]`, weighted checksum | 75025000 |
+| [`array/filter-10000`](../src/Test/ArrayFilter10000/ArrayFilter10000.purs) | Keep even elements, weighted checksum | 37510000 |
+| [`array/foldl-sum-10000`](../src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | Sum `[1..10000]` | 50005000 |
+| [`array/sort-descending-10000`](../src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | Sort `[10000..1]` ascending, weighted checksum | 75010000 |
+| [`array/eq-neq-last-10000`](../src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | Compare distinct arrays differing only at the last element; false → 0 | 0 |
+| [`array/append-1000`](../src/Test/ArrayAppend1000/ArrayAppend1000.purs) | Append `[1..1000]` and `[1001..2000]`, weighted checksum | 3002000 |
+| [`foldable/traverse-maybe-1000`](../src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | Traverse `[1..1000]` with `Just (x+1)`, weighted checksum | 752500 |
+| [`foldable/traverse-maybe-fail-first-1000`](../src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | Reject value 1; `Nothing` → −1 | -1 |
+| [`foldable/traverse-maybe-fail-last-1000`](../src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | Reject value 1000; `Nothing` → −1 | -1 |
+| [`string/cu-length-unicode-1000`](../src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | UTF-16 code-unit length of `"a😀é"` repeated 1000 times | 4000 |
+| [`string/cp-length-unicode-1000`](../src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | Code-point length of the same recipe | 3000 |
+| [`string/indexOf-hit-10000`](../src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | Find `"needle"` in 10000 `a` characters followed by `"needle"` | 10000 |
+| [`string/indexOf-miss-10000`](../src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | Find `"absent"` in that recipe; `Nothing` → −1 | -1 |
+| [`string/cp-take-unicode-1500`](../src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | Take 1500 code points, sum their scalar values | 64421000 |
+| [`string/split-1000`](../src/Test/StringSplit1000/StringSplit1000.purs) | Split 1000 comma-separated `"abc"` parts, count parts plus all scalar values | 295000 |
+| [`string/concat-1000`](../src/Test/StringConcat1000/StringConcat1000.purs) | Left-fold append over 1000 `"ab"` fragments, sum all scalar values | 195000 |
+| [`record/set-small-1000`](../src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | 1000 immutable updates to the last of 2 fields, sum original and final fields | 1006 |
+| [`record/set-medium-1000`](../src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | Same with 8 fields | 1072 |
+| [`record/set-large-1000`](../src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | Same with 16 fields | 1272 |
+| [`st/ref-write-10000`](../src/Test/STRefWrite10000/STRefWrite10000.purs) | New ST ref, writes 1 through 10000, final read | 10000 |
+| [`st/ref-modify-10000`](../src/Test/STRefModify10000/STRefModify10000.purs) | New ST ref at 0, 10000 increments, final read | 10000 |
+| [`effect/ref-write-10000`](../src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | New Effect ref, writes 1 through 10000, final read | 10000 |
+| [`effect/ref-modify-10000`](../src/Test/EffectRefModify10000/EffectRefModify10000.purs) | New Effect ref at 0, 10000 increments, final read | 10000 |
 
 The filter checksum is `6m² + 4m` with `m = 2500`. Mapping adds 15000 to
 the 10000-element checksum; the successful traversal adds 1500 to the
@@ -161,16 +161,22 @@ Record fields start at 1 through their field count. Both the original and final
 records are consumed, giving `1000 + 2 × sum(1..fieldCount)`. Normal scalar
 replacement is allowed. Each action starts again from the immutable fixture.
 
-## Source isolation
+## Source selection
 
-The configured drivers copy `benchmarks/library/src/` into their private `src/`
-snapshot only with `--wip-included`. The extra direct dependencies
-(`foldable-traversable`, `refs`, `enums`) are added to that private configuration.
-Other backends and FFI/extended/individual-test modes do not compile these
-sources. Sources and the oracle manifest are fingerprinted
-to reject stale library artifacts and changes during collection.
+Each case resides in its own `src/Test/<Name>/` directory, with its PureScript
+implementation and any FFI files. Shared fixture helpers reside in `src/Bench/`;
+the oracle manifest is [`bin/benchmark/library-cases.json`](../bin/benchmark/library-cases.json).
+The entry points are
+[`src/AppLibrary.purs`](../src/AppLibrary.purs) and
+[`src/AppAll.purs`](../src/AppAll.purs). Selection remains explicit: configured
+drivers include these sources in their private workspace only with
+`--wip-included`. The extra direct dependencies (`foldable-traversable`, `refs`,
+`enums`) are added to that private configuration. Other backends and
+FFI/extended/individual-test modes do not compile these sources. Sources and
+the oracle manifest are fingerprinted to reject stale library artifacts and
+changes during collection.
 
-To add a case, add its preparation to the appropriate family module, register
-the same label and order in `AppLibrary.cases` and `cases.json`, and document the
+To add a case, create `src/Test/<Name>/<Name>.purs` with its `prepare` function,
+register the same label and order in `AppLibrary.cases` and [`library-cases.json`](../bin/benchmark/library-cases.json), and document the
 oracle derivation and measured consumer here. Expected values must be derived
 independently of the measured implementation.

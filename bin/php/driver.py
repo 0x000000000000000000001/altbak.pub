@@ -14,6 +14,7 @@ sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'bin/benchmark'))
 from validate import expected_cases, validate_output
+from library_suite import is_library_source
 
 PHP_FLAGS = ['-d', 'xdebug.mode=off', '-d', 'opcache.enable_cli=1',
              '-d', 'opcache.file_update_protection=0',
@@ -34,11 +35,13 @@ def write_json(path, value):
 
 def inputs():
     paths = [p for base in ['src', 'srx'] for p in (ROOT / base).rglob('*')
-             if p.is_file() and p.suffix in {'.purs', '.php'}]
+             if p.is_file() and p.suffix in {'.purs', '.php'}
+             and (base != 'src' or not is_library_source(p.relative_to(ROOT / 'src')))]
     backend = ROOT.parent / 'phpurs/phpurs/bin'
     paths += [backend / 'phpurs', backend / 'phpurs.js', Path(__file__),
               ROOT / 'bin/php/run', ROOT / 'bin/php/composer.phar', ROOT / 'bin/php/composer-state.php',
-              ROOT / 'bin/benchmark/validate.py',
+              ROOT / 'bin/benchmark/validate.py', ROOT / 'bin/benchmark/library_suite.py',
+              ROOT / 'bin/benchmark/library-cases.json',
               ROOT / 'test/native/php/generated.py', ROOT / 'test/native/oracle.py',
               ROOT / 'run/bak/php/spago.php.yaml', ROOT / 'run/bak/php/composer.json',
               ROOT / 'run/bak/php/composer.lock']
@@ -178,12 +181,21 @@ def prepare(directory, args):
             target.unlink()
         elif target.exists():
             shutil.rmtree(target)
-    # JSON diagnostics use independent workspaces and optional dependencies.
-    shutil.copytree(ROOT / 'src', directory / 'src',
-                    ignore=shutil.ignore_patterns('JsonTypedAst', 'JsonTypedAst.purs',
+    # JSON diagnostics use independent workspaces; library WIP is not configured
+    # for PHP. Neither set belongs in this backend's source snapshot.
+    ignore_json_sources = shutil.ignore_patterns('JsonTypedAst', 'JsonTypedAst.purs',
                                                  'JsonTypedAst.go', 'JsonTypedAst.js',
                                                  'JsonDecoding', 'JsonDecoding.purs',
-                                                 'JsonDecoding.go', 'JsonDecoding.js'))
+                                                 'JsonDecoding.go', 'JsonDecoding.js')
+
+    def ignore_sources(source_directory, names):
+        return ignore_json_sources(source_directory, names) | {
+            name for name in names
+            if is_library_source((Path(source_directory) / name).relative_to(ROOT / 'src'))
+        }
+
+    shutil.copytree(ROOT / 'src', directory / 'src',
+                    ignore=ignore_sources)
     entry = {'pure': 'App', 'ffi': 'AppFFI', 'fficc': 'AppFFICheatcode', 'test': 'AppX', 'x': 'AppX'}[args.mode]
     if args.mode == 'test':
         # Replace only the isolated copy, preserving the user's AppX.

@@ -17,7 +17,7 @@ with tempfile.TemporaryDirectory(prefix='altbak-native-rust-') as temporary:
     for name in NOMINAL:
         for suffix in ['FFI', 'FFICheatcode']:
             module = name + suffix
-            original = (ROOT / 'src' / 'Test' / (module + '.rs')).read_text()
+            original = (ROOT / 'src' / 'Test' / name / (module + '.rs')).read_text()
             extra = Path(__file__).with_name(module + '.checks.rs')
             if extra.exists():
                 original += '\n' + extra.read_text()

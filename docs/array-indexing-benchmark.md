@@ -7,7 +7,7 @@ python3 bin/benchmark/array-indexing.py --build-only --build-dir run/bak/go/mode
 python3 bin/benchmark/array-indexing.py --run-only --build-dir run/bak/go/modes/test-ArrayIndexing --output var/benchmark/array-indexing/campaign
 ```
 
-The same `src/Test/ArrayIndexing.purs` produces the official PureScript JavaScript,
+The same `src/Test/ArrayIndexing/ArrayIndexing.purs` produces the official PureScript JavaScript,
 Gopurs Go, C reference and purust Rust kernels. The Go backend uses the existing
 JavaScript compiler bundle (`GOPURS_JS=1`), and the local TAST `purs` fork has
 priority on `PATH`. Installed dependencies come from the existing Go package set;

@@ -199,13 +199,16 @@ class Routing(unittest.TestCase):
 
 
 class OptionalSources(unittest.TestCase):
-    def test_regular_snapshots_exclude_only_separate_json_diagnostics(self):
+    def test_regular_snapshots_exclude_separate_json_and_wip_sources(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary) / "repo"
             paths = ["src/App.purs", "srx/AppX.purs", "srx/Test/STArray.purs",
-                     "src/Test/JsonTypedAst.purs", "src/Test/JsonTypedAst.go",
-                     "src/Test/JsonTypedAst.js",
-                     "src/Test/JsonDecoding.purs", "src/Test/JsonDecoding.go", "src/Test/JsonDecoding.js"]
+                     "src/Test/JsonTypedAst/JsonTypedAst.purs", "src/Test/JsonTypedAst/JsonTypedAst.go",
+                     "src/Test/JsonTypedAst/JsonTypedAst.js",
+                     "src/Test/JsonDecoding/JsonDecoding.purs", "src/Test/JsonDecoding/JsonDecoding.go",
+                     "src/Test/JsonDecoding/JsonDecoding.js", "src/AppAll.purs", "src/AppLibrary.purs",
+                     "src/Bench/ArrayFixtures.purs", "src/Bench/StringFixtures.purs",
+                     "src/Test/ArrayMap10000/ArrayMap10000.purs"]
             paths += [f"run/bak/{runtime}/spago.{runtime}.yaml" for runtime in ["go", "php"]]
             paths += [f"run/bak/php/{name}" for name in ["composer.json", "composer.lock"]]
             for relative in paths:
@@ -230,21 +233,33 @@ class OptionalSources(unittest.TestCase):
                         self.assertEqual((directory / "src/Test/STArray.purs").is_file(), mode == "x")
                         self.assertFalse(list((directory / "src").rglob("JsonTypedAst*")))
                         self.assertFalse(list((directory / "src").rglob("JsonDecoding*")))
+                        for relative in ["AppAll.purs", "AppLibrary.purs", "Bench/ArrayFixtures.purs",
+                                         "Bench/StringFixtures.purs", "Test/ArrayMap10000/ArrayMap10000.purs"]:
+                            self.assertFalse((directory / "src" / relative).exists())
             self.assertEqual(before, {path.relative_to(root): path.read_bytes()
                                       for path in root.rglob('*') if path.is_file()})
 
-    def test_legacy_go_snapshots_exclude_json_without_moving_sources(self):
+    def test_legacy_go_snapshots_exclude_json_and_wip_without_moving_sources(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             runner = root / 'bin/go/test'
             runner.parent.mkdir(parents=True)
             shutil.copyfile(ROOT / 'bin/go/test', runner)
+            helpers = root / 'bin/benchmark'
+            helpers.mkdir(parents=True)
+            for filename in ['library_suite.py', 'library-cases.json']:
+                shutil.copyfile(ROOT / 'bin/benchmark' / filename, helpers / filename)
             sources = {
-                'src/Test/Fib.purs': 'module Test.Fib where\n',
-                'src/Test/JsonTypedAst.purs': 'module Test.JsonTypedAst where\n',
-                'src/Test/JsonDecoding.purs': 'module Test.JsonDecoding where\n',
-                'src/Test/JsonTypedAst.go': 'typed foreign',
-                'src/Test/JsonDecoding.js': 'general foreign',
+                'src/Test/Fib/Fib.purs': 'module Test.Fib where\n',
+                'src/Test/JsonTypedAst/JsonTypedAst.purs': 'module Test.JsonTypedAst where\n',
+                'src/Test/JsonDecoding/JsonDecoding.purs': 'module Test.JsonDecoding where\n',
+                'src/Test/JsonTypedAst/JsonTypedAst.go': 'typed foreign',
+                'src/Test/JsonDecoding/JsonDecoding.js': 'general foreign',
+                'src/Test/ArrayMap10000/ArrayMap10000.purs': 'module Test.ArrayMap10000 where\n',
+                'src/Bench/ArrayFixtures.purs': 'module Bench.ArrayFixtures where\n',
+                'src/Bench/StringFixtures.purs': 'module Bench.StringFixtures where\n',
+                'src/AppAll.purs': 'module AppAll where\n',
+                'src/AppLibrary.purs': 'module AppLibrary where\n',
                 'srx/Test/STArray.purs': 'module Helper where\n',
                 'src/AppX.purs': 'user AppX',
                 'run/bak/go/spago.go.yaml': '{}',
@@ -265,9 +280,13 @@ class OptionalSources(unittest.TestCase):
             arguments = (root / 'spago-arguments').read_text().splitlines()
             self.assertEqual(arguments[:3], ['build', '-q', '--purs-args'])
             self.assertEqual(arguments[3].split(), [
-                '--exclude-files', 'src/Test/JsonTypedAst.purs',
-                '--exclude-files', 'src/Test/JsonTypedAst/**/*.purs',
-                '--exclude-files', 'src/Test/JsonDecoding.purs'])
+                '--exclude-files', 'src/AppAll.purs',
+                '--exclude-files', 'src/AppLibrary.purs',
+                '--exclude-files', 'src/Bench/ArrayFixtures.purs',
+                '--exclude-files', 'src/Bench/StringFixtures.purs',
+                '--exclude-files', 'src/Test/ArrayMap10000/ArrayMap10000.purs',
+                '--exclude-files', 'src/Test/JsonDecoding/JsonDecoding.purs',
+                '--exclude-files', 'src/Test/JsonTypedAst/JsonTypedAst.purs'])
             for relative, contents in sources.items():
                 self.assertEqual((root / relative).read_text(), contents)
 
@@ -283,8 +302,8 @@ class JsonSuites(unittest.TestCase):
                      base / 'purescript/.stack-work/dist/test/build/purs/purs',
                      compiler.parent / 'gopurs-argonaut-core/spago.yaml',
                      compiler.parent / 'gopurs-argonaut-core/src/Json.go']
-            typed_sources = [sources / ('JsonTypedAst.' + ext) for ext in ['purs', 'go', 'js']]
-            paths += typed_sources + [sources / ('JsonDecoding.' + ext) for ext in ['purs', 'go', 'js']]
+            typed_sources = [sources / 'JsonTypedAst' / ('JsonTypedAst.' + ext) for ext in ['purs', 'go', 'js']]
+            paths += typed_sources + [sources / 'JsonDecoding' / ('JsonDecoding.' + ext) for ext in ['purs', 'go', 'js']]
             paths += [root / f'test/fixtures/{suite}/expected.json' for suite in ['json-decoding', 'json-typed-ast']]
             for path in paths:
                 path.parent.mkdir(parents=True, exist_ok=True)
@@ -310,14 +329,15 @@ class JsonSuites(unittest.TestCase):
             sources.mkdir(parents=True)
             work.mkdir()
             for name in ['JsonDecoding', 'JsonTypedAst']:
+                (sources / name).mkdir()
                 for ext in ['purs', 'go', 'js']:
-                    (sources / f'{name}.{ext}').write_text('source')
+                    (sources / name / f'{name}.{ext}').write_text('source')
             (work / 'spago.yaml').write_text('package:\n  name: test\n  dependencies:\n    - argonaut-codecs\nworkspace:\n')
             with patch.object(json_diagnostic, 'SOURCES', sources), patch.object(json_diagnostic, 'call'):
                 json_diagnostic.build_js(work, {}, 'JsonDecoding')
-            self.assertTrue((work / 'js/src/Test/JsonDecoding.purs').is_file())
-            self.assertTrue((work / 'js/src/Test/JsonDecoding.js').is_file())
-            self.assertFalse((work / 'js/src/Test/JsonDecoding.go').exists())
+            self.assertTrue((work / 'js/src/Test/JsonDecoding/JsonDecoding.purs').is_file())
+            self.assertTrue((work / 'js/src/Test/JsonDecoding/JsonDecoding.js').is_file())
+            self.assertFalse((work / 'js/src/Test/JsonDecoding/JsonDecoding.go').exists())
             self.assertFalse(list((work / 'js/src').rglob('JsonTypedAst*')))
             self.assertNotIn('backend-optimizer', (work / 'js/spago.yaml').read_text())
             self.assertIn('Test.JsonDecoding/index.js', (work / 'js/entry.mjs').read_text())

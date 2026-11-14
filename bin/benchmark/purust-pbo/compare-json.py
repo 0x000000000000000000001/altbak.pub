@@ -40,8 +40,12 @@ def main():
     assert builds['before']['rust']['rustc'] == builds['after']['rust']['rustc']
     for path in [a.before, a.after]:
         for suffix in ['purs', 'rs']:
+            candidate_source = path / 'sources' / diag.ROOT.name / f'src/Test/JsonTypedAst/JsonTypedAst.{suffix}'
+            if not candidate_source.is_file():
+                # Existing frozen campaigns keep their original flat layout.
+                candidate_source = path / f'sources/altbak.pub/src/Test/JsonTypedAst.{suffix}'
             assert (reference / f'artifacts/sources/JsonTypedAst.{suffix}').read_bytes() == (
-                path / f'sources/altbak.pub/src/Test/JsonTypedAst.{suffix}').read_bytes()
+                candidate_source).read_bytes()
     sources = {'go': reference / go['copied'], **{k: Path(b['timed']['path']) for k, b in builds.items()}}
     binaries = {}
     (out / 'binaries').mkdir()
