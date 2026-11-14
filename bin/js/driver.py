@@ -15,6 +15,9 @@ import sys
 import tempfile
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.dont_write_bytecode = True
+sys.path.insert(0, str(ROOT / "bin/benchmark"))
+from library_suite import copy_library_sources, library_cases, library_config, library_inputs
 
 
 def options():
@@ -25,6 +28,7 @@ def options():
     modes.add_argument("--fficc", action="store_true")
     modes.add_argument("--test", metavar="MODULE")
     modes.add_argument("--x", action="store_true")
+    modes.add_argument("--wip", action="store_true", help="Run the WIP library benchmarks")
     actions = parser.add_mutually_exclusive_group()
     actions.add_argument("--build-only", action="store_true")
     actions.add_argument("--run-only", action="store_true")
@@ -41,7 +45,16 @@ def options():
         parser.error("--expected requires --test")
     if args.test and not re.fullmatch(r"[A-Z][A-Za-z0-9_]*(?:\.[A-Z][A-Za-z0-9_]*)*", args.test):
         parser.error("--test expects a PureScript module name")
-    args.mode = "test" if args.test else "x" if args.x else "ffi" if args.ffi else "fficc" if args.fficc else "pure"
+    args.mode = "wip" if args.wip else "test" if args.test else "x" if args.x else "ffi" if args.ffi else "fficc" if args.fficc else "pure"
+    if args.mode == "wip" and args.backend not in {"js", "es"}:
+        parser.error("--wip is not configured for Scheme or Erlang")
+    args.include_library = args.mode in {"pure", "wip"} and args.backend in {"js", "es"}
+    if args.include_library:
+        library_cases()
+        if args.mode == "wip" and args.backend == "es":
+            print("ES runs the WIP library cases; ArrayIndexing, JsonTypedAst and JsonDecoding are not configured.", flush=True)
+    elif args.mode == "pure":
+        print(f"WIP library cases are not configured for {args.backend}; running the core suite only.", flush=True)
     args.test = args.test.removeprefix("Test.") if args.test else None
     return args
 
@@ -96,6 +109,8 @@ def snapshot_sources(work, args):
                 target = work / "src" / source.relative_to(ROOT / "srx")
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(source, target)
+    elif args.include_library:
+        copy_library_sources(work / "src")
 
 
 def source_closure(work, entry, backend):
@@ -158,10 +173,14 @@ def scheme_tool(work):
 def build(args, store, pointer):
     work = Path(tempfile.mkdtemp(prefix=args.mode + "-", dir=store))
     print(f"Build directory: {work}", flush=True)
+    library_fingerprint = library_inputs() if args.include_library else None
     snapshot_sources(work, args)
     cache_backend = "js" if args.backend == "es" else args.backend
     base = ROOT / "run/bak" / cache_backend
     shutil.copyfile(base / f"spago.{cache_backend}.yaml", work / "spago.yaml")
+    if args.include_library:
+        config = work / "spago.yaml"
+        config.write_text(library_config(config.read_text()))
     if (base / "spago.lock").is_file():
         shutil.copyfile(base / "spago.lock", work / "spago.lock")
     # Dependencies are private copies; no mutation of root links or backend caches.
@@ -170,7 +189,9 @@ def build(args, store, pointer):
     env = environment(args.backend)
     commands = []
     entry = {"pure": "App", "ffi": "AppFFI", "fficc": "AppFFICheatcode",
-             "test": "AppX", "x": "AppX"}[args.mode]
+             "test": "AppX", "x": "AppX", "wip": "AppLibrary"}[args.mode]
+    if args.include_library and args.mode == "pure":
+        entry = "AppAll"
     compatibility = []
     if args.backend == "erl":
         # Actual identity foreigns required by this old purerl package set.
@@ -234,6 +255,10 @@ def build(args, store, pointer):
     manifest = {"backend": args.backend, "mode": args.mode, "test": args.test,
                 "expected": args.expected, "entry": entry, "run": run,
                 "commands": commands, "source_sha256": hashes, "compatibility": compatibility}
+    if args.include_library:
+        if library_fingerprint != library_inputs():
+            raise RuntimeError("Library sources or oracles changed during build; no artifact was accepted")
+        manifest["library_inputs"] = library_fingerprint
     (work / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     pointer.write_text(json.dumps({"artifact": str(work)}) + "\n")
     print(f"Artifact: {work}\nCommand: {' '.join(run)}", flush=True)
@@ -245,6 +270,8 @@ def execute(args, work):
     for key in ["backend", "mode", "test", "expected"]:
         if manifest[key] != getattr(args, key):
             raise RuntimeError(f"Artifact {key}={manifest[key]!r} does not match requested {getattr(args, key)!r}")
+    if args.include_library and manifest.get("library_inputs") != library_inputs():
+        raise RuntimeError("Library sources or oracles changed; rebuild without --run-only")
     if args.mode == "x":
         (work / "var").mkdir(exist_ok=True)
     result = subprocess.run(manifest["run"], cwd=work, env=environment(args.backend),
@@ -257,7 +284,8 @@ def execute(args, work):
     if result.returncode:
         raise RuntimeError(f"Native program failed ({result.returncode})")
     validator = runpy.run_path(str(ROOT / "bin/benchmark/validate.py"))
-    checked = validator["validate_output"](result.stdout, args.mode, args.test, args.expected)
+    checked = validator["validate_output"](result.stdout, args.mode, args.test, args.expected,
+                                           include_library=args.include_library and args.mode == "pure")
     (work / "validated.json").write_text(json.dumps(checked, indent=2) + "\n")
     print(f"Validated output: {work / 'validated.json'}", file=sys.stderr)
 

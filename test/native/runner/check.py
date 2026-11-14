@@ -25,8 +25,8 @@ class RunnerContracts(unittest.TestCase):
         for path, contents in {
             'src/AppX.purs': 'user-owned AppX', 'src/Test/Fib.purs': 'source',
             'srx/AppX.purs': 'extended entry', 'srx/Test/Extended.purs': 'extended source',
-            'run/bak/go/spago.go.yaml': 'path: "../gopurs/gopurs-prelude"\n',
-            'run/bak/rust/spago.rust.yaml': 'path: "../purust/purust-prelude"\n',
+            'run/bak/go/spago.go.yaml': 'package:\n  dependencies:\n    - prelude\npath: "../gopurs/gopurs-prelude"\n',
+            'run/bak/rust/spago.rust.yaml': 'package:\n  dependencies:\n    - prelude\npath: "../purust/purust-prelude"\n',
         }.items():
             target = self.root / path
             target.parent.mkdir(parents=True, exist_ok=True)
@@ -38,7 +38,8 @@ class RunnerContracts(unittest.TestCase):
         self.addCleanup(self.temporary.cleanup)
 
     def args(self, **kwargs):
-        return argparse.Namespace(clean=False, mode='test', test='Fib', dev=False, **kwargs)
+        return argparse.Namespace(clean=False, mode='test', test='Fib', dev=False,
+                                  include_library=False, **kwargs)
 
     def test_workspace_preserves_appx_and_absolutizes_package_paths(self):
         driver.prepare(self.directory, 'go', self.args())
@@ -139,8 +140,9 @@ class RunnerContracts(unittest.TestCase):
                     backend_directory = self.root.parent / backend_name / backend_name
                     compiler_command = ['npm', 'run', script, '--silent']
 
-                    def inputs(selected):
+                    def inputs(selected, mode):
                         self.assertEqual(selected, language)
+                        self.assertEqual(mode, 'pure')
                         events.append(('snapshot', versions[host]))
                         return {'compiler': dict(versions), 'source': 'unchanged'}
 
@@ -160,7 +162,7 @@ class RunnerContracts(unittest.TestCase):
                             elif command[2] == 'build:rust':
                                 versions['rust'] = 'rebuilt'
                         elif Path(command[0]).name == 'gopurs':
-                            self.assertEqual(command[1:], ['--main', 'App', *(['--dev'] if dev else [])])
+                            self.assertEqual(command[1:], ['--main', 'AppAll', *(['--dev'] if dev else [])])
                             self.assertEqual(versions[host], 'rebuilt' if clean else 'old',
                                              'the selected compiler still embeds the old runtime')
                             target = directory / 'output/main/main.go'

@@ -62,4 +62,6 @@ workspace:
       path: "../purust/purust-assert"
     lazy:
       path: "../purust/purust-lazy"
+    unfoldable:
+      path: "../purust/purust-unfoldable"
 

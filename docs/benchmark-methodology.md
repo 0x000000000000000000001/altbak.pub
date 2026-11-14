@@ -32,7 +32,9 @@ assert that Go must outperform JavaScript.
 Sources use `src/Test/ArrayIndexing.purs`, `src/Test/JsonTypedAst.*` and
 `src/Test/JsonDecoding.*`.
 Run them through `bin/go/run --test ArrayIndexing`, `--test JsonTypedAst` or `--test JsonDecoding`,
-and the equivalent `bin/js/run` commands. They are opt-in cases with their
+and the equivalent `bin/js/run` or `bin/rust/run` commands. `--wip` groups these
+three diagnostics with the new library cases, preserving their separate protocols.
+They are opt-in cases with their
 recorded protocols, not additions to the ordinary fourteen-case or `--x` totals.
 PBO dependencies are resolved only in the `JsonTypedAst` isolated workspace.
 `JsonDecoding` uses ordinary Argonaut codecs without a PBO dependency.
@@ -79,6 +81,38 @@ boundaries are recorded rather than equated to every historical table cell.
 Keep per-size and per-phase results alongside the table summary. Compiler-workload
 measurements use a different boundary from the numeric core suite and must remain
 outside its historical total.
+
+## Library microbenchmarks
+
+The **excluded WIP** library cases are defined in
+[`benchmarks/library`](../benchmarks/library/README.md). These 23 cases compile the
+same PureScript sources through the JS, JS/PBO, Go and Rust runners. They measure
+the selected library implementations together with their compiler, FFI and
+runtime; differences cannot be attributed to code generation alone. They follow
+the 14 core cases in the normal run on those four backends. `AppAll` preserves
+the core total, then prints an `=== Excluded WIP benchmarks ===` marker and runs
+the new cases. The validator retains the historical core result at the top
+level and stores the new results under `library`, without a WIP total.
+
+Each case prepares an immutable fixture outside timing and returns a deferred
+`Effect Int`. Each invocation obtains its inputs through `Bench.opaque`, computes
+the operation and consumes the result. Mutable references are created anew
+inside each invocation. Result checksums, Effect adapters, opaque input boundaries
+and numeric sinks are included; scalar operations can be dominated by these
+boundaries. The suite documentation specifies the consumer used by each case.
+Fixture construction is excluded; any deferred representation work incurred
+while consuming a result is included. String fixtures are defined by their
+construction recipe, without assuming a shared flat or rope representation.
+
+The suite uses the existing three global warm-ups, three local warm-ups,
+calibrated batches and minimum of ten batches. Independent expected integers
+come from `cases.json`; they are not inferred from the warm-up values. The
+collector accepts the combined normal output as `mode: "pure"`, or the 23-case
+section alone as `mode: "wip"`, and aggregates three independent processes per
+case and section. The public JS/Go/Rust `--wip` command also runs the three
+separate diagnostic protocols; its combined console output is not one numeric
+collector input. There is no WIP suite total or change to the historical totals.
+The first compilation and execution of these additions remain pending.
 
 ## Core timing boundary
 

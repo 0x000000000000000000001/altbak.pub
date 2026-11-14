@@ -5,9 +5,11 @@ import json
 import math
 from pathlib import Path
 import re
+import runpy
 import sys
 
 ROOT = Path(__file__).resolve().parents[2]
+LIBRARY_MARKER = "=== Excluded WIP benchmarks ==="
 CASES = dict(zip(
     ["AstTree", "Fib", "ListOps", "TCO", "Records", "Ackermann", "Church",
      "Primes", "RBTree", "Polymorphism", "StateMonad", "LazyEvaluation", "ArrayOps", "RowToList"],
@@ -53,13 +55,30 @@ def expected_cases(mode, test=None, expected=None):
         raise ValueError("--test and --expected require --mode test")
     if mode == "x":
         return [dict(case) for case in EXTENDED_CASES]
+    if mode == "wip":
+        # Some backend runners load this validator by filename without adding
+        # its directory to sys.path. Keep the WIP section equally portable.
+        suite = runpy.run_path(str(ROOT / "bin/benchmark/library_suite.py"))
+        return suite["library_cases"]()
     if mode not in {"pure", "ffi", "fficc"}:
         raise ValueError(f"Unknown benchmark mode {mode}")
     suffix = {"pure": "", "ffi": "FFI", "fficc": "FFICheatcode"}[mode]
     return [case_for(name + suffix) for name in CASES]
 
 
-def validate_output(output, mode="pure", test=None, expected=None):
+def split_library_output(output):
+    """Split the appended section, preserving older core-only log support."""
+    markers = list(re.finditer(r"(?m)^" + re.escape(LIBRARY_MARKER) + r"\r?$", output))
+    if len(markers) > 1 or output.count(LIBRARY_MARKER) != len(markers):
+        raise ValueError("Repeated or malformed WIP benchmark marker")
+    if not markers:
+        return output, None
+    marker = markers[0]
+    return output[:marker.start()], output[marker.end():]
+
+
+def validate_section(output, mode, test=None, expected=None):
+    """Validate one core/extended section or the excluded WIP section."""
     cases = expected_cases(mode, test, expected)
     rows = ROW.findall(output)
     if (len(rows) != len(cases) or output.count("(Test)") != len(cases)
@@ -82,7 +101,7 @@ def validate_output(output, mode="pure", test=None, expected=None):
         values.append(value)
         times.append(duration)
     totals = re.findall(r"Total exec time:\s*(\S+)\s+ms", output)
-    if len(totals) != (0 if mode == "test" else 1):
+    if len(totals) != (0 if mode in {"test", "wip"} else 1):
         raise ValueError("Missing or repeated benchmark total")
     summed = sum(times) / 1000.0
     # At most .005 μs rounding per row and .005 ms for the printed total.
@@ -91,14 +110,29 @@ def validate_output(output, mode="pure", test=None, expected=None):
     if total is not None and (not math.isfinite(total) or total < 0 or abs(total - summed) > tolerance):
         raise ValueError(f"Printed total {total} ms differs from row sum {summed} ms")
     return {"mode": mode, "labels": labels, "values": values, "times_us": times,
-            "total_ms": total, "sum_displayed_lines_ms": summed,
-            "values_validated": True, "oracle": "extended" if mode == "x" else "core",
+            "total_ms": total, "sum_displayed_lines_ms": None if mode == "wip" else summed,
+            "values_validated": True,
+            "oracle": "wip" if mode == "wip" else "extended" if mode == "x" else "core",
             "timer_unit": "microseconds"}
+
+
+def validate_output(output, mode="pure", test=None, expected=None, include_library=False):
+    if mode not in {"pure", "ffi", "fficc", "test", "x", "wip"}:
+        raise ValueError(f"Unknown benchmark mode {mode}")
+    core_output, library_output = split_library_output(output)
+    if mode != "pure" and (include_library or library_output is not None):
+        raise ValueError("An appended WIP section is only valid after the pure core suite")
+    if include_library and library_output is None:
+        raise ValueError("Missing excluded WIP benchmark section")
+    result = validate_section(core_output, mode, test, expected)
+    if library_output is not None:
+        result["library"] = validate_section(library_output, "wip")
+    return result
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--mode", choices=["pure", "ffi", "fficc", "test", "x"], default="pure")
+    parser.add_argument("--mode", choices=["pure", "ffi", "fficc", "test", "x", "wip"], default="pure")
     parser.add_argument("--test")
     parser.add_argument("--expected")
     parser.add_argument("--input", type=Path, help="read an existing log instead of stdin")
@@ -115,6 +149,8 @@ def main():
             args.output.parent.mkdir(parents=True, exist_ok=True)
             args.output.write_text(json.dumps(result, indent=2) + "\n")
         message = f"{len(result['values'])} expected {result['oracle']} results and timings verified"
+        if "library" in result:
+            message += f"; {len(result['library']['values'])} excluded WIP results and timings verified"
         print("Benchmark validation: " + message, file=sys.stderr)
     except (ValueError, OSError) as error:
         print("Benchmark validation failed: " + str(error), file=sys.stderr)

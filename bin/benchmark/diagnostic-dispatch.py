@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Expose diagnostic protocols through the usual Go and JS runners."""
+"""Expose diagnostic protocols through the usual Go, JS and Rust runners."""
 import argparse
 from datetime import datetime, timezone
 import json
@@ -114,12 +114,51 @@ def execute(runtime, args):
         print(f"Validated {runtime} {args.test} results: {output / 'results.json'}", flush=True)
 
 
+def ordinary_driver(runtime):
+    return ROOT / ("bin/native/driver.py" if runtime in {"go", "rust"} else "bin/js/driver.py")
+
+
+def execute_wip(runtime, arguments):
+    parser = argparse.ArgumentParser(
+        description="Run only excluded WIP: ArrayIndexing, JsonTypedAst, JsonDecoding and library cases.",
+        allow_abbrev=False)
+    parser.add_argument("--wip", action="store_true", required=True)
+    actions = parser.add_mutually_exclusive_group()
+    actions.add_argument("--build-only", action="store_true")
+    actions.add_argument("--run-only", action="store_true")
+    parser.add_argument("-d", "--dev", action="store_true")
+    parser.add_argument("-c", "--clean", action="store_true",
+                        help="Rebuild the native backend compiler; diagnostic builds are already fresh")
+    args = parser.parse_args(arguments)
+    if args.dev and runtime != "go":
+        parser.error("--dev is Go-only")
+    if args.clean and args.run_only:
+        parser.error("--clean cannot be combined with --run-only")
+    profile_args = ["--dev"] if args.dev else []
+    phases = (["--build-only"] if args.build_only else ["--run-only"] if args.run_only
+              else ["--build-only", "--run-only"])
+    for phase in phases:
+        # Build the ordinary workspace first, so --clean refreshes the backend
+        # compiler before any diagnostic artifact records its identity.
+        native_args = ["--wip", phase, *profile_args]
+        if args.clean and phase == "--build-only":
+            native_args.append("--clean")
+        print(f"=== {runtime}: new excluded WIP cases / {phase[2:]} ===", flush=True)
+        run([sys.executable, ordinary_driver(runtime), runtime, *native_args])
+        for name in DIAGNOSTICS:
+            print(f"=== {runtime}: {name} (excluded WIP) / {phase[2:]} ===", flush=True)
+            execute(runtime, options(runtime, ["--test", name, phase, *profile_args]))
+
+
 def main():
     runtime, *arguments = sys.argv[1:]
-    if runtime not in {"go", "js"}:
-        raise ValueError("diagnostic dispatch supports Go and JS")
+    if runtime not in {"go", "js", "rust"}:
+        raise ValueError("diagnostic dispatch supports Go, JS and Rust")
+    if "--wip" in arguments:
+        execute_wip(runtime, arguments)
+        return
     if diagnostic_name(arguments) is None:
-        ordinary = ROOT / ("bin/native/driver.py" if runtime == "go" else "bin/js/driver.py")
+        ordinary = ordinary_driver(runtime)
         os.execv(sys.executable, [sys.executable, str(ordinary), runtime, *arguments])
     execute(runtime, options(runtime, arguments))
 

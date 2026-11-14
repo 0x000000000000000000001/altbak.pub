@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'bin/benchmark'))
 from validate import expected_cases, validate_output
 from go_profile import go_build_flags
+from library_suite import copy_library_sources, library_cases, library_config, library_inputs
 
 
 def digest(path):
@@ -27,7 +28,7 @@ def write_json(path, value):
     temporary.replace(path)
 
 
-def inputs(language):
+def inputs(language, mode="pure"):
     result = {}
     for base in ['src', 'srx']:
         for path in sorted((ROOT / base).rglob('*')):
@@ -40,8 +41,10 @@ def inputs(language):
             result[str(path)] = digest(path)
     for path in [ROOT / f'run/bak/{language}/spago.{language}.yaml',
                  Path(__file__), ROOT / f'bin/{language}/run', ROOT / 'bin/benchmark/validate.py',
-                 ROOT / 'bin/benchmark/go_profile.py']:
+                 ROOT / 'bin/benchmark/go_profile.py', ROOT / 'bin/benchmark/library_suite.py']:
         result[str(path.relative_to(ROOT))] = digest(path)
+    if mode in {'pure', 'wip'}:
+        result.update(library_inputs())
     return result
 
 
@@ -100,7 +103,8 @@ def prepare(directory, language, args):
                                                  'JsonTypedAst.go', 'JsonTypedAst.js',
                                                  'JsonDecoding', 'JsonDecoding.purs',
                                                  'JsonDecoding.go', 'JsonDecoding.js'))
-    entry = {'pure': 'App', 'ffi': 'AppFFI', 'fficc': 'AppFFICheatcode', 'test': 'AppX', 'x': 'AppX'}[args.mode]
+    entry = {'pure': 'AppAll', 'ffi': 'AppFFI', 'fficc': 'AppFFICheatcode',
+             'test': 'AppX', 'x': 'AppX', 'wip': 'AppLibrary'}[args.mode]
     if args.mode == 'test':
         # Only the workspace copy is replaced; the user's AppX never changes.
         (directory / 'src/AppX.purs').write_text(f'''module AppX where
@@ -118,9 +122,13 @@ main = void $ runBench Case.describe Case.act
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(path, target)
         (directory / 'var').mkdir(exist_ok=True)
+    elif args.include_library:
+        copy_library_sources(directory / 'src')
     source = ROOT / f'run/bak/{language}/spago.{language}.yaml'
     config = re.sub(r'(?m)^(\s*path:\s*)"([^"\n]+)"',
                     lambda match: match[1] + json.dumps(str((ROOT / match[2]).resolve())), source.read_text())
+    if args.include_library:
+        config = library_config(config)
     (directory / 'spago.yaml').write_text(config)
     # An independent lock/cache is kept per mode; no root links or config files are changed.
     return entry
@@ -143,7 +151,8 @@ def execute(binary, directory, env, args, name='results'):
         code = process.wait()
     if code:
         raise RuntimeError(f'Benchmark exited {code}; see {raw}')
-    result = validate_output(''.join(chunks), args.mode, args.test, args.expected)
+    result = validate_output(''.join(chunks), args.mode, args.test, args.expected,
+                             include_library=args.include_library and args.mode == 'pure')
     write_json(directory / (name + '.json'), result)
     return result
 
@@ -156,6 +165,7 @@ def main():
     modes.add_argument('--fficc', action='store_true')
     modes.add_argument('--test')
     modes.add_argument('--x', action='store_true')
+    modes.add_argument('--wip', action='store_true', help='Run the WIP library benchmarks')
     parser.add_argument('--expected')
     actions = parser.add_mutually_exclusive_group()
     actions.add_argument('--build-only', action='store_true')
@@ -172,8 +182,11 @@ def main():
         args.test = args.test.removeprefix('Test.')
         if not re.fullmatch(r'[A-Z][A-Za-z0-9_]*(?:\.[A-Z][A-Za-z0-9_]*)*', args.test):
             parser.error('invalid --test module')
-    args.mode = 'test' if args.test else 'x' if args.x else 'ffi' if args.ffi else 'fficc' if args.fficc else 'pure'
+    args.mode = 'wip' if args.wip else 'test' if args.test else 'x' if args.x else 'ffi' if args.ffi else 'fficc' if args.fficc else 'pure'
+    args.include_library = args.mode in {'pure', 'wip'}
     expected_cases(args.mode, args.test, args.expected)  # Fail before writes/builds for unknown contracts.
+    if args.include_library:
+        library_cases()
     if args.run_only and args.clean:
         parser.error('--run-only is incompatible with --clean (requires a compiler and executable rebuild)')
     if args.language != 'go' and (args.pgo or args.pgo_profile):
@@ -203,7 +216,7 @@ def main():
     binary = directory / 'benchmark'
     manifest_path = directory / 'manifest.json'
     if args.run_only:
-        fingerprint = inputs(args.language)
+        fingerprint = inputs(args.language, args.mode)
         manifest = json.loads(manifest_path.read_text())
         required = {'language': args.language, 'mode': args.mode, 'test': args.test,
                     'expected': args.expected, 'profile': config, 'inputs': fingerprint}
@@ -216,6 +229,7 @@ def main():
             raise ValueError('Executable SHA differs from its build manifest')
         execute(binary, directory, env, args)
         return
+    library_fingerprint = library_inputs() if args.include_library else None
     entry = prepare(directory, args.language, args)
     logs = directory / 'logs'
     logs.mkdir(exist_ok=True)
@@ -234,7 +248,7 @@ def main():
         commands.append(logged(['npm', 'run', build_script, '--silent'], backend_directory,
                                logs / 'compiler-build.log', env))
     # --clean changes the compiler artifacts; record them after rebuilding.
-    fingerprint = inputs(args.language)
+    fingerprint = inputs(args.language, args.mode)
     commands.append(logged(['spago', 'build'], directory, logs / 'spago.log', env))
     if args.language == 'go':
         backend = ROOT.parent / 'gopurs/gopurs/bin/gopurs'
@@ -273,8 +287,10 @@ def main():
                                project, logs / 'build.log', env))
         shutil.copy2(target / 'release/purust_output', binary)
         toolchain = subprocess.check_output(['rustc', '--version'], text=True, env=env).strip()
-    if fingerprint != inputs(args.language):
+    if fingerprint != inputs(args.language, args.mode):
         raise RuntimeError('Sources changed during build; no executable manifest was accepted')
+    if args.include_library and library_fingerprint != library_inputs():
+        raise RuntimeError('Library sources or oracles changed during build; no executable manifest was accepted')
     manifest = {'language': args.language, 'mode': args.mode, 'test': args.test, 'expected': args.expected,
                 'entry': entry, 'profile': config, 'inputs': fingerprint, 'binary_sha256': digest(binary),
                 'toolchain': toolchain, 'commands': commands}

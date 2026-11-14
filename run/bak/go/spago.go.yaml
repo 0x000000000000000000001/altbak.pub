@@ -62,4 +62,6 @@ workspace:
       path: "../gopurs/gopurs-assert"
     lazy:
       path: "../gopurs/gopurs-lazy"
+    unfoldable:
+      path: "../gopurs/gopurs-unfoldable"
 

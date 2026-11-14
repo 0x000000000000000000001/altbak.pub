@@ -24,9 +24,23 @@ Construction, copying, conversion and eventual reclamation costs must be measure
 and reported; deferred work must not disappear beyond a timing boundary.
 
 ### Core vs extended tests (`srx/`)
-To ensure fair and executable comparisons across all backends, the test suite is split into two parts:
+The historical benchmark tables distinguish two parts:
 1. **Core tests (`src/`)**: Pure computational tasks (AST, Fibonacci, recursion) executed on the configured core backends via `./bin/run`.
 2. **Extended tests (`srx/`)**: Tests relying heavily on Javascript/PHP FFI bindings (like `Effect.Aff`, mutable `STArray`, and regex). Since Scheme and Erlang lack FFI implementations for these specific libraries in their package sets, they are isolated in the `srx/` directory. **Note that this is completely normal and expected:** Scheme is targeted here for raw computation, and Erlang's BEAM already natively handles concurrency and multithreading at the VM level (making JS style `Aff` workarounds irrelevant). Executed via `./bin/run --x` (which dynamically injects `srx/` into the compilation step and skips Scheme/Erlang).
+
+### Excluded WIP benchmarks
+
+The normal JS, JS/PBO, Go and Rust runs also include **23 library cases**: array operations, `Traversable` with
+`Maybe`, Unicode strings, flat record updates, and `ST.Ref` / `Effect.Ref` loops.
+These new cases are marked **excluded WIP**: their results are outside the
+historical total and /C ratios. They have not yet been compiled or executed.
+Run Go normally with `./bin/go/run`. To run only excluded WIP cases, use
+`./bin/go/run --wip`: the 23 new cases plus Array Indexing, JSON to Typed AST and
+JSON Decoding, each retaining its measurement protocol. `./bin/run --wip`
+selects JS, JS/PBO, Go and Rust; JS/PBO currently runs only the 23 new cases.
+The [suite documentation](benchmarks/library/README.md) records provenance,
+timing boundaries, expected results and individual backend commands. Its sources
+are loaded only for configured backends; other backends retain their available tests.
 
 ### Core stresstest benchmark results (pure computational)
 
@@ -51,6 +65,7 @@ RowToList | ~ 0.04 μs | ~ 0.02 μs | ~ 0.06 μs | ~ 0.02 μs |
 Array Indexing (excluded WIP) | ~ 25303.33 μs | — | — | — |
 JSON to Typed AST (excluded WIP) | ~ 80646.58 μs | — | — | — |
 JSON Decoding (excluded WIP) | ~ 9283.94 μs | — | — | — |
+Library operations — 23 cases (excluded WIP) | pending | pending | — | — |
 **Total Execution Time** | ~ 129.10 ms <br>(/C = 13.1x) | ~ 66.89 ms <br>(/C = 6.8x) | ~ 48.48 ms <br>(/C = 4.9x) | ~ 30.54 ms <br>(/C = 3.1x) |
 
 Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
@@ -76,6 +91,7 @@ RowToList | ~ 0.15 μs | ~ 0.30 μs | ~ 0.50 μs | ~ 0.07 μs | ~ 0.03 μs |
 Array Indexing (excluded WIP) | ~ 3962.17 μs | — | — | — | — |
 JSON to Typed AST (excluded WIP) | ~ 20002.75 μs | — | — | — | — |
 JSON Decoding (excluded WIP) | ~ 2241.42 μs | — | — | — | — |
+Library operations — 23 cases (excluded WIP) | pending | pending | — | — | — |
 **Total Execution Time** | ~ 13.28 ms <br>(/C = 1.3x) | ~ 50.55 ms <br>(/C = 5.3x) | ~ 1464.74 ms <br>(/C = 148.8x) | ~ 88.99 ms <br>(/C = 9.0x) | ~ 11.34 ms <br>(/C = 1.2x) |
 
 Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
@@ -161,6 +177,7 @@ RowToList | ~ 0.068 μs | ~ 0.95 μs | ~ 0.10 μs | ~ 0.02 μs | ~ 0.01 μs |
 Array Indexing (excluded WIP) | ~ 6387.79 μs | — | — | — | — |
 JSON to Typed AST (excluded WIP) | ~ 35351.17 μs | — | — | — | — |
 JSON Decoding (excluded WIP) | ~ 1130.69 μs | — | — | — | — |
+Library operations — 23 cases (excluded WIP) | pending | — | — | — | — |
 **Total Execution Time** | ~ 8.54 ms <br>(/C = 0.9x) | ~ 2455.35 ms <br>(/C = 249.5x) | ~ 99.28 ms <br>(/C = 10.1x) | ~ 53.73 ms <br>(/C = 5.5x) | ~ 28.31 ms <br>(/C = 2.9x) |
 
 Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.

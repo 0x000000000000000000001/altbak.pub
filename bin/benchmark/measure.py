@@ -19,7 +19,8 @@ import subprocess
 import sys
 
 sys.dont_write_bytecode = True
-from validate import validate_output
+from validate import split_library_output, validate_output
+from library_suite import library_inputs
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -29,24 +30,35 @@ def digest(path):
 
 
 def fingerprints():
-    return {str(p.relative_to(ROOT)): digest(p)
+    result = {str(p.relative_to(ROOT)): digest(p)
             for folder in ['src', 'srx', 'bin', 'test/native', 'tmp']
             for p in sorted((ROOT / folder).rglob('*'))
             if p.is_file() and 'node_modules' not in p.parts and p.suffix in
             {'.purs', '.js', '.go', '.rs', '.fs', '.java', '.cc', '.ss', '.erl', '.php', '.py', '.mjs', '.c', '.hs', '.kk', '.ml'}}
+    result.update(library_inputs())
+    return result
 
 
-def check(output, mode):
-    result = validate_output(output, mode)
+def check_section(output, result, batched):
     if not result['values_validated']:
         raise ValueError('A timing without validated results cannot be published')
     if any(not math.isfinite(t) or t <= 0 for t in result['times_us']):
         raise ValueError('Nonpositive or nonfinite per-call timing')
-    if mode != 'x':
+    if batched:
         counts = [int(n) for n in re.findall(r'^Batch iterations: (\d+)$', output, re.M)]
-        if len(counts) != 14 or any(n < 1 or n > 16777216 or n & (n - 1) for n in counts):
-            raise ValueError('Expected 14 calibrated power-of-two batch sizes')
+        expected_count = len(result['values'])
+        if len(counts) != expected_count or any(n < 1 or n > 16777216 or n & (n - 1) for n in counts):
+            raise ValueError(f'Expected {expected_count} calibrated power-of-two batch sizes')
         result['batch_iterations'] = counts
+    return result
+
+
+def check(output, mode):
+    result = validate_output(output, mode)
+    core_output, library_output = split_library_output(output)
+    check_section(core_output, result, mode != 'x')
+    if library_output is not None:
+        check_section(library_output, result['library'], True)
     return result
 
 
@@ -55,13 +67,21 @@ def aggregate(samples):
         raise ValueError('Three independent processes are required')
     if any(s['values'] != samples[0]['values'] or s['labels'] != samples[0]['labels'] for s in samples):
         raise ValueError('Benchmark outputs changed across processes')
+    has_library = 'library' in samples[0]
+    if any(('library' in sample) != has_library for sample in samples):
+        raise ValueError('Excluded WIP benchmark section changed across processes')
     result = dict(samples[0])
     result.pop('batch_iterations', None)
     result['times_us'] = [statistics.median(s['times_us'][i] for s in samples)
                           for i in range(len(samples[0]['times_us']))]
-    result['total_ms'] = result['sum_displayed_lines_ms'] = sum(result['times_us']) / 1000
+    result['total_ms'] = result['sum_displayed_lines_ms'] = (
+        None if result['mode'] == 'wip' else sum(result['times_us']) / 1000)
     result['process_runs'] = samples
-    result['aggregation'] = 'median per row across three processes; total sums median rows'
+    result['aggregation'] = 'median per row across three processes'
+    if result['mode'] != 'wip':
+        result['aggregation'] += '; total sums median rows'
+    if has_library:
+        result['library'] = aggregate([sample['library'] for sample in samples])
     return result
 
 
@@ -76,7 +96,7 @@ def main():
     if not plan or len({p['key'] for p in plan}) != len(plan):
         raise ValueError('Plan keys must be nonempty and unique')
     for item in plan:
-        if item['mode'] not in ['pure', 'ffi', 'fficc', 'x']:
+        if item['mode'] not in ['pure', 'ffi', 'fficc', 'x', 'wip']:
             raise ValueError('Unsupported plan mode')
         if '--run-only' not in item['command'] and not item.get('executable_sha256'):
             raise ValueError('Use --run-only or a numeric executable with its build SHA')
@@ -151,7 +171,12 @@ def main():
                                          'stdout_sha256': digest(output), 'stderr_sha256': digest(errors),
                                          'result_sha256': digest(result_path), 'command': item['command']})
                 save()
-                print(f'{key}: {len(checked["values"])} outputs verified, {checked["total_ms"]:.6f} ms', flush=True)
+                summary = f'{key}: {len(checked["values"])} outputs verified'
+                if checked['total_ms'] is not None:
+                    summary += f', {checked["total_ms"]:.6f} ms'
+                if 'library' in checked:
+                    summary += f'; {len(checked["library"]["values"])} excluded WIP outputs verified'
+                print(summary, flush=True)
             samples[key].append(checked)
     if fingerprints() != current:
         raise ValueError('Sources changed during the campaign; no publication')

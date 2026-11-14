@@ -188,7 +188,9 @@ class OptionalSources(unittest.TestCase):
                 path.write_text("{}")
             before = {path.relative_to(root): path.read_bytes() for path in root.rglob('*') if path.is_file()}
             for mode in ["pure", "test", "x"]:
-                args = argparse.Namespace(mode=mode, clean=False, test="Fib")
+                # This contract checks the core/extended snapshot boundary;
+                # the library suite is supplied separately by the CLI routes.
+                args = argparse.Namespace(mode=mode, clean=False, test="Fib", include_library=False)
                 for runtime, driver in [("go", native), ("php", php), ("js", js)]:
                     with self.subTest(runtime=runtime, mode=mode):
                         directory = Path(temporary) / runtime / mode

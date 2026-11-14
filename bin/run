@@ -9,7 +9,7 @@ while [[ $# -gt 0 ]]; do
   case "$1" in
     --clean|-c) ARGS+=(--clean); shift ;;
     --build-only|--run-only) ARGS+=("$1"); shift ;;
-    --ffi|--fficc|--x)
+    --ffi|--fficc|--x|--wip)
       [[ "$MODE" == pure ]] || { echo 'Choose only one benchmark mode.' >&2; exit 2; }
       MODE="${1#--}"; ARGS+=("$1"); shift ;;
     --test)
@@ -21,11 +21,14 @@ done
 
 # All documented core backends take part. Unsupported extended/foreign modes
 # are excluded explicitly instead of being silently treated as compiled mode.
+# Default JS/ES/Go/Rust runs append the library WIP section after the core suite;
+# the historical core total still covers only its fourteen cases.
 BACKENDS=(js es php go rust sharp)
 case "$MODE" in
   pure|test) BACKENDS+=(java wasm scm erl cpp psgo) ;;
   ffi|fficc) BACKENDS+=(java scm erl cpp) ;;
   x) ;;
+  wip) BACKENDS=(js es go rust) ;;
 esac
 if [[ "$MODE" == test && ( "$TEST" == ArrayIndexing || "$TEST" == JsonTypedAst || "$TEST" == JsonDecoding ) ]]; then
   BACKENDS=(go js)
@@ -33,6 +36,13 @@ fi
 FAILED=()
 for backend in "${BACKENDS[@]}"; do
   echo "=== $backend / $MODE ==="
+  if [[ "$MODE" == pure ]]; then
+    case "$backend" in
+      # The shared JS driver reports unsupported library cases for SCM/ERL.
+      js|es|go|rust|scm|erl) ;;
+      *) echo "WIP library cases are not configured for $backend; running the core suite only." ;;
+    esac
+  fi
   if ! "./bin/$backend/run" ${ARGS[@]+"${ARGS[@]}"}; then
     FAILED+=("$backend")
     echo "=== $backend failed ===" >&2
