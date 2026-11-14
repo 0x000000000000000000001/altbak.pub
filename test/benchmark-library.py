@@ -131,7 +131,11 @@ class LibraryPublication(unittest.TestCase):
                 expected = []
                 for key in COLUMNS[section]:
                     time_us = results[key]["library"]["times_us"][index]
-                    expected.append(f"~ {time_us:.2f} μs<br>(/C = —)<br>(/JS = {time_us / js_time:.2f}x)")
+                    cell = f"~ {time_us:.2f} μs<br>(/C = —)"
+                    js_ratio = f"{time_us / js_time:.2f}x"
+                    if js_ratio != "1.00x":
+                        cell += f"<br>(/JS = {js_ratio})"
+                    expected.append(cell)
                 self.assertEqual(values, expected)
                 seen[section].append(label)
             else:

@@ -56,8 +56,9 @@ def format_time(value, unit='μs'):
 def format_wip_cell(value, c_reference, js_reference):
     def ratio(reference):
         return '—' if reference is None or reference <= 0 else format_number(value / reference) + 'x'
-    return (format_time(value) + '<br>(/C = ' + ratio(c_reference)
-            + ')<br>(/JS = ' + ratio(js_reference) + ')')
+    cell = format_time(value) + '<br>(/C = ' + ratio(c_reference) + ')'
+    js_ratio = ratio(js_reference)
+    return cell if js_ratio == '1.00x' else cell + '<br>(/JS = ' + js_ratio + ')'
 
 
 def reference_times(text, title):
