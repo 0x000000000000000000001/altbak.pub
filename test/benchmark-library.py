@@ -127,8 +127,12 @@ class LibraryPublication(unittest.TestCase):
                 values = [part.strip() for part in new.split("|")[1:-1]]
                 self.assertEqual(len(values), len(COLUMNS[section]))
                 index = labels.index(label)
-                self.assertEqual(values, [f"~ {results[key]['library']['times_us'][index]:.6f} μs"
-                                          for key in COLUMNS[section]])
+                js_time = results["js-pure"]["library"]["times_us"][index]
+                expected = []
+                for key in COLUMNS[section]:
+                    time_us = results[key]["library"]["times_us"][index]
+                    expected.append(f"~ {time_us:.2f} μs<br>(/C = —)<br>(/JS = {time_us / js_time:.2f}x)")
+                self.assertEqual(values, expected)
                 seen[section].append(label)
             else:
                 original_other.append(old)

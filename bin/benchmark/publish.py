@@ -43,6 +43,36 @@ def row_label(cell):
     return re.sub(r'^\[([^\]]+)\]\([^)]+\)', r'\1', cell.strip())
 
 
+def format_number(value):
+    """Limit display precision without presenting a positive value as zero."""
+    return '< 0.01' if 0 < value < 0.005 else f'{value:.2f}'
+
+
+def format_time(value, unit='μs'):
+    number = format_number(value)
+    return ('' if number.startswith('<') else '~ ') + number + ' ' + unit
+
+
+def format_wip_cell(value, c_reference, js_reference):
+    def ratio(reference):
+        return '—' if reference is None or reference <= 0 else format_number(value / reference) + 'x'
+    return (format_time(value) + '<br>(/C = ' + ratio(c_reference)
+            + ')<br>(/JS = ' + ratio(js_reference) + ')')
+
+
+def reference_times(text, title):
+    """Use the same-row first column of the published reference table."""
+    match = re.search(r'#### ' + re.escape(title) + r'\n(.*?)(?=\n#### |\n### |\n## |\Z)', text, re.S)
+    result = {}
+    if match:
+        for line in match[1].splitlines():
+            cells = line.split('|')
+            timing = re.match(r'\s*~\s+([\d.]+) μs', cells[1]) if len(cells) > 1 else None
+            if timing:
+                result[row_label(cells[0])] = float(timing[1])
+    return result
+
+
 def verify(key, result):
     extended = key.endswith('-x')
     wip = result['mode'] == 'wip'
@@ -99,8 +129,7 @@ def render(original, results):
             for key in keys:
                 result = results[key]
                 value = result['total_ms'] if total else result['times_us'][expected_rows.index(label)]
-                # Six fractional digits preserve nonzero nanosecond-scale results.
-                values.append(f'~ {value:.6f} ' + ('ms' if total else 'μs'))
+                values.append(format_time(value, 'ms' if total else 'μs'))
             lines[i] = name_cell + ' | ' + ' | '.join(values) + ' |'
             seen.append(label)
         if seen != expected_rows + ['**Total Execution Time**']:
@@ -113,6 +142,9 @@ def render_wip(original, results):
     """Update only the 23 WIP rows in the nine JS/Go columns."""
     text = original
     labels = [case['label'] for case in expected_cases('wip')]
+    c_reference = reference_times(original, 'C (reference)')
+    js_reference = dict(zip(results['js-pure']['library']['labels'],
+                            results['js-pure']['library']['times_us']))
     for title, keys in WIP_GROUPS.items():
         pattern = r'(#### ' + re.escape(title) + r'\n)(.*?)(?=\n#### |\n### |\n## |\Z)'
         matches = list(re.finditer(pattern, text, re.S))
@@ -130,7 +162,9 @@ def render_wip(original, results):
             if len(cells) != len(keys) + 2 or cells[-1].strip():
                 raise ValueError('Unexpected column count for ' + title + ': ' + label)
             values = [results[key]['library']['times_us'][labels.index(label)] for key in keys]
-            lines[index] = name_cell + ' | ' + ' | '.join(f'~ {value:.6f} μs' for value in values) + ' |'
+            lines[index] = name_cell + ' | ' + ' | '.join(
+                format_wip_cell(value, c_reference.get(label), js_reference[label])
+                for value in values) + ' |'
             seen.append(label)
         if seen != labels:
             raise ValueError('Unexpected WIP row order: ' + title)
