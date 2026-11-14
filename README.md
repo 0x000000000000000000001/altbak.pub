@@ -24,41 +24,9 @@ Construction, copying, conversion and eventual reclamation costs must be measure
 and reported; deferred work must not disappear beyond a timing boundary.
 
 ### Core vs extended tests (`srx/`)
-The historical benchmark tables distinguish two parts:
+To ensure fair and executable comparisons across all backends, the test suite is split into two parts:
 1. **Core tests (`src/`)**: Pure computational tasks (AST, Fibonacci, recursion) executed on the configured core backends via `./bin/run`.
 2. **Extended tests (`srx/`)**: Tests relying heavily on Javascript/PHP FFI bindings (like `Effect.Aff`, mutable `STArray`, and regex). Since Scheme and Erlang lack FFI implementations for these specific libraries in their package sets, they are isolated in the `srx/` directory. **Note that this is completely normal and expected:** Scheme is targeted here for raw computation, and Erlang's BEAM already natively handles concurrency and multithreading at the VM level (making JS style `Aff` workarounds irrelevant). Executed via `./bin/run --x` (which dynamically injects `srx/` into the compilation step and skips Scheme/Erlang).
-
-### Excluded WIP benchmarks
-
-Normal runs execute the **14 core benchmarks**, without WIP cases. Use
-`./bin/go/run --wip-included` to include the core suite, **23 library cases**
-(array operations, `Traversable` with `Maybe`, Unicode strings, flat record
-updates, and `ST.Ref` / `Effect.Ref` loops), plus Array Indexing, JSON to Typed
-AST and JSON Decoding. JS and Rust support the same selection; JS/PBO includes
-the core suite and the 23 library cases, with the three older diagnostics not
-configured for that backend. psgo also includes the 14 core and 23 new cases.
-JS and Go accept `--ffi --wip-included` or `--fficc --wip-included` for the
-corresponding native references. Each diagnostic retains its measurement protocol.
-`./bin/run --wip-included` applies this selection to JS, JS/PBO, Go, Rust and psgo;
-the other configured backends run their core suite only.
-
-Every new library case has its own row in each core results table below. Rows
-grouped under **Excluded WIP** remain outside the historical **Total Execution Time**
-and **/C** ratios, even when requested with `--wip-included`. For the new rows,
-**pending** means a configured implementation is pending runtime qualification,
-with no published measurements; **—** means no implementation is configured for
-that column. Existing diagnostic measurements retain their recorded values.
-
-The [suite documentation](docs/library-benchmarks.md) records provenance,
-timing boundaries, expected results and individual backend commands. Each test
-has its own `src/Test/<Name>/` directory containing its PureScript and FFI files.
-WIP selection remains explicit: configured runners include these cases only with
-`--wip-included`.
-
-The 23 new rows in all nine JS/Go columns use medians from three independent
-processes, measured on November 14, 2026. The [measurement archive](docs/benchmark-results/2026-11-14-library-js-go.md)
-records all 621 validated WIP outputs, build profiles and source fingerprints.
-The psgo column includes a documented local UTF-16 length correction.
 
 ### Core stresstest benchmark results (pure computational)
 
