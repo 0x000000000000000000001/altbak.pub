@@ -20,6 +20,7 @@ sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "bin/benchmark"))
 from validate import CASES, validate_output
+from publish import row_label
 
 CONFIG = {
     "Koka": ("koka", ["bench_koka.kk"],
@@ -97,7 +98,7 @@ def render_readme(original, results):
         for index, line in enumerate(lines):
             if "|" not in line:
                 continue
-            label = line.split("|", 1)[0].strip()
+            label = row_label(line.split("|", 1)[0])
             if label in TABLE_ROWS:
                 line, count = re.subn(r"\|\s*~\s*[0-9.]+ μs",
                                       lambda _: f"| ~ {next(times):.3f} μs", line, count=1)

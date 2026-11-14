@@ -122,7 +122,8 @@ def table_coordinates(original: str, variant: str = 'sharpurs') -> tuple[list[st
     expected = TABLE_ROWS + ['**Total Execution Time**']
     for offset, label in enumerate(expected, start=2):
         cells = lines[header+offset].rstrip('\r\n').split('|')
-        if len(cells) != len(header_cells) or cells[label_column].strip() != label:
+        if (len(cells) != len(header_cells)
+                or re.sub(r'^\[([^\]]+)\]\([^)]+\)', r'\1', cells[label_column].strip()) != label):
             raise ValueError(f'Unexpected Fable table row/order: expected {label!r}')
     return lines, header, column, label_column
 

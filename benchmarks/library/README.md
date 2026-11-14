@@ -11,6 +11,19 @@ was inspected during the search. Its older library benchmarks do not establish
 the source or measurement protocol of the Discord table. No upstream benchmark
 code was copied into this suite.
 
+The earlier August 2024 discussion does have an identified source:
+[`anttih/purescm-string-benchmarks` at b792b00](https://github.com/anttih/purescm-string-benchmarks/blob/b792b00fa3fc8f50bccec5d28c0964221721ca89/src/Main.purs).
+Its `(list) fold`, `(list) fold + slice`, `(array) fold` and `(array) fold + slice`
+labels match that exchange. This is Antti's older suite, distinct from Fabrizio
+Ferrai's 218-case JS/Chez/Racket table from March 2026.
+
+The renewed search covered Fabrizio's public repositories and organizations,
+the public `purescm` and `purescript-core` branches, his personal site and
+authenticated GitHub code searches for exact benchmark labels. The 2026 source
+was not located in that scope; this does not establish that it is unpublished.
+In the supplied Discord exchange, Fabrizio said on 8 April 2026 that he planned
+to publish code soon. That statement does not establish its current location.
+
 **Status:** implementation only. No compilation, test, benchmark or executable
 verification was run when adding these files, at the user's request. There are
 no performance measurements or qualified backend results yet.
@@ -18,28 +31,26 @@ no performance measurements or qualified backend results yet.
 ## Running
 
 From the repository root, the normal Go command builds and runs the 14 core
-cases followed by the 23 new WIP cases:
+cases, with no WIP cases:
 
 ```sh
 ./bin/go/run
 ```
 
-The same integration is configured for JS, JS/PBO (`es`) and Rust. `./bin/run`
-uses all existing backends; those without the new cases retain their existing
-coverage and report the omission. The new WIP values do not enter the core total.
-
-To run only the excluded WIP group:
+To include the new library cases and the three existing WIP diagnostics as well:
 
 ```sh
-./bin/go/run --wip
+./bin/go/run --wip-included
 ```
 
-On Go, JS and Rust, `--wip` runs these 23 cases plus the three diagnostics already
-marked excluded WIP in the main README: Array Indexing, JSON to Typed AST and
-JSON Decoding. The latter retain their independent workspaces, protocols and
+On Go, JS and Rust, `--wip-included` runs the 14 core cases, these 23 new cases,
+and the three diagnostics already marked excluded WIP in the main README:
+Array Indexing, JSON to Typed AST and JSON Decoding. The latter retain their independent workspaces, protocols and
 campaign results. They can also be selected individually with `--test`.
-JS/PBO currently runs only the 23 library cases. `./bin/run --wip` selects all
-four configured backends. This option is mutually exclusive with `--test`,
+JS/PBO currently runs the 14 core cases plus the 23 library cases.
+`./bin/run --wip-included` retains all existing core backends, includes WIP where configured,
+and reports their absence on the others. The new WIP values do not enter the
+core total. This option is mutually exclusive with `--test`,
 `--x`, `--ffi` and `--fficc`.
 The grouped JS/Go/Rust command accepts the build/run phase flags and `--clean`,
 plus `--dev` for Go. Custom artifact/build directories and Go PGO options remain
@@ -49,14 +60,14 @@ The commands also accept `--build-only` and `--run-only`. For a multi-backend
 comparison, finish all builds before starting measurement:
 
 ```sh
-./bin/run --wip --build-only
-./bin/run --wip --run-only
+./bin/run --wip-included --build-only
+./bin/run --wip-included --run-only
 ```
 
 JS/ES keep builds under `run/bak/<backend>/output-runs/pure-*` (normal run) or
-`wip-*`, with the corresponding `latest-pure.json` / `latest-wip.json` pointer
+`pure-wip-included-*`, with the corresponding `latest-pure.json` / `latest-pure-wip-included.json` pointer
 and `validated.json` in the artifact directory. Go/Rust use
-`run/bak/<backend>/modes/pure/` or `modes/wip/`, with `results.json`. These files
+`run/bak/<backend>/modes/pure/` or `modes/pure-wip-included/`, with `results.json`. These files
 describe one process, not the median of three independent processes.
 
 For a publication campaign, use the existing frozen-plan protocol in
@@ -67,10 +78,11 @@ processes. The core result keeps its original shape; the new result is nested
 under `library`. Keep the build manifests and payload hashes required by that
 protocol. `publish.py` continues to publish the historical core totals.
 
-A numeric plan for the 23 new cases alone uses `"mode": "wip"` and the ordinary
-driver directly, e.g. `python3 bin/native/driver.py go --wip --run-only`, against
-the artifact prepared by `./bin/go/run --wip --build-only`. Do not feed the public
-JS/Go/Rust `--wip` group's combined console output into one numeric plan entry:
+A numeric plan that includes the 23 new cases uses `"mode": "pure"` and the
+ordinary driver directly, e.g. `python3 bin/native/driver.py go --wip-included --run-only`,
+against the artifact prepared by `./bin/go/run --wip-included --build-only`.
+Do not feed the public JS/Go/Rust `--wip-included` group's combined
+console output into one numeric plan entry:
 its other three diagnostics already collect their own campaigns and use
 different measurement boundaries. WIP results have no aggregate score.
 
@@ -110,29 +122,29 @@ For `[1 .. 2m]`, the sum is `3m² + 2m`. All intermediate sums fit signed Int32.
 
 | Case | Measured operation and consumer | Expected |
 | --- | --- | ---: |
-| `array/map-10000` | Map `+1` over `[1..10000]`, weighted checksum | 75025000 |
-| `array/filter-10000` | Keep even elements, weighted checksum | 37510000 |
-| `array/foldl-sum-10000` | Sum `[1..10000]` | 50005000 |
-| `array/sort-descending-10000` | Sort `[10000..1]` ascending, weighted checksum | 75010000 |
-| `array/eq-neq-last-10000` | Compare distinct arrays differing only at the last element; false → 0 | 0 |
-| `array/append-1000` | Append `[1..1000]` and `[1001..2000]`, weighted checksum | 3002000 |
-| `foldable/traverse-maybe-1000` | Traverse `[1..1000]` with `Just (x+1)`, weighted checksum | 752500 |
-| `foldable/traverse-maybe-fail-first-1000` | Reject value 1; `Nothing` → −1 | -1 |
-| `foldable/traverse-maybe-fail-last-1000` | Reject value 1000; `Nothing` → −1 | -1 |
-| `string/cu-length-unicode-1000` | UTF-16 code-unit length of `"a😀é"` repeated 1000 times | 4000 |
-| `string/cp-length-unicode-1000` | Code-point length of the same recipe | 3000 |
-| `string/indexOf-hit-10000` | Find `"needle"` in 10000 `a` characters followed by `"needle"` | 10000 |
-| `string/indexOf-miss-10000` | Find `"absent"` in that recipe; `Nothing` → −1 | -1 |
-| `string/cp-take-unicode-1500` | Take 1500 code points, sum their scalar values | 64421000 |
-| `string/split-1000` | Split 1000 comma-separated `"abc"` parts, count parts plus all scalar values | 295000 |
-| `string/concat-1000` | Left-fold append over 1000 `"ab"` fragments, sum all scalar values | 195000 |
-| `record/set-small-1000` | 1000 immutable updates to the last of 2 fields, sum original and final fields | 1006 |
-| `record/set-medium-1000` | Same with 8 fields | 1072 |
-| `record/set-large-1000` | Same with 16 fields | 1272 |
-| `st/ref-write-10000` | New ST ref, writes 1 through 10000, final read | 10000 |
-| `st/ref-modify-10000` | New ST ref at 0, 10000 increments, final read | 10000 |
-| `effect/ref-write-10000` | New Effect ref, writes 1 through 10000, final read | 10000 |
-| `effect/ref-modify-10000` | New Effect ref at 0, 10000 increments, final read | 10000 |
+| [`array/map-10000`](src/Test/Library/Arrays.purs) | Map `+1` over `[1..10000]`, weighted checksum | 75025000 |
+| [`array/filter-10000`](src/Test/Library/Arrays.purs) | Keep even elements, weighted checksum | 37510000 |
+| [`array/foldl-sum-10000`](src/Test/Library/Arrays.purs) | Sum `[1..10000]` | 50005000 |
+| [`array/sort-descending-10000`](src/Test/Library/Arrays.purs) | Sort `[10000..1]` ascending, weighted checksum | 75010000 |
+| [`array/eq-neq-last-10000`](src/Test/Library/Arrays.purs) | Compare distinct arrays differing only at the last element; false → 0 | 0 |
+| [`array/append-1000`](src/Test/Library/Arrays.purs) | Append `[1..1000]` and `[1001..2000]`, weighted checksum | 3002000 |
+| [`foldable/traverse-maybe-1000`](src/Test/Library/Traversal.purs) | Traverse `[1..1000]` with `Just (x+1)`, weighted checksum | 752500 |
+| [`foldable/traverse-maybe-fail-first-1000`](src/Test/Library/Traversal.purs) | Reject value 1; `Nothing` → −1 | -1 |
+| [`foldable/traverse-maybe-fail-last-1000`](src/Test/Library/Traversal.purs) | Reject value 1000; `Nothing` → −1 | -1 |
+| [`string/cu-length-unicode-1000`](src/Test/Library/Strings.purs) | UTF-16 code-unit length of `"a😀é"` repeated 1000 times | 4000 |
+| [`string/cp-length-unicode-1000`](src/Test/Library/Strings.purs) | Code-point length of the same recipe | 3000 |
+| [`string/indexOf-hit-10000`](src/Test/Library/Strings.purs) | Find `"needle"` in 10000 `a` characters followed by `"needle"` | 10000 |
+| [`string/indexOf-miss-10000`](src/Test/Library/Strings.purs) | Find `"absent"` in that recipe; `Nothing` → −1 | -1 |
+| [`string/cp-take-unicode-1500`](src/Test/Library/Strings.purs) | Take 1500 code points, sum their scalar values | 64421000 |
+| [`string/split-1000`](src/Test/Library/Strings.purs) | Split 1000 comma-separated `"abc"` parts, count parts plus all scalar values | 295000 |
+| [`string/concat-1000`](src/Test/Library/Strings.purs) | Left-fold append over 1000 `"ab"` fragments, sum all scalar values | 195000 |
+| [`record/set-small-1000`](src/Test/Library/Records.purs) | 1000 immutable updates to the last of 2 fields, sum original and final fields | 1006 |
+| [`record/set-medium-1000`](src/Test/Library/Records.purs) | Same with 8 fields | 1072 |
+| [`record/set-large-1000`](src/Test/Library/Records.purs) | Same with 16 fields | 1272 |
+| [`st/ref-write-10000`](src/Test/Library/Refs.purs) | New ST ref, writes 1 through 10000, final read | 10000 |
+| [`st/ref-modify-10000`](src/Test/Library/Refs.purs) | New ST ref at 0, 10000 increments, final read | 10000 |
+| [`effect/ref-write-10000`](src/Test/Library/Refs.purs) | New Effect ref, writes 1 through 10000, final read | 10000 |
+| [`effect/ref-modify-10000`](src/Test/Library/Refs.purs) | New Effect ref at 0, 10000 increments, final read | 10000 |
 
 The filter checksum is `6m² + 4m` with `m = 2500`. Mapping adds 15000 to
 the 10000-element checksum; the successful traversal adds 1500 to the
@@ -152,7 +164,7 @@ replacement is allowed. Each action starts again from the immutable fixture.
 ## Source isolation
 
 The configured drivers copy `benchmarks/library/src/` into their private `src/`
-snapshot for normal runs and WIP-only runs. The extra direct dependencies
+snapshot only with `--wip-included`. The extra direct dependencies
 (`foldable-traversable`, `refs`, `enums`) are added to that private configuration.
 Other backends and FFI/extended/individual-test modes do not compile these
 sources. Sources and the oracle manifest are fingerprinted

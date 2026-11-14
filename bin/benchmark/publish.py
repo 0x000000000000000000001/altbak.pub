@@ -34,6 +34,11 @@ ROWS = ['AST Evaluation', 'Fibonacci', 'List Processing', 'Tail Call Optimizatio
 EXTENDED_ROWS = ['File I/O', 'STArray Operations', 'String Operations', 'Aff Operations', 'Parallelism']
 
 
+def row_label(cell):
+    """Read the benchmark name while keeping source links in the table."""
+    return re.sub(r'^\[([^\]]+)\]\([^)]+\)', r'\1', cell.strip())
+
+
 def verify(key, result):
     extended = key.endswith('-x')
     expected = [case['value'] for case in EXTENDED_CASES] if extended else list(CASES.values())
@@ -76,7 +81,8 @@ def render(original, results):
         for i, line in enumerate(lines):
             if '|' not in line:
                 continue
-            label = line.split('|', 1)[0].strip()
+            name_cell = line.split('|', 1)[0].strip()
+            label = row_label(name_cell)
             if label not in expected_rows and label != '**Total Execution Time**':
                 continue
             total = label == '**Total Execution Time**'
@@ -86,7 +92,7 @@ def render(original, results):
                 value = result['total_ms'] if total else result['times_us'][expected_rows.index(label)]
                 # Six fractional digits preserve nonzero nanosecond-scale results.
                 values.append(f'~ {value:.6f} ' + ('ms' if total else 'μs'))
-            lines[i] = label + ' | ' + ' | '.join(values) + ' |'
+            lines[i] = name_cell + ' | ' + ' | '.join(values) + ' |'
             seen.append(label)
         if seen != expected_rows + ['**Total Execution Time**']:
             raise ValueError('Unexpected table row order: ' + title)

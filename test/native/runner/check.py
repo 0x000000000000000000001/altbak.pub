@@ -38,8 +38,7 @@ class RunnerContracts(unittest.TestCase):
         self.addCleanup(self.temporary.cleanup)
 
     def args(self, **kwargs):
-        return argparse.Namespace(clean=False, mode='test', test='Fib', dev=False,
-                                  include_library=False, **kwargs)
+        return argparse.Namespace(clean=False, mode='test', test='Fib', dev=False, **kwargs)
 
     def test_workspace_preserves_appx_and_absolutizes_package_paths(self):
         driver.prepare(self.directory, 'go', self.args())
@@ -109,6 +108,7 @@ class RunnerContracts(unittest.TestCase):
 
     def test_cli_rejects_incompatible_modes_before_build(self):
         for arguments in [['go','--ffi','--fficc'], ['go','--test','bad/name'],
+                          ['go', '--wip'], ['go', '--wip-included', '--ffi'],
                           ['rust','--pgo'], ['rust', '--dev'], ['go','--pgo','--build-only'],
                           ['go','--run-only','--clean'], ['rust','--run-only','--clean']]:
             with self.subTest(arguments=arguments), patch.object(sys,'argv',['driver.py']+arguments), \
@@ -140,9 +140,10 @@ class RunnerContracts(unittest.TestCase):
                     backend_directory = self.root.parent / backend_name / backend_name
                     compiler_command = ['npm', 'run', script, '--silent']
 
-                    def inputs(selected, mode):
+                    def inputs(selected, mode, include_library):
                         self.assertEqual(selected, language)
                         self.assertEqual(mode, 'pure')
+                        self.assertFalse(include_library)
                         events.append(('snapshot', versions[host]))
                         return {'compiler': dict(versions), 'source': 'unchanged'}
 
@@ -162,7 +163,7 @@ class RunnerContracts(unittest.TestCase):
                             elif command[2] == 'build:rust':
                                 versions['rust'] = 'rebuilt'
                         elif Path(command[0]).name == 'gopurs':
-                            self.assertEqual(command[1:], ['--main', 'AppAll', *(['--dev'] if dev else [])])
+                            self.assertEqual(command[1:], ['--main', 'App', *(['--dev'] if dev else [])])
                             self.assertEqual(versions[host], 'rebuilt' if clean else 'old',
                                              'the selected compiler still embeds the old runtime')
                             target = directory / 'output/main/main.go'
@@ -224,7 +225,8 @@ class RunnerContracts(unittest.TestCase):
             return command
 
         for flag in ['-d', '--dev']:
-            for mode, key in [([], 'pure'), (['--ffi'], 'ffi'), (['--fficc'], 'fficc'),
+            for mode, key in [([], 'pure'), (['--wip-included'], 'pure-wip-included'),
+                              (['--ffi'], 'ffi'), (['--fficc'], 'fficc'),
                               (['--x'], 'x'), (['--test', 'Test.Fib'], 'test-Fib')]:
                 with self.subTest(flag=flag, mode=mode):
                     argv = ['driver.py', 'go', flag, *mode, '--build-only']
@@ -237,6 +239,9 @@ class RunnerContracts(unittest.TestCase):
                         driver.main()
                         execute.assert_not_called()
                         manifest = json.loads((directory / 'manifest.json').read_text())
+                        self.assertEqual(manifest['include_library'], '--wip-included' in mode)
+                        if key.startswith('pure'):
+                            self.assertEqual(manifest['entry'], 'AppAll' if '--wip-included' in mode else 'App')
                         self.assertEqual(manifest['profile']['backend_profile'], 'dev')
                         self.assertEqual(manifest['profile']['go_build_flags'],
                                          ['-gcflags=gopurs/output/...=-N -l'])

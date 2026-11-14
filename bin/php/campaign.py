@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'bin/benchmark'))
 sys.path.insert(0, str(ROOT / 'bin/php'))
 from driver import artifacts  # noqa: E402
-from publish import ROWS  # noqa: E402
+from publish import ROWS, row_label  # noqa: E402
 from validate import expected_cases  # noqa: E402
 
 MODES = {'pure': [], 'ffi': ['--ffi'], 'fficc': ['--fficc']}
@@ -144,7 +144,7 @@ def update_readme(mode, result):
     for index, line in enumerate(lines):
         newline = '\n' if line.endswith('\n') else ''
         body = line[:-1] if newline else line
-        label = body.split('|', 1)[0].strip()
+        label = row_label(body.split('|', 1)[0])
         if label in ROWS:
             if seen >= len(result['times_us']):
                 raise ValueError('More README rows than measured cells')

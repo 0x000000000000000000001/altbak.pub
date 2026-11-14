@@ -59,7 +59,7 @@ def render_readme(original, purust, c):
     section = match[2]
     pattern = r"^([^|\n]+)(\|\s*~\s*)([0-9.]+)( μs)"
     labels = re.findall(pattern, section, re.M)
-    if [row[0].strip() for row in labels] != references.TABLE_ROWS:
+    if [references.row_label(row[0]) for row in labels] != references.TABLE_ROWS:
         raise ValueError("Unexpected Rust README rows")
     times = iter(purust["times_us"])
     section = re.sub(pattern, lambda row: row[1] + row[2] + f"{next(times):.3f}" + row[4],

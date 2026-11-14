@@ -21,14 +21,14 @@ from library_suite import copy_library_sources, library_cases, library_config, l
 
 
 def options():
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(description=__doc__, allow_abbrev=False)
     parser.add_argument("backend", choices=["js", "es", "scm", "erl"])
     modes = parser.add_mutually_exclusive_group()
     modes.add_argument("--ffi", action="store_true")
     modes.add_argument("--fficc", action="store_true")
     modes.add_argument("--test", metavar="MODULE")
     modes.add_argument("--x", action="store_true")
-    modes.add_argument("--wip", action="store_true", help="Run the WIP library benchmarks")
+    modes.add_argument("--wip-included", action="store_true", help="Include WIP cases after the core benchmarks")
     actions = parser.add_mutually_exclusive_group()
     actions.add_argument("--build-only", action="store_true")
     actions.add_argument("--run-only", action="store_true")
@@ -45,16 +45,14 @@ def options():
         parser.error("--expected requires --test")
     if args.test and not re.fullmatch(r"[A-Z][A-Za-z0-9_]*(?:\.[A-Z][A-Za-z0-9_]*)*", args.test):
         parser.error("--test expects a PureScript module name")
-    args.mode = "wip" if args.wip else "test" if args.test else "x" if args.x else "ffi" if args.ffi else "fficc" if args.fficc else "pure"
-    if args.mode == "wip" and args.backend not in {"js", "es"}:
-        parser.error("--wip is not configured for Scheme or Erlang")
-    args.include_library = args.mode in {"pure", "wip"} and args.backend in {"js", "es"}
+    args.mode = "test" if args.test else "x" if args.x else "ffi" if args.ffi else "fficc" if args.fficc else "pure"
+    if args.wip_included and args.backend not in {"js", "es"}:
+        parser.error("--wip-included is not configured for Scheme or Erlang")
+    args.include_library = bool(args.wip_included)
     if args.include_library:
         library_cases()
-        if args.mode == "wip" and args.backend == "es":
-            print("ES runs the WIP library cases; ArrayIndexing, JsonTypedAst and JsonDecoding are not configured.", flush=True)
-    elif args.mode == "pure":
-        print(f"WIP library cases are not configured for {args.backend}; running the core suite only.", flush=True)
+        if args.backend == "es":
+            print("ES includes the WIP library cases; ArrayIndexing, JsonTypedAst and JsonDecoding are not configured.", flush=True)
     args.test = args.test.removeprefix("Test.") if args.test else None
     return args
 
@@ -109,7 +107,7 @@ def snapshot_sources(work, args):
                 target = work / "src" / source.relative_to(ROOT / "srx")
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(source, target)
-    elif args.include_library:
+    elif getattr(args, "include_library", False):
         copy_library_sources(work / "src")
 
 
@@ -171,7 +169,8 @@ def scheme_tool(work):
 
 
 def build(args, store, pointer):
-    work = Path(tempfile.mkdtemp(prefix=args.mode + "-", dir=store))
+    key = args.mode + ("-wip-included" if args.include_library else "")
+    work = Path(tempfile.mkdtemp(prefix=key + "-", dir=store))
     print(f"Build directory: {work}", flush=True)
     library_fingerprint = library_inputs() if args.include_library else None
     snapshot_sources(work, args)
@@ -189,7 +188,7 @@ def build(args, store, pointer):
     env = environment(args.backend)
     commands = []
     entry = {"pure": "App", "ffi": "AppFFI", "fficc": "AppFFICheatcode",
-             "test": "AppX", "x": "AppX", "wip": "AppLibrary"}[args.mode]
+             "test": "AppX", "x": "AppX"}[args.mode]
     if args.include_library and args.mode == "pure":
         entry = "AppAll"
     compatibility = []
@@ -253,6 +252,7 @@ def build(args, store, pointer):
               for path in directory.rglob("*")
               if path.is_file() and path.suffix in {".purs", ".js", ".ss", ".erl"}}
     manifest = {"backend": args.backend, "mode": args.mode, "test": args.test,
+                "include_library": args.include_library,
                 "expected": args.expected, "entry": entry, "run": run,
                 "commands": commands, "source_sha256": hashes, "compatibility": compatibility}
     if args.include_library:
@@ -266,11 +266,14 @@ def build(args, store, pointer):
 
 
 def execute(args, work):
+    include_library = getattr(args, "include_library", False)
     manifest = json.loads((work / "manifest.json").read_text())
     for key in ["backend", "mode", "test", "expected"]:
         if manifest[key] != getattr(args, key):
             raise RuntimeError(f"Artifact {key}={manifest[key]!r} does not match requested {getattr(args, key)!r}")
-    if args.include_library and manifest.get("library_inputs") != library_inputs():
+    if manifest.get("include_library") != include_library:
+        raise RuntimeError("Artifact WIP selection differs; rebuild without --run-only")
+    if include_library and manifest.get("library_inputs") != library_inputs():
         raise RuntimeError("Library sources or oracles changed; rebuild without --run-only")
     if args.mode == "x":
         (work / "var").mkdir(exist_ok=True)
@@ -285,7 +288,7 @@ def execute(args, work):
         raise RuntimeError(f"Native program failed ({result.returncode})")
     validator = runpy.run_path(str(ROOT / "bin/benchmark/validate.py"))
     checked = validator["validate_output"](result.stdout, args.mode, args.test, args.expected,
-                                           include_library=args.include_library and args.mode == "pure")
+                                           include_library=include_library)
     (work / "validated.json").write_text(json.dumps(checked, indent=2) + "\n")
     print(f"Validated output: {work / 'validated.json'}", file=sys.stderr)
 
@@ -295,6 +298,8 @@ def main():
     store = ROOT / "run/bak" / args.backend / "output-runs"
     store.mkdir(parents=True, exist_ok=True)
     key = args.mode + ("-" + args.test if args.test else "")
+    if args.include_library:
+        key += "-wip-included"
     pointer = store / ("latest-" + key + ".json")
     work = ((args.artifact.resolve() if args.artifact else Path(json.loads(pointer.read_text())["artifact"]))
             if args.run_only else build(args, store, pointer))

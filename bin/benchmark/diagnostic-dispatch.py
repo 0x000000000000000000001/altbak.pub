@@ -118,11 +118,11 @@ def ordinary_driver(runtime):
     return ROOT / ("bin/native/driver.py" if runtime in {"go", "rust"} else "bin/js/driver.py")
 
 
-def execute_wip(runtime, arguments):
+def execute_with_wip(runtime, arguments):
     parser = argparse.ArgumentParser(
-        description="Run only excluded WIP: ArrayIndexing, JsonTypedAst, JsonDecoding and library cases.",
+        description="Run the core suite plus all available excluded WIP benchmarks.",
         allow_abbrev=False)
-    parser.add_argument("--wip", action="store_true", required=True)
+    parser.add_argument("--wip-included", action="store_true", required=True)
     actions = parser.add_mutually_exclusive_group()
     actions.add_argument("--build-only", action="store_true")
     actions.add_argument("--run-only", action="store_true")
@@ -140,10 +140,10 @@ def execute_wip(runtime, arguments):
     for phase in phases:
         # Build the ordinary workspace first, so --clean refreshes the backend
         # compiler before any diagnostic artifact records its identity.
-        native_args = ["--wip", phase, *profile_args]
+        native_args = ["--wip-included", phase, *profile_args]
         if args.clean and phase == "--build-only":
             native_args.append("--clean")
-        print(f"=== {runtime}: new excluded WIP cases / {phase[2:]} ===", flush=True)
+        print(f"=== {runtime}: core and library WIP cases / {phase[2:]} ===", flush=True)
         run([sys.executable, ordinary_driver(runtime), runtime, *native_args])
         for name in DIAGNOSTICS:
             print(f"=== {runtime}: {name} (excluded WIP) / {phase[2:]} ===", flush=True)
@@ -154,8 +154,8 @@ def main():
     runtime, *arguments = sys.argv[1:]
     if runtime not in {"go", "js", "rust"}:
         raise ValueError("diagnostic dispatch supports Go, JS and Rust")
-    if "--wip" in arguments:
-        execute_wip(runtime, arguments)
+    if "--wip-included" in arguments:
+        execute_with_wip(runtime, arguments)
         return
     if diagnostic_name(arguments) is None:
         ordinary = ordinary_driver(runtime)

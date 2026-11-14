@@ -34,6 +34,32 @@ array_diagnostic = load("array_diagnostic", "bin/benchmark/array-indexing.py")
 
 
 class Routing(unittest.TestCase):
+    def test_wip_included_builds_core_and_all_diagnostics(self):
+        with patch.object(sys, "argv", ["dispatch", "go", "--wip-included", "--build-only"]), \
+                patch.object(dispatch, "run") as run, patch.object(dispatch, "execute") as execute:
+            dispatch.main()
+        run.assert_called_once_with([
+            sys.executable, ROOT / "bin/native/driver.py", "go", "--wip-included", "--build-only"])
+        self.assertEqual([call.args[1].test for call in execute.call_args_list],
+                         ["ArrayIndexing", "JsonTypedAst", "JsonDecoding"])
+        for call in execute.call_args_list:
+            self.assertEqual(call.args[0], "go")
+            self.assertTrue(call.args[1].build_only)
+            self.assertFalse(call.args[1].run_only)
+
+    def test_js_wip_requires_the_full_explicit_flag(self):
+        with patch.object(sys, "argv", ["driver", "js"]):
+            args = js.options()
+        self.assertEqual(args.mode, "pure")
+        self.assertFalse(args.include_library)
+        with patch.object(sys, "argv", ["driver", "js", "--wip-included"]):
+            args = js.options()
+        self.assertEqual(args.mode, "pure")
+        self.assertTrue(args.include_library)
+        with patch.object(sys, "argv", ["driver", "js", "--wip"]), \
+                redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+            js.options()
+
     def test_dev_aliases_reach_all_go_routes_and_isolate_workspaces(self):
         for flag in ['-d', '--dev']:
             arguments = ['--test', 'Fib', '-c', flag, '--']
@@ -188,9 +214,8 @@ class OptionalSources(unittest.TestCase):
                 path.write_text("{}")
             before = {path.relative_to(root): path.read_bytes() for path in root.rglob('*') if path.is_file()}
             for mode in ["pure", "test", "x"]:
-                # This contract checks the core/extended snapshot boundary;
-                # the library suite is supplied separately by the CLI routes.
-                args = argparse.Namespace(mode=mode, clean=False, test="Fib", include_library=False)
+                # Minimal helper arguments retain the default without WIP cases.
+                args = argparse.Namespace(mode=mode, clean=False, test="Fib")
                 for runtime, driver in [("go", native), ("php", php), ("js", js)]:
                     with self.subTest(runtime=runtime, mode=mode):
                         directory = Path(temporary) / runtime / mode

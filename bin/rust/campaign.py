@@ -29,7 +29,7 @@ from pathlib import Path
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'bin/benchmark'))
-from publish import EXTENDED_ROWS, ROWS  # noqa: E402
+from publish import EXTENDED_ROWS, ROWS, row_label  # noqa: E402
 from validate import expected_cases  # noqa: E402
 
 MODES = {'ffi': ['--ffi'], 'fficc': ['--fficc'], 'x': ['--x']}
@@ -156,7 +156,7 @@ def update_readme(mode, result):
     for index, line in enumerate(lines):
         newline = '\n' if line.endswith('\n') else ''
         body = line[:-1] if newline else line
-        label = body.split('|', 1)[0].strip()
+        label = row_label(body.split('|', 1)[0])
         if label in rows:
             if seen >= len(result['times_us']):
                 raise ValueError('More README rows than measured cells')
