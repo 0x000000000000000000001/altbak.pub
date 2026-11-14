@@ -41,7 +41,7 @@ configured for that backend. Each diagnostic retains its measurement protocol.
 the other configured backends run their core suite only.
 
 Every new library case has its own row in each core results table below. Rows
-marked **excluded WIP** remain outside the historical **Total Execution Time**
+grouped under **Excluded WIP** remain outside the historical **Total Execution Time**
 and **/C** ratios, even when requested with `--wip-included`. For the new rows,
 **pending** means a configured implementation is pending runtime qualification,
 with no published measurements; **—** means no implementation is configured for
@@ -71,35 +71,36 @@ JS Benchmark            | Hand-written PureScript<br>↓<br>[official](https://g
 [Lazy Evaluation](src/Test/LazyEvaluation.purs) | ~ 14608.29 μs | ~ 10604.88 μs | ~ 17513.12 μs | ~ 321.48 μs |
 [Array Processing](src/Test/ArrayOps.purs) | ~ 7.35 μs | ~ 3.75 μs | ~ 3.12 μs | ~ 0.50 μs |
 [RowToList](src/Test/RowToList.purs) | ~ 0.04 μs | ~ 0.02 μs | ~ 0.06 μs | ~ 0.02 μs |
-[Array Indexing](src/Test/ArrayIndexing.purs) (excluded WIP) | ~ 25303.33 μs | — | — | — |
-[JSON to Typed AST](src/Test/JsonTypedAst.purs) (excluded WIP) | ~ 80646.58 μs | — | — | — |
-[JSON Decoding](src/Test/JsonDecoding.purs) (excluded WIP) | ~ 9283.94 μs | — | — | — |
-[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | pending | — | — |
-[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | pending | — | — |
-[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | pending | — | — |
-[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | pending | — | — |
-[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | pending | — | — |
-[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | pending | — | — |
-[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | pending | pending | — | — |
-[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | pending | pending | — | — |
-[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | pending | pending | — | — |
-[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | pending | — | — |
-[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | pending | — | — |
-[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | pending | — | — |
-[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | pending | — | — |
-[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | pending | — | — |
-[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | pending | — | — |
-[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | pending | — | — |
-[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | pending | pending | — | — |
-[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | pending | pending | — | — |
-[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | pending | pending | — | — |
-[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | pending | pending | — | — |
-[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | pending | pending | — | — |
-[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | pending | pending | — | — |
-[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | pending | pending | — | — |
 **Total Execution Time** | ~ 129.10 ms <br>(/C = 13.1x) | ~ 66.89 ms <br>(/C = 6.8x) | ~ 48.48 ms <br>(/C = 4.9x) | ~ 30.54 ms <br>(/C = 3.1x) |
+**Excluded WIP** | | | | |
+[Array Indexing](src/Test/ArrayIndexing.purs) | ~ 25303.33 μs | — | — | — |
+[JSON to Typed AST](src/Test/JsonTypedAst.purs) | ~ 80646.58 μs | — | — | — |
+[JSON Decoding](src/Test/JsonDecoding.purs) | ~ 9283.94 μs | — | — | — |
+[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | pending | — | — |
+[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | pending | — | — |
+[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | pending | — | — |
+[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | pending | — | — |
+[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | pending | — | — |
+[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | pending | — | — |
+[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) | pending | pending | — | — |
+[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) | pending | pending | — | — |
+[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) | pending | pending | — | — |
+[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | pending | pending | — | — |
+[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | pending | pending | — | — |
+[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) | pending | pending | — | — |
+[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) | pending | pending | — | — |
+[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) | pending | pending | — | — |
+[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) | pending | pending | — | — |
+[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) | pending | pending | — | — |
+[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) | pending | pending | — | — |
+[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) | pending | pending | — | — |
+[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) | pending | pending | — | — |
+[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | pending | pending | — | — |
+[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | pending | pending | — | — |
+[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | pending | pending | — | — |
+[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | pending | pending | — | — |
 
-Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
+Rows grouped under **Excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
 
 #### Go
 
@@ -119,35 +120,36 @@ Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://git
 [Lazy Evaluation](src/Test/LazyEvaluation.purs) | ~ 247.11 μs | ~ 1566.95 μs | ~ 71378.08 μs | ~ 13865.38 μs | ~ 0.27 μs |
 [Array Processing](src/Test/ArrayOps.purs) | ~ 19.26 μs | ~ 32.70 μs | ~ 43.81 μs | ~ 4.90 μs | ~ 0.45 μs |
 [RowToList](src/Test/RowToList.purs) | ~ 0.15 μs | ~ 0.30 μs | ~ 0.50 μs | ~ 0.07 μs | ~ 0.03 μs |
-[Array Indexing](src/Test/ArrayIndexing.purs) (excluded WIP) | ~ 3962.17 μs | — | — | — | — |
-[JSON to Typed AST](src/Test/JsonTypedAst.purs) (excluded WIP) | ~ 20002.75 μs | — | — | — | — |
-[JSON Decoding](src/Test/JsonDecoding.purs) (excluded WIP) | ~ 2241.42 μs | — | — | — | — |
-[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | pending | — | — | — |
-[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | pending | — | — | — |
-[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | pending | — | — | — |
-[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | pending | — | — | — |
-[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | pending | — | — | — |
-[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | pending | — | — | — |
-[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | pending | pending | — | — | — |
-[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | pending | pending | — | — | — |
-[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | pending | pending | — | — | — |
-[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | pending | — | — | — |
-[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | pending | — | — | — |
-[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | pending | — | — | — |
-[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | pending | — | — | — |
-[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | pending | — | — | — |
-[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | pending | — | — | — |
-[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | pending | — | — | — |
-[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | pending | pending | — | — | — |
-[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | pending | pending | — | — | — |
-[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | pending | pending | — | — | — |
-[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | pending | pending | — | — | — |
-[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | pending | pending | — | — | — |
-[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | pending | pending | — | — | — |
-[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | pending | pending | — | — | — |
 **Total Execution Time** | ~ 13.28 ms <br>(/C = 1.3x) | ~ 50.55 ms <br>(/C = 5.3x) | ~ 1464.74 ms <br>(/C = 148.8x) | ~ 88.99 ms <br>(/C = 9.0x) | ~ 11.34 ms <br>(/C = 1.2x) |
+**Excluded WIP** | | | | | |
+[Array Indexing](src/Test/ArrayIndexing.purs) | ~ 3962.17 μs | — | — | — | — |
+[JSON to Typed AST](src/Test/JsonTypedAst.purs) | ~ 20002.75 μs | — | — | — | — |
+[JSON Decoding](src/Test/JsonDecoding.purs) | ~ 2241.42 μs | — | — | — | — |
+[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | pending | — | — | — |
+[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | pending | — | — | — |
+[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | pending | — | — | — |
+[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | pending | — | — | — |
+[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | pending | — | — | — |
+[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | pending | — | — | — |
+[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) | pending | pending | — | — | — |
+[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) | pending | pending | — | — | — |
+[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) | pending | pending | — | — | — |
+[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | pending | pending | — | — | — |
+[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | pending | pending | — | — | — |
+[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) | pending | pending | — | — | — |
+[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) | pending | pending | — | — | — |
+[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) | pending | pending | — | — | — |
+[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) | pending | pending | — | — | — |
+[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) | pending | pending | — | — | — |
+[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) | pending | pending | — | — | — |
+[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) | pending | pending | — | — | — |
+[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) | pending | pending | — | — | — |
+[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | pending | pending | — | — | — |
+[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | pending | pending | — | — | — |
+[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | pending | pending | — | — | — |
+[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | pending | pending | — | — | — |
 
-Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
+Rows grouped under **Excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
 
 #### Scheme
 
@@ -167,30 +169,31 @@ Scheme Benchmark        | Hand-written PureScript<br>↓<br>[pscm](https://githu
 [Lazy Evaluation](src/Test/LazyEvaluation.purs) | ~ 2989.50 μs | ~ 1964 μs | ~ 0.61 μs |
 [Array Processing](src/Test/ArrayOps.purs) | ~ 7.29 μs | ~ 5.04 μs | ~ 2.79 μs |
 [RowToList](src/Test/RowToList.purs) | ~ 0 μs | ~ 0.01 μs | ~ 0 μs |
-[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
 **Total Execution Time** | ~ 44.17 ms <br>(/C = 4.5x) | ~ 45.41 ms <br>(/C = 4.6x) | ~ 19.15 ms <br>(/C = 1.9x) |
+**Excluded WIP** | | | |
+[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
 
 #### Erlang
 
@@ -210,30 +213,31 @@ Erlang Benchmark        | Hand-written PureScript<br>↓<br>[purerl](https://git
 [Lazy Evaluation](src/Test/LazyEvaluation.purs) | ~ 8739.06 μs | ~ 6780.02 μs | ~ 0.01 μs |
 [Array Processing](src/Test/ArrayOps.purs) | ~ 27.82 μs | ~ 16.21 μs | ~ 1.04 μs |
 [RowToList](src/Test/RowToList.purs) | ~ 0.04 μs | ~ 0.04 μs | ~ 0.01 μs |
-[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
 **Total Execution Time** | ~ 94.84 ms <br>(/C = 9.6x) | ~ 75.42 ms <br>(/C = 7.7x) | ~ 14.61 ms <br>(/C = 1.5x) |
+**Excluded WIP** | | | |
+[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
 
 #### PHP
 
@@ -253,30 +257,31 @@ PHP Benchmark           | Hand-written PureScript<br>↓<br>[phpurs](https://git
 [Lazy Evaluation](src/Test/LazyEvaluation.purs) | ~ 791.27 μs | ~ 111183.96 μs | ~ 326.09 μs |
 [Array Processing](src/Test/ArrayOps.purs) | ~ 89.94 μs | ~ 26.94 μs | ~ 0.80 μs |
 [RowToList](src/Test/RowToList.purs) | ~ 0.84 μs | ~ 0.85 μs | ~ 0.08 μs |
-[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
 **Total Execution Time** | ~ 65.78 ms <br>(/C = 6.8x) | ~ 1064.43 ms <br>(/C = 108.2x) | ~ 202.55 ms <br>(/C = 20.6x) |
+**Excluded WIP** | | | |
+[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
 
 #### Rust
 
@@ -296,35 +301,36 @@ Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://git
 [Lazy Evaluation](src/Test/LazyEvaluation.purs) | ~ 0.011 μs | ~ 159056.38 μs | ~ 38342.83 μs | ~ 23675.83 μs | ~ 0.01 μs |
 [Array Processing](src/Test/ArrayOps.purs) | ~ 0.034 μs | ~ 298.70 μs | ~ 3.28 μs | ~ 0.58 μs | ~ 0.25 μs |
 [RowToList](src/Test/RowToList.purs) | ~ 0.068 μs | ~ 0.95 μs | ~ 0.10 μs | ~ 0.02 μs | ~ 0.01 μs |
-[Array Indexing](src/Test/ArrayIndexing.purs) (excluded WIP) | ~ 6387.79 μs | — | — | — | — |
-[JSON to Typed AST](src/Test/JsonTypedAst.purs) (excluded WIP) | ~ 35351.17 μs | — | — | — | — |
-[JSON Decoding](src/Test/JsonDecoding.purs) (excluded WIP) | ~ 1130.69 μs | — | — | — | — |
-[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | — | — | — | — |
-[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | — | — | — | — |
-[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | — | — | — | — |
-[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | — | — | — | — |
-[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | — | — | — | — |
-[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | pending | — | — | — | — |
-[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | pending | — | — | — | — |
-[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | pending | — | — | — | — |
-[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | pending | — | — | — | — |
-[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | — | — | — | — |
-[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | — | — | — | — |
-[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | — | — | — | — |
-[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | — | — | — | — |
-[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | — | — | — | — |
-[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | — | — | — | — |
-[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | pending | — | — | — | — |
-[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | pending | — | — | — | — |
-[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | pending | — | — | — | — |
-[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | pending | — | — | — | — |
-[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | pending | — | — | — | — |
-[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | pending | — | — | — | — |
-[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | pending | — | — | — | — |
-[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | pending | — | — | — | — |
 **Total Execution Time** | ~ 8.54 ms <br>(/C = 0.9x) | ~ 2455.35 ms <br>(/C = 249.5x) | ~ 99.28 ms <br>(/C = 10.1x) | ~ 53.73 ms <br>(/C = 5.5x) | ~ 28.31 ms <br>(/C = 2.9x) |
+**Excluded WIP** | | | | | |
+[Array Indexing](src/Test/ArrayIndexing.purs) | ~ 6387.79 μs | — | — | — | — |
+[JSON to Typed AST](src/Test/JsonTypedAst.purs) | ~ 35351.17 μs | — | — | — | — |
+[JSON Decoding](src/Test/JsonDecoding.purs) | ~ 1130.69 μs | — | — | — | — |
+[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | — | — | — | — |
+[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | — | — | — | — |
+[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | — | — | — | — |
+[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | — | — | — | — |
+[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | — | — | — | — |
+[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) | pending | — | — | — | — |
+[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) | pending | — | — | — | — |
+[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) | pending | — | — | — | — |
+[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) | pending | — | — | — | — |
+[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | pending | — | — | — | — |
+[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | pending | — | — | — | — |
+[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) | pending | — | — | — | — |
+[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) | pending | — | — | — | — |
+[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) | pending | — | — | — | — |
+[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) | pending | — | — | — | — |
+[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) | pending | — | — | — | — |
+[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) | pending | — | — | — | — |
+[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) | pending | — | — | — | — |
+[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) | pending | — | — | — | — |
+[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | pending | — | — | — | — |
+[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | pending | — | — | — | — |
+[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | pending | — | — | — | — |
+[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | pending | — | — | — | — |
 
-Rows marked **excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
+Rows grouped under **Excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
 
 #### C++
 
@@ -344,30 +350,31 @@ C++ Benchmark           | Hand-written PureScript<br>↓<br>[pscpp](https://gith
 [Lazy Evaluation](src/Test/LazyEvaluation.purs) | ~ 36615.58 μs | ~ 31474.58 μs | ~ 0.02 μs |
 [Array Processing](src/Test/ArrayOps.purs) | ~ 36.57 μs | ~ 1.10 μs | ~ 0.74 μs |
 [RowToList](src/Test/RowToList.purs) | ~ 0.48 μs | ~ 0.30 μs | ~ 0.02 μs |
-[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
 **Total Execution Time** | ~ 923.88 ms <br>(/C = 93.9x) | ~ 130.23 ms <br>(/C = 13.2x) | ~ 22.06 ms <br>(/C = 2.2x) |
+**Excluded WIP** | | | |
+[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
 
 #### F#/C#
 
@@ -387,30 +394,31 @@ F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://g
 [Lazy Evaluation](src/Test/LazyEvaluation.purs) | ~ 6576.73 μs | ~ 9665.58 μs | ~ 235.04 μs |
 [Array Processing](src/Test/ArrayOps.purs) | ~ 62.07 μs | ~ 29.54 μs | ~ 15.63 μs |
 [RowToList](src/Test/RowToList.purs) | ~ 0.24 μs | ~ 0.06 μs | ~ 0.02 μs |
-[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
 **Total Execution Time** | ~ 33.79 ms <br>(/C = 3.6x) | ~ 70.21 ms <br>(/C = 7.3x) | ~ 12.10 ms <br>(/C = 1.3x) |
+**Excluded WIP** | | | |
+[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
 
 #### Java
 
@@ -430,30 +438,31 @@ Java Benchmark          | Hand-written PureScript<br>↓<br>[javapurs](https://g
 [Lazy Evaluation](src/Test/LazyEvaluation.purs) | ~ 5.24 μs | ~ 8062 μs | ~ 0.04 μs |
 [Array Processing](src/Test/ArrayOps.purs) | ~ 2.96 μs | ~ 3.06 μs | ~ 0.50 μs |
 [RowToList](src/Test/RowToList.purs) | ~ 0.01 μs | ~ 0.01 μs | ~ 0 μs |
-[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — | — | — |
-[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — | — | — |
-[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — | — | — |
-[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
-[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — | — | — |
 **Total Execution Time** | ~ 17.28 ms <br>(/C = 1.8x) | ~ 35.21 ms <br>(/C = 3.6x) | ~ 11.88 ms <br>(/C = 1.2x) |
+**Excluded WIP** | | | |
+[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) | — | — | — |
+[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — | — | — |
+[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) | — | — | — |
+[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) | — | — | — |
+[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
+[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — | — | — |
 
 #### Koka
 
@@ -473,30 +482,31 @@ Koka Benchmark          | Hand-written Koka<br>↓<br>koka -O3<br><br>(WIP) |
 [Lazy Evaluation](src/Test/LazyEvaluation.purs) | ~ 8982 μs |
 [Array Processing](src/Test/ArrayOps.purs) | ~ 6.58 μs |
 [RowToList](src/Test/RowToList.purs) | ~ 0 μs |
-[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — |
-[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — |
-[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — |
-[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — |
-[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — |
-[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — |
-[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — |
-[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — |
-[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — |
-[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — |
 **Total Execution Time** | ~ 54.46 ms <br>(/C = 5.5x) |
+**Excluded WIP** | |
+[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — |
+[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — |
+[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — |
+[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) | — |
+[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) | — |
+[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) | — |
+[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — |
+[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — |
+[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — |
+[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — |
 
 #### Haskell
 
@@ -516,30 +526,31 @@ Haskell Benchmark       | Hand-written Haskell<br>↓<br>GHC -O2<br><br>(WIP) |
 [Lazy Evaluation](src/Test/LazyEvaluation.purs) | ~ 0.46 μs |
 [Array Processing](src/Test/ArrayOps.purs) | ~ 4.33 μs |
 [RowToList](src/Test/RowToList.purs) | ~ 0 μs |
-[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — |
-[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — |
-[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — |
-[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — |
-[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — |
-[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — |
-[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — |
-[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — |
-[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — |
-[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — |
 **Total Execution Time** | ~ 16.69 ms <br>(/C = 1.7x) |
+**Excluded WIP** | |
+[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — |
+[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — |
+[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — |
+[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) | — |
+[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) | — |
+[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) | — |
+[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — |
+[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — |
+[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — |
+[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — |
 
 #### OCaml
 
@@ -559,30 +570,31 @@ OCaml Benchmark         | Hand-written OCaml<br>↓<br>ocamlopt -O3<br><br>(WIP)
 [Lazy Evaluation](src/Test/LazyEvaluation.purs) | ~ 5690 μs |
 [Array Processing](src/Test/ArrayOps.purs) | ~ 5.89 μs |
 [RowToList](src/Test/RowToList.purs) | ~ 0 μs |
-[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — |
-[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — |
-[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — |
-[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — |
-[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — |
-[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — |
-[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — |
-[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — |
-[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — |
-[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — |
 **Total Execution Time** | ~ 29.18 ms <br>(/C = 3.0x) |
+**Excluded WIP** | |
+[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — |
+[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — |
+[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — |
+[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) | — |
+[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) | — |
+[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) | — |
+[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — |
+[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — |
+[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — |
+[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — |
 
 #### C (reference)
 
@@ -602,33 +614,34 @@ C Benchmark             | Hand-written imperative C<br>↓<br>clang -O3<br><br>(
 [Lazy Evaluation](src/Test/LazyEvaluation.purs) | ~ 0.001 μs |
 [Array Processing](src/Test/ArrayOps.purs) | ~ 0.050 μs |
 [RowToList](src/Test/RowToList.purs) | ~ 0.001 μs |
-[Array Indexing](src/Test/ArrayIndexing.purs) (excluded WIP) | ~ 6589.00 μs |
-[JSON to Typed AST](src/Test/JsonTypedAst.purs) (excluded WIP) | ~ 10560.13 μs |
-[JSON Decoding](src/Test/JsonDecoding.purs) (excluded WIP) | ~ 657.69 μs |
-[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) (excluded WIP) | — |
-[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — |
-[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — |
-[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) (excluded WIP) | — |
-[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) (excluded WIP) | — |
-[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — |
-[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — |
-[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) (excluded WIP) | — |
-[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — |
-[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — |
-[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — |
-[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) (excluded WIP) | — |
 **Total Execution Time** | ~ 9.61 ms |
+**Excluded WIP** | |
+[Array Indexing](src/Test/ArrayIndexing.purs) | ~ 6589.00 μs |
+[JSON to Typed AST](src/Test/JsonTypedAst.purs) | ~ 10560.13 μs |
+[JSON Decoding](src/Test/JsonDecoding.purs) | ~ 657.69 μs |
+[array/map-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/filter-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/foldl-sum-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/sort-descending-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/eq-neq-last-10000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[array/append-1000](benchmarks/library/src/Test/Library/Arrays.purs) | — |
+[foldable/traverse-maybe-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — |
+[foldable/traverse-maybe-fail-first-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — |
+[foldable/traverse-maybe-fail-last-1000](benchmarks/library/src/Test/Library/Traversal.purs) | — |
+[string/cu-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/cp-length-unicode-1000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/indexOf-hit-10000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/indexOf-miss-10000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/cp-take-unicode-1500](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/split-1000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[string/concat-1000](benchmarks/library/src/Test/Library/Strings.purs) | — |
+[record/set-small-1000](benchmarks/library/src/Test/Library/Records.purs) | — |
+[record/set-medium-1000](benchmarks/library/src/Test/Library/Records.purs) | — |
+[record/set-large-1000](benchmarks/library/src/Test/Library/Records.purs) | — |
+[st/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — |
+[st/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — |
+[effect/ref-write-10000](benchmarks/library/src/Test/Library/Refs.purs) | — |
+[effect/ref-modify-10000](benchmarks/library/src/Test/Library/Refs.purs) | — |
 
 ### Extended benchmark results (I/O, mutability, async)
 
