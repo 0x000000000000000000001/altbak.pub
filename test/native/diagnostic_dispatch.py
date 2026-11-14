@@ -34,6 +34,19 @@ array_diagnostic = load("array_diagnostic", "bin/benchmark/array-indexing.py")
 
 
 class Routing(unittest.TestCase):
+    def test_wip_foreign_modes_build_and_run_without_unrelated_diagnostics(self):
+        for runtime in ["js", "go"]:
+            for mode in ["--ffi", "--fficc"]:
+                with self.subTest(runtime=runtime, mode=mode), \
+                        patch.object(sys, "argv", ["dispatch", runtime, "--wip-included", mode]), \
+                        patch.object(dispatch, "run") as run, patch.object(dispatch, "execute") as execute:
+                    dispatch.main()
+                execute.assert_not_called()
+                self.assertEqual([call.args[0] for call in run.call_args_list], [
+                    [sys.executable, dispatch.ordinary_driver(runtime), runtime,
+                     "--wip-included", phase, mode]
+                    for phase in ["--build-only", "--run-only"]])
+
     def test_wip_included_builds_core_and_all_diagnostics(self):
         with patch.object(sys, "argv", ["dispatch", "go", "--wip-included", "--build-only"]), \
                 patch.object(dispatch, "run") as run, patch.object(dispatch, "execute") as execute:

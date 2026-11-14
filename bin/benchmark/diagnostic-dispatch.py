@@ -123,6 +123,9 @@ def execute_with_wip(runtime, arguments):
         description="Run the core suite plus all available excluded WIP benchmarks.",
         allow_abbrev=False)
     parser.add_argument("--wip-included", action="store_true", required=True)
+    modes = parser.add_mutually_exclusive_group()
+    modes.add_argument("--ffi", action="store_true")
+    modes.add_argument("--fficc", action="store_true")
     actions = parser.add_mutually_exclusive_group()
     actions.add_argument("--build-only", action="store_true")
     actions.add_argument("--run-only", action="store_true")
@@ -134,7 +137,10 @@ def execute_with_wip(runtime, arguments):
         parser.error("--dev is Go-only")
     if args.clean and args.run_only:
         parser.error("--clean cannot be combined with --run-only")
+    if runtime == "rust" and (args.ffi or args.fficc):
+        parser.error("WIP FFI variants are configured for JS and Go only")
     profile_args = ["--dev"] if args.dev else []
+    profile_args += ["--ffi"] if args.ffi else ["--fficc"] if args.fficc else []
     phases = (["--build-only"] if args.build_only else ["--run-only"] if args.run_only
               else ["--build-only", "--run-only"])
     for phase in phases:
@@ -145,7 +151,7 @@ def execute_with_wip(runtime, arguments):
             native_args.append("--clean")
         print(f"=== {runtime}: core and library WIP cases / {phase[2:]} ===", flush=True)
         run([sys.executable, ordinary_driver(runtime), runtime, *native_args])
-        for name in DIAGNOSTICS:
+        for name in ([] if args.ffi or args.fficc else DIAGNOSTICS):
             print(f"=== {runtime}: {name} (excluded WIP) / {phase[2:]} ===", flush=True)
             execute(runtime, options(runtime, ["--test", name, phase, *profile_args]))
 

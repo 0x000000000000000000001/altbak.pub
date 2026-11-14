@@ -3,6 +3,7 @@ module Test.EffectRefWrite10000 (prepare) where
 import Prelude
 
 import Bench as Bench
+import Control.Monad.Rec.Class (Step(..), tailRecM)
 import Effect.Ref as Ref
 import Effect (Effect)
 
@@ -18,8 +19,10 @@ prepare = do
     Ref.read ref
 
 writeEffect :: Int -> Int -> Ref.Ref Int -> Effect Unit
-writeEffect i n ref
-  | i > n = pure unit
-  | otherwise = do
-      Ref.write i ref
-      writeEffect (i + 1) n ref
+writeEffect start n ref = tailRecM step start
+  where
+  step i
+    | i > n = pure (Done unit)
+    | otherwise = do
+        Ref.write i ref
+        pure (Loop (i + 1))

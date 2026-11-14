@@ -48,7 +48,7 @@ def inputs(language, mode="pure", include_library=False):
                  ROOT / 'bin/benchmark/library-cases.json']:
         result[str(path.relative_to(ROOT))] = digest(path)
     if include_library:
-        result.update(library_inputs())
+        result.update(library_inputs(mode))
     return result
 
 
@@ -133,7 +133,7 @@ main = void $ runBench Case.describe Case.act
                 shutil.copy2(path, target)
         (directory / 'var').mkdir(exist_ok=True)
     elif include_library:
-        copy_library_sources(directory / 'src')
+        copy_library_sources(directory / 'src', args.mode)
     source = ROOT / f'run/bak/{language}/spago.{language}.yaml'
     config = re.sub(r'(?m)^(\s*path:\s*)"([^"\n]+)"',
                     lambda match: match[1] + json.dumps(str((ROOT / match[2]).resolve())), source.read_text())
@@ -175,7 +175,7 @@ def main():
     modes.add_argument('--fficc', action='store_true')
     modes.add_argument('--test')
     modes.add_argument('--x', action='store_true')
-    modes.add_argument('--wip-included', action='store_true', help='Include WIP cases after the core benchmarks')
+    parser.add_argument('--wip-included', action='store_true', help='Include WIP cases after the core benchmarks')
     parser.add_argument('--expected')
     actions = parser.add_mutually_exclusive_group()
     actions.add_argument('--build-only', action='store_true')
@@ -194,6 +194,10 @@ def main():
             parser.error('invalid --test module')
     args.mode = 'test' if args.test else 'x' if args.x else 'ffi' if args.ffi else 'fficc' if args.fficc else 'pure'
     args.include_library = bool(args.wip_included)
+    if args.include_library and args.mode not in {'pure', 'ffi', 'fficc'}:
+        parser.error('--wip-included requires the core, FFI or imperative FFI suite')
+    if args.include_library and args.language == 'rust' and args.mode != 'pure':
+        parser.error('WIP FFI variants are configured for JS and Go only')
     expected_cases(args.mode, args.test, args.expected)  # Fail before writes/builds for unknown contracts.
     if args.include_library:
         library_cases()
@@ -242,7 +246,7 @@ def main():
             raise ValueError('Executable SHA differs from its build manifest')
         execute(binary, directory, env, args)
         return
-    library_fingerprint = library_inputs() if args.include_library else None
+    library_fingerprint = library_inputs(args.mode) if args.include_library else None
     entry = prepare(directory, args.language, args)
     logs = directory / 'logs'
     logs.mkdir(exist_ok=True)
@@ -302,7 +306,7 @@ def main():
         toolchain = subprocess.check_output(['rustc', '--version'], text=True, env=env).strip()
     if fingerprint != inputs(args.language, args.mode, args.include_library):
         raise RuntimeError('Sources changed during build; no executable manifest was accepted')
-    if args.include_library and library_fingerprint != library_inputs():
+    if args.include_library and library_fingerprint != library_inputs(args.mode):
         raise RuntimeError('Library sources or oracles changed during build; no executable manifest was accepted')
     manifest = {'language': args.language, 'mode': args.mode, 'test': args.test, 'expected': args.expected,
                 'include_library': args.include_library,

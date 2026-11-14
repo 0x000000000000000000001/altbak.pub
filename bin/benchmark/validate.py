@@ -120,8 +120,8 @@ def validate_output(output, mode="pure", test=None, expected=None, include_libra
     if mode not in {"pure", "ffi", "fficc", "test", "x", "wip"}:
         raise ValueError(f"Unknown benchmark mode {mode}")
     core_output, library_output = split_library_output(output)
-    if mode != "pure" and (include_library or library_output is not None):
-        raise ValueError("An appended WIP section is only valid after the pure core suite")
+    if mode not in {"pure", "ffi", "fficc"} and (include_library or library_output is not None):
+        raise ValueError("An appended WIP section is only valid after a core suite")
     if include_library and library_output is None:
         raise ValueError("Missing excluded WIP benchmark section")
     result = validate_section(core_output, mode, test, expected)

@@ -29,7 +29,7 @@ def options():
     modes.add_argument("--fficc", action="store_true")
     modes.add_argument("--test", metavar="MODULE")
     modes.add_argument("--x", action="store_true")
-    modes.add_argument("--wip-included", action="store_true", help="Include WIP cases after the core benchmarks")
+    parser.add_argument("--wip-included", action="store_true", help="Include WIP cases after the core benchmarks")
     actions = parser.add_mutually_exclusive_group()
     actions.add_argument("--build-only", action="store_true")
     actions.add_argument("--run-only", action="store_true")
@@ -50,6 +50,8 @@ def options():
     if args.wip_included and args.backend not in {"js", "es"}:
         parser.error("--wip-included is not configured for Scheme or Erlang")
     args.include_library = bool(args.wip_included)
+    if args.include_library and args.mode not in {"pure", "ffi", "fficc"}:
+        parser.error("--wip-included requires the core, FFI or imperative FFI suite")
     if args.include_library:
         library_cases()
         if args.backend == "es":
@@ -111,7 +113,7 @@ def snapshot_sources(work, args):
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(source, target)
     elif getattr(args, "include_library", False):
-        copy_library_sources(work / "src")
+        copy_library_sources(work / "src", args.mode)
 
 
 def source_closure(work, entry, backend):
@@ -175,7 +177,7 @@ def build(args, store, pointer):
     key = args.mode + ("-wip-included" if args.include_library else "")
     work = Path(tempfile.mkdtemp(prefix=key + "-", dir=store))
     print(f"Build directory: {work}", flush=True)
-    library_fingerprint = library_inputs() if args.include_library else None
+    library_fingerprint = library_inputs(args.mode) if args.include_library else None
     snapshot_sources(work, args)
     cache_backend = "js" if args.backend == "es" else args.backend
     base = ROOT / "run/bak" / cache_backend
@@ -190,9 +192,13 @@ def build(args, store, pointer):
         shutil.copytree(base / "spago", work / ".spago", symlinks=False)
     env = environment(args.backend)
     commands = []
+    if args.backend in {"js", "es"}:
+        # install also compiles through PATH's purs, which may be the TAST fork.
+        # Fetch only; the explicit compiler below owns every output module.
+        command(["spago", "fetch"], work, env, "dependencies", commands)
     entry = {"pure": "App", "ffi": "AppFFI", "fficc": "AppFFICheatcode",
              "test": "AppX", "x": "AppX"}[args.mode]
-    if args.include_library and args.mode == "pure":
+    if args.include_library:
         entry = "AppAll"
     compatibility = []
     if args.backend == "erl":
@@ -212,12 +218,11 @@ def build(args, store, pointer):
                     compatibility.append(str(foreign.relative_to(work)))
         if compatibility:
             print("Identity compatibility foreigns: " + ", ".join(compatibility), flush=True)
-    # Compile the reachable modules from the copied packages. This requires no
-    # writable global Spago database, network, or fake JavaScript foreigns.
+    # Compile only reachable modules from the private package snapshot.
     sources = source_closure(work, entry, args.backend)
     codegen = "corefn" if args.backend in ["scm", "erl"] else "js,corefn"
-    # Arista consumes standard CoreFn, unlike the local typed CoreFn backends.
-    compiler = str(ROOT / "run/bak/js/node_modules/purescript/purs.bin") if args.backend == "es" else "purs"
+    # JS is the official compiler baseline; Arista also requires stock CoreFn.
+    compiler = str(ROOT / "run/bak/js/node_modules/purescript/purs.bin") if args.backend in {"js", "es"} else "purs"
     build_command = [compiler, "compile", "--codegen", codegen, *sources]
     command(build_command, work, env, "purs", commands)
     if args.backend == "es":
@@ -259,7 +264,7 @@ def build(args, store, pointer):
                 "expected": args.expected, "entry": entry, "run": run,
                 "commands": commands, "source_sha256": hashes, "compatibility": compatibility}
     if args.include_library:
-        if library_fingerprint != library_inputs():
+        if library_fingerprint != library_inputs(args.mode):
             raise RuntimeError("Library sources or oracles changed during build; no artifact was accepted")
         manifest["library_inputs"] = library_fingerprint
     (work / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
@@ -276,7 +281,7 @@ def execute(args, work):
             raise RuntimeError(f"Artifact {key}={manifest[key]!r} does not match requested {getattr(args, key)!r}")
     if manifest.get("include_library") != include_library:
         raise RuntimeError("Artifact WIP selection differs; rebuild without --run-only")
-    if include_library and manifest.get("library_inputs") != library_inputs():
+    if include_library and manifest.get("library_inputs") != library_inputs(args.mode):
         raise RuntimeError("Library sources or oracles changed; rebuild without --run-only")
     if args.mode == "x":
         (work / "var").mkdir(exist_ok=True)

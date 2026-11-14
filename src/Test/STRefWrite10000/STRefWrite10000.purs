@@ -3,6 +3,7 @@ module Test.STRefWrite10000 (prepare) where
 import Prelude
 
 import Bench as Bench
+import Control.Monad.Rec.Class (Step(..), tailRecM)
 import Control.Monad.ST (ST)
 import Control.Monad.ST as ST
 import Control.Monad.ST.Ref as STRef
@@ -21,8 +22,10 @@ prepare = do
       STRef.read ref
 
 writeST :: forall r. Int -> Int -> STRef.STRef r Int -> ST r Unit
-writeST i n ref
-  | i > n = pure unit
-  | otherwise = do
-      _ <- STRef.write i ref
-      writeST (i + 1) n ref
+writeST start n ref = tailRecM step start
+  where
+  step i
+    | i > n = pure (Done unit)
+    | otherwise = do
+        _ <- STRef.write i ref
+        pure (Loop (i + 1))

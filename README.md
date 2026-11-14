@@ -36,8 +36,10 @@ Normal runs execute the **14 core benchmarks**, without WIP cases. Use
 updates, and `ST.Ref` / `Effect.Ref` loops), plus Array Indexing, JSON to Typed
 AST and JSON Decoding. JS and Rust support the same selection; JS/PBO includes
 the core suite and the 23 library cases, with the three older diagnostics not
-configured for that backend. Each diagnostic retains its measurement protocol.
-`./bin/run --wip-included` applies this selection to JS, JS/PBO, Go and Rust;
+configured for that backend. psgo also includes the 14 core and 23 new cases.
+JS and Go accept `--ffi --wip-included` or `--fficc --wip-included` for the
+corresponding native references. Each diagnostic retains its measurement protocol.
+`./bin/run --wip-included` applies this selection to JS, JS/PBO, Go, Rust and psgo;
 the other configured backends run their core suite only.
 
 Every new library case has its own row in each core results table below. Rows
@@ -52,6 +54,11 @@ timing boundaries, expected results and individual backend commands. Each test
 has its own `src/Test/<Name>/` directory containing its PureScript and FFI files.
 WIP selection remains explicit: configured runners include these cases only with
 `--wip-included`.
+
+The 23 new rows in all nine JS/Go columns use medians from three independent
+processes, measured on November 14, 2026. The [measurement archive](docs/benchmark-results/2026-11-14-library-js-go.md)
+records all 621 validated WIP outputs, build profiles and source fingerprints.
+The psgo column includes a documented local UTF-16 length correction.
 
 ### Core stresstest benchmark results (pure computational)
 
@@ -78,29 +85,29 @@ JS Benchmark            | Hand-written PureScript<br>↓<br>[official](https://g
 [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | ~ 25303.33 μs | — | — | — |
 [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | ~ 80646.58 μs | — | — | — |
 [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | ~ 9283.94 μs | — | — | — |
-[array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | pending | pending | — | — |
-[array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | pending | pending | — | — |
-[array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | pending | pending | — | — |
-[array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | pending | pending | — | — |
-[array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | pending | pending | — | — |
-[array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | pending | pending | — | — |
-[foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | pending | pending | — | — |
-[foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | pending | pending | — | — |
-[foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | pending | pending | — | — |
-[string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | pending | pending | — | — |
-[string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | pending | pending | — | — |
-[string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | pending | pending | — | — |
-[string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | pending | pending | — | — |
-[string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | pending | pending | — | — |
-[string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | pending | pending | — | — |
-[string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | pending | pending | — | — |
-[record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | pending | pending | — | — |
-[record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | pending | pending | — | — |
-[record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | pending | pending | — | — |
-[st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | pending | pending | — | — |
-[st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | pending | pending | — | — |
-[effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | pending | pending | — | — |
-[effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | pending | pending | — | — |
+[array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | ~ 121.935867 μs | ~ 144.599937 μs | ~ 92.195641 μs | ~ 12.934041 μs |
+[array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | ~ 127.590500 μs | ~ 130.461594 μs | ~ 74.632488 μs | ~ 18.581299 μs |
+[array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | ~ 70.249672 μs | ~ 70.224937 μs | ~ 44.010418 μs | ~ 3.319621 μs |
+[array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | ~ 561.690094 μs | ~ 517.867188 μs | ~ 114.676430 μs | ~ 78.298828 μs |
+[array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | ~ 51.630127 μs | ~ 50.712971 μs | ~ 41.039391 μs | ~ 5.025553 μs |
+[array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | ~ 30.203777 μs | ~ 31.051840 μs | ~ 2.052938 μs | ~ 2.397166 μs |
+[foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | ~ 80.605469 μs | ~ 81.040367 μs | ~ 49.832031 μs | ~ 1.388829 μs |
+[foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | ~ 68.352703 μs | ~ 65.143555 μs | ~ 42.175457 μs | ~ 1.066961 μs |
+[foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | ~ 68.013836 μs | ~ 64.647949 μs | ~ 42.452637 μs | ~ 1.076210 μs |
+[string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | ~ 0.010101 μs | ~ 0.008717 μs | ~ 0.019395 μs | ~ 0.019554 μs |
+[string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | ~ 37.440756 μs | ~ 37.436686 μs | ~ 37.085775 μs | ~ 8.538411 μs |
+[string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | ~ 0.190754 μs | ~ 0.189787 μs | ~ 0.194748 μs | ~ 0.190831 μs |
+[string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | ~ 63.797687 μs | ~ 63.971680 μs | ~ 63.936523 μs | ~ 63.724281 μs |
+[string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | ~ 45.279133 μs | ~ 44.962074 μs | ~ 42.096844 μs | ~ 21.009439 μs |
+[string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | ~ 145.330727 μs | ~ 144.871094 μs | ~ 138.398438 μs | ~ 24.686850 μs |
+[string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | ~ 47.710773 μs | ~ 46.517254 μs | ~ 42.638508 μs | ~ 11.851929 μs |
+[record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | ~ 2.443736 μs | ~ 4.371124 μs | ~ 4.324931 μs | ~ 0.724998 μs |
+[record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | ~ 4.553304 μs | ~ 9.343038 μs | ~ 9.037557 μs | ~ 0.713844 μs |
+[record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | ~ 7.028198 μs | ~ 14.728271 μs | ~ 14.376181 μs | ~ 0.721029 μs |
+[st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | ~ 463.872406 μs | ~ 106.022789 μs | ~ 2.437561 μs | ~ 2.478353 μs |
+[st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | ~ 513.201844 μs | ~ 106.032227 μs | ~ 31.673260 μs | ~ 3.408488 μs |
+[effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | ~ 155.670578 μs | ~ 102.375000 μs | ~ 2.387959 μs | ~ 2.562785 μs |
+[effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | ~ 211.841797 μs | ~ 113.525391 μs | ~ 31.142822 μs | ~ 3.523031 μs |
 
 Rows grouped under **Excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
 
@@ -127,29 +134,29 @@ Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://git
 [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | ~ 3962.17 μs | — | — | — | — |
 [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | ~ 20002.75 μs | — | — | — | — |
 [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | ~ 2241.42 μs | — | — | — | — |
-[array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | pending | pending | — | — | — |
-[array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | pending | pending | — | — | — |
-[array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | pending | pending | — | — | — |
-[array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | pending | pending | — | — | — |
-[array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | pending | pending | — | — | — |
-[array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | pending | pending | — | — | — |
-[foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | pending | pending | — | — | — |
-[foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | pending | pending | — | — | — |
-[foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | pending | pending | — | — | — |
-[string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | pending | pending | — | — | — |
-[string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | pending | pending | — | — | — |
-[string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | pending | pending | — | — | — |
-[string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | pending | pending | — | — | — |
-[string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | pending | pending | — | — | — |
-[string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | pending | pending | — | — | — |
-[string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | pending | pending | — | — | — |
-[record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | pending | pending | — | — | — |
-[record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | pending | pending | — | — | — |
-[record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | pending | pending | — | — | — |
-[st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | pending | pending | — | — | — |
-[st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | pending | pending | — | — | — |
-[effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | pending | pending | — | — | — |
-[effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | pending | pending | — | — | — |
+[array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | ~ 745.239625 μs | ~ 1452.411375 μs | ~ 2146.406250 μs | ~ 77.413414 μs | ~ 6.610636 μs |
+[array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | ~ 397.019531 μs | ~ 828.921875 μs | ~ 1330.390625 μs | ~ 67.384277 μs | ~ 6.847778 μs |
+[array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | ~ 65.058758 μs | ~ 281.146484 μs | ~ 133.050125 μs | ~ 49.773113 μs | ~ 2.310771 μs |
+[array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | ~ 6631.062500 μs | ~ 12300.375000 μs | ~ 11626.084000 μs | ~ 825.354187 μs | ~ 10.362264 μs |
+[array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | ~ 269.640625 μs | ~ 752.148438 μs | ~ 98.900063 μs | ~ 48.099773 μs | ~ 2.533712 μs |
+[array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | ~ 171.339844 μs | ~ 304.514984 μs | ~ 372.027344 μs | ~ 13.950724 μs | ~ 1.253637 μs |
+[foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | ~ 286.458984 μs | ~ 464.653656 μs | ~ 476.588563 μs | ~ 18.970174 μs | ~ 0.869265 μs |
+[foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | ~ 180.463547 μs | ~ 298.481125 μs | ~ 303.084625 μs | ~ 11.640950 μs | ~ 0.744225 μs |
+[foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | ~ 179.328125 μs | ~ 297.101562 μs | ~ 307.257812 μs | ~ 11.442952 μs | ~ 0.738838 μs |
+[string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | ~ 6.221517 μs | ~ 17.048177 μs | ~ 3.470876 μs | ~ 3.448792 μs | ~ 3.449483 μs |
+[string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | ~ 49.368488 μs | ~ 79.964516 μs | ~ 62.436359 μs | ~ 7.204061 μs | ~ 3.408691 μs |
+[string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | ~ 35.340088 μs | ~ 130.747070 μs | ~ 2.707021 μs | ~ 0.172040 μs | ~ 0.168497 μs |
+[string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | ~ 37.475586 μs | ~ 140.417969 μs | ~ 2.469482 μs | ~ 2.314458 μs | ~ 2.320679 μs |
+[string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | ~ 56.183430 μs | ~ 105.920898 μs | ~ 104.163406 μs | ~ 146.886063 μs | ~ 3.664398 μs |
+[string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | ~ 158.154297 μs | ~ 318.046875 μs | ~ 300.931000 μs | ~ 32.675943 μs | ~ 9.745361 μs |
+[string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | ~ 120.708984 μs | ~ 216.065750 μs | ~ 167.982422 μs | ~ 74.425945 μs | ~ 3.707835 μs |
+[record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | ~ 0.505563 μs | ~ 5.462097 μs | ~ 144.739578 μs | ~ 0.718816 μs | ~ 0.243881 μs |
+[record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | ~ 5.776530 μs | ~ 13.302368 μs | ~ 190.033859 μs | ~ 7.202799 μs | ~ 0.257552 μs |
+[record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | ~ 9.578207 μs | ~ 22.402750 μs | ~ 679.419250 μs | ~ 12.854817 μs | ~ 1.033473 μs |
+[st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | ~ 536.369781 μs | ~ 1019.367188 μs | ~ 3085.812500 μs | ~ 2.250295 μs | ~ 2.253082 μs |
+[st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | ~ 538.565094 μs | ~ 1073.348937 μs | ~ 4068.218750 μs | ~ 2.326985 μs | ~ 2.377767 μs |
+[effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | ~ 1014.833313 μs | ~ 2199.807375 μs | ~ 3135.145750 μs | ~ 2.257085 μs | ~ 2.256363 μs |
+[effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | ~ 3195.802000 μs | ~ 4998.000000 μs | ~ 4026.197750 μs | ~ 2.362386 μs | ~ 2.361583 μs |
 
 Rows grouped under **Excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
 

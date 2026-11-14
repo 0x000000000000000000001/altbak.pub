@@ -13,6 +13,8 @@ import tempfile
 
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / 'bin/benchmark'))
+from library_suite import copy_library_sources, library_cases, library_config, library_inputs
 
 
 def run(command, work, log, env):
@@ -24,8 +26,10 @@ def run(command, work, log, env):
 
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--test')
+    parser = argparse.ArgumentParser(description=__doc__, allow_abbrev=False)
+    modes = parser.add_mutually_exclusive_group()
+    modes.add_argument('--test')
+    modes.add_argument('--wip-included', action='store_true', help='Include the 23 WIP cases after the core benchmarks')
     parser.add_argument('--expected')
     parser.add_argument('--artifact', type=Path, help='Frozen build directory; requires --run-only')
     parser.add_argument('-c', '--clean', action='store_true', help='Every build already uses a fresh directory')
@@ -38,14 +42,18 @@ def main():
     if args.run_only and args.clean:
         parser.error('--run-only conflicts with --clean')
     mode = 'test' if args.test else 'pure'
+    include_library = args.wip_included
     spec = importlib.util.spec_from_file_location('validator', ROOT / 'bin/benchmark/validate.py')
     validator = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(validator)
     validator.expected_cases(mode, args.test, args.expected)
+    if include_library:
+        library_cases()
     base = ROOT / 'run/bak/psgo'
     store = base / 'output-runs'
     store.mkdir(parents=True, exist_ok=True)
-    pointer = store / ('latest-' + mode + ('-' + args.test if args.test else '') + '.json')
+    key = mode + ('-' + args.test if args.test else '') + ('-wip-included' if include_library else '')
+    pointer = store / ('latest-' + key + '.json')
     env = os.environ.copy()
     env.setdefault('GOGC', '800')
     # Keep module and compiler caches writable inside the benchmark checkout.
@@ -53,8 +61,9 @@ def main():
     if args.run_only:
         work = args.artifact.resolve() if args.artifact else Path(json.loads(pointer.read_text())['artifact'])
     else:
-        work = Path(tempfile.mkdtemp(prefix=mode + '-', dir=store))
+        work = Path(tempfile.mkdtemp(prefix=key + '-', dir=store))
         print(f'Artifact: {work}', flush=True)
+        library_fingerprint = library_inputs() if include_library else None
         (work / 'src/Test').mkdir(parents=True)
         for name in ['App.purs', 'Bench.purs', 'Bench.js']:
             shutil.copyfile(ROOT / 'src' / name, work / 'src' / name)
@@ -70,7 +79,10 @@ def main():
         if args.test:
             (work / 'src/App.purs').write_text('module App where\nimport Prelude\nimport Effect (Effect)\nimport Bench (runBench)\n' +
                 f'import Test.{modules[0]} as Selected\nmain :: Effect Unit\nmain = void (runBench Selected.describe Selected.act)\n')
-        shutil.copyfile(base / 'spago.psgo.yaml', work / 'spago.yaml')
+        elif include_library:
+            copy_library_sources(work / 'src')
+        config = (base / 'spago.psgo.yaml').read_text()
+        (work / 'spago.yaml').write_text(library_config(config) if include_library else config)
         if (base / 'spago').is_dir():
             shutil.copytree(base / 'spago', work / '.spago')
         purs = Path(env.get('PSGO_PURS', str(ROOT / 'run/bak/js/node_modules/purescript/purs.bin'))).resolve()
@@ -95,12 +107,16 @@ def main():
             path = loader / name
             path.write_text(path.read_text().replace('github.com/purescript-native/go-ffi', 'github.com/i-am-the-slime/go-ffi'))
         shutil.copyfile(ROOT / 'bin/psgo/bench_ffi.go', loader / 'bench_ffi.go')
+        if include_library:
+            shutil.copyfile(ROOT / 'bin/psgo/library_ffi.go', loader / 'library_ffi.go')
         run(['go', 'mod', 'edit', '-dropreplace', 'github.com/purescript-native/go-ffi'], work, 'drop-replace.log', env)
         local_ffi = ROOT.parent / 'go-ffi'
         if local_ffi.is_dir():
             shutil.copytree(local_ffi, work / 'go-ffi', ignore=shutil.ignore_patterns('.git'))
             run(['go', 'mod', 'edit', '-replace=github.com/i-am-the-slime/go-ffi=./go-ffi'], work, 'ffi-replace.log', env)
-        shutil.copyfile(ROOT / 'bin/psgo/main.go', work / 'main.go')
+        entry = 'AppAll' if include_library else 'App'
+        main_source = (ROOT / 'bin/psgo/main.go').read_text()
+        (work / 'main.go').write_text(main_source.replace('/output/App"', f'/output/{entry}"'))
         run(['go', 'mod', 'tidy'], work, 'go-tidy.log', env)
         run(['go', 'build', '-pgo=off', '-o', 'Main', './main.go'], work, 'go-build.log', env)
         hashes = {str(p.relative_to(work)): hashlib.sha256(p.read_bytes()).hexdigest()
@@ -109,7 +125,11 @@ def main():
         for name in ['main.go', 'go.mod', 'go.sum']:
             if (work / name).is_file():
                 hashes[name] = hashlib.sha256((work / name).read_bytes()).hexdigest()
+        if include_library and library_fingerprint != library_inputs():
+            raise RuntimeError('WIP benchmark inputs changed during build')
         manifest = {'mode': mode, 'test': args.test, 'expected': args.expected,
+                    'include_library': include_library, 'entry': entry,
+                    'library_inputs': library_fingerprint,
                     'binary_sha256': hashlib.sha256((work / 'Main').read_bytes()).hexdigest(),
                     'source_sha256': hashes, 'gogc': env['GOGC'], 'pgo': 'off',
                     'purs': subprocess.check_output([purs, '--version'], text=True).strip()}
@@ -120,6 +140,10 @@ def main():
     manifest = json.loads((work / 'manifest.json').read_text())
     if [manifest[k] for k in ['mode', 'test', 'expected']] != [mode, args.test, args.expected]:
         raise RuntimeError('Artifact mode does not match requested benchmark')
+    if manifest.get('include_library', False) != include_library:
+        raise RuntimeError('Artifact WIP selection does not match requested benchmark')
+    if include_library and manifest.get('library_inputs') != library_inputs():
+        raise RuntimeError('WIP benchmark inputs changed since build')
     if hashlib.sha256((work / 'Main').read_bytes()).hexdigest() != manifest['binary_sha256']:
         raise RuntimeError('Benchmark binary changed since build')
     if env['GOGC'] != manifest['gogc']:
@@ -130,7 +154,8 @@ def main():
     (work / 'run.stdout').write_text(result.stdout)
     if result.returncode:
         raise RuntimeError(f'Benchmark exited {result.returncode}')
-    checked = validator.validate_output(result.stdout, mode, args.test, args.expected)
+    checked = validator.validate_output(result.stdout, mode, args.test, args.expected,
+                                        include_library=include_library)
     (work / 'validated.json').write_text(json.dumps(checked, indent=2) + '\n')
 
 

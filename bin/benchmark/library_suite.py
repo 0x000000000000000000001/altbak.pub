@@ -11,7 +11,7 @@ SOURCE_ROOT = ROOT / "src"
 MANIFEST = ROOT / "bin/benchmark/library-cases.json"
 SUPPORT_SOURCES = ("AppAll.purs", "AppLibrary.purs",
                    "Bench/ArrayFixtures.purs", "Bench/StringFixtures.purs")
-DEPENDENCIES = ("foldable-traversable", "refs", "enums")
+DEPENDENCIES = ("foldable-traversable", "refs", "enums", "tailrec")
 
 
 def is_library_source(path):
@@ -27,10 +27,13 @@ def library_test_names():
     return frozenset(case["module"].removeprefix("Test.") for case in library_cases())
 
 
-def library_sources():
-    return [*(SOURCE_ROOT / name for name in SUPPORT_SOURCES),
+def library_sources(mode="pure"):
+    suffix = {"pure": "", "ffi": "FFI", "fficc": "FFICheatcode"}[mode]
+    support = SUPPORT_SOURCES if mode == "pure" else SUPPORT_SOURCES[:2]
+    return [*(SOURCE_ROOT / name for name in support),
             *(path for name in sorted(library_test_names())
-              for path in (SOURCE_ROOT / "Test" / name).rglob("*") if path.is_file())]
+              for path in (SOURCE_ROOT / "Test" / name).glob(name + suffix + ".*")
+              if path.is_file())]
 
 
 def library_cases():
@@ -59,17 +62,26 @@ def library_cases():
     return cases
 
 
-def library_inputs():
-    paths = [MANIFEST, *library_sources()]
+def library_inputs(mode="pure"):
+    paths = [MANIFEST, *library_sources(mode)]
     return {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
             for path in sorted(paths)}
 
 
-def copy_library_sources(destination):
-    for source in library_sources():
+def copy_library_sources(destination, mode="pure"):
+    suffix = {"pure": "", "ffi": "FFI", "fficc": "FFICheatcode"}[mode]
+    for source in library_sources(mode):
         target = Path(destination) / source.relative_to(SOURCE_ROOT)
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(source, target)
+        if suffix and source.name == "AppLibrary.purs":
+            content = source.read_text()
+            for name in library_test_names():
+                content = content.replace(f"import Test.{name} as ", f"import Test.{name}{suffix} as ")
+            target.write_text(content)
+        elif suffix and source.name == "AppAll.purs":
+            target.write_text(source.read_text().replace("import App as Core", f"import App{suffix} as Core"))
+        else:
+            shutil.copy2(source, target)
 
 
 def library_config(config):

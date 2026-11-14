@@ -3,6 +3,7 @@ module Test.EffectRefModify10000 (prepare) where
 import Prelude
 
 import Bench as Bench
+import Control.Monad.Rec.Class (Step(..), tailRecM)
 import Effect.Ref as Ref
 import Effect (Effect)
 
@@ -18,8 +19,10 @@ prepare = do
     Ref.read ref
 
 modifyEffect :: Int -> Ref.Ref Int -> Effect Unit
-modifyEffect remaining ref
-  | remaining <= 0 = pure unit
-  | otherwise = do
-      _ <- Ref.modify (_ + 1) ref
-      modifyEffect (remaining - 1) ref
+modifyEffect count ref = tailRecM step count
+  where
+  step remaining
+    | remaining <= 0 = pure (Done unit)
+    | otherwise = do
+        _ <- Ref.modify (_ + 1) ref
+        pure (Loop (remaining - 1))

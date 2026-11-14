@@ -87,10 +87,11 @@ outside its historical total.
 
 The **excluded WIP** library cases are defined in
 [the suite documentation](library-benchmarks.md). These 23 cases compile the
-same PureScript sources through the JS, JS/PBO, Go and Rust runners. They measure
+same PureScript sources through the JS, JS/PBO, Go, psgo and Rust runners. They measure
 the selected library implementations together with their compiler, FFI and
 runtime; differences cannot be attributed to code generation alone. With
-`--wip-included`, they follow the 14 core cases on those four backends. The
+`--wip-included`, they follow the 14 core cases on those backends. JS and Go also
+provide FP-style and imperative FFI variants under the same timing harness. The
 default run only executes the 14 core cases. Each test has its own `src/Test/<Name>/` directory; its presence under `src/`
 does not select it for a normal run. [`src/AppAll.purs`](../src/AppAll.purs) preserves
 the core total, then prints an `=== Excluded WIP benchmarks ===` marker and runs
@@ -112,11 +113,14 @@ calibrated batches and minimum of ten batches. Independent expected integers
 come from [`bin/benchmark/library-cases.json`](../bin/benchmark/library-cases.json);
 they are not inferred from the warm-up values. The
 collector accepts core output with or without the appended WIP section as
-`mode: "pure"` and aggregates three independent processes per case and section.
-The public JS/Go/Rust `--wip-included` command also runs the three
+`mode: "pure"`, `"ffi"` or `"fficc"` and aggregates three independent processes
+per case and section. The public JS/Go/Rust pure `--wip-included` command also runs the three
 separate diagnostic protocols; its combined console output is not one numeric
 collector input. There is no WIP suite total or change to the historical totals.
-Runtime qualification and publication of these new cases remain pending.
+The [November 14, 2026 campaign](benchmark-results/2026-11-14-library-js-go.md)
+qualifies and publishes all nine JS/Go columns: 27 processes and 621 validated
+WIP outputs. `publish.py --wip-only` updates those 207 cells without changing
+historical core results. Rust and other runtime columns remain unmeasured.
 
 ## Core timing boundary
 

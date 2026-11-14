@@ -3,6 +3,7 @@ module Test.STRefModify10000 (prepare) where
 import Prelude
 
 import Bench as Bench
+import Control.Monad.Rec.Class (Step(..), tailRecM)
 import Control.Monad.ST (ST)
 import Control.Monad.ST as ST
 import Control.Monad.ST.Ref as STRef
@@ -21,8 +22,10 @@ prepare = do
       STRef.read ref
 
 modifyST :: forall r. Int -> STRef.STRef r Int -> ST r Unit
-modifyST remaining ref
-  | remaining <= 0 = pure unit
-  | otherwise = do
-      _ <- STRef.modify (_ + 1) ref
-      modifyST (remaining - 1) ref
+modifyST count ref = tailRecM step count
+  where
+  step remaining
+    | remaining <= 0 = pure (Done unit)
+    | otherwise = do
+        _ <- STRef.modify (_ + 1) ref
+        pure (Loop (remaining - 1))

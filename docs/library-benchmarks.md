@@ -24,9 +24,10 @@ was not located in that scope; this does not establish that it is unpublished.
 In the supplied Discord exchange, Fabrizio said on 8 April 2026 that he planned
 to publish code soon. That statement does not establish its current location.
 
-**Status:** implementation only. No compilation, test, benchmark or executable
-verification was run when adding these files, at the user's request. There are
-no performance measurements or qualified backend results yet.
+**Status:** excluded WIP, with all nine JS/Go columns measured in the
+[November 14, 2026 campaign](benchmark-results/2026-11-14-library-js-go.md).
+Each published cell is the median of three independent processes. Rust and the
+other runtime columns have no published measurements for these cases.
 
 ## Running
 
@@ -47,11 +48,23 @@ On Go, JS and Rust, `--wip-included` runs the 14 core cases, these 23 new cases,
 and the three diagnostics already marked excluded WIP in the [main README](../README.md):
 Array Indexing, JSON to Typed AST and JSON Decoding. The latter retain their independent workspaces, protocols and
 campaign results. They can also be selected individually with `--test`.
-JS/PBO currently runs the 14 core cases plus the 23 library cases.
+JS/PBO and psgo run the 14 core cases plus the 23 library cases.
 `./bin/run --wip-included` retains all existing core backends, includes WIP where configured,
 and reports their absence on the others. The new WIP values do not enter the
-core total. This option is mutually exclusive with `--test`,
-`--x`, `--ffi` and `--fficc`.
+core total. This option is mutually exclusive with `--test` and `--x`.
+On JS and Go, it also accepts `--ffi` or `--fficc` to select the FP-style or
+imperative native implementations. Those modes run their 14 core references
+and 23 new references, without the three independent diagnostics:
+
+```sh
+./bin/js/run --ffi --wip-included
+./bin/js/run --fficc --wip-included
+./bin/go/run --ffi --wip-included
+./bin/go/run --fficc --wip-included
+./bin/go/run --dev --wip-included
+./bin/psgo/run --wip-included
+```
+
 The grouped JS/Go/Rust command accepts the build/run phase flags and `--clean`,
 plus `--dev` for Go. Custom artifact/build directories and Go PGO options remain
 available on the ordinary run, not on this group of different protocols.
@@ -69,6 +82,9 @@ JS/ES keep builds under `run/bak/<backend>/output-runs/pure-*` (normal run) or
 and `validated.json` in the artifact directory. Go/Rust use
 `run/bak/<backend>/modes/pure/` or `modes/pure-wip-included/`, with `results.json`. These files
 describe one process, not the median of three independent processes.
+FFI variants use the corresponding `ffi-wip-included` or `fficc-wip-included`
+workspace keys. Go development builds have a separate `-dev` suffix. psgo uses
+`run/bak/psgo/output-runs/pure-wip-included-*` and a matching latest-build pointer.
 
 For a publication campaign, use the existing frozen-plan protocol in
 [`docs/benchmark-methodology.md`](benchmark-methodology.md), with
@@ -76,15 +92,54 @@ For a publication campaign, use the existing frozen-plan protocol in
 and WIP sections separately and aggregates medians per case over three
 processes. The core result keeps its original shape; the new result is nested
 under `library`. Keep the build manifests and payload hashes required by that
-protocol. `publish.py` continues to publish the historical core totals.
+protocol. `publish.py --wip-only` publishes only the 23 new rows across the nine
+JS/Go columns, preserving core cells, totals, source links and other tables.
+It requires all nine columns and rejects incorrect oracles or cell medians.
 
-A numeric plan that includes the 23 new cases uses `"mode": "pure"` and the
+A numeric plan that includes the 23 new cases uses `"mode": "pure"`, `"ffi"` or
+`"fficc"` to match the selected core variant and the
 ordinary driver directly, e.g. `python3 bin/native/driver.py go --wip-included --run-only`,
 against the artifact prepared by `./bin/go/run --wip-included --build-only`.
 Do not feed the public JS/Go/Rust `--wip-included` group's combined
 console output into one numeric plan entry:
 its other three diagnostics already collect their own campaigns and use
 different measurement boundaries. WIP results have no aggregate score.
+
+## Native reference variants
+
+The nine JS/Go columns comprise JS official, JS/PBO, FP-style JS FFI,
+imperative JS FFI, gopurs release, gopurs development, psgo, FP-style Go FFI and
+imperative Go FFI. All use the same case labels, fixtures and expected outputs.
+Each native reference resides next to its PureScript case as `<Name>FFI.*` or
+`<Name>FFICheatcode.*`.
+
+The shared PureScript wrappers call
+`makeAction :: Int -> Effect (Int -> Int)`. The factory constructs immutable
+fixtures outside timing and returns a function that performs the workload on
+each call. The wrapper passes its size through `Bench.opaque` both before
+preparation and inside each measured invocation. Native references allocate
+mutable refs anew on every invocation; no result or mutable ref is cached.
+
+The size is 10000 for the five large array cases, string searches and ref loops;
+it is 1000 for each append input, traversals, Unicode fixture groups, split/concat
+parts and record-update loops. The code-point take case prepares 1000 `a😀é`
+groups and takes `count + floor(count / 2)` code points, hence 1500 at the
+benchmark size.
+
+FP-style references preserve map/filter/fold callbacks, the balanced
+split-and-concatenate Array traversal with explicit `Maybe` operations, and an
+immutable record update on every iteration. Code-point length materializes the
+code-point array used by the PureScript implementation. Constructed strings are
+consumed through a code-point array and fold. Imperative references may use
+loops and local mutation, while constructing and consuming the required array
+or string results. Every element is visited in the failure-position cases;
+FP-style callbacks remain explicit.
+
+The psgo build uses a private loader adaptation for `Data.String.CodeUnits.length`:
+supplementary Unicode characters count as two UTF-16 code units, matching the
+PureScript contract. Its upstream code-point count would return 3000 for the
+fixture whose code-unit oracle is 4000. The adaptation is included only in WIP
+builds and recorded with the other loader sources in the artifact manifest.
 
 ## Measurement boundary
 
@@ -171,8 +226,9 @@ The entry points are
 [`src/AppAll.purs`](../src/AppAll.purs). Selection remains explicit: configured
 drivers include these sources in their private workspace only with
 `--wip-included`. The extra direct dependencies (`foldable-traversable`, `refs`,
-`enums`) are added to that private configuration. Other backends and
-FFI/extended/individual-test modes do not compile these sources. Sources and
+`enums`, `tailrec`) are added to that private configuration. JS/Go FFI modes
+select the matching native wrappers and files; default, extended and individual
+core-test modes omit the WIP sources. Sources and
 the oracle manifest are fingerprinted to reject stale library artifacts and
 changes during collection.
 

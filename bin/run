@@ -11,10 +11,11 @@ while [[ $# -gt 0 ]]; do
     --clean|-c) ARGS+=(--clean); shift ;;
     --build-only|--run-only) ARGS+=("$1"); shift ;;
     --ffi|--fficc|--x)
-      [[ "$MODE" == pure && "$WIP_INCLUDED" == 0 ]] || { echo 'Choose only one benchmark mode.' >&2; exit 2; }
+      [[ "$MODE" == pure ]] || { echo 'Choose only one benchmark mode.' >&2; exit 2; }
+      [[ "$1" != --x || "$WIP_INCLUDED" == 0 ]] || { echo '--wip-included cannot be combined with --x.' >&2; exit 2; }
       MODE="${1#--}"; ARGS+=("$1"); shift ;;
     --wip-included)
-      [[ "$MODE" == pure && "$WIP_INCLUDED" == 0 ]] || { echo '--wip-included requires the default core mode.' >&2; exit 2; }
+      [[ "$MODE" != x && "$MODE" != test && "$WIP_INCLUDED" == 0 ]] || { echo '--wip-included requires a core mode.' >&2; exit 2; }
       WIP_INCLUDED=1; shift ;;
     --test)
       [[ "$MODE" == pure && "$WIP_INCLUDED" == 0 && $# -ge 2 ]] || { echo '--test requires a module and cannot be combined with another mode.' >&2; exit 2; }
@@ -42,7 +43,11 @@ for backend in "${BACKENDS[@]}"; do
   EXTRA_ARGS=()
   if [[ "$WIP_INCLUDED" == 1 ]]; then
     case "$backend" in
-      js|es|go|rust) EXTRA_ARGS=(--wip-included) ;;
+      js|es|go) EXTRA_ARGS=(--wip-included) ;;
+      rust|psgo)
+        if [[ "$MODE" == pure ]]; then EXTRA_ARGS=(--wip-included)
+        else echo "WIP $MODE cases are not configured for $backend; running the core suite only."
+        fi ;;
       *) echo "WIP cases are not configured for $backend; running the core suite only." ;;
     esac
   fi

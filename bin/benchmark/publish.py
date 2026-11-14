@@ -32,6 +32,10 @@ ROWS = ['AST Evaluation', 'Fibonacci', 'List Processing', 'Tail Call Optimizatio
         'Red-Black Tree', 'Polymorphism', 'State Monad', 'Lazy Evaluation',
         'Array Processing', 'RowToList']
 EXTENDED_ROWS = ['File I/O', 'STArray Operations', 'String Operations', 'Aff Operations', 'Parallelism']
+WIP_GROUPS = {
+    'JavaScript': ['js-pure', 'es-pure', 'js-ffi', 'js-fficc'],
+    'Go': ['go-pure', 'go-dev', 'psgo-pure', 'go-ffi', 'go-fficc'],
+}
 
 
 def row_label(cell):
@@ -41,7 +45,9 @@ def row_label(cell):
 
 def verify(key, result):
     extended = key.endswith('-x')
-    expected = [case['value'] for case in EXTENDED_CASES] if extended else list(CASES.values())
+    wip = result['mode'] == 'wip'
+    expected = ([case['value'] for case in expected_cases('wip')] if wip else
+                [case['value'] for case in EXTENDED_CASES] if extended else list(CASES.values()))
     expected = [str(v) for v in expected]
     if not result.get('values_validated') or result['values'] != expected:
         raise ValueError('Missing or incorrect oracles: ' + key)
@@ -62,7 +68,10 @@ def verify(key, result):
         median = statistics.median(s['times_us'][i] for s in samples)
         if not math.isclose(value, median, rel_tol=1e-12, abs_tol=1e-12):
             raise ValueError('Cell is not the median of recorded processes: ' + key)
-    if not math.isclose(result['total_ms'], sum(result['times_us']) / 1000, rel_tol=1e-12, abs_tol=1e-12):
+    if wip:
+        if result['total_ms'] is not None:
+            raise ValueError('WIP cases do not have an aggregate score: ' + key)
+    elif not math.isclose(result['total_ms'], sum(result['times_us']) / 1000, rel_tol=1e-12, abs_tol=1e-12):
         raise ValueError('Inconsistent total: ' + key)
 
 
@@ -100,10 +109,40 @@ def render(original, results):
     return text
 
 
+def render_wip(original, results):
+    """Update only the 23 WIP rows in the nine JS/Go columns."""
+    text = original
+    labels = [case['label'] for case in expected_cases('wip')]
+    for title, keys in WIP_GROUPS.items():
+        pattern = r'(#### ' + re.escape(title) + r'\n)(.*?)(?=\n#### |\n### |\n## |\Z)'
+        matches = list(re.finditer(pattern, text, re.S))
+        if len(matches) != 1:
+            raise ValueError('Missing/ambiguous section: ' + title)
+        match = matches[0]
+        lines = match[2].splitlines()
+        seen = []
+        for index, line in enumerate(lines):
+            name_cell = line.split('|', 1)[0].strip()
+            label = row_label(name_cell)
+            if label not in labels:
+                continue
+            cells = line.split('|')
+            if len(cells) != len(keys) + 2 or cells[-1].strip():
+                raise ValueError('Unexpected column count for ' + title + ': ' + label)
+            values = [results[key]['library']['times_us'][labels.index(label)] for key in keys]
+            lines[index] = name_cell + ' | ' + ' | '.join(f'~ {value:.6f} μs' for value in values) + ' |'
+            seen.append(label)
+        if seen != labels:
+            raise ValueError('Unexpected WIP row order: ' + title)
+        text = text[:match.start(2)] + '\n'.join(lines) + '\n' + text[match.end(2):]
+    return text
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--campaign', type=Path, action='append', required=True)
     parser.add_argument('--readme', type=Path, default=ROOT / 'README.md')
+    parser.add_argument('--wip-only', action='store_true', help='Publish the 23 new rows in the nine JS/Go columns')
     args = parser.parse_args()
     results = {}
     source_snapshot = None
@@ -125,15 +164,19 @@ def main():
         results.update(incoming)
     if fingerprints() != source_snapshot:
         raise ValueError('Current sources differ from the completed campaigns')
-    for keys in GROUPS.values():
+    groups = WIP_GROUPS if args.wip_only else GROUPS
+    for keys in groups.values():
         for key in keys:
             verify(key, results[key])
+            if args.wip_only:
+                verify(key, results[key]['library'])
     original = args.readme.read_text()
-    updated = render(original, results)
+    updated = render_wip(original, results) if args.wip_only else render(original, results)
     if args.readme.read_text() != original:
         raise RuntimeError('README changed while preparing publication')
     args.readme.write_text(updated)
-    print('Published 39 complete validated columns; existing headers preserved.')
+    print('Published 23 WIP rows across nine JS/Go columns; core cells preserved.' if args.wip_only
+          else 'Published 39 complete validated columns; existing headers preserved.')
 
 
 if __name__ == '__main__':
