@@ -128,17 +128,6 @@ Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://git
 
 Rows grouped under **Excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
 
-> The gopurs column was re-measured on 2026-11-15/16 after these port fixes:
-> `CodeUnits` Drop/Length/indexOf, `Effect.Ref` record reads without a map,
-> array and equality FFI callbacks taking native values, a direct `sort.Stable`
-> interface, and index-loop `FoldableWithIndex`. Updated rows:
-> `cu-length-unicode` 2.66 μs, `indexOf-hit` 2.56 μs, `indexOf-miss` 2.42 μs,
-> `ref-modify` 1031.72 μs, `ref-write` 925.27 μs,
-> `array/sort-descending` 4566 μs, `array/eq-neq-last` 208.80 μs,
-> `array/map` 158.30 μs, `array/filter` 104.00 μs, `array/append` 51.40 μs.
-> The `/JS` ratios come from same-session JavaScript runs; the `--dev`, `psgo`
-> and FFI columns keep the earlier measurements.
-
 #### Scheme
 
 Scheme Benchmark        | Hand-written PureScript<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3 | Hand-written FP-style Scheme FFI<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3<br><br>(WIP) | Hand-written Scheme FFI<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3<br><br>(WIP) |
