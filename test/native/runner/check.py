@@ -106,9 +106,96 @@ class RunnerContracts(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'SHA'):
                 driver.main()
 
+    def test_go_dependency_pins_precede_backend_after_workspace_cleanup(self):
+        port = self.root.parent / 'selected library'
+        port.mkdir()
+        (port / 'go-dependencies.json').write_text(json.dumps({
+            'schema': 1, 'require': {'example.test/regex': 'v1.2.3'}}))
+        # An unrelated sibling must not supply dependencies to this application.
+        unrelated = self.root.parent / 'unselected library'
+        unrelated.mkdir()
+        (unrelated / 'go-dependencies.json').write_text('invalid manifest')
+        (self.root / 'run/bak/go/spago.go.yaml').write_text(
+            'workspace:\n  extraPackages:\n    selected:\n      path: '
+            + json.dumps(str(port)) + '\n')
+        helper = self.root.parent / 'gopurs/gopurs/tools/library-go-dependencies.mjs'
+        for clean, fail in [(False, False), (True, False), (True, True)]:
+            with self.subTest(clean=clean, fail=fail):
+                driver.prepare(self.directory, 'go', self.args())
+                (self.directory / 'output').mkdir()
+                (self.directory / 'output/go.mod').write_text('stale dependency')
+                calls = []
+
+                def tools(command, directory, log, env):
+                    command = list(map(str, command)); calls.append(command)
+                    self.assertEqual(env['GOPURS_GO_PACKAGES'], '1')
+                    self.assertEqual(env['GOPURS_GO_PACKAGE_OVERLAY'], '1')
+                    project = self.directory / 'output'
+                    if command[0] == 'node':
+                        self.assertEqual(command, ['node', str(helper), str(project.resolve()), str(port.resolve())])
+                        self.assertFalse((project / 'go.mod').exists(), 'cleanup must precede preparation')
+                        if fail:
+                            raise RuntimeError('dependency preparation failed')
+                        project.mkdir(exist_ok=True)
+                        (project / 'go.mod').write_text('module gopurs/output\nrequire example.test/regex v1.2.3\n')
+                    elif Path(command[0]).name == 'gopurs':
+                        self.assertTrue((project / 'go.mod').is_file(), 'dependency pin missing before backend')
+                        self.assertIn('v1.2.3', (project / 'go.mod').read_text())
+                        target = project / 'main/main.go'; target.parent.mkdir(); target.write_text('generated')
+                    elif command[:2] == ['go', 'build']:
+                        Path(command[command.index('-o') + 1]).write_text('compiled')
+                    return command
+
+                argv = ['driver.py', 'go', '--build-only', '--build-dir', str(self.directory)]
+                if clean: argv.append('--clean')
+                with patch.dict(os.environ, {'GOPURS_GO_PACKAGES': '1', 'GOPURS_GO_PACKAGE_OVERLAY': '1'}), \
+                     patch.object(sys, 'argv', argv), patch.object(driver, 'expected_cases'), \
+                     patch.object(driver, 'inputs', return_value={'source': 'abc'}), \
+                     patch.object(driver, 'logged', side_effect=tools), \
+                     patch.object(driver.subprocess, 'check_output', return_value='go test'):
+                    if fail:
+                        with self.assertRaisesRegex(RuntimeError, 'dependency preparation failed'):
+                            driver.main()
+                        self.assertFalse(any(Path(c[0]).name == 'gopurs' for c in calls))
+                        self.assertFalse((self.directory / 'manifest.json').exists())
+                    else:
+                        driver.main()
+                        self.assertEqual(sum(c[0] == 'node' for c in calls), 1)
+                        self.assertTrue((self.directory / 'manifest.json').exists())
+                        calls.clear()
+                        argv.remove('--build-only'); argv.append('--run-only')
+                        if '--clean' in argv: argv.remove('--clean')
+                        with patch.object(driver, 'execute') as execute:
+                            driver.main(); execute.assert_called_once()
+                        self.assertEqual(calls, [])
+
+    def test_go_dependency_manifests_and_helper_invalidate_saved_inputs(self):
+        port = self.root.parent / 'selected library'; port.mkdir()
+        dependency = port / 'go-dependencies.json'
+        dependency.write_text('{"schema":1,"require":{"example.test/regex":"v1.2.3"}}')
+        config = 'workspace:\n  extraPackages:\n    selected:\n      path: "../selected library"\n'
+        (self.root / 'run/bak/go/spago.go.yaml').write_text(config)
+        helper = driver.go_dependency_helper(); helper.parent.mkdir(parents=True)
+        helper.write_text('helper v1')
+        for relative in ['bin/native/driver.py', 'bin/go/run', 'bin/benchmark/validate.py',
+                         'bin/benchmark/go_profile.py', 'bin/benchmark/library_suite.py',
+                         'bin/benchmark/library-cases.json']:
+            path = self.root / relative; path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text('fixture')
+        with patch.object(driver, '__file__', str(self.root / 'bin/native/driver.py')):
+            first = driver.inputs('go')
+            key = str(dependency.resolve())
+            self.assertEqual(first[key], driver.digest(dependency))
+            self.assertEqual(first[str(helper)], driver.digest(helper))
+            dependency.write_text(dependency.read_text().replace('v1.2.3', 'v1.2.4'))
+            second = driver.inputs('go')
+            self.assertNotEqual(first[key], second[key])
+            helper.write_text('helper v2')
+            self.assertNotEqual(second[str(helper)], driver.inputs('go')[str(helper)])
+
     def test_cli_rejects_incompatible_modes_before_build(self):
         for arguments in [['go','--ffi','--fficc'], ['go','--test','bad/name'],
-                          ['go', '--wip'], ['go', '--wip-included', '--ffi'],
+                          ['go', '--wip'], ['go', '--wip-included', '--x'],
                           ['rust','--pgo'], ['rust', '--dev'], ['go','--pgo','--build-only'],
                           ['go','--run-only','--clean'], ['rust','--run-only','--clean']]:
             with self.subTest(arguments=arguments), patch.object(sys,'argv',['driver.py']+arguments), \

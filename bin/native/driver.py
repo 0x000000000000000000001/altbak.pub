@@ -29,6 +29,17 @@ def write_json(path, value):
     temporary.replace(path)
 
 
+def go_dependency_ports(config, relative_to):
+    """Read the quoted local overrides used by this runner's Spago config."""
+    ports = {(relative_to / json.loads(match[1])).resolve()
+             for match in re.finditer(r'(?m)^\s*path:\s*("(?:[^"\\]|\\.)*")\s*$', config)}
+    return sorted(port for port in ports if (port / 'go-dependencies.json').is_file())
+
+
+def go_dependency_helper():
+    return ROOT.parent / 'gopurs/gopurs/tools/library-go-dependencies.mjs'
+
+
 def inputs(language, mode="pure", include_library=False):
     result = {}
     for base in ['src', 'srx']:
@@ -47,6 +58,11 @@ def inputs(language, mode="pure", include_library=False):
                  ROOT / 'bin/benchmark/go_profile.py', ROOT / 'bin/benchmark/library_suite.py',
                  ROOT / 'bin/benchmark/library-cases.json']:
         result[str(path.relative_to(ROOT))] = digest(path)
+    if language == 'go':
+        ports = go_dependency_ports((ROOT / 'run/bak/go/spago.go.yaml').read_text(), ROOT)
+        if ports:
+            for path in [go_dependency_helper(), *(port / 'go-dependencies.json' for port in ports)]:
+                result[str(path)] = digest(path)
     if include_library:
         result.update(library_inputs(mode))
     return result
@@ -269,9 +285,15 @@ def main():
     commands.append(logged(['spago', 'build'], directory, logs / 'spago.log', env))
     if args.language == 'go':
         backend = ROOT.parent / 'gopurs/gopurs/bin/gopurs'
+        project = directory / 'output'
+        ports = go_dependency_ports((directory / 'spago.yaml').read_text(), directory)
+        if ports:
+            # Package/overlay exports run go list -mod=readonly inside gopurs.
+            # Prepare exact declared versions after cleanup and before that call.
+            commands.append(logged(['node', go_dependency_helper(), project, *ports],
+                                   directory, logs / 'go-dependencies.log', env))
         commands.append(logged([backend, '--main', entry, *(['--dev'] if args.dev else [])],
                                directory, logs / 'backend.log', env))
-        project = directory / 'output'
         if not (project / 'main/main.go').is_file():
             raise RuntimeError('Gopurs did not generate main/main.go')
         commands.append(logged(['go', 'mod', 'tidy'], project, logs / 'modules.log', env))
