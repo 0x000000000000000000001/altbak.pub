@@ -17,6 +17,21 @@ DRIVERS = ROOT / 'bin/benchmark/array-indexing'
 KERNEL = ROOT / 'src/Test/ArrayIndexing/ArrayIndexing.purs'
 BACKEND = ROOT.parent / 'gopurs/gopurs/bin/gopurs'
 RUST_BACKEND = ROOT.parent / 'purust/purust/bin/purust'
+ENTRY_MODULE = 'ArrayIndexingMain'
+ENTRY_SOURCE = '''module ArrayIndexingMain (main) where
+
+import Prelude (pure)
+import Effect (Effect)
+import Test.ArrayIndexing (BoxedArray, nativeReads, boxedReads)
+
+-- Retain both diagnostic roots through a valid Effect entrypoint. The timing
+-- drivers call the kernels directly and never execute this wrapper.
+main :: Effect
+  { nativeReads :: Array Int -> Int -> Int -> Int -> Int
+  , boxedReads :: BoxedArray -> Int -> Int -> Int -> Int
+  }
+main = pure { nativeReads, boxedReads }
+'''
 
 
 def digest(path):
@@ -41,7 +56,7 @@ def run_logged(command, cwd, log, env):
     return command
 
 
-def module_closure(candidates):
+def module_closure(candidates, entry_module='Test.ArrayIndexing'):
     # Resolve only the imported modules from an already installed package set.
     # No registry update, root symlink mutation or compiler rebuild occurs.
     modules = {}
@@ -49,7 +64,7 @@ def module_closure(candidates):
         match = re.search(r'^module\s+([A-Z][\w.]*)', path.read_text(), re.MULTILINE)
         if match:
             modules[match[1]] = path.resolve()
-    selected, pending = {}, ['Test.ArrayIndexing']
+    selected, pending = {}, [entry_module]
     while pending:
         name = pending.pop()
         if name in selected or name == 'Prim' or name.startswith('Prim.'):
@@ -62,13 +77,15 @@ def module_closure(candidates):
     return sorted(selected.values())
 
 
-def dependency_sources():
+def dependency_sources(entry=None):
     config = ROOT / 'run/bak/go/spago.go.yaml'
     candidates = list((ROOT / 'run/bak/go/spago/p').glob('*/src/**/*.purs'))
     for relative in re.findall(r'path: "([^"\n]+)"', config.read_text()):
         candidates.extend((ROOT / relative / 'src').glob('**/*.purs'))
     candidates.append(KERNEL)
-    return module_closure(candidates)
+    if entry is not None:
+        candidates.append(entry)
+    return module_closure(candidates, ENTRY_MODULE if entry is not None else 'Test.ArrayIndexing')
 
 
 def rust_dependency_sources():
@@ -136,7 +153,9 @@ def build(directory, env, dev=False):
     (directory / 'manifest.json').unlink(missing_ok=True)
     logs = directory / 'logs'
     logs.mkdir(exist_ok=True)
-    deps = dependency_sources()
+    entry = directory / (ENTRY_MODULE + '.purs')
+    entry.write_text(ENTRY_SOURCE)
+    deps = dependency_sources(entry)
     rust_deps = rust_dependency_sources()
     purs = shutil.which('purs', path=env['PATH'])
     if not purs:
@@ -156,7 +175,7 @@ def build(directory, env, dev=False):
     tast = json.loads((directory / 'output/Test.ArrayIndexing/corefn.json').read_text())
     if 'dataDecls' not in tast or 'classDecls' not in tast:
         raise ValueError('The selected purs does not produce the required TAST; use the local fork')
-    commands.append(run_logged([BACKEND, '--main', 'Test.ArrayIndexing', *(['--dev'] if dev else [])],
+    commands.append(run_logged([BACKEND, '--main', ENTRY_MODULE, *(['--dev'] if dev else [])],
                                directory, logs / 'gopurs.log', env))
     generated = directory / 'output/purescript/Test_ArrayIndexing.go'
     audit = audit_generated(generated)

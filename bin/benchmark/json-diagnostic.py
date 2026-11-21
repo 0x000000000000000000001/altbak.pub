@@ -423,7 +423,7 @@ def main():
     p.add_argument('--suite',choices=SUITES,default='JsonTypedAst')
     p.add_argument('--workspace',type=Path)
     p.add_argument('--output',type=Path)
-    p.add_argument('--runtime', choices=['go', 'js', 'c', 'rust'], help='measure only the selected runtime; builds retain both artifacts')
+    p.add_argument('--runtime', choices=['go', 'js', 'c', 'rust'], help='measure only the selected runtime; builds retain Go/JS/C artifacts and build Rust only when selected or no runtime filter is given')
     p.add_argument('-d', '--dev', action='store_true', help='use the gopurs development profile')
     p.add_argument('--runtimes', help='comma-separated runtimes measured in the shared protocol order, e.g. go,js,rust')
     p.add_argument('--corpus', choices=['fixture12', 'gopurs238'], default='fixture12', help='typed-AST corpus; gopurs238 is the frozen 238-module corpus')
@@ -475,7 +475,7 @@ def main():
              work/'output',work/'logs/go.log',build_env)
         build_js(work,env,suite)
         c_build=build_c(work,env,suite)
-        rust_build=build_rust(work,env,suite)
+        rust_build=build_rust(work,env,suite) if args.runtime in [None, 'rust'] else {}
         if before!=fingerprint(suite): raise ValueError('Source changed during build')
         manifest={'suite':suite,'sources':before,'binary_sha256':sha(work/'benchmark'),'js_sha256':sha(work/'benchmark.mjs'),
                   'go_backend_profile':'dev' if args.dev else 'release',

@@ -1,0 +1,3899 @@
+{
+  "date": "2026-11-21",
+  "scope": "45 Go runtime cases; exploratory prototypes only",
+  "readme_before_sha256": "d9019b4361c429e70cac46520c65c4b0b44c084576c76aa2b2067204e95af7c1",
+  "coverage": [
+    {
+      "case": "AST Evaluation",
+      "source": "src/Test/AstTree/AstTree.purs",
+      "group": "Go",
+      "readme_us": 0.35,
+      "readme_cell": "~ 0.35 μs<br>(/C = 3.50x)<br>(/JS = 1.35x)",
+      "priority": "Faible",
+      "finding": "Construction/évaluation de 43 nœuds ; petit coût absolu. FFI Go historique 0,32 µs contre 0,35 µs. Une représentation ADT plus compacte est une piste générale, sans gros gain établi ici.",
+      "fresh_official_protocol_us": 0.310566
+    },
+    {
+      "case": "Fibonacci",
+      "source": "src/Test/Fib/Fib.purs",
+      "group": "Go",
+      "readme_us": 0.21,
+      "readme_cell": "~ 0.21 μs<br>(/C = 2.63x)<br>(/JS = 0.68x)",
+      "priority": "Faible",
+      "finding": "Récursion directe sur entiers natifs, sans allocation ni dictionnaire dans le noyau. Peu de résidu propre au backend.",
+      "fresh_official_protocol_us": 0.202424
+    },
+    {
+      "case": "List Processing",
+      "source": "src/Test/ListOps/ListOps.purs",
+      "group": "Go",
+      "readme_us": 17.09,
+      "readme_cell": "~ 17.09 μs<br>(/C = 341.82x)<br>(/JS = 1.78x)",
+      "priority": "Gain mesuré",
+      "finding": "Noyau 19,71 → 11,40 µs (1,73×), 1 805 → 1 357 allocations. Même range/filter et addition Int ; seul le retour au fold générique avec rebox est supprimé.",
+      "fresh_official_protocol_us": 15.629395
+    },
+    {
+      "case": "Tail Call Optimization",
+      "source": "src/Test/TCO/TCO.purs",
+      "group": "Go",
+      "readme_us": 64.19,
+      "readme_cell": "~ 64.19 μs<br>(/C = 1.87x)<br>(/JS = 0.34x)",
+      "priority": "Moyenne",
+      "finding": "Boucle native déjà générée. IntMod garde les sémantiques euclidiennes générales ; analyse de bornes/signe pour simplifier modulo 3. Référence FFI Go historique 35,50 µs ; potentiel non mesuré.",
+      "fresh_official_protocol_us": 62.091961
+    },
+    {
+      "case": "Deep Record Updates",
+      "source": "src/Test/Records/Records.purs",
+      "group": "Go",
+      "readme_us": 8.76,
+      "readme_cell": "~ 8.76 μs<br>(/C = 2.56x)<br>(/JS = 0.12x)",
+      "priority": "Secondaire",
+      "finding": "Copies de structs imbriqués et champs intermédiaires non consommés. Scalarisation/projection possible ; coût absolu limité.",
+      "fresh_official_protocol_us": 8.63147
+    },
+    {
+      "case": "Ackermann",
+      "source": "src/Test/Ackermann/Ackermann.purs",
+      "group": "Go",
+      "readme_us": 16.38,
+      "readme_cell": "~ 16.38 μs<br>(/C = 0.97x)<br>(/JS = 0.24x)",
+      "priority": "Faible",
+      "finding": "Récursion native et appel terminal transformé en boucle ; déjà proche du C et meilleur que la FFI Go historique.",
+      "fresh_official_protocol_us": 16.047812
+    },
+    {
+      "case": "Church Numerals",
+      "source": "src/Test/Church/Church.purs",
+      "group": "Go",
+      "readme_us": 233.79,
+      "readme_cell": "~ 233.79 μs<br>(/C = —)<br>(/JS = 0.18x)",
+      "priority": "Moyenne",
+      "finding": "Boucle comptée déjà présente, mais callback Value/Apply conservé. Spécialiser les fonctions connues ; gain non mesuré.",
+      "fresh_official_protocol_us": 227.702469
+    },
+    {
+      "case": "Prime Sieve",
+      "source": "src/Test/Primes/Primes.purs",
+      "group": "Go",
+      "readme_us": 77.26,
+      "readme_cell": "~ 77.26 μs<br>(/C = 70.88x)<br>(/JS = 1.22x)",
+      "priority": "Moyenne",
+      "finding": "Le filtre construit puis reverse reconstruit des Cons. Fusion ou réemploi sous preuve de consommation ; le C utilise un autre algorithme (diviseurs).",
+      "fresh_official_protocol_us": 72.938637
+    },
+    {
+      "case": "Red-Black Tree",
+      "source": "src/Test/RBTree/RBTree.purs",
+      "group": "Go",
+      "readme_us": 10037.62,
+      "readme_cell": "~ 10037.62 μs<br>(/C = 1.05x)<br>(/JS = 0.11x)",
+      "priority": "Marge modérée mesurée",
+      "finding": "Généré 9,714 ms contre FFI native 8,531 ms (−12,2 %), avec les mêmes 100 000 nœuds et 3,20 MB. Témoin de marge, pas prototype de passe compilateur. Simplification de balance/stores à démontrer.",
+      "fresh_official_protocol_us": 10024.375
+    },
+    {
+      "case": "Polymorphism",
+      "source": "src/Test/Polymorphism/Polymorphism.purs",
+      "group": "Go",
+      "readme_us": 2288.66,
+      "readme_cell": "~ 2288.66 μs<br>(/C = —)<br>(/JS = 0.10x)",
+      "priority": "Recherche",
+      "finding": "Boucle spécialisée int32 sans dictionnaire dans le noyau. Réduction générale de récurrence affine possible sous preuve de terminaison et overflow ; pas une simple suppression de boxing.",
+      "fresh_official_protocol_us": 2222.09375
+    },
+    {
+      "case": "State Monad",
+      "source": "src/Test/StateMonad/StateMonad.purs",
+      "group": "Go",
+      "readme_us": 94.28,
+      "readme_cell": "~ 94.28 μs<br>(/C = —)<br>(/JS = 1.95x)",
+      "priority": "Élevée, non mesurée",
+      "finding": "Chaque bind conserve Value/Apply et RecordDict2. Worker saturé et retour natif pour le couple état/résultat : mécanisme général à explorer.",
+      "fresh_official_protocol_us": 86.475906
+    },
+    {
+      "case": "Lazy Evaluation",
+      "source": "src/Test/LazyEvaluation/LazyEvaluation.purs",
+      "group": "Go",
+      "readme_us": 231.11,
+      "readme_cell": "~ 231.11 μs<br>(/C = —)<br>(/JS = 0.02x)",
+      "priority": "Recherche",
+      "finding": "Worker strict déjà présent ; absence de chaîne de thunks. Réduction affine possible pour les boucles numériques, comme Polymorphism.",
+      "fresh_official_protocol_us": 229.410156
+    },
+    {
+      "case": "Array Processing",
+      "source": "src/Test/ArrayOps/ArrayOps.purs",
+      "group": "Go",
+      "readme_us": 7.8,
+      "readme_cell": "~ 7.80 μs<br>(/C = 156.06x)<br>(/JS = 1.06x)",
+      "priority": "Moyenne",
+      "finding": "range/filter/fold alternent tableaux natifs et Value, avec callbacks dynamiques. Même chantier de représentation que les WIP arrays ; petit coût absolu ici.",
+      "fresh_official_protocol_us": 7.63678
+    },
+    {
+      "case": "RowToList",
+      "source": "src/Test/RowToList/RowToList.purs",
+      "group": "Go",
+      "readme_us": 0.15,
+      "readme_cell": "~ 0.15 μs<br>(/C = —)<br>(/JS = 3.85x)",
+      "priority": "Faible absolu",
+      "finding": "Dictionnaires et closures autour de cinq champs connus. Évaluation partielle/inlining possible, mais seulement 0,15 µs au total.",
+      "fresh_official_protocol_us": 0.141146
+    },
+    {
+      "case": "Array Indexing",
+      "source": "src/Test/ArrayIndexing/ArrayIndexing.purs",
+      "group": "Go",
+      "readme_us": 4596.08,
+      "readme_cell": "~ 4596.08 μs<br>(/C = 0.70x)<br>(/JS = 0.18x)",
+      "priority": "Faible",
+      "finding": "8 388 608 lectures : environ 0,55 ns/lecture à la baseline. Les conversions hors intervalle sont vérifiées. Pas de gros défaut démontré."
+    },
+    {
+      "case": "JSON to Typed AST",
+      "source": "src/Test/JsonTypedAst/JsonTypedAst.purs",
+      "group": "Go",
+      "readme_us": 20204.83,
+      "readme_cell": "~ 20204.83 μs<br>(/C = 1.91x)<br>(/JS = 0.25x)",
+      "priority": "Élevée, gain non mesuré",
+      "finding": "Profil du chemin combiné : 29 901 260 B et 308 118 allocations/corpus. Échantillonnage des octets : index temporaire ~36 %, RecordDict2/3/4 ~20 %, table des types ~14 % en propre. Chemin texte direct déjà présent ; compacter les intermédiaires et produire les records natifs."
+    },
+    {
+      "case": "JSON Decoding",
+      "source": "src/Test/JsonDecoding/JsonDecoding.purs",
+      "group": "Go",
+      "readme_us": 2172.48,
+      "readme_cell": "~ 2172.48 μs<br>(/C = 3.30x)<br>(/JS = 0.23x)",
+      "priority": "Déjà corrigé",
+      "finding": "La régression précédente est corrigée : 2,172 ms, contre 2,241 ms historique. Six paires validées, chemin texte typé rétabli ; conserver la couverture de ce chemin."
+    },
+    {
+      "case": "array/map-10000",
+      "source": "src/Test/ArrayMap10000/ArrayMap10000.purs",
+      "group": "Go",
+      "readme_us": 166.81,
+      "readme_cell": "~ 166.81 μs<br>(/C = —)<br>(/JS = 1.37x)",
+      "priority": "Élevée, non mesurée",
+      "finding": "819 Ko/action et 5 allocations dans le probe : résultat boxé, conversions natif/Value et copie pour checksum ; callback Apply par élément.",
+      "fresh_official_protocol_us": 159.179031
+    },
+    {
+      "case": "array/filter-10000",
+      "source": "src/Test/ArrayFilter10000/ArrayFilter10000.purs",
+      "group": "Go",
+      "readme_us": 107.89,
+      "readme_cell": "~ 107.89 μs<br>(/C = —)<br>(/JS = 0.85x)",
+      "priority": "Moyenne",
+      "finding": "456 Ko et 17 allocations : croissance du buffer sans capacité et conversions. Préserver une évaluation du prédicat par élément.",
+      "fresh_official_protocol_us": 102.325844
+    },
+    {
+      "case": "array/foldl-sum-10000",
+      "source": "src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs",
+      "group": "Go",
+      "readme_us": 66.88,
+      "readme_cell": "~ 66.88 μs<br>(/C = —)<br>(/JS = 0.95x)",
+      "priority": "Élevée, non mesurée",
+      "finding": "Deux buffers int64/Value totalisent 327 680 octets. Lire la représentation existante et conserver un accumulateur scalaire natif.",
+      "fresh_official_protocol_us": 64.586426
+    },
+    {
+      "case": "array/sort-descending-10000",
+      "source": "src/Test/ArraySortDescending10000/ArraySortDescending10000.purs",
+      "group": "Go",
+      "readme_us": 620.04,
+      "readme_cell": "~ 620.04 μs<br>(/C = —)<br>(/JS = 1.10x)",
+      "priority": "Élevée, non mesurée",
+      "finding": "30 008 allocations et 2,36 MB malgré le chemin monotone. Spécialiser le comparateur connu et ses adaptateurs ; conserver stabilité et input immuable.",
+      "fresh_official_protocol_us": 591.713562
+    },
+    {
+      "case": "array/eq-neq-last-10000",
+      "source": "src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs",
+      "group": "Go",
+      "readme_us": 23.32,
+      "readme_cell": "~ 23.32 μs<br>(/C = —)<br>(/JS = 0.45x)",
+      "priority": "Moyenne",
+      "finding": "La boucle primitive existe. Les conversions autour des entrées allouent encore ; le probe et le protocole officiel ont des paramètres GC différents.",
+      "fresh_official_protocol_us": 21.89616
+    },
+    {
+      "case": "array/append-1000",
+      "source": "src/Test/ArrayAppend1000/ArrayAppend1000.purs",
+      "group": "Go",
+      "readme_us": 54.39,
+      "readme_cell": "~ 54.39 μs<br>(/C = —)<br>(/JS = 1.80x)",
+      "priority": "Moyenne",
+      "finding": "2 015 allocations/310 Ko : passerelle []interface{} et boxing. Garder une sortie fraîche lorsque les deux entrées sont non vides.",
+      "fresh_official_protocol_us": 51.549965
+    },
+    {
+      "case": "foldable/traverse-maybe-1000",
+      "source": "src/Test/TraverseMaybe1000/TraverseMaybe1000.purs",
+      "group": "Go",
+      "readme_us": 235.23,
+      "readme_cell": "~ 235.23 μs<br>(/C = —)<br>(/JS = 2.92x)",
+      "priority": "Gain mesuré",
+      "finding": "Noyau 217,81 → 12,24 µs (17,8×) ; 16 970 → 1 003 allocations. Boucle dédiée au Maybe standard, tous callbacks conservés.",
+      "fresh_official_protocol_us": 211.684906
+    },
+    {
+      "case": "foldable/traverse-maybe-fail-first-1000",
+      "source": "src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs",
+      "group": "Go",
+      "readme_us": 187.23,
+      "readme_cell": "~ 187.23 μs<br>(/C = —)<br>(/JS = 2.74x)",
+      "priority": "Gain mesuré",
+      "finding": "Noyau 188,22 → 11,49 µs (16,4×). Les 1 000 callbacks restent évalués en ordre, même après Nothing.",
+      "fresh_official_protocol_us": 171.397141
+    },
+    {
+      "case": "foldable/traverse-maybe-fail-last-1000",
+      "source": "src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs",
+      "group": "Go",
+      "readme_us": 186.12,
+      "readme_cell": "~ 186.12 μs<br>(/C = —)<br>(/JS = 2.74x)",
+      "priority": "Gain mesuré",
+      "finding": "Noyau 188,29 → 12,04 µs (15,6×). Résultat, ordre, input intact et exception tardive vérifiés.",
+      "fresh_official_protocol_us": 170.738281
+    },
+    {
+      "case": "string/cu-length-unicode-1000",
+      "source": "src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs",
+      "group": "Go",
+      "readme_us": 0.01,
+      "readme_cell": "~ 0.01 μs<br>(/C = —)<br>(/JS = 0.97x)",
+      "priority": "Déjà corrigé",
+      "finding": "Lecture de longueur UTF-16 en O(1) avec métadonnée immuable. La construction JoinWith avait augmenté de 47 % ; ne pas étendre ce cache sans mesurer lecture et construction.",
+      "fresh_official_protocol_us": 0.009652
+    },
+    {
+      "case": "string/cp-length-unicode-1000",
+      "source": "src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs",
+      "group": "Go",
+      "readme_us": 50.88,
+      "readme_cell": "~ 50.88 μs<br>(/C = —)<br>(/JS = 1.36x)",
+      "priority": "Gain mesuré",
+      "finding": "Action 71,83 → 7,40 µs (9,71×) avec CP.length seul ; ensemble CP 6,73 µs. Compter sans tableau : 4 017 → 0 allocations. Parité avec FFI existant sur Unicode/WTF-8/malformed.",
+      "fresh_official_protocol_us": 47.395348
+    },
+    {
+      "case": "string/indexOf-hit-10000",
+      "source": "src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs",
+      "group": "Go",
+      "readme_us": 0.41,
+      "readme_cell": "~ 0.41 μs<br>(/C = —)<br>(/JS = 2.15x)",
+      "priority": "Faible absolu",
+      "finding": "Recherche native et comptage UTF-16 du préfixe. Ancien gain déjà obtenu (2,56 → 0,41 µs) ; résidu petit.",
+      "fresh_official_protocol_us": 0.399378
+    },
+    {
+      "case": "string/indexOf-miss-10000",
+      "source": "src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs",
+      "group": "Go",
+      "readme_us": 2.44,
+      "readme_cell": "~ 2.44 μs<br>(/C = —)<br>(/JS = 0.04x)",
+      "priority": "Faible",
+      "finding": "Recherche native déjà très favorable face au JS. Aucun gain significatif du probe.",
+      "fresh_official_protocol_us": 2.339167
+    },
+    {
+      "case": "string/cp-take-unicode-1500",
+      "source": "src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs",
+      "group": "Go",
+      "readme_us": 59.22,
+      "readme_cell": "~ 59.22 μs<br>(/C = —)<br>(/JS = 1.31x)",
+      "priority": "Gain mesuré modéré",
+      "finding": "Action avec checksum 74,38 → 63,47 µs (1,17×). Scanner seulement le préfixe utile et améliorer toCodePointArray ; préserver normalisation malformed.",
+      "fresh_official_protocol_us": 56.368328
+    },
+    {
+      "case": "string/split-1000",
+      "source": "src/Test/StringSplit1000/StringSplit1000.purs",
+      "group": "Go",
+      "readme_us": 163.98,
+      "readme_cell": "~ 163.98 μs<br>(/C = —)<br>(/JS = 1.13x)",
+      "priority": "Gain mesuré modéré",
+      "finding": "Action avec tous checksums 204,74 → 180,16 µs (1,14×). Le coût ne se limite pas à strings.Split : conversions Unicode des 1 000 morceaux.",
+      "fresh_official_protocol_us": 154.329422
+    },
+    {
+      "case": "string/concat-1000",
+      "source": "src/Test/StringConcat1000/StringConcat1000.purs",
+      "group": "Go",
+      "readme_us": 125.61,
+      "readme_cell": "~ 125.61 μs<br>(/C = —)<br>(/JS = 2.63x)",
+      "priority": "Gain mesuré",
+      "finding": "Action avec checksum 176,04 → 82,13 µs (2,14×) via builder pour fold appendString canonique. Les primitives CP seules ne gagnent que 2 %.",
+      "fresh_official_protocol_us": 118.054039
+    },
+    {
+      "case": "record/set-small-1000",
+      "source": "src/Test/RecordSetSmall1000/RecordSetSmall1000.purs",
+      "group": "Go",
+      "readme_us": 0.53,
+      "readme_cell": "~ 0.53 μs<br>(/C = —)<br>(/JS = 0.22x)",
+      "priority": "Faible",
+      "finding": "Seulement 3 allocations fixes/64 octets pour 1 000 updates. Boucle native proche du plancher.",
+      "fresh_official_protocol_us": 0.508507
+    },
+    {
+      "case": "record/set-medium-1000",
+      "source": "src/Test/RecordSetMedium1000/RecordSetMedium1000.purs",
+      "group": "Go",
+      "readme_us": 6.44,
+      "readme_cell": "~ 6.44 μs<br>(/C = —)<br>(/JS = 1.42x)",
+      "priority": "Secondaire",
+      "finding": "3 allocations fixes/64 octets. Copies de struct 8 champs dans la boucle ; scalariser son état privé, sans muter un record source partagé.",
+      "fresh_official_protocol_us": 6.13442
+    },
+    {
+      "case": "record/set-large-1000",
+      "source": "src/Test/RecordSetLarge1000/RecordSetLarge1000.purs",
+      "group": "Go",
+      "readme_us": 9.97,
+      "readme_cell": "~ 9.97 μs<br>(/C = —)<br>(/JS = 1.42x)",
+      "priority": "Secondaire",
+      "finding": "Même mécanisme pour struct 16 champs. Gain possible mais coût absolu inférieur à 10 µs.",
+      "fresh_official_protocol_us": 9.798258
+    },
+    {
+      "case": "st/ref-write-10000",
+      "source": "src/Test/STRefWrite10000/STRefWrite10000.purs",
+      "group": "Go",
+      "readme_us": 290.97,
+      "readme_cell": "~ 290.97 μs<br>(/C = —)<br>(/JS = 0.63x)",
+      "priority": "Élevée, non mesurée",
+      "finding": "30 008 allocations/1,20 MB par action. Abaisser le corps local tailRecM dans la boucle et supprimer Step/thunks intermédiaires.",
+      "fresh_official_protocol_us": 260.686844
+    },
+    {
+      "case": "st/ref-modify-10000",
+      "source": "src/Test/STRefModify10000/STRefModify10000.purs",
+      "group": "Go",
+      "readme_us": 292.31,
+      "readme_cell": "~ 292.31 μs<br>(/C = —)<br>(/JS = 0.57x)",
+      "priority": "Élevée, non mesurée",
+      "finding": "Même 30 008 allocations/1,20 MB. Conserver l’appel et l’ordre du callback de modification.",
+      "fresh_official_protocol_us": 263.773438
+    },
+    {
+      "case": "effect/ref-write-10000",
+      "source": "src/Test/EffectRefWrite10000/EffectRefWrite10000.purs",
+      "group": "Go",
+      "readme_us": 404.81,
+      "readme_cell": "~ 404.81 μs<br>(/C = —)<br>(/JS = 2.60x)",
+      "priority": "Élevée, non mesurée",
+      "finding": "40 007 allocations/1,76 MB. Même chantier tailRecM/Effect ; conserver les mutex.",
+      "fresh_official_protocol_us": 380.528656
+    },
+    {
+      "case": "effect/ref-modify-10000",
+      "source": "src/Test/EffectRefModify10000/EffectRefModify10000.purs",
+      "group": "Go",
+      "readme_us": 539.51,
+      "readme_cell": "~ 539.51 μs<br>(/C = —)<br>(/JS = 2.55x)",
+      "priority": "Élevée, non mesurée",
+      "finding": "40 007 allocations/2,40 MB, adaptateur state/value inclus. Worker Effect natif possible ; usage local ne prouve pas absence de partage.",
+      "fresh_official_protocol_us": 492.761719
+    },
+    {
+      "case": "File I/O",
+      "source": "srx/Test/FileOps/FileOps.purs",
+      "group": "Extended Results",
+      "readme_us": 442703.25,
+      "readme_cell": "~ 442703.25 μs<br>(/C = —)<br>(/JS = 0.95x)",
+      "priority": "Faible pour gopurs",
+      "finding": "10 000 écritures/lectures de fichier, principalement système. Go proche du JS ; aucune optimisation compiler prioritaire démontrée.",
+      "fresh_official_protocol_us": 551794.667
+    },
+    {
+      "case": "STArray Operations",
+      "source": "srx/Test/STArray.purs",
+      "group": "Extended Results",
+      "readme_us": 0.54,
+      "readme_cell": "~ 0.54 μs<br>(/C = —)<br>(/JS = 0.59x)",
+      "priority": "Faible absolu",
+      "finding": "Création, pushAll de 10 éléments, pop et show : 0,54 µs. Passerelles ST encore présentes, mais très faible coût absolu.",
+      "fresh_official_protocol_us": 0.333
+    },
+    {
+      "case": "String Operations",
+      "source": "srx/Test/StringOps.purs",
+      "group": "Extended Results",
+      "readme_us": 507.08,
+      "readme_cell": "~ 507.08 μs<br>(/C = —)<br>(/JS = 1.98x)",
+      "priority": "Régression et gain mesurés",
+      "finding": "Ancien binaire 587,44 → actuel 919,80 µs dans le même harness : passage regexp standard à regexp2 et adaptateurs UTF-16/captures. Sur actuel, remplacement littéral + CP.take donnent 931,47 → 693,31 µs (1,34×), sans remplacer le moteur. 37 464 → 26 464 allocations.",
+      "fresh_official_protocol_us": 802.208
+    },
+    {
+      "case": "Aff Operations",
+      "source": "srx/Test/AffOperations.purs",
+      "group": "Extended Results",
+      "readme_us": 11009.25,
+      "readme_cell": "~ 11009.25 μs<br>(/C = —)<br>(/JS = 1.09x)",
+      "priority": "Plancher du test",
+      "finding": "Le test demande explicitement un délai de 10 ms. Son temps ~11 ms ne représente pas le débit Aff ; peu de gain mesurable sans changer le travail.",
+      "fresh_official_protocol_us": 10925.375
+    },
+    {
+      "case": "Parallelism",
+      "source": "srx/Test/Parallelism.purs",
+      "group": "Extended Results",
+      "readme_us": 1182150.08,
+      "readme_cell": "~ 1182150.08 μs<br>(/C = —)<br>(/JS = 0.08x)",
+      "priority": "Faible pour gopurs",
+      "finding": "10 fib(42) récursifs exécutés en parallèle. Noyau déjà direct int64/IntAdd/IntSub ; changer Fibonacci ou partager ses résultats changerait le travail. Écart Rust restant non attribué.",
+      "fresh_official_protocol_us": 990267.208
+    }
+  ],
+  "probes": {
+    "arrays": {
+      "path": "var/benchmark/go-opportunities-20261121/arrays-probes/summary.json",
+      "sha256": "a6c9b73eb33089da2352ca3e2ddb91c58d7616523190ab3eac2d2e6e0e773b32",
+      "results": {
+        "date": "2026-11-21",
+        "host": "Apple M4 Pro darwin/arm64",
+        "output": "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure-wip-included/output",
+        "flags": "go test -pgo=off, 3 repetitions, 100ms/benchmark",
+        "tests": "all callback-order/result/input checks passed; later panic after Nothing preserved",
+        "source_sha256": {
+          "purescript/Test_STRefWrite10000.go": "b776dcc28a308b5fae99051900ba0c31649255c04f534209ca8afa3eb99ef7ee",
+          "purescript/Test_ArraySortDescending10000.go": "68c8ebe4c665f36b2a168ad80871cf6106f072782767e0926a2a036c88dcb3e9",
+          "purescript/Test_RecordSetMedium1000.go": "0ad38f1fb330143f37fd59976cf939ce4c1796d240d4b741ae3be8797ec1d6fe",
+          "purescript/Test_EffectRefModify10000.go": "a595fbde3cfddb864157ff2b6fd61c860316a4a62c1e01eeef055939514edec0",
+          "purescript/Test_EffectRefWrite10000.go": "dac8e171fc7c09d6d4d8ed13b18c41c5fad7cec2a31d4888e93ff7dcb5d0335d",
+          "purescript/Test_ArrayFoldlSum10000.go": "043cc2d3bd52b55a3141810cd129ea25e8fa1590a9da09b5e7541312df5a6d6c",
+          "purescript/Test_STRefModify10000.go": "6a24db1f7e21f10117286bb8d9f1437469922c7871c7308cb744cbf41fd915ba",
+          "purescript/Test_RecordSetLarge1000.go": "cd4866f239e7e1d0c8a869dcd892a480ebed378b8d9ebb289badbdbcea196d7f",
+          "purescript/Test_RecordSetSmall1000.go": "339b83661e5ad2078c0ead692536974937bf78386dda314203dc7c1975eabf79",
+          "purescript/Test_ArrayMap10000.go": "87017b1ae0723f69f803bd5411bc6b9d62e89ede1f781e35fa3614a91ccc3e3a",
+          "purescript/Test_TraverseMaybeFailLast1000.go": "683f5d1e87062269e5b6179ad97ff010671757317e8bcc4b93788aba27b1fc56",
+          "purescript/Test_ArrayEqNeqLast10000.go": "2b21969321282d034de68c6e3689b852f1f1df79b1bd7535d84c935644836ca0",
+          "purescript/Test_ArrayAppend1000.go": "fa1642f2481df9c22e4b857826d48f7a49cb246112cb1c6dfc7ad701c2052f6b",
+          "purescript/Test_TraverseMaybeFailFirst1000.go": "308424bde249fb356d1f9c9cbb11f1194edac9c9a6e55742059023683cfec21e",
+          "purescript/Test_ArrayFilter10000.go": "73b98584d7d4ec86f4305333989359ce8dea5f58150b08085079570a7dcfb298",
+          "purescript/Test_TraverseMaybe1000.go": "016e09180aabbbed14e3f2d4c0df916bef12b9ccb39dd1ac73957ca5d75babcb"
+        },
+        "results": {
+          "AuditedActions/array-map": {
+            "ns": 185725.0,
+            "bytes": 819232,
+            "allocs": 5,
+            "samples": [
+              {
+                "ns": 185725.0,
+                "bytes": 819230,
+                "allocs": 5
+              },
+              {
+                "ns": 190764.0,
+                "bytes": 819235,
+                "allocs": 5
+              },
+              {
+                "ns": 177877.0,
+                "bytes": 819232,
+                "allocs": 5
+              }
+            ]
+          },
+          "AuditedActions/array-filter": {
+            "ns": 113294.0,
+            "bytes": 455898,
+            "allocs": 17,
+            "samples": [
+              {
+                "ns": 112122.0,
+                "bytes": 455898,
+                "allocs": 17
+              },
+              {
+                "ns": 113642.0,
+                "bytes": 455897,
+                "allocs": 17
+              },
+              {
+                "ns": 113294.0,
+                "bytes": 455898,
+                "allocs": 17
+              }
+            ]
+          },
+          "AuditedActions/array-fold": {
+            "ns": 70687.0,
+            "bytes": 327680,
+            "allocs": 2,
+            "samples": [
+              {
+                "ns": 70705.0,
+                "bytes": 327680,
+                "allocs": 2
+              },
+              {
+                "ns": 69975.0,
+                "bytes": 327680,
+                "allocs": 2
+              },
+              {
+                "ns": 70687.0,
+                "bytes": 327680,
+                "allocs": 2
+              }
+            ]
+          },
+          "AuditedActions/array-sort": {
+            "ns": 679059.0,
+            "bytes": 2358408,
+            "allocs": 30008,
+            "samples": [
+              {
+                "ns": 679059.0,
+                "bytes": 2358408,
+                "allocs": 30008
+              },
+              {
+                "ns": 689826.0,
+                "bytes": 2358406,
+                "allocs": 30008
+              },
+              {
+                "ns": 668750.0,
+                "bytes": 2358408,
+                "allocs": 30008
+              }
+            ]
+          },
+          "AuditedActions/array-eq": {
+            "ns": 51858.0,
+            "bytes": 491694,
+            "allocs": 10,
+            "samples": [
+              {
+                "ns": 51110.0,
+                "bytes": 491694,
+                "allocs": 10
+              },
+              {
+                "ns": 52055.0,
+                "bytes": 491695,
+                "allocs": 10
+              },
+              {
+                "ns": 51858.0,
+                "bytes": 491694,
+                "allocs": 10
+              }
+            ]
+          },
+          "AuditedActions/array-append": {
+            "ns": 58122.0,
+            "bytes": 310281,
+            "allocs": 2015,
+            "samples": [
+              {
+                "ns": 58317.0,
+                "bytes": 310281,
+                "allocs": 2015
+              },
+              {
+                "ns": 58122.0,
+                "bytes": 310280,
+                "allocs": 2015
+              },
+              {
+                "ns": 57993.0,
+                "bytes": 310281,
+                "allocs": 2015
+              }
+            ]
+          },
+          "AuditedActions/traverse-success": {
+            "ns": 229946.0,
+            "bytes": 979169,
+            "allocs": 16973,
+            "samples": [
+              {
+                "ns": 229306.0,
+                "bytes": 979169,
+                "allocs": 16973
+              },
+              {
+                "ns": 229946.0,
+                "bytes": 979169,
+                "allocs": 16973
+              },
+              {
+                "ns": 233464.0,
+                "bytes": 979169,
+                "allocs": 16973
+              }
+            ]
+          },
+          "AuditedActions/traverse-first": {
+            "ns": 186576.0,
+            "bytes": 758784,
+            "allocs": 14910,
+            "samples": [
+              {
+                "ns": 187220.0,
+                "bytes": 758784,
+                "allocs": 14910
+              },
+              {
+                "ns": 186576.0,
+                "bytes": 758784,
+                "allocs": 14910
+              },
+              {
+                "ns": 185817.0,
+                "bytes": 758784,
+                "allocs": 14910
+              }
+            ]
+          },
+          "AuditedActions/traverse-last": {
+            "ns": 184664.0,
+            "bytes": 758217,
+            "allocs": 14917,
+            "samples": [
+              {
+                "ns": 184664.0,
+                "bytes": 758217,
+                "allocs": 14917
+              },
+              {
+                "ns": 186312.0,
+                "bytes": 758216,
+                "allocs": 14917
+              },
+              {
+                "ns": 182697.0,
+                "bytes": 758217,
+                "allocs": 14917
+              }
+            ]
+          },
+          "AuditedActions/record-small": {
+            "ns": 496.0,
+            "bytes": 64,
+            "allocs": 3,
+            "samples": [
+              {
+                "ns": 495.9,
+                "bytes": 64,
+                "allocs": 3
+              },
+              {
+                "ns": 496.0,
+                "bytes": 64,
+                "allocs": 3
+              },
+              {
+                "ns": 496.8,
+                "bytes": 64,
+                "allocs": 3
+              }
+            ]
+          },
+          "AuditedActions/record-medium": {
+            "ns": 5426.0,
+            "bytes": 64,
+            "allocs": 3,
+            "samples": [
+              {
+                "ns": 5392.0,
+                "bytes": 64,
+                "allocs": 3
+              },
+              {
+                "ns": 5443.0,
+                "bytes": 64,
+                "allocs": 3
+              },
+              {
+                "ns": 5426.0,
+                "bytes": 64,
+                "allocs": 3
+              }
+            ]
+          },
+          "AuditedActions/record-large": {
+            "ns": 9483.0,
+            "bytes": 64,
+            "allocs": 3,
+            "samples": [
+              {
+                "ns": 9483.0,
+                "bytes": 64,
+                "allocs": 3
+              },
+              {
+                "ns": 9495.0,
+                "bytes": 64,
+                "allocs": 3
+              },
+              {
+                "ns": 9476.0,
+                "bytes": 64,
+                "allocs": 3
+              }
+            ]
+          },
+          "AuditedActions/st-write": {
+            "ns": 267860.0,
+            "bytes": 1200281,
+            "allocs": 30008,
+            "samples": [
+              {
+                "ns": 267860.0,
+                "bytes": 1200281,
+                "allocs": 30008
+              },
+              {
+                "ns": 270895.0,
+                "bytes": 1200282,
+                "allocs": 30008
+              },
+              {
+                "ns": 266650.0,
+                "bytes": 1200281,
+                "allocs": 30008
+              }
+            ]
+          },
+          "AuditedActions/st-modify": {
+            "ns": 269437.0,
+            "bytes": 1200265,
+            "allocs": 30008,
+            "samples": [
+              {
+                "ns": 269320.0,
+                "bytes": 1200265,
+                "allocs": 30008
+              },
+              {
+                "ns": 269437.0,
+                "bytes": 1200266,
+                "allocs": 30008
+              },
+              {
+                "ns": 273294.0,
+                "bytes": 1200265,
+                "allocs": 30008
+              }
+            ]
+          },
+          "AuditedActions/effect-write": {
+            "ns": 403883.0,
+            "bytes": 1760257,
+            "allocs": 40007,
+            "samples": [
+              {
+                "ns": 404343.0,
+                "bytes": 1760257,
+                "allocs": 40007
+              },
+              {
+                "ns": 403883.0,
+                "bytes": 1760257,
+                "allocs": 40007
+              },
+              {
+                "ns": 401865.0,
+                "bytes": 1760258,
+                "allocs": 40007
+              }
+            ]
+          },
+          "AuditedActions/effect-modify": {
+            "ns": 520025.0,
+            "bytes": 2400244,
+            "allocs": 40007,
+            "samples": [
+              {
+                "ns": 525035.0,
+                "bytes": 2400244,
+                "allocs": 40007
+              },
+              {
+                "ns": 520025.0,
+                "bytes": 2400246,
+                "allocs": 40007
+              },
+              {
+                "ns": 516270.0,
+                "bytes": 2400244,
+                "allocs": 40007
+              }
+            ]
+          },
+          "TraversePlans/success/generic": {
+            "ns": 217808.0,
+            "bytes": 921826,
+            "allocs": 16970,
+            "samples": [
+              {
+                "ns": 212472.0,
+                "bytes": 921825,
+                "allocs": 16970
+              },
+              {
+                "ns": 217808.0,
+                "bytes": 921826,
+                "allocs": 16970
+              },
+              {
+                "ns": 221945.0,
+                "bytes": 921826,
+                "allocs": 16970
+              }
+            ]
+          },
+          "TraversePlans/success/linear-preserve-callbacks": {
+            "ns": 12240.0,
+            "bytes": 56632,
+            "allocs": 1003,
+            "samples": [
+              {
+                "ns": 12240.0,
+                "bytes": 56632,
+                "allocs": 1003
+              },
+              {
+                "ns": 12092.0,
+                "bytes": 56632,
+                "allocs": 1003
+              },
+              {
+                "ns": 12261.0,
+                "bytes": 56632,
+                "allocs": 1003
+              }
+            ]
+          },
+          "TraversePlans/first/generic": {
+            "ns": 188223.0,
+            "bytes": 758712,
+            "allocs": 14907,
+            "samples": [
+              {
+                "ns": 189801.0,
+                "bytes": 758713,
+                "allocs": 14907
+              },
+              {
+                "ns": 188223.0,
+                "bytes": 758712,
+                "allocs": 14907
+              },
+              {
+                "ns": 187987.0,
+                "bytes": 758712,
+                "allocs": 14907
+              }
+            ]
+          },
+          "TraversePlans/first/linear-preserve-callbacks": {
+            "ns": 11486.0,
+            "bytes": 56544,
+            "allocs": 1000,
+            "samples": [
+              {
+                "ns": 11486.0,
+                "bytes": 56544,
+                "allocs": 1000
+              },
+              {
+                "ns": 11495.0,
+                "bytes": 56544,
+                "allocs": 1000
+              },
+              {
+                "ns": 11374.0,
+                "bytes": 56544,
+                "allocs": 1000
+              }
+            ]
+          },
+          "TraversePlans/last/generic": {
+            "ns": 188286.0,
+            "bytes": 758145,
+            "allocs": 14914,
+            "samples": [
+              {
+                "ns": 188286.0,
+                "bytes": 758145,
+                "allocs": 14914
+              },
+              {
+                "ns": 186550.0,
+                "bytes": 758145,
+                "allocs": 14914
+              },
+              {
+                "ns": 189396.0,
+                "bytes": 758145,
+                "allocs": 14914
+              }
+            ]
+          },
+          "TraversePlans/last/linear-preserve-callbacks": {
+            "ns": 12039.0,
+            "bytes": 56544,
+            "allocs": 1000,
+            "samples": [
+              {
+                "ns": 12039.0,
+                "bytes": 56544,
+                "allocs": 1000
+              },
+              {
+                "ns": 12142.0,
+                "bytes": 56544,
+                "allocs": 1000
+              },
+              {
+                "ns": 11906.0,
+                "bytes": 56544,
+                "allocs": 1000
+              }
+            ]
+          }
+        },
+        "scope": "Only scratch Go overlay; production and benchmark sources unchanged. Official action allocations include checksum and opaque calls; traversal variants measure only the traversal kernel with identical callbacks.",
+        "coverage": [
+          {
+            "label": "array/map-10000",
+            "archive_readme_us": 166.809891,
+            "measured_us": 185.725,
+            "allocations": 5,
+            "bytes": 819232,
+            "finding": "5 allocations, 819232 bytes: boxed map output plus native/boxed conversion roundtrip and checksum input copy; callback remains Apply per element."
+          },
+          {
+            "label": "array/filter-10000",
+            "archive_readme_us": 107.885414,
+            "measured_us": 113.294,
+            "allocations": 17,
+            "bytes": 455898,
+            "finding": "17 allocations, 455898 bytes: native input copy, zero-capacity output growth, boxed output and checksum copy. Preserve predicate evaluation exactly once."
+          },
+          {
+            "label": "array/foldl-sum-10000",
+            "archive_readme_us": 66.87923,
+            "measured_us": 70.687,
+            "allocations": 2,
+            "bytes": 327680,
+            "finding": "2 allocations, 327680 bytes exactly match Int64+Value conversion buffers. Direct read-only boxed source iteration plus native scalar accumulator is the general target."
+          },
+          {
+            "label": "array/sort-descending-10000",
+            "archive_readme_us": 620.0365,
+            "measured_us": 679.059,
+            "allocations": 30008,
+            "bytes": 2358408,
+            "finding": "30008 allocations: monotone fast path still uses dynamic comparator/fromOrdering bridges. Need profile before attributing individual allocation sites; stability and immutable input remain required."
+          },
+          {
+            "label": "array/eq-neq-last-10000",
+            "archive_readme_us": 23.321371,
+            "measured_us": 51.858,
+            "allocations": 10,
+            "bytes": 491694,
+            "finding": "Primitive equality loop exists; remaining allocations surround opaque input representation conversions. New harness median differs substantially from README and needs official-baseline reconciliation."
+          },
+          {
+            "label": "array/append-1000",
+            "archive_readme_us": 54.394531,
+            "measured_us": 58.122,
+            "allocations": 2015,
+            "bytes": 310281,
+            "finding": "2015 allocations: legacy []interface{} concat bridge converts/boxes input elements; retain fresh output semantics when both nonempty."
+          },
+          {
+            "label": "foldable/traverse-maybe-1000",
+            "archive_readme_us": 235.233734,
+            "measured_us": 229.946,
+            "allocations": 16973,
+            "bytes": 979169,
+            "finding": "Confirmed linear standard-Maybe kernel preserves every callback/order and cuts overhead; actual Just callbacks still allocate."
+          },
+          {
+            "label": "foldable/traverse-maybe-fail-first-1000",
+            "archive_readme_us": 187.229172,
+            "measured_us": 186.576,
+            "allocations": 14910,
+            "bytes": 758784,
+            "finding": "Confirmed linear kernel does not short-circuit callback execution after first Nothing; later callback panic remains observable."
+          },
+          {
+            "label": "foldable/traverse-maybe-fail-last-1000",
+            "archive_readme_us": 186.120453,
+            "measured_us": 184.664,
+            "allocations": 14917,
+            "bytes": 758217,
+            "finding": "Confirmed linear kernel produces same Nothing while preserving all callback execution and order."
+          },
+          {
+            "label": "record/set-small-1000",
+            "archive_readme_us": 0.526703,
+            "measured_us": 0.496,
+            "allocations": 3,
+            "bytes": 64,
+            "finding": "Only 3 fixed allocations/64 bytes; 1000 native updates are close to scalar loop cost. Low priority."
+          },
+          {
+            "label": "record/set-medium-1000",
+            "archive_readme_us": 6.438843,
+            "measured_us": 5.426,
+            "allocations": 3,
+            "bytes": 64,
+            "finding": "Only 3 fixed allocations/64 bytes; copies of an 8-field by-value struct per loop dominate candidate work. Scalarize private TCO state; do not mutate input record."
+          },
+          {
+            "label": "record/set-large-1000",
+            "archive_readme_us": 9.970581,
+            "measured_us": 9.483,
+            "allocations": 3,
+            "bytes": 64,
+            "finding": "Only 3 fixed allocations/64 bytes; copies of a 16-field by-value struct per loop. Same private-state scalarization opportunity."
+          },
+          {
+            "label": "st/ref-write-10000",
+            "archive_readme_us": 290.9655,
+            "measured_us": 267.86,
+            "allocations": 30008,
+            "bytes": 1200281,
+            "finding": "30008 allocations/1.2MB: Effect-style loop still invokes boxed step and thunk and creates Step constructors. Inline actual local step body using TAST, retaining ST semantics."
+          },
+          {
+            "label": "st/ref-modify-10000",
+            "archive_readme_us": 292.313781,
+            "measured_us": 269.437,
+            "allocations": 30008,
+            "bytes": 1200265,
+            "finding": "30008 allocations/1.2MB: same loop/Step overhead; preserve modify callback invocation and order."
+          },
+          {
+            "label": "effect/ref-write-10000",
+            "archive_readme_us": 404.8125,
+            "measured_us": 403.883,
+            "allocations": 40007,
+            "bytes": 1760257,
+            "finding": "40007 allocations/1.76MB: loop/Step/effect-thunk overhead. Keep each existing mutex-protected update; no lock elision from usage annotations."
+          },
+          {
+            "label": "effect/ref-modify-10000",
+            "archive_readme_us": 539.5065,
+            "measured_us": 520.025,
+            "allocations": 40007,
+            "bytes": 2400244,
+            "finding": "40007 allocations/2.40MB: loop/Step/effect-thunk overhead plus state/value record adapter. Keep locking and callback semantics; specialized native effect worker requires proof from actual body."
+          }
+        ],
+        "comparison_caution": "Go testing probe medians measure the original generated actions and match values, but are not a replacement for the published three-process benchmark protocol. Equality timing notably differs; no standalone regression conclusion."
+      }
+    },
+    "strings": {
+      "path": "var/benchmark/go-opportunities-20261121/strings-probes/results.json",
+      "sha256": "6c06ad8608432039304464c60d3946abf20df2a0a130fbb018d46bb2000266fa",
+      "results": {
+        "protocol": {
+          "GOGC": 100,
+          "GOMAXPROCS": 1,
+          "processes": 3,
+          "benchtime": "100ms",
+          "fixture_preparation_timed": false,
+          "original_checksums_timed": true
+        },
+        "binary_sha256": {
+          "extended-baseline.test": "de3cdd922b4e847d7f2d7189ce296d249cf6c4f2b798a4b9b85e055a59b4407f",
+          "extended-all_cp.test": "afaae01a5d3d109c1d08c3c95af477b7587b64dcc510ef4207f303095c02ccfc",
+          "core-concat_builder.test": "d24ab21de80694e2a2146cfd60aefc0ee59ba4f6369185839ee16f2652ef8920",
+          "core-length.test": "4dd8a452bdcf0b92fe93bc832b70ebc3f72456f936e7e352bbc1db9c1c2f4c69",
+          "core-baseline.test": "634373294988c8a48550d96b1c7eeec7ff9a72a9d1ec3d76b04ea74c220f4f1a",
+          "core-all_cp.test": "a8336cf9c4768bc35ba544191a51586199f2cc3233485f9782b8f6e1a019b19a"
+        },
+        "samples": [
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/CU_length",
+            "n": 13974680,
+            "ns": 7.837,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/CP_length",
+            "n": 1752,
+            "ns": 71766.0,
+            "bytes": 285456.0,
+            "allocations": 4017.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/Index_hit",
+            "n": 370622,
+            "ns": 356.9,
+            "bytes": 144.0,
+            "allocations": 6.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/Index_miss",
+            "n": 51198,
+            "ns": 2331.0,
+            "bytes": 88.0,
+            "allocations": 4.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/CP_take_checksum",
+            "n": 1653,
+            "ns": 73676.0,
+            "bytes": 237384.0,
+            "allocations": 3547.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/Split_checksum",
+            "n": 580,
+            "ns": 204736.0,
+            "bytes": 433024.0,
+            "allocations": 13005.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/Concat_checksum",
+            "n": 674,
+            "ns": 176036.0,
+            "bytes": 1352672.0,
+            "allocations": 6018.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/CU_length",
+            "n": 16140783,
+            "ns": 7.763,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/CP_length",
+            "n": 18163,
+            "ns": 6761.0,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/Index_hit",
+            "n": 339258,
+            "ns": 351.1,
+            "bytes": 144.0,
+            "allocations": 6.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/Index_miss",
+            "n": 51944,
+            "ns": 2333.0,
+            "bytes": 88.0,
+            "allocations": 4.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/CP_take_checksum",
+            "n": 1862,
+            "ns": 63469.0,
+            "bytes": 158048.0,
+            "allocations": 3510.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/Split_checksum",
+            "n": 661,
+            "ns": 179939.0,
+            "bytes": 385024.0,
+            "allocations": 11005.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/Concat_checksum",
+            "n": 694,
+            "ns": 172516.0,
+            "bytes": 1315175.0,
+            "allocations": 6006.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/CU_length",
+            "n": 16146844,
+            "ns": 7.78,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/CP_length",
+            "n": 1737,
+            "ns": 72601.0,
+            "bytes": 285456.0,
+            "allocations": 4017.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/Index_hit",
+            "n": 375669,
+            "ns": 365.3,
+            "bytes": 144.0,
+            "allocations": 6.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/Index_miss",
+            "n": 50414,
+            "ns": 2315.0,
+            "bytes": 88.0,
+            "allocations": 4.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/CP_take_checksum",
+            "n": 1641,
+            "ns": 76535.0,
+            "bytes": 237384.0,
+            "allocations": 3547.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/Split_checksum",
+            "n": 588,
+            "ns": 205319.0,
+            "bytes": 433024.0,
+            "allocations": 13005.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/Concat_checksum",
+            "n": 1440,
+            "ns": 82344.0,
+            "bytes": 278176.0,
+            "allocations": 4029.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/CU_length",
+            "n": 15925680,
+            "ns": 7.73,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/CP_length",
+            "n": 16084,
+            "ns": 7395.0,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/Index_hit",
+            "n": 368743,
+            "ns": 351.3,
+            "bytes": 144.0,
+            "allocations": 6.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/Index_miss",
+            "n": 50852,
+            "ns": 2320.0,
+            "bytes": 88.0,
+            "allocations": 4.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/CP_take_checksum",
+            "n": 1628,
+            "ns": 74343.0,
+            "bytes": 237384.0,
+            "allocations": 3547.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/Split_checksum",
+            "n": 589,
+            "ns": 204593.0,
+            "bytes": 433024.0,
+            "allocations": 13005.0
+          },
+          {
+            "process": 1,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/Concat_checksum",
+            "n": 674,
+            "ns": 178848.0,
+            "bytes": 1352672.0,
+            "allocations": 6018.0
+          },
+          {
+            "process": 1,
+            "suite": "extended",
+            "variant": "baseline",
+            "name": "BenchmarkAction",
+            "n": 200,
+            "ns": 598133.0,
+            "bytes": 801923.0,
+            "allocations": 36486.0
+          },
+          {
+            "process": 1,
+            "suite": "extended",
+            "variant": "all_cp",
+            "name": "BenchmarkAction",
+            "n": 254,
+            "ns": 473062.0,
+            "bytes": 523938.0,
+            "allocations": 29485.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/CU_length",
+            "n": 15919164,
+            "ns": 7.947,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/CP_length",
+            "n": 1668,
+            "ns": 72423.0,
+            "bytes": 285456.0,
+            "allocations": 4017.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/Index_hit",
+            "n": 376420,
+            "ns": 359.3,
+            "bytes": 144.0,
+            "allocations": 6.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/Index_miss",
+            "n": 50971,
+            "ns": 2337.0,
+            "bytes": 88.0,
+            "allocations": 4.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/CP_take_checksum",
+            "n": 1657,
+            "ns": 75644.0,
+            "bytes": 237384.0,
+            "allocations": 3547.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/Split_checksum",
+            "n": 597,
+            "ns": 206635.0,
+            "bytes": 433024.0,
+            "allocations": 13005.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/Concat_checksum",
+            "n": 666,
+            "ns": 178738.0,
+            "bytes": 1352672.0,
+            "allocations": 6018.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/CU_length",
+            "n": 15322814,
+            "ns": 7.755,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/CP_length",
+            "n": 1629,
+            "ns": 72858.0,
+            "bytes": 285456.0,
+            "allocations": 4017.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/Index_hit",
+            "n": 351141,
+            "ns": 360.8,
+            "bytes": 144.0,
+            "allocations": 6.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/Index_miss",
+            "n": 51938,
+            "ns": 2324.0,
+            "bytes": 88.0,
+            "allocations": 4.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/CP_take_checksum",
+            "n": 1647,
+            "ns": 76429.0,
+            "bytes": 237384.0,
+            "allocations": 3547.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/Split_checksum",
+            "n": 574,
+            "ns": 207882.0,
+            "bytes": 433024.0,
+            "allocations": 13005.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/Concat_checksum",
+            "n": 1428,
+            "ns": 82127.0,
+            "bytes": 278176.0,
+            "allocations": 4029.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/CU_length",
+            "n": 15618560,
+            "ns": 7.651,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/CP_length",
+            "n": 15462,
+            "ns": 7646.0,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/Index_hit",
+            "n": 365416,
+            "ns": 353.8,
+            "bytes": 144.0,
+            "allocations": 6.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/Index_miss",
+            "n": 51727,
+            "ns": 2328.0,
+            "bytes": 88.0,
+            "allocations": 4.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/CP_take_checksum",
+            "n": 1632,
+            "ns": 74639.0,
+            "bytes": 237384.0,
+            "allocations": 3547.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/Split_checksum",
+            "n": 582,
+            "ns": 204753.0,
+            "bytes": 433024.0,
+            "allocations": 13005.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/Concat_checksum",
+            "n": 673,
+            "ns": 180915.0,
+            "bytes": 1352672.0,
+            "allocations": 6018.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/CU_length",
+            "n": 15517827,
+            "ns": 7.866,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/CP_length",
+            "n": 17485,
+            "ns": 6729.0,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/Index_hit",
+            "n": 359263,
+            "ns": 379.1,
+            "bytes": 144.0,
+            "allocations": 6.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/Index_miss",
+            "n": 52117,
+            "ns": 2329.0,
+            "bytes": 88.0,
+            "allocations": 4.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/CP_take_checksum",
+            "n": 2004,
+            "ns": 63278.0,
+            "bytes": 158048.0,
+            "allocations": 3510.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/Split_checksum",
+            "n": 666,
+            "ns": 181696.0,
+            "bytes": 385024.0,
+            "allocations": 11005.0
+          },
+          {
+            "process": 2,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/Concat_checksum",
+            "n": 667,
+            "ns": 173427.0,
+            "bytes": 1315175.0,
+            "allocations": 6006.0
+          },
+          {
+            "process": 2,
+            "suite": "extended",
+            "variant": "baseline",
+            "name": "BenchmarkAction",
+            "n": 200,
+            "ns": 602704.0,
+            "bytes": 801923.0,
+            "allocations": 36486.0
+          },
+          {
+            "process": 2,
+            "suite": "extended",
+            "variant": "all_cp",
+            "name": "BenchmarkAction",
+            "n": 262,
+            "ns": 472738.0,
+            "bytes": 523938.0,
+            "allocations": 29485.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/CU_length",
+            "n": 15396871,
+            "ns": 8.024,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/CP_length",
+            "n": 1705,
+            "ns": 71826.0,
+            "bytes": 285456.0,
+            "allocations": 4017.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/Index_hit",
+            "n": 372790,
+            "ns": 358.6,
+            "bytes": 144.0,
+            "allocations": 6.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/Index_miss",
+            "n": 51514,
+            "ns": 2337.0,
+            "bytes": 88.0,
+            "allocations": 4.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/CP_take_checksum",
+            "n": 1651,
+            "ns": 74380.0,
+            "bytes": 237384.0,
+            "allocations": 3547.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/Split_checksum",
+            "n": 595,
+            "ns": 203162.0,
+            "bytes": 433024.0,
+            "allocations": 13005.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "baseline",
+            "name": "BenchmarkActions/Concat_checksum",
+            "n": 679,
+            "ns": 175259.0,
+            "bytes": 1352672.0,
+            "allocations": 6018.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/CU_length",
+            "n": 15545216,
+            "ns": 7.747,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/CP_length",
+            "n": 16507,
+            "ns": 7285.0,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/Index_hit",
+            "n": 368088,
+            "ns": 348.7,
+            "bytes": 144.0,
+            "allocations": 6.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/Index_miss",
+            "n": 52171,
+            "ns": 2338.0,
+            "bytes": 88.0,
+            "allocations": 4.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/CP_take_checksum",
+            "n": 1639,
+            "ns": 75599.0,
+            "bytes": 237384.0,
+            "allocations": 3547.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/Split_checksum",
+            "n": 583,
+            "ns": 205656.0,
+            "bytes": 433024.0,
+            "allocations": 13005.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "length",
+            "name": "BenchmarkActions/Concat_checksum",
+            "n": 670,
+            "ns": 178689.0,
+            "bytes": 1352672.0,
+            "allocations": 6018.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/CU_length",
+            "n": 15171229,
+            "ns": 7.825,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/CP_length",
+            "n": 17499,
+            "ns": 6567.0,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/Index_hit",
+            "n": 359671,
+            "ns": 354.2,
+            "bytes": 144.0,
+            "allocations": 6.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/Index_miss",
+            "n": 51482,
+            "ns": 2327.0,
+            "bytes": 88.0,
+            "allocations": 4.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/CP_take_checksum",
+            "n": 1959,
+            "ns": 63992.0,
+            "bytes": 158048.0,
+            "allocations": 3510.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/Split_checksum",
+            "n": 662,
+            "ns": 180161.0,
+            "bytes": 385024.0,
+            "allocations": 11005.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "all_cp",
+            "name": "BenchmarkActions/Concat_checksum",
+            "n": 700,
+            "ns": 171566.0,
+            "bytes": 1315175.0,
+            "allocations": 6006.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/CU_length",
+            "n": 15830001,
+            "ns": 7.827,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/CP_length",
+            "n": 1658,
+            "ns": 75068.0,
+            "bytes": 285456.0,
+            "allocations": 4017.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/Index_hit",
+            "n": 349158,
+            "ns": 363.2,
+            "bytes": 144.0,
+            "allocations": 6.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/Index_miss",
+            "n": 51918,
+            "ns": 2349.0,
+            "bytes": 88.0,
+            "allocations": 4.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/CP_take_checksum",
+            "n": 1621,
+            "ns": 77493.0,
+            "bytes": 237384.0,
+            "allocations": 3547.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/Split_checksum",
+            "n": 589,
+            "ns": 204199.0,
+            "bytes": 433024.0,
+            "allocations": 13005.0
+          },
+          {
+            "process": 3,
+            "suite": "core",
+            "variant": "concat_builder",
+            "name": "BenchmarkActions/Concat_checksum",
+            "n": 1500,
+            "ns": 81078.0,
+            "bytes": 278176.0,
+            "allocations": 4029.0
+          },
+          {
+            "process": 3,
+            "suite": "extended",
+            "variant": "baseline",
+            "name": "BenchmarkAction",
+            "n": 202,
+            "ns": 606953.0,
+            "bytes": 801924.0,
+            "allocations": 36486.0
+          },
+          {
+            "process": 3,
+            "suite": "extended",
+            "variant": "all_cp",
+            "name": "BenchmarkAction",
+            "n": 258,
+            "ns": 473683.0,
+            "bytes": 523938.0,
+            "allocations": 29485.0
+          }
+        ],
+        "medians": {
+          "core/baseline/BenchmarkActions/CU_length": {
+            "ns": 7.947,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          "core/baseline/BenchmarkActions/CP_length": {
+            "ns": 71826.0,
+            "bytes": 285456.0,
+            "allocations": 4017.0
+          },
+          "core/baseline/BenchmarkActions/Index_hit": {
+            "ns": 358.6,
+            "bytes": 144.0,
+            "allocations": 6.0
+          },
+          "core/baseline/BenchmarkActions/Index_miss": {
+            "ns": 2337.0,
+            "bytes": 88.0,
+            "allocations": 4.0
+          },
+          "core/baseline/BenchmarkActions/CP_take_checksum": {
+            "ns": 74380.0,
+            "bytes": 237384.0,
+            "allocations": 3547.0
+          },
+          "core/baseline/BenchmarkActions/Split_checksum": {
+            "ns": 204736.0,
+            "bytes": 433024.0,
+            "allocations": 13005.0
+          },
+          "core/baseline/BenchmarkActions/Concat_checksum": {
+            "ns": 176036.0,
+            "bytes": 1352672.0,
+            "allocations": 6018.0
+          },
+          "core/all_cp/BenchmarkActions/CU_length": {
+            "ns": 7.825,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          "core/all_cp/BenchmarkActions/CP_length": {
+            "ns": 6729.0,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          "core/all_cp/BenchmarkActions/Index_hit": {
+            "ns": 354.2,
+            "bytes": 144.0,
+            "allocations": 6.0
+          },
+          "core/all_cp/BenchmarkActions/Index_miss": {
+            "ns": 2329.0,
+            "bytes": 88.0,
+            "allocations": 4.0
+          },
+          "core/all_cp/BenchmarkActions/CP_take_checksum": {
+            "ns": 63469.0,
+            "bytes": 158048.0,
+            "allocations": 3510.0
+          },
+          "core/all_cp/BenchmarkActions/Split_checksum": {
+            "ns": 180161.0,
+            "bytes": 385024.0,
+            "allocations": 11005.0
+          },
+          "core/all_cp/BenchmarkActions/Concat_checksum": {
+            "ns": 172516.0,
+            "bytes": 1315175.0,
+            "allocations": 6006.0
+          },
+          "core/concat_builder/BenchmarkActions/CU_length": {
+            "ns": 7.78,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          "core/concat_builder/BenchmarkActions/CP_length": {
+            "ns": 72858.0,
+            "bytes": 285456.0,
+            "allocations": 4017.0
+          },
+          "core/concat_builder/BenchmarkActions/Index_hit": {
+            "ns": 363.2,
+            "bytes": 144.0,
+            "allocations": 6.0
+          },
+          "core/concat_builder/BenchmarkActions/Index_miss": {
+            "ns": 2324.0,
+            "bytes": 88.0,
+            "allocations": 4.0
+          },
+          "core/concat_builder/BenchmarkActions/CP_take_checksum": {
+            "ns": 76535.0,
+            "bytes": 237384.0,
+            "allocations": 3547.0
+          },
+          "core/concat_builder/BenchmarkActions/Split_checksum": {
+            "ns": 205319.0,
+            "bytes": 433024.0,
+            "allocations": 13005.0
+          },
+          "core/concat_builder/BenchmarkActions/Concat_checksum": {
+            "ns": 82127.0,
+            "bytes": 278176.0,
+            "allocations": 4029.0
+          },
+          "core/length/BenchmarkActions/CU_length": {
+            "ns": 7.73,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          "core/length/BenchmarkActions/CP_length": {
+            "ns": 7395.0,
+            "bytes": 0.0,
+            "allocations": 0.0
+          },
+          "core/length/BenchmarkActions/Index_hit": {
+            "ns": 351.3,
+            "bytes": 144.0,
+            "allocations": 6.0
+          },
+          "core/length/BenchmarkActions/Index_miss": {
+            "ns": 2328.0,
+            "bytes": 88.0,
+            "allocations": 4.0
+          },
+          "core/length/BenchmarkActions/CP_take_checksum": {
+            "ns": 74639.0,
+            "bytes": 237384.0,
+            "allocations": 3547.0
+          },
+          "core/length/BenchmarkActions/Split_checksum": {
+            "ns": 204753.0,
+            "bytes": 433024.0,
+            "allocations": 13005.0
+          },
+          "core/length/BenchmarkActions/Concat_checksum": {
+            "ns": 178848.0,
+            "bytes": 1352672.0,
+            "allocations": 6018.0
+          },
+          "extended/baseline/BenchmarkAction": {
+            "ns": 602704.0,
+            "bytes": 801923.0,
+            "allocations": 36486.0
+          },
+          "extended/all_cp/BenchmarkAction": {
+            "ns": 473062.0,
+            "bytes": 523938.0,
+            "allocations": 29485.0
+          }
+        }
+      }
+    },
+    "core": {
+      "path": "var/benchmark/go-opportunities-20261121/core-probes/summary.json",
+      "sha256": "07c26a7140af17be30db96fc4b4007483225794ab836e49ede2a0b935593e1bd",
+      "results": {
+        "protocol": {
+          "process_pairs": 3,
+          "pair_order": "baseline,current / current,baseline / baseline,current",
+          "warmup_acts": 2,
+          "samples_per_process": 5,
+          "GC_before_samples": true,
+          "GOMAXPROCS": 1,
+          "GOGC": 100,
+          "timing": "whole act plus atomic result sink, MemStats outside timing",
+          "paired_cells": "median of 3 process minima",
+          "other_act_cells": "one process minimum, diagnostic only",
+          "source": "preserved generated output from prior README campaign"
+        },
+        "verification": {
+          "verified_cases": 12563
+        },
+        "paired": {
+          "ListOps": {
+            "ListOps-kernel": {
+              "us_per_act": 19.708984375,
+              "allocated_bytes_per_act": 54048,
+              "allocations_per_act": 1805
+            },
+            "ListOps-native-fold": {
+              "us_per_act": 11.3980712890625,
+              "allocated_bytes_per_act": 32520,
+              "allocations_per_act": 1357
+            },
+            "time_ratio": 1.7291508251850107
+          },
+          "RBTree": {
+            "RBTree": {
+              "us_per_act": 9714.041,
+              "allocated_bytes_per_act": 3200064,
+              "allocations_per_act": 100003
+            },
+            "RBTree-native": {
+              "us_per_act": 8530.584,
+              "allocated_bytes_per_act": 3200000,
+              "allocations_per_act": 100000
+            },
+            "time_ratio": 1.1387310646023765
+          }
+        },
+        "acts": {
+          "AstTree": {
+            "us_per_act": 0.42072549438476564,
+            "allocated_bytes_per_act": 1760,
+            "allocations_per_act": 46
+          },
+          "Fib": {
+            "us_per_act": 0.19313557434082032,
+            "allocated_bytes_per_act": 64,
+            "allocations_per_act": 3
+          },
+          "ListOps": {
+            "us_per_act": 19.5137529296875,
+            "allocated_bytes_per_act": 54112,
+            "allocations_per_act": 1808
+          },
+          "TCO": {
+            "us_per_act": 57.8885078125,
+            "allocated_bytes_per_act": 64,
+            "allocations_per_act": 3
+          },
+          "Records": {
+            "us_per_act": 7.9332275390625,
+            "allocated_bytes_per_act": 64,
+            "allocations_per_act": 3
+          },
+          "Ackermann": {
+            "us_per_act": 15.9723310546875,
+            "allocated_bytes_per_act": 64,
+            "allocations_per_act": 3
+          },
+          "Church": {
+            "us_per_act": 212.302734375,
+            "allocated_bytes_per_act": 5344,
+            "allocations_per_act": 115
+          },
+          "Primes": {
+            "us_per_act": 101.04134375,
+            "allocated_bytes_per_act": 260480,
+            "allocations_per_act": 10919
+          },
+          "RBTree": {
+            "us_per_act": 9816.792,
+            "allocated_bytes_per_act": 3200064,
+            "allocations_per_act": 100003
+          },
+          "Polymorphism": {
+            "us_per_act": 2219.171875,
+            "allocated_bytes_per_act": 112,
+            "allocations_per_act": 6
+          },
+          "StateMonad": {
+            "us_per_act": 104.050453125,
+            "allocated_bytes_per_act": 385664,
+            "allocations_per_act": 7223
+          },
+          "LazyEvaluation": {
+            "us_per_act": 229.449875,
+            "allocated_bytes_per_act": 64,
+            "allocations_per_act": 3
+          },
+          "ArrayOps": {
+            "us_per_act": 8.401123046875,
+            "allocated_bytes_per_act": 57240,
+            "allocations_per_act": 15
+          },
+          "RowToList": {
+            "us_per_act": 0.16670098876953124,
+            "allocated_bytes_per_act": 384,
+            "allocations_per_act": 13
+          }
+        },
+        "commands": [
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--verify"
+            ],
+            "started_unix": 1795294818.763061,
+            "wall_seconds": 0.47566699981689453,
+            "output": "verification.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "ListOps-kernel"
+            ],
+            "started_unix": 1795294819.2387688,
+            "wall_seconds": 0.11795830726623535,
+            "output": "ListOps-pair0-ListOps-kernel.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "ListOps-native-fold"
+            ],
+            "started_unix": 1795294819.356761,
+            "wall_seconds": 0.0655980110168457,
+            "output": "ListOps-pair0-ListOps-native-fold.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "ListOps-native-fold"
+            ],
+            "started_unix": 1795294819.422389,
+            "wall_seconds": 0.06548285484313965,
+            "output": "ListOps-pair1-ListOps-native-fold.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "ListOps-kernel"
+            ],
+            "started_unix": 1795294819.487904,
+            "wall_seconds": 0.10802602767944336,
+            "output": "ListOps-pair1-ListOps-kernel.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "ListOps-kernel"
+            ],
+            "started_unix": 1795294819.595959,
+            "wall_seconds": 0.10745501518249512,
+            "output": "ListOps-pair2-ListOps-kernel.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "ListOps-native-fold"
+            ],
+            "started_unix": 1795294819.7034502,
+            "wall_seconds": 0.06455564498901367,
+            "output": "ListOps-pair2-ListOps-native-fold.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "RBTree"
+            ],
+            "started_unix": 1795294819.768031,
+            "wall_seconds": 0.08331799507141113,
+            "output": "RBTree-pair0-RBTree.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "RBTree-native"
+            ],
+            "started_unix": 1795294819.851378,
+            "wall_seconds": 0.06975507736206055,
+            "output": "RBTree-pair0-RBTree-native.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "RBTree-native"
+            ],
+            "started_unix": 1795294819.9211671,
+            "wall_seconds": 0.06927895545959473,
+            "output": "RBTree-pair1-RBTree-native.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "RBTree"
+            ],
+            "started_unix": 1795294819.9904692,
+            "wall_seconds": 0.08231973648071289,
+            "output": "RBTree-pair1-RBTree.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "RBTree"
+            ],
+            "started_unix": 1795294820.072814,
+            "wall_seconds": 0.0846710205078125,
+            "output": "RBTree-pair2-RBTree.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "RBTree-native"
+            ],
+            "started_unix": 1795294820.157517,
+            "wall_seconds": 0.07117605209350586,
+            "output": "RBTree-pair2-RBTree-native.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "AstTree"
+            ],
+            "started_unix": 1795294820.22874,
+            "wall_seconds": 0.07467889785766602,
+            "output": "act-AstTree.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "Fib"
+            ],
+            "started_unix": 1795294820.303443,
+            "wall_seconds": 0.06691312789916992,
+            "output": "act-Fib.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "ListOps"
+            ],
+            "started_unix": 1795294820.370381,
+            "wall_seconds": 0.10694599151611328,
+            "output": "act-ListOps.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "TCO"
+            ],
+            "started_unix": 1795294820.477361,
+            "wall_seconds": 0.07824397087097168,
+            "output": "act-TCO.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "Records"
+            ],
+            "started_unix": 1795294820.555626,
+            "wall_seconds": 0.0859682559967041,
+            "output": "act-Records.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "Ackermann"
+            ],
+            "started_unix": 1795294820.6416152,
+            "wall_seconds": 0.08497285842895508,
+            "output": "act-Ackermann.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "Church"
+            ],
+            "started_unix": 1795294820.72661,
+            "wall_seconds": 0.07226705551147461,
+            "output": "act-Church.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "Primes"
+            ],
+            "started_unix": 1795294820.798896,
+            "wall_seconds": 0.07051301002502441,
+            "output": "act-Primes.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "RBTree"
+            ],
+            "started_unix": 1795294820.869431,
+            "wall_seconds": 0.0838620662689209,
+            "output": "act-RBTree.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "Polymorphism"
+            ],
+            "started_unix": 1795294820.9533162,
+            "wall_seconds": 0.09641766548156738,
+            "output": "act-Polymorphism.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "StateMonad"
+            ],
+            "started_unix": 1795294821.0497532,
+            "wall_seconds": 0.07094573974609375,
+            "output": "act-StateMonad.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "LazyEvaluation"
+            ],
+            "started_unix": 1795294821.12072,
+            "wall_seconds": 0.07755517959594727,
+            "output": "act-LazyEvaluation.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "ArrayOps"
+            ],
+            "started_unix": 1795294821.198303,
+            "wall_seconds": 0.091156005859375,
+            "output": "act-ArrayOps.json"
+          },
+          {
+            "command": [
+              "/tmp/gopurs-core-audit-20261121/audit",
+              "--case",
+              "RowToList"
+            ],
+            "started_unix": 1795294821.2894819,
+            "wall_seconds": 0.061109066009521484,
+            "output": "act-RowToList.json"
+          }
+        ],
+        "source_hashes": {
+          "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure-wip-included/output/purescript/Test_AstTree.go": "76bc91d25bb696aa00b4cae6e5ba4143650c0f0dd6d67ec7b5f8717c173f8b75",
+          "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure-wip-included/output/purescript/Test_Fib.go": "ddbfa0d701da973991d1ee2643d4a5b8f574a8501f3c3499cdf4352c887a8e0c",
+          "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure-wip-included/output/purescript/Test_ListOps.go": "6f359e72f79fbef1a70b9886e97939941fe5048d8a87103822d575f76d6348cc",
+          "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure-wip-included/output/purescript/Test_TCO.go": "9bc36485dcc7884c6a4f404e13380757db5bf1812a9ba3ef550ef070a66b711c",
+          "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure-wip-included/output/purescript/Test_Records.go": "612dda456b2159298d628866a42f23c655d9e2cf10643af70a6757bf927620ef",
+          "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure-wip-included/output/purescript/Test_Ackermann.go": "bd491a2aeed5944fdc6eaa79c9cc7e815b483ac5f372b416d9f9333caa7b2ccc",
+          "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure-wip-included/output/purescript/Test_Church.go": "53e5c21c13d7cefad10f2c4876bf2b5def61b78d402cd0af4b587dfaecf126ca",
+          "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure-wip-included/output/purescript/Test_Primes.go": "4f7ca3561484fb84d5309b8e1e58a4cf61357b8fd25bc7326ef4db7eaee2abdd",
+          "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure-wip-included/output/purescript/Test_RBTree.go": "fd0ba7849cf6aec869f6b034fa6b1fa6097b174b2b5bf15bbfca03abb06092b0",
+          "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure-wip-included/output/purescript/Test_Polymorphism.go": "4e448772a2739adcc3d30edf98efd06524cda5d3f355738e0366fad6ae9cc5ca",
+          "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure-wip-included/output/purescript/Test_StateMonad.go": "83804336002ffc52cc64e228bb62a3ed66b735579b72568ad337f3efeeac546d",
+          "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure-wip-included/output/purescript/Test_LazyEvaluation.go": "601f16ac91ef0b37b6e25b29769ed39a3c07e130a70ac78e83f935c4391b7159",
+          "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure-wip-included/output/purescript/Test_ArrayOps.go": "2b7be9fac6ed1d4639d4e422d990e3e6800c14b3e0ca3a1c124169943fe85807",
+          "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/pure-wip-included/output/purescript/Test_RowToList.go": "998e0041e50fa8f082c70e8cfb7db71fe74fc8728c46a44dc72573717ca6b19e"
+        },
+        "files": {
+          "main.go": "18402f82b4ca3da4825c3a71b173e981ed06d357f21cd84063cc32b56214baa2",
+          "audit": "47bc9d65c0d61fef0007cb7b4fa3bd2d21cb74410a0b86efb5ca4cefad50fc4a",
+          "go.mod": "ee460a50d4cba78cc8fe86cb894c018fe50fcb3fc9c9a77debf5ba31accc814e"
+        },
+        "go": "go version go1.27.0 darwin/arm64"
+      }
+    },
+    "tast_allocations": {
+      "path": "var/benchmark/go-opportunities-20261121/tast-probe/result.json",
+      "sha256": "3cc37f9dd558ae47b25266b7470cf45e7a967e5e46cc99caffad32ce702bdc40",
+      "results": {
+        "modules": 12,
+        "passes": 20,
+        "allocated_bytes_per_corpus": 29901260,
+        "allocations_per_corpus": 308118,
+        "fingerprints_match": true
+      }
+    },
+    "extended_regression": {
+      "path": "var/benchmark/go-opportunities-20261121/extended-current-probe/results.json",
+      "sha256": "1eeaa162216c787d765c77bd1d6470f7e67987688ec9a19c3b12de096371d2d9",
+      "results": {
+        "protocol": {
+          "GOGC": 100,
+          "GOMAXPROCS": 1,
+          "processes": 3,
+          "benchtime": "100ms"
+        },
+        "samples": {
+          "old": [
+            {
+              "ns": 587441.0,
+              "bytes": 801924.0,
+              "allocations": 36486.0
+            },
+            {
+              "ns": 587599.0,
+              "bytes": 801924.0,
+              "allocations": 36486.0
+            },
+            {
+              "ns": 585469.0,
+              "bytes": 801923.0,
+              "allocations": 36486.0
+            }
+          ],
+          "current": [
+            {
+              "ns": 905109.0,
+              "bytes": 1399647.0,
+              "allocations": 37464.0
+            },
+            {
+              "ns": 919797.0,
+              "bytes": 1399647.0,
+              "allocations": 37464.0
+            },
+            {
+              "ns": 927391.0,
+              "bytes": 1399647.0,
+              "allocations": 37464.0
+            }
+          ]
+        },
+        "medians": {
+          "old": {
+            "ns": 587441.0,
+            "bytes": 801924.0,
+            "allocations": 36486.0
+          },
+          "current": {
+            "ns": 919797.0,
+            "bytes": 1399647.0,
+            "allocations": 37464.0
+          }
+        }
+      }
+    },
+    "extended_candidates": {
+      "path": "var/benchmark/go-opportunities-20261121/extended-current-probe/candidates.json",
+      "sha256": "84db89293e90d7c8313e919352400659a86b03c75e9d12bd9eb1b970869b5515",
+      "results": {
+        "protocol": {
+          "GOGC": 100,
+          "GOMAXPROCS": 1,
+          "processes": 3,
+          "benchtime": "100ms"
+        },
+        "samples": {
+          "current": [
+            {
+              "ns": 931467.0,
+              "bytes": 1399648.0,
+              "allocations": 37464.0
+            },
+            {
+              "ns": 924387.0,
+              "bytes": 1399648.0,
+              "allocations": 37464.0
+            },
+            {
+              "ns": 933033.0,
+              "bytes": 1399648.0,
+              "allocations": 37464.0
+            }
+          ],
+          "literal": [
+            {
+              "ns": 806826.0,
+              "bytes": 1097684.0,
+              "allocations": 33464.0
+            },
+            {
+              "ns": 804355.0,
+              "bytes": 1097684.0,
+              "allocations": 33464.0
+            },
+            {
+              "ns": 804783.0,
+              "bytes": 1097683.0,
+              "allocations": 33464.0
+            }
+          ],
+          "take": [
+            {
+              "ns": 810373.0,
+              "bytes": 1125667.0,
+              "allocations": 30464.0
+            },
+            {
+              "ns": 793739.0,
+              "bytes": 1125668.0,
+              "allocations": 30464.0
+            },
+            {
+              "ns": 807291.0,
+              "bytes": 1125667.0,
+              "allocations": 30464.0
+            }
+          ],
+          "both": [
+            {
+              "ns": 693307.0,
+              "bytes": 825669.0,
+              "allocations": 26464.0
+            },
+            {
+              "ns": 701728.0,
+              "bytes": 825670.0,
+              "allocations": 26464.0
+            },
+            {
+              "ns": 692280.0,
+              "bytes": 825670.0,
+              "allocations": 26464.0
+            }
+          ]
+        },
+        "medians": {
+          "current": {
+            "ns": 931467.0,
+            "bytes": 1399648.0,
+            "allocations": 37464.0
+          },
+          "literal": {
+            "ns": 804783.0,
+            "bytes": 1097684.0,
+            "allocations": 33464.0
+          },
+          "take": {
+            "ns": 807291.0,
+            "bytes": 1125667.0,
+            "allocations": 30464.0
+          },
+          "both": {
+            "ns": 693307.0,
+            "bytes": 825670.0,
+            "allocations": 26464.0
+          }
+        }
+      }
+    }
+  },
+  "official_measurements": {
+    "go-core": {
+      "mode": "pure",
+      "labels": [
+        "AST Evaluation:",
+        "Fibonacci:",
+        "List Processing (900 elements):",
+        "Tail Call Optimization (100k calls):",
+        "Deep Record Updates (10k iterations):",
+        "Ackermann (3, 4):",
+        "Church Numerals (100k Closure Applications):",
+        "Prime Sieve (sum primes up to 500):",
+        "Red-Black Tree (100k Worst-Case Insertions):",
+        "Polymorphism (10M Type Class Dict Lookups):",
+        "State Monad (1.2k Binds, 60 Stack Depth):",
+        "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+        "Array Processing (900 elements):",
+        "RowToList (Keys Count):"
+      ],
+      "values": [
+        "7",
+        "55",
+        "202950",
+        "100000",
+        "20000",
+        "125",
+        "100000",
+        "21536",
+        "22",
+        "10000000",
+        "1200",
+        "1000000",
+        "202950",
+        "5"
+      ],
+      "times_us": [
+        0.310566,
+        0.202424,
+        15.629395,
+        62.091961,
+        8.63147,
+        16.047812,
+        227.702469,
+        72.938637,
+        10024.375,
+        2222.09375,
+        86.475906,
+        229.410156,
+        7.63678,
+        0.141146
+      ],
+      "total_ms": 12.973687472,
+      "sum_displayed_lines_ms": 12.973687472,
+      "values_validated": true,
+      "oracle": "core",
+      "timer_unit": "microseconds",
+      "library": {
+        "mode": "wip",
+        "labels": [
+          "array/map-10000",
+          "array/filter-10000",
+          "array/foldl-sum-10000",
+          "array/sort-descending-10000",
+          "array/eq-neq-last-10000",
+          "array/append-1000",
+          "foldable/traverse-maybe-1000",
+          "foldable/traverse-maybe-fail-first-1000",
+          "foldable/traverse-maybe-fail-last-1000",
+          "string/cu-length-unicode-1000",
+          "string/cp-length-unicode-1000",
+          "string/indexOf-hit-10000",
+          "string/indexOf-miss-10000",
+          "string/cp-take-unicode-1500",
+          "string/split-1000",
+          "string/concat-1000",
+          "record/set-small-1000",
+          "record/set-medium-1000",
+          "record/set-large-1000",
+          "st/ref-write-10000",
+          "st/ref-modify-10000",
+          "effect/ref-write-10000",
+          "effect/ref-modify-10000"
+        ],
+        "values": [
+          "75025000",
+          "37510000",
+          "50005000",
+          "75010000",
+          "0",
+          "3002000",
+          "752500",
+          "-1",
+          "-1",
+          "4000",
+          "3000",
+          "10000",
+          "-1",
+          "64421000",
+          "295000",
+          "195000",
+          "1006",
+          "1072",
+          "1272",
+          "10000",
+          "10000",
+          "10000",
+          "10000"
+        ],
+        "times_us": [
+          159.179031,
+          102.325844,
+          64.586426,
+          591.713562,
+          21.89616,
+          51.549965,
+          211.684906,
+          171.397141,
+          170.738281,
+          0.009652,
+          47.395348,
+          0.399378,
+          2.339167,
+          56.368328,
+          154.329422,
+          118.054039,
+          0.508507,
+          6.13442,
+          9.798258,
+          260.686844,
+          263.773438,
+          380.528656,
+          492.761719
+        ],
+        "total_ms": null,
+        "sum_displayed_lines_ms": null,
+        "values_validated": true,
+        "oracle": "wip",
+        "timer_unit": "microseconds",
+        "process_runs": [
+          {
+            "mode": "wip",
+            "labels": [
+              "array/map-10000",
+              "array/filter-10000",
+              "array/foldl-sum-10000",
+              "array/sort-descending-10000",
+              "array/eq-neq-last-10000",
+              "array/append-1000",
+              "foldable/traverse-maybe-1000",
+              "foldable/traverse-maybe-fail-first-1000",
+              "foldable/traverse-maybe-fail-last-1000",
+              "string/cu-length-unicode-1000",
+              "string/cp-length-unicode-1000",
+              "string/indexOf-hit-10000",
+              "string/indexOf-miss-10000",
+              "string/cp-take-unicode-1500",
+              "string/split-1000",
+              "string/concat-1000",
+              "record/set-small-1000",
+              "record/set-medium-1000",
+              "record/set-large-1000",
+              "st/ref-write-10000",
+              "st/ref-modify-10000",
+              "effect/ref-write-10000",
+              "effect/ref-modify-10000"
+            ],
+            "values": [
+              "75025000",
+              "37510000",
+              "50005000",
+              "75010000",
+              "0",
+              "3002000",
+              "752500",
+              "-1",
+              "-1",
+              "4000",
+              "3000",
+              "10000",
+              "-1",
+              "64421000",
+              "295000",
+              "195000",
+              "1006",
+              "1072",
+              "1272",
+              "10000",
+              "10000",
+              "10000",
+              "10000"
+            ],
+            "times_us": [
+              149.269531,
+              95.866859,
+              60.24707,
+              559.665344,
+              21.296305,
+              47.839355,
+              197.081375,
+              161.824859,
+              157.248047,
+              0.008977,
+              44.824547,
+              0.368369,
+              2.302302,
+              52.655437,
+              143.298828,
+              111.076172,
+              0.492606,
+              6.049316,
+              9.348002,
+              245.607422,
+              247.345047,
+              355.636719,
+              463.220062
+            ],
+            "total_ms": null,
+            "sum_displayed_lines_ms": null,
+            "values_validated": true,
+            "oracle": "wip",
+            "timer_unit": "microseconds",
+            "batch_iterations": [
+              128,
+              128,
+              256,
+              32,
+              512,
+              256,
+              64,
+              64,
+              64,
+              2097152,
+              256,
+              32768,
+              8192,
+              256,
+              128,
+              128,
+              32768,
+              2048,
+              2048,
+              64,
+              64,
+              32,
+              32
+            ]
+          },
+          {
+            "mode": "wip",
+            "labels": [
+              "array/map-10000",
+              "array/filter-10000",
+              "array/foldl-sum-10000",
+              "array/sort-descending-10000",
+              "array/eq-neq-last-10000",
+              "array/append-1000",
+              "foldable/traverse-maybe-1000",
+              "foldable/traverse-maybe-fail-first-1000",
+              "foldable/traverse-maybe-fail-last-1000",
+              "string/cu-length-unicode-1000",
+              "string/cp-length-unicode-1000",
+              "string/indexOf-hit-10000",
+              "string/indexOf-miss-10000",
+              "string/cp-take-unicode-1500",
+              "string/split-1000",
+              "string/concat-1000",
+              "record/set-small-1000",
+              "record/set-medium-1000",
+              "record/set-large-1000",
+              "st/ref-write-10000",
+              "st/ref-modify-10000",
+              "effect/ref-write-10000",
+              "effect/ref-modify-10000"
+            ],
+            "values": [
+              "75025000",
+              "37510000",
+              "50005000",
+              "75010000",
+              "0",
+              "3002000",
+              "752500",
+              "-1",
+              "-1",
+              "4000",
+              "3000",
+              "10000",
+              "-1",
+              "64421000",
+              "295000",
+              "195000",
+              "1006",
+              "1072",
+              "1272",
+              "10000",
+              "10000",
+              "10000",
+              "10000"
+            ],
+            "times_us": [
+              159.179031,
+              102.325844,
+              64.586426,
+              595.904937,
+              22.061441,
+              51.549965,
+              212.939453,
+              172.888016,
+              172.273438,
+              0.009652,
+              48.01725,
+              0.399378,
+              2.370239,
+              56.526855,
+              154.329422,
+              118.650719,
+              0.510499,
+              6.164469,
+              9.798258,
+              260.686844,
+              263.773438,
+              380.528656,
+              497.260438
+            ],
+            "total_ms": null,
+            "sum_displayed_lines_ms": null,
+            "values_validated": true,
+            "oracle": "wip",
+            "timer_unit": "microseconds",
+            "batch_iterations": [
+              64,
+              128,
+              256,
+              32,
+              512,
+              256,
+              64,
+              64,
+              64,
+              1048576,
+              256,
+              32768,
+              4096,
+              256,
+              64,
+              128,
+              32768,
+              2048,
+              1024,
+              64,
+              64,
+              32,
+              32
+            ]
+          },
+          {
+            "mode": "wip",
+            "labels": [
+              "array/map-10000",
+              "array/filter-10000",
+              "array/foldl-sum-10000",
+              "array/sort-descending-10000",
+              "array/eq-neq-last-10000",
+              "array/append-1000",
+              "foldable/traverse-maybe-1000",
+              "foldable/traverse-maybe-fail-first-1000",
+              "foldable/traverse-maybe-fail-last-1000",
+              "string/cu-length-unicode-1000",
+              "string/cp-length-unicode-1000",
+              "string/indexOf-hit-10000",
+              "string/indexOf-miss-10000",
+              "string/cp-take-unicode-1500",
+              "string/split-1000",
+              "string/concat-1000",
+              "record/set-small-1000",
+              "record/set-medium-1000",
+              "record/set-large-1000",
+              "st/ref-write-10000",
+              "st/ref-modify-10000",
+              "effect/ref-write-10000",
+              "effect/ref-modify-10000"
+            ],
+            "values": [
+              "75025000",
+              "37510000",
+              "50005000",
+              "75010000",
+              "0",
+              "3002000",
+              "752500",
+              "-1",
+              "-1",
+              "4000",
+              "3000",
+              "10000",
+              "-1",
+              "64421000",
+              "295000",
+              "195000",
+              "1006",
+              "1072",
+              "1272",
+              "10000",
+              "10000",
+              "10000",
+              "10000"
+            ],
+            "times_us": [
+              159.227859,
+              102.408859,
+              65.317707,
+              591.713562,
+              21.89616,
+              51.555664,
+              211.684906,
+              171.397141,
+              170.738281,
+              0.009787,
+              47.395348,
+              0.423443,
+              2.339167,
+              56.368328,
+              154.529617,
+              118.054039,
+              0.508507,
+              6.13442,
+              9.817301,
+              265.086578,
+              274.733719,
+              384.283844,
+              492.761719
+            ],
+            "total_ms": null,
+            "sum_displayed_lines_ms": null,
+            "values_validated": true,
+            "oracle": "wip",
+            "timer_unit": "microseconds",
+            "batch_iterations": [
+              64,
+              128,
+              256,
+              32,
+              512,
+              256,
+              64,
+              64,
+              64,
+              1048576,
+              256,
+              32768,
+              8192,
+              256,
+              128,
+              128,
+              32768,
+              2048,
+              1024,
+              64,
+              64,
+              32,
+              32
+            ]
+          }
+        ],
+        "aggregation": "median per row across three processes"
+      },
+      "process_runs": [
+        {
+          "mode": "pure",
+          "labels": [
+            "AST Evaluation:",
+            "Fibonacci:",
+            "List Processing (900 elements):",
+            "Tail Call Optimization (100k calls):",
+            "Deep Record Updates (10k iterations):",
+            "Ackermann (3, 4):",
+            "Church Numerals (100k Closure Applications):",
+            "Prime Sieve (sum primes up to 500):",
+            "Red-Black Tree (100k Worst-Case Insertions):",
+            "Polymorphism (10M Type Class Dict Lookups):",
+            "State Monad (1.2k Binds, 60 Stack Depth):",
+            "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+            "Array Processing (900 elements):",
+            "RowToList (Keys Count):"
+          ],
+          "values": [
+            "7",
+            "55",
+            "202950",
+            "100000",
+            "20000",
+            "125",
+            "100000",
+            "21536",
+            "22",
+            "10000000",
+            "1200",
+            "1000000",
+            "202950",
+            "5"
+          ],
+          "times_us": [
+            0.285308,
+            0.185013,
+            14.523764,
+            57.693359,
+            8.07076,
+            16.09908,
+            211.178375,
+            68.486652,
+            9058.125,
+            2225.598875,
+            80.72168,
+            229.248047,
+            7.02832,
+            0.131902
+          ],
+          "total_ms": 11.977376,
+          "sum_displayed_lines_ms": 11.977376134999998,
+          "values_validated": true,
+          "oracle": "core",
+          "timer_unit": "microseconds",
+          "library": {
+            "mode": "wip",
+            "labels": [
+              "array/map-10000",
+              "array/filter-10000",
+              "array/foldl-sum-10000",
+              "array/sort-descending-10000",
+              "array/eq-neq-last-10000",
+              "array/append-1000",
+              "foldable/traverse-maybe-1000",
+              "foldable/traverse-maybe-fail-first-1000",
+              "foldable/traverse-maybe-fail-last-1000",
+              "string/cu-length-unicode-1000",
+              "string/cp-length-unicode-1000",
+              "string/indexOf-hit-10000",
+              "string/indexOf-miss-10000",
+              "string/cp-take-unicode-1500",
+              "string/split-1000",
+              "string/concat-1000",
+              "record/set-small-1000",
+              "record/set-medium-1000",
+              "record/set-large-1000",
+              "st/ref-write-10000",
+              "st/ref-modify-10000",
+              "effect/ref-write-10000",
+              "effect/ref-modify-10000"
+            ],
+            "values": [
+              "75025000",
+              "37510000",
+              "50005000",
+              "75010000",
+              "0",
+              "3002000",
+              "752500",
+              "-1",
+              "-1",
+              "4000",
+              "3000",
+              "10000",
+              "-1",
+              "64421000",
+              "295000",
+              "195000",
+              "1006",
+              "1072",
+              "1272",
+              "10000",
+              "10000",
+              "10000",
+              "10000"
+            ],
+            "times_us": [
+              149.269531,
+              95.866859,
+              60.24707,
+              559.665344,
+              21.296305,
+              47.839355,
+              197.081375,
+              161.824859,
+              157.248047,
+              0.008977,
+              44.824547,
+              0.368369,
+              2.302302,
+              52.655437,
+              143.298828,
+              111.076172,
+              0.492606,
+              6.049316,
+              9.348002,
+              245.607422,
+              247.345047,
+              355.636719,
+              463.220062
+            ],
+            "total_ms": null,
+            "sum_displayed_lines_ms": null,
+            "values_validated": true,
+            "oracle": "wip",
+            "timer_unit": "microseconds",
+            "batch_iterations": [
+              128,
+              128,
+              256,
+              32,
+              512,
+              256,
+              64,
+              64,
+              64,
+              2097152,
+              256,
+              32768,
+              8192,
+              256,
+              128,
+              128,
+              32768,
+              2048,
+              2048,
+              64,
+              64,
+              32,
+              32
+            ]
+          },
+          "batch_iterations": [
+            32768,
+            65536,
+            1024,
+            256,
+            2048,
+            1024,
+            64,
+            256,
+            2,
+            8,
+            128,
+            64,
+            2048,
+            131072
+          ]
+        },
+        {
+          "mode": "pure",
+          "labels": [
+            "AST Evaluation:",
+            "Fibonacci:",
+            "List Processing (900 elements):",
+            "Tail Call Optimization (100k calls):",
+            "Deep Record Updates (10k iterations):",
+            "Ackermann (3, 4):",
+            "Church Numerals (100k Closure Applications):",
+            "Prime Sieve (sum primes up to 500):",
+            "Red-Black Tree (100k Worst-Case Insertions):",
+            "Polymorphism (10M Type Class Dict Lookups):",
+            "State Monad (1.2k Binds, 60 Stack Depth):",
+            "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+            "Array Processing (900 elements):",
+            "RowToList (Keys Count):"
+          ],
+          "values": [
+            "7",
+            "55",
+            "202950",
+            "100000",
+            "20000",
+            "125",
+            "100000",
+            "21536",
+            "22",
+            "10000000",
+            "1200",
+            "1000000",
+            "202950",
+            "5"
+          ],
+          "times_us": [
+            0.315325,
+            0.204718,
+            15.660808,
+            63.018391,
+            8.701111,
+            16.047812,
+            227.702469,
+            72.938637,
+            10024.375,
+            2218.682375,
+            87.082031,
+            229.410156,
+            7.63678,
+            0.141146
+          ],
+          "total_ms": 12.971917,
+          "sum_displayed_lines_ms": 12.971916759,
+          "values_validated": true,
+          "oracle": "core",
+          "timer_unit": "microseconds",
+          "library": {
+            "mode": "wip",
+            "labels": [
+              "array/map-10000",
+              "array/filter-10000",
+              "array/foldl-sum-10000",
+              "array/sort-descending-10000",
+              "array/eq-neq-last-10000",
+              "array/append-1000",
+              "foldable/traverse-maybe-1000",
+              "foldable/traverse-maybe-fail-first-1000",
+              "foldable/traverse-maybe-fail-last-1000",
+              "string/cu-length-unicode-1000",
+              "string/cp-length-unicode-1000",
+              "string/indexOf-hit-10000",
+              "string/indexOf-miss-10000",
+              "string/cp-take-unicode-1500",
+              "string/split-1000",
+              "string/concat-1000",
+              "record/set-small-1000",
+              "record/set-medium-1000",
+              "record/set-large-1000",
+              "st/ref-write-10000",
+              "st/ref-modify-10000",
+              "effect/ref-write-10000",
+              "effect/ref-modify-10000"
+            ],
+            "values": [
+              "75025000",
+              "37510000",
+              "50005000",
+              "75010000",
+              "0",
+              "3002000",
+              "752500",
+              "-1",
+              "-1",
+              "4000",
+              "3000",
+              "10000",
+              "-1",
+              "64421000",
+              "295000",
+              "195000",
+              "1006",
+              "1072",
+              "1272",
+              "10000",
+              "10000",
+              "10000",
+              "10000"
+            ],
+            "times_us": [
+              159.179031,
+              102.325844,
+              64.586426,
+              595.904937,
+              22.061441,
+              51.549965,
+              212.939453,
+              172.888016,
+              172.273438,
+              0.009652,
+              48.01725,
+              0.399378,
+              2.370239,
+              56.526855,
+              154.329422,
+              118.650719,
+              0.510499,
+              6.164469,
+              9.798258,
+              260.686844,
+              263.773438,
+              380.528656,
+              497.260438
+            ],
+            "total_ms": null,
+            "sum_displayed_lines_ms": null,
+            "values_validated": true,
+            "oracle": "wip",
+            "timer_unit": "microseconds",
+            "batch_iterations": [
+              64,
+              128,
+              256,
+              32,
+              512,
+              256,
+              64,
+              64,
+              64,
+              1048576,
+              256,
+              32768,
+              4096,
+              256,
+              64,
+              128,
+              32768,
+              2048,
+              1024,
+              64,
+              64,
+              32,
+              32
+            ]
+          },
+          "batch_iterations": [
+            32768,
+            65536,
+            1024,
+            256,
+            2048,
+            1024,
+            64,
+            256,
+            1,
+            8,
+            128,
+            64,
+            2048,
+            131072
+          ]
+        },
+        {
+          "mode": "pure",
+          "labels": [
+            "AST Evaluation:",
+            "Fibonacci:",
+            "List Processing (900 elements):",
+            "Tail Call Optimization (100k calls):",
+            "Deep Record Updates (10k iterations):",
+            "Ackermann (3, 4):",
+            "Church Numerals (100k Closure Applications):",
+            "Prime Sieve (sum primes up to 500):",
+            "Red-Black Tree (100k Worst-Case Insertions):",
+            "Polymorphism (10M Type Class Dict Lookups):",
+            "State Monad (1.2k Binds, 60 Stack Depth):",
+            "Lazy Evaluation (1M Thunks Forced, 1k Depth):",
+            "Array Processing (900 elements):",
+            "RowToList (Keys Count):"
+          ],
+          "values": [
+            "7",
+            "55",
+            "202950",
+            "100000",
+            "20000",
+            "125",
+            "100000",
+            "21536",
+            "22",
+            "10000000",
+            "1200",
+            "1000000",
+            "202950",
+            "5"
+          ],
+          "times_us": [
+            0.310566,
+            0.202424,
+            15.629395,
+            62.091961,
+            8.63147,
+            16.044596,
+            228.457672,
+            73.252441,
+            10051.375,
+            2222.09375,
+            86.475906,
+            229.583984,
+            7.686849,
+            0.141533
+          ],
+          "total_ms": 13.001978,
+          "sum_displayed_lines_ms": 13.001977547000001,
+          "values_validated": true,
+          "oracle": "core",
+          "timer_unit": "microseconds",
+          "library": {
+            "mode": "wip",
+            "labels": [
+              "array/map-10000",
+              "array/filter-10000",
+              "array/foldl-sum-10000",
+              "array/sort-descending-10000",
+              "array/eq-neq-last-10000",
+              "array/append-1000",
+              "foldable/traverse-maybe-1000",
+              "foldable/traverse-maybe-fail-first-1000",
+              "foldable/traverse-maybe-fail-last-1000",
+              "string/cu-length-unicode-1000",
+              "string/cp-length-unicode-1000",
+              "string/indexOf-hit-10000",
+              "string/indexOf-miss-10000",
+              "string/cp-take-unicode-1500",
+              "string/split-1000",
+              "string/concat-1000",
+              "record/set-small-1000",
+              "record/set-medium-1000",
+              "record/set-large-1000",
+              "st/ref-write-10000",
+              "st/ref-modify-10000",
+              "effect/ref-write-10000",
+              "effect/ref-modify-10000"
+            ],
+            "values": [
+              "75025000",
+              "37510000",
+              "50005000",
+              "75010000",
+              "0",
+              "3002000",
+              "752500",
+              "-1",
+              "-1",
+              "4000",
+              "3000",
+              "10000",
+              "-1",
+              "64421000",
+              "295000",
+              "195000",
+              "1006",
+              "1072",
+              "1272",
+              "10000",
+              "10000",
+              "10000",
+              "10000"
+            ],
+            "times_us": [
+              159.227859,
+              102.408859,
+              65.317707,
+              591.713562,
+              21.89616,
+              51.555664,
+              211.684906,
+              171.397141,
+              170.738281,
+              0.009787,
+              47.395348,
+              0.423443,
+              2.339167,
+              56.368328,
+              154.529617,
+              118.054039,
+              0.508507,
+              6.13442,
+              9.817301,
+              265.086578,
+              274.733719,
+              384.283844,
+              492.761719
+            ],
+            "total_ms": null,
+            "sum_displayed_lines_ms": null,
+            "values_validated": true,
+            "oracle": "wip",
+            "timer_unit": "microseconds",
+            "batch_iterations": [
+              64,
+              128,
+              256,
+              32,
+              512,
+              256,
+              64,
+              64,
+              64,
+              1048576,
+              256,
+              32768,
+              8192,
+              256,
+              128,
+              128,
+              32768,
+              2048,
+              1024,
+              64,
+              64,
+              32,
+              32
+            ]
+          },
+          "batch_iterations": [
+            32768,
+            65536,
+            1024,
+            256,
+            2048,
+            1024,
+            64,
+            256,
+            1,
+            8,
+            128,
+            64,
+            2048,
+            131072
+          ]
+        }
+      ],
+      "aggregation": "median per row across three processes; total sums median rows"
+    },
+    "go-extended": {
+      "mode": "x",
+      "labels": [
+        "File I/O (10k writes/reads):",
+        "STArray Operations:",
+        "String Operations (1k Regex/Split):",
+        "Aff Operations (Asynchronous Delays)",
+        "Parallelism (10 x Fib 42)"
+      ],
+      "values": [
+        "10000",
+        "10",
+        "2000",
+        "10",
+        "Checksum: 679142946"
+      ],
+      "times_us": [
+        551794.667,
+        0.333,
+        802.208,
+        10925.375,
+        990267.208
+      ],
+      "total_ms": 1553.789791,
+      "sum_displayed_lines_ms": 1553.789791,
+      "values_validated": true,
+      "oracle": "extended",
+      "timer_unit": "microseconds",
+      "process_runs": [
+        {
+          "mode": "x",
+          "labels": [
+            "File I/O (10k writes/reads):",
+            "STArray Operations:",
+            "String Operations (1k Regex/Split):",
+            "Aff Operations (Asynchronous Delays)",
+            "Parallelism (10 x Fib 42)"
+          ],
+          "values": [
+            "10000",
+            "10",
+            "2000",
+            "10",
+            "Checksum: 679142946"
+          ],
+          "times_us": [
+            551977.166,
+            0.333,
+            802.208,
+            10579.166,
+            996635.333
+          ],
+          "total_ms": 1559.994206,
+          "sum_displayed_lines_ms": 1559.9942059999998,
+          "values_validated": true,
+          "oracle": "extended",
+          "timer_unit": "microseconds"
+        },
+        {
+          "mode": "x",
+          "labels": [
+            "File I/O (10k writes/reads):",
+            "STArray Operations:",
+            "String Operations (1k Regex/Split):",
+            "Aff Operations (Asynchronous Delays)",
+            "Parallelism (10 x Fib 42)"
+          ],
+          "values": [
+            "10000",
+            "10",
+            "2000",
+            "10",
+            "Checksum: 679142946"
+          ],
+          "times_us": [
+            551794.667,
+            0.375,
+            734.292,
+            10925.375,
+            988645.416
+          ],
+          "total_ms": 1552.100125,
+          "sum_displayed_lines_ms": 1552.100125,
+          "values_validated": true,
+          "oracle": "extended",
+          "timer_unit": "microseconds"
+        },
+        {
+          "mode": "x",
+          "labels": [
+            "File I/O (10k writes/reads):",
+            "STArray Operations:",
+            "String Operations (1k Regex/Split):",
+            "Aff Operations (Asynchronous Delays)",
+            "Parallelism (10 x Fib 42)"
+          ],
+          "values": [
+            "10000",
+            "10",
+            "2000",
+            "10",
+            "Checksum: 679142946"
+          ],
+          "times_us": [
+            539867.917,
+            0.333,
+            855.5,
+            11013.5,
+            990267.208
+          ],
+          "total_ms": 1542.004458,
+          "sum_displayed_lines_ms": 1542.004458,
+          "values_validated": true,
+          "oracle": "extended",
+          "timer_unit": "microseconds"
+        }
+      ],
+      "aggregation": "median per row across three processes; total sums median rows"
+    }
+  }
+}

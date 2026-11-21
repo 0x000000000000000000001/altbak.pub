@@ -306,6 +306,39 @@ class OptionalSources(unittest.TestCase):
 
 
 class JsonSuites(unittest.TestCase):
+    def test_runtime_filter_skips_unselected_rust_build_and_records_availability(self):
+        for suite in ['JsonTypedAst', 'JsonDecoding']:
+            for runtime in [None, 'go', 'js', 'c', 'rust']:
+                with self.subTest(suite=suite, runtime=runtime), tempfile.TemporaryDirectory() as temporary:
+                    root = Path(temporary)
+                    work = root / 'build'
+                    argv = ['json-diagnostic', 'build', '--suite', suite, '--workspace', str(work)]
+                    if runtime is not None:
+                        argv += ['--runtime', runtime]
+                    rust_selected = runtime in [None, 'rust']
+                    with patch.object(sys, 'argv', argv), \
+                         patch.object(json_diagnostic, 'COMPILER', root / 'gopurs'), \
+                         patch.object(json_diagnostic, 'environment', return_value={}), \
+                         patch.object(json_diagnostic, 'copy_sources'), \
+                         patch.object(json_diagnostic, 'fingerprint', return_value={}), \
+                         patch.object(json_diagnostic, 'sha', return_value='artifact-hash'), \
+                         patch.object(json_diagnostic.subprocess, 'check_output', return_value='version'), \
+                         patch.object(json_diagnostic, 'call') as call, \
+                         patch.object(json_diagnostic, 'build_js') as build_js, \
+                         patch.object(json_diagnostic, 'build_c', return_value={'suite': suite}) as build_c, \
+                         patch.object(json_diagnostic, 'build_rust', return_value={'suite': suite},
+                                      side_effect=None if rust_selected else RuntimeError('unselected Rust build')) as build_rust:
+                        json_diagnostic.main()
+                    build_js.assert_called_once()
+                    build_c.assert_called_once()
+                    self.assertTrue(any(command.args[0][:2] == ['go', 'build'] for command in call.call_args_list))
+                    if rust_selected:
+                        build_rust.assert_called_once()
+                    else:
+                        build_rust.assert_not_called()
+                    manifest = json.loads((work / 'manifest.json').read_text())
+                    self.assertEqual(manifest['rust'], {'suite': suite} if rust_selected else {})
+
     def test_general_suite_has_no_pbo_dependency_or_source_fingerprint(self):
         with tempfile.TemporaryDirectory() as temporary:
             base = Path(temporary)
@@ -418,7 +451,7 @@ class JsonSuites(unittest.TestCase):
                 with self.assertRaisesRegex(RuntimeError, 'Go build captured'):
                     array_diagnostic.build(work, {'PATH': ''}, True)
             backend = next(command for command in commands if Path(command[0]).name == 'gopurs')
-            self.assertEqual(backend[1:], ['--main', 'Test.ArrayIndexing', '--dev'])
+            self.assertEqual(backend[1:], ['--main', 'ArrayIndexingMain', '--dev'])
             self.assertIn('-gcflags=gopurs/output/...=-N -l', commands[-1])
             (work / 'manifest.json').write_text(json.dumps({'go_backend_profile': 'release'}))
             with self.assertRaisesRegex(ValueError, 'profile changed'):
@@ -426,6 +459,21 @@ class JsonSuites(unittest.TestCase):
             (work / 'manifest.json').write_text(json.dumps({'go_backend_profile': 'dev'}))
             with self.assertRaisesRegex(ValueError, 'Go build flags changed'):
                 array_diagnostic.measure(work, work / 'results', argparse.Namespace(dev=True), {})
+
+    def test_array_entrypoint_closure_retains_effect_and_both_kernel_roots(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            work = Path(temporary)
+            entry = work / 'ArrayIndexingMain.purs'
+            entry.write_text(array_diagnostic.ENTRY_SOURCE)
+            candidates = [entry]
+            for name in ['Prelude', 'Effect', 'Test.ArrayIndexing']:
+                source = work / (name + '.purs')
+                source.write_text('module ' + name + ' where\n')
+                candidates.append(source)
+            self.assertEqual(set(array_diagnostic.module_closure(candidates, array_diagnostic.ENTRY_MODULE)),
+                             {path.resolve() for path in candidates})
+            self.assertIn('main :: Effect', entry.read_text())
+            self.assertIn('main = pure { nativeReads, boxedReads }', entry.read_text())
 
     def test_general_results_validate_case_identity_and_correctness_before_timing(self):
         oracle = {'modules': 2, 'names': ['valid', 'wrong-field'], 'timed_cases': 1,
