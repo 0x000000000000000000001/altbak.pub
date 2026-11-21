@@ -128,15 +128,6 @@ Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://git
 
 Rows grouped under **Excluded WIP** are not included in **Total Execution Time** or the **/C** ratios.
 
-The Go release column was refreshed on November 21 with `./bin/go/run --wip-included`;
-all 40 cases use validated medians from at least three processes. The [measurement archive](docs/benchmark-results/2026-11-21-go-readme.json)
-records the source results; ratios use the existing C and official JS reference cells.
-The [library optimization campaign](docs/benchmark-results/2026-11-21-go-library-ratios.md)
-and [Unicode length campaign](docs/benchmark-results/2026-11-21-go-unicode-length.md)
-document the changes and matched comparisons, including the added string construction cost.
-The [JSON decoding correction](docs/benchmark-results/2026-11-21-go-json-decoding-restored.md)
-subsequently restored the direct text-schema path: **2.172479 ms**, validated in six paired processes.
-
 #### Scheme
 
 Scheme Benchmark        | Hand-written PureScript<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3 | Hand-written FP-style Scheme FFI<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3<br><br>(WIP) | Hand-written Scheme FFI<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3<br><br>(WIP) |
