@@ -1894,6 +1894,16 @@ Benchmark               | Hand-written PureScript<br>↓<br>[official](https://g
 > **Hardware Context**
 > Measurements ran on an **Apple M4 Pro with 10 performance cores and 4 efficiency cores**, without explicit CPU affinity. The extended *Parallelism* row compares JavaScript's single-thread scheduler with the Go/Rust multicore runtimes.
 
+### Application benchmark results
+
+Application | JavaScript | Go (gopurs) | Go / JS |
+--- | ---: | ---: | ---: |
+[purescript-tidy](https://github.com/natefaubion/purescript-tidy) | ~ 283.20 ms | ~ 556.44 ms | 1.96x |
+
+Application | JavaScript estimated heap allocation | Go allocated bytes |
+--- | ---: | ---: |
+[purescript-tidy](https://github.com/natefaubion/purescript-tidy) | ~ 0.82 GB | ~ 0.93 GB |
+
 ### Compilation times...
 
 #### ... to Go

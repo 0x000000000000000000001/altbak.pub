@@ -36,6 +36,21 @@ class PublicationTests(unittest.TestCase):
         headers = lambda text: [line for line in text.splitlines() if 'Benchmark ' in line or line.startswith('Benchmark ')]
         self.assertEqual(headers(original), headers(rendered))
 
+    def test_application_tables_survive_core_and_wip_publication(self):
+        original = (ROOT / 'README.md').read_text()
+        start = original.index('### Application benchmark results\n')
+        end = original.index('### Compilation times...', start)
+        application = original[start:end]
+        results = {key: fixture(key) for keys in PUBLISH['GROUPS'].values() for key in keys}
+        self.assertIn(application, PUBLISH['render'](original, results))
+
+        cases = PUBLISH['expected_cases']('wip')
+        library = {'labels': [case['label'] for case in cases],
+                   'times_us': [float(i + 1) for i in range(len(cases))]}
+        wip = {key: {'library': copy.deepcopy(library)}
+               for keys in PUBLISH['WIP_GROUPS'].values() for key in keys}
+        self.assertIn(application, PUBLISH['render_wip'](original, wip))
+
     def test_wrong_labels_outputs_and_statistics_are_rejected(self):
         original = fixture('js-pure')
         for mutation in [lambda r: r['times_us'].__setitem__(0, 9),
