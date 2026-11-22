@@ -2,6 +2,7 @@
 """Publish complete validated campaigns, preserving the user's column headers."""
 import argparse
 import hashlib
+from html import escape
 import json
 import math
 from pathlib import Path
@@ -173,10 +174,12 @@ def bold_value(value):
     value = value.strip()
     if not value or value == '—':
         return value
+    value = re.sub(r'\*\*((?:~ |< )?[\d.]+(?: (?:μs|ms|s)|x))\*\*', r'\1', value)
     if re.fullmatch(r'(?:~ |< )?[\d.]+ (?:μs|ms|s)', value) or re.fullmatch(r'[\d.]+x', value):
-        return '**' + value + '**'
-    value = re.sub(r'^((?:~ |< )?[\d.]+ (?:μs|ms|s))', r'**\1**', value)
-    return re.sub(r'(/(?:C|JS) = )([\d.]+x)', r'\1**\2**', value)
+        return '<strong>' + escape(value) + '</strong>'
+    value = re.sub(r'^((?:~ |< )?[\d.]+ (?:μs|ms|s))',
+                   lambda match: '<strong>' + escape(match[1]) + '</strong>', value)
+    return re.sub(r'(/(?:C|JS) = )([\d.]+x)', r'\1<strong>\2</strong>', value)
 
 
 def bold_total_line(line):
