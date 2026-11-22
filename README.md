@@ -2089,11 +2089,11 @@ Benchmark               | Hand-written PureScript<br>↓<br>[official](https://g
 
 App scenario | JS | Go | Go / JS |
 --- | ---: | ---: | ---: |
-CST (corpus parsing) | ~ 59.53 ms | ~ 344.51 ms | 5.79x |
-CST (fixture parsing) | ~ 8.64 ms | ~ 37.98 ms | 4.40x |
-tidy (parsing + formatting) | ~ 14.23 ms | ~ 50.40 ms | 3.54x |
-tidy (10 iterations, current driver) | ~ 313.32 ms | ~ 505.99 ms | 1.61x |
-tidy (10 iterations, historical baseline) | ~ 283.20 ms | ~ 556.44 ms | 1.96x |
+[CST](https://github.com/natefaubion/purescript-language-cst-parser) (corpus parsing) | ~ 59.53 ms | ~ 344.51 ms | 5.79x |
+[CST](https://github.com/natefaubion/purescript-language-cst-parser) (fixture parsing) | ~ 8.64 ms | ~ 37.98 ms | 4.40x |
+[tidy](https://github.com/natefaubion/purescript-tidy) (parsing + formatting) | ~ 14.23 ms | ~ 50.40 ms | 3.54x |
+[tidy](https://github.com/natefaubion/purescript-tidy) (10 iterations, current driver) | ~ 313.32 ms | ~ 505.99 ms | 1.61x |
+[tidy](https://github.com/natefaubion/purescript-tidy) (10 iterations, historical baseline) | ~ 283.20 ms | ~ 556.44 ms | 1.96x |
 
 ### Compilation times...
 
