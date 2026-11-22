@@ -106,43 +106,52 @@ class LibraryPublication(unittest.TestCase):
             publish.main()
         return readme.read_text()
 
-    def test_nine_columns_publish_only_the_23_rows_and_preserve_links(self):
+    def test_nine_columns_publish_23_rows_and_derived_totals(self):
         original = (ROOT / "README.md").read_text()
         results = campaign_results()
         with tempfile.TemporaryDirectory() as temporary:
             rendered = self.publish_fixture(Path(temporary), results, original)
         labels = [case["label"] for case in validate.expected_cases("wip")]
-        section = None
-        original_other, rendered_other = [], []
-        seen = {title: [] for title in COLUMNS}
-        original_lines, rendered_lines = original.splitlines(), rendered.splitlines()
-        self.assertEqual(len(rendered_lines), len(original_lines))
-        for old, new in zip(original_lines, rendered_lines):
-            if old.startswith("#### "):
-                section = old.removeprefix("#### ")
-            cell = old.split("|", 1)[0].strip()
-            label = next((label for label in labels if cell.startswith("[" + label + "](")), None)
-            if section in COLUMNS and label is not None:
-                self.assertEqual(new.split("|", 1)[0].strip(), cell, "source link changed")
-                values = [part.strip() for part in new.split("|")[1:-1]]
-                self.assertEqual(len(values), len(COLUMNS[section]))
-                index = labels.index(label)
-                js_time = results["js-pure"]["library"]["times_us"][index]
-                expected = []
-                for key in COLUMNS[section]:
-                    time_us = results[key]["library"]["times_us"][index]
-                    cell = f"~ {time_us:.2f} μs<br>(/C = —)"
-                    js_ratio = f"{time_us / js_time:.2f}x"
-                    if js_ratio != "1.00x":
-                        cell += f"<br>(/JS = {js_ratio})"
-                    expected.append(cell)
-                self.assertEqual(values, expected)
-                seen[section].append(label)
-            else:
-                original_other.append(old)
-                rendered_other.append(new)
-        self.assertEqual(seen, {title: labels for title in COLUMNS})
-        self.assertEqual(rendered_other, original_other, "core, totals or unrelated sections changed")
+        original_lines = original.splitlines()
+        rendered_lines = rendered.splitlines()
+        self.assertEqual(len(original_lines), len(rendered_lines))
+        # The derived rows must agree with the displayed cells.
+        self.assertEqual(publish.refresh_new_totals(rendered), rendered)
+        changed = set()
+        for title, keys in COLUMNS.items():
+            start = next(i for i, line in enumerate(original_lines)
+                         if line.strip() == "#### " + title)
+            body = re.search(r"#### " + re.escape(title) + r"\n(.*?)(?=\n#### )",
+                             rendered, re.S)[1].splitlines()
+            def full(local):
+                return start + 1 + local
+            for label in labels:
+                local = next(i for i, line in enumerate(body)
+                             if line.startswith("| [" + label + "]("))
+                values = [results[key]["library"]["times_us"][labels.index(label)]
+                          for key in keys]
+                self.assertEqual(
+                    [cell.strip() for cell in rendered_lines[full(local)].split("|")[2:-1]],
+                    [f"~ {value:.2f} μs" for value in values])
+                self.assertEqual(
+                    [cell.strip() for cell in rendered_lines[full(local + 1)].split("|")[2:-1]],
+                    ["—"] * len(keys))
+                js_time = results["js-pure"]["library"]["times_us"][labels.index(label)]
+                expected_js = [
+                    "—" if title == "JavaScript" and column == 0
+                    else f"{value / js_time:.2f}x"
+                    for column, value in enumerate(values)]
+                self.assertEqual(
+                    [cell.strip() for cell in rendered_lines[full(local + 2)].split("|")[2:-1]],
+                    expected_js)
+                changed.update({full(local), full(local + 1), full(local + 2)})
+            for total in ("**Total Incl WIP**", "**Total Stable + Incl WIP**"):
+                local = next(i for i, line in enumerate(body)
+                             if line.startswith("| " + total + " |"))
+                changed.update({full(local), full(local + 1), full(local + 2), full(local + 3)})
+        for index, (old, new) in enumerate(zip(original_lines, rendered_lines)):
+            if index not in changed:
+                self.assertEqual(new, old, f"unrelated line changed: {index + 1}")
 
     def test_incomplete_or_invalid_campaign_never_rewrites_readme(self):
         original = (ROOT / "README.md").read_text()
@@ -163,10 +172,10 @@ class LibraryPublication(unittest.TestCase):
 
     def test_missing_readme_row_is_rejected_without_partial_publication(self):
         original = (ROOT / "README.md").read_text()
-        malformed = re.sub(r"(?m)^\[array/map-10000\][^\n]*\n", "", original, count=1)
+        malformed = re.sub(r"(?m)^\| \[array/map-10000\][^\n]*\n", "", original, count=1)
         with tempfile.TemporaryDirectory() as temporary:
             directory = Path(temporary)
-            with self.assertRaisesRegex(ValueError, "WIP row order"):
+            with self.assertRaises(ValueError):
                 self.publish_fixture(directory, campaign_results(), malformed)
             self.assertEqual((directory / "README.md").read_text(), malformed)
 

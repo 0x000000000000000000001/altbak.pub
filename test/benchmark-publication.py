@@ -28,7 +28,7 @@ def fixture(key):
 class PublicationTests(unittest.TestCase):
     def test_all_columns_preserve_user_headers(self):
         results = {key: fixture(key) for keys in PUBLISH['GROUPS'].values() for key in keys}
-        self.assertEqual(len(results), 39)
+        self.assertEqual(len(results), 40)
         for key, result in results.items():
             PUBLISH['verify'](key, result)
         original = (ROOT / 'README.md').read_text()

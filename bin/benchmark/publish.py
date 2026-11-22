@@ -16,7 +16,7 @@ from measure import fingerprints
 ROOT = Path(__file__).resolve().parents[2]
 GROUPS = {
     'JavaScript': ['js-pure', 'es-pure', 'js-ffi', 'js-fficc'],
-    'Go': ['go-pure', 'psgo-pure', 'go-ffi', 'go-fficc'],
+    'Go': ['go-pure', 'go-dev', 'psgo-pure', 'go-ffi', 'go-fficc'],
     'Scheme': ['scm-pure', 'scm-ffi', 'scm-fficc'],
     'Erlang': ['erl-pure', 'erl-ffi', 'erl-fficc'],
     'PHP': ['php-pure', 'php-ffi', 'php-fficc'],
@@ -36,6 +36,10 @@ WIP_GROUPS = {
     'JavaScript': ['js-pure', 'es-pure', 'js-ffi', 'js-fficc'],
     'Go': ['go-pure', 'go-dev', 'psgo-pure', 'go-ffi', 'go-fficc'],
 }
+WIP_TOTAL_LABEL = '**Excluded WIP Total**'
+GRAND_TOTAL_LABEL = '**Total incl. Excluded WIP**'
+WIP_CELL = re.compile(r'(?:< )?([\d.]+) μs')
+TOTAL_CELL = re.compile(r'(?:< )?([\d.]+) ms')
 
 
 def row_label(cell):
@@ -106,44 +110,305 @@ def verify(key, result):
         raise ValueError('Inconsistent total: ' + key)
 
 
+NEW_LAYOUT_GROUPS = tuple(title for title in GROUPS if title != 'Extended Results')
+CELL_RATIO = re.compile(r'([\d.]+)x')
+CELL_MS = re.compile(r'([\d.]+) ms')
+CELL_US = re.compile(r'([\d.]+) μs')
+
+
+def table_cells(line):
+    return [cell.strip() for cell in line.split('|')[1:-1]]
+
+
+def find_benchmark_row(lines, label):
+    prefix = '| [' + label + ']('
+    for i, line in enumerate(lines):
+        if line.startswith(prefix):
+            return i
+    raise ValueError('Missing benchmark row: ' + label)
+
+
+def find_table_row(lines, label):
+    prefix = '| ' + label + ' |'
+    return next(i for i, line in enumerate(lines) if line.startswith(prefix))
+
+
+def metric_row(lines, start, label):
+    for i in range(start + 1, len(lines)):
+        if lines[i].startswith('| ' + label + ' |'):
+            return i
+        if lines[i].startswith('| **') or lines[i].startswith('| ['):
+            break
+    raise ValueError('Missing ' + label + ' row')
+
+
+def cell_ratio(cell):
+    match = CELL_RATIO.search(cell)
+    return None if match is None else float(match.group(1))
+
+
+def cell_ms(cell):
+    match = CELL_MS.search(cell)
+    return None if match is None else float(match.group(1))
+
+
+def cell_us(cell):
+    match = CELL_US.search(cell)
+    return None if match is None else float(match.group(1))
+
+
+def new_layout(lines):
+    return any(line.startswith('| **Stable** |') for line in lines)
+
+
+def section_lines(text, title):
+    pattern = r'(#### ' + re.escape(title) + r'\n)(.*?)(?=\n#### |\n### |\n## |\Z)'
+    match = re.search(pattern, text, re.S)
+    if match is None:
+        return None
+    return match, match[2].splitlines()
+
+
+def bold_value(value):
+    value = value.strip()
+    if not value or value == '—':
+        return value
+    if re.fullmatch(r'(?:~ |< )?[\d.]+ (?:μs|ms|s)', value) or re.fullmatch(r'[\d.]+x', value):
+        return '**' + value + '**'
+    value = re.sub(r'^((?:~ |< )?[\d.]+ (?:μs|ms|s))', r'**\1**', value)
+    return re.sub(r'(/(?:C|JS) = )([\d.]+x)', r'\1**\2**', value)
+
+
+def bold_total_line(line):
+    parts = line.split('|')
+    start = 2 if line.startswith('|') else 1
+    end = len(parts) - 1 if line.rstrip().endswith('|') else len(parts)
+    for i in range(start, end):
+        raw = parts[i]
+        value = raw.strip()
+        if not value or value == '—':
+            continue
+        bolded = bold_value(value)
+        if bolded != value:
+            parts[i] = raw.replace(value, bolded, 1)
+    return '|'.join(parts)
+
+
+def bold_totals(text):
+    """Bold the numeric cells of total rows and their metric rows."""
+    result = []
+    in_total = False
+    for line in text.splitlines():
+        if line.startswith('| **Total'):
+            result.append(bold_total_line(line))
+            in_total = True
+        elif line.startswith('**Total'):
+            result.append(bold_total_line(line))
+            in_total = False
+        elif in_total and line.startswith('| ↳ '):
+            result.append(bold_total_line(line))
+        else:
+            in_total = False
+            result.append(line)
+    return '\n'.join(result) + '\n'
+
+
+def refresh_new_totals(text):
+    """Recompute the Stable/Incl WIP aggregate rows from displayed cells."""
+    js_match, js_lines = section_lines(text, 'JavaScript')
+    if js_match is None or not new_layout(js_lines):
+        return text
+    js_stable = cell_ms(table_cells(js_lines[find_table_row(js_lines, '**Total Stable**')])[1])
+    js_incl_rows = []
+    js_block = None
+    for js_index, js_line in enumerate(js_lines):
+        if js_line.startswith('| **Incl WIP**'):
+            js_block = 'incl'
+        elif js_line.startswith('| **Excl WIP**'):
+            js_block = 'excl'
+        elif js_block == 'incl' and js_line.startswith('| ['):
+            js_incl_rows.append(js_index)
+    if len(js_incl_rows) != 23:
+        raise ValueError('Unexpected Incl WIP composition in JavaScript')
+    js_incl = sum(cell_us(table_cells(js_lines[i])[1]) for i in js_incl_rows) / 1000
+    js_combined = js_stable + js_incl
+    for title in NEW_LAYOUT_GROUPS:
+        found = section_lines(text, title)
+        if found is None:
+            continue
+        match, lines = found
+        if not new_layout(lines):
+            continue
+        header = next(i for i, line in enumerate(lines) if line.strip())
+        columns = len(table_cells(lines[header + 1]))
+        block, benchmarks = None, []
+        for i, line in enumerate(lines):
+            if line.startswith('| **Stable**'):
+                block = 'stable'
+            elif line.startswith('| **Incl WIP**'):
+                block = 'incl'
+            elif line.startswith('| **Excl WIP**'):
+                block = 'excl'
+            elif line.startswith('| ['):
+                label = line[len('| ['):line.index('](')]
+                benchmarks.append((block, label, i))
+        stable = [row for row in benchmarks if row[0] == 'stable']
+        incl = [row for row in benchmarks if row[0] == 'incl']
+        if len(stable) != 14 or len(incl) != 23:
+            raise ValueError('Unexpected Stable/Incl WIP composition in ' + title)
+
+        def ratios(rows, metric):
+            result = []
+            for _, _, index in rows:
+                result.append([cell_ratio(cell)
+                               for cell in table_cells(lines[metric_row(lines, index, metric)])[1:]])
+            return result
+
+        stable_c = ratios(stable, '↳ /C')
+        stable_js = ratios(stable, '↳ /JS')
+        incl_js = ratios(incl, '↳ /JS')
+        all_js = stable_js + incl_js
+        total_row = find_table_row(lines, '**Total Stable**')
+        stable_ms = [cell_ms(cell) for cell in table_cells(lines[total_row])[1:]]
+
+        def incl_total(i):
+            times = [cell_us(table_cells(lines[index])[i + 1]) for _, _, index in incl]
+            if any(value is None for value in times):
+                return None
+            return sum(times) / 1000
+
+        incl_ms = [incl_total(i) for i in range(columns)]
+        combined_ms = [None if incl_ms[i] is None else stable_ms[i] + incl_ms[i]
+                       for i in range(columns)]
+
+        def mean_cells(rows, available=None):
+            cells = []
+            for i in range(columns):
+                if available is not None and not available[i]:
+                    cells.append('—')
+                    continue
+                values = [row[i] for row in rows if row[i] is not None]
+                cells.append('—' if not values else
+                             format_number(sum(values) / len(values)) + 'x')
+            return cells
+
+        for label, rows in [('↳ μ/C', stable_c), ('↳ μ/JS', stable_js)]:
+            lines[metric_row(lines, total_row, label)] = (
+                '| ' + label + ' | ' + ' | '.join(mean_cells(rows)) + ' |')
+
+        incl_row = find_table_row(lines, '**Total Incl WIP**')
+        lines[incl_row] = ('| **Total Incl WIP** | '
+                           + ' | '.join('—' if value is None else format_time(value, 'ms')
+                                        for value in incl_ms) + ' |')
+        lines[metric_row(lines, incl_row, '↳ /C')] = (
+            '| ↳ /C | ' + ' | '.join('—' for _ in range(columns)) + ' |')
+        lines[metric_row(lines, incl_row, '↳ /JS')] = (
+            '| ↳ /JS | ' + ' | '.join(
+                '—' if incl_ms[i] is None or (title == 'JavaScript' and i == 0)
+                else format_number(incl_ms[i] / js_incl) + 'x'
+                for i in range(columns)) + ' |')
+        lines[metric_row(lines, incl_row, '↳ μ/JS')] = (
+            '| ↳ μ/JS | ' + ' | '.join(mean_cells(incl_js, [v is not None for v in incl_ms])) + ' |')
+
+        combined_row = find_table_row(lines, '**Total Stable + Incl WIP**')
+        lines[combined_row] = ('| **Total Stable + Incl WIP** | '
+                               + ' | '.join('—' if value is None else format_time(value, 'ms')
+                                            for value in combined_ms) + ' |')
+        lines[metric_row(lines, combined_row, '↳ /C')] = (
+            '| ↳ /C | ' + ' | '.join('—' for _ in range(columns)) + ' |')
+        lines[metric_row(lines, combined_row, '↳ /JS')] = (
+            '| ↳ /JS | ' + ' | '.join(
+                '—' if combined_ms[i] is None or (title == 'JavaScript' and i == 0)
+                else format_number(combined_ms[i] / js_combined) + 'x'
+                for i in range(columns)) + ' |')
+        lines[metric_row(lines, combined_row, '↳ μ/JS')] = (
+            '| ↳ μ/JS | ' + ' | '.join(mean_cells(all_js, [v is not None for v in combined_ms])) + ' |')
+
+        text = text[:match.start(2)] + '\n'.join(lines) + '\n' + text[match.end(2):]
+    return bold_totals(text)
+
+
 def render(original, results):
     text = original
+    c_reference = dict(zip(ROWS, results['c']['times_us']))
+    js_reference = dict(zip(ROWS, results['js-pure']['times_us']))
     for title, keys in GROUPS.items():
         pattern = r'(#### ' + re.escape(title) + r'\n)(.*?)(?=\n#### |\n### |\n## |\n> |\Z)'
         matches = list(re.finditer(pattern, text, re.S))
         if len(matches) != 1:
             raise ValueError('Missing/ambiguous section: ' + title)
         match = matches[0]
-        section = match[2]
-        expected_rows = EXTENDED_ROWS if title == 'Extended Results' else ROWS
-        lines = section.splitlines()
-        seen = []
-        for i, line in enumerate(lines):
-            if '|' not in line:
-                continue
-            name_cell = line.split('|', 1)[0].strip()
-            label = row_label(name_cell)
-            if label not in expected_rows and label != '**Total Execution Time**':
-                continue
-            total = label == '**Total Execution Time**'
-            values = []
-            for key in keys:
-                result = results[key]
-                value = result['total_ms'] if total else result['times_us'][expected_rows.index(label)]
-                values.append(format_time(value, 'ms' if total else 'μs'))
-            lines[i] = name_cell + ' | ' + ' | '.join(values) + ' |'
-            seen.append(label)
-        if seen != expected_rows + ['**Total Execution Time**']:
-            raise ValueError('Unexpected table row order: ' + title)
+        lines = match[2].splitlines()
+        if title in NEW_LAYOUT_GROUPS:
+            for label in ROWS:
+                index = find_benchmark_row(lines, label)
+                if len(table_cells(lines[index])) != len(keys) + 1:
+                    raise ValueError('Unexpected column count for ' + title + ': ' + label)
+                values = [results[key]['times_us'][ROWS.index(label)] for key in keys]
+                lines[index] = ('| ' + table_cells(lines[index])[0] + ' | '
+                                + ' | '.join(format_time(value, 'μs') for value in values) + ' |')
+                c_row = metric_row(lines, index, '↳ /C')
+                c_ref = c_reference.get(label)
+                c_values = (['—' if c_ref is None else format_number(value / c_ref) + 'x'
+                             for value in values])
+                lines[c_row] = '| ↳ /C | ' + ' | '.join(c_values) + ' |'
+                js_row = metric_row(lines, index, '↳ /JS')
+                js_values = []
+                for column, value in enumerate(values):
+                    if title == 'JavaScript' and column == 0:
+                        js_values.append('—')
+                    else:
+                        js_values.append(format_number(value / js_reference[label]) + 'x')
+                lines[js_row] = '| ↳ /JS | ' + ' | '.join(js_values) + ' |'
+            total_row = find_table_row(lines, '**Total Stable**')
+            if len(table_cells(lines[total_row])) != len(keys) + 1:
+                raise ValueError('Unexpected column count for ' + title + ': Total Stable')
+            lines[total_row] = ('| **Total Stable** | ' + ' | '.join(
+                format_time(results[key]['total_ms'], 'ms') for key in keys) + ' |')
+            c_row = metric_row(lines, total_row, '↳ /C')
+            c_total = results['c']['total_ms']
+            lines[c_row] = '| ↳ /C | ' + ' | '.join(
+                format_number(results[key]['total_ms'] / c_total) + 'x' for key in keys) + ' |'
+            js_row = metric_row(lines, total_row, '↳ /JS')
+            js_values = []
+            for column, key in enumerate(keys):
+                if title == 'JavaScript' and column == 0:
+                    js_values.append('—')
+                else:
+                    js_values.append(format_number(results[key]['total_ms']
+                                                   / results['js-pure']['total_ms']) + 'x')
+            lines[js_row] = '| ↳ /JS | ' + ' | '.join(js_values) + ' |'
+        else:
+            expected_rows = EXTENDED_ROWS if title == 'Extended Results' else ROWS
+            seen = []
+            for i, line in enumerate(lines):
+                if '|' not in line:
+                    continue
+                name_cell = line.split('|', 1)[0].strip()
+                label = row_label(name_cell)
+                if label not in expected_rows and label != '**Total Execution Time**':
+                    continue
+                total = label == '**Total Execution Time**'
+                old_cells = line.split('|')[1:-1]
+                new_cells = []
+                for cell, key in zip(old_cells, keys):
+                    result = results[key]
+                    value = result['total_ms'] if total else result['times_us'][expected_rows.index(label)]
+                    suffix = cell.split('<br>', 1)[1] if '<br>' in cell else ''
+                    new_cells.append(format_time(value, 'ms' if total else 'μs')
+                                     + ('<br>' + suffix if suffix else ''))
+                lines[i] = name_cell + ' | ' + ' | '.join(new_cells) + ' |'
+                seen.append(label)
+            if seen != expected_rows + ['**Total Execution Time**']:
+                raise ValueError('Unexpected table row order: ' + title)
         text = text[:match.start(2)] + '\n'.join(lines) + '\n' + text[match.end(2):]
-    return text
+    return refresh_new_totals(text)
 
 
 def render_wip(original, results):
-    """Update only the 23 WIP rows in the nine JS/Go columns."""
+    """Update the 23 WIP rows in the nine JS/Go columns and their totals."""
     text = original
     labels = [case['label'] for case in expected_cases('wip')]
-    c_reference = reference_times(original, 'C (reference)')
     js_reference = dict(zip(results['js-pure']['library']['labels'],
                             results['js-pure']['library']['times_us']))
     for title, keys in WIP_GROUPS.items():
@@ -154,23 +419,28 @@ def render_wip(original, results):
         match = matches[0]
         lines = match[2].splitlines()
         seen = []
-        for index, line in enumerate(lines):
-            name_cell = line.split('|', 1)[0].strip()
-            label = row_label(name_cell)
-            if label not in labels:
-                continue
-            cells = line.split('|')
-            if len(cells) != len(keys) + 2 or cells[-1].strip():
+        for label in labels:
+            index = find_benchmark_row(lines, label)
+            if len(table_cells(lines[index])) != len(keys) + 1:
                 raise ValueError('Unexpected column count for ' + title + ': ' + label)
             values = [results[key]['library']['times_us'][labels.index(label)] for key in keys]
-            lines[index] = name_cell + ' | ' + ' | '.join(
-                format_wip_cell(value, c_reference.get(label), js_reference[label])
-                for value in values) + ' |'
+            lines[index] = ('| ' + table_cells(lines[index])[0] + ' | '
+                            + ' | '.join(format_time(value, 'μs') for value in values) + ' |')
+            lines[metric_row(lines, index, '↳ /C')] = (
+                '| ↳ /C | ' + ' | '.join('—' for _ in keys) + ' |')
+            js_values = []
+            for column, value in enumerate(values):
+                if title == 'JavaScript' and column == 0:
+                    js_values.append('—')
+                else:
+                    js_values.append(format_number(value / js_reference[label]) + 'x')
+            lines[metric_row(lines, index, '↳ /JS')] = (
+                '| ↳ /JS | ' + ' | '.join(js_values) + ' |')
             seen.append(label)
         if seen != labels:
             raise ValueError('Unexpected WIP row order: ' + title)
         text = text[:match.start(2)] + '\n'.join(lines) + '\n' + text[match.end(2):]
-    return text
+    return refresh_new_totals(text)
 
 
 def main():
@@ -210,8 +480,8 @@ def main():
     if args.readme.read_text() != original:
         raise RuntimeError('README changed while preparing publication')
     args.readme.write_text(updated)
-    print('Published 23 WIP rows across nine JS/Go columns; core cells preserved.' if args.wip_only
-          else 'Published 39 complete validated columns; existing headers preserved.')
+    print('Published 23 WIP rows and their totals across nine JS/Go columns; core cells preserved.' if args.wip_only
+          else 'Published 40 complete validated columns; existing headers preserved.')
 
 
 if __name__ == '__main__':
