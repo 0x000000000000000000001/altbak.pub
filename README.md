@@ -2091,6 +2091,53 @@ Application | JavaScript (reference) | Go (gopurs) | Go / JS |
 --- | ---: | ---: | ---: |
 [purescript-tidy](https://github.com/natefaubion/purescript-tidy) | ~ 283.20 ms | ~ 556.44 ms | 1.96x |
 
+The tidy reference above measures a fresh process performing ten complete
+parse/format/consume iterations, including startup and module loading.
+See its [protocol and recorded campaign](bin/benchmark/tidy/README.md).
+
+#### CST parser and matched formatter control
+
+Measured on 22 November 2026, using the same PureScript driver for official
+JavaScript (PureScript 0.15.15) and Go (typed fork 0.15.17, gopurs 0.1.1).
+The corpus contains nine tidy source modules (103,257 bytes); the separate
+fixture is the input used by the tidy reference above.
+
+These are **median loop times per pass, excluding startup and input I/O**.
+Each backend has twelve interleaved runs, with twelve passes per process for
+the corpus and 76 for the fixture. Longer loops amortize Node's JIT work
+differently from the ten-iteration reference; these ratios describe their
+own workloads and timing scope.
+
+Workload (one pass) | JavaScript | Go (gopurs) | Go / JS |
+--- | ---: | ---: | ---: |
+[CST parsing — nine-module corpus](bin/benchmark/cst-parser/README.md) | ~ 63.05 ms | ~ 387.77 ms | 6.15x |
+CST parsing — tidy fixture | ~ 9.40 ms | ~ 44.31 ms | 4.71x |
+Same fixture — parse + format + consume | ~ 15.03 ms | ~ 57.59 ms | 3.83x |
+
+Parsing alone takes about **77%** of the matched Go formatter control's time.
+This compares separate workloads; it establishes that parsing is already a
+substantial cost, without isolating the printer or identifying the internal
+cause. Existing string and other FFI implementations are included.
+
+Median cumulative allocations per pass, from three separate allocation runs:
+
+Workload | JavaScript V8 heap estimate | Go `TotalAlloc` | Go allocation count |
+--- | ---: | ---: | ---: |
+CST parsing — nine-module corpus | ~ 346.40 MB | ~ 479.89 MB | ~ 10,866,807 |
+CST parsing — tidy fixture | ~ 53.65 MB | ~ 72.04 MB | ~ 1,653,765 |
+Same fixture — parse + format + consume | ~ 78.37 MB | ~ 92.84 MB | ~ 1,964,059 |
+
+MB denotes decimal megabytes. V8 heap growth is an estimate; Go reports an
+exact cumulative allocation counter. Neither measures peak memory. The JS
+formatter additionally creates 14,624 bytes of UTF-8 Buffer payload per pass.
+
+All fourteen verification inputs agree across backends, including complete
+CST round-trips and recovered/fatal parse errors. Every primary timed loop
+exceeds 0.5 seconds; one warm-up per backend/workload and calibration runs are
+excluded, with no outlier removal. Sources and generated artifacts stayed
+unchanged during measurement. See the [protocol and reproduction commands](bin/benchmark/cst-parser/README.md)
+and [raw samples, versions and hashes](bin/benchmark/cst-parser/results.json).
+
 ### Compilation times...
 
 #### ... to Go
