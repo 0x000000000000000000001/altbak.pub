@@ -107,16 +107,21 @@ class LibraryPublication(unittest.TestCase):
         return readme.read_text()
 
     def test_nine_columns_publish_23_rows_and_derived_totals(self):
-        original = (ROOT / "README.md").read_text()
+        original = publish.refresh_ratio_statistics((ROOT / "README.md").read_text())
         results = campaign_results()
+        catalogue = ROOT / "bin/benchmark/ratio-measurements.json"
+        catalogue_before = catalogue.read_bytes()
         with tempfile.TemporaryDirectory() as temporary:
             rendered = self.publish_fixture(Path(temporary), results, original)
+        self.assertEqual(catalogue.read_bytes(), catalogue_before)
         labels = [case["label"] for case in validate.expected_cases("wip")]
         original_lines = original.splitlines()
         rendered_lines = rendered.splitlines()
         self.assertEqual(len(original_lines), len(rendered_lines))
-        # The derived rows must agree with the displayed cells.
-        self.assertEqual(publish.refresh_new_totals(rendered), rendered)
+        # Repeated publication keeps times and statistics stable.
+        measurements = {key: dict(zip(result["library"]["labels"], result["library"]["times_us"]))
+                        for key, result in results.items()}
+        self.assertEqual(publish.refresh_new_totals(rendered, measurements), rendered)
         changed = set()
         for title, keys in COLUMNS.items():
             start = next(i for i, line in enumerate(original_lines)
@@ -148,7 +153,11 @@ class LibraryPublication(unittest.TestCase):
             for total in ("**Total Incl WIP**", "**Total Stable + Incl WIP**"):
                 local = next(i for i, line in enumerate(body)
                              if line.startswith("| " + total + " |"))
-                changed.update({full(local), full(local + 1), full(local + 2), full(local + 3)})
+                changed.add(full(local))
+                metric = local + 1
+                while metric < len(body) and body[metric].startswith("| ↳ "):
+                    changed.add(full(metric))
+                    metric += 1
         for index, (old, new) in enumerate(zip(original_lines, rendered_lines)):
             if index not in changed:
                 self.assertEqual(new, old, f"unrelated line changed: {index + 1}")

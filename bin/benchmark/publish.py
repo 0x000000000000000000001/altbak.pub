@@ -2,9 +2,10 @@
 """Publish complete validated campaigns, preserving the user's column headers."""
 import argparse
 import hashlib
-from html import escape
+from html import escape, unescape
 import json
 import math
+import os
 from pathlib import Path
 import re
 import statistics
@@ -112,7 +113,6 @@ def verify(key, result):
 
 
 NEW_LAYOUT_GROUPS = tuple(title for title in GROUPS if title != 'Extended Results')
-CELL_RATIO = re.compile(r'([\d.]+)x')
 CELL_MS = re.compile(r'([\d.]+) ms')
 CELL_US = re.compile(r'([\d.]+) μs')
 
@@ -141,11 +141,6 @@ def metric_row(lines, start, label):
         if lines[i].startswith('| **') or lines[i].startswith('| ['):
             break
     raise ValueError('Missing ' + label + ' row')
-
-
-def cell_ratio(cell):
-    match = CELL_RATIO.search(cell)
-    return None if match is None else float(match.group(1))
 
 
 def cell_ms(cell):
@@ -216,7 +211,201 @@ def bold_totals(text):
     return '\n'.join(result) + '\n'
 
 
-def refresh_new_totals(text):
+def timing_measurement(cell, key, label, measurements, catalogue):
+    """Read a time, retaining published bounds and its precision provenance."""
+    plain = unescape(re.sub(r'</?strong>', '', cell)).strip()
+    if plain == '—':
+        return ('missing', None, False)
+    if plain.startswith('<'):
+        return ('bounded', None, False)
+    match = re.fullmatch(r'~?\s*([\d.]+) μs', plain)
+    if match is None:
+        raise ValueError('Invalid timing cell for ' + key + ': ' + label)
+    published = float(match[1])
+    if published <= 0:
+        return ('bounded', None, False)
+    incoming = measurements.get(key, {})
+    stored = catalogue.get('columns', {}).get(key, {}).get(label, {})
+    if label in incoming:
+        value, approximate = incoming[label], False
+    elif stored.get('display') == cell:
+        value, approximate = stored['time_us'], False
+    else:
+        value, approximate = published, True
+    if not math.isfinite(value) or value <= 0:
+        raise ValueError('Invalid statistical timing for ' + key + ': ' + label)
+    return ('measured', value, approximate)
+
+
+def summarize_ratios(candidates, references):
+    """Summarize matched positive times; a missing measurement invalidates a block."""
+    if len(candidates) != len(references):
+        raise ValueError('Mismatched ratio populations')
+    pairs = list(zip(candidates, references))
+    if not pairs or any('missing' in (value[0], reference[0]) for value, reference in pairs):
+        return None
+    measured = [(value, reference) for value, reference in pairs
+                if value[0] == reference[0] == 'measured']
+    if not measured:
+        return None
+    ratios = [value[1] / reference[1] for value, reference in measured]
+    return {
+        'μ': statistics.fmean(ratios),
+        'Q₂': statistics.median(ratios),
+        'G': math.exp(statistics.fmean(math.log(value) for value in ratios)),
+        'count': len(ratios), 'population': len(pairs),
+        'approximate': any(value[2] or reference[2] for value, reference in measured),
+    }
+
+
+def statistics_cell(summary, statistic):
+    if summary is None:
+        return '—'
+    value = ('≈ ' if summary['approximate'] else '') + format_number(summary[statistic]) + 'x'
+    cell = '<strong>' + escape(value) + '</strong>'
+    if summary['count'] != summary['population']:
+        cell += ' (n=' + str(summary['count']) + '/' + str(summary['population']) + ')'
+    return cell
+
+
+def campaign_times(results, wip=False):
+    return {key: dict(zip(result['library']['labels'], result['library']['times_us']))
+            if wip else dict(zip(EXTENDED_ROWS if key.endswith('-x') else ROWS, result['times_us']))
+            for key, result in results.items() if not wip or not key.endswith('-x')}
+
+
+def updated_ratio_catalogue(catalogue, measurements, origins):
+    """Retain raw times from validated publications without dropping older blocks."""
+    updated = {**catalogue, 'sources': dict(catalogue.get('sources', {})),
+               'columns': {key: dict(values) for key, values in catalogue.get('columns', {}).items()}}
+    for key, values in measurements.items():
+        source = origins[key]['path']
+        updated['sources'][source] = origins[key]['sha256']
+        column = updated['columns'].setdefault(key, {})
+        for label, value in values.items():
+            column[label] = {'time_us': value, 'display': format_time(value), 'source': source}
+    if 'missing_columns' in catalogue:
+        updated['missing_columns'] = []
+        for item in catalogue['missing_columns']:
+            remaining = [label for label in item['missing']
+                         if label not in measurements.get(item['key'], {})]
+            if remaining:
+                updated['missing_columns'].append({**item, 'missing': remaining})
+    return updated
+
+
+def refresh_extended_statistics(text, measurements, catalogue):
+    """Use the extended table's own JS reference and preserve its inline metrics."""
+    found = section_lines(text, 'Extended Results')
+    if found is None:
+        return text
+    match, lines = found
+    keys = GROUPS['Extended Results']
+    times = {key: {} for key in keys}
+    total_index = None
+    for index, line in enumerate(lines):
+        cells = [cell.strip() for cell in line.split('|')]
+        label = row_label(cells[0])
+        if label == '**Total Execution Time**':
+            total_index = index
+        if label not in EXTENDED_ROWS:
+            continue
+        if len(cells[1:-1]) != len(keys):
+            raise ValueError('Unexpected statistical column count in Extended Results')
+        for key, cell in zip(keys, cells[1:-1]):
+            times[key][label] = timing_measurement(cell.split('<br>', 1)[0], key, label,
+                                                   measurements, catalogue)
+    if total_index is None or any(list(values) != EXTENDED_ROWS for values in times.values()):
+        raise ValueError('Unexpected statistical population in Extended Results')
+    summaries = [None if key == 'js-x' else summarize_ratios(
+        list(times[key].values()), list(times['js-x'].values())) for key in keys]
+    end = total_index + 1
+    while end < len(lines) and re.match(r'^↳ (?:μ|Q₂|G)/(?:C|JS) \|', lines[end]):
+        end += 1
+    rows = []
+    for reference in ['C', 'JS']:
+        for statistic in ['μ', 'Q₂', 'G']:
+            cells = ['—'] * len(keys) if reference == 'C' else [
+                statistics_cell(summary, statistic) for summary in summaries]
+            rows.append('↳ ' + statistic + '/' + reference + ' | ' + ' | '.join(cells) + ' |')
+    lines[total_index + 1:end] = rows
+    return text[:match.start(2)] + '\n'.join(lines) + '\n' + text[match.end(2):]
+
+
+def refresh_ratio_statistics(text, measurements=None, catalogue=None):
+    """Refresh only μ, Q₂ and G rows, using times rather than rounded ratios.
+
+    ``measurements`` maps backend keys to ``{label: time_us}`` and overrides
+    archived times, including when both round to the same displayed cell.
+    Archived times are usable only while their published cell still matches.
+    """
+    measurements = {} if measurements is None else measurements
+    if catalogue is None:
+        source = ROOT / 'bin/benchmark/ratio-measurements.json'
+        catalogue = json.loads(source.read_text()) if source.exists() else {}
+    sections = {}
+    for title in NEW_LAYOUT_GROUPS:
+        found = section_lines(text, title)
+        if found is None or not new_layout(found[1]):
+            continue
+        _, lines = found
+        blocks, block = {'stable': [], 'incl': []}, None
+        for line in lines:
+            if line.startswith('| **Stable** |'):
+                block = 'stable'
+            elif line.startswith('| **Incl WIP** |'):
+                block = 'incl'
+            elif line.startswith('| **Excl WIP** |'):
+                block = None
+            elif block is not None and line.startswith('| ['):
+                cells = table_cells(line)
+                label = row_label(cells[0])
+                if len(cells) != len(GROUPS[title]) + 1:
+                    raise ValueError('Unexpected statistical column count in ' + title)
+                blocks[block].append((label, cells[1:]))
+        if len(blocks['stable']) != 14 or len(blocks['incl']) != 23:
+            raise ValueError('Unexpected statistical population in ' + title)
+        sections[title] = blocks
+
+    def times(title, block, column):
+        key = GROUPS[title][column]
+        rows = sections[title][block] if block != 'combined' else (
+            sections[title]['stable'] + sections[title]['incl'])
+        return {label: timing_measurement(cells[column], key, label, measurements, catalogue)
+                for label, cells in rows}
+
+    for title in sections:
+        match, lines = section_lines(text, title)
+        for block, total in [('stable', '**Total Stable**'),
+                             ('incl', '**Total Incl WIP**'),
+                             ('combined', '**Total Stable + Incl WIP**')]:
+            total_index = find_table_row(lines, total)
+            end = total_index + 1
+            while end < len(lines) and lines[end].startswith('| ↳ '):
+                end += 1
+            old_metrics = {table_cells(line)[0]: line for line in lines[total_index + 1:end]}
+            metrics = []
+            for reference_name, reference_title in [('C', 'C (reference)'), ('JS', 'JavaScript')]:
+                metrics.append(old_metrics['↳ /' + reference_name])
+                reference = (times(reference_title, block, 0) if reference_title in sections else {})
+                summaries = []
+                for column, key in enumerate(GROUPS[title]):
+                    if key == 'js-pure' and reference_name == 'JS':
+                        summaries.append(None)
+                        continue
+                    candidate = times(title, block, column)
+                    summaries.append(summarize_ratios(
+                        list(candidate.values()),
+                        [reference.get(label, ('missing', None, False)) for label in candidate]))
+                for statistic in ['μ', 'Q₂', 'G']:
+                    metrics.append('| ↳ ' + statistic + '/' + reference_name + ' | '
+                                   + ' | '.join(statistics_cell(value, statistic) for value in summaries) + ' |')
+            lines[total_index + 1:end] = metrics
+        text = text[:match.start(2)] + '\n'.join(lines) + '\n' + text[match.end(2):]
+    return refresh_extended_statistics(text, measurements, catalogue)
+
+
+def refresh_new_totals(text, measurements=None, catalogue=None):
     """Recompute the Stable/Incl WIP aggregate rows from displayed cells."""
     js_match, js_lines = section_lines(text, 'JavaScript')
     if js_match is None or not new_layout(js_lines):
@@ -242,8 +431,7 @@ def refresh_new_totals(text):
         match, lines = found
         if not new_layout(lines):
             continue
-        header = next(i for i, line in enumerate(lines) if line.strip())
-        columns = len(table_cells(lines[header + 1]))
+        columns = len(GROUPS[title])
         block, benchmarks = None, []
         for i, line in enumerate(lines):
             if line.startswith('| **Stable**'):
@@ -260,17 +448,6 @@ def refresh_new_totals(text):
         if len(stable) != 14 or len(incl) != 23:
             raise ValueError('Unexpected Stable/Incl WIP composition in ' + title)
 
-        def ratios(rows, metric):
-            result = []
-            for _, _, index in rows:
-                result.append([cell_ratio(cell)
-                               for cell in table_cells(lines[metric_row(lines, index, metric)])[1:]])
-            return result
-
-        stable_c = ratios(stable, '↳ /C')
-        stable_js = ratios(stable, '↳ /JS')
-        incl_js = ratios(incl, '↳ /JS')
-        all_js = stable_js + incl_js
         total_row = find_table_row(lines, '**Total Stable**')
         stable_ms = [cell_ms(cell) for cell in table_cells(lines[total_row])[1:]]
 
@@ -284,21 +461,6 @@ def refresh_new_totals(text):
         combined_ms = [None if incl_ms[i] is None else stable_ms[i] + incl_ms[i]
                        for i in range(columns)]
 
-        def mean_cells(rows, available=None):
-            cells = []
-            for i in range(columns):
-                if available is not None and not available[i]:
-                    cells.append('—')
-                    continue
-                values = [row[i] for row in rows if row[i] is not None]
-                cells.append('—' if not values else
-                             format_number(sum(values) / len(values)) + 'x')
-            return cells
-
-        for label, rows in [('↳ μ/C', stable_c), ('↳ μ/JS', stable_js)]:
-            lines[metric_row(lines, total_row, label)] = (
-                '| ' + label + ' | ' + ' | '.join(mean_cells(rows)) + ' |')
-
         incl_row = find_table_row(lines, '**Total Incl WIP**')
         lines[incl_row] = ('| **Total Incl WIP** | '
                            + ' | '.join('—' if value is None else format_time(value, 'ms')
@@ -310,9 +472,6 @@ def refresh_new_totals(text):
                 '—' if incl_ms[i] is None or (title == 'JavaScript' and i == 0)
                 else format_number(incl_ms[i] / js_incl) + 'x'
                 for i in range(columns)) + ' |')
-        lines[metric_row(lines, incl_row, '↳ μ/JS')] = (
-            '| ↳ μ/JS | ' + ' | '.join(mean_cells(incl_js, [v is not None for v in incl_ms])) + ' |')
-
         combined_row = find_table_row(lines, '**Total Stable + Incl WIP**')
         lines[combined_row] = ('| **Total Stable + Incl WIP** | '
                                + ' | '.join('—' if value is None else format_time(value, 'ms')
@@ -324,11 +483,8 @@ def refresh_new_totals(text):
                 '—' if combined_ms[i] is None or (title == 'JavaScript' and i == 0)
                 else format_number(combined_ms[i] / js_combined) + 'x'
                 for i in range(columns)) + ' |')
-        lines[metric_row(lines, combined_row, '↳ μ/JS')] = (
-            '| ↳ μ/JS | ' + ' | '.join(mean_cells(all_js, [v is not None for v in combined_ms])) + ' |')
-
         text = text[:match.start(2)] + '\n'.join(lines) + '\n' + text[match.end(2):]
-    return bold_totals(text)
+    return bold_totals(refresh_ratio_statistics(text, measurements, catalogue))
 
 
 def render(original, results):
@@ -405,7 +561,7 @@ def render(original, results):
             if seen != expected_rows + ['**Total Execution Time**']:
                 raise ValueError('Unexpected table row order: ' + title)
         text = text[:match.start(2)] + '\n'.join(lines) + '\n' + text[match.end(2):]
-    return refresh_new_totals(text)
+    return refresh_new_totals(text, campaign_times(results))
 
 
 def render_wip(original, results):
@@ -443,7 +599,7 @@ def render_wip(original, results):
         if seen != labels:
             raise ValueError('Unexpected WIP row order: ' + title)
         text = text[:match.start(2)] + '\n'.join(lines) + '\n' + text[match.end(2):]
-    return refresh_new_totals(text)
+    return refresh_new_totals(text, campaign_times(results, wip=True))
 
 
 def main():
@@ -453,6 +609,7 @@ def main():
     parser.add_argument('--wip-only', action='store_true', help='Publish the 23 new rows in the nine JS/Go columns')
     args = parser.parse_args()
     results = {}
+    origins = {}
     source_snapshot = None
     protocol = None
     for folder in args.campaign:
@@ -470,6 +627,8 @@ def main():
         if results.keys() & incoming.keys():
             raise ValueError('Duplicate column in campaigns')
         results.update(incoming)
+        origins.update({key: {'path': os.path.relpath(result_file.resolve(), ROOT),
+                              'sha256': manifest['results_sha256']} for key in incoming})
     if fingerprints() != source_snapshot:
         raise ValueError('Current sources differ from the completed campaigns')
     groups = WIP_GROUPS if args.wip_only else GROUPS
@@ -480,9 +639,23 @@ def main():
                 verify(key, results[key]['library'])
     original = args.readme.read_text()
     updated = render_wip(original, results) if args.wip_only else render(original, results)
+    catalogue_path = ROOT / 'bin/benchmark/ratio-measurements.json'
+    catalogue_text = None
+    if args.readme.resolve() == (ROOT / 'README.md').resolve():
+        catalogue_original = catalogue_path.read_text() if catalogue_path.exists() else None
+        catalogue = json.loads(catalogue_original) if catalogue_original is not None else {}
+        catalogue_text = json.dumps(updated_ratio_catalogue(
+            catalogue, campaign_times(results, wip=args.wip_only), origins),
+            ensure_ascii=False, indent=2) + '\n'
     if args.readme.read_text() != original:
         raise RuntimeError('README changed while preparing publication')
+    if catalogue_text is not None:
+        latest = catalogue_path.read_text() if catalogue_path.exists() else None
+        if latest != catalogue_original:
+            raise RuntimeError('Ratio catalogue changed while preparing publication')
     args.readme.write_text(updated)
+    if catalogue_text is not None:
+        catalogue_path.write_text(catalogue_text)
     print('Published 23 WIP rows and their totals across nine JS/Go columns; core cells preserved.' if args.wip_only
           else 'Published 40 complete validated columns; existing headers preserved.')
 
