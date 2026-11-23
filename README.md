@@ -2092,8 +2092,7 @@ App scenario | JS | Go | Go / JS |
 [CST](https://github.com/natefaubion/purescript-language-cst-parser) (corpus parsing) | ~ 62.54 ms | ~ 167.35 ms | 2.68x |
 [CST](https://github.com/natefaubion/purescript-language-cst-parser) (fixture parsing) | ~ 8.87 ms | ~ 22.77 ms | 2.57x |
 [tidy](https://github.com/natefaubion/purescript-tidy) (parsing + formatting) | ~ 15.25 ms | ~ 35.03 ms | 2.30x |
-[tidy](https://github.com/natefaubion/purescript-tidy) (10 iterations, current driver) | ~ 311.84 ms | ~ 344.87 ms | 1.11x |
-[tidy](https://github.com/natefaubion/purescript-tidy) (10 iterations, historical baseline) | ~ 283.20 ms | ~ 556.44 ms | 1.96x |
+[tidy](https://github.com/natefaubion/purescript-tidy) (10 iterations) | ~ 311.84 ms | ~ 344.87 ms | 1.11x |
 
 ### Compilation times...
 
