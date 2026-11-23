@@ -2089,16 +2089,16 @@ Benchmark               | Hand-written PureScript<br>↓<br>[official](https://g
 
 App scenario | JS | Go | Go / JS |
 --- | ---: | ---: | ---: |
-[CST](https://github.com/natefaubion/purescript-language-cst-parser) (corpus parsing) | ~ 62.54 ms | ~ 167.35 ms | 2.68x |
-[CST](https://github.com/natefaubion/purescript-language-cst-parser) (fixture parsing) | ~ 8.87 ms | ~ 22.77 ms | 2.57x |
-[tidy](https://github.com/natefaubion/purescript-tidy) (parsing + formatting) | ~ 15.25 ms | ~ 35.03 ms | 2.30x |
-[tidy](https://github.com/natefaubion/purescript-tidy) (10 iterations) | ~ 311.84 ms | ~ 344.87 ms | 1.11x |
+[CST](https://github.com/natefaubion/purescript-language-cst-parser) (corpus parsing) | ~ 63.54 ms | ~ 168.00 ms | 2.64x |
+[CST](https://github.com/natefaubion/purescript-language-cst-parser) (fixture parsing) | ~ 9.39 ms | ~ 23.20 ms | 2.47x |
+[tidy](https://github.com/natefaubion/purescript-tidy) (parsing + formatting) | ~ 14.26 ms | ~ 29.56 ms | 2.07x |
+[tidy](https://github.com/natefaubion/purescript-tidy) (10 iterations) | ~ 307.50 ms | ~ 290.41 ms | 0.94x |
 
 ### Compilation times...
 
 #### ... to Go
 
-Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS binary<br>(official compiler)<br>(WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Go binary<br>(compiled by [gopurs](https://github.com/0x000000000000000000001/gopurs))<br>(WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Go binary<br>`--dev`<br>(compiled by [gopurs](https://github.com/0x000000000000000000001/gopurs))<br>(WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Rust binary<br>(compiled by [purust](https://github.com/0x000000000000000000001/purust))<br>(WIP)
+Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS binary<br>(official compiler)<br>(WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Go binary<br>(compiled by [gopurs](https://github.com/0x000000000000000000001/gopurs))<br>(WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Go binary<br>(compiled by [gopurs](https://github.com/0x000000000000000000001/gopurs)<br>`--dev`)<br>(WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Rust binary<br>(compiled by [purust](https://github.com/0x000000000000000000001/purust))<br>(WIP)
 ----------- | --------- | ------------------ | --------------------- | ---------------------
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 146.39 s | ~ 78.04 s <br>(/JS = 0.53x) | ~ 53.61 s <br>(/JS = 0.37x) | ~ 52.92 s <br>(/JS = 0.36x)
 [gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff) | ~ 16023 ms | ~ 6312 ms | ~ 5437 ms | ~ 5002 ms
