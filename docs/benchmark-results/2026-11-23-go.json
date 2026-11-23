@@ -1,0 +1,900 @@
+{
+  "schema": 1,
+  "measured_at_utc": "2026-11-23T20:00:32.463048+00:00",
+  "command": "bin/go/run --wip-included; two additional ordinary --run-only processes",
+  "scope": "First Go column: 14 Stable, 23 Incl WIP, 3 Excl WIP diagnostics",
+  "aggregation": "Core and Incl WIP: median of three process minima; diagnostic protocols retained",
+  "build": {
+    "profile": {
+      "GOGC": "800",
+      "pgo": false,
+      "backend_profile": "release",
+      "go_build_flags": [],
+      "GOFLAGS": "",
+      "GOEXPERIMENT": ""
+    },
+    "toolchain": "go version go1.27.0 darwin/arm64",
+    "binary_sha256": "4395754408c0d58ad3d4de2bc9f80b1d1d1548365444e7ee2a7bec4d9040efd5"
+  },
+  "build_manifest_sha256": "e0fbd75956463656170182660c75030e61d37a1ab72107da1d45091464d18344",
+  "source_results": {
+    "/tmp/altbak-go-refresh.pNk6Kl/core-aggregate.json": "588d20c391c32844a22e82fcc25e42d9ecee67c5441d1d22f18ad20519a75fc5",
+    "run/bak/go/modes/test-ArrayIndexing/campaigns/20261123T195630.734151Z-42210/results.json": "e6c810c35f3397051312cd092543fd02b24bc62bd9279a38437de1dbc9b0308d",
+    "run/bak/go/modes/test-JsonTypedAst/campaigns/20261123T195632.465225Z-42210/results.json": "05bedf1118d7370f6cc338afb986d1d8c2fa29ac60d6b7ac09bf293f8faa22e2",
+    "run/bak/go/modes/test-JsonDecoding/campaigns/20261123T195705.838550Z-42210/results.json": "98b7349029c61f355240f0c47242279e20afbae40b5c0eace930ff7debce0381"
+  },
+  "times_us": {
+    "AST Evaluation": 0.325774,
+    "Fibonacci": 0.214848,
+    "List Processing": 8.71106,
+    "Tail Call Optimization": 62.772785,
+    "Deep Record Updates": 8.678508,
+    "Ackermann": 16.362875,
+    "Church Numerals": 226.932297,
+    "Prime Sieve": 73.303547,
+    "Red-Black Tree": 9907.0,
+    "Polymorphism": 0.03062,
+    "State Monad": 88.500977,
+    "Lazy Evaluation": 0.75487,
+    "Array Processing": 2.673269,
+    "RowToList": 0.140972,
+    "array/map-10000": 132.214195,
+    "array/filter-10000": 75.929527,
+    "array/foldl-sum-10000": 4.757975,
+    "array/sort-descending-10000": 156.318359,
+    "array/eq-neq-last-10000": 3.872792,
+    "array/append-1000": 26.509684,
+    "foldable/traverse-maybe-1000": 16.096639,
+    "foldable/traverse-maybe-fail-first-1000": 3.799998,
+    "foldable/traverse-maybe-fail-last-1000": 3.780721,
+    "string/cu-length-unicode-1000": 0.009593,
+    "string/cp-length-unicode-1000": 6.517171,
+    "string/indexOf-hit-10000": 0.404519,
+    "string/indexOf-miss-10000": 2.385773,
+    "string/cp-take-unicode-1500": 45.108723,
+    "string/split-1000": 135.954102,
+    "string/concat-1000": 58.865563,
+    "record/set-small-1000": 0.531342,
+    "record/set-medium-1000": 5.965353,
+    "record/set-large-1000": 9.889811,
+    "st/ref-write-10000": 6.291361,
+    "st/ref-modify-10000": 20.836914,
+    "effect/ref-write-10000": 204.561203,
+    "effect/ref-modify-10000": 184.341797,
+    "Array Indexing": 4616.792,
+    "JSON to Typed AST": 20801.167,
+    "JSON Decoding": 2237.333
+  },
+  "process_times_us": {
+    "stable": [
+      [
+        0.323335,
+        0.215151,
+        8.576253,
+        63.473797,
+        8.789246,
+        16.308878,
+        230.179688,
+        73.303547,
+        9981.625,
+        0.031485,
+        90.301109,
+        0.771233,
+        2.724721,
+        0.137974
+      ],
+      [
+        0.325774,
+        0.208962,
+        8.71106,
+        61.290852,
+        8.605896,
+        16.362875,
+        225.628906,
+        72.72477,
+        9588.042,
+        0.03062,
+        88.500977,
+        0.75487,
+        2.673269,
+        0.140972
+      ],
+      [
+        0.34669,
+        0.214848,
+        8.744161,
+        62.772785,
+        8.678508,
+        16.627359,
+        226.932297,
+        74.207031,
+        9907.0,
+        0.030109,
+        86.704102,
+        0.740107,
+        2.660858,
+        0.142893
+      ]
+    ],
+    "incl_wip": [
+      [
+        132.214195,
+        75.788414,
+        4.832255,
+        156.318359,
+        3.872792,
+        26.509684,
+        16.096639,
+        3.799998,
+        3.780721,
+        0.009453,
+        6.517171,
+        0.406809,
+        2.441762,
+        45.108723,
+        141.801109,
+        58.865563,
+        0.531342,
+        5.965353,
+        10.024984,
+        7.45931,
+        20.643229,
+        189.065109,
+        180.730469
+      ],
+      [
+        130.233727,
+        75.929527,
+        4.757975,
+        153.169594,
+        3.854706,
+        25.871744,
+        15.750977,
+        3.742757,
+        3.674418,
+        0.009698,
+        6.523173,
+        0.388615,
+        2.34847,
+        44.669434,
+        133.98275,
+        58.372395,
+        0.514791,
+        5.829977,
+        9.689656,
+        6.249207,
+        20.836914,
+        206.852859,
+        184.341797
+      ],
+      [
+        134.811523,
+        80.181969,
+        4.745402,
+        156.645828,
+        3.977203,
+        26.896891,
+        16.201131,
+        3.907847,
+        3.828634,
+        0.009593,
+        6.474304,
+        0.404519,
+        2.385773,
+        46.988609,
+        135.954102,
+        60.509441,
+        0.566416,
+        6.376322,
+        9.889811,
+        6.291361,
+        21.294107,
+        204.561203,
+        191.343109
+      ]
+    ]
+  },
+  "oracles": {
+    "stable": [
+      "7",
+      "55",
+      "202950",
+      "100000",
+      "20000",
+      "125",
+      "100000",
+      "21536",
+      "22",
+      "10000000",
+      "1200",
+      "1000000",
+      "202950",
+      "5"
+    ],
+    "incl_wip": [
+      "75025000",
+      "37510000",
+      "50005000",
+      "75010000",
+      "0",
+      "3002000",
+      "752500",
+      "-1",
+      "-1",
+      "4000",
+      "3000",
+      "10000",
+      "-1",
+      "64421000",
+      "295000",
+      "195000",
+      "1006",
+      "1072",
+      "1272",
+      "10000",
+      "10000",
+      "10000",
+      "10000"
+    ],
+    "all_values_validated": true
+  },
+  "diagnostics": {
+    "Array Indexing": {
+      "process_minima_us": [
+        4583.125,
+        4616.792,
+        4653.833
+      ],
+      "representation": "boxed",
+      "size": 16384,
+      "accesses": 8388608,
+      "batches_per_process": 10,
+      "profile": {
+        "GOGC": "800",
+        "GOMAXPROCS": "1",
+        "GOWORK": "off",
+        "GOFLAGS": "",
+        "GOEXPERIMENT": "",
+        "GOPURS_JS": "1",
+        "NODE_OPTIONS": ""
+      },
+      "artifacts": {
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/array-benchmark": "af9c1c08a27079888d7468c5bd70b63874f0540ea2cafc8f12899d9ffabc8f9d",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/array-benchmark-c": "c4d5315f0a2e02d1c16e9b445f340c1d4144b07af54879230ae7b8183a3c03d4",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/driver.mjs": "22701878dc0c9389cf129676193d97f405f3f0fb64b33ef86a4b4c4e1c70a728",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/ArrayIndexingMain/index.js": "ba1ccb3ca86cc7b33284319471cceb733eca92c26f6c585222d8c764a4592fcc",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Alt/index.js": "8f0524fc0720fd3363f46a28cd7262ba0c89b373461808905dff00f720b92965",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Alternative/index.js": "6d948cc9bc078016a77fa42bf1425aa040e072e7887e7e711ea7ed09404becce",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Applicative/index.js": "e5cde924be4417f22b1af67766ea820fc29045ca83f27a0c2eec709fa7a270b8",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Apply/foreign.js": "ddebe14d1c07db99d7c2bf659d823c35fb65409c977be0f297be3215d5e01966",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Apply/index.js": "f80b7776091f1ae729bb0d8677b7738cc7167c1895af3fbc937d498769db85bf",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Bind/foreign.js": "007135a8719432572e647c34f9cce8c7dd770df384be16c5d87f81f21167c798",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Bind/index.js": "c452692fdd7e3206f20698b2bda92ffb57c232ae132b8911b5c6df7e74a3f8d4",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Category/index.js": "134d1f3b4333aee83841ee9a80be4cce20ec897bbda7e4a4b3a3148c4931f47e",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Comonad/index.js": "6b3a0de47037577e3555c458626c7c872921b6371d1e7f909c5da7e6ea256cf7",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Extend/foreign.js": "692f882f78d2c5bf428b4234180e8ce42e7302cbe36864edbb8618078c163a7c",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Extend/index.js": "8581dde306fed272ce262a00965d5e4da02df3b0f80b380a1443ac5bb62e9333",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Lazy/index.js": "46d1d99a41e9bebbed14399297b42096a059327b1ccf1a8b6ddf4479ae365406",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Monad/index.js": "54c92a44fafb100688d9aacc2ac941bb130a8a35406787d3127806a71bc151e1",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Monad.Rec.Class/index.js": "fc3a079ca5c5c2aad2b6ab4d533a0b1a0f7b6badf6918800dd7a89a41d22b4cb",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Monad.ST/index.js": "318d72c36f5b62c3b7d3e90e688f37b31aedeb128669df86c5dcfd9ca1b1895d",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Monad.ST.Internal/foreign.js": "b38079003c6a28fd285045e4071b852ed2827554bfab45bdcd0e9704eac30183",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Monad.ST.Internal/index.js": "32808513ac193173c01ef63d16252affda14dc332057c8e55ad7d34939cefa4c",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Monad.ST.Ref/index.js": "b4659cbfc7e209709fbafcf4ba3be056a3eca746614e60dafe74620dbc206403",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Monad.ST.Uncurried/foreign.js": "747021864462ce3459bccff4d5e503c204e74c378b3341c7d186f6bfc6c9a11d",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Monad.ST.Uncurried/index.js": "a5dadbf3a617ab0dc3475bbc24955761079d2994f6c7631323cb1a04df444c1f",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.MonadPlus/index.js": "d4eb99b21339855e726ea96ffd8b4e3d34c76b0c48675cb92768bb1fa9120ff6",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Plus/index.js": "e5e41f704127cf486f88b70e66a2605bd20a4d2a7d6881aad44127111f1819f8",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Control.Semigroupoid/index.js": "bb8b8946c52c84989ae142c96693bf378607b499ee478d1fd30a6bcb23dc61f6",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Array/foreign.js": "8c3cb15941ee42024e5d9bd3724f644ce84f0bdc7a73931b9415bea08249b10f",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Array/index.js": "4759d560d28e7554a9a14789b0f428127c71867e889196646b8ad62acef03834",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Array.NonEmpty.Internal/foreign.js": "21a38d1e70957d1ef0aa0e4a15fad434274cc66a166a1996e460d5f328e9c56d",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Array.NonEmpty.Internal/index.js": "8830ef2bc76baed41a6e0836869293343c8ff5acf6e5342c94539bb82b75ccf1",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Array.ST/foreign.js": "fa71d8fdee92c2f36bee580b979d325f3c18004d3ce4ac1b953c571788951762",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Array.ST/index.js": "13eadd06e9760e2cdc8f1272b0e89d3e395c3ffe2bd82a2470a649f933878099",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Array.ST.Iterator/index.js": "b987d89fe879cd76eea07e4e06e82f7dc288e24f14df4c5604ef3dd0178a22ff",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Bifunctor/index.js": "2180b1d8abd0c6b6574972dcebf6033ac599d7fc42323db4b8007c0692b1edbf",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Boolean/index.js": "edab891013727450a210174adb77b29e06795d3c5adee0cc21677c26dd9eb6e1",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.BooleanAlgebra/index.js": "6c6e735daab4e03afcdd44e87de47bcba8561237ade2b9f227e63eae15c34642",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Bounded/foreign.js": "1c1efc2e6387570103ee581799e6f5d6175e210c9a7cf94aba235ff628d73634",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Bounded/index.js": "60c2687c1551c87ad77284619cd351b635444ec6ef777371dc27b31e0165ce8a",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.CommutativeRing/index.js": "79895971847a5e7629facf2c4f03452793eefffcf9068acdfd81aae3ffa88487",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Const/index.js": "7d855390242395fabe9a07eb3fe00f5ad3f92b19059db7b77f5f4070993e9ead",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.DivisionRing/index.js": "3e0a4e7911e800e618aff21ca1f424e10fe03c7a4dac546cac2098339e6c1071",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Either/index.js": "43266ca5336c21ff7e2286adbab721217647e74f53b469442fe9529c35c3a8de",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Eq/foreign.js": "0a322f9252ba18de27c1dbb8fec560b44dfd4f2b4c82b3a51fde82af4d871ffe",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Eq/index.js": "081bf2195a7dce9e857ece31485fdb22fab0bbeb2adb99fbcfa6afccbd8a5d67",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.EuclideanRing/foreign.js": "cc7b72061de673f538c3ced03a0d77813c65d76bc6b2731de11f7a921862950f",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.EuclideanRing/index.js": "6648f3a1f190f4194c3bb115c0ae6cab7caf170cca943f336590acea8aaba173",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Field/index.js": "b97eb0e4e5725394d1b5bda3dd12f8ec44559573ad5b9ae84ad05f1baedd80ec",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Foldable/foreign.js": "8bb5b064b2991c3b2afd81e66f059be55c3f1620c11e65543ca2ed5c3a9db720",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Foldable/index.js": "de3e2ae8b09bf0078fcf6cb6822b41636b02d8e57b4e42b9bfe8c5d3605f998d",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.FoldableWithIndex/foreign.js": "b1d9d7320807c17e4650be364fc25a1465c498d6c2da9d8feb0b2fd81c3ee187",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.FoldableWithIndex/index.js": "53cb1135938b4d0b418a7c58473373ba18b005c26c332d980f347f06355e496e",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Function/index.js": "ad64f9e6ebe103e51e6e196a51c68821a34ce315399761b9c90ed5382c70d493",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Function.Uncurried/foreign.js": "4247171b14b7a69baf35e208774ee4ca60ad8064ec68be35833982536bcb15ef",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Function.Uncurried/index.js": "171c7342538e043569cd7b2a84ade6e91ed90fa6343a176b0748b47939b15217",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Functor/foreign.js": "0150580296d7cc25833ba91f7df6986306fec5dfe170aacf77807aac00c0ebf0",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Functor/index.js": "bcb909535de347f841cd73123a4231ff4dfd817662e14c12e83a5a384b5b99c5",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Functor.App/index.js": "98d25354a0de4e11278c0a9678aa954bc21b252d89084d89aa816795da445c22",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Functor.Compose/index.js": "938ccef1a7840a26730569fe94941881de1a6807807191695c1fd1e70125b4df",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Functor.Coproduct/index.js": "acbbbff252914dac27d9dbc543b423444639cb90c2376d1621f7264393e98976",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Functor.Invariant/index.js": "7f859da8a26f101f582c32c2601714aec9bfbaf1efd937d068ca676df5369919",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Functor.Product/index.js": "89da0c46c5f2b40130b1c82538a503a63e1d6c43badb63731f0015421c573663",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.FunctorWithIndex/foreign.js": "a7069bbad5101e33d72f07c7ef54ed9f422d738c3f0765555fe90612b96c839c",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.FunctorWithIndex/index.js": "9615c1d1a966eae412006b4580fa747c75a7c248df61752db740c23ab651fee7",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Generic.Rep/index.js": "9f29f6de4c2fba342fa268062fe73740ac11b454c92f7107f258a43a83be0e14",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.HeytingAlgebra/foreign.js": "c047b0c397ee4127c2e14ac297f97f9e8deddcb1bace7bcecb2ee1d3117bb70b",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.HeytingAlgebra/index.js": "4d1b91dc1305706afff2aa30d030e6c443a64997a508e174493065f4a1ed9f4e",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Identity/index.js": "fc93460260cc095bda31a1cc00de84a54322d7a423012de48519f41825fb4cb3",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Maybe/index.js": "b62433f3b5eb83cd0ed065d962db66366f4929b7e0cbd2aad9c1c544a03962c2",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Maybe.First/index.js": "4b8309e488fe7837aa56f300bdac57db994957b3f66ce296d0553a1d645a285b",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Maybe.Last/index.js": "97827692fd24a34e9f22482cdbaff8f5fe3a8a872da91b23c06398b010ac9989",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Monoid/index.js": "fce364566f646c4b3b30855fb6ede7d0b3fb21e23ab93d6d0f2c8ebaf26a2062",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Monoid.Additive/index.js": "0beb25ac85a7a28bdcbc43f92fcf2afa7a55d21c09217ae7b08ef27ad182dc24",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Monoid.Alternate/index.js": "0cbf043ecd0d17d4fcb6a15144d2a3d9193b2d937adf60b869c5ef18ad6e1afe",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Monoid.Conj/index.js": "bae2d1c1f95aec65aae0f2019af1cb159ac774c197df6e8ff96e56d2ee22885b",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Monoid.Disj/index.js": "2ecbb503b01977dd8c538774ab32467ad31dc430979332f7b9b6cedc1a24e4dd",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Monoid.Dual/index.js": "44ce5cd5036eb8c458256af34dcbe91796b5cbd6316b61e6759e0ecaec3fd6d1",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Monoid.Endo/index.js": "c14df279d34e93b91311ad32c47e96ddde08d78d6185b70b6daa26bfbc521415",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Monoid.Multiplicative/index.js": "de8af72806f4222db0947cd4a3366f3e4e9146352bacaa0b4f917032bab70d50",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.NaturalTransformation/index.js": "4e95efc8bc31c58e8d80f6e4ffb13d2cdbb09cc154db9f1a4eef3134f599e6b9",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Newtype/index.js": "05e5765cd83f465cf63e967557135fe9cbc72e27f036292c3922f0eb5308ef18",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Ord/foreign.js": "67333cefe4084b8056f769170efd79ffc7309a191ab2a420afef902f1719d803",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Ord/index.js": "85b3c81bc5547e8ff77bef651440ac5471b984a00e81138e2c0090670b195a1d",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Ord.Max/index.js": "627ddf5df2b60b07e508aca98e60ecdeb5d2b34794310c4547bcc869d27ed92a",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Ord.Min/index.js": "4d73dd4753a239663fdaecefd546cc2b7f9bb8c32987ff51fc0df1181071d554",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Ordering/index.js": "e5a59d3cb5c1ec4207c1fcbc8115642c3e9228db2c713cadb546cd25af7638c5",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Ring/foreign.js": "cbddf7ed3d4c34c775dffd9534719fc20f980d6063edbffcf1ac2bd436b59131",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Ring/index.js": "b3a55dc97323216ad5c6aacb6800bd6d79a229f5bde47c0e6a9de498a9f07b8b",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Semigroup/foreign.js": "f70a0bfaa06332395ec149147df89d6969deac63992556c12fb6817b3abcd386",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Semigroup/index.js": "131c6651846e8d9444b1c8ef2769490d6c22cf16c3bffb73d1e95984af5ff4ff",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Semigroup.First/index.js": "3789efd4b868ec9e19a46037b7c685342f0ad96dbd82fdba9f1f0ad0edc00648",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Semigroup.Foldable/index.js": "eaa0dcaf8f096a7c86a877ef68986294a9343032dfc6d7c43c3bbc80dcc33382",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Semigroup.Last/index.js": "f3d2f81176382f67ab9fd0097dbd494fbbc62c8252c9258b0876d3129676bf34",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Semigroup.Traversable/index.js": "16f3206d7c0c7ddfd778e4e52ae960f72ec5bde4e487b0739dd08001321e7c8f",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Semiring/foreign.js": "fb5e09243e90fcde78f52b15d56a07216a8bea1267db2e12d46ff07c8e0334c9",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Semiring/index.js": "3ea2a97128d7b14aa5ea291f3adf41cf3af731c22da1c227b3853de9ae972a8c",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Show/foreign.js": "aa21cf7b67f9756c987b04ad0bb5b8d81709fa1c922ea4f7c7a53489ff3e4f4a",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Show/index.js": "4ddaeda202075a6a44c91b71bd04ac79f70f9254626e985c6a1afde4fee06260",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Symbol/foreign.js": "f41ee6c67044d689964e50c53fae67270fb5d475f7b739260dacba3da30b54a3",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Symbol/index.js": "a8641ff0e56a26c48dc72b211d7f3d7f8cbca239ff9c60b7e65a90f221989bde",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Traversable/foreign.js": "9fb8b734b49116d252b34ab34b55ecf0168472049cfaf34bf0827b55d720d363",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Traversable/index.js": "71ecea7705cd9e052c206d75d99747d7fcc42e29443d04b69e32d7161c3b444f",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Traversable.Accum/index.js": "4e95efc8bc31c58e8d80f6e4ffb13d2cdbb09cc154db9f1a4eef3134f599e6b9",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Traversable.Accum.Internal/index.js": "e99e7b7634076ca2c05c503314b159817ec9f92a6c3d7f9af2f403aff2a47682",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.TraversableWithIndex/index.js": "a51a7b0fc17a88003651ad82bf80ffab6bda1850b6e4280ebd13f77346f111c4",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Tuple/index.js": "54a9b6cb55515d40fa4946befcb112cbf2115b6e6d8505b9e21cc806adb73bc5",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Unfoldable/foreign.js": "600fed01049d552822d57e51064a23cff0b3e4038ae539cc39c264c30aa139e4",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Unfoldable/index.js": "9f95161049716315d3d4b5a98d83a4b5f23029cf4dfbbd8a4f14eda202011ffa",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Unfoldable1/foreign.js": "8194bb4677a6354205d97c8919ca745c158f2cefc8658adb8b124d009156ddbe",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Unfoldable1/index.js": "1cf4ff60802ebf56caffc420ee0d30ab324a3a685c8708aedf29df1d8f732c67",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Unit/foreign.js": "c928455ceb34797264d3059e33e0bd5da65b5c4c158dedd478e6a6caad5dc26f",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Unit/index.js": "b44d8467491e2c1d0dca3ce0fa56c12ae49bc917098a1c88c949dcb27938b77d",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Data.Void/index.js": "205e7e7205ce3cfde9bc96eeac1bf94c6b0de551414fcdc799e4f27911c84b0d",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Effect/foreign.js": "0ca289d7dea14d96347f58cda0cdffc4c098101f6604793a045404a069e73be3",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Effect/index.js": "48e81d0e8293d4ac7e2a544399eb4b22e285fede6f1f8223c82bbf612ca0364d",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Effect.Ref/foreign.js": "12c64490ed439a6d17a84b0fc526484dd94eac981e3facb673ab371035735b88",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Effect.Ref/index.js": "61af31c7c1369455977c978af31827bb42b62f9ebed54990fcfc05e83bf253f2",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Partial/foreign.js": "e08be31dbc984ad19ac5cbdf1dc001fe7fdad3257388eb64150bb70a6f9e6fcc",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Partial/index.js": "70ab845ba7f833076ebb78e27150e60d4854a0d6f275163a800e07c02bdf971d",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Partial.Unsafe/foreign.js": "96b3ffa62e7ff7598bd833c71be22683e91955f2a773521a6298c70afdadc414",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Partial.Unsafe/index.js": "83b1d9189aa50aa4e685a373f26534aa829d925f9601eb16bd020b106e93cbee",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Prelude/index.js": "c6986f1849c59e9421b0562894fc906841150d489f5b8a52f4d352e16d5da740",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Record.Unsafe/foreign.js": "9be9965542470472d39ac55b4e86423adf28694e35bf3a49e50a81d3e7a5939b",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Record.Unsafe/index.js": "fc0467a2762a2fe569332b1a820fadc990abd8b7943ab67a21af26eb7e279fc5",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Safe.Coerce/index.js": "a9b832e59e0b515307940fcf751bf5efea2ff5c53932b2e0a0887bbd92f06289",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Test.ArrayIndexing/index.js": "1bb5a73eb2ffae171c35162fead838e1bc0124ce0bb68b187fb33ede77bd0340",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Type.Proxy/index.js": "6339f91bcf21bd165d09c83f845bc8564713f28f8a0efd7df20bfb377acb704e",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Unsafe.Coerce/foreign.js": "2d5c05fcec38db09f662f19f4b75fdafa05df851b828390e5a045591a9322345",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/Unsafe.Coerce/index.js": "238714ee184591d7b5ad8309e5819c236a2c73982220d64977e9a44feeb31646",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/output/purescript/Test_ArrayIndexing.go": "89d9491b994af9b3eec909b0b160f8a700298e58b7f6361a1fb132b50e1faa0b",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/rust-project/Purs_Test_ArrayIndexing/src/lib.rs": "ebc235236e45e00fe13b8702d540d861ad20e571beb3b73c358dd8590326677a",
+        "/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/modes/test-ArrayIndexing/rust-project/target/release/purust_output": "8073400f0a2e28dd09f7969a60cf62ff961c42425ad50b28e4b77e04d4005e0c"
+      }
+    },
+    "JSON to Typed AST": {
+      "process_phase_minima_us": {
+        "parse": [
+          20209.708,
+          19792.667,
+          20030.334
+        ],
+        "decode": [
+          12332.584,
+          11574.708,
+          11302.666
+        ],
+        "combined": [
+          20801.167,
+          21108.333,
+          18930.792
+        ]
+      },
+      "protocol": {
+        "processes_per_backend": 3,
+        "warmups_per_phase": 2,
+        "samples_per_phase": 5,
+        "cell": "median of process minimum times",
+        "runtimes": [
+          "go"
+        ],
+        "GOMAXPROCS": 1,
+        "GOGC": 100,
+        "file_io_timed": false,
+        "fingerprinting_timed": false,
+        "destruction_timed_separately": []
+      },
+      "corpus": {
+        "origin": "gopurs-aff 238-module TAST corpus frozen 2026-09-21; selected 12 modules spanning arrays, ADTs, collections, Aff and tests",
+        "modules": [
+          {
+            "module": "Data.Array",
+            "bytes": 609523,
+            "sha256": "218aae45d73c9f3235984dcb168880cb8681b8bad2b9ea29af80b1b4c65367a1",
+            "types": 3298
+          },
+          {
+            "module": "Data.Array.Partial",
+            "bytes": 14429,
+            "sha256": "6388c3676e556851a7dc8502b8941d24afb00868878e5b7a55d94b33c8fe9ab4",
+            "types": 63
+          },
+          {
+            "module": "Data.List",
+            "bytes": 635248,
+            "sha256": "246705477e0b62d9d81a4694d6a7bd9e48acf4cb104ec51ddc5d7501f86e67b0",
+            "types": 2180
+          },
+          {
+            "module": "Data.Map.Internal",
+            "bytes": 1268476,
+            "sha256": "0875e432571b04e3a60a08c6a05e868e71cad2e848c292f6039aad3298340914",
+            "types": 5311
+          },
+          {
+            "module": "Data.Either",
+            "bytes": 185912,
+            "sha256": "71ebc2b87b39a46fa22221ff9ffd0ca0d4313e56621d5139a94bce2a52d4849f",
+            "types": 1025
+          },
+          {
+            "module": "Data.Maybe",
+            "bytes": 162284,
+            "sha256": "b09ecaabd2bf23c7c3353a6075d59d7c6bc18a38bb98cacb900a3a2c0226570c",
+            "types": 793
+          },
+          {
+            "module": "Data.Traversable",
+            "bytes": 473941,
+            "sha256": "506f2174b03ad5c6d5e5782de4554d438f59976eeae63bdf6a0c40abb5dfc68a",
+            "types": 2750
+          },
+          {
+            "module": "Effect.Aff",
+            "bytes": 358576,
+            "sha256": "ef46ddb003fd336145daeefc6fbae4dec9c43c3e1a59927896393532c1d1decf",
+            "types": 2249
+          },
+          {
+            "module": "Effect.Class",
+            "bytes": 7491,
+            "sha256": "8a00d41002380ed61f664f320fff63d284a07e8f1bba2882e06807bbdff1452e",
+            "types": 47
+          },
+          {
+            "module": "Test.Main",
+            "bytes": 1485997,
+            "sha256": "e4de47c30f0c10ba96af32f60849382ee45cf1bca3970171b2223307610e22ab",
+            "types": 2099
+          },
+          {
+            "module": "Control.Monad.ST.Internal",
+            "bytes": 79540,
+            "sha256": "b225809057dd215a1aed535d112b08f8e0af391ce941a8e906f12172a06c6655",
+            "types": 589
+          },
+          {
+            "module": "Data.Tuple",
+            "bytes": 263676,
+            "sha256": "8cdfe18be1e2f87ad47c78cd382a75bc48c31eea55b6c7dc0174def296dc1b54",
+            "types": 1170
+          }
+        ],
+        "total_bytes": 5545093,
+        "compressed_sha256": "10062cfd63d1b5461c335a1ce2c5dc2317e0761b224dfcb66ee996ad60cf965a",
+        "kind": "fixture12",
+        "corpus_bytes": 6454793,
+        "corpus_sha256": "ef5ed1bae6ae52d084a4b3fd9d1e9e90a5da2c3a2d1e6e3aa56122007e0b223a"
+      },
+      "binary_sha256": "c0b797e212908ff499d0ba3722cd5b8c095b378571508da9a495c86ead12d802",
+      "build_sources_sha256": "d1a9dddd574d974458c870cea0da72a5d32fb7eedf6dee66471862e4b368caaa"
+    },
+    "JSON Decoding": {
+      "process_phase_minima_us": {
+        "parse": [
+          1896,
+          2048.917,
+          2032.958
+        ],
+        "decode": [
+          641.541,
+          703.875,
+          903.417
+        ],
+        "combined": [
+          2182.667,
+          2237.333,
+          2425.625
+        ]
+      },
+      "protocol": {
+        "processes_per_backend": 3,
+        "warmups_per_phase": 2,
+        "samples_per_phase": 5,
+        "cell": "median of process minimum times",
+        "runtimes": [
+          "go"
+        ],
+        "GOMAXPROCS": 1,
+        "GOGC": 100,
+        "file_io_timed": false,
+        "fingerprinting_timed": false,
+        "destruction_timed_separately": []
+      },
+      "corpus": {
+        "modules": 17,
+        "files": [
+          {
+            "name": "empty-arrays",
+            "benchmark": true,
+            "bytes": 36
+          },
+          {
+            "name": "flat-record-arrays",
+            "benchmark": true,
+            "bytes": 133110
+          },
+          {
+            "name": "nested-records-and-variants",
+            "benchmark": true,
+            "bytes": 238916
+          },
+          {
+            "name": "null-and-missing-optionals",
+            "benchmark": true,
+            "bytes": 94826
+          },
+          {
+            "name": "unicode-escaping-and-numbers",
+            "benchmark": true,
+            "bytes": 194021
+          },
+          {
+            "name": "wrong-root-type",
+            "benchmark": false,
+            "bytes": 2
+          },
+          {
+            "name": "missing-required-version",
+            "benchmark": false,
+            "bytes": 24
+          },
+          {
+            "name": "fractional-int",
+            "benchmark": false,
+            "bytes": 38
+          },
+          {
+            "name": "wrong-boolean",
+            "benchmark": false,
+            "bytes": 76
+          },
+          {
+            "name": "invalid-optional-record",
+            "benchmark": false,
+            "bytes": 92
+          },
+          {
+            "name": "invalid-nested-optional-string",
+            "benchmark": false,
+            "bytes": 128
+          },
+          {
+            "name": "unknown-variant-tag",
+            "benchmark": false,
+            "bytes": 52
+          },
+          {
+            "name": "nested-array-element-type",
+            "benchmark": false,
+            "bytes": 156
+          },
+          {
+            "name": "wrong-array-container",
+            "benchmark": false,
+            "bytes": 36
+          },
+          {
+            "name": "first-error-priority",
+            "benchmark": false,
+            "bytes": 80
+          },
+          {
+            "name": "optional-fields-missing",
+            "benchmark": false,
+            "bytes": 208
+          },
+          {
+            "name": "optional-fields-null",
+            "benchmark": false,
+            "bytes": 257
+          }
+        ],
+        "kind": "fixture12"
+      },
+      "binary_sha256": "8be80c9795e1108673fd3105364ca09738970b04a85c72769c4bb2ccb62a058c",
+      "build_sources_sha256": "32cfe8efa7064ea0c887bdedb80c5d270bf156612180843192d8d6e859bb25cb"
+    }
+  },
+  "totals_ms": {
+    "**Total Stable**": 10.396402402,
+    "**Total Incl WIP**": 1.104943115,
+    "**Total Stable + Incl WIP**": 11.501345516999999
+  },
+  "changes": [
+    {
+      "label": "AST Evaluation",
+      "before_us": 0.316771,
+      "after_us": 0.325774,
+      "change_pct": 2.8421162290739987
+    },
+    {
+      "label": "Fibonacci",
+      "before_us": 0.203018,
+      "after_us": 0.214848,
+      "change_pct": 5.827069520929173
+    },
+    {
+      "label": "List Processing",
+      "before_us": 8.826477,
+      "after_us": 8.71106,
+      "change_pct": -1.3076225089579951
+    },
+    {
+      "label": "Tail Call Optimization",
+      "before_us": 61.635578,
+      "after_us": 62.772785,
+      "change_pct": 1.8450496237740976
+    },
+    {
+      "label": "Deep Record Updates",
+      "before_us": 8.53953,
+      "after_us": 8.678508,
+      "change_pct": 1.6274666170152496
+    },
+    {
+      "label": "Ackermann",
+      "before_us": 16.162842,
+      "after_us": 16.362875,
+      "change_pct": 1.237610316304516
+    },
+    {
+      "label": "Church Numerals",
+      "before_us": 226.674484,
+      "after_us": 226.932297,
+      "change_pct": 0.11373710681965576
+    },
+    {
+      "label": "Prime Sieve",
+      "before_us": 73.407227,
+      "after_us": 73.303547,
+      "change_pct": -0.14123949948416925
+    },
+    {
+      "label": "Red-Black Tree",
+      "before_us": 9763.542,
+      "after_us": 9907.0,
+      "change_pct": 1.4693233254898797
+    },
+    {
+      "label": "Polymorphism",
+      "before_us": 0.044347,
+      "after_us": 0.03062,
+      "change_pct": -30.953615802647295
+    },
+    {
+      "label": "State Monad",
+      "before_us": 91.179039,
+      "after_us": 88.500977,
+      "change_pct": -2.937146551851677
+    },
+    {
+      "label": "Lazy Evaluation",
+      "before_us": 0.762248,
+      "after_us": 0.75487,
+      "change_pct": -0.9679264491346595
+    },
+    {
+      "label": "Array Processing",
+      "before_us": 2.638245,
+      "after_us": 2.673269,
+      "change_pct": 1.3275491851590715
+    },
+    {
+      "label": "RowToList",
+      "before_us": 0.144864,
+      "after_us": 0.140972,
+      "change_pct": -2.6866578307930267
+    },
+    {
+      "label": "array/map-10000",
+      "before_us": 131.847656,
+      "after_us": 132.214195,
+      "change_pct": 0.2780019085056651
+    },
+    {
+      "label": "array/filter-10000",
+      "before_us": 76.492508,
+      "after_us": 75.929527,
+      "change_pct": -0.7359949552183664
+    },
+    {
+      "label": "array/foldl-sum-10000",
+      "before_us": 4.948466,
+      "after_us": 4.757975,
+      "change_pct": -3.8494959852204635
+    },
+    {
+      "label": "array/sort-descending-10000",
+      "before_us": 154.746094,
+      "after_us": 156.318359,
+      "change_pct": 1.0160288763088277
+    },
+    {
+      "label": "array/eq-neq-last-10000",
+      "before_us": 16.065349,
+      "after_us": 3.872792,
+      "change_pct": -75.89350844479009
+    },
+    {
+      "label": "array/append-1000",
+      "before_us": 30.561117,
+      "after_us": 26.509684,
+      "change_pct": -13.256822386433065
+    },
+    {
+      "label": "foldable/traverse-maybe-1000",
+      "before_us": 17.474895,
+      "after_us": 16.096639,
+      "change_pct": -7.887063126845684
+    },
+    {
+      "label": "foldable/traverse-maybe-fail-first-1000",
+      "before_us": 3.846212,
+      "after_us": 3.799998,
+      "change_pct": -1.2015458326270156
+    },
+    {
+      "label": "foldable/traverse-maybe-fail-last-1000",
+      "before_us": 3.797404,
+      "after_us": 3.780721,
+      "change_pct": -0.439326445118815
+    },
+    {
+      "label": "string/cu-length-unicode-1000",
+      "before_us": 0.00991,
+      "after_us": 0.009593,
+      "change_pct": -3.1987891019172543
+    },
+    {
+      "label": "string/cp-length-unicode-1000",
+      "before_us": 6.712056,
+      "after_us": 6.517171,
+      "change_pct": -2.9035067645442614
+    },
+    {
+      "label": "string/indexOf-hit-10000",
+      "before_us": 0.410172,
+      "after_us": 0.404519,
+      "change_pct": -1.3782023151263312
+    },
+    {
+      "label": "string/indexOf-miss-10000",
+      "before_us": 2.510376,
+      "after_us": 2.385773,
+      "change_pct": -4.963519409044704
+    },
+    {
+      "label": "string/cp-take-unicode-1500",
+      "before_us": 44.483234,
+      "after_us": 45.108723,
+      "change_pct": 1.4061230350293163
+    },
+    {
+      "label": "string/split-1000",
+      "before_us": 133.980469,
+      "after_us": 135.954102,
+      "change_pct": 1.473075153961445
+    },
+    {
+      "label": "string/concat-1000",
+      "before_us": 56.956055,
+      "after_us": 58.865563,
+      "change_pct": 3.3525987711052085
+    },
+    {
+      "label": "record/set-small-1000",
+      "before_us": 0.53473,
+      "after_us": 0.531342,
+      "change_pct": -0.6335907841340638
+    },
+    {
+      "label": "record/set-medium-1000",
+      "before_us": 5.689575,
+      "after_us": 5.965353,
+      "change_pct": 4.847075572428539
+    },
+    {
+      "label": "record/set-large-1000",
+      "before_us": 10.044271,
+      "after_us": 9.889811,
+      "change_pct": -1.5377920408559342
+    },
+    {
+      "label": "st/ref-write-10000",
+      "before_us": 7.148641,
+      "after_us": 6.291361,
+      "change_pct": -11.992209428337485
+    },
+    {
+      "label": "st/ref-modify-10000",
+      "before_us": 20.672283,
+      "after_us": 20.836914,
+      "change_pct": 0.796385188805715
+    },
+    {
+      "label": "effect/ref-write-10000",
+      "before_us": 190.794281,
+      "after_us": 204.561203,
+      "change_pct": 7.215584202966752
+    },
+    {
+      "label": "effect/ref-modify-10000",
+      "before_us": 192.986328,
+      "after_us": 184.341797,
+      "change_pct": -4.47934892051004
+    },
+    {
+      "label": "Array Indexing",
+      "before_us": 4630.79,
+      "after_us": 4616.792,
+      "change_pct": -0.3022810362810602
+    },
+    {
+      "label": "JSON to Typed AST",
+      "before_us": 20534.73,
+      "after_us": 20801.167,
+      "change_pct": 1.2974945373033897
+    },
+    {
+      "label": "JSON Decoding",
+      "before_us": 2220.35,
+      "after_us": 2237.333,
+      "change_pct": 0.7648794109036849
+    }
+  ],
+  "readme_before_sha256": "1ca84625f32b187948dbdf8d7c1700ce1fbe8091319283f5746bf41130d5c4b6",
+  "readme_after_sha256": "a393741887eeb1e80e00ce3464f1b47f73e0304d8e4c48dbb293ac5b4998487e",
+  "regression_recheck": {
+    "case": "effect/ref-write-10000",
+    "process_times_us": [
+      183.792969,
+      182.704422,
+      204.774094
+    ],
+    "median_us": 183.792969,
+    "published_campaign": "initial three processes, retained without selecting the faster recheck",
+    "all_values_validated": true
+  }
+}

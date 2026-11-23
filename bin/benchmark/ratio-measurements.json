@@ -3,7 +3,8 @@
     "docs/benchmark-results/2026-09-20.json": "0218ee63d383ff6c87a54f3de55c37453f4470526fc93ca421e3197c43605c94",
     "../altbak.pub-gopurs/var/benchmark/go-pbo-pin-20261121/after/results.json": "6f16abbef5f89d93ba24d5c0fe30080f39366150f30228227acb9fc0b75c97ff",
     "docs/benchmark-results/2026-11-14-library-js-go.json": "3e99fced5bf90f6138373d0f868f81069187bafc391cc52c0b2353155aa01a9e",
-    "docs/benchmark-results/2026-11-21-go-significant-gains.json": "af2e9b22bd062644ac06539a89d697d9034d0bb28a4ceab509a8e1deb37d1105"
+    "docs/benchmark-results/2026-11-21-go-significant-gains.json": "af2e9b22bd062644ac06539a89d697d9034d0bb28a4ceab509a8e1deb37d1105",
+    "docs/benchmark-results/2026-11-23-go.json": "1de124d55a83dda9be897bc95f3aaac2b12ec694dc03b58aa35366df798e437d"
   },
   "columns": {
     "js-pure": {
@@ -2397,189 +2398,204 @@
     },
     "go-pure": {
       "AST Evaluation": {
-        "time_us": 0.316771,
-        "display": "~ 0.32 μs",
-        "source": "../altbak.pub-gopurs/var/benchmark/go-pbo-pin-20261121/after/results.json"
+        "time_us": 0.325774,
+        "display": "~ 0.33 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "Fibonacci": {
-        "time_us": 0.203018,
-        "display": "~ 0.20 μs",
-        "source": "../altbak.pub-gopurs/var/benchmark/go-pbo-pin-20261121/after/results.json"
+        "time_us": 0.214848,
+        "display": "~ 0.21 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "List Processing": {
-        "time_us": 8.826477,
-        "display": "~ 8.83 μs",
-        "source": "../altbak.pub-gopurs/var/benchmark/go-pbo-pin-20261121/after/results.json"
+        "time_us": 8.71106,
+        "display": "~ 8.71 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "Tail Call Optimization": {
-        "time_us": 61.635578,
-        "display": "~ 61.64 μs",
-        "source": "../altbak.pub-gopurs/var/benchmark/go-pbo-pin-20261121/after/results.json"
+        "time_us": 62.772785,
+        "display": "~ 62.77 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "Deep Record Updates": {
-        "time_us": 8.53953,
-        "display": "~ 8.54 μs",
-        "source": "../altbak.pub-gopurs/var/benchmark/go-pbo-pin-20261121/after/results.json"
+        "time_us": 8.678508,
+        "display": "~ 8.68 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "Ackermann": {
-        "time_us": 16.162842,
-        "display": "~ 16.16 μs",
-        "source": "../altbak.pub-gopurs/var/benchmark/go-pbo-pin-20261121/after/results.json"
+        "time_us": 16.362875,
+        "display": "~ 16.36 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "Church Numerals": {
-        "time_us": 226.674484,
-        "display": "~ 226.67 μs",
-        "source": "../altbak.pub-gopurs/var/benchmark/go-pbo-pin-20261121/after/results.json"
+        "time_us": 226.932297,
+        "display": "~ 226.93 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "Prime Sieve": {
-        "time_us": 73.407227,
-        "display": "~ 73.41 μs",
-        "source": "../altbak.pub-gopurs/var/benchmark/go-pbo-pin-20261121/after/results.json"
+        "time_us": 73.303547,
+        "display": "~ 73.30 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "Red-Black Tree": {
-        "time_us": 9763.542,
-        "display": "~ 9763.54 μs",
-        "source": "../altbak.pub-gopurs/var/benchmark/go-pbo-pin-20261121/after/results.json"
+        "time_us": 9907.0,
+        "display": "~ 9907.00 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "Polymorphism": {
-        "time_us": 0.044347,
-        "display": "~ 0.04 μs",
-        "source": "../altbak.pub-gopurs/var/benchmark/go-pbo-pin-20261121/after/results.json"
+        "time_us": 0.03062,
+        "display": "~ 0.03 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "State Monad": {
-        "time_us": 91.179039,
-        "display": "~ 91.18 μs",
-        "source": "../altbak.pub-gopurs/var/benchmark/go-pbo-pin-20261121/after/results.json"
+        "time_us": 88.500977,
+        "display": "~ 88.50 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "Lazy Evaluation": {
-        "time_us": 0.762248,
-        "display": "~ 0.76 μs",
-        "source": "../altbak.pub-gopurs/var/benchmark/go-pbo-pin-20261121/after/results.json"
+        "time_us": 0.75487,
+        "display": "~ 0.75 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "Array Processing": {
-        "time_us": 2.638245,
-        "display": "~ 2.64 μs",
-        "source": "../altbak.pub-gopurs/var/benchmark/go-pbo-pin-20261121/after/results.json"
+        "time_us": 2.673269,
+        "display": "~ 2.67 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "RowToList": {
-        "time_us": 0.144864,
+        "time_us": 0.140972,
         "display": "~ 0.14 μs",
-        "source": "../altbak.pub-gopurs/var/benchmark/go-pbo-pin-20261121/after/results.json"
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "array/map-10000": {
-        "time_us": 131.847656,
-        "display": "~ 131.85 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 132.214195,
+        "display": "~ 132.21 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "array/filter-10000": {
-        "time_us": 76.492508,
-        "display": "~ 76.49 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 75.929527,
+        "display": "~ 75.93 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "array/foldl-sum-10000": {
-        "time_us": 4.948466,
-        "display": "~ 4.95 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 4.757975,
+        "display": "~ 4.76 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "array/sort-descending-10000": {
-        "time_us": 154.746094,
-        "display": "~ 154.75 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 156.318359,
+        "display": "~ 156.32 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "array/eq-neq-last-10000": {
-        "time_us": 16.065349,
-        "display": "~ 16.07 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 3.872792,
+        "display": "~ 3.87 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "array/append-1000": {
-        "time_us": 30.561117,
-        "display": "~ 30.56 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 26.509684,
+        "display": "~ 26.51 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "foldable/traverse-maybe-1000": {
-        "time_us": 17.474895,
-        "display": "~ 17.47 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 16.096639,
+        "display": "~ 16.10 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "foldable/traverse-maybe-fail-first-1000": {
-        "time_us": 3.846212,
-        "display": "~ 3.85 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 3.799998,
+        "display": "~ 3.80 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "foldable/traverse-maybe-fail-last-1000": {
-        "time_us": 3.797404,
-        "display": "~ 3.80 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 3.780721,
+        "display": "~ 3.78 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "string/cu-length-unicode-1000": {
-        "time_us": 0.00991,
+        "time_us": 0.009593,
         "display": "~ 0.01 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "string/cp-length-unicode-1000": {
-        "time_us": 6.712056,
-        "display": "~ 6.71 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 6.517171,
+        "display": "~ 6.52 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "string/indexOf-hit-10000": {
-        "time_us": 0.410172,
-        "display": "~ 0.41 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 0.404519,
+        "display": "~ 0.40 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "string/indexOf-miss-10000": {
-        "time_us": 2.510376,
-        "display": "~ 2.51 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 2.385773,
+        "display": "~ 2.39 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "string/cp-take-unicode-1500": {
-        "time_us": 44.483234,
-        "display": "~ 44.48 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 45.108723,
+        "display": "~ 45.11 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "string/split-1000": {
-        "time_us": 133.980469,
-        "display": "~ 133.98 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 135.954102,
+        "display": "~ 135.95 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "string/concat-1000": {
-        "time_us": 56.956055,
-        "display": "~ 56.96 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 58.865563,
+        "display": "~ 58.87 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "record/set-small-1000": {
-        "time_us": 0.53473,
+        "time_us": 0.531342,
         "display": "~ 0.53 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "record/set-medium-1000": {
-        "time_us": 5.689575,
-        "display": "~ 5.69 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 5.965353,
+        "display": "~ 5.97 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "record/set-large-1000": {
-        "time_us": 10.044271,
-        "display": "~ 10.04 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 9.889811,
+        "display": "~ 9.89 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "st/ref-write-10000": {
-        "time_us": 7.148641,
-        "display": "~ 7.15 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 6.291361,
+        "display": "~ 6.29 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "st/ref-modify-10000": {
-        "time_us": 20.672283,
-        "display": "~ 20.67 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 20.836914,
+        "display": "~ 20.84 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "effect/ref-write-10000": {
-        "time_us": 190.794281,
-        "display": "~ 190.79 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 204.561203,
+        "display": "~ 204.56 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       },
       "effect/ref-modify-10000": {
-        "time_us": 192.986328,
-        "display": "~ 192.99 μs",
-        "source": "docs/benchmark-results/2026-11-21-go-significant-gains.json"
+        "time_us": 184.341797,
+        "display": "~ 184.34 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
+      },
+      "Array Indexing": {
+        "time_us": 4616.792,
+        "display": "~ 4616.79 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
+      },
+      "JSON to Typed AST": {
+        "time_us": 20801.167,
+        "display": "~ 20801.17 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
+      },
+      "JSON Decoding": {
+        "time_us": 2237.333,
+        "display": "~ 2237.33 μs",
+        "source": "docs/benchmark-results/2026-11-23-go.json"
       }
     },
     "go-dev": {
