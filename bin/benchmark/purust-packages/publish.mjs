@@ -89,10 +89,13 @@ assert.equal(report.coverage.generations, 696); assert.equal(report.coverage.mea
 const table = [
   'Benchmark   | ' + link('purust') + ' JS binary (WIP) | ' + link('purust') + ' Rust binary (WIP)',
   '----------- | --------- | ---------------------',
-  `[b8x — Rust test profile](https://github.com/0x000000000000000000001/b8x.pub) | ~ ${(b8x.summary.js.median_ms / 1000).toFixed(3)} s | ~ ${(b8x.summary.rust.median_ms / 1000).toFixed(3)} s <br>(/JS = ${ratio(b8x.summary.rust.median_ms, b8x.summary.js.median_ms)}x)`,
+  `[b8x — Rust test profile](https://github.com/0x000000000000000000001/b8x.pub) | ~ ${(b8x.summary.js.median_ms / 1000).toFixed(3)} s | ~ ${(b8x.summary.rust.median_ms / 1000).toFixed(3)} s`,
+  `↳ /JS | — | ${ratio(b8x.summary.rust.median_ms, b8x.summary.js.median_ms)}x`,
   ...libraries.map(result => `${link(result.name)} | ~ ${result.summary.js.median_ms} ms | ~ ${result.summary.rust.median_ms} ms`),
-  `**Total purust-*** | ~ ${seconds(subtotal.js)} s | ~ ${seconds(subtotal.rust)} s <br>(/JS = ${ratio(subtotal.rust, subtotal.js)}x)`,
-  `**Total** | ~ ${seconds(total.js)} s | ~ ${seconds(total.rust)} s <br>(/JS = ${ratio(total.rust, total.js)}x)`,
+  `**Total purust-*** | ~ ${seconds(subtotal.js)} s | ~ ${seconds(subtotal.rust)} s`,
+  `↳ /JS | — | ${ratio(subtotal.rust, subtotal.js)}x`,
+  `**Total** | ~ ${seconds(total.js)} s | ~ ${seconds(total.rust)} s`,
+  `↳ /JS | — | ${ratio(total.rust, total.js)}x`,
 ].join('\n');
 const note = `> Purust timings: median of five backend-only runs per host after one warmup, on frozen inputs with byte-identical Rust/Cargo output. Totals are sums of medians. b8x uses the Rust Core/Infra/Util test profile (${report.results[0].input.modules.toLocaleString('en-US')} modules), a different corpus from the full Go-target row. [Protocol, scopes and validation](docs/benchmark-results/2026-10-04-purust-packages.md).`;
 const path = join(site, 'README.md'), current = readFileSync(path, 'utf8'), marker = '#### ... to Rust\n';

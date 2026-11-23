@@ -2112,7 +2112,8 @@ App scenario | JS | Go | Go / JS |
 
 Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS binary<br>(official compiler)<br>(WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Go binary<br>(compiled by [gopurs](https://github.com/0x000000000000000000001/gopurs))<br>(WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Go binary<br>(compiled by [gopurs](https://github.com/0x000000000000000000001/gopurs)<br>`--dev`)<br>(WIP) | [gopurs](https://github.com/0x000000000000000000001/gopurs) Rust binary<br>(compiled by [purust](https://github.com/0x000000000000000000001/purust))<br>(WIP)
 ----------- | --------- | ------------------ | --------------------- | ---------------------
-[b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 146.39 s | ~ 78.04 s <br>(/JS = 0.53x) | ~ 53.61 s <br>(/JS = 0.37x) | ~ 52.92 s <br>(/JS = 0.36x)
+[b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 146.39 s | ~ 78.04 s | ~ 53.61 s | ~ 52.92 s
+↳ /JS | — | 0.53x | 0.37x | 0.36x
 [gopurs-aff](https://github.com/0x000000000000000000001/gopurs-aff) | ~ 16023 ms | ~ 6312 ms | ~ 5437 ms | ~ 5002 ms
 [gopurs-argonaut-core](https://github.com/0x000000000000000000001/gopurs-argonaut-core) | ~ 15672 ms | ~ 5930 ms | ~ 4962 ms | ~ 4800 ms
 [gopurs-arrays](https://github.com/0x000000000000000000001/gopurs-arrays) | ~ 12758 ms | ~ 5072 ms | ~ 3782 ms | ~ 4001 ms
@@ -2163,14 +2164,17 @@ Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS bin
 [gopurs-uuid](https://github.com/0x000000000000000000001/gopurs-uuid) | ~ 20972 ms | ~ 8748 ms | ~ 6505 ms | ~ 7340 ms
 [gopurs-variant](https://github.com/0x000000000000000000001/gopurs-variant) | ~ 11455 ms | ~ 4451 ms | ~ 3881 ms | ~ 3279 ms
 [gopurs-yoga-json](https://github.com/0x000000000000000000001/gopurs-yoga-json) | ~ 36226 ms | ~ 16572 ms | ~ 11991 ms | ~ 13134 ms
-**Total gopurs-*** | <strong>~ 666.09 s</strong> | <strong>~ 254.68 s</strong> <br>(/JS = <strong>0.38x</strong>) | <strong>~ 212.02 s</strong> <br>(/JS = <strong>0.32x</strong>) | <strong>~ 203.99 s</strong> <br>(/JS = <strong>0.31x</strong>)
-**Total** | <strong>~ 812.48 s</strong> | <strong>~ 332.71 s</strong> <br>(/JS = <strong>0.41x</strong>) | <strong>~ 265.63 s</strong> <br>(/JS = <strong>0.33x</strong>) | <strong>~ 256.92 s</strong> <br>(/JS = <strong>0.32x</strong>)
+**Total gopurs-*** | <strong>~ 666.09 s</strong> | <strong>~ 254.68 s</strong> | <strong>~ 212.02 s</strong> | <strong>~ 203.99 s</strong>
+↳ /JS | — | <strong>0.38x</strong> | <strong>0.32x</strong> | <strong>0.31x</strong>
+**Total** | <strong>~ 812.48 s</strong> | <strong>~ 332.71 s</strong> | <strong>~ 265.63 s</strong> | <strong>~ 256.92 s</strong>
+↳ /JS | — | <strong>0.41x</strong> | <strong>0.33x</strong> | <strong>0.32x</strong>
 
 #### ... to Rust
 
 Benchmark   | [purust](https://github.com/0x000000000000000000001/purust) JS binary<br>(official compiler)<br>(WIP) | [purust](https://github.com/0x000000000000000000001/purust) Rust binary<br>(compiled by [purust](https://github.com/0x000000000000000000001/purust))<br>(WIP)
 ----------- | --------- | ---------------------
-[b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 44.31 s | ~ 20.62 s <br>(/JS = 0.47x)
+[b8x](https://github.com/0x000000000000000000001/b8x.pub) | ~ 44.31 s | ~ 20.62 s
+↳ /JS | — | 0.47x
 [purust-aff](https://github.com/0x000000000000000000001/purust-aff) | ~ 6218 ms | ~ 2076 ms
 [purust-argonaut-codecs](https://github.com/0x000000000000000000001/purust-argonaut-codecs) | ~ 6090 ms | ~ 2120 ms
 [purust-argonaut-core](https://github.com/0x000000000000000000001/purust-argonaut-core) | ~ 5122 ms | ~ 1682 ms
@@ -2228,5 +2232,7 @@ Benchmark   | [purust](https://github.com/0x000000000000000000001/purust) JS bin
 [purust-uuid](https://github.com/0x000000000000000000001/purust-uuid) | ~ 7613 ms | ~ 2588 ms
 [purust-variant](https://github.com/0x000000000000000000001/purust-variant) | ~ 4537 ms | ~ 1405 ms
 [purust-yoga-json](https://github.com/0x000000000000000000001/purust-yoga-json) | ~ 16694 ms | ~ 14548 ms
-**Total purust-*** | <strong>~ 304.03 s</strong> | <strong>~ 120.12 s</strong> <br>(/JS = <strong>0.40x</strong>)
-**Total** | <strong>~ 348.34 s</strong> | <strong>~ 140.73 s</strong> <br>(/JS = <strong>0.40x</strong>)
+**Total purust-*** | <strong>~ 304.03 s</strong> | <strong>~ 120.12 s</strong>
+↳ /JS | — | <strong>0.40x</strong>
+**Total** | <strong>~ 348.34 s</strong> | <strong>~ 140.73 s</strong>
+↳ /JS | — | <strong>0.40x</strong>

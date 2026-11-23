@@ -58,7 +58,8 @@ const marker = '#### ... to Rust\n', before = readFileSync(join(archive, 'README
 assert.equal(readme.split(marker).length, 2); assert.equal(before.split(marker).length, 2);
 assert.equal(readme.split(marker)[0], before.split(marker)[0], 'Earlier README sections changed');
 const section = readme.split(marker)[1];
-const rows = section.split('\n').filter(line => /^(\[|\*\*Total)/.test(line)).map(line => line.split('|').map(cell => cell.trim()));
+const lines = section.split('\n');
+const rows = lines.filter(line => /^(\[|\*\*Total)/.test(line)).map(line => line.split('|').map(cell => cell.trim()));
 assert.equal(rows.length, 60); assert(rows.every(row => row.length === 3));
 assert.equal(report.results[0].name, 'b8x');
 const libraryNames = report.results.slice(1).map(row => row.name);
@@ -77,15 +78,19 @@ for (let index = 0; index < rows.length; index++) {
   for (const [hostIndex, host] of hosts.entries()) {
     const time = index === 0 ? `${(values[host] / 1000).toFixed(3)} s`
       : index < 58 ? `${values[host]} ms` : `${(Math.round(values[host] / 10) / 100).toFixed(2)} s`;
-    const expected = `~ ${time}` + (host === 'rust' && (index === 0 || index >= 58) ? ` <br>(/JS = ${(values.rust / values.js).toFixed(2)}x)` : '');
-    assert.equal(cells[hostIndex], expected, `${name} ${host}`);
+    assert.equal(cells[hostIndex], `~ ${time}`, `${name} ${host}`);
+  }
+  if (index === 0 || index >= 58) {
+    const lineIndex = lines.findIndex(line => line.split('|')[0].trim() === label);
+    assert.equal(lines[lineIndex + 1], `↳ /JS | — | ${(values.rust / values.js).toFixed(2)}x`, `${name} /JS`);
   }
   checks.push({ name, median_ms: values, rust_js_ratio: (values.rust / values.js).toFixed(2) });
 }
 assert(section.includes('Totals are sums of medians.'));
 assert(section.includes('Rust Core/Infra/Util test profile'));
 assert(section.includes(`docs/benchmark-results/${report.date}-purust-packages.md`));
-assert.equal((section.match(/\(\/JS = /g) ?? []).length, 3);
+assert.equal((section.match(/^↳ \/JS \|/gm) ?? []).length, 3);
+assert(!section.includes('(/JS = '));
 assert.equal(report.publication.project_cells, 116); assert.equal(report.publication.total_cells, 4);
 const audit = { status: 'passed', checked_at: new Date().toISOString(), archive,
   script: { path: script, sha256: hash(readFileSync(script)) },

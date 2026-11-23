@@ -98,18 +98,19 @@ const replace = (pattern, render) => {
 };
 for (const item of libraries) replace(new RegExp(`^(\\[${item.name}\\]\\([^\\n]+?\\))[^\\n]*$`),
   (_, link) => `${link}  | ${hosts.map(host => `~ ${item.summary[host].median_ms} ms`).join(' | ')}`);
-replace(/^(\[b8x\]\([^\n]+?\))[^\n]*$/, (_, link) => `${link} | ~ ${(b8x.summary.js.median_ms / 1000).toFixed(3)} s` +
-  ` | ~ ${(b8x.summary.go.median_ms / 1000).toFixed(3)} s <br>(/JS = ${ratio(b8x.summary.go.median_ms, b8x.summary.js.median_ms)}x)` +
-  ` | ~ ${(b8x.summary.rust.median_ms / 1000).toFixed(3)} s <br>(/JS = ${ratio(b8x.summary.rust.median_ms, b8x.summary.js.median_ms)}x)`);
-for (const [pattern, title, values] of [[/^\*\*Total gopurs-\*\*\*[^\n]*$/, '**Total gopurs-***', subtotal],
-  [/^\*\*Total\*\*[^\n]*$/, '**Total**', total]])
-  replace(pattern, `${title} | ~ ${seconds(values.js)} s | ~ ${seconds(values.go)} s <br>(/JS = ${ratio(values.go, values.js)}x)` +
-    ` | ~ ${seconds(values.rust)} s <br>(/JS = ${ratio(values.rust, values.js)}x)`);
+replace(/^(\[b8x\]\([^\n]+?\))[^\n]*(?:\n↳ \/JS \|[^\n]*)?$/, (_, link) => `${link} | ~ ${(b8x.summary.js.median_ms / 1000).toFixed(3)} s` +
+  ` | ~ ${(b8x.summary.go.median_ms / 1000).toFixed(3)} s | ~ ${(b8x.summary.rust.median_ms / 1000).toFixed(3)} s` +
+  `\n↳ /JS | — | ${ratio(b8x.summary.go.median_ms, b8x.summary.js.median_ms)}x | ${ratio(b8x.summary.rust.median_ms, b8x.summary.js.median_ms)}x |`);
+for (const [pattern, title, values] of [[/^\*\*Total gopurs-\*\*\*[^\n]*(?:\n↳ \/JS \|[^\n]*)?$/, '**Total gopurs-***', subtotal],
+  [/^\*\*Total\*\*[^\n]*(?:\n↳ \/JS \|[^\n]*)?$/, '**Total**', total]])
+  replace(pattern, `${title} | ~ ${seconds(values.js)} s | ~ ${seconds(values.go)} s | ~ ${seconds(values.rust)} s` +
+    `\n↳ /JS | — | ${ratio(values.go, values.js)}x | ${ratio(values.rust, values.js)}x |`);
 const reportName = '2026-10-05-gopurs-rust-saturation';
 section = section.trimEnd() + `\n\n> Refreshed on **5 October 2026** after the Rust-host optimization campaign. Median of five backend-only runs per host after one warmup; totals sum project medians. All hosts generate byte-identical Go. [Protocol, qualification and results](docs/benchmark-results/${reportName}.md).\n\n`;
 const next = before.slice(0, start) + section + before.slice(end);
 for (const line of section.split('\n').filter(line => line.startsWith('[gopurs-'))) assert(!line.includes('/JS'));
-assert.equal((section.match(/\/JS =/g) ?? []).length, 6);
+assert.equal((section.match(/^↳ \/JS \|/gm) ?? []).length, 3);
+assert(!section.includes('(/JS'));
 const report = { schema: 1, status: 'passed', date: '2026-10-05', archive,
   protocol: campaign.protocol, compilers: production.compiler, qualification: evidence('production/results.json'),
   production_contracts: evidence('production/contracts/results.json'),

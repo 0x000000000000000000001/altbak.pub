@@ -75,24 +75,25 @@ const seconds = ms => (Math.round(ms / 10) / 100).toFixed(2), ratio = (left, rig
 const before = readFileSync(join(archive, 'README-before.md'), 'utf8');
 assert.equal(readFileSync(join(site, 'README.md'), 'utf8'), before, 'README changed during campaign; reconcile before publication');
 let next = before;
+const edits = [];
 const replace = (pattern, render) => {
   const matches = [...next.matchAll(new RegExp(pattern.source, 'gm'))]; assert.equal(matches.length, 1, pattern.source);
-  next = next.replace(new RegExp(pattern.source, 'm'), render);
+  const match = matches[0], replacement = typeof render === 'function' ? render(...match) : render;
+  edits.push({ line: before.slice(0, before.indexOf(match[0])).split('\n').length, before: match[0], after: replacement });
+  next = next.replace(new RegExp(pattern.source, 'm'), () => replacement);
 };
 for (const result of libraries) replace(new RegExp(`^(\\[${result.name}\\]\\([^\\n]+?\\))[^\\n]*$`),
   (_, link) => `${link}  | ${hosts.map(host => `~ ${result.summary[host].median_ms} ms`).join(' | ')}`);
-replace(/^(\[b8x\]\([^\n]+?\)) \| ~[^\n]*$/,
-  (_, link) => `${link} | ~ ${(b8x.summary.js.median_ms / 1000).toFixed(3)} s | ~ ${(b8x.summary.go.median_ms / 1000).toFixed(3)} s <br>(/JS = ${ratio(b8x.summary.go.median_ms, b8x.summary.js.median_ms)}x) | ~ ${(b8x.summary.rust.median_ms / 1000).toFixed(3)} s <br>(/JS = ${ratio(b8x.summary.rust.median_ms, b8x.summary.js.median_ms)}x)`);
-replace(/^\*\*Total gopurs-\*\*\*[^\n]*$/,
-  `**Total gopurs-*** | ~ ${seconds(subtotal.js)} s | ~ ${seconds(subtotal.go)} s <br>(/JS = ${ratio(subtotal.go, subtotal.js)}x) | ~ ${seconds(subtotal.rust)} s <br>(/JS = ${ratio(subtotal.rust, subtotal.js)}x)`);
-replace(/^\*\*Total\*\* \| ~[^\n]*$/,
-  `**Total** | ~ ${seconds(total.js)} s | ~ ${seconds(total.go)} s <br>(/JS = ${ratio(total.go, total.js)}x) | ~ ${seconds(total.rust)} s <br>(/JS = ${ratio(total.rust, total.js)}x)`);
-replace(/^(\[purust-aff\]\([^\n]+?\))[^\n]*$/,
-  (_, link) => `${link}  | ~ ${purust.summary.js.median_ms} ms | ~ ${purust.summary.rust.median_ms} ms <br>(/JS = ${ratio(purust.summary.rust.median_ms, purust.summary.js.median_ms)}x)`);
+replace(/^(\[b8x\]\([^\n]+?\)) \| ~[^\n]*(?:\n↳ \/JS \|[^\n]*)?$/,
+  (_, link) => `${link} | ~ ${(b8x.summary.js.median_ms / 1000).toFixed(3)} s | ~ ${(b8x.summary.go.median_ms / 1000).toFixed(3)} s | ~ ${(b8x.summary.rust.median_ms / 1000).toFixed(3)} s\n↳ /JS | — | ${ratio(b8x.summary.go.median_ms, b8x.summary.js.median_ms)}x | ${ratio(b8x.summary.rust.median_ms, b8x.summary.js.median_ms)}x |`);
+replace(/^\*\*Total gopurs-\*\*\*[^\n]*(?:\n↳ \/JS \|[^\n]*)?$/,
+  `**Total gopurs-*** | ~ ${seconds(subtotal.js)} s | ~ ${seconds(subtotal.go)} s | ~ ${seconds(subtotal.rust)} s\n↳ /JS | — | ${ratio(subtotal.go, subtotal.js)}x | ${ratio(subtotal.rust, subtotal.js)}x |`);
+replace(/^\*\*Total\*\* \| ~[^\n]*(?:\n↳ \/JS \|[^\n]*)?$/,
+  `**Total** | ~ ${seconds(total.js)} s | ~ ${seconds(total.go)} s | ~ ${seconds(total.rust)} s\n↳ /JS | — | ${ratio(total.go, total.js)}x | ${ratio(total.rust, total.js)}x |`);
+replace(/^(\[purust-aff\]\([^\n]+?\))[^\n]*(?:\n↳ \/JS \|[^\n]*)?$/,
+  (_, link) => `${link}  | ~ ${purust.summary.js.median_ms} ms | ~ ${purust.summary.rust.median_ms} ms\n↳ /JS | — | ${ratio(purust.summary.rust.median_ms, purust.summary.js.median_ms)}x |`);
 const note = '> Compilation timings refreshed on **4 October 2026**: median of five backend-only runs per host after one warmup, with frozen inputs and byte-exact generated-output checks. Totals sum the displayed project medians. [Protocol and full results](docs/benchmark-results/2026-10-04-compilation-refresh.md).';
 next = next.replace('\nMore to come...', `\n${note}\n\nMore to come...`);
-const beforeLines = before.split('\n'), nextLines = next.split('\n');
-const edits = beforeLines.flatMap((line, index) => index < beforeLines.length - 3 && line !== nextLines[index] ? [{ line: index + 1, before: line, after: nextLines[index] }] : []);
 assert.equal(edits.length, 54);
 report.publication = { readme_before_sha256: hash(before), readme_after_sha256: hash(next), changed_table_lines: edits };
 writeFileSync(join(archive, 'README-next.md'), next);
