@@ -35,6 +35,12 @@ class PublicationTests(unittest.TestCase):
         rendered = PUBLISH['render'](original, results)
         headers = lambda text: [line for line in text.splitlines() if 'Benchmark ' in line or line.startswith('Benchmark ')]
         self.assertEqual(headers(original), headers(rendered))
+        _, extended = PUBLISH['section_lines'](rendered, 'Extended Results')
+        self.assertFalse(any('(/JS' in line or '(/C' in line for line in extended))
+        ratios = [line for line in extended if line.startswith('↳ /JS |')]
+        self.assertEqual(ratios, ['↳ /JS | — | 1.00x | 1.00x | 1.00x |'] * 5 + [
+            '↳ /JS | — | <strong>1.00x</strong> | <strong>1.00x</strong> | <strong>1.00x</strong> |'])
+        self.assertEqual(extended.count('↳ /C | — | — | — | — |'), 6)
 
     def test_application_tables_survive_core_and_wip_publication(self):
         original = (ROOT / 'README.md').read_text()

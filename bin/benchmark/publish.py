@@ -202,8 +202,8 @@ def bold_totals(text):
             in_total = True
         elif line.startswith('**Total'):
             result.append(bold_total_line(line))
-            in_total = False
-        elif in_total and line.startswith('| ↳ '):
+            in_total = True
+        elif in_total and line.startswith(('| ↳ ', '↳ ')):
             result.append(bold_total_line(line))
         else:
             in_total = False
@@ -295,7 +295,7 @@ def updated_ratio_catalogue(catalogue, measurements, origins):
 
 
 def refresh_extended_statistics(text, measurements, catalogue):
-    """Use the extended table's own JS reference and preserve its inline metrics."""
+    """Use the extended table's own JS reference and preserve its ratio rows."""
     found = section_lines(text, 'Extended Results')
     if found is None:
         return text
@@ -313,17 +313,20 @@ def refresh_extended_statistics(text, measurements, catalogue):
         if len(cells[1:-1]) != len(keys):
             raise ValueError('Unexpected statistical column count in Extended Results')
         for key, cell in zip(keys, cells[1:-1]):
-            times[key][label] = timing_measurement(cell.split('<br>', 1)[0], key, label,
+            times[key][label] = timing_measurement(cell, key, label,
                                                    measurements, catalogue)
     if total_index is None or any(list(values) != EXTENDED_ROWS for values in times.values()):
         raise ValueError('Unexpected statistical population in Extended Results')
     summaries = [None if key == 'js-x' else summarize_ratios(
         list(times[key].values()), list(times['js-x'].values())) for key in keys]
     end = total_index + 1
-    while end < len(lines) and re.match(r'^↳ (?:μ|Q₂|G)/(?:C|JS) \|', lines[end]):
+    while end < len(lines) and lines[end].startswith('↳ '):
         end += 1
+    old_metrics = {line.split('|', 1)[0].strip(): line
+                   for line in lines[total_index + 1:end]}
     rows = []
     for reference in ['C', 'JS']:
+        rows.append(old_metrics['↳ /' + reference])
         for statistic in ['μ', 'Q₂', 'G']:
             cells = ['—'] * len(keys) if reference == 'C' else [
                 statistics_cell(summary, statistic) for summary in summaries]
@@ -553,10 +556,17 @@ def render(original, results):
                 for cell, key in zip(old_cells, keys):
                     result = results[key]
                     value = result['total_ms'] if total else result['times_us'][expected_rows.index(label)]
-                    suffix = cell.split('<br>', 1)[1] if '<br>' in cell else ''
-                    new_cells.append(format_time(value, 'ms' if total else 'μs')
-                                     + ('<br>' + suffix if suffix else ''))
+                    new_cells.append(format_time(value, 'ms' if total else 'μs'))
                 lines[i] = name_cell + ' | ' + ' | '.join(new_cells) + ' |'
+                reference = results['js-x']
+                js_value = reference['total_ms'] if total else reference['times_us'][expected_rows.index(label)]
+                ratios = ['—' if key == 'js-x' else format_number(
+                    (results[key]['total_ms'] if total else results[key]['times_us'][expected_rows.index(label)])
+                    / js_value) + 'x' for key in keys]
+                for metric, values in [('C', ['—'] * len(keys)), ('JS', ratios)]:
+                    ratio_index = next(j for j in range(i + 1, len(lines))
+                                       if lines[j].startswith('↳ /' + metric + ' |'))
+                    lines[ratio_index] = '↳ /' + metric + ' | ' + ' | '.join(values) + ' |'
                 seen.append(label)
             if seen != expected_rows + ['**Total Execution Time**']:
                 raise ValueError('Unexpected table row order: ' + title)

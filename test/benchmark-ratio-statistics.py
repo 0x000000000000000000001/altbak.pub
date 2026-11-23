@@ -124,20 +124,30 @@ class RatioStatistics(unittest.TestCase):
         self.assertNotIn('fresh', catalogue['columns']['go-pure'])
         self.assertEqual(catalogue['missing_columns'][0]['missing'], ['fresh', 'still missing'])
 
-    def test_extended_statistics_use_the_extended_js_reference_and_inline_times(self):
+    def test_extended_statistics_use_the_extended_js_reference_and_separate_ratio_rows(self):
         lines = ['#### Extended Results', '', 'Benchmark | JS | ES | Go | Rust |',
                  '--- | --- | --- | --- | --- |']
         for label, ratio in zip(PUBLISH['EXTENDED_ROWS'], [1, 2, 4, 8, 16]):
             lines.append('[' + label + '](fixture) | ' + ' | '.join(
-                PUBLISH['format_time'](value) + '<br>(/C = —)<br>(/JS = 999.00x)'
+                PUBLISH['format_time'](value)
                 for value in [1, ratio, ratio * 2, ratio * 3]) + ' |')
+            # Deliberately unrelated ratios: statistics must use the times.
+            lines.extend(['↳ /C | — | — | — | — |',
+                          '↳ /JS | — | 999.00x | 999.00x | 999.00x |'])
         lines.append('**Total Execution Time** | ' + ' | '.join(['~ 1.00 ms'] * 4) + ' |')
+        lines.extend(['↳ /C | — | — | — | — |',
+                      '↳ /JS | — | <strong>99.00x</strong> | <strong>99.00x</strong> | <strong>99.00x</strong> |'])
         original = '\n'.join(lines) + '\n'
         refresh = PUBLISH['refresh_ratio_statistics']
         rendered = refresh(original, catalogue={})
         self.assertEqual(refresh(rendered, catalogue={}), rendered)
-        without_statistics = [line for line in rendered.splitlines() if not line.startswith('↳ ')]
+        without_statistics = [line for line in rendered.splitlines()
+                              if not any(line.startswith('↳ ' + name + '/') for name in ['μ', 'Q₂', 'G'])]
         self.assertEqual(without_statistics, original.splitlines())
+        total = rendered.splitlines().index(lines[-3])
+        self.assertEqual([line.split('|', 1)[0].strip() for line in rendered.splitlines()[total + 1:]],
+                         ['↳ /C', '↳ μ/C', '↳ Q₂/C', '↳ G/C',
+                          '↳ /JS', '↳ μ/JS', '↳ Q₂/JS', '↳ G/JS'])
         self.assertIn('↳ μ/JS | — | <strong>≈ 6.20x</strong>', rendered)
         self.assertIn('↳ Q₂/JS | — | <strong>≈ 4.00x</strong>', rendered)
         self.assertIn('↳ G/JS | — | <strong>≈ 4.00x</strong>', rendered)

@@ -37,7 +37,7 @@ To ensure fair and executable comparisons across all backends, the test suite is
 > - **Incl WIP** — the 23 shared WIP micro-benchmarks. They are measured on every JS/Go column today; other families show `—` until their WIP campaign runs. `Total Incl WIP` is their sum (`—` until measured).
 > - **Excl WIP** — the three single-column WIP diagnostics (Array Indexing, JSON to Typed AST, JSON Decoding), listed in every table and measured for JavaScript, Go, Rust and C. They are shown for reference only and are **not** part of any total.
 > - **Total Stable + Incl WIP** — the 37 comparable cases; `—` until the Incl WIP cases are measured.
-> - In every core language table, each case has three rows: its time, `↳ /C`, and `↳ /JS`. Rows beginning with `↳` belong to the case or total above them.
+> - In every core language table and Extended Results, each case has three rows: its time, `↳ /C`, and `↳ /JS`. Rows beginning with `↳` belong to the case or total above them.
 > - In the core language tables, `/JS` is the ratio to the **first column of the JavaScript table** (hand-written PureScript, official compiler, JS on V8), and `/C` is the ratio to the **first column of the C (reference) table** (hand-written imperative C, `clang -O3`). Extended Results uses its own first column as the JavaScript reference and has no C reference. The JavaScript reference column shows `—` for `/JS`; the C reference column shows `/C = 1.00x`.
 > - On a total row, `↳ /C` and `↳ /JS` are ratios of the sums of case timings, equivalently arithmetic means of case ratios weighted by the reference time. They describe this benchmark mix, not an end-to-end application measurement.
 > - `μ` is the unweighted arithmetic mean of case ratios; `Q₂` is their median (second quartile; the mean of the two middle ratios for an even count); `G` is their geometric mean, `exp(mean(log(ratio)))`. Each eligible case has equal weight in these three summaries. `/C` and `/JS` identify the reference; lower is faster, and `1.00x` means equal time.
@@ -2068,15 +2068,27 @@ C Benchmark             | Hand-written imperative C<br>↓<br>clang -O3<br><br>(
 
 Benchmark               | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[Arista](https://github.com/aristanetworks/purescript-backend-optimizer)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP)
 ----------------------- | ------------- | -------------- | --------------- | ---------------
-[File I/O](srx/Test/FileOps/FileOps.purs) | ~ 466899.83 μs<br>(/C = —) | ~ 477117.79 μs<br>(/C = —)<br>(/JS = 1.02x) | ~ 475960.00 μs<br>(/C = —)<br>(/JS = 1.02x) | ~ 542377.75 μs<br>(/C = —)<br>(/JS = 1.16x) |
-[STArray Operations](srx/Test/STArray.purs) | ~ 0.92 μs<br>(/C = —) | ~ 0.54 μs<br>(/C = —)<br>(/JS = 0.59x) | ~ 0.29 μs<br>(/C = —)<br>(/JS = 0.32x) | ~ 0.29 μs<br>(/C = —)<br>(/JS = 0.32x) |
-[String Operations](srx/Test/StringOps.purs) | ~ 256.71 μs<br>(/C = —) | ~ 232.50 μs<br>(/C = —)<br>(/JS = 0.91x) | ~ 559.04 μs<br>(/C = —)<br>(/JS = 2.18x) | ~ 414.58 μs<br>(/C = —)<br>(/JS = 1.61x) |
-[Aff Operations](srx/Test/AffOperations.purs) | ~ 10125.21 μs<br>(/C = —) | ~ 11581.83 μs<br>(/C = —)<br>(/JS = 1.14x) | ~ 10500.21 μs<br>(/C = —)<br>(/JS = 1.04x) | ~ 10903.21 μs<br>(/C = —)<br>(/JS = 1.08x) |
-[Parallelism](srx/Test/Parallelism.purs) | ~ 14275052.04 μs<br>(/C = —) | ~ 14278260.46 μs<br>(/C = —) | ~ 965397.12 μs<br>(/C = —)<br>(/JS = 0.07x) | ~ 478303.67 μs<br>(/C = —)<br>(/JS = 0.03x) |
-**Total Execution Time** | <strong>~ 14752.33 ms</strong><br>(/C = —) | <strong>~ 14767.19 ms</strong><br>(/C = —) | <strong>~ 1452.42 ms</strong><br>(/C = —)<br>(/JS = <strong>0.10x</strong>) | <strong>~ 1032.00 ms</strong><br>(/C = —)<br>(/JS = <strong>0.07x</strong>) |
+[File I/O](srx/Test/FileOps/FileOps.purs) | ~ 466899.83 μs | ~ 477117.79 μs | ~ 475960.00 μs | ~ 542377.75 μs |
+↳ /C | — | — | — | — |
+↳ /JS | — | 1.02x | 1.02x | 1.16x |
+[STArray Operations](srx/Test/STArray.purs) | ~ 0.92 μs | ~ 0.54 μs | ~ 0.29 μs | ~ 0.29 μs |
+↳ /C | — | — | — | — |
+↳ /JS | — | 0.59x | 0.32x | 0.32x |
+[String Operations](srx/Test/StringOps.purs) | ~ 256.71 μs | ~ 232.50 μs | ~ 559.04 μs | ~ 414.58 μs |
+↳ /C | — | — | — | — |
+↳ /JS | — | 0.91x | 2.18x | 1.61x |
+[Aff Operations](srx/Test/AffOperations.purs) | ~ 10125.21 μs | ~ 11581.83 μs | ~ 10500.21 μs | ~ 10903.21 μs |
+↳ /C | — | — | — | — |
+↳ /JS | — | 1.14x | 1.04x | 1.08x |
+[Parallelism](srx/Test/Parallelism.purs) | ~ 14275052.04 μs | ~ 14278260.46 μs | ~ 965397.12 μs | ~ 478303.67 μs |
+↳ /C | — | — | — | — |
+↳ /JS | — | 1.00x | 0.07x | 0.03x |
+**Total Execution Time** | <strong>~ 14752.33 ms</strong> | <strong>~ 14767.19 ms</strong> | <strong>~ 1452.42 ms</strong> | <strong>~ 1032.00 ms</strong> |
+↳ /C | — | — | — | — |
 ↳ μ/C | — | — | — | — |
 ↳ Q₂/C | — | — | — | — |
 ↳ G/C | — | — | — | — |
+↳ /JS | — | <strong>1.00x</strong> | <strong>0.10x</strong> | <strong>0.07x</strong> |
 ↳ μ/JS | — | <strong>0.93x</strong> | <strong>0.92x</strong> | <strong>≈ 0.84x</strong> |
 ↳ Q₂/JS | — | <strong>1.00x</strong> | <strong>1.02x</strong> | <strong>≈ 1.08x</strong> |
 ↳ G/JS | — | <strong>0.91x</strong> | <strong>0.55x</strong> | <strong>≈ 0.46x</strong> |
