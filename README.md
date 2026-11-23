@@ -251,9 +251,9 @@ Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://git
 | ↳ /JS | 3.39x | 7.50x | 12.50x | 1.75x | 0.75x |
 | **Total Stable** | <strong>~ 10.40 ms</strong> | <strong>~ 50.55 ms</strong> | <strong>~ 1464.74 ms</strong> | <strong>~ 88.99 ms</strong> | <strong>~ 11.34 ms</strong> |
 | ↳ /C | <strong>1.08x</strong> | <strong>5.26x</strong> | <strong>152.42x</strong> | <strong>9.26x</strong> | <strong>1.18x</strong> |
-| ↳ μ/C | <strong>≈ 34.14x</strong> (n=9/14) | <strong>153.72x</strong> (n=9/14) | <strong>981.23x</strong> (n=9/14) | <strong>78.82x</strong> (n=9/14) | <strong>3.48x</strong> (n=9/14) |
-| ↳ Q₂/C | <strong>≈ 2.69x</strong> (n=9/14) | <strong>10.37x</strong> (n=9/14) | <strong>183.25x</strong> (n=9/14) | <strong>3.24x</strong> (n=9/14) | <strong>2.06x</strong> (n=9/14) |
-| ↳ G/C | <strong>≈ 6.65x</strong> (n=9/14) | <strong>24.85x</strong> (n=9/14) | <strong>275.36x</strong> (n=9/14) | <strong>10.22x</strong> (n=9/14) | <strong>2.26x</strong> (n=9/14) |
+| ↳ μ/C | <strong>34.14x</strong> (n=9/14) | <strong>153.72x</strong> (n=9/14) | <strong>981.23x</strong> (n=9/14) | <strong>78.82x</strong> (n=9/14) | <strong>3.48x</strong> (n=9/14) |
+| ↳ Q₂/C | <strong>2.69x</strong> (n=9/14) | <strong>10.37x</strong> (n=9/14) | <strong>183.25x</strong> (n=9/14) | <strong>3.24x</strong> (n=9/14) | <strong>2.06x</strong> (n=9/14) |
+| ↳ G/C | <strong>6.65x</strong> (n=9/14) | <strong>24.85x</strong> (n=9/14) | <strong>275.36x</strong> (n=9/14) | <strong>10.22x</strong> (n=9/14) | <strong>2.26x</strong> (n=9/14) |
 | ↳ /JS | <strong>0.08x</strong> | <strong>0.39x</strong> | <strong>11.35x</strong> | <strong>0.69x</strong> | <strong>0.09x</strong> |
 | ↳ μ/JS | <strong>0.76x</strong> | <strong>2.07x</strong> | <strong>18.29x</strong> | <strong>1.06x</strong> | <strong>0.25x</strong> |
 | ↳ Q₂/JS | <strong>0.35x</strong> | <strong>1.81x</strong> | <strong>14.10x</strong> | <strong>0.89x</strong> | <strong>0.10x</strong> |
