@@ -2101,10 +2101,10 @@ Benchmark               | Hand-written PureScript<br>↓<br>[official](https://g
 
 App scenario | JS | Go | Go / JS |
 --- | ---: | ---: | ---: |
-[CST](https://github.com/natefaubion/purescript-language-cst-parser) (corpus parsing) | ~ 63.54 ms | ~ 168.00 ms | 2.64x |
-[CST](https://github.com/natefaubion/purescript-language-cst-parser) (fixture parsing) | ~ 9.39 ms | ~ 23.20 ms | 2.47x |
-[tidy](https://github.com/natefaubion/purescript-tidy) (parsing + formatting) | ~ 14.26 ms | ~ 29.56 ms | 2.07x |
-[tidy](https://github.com/natefaubion/purescript-tidy) (10 iterations) | ~ 307.50 ms | ~ 290.41 ms | 0.94x |
+[CST](https://github.com/natefaubion/purescript-language-cst-parser) (corpus parsing) | ~ 62.17 ms | ~ 128.79 ms | 2.07x |
+[CST](https://github.com/natefaubion/purescript-language-cst-parser) (fixture parsing) | ~ 8.94 ms | ~ 17.67 ms | 1.98x |
+[tidy](https://github.com/natefaubion/purescript-tidy) (parsing + formatting) | ~ 14.23 ms | ~ 23.65 ms | 1.66x |
+[tidy](https://github.com/natefaubion/purescript-tidy) (10 iterations) | ~ 316.12 ms | ~ 239.07 ms | 0.76x |
 
 ### Compilation times...
 
