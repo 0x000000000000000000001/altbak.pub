@@ -2089,10 +2089,10 @@ Benchmark               | Hand-written PureScript<br>↓<br>[official](https://g
 
 App scenario | JS | Go | Go / JS |
 --- | ---: | ---: | ---: |
-[CST](https://github.com/natefaubion/purescript-language-cst-parser) (corpus parsing) | ~ 63.29 ms | ~ 240.37 ms | 3.80x |
-[CST](https://github.com/natefaubion/purescript-language-cst-parser) (fixture parsing) | ~ 9.05 ms | ~ 30.27 ms | 3.34x |
-[tidy](https://github.com/natefaubion/purescript-tidy) (parsing + formatting) | ~ 14.84 ms | ~ 42.42 ms | 2.86x |
-[tidy](https://github.com/natefaubion/purescript-tidy) (10 iterations, current driver) | ~ 323.90 ms | ~ 427.52 ms | 1.32x |
+[CST](https://github.com/natefaubion/purescript-language-cst-parser) (corpus parsing) | ~ 62.74 ms | ~ 208.87 ms | 3.33x |
+[CST](https://github.com/natefaubion/purescript-language-cst-parser) (fixture parsing) | ~ 9.07 ms | ~ 27.44 ms | 3.02x |
+[tidy](https://github.com/natefaubion/purescript-tidy) (parsing + formatting) | ~ 14.94 ms | ~ 39.06 ms | 2.61x |
+[tidy](https://github.com/natefaubion/purescript-tidy) (10 iterations, current driver) | ~ 322.57 ms | ~ 391.36 ms | 1.21x |
 [tidy](https://github.com/natefaubion/purescript-tidy) (10 iterations, historical baseline) | ~ 283.20 ms | ~ 556.44 ms | 1.96x |
 
 ### Compilation times...
