@@ -134,4 +134,4 @@ def refresh(text, catalogue, measurements=None, origins=None):
                             else ratio(section['totals'][block][column], reference))
                     lines[index] = replace_cell(lines[index], column, pub.bold_value(cell))
         text = text[:match.start(2)] + '\n'.join(lines) + '\n' + text[match.end(2):]
-    return pub.refresh_ratio_statistics(text, catalogue=updated), updated
+    return pub.format_table_numbers(pub.refresh_ratio_statistics(text, catalogue=updated)), updated

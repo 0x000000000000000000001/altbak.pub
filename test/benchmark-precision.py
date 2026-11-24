@@ -24,6 +24,27 @@ def case_cell(text, title, label, metric=None):
 
 
 class PrecisionPublication(unittest.TestCase):
+    def test_all_table_displays_normalize_without_promoting_bounds(self):
+        text = ('Note: 0.08 μs\n'
+                '| [link](https://example.org/0x1) | ~ 16023 ms | 0.08x | < 0.01 μs | — |\n'
+                'extended | <strong>0.03x</strong> | ~ 10.43 s |\n')
+        expected = ('Note: 0.08 μs\n'
+                    '| [link](https://example.org/0x1) | ~ 16023.00 ms | 0.080x | < 0.01 μs | — |\n'
+                    'extended | <strong>0.030x</strong> | ~ 10.43 s |\n')
+        self.assertEqual(publish.format_table_numbers(text), expected)
+        self.assertEqual(publish.format_table_numbers(expected), expected)
+
+    def test_precision_switches_at_one(self):
+        cases = [(0.000045, '0.000045'), (0.009492, '0.0095'),
+                 (0.1, '0.10'), (0.9999, '1.00'), (1, '1.00'),
+                 (1.0045, '1.00'), (12.000045, '12.00'),
+                 (1234.005678, '1234.01'), (12.00999, '12.01'),
+                 (12.9999, '13.00'), (-12.000045, '-12.00'),
+                 (-0.000045, '-0.000045'), (0, '0.00')]
+        for value, expected in cases:
+            with self.subTest(value=value):
+                self.assertEqual(publish.format_number(value), expected)
+
     def test_fresh_small_c_measurements_restore_fourteen_pairs_and_totals(self):
         values = {f'Stable{i}': 1 if i < 9 else 0.000045 for i in range(14)}
         incoming = {'c': values}

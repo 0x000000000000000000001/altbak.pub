@@ -24,9 +24,11 @@ computation manually with its expected result in an FP reference is not.
 
 ## Small timings and ratio coverage
 
-Numeric displays keep two decimal places for ordinary values and extend through
-two significant fractional digits when leading zeros would otherwise erase
-precision: `0.000045` stays `0.000045`, and `0.009492` displays as `0.0095`.
+Values at least 1 are rounded to two decimal places: `12.000045` becomes
+`12.00` and `1234.005678` becomes `1234.01`. Positive values below 1 retain
+two significant digits after leading fractional zeros: `0.000045` stays
+unchanged and `0.009492` becomes `0.0095`. Zero displays as `0.00`;
+negative values follow the same rule by magnitude.
 The same rule applies to ratios. Calculations use the matching archived times
 before display rounding, so small positive measurements remain eligible.
 

@@ -51,15 +51,27 @@ def row_label(cell):
 
 
 def format_number(value):
-    """Keep two decimals, extending tiny values through two significant digits.
+    """Use two decimals at magnitude >= 1, otherwise two significant digits."""
+    if value == 0 or abs(value) >= 1:
+        return f'{value:.2f}'
+    rounded = Decimal(format(value, '#.2g'))
+    # Rounding a value just below one may cross the ordinary-decimal boundary.
+    return format(rounded, '.2f' if abs(rounded) >= 1 else 'f')
 
-    Leading fractional zeros do not consume the precision budget: 0.000045
-    stays 0.000045. Decimal expands the rounded representation without exponent
-    notation; the alternate form retains its significant trailing zero.
-    """
-    if 0 < abs(value) < 0.1:
-        return format(Decimal(format(value, '#.2g')), 'f')
-    return f'{value:.2f}'
+
+def format_table_numbers(text):
+    """Normalize existing timing/ratio displays without turning bounds into data."""
+    number = re.compile(r'(?<![\w./=])(-?\d+(?:\.\d+)?)(\s*(?:μs|µs|ns|ms|s|x|×))(?!\w)')
+    lines = text.splitlines(keepends=True)
+    for index, line in enumerate(lines):
+        if '|' not in line or line.lstrip().startswith('>'):
+            continue
+        def replace(match):
+            if re.search(r'<\s*$', line[:match.start()]):
+                return match.group(0)
+            return format_number(float(match.group(1))) + match.group(2)
+        lines[index] = number.sub(replace, line)
+    return ''.join(lines)
 
 
 def format_time(value, unit='μs'):
@@ -657,6 +669,7 @@ def main():
                 verify(key, results[key]['library'])
     original = args.readme.read_text()
     updated = render_wip(original, results) if args.wip_only else render(original, results)
+    updated = format_table_numbers(updated)
     catalogue_path = ROOT / 'bin/benchmark/ratio-measurements.json'
     catalogue_text = None
     if args.readme.resolve() == (ROOT / 'README.md').resolve():
