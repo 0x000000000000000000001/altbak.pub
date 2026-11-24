@@ -206,8 +206,6 @@ JS Benchmark            | Hand-written PureScript<br>↓<br>[official](https://g
 
 #### Go
 
-> **24 November 2026:** The optimized column combines the [validated 37-case campaign](docs/benchmark-results/2026-11-24-go-c-priorities.md) and the [integrated JSON optimization](docs/benchmark-results/2026-11-24-go-json-decoding.md): 2,412.583 → 1,403.375 μs (−41.83%), now 2.13× C. JSON remains a provisional exception to the <2× target. The [fresh 14-case C reference](docs/benchmark-results/2026-11-24-c-reference.md) and restored small-value precision reveal five additional ratios ≥2×; these are newly visible comparisons, not new Go regressions. Fibonacci is 1.9954× before rounding (displayed 2.00×), with little margin. JSON C/JS references remain historical.
-
 Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs) <br>`--dev`<br>↓<br>Go<br>↓<br>go-build<br>`-N -l`<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[psgo](https://github.com/i-am-the-slime/purescript-native)<br>↓<br>Go<br>↓<br>go-build | Hand-written FP-style Go FFI<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(WIP) | Hand-written imperative Go FFI<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(WIP) |
 ----------------------- | -------------------------------- | -------------------------------- | ------------------------------------- | ---------------------- | ---------------------------- |
 | **Stable** | | | | | |
