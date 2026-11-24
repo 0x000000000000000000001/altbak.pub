@@ -1,330 +1,86 @@
-# Benchmark methodology
+# How the benchmarks are measured
 
-## What the columns compare
+These small tests help identify compiler and runtime bottlenecks. They do not
+predict the speed of a complete application. For the table labels and ratios,
+see the [README legend](../README.md).
 
-The compiled columns start with the same 14 PureScript kernels in `src/Test`.
-The Haskell, Koka, OCaml and native F# references translate their functional
-structures according to the [source contract](../tmp/fp_reference_contract.md).
-The FP-style FFI columns also retain these structures, callbacks and explicit
-dictionaries. In FFI columns, the backend translates the PureScript wrapper;
-the native kernel is supplied as hand-written code. Their host-language control loops may implement tail recursion;
-they do not demonstrate that the host compiler optimizes recursive source.
-Dynamic languages use explicit dictionaries without static row proofs.
+## What is being compared?
 
-The imperative columns, including C, intentionally permit other algorithms,
-mutable data, preallocation and numerical simplifications. Their ratios include
-those source-level choices. In particular, C allocates its AST/tree arenas before
-timing and reuses them. These are useful alternative implementations, not tests
-of compiling the same FP program.
+| Columns | Implementation |
+| --- | --- |
+| Compiled PureScript | The same PureScript program, compiled for each target. |
+| Functional references and FP-style FFI | Hand-written translations preserving the functional structure. |
+| Imperative references, including C | Alternative implementations that may use different algorithms and mutable data. |
 
-Normal compiler optimizations are permitted: specialization, fusion, constant
-folding, conversion to loops, allocation reuse and invariant-code motion.
-A compiler reducing a generic computation to a constant is valid. Replacing that
-computation manually with its expected result in an FP reference is not.
+A ratio therefore measures the whole implementation: compiler, libraries,
+runtime and source choices. It does not isolate compiler quality.
 
-## Small timings and ratio coverage
+One limitation matters especially: the historical C reference allocates its
+AST and tree arenas before timing, then reuses them. Its allocation costs are
+not equivalent to those of the compiled program. The
+[C reference report](benchmark-results/2026-11-24-c-reference.md) explains this
+and the extremely short timings produced by clang's simplifications.
 
-Values at least 1 are rounded to two decimal places: `12.000045` becomes
-`12.00` and `1234.005678` becomes `1234.01`. Positive values below 1 retain
-two significant digits after leading fractional zeros: `0.000045` stays
-unchanged and `0.009492` becomes `0.0095`. Zero displays as `0.00`;
-negative values follow the same rule by magnitude.
-The same rule applies to ratios. Calculations use the matching archived times
-before display rounding, so small positive measurements remain eligible.
+## How is a time obtained?
 
-A historical bound such as `< 0.01` is not itself a measured value. It can only
-be replaced by a matching archived measurement or a newly validated campaign.
-Unresolved bounds and zeros remain excluded from pairwise ratio statistics;
-the `n=…/…` suffix still reports incomplete coverage where it actually remains.
+For the 14 core tests and 23 shared library microbenchmarks:
 
-The [24 November 2026 C reference campaign](benchmark-results/2026-11-24-c-reference.md)
-records all 14 positive timings, including the five cases previously displayed
-as bounds. It uses the historical C driver unchanged: the AST/tree arenas are
-allocated before timing and reset/reused as before. The campaign changes display
-precision and reference measurements, not that allocation contract or any C
-algorithm. This reference remains an imperative comparison with those
-source-level simplifications, rather than a measurement of compiling the same
-functional program.
+1. Build first, then freeze the sources, executable and runtime settings.
+2. Warm up the program and calibrate repeated calls into timed batches.
+3. Check the calculated results against independent expected values.
+4. Keep the fastest of ten batches per process, then publish the median from
+   three independent processes.
 
-## Additional Go diagnostics
+Compilation, process startup, logging and conversion of the final result to
+text are outside the core timing interval. The computation runs on every call;
+its result must be consumed. Generated call adapters remain included where used.
 
-The Go and JS tables include additional diagnostics, with a [separate initial measurement
-archive](benchmark-results/2026-09-21-go-diagnostics.md). The existing 14-case
-results and totals remain the published core baseline. These diagnostics do not
-assert that Go must outperform JavaScript.
+These are warmed-up minimum timings, not average request latency. Totals add
+per-test medians. Small differences, especially on very short tests, may be noise.
 
-Sources use `src/Test/ArrayIndexing/ArrayIndexing.purs`,
-`src/Test/JsonTypedAst/JsonTypedAst.*` and `src/Test/JsonDecoding/JsonDecoding.*`.
-Run them through `bin/go/run --test ArrayIndexing`, `--test JsonTypedAst` or `--test JsonDecoding`,
-and the equivalent `bin/js/run` or `bin/rust/run` commands. `--wip-included` runs
-the core suite plus these three diagnostics and the new library cases,
-preserving their separate protocols. Without this flag, the normal run excludes WIP.
-They are opt-in cases with their
-recorded protocols, not additions to the ordinary fourteen-case or `--x` totals.
-PBO dependencies are resolved only in the `JsonTypedAst` isolated workspace.
-`JsonDecoding` uses ordinary Argonaut codecs without a PBO dependency.
-Historical measurement manifests retain their original source paths; rebuild
-the diagnostics after their relocation from `srx/Test` to `src/Test`.
+## Which tests have a separate protocol?
 
-- **Array Indexing (multiple sizes):** repeatedly read elements from arrays of
-  16, 1,024 and 16,384 elements, exercising both native and boxed representations
-  and the generated conversion between them. Obtain inputs through an optimization
-  barrier, consume a checked checksum, and keep input construction outside the
-  indexed-read interval. Report time and allocated bytes per access for each size,
-  rather than hiding the size dependence in one aggregate. Check the generated
-  code actually exercises the intended conversion; allocations must not grow
-  with the entire array length for a single read. Compare the same PureScript
-  workload compiled to Go and JS.
-- **JSON → Typed AST (parse + decode):** use a fixed, versioned corpus of real
-  TAST/tcorefn JSON and the same PBO decoding logic compiled to Go and JS. Measure
-  JSON parsing, decoding of the parsed objects into the typed AST, and their
-  combined duration separately. File reading and compiler optimization/emission
-  are outside these intervals. Preserve and verify the types and decoded
-  structure, and recreate decoded state on every invocation. Report corpus size,
-  time and Go allocations. Use one worker for the sequential comparison; record
-  any parallel variant separately. Parsing includes the selected JSON library
-  and runtime costs, so a parsing-only result cannot explain all AST decoding.
-- **JSON Decoding (records and arrays):** compile the same ordinary Argonaut
-  record codecs and a tagged event codec to Go and JS. Exercise nested records,
-  arrays, optional fields, Unicode and numeric values. Measure parsing, decoding
-  of already parsed JSON and their combination separately. Missing fields, wrong
-  types and nested error paths are checked outside timing. A fixed independent
-  oracle verifies every decoded field and complete error message; fast failure
-  cannot improve the timed successful workload. Sources and fixture generation
-  are documented in [the corpus](../test/fixtures/json-decoding/README.md).
+- **JSON diagnostics** measure parsing, decoding and their combination separately.
+  File reads and result verification are outside timing. See the
+  [JSON report](benchmark-results/2026-11-24-go-json-decoding.md).
+- **Array Indexing** measures several array sizes and reports time and allocations
+  per access. See the [protocol](array-indexing-benchmark.md).
+- **Extended tests** include their Effect/Aff adapters. File I/O uses the OS cache
+  without an `fsync` guarantee. The async delay tests the timer; Parallelism
+  compares JS's single-thread scheduler with Go/Rust's multicore runtimes.
 
-Freeze sources, inputs, binaries and runtime settings, validate outputs, and
-collect three independent processes per configuration after warm-up.
-The measured array protocol uses three warm-ups and ten batches, GOGC=800; JSON
-uses two warm-ups and five corpus samples per phase, GOGC=100. Both report the
-median of three process minima with Go GOMAXPROCS=1. This caps Go runtime execution
-as well as application work; Node retains its default background threads, so the
-comparison does not establish equal total CPU use. Array drivers call generated
-native Go kernels directly; JSON retains generic callback adapters. These
-boundaries are recorded rather than equated to every historical table cell.
+The three diagnostics marked **Excl WIP** never enter the totals. The 23 shared
+**Incl WIP** tests have their own [suite documentation](library-benchmarks.md).
+Compare campaigns only when their inputs, timing boundaries and runtime settings
+match; each report records those settings.
 
-Keep per-size and per-phase results alongside the table summary. Compiler-workload
-measurements use a different boundary from the numeric core suite and must remain
-outside its historical total.
+## Precision and evidence
 
-## Library microbenchmarks
+Values ≥ 1 display two decimal places. Below 1, leading fractional zeros do not
+count toward the two significant digits: `0.009492 → 0.0095`.
+Calculations use archived timings before rounding. Missing values and unresolved
+bounds such as `< 0.01` are excluded from ratio summaries.
 
-The **excluded WIP** library cases are defined in
-[the suite documentation](library-benchmarks.md). These 23 cases compile the
-same PureScript sources through the JS, JS/PBO, Go, psgo and Rust runners. They measure
-the selected library implementations together with their compiler, FFI and
-runtime; differences cannot be attributed to code generation alone. With
-`--wip-included`, they follow the 14 core cases on those backends. JS and Go also
-provide FP-style and imperative FFI variants under the same timing harness. The
-default run only executes the 14 core cases. Each test has its own `src/Test/<Name>/` directory; its presence under `src/`
-does not select it for a normal run. [`src/AppAll.purs`](../src/AppAll.purs) preserves
-the core total, then prints an `=== Excluded WIP benchmarks ===` marker and runs
-the new cases. The validator retains the historical core result at the top
-level and stores the new results under `library`, without a WIP total.
+The [campaign index](benchmark-results/README.md) helps find a report. The
+[timing catalogue](../bin/benchmark/ratio-measurements.json) links each
+measurement to its source. Campaign archives retain process timings, checked
+outputs, source and executable hashes, commands and runtime settings.
 
-Each case prepares an immutable fixture outside timing and returns a deferred
-`Effect Int`. Each invocation obtains its inputs through `Bench.opaque`, computes
-the operation and consumes the result. Mutable references are created anew
-inside each invocation. Result checksums, Effect adapters, opaque input boundaries
-and numeric sinks are included; scalar operations can be dominated by these
-boundaries. The suite documentation specifies the consumer used by each case.
-Fixture construction is excluded; any deferred representation work incurred
-while consuming a result is included. String fixtures are defined by their
-construction recipe, without assuming a shared flat or rope representation.
+## Reproducing a campaign
 
-The suite uses the existing three global warm-ups, three local warm-ups,
-calibrated batches and minimum of ten batches. Independent expected integers
-come from [`bin/benchmark/library-cases.json`](../bin/benchmark/library-cases.json);
-they are not inferred from the warm-up values. The
-collector accepts core output with or without the appended WIP section as
-`mode: "pure"`, `"ffi"` or `"fficc"` and aggregates three independent processes
-per case and section. The public JS/Go/Rust pure `--wip-included` command also runs the three
-separate diagnostic protocols; its combined console output is not one numeric
-collector input. There is no WIP suite total or change to the historical totals.
-The [November 14, 2026 campaign](benchmark-results/2026-11-14-library-js-go.md)
-qualifies and publishes all nine JS/Go columns: 27 processes and 621 validated
-WIP outputs. `publish.py --wip-only` updates those 207 cells without changing
-historical core results. Rust and other runtime columns remain unmeasured.
-
-## Core timing boundary
-
-Core entry points return integers. Conversion to text, logging, compilation and
-process startup are outside the interval being measured. `Bench.measureBatch`
-calls the supplied effect for every iteration; constructing the effect must not
-execute or cache the measured computation. Every result is consumed through a
-native sink or optimization barrier. Each batch checks its final result against
-the warm-up value; the external validator independently checks all 14 oracles.
-
-There are three global warm-up suites and three local warm-ups. Calibration
-doubles the invocation count until a batch takes at least 10 ms, capped at
-2^24 invocations. Each process records the minimum per-invocation time of ten
-batches. The published cell is the median of three independent processes, run
-sequentially after all compilation has finished. The total sums these cell
-medians before rounding; it is not a separately selected fastest total.
-
-These are warmed-up minimum batch durations, not mean latency or tail-latency
-measurements. Some short JIT kernels vary noticeably between processes: in the
-September 20 campaign, Java AST ranged from 0.140650 to 0.279165 microseconds.
-The archive retains all three measurements. Printed decimal places preserve
-small nonzero values; they do not establish that precision or justify rankings
-based on differences smaller than the observed variation.
-
-The numeric references, including the published Purust and sharpurs/Fable Rust
-columns, call numeric functions directly. Other compiled columns and the FFI
-columns retain their generated Effect/call adapters. The additional `rust-pure`
-diagnostic in the measurement archive retains Effect and is not the published
-Purust numeric column. Adapter overhead is included where present,
-as are input/result barriers. Very short kernels can mostly measure this
-overhead. Native representations, integer widths, garbage collectors and
-allocators differ. Rust numeric references use mimalloc; Fable's driver reserves
-a 1 GiB stack. These choices belong to the measured configuration, not to a
-universal language ranking. All current core values fit the common integer range.
-
-The native FFI State entry historically accepts depth 60 with 20 repetitions;
-the PureScript entry accepts 20 repetitions with depth 60. Work is equivalent
-at the benchmark point, but the optimizer sees different opaque parameters.
-This interface difference remains recorded, rather than hidden by the labels.
-
-The older protocol timed individual `Effect String` calls, discarded their
-results and included formatting. Those numbers must not be mixed with this
-numeric batch protocol or presented as compiler speedups after this correction.
-Recorded zeros from the old microsecond clocks are not zero-cost executions.
-
-## Fable routes
-
-The hand-written F# route uses unmodified Fable. The sharpurs route consumes a
-generated F# snapshot, extracts reachable numeric kernels, adapts its runtime
-and uses a locally patched Fable Rust emitter. It is a compatibility experiment,
-not an unchanged end-to-end build with the public Fable package. Both retain
-their numeric algorithms. Exact adaptations and commands are described in
-[the Fable benchmark documentation](../tmp/fable_rust/README.md).
-
-## Extended tests
-
-Extended tests retain an end-to-end Effect/Aff boundary and ten individual
-samples, with three independent processes. They are a separate experiment from
-the numeric core. Inputs for STArray, StringOps and the async computations are
-obtained inside each effect, preventing module initialization from doing the
-work before the timer. Every timed result is stored in an observable sink and
-compared with its warm-up value before the timer stops; the external validator
-checks the warm-up value against an independent oracle. These short string
-checks and the Effect/Aff adapters are part of the end-to-end interval.
-
-- File I/O performs 10,000 writes and reads and checks each read's content. It
-  measures synchronous filesystem APIs with OS caching, without an `fsync`
-  durability guarantee.
-- STArray creates and modifies a small mutable array on every invocation.
-- StringOps performs 1,000 regex/split iterations on every invocation.
-- Aff Operations requests a 10 ms delay. This is a timer/runtime check, not a
-  measurement of general async throughput.
-- Parallelism launches ten `fib 42` tasks. Its checksum is reduced safely within
-  the common 32-bit range and is checked. JavaScript's single-thread scheduler
-  and Go/Rust's multicore runtimes use different CPU resources; this row compares
-  runtime parallelism, not sequential code-generation efficiency.
-
-## Evidence and reproduction
-
-The [September 20, 2026 archive](benchmark-results/2026-09-20.json) records the
-39 published columns and two additional diagnostics (`rust-pure` and
-`wasm-pure`): 123 process runs and 1,614 validated case outputs. It includes all
-per-process measurements, the common source fingerprints, build identities and
-recorded tool configurations. Missing version information is marked explicitly.
-Complete raw logs and manifests remain in
-`var/benchmark/fairness-20260920/{core-measurements,extended-measurements}`;
-their hashes are in the archive. These corrected tables establish a new baseline.
-
-Every published campaign keeps its build plan, source fingerprints, compiler
-commands/profiles, executable identities, raw stdout/stderr, validated outputs
-and per-process measurements. The measurement command is:
+Build the chosen backend with `--build-only`, then measure its frozen executable
+with `--run-only`. For the standard collector, a plan specifies those artifacts
+and run commands:
 
 ```sh
 python3 bin/benchmark/measure.py --plan path/to/plan.json --output path/to/new-campaign
 ```
 
-The plan names frozen artifacts and run-only commands. Numeric executables carry
-their build SHA. The collector checks source stability, outputs, batch counts
-and positive durations, then aggregates three processes. It never builds while
-measuring. `--resume` accepts only the same source snapshot and plan and verifies
-the saved stdout before reusing a completed process.
+Use the relevant campaign report for the exact commands and environment.
+`./bin/run` alone does not reproduce every published reference or aggregate
+three processes. Runner-specific details live with the
+[collector](../bin/benchmark/measure.py), [Java runner](../bin/java/run) and
+[PHP dependency preparation](../bin/php/driver.py).
 
-Backend runners expose `--build-only` and `--run-only`. The numeric launchers in
-`tmp/run_benchmarks.py`, `tmp/run_purust_benchmark.py` and both Fable launchers also
-accept `--build-only`. Source fidelity has separate native tests in `test/native`;
-`test/benchmark-batches.py` checks deferred execution, exact invocation counts,
-recomputation and rejection of incorrect results.
-
-### Java workspace output
-
-`bin/java/run` uses Javapurs' `output/java/` destination inside each isolated
-workspace (`run/bak/java/modes/<mode>/` by default). `javac` writes to
-`output/java/classes/`, and `jar` packages those classes into `benchmark.jar` at
-the workspace root. Shared preparation removes `output/` before each build,
-including previous Java sources and bytecode. `--run-only` executes the saved
-JAR after checking its manifest and SHA-256.
-
-For a targeted build and execution with the Fibonacci result oracle:
-
-```sh
-./bin/java/run --test Fib
-./bin/java/run --test Fib --run-only
-```
-
-### PHP dependency preparation
-
-`bin/php/driver.py` prepares Composer dependencies after code generation and
-before the generated-code checks or benchmark execution. It uses the committed
-`run/bak/php/composer.lock` and pinned `bin/php/composer.phar` with `install
---no-plugins --no-scripts --no-interaction --no-progress --prefer-dist --no-dev`.
-The ordinary runner never resolves an update or creates a missing lock.
-
-Each isolated workspace keeps `.composer-prepared.json`. A later build reuses
-`vendor` when the root and generated Composer manifests, lock, preparation code,
-PHP executable/platform, Composer configuration/environment and installed file
-hashes still match. The `vendor/phpurs/lib-deps` link must target this workspace's
-current `output`; PHP regeneration alone does not invalidate the dependencies.
-Missing/modified dependencies or an invalid preparation stamp cause a fresh
-locked installation. `manifest.json` records `composer.status` (`installed` or
-`reused`) and the actual installer commands. A cache hit still reads and hashes
-dependencies and runs a small PHP platform/lock probe; it does not run the
-Composer installer or rewrite the autoloader.
-
-```sh
-./bin/php/run --build-only --build-dir run/bak/php/modes/pure
-./bin/php/run --run-only --build-dir run/bak/php/modes/pure
-```
-
-`--run-only` verifies the frozen manifest, dependency bytes and links, then runs
-PHP without dependency preparation. Use it for measurements. A clean workspace
-requires preparation again.
-
-The runner rejects both an outdated root lock and generated `phpurs/lib-deps`
-requirements that differ from the locked path package. When changing FFI
-dependencies, first generate the workspace (the build stops at that check), then
-explicitly refresh its lock, inspect the changes and copy it back:
-
-```sh
-php bin/php/composer.phar --working-dir=run/bak/php/modes/pure update \
-  --no-install --no-plugins --no-scripts --no-interaction
-cp run/bak/php/modes/pure/composer.lock run/bak/php/composer.lock
-git diff -- run/bak/php/composer.json run/bak/php/composer.lock
-./bin/php/run --build-only --build-dir run/bak/php/modes/pure
-```
-
-Offline preparation/repair regressions use a local path-only dependency graph:
-`python3 -B test/php-composer.py`.
-
-### Running the configured backends
-
-`./bin/run` and `./bin/run --x` run the configured backends. They do not alone
-produce all the published native references or aggregate three processes.
-After collecting the core and extended plans from the same frozen sources,
-publish their validated medians with:
-
-```sh
-python3 bin/benchmark/publish.py --campaign path/to/core-campaign --campaign path/to/extended-campaign
-```
-
-These deliberately small synthetic programs help examine particular compiler
-transformations. Neither their aggregate total nor a faster cell establishes
-that a compiler beats every hand-written implementation, or removes the need to
-profile real applications and implement appropriate FFI.
+The experimental Fable Rust route also requires the adaptations described in
+[its technical reference](../tmp/fable_rust/README.md).

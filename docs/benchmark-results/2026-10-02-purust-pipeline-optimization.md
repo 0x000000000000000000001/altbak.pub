@@ -32,6 +32,28 @@ Retained changes:
 4. Borrow layout-fact AVL keys during native lookup instead of allocating
    temporary pair/comparison objects and cloning keys at each node.
 
+## Final controlled before/after comparison
+
+After the final JS/native campaign and application validation, the preceding
+published second-lot native compiler and the installed third-lot stage 2 were
+compared on the restored input snapshot. One warm-up each, then **five measured
+rounds**, alternating which compiler runs first. All 12 outputs have the same
+496 Rust sources/Cargo manifests. Raw: `before-after.json`.
+
+| Native compiler | Five samples (ms) | Median total (ms) | Maximum RSS (MiB) |
+|---|---|---:|---:|
+| Published second-lot stage 2 | 7,696 / 7,591 / 7,583 / 7,512 / 7,339 | **7,583** | 504 |
+| Third-lot stage 2 | 5,183 / 5,730 / 5,715 / 5,178 / 5,499 | **5,499** | 485 |
+
+This lot reduces median time by **27.5%**, a **1.38× speedup**, with lower maximum
+RSS. All samples are retained, including the two faster third-lot runs. These
+measurements isolate the third lot against its predecessor. The README retains
+the separate paired JS/native campaign's native median, **5,743 ms**.
+
+
+<details>
+<summary>Technical reference: protocol, experiments and qualification</summary>
+
 ## Protocol and provenance
 
 The 548 reference files were restored and checked against the preceding
@@ -63,24 +85,6 @@ are independent and do not necessarily sum to the total.
 Candidate builds freeze both Purust and PBO source/FFI trees before generation.
 Each build records source hashes. Times from distinct campaigns are not combined
 to calculate speedups.
-
-## Final controlled before/after comparison
-
-After the final JS/native campaign and application validation, the preceding
-published second-lot native compiler and the installed third-lot stage 2 were
-compared on the restored input snapshot. One warm-up each, then **five measured
-rounds**, alternating which compiler runs first. All 12 outputs have the same
-496 Rust sources/Cargo manifests. Raw: `before-after.json`.
-
-| Native compiler | Five samples (ms) | Median total (ms) | Maximum RSS (MiB) |
-|---|---|---:|---:|
-| Published second-lot stage 2 | 7,696 / 7,591 / 7,583 / 7,512 / 7,339 | **7,583** | 504 |
-| Third-lot stage 2 | 5,183 / 5,730 / 5,715 / 5,178 / 5,499 | **5,499** | 485 |
-
-This lot reduces median time by **27.5%**, a **1.38× speedup**, with lower maximum
-RSS. All samples are retained, including the two faster third-lot runs. These
-measurements isolate the third lot against its predecessor. The README retains
-the separate paired JS/native campaign's native median, **5,743 ms**.
 
 ## Updated CPU and allocation diagnostics
 
@@ -281,3 +285,5 @@ It also rechecks **914 identical self-hosted files** across original JS, final J
 and native stage 1, and confirms that the installed stage 2 is the measured one.
 Raw verification: `verification.json` in the durable workspace and the
 `verification` object in the published campaign archive.
+
+</details>

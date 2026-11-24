@@ -1,9 +1,5 @@
 # Compact JSON objects and fused field accessors
 
-This cycle targets the actual remaining native TAST path, then the generated
-application decoder. The preserved starting point is the final build from
-[the dictionary/callback follow-up](2026-09-24-json-codegen-follow-up.md).
-
 The final paired campaigns reduce **TAST combined time by 43.3%** and
 **application JSON combined time by 30.2%**. Combined allocations fall by
 **38.1%** and **34.6%**, respectively. The official Go README cells are now
@@ -101,6 +97,9 @@ C/C++ reference cells remain the existing historical values.
 
 Artifacts: `official-final-json/results.json` and
 `official-final-tast/results.json`.
+
+<details>
+<summary>Technical reference: implementation, validation and reproduction</summary>
 
 ## Implementation
 
@@ -261,6 +260,11 @@ beyond compiler bootstrap remains pending.
 
 ## Sources and reproduction
 
+This cycle targets the actual remaining native TAST path, then the generated
+application decoder. The preserved starting point is the final build from
+[the dictionary/callback follow-up](2026-09-24-json-codegen-follow-up.md).
+
+
 Preserved root: `var/benchmark/json-parser-20260924/`.
 
 - `before.json`, `library-before/`, `compiler-before`: starting hashes and parser
@@ -294,3 +298,5 @@ The specialised comparison uses `specialized/run.py setup` for each source
 workspace, then `campaign --workspace <final> --compare-workspace <baseline>
 --output <new> --processes 6`. Official cells use the ordinary runner's
 `measure --suite <suite> --workspace <final> --output <new>`.
+
+</details>

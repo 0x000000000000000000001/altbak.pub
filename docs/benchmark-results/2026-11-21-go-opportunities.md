@@ -19,9 +19,9 @@ chiffre README n’est publié par cet audit.
 | CP.take + checksum | 74,38 → 63,47 µs | 1,17× | Action complète, primitives CP |
 | Split + checksums | 204,74 → 180,16 µs | 1,14× | Action complète, primitives CP |
 
-Je commencerais par **traverse Maybe et CP.length**, puis **concaténation et
-continuité des workers spécialisés de listes**. Ce sont des causes isolées avec
-un gain observé. `CP.length` est une correction locale particulièrement nette :
+Les priorités de cet audit sont **traverse Maybe et CP.length**, puis
+**concaténation et continuité des workers spécialisés de listes** : ces pistes
+ont un gain mesuré. `CP.length` est une correction locale particulièrement nette :
 4 017 allocations et 285 456 octets deviennent zéro. Pour traverse succès,
 16 970 allocations/921 826 octets deviennent 1 003/56 632 ; les `Just` réellement
 produits par les callbacks restent inclus.
@@ -118,6 +118,9 @@ Aff Operations contient un délai demandé de 10 ms. File I/O comprend 10 000
 écritures/lectures. Parallelism effectue dix fib(42) récursifs en parallèle avec
 un noyau Go direct. Leurs grands temps absolus ne suffisent pas à diagnostiquer
 un défaut de gopurs ; aucun gain compiler significatif n’y est établi ici.
+
+<details>
+<summary>Référence technique : revue des 45 tests, protocole et artefacts</summary>
 
 ## Revue de chacun des 45 tests
 
@@ -239,3 +242,5 @@ Les prochains changements devraient être génériques : décisions fondées sur
 TAST et les opérations canoniques, sans reconnaissance des noms des benchmarks.
 Chaque intégration doit ensuite passer les contrôles sémantiques appropriés et
 `./bin/go/run --wip-included` avant de publier des chiffres dans le README.
+
+</details>

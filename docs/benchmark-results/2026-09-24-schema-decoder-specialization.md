@@ -1,14 +1,8 @@
 # Known-decoder specialization and typed-cursor TAST experiment
 
-This cycle follows [borrowed event objects](2026-09-24-borrowed-event-objects.md).
-The application baseline is the preserved
-`json-direct-20260924/final-json`; the TAST baseline is the production compact-DOM
-build `json-parser-20260924/fused-tast`.
-
-Artifacts are under `var/benchmark/json-schema-20260924/`. The application build
-selected for publication is `published-json`; the typed-cursor experiment is
-`validated-typed-tast`. Earlier pilots, failed builds and the initial TAST driver
-boundary failure are preserved separately.
+Generated schema workers reduce application decoding by **52.9%** and
+parse + decode by **27.1%** in the final paired campaign. The application
+specialization is retained; the TAST cursor remains experimental.
 
 ## Application result: retain the specialization
 
@@ -57,6 +51,9 @@ aligned in this comparison.
 
 The ordinary paired and aligned-reference campaigns validate respectively
 **900** and **1,800** sampled outputs, in addition to warmups and setup.
+
+<details>
+<summary>Technical reference: implementation, rejected experiment and validation</summary>
 
 ## Compiler and codec implementation
 
@@ -260,6 +257,17 @@ limitations from the [comparison audit](2026-09-24-comparison-audit.md) still ap
 
 ## Provenance
 
+This cycle follows [borrowed event objects](2026-09-24-borrowed-event-objects.md).
+The application baseline is the preserved
+`json-direct-20260924/final-json`; the TAST baseline is the production compact-DOM
+build `json-parser-20260924/fused-tast`.
+
+Artifacts are under `var/benchmark/json-schema-20260924/`. The application build
+selected for publication is `published-json`; the typed-cursor experiment is
+`validated-typed-tast`. Earlier pilots, failed builds and the initial TAST driver
+boundary failure are preserved separately.
+
+
 `before.json` and `sources-before/` preserve the starting revisions and sources.
 `after.json` and `sources-after/` preserve the final compiler, codec, benchmark,
 fixture and report sources, including the actual compiler binaries. Each paired
@@ -270,3 +278,5 @@ corpus/oracle hashes, process schedule and complete measurement reports.
 preserved campaign binaries and emitted Go, validates the saved outputs against
 the frozen oracles, and records `final-verification.json`. Failed/pilot builds
 remain identifiable in their original directories and are not publication data.
+
+</details>

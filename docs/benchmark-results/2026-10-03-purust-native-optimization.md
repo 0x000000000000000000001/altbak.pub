@@ -101,6 +101,9 @@ de la comparaison commune correspondent exactement aux références de leurs
 cibles. Cette campagne mesure `gopurs-aff` ; les autres cellules Rust des
 paquets `gopurs-*` restent non mesurées.
 
+<details>
+<summary>Référence technique : changements, diagnostics, protocole et qualification</summary>
+
 ## Changements retenus
 
 Le profil reste **O3 sans LTO, Arc, mimalloc, quatre workers PBO et quatre
@@ -336,3 +339,5 @@ correction est `resources-final-v2`.
   chaque sélection immuable ; `rejected-substitution/` conserve le port écarté.
 - Les caches Cargo supprimés font l'objet de rapports de nettoyage avec copie
   et vérification des exécutables. Sources, sorties et logs restent archivés.
+
+</details>

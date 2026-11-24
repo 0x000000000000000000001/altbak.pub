@@ -81,6 +81,9 @@ une sous-phase de préparation.
 | 14 | 3 491 | 3 234 | -257 |
 | 15 | 3 623 | 3 422 | -201 |
 
+<details>
+<summary>Référence technique : réglages, ressources et preuves de qualification</summary>
+
 ## Valeurs par défaut du launcher
 
 Cinq tours tournants sans aucun worker imposé ; seuls les sélecteurs d'hôte sont
@@ -252,3 +255,5 @@ est conservée et mesurée séparément.
 | gopurs.js | `0654f8f6eb8e853d8f87ae94eea64484bc0a3201c13dcf1c28932c9073624d14` |
 | gopurs-native | `d99ada8d641c4a68522f483e9bd15c8444d99b3f81c2b43971c1b903b6e367e3` |
 | gopurs-rust | `24ed33ad2624f8442080c2c0a256bae7b5e041ab37cfb6f86253c1ffb0152f3a` |
+
+</details>

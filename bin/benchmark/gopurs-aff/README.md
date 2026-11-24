@@ -1,5 +1,9 @@
 # Compile the same gopurs-aff TAST
 
+Maintainer guide for comparing compiler hosts on one frozen Aff corpus.
+The current route below compares gopurs hosts that all generate Go; the older
+comparison of different output languages is retained separately.
+
 ## Gopurs hosted in JavaScript, Go and Rust (all generate Go)
 
 Build `gopurs/bin/gopurs-rust` with `npm run build:rust -- --keep-workspace`
@@ -22,6 +26,9 @@ Every output must match the original Go oracle. Publication rechecks raw logs,
 generated files, installed/frozen executable hashes and the README row.
 
 See the [October 3 host report](../../../docs/benchmark-results/2026-10-03-gopurs-rust-host.md).
+
+<details>
+<summary>Historical Go/Rust target comparison: commands and compatibility details</summary>
 
 ## Historical comparison of gopurs and Purust (different targets)
 
@@ -110,3 +117,5 @@ The workspace retains inputs, compiler artifacts, generated sources, manifests,
 application binaries, logs, failed diagnostics, all timing samples and the
 `verification.json` integrity check. Run builds and campaigns in the background,
 and run the final timing campaign without concurrent builds or other benchmarks.
+
+</details>

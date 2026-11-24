@@ -1,27 +1,36 @@
 # Optimization techniques by backend
 
-Audit dated **September 9, 2026**: **53 techniques across 11 backends**, cross-checked against their invoked passes and code generation paths. This matrix describes integration, coverage, and limitations. It serves as a work list; **it is not a ranking of backend speed**. The reference measurements remain those in the [README](README.md).
-
-All eleven backends referenced by the runners are included. **Our five backends occupy the first columns: sharpurs, purust, phpurs, gopurs, and javapurs.** The other six follow on the right: psgo, official JS, ES, purescm, purerl, and Wasm, which is experimental across the 14 core cases. The README's “Native FP-style” and “Native hand-optimized” columns are handwritten implementations: their shortcuts are not attributed to the compilers.
+**Maintainer reference:** this matrix tracks compiler mechanisms and their
+known limits, not backend speed. The initial audit dates from **9 September
+2026**, with later integrations recorded below. It covers **53 techniques and
+11 backends**; measured performance remains in the [README](README.md).
 
 ## Rating legend
 
-- 🟢 **Complete within the defined scope**: the mechanism is integrated and used by the relevant code generation path. This does not certify every possible program.
-- 🟡 **Partial**: a significant restriction on types, expression shapes, local/intermodule scope, ABI, or code generation path. [Audit notes](optimization-audit.md#exact-scope-of-the-rows) explain the restriction.
-- 🔴 **Missing**: no corresponding mechanism is integrated into the audited pipeline; a primitive, prototype, or unused module is insufficient.
-- ⚪ **Gray — unnecessary / not applicable in this form**: the target's representation, value management, or native tail calls already cover the need. Gray cases are explained in the [audit notes](optimization-audit.md#exact-scope-of-the-rows).
+- 🟢 **Integrated within the stated scope**, not guaranteed for every program.
+- 🟡 **Partial:** restrictions on types, shapes, ABI or analysis scope.
+- 🔴 **Missing:** no implementation used by the audited pipeline.
+- ⚪ **Not applicable in this form:** the target already handles the need.
 
-**🟢 (PBO) / 🟡 (PBO)**: the shared PBO infrastructure provides a transformation or analysis actually used for this capability, sometimes complemented by the target code generator. The label means neither that PBO implements the entire technique on its own nor that all backends use it with the same coverage. It distinguishes this contribution from passes belonging to the backend, the PureScript frontend, or the runtime. For ES and purescm, it refers to their version of PBO, not our fork's TAST extensions.
+`(PBO)` identifies a contribution from the optimizer used by that backend; it
+does not mean PBO supplies the whole mechanism. ES and purescm use their own PBO
+versions. See the [scope notes](optimization-audit.md#exact-scope-of-the-rows).
 
-A conservative proof of purity, arity, or non-escape is necessary for correctness; it is not inherently a shortcoming. “Partial” identifies a coverage limit worth knowing about. These cells should not be added up into a maturity percentage: some rows depend on the same passes and carry different weight.
+Do not add the colors into a maturity score: rows overlap and differ in impact.
+Conservative proofs protect correctness; yellow identifies limited coverage.
 
 ## Matrix
 
-**Row order defines performance-investigation priority, highest first**, across our five backends and the core benchmarks. Skip capabilities already complete for the backend being improved. The first ten rows cover broad transformations and their representation prerequisites; rows **11–12** add the foreign-call bridge and the string payload representation; rows **13–17** group ADT layouts, FBIP, field-level reuse specialization, borrowing and Perceus-style reference-count optimization. Sticky sharing is last because no current hot-path benefit has been established. This is a qualitative order; each proposed gain still needs an isolated measurement. [Ordering rationale](optimization-audit.md#estimated-impact-order).
+Rows are ordered by investigation priority. Skip mechanisms already complete
+for the backend and measure any proposed gain before changing its status.
+[Ordering rationale](optimization-audit.md#estimated-impact-order).
 
-**Cell references:** backend columns are **A–K**, and technique rows are **1–53**. For example, **E13** means **javapurs × ADT fields specialized by payload type**. Coordinates follow the current table order; the audit uses separate stable technique IDs. The 27 September review adds stable IDs **50–53**, displayed at rows **11, 12, 20 and 39**.
+Columns **A–E** are our sharpurs, purust, phpurs, gopurs and javapurs backends;
+**F–K** are psgo, official JS, Arista ES, purescm, purerl and experimental Wasm.
+Sharpurs emits F#. Hand-written FFI shortcuts are not credited to the compiler.
 
-The headers link to each backend's evidence and limitations. **JS** refers to the official code generator; **ES** refers to Arista's `purs-backend-es`. **Sharpurs emits F#**, with C# interoperability, rather than translating PureScript function bodies into C#.
+Cell references use column and row, for example **E13** = javapurs × typed ADT
+fields. The audit also keeps stable technique IDs when the priority order changes.
 
 | # | Technique | **A**<br>[sharpurs](optimization-audit.md#sharpurs) | **B**<br>[purust](optimization-audit.md#purust) | **C**<br>[phpurs](optimization-audit.md#phpurs) | **D**<br>[gopurs](optimization-audit.md#gopurs) | **E**<br>[javapurs](optimization-audit.md#javapurs) | **F**<br>[psgo](optimization-audit.md#psgo) | **G**<br>[JS](optimization-audit.md#official-js) | **H**<br>[ES](optimization-audit.md#es) | **I**<br>[purescm](optimization-audit.md#purescm) | **J**<br>[purerl](optimization-audit.md#purerl) | **K**<br>[Wasm](optimization-audit.md#wasm) |
 | :---: | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -81,6 +90,9 @@ The headers link to each backend's evidence and limitations. **JS** refers to th
 
 [Audit notes: technique scope, evidence, limitations, and source revisions](optimization-audit.md).
 
+<details>
+<summary>Integration history, restrictions and benchmark evidence</summary>
+
 ## Latest Gopurs integrations
 
 - **No displayed cell changes (22–27 September); D3/D4/D6/D23/D28/D40 remain yellow.** The backend now runs ordinary beta reduction after PBO ([ImmediateApplications](../gopurs/gopurs/src/Gopurs/ImmediateApplications.purs)), hoists closed class-typed dictionary constructions into top-level `sync.Once` getters ([ClosedDictionaries](../gopurs/gopurs/src/Gopurs/ClosedDictionaries.purs) — a global cache, deliberately not row 19), shares one native worker across proven record shapes with foreign forwarders excluded from specialisation, keeps `[]int64` for recognised `Data.Array` map/foldl/filter/index paths, lowers qualified Array/Object/Either traversals with native callbacks and one fresh output map, specialises Argonaut decoder shapes only through their standard qualified dictionaries, and lowers known pure foreign calls through typed workers instead of the `_Gopurs_*` wrapper. The [fused traversal campaign](docs/benchmark-results/2026-09-22-fused-json-traversals.md) gives JSON Decoding **31.79 → 24.94 ms** and JSON-to-typed-AST **531.30 → 498.37 ms** combined (17 JSON and 12 TAST oracles; 171 compiler tests); the [record-worker probes](docs/benchmark-results/2026-09-22-native-record-workers.md) give 18–41× on isolated reader pipelines with 0 allocations. The rejected field-update and static-cell prototypes remain unintegrated.
@@ -116,9 +128,14 @@ These are separate experiments with their own baselines, not successive runs who
 
 - **E46: red → yellow; no other cell changes (24–25 September).** [Reuse](../javapurs/javapurs/src/Javapurs/Reuse.purs) shares a constructor rebuild with its source: a rebuild whose every argument is the source's own projection returns the source, and a rebuild with exactly one object field replaced by a shared nullary constructor emits a runtime equality test that returns the source when the field already matches (primitive fields are excluded because reference equality is not value equality). [Reuse guards](../javapurs/javapurs/test/constructor-reuse.mjs) compile and run both shapes. `Ownership` also consumes local recursive groups, polymorphic tree families and freshly built trees in place (rows 14/15 keep their yellow scope), recursive definitions without a back edge keep primitive parameters without loop storage (RBTree 16.60 → 16.05 ms, Fib 0.193 → 0.115 µs over isolated pairs), and Ref/ST primitives now translate to one-element `Object[]` references (support only; row 38 stays red).
 
+</details>
+
 ## Perceus, FBIP and sticky sharing
 
 These names describe related but distinct mechanisms. **Perceus** combines precise reference counting, reuse analysis and specialization; **FBIP** means *functional but in-place*, where functional code can reuse uniquely owned storage while preserving shared values. A runtime pointer named `PerceusPtr` alone does not establish the complete compiler algorithm. See the [Perceus paper, sections 2.2–2.7](https://www.microsoft.com/en-us/research/wp-content/uploads/2020/11/perceus-tr-v4.pdf).
+
+<details>
+<summary>Purust ownership mechanisms: scope and implementation references</summary>
 
 | Mechanism | Priority / matrix cells | Current Purust scope |
 | --- | --- | --- |
@@ -131,3 +148,5 @@ These names describe related but distinct mechanisms. **Perceus** combines preci
 Evidence: [ownership and reuse](optimization-audit.md#purust), [record setters and last-use generation](../purust/purust/src/Purust/CodeGen.purs), and the [saturating pointer runtime](../purust/purust/tests/runtime/perceus_ptr/src/lib.rs). The [Purust plan](../purust/purust/todo.md) breaks the remaining work into measured baby steps. Shared nullary constructors in **B45** are another distinct mechanism: sharing a value does not imply an immortal or saturated reference count.
 
 The three added mechanisms have separate stable audit IDs **47–49**. Existing ratings are retained with their techniques; displayed coordinates change with the priority order. The audit explains the scopes and the gray cells for targets without backend-controlled reference counting.
+
+</details>

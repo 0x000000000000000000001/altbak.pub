@@ -1,5 +1,17 @@
 # Purust compilation-table campaign
 
+Maintainer reference for the **October 2026 compilation campaign**. This folder
+records library preparation, compiler fixes and validation retries against
+frozen inputs. The commands below name that archive; they are not a general
+Purust installation guide.
+
+For the common measurement and publication sequence, start with
+[compilation-table refresh](../compilation-refresh/README.md). Keep builds,
+qualification and measurements serial, and retain failed attempts as evidence.
+
+<details>
+<summary>Archived commands, fixes and validation procedures</summary>
+
 Run commands from the `altbak.pub` repository. Frontend preparation, compiler
 qualification, measurements and application builds run **serially**. Each
 script writes its logs and evidence to the archive; existing result files are
@@ -135,3 +147,5 @@ cohort can be selected with the final argument (`-` skips bootstrap reuse):
 ```sh
 node bin/benchmark/purust-packages/finish-primed.mjs var/benchmark/purust-packages-20261004 finish7 qualify-primed unicode-bootstrap - revision3
 ```
+
+</details>

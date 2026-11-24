@@ -24,6 +24,9 @@ travail spéculatif PBO variable : le gain global est bien plus petit et variabl
 le gain isolé du décodeur. Tous les échantillons, diagnostics et qualifications
 sont publiés dans les [données JSON](2026-10-02-rust-json-typed-ast.json).
 
+<details>
+<summary>Référence technique : essais, mesures détaillées et reproduction</summary>
+
 ## Première mesure du compilateur complet
 
 Sur les 238 modules, médianes de cinq processus après une chauffe, ordre tournant :
@@ -275,3 +278,5 @@ Le runner de l'autre suite `JsonDecoding` a aussi été reconstruit et contrôl�
 les 17 cas conservent leurs empreintes dans neuf processus, trois par runtime
 JS/Go/Rust. Ces temps de contrôle ne remplacent pas les résultats publiés de
 cette autre suite.
+
+</details>

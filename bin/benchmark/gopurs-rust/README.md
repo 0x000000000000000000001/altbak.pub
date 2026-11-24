@@ -1,6 +1,7 @@
 # Optimisation de gopurs hébergé en Rust
 
-Tous les candidats de ce dossier exécutent **gopurs et produisent du Go**.
+Référence technique pour reproduire les expériences du **3 octobre 2026**.
+Tous les candidats exécutent **gopurs et produisent du Go**.
 Ils utilisent le fork `purescript-backend-optimizer-gopurs` ; Purust sert au
 bootstrap du compilateur.
 
@@ -116,6 +117,9 @@ des maps couvre aussi `insertWith`, son ordre de fusion et les versions
 persistantes. `check-pbo.mjs` exécute les quinze suites
 sémantiques PBO sur le JavaScript compilé correspondant.
 
+<details>
+<summary>Passe allocations du 3 octobre : configuration et confirmation</summary>
+
 ### Passe allocations du 3 octobre
 
 Le lot `gopurs-rust-allocation-20261003` reprend la référence aux défauts publics
@@ -127,3 +131,5 @@ inventoriés entre campagnes ; les profils finaux (backend entier puis
 PBO/émission) suivent les mesures. La vérification finale relit tous les dossiers
 `*-runs`, y compris les essais de profil de liaison. `publish-allocation.mjs`
 publie ensuite les preuves vérifiées et la seule ligne `gopurs-aff` du tableau.
+
+</details>

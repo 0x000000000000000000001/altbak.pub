@@ -3,37 +3,8 @@
 This benchmark measures parsing, formatting and consuming the complete output
 of [purescript-tidy](https://github.com/natefaubion/purescript-tidy). It is an
 application measurement, outside the numeric core and extended-test totals.
-The [recorded results](results.json) retain all samples and output checks.
-
-## Workload and timing
-
-The fixture is the 514-line `bench/fixture.purs` in the application checkout,
-a copy of `src/Tidy/Doc.purs`. Formatting uses page width
-80 and indentation width 2. The output is 14,624 bytes. Each process performs
-ten complete parse/format/consume iterations and prints the sum of their
-32-bit FNV-1a hashes: `32412660080`. The consumer reads all 146,240 output bytes;
-checking only the string length is not the published result.
-
-JavaScript encodes each result with `Buffer.from(text, "utf8")` before hashing.
-Go hashes its native UTF-8 string bytes directly. The input and formatted
-fixture are ASCII. The published runtime executes the actual `Main.main`
-applications; a separate measurement driver checks output and allocations.
-
-Runtime is the wall-clock duration of a fresh process, including startup,
-module loading and fixture reading. The campaign uses 24 executions per
-variant, cycling through all six orders of JS, Go before native Tuple
-construction and Go with the integrated correction. There is one excluded
-warm-up per variant and no outlier removal. Compilation and profiling are completed outside timed runs.
-
-Measurements use an Apple M4 Pro with ten performance cores and four efficiency
-cores, Go 1.27.0, and Node 24.8.0 with `--stack-size=4000`. The JavaScript
-frontend is the official PureScript 0.15.15 compiler; Go uses TAST from the
-typed 0.15.17 fork with the TypeApp optimizer correction. Both Go variants use
-byte-identical TAST, application sources and dependency inputs. They differ in
-gopurs: the integrated version constructs native Tuples directly and preserves
-the canonical conversion to struct-value representations. Compiler provenance,
-working-tree source hashes, generated headers and artifact hashes are recorded
-in the report. GC and runtime thread settings retain their defaults.
+This page describes the November 22, 2026 campaign; the
+[recorded results](results.json) retain every sample and output check.
 
 ## Current results
 
@@ -47,14 +18,6 @@ The integrated correction reduces Go runtime by **7.73%** and allocated
 bytes by **12.64%** on this workload. Go allocation count falls from 22,908,104
 to 19,642,993 (**14.25%**). Its ratio to official JS moves from **2.13×**
 to **1.96×**. The published tables use the integrated build.
-
-The preceding TypeApp campaign measured 289.06 ms for official JavaScript,
-621.78 ms for Go and 1,063,512,040 bytes of Go allocations; its report remains
-in `bench/results/typeapp-go-2026-11-22.json`. The earlier typed 0.15.16 campaign
-measured 281.23 ms for JavaScript, 550.39 ms for Go and approximately 940 MB of
-Go allocations, retained in `bench/results/application-2026-11-22.json`.
-These are historical references. The percentage gains above compare the
-before and integrated Go variants measured together in the current campaign.
 
 ## Build and rerun
 
@@ -93,6 +56,39 @@ changes during the campaign. The small allocation-driver build finishes
 before any timing and its temporary workspace is removed automatically.
 The report published here is a byte-for-byte copy of
 `bench/results/native-tuples-integrated-2026-11-22.json`.
+
+<details>
+<summary>Technical reference: timing boundaries, allocations and validation</summary>
+
+## Workload and timing
+
+The fixture is the 514-line `bench/fixture.purs` in the application checkout,
+a copy of `src/Tidy/Doc.purs`. Formatting uses page width
+80 and indentation width 2. The output is 14,624 bytes. Each process performs
+ten complete parse/format/consume iterations and prints the sum of their
+32-bit FNV-1a hashes: `32412660080`. The consumer reads all 146,240 output bytes;
+checking only the string length is not the published result.
+
+JavaScript encodes each result with `Buffer.from(text, "utf8")` before hashing.
+Go hashes its native UTF-8 string bytes directly. The input and formatted
+fixture are ASCII. The published runtime executes the actual `Main.main`
+applications; a separate measurement driver checks output and allocations.
+
+Runtime is the wall-clock duration of a fresh process, including startup,
+module loading and fixture reading. The campaign uses 24 executions per
+variant, cycling through all six orders of JS, Go before native Tuple
+construction and Go with the integrated correction. There is one excluded
+warm-up per variant and no outlier removal. Compilation and profiling are completed outside timed runs.
+
+Measurements use an Apple M4 Pro with ten performance cores and four efficiency
+cores, Go 1.27.0, and Node 24.8.0 with `--stack-size=4000`. The JavaScript
+frontend is the official PureScript 0.15.15 compiler; Go uses TAST from the
+typed 0.15.17 fork with the TypeApp optimizer correction. Both Go variants use
+byte-identical TAST, application sources and dependency inputs. They differ in
+gopurs: the integrated version constructs native Tuples directly and preserves
+the canonical conversion to struct-value representations. Compiler provenance,
+working-tree source hashes, generated headers and artifact hashes are recorded
+in the report. GC and runtime thread settings retain their defaults.
 
 ## Allocations and verification
 
@@ -143,3 +139,18 @@ historical reports remain in the application's `bench/results/` directory.
 They are not official-JavaScript measurements and do not populate the current
 application tables. The current fresh builds, actual application entrypoints
 and raw samples are recorded in `results.json`.
+
+</details>
+
+<details>
+<summary>Earlier campaigns and their different baselines</summary>
+
+The preceding TypeApp campaign measured 289.06 ms for official JavaScript,
+621.78 ms for Go and 1,063,512,040 bytes of Go allocations; its report remains
+in `bench/results/typeapp-go-2026-11-22.json`. The earlier typed 0.15.16 campaign
+measured 281.23 ms for JavaScript, 550.39 ms for Go and approximately 940 MB of
+Go allocations, retained in `bench/results/application-2026-11-22.json`.
+These are historical references. The percentage gains above compare the
+before and integrated Go variants measured together in the current campaign.
+
+</details>

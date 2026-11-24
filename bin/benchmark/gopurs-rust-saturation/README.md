@@ -1,7 +1,10 @@
 # Saturation du compilateur gopurs hébergé en Rust
 
-Campagne autorisée dans la nuit du 4 au 5 octobre 2026. Les trois hôtes gopurs
-génèrent du **Go**. Archive : `var/benchmark/gopurs-rust-saturation-20261004/`.
+Référence technique de la campagne du **4–5 octobre 2026**, pour maintenir
+ou reproduire ses scripts. Les trois hôtes gopurs génèrent du **Go**.
+Archive : `var/benchmark/gopurs-rust-saturation-20261004/`.
+Les étapes ci-dessous décrivent ce protocole figé, pas une campagne à lancer
+automatiquement.
 
 ## Protocole
 

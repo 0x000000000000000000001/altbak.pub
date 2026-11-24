@@ -1,8 +1,9 @@
 # Renewed TAST decode profile and b8x reference — 23 September 2026
 
-This campaign re-establishes the reference cells with the current compiler and
-attributes the TAST decode cost on the generated Go. Nothing was optimised in
-this step; all numbers are measurements of the published state.
+The initial profile identifies ST foreign-interface adapters as a major source
+of temporary allocations. The subsequent integrated change reduces paired
+decode time by **11.88%** and allocated bytes by **9.09%**. This report retains
+both the original reference measurements and the later optimization campaign.
 
 ## Summary
 
@@ -30,6 +31,9 @@ this step; all numbers are measurements of the published state.
   as `gopurs_runtime.Value`). Ten paired runs give **decode −11.88%** and
   **allocations −9.09%**; the official cells move to **358.78 ms Go** and
   **396.74 ms combined**.
+
+<details>
+<summary>Technical reference: measurements, profiling and integrated implementation</summary>
 
 ## Reference measurements
 
@@ -300,3 +304,5 @@ candidates before the native callback ABI.
 No repository file was modified for the reference, profile and probe
 measurements. The integrated port modifies only
 `gopurs-st/src/Control/Monad/ST/Internal.go` and `Uncurried.go`.
+
+</details>

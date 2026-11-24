@@ -1,179 +1,91 @@
-# Library microbenchmarks (excluded WIP)
+# Library microbenchmarks
 
-These 23 original PureScript benchmarks are marked **excluded WIP** and inspired by the
-library-operation families shared by **f-f on the PureScript Discord in March
-2026**. The exact sources and commit of the 218-case Discord suite were not
-located. These are new implementations, not a source import or a reproduction
-of its reported JS/Chez/Racket timings.
-
-The public [purescm core Racket branch](https://github.com/purescm/purescript-core/tree/b0bee39302df30afeb70560cb328d3208441f195)
-was inspected during the search. Its older library benchmarks do not establish
-the source or measurement protocol of the Discord table. No upstream benchmark
-code was copied into this suite.
-
-The earlier August 2024 discussion does have an identified source:
-[`anttih/purescm-string-benchmarks` at b792b00](https://github.com/anttih/purescm-string-benchmarks/blob/b792b00fa3fc8f50bccec5d28c0964221721ca89/src/Main.purs).
-Its `(list) fold`, `(list) fold + slice`, `(array) fold` and `(array) fold + slice`
-labels match that exchange. This is Antti's older suite, distinct from Fabrizio
-Ferrai's 218-case JS/Chez/Racket table from March 2026.
-
-The renewed search covered Fabrizio's public repositories and organizations,
-the public `purescm` and `purescript-core` branches, his personal site and
-authenticated GitHub code searches for exact benchmark labels. The 2026 source
-was not located in that scope; this does not establish that it is unpublished.
-In the supplied Discord exchange, Fabrizio said on 8 April 2026 that he planned
-to publish code soon. That statement does not establish its current location.
-
-**Status:** excluded WIP, with all nine JS/Go columns measured in the
-[November 14, 2026 campaign](benchmark-results/2026-11-14-library-js-go.md).
-Each published cell is the median of three independent processes. Rust and the
-other runtime columns have no published measurements for these cases.
+These 23 **Incl WIP** cases measure common array, string, record and reference
+operations. All nine JS/Go columns were measured in the
+[November 14 campaign](benchmark-results/2026-11-14-library-js-go.md).
+They have their own total in the README; they do not change the 14-case Stable
+total. Rust and the other families have no published results for these cases.
 
 ## Running
 
-From the repository root, the normal Go command builds and runs the 14 core
-cases, with no WIP cases:
+From the repository root:
 
 ```sh
-./bin/go/run
+./bin/go/run                       # 14 core tests
+./bin/go/run --wip-included        # Core, library cases and separate diagnostics
+./bin/go/run --dev --wip-included  # Go development profile
 ```
 
-To include the new library cases and the three existing WIP diagnostics as well:
+Use `--ffi` or `--fficc` with JS/Go to select functional or imperative native
+references. These variants run the core and library cases without the three
+separate diagnostics. JS/PBO and psgo also run the core and library cases.
+`--wip-included` cannot be combined with `--test` or `--x`.
 
-```sh
-./bin/go/run --wip-included
-```
-
-On Go, JS and Rust, `--wip-included` runs the 14 core cases, these 23 new cases,
-and the three diagnostics already marked excluded WIP in the [main README](../README.md):
-Array Indexing, JSON to Typed AST and JSON Decoding. The latter retain their independent workspaces, protocols and
-campaign results. They can also be selected individually with `--test`.
-JS/PBO and psgo run the 14 core cases plus the 23 library cases.
-`./bin/run --wip-included` retains all existing core backends, includes WIP where configured,
-and reports their absence on the others. The new WIP values do not enter the
-core total. This option is mutually exclusive with `--test` and `--x`.
-On JS and Go, it also accepts `--ffi` or `--fficc` to select the FP-style or
-imperative native implementations. Those modes run their 14 core references
-and 23 new references, without the three independent diagnostics:
-
-```sh
-./bin/js/run --ffi --wip-included
-./bin/js/run --fficc --wip-included
-./bin/go/run --ffi --wip-included
-./bin/go/run --fficc --wip-included
-./bin/go/run --dev --wip-included
-./bin/psgo/run --wip-included
-```
-
-The grouped JS/Go/Rust command accepts the build/run phase flags and `--clean`,
-plus `--dev` for Go. Custom artifact/build directories and Go PGO options remain
-available on the ordinary run, not on this group of different protocols.
-
-The commands also accept `--build-only` and `--run-only`. For a multi-backend
-comparison, finish all builds before starting measurement:
+For a multi-backend campaign, finish all builds before measuring:
 
 ```sh
 ./bin/run --wip-included --build-only
 ./bin/run --wip-included --run-only
 ```
 
-JS/ES keep builds under `run/bak/<backend>/output-runs/pure-*` (normal run) or
-`pure-wip-included-*`, with the corresponding `latest-pure.json` / `latest-pure-wip-included.json` pointer
-and `validated.json` in the artifact directory. Go/Rust use
-`run/bak/<backend>/modes/pure/` or `modes/pure-wip-included/`, with `results.json`. These files
-describe one process, not the median of three independent processes.
-FFI variants use the corresponding `ffi-wip-included` or `fficc-wip-included`
-workspace keys. Go development builds have a separate `-dev` suffix. psgo uses
-`run/bak/psgo/output-runs/pure-wip-included-*` and a matching latest-build pointer.
+The public JS/Go/Rust command also launches Array Indexing, JSON to Typed AST
+and JSON Decoding, each with its own protocol. Its combined console output is
+**not** one input to the numeric collector. Use the ordinary driver in a frozen
+numeric plan, for example:
 
-For a publication campaign, use the existing frozen-plan protocol in
-[`docs/benchmark-methodology.md`](benchmark-methodology.md), with
-`"mode": "pure"` for a normal run-only command. `measure.py` validates the core
-and WIP sections separately and aggregates medians per case over three
-processes. The core result keeps its original shape; the new result is nested
-under `library`. Keep the build manifests and payload hashes required by that
-protocol. `publish.py --wip-only` publishes only the 23 new rows across the nine
-JS/Go columns, preserving core cells, totals, source links and other tables.
-It requires all nine columns and rejects incorrect oracles or cell medians.
+```sh
+python3 bin/native/driver.py go --wip-included --run-only
+```
 
-A numeric plan that includes the 23 new cases uses `"mode": "pure"`, `"ffi"` or
-`"fficc"` to match the selected core variant and the
-ordinary driver directly, e.g. `python3 bin/native/driver.py go --wip-included --run-only`,
-against the artifact prepared by `./bin/go/run --wip-included --build-only`.
-Do not feed the public JS/Go/Rust `--wip-included` group's combined
-console output into one numeric plan entry:
-its other three diagnostics already collect their own campaigns and use
-different measurement boundaries. WIP results have no aggregate score.
+The plan's mode must match `pure`, `ffi` or `fficc`. The collector validates
+core and library results separately and takes medians over three processes.
+`publish.py --wip-only` updates the nine JS/Go library columns and their totals;
+it requires all nine columns and preserves the core measurements. See the
+[measurement workflow](benchmark-methodology.md).
+
+## What is timed?
+
+Immutable fixtures are prepared before timing. Every measured call gets its
+inputs through `Bench.opaque`, performs the operation, consumes the result and
+returns a checked integer. Mutable references are created again on every call.
+
+The interval includes callbacks, Effect adapters, representation conversions,
+input barriers and result consumption. Arrays are read element by element;
+strings are consumed by code point, including any deferred string work.
+Consumer cost is not subtracted. Very small timings can be dominated by these
+boundaries, so inspect generated code before attributing a gap to one operation.
+
+Each process performs three global and three local warm-ups, calibrates batches
+toward 10 ms (up to 2^24 calls), and retains the minimum of ten batches. Runtime
+memory management stays enabled; there is no forced GC after every call and
+these measurements do not report peak memory.
 
 ## Native reference variants
 
-The nine JS/Go columns comprise JS official, JS/PBO, FP-style JS FFI,
-imperative JS FFI, gopurs release, gopurs development, psgo, FP-style Go FFI and
-imperative Go FFI. All use the same case labels, fixtures and expected outputs.
-Each native reference resides next to its PureScript case as `<Name>FFI.*` or
+The nine columns are official JS, JS/PBO, JS FP/imperative FFI, gopurs
+Release/Dev, psgo and Go FP/imperative FFI. They share labels, fixtures and oracles.
+Native implementations live beside each case in `<Name>FFI.*` or
 `<Name>FFICheatcode.*`.
 
-The shared PureScript wrappers call
-`makeAction :: Int -> Effect (Int -> Int)`. The factory constructs immutable
-fixtures outside timing and returns a function that performs the workload on
-each call. The wrapper passes its size through `Bench.opaque` both before
-preparation and inside each measured invocation. Native references allocate
-mutable refs anew on every invocation; no result or mutable ref is cached.
+Functional references preserve callbacks, explicit `Maybe` traversal and
+immutable record updates. Code-point length materializes the same code-point
+array as PureScript; constructed strings are consumed through that array.
+Imperative references may use loops and local mutation, but must construct and
+consume the required results. Failure-position traversals still visit every
+element; their labels do not imply early termination.
 
-The size is 10000 for the five large array cases, string searches and ref loops;
-it is 1000 for each append input, traversals, Unicode fixture groups, split/concat
-parts and record-update loops. The code-point take case prepares 1000 `a😀é`
-groups and takes `count + floor(count / 2)` code points, hence 1500 at the
-benchmark size.
-
-FP-style references preserve map/filter/fold callbacks, the balanced
-split-and-concatenate Array traversal with explicit `Maybe` operations, and an
-immutable record update on every iteration. Code-point length materializes the
-code-point array used by the PureScript implementation. Constructed strings are
-consumed through a code-point array and fold. Imperative references may use
-loops and local mutation, while constructing and consuming the required array
-or string results. Every element is visited in the failure-position cases;
-FP-style callbacks remain explicit.
-
-The psgo build uses a private loader adaptation for `Data.String.CodeUnits.length`:
-supplementary Unicode characters count as two UTF-16 code units, matching the
-PureScript contract. Its upstream code-point count would return 3000 for the
-fixture whose code-unit oracle is 4000. The adaptation is included only in WIP
-builds and recorded with the other loader sources in the artifact manifest.
-
-## Measurement boundary
-
-[`src/AppLibrary.purs`](../src/AppLibrary.purs) prepares all fixtures before the three global warm-ups.
-Each preparation returns an `Effect Int`; the operation is performed inside that
-action on every invocation. Inputs pass through `Bench.opaque` inside the action.
-`Bench.runBench` provides the three local warm-ups, calibrated batches targeting
-10 ms (capped at 2^24 invocations) and minimum of ten batches.
-
-Fixture construction is excluded. The measured interval includes the operation,
-the result consumer described below, input barriers, Effect/callback adapters
-and the numeric result sink. Backend conversions at a generic opaque boundary
-are included too. Read very small timings with that overhead in mind. Inspect
-generated code before attributing an unexpected gap to the named operation alone.
-
-Constructed arrays are consumed element by element. Constructed strings are
-consumed code point by code point. This also includes deferred string work
-triggered by consumption. These are operation-plus-consumption timings; no
-consumer cost is subtracted. Fixture reuse is limited to immutable inputs;
-mutable reference allocation is repeated inside every invocation. Runtime memory
-management and normal compiler optimizations remain enabled. This protocol does
-not force a final collection after each invocation or measure peak memory.
-
-The external validator compares outputs to the independent integer oracles in
-[`library-cases.json`](../bin/benchmark/library-cases.json), in exact label order. The batch driver also checks consistency
-against the warm-up result. These checksums are benchmark contracts, not a
-replacement for each library's full correctness tests.
+The shared wrapper calls `makeAction :: Int -> Effect (Int -> Int)`: fixture
+preparation is outside timing; the returned function performs each invocation.
+The psgo WIP loader adapts `Data.String.CodeUnits.length` to count UTF-16 units,
+so the Unicode fixture returns 4000 rather than 3000. This adaptation is recorded
+in the build manifest.
 
 ## Cases and independent oracles
 
-Every case below is **excluded WIP**, with performance measurements pending.
-
-Array result checksums use alternating weights 1 and 2, starting with weight 1.
-For `[1 .. 2m]`, the sum is `3m² + 2m`. All intermediate sums fit signed Int32.
+Expected values come from
+[`library-cases.json`](../bin/benchmark/library-cases.json), independently of the
+measured implementation. The validator checks exact labels, order and results.
+These checksums complement each library's correctness tests.
 
 | Case | Measured operation and consumer | Expected |
 | --- | --- | ---: |
@@ -201,38 +113,41 @@ For `[1 .. 2m]`, the sum is `3m² + 2m`. All intermediate sums fit signed Int32.
 | [`effect/ref-write-10000`](../src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | New Effect ref, writes 1 through 10000, final read | 10000 |
 | [`effect/ref-modify-10000`](../src/Test/EffectRefModify10000/EffectRefModify10000.purs) | New Effect ref at 0, 10000 increments, final read | 10000 |
 
-The filter checksum is `6m² + 4m` with `m = 2500`. Mapping adds 15000 to
-the 10000-element checksum; the successful traversal adds 1500 to the
-1000-element checksum. Failure position does not imply that the Array
-`Traversable` instance stops evaluating callbacks early.
+<details>
+<summary>Oracle derivations and fixture details</summary>
 
-The Unicode take returns 500 complete `a😀é` groups, so its oracle is
-`500 × (97 + 128512 + 233)`. Split returns 1000 parts whose scalar values sum
-to 294000, giving 295000. Concat has checksum `1000 × (97 + 98)`.
-The strings are built by the documented joins/appends; no particular flat or
-rope representation is assumed, and `é` is the single code point U+00E9.
+Array checksums alternate weights 1 and 2. For `[1 .. 2m]`, the checksum is
+`3m² + 2m`. Filter uses `6m² + 4m` with `m = 2500`; map adds 15000 to the
+10000-element checksum; successful traversal adds 1500 to the 1000-element
+checksum. All intermediate sums fit Int32.
 
-Record fields start at 1 through their field count. Both the original and final
-records are consumed, giving `1000 + 2 × sum(1..fieldCount)`. Normal scalar
-replacement is allowed. Each action starts again from the immutable fixture.
+The Unicode fixture repeats `a😀é` 1000 times (`é` is U+00E9). Taking 1500 code
+points returns 500 complete groups, hence `500 × (97 + 128512 + 233)`.
+Split's 1000 parts contain scalar values summing to 294000, giving 295000.
+Concat returns `1000 × (97 + 98)`. No flat or rope representation is assumed.
+
+Record fields start at 1 through their field count. Both original and final
+records are consumed: `1000 + 2 × sum(1..fieldCount)`. Each invocation restarts
+from the immutable fixture; normal scalar replacement remains allowed.
+
+</details>
 
 ## Source selection
 
-Each case resides in its own `src/Test/<Name>/` directory, with its PureScript
-implementation and any FFI files. Shared fixture helpers reside in `src/Bench/`;
-the oracle manifest is [`bin/benchmark/library-cases.json`](../bin/benchmark/library-cases.json).
-The entry points are
-[`src/AppLibrary.purs`](../src/AppLibrary.purs) and
-[`src/AppAll.purs`](../src/AppAll.purs). Selection remains explicit: configured
-drivers include these sources in their private workspace only with
-`--wip-included`. The extra direct dependencies (`foldable-traversable`, `refs`,
-`enums`, `tailrec`) are added to that private configuration. JS/Go FFI modes
-select the matching native wrappers and files; default, extended and individual
-core-test modes omit the WIP sources. Sources and
-the oracle manifest are fingerprinted to reject stale library artifacts and
-changes during collection.
+Cases live in `src/Test/<Name>/`; shared helpers are in `src/Bench/`.
+[`AppLibrary`](../src/AppLibrary.purs) and [`AppAll`](../src/AppAll.purs) select
+them only for `--wip-included`. Default, extended and individual core-test runs
+omit them. Drivers add the required dependencies to their isolated workspace;
+sources and the oracle manifest are fingerprinted to reject stale artifacts.
 
-To add a case, create `src/Test/<Name>/<Name>.purs` with its `prepare` function,
-register the same label and order in `AppLibrary.cases` and [`library-cases.json`](../bin/benchmark/library-cases.json), and document the
-oracle derivation and measured consumer here. Expected values must be derived
-independently of the measured implementation.
+To add a case, write its `prepare` function, register the same label and order
+in `AppLibrary.cases` and `library-cases.json`, then document its consumer and
+independent oracle here.
+
+## Origins
+
+These are original implementations inspired by operation families discussed on
+PureScript Discord in March 2026, not a reproduction of that 218-case suite.
+Its exact source was not found during the recorded search. The identified
+[August 2024 string benchmark](https://github.com/anttih/purescm-string-benchmarks/blob/b792b00fa3fc8f50bccec5d28c0964221721ca89/src/Main.purs)
+is a different suite. No upstream benchmark code was copied.
