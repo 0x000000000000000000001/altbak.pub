@@ -2082,7 +2082,7 @@ Benchmark               | Hand-written PureScript<br>↓<br>[official](https://g
 > **Hardware Context**
 > Measurements ran on an **Apple M4 Pro with 10 performance cores and 4 efficiency cores**, without explicit CPU affinity. The extended *Parallelism* row compares JavaScript's single-thread scheduler with the Go/Rust multicore runtimes.
 
-### Application benchmark results
+### Application benchmark results (WIP)
 
 App scenario | JS | Go | Go / JS |
 --- | ---: | ---: | ---: |
