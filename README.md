@@ -22,19 +22,13 @@ To ensure fair and executable comparisons across all backends, the test suite is
 > [!NOTE]
 > **Reading the benchmark tables**
 >
-> - **Stable** — the 14 core cases, measured on every column. `Total Stable` is their sum.
-> - **Incl WIP** — the 23 shared WIP micro-benchmarks. They are measured on every JS/Go column today; other families show `—` until their WIP campaign runs. `Total Incl WIP` is their sum (`—` until measured).
-> - **Excl WIP** — the three single-column WIP diagnostics (Array Indexing, JSON to Typed AST, JSON Decoding), listed in every table and measured for JavaScript, Go, Rust and C. They are shown for reference only and are **not** part of any total.
-> - **Total Stable + Incl WIP** — the 37 comparable cases; `—` until the Incl WIP cases are measured.
-> - In every core language table and Extended Results, each case has three rows: its time, `↳ /C`, and `↳ /JS`. Rows beginning with `↳` belong to the case or total above them.
-> - In the core language tables, `/JS` is the ratio to the **first column of the JavaScript table** (hand-written PureScript, official compiler, JS on V8), and `/C` is the ratio to the **first column of the C (reference) table** (hand-written imperative C, `clang -O3`). Extended Results uses its own first column as the JavaScript reference and has no C reference. The JavaScript reference column shows `—` for `/JS`; the C reference column shows `/C = 1.00x`.
-> - On a total row, `↳ /C` and `↳ /JS` are ratios of the sums of case timings, equivalently arithmetic means of case ratios weighted by the reference time. They describe this benchmark mix, not an end-to-end application measurement.
-> - `μ` is the unweighted arithmetic mean of case ratios; `Q₂` is their median (second quartile; the mean of the two middle ratios for an even count); `G` is their geometric mean, `exp(mean(log(ratio)))`. Each eligible case has equal weight in these three summaries. `/C` and `/JS` identify the reference; lower is faster, and `1.00x` means equal time.
-> - `μ`, `Q₂` and `G` use the same eligible pairs. Timings displayed as bounds (`< ...`) are excluded, even if a historical per-case ratio cell contains a number. The refreshed C reference covers all 14 Stable cases. Any future partial summary must identify its actual coverage.
-> - Matching archived timings are used before rounding; rounded ratio cells are never averaged. `≈` marks a summary that falls back to published timing precision because a matching original campaign is unavailable. [Archived timing catalogue and provenance](bin/benchmark/ratio-measurements.json).
-> - `—` means the candidate or reference block has not been measured, no eligible pairs remain, or this is the JavaScript reference compared with itself. A missing WIP reference prevents a combined 37-case summary; it is not replaced by the Stable subset. Values at least 1 are rounded to two decimal places (for example, `12.000045` → `12.00`). Positive values below 1 retain two significant digits after leading fractional zeros (`0.000045` stays unchanged; `0.009492` → `0.0095`). Zero displays as `0.00`; the same rule applies to the magnitude of negative values. This rule applies to timing and ratio values in all tables, including core, extended, application and compilation results; calculations and threshold comparisons use archived values before display rounding. Genuine bounds remain excluded.
-> - `μ` is sensitive to large ratios, `Q₂` describes the middle case, and `G` summarizes multiplicative factors. None substitutes for an application benchmark; very short reference timings also deserve caution.
-> - Totals are sums of per-case medians, not a single measured run.
+> - **Groups:** Stable = 14 core tests; Incl WIP = 23 shared micro-benchmarks. Together they make 37 tests. Excl WIP contains three diagnostics, excluded from all totals.
+> - **Ratios:** `/C` and `/JS` compare with the first C and JavaScript reference columns. **Below 1× is faster; above 1× is slower.** Extended Results uses its own JS reference and has no C reference.
+> - **Totals:** sums of per-test median times. Total ratios compare these sums; they do not represent an application benchmark.
+> - **Summaries:** `μ` = arithmetic mean, `Q₂` = median, `G` = geometric mean of the case ratios. Each case has equal weight. Very small reference times can produce large ratios.
+> - **Missing data:** `—` means unavailable or not applicable. Bounds (`< …`) are excluded from summaries; partial coverage is identified. The 37-test total requires both Stable and Incl WIP.
+> - **Display precision, in every table:** values ≥ 1 use two decimal places (`12.000045 → 12.00`); positive values < 1 keep two significant digits after leading zeros (`0.000045`, `0.009492 → 0.0095`). Zero is `0.00`.
+> - **Calculations:** use archived timings before display rounding, including for threshold checks. `≈` marks a fallback to published precision. See the [timing archive](bin/benchmark/ratio-measurements.json) and [methodology](docs/benchmark-methodology.md).
 
 #### JavaScript
 
