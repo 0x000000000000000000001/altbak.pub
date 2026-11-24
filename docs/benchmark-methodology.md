@@ -22,6 +22,28 @@ folding, conversion to loops, allocation reuse and invariant-code motion.
 A compiler reducing a generic computation to a constant is valid. Replacing that
 computation manually with its expected result in an FP reference is not.
 
+## Small timings and ratio coverage
+
+Numeric displays keep two decimal places for ordinary values and extend through
+two significant fractional digits when leading zeros would otherwise erase
+precision: `0.000045` stays `0.000045`, and `0.009492` displays as `0.0095`.
+The same rule applies to ratios. Calculations use the matching archived times
+before display rounding, so small positive measurements remain eligible.
+
+A historical bound such as `< 0.01` is not itself a measured value. It can only
+be replaced by a matching archived measurement or a newly validated campaign.
+Unresolved bounds and zeros remain excluded from pairwise ratio statistics;
+the `n=…/…` suffix still reports incomplete coverage where it actually remains.
+
+The [24 November 2026 C reference campaign](benchmark-results/2026-11-24-c-reference.md)
+records all 14 positive timings, including the five cases previously displayed
+as bounds. It uses the historical C driver unchanged: the AST/tree arenas are
+allocated before timing and reset/reused as before. The campaign changes display
+precision and reference measurements, not that allocation contract or any C
+algorithm. This reference remains an imperative comparison with those
+source-level simplifications, rather than a measurement of compiling the same
+functional program.
+
 ## Additional Go diagnostics
 
 The Go and JS tables include additional diagnostics, with a [separate initial measurement

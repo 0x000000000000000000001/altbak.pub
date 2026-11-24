@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Publish complete validated campaigns, preserving the user's column headers."""
 import argparse
+from decimal import Decimal
 import hashlib
 from html import escape, unescape
 import json
@@ -50,8 +51,15 @@ def row_label(cell):
 
 
 def format_number(value):
-    """Limit display precision without presenting a positive value as zero."""
-    return '< 0.01' if 0 < value < 0.005 else f'{value:.2f}'
+    """Keep two decimals, extending tiny values through two significant digits.
+
+    Leading fractional zeros do not consume the precision budget: 0.000045
+    stays 0.000045. Decimal expands the rounded representation without exponent
+    notation; the alternate form retains its significant trailing zero.
+    """
+    if 0 < abs(value) < 0.1:
+        return format(Decimal(format(value, '#.2g')), 'f')
+    return f'{value:.2f}'
 
 
 def format_time(value, unit='μs'):
@@ -495,7 +503,7 @@ def render(original, results):
     c_reference = dict(zip(ROWS, results['c']['times_us']))
     js_reference = dict(zip(ROWS, results['js-pure']['times_us']))
     for title, keys in GROUPS.items():
-        pattern = r'(#### ' + re.escape(title) + r'\n)(.*?)(?=\n#### |\n### |\n## |\n> |\Z)'
+        pattern = r'(#### ' + re.escape(title) + r'\n)(.*?)(?=\n#### |\n### |\n## |\Z)'
         matches = list(re.finditer(pattern, text, re.S))
         if len(matches) != 1:
             raise ValueError('Missing/ambiguous section: ' + title)

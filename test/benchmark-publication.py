@@ -42,6 +42,16 @@ class PublicationTests(unittest.TestCase):
             '↳ /JS | — | <strong>1.00x</strong> | <strong>1.00x</strong> | <strong>1.00x</strong> |'])
         self.assertEqual(extended.count('↳ /C | — | — | — | — |'), 6)
 
+    def test_section_provenance_notes_survive_publication(self):
+        original = (ROOT / 'README.md').read_text()
+        note = '> Timing precision and campaign provenance are retained.\n\n'
+        original = original.replace('#### Go\n\n', '#### Go\n\n' + note, 1)
+        results = {key: fixture(key) for keys in PUBLISH['GROUPS'].values() for key in keys}
+        rendered = PUBLISH['render'](original, results)
+        self.assertEqual(rendered.count(note), 1)
+        _, lines = PUBLISH['section_lines'](rendered, 'Go')
+        self.assertGreater(PUBLISH['find_benchmark_row'](lines, 'AST Evaluation'), 0)
+
     def test_application_tables_survive_core_and_wip_publication(self):
         original = (ROOT / 'README.md').read_text()
         start = original.index('### Application benchmark results\n')

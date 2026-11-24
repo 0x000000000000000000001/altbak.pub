@@ -47,6 +47,18 @@ def table_fixture():
 
 
 class RatioStatistics(unittest.TestCase):
+    def test_small_measurements_keep_two_significant_fractional_digits(self):
+        cases = [(12.345, '12.35'), (0, '0.00'), (0.1, '0.10'),
+                 (0.01234, '0.012'), (0.009492, '0.0095'),
+                 (0.000045, '0.000045'), (0.0000001, '0.00000010'),
+                 (0.00999, '0.010'), (0.0000999, '0.00010'),
+                 (-0.000045, '-0.000045')]
+        for value, expected in cases:
+            with self.subTest(value=value):
+                self.assertEqual(PUBLISH['format_number'](value), expected)
+        self.assertEqual(PUBLISH['format_time'](0.000045), '~ 0.000045 μs')
+        self.assertGreater(float(PUBLISH['format_number'](math.ulp(0.0))), 0)
+
     def test_mean_median_and_geometric_mean_of_ratios(self):
         result = PUBLISH['summarize_ratios'](
             [measured(value) for value in [1, 2, 8]], [measured(1)] * 3)
@@ -73,7 +85,27 @@ class RatioStatistics(unittest.TestCase):
         self.assertAlmostEqual(result['G'] / 1e-7, 1)
         self.assertTrue(math.isfinite(result['G']))
         self.assertEqual(PUBLISH['statistics_cell'](result, 'G'),
-                         '<strong>&lt; 0.01x</strong>')
+                         '<strong>0.00000010x</strong>')
+
+    def test_exact_small_measurements_restore_full_coverage_without_using_bounds(self):
+        # Old bounds alone stay excluded. A newly published positive measurement
+        # gets an explicit numeric display and participates in all 14 ratios.
+        read = PUBLISH['timing_measurement']
+        values = [measured(1)] * 14
+        historical = [read('~ 1.00 μs', 'c', str(i), {}, {}) for i in range(9)]
+        historical += [read('< 0.01 μs', 'c', str(i), {}, {}) for i in range(9, 14)]
+        self.assertEqual(PUBLISH['summarize_ratios'](values, historical)['count'], 9)
+        tiny = [0.000045, 0.000031, 0.000072, 0.000081, 0.000029]
+        raw = dict(zip(map(str, range(9, 14)), tiny))
+        catalogue = PUBLISH['updated_ratio_catalogue'](
+            {}, {'c': raw}, {'c': {'path': 'measured.json', 'sha256': 'hash'}})
+        measured_refs = historical[:9] + [read(PUBLISH['format_time'](value), 'c',
+                                               str(i), {}, catalogue)
+                                           for i, value in zip(range(9, 14), tiny)]
+        result = PUBLISH['summarize_ratios'](values, measured_refs)
+        self.assertEqual((result['count'], result['population']), (14, 14))
+        self.assertNotIn('(n=', PUBLISH['statistics_cell'](result, 'μ'))
+        self.assertAlmostEqual(result['μ'], (9 + sum(1 / value for value in tiny)) / 14)
 
     def test_raw_times_require_matching_display_and_incoming_times_take_priority(self):
         catalogue = {'columns': {'go-pure': {'case': {
