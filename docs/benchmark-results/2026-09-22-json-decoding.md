@@ -9,7 +9,7 @@ workload or identify the cost of each remaining compiler/runtime mechanism.
 
 ## Workload and correctness
 
-The shared [PureScript source](../../src/Test/JsonDecoding.purs) uses ordinary
+The shared [PureScript source](../../src/Test/JsonDecoding/JsonDecoding.purs) uses ordinary
 `DecodeJson` record instances and a small hand-written instance for tagged events.
 Payloads include nested records, arrays, optional records/strings/integers,
 booleans, numeric values, Unicode and escaped strings. The JS/Go FFI only handles
