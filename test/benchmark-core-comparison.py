@@ -69,6 +69,47 @@ class CoreComparison(unittest.TestCase):
         self.assertEqual(spread['minimum'], 0.6)
         self.assertEqual(spread['maximum'], 10 / 3)
 
+    def test_imperative_rankings_require_and_retain_the_declared_identity(self):
+        results = {'go': column([6.0] * 14), 'js': column([3.0] * 14),
+                   'c-imperative': column([2.0] * 14)}
+        rows = C['rankings'](results, 'imperative')
+        row = rows['go_c'][0]
+        self.assertEqual(row['go_over_c'], 3)
+        self.assertEqual(row['go_over_js'], 2)
+        self.assertEqual(row['times_us']['c-imperative'], 2)
+        self.assertNotIn('c-functional', row['times_us'])
+        with self.assertRaises(ValueError):
+            C['rankings'](results)
+        with self.assertRaises(ValueError):
+            C['rankings']({**results, 'c-functional': column()}, 'imperative')
+
+    def test_snapshot_freezes_the_selected_contract_and_shared_opaque_boundaries(self):
+        globals_ = C['source_snapshot'].__globals__
+        with patch.dict(globals_, sha=lambda path: str(path)):
+            for kind, source, contract in [
+                    ('functional', 'tmp/bench_functional.c', 'tmp/fp_reference_contract.md'),
+                    ('imperative', 'tmp/bench_native.c', 'tmp/imperative_reference_contract.md')]:
+                with self.subTest(kind=kind):
+                    snapshot = C['source_snapshot'](ROOT / source, kind)
+                    self.assertIn(source, snapshot)
+                    self.assertIn(contract, snapshot)
+                    self.assertIn('src/Bench.purs', snapshot)
+                    self.assertIn('src/Bench.go', snapshot)
+                    self.assertIn('src/Bench.js', snapshot)
+                    other = ('tmp/fp_reference_contract.md' if kind == 'imperative'
+                             else 'tmp/imperative_reference_contract.md')
+                    self.assertNotIn(other, snapshot)
+
+    def test_historical_c_keeps_provenance_without_assuming_an_implementation(self):
+        stored = {'time_us': 7.0, 'source': 'archived-functional.json'}
+        catalogue = {'columns': {'c': {name: stored for name in C['ROWS']}}}
+        globals_ = C['historical_comparison'].__globals__
+        with patch.dict(globals_, json_file=lambda _: catalogue, sha=lambda _: 'digest'):
+            history = C['historical_comparison']({'go': column(), 'js': column()})
+        self.assertEqual(history['cases'][0]['c_archived'], stored)
+        self.assertNotIn('imperative_c_archived', history['cases'][0])
+        self.assertIn('recorded source identity', history['note'])
+
     def test_partial_columns_or_tampered_aggregate_are_rejected(self):
         results = {key: column() for key in C['BACKENDS']}
         mutations = [lambda r: r.pop('js'),
@@ -157,6 +198,41 @@ class CoreComparison(unittest.TestCase):
             self.assertIn('14/14', (output / 'report.md').read_text())
             with self.assertRaises(FileExistsError):
                 C['run_campaign'](builds, output, {}, 5)
+
+    def test_imperative_campaign_archives_its_own_identity_and_protocol(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary) / 'imperative'
+            builds = {key: {'command': [key], 'cwd': temporary}
+                      for key in ('go', 'js', 'c-imperative')}
+            seen = []
+
+            def fake_run(command, **kwargs):
+                seen.append(command[0])
+                kwargs['stdout'].write(output_fixture())
+                return subprocess.CompletedProcess(command, 0)
+
+            globals_ = C['run_campaign'].__globals__
+            with patch.dict(globals_, verify_frozen=lambda *_: None,
+                            historical_comparison=lambda _: None), \
+                    patch.object(C['platform'], 'platform', return_value='test host'), \
+                    patch.object(subprocess, 'run', side_effect=fake_run):
+                report = C['run_campaign'](builds, output, {}, 5, 'imperative')
+            self.assertEqual(seen, ['go', 'js', 'c-imperative', 'js', 'c-imperative', 'go',
+                                    'c-imperative', 'go', 'js'])
+            self.assertEqual(report['c_reference'], {
+                'kind': 'imperative', 'backend': 'c-imperative',
+                'contract': 'tmp/imperative_reference_contract.md'})
+            manifest = json.loads((output / 'manifest.json').read_text())
+            self.assertEqual(manifest['c_reference'], report['c_reference'])
+            self.assertEqual(report['scope']['backends'], ['go', 'js', 'c-imperative'])
+            self.assertNotIn('c-functional', report['results'])
+            text = (output / 'report.md').read_text()
+            self.assertIn('Go / C impératif', text)
+            self.assertIn('entrées restent opaques', text)
+            self.assertNotIn('C fonctionnel', text)
+            self.assertNotIn('malloc` avec un registre', text)
+            with self.assertRaisesRegex(ValueError, 'Build identities'):
+                C['run_campaign'](builds, output / 'wrong-kind', {}, 5)
 
 
 if __name__ == '__main__':

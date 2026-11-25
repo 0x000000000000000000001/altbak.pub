@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Measure frozen Go, official JS and functional C core suites together.
+"""Measure frozen Go, official JS and a declared C core reference together.
 
 Build all artifacts first. The C binary requires a build sidecar (by default
 <binary>.manifest.json) with binary_sha256, source_sha256, toolchain, commands
@@ -23,6 +23,14 @@ from publish import ROWS, format_number, verify
 from validate import CASES
 
 ROOT = Path(__file__).resolve().parents[2]
+C_REFERENCES = {
+    'functional': {'backend': 'c-functional', 'label': 'C fonctionnel',
+                   'source': 'tmp/bench_functional.c',
+                   'contract': 'tmp/fp_reference_contract.md'},
+    'imperative': {'backend': 'c-imperative', 'label': 'C impératif',
+                   'source': 'tmp/bench_native.c',
+                   'contract': 'tmp/imperative_reference_contract.md'},
+}
 BACKENDS = ('go', 'js', 'c-functional')
 CORE_SOURCES = ['src/App.purs', 'src/Bench.purs'] + [
     f'src/Test/{module}/{module}.purs' for module in CASES]
@@ -34,6 +42,22 @@ PROTOCOL = {
     'order': [list(BACKENDS[i:] + BACKENDS[:i]) for i in range(3)],
     'scope': '14 Stable core cases; no library or excluded diagnostics',
 }
+
+
+def c_reference(kind):
+    if kind not in C_REFERENCES:
+        raise ValueError(f'Unknown C reference kind: {kind}')
+    return C_REFERENCES[kind]
+
+
+def backends_for(kind):
+    return ('go', 'js', c_reference(kind)['backend'])
+
+
+def protocol_for(kind):
+    backends = backends_for(kind)
+    return {**PROTOCOL,
+            'order': [list(backends[i:] + backends[:i]) for i in range(3)]}
 
 
 def sha(path):
@@ -161,10 +185,10 @@ def inspect_c(binary, manifest_path, source):
             'source_sha256': manifest['source_sha256']}
 
 
-def source_snapshot(c_source):
+def source_snapshot(c_source, c_kind='functional'):
     names = CORE_SOURCES + ['src/Bench.go', 'src/Bench.js',
                            str(Path(c_source).resolve().relative_to(ROOT)),
-                           'tmp/fp_reference_contract.md',
+                           c_reference(c_kind)['contract'],
                            'bin/benchmark/compare-core.py', 'bin/benchmark/measure.py',
                            'bin/benchmark/validate.py', 'bin/benchmark/publish.py']
     catalogue = ROOT / 'bin/benchmark/ratio-measurements.json'
@@ -193,8 +217,9 @@ def check_core(output):
     return checked
 
 
-def rankings(results):
-    if set(results) != set(BACKENDS):
+def rankings(results, c_kind='functional'):
+    c_backend = c_reference(c_kind)['backend']
+    if set(results) != set(backends_for(c_kind)):
         raise ValueError('All three complete backend columns are required')
     for key, result in results.items():
         verify(key, result)
@@ -204,7 +229,7 @@ def rankings(results):
         samples = {key: [sample['times_us'][index] for sample in result['process_runs']]
                    for key, result in results.items()}
         variability = {}
-        for reference, key in [('c-functional', 'go_c'), ('js', 'go_js')]:
+        for reference, key in [(c_backend, 'go_c'), ('js', 'go_js')]:
             ratios = [go / other for go, other in zip(samples['go'], samples[reference])]
             variability[key] = {'ratios_by_cycle': ratios, 'minimum': min(ratios),
                                 'maximum': max(ratios),
@@ -214,7 +239,7 @@ def rankings(results):
                      'label': results['go']['labels'][index],
                      'expected': results['go']['values'][index], 'times_us': times,
                      'process_samples_us': samples, 'ratio_variability': variability,
-                     'go_over_c': times['go'] / times['c-functional'],
+                     'go_over_c': times['go'] / times[c_backend],
                      'go_over_js': times['go'] / times['js']})
     return {'go_c': sorted(rows, key=lambda row: (-row['go_over_c'], row['case'])),
             'go_js': sorted(rows, key=lambda row: (-row['go_over_js'], row['case']))}
@@ -236,15 +261,35 @@ def historical_comparison(results):
                 values[fresh_key] = {'archived': item,
                                     'fresh_over_archived': results[fresh_key]['times_us'][index] / item['time_us']}
         rows.append({'case': name, 'program_timings': values,
-                     'imperative_c_archived': old['c']})
+                     'c_archived': old['c']})
     return {'catalogue': str(path.relative_to(ROOT)), 'sha256': sha(path),
             'note': 'Historical observations only, not paired measurements. '
-                    'The functional C reference is a different implementation.',
+                    'Archived C timings retain their recorded source identity; '
+                    'they may describe a different C implementation.',
             'cases': rows}
 
 
 def render_report(report):
-    lines = ['# Comparaison des 14 cas : Go, JavaScript officiel et C fonctionnel', '',
+    kind = report.get('c_reference', {}).get('kind', 'functional')
+    reference = c_reference(kind)
+    if kind == 'functional':
+        scope = ('La référence C traduit la structure fonctionnelle des cas. Les backends restent libres '
+                 'd’optimiser : une forme close légitime est un résultat de compilation, pas une erreur. ')
+        memory = ('Le C alloue via `malloc` avec un registre et libère les allocations dans chaque action '
+                  'chronométrée ; aucune arène préallouée hors mesure n’est utilisée. ')
+        verification = ('La correction des oracles ne prouve pas à elle seule '
+                        'l’équivalence structurelle : le contrat et le source C doivent être lus avec ces résultats.')
+    else:
+        scope = ('La référence C est impérative et optimisée. Ses algorithmes et structures mutables '
+                 'peuvent différer de ceux des sources PureScript, avec les mêmes entrées et résultats. '
+                 'Les entrées restent opaques à l’optimisation ; les simplifications algébriques '
+                 'qui calculent encore le résultat depuis l’entrée d’exécution restent permises. ')
+        memory = ('Les allocations et libérations nécessaires au C sont incluses dans chaque action '
+                  'chronométrée ; aucune arène préallouée hors mesure n’est utilisée. ')
+        verification = ('Les oracles ne prouvent pas à eux seuls l’opacité des entrées ni '
+                        'l’équivalence pour d’autres paramètres : le contrat, les vérifications '
+                        'complémentaires et le source C doivent être lus avec ces résultats.')
+    lines = [f"# Comparaison des 14 cas : Go, JavaScript officiel et {reference['label']}", '',
              f"Campagne terminée : {report['completed_at_utc']} (UTC).", '',
              'Les ratios sont les temps Go divisés par la référence : au-dessus de 1×, Go est plus lent. '
              'Le tri utilise les valeurs archivées avant arrondi. Les deux classements couvrent 14/14 cas.', '',
@@ -256,7 +301,8 @@ def render_report(report):
              'Les sources et artefacts ont été figés et vérifiés avant et après chaque exécution.', '',
              'Go : Release, GOGC=800, sans PGO, GOMAXPROCS par défaut. '
              'JavaScript : compilateur PureScript officiel, runtime Node.js. '
-             'C : référence fonctionnelle compilée séparément avant la campagne. '
+             f"C : référence {('fonctionnelle' if kind == 'functional' else 'impérative')} "
+             'compilée séparément avant la campagne. '
              'Les versions, commandes, profils, hashes, labels/paramètres, oracles et sorties brutes '
              'sont archivés dans `results.json` et `manifest.json`. Les sources mesurées et le contrat '
              'C sont copiés sous `sources/`.', '',
@@ -266,52 +312,53 @@ def render_report(report):
              'Le classement porte sur les ratios des médianes, qui peuvent différer de la médiane '
              'des ratios par cycle.', '',
              '## Portée de la comparaison', '',
-             'La référence C traduit la structure fonctionnelle des cas. Les backends restent libres '
-             'd’optimiser : une forme close légitime est un résultat de compilation, pas une erreur. '
+             scope +
              'Ces ratios comparent les programmes complets optimisés ; ils ne sont pas des coûts '
              'par opération source ni la preuve d’un nombre identique d’opérations machine.', '',
-             'Le C alloue via `malloc` avec un registre et libère les allocations dans chaque action '
-             'chronométrée ; aucune arène préallouée hors mesure n’est utilisée. '
+             memory +
              'Go et JavaScript utilisent leur GC. '
              'Les représentations et coûts de libération restent donc différents. '
              'Les trois harnais consomment les résultats via des accès atomiques ; les instructions '
              'natives et les adaptations FFI Go/JS restent différentes. '
              'Les adaptations d’appel et harnais sont incluses ; les très petits temps peuvent '
-             'être dominés par ces coûts. La correction des oracles ne prouve pas à elle seule '
-             'l’équivalence structurelle : le contrat et le source C doivent être lus avec ces résultats.', '']
-    for title, key, reference, ratio in [('Go / C fonctionnel', 'go_c', 'c-functional', 'go_over_c'),
-                                        ('Go / JavaScript officiel', 'go_js', 'js', 'go_over_js')]:
+             'être dominés par ces coûts. ' + verification, '']
+    for title, key, backend, ratio in [(f"Go / {reference['label']}", 'go_c', reference['backend'], 'go_over_c'),
+                                      ('Go / JavaScript officiel', 'go_js', 'js', 'go_over_js')]:
         lines += [f'## {title} — ordre décroissant', '',
                   '| Cas | Go (µs) | Référence (µs) | Ratio | Min–max des ratios par cycle |',
                   '| --- | ---: | ---: | ---: | ---: |']
         for row in report['rankings'][key]:
             spread = row['ratio_variability'][key]
             lines.append(f"| {row['case']} | {format_number(row['times_us']['go'])} | "
-                         f"{format_number(row['times_us'][reference])} | {format_number(row[ratio])}× | "
+                         f"{format_number(row['times_us'][backend])} | {format_number(row[ratio])}× | "
                          f"{format_number(spread['minimum'])}–{format_number(spread['maximum'])}× |")
         lines += ['']
     history = report.get('historical_comparison')
     if history:
         lines += ['## Baselines historiques — comparaison séparée', '',
-                  'La colonne C impérative historique et le catalogue restent inchangés. '
-                  'Elle ne remplace pas la nouvelle référence fonctionnelle. Les variations suivantes '
+                  'Le catalogue reste inchangé par cette collecte. La référence C archivée garde '
+                  'son identité et sa provenance ; elle peut différer de celle de cette campagne. Les variations suivantes '
                   'confrontent les mesures Go/JS fraîches aux baselines archivées du README ; '
                   'elles ne sont pas une expérience avant/après appariée et peuvent inclure des '
                   'changements de harnais, versions ou environnement.', '',
-                  '| Cas | Go frais / Go archivé | JS frais / JS archivé | C impératif archivé (µs) |',
+                  '| Cas | Go frais / Go archivé | JS frais / JS archivé | C archivé (µs) |',
                   '| --- | ---: | ---: | ---: |']
         for row in history['cases']:
             values = row['program_timings']
             cells = [format_number(values[key]['fresh_over_archived']) + '×' if key in values else '—'
                      for key in ['go', 'js']]
-            old_c = row['imperative_c_archived']
+            old_c = row.get('c_archived', row.get('imperative_c_archived'))
             cells.append(format_number(old_c['time_us']) if old_c else '—')
             lines.append('| ' + row['case'] + ' | ' + ' | '.join(cells) + ' |')
         lines += ['']
     return '\n'.join(lines)
 
 
-def run_campaign(builds, output, sources, timeout):
+def run_campaign(builds, output, sources, timeout, c_kind='functional'):
+    backends = backends_for(c_kind)
+    protocol = protocol_for(c_kind)
+    if set(builds) != set(backends):
+        raise ValueError('Build identities do not match the declared C reference kind')
     output = Path(output).resolve()
     output.mkdir(parents=True, exist_ok=False)
     verify_hashes(sources, ROOT)
@@ -324,14 +371,16 @@ def run_campaign(builds, output, sources, timeout):
     env.pop('GOMAXPROCS', None)
     env.pop('PPROF', None)
     manifest = {'started_at_utc': timestamp(), 'host': platform.platform(),
-                'machine': platform.machine(), 'protocol': PROTOCOL,
+                'machine': platform.machine(), 'protocol': protocol,
+                'c_reference': {'kind': c_kind, 'backend': c_reference(c_kind)['backend'],
+                                'contract': c_reference(c_kind)['contract']},
                 'load_average_start': load_average(), 'host_isolated': False,
                 'environment': {name: env.get(name, 'unset') for name in
                                 ['GOGC', 'GOMAXPROCS', 'GOMEMLIMIT', 'GODEBUG', 'NODE_OPTIONS']},
                 'sources_sha256': sources, 'builds': builds, 'runs': []}
     write_json(output / 'manifest.json', manifest)
-    samples = {key: [] for key in BACKENDS}
-    for cycle, order in enumerate(PROTOCOL['order'], 1):
+    samples = {key: [] for key in backends}
+    for cycle, order in enumerate(protocol['order'], 1):
         for key in order:
             verify_frozen(builds, sources)
             build = builds[key]
@@ -359,13 +408,14 @@ def run_campaign(builds, output, sources, timeout):
             print(f'{stem}: 14 oracles and calibrated batches verified', flush=True)
     results = {key: aggregate(values) for key, values in samples.items()}
     report = {'started_at_utc': manifest['started_at_utc'], 'completed_at_utc': timestamp(),
-              'scope': {'core_cases': 14, 'backends': list(BACKENDS)},
-              'protocol': PROTOCOL, 'environment': manifest['environment'],
+              'scope': {'core_cases': 14, 'backends': list(backends)},
+              'c_reference': manifest['c_reference'],
+              'protocol': protocol, 'environment': manifest['environment'],
               'host': manifest['host'], 'machine': manifest['machine'], 'host_isolated': False,
               'load_average_start': manifest['load_average_start'], 'load_average_end': load_average(),
               'runs': manifest['runs'],
               'sources_sha256': sources, 'builds': builds, 'results': results,
-              'rankings': rankings(results), 'historical_comparison': historical_comparison(results)}
+              'rankings': rankings(results, c_kind), 'historical_comparison': historical_comparison(results)}
     verify_frozen(builds, sources)
     write_json(output / 'results.json', report)
     (output / 'report.md').write_text(render_report(report))
@@ -384,19 +434,24 @@ def main():
     parser.add_argument('--js-dir', type=Path, required=True)
     parser.add_argument('--c-binary', type=Path, required=True)
     parser.add_argument('--c-manifest', type=Path)
-    parser.add_argument('--c-source', type=Path, default=ROOT / 'tmp/bench_functional.c')
+    parser.add_argument('--c-kind', choices=tuple(C_REFERENCES), default='functional',
+                        help='C implementation identity (default: functional)')
+    parser.add_argument('--c-source', type=Path,
+                        help='defaults to bench_functional.c or bench_native.c according to --c-kind')
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--timeout', type=float, default=600)
     args = parser.parse_args()
+    c_source = args.c_source or ROOT / c_reference(args.c_kind)['source']
+    c_backend = c_reference(args.c_kind)['backend']
     c_manifest = args.c_manifest or Path(str(args.c_binary) + '.manifest.json')
     builds = {'go': inspect_go(args.go_dir), 'js': inspect_js(args.js_dir),
-              'c-functional': inspect_c(args.c_binary, c_manifest, args.c_source)}
+              c_backend: inspect_c(args.c_binary, c_manifest, c_source)}
     for name in CORE_SOURCES:
         if builds['go']['source_sha256'][name] != builds['js']['source_sha256'][name]:
             raise ValueError(f'Go and JS do not share the same PureScript source: {name}')
-    sources = source_snapshot(args.c_source)
+    sources = source_snapshot(c_source, args.c_kind)
     verify_frozen(builds, sources)
-    run_campaign(builds, args.output, sources, args.timeout)
+    run_campaign(builds, args.output, sources, args.timeout, args.c_kind)
 
 
 if __name__ == '__main__':

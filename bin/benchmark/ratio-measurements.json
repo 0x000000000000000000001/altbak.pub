@@ -9,79 +9,80 @@
     "docs/benchmark-results/2026-11-24-c-reference.json": "e2380a3cd697aaa54578728eec3dcab4f323070ff3e0d7200097f9123a4ad0cf",
     "docs/benchmark-results/2026-11-24-go-json-decoding.json": "e4af3a84e60a6674f869a80f8585d56549cb6c375bc59dffa51a4cc4ab181d1f",
     "docs/benchmark-results/2026-11-25-go-small-actions.json": "6c5525766faa24abce1582ecd4531c0d32bf609a9b05eaf5385b111f0e67b236",
-    "docs/benchmark-results/2026-11-25-go-c-js-functional.json": "87efaa7336c9b727a6298da9fb3be68c9fd6f6820c492faf00d29c301c9a0350"
+    "docs/benchmark-results/2026-11-25-go-c-js-functional.json": "87efaa7336c9b727a6298da9fb3be68c9fd6f6820c492faf00d29c301c9a0350",
+    "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json": "fc078b84173999622c6ffdc08296787ede5a873680f18b0524f619cadaa737a0"
   },
   "columns": {
     "js-pure": {
       "AST Evaluation": {
-        "time_us": 0.259021,
+        "time_us": 0.257415,
         "display": "~ 0.26 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Fibonacci": {
-        "time_us": 0.310153,
-        "display": "~ 0.31 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 0.303486,
+        "display": "~ 0.30 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "List Processing": {
-        "time_us": 8.69808,
-        "display": "~ 8.70 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 8.635294,
+        "display": "~ 8.64 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Tail Call Optimization": {
-        "time_us": 185.989578,
-        "display": "~ 185.99 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 187.098313,
+        "display": "~ 187.10 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Deep Record Updates": {
-        "time_us": 72.876629,
-        "display": "~ 72.88 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 74.341961,
+        "display": "~ 74.34 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Ackermann": {
-        "time_us": 63.839516,
-        "display": "~ 63.84 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 66.770832,
+        "display": "~ 66.77 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Church Numerals": {
-        "time_us": 1362.3125,
-        "display": "~ 1362.31 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 1269.885375,
+        "display": "~ 1269.89 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Prime Sieve": {
-        "time_us": 58.25293,
-        "display": "~ 58.25 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 58.009113,
+        "display": "~ 58.01 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Red-Black Tree": {
-        "time_us": 82980.625,
-        "display": "~ 82980.62 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 84263.208,
+        "display": "~ 84263.21 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Polymorphism": {
-        "time_us": 11494.625,
-        "display": "~ 11494.62 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 11836.875,
+        "display": "~ 11836.88 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "State Monad": {
-        "time_us": 46.617676,
-        "display": "~ 46.62 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 47.339684,
+        "display": "~ 47.34 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Lazy Evaluation": {
-        "time_us": 13813.875,
-        "display": "~ 13813.88 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 14058.084,
+        "display": "~ 14058.08 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Array Processing": {
-        "time_us": 6.98588,
-        "display": "~ 6.99 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 7.072123,
+        "display": "~ 7.07 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "RowToList": {
-        "time_us": 0.035633,
-        "display": "~ 0.036 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 0.035453,
+        "display": "~ 0.035 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "array/map-10000": {
         "time_us": 121.935867,
@@ -2403,74 +2404,74 @@
     },
     "go-pure": {
       "AST Evaluation": {
-        "time_us": 0.039665,
-        "display": "~ 0.040 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
+        "time_us": 0.038935,
+        "display": "~ 0.039 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Fibonacci": {
-        "time_us": 0.145679,
-        "display": "~ 0.15 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
+        "time_us": 0.138118,
+        "display": "~ 0.14 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "List Processing": {
-        "time_us": 0.013933,
-        "display": "~ 0.014 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
+        "time_us": 0.013473,
+        "display": "~ 0.013 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Tail Call Optimization": {
-        "time_us": 64.219887,
-        "display": "~ 64.22 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
+        "time_us": 60.381188,
+        "display": "~ 60.38 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Deep Record Updates": {
-        "time_us": 0.033483,
-        "display": "~ 0.033 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
+        "time_us": 0.031944,
+        "display": "~ 0.032 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Ackermann": {
-        "time_us": 16.493408,
-        "display": "~ 16.49 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
+        "time_us": 16.619995,
+        "display": "~ 16.62 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Church Numerals": {
-        "time_us": 233.858078,
-        "display": "~ 233.86 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
+        "time_us": 225.366547,
+        "display": "~ 225.37 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Prime Sieve": {
-        "time_us": 0.599525,
-        "display": "~ 0.60 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
+        "time_us": 0.583548,
+        "display": "~ 0.58 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Red-Black Tree": {
-        "time_us": 10176.25,
-        "display": "~ 10176.25 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
+        "time_us": 9829.958,
+        "display": "~ 9829.96 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Polymorphism": {
-        "time_us": 0.01376,
-        "display": "~ 0.014 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
+        "time_us": 0.012861,
+        "display": "~ 0.013 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "State Monad": {
-        "time_us": 90.852859,
-        "display": "~ 90.85 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
+        "time_us": 90.753578,
+        "display": "~ 90.75 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Lazy Evaluation": {
-        "time_us": 0.776454,
-        "display": "~ 0.78 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
+        "time_us": 0.73334,
+        "display": "~ 0.73 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Array Processing": {
-        "time_us": 0.014066,
+        "time_us": 0.013643,
         "display": "~ 0.014 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "RowToList": {
-        "time_us": 0.01298,
+        "time_us": 0.012629,
         "display": "~ 0.013 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "array/map-10000": {
         "time_us": 134.536461,
@@ -2803,74 +2804,74 @@
     },
     "c": {
       "AST Evaluation": {
-        "time_us": 0.725158691,
-        "display": "~ 0.73 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 0.095909119,
+        "display": "~ 0.096 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Fibonacci": {
-        "time_us": 0.08618927,
-        "display": "~ 0.086 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 0.079269409,
+        "display": "~ 0.079 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "List Processing": {
-        "time_us": 21.015625,
-        "display": "~ 21.02 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 0.001217246,
+        "display": "~ 0.0012 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Tail Call Optimization": {
-        "time_us": 15.06640625,
-        "display": "~ 15.07 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 32.1640625,
+        "display": "~ 32.16 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Deep Record Updates": {
-        "time_us": 11.486328125,
-        "display": "~ 11.49 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 3.270507812,
+        "display": "~ 3.27 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Ackermann": {
-        "time_us": 14.254882812,
-        "display": "~ 14.25 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 15.158203125,
+        "display": "~ 15.16 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Church Numerals": {
-        "time_us": 1879.75,
-        "display": "~ 1879.75 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 0.001116991,
+        "display": "~ 0.0011 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Prime Sieve": {
-        "time_us": 158.390625,
-        "display": "~ 158.39 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 0.114128113,
+        "display": "~ 0.11 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Red-Black Tree": {
-        "time_us": 53161.0,
-        "display": "~ 53161.00 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 8708.0,
+        "display": "~ 8708.00 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Polymorphism": {
-        "time_us": 0.000679731,
-        "display": "~ 0.00068 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 0.001125813,
+        "display": "~ 0.0011 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "State Monad": {
-        "time_us": 95.5859375,
-        "display": "~ 95.59 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 0.001119435,
+        "display": "~ 0.0011 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Lazy Evaluation": {
-        "time_us": 20301.0,
-        "display": "~ 20301.00 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 0.001121342,
+        "display": "~ 0.0011 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "Array Processing": {
-        "time_us": 0.331726074,
-        "display": "~ 0.33 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 0.001413584,
+        "display": "~ 0.0014 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       },
       "RowToList": {
-        "time_us": 0.001658201,
-        "display": "~ 0.0017 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
+        "time_us": 0.001119375,
+        "display": "~ 0.0011 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json"
       }
     }
   },
