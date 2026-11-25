@@ -12,7 +12,8 @@
     "docs/benchmark-results/2026-11-25-go-c-js-functional.json": "87efaa7336c9b727a6298da9fb3be68c9fd6f6820c492faf00d29c301c9a0350",
     "docs/benchmark-results/2026-11-25-go-c-imperative-opaque.json": "fc078b84173999622c6ffdc08296787ede5a873680f18b0524f619cadaa737a0",
     "docs/benchmark-results/2026-11-25-go-church-state.json": "df9c3bb650e867a89c85802806a8727bbf477f3e0ae4334ab2c2fee98456c7e0",
-    "docs/benchmark-results/2026-11-25-go-lazy.json": "5b0aedea9e6490604d63aef138cc7bff55c101d78e25c28d14dbfc0b2cef9da4"
+    "docs/benchmark-results/2026-11-25-go-lazy.json": "5b0aedea9e6490604d63aef138cc7bff55c101d78e25c28d14dbfc0b2cef9da4",
+    "docs/benchmark-results/2026-11-25-go-church.json": "e11e5800479f56a8c824561aa46b5bc97ffff2167365a6d55cfbb5c154562bb3"
   },
   "columns": {
     "js-pure": {
@@ -2406,189 +2407,189 @@
     },
     "go-pure": {
       "AST Evaluation": {
-        "time_us": 0.038334,
-        "display": "~ 0.038 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 0.03864,
+        "display": "~ 0.039 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "Fibonacci": {
-        "time_us": 0.141108,
+        "time_us": 0.135913,
         "display": "~ 0.14 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "List Processing": {
-        "time_us": 0.013641,
-        "display": "~ 0.014 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 0.013397,
+        "display": "~ 0.013 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "Tail Call Optimization": {
-        "time_us": 62.571453,
-        "display": "~ 62.57 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 60.074379,
+        "display": "~ 60.07 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "Deep Record Updates": {
-        "time_us": 0.032326,
+        "time_us": 0.031795,
         "display": "~ 0.032 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "Ackermann": {
-        "time_us": 16.226277,
-        "display": "~ 16.23 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 16.290405,
+        "display": "~ 16.29 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "Church Numerals": {
-        "time_us": 0.034597,
-        "display": "~ 0.035 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 0.013175,
+        "display": "~ 0.013 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "Prime Sieve": {
-        "time_us": 0.552035,
-        "display": "~ 0.55 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 0.527482,
+        "display": "~ 0.53 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "Red-Black Tree": {
-        "time_us": 9959.896,
-        "display": "~ 9959.90 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 9503.104,
+        "display": "~ 9503.10 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "Polymorphism": {
-        "time_us": 0.012948,
+        "time_us": 0.012794,
         "display": "~ 0.013 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "State Monad": {
-        "time_us": 0.018576,
-        "display": "~ 0.019 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 0.017817,
+        "display": "~ 0.018 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "Lazy Evaluation": {
-        "time_us": 0.012948,
+        "time_us": 0.012696,
         "display": "~ 0.013 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "Array Processing": {
-        "time_us": 0.013443,
+        "time_us": 0.01329,
         "display": "~ 0.013 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "RowToList": {
-        "time_us": 0.012558,
-        "display": "~ 0.013 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 0.01236,
+        "display": "~ 0.012 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "array/map-10000": {
-        "time_us": 132.076172,
-        "display": "~ 132.08 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 130.171227,
+        "display": "~ 130.17 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "array/filter-10000": {
-        "time_us": 76.464844,
-        "display": "~ 76.46 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 75.808914,
+        "display": "~ 75.81 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "array/foldl-sum-10000": {
-        "time_us": 4.874817,
-        "display": "~ 4.87 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 4.600596,
+        "display": "~ 4.60 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "array/sort-descending-10000": {
-        "time_us": 154.624359,
-        "display": "~ 154.62 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 153.264969,
+        "display": "~ 153.26 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "array/eq-neq-last-10000": {
-        "time_us": 3.824453,
-        "display": "~ 3.82 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 3.729553,
+        "display": "~ 3.73 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "array/append-1000": {
-        "time_us": 26.034748,
-        "display": "~ 26.03 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 26.175781,
+        "display": "~ 26.18 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "foldable/traverse-maybe-1000": {
-        "time_us": 16.079305,
-        "display": "~ 16.08 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 15.861897,
+        "display": "~ 15.86 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "foldable/traverse-maybe-fail-first-1000": {
-        "time_us": 3.723307,
-        "display": "~ 3.72 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 3.637583,
+        "display": "~ 3.64 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "foldable/traverse-maybe-fail-last-1000": {
-        "time_us": 3.691813,
-        "display": "~ 3.69 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 3.630117,
+        "display": "~ 3.63 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "string/cu-length-unicode-1000": {
-        "time_us": 0.009916,
-        "display": "~ 0.0099 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 0.009706,
+        "display": "~ 0.0097 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "string/cp-length-unicode-1000": {
-        "time_us": 6.531311,
-        "display": "~ 6.53 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 6.626892,
+        "display": "~ 6.63 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "string/indexOf-hit-10000": {
-        "time_us": 0.322529,
+        "time_us": 0.319529,
         "display": "~ 0.32 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "string/indexOf-miss-10000": {
-        "time_us": 2.367503,
-        "display": "~ 2.37 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 2.333598,
+        "display": "~ 2.33 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "string/cp-take-unicode-1500": {
-        "time_us": 43.81966,
-        "display": "~ 43.82 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 42.702309,
+        "display": "~ 42.70 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "string/split-1000": {
-        "time_us": 134.486977,
-        "display": "~ 134.49 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 129.304039,
+        "display": "~ 129.30 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "string/concat-1000": {
-        "time_us": 57.669109,
-        "display": "~ 57.67 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 56.828289,
+        "display": "~ 56.83 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "record/set-small-1000": {
-        "time_us": 0.041547,
-        "display": "~ 0.042 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 0.040961,
+        "display": "~ 0.041 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "record/set-medium-1000": {
-        "time_us": 0.143919,
+        "time_us": 0.142637,
         "display": "~ 0.14 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "record/set-large-1000": {
-        "time_us": 0.418791,
-        "display": "~ 0.42 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 0.402309,
+        "display": "~ 0.40 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "st/ref-write-10000": {
-        "time_us": 7.324503,
-        "display": "~ 7.32 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 6.242188,
+        "display": "~ 6.24 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "st/ref-modify-10000": {
-        "time_us": 20.708984,
-        "display": "~ 20.71 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 20.296387,
+        "display": "~ 20.30 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "effect/ref-write-10000": {
-        "time_us": 197.81575,
-        "display": "~ 197.82 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 188.070953,
+        "display": "~ 188.07 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "effect/ref-modify-10000": {
-        "time_us": 183.294266,
-        "display": "~ 183.29 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-25-go-lazy.json"
+        "time_us": 180.984375,
+        "display": "~ 180.98 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-church.json"
       },
       "Array Indexing": {
         "time_us": 4616.792,
