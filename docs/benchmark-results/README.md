@@ -10,7 +10,8 @@ measurement rules, read the [short methodology](../benchmark-methodology.md).
 
 | Report | What to read it for |
 | --- | --- |
-| [Go / imperative C / official JS — 25 November](2026-11-25-go-c-imperative-opaque.md) | Current 14-case comparison, optimized imperative C, opaque runtime inputs, and executable validation evidence. |
+| [Church and State — 25 November](2026-11-25-go-church-state.md) | Paired Go optimizations, all four Go/C indicators against unchanged imperative C, opaque-input proofs and 37-case regression checks. |
+| [Go / imperative C / official JS — 25 November](2026-11-25-go-c-imperative-opaque.md) | Imperative C and official JS references, 14-case Go comparison, opaque runtime inputs, and executable validation evidence. |
 | [Polymorphism and RowToList — 25 November](2026-11-25-go-small-actions.md) | Paired Go optimization, allocations, all four Go/C indicators against unchanged C references, and 37-case regression checks. |
 | [Go / functional C / official JS — 25 November](2026-11-25-go-c-js-functional.md) | Fresh 14-case comparison with a structural C reference, both descending rankings, complete raw evidence and allocation limits. |
 | [JSON Decoding integration — 24 November](2026-11-24-go-json-decoding.md) | Before/after results, allocations and remaining C gap. |
