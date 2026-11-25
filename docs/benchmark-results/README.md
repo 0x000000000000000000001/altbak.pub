@@ -10,6 +10,7 @@ measurement rules, read the [short methodology](../benchmark-methodology.md).
 
 | Report | What to read it for |
 | --- | --- |
+| [Go / functional C / official JS — 25 November](2026-11-25-go-c-js-functional.md) | Fresh 14-case comparison with a structural C reference, both descending rankings, complete raw evidence and allocation limits. |
 | [JSON Decoding integration — 24 November](2026-11-24-go-json-decoding.md) | Before/after results, allocations and remaining C gap. |
 | [C reference precision — 24 November](2026-11-24-c-reference.md) | The 14 measured references and their comparison limits. |
 | [AST, Fibonacci and records — 24 November](2026-11-24-go-c-priorities.md) | Three compiler optimizations, measured against the C reference then in use. |

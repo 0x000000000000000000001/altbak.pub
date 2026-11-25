@@ -1,9 +1,10 @@
 # Functional reference contract
 
-The Haskell, Koka, OCaml and hand-written F# benchmarks translate the numeric
-kernels in `src/Test/*.purs`. Matching the final integer is necessary but is not
-sufficient: the source must express the same data structures and operations.
-The C reference is deliberately imperative and is outside this contract.
+The functional C, Haskell, Koka, OCaml and hand-written F# benchmarks translate
+the numeric kernels in `src/Test/*.purs`. Matching the final integer is necessary
+but is not sufficient: the source must express the same data structures and
+operations. The historical imperative C source, `bench_native.c`, remains
+outside this contract. The separate `bench_functional.c` follows it.
 
 | PureScript module | Input | Required source structure | Result |
 | --- | --- | --- | --- |
@@ -33,6 +34,13 @@ disable normal optimization.
 
 ## Language mappings
 
+- Functional C uses typed structs, function pointers with captured environments,
+  explicit dictionaries, strict lists and materialized arrays. Its allocation
+  region uses `malloc`; construction and release are inside each timed action.
+  No AST/tree arena is allocated before timing. Region bookkeeping and keeping
+  allocations until the end of an action are part of this C runtime model;
+  they differ from the Go and JavaScript garbage collectors. The comparison
+  measures complete optimized implementations, not an isolated compiler cost.
 - Haskell uses strict custom lists/records and explicit function wrappers for
   State/Lazy, rather than relying on implicit lazy evaluation. ArrayOps uses
   immutable `UArray` values; its adapters can allocate temporary lists.

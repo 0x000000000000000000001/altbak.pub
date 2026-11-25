@@ -17,6 +17,33 @@ To ensure fair and executable comparisons across all backends, the test suite is
 1. **Core tests (`src/`)**: Pure computational tasks (AST, Fibonacci, recursion) executed on the configured core backends via `./bin/run`.
 2. **Extended tests (`srx/`)**: Tests relying heavily on Javascript/PHP FFI bindings (like `Effect.Aff`, mutable `STArray`, and regex). Since Scheme and Erlang lack FFI implementations for these specific libraries in their package sets, they are isolated in the `srx/` directory. **Note that this is completely normal and expected:** Scheme is targeted here for raw computation, and Erlang's BEAM already natively handles concurrency and multithreading at the VM level (making JS style `Aff` workarounds irrelevant). Executed via `./bin/run --x` (which dynamically injects `srx/` into the compilation step and skips Scheme/Erlang).
 
+### Comparable Go, C and JavaScript programs — 25 November 2026
+
+This fresh 14-case campaign uses the same PureScript sources for Go and official JavaScript, and a new [functional C translation](tmp/bench_functional.c) following the [source contract](tmp/fp_reference_contract.md). C allocation and release are included in each timed action. Compiler optimizations, including closed forms, remain allowed; these are complete-program comparisons with different runtime and allocation models.
+
+All three backends were remeasured in three independent processes in rotating order; all 126 results and calibrated batches passed validation. Values below are medians of process minima, sorted by Go/C-functional before rounding. The [full report](docs/benchmark-results/2026-11-25-go-c-js-functional.md) gives both descending rankings, variability and reproducible [raw evidence](docs/benchmark-results/2026-11-25-go-c-js-functional.json).
+
+| Case | Go (µs) | C functional (µs) | Official JS (µs) | Go / C functional | Go / JS |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Polymorphism | 0.032 | 0.00068 | 11494.62 | 47.41× | 0.0000028× |
+| RowToList | 0.026 | 0.0017 | 0.036 | 15.90× | 0.74× |
+| Tail Call Optimization | 60.19 | 15.07 | 185.99 | 3.99× | 0.32× |
+| Fibonacci | 0.15 | 0.086 | 0.31 | 1.74× | 0.48× |
+| Ackermann | 16.58 | 14.25 | 63.84 | 1.16× | 0.26× |
+| State Monad | 92.85 | 95.59 | 46.62 | 0.97× | 1.99× |
+| Red-Black Tree | 9472.17 | 53161.00 | 82980.62 | 0.18× | 0.11× |
+| Church Numerals | 223.43 | 1879.75 | 1362.31 | 0.12× | 0.16× |
+| Array Processing | 0.028 | 0.33 | 6.99 | 0.084× | 0.0040× |
+| AST Evaluation | 0.051 | 0.73 | 0.26 | 0.071× | 0.20× |
+| Deep Record Updates | 0.047 | 11.49 | 72.88 | 0.0041× | 0.00065× |
+| Prime Sieve | 0.57 | 158.39 | 58.25 | 0.0036× | 0.0097× |
+| List Processing | 0.028 | 21.02 | 8.70 | 0.0013× | 0.0032× |
+| Lazy Evaluation | 0.76 | 20301.00 | 13813.88 | 0.000037× | 0.000055× |
+
+Polymorphism and RowToList have very short optimized C kernels: their ratios are sensitive to harness and call overhead, not a cost per dictionary operation. Small Go ratios on other cases can reflect legitimate elimination of source-level work. State Go/JS is 1.99× for the ratio of medians, with 1.87–2.07× observed across cycles.
+
+The historical multi-backend tables below retain their original timings and **imperative C reference**. Their `/C` ratios are distinct from the functional C comparison above; the historical timing catalogue is preserved.
+
 ### Core stresstest benchmark results (pure computational)
 
 > [!NOTE]
