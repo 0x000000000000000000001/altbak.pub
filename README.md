@@ -17,6 +17,10 @@ To ensure fair and executable comparisons across all backends, the test suite is
 1. **Core tests (`src/`)**: Pure computational tasks (AST, Fibonacci, recursion) executed on the configured core backends via `./bin/run`.
 2. **Extended tests (`srx/`)**: Tests relying heavily on Javascript/PHP FFI bindings (like `Effect.Aff`, mutable `STArray`, and regex). Since Scheme and Erlang lack FFI implementations for these specific libraries in their package sets, they are isolated in the `srx/` directory. **Note that this is completely normal and expected:** Scheme is targeted here for raw computation, and Erlang's BEAM already natively handles concurrency and multithreading at the VM level (making JS style `Aff` workarounds irrelevant). Executed via `./bin/run --x` (which dynamically injects `srx/` into the compilation step and skips Scheme/Erlang).
 
+### Go optimization follow-up — 25 November 2026
+
+A paired Go campaign, with benchmark sources and C/JS references unchanged, makes Polymorphism **2.26× faster** and RowToList **2.08× faster**. Across the 14 core cases, Go/C arithmetic mean falls from **5.045× to 2.611×**, geometric mean from **0.1356× to 0.1048×**; the total ratio and median remain practically stable. See the [results and four indicators](docs/benchmark-results/2026-11-25-go-small-actions.md) and [raw evidence](docs/benchmark-results/2026-11-25-go-small-actions.json). The earlier campaign and historical tables below retain their original measurements.
+
 ### Comparable Go, C and JavaScript programs — 25 November 2026
 
 This fresh 14-case campaign uses the same PureScript sources for Go and official JavaScript, and a new [functional C translation](tmp/bench_functional.c) following the [source contract](tmp/fp_reference_contract.md). C allocation and release are included in each timed action. Compiler optimizations, including closed forms, remain allowed; these are complete-program comparisons with different runtime and allocation models.
