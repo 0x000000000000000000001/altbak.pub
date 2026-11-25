@@ -7,79 +7,81 @@
     "docs/benchmark-results/2026-11-23-go.json": "1de124d55a83dda9be897bc95f3aaac2b12ec694dc03b58aa35366df798e437d",
     "docs/benchmark-results/2026-11-24-go-c-priorities.json": "fb67c8c601b3f71808d818f67383740062c7e28e01c91738fb51b1c494628ba6",
     "docs/benchmark-results/2026-11-24-c-reference.json": "e2380a3cd697aaa54578728eec3dcab4f323070ff3e0d7200097f9123a4ad0cf",
-    "docs/benchmark-results/2026-11-24-go-json-decoding.json": "e4af3a84e60a6674f869a80f8585d56549cb6c375bc59dffa51a4cc4ab181d1f"
+    "docs/benchmark-results/2026-11-24-go-json-decoding.json": "e4af3a84e60a6674f869a80f8585d56549cb6c375bc59dffa51a4cc4ab181d1f",
+    "docs/benchmark-results/2026-11-25-go-small-actions.json": "6c5525766faa24abce1582ecd4531c0d32bf609a9b05eaf5385b111f0e67b236",
+    "docs/benchmark-results/2026-11-25-go-c-js-functional.json": "87efaa7336c9b727a6298da9fb3be68c9fd6f6820c492faf00d29c301c9a0350"
   },
   "columns": {
     "js-pure": {
       "AST Evaluation": {
-        "time_us": 0.259782,
+        "time_us": 0.259021,
         "display": "~ 0.26 \u03bcs",
-        "source": "docs/benchmark-results/2026-09-20.json"
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Fibonacci": {
-        "time_us": 0.309606,
+        "time_us": 0.310153,
         "display": "~ 0.31 \u03bcs",
-        "source": "docs/benchmark-results/2026-09-20.json"
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "List Processing": {
-        "time_us": 9.588542,
-        "display": "~ 9.59 \u03bcs",
-        "source": "docs/benchmark-results/2026-09-20.json"
+        "time_us": 8.69808,
+        "display": "~ 8.70 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Tail Call Optimization": {
-        "time_us": 189.485016,
-        "display": "~ 189.49 \u03bcs",
-        "source": "docs/benchmark-results/2026-09-20.json"
+        "time_us": 185.989578,
+        "display": "~ 185.99 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Deep Record Updates": {
-        "time_us": 74.181641,
-        "display": "~ 74.18 \u03bcs",
-        "source": "docs/benchmark-results/2026-09-20.json"
+        "time_us": 72.876629,
+        "display": "~ 72.88 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Ackermann": {
-        "time_us": 67.494629,
-        "display": "~ 67.49 \u03bcs",
-        "source": "docs/benchmark-results/2026-09-20.json"
+        "time_us": 63.839516,
+        "display": "~ 63.84 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Church Numerals": {
-        "time_us": 1263.817625,
-        "display": "~ 1263.82 \u03bcs",
-        "source": "docs/benchmark-results/2026-09-20.json"
+        "time_us": 1362.3125,
+        "display": "~ 1362.31 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Prime Sieve": {
-        "time_us": 63.388023,
-        "display": "~ 63.39 \u03bcs",
-        "source": "docs/benchmark-results/2026-09-20.json"
+        "time_us": 58.25293,
+        "display": "~ 58.25 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Red-Black Tree": {
-        "time_us": 89940.584,
-        "display": "~ 89940.58 \u03bcs",
-        "source": "docs/benchmark-results/2026-09-20.json"
+        "time_us": 82980.625,
+        "display": "~ 82980.62 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Polymorphism": {
-        "time_us": 22830.25,
-        "display": "~ 22830.25 \u03bcs",
-        "source": "docs/benchmark-results/2026-09-20.json"
+        "time_us": 11494.625,
+        "display": "~ 11494.62 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "State Monad": {
-        "time_us": 48.230633,
-        "display": "~ 48.23 \u03bcs",
-        "source": "docs/benchmark-results/2026-09-20.json"
+        "time_us": 46.617676,
+        "display": "~ 46.62 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Lazy Evaluation": {
-        "time_us": 14608.292,
-        "display": "~ 14608.29 \u03bcs",
-        "source": "docs/benchmark-results/2026-09-20.json"
+        "time_us": 13813.875,
+        "display": "~ 13813.88 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Array Processing": {
-        "time_us": 7.350688,
-        "display": "~ 7.35 \u03bcs",
-        "source": "docs/benchmark-results/2026-09-20.json"
+        "time_us": 6.98588,
+        "display": "~ 6.99 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "RowToList": {
-        "time_us": 0.041569,
-        "display": "~ 0.042 \u03bcs",
-        "source": "docs/benchmark-results/2026-09-20.json"
+        "time_us": 0.035633,
+        "display": "~ 0.036 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "array/map-10000": {
         "time_us": 121.935867,
@@ -2401,189 +2403,189 @@
     },
     "go-pure": {
       "AST Evaluation": {
-        "time_us": 0.053361,
-        "display": "~ 0.053 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 0.039665,
+        "display": "~ 0.040 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "Fibonacci": {
-        "time_us": 0.153941,
+        "time_us": 0.145679,
         "display": "~ 0.15 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "List Processing": {
-        "time_us": 0.027193,
-        "display": "~ 0.027 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 0.013933,
+        "display": "~ 0.014 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "Tail Call Optimization": {
-        "time_us": 63.195961,
-        "display": "~ 63.20 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 64.219887,
+        "display": "~ 64.22 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "Deep Record Updates": {
-        "time_us": 0.046134,
-        "display": "~ 0.046 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 0.033483,
+        "display": "~ 0.033 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "Ackermann": {
-        "time_us": 16.659302,
-        "display": "~ 16.66 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 16.493408,
+        "display": "~ 16.49 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "Church Numerals": {
-        "time_us": 232.037766,
-        "display": "~ 232.04 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 233.858078,
+        "display": "~ 233.86 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "Prime Sieve": {
-        "time_us": 0.594672,
-        "display": "~ 0.59 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 0.599525,
+        "display": "~ 0.60 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "Red-Black Tree": {
-        "time_us": 10102.834,
-        "display": "~ 10102.83 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 10176.25,
+        "display": "~ 10176.25 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "Polymorphism": {
-        "time_us": 0.031215,
-        "display": "~ 0.031 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 0.01376,
+        "display": "~ 0.014 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "State Monad": {
-        "time_us": 91.176438,
-        "display": "~ 91.18 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 90.852859,
+        "display": "~ 90.85 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "Lazy Evaluation": {
-        "time_us": 0.76842,
-        "display": "~ 0.77 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 0.776454,
+        "display": "~ 0.78 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "Array Processing": {
-        "time_us": 0.027181,
-        "display": "~ 0.027 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 0.014066,
+        "display": "~ 0.014 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "RowToList": {
-        "time_us": 0.026248,
-        "display": "~ 0.026 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 0.01298,
+        "display": "~ 0.013 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "array/map-10000": {
-        "time_us": 132.222008,
-        "display": "~ 132.22 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 134.536461,
+        "display": "~ 134.54 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "array/filter-10000": {
-        "time_us": 77.25293,
-        "display": "~ 77.25 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 79.593422,
+        "display": "~ 79.59 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "array/foldl-sum-10000": {
-        "time_us": 4.854614,
-        "display": "~ 4.85 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 4.941,
+        "display": "~ 4.94 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "array/sort-descending-10000": {
-        "time_us": 159.571609,
-        "display": "~ 159.57 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 156.990891,
+        "display": "~ 156.99 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "array/eq-neq-last-10000": {
-        "time_us": 3.849538,
-        "display": "~ 3.85 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 3.911621,
+        "display": "~ 3.91 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "array/append-1000": {
-        "time_us": 26.685465,
-        "display": "~ 26.69 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 26.746746,
+        "display": "~ 26.75 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "foldable/traverse-maybe-1000": {
-        "time_us": 16.236287,
-        "display": "~ 16.24 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 16.430135,
+        "display": "~ 16.43 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "foldable/traverse-maybe-fail-first-1000": {
-        "time_us": 3.856435,
-        "display": "~ 3.86 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 3.851725,
+        "display": "~ 3.85 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "foldable/traverse-maybe-fail-last-1000": {
-        "time_us": 3.775248,
-        "display": "~ 3.78 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 3.902863,
+        "display": "~ 3.90 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "string/cu-length-unicode-1000": {
-        "time_us": 0.009729,
-        "display": "~ 0.0097 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 0.009923,
+        "display": "~ 0.0099 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "string/cp-length-unicode-1000": {
-        "time_us": 6.702209,
-        "display": "~ 6.70 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 6.851603,
+        "display": "~ 6.85 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "string/indexOf-hit-10000": {
-        "time_us": 0.326195,
-        "display": "~ 0.33 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 0.336625,
+        "display": "~ 0.34 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "string/indexOf-miss-10000": {
-        "time_us": 2.473795,
-        "display": "~ 2.47 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 2.475454,
+        "display": "~ 2.48 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "string/cp-take-unicode-1500": {
-        "time_us": 45.35368,
-        "display": "~ 45.35 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 46.167645,
+        "display": "~ 46.17 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "string/split-1000": {
-        "time_us": 138.519211,
-        "display": "~ 138.52 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 138.226562,
+        "display": "~ 138.23 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "string/concat-1000": {
-        "time_us": 58.461426,
-        "display": "~ 58.46 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 61.158527,
+        "display": "~ 61.16 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "record/set-small-1000": {
-        "time_us": 0.041704,
+        "time_us": 0.042062,
         "display": "~ 0.042 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "record/set-medium-1000": {
-        "time_us": 0.139792,
+        "time_us": 0.144979,
         "display": "~ 0.14 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "record/set-large-1000": {
-        "time_us": 0.397329,
-        "display": "~ 0.40 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 0.394081,
+        "display": "~ 0.39 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "st/ref-write-10000": {
-        "time_us": 6.258646,
-        "display": "~ 6.26 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 6.641276,
+        "display": "~ 6.64 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "st/ref-modify-10000": {
-        "time_us": 20.765055,
-        "display": "~ 20.77 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 20.85791,
+        "display": "~ 20.86 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "effect/ref-write-10000": {
-        "time_us": 201.660156,
-        "display": "~ 201.66 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 210.417313,
+        "display": "~ 210.42 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "effect/ref-modify-10000": {
-        "time_us": 182.875,
-        "display": "~ 182.88 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-go-c-priorities.json"
+        "time_us": 185.778656,
+        "display": "~ 185.78 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-small-actions.json"
       },
       "Array Indexing": {
         "time_us": 4616.792,
@@ -2801,74 +2803,74 @@
     },
     "c": {
       "AST Evaluation": {
-        "time_us": 0.089943,
-        "display": "~ 0.090 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-c-reference.json"
+        "time_us": 0.725158691,
+        "display": "~ 0.73 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Fibonacci": {
-        "time_us": 0.077148,
-        "display": "~ 0.077 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-c-reference.json"
+        "time_us": 0.08618927,
+        "display": "~ 0.086 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "List Processing": {
-        "time_us": 0.046219,
-        "display": "~ 0.046 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-c-reference.json"
+        "time_us": 21.015625,
+        "display": "~ 21.02 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Tail Call Optimization": {
-        "time_us": 32.140625,
-        "display": "~ 32.14 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-c-reference.json"
+        "time_us": 15.06640625,
+        "display": "~ 15.07 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Deep Record Updates": {
-        "time_us": 3.25293,
-        "display": "~ 3.25 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-c-reference.json"
+        "time_us": 11.486328125,
+        "display": "~ 11.49 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Ackermann": {
-        "time_us": 16.828125,
-        "display": "~ 16.83 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-c-reference.json"
+        "time_us": 14.254882812,
+        "display": "~ 14.25 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Church Numerals": {
-        "time_us": 0.000678,
-        "display": "~ 0.00068 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-c-reference.json"
+        "time_us": 1879.75,
+        "display": "~ 1879.75 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Prime Sieve": {
-        "time_us": 1.005493,
-        "display": "~ 1.01 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-c-reference.json"
+        "time_us": 158.390625,
+        "display": "~ 158.39 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Red-Black Tree": {
-        "time_us": 9053.5,
-        "display": "~ 9053.50 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-c-reference.json"
+        "time_us": 53161.0,
+        "display": "~ 53161.00 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Polymorphism": {
-        "time_us": 0.00067,
-        "display": "~ 0.00067 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-c-reference.json"
+        "time_us": 0.000679731,
+        "display": "~ 0.00068 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "State Monad": {
-        "time_us": 0.000668,
-        "display": "~ 0.00067 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-c-reference.json"
+        "time_us": 95.5859375,
+        "display": "~ 95.59 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Lazy Evaluation": {
-        "time_us": 0.000668,
-        "display": "~ 0.00067 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-c-reference.json"
+        "time_us": 20301.0,
+        "display": "~ 20301.00 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "Array Processing": {
-        "time_us": 0.045589,
-        "display": "~ 0.046 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-c-reference.json"
+        "time_us": 0.331726074,
+        "display": "~ 0.33 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       },
       "RowToList": {
-        "time_us": 0.000668,
-        "display": "~ 0.00067 \u03bcs",
-        "source": "docs/benchmark-results/2026-11-24-c-reference.json"
+        "time_us": 0.001658201,
+        "display": "~ 0.0017 \u03bcs",
+        "source": "docs/benchmark-results/2026-11-25-go-c-js-functional.json"
       }
     }
   },

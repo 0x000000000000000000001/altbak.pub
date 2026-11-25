@@ -10,7 +10,7 @@ see the [README legend](../README.md).
 | --- | --- |
 | Compiled PureScript | The same PureScript program, compiled for each target. |
 | Functional references and FP-style FFI | Hand-written translations preserving the functional structure. |
-| Imperative references, including C | Alternative implementations that may use different algorithms and mutable data. |
+| Imperative FFI and historical references | Alternative implementations that may use different algorithms and mutable data. |
 
 A ratio therefore measures the whole implementation: compiler, libraries,
 runtime and source choices. It does not isolate compiler quality.
@@ -21,12 +21,14 @@ not equivalent to those of the compiled program. The
 [C reference report](benchmark-results/2026-11-24-c-reference.md) explains this
 and the extremely short timings produced by clang's simplifications.
 
-The separate [functional C reference](../tmp/bench_functional.c) follows the
+The current C column and `/C` ratios use the
+[functional C reference](../tmp/bench_functional.c), which follows the
 [functional source contract](../tmp/fp_reference_contract.md). In particular,
 it implements Church compositions, State and Lazy closures, the linked-list
 prime sieve, immutable records and persistent trees. Its allocation region is
 created and released within each timed action. The historical imperative C
-source and measurements are retained under their original identity.
+source and measurements are retained in the historical reports. Excl WIP
+diagnostics keep their separate reference implementations and stay outside totals.
 
 The Go/C-functional and Go/official-JS comparison measures the resulting
 optimized programs. Specialization, fusion, closed forms and eliminated
