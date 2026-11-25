@@ -1895,8 +1895,6 @@ OCaml Benchmark         | Hand-written OCaml<br>↓<br>ocamlopt -O3<br><br>(WIP)
 
 #### C (reference)
 
-> **25 November 2026:** [Functional C reference, raw values and limitations](docs/benchmark-results/2026-11-25-go-c-js-functional.md). Allocation and release are included in each timed action; clang optimizations remain allowed. Excl WIP diagnostics keep their separate historical references.
-
 C Benchmark             | [Hand-written functional C](tmp/bench_functional.c)<br>↓<br>clang -O3<br><br>(WIP) |
 ----------------------- | -------------------- |
 | **Stable** | |
