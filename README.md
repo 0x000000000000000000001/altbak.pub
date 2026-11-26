@@ -6,19 +6,6 @@ This project is a **proof of concept** demonstrating the power of abstraction an
 ## Comprehensive benchmarks
 The benchmark suite runs a **wide variety** of computationally intensive tasks: AST evaluation, massive list processing, tail call optimization, deep record updates... These tests apply massive **pressure** on the call stack, garbage collector, disk I/O, event loops, and runtime execution engines to measure the raw ability of the compiler and the underlying virtual machine. 
 
-> [!IMPORTANT]
-> **Worst-case scenario driven design**
-> The code in these benchmarks is deliberately designed to be as naive, inefficient, and stressful as possible. The goal is to obtain the maximum possible performance gap between the compiled code and its native FFI equivalent. By studying these artificially worsened gaps, we can continually improve the code generation of our AOT compilers.
-> 
-> In the context of a real-world project, the idea is to provide the best possible performance ratio **even when** a developer makes a catastrophic design error. This mitigates the impact of such errors and delays as long as possible the need to drop down to FFI or use mutable abstractions for the rare algorithmic *hot paths* of a project. (Preferably, it would avoid that completely.)
-
-### Core vs extended tests (`srx/`)
-
-The suites reflect the features shared by the compilation targets:
-
-- **Core tests (`src/`)** cover features common to all tested targets (`./bin/run`).
-- **Extended tests (`srx/`)** cover features shared by a smaller subset of targets (`./bin/run --x`). For example, `Aff` is supported by the JavaScript, Rust and Go backends, but not the Scheme backend.
-
 > [!NOTE]
 > **Reading the benchmark tables**
 >
@@ -28,10 +15,12 @@ The suites reflect the features shared by the compilation targets:
 > - **Summaries:** `μ` = arithmetic mean, `Q₂` = median, `G` = geometric mean of the case ratios. Each case has equal weight. Very small reference times can produce large ratios.
 > - **Missing data:** `—` means unavailable or not applicable. Bounds (`< …`) are excluded from summaries; partial coverage is identified. The 37-test total requires both Stable and Incl WIP.
 > - **Display precision, in every table:** values ≥ 1 use two decimal places (`12.000045 → 12.00`); positive values < 1 keep two significant digits after leading zeros (`0.000045`, `0.009492 → 0.0095`). Zero is `0.00`.
-> - **Opaque inputs, in every table:** inputs must remain unknown to the optimizer at runtime. Algebraic simplification is allowed; substituting the driver’s known input is not. See the [contract and audit](docs/benchmark-results/2026-11-25-go-c-imperative-opaque.md).
-> - **Calculations:** use archived timings before display rounding, including for threshold checks. `≈` marks a fallback to published precision. See the [timing archive](bin/benchmark/ratio-measurements.json) and [methodology](docs/benchmark-methodology.md).
+> - **Opaque inputs, in every table:** inputs must remain unknown to the optimizer at runtime. Algebraic simplification is allowed; substituting the driver’s known input is not.
+> - **Calculations:** use archived timings before display rounding, including for threshold checks. `≈` marks a fallback to published precision.
 
 ### Core stresstest benchmark results (pure computational)
+
+**Core tests (`src/`)** cover features common to all tested targets (`./bin/run`)
 
 #### JavaScript
 
@@ -2049,6 +2038,8 @@ C Benchmark             | [Hand-written imperative C](tmp/bench_native.c)<br>↓
 | ↳ /JS | 0.071x |
 
 ### Extended benchmark results (I/O, mutability, async)
+
+**Extended tests (`srx/`)** cover features shared by a smaller subset of targets (`./bin/run --x`). For example, `Aff` is supported by the JavaScript, Rust and Go backends, but not the Scheme backend.
 
 #### Extended Results
 

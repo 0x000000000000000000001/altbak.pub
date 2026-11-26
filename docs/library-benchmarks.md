@@ -40,8 +40,7 @@ python3 bin/native/driver.py go --wip-included --run-only
 The plan's mode must match `pure`, `ffi` or `fficc`. The collector validates
 core and library results separately and takes medians over three processes.
 `publish.py --wip-only` updates the nine JS/Go library columns and their totals;
-it requires all nine columns and preserves the core measurements. See the
-[measurement workflow](benchmark-methodology.md).
+it requires all nine columns and preserves the core measurements.
 
 ## What is timed?
 

@@ -7,10 +7,9 @@ processus après optimisation. Le plus grand ratio médian est désormais
 **State Monad : 1,764×** ; son échantillon le plus lent atteint **1,852×**.
 
 Les références JavaScript sont les valeurs exactes de la première colonne JS
-du [README officiel](../../README.md#javascript), conservées dans
-[ratio-measurements.json](../../bin/benchmark/ratio-measurements.json),
-`columns.js-pure`. Le JavaScript n'a pas été remesuré. Les références viennent
-des campagnes du 20 septembre et du 14 novembre 2026 ; le README reste inchangé.
+du [README officiel](../../README.md#javascript). Le JavaScript n'a pas été
+remesuré. Les références viennent des campagnes du 20 septembre et du 14
+novembre 2026 ; le README reste inchangé.
 Les [données brutes](2026-11-24-go-js-ratios.json) archivent les sorties, échantillons,
 manifestes, sources ciblées, empreintes et journaux de validation.
 

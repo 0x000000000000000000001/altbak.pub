@@ -111,8 +111,7 @@ Il ne faut pas annoncer une suppression de boxing ou de thunks déjà absents.
 Les références C emploient parfois un travail différent : arènes AST/RBTree
 préallouées hors timing, boucles sans listes/tableaux, test des diviseurs pour
 Primes, expressions numériques simplifiées pour Church/State/Lazy/Poly. Les
-valeurs `<0,01 µs` ne fournissent pas de dénominateur précis. Voir
-[la méthodologie](../benchmark-methodology.md).
+valeurs `<0,01 µs` ne fournissent pas de dénominateur précis.
 
 Aff Operations contient un délai demandé de 10 ms. File I/O comprend 10 000
 écritures/lectures. Parallelism effectue dix fib(42) récursifs en parallèle avec

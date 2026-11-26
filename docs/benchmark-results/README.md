@@ -3,8 +3,7 @@
 These are **dated technical reports for compiler and runtime contributors**.
 They preserve measurements, experiments, rejected candidates and validation
 proofs. A result describes its campaign; it may have been superseded.
-For current figures, start with the [main tables](../../README.md). For the
-measurement rules, read the [short methodology](../benchmark-methodology.md).
+For current figures, start with the [main tables](../../README.md).
 
 ## Recent Go results
 
@@ -14,7 +13,6 @@ measurement rules, read the [short methodology](../benchmark-methodology.md).
 | [Church native integer products — 25 November](2026-11-25-go-church.md) | Paired Go optimization, bounded native multiplication preserving JS rounding, all four Go/C indicators and regression checks. |
 | [Lazy — 25 November](2026-11-25-go-lazy.md) | Paired Go optimization, all four Go/C indicators against unchanged imperative C, exact Int32 arithmetic and opaque-input proofs. |
 | [Church and State — 25 November](2026-11-25-go-church-state.md) | Paired Go optimizations, all four Go/C indicators against unchanged imperative C, opaque-input proofs and 37-case regression checks. |
-| [Go / imperative C / official JS — 25 November](2026-11-25-go-c-imperative-opaque.md) | Imperative C and official JS references, 14-case Go comparison, opaque runtime inputs, and executable validation evidence. |
 | [Polymorphism and RowToList — 25 November](2026-11-25-go-small-actions.md) | Paired Go optimization, allocations, all four Go/C indicators against unchanged C references, and 37-case regression checks. |
 | [Go / functional C / official JS — 25 November](2026-11-25-go-c-js-functional.md) | Fresh 14-case comparison with a structural C reference, both descending rankings, complete raw evidence and allocation limits. |
 | [JSON Decoding integration — 24 November](2026-11-24-go-json-decoding.md) | Before/after results, allocations and remaining C gap. |
@@ -38,6 +36,4 @@ measurement rules, read the [short methodology](../benchmark-methodology.md).
 
 Long reports keep their implementation details and reproduction evidence in
 expandable **Technical reference** sections. Their numerical tables and raw
-archives are retained. The [timing catalogue](../../bin/benchmark/ratio-measurements.json)
-identifies the source used by each current table cell; the other files in this
-folder retain the intervening history.
+archives are retained; the files in this folder retain the intervening history.

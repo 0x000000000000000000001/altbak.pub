@@ -13,7 +13,7 @@ extraits Go et contrôles d’opacité.
 
 Les mêmes quatorze médianes C impératives servent de dénominateurs aux deux
 versions Go. La référence vient de la
-[campagne impérative avec entrées opaques](2026-11-25-go-c-imperative-opaque.md).
+campagne impérative avec entrées opaques.
 Ni le C ni JavaScript ne sont remesurés ici.
 
 - Ratio des totaux : **1,196025× → 1,154000×**, soit −3,51 %.
