@@ -146,11 +146,11 @@ JS Benchmark            | Hand-written PureScript<br>↓<br>[official](https://g
 | [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | ~ 9283.94 μs | — | — | — |
 | ↳ /C | 14.12x | — | — | — |
 | ↳ /JS | — | — | — | — |
-| **Total** | <strong>≈ 229.99 ms</strong> | <strong>~ 68.84 ms</strong> (n=37/40) | <strong>~ 49.41 ms</strong> (n=37/40) | <strong>~ 30.81 ms</strong> (n=37/40) |
-| ↳ /C | <strong>≈ 8.55x</strong> (n=17/40) | <strong>7.64x</strong> (n=14/37) | <strong>5.54x</strong> (n=14/37) | <strong>3.49x</strong> (n=14/37) |
-| ↳ μ/C | <strong>≈ 1426046.39x</strong> (n=17/40) | <strong>1223665.79x</strong> (n=14/37) | <strong>1512698.34x</strong> (n=14/37) | <strong>201717.81x</strong> (n=14/37) |
-| ↳ Q₂/C | <strong>≈ 22.73x</strong> (n=17/40) | <strong>138.74x</strong> (n=14/37) | <strong>404.99x</strong> (n=14/37) | <strong>11.99x</strong> (n=14/37) |
-| ↳ G/C | <strong>≈ 384.26x</strong> (n=17/40) | <strong>606.91x</strong> (n=14/37) | <strong>702.62x</strong> (n=14/37) | <strong>115.47x</strong> (n=14/37) |
+| **Total** | <strong>229.99 ms</strong> | <strong>~ 68.84 ms</strong> (n=37/40) | <strong>~ 49.41 ms</strong> (n=37/40) | <strong>~ 30.81 ms</strong> (n=37/40) |
+| ↳ /C | <strong>8.55x</strong> (n=17/40) | <strong>7.64x</strong> (n=14/37) | <strong>5.54x</strong> (n=14/37) | <strong>3.49x</strong> (n=14/37) |
+| ↳ μ/C | <strong>1426046.39x</strong> (n=17/40) | <strong>1223665.79x</strong> (n=14/37) | <strong>1512698.34x</strong> (n=14/37) | <strong>201717.81x</strong> (n=14/37) |
+| ↳ Q₂/C | <strong>22.73x</strong> (n=17/40) | <strong>138.74x</strong> (n=14/37) | <strong>404.99x</strong> (n=14/37) | <strong>11.99x</strong> (n=14/37) |
+| ↳ G/C | <strong>384.26x</strong> (n=17/40) | <strong>606.91x</strong> (n=14/37) | <strong>702.62x</strong> (n=14/37) | <strong>115.47x</strong> (n=14/37) |
 | ↳ /JS | — | <strong>0.60x</strong> | <strong>0.43x</strong> | <strong>0.27x</strong> |
 | ↳ μ/JS | — | <strong>0.92x</strong> | <strong>0.86x</strong> | <strong>0.29x</strong> |
 | ↳ Q₂/JS | — | <strong>0.96x</strong> | <strong>0.76x</strong> | <strong>0.11x</strong> |
@@ -274,15 +274,15 @@ Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://git
 | [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | ~ 178.20 μs | ~ 4998.00 μs | ~ 4026.20 μs | ~ 2.36 μs | ~ 2.36 μs |
 | ↳ /C | — | — | — | — | — |
 | ↳ /JS | 0.84x | 23.59x | 19.01x | 0.011x | 0.011x |
-| **Total WIP** | <strong>~ 10.83 ms</strong> | <strong>≈ 77.87 ms</strong> |  | <strong>~ 90.41 ms</strong> | <strong>~ 11.41 ms</strong> |
-| ↳ /C | <strong>1.12x</strong> (n=14/37) | <strong>≈ 5.77x</strong> (n=14/37) |  | <strong>10.16x</strong> (n=14/37) | <strong>1.30x</strong> (n=14/37) |
-| ↳ μ/C | <strong>6.40x</strong> (n=14/37) | <strong>≈ 1184047.35x</strong> (n=14/37) |  | <strong>4074165.79x</strong> (n=14/37) | <strong>143928.52x</strong> (n=14/37) |
-| ↳ Q₂/C | <strong>7.19x</strong> (n=14/37) | <strong>≈ 468.76x</strong> (n=14/37) |  | <strong>518.14x</strong> (n=14/37) | <strong>17.01x</strong> (n=14/37) |
-| ↳ G/C | <strong>2.78x</strong> (n=14/37) | <strong>≈ 1307.77x</strong> (n=14/37) |  | <strong>789.82x</strong> (n=14/37) | <strong>55.24x</strong> (n=14/37) |
-| ↳ /JS | <strong>0.094x</strong> | <strong>≈ 0.68x</strong> |  | <strong>0.79x</strong> | <strong>0.099x</strong> |
-| ↳ μ/JS | <strong>0.35x</strong> | <strong>≈ 68.97x</strong> |  | <strong>10.12x</strong> | <strong>9.38x</strong> |
-| ↳ Q₂/JS | <strong>0.12x</strong> | <strong>≈ 2.92x</strong> |  | <strong>0.63x</strong> | <strong>0.054x</strong> |
-| ↳ G/JS | <strong>0.041x</strong> | <strong>≈ 4.17x</strong> |  | <strong>0.48x</strong> | <strong>0.057x</strong> |
+| **Total WIP** | <strong>~ 10.83 ms</strong> | <strong>77.87 ms</strong> |  | <strong>~ 90.41 ms</strong> | <strong>~ 11.41 ms</strong> |
+| ↳ /C | <strong>1.12x</strong> (n=14/37) | <strong>5.77x</strong> (n=14/37) |  | <strong>10.16x</strong> (n=14/37) | <strong>1.30x</strong> (n=14/37) |
+| ↳ μ/C | <strong>6.40x</strong> (n=14/37) | <strong>1184047.35x</strong> (n=14/37) |  | <strong>4074165.79x</strong> (n=14/37) | <strong>143928.52x</strong> (n=14/37) |
+| ↳ Q₂/C | <strong>7.19x</strong> (n=14/37) | <strong>468.76x</strong> (n=14/37) |  | <strong>518.14x</strong> (n=14/37) | <strong>17.01x</strong> (n=14/37) |
+| ↳ G/C | <strong>2.78x</strong> (n=14/37) | <strong>1307.77x</strong> (n=14/37) |  | <strong>789.82x</strong> (n=14/37) | <strong>55.24x</strong> (n=14/37) |
+| ↳ /JS | <strong>0.094x</strong> | <strong>0.68x</strong> |  | <strong>0.79x</strong> | <strong>0.099x</strong> |
+| ↳ μ/JS | <strong>0.35x</strong> | <strong>68.97x</strong> |  | <strong>10.12x</strong> | <strong>9.38x</strong> |
+| ↳ Q₂/JS | <strong>0.12x</strong> | <strong>2.92x</strong> |  | <strong>0.63x</strong> | <strong>0.054x</strong> |
+| ↳ G/JS | <strong>0.041x</strong> | <strong>4.17x</strong> |  | <strong>0.48x</strong> | <strong>0.057x</strong> |
 |  | **Backlog** | **Backlog** |  | **Backlog** | **Backlog** |
 | [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — | — | — | — | — |
 | [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — | — | — |
@@ -512,15 +512,15 @@ PHP Benchmark           | Hand-written PureScript<br>↓<br>[phpurs](https://git
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.84 μs | ~ 0.85 μs | ~ 0.080 μs |
 | ↳ /C | 750.42x | 759.35x | 71.47x |
 | ↳ /JS | 23.69x | 23.98x | 2.26x |
-| **Total WIP** | <strong>≈ 65.78 ms</strong> | <strong>≈ 1064.43 ms</strong> | <strong>≈ 202.55 ms</strong> |
-| ↳ /C | <strong>≈ 7.51x</strong> | <strong>≈ 121.53x</strong> | <strong>≈ 23.13x</strong> |
-| ↳ μ/C | <strong>≈ 613250.87x</strong> | <strong>≈ 35036854.22x</strong> | <strong>≈ 5591164.76x</strong> |
-| ↳ Q₂/C | <strong>≈ 3433.88x</strong> | <strong>≈ 4858.77x</strong> | <strong>≈ 110.91x</strong> |
-| ↳ G/C | <strong>≈ 2558.31x</strong> | <strong>≈ 6964.40x</strong> | <strong>≈ 347.31x</strong> |
-| ↳ /JS | <strong>≈ 0.59x</strong> | <strong>≈ 9.51x</strong> | <strong>≈ 1.81x</strong> |
-| ↳ μ/JS | <strong>≈ 7.78x</strong> | <strong>≈ 12.68x</strong> | <strong>≈ 2.24x</strong> |
-| ↳ Q₂/JS | <strong>≈ 5.92x</strong> | <strong>≈ 9.87x</strong> | <strong>≈ 0.53x</strong> |
-| ↳ G/JS | <strong>≈ 2.86x</strong> | <strong>≈ 7.79x</strong> | <strong>≈ 0.39x</strong> |
+| **Total WIP** | <strong>65.78 ms</strong> | <strong>1064.43 ms</strong> | <strong>202.55 ms</strong> |
+| ↳ /C | <strong>7.51x</strong> | <strong>121.53x</strong> | <strong>23.13x</strong> |
+| ↳ μ/C | <strong>613250.87x</strong> | <strong>35036854.22x</strong> | <strong>5591164.76x</strong> |
+| ↳ Q₂/C | <strong>3433.88x</strong> | <strong>4858.77x</strong> | <strong>110.91x</strong> |
+| ↳ G/C | <strong>2558.31x</strong> | <strong>6964.40x</strong> | <strong>347.31x</strong> |
+| ↳ /JS | <strong>0.59x</strong> | <strong>9.51x</strong> | <strong>1.81x</strong> |
+| ↳ μ/JS | <strong>7.78x</strong> | <strong>12.68x</strong> | <strong>2.24x</strong> |
+| ↳ Q₂/JS | <strong>5.92x</strong> | <strong>9.87x</strong> | <strong>0.53x</strong> |
+| ↳ G/JS | <strong>2.86x</strong> | <strong>7.79x</strong> | <strong>0.39x</strong> |
 |  | **Backlog** | **Backlog** | **Backlog** |
 | [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — |
 | [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — |
@@ -598,15 +598,15 @@ Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://git
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.070 μs | ~ 0.95 μs | ~ 0.10 μs | ~ 0.020 μs | ~ 0.010 μs |
 | ↳ /C | 62.53x | 848.69x | 89.34x | 17.87x | 8.93x |
 | ↳ /JS | 1.97x | 26.80x | 2.82x | 0.56x | 0.28x |
-| **Total WIP** | <strong>≈ 8.54 ms</strong> | <strong>≈ 2455.35 ms</strong> |  | <strong>≈ 53.73 ms</strong> | <strong>≈ 28.31 ms</strong> |
-| ↳ /C | <strong>≈ 0.97x</strong> | <strong>≈ 280.33x</strong> |  | <strong>≈ 6.13x</strong> | <strong>≈ 3.23x</strong> |
-| ↳ μ/C | <strong>≈ 13150.43x</strong> | <strong>≈ 111772664.18x</strong> |  | <strong>≈ 1576716.34x</strong> | <strong>≈ 46.97x</strong> |
-| ↳ Q₂/C | <strong>≈ 15.07x</strong> | <strong>≈ 10950.71x</strong> |  | <strong>≈ 25.44x</strong> | <strong>≈ 7.86x</strong> |
-| ↳ G/C | <strong>≈ 30.20x</strong> | <strong>≈ 26167.52x</strong> |  | <strong>≈ 192.74x</strong> | <strong>≈ 6.73x</strong> |
-| ↳ /JS | <strong>≈ 0.076x</strong> | <strong>≈ 21.95x</strong> |  | <strong>≈ 0.48x</strong> | <strong>≈ 0.25x</strong> |
-| ↳ μ/JS | <strong>≈ 0.52x</strong> | <strong>≈ 46.13x</strong> |  | <strong>≈ 0.70x</strong> | <strong>≈ 0.18x</strong> |
-| ↳ Q₂/JS | <strong>≈ 0.14x</strong> | <strong>≈ 32.32x</strong> |  | <strong>≈ 0.57x</strong> | <strong>≈ 0.053x</strong> |
-| ↳ G/JS | <strong>≈ 0.034x</strong> | <strong>≈ 29.26x</strong> |  | <strong>≈ 0.22x</strong> | <strong>≈ 0.0075x</strong> |
+| **Total WIP** | <strong>8.54 ms</strong> | <strong>2455.35 ms</strong> |  | <strong>53.73 ms</strong> | <strong>28.31 ms</strong> |
+| ↳ /C | <strong>0.97x</strong> | <strong>280.33x</strong> |  | <strong>6.13x</strong> | <strong>3.23x</strong> |
+| ↳ μ/C | <strong>13150.43x</strong> | <strong>111772664.18x</strong> |  | <strong>1576716.34x</strong> | <strong>46.97x</strong> |
+| ↳ Q₂/C | <strong>15.07x</strong> | <strong>10950.71x</strong> |  | <strong>25.44x</strong> | <strong>7.86x</strong> |
+| ↳ G/C | <strong>30.20x</strong> | <strong>26167.52x</strong> |  | <strong>192.74x</strong> | <strong>6.73x</strong> |
+| ↳ /JS | <strong>0.076x</strong> | <strong>21.95x</strong> |  | <strong>0.48x</strong> | <strong>0.25x</strong> |
+| ↳ μ/JS | <strong>0.52x</strong> | <strong>46.13x</strong> |  | <strong>0.70x</strong> | <strong>0.18x</strong> |
+| ↳ Q₂/JS | <strong>0.14x</strong> | <strong>32.32x</strong> |  | <strong>0.57x</strong> | <strong>0.053x</strong> |
+| ↳ G/JS | <strong>0.034x</strong> | <strong>29.26x</strong> |  | <strong>0.22x</strong> | <strong>0.0075x</strong> |
 |  | **Backlog** | **Backlog** |  | **Backlog** | **Backlog** |
 | [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — | — | — |
 | [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — | — | — |
@@ -634,15 +634,15 @@ Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://git
 | [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — | — | — | — | — |
 | [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — | — | — |
 | [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — | — | — | — | — |
-| **Total** |  |  | <strong>≈ 99.28 ms</strong> (n=14/40) |  |  |
-| ↳ /C |  |  | <strong>≈ 11.33x</strong> |  |  |
-| ↳ μ/C |  |  | <strong>≈ 3066202.80x</strong> |  |  |
-| ↳ Q₂/C |  |  | <strong>≈ 572.28x</strong> |  |  |
-| ↳ G/C |  |  | <strong>≈ 750.25x</strong> |  |  |
-| ↳ /JS |  |  | <strong>≈ 0.89x</strong> |  |  |
-| ↳ μ/JS |  |  | <strong>≈ 1.26x</strong> |  |  |
-| ↳ Q₂/JS |  |  | <strong>≈ 1.22x</strong> |  |  |
-| ↳ G/JS |  |  | <strong>≈ 0.84x</strong> |  |  |
+| **Total** |  |  | <strong>99.28 ms</strong> (n=14/40) |  |  |
+| ↳ /C |  |  | <strong>11.33x</strong> |  |  |
+| ↳ μ/C |  |  | <strong>3066202.80x</strong> |  |  |
+| ↳ Q₂/C |  |  | <strong>572.28x</strong> |  |  |
+| ↳ G/C |  |  | <strong>750.25x</strong> |  |  |
+| ↳ /JS |  |  | <strong>0.89x</strong> |  |  |
+| ↳ μ/JS |  |  | <strong>1.26x</strong> |  |  |
+| ↳ Q₂/JS |  |  | <strong>1.22x</strong> |  |  |
+| ↳ G/JS |  |  | <strong>0.84x</strong> |  |  |
 
 
 #### C++
@@ -776,15 +776,15 @@ F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://g
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.24 μs | ~ 0.060 μs | ~ 0.020 μs |
 | ↳ /C | 214.41x | 53.60x | 17.87x |
 | ↳ /JS | 6.77x | 1.69x | 0.56x |
-| **Total WIP** | <strong>≈ 33.79 ms</strong> | <strong>≈ 70.21 ms</strong> | <strong>≈ 12.10 ms</strong> |
-| ↳ /C | <strong>≈ 3.86x</strong> | <strong>≈ 8.02x</strong> | <strong>≈ 1.38x</strong> |
-| ↳ μ/C | <strong>≈ 733660.72x</strong> | <strong>≈ 2119689.97x</strong> | <strong>≈ 160804.75x</strong> |
-| ↳ Q₂/C | <strong>≈ 2691.58x</strong> | <strong>≈ 225.09x</strong> | <strong>≈ 16.82x</strong> |
-| ↳ G/C | <strong>≈ 1925.83x</strong> | <strong>≈ 728.13x</strong> | <strong>≈ 149.83x</strong> |
-| ↳ /JS | <strong>≈ 0.30x</strong> | <strong>≈ 0.63x</strong> | <strong>≈ 0.11x</strong> |
-| ↳ μ/JS | <strong>≈ 9.69x</strong> | <strong>≈ 1.24x</strong> | <strong>≈ 0.45x</strong> |
-| ↳ Q₂/JS | <strong>≈ 2.45x</strong> | <strong>≈ 0.98x</strong> | <strong>≈ 0.15x</strong> |
-| ↳ G/JS | <strong>≈ 2.15x</strong> | <strong>≈ 0.81x</strong> | <strong>≈ 0.17x</strong> |
+| **Total WIP** | <strong>33.79 ms</strong> | <strong>70.21 ms</strong> | <strong>12.10 ms</strong> |
+| ↳ /C | <strong>3.86x</strong> | <strong>8.02x</strong> | <strong>1.38x</strong> |
+| ↳ μ/C | <strong>733660.72x</strong> | <strong>2119689.97x</strong> | <strong>160804.75x</strong> |
+| ↳ Q₂/C | <strong>2691.58x</strong> | <strong>225.09x</strong> | <strong>16.82x</strong> |
+| ↳ G/C | <strong>1925.83x</strong> | <strong>728.13x</strong> | <strong>149.83x</strong> |
+| ↳ /JS | <strong>0.30x</strong> | <strong>0.63x</strong> | <strong>0.11x</strong> |
+| ↳ μ/JS | <strong>9.69x</strong> | <strong>1.24x</strong> | <strong>0.45x</strong> |
+| ↳ Q₂/JS | <strong>2.45x</strong> | <strong>0.98x</strong> | <strong>0.15x</strong> |
+| ↳ G/JS | <strong>2.15x</strong> | <strong>0.81x</strong> | <strong>0.17x</strong> |
 |  | **Backlog** | **Backlog** | **Backlog** |
 | [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — |
 | [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — |
@@ -1227,15 +1227,15 @@ C Benchmark             | [Hand-written imperative C](tmp/bench_native.c)<br>↓
 | [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | ~ 657.69 μs |
 | ↳ /C | 1.00x |
 | ↳ /JS | 0.071x |
-| **Total** | <strong>≈ 26.57 ms</strong> (n=17/40) |
+| **Total** | <strong>26.57 ms</strong> (n=17/40) |
 | ↳ /C | <strong>1.00x</strong> |
 | ↳ μ/C | <strong>1.00x</strong> |
 | ↳ Q₂/C | <strong>1.00x</strong> |
 | ↳ G/C | <strong>1.00x</strong> |
-| ↳ /JS | <strong>≈ 0.12x</strong> |
-| ↳ μ/JS | <strong>≈ 0.099x</strong> |
-| ↳ Q₂/JS | <strong>≈ 0.044x</strong> |
-| ↳ G/JS | <strong>≈ 0.0026x</strong> |
+| ↳ /JS | <strong>0.12x</strong> |
+| ↳ μ/JS | <strong>0.099x</strong> |
+| ↳ Q₂/JS | <strong>0.044x</strong> |
+| ↳ G/JS | <strong>0.0026x</strong> |
 
 
 ### Extended benchmark results (I/O, mutability, async)
