@@ -9,6 +9,7 @@ For current figures, start with the [main tables](../../README.md).
 
 | Report | What to read it for |
 | --- | --- |
+| [FFI argument conversions — 26 November](2026-11-26-go-ffi-calls.md) | Cached immutable argument conversions, allocation proofs, all four Go/C indicators and 37-case regression checks. |
 | [State affine loop — 25 November](2026-11-25-go-state.md) | Paired Go optimization preserving strict global reads, all four Go/C indicators, opaque-input proofs and regression diagnostics. |
 | [Church native integer products — 25 November](2026-11-25-go-church.md) | Paired Go optimization, bounded native multiplication preserving JS rounding, all four Go/C indicators and regression checks. |
 | [Lazy — 25 November](2026-11-25-go-lazy.md) | Paired Go optimization, all four Go/C indicators against unchanged imperative C, exact Int32 arithmetic and opaque-input proofs. |
