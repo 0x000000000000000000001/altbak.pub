@@ -10,6 +10,7 @@ measurement rules, read the [short methodology](../benchmark-methodology.md).
 
 | Report | What to read it for |
 | --- | --- |
+| [State affine loop — 25 November](2026-11-25-go-state.md) | Paired Go optimization preserving strict global reads, all four Go/C indicators, opaque-input proofs and regression diagnostics. |
 | [Church native integer products — 25 November](2026-11-25-go-church.md) | Paired Go optimization, bounded native multiplication preserving JS rounding, all four Go/C indicators and regression checks. |
 | [Lazy — 25 November](2026-11-25-go-lazy.md) | Paired Go optimization, all four Go/C indicators against unchanged imperative C, exact Int32 arithmetic and opaque-input proofs. |
 | [Church and State — 25 November](2026-11-25-go-church-state.md) | Paired Go optimizations, all four Go/C indicators against unchanged imperative C, opaque-input proofs and 37-case regression checks. |
