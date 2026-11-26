@@ -12,7 +12,7 @@ The benchmark suite runs a **wide variety** of computationally intensive tasks: 
 > - **Status, only for gopurs, purust, phpurs, sharpurs and javapurs:** **Stable** = measured and considered fully optimized; **WIP** = measured, with optimization work remaining; **Backlog** = planned work without a published measurement or ratio. Status labels belong only to the relevant backend columns. References and external backends have no status. Stable is currently empty, including for Go: the available analyses still identify optimization opportunities.
 > - **Ratios:** `/C` uses the optimized imperative C reference; `/JS` uses the first JavaScript column. **Below 1× is faster; above 1× is slower.** Extended Results uses its own JS reference and has no C reference.
 > - **Totals:** sums of the available per-test medians: **Total WIP** for the controlled backends, **Total** for references and external backends. Backlog never contributes. Empty Stable groups are shown as *Coming soon...* and have no defined total, ratio or mean. These totals do not represent an application benchmark.
-> - **Summaries:** `μ` = arithmetic mean, `Q₂` = median, `G` = geometric mean of the case ratios. Each case has equal weight. All four ratios use exactly the same measured cases on both sides: for example, Go/C covers 14 of the 37 measured Go cases, while Go/JS covers all 37. The full total of a reference table is not used as a denominator for a different set of cases. Very small reference times can produce large ratios.
+> - **Summaries:** `μ` = arithmetic mean, `Q₂` = median, `G` = geometric mean of the case ratios. Each case has equal weight. All four ratios use exactly the same measured cases on both sides: Go/C and Go/JS both cover all 37 measured Go cases. The full total of a reference table is not used as a denominator for a different set of cases. Very small reference times can produce large ratios.
 > - **Missing data:** `—` means unavailable or not applicable, never zero. Bounds (`< …`) are excluded from summaries. `n=a/b` indicates coverage: measured cases out of listed cases for a time total, or matched references out of measured cases for a ratio. Historical diagnostic measurements remain in the reference tables; their controlled-backend counterparts belong to unmeasured Backlog.
 > - **Display precision, in every table:** values ≥ 1 use two decimal places (`12.000045 → 12.00`); positive values < 1 keep two significant digits after leading zeros (`0.000045`, `0.009492 → 0.0095`). Zero is `0.00`.
 > - **Opaque inputs, in every table:** inputs must remain unknown to the optimizer at runtime. Algebraic simplification is allowed; substituting the driver’s known input is not.
@@ -69,73 +69,73 @@ JS Benchmark            | Hand-written PureScript<br>↓<br>[official](https://g
 | ↳ /C | 31.67x | 15.32x | 53.58x | 18.28x |
 | ↳ /JS | — | 0.48x | 1.69x | 0.58x |
 | [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | ~ 121.94 μs | ~ 144.60 μs | ~ 92.20 μs | ~ 12.93 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 284.36x | 337.22x | 215.01x | 30.16x |
 | ↳ /JS | — | 1.19x | 0.76x | 0.11x |
 | [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | ~ 127.59 μs | ~ 130.46 μs | ~ 74.63 μs | ~ 18.58 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 28.04x | 28.67x | 16.40x | 4.08x |
 | ↳ /JS | — | 1.02x | 0.58x | 0.15x |
 | [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | ~ 70.25 μs | ~ 70.22 μs | ~ 44.01 μs | ~ 3.32 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 252.01x | 251.92x | 157.88x | 11.91x |
 | ↳ /JS | — | 1.00x | 0.63x | 0.047x |
 | [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | ~ 561.69 μs | ~ 517.87 μs | ~ 114.68 μs | ~ 78.30 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 120.51x | 111.11x | 24.60x | 16.80x |
 | ↳ /JS | — | 0.92x | 0.20x | 0.14x |
 | [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | ~ 51.63 μs | ~ 50.71 μs | ~ 41.04 μs | ~ 5.03 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 81.79x | 80.34x | 65.02x | 7.96x |
 | ↳ /JS | — | 0.98x | 0.79x | 0.097x |
 | [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | ~ 30.20 μs | ~ 31.05 μs | ~ 2.05 μs | ~ 2.40 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 358.69x | 368.76x | 24.38x | 28.47x |
 | ↳ /JS | — | 1.03x | 0.068x | 0.079x |
 | [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | ~ 80.61 μs | ~ 81.04 μs | ~ 49.83 μs | ~ 1.39 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 1908.96x | 1919.26x | 1180.16x | 32.89x |
 | ↳ /JS | — | 1.01x | 0.62x | 0.017x |
 | [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | ~ 68.35 μs | ~ 65.14 μs | ~ 42.18 μs | ~ 1.07 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 50886.05x | 48496.96x | 31398.06x | 794.31x |
 | ↳ /JS | — | 0.95x | 0.62x | 0.016x |
 | [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | ~ 68.01 μs | ~ 64.65 μs | ~ 42.45 μs | ~ 1.08 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 208.29x | 197.98x | 130.01x | 3.30x |
 | ↳ /JS | — | 0.95x | 0.62x | 0.016x |
 | [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | ~ 0.010 μs | ~ 0.0087 μs | ~ 0.019 μs | ~ 0.020 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 9.05x | 7.81x | 17.38x | 17.52x |
 | ↳ /JS | — | 0.86x | 1.92x | 1.94x |
 | [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | ~ 37.44 μs | ~ 37.44 μs | ~ 37.09 μs | ~ 8.54 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 34.14x | 34.14x | 33.82x | 7.79x |
 | ↳ /JS | — | 1.00x | 0.99x | 0.23x |
 | [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | ~ 0.19 μs | ~ 0.19 μs | ~ 0.19 μs | ~ 0.19 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 0.18x | 0.18x | 0.18x | 0.18x |
 | ↳ /JS | — | 0.99x | 1.02x | 1.00x |
 | [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | ~ 63.80 μs | ~ 63.97 μs | ~ 63.94 μs | ~ 63.72 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 51.64x | 51.78x | 51.76x | 51.58x |
 | ↳ /JS | — | 1.00x | 1.00x | 1.00x |
 | [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | ~ 45.28 μs | ~ 44.96 μs | ~ 42.10 μs | ~ 21.01 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 70.21x | 69.72x | 65.28x | 32.58x |
 | ↳ /JS | — | 0.99x | 0.93x | 0.46x |
 | [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | ~ 145.33 μs | ~ 144.87 μs | ~ 138.40 μs | ~ 24.69 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 58.93x | 58.74x | 56.12x | 10.01x |
 | ↳ /JS | — | 1.00x | 0.95x | 0.17x |
 | [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | ~ 47.71 μs | ~ 46.52 μs | ~ 42.64 μs | ~ 11.85 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 51.64x | 50.35x | 46.15x | 12.83x |
 | ↳ /JS | — | 0.97x | 0.89x | 0.25x |
 | [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | ~ 2.44 μs | ~ 4.37 μs | ~ 4.32 μs | ~ 0.72 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 2175.36x | 3891.09x | 3849.97x | 645.38x |
 | ↳ /JS | — | 1.79x | 1.77x | 0.30x |
 | [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | ~ 4.55 μs | ~ 9.34 μs | ~ 9.04 μs | ~ 0.71 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 4056.27x | 8323.17x | 8051.03x | 635.92x |
 | ↳ /JS | — | 2.05x | 1.98x | 0.16x |
 | [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | ~ 7.03 μs | ~ 14.73 μs | ~ 14.38 μs | ~ 0.72 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 5183.02x | 10861.51x | 10601.86x | 531.73x |
 | ↳ /JS | — | 2.10x | 2.05x | 0.10x |
 | [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | ~ 463.87 μs | ~ 106.02 μs | ~ 2.44 μs | ~ 2.48 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 411097.54x | 93960.55x | 2160.24x | 2196.39x |
 | ↳ /JS | — | 0.23x | 0.0053x | 0.0053x |
 | [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | ~ 513.20 μs | ~ 106.03 μs | ~ 31.67 μs | ~ 3.41 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 455681.30x | 94147.95x | 28123.27x | 3026.46x |
 | ↳ /JS | — | 0.21x | 0.062x | 0.0066x |
 | [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | ~ 155.67 μs | ~ 102.38 μs | ~ 2.39 μs | ~ 2.56 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 138832.60x | 91301.70x | 2129.67x | 2285.58x |
 | ↳ /JS | — | 0.66x | 0.015x | 0.016x |
 | [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | ~ 211.84 μs | ~ 113.53 μs | ~ 31.14 μs | ~ 3.52 μs |
-| ↳ /C | — | — | — | — |
+| ↳ /C | 187275.56x | 100360.42x | 27531.34x | 3114.48x |
 | ↳ /JS | — | 0.54x | 0.15x | 0.017x |
 | [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | ~ 25303.33 μs | — | — | — |
 | ↳ /C | 3.84x | — | — | — |
@@ -147,10 +147,10 @@ JS Benchmark            | Hand-written PureScript<br>↓<br>[official](https://g
 | ↳ /C | 14.12x | — | — | — |
 | ↳ /JS | — | — | — | — |
 | **Total** | <strong>229.99 ms</strong> | <strong>~ 68.84 ms</strong> (n=37/40) | <strong>~ 49.41 ms</strong> (n=37/40) | <strong>~ 30.81 ms</strong> (n=37/40) |
-| ↳ /C | <strong>8.55x</strong> (n=17/40) | <strong>7.64x</strong> (n=14/37) | <strong>5.54x</strong> (n=14/37) | <strong>3.49x</strong> (n=14/37) |
-| ↳ μ/C | <strong>1426046.39x</strong> (n=17/40) | <strong>1223665.79x</strong> (n=14/37) | <strong>1512698.34x</strong> (n=14/37) | <strong>201717.81x</strong> (n=14/37) |
-| ↳ Q₂/C | <strong>22.73x</strong> (n=17/40) | <strong>138.74x</strong> (n=14/37) | <strong>404.99x</strong> (n=14/37) | <strong>11.99x</strong> (n=14/37) |
-| ↳ G/C | <strong>384.26x</strong> (n=17/40) | <strong>606.91x</strong> (n=14/37) | <strong>702.62x</strong> (n=14/37) | <strong>115.47x</strong> (n=14/37) |
+| ↳ /C | <strong>≈ 8.65x</strong> | <strong>7.84x</strong> | <strong>5.63x</strong> | <strong>3.51x</strong> |
+| ↳ μ/C | <strong>≈ 637537.37x</strong> | <strong>475303.58x</strong> | <strong>575505.57x</strong> | <strong>76690.48x</strong> |
+| ↳ Q₂/C | <strong>≈ 164.40x</strong> | <strong>236.48x</strong> | <strong>130.01x</strong> | <strong>28.47x</strong> |
+| ↳ G/C | <strong>≈ 507.73x</strong> | <strong>581.52x</strong> | <strong>391.00x</strong> | <strong>74.58x</strong> |
 | ↳ /JS | — | <strong>0.60x</strong> | <strong>0.43x</strong> | <strong>0.27x</strong> |
 | ↳ μ/JS | — | <strong>0.92x</strong> | <strong>0.86x</strong> | <strong>0.29x</strong> |
 | ↳ Q₂/JS | — | <strong>0.96x</strong> | <strong>0.76x</strong> | <strong>0.11x</strong> |
@@ -206,79 +206,79 @@ Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://git
 | ↳ /C | 3.18x | 268.01x | 450.32x | 64.80x | 28.55x |
 | ↳ /JS | 0.10x | 8.46x | 14.22x | 2.05x | 0.90x |
 | [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | ~ 128.79 μs | ~ 1452.41 μs | ~ 2146.41 μs | ~ 77.41 μs | ~ 6.61 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 300.36x | 3387.13x | 5005.58x | 180.53x | 15.42x |
 | ↳ /JS | 1.06x | 11.91x | 17.60x | 0.63x | 0.054x |
 | [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | ~ 74.95 μs | ~ 828.92 μs | ~ 1330.39 μs | ~ 67.38 μs | ~ 6.85 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 16.47x | 182.18x | 292.39x | 14.81x | 1.50x |
 | ↳ /JS | 0.59x | 6.50x | 10.43x | 0.53x | 0.054x |
 | [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | ~ 4.60 μs | ~ 281.15 μs | ~ 133.05 μs | ~ 49.77 μs | ~ 2.31 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 16.51x | 1008.55x | 477.29x | 178.55x | 8.29x |
 | ↳ /JS | 0.066x | 4.00x | 1.89x | 0.71x | 0.033x |
 | [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | ~ 150.50 μs | ~ 12300.38 μs | ~ 11626.08 μs | ~ 825.35 μs | ~ 10.36 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 32.29x | 2639.06x | 2494.39x | 177.08x | 2.22x |
 | ↳ /JS | 0.27x | 21.90x | 20.70x | 1.47x | 0.018x |
 | [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | ~ 3.81 μs | ~ 752.15 μs | ~ 98.90 μs | ~ 48.10 μs | ~ 2.53 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 6.04x | 1191.57x | 156.68x | 76.20x | 4.01x |
 | ↳ /JS | 0.074x | 14.57x | 1.92x | 0.93x | 0.049x |
 | [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | ~ 25.45 μs | ~ 304.51 μs | ~ 372.03 μs | ~ 13.95 μs | ~ 1.25 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 302.19x | 3616.33x | 4418.08x | 165.67x | 14.89x |
 | ↳ /JS | 0.84x | 10.08x | 12.32x | 0.46x | 0.042x |
 | [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | ~ 15.70 μs | ~ 464.65 μs | ~ 476.59 μs | ~ 18.97 μs | ~ 0.87 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 371.75x | 11004.26x | 11286.91x | 449.27x | 20.59x |
 | ↳ /JS | 0.19x | 5.76x | 5.91x | 0.24x | 0.011x |
 | [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | ~ 3.64 μs | ~ 298.48 μs | ~ 303.08 μs | ~ 11.64 μs | ~ 0.74 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 2711.00x | 222208.13x | 225635.26x | 8666.26x | 554.05x |
 | ↳ /JS | 0.053x | 4.37x | 4.43x | 0.17x | 0.011x |
 | [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | ~ 3.59 μs | ~ 297.10 μs | ~ 307.26 μs | ~ 11.44 μs | ~ 0.74 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 11.00x | 909.85x | 940.96x | 35.04x | 2.26x |
 | ↳ /JS | 0.053x | 4.37x | 4.52x | 0.17x | 0.011x |
 | [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | ~ 0.0094 μs | ~ 17.05 μs | ~ 3.47 μs | ~ 3.45 μs | ~ 3.45 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 8.44x | 15273.19x | 3109.50x | 3089.72x | 3090.34x |
 | ↳ /JS | 0.93x | 1687.77x | 343.62x | 341.43x | 341.50x |
 | [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | ~ 6.37 μs | ~ 79.96 μs | ~ 62.44 μs | ~ 7.20 μs | ~ 3.41 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 5.81x | 72.92x | 56.93x | 6.57x | 3.11x |
 | ↳ /JS | 0.17x | 2.14x | 1.67x | 0.19x | 0.091x |
 | [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | ~ 0.32 μs | ~ 130.75 μs | ~ 2.71 μs | ~ 0.17 μs | ~ 0.17 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 0.29x | 121.49x | 2.52x | 0.16x | 0.16x |
 | ↳ /JS | 1.65x | 685.42x | 14.19x | 0.90x | 0.88x |
 | [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | ~ 2.31 μs | ~ 140.42 μs | ~ 2.47 μs | ~ 2.31 μs | ~ 2.32 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 1.87x | 113.67x | 2.00x | 1.87x | 1.88x |
 | ↳ /JS | 0.036x | 2.20x | 0.039x | 0.036x | 0.036x |
 | [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | ~ 43.87 μs | ~ 105.92 μs | ~ 104.16 μs | ~ 146.89 μs | ~ 3.66 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 68.02x | 164.24x | 161.52x | 227.77x | 5.68x |
 | ↳ /JS | 0.97x | 2.34x | 2.30x | 3.24x | 0.081x |
 | [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | ~ 130.41 μs | ~ 318.05 μs | ~ 300.93 μs | ~ 32.68 μs | ~ 9.75 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 52.88x | 128.96x | 122.02x | 13.25x | 3.95x |
 | ↳ /JS | 0.90x | 2.19x | 2.07x | 0.22x | 0.067x |
 | [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | ~ 57.21 μs | ~ 216.07 μs | ~ 167.98 μs | ~ 74.43 μs | ~ 3.71 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 61.92x | 233.87x | 181.82x | 80.56x | 4.01x |
 | ↳ /JS | 1.20x | 4.53x | 3.52x | 1.56x | 0.078x |
 | [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | ~ 0.041 μs | ~ 5.46 μs | ~ 144.74 μs | ~ 0.72 μs | ~ 0.24 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 36.21x | 4862.25x | 128844.23x | 639.88x | 217.10x |
 | ↳ /JS | 0.017x | 2.24x | 59.23x | 0.29x | 0.10x |
 | [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | ~ 0.14 μs | ~ 13.30 μs | ~ 190.03 μs | ~ 7.20 μs | ~ 0.26 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 123.98x | 11850.30x | 169290.03x | 6416.55x | 229.44x |
 | ↳ /JS | 0.031x | 2.92x | 41.74x | 1.58x | 0.057x |
 | [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | ~ 0.41 μs | ~ 22.40 μs | ~ 679.42 μs | ~ 12.85 μs | ~ 1.03 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 303.66x | 16521.13x | 501044.55x | 9479.91x | 762.15x |
 | ↳ /JS | 0.059x | 3.19x | 96.67x | 1.83x | 0.15x |
 | [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | ~ 7.14 μs | ~ 1019.37 μs | ~ 3085.81 μs | ~ 2.25 μs | ~ 2.25 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 6326.49x | 903393.56x | 2734738.94x | 1994.28x | 1996.75x |
 | ↳ /JS | 0.015x | 2.20x | 6.65x | 0.0049x | 0.0049x |
 | [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | ~ 20.23 μs | ~ 1073.35 μs | ~ 4068.22 μs | ~ 2.33 μs | ~ 2.38 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 17960.19x | 953046.15x | 3612245.82x | 2066.17x | 2111.26x |
 | ↳ /JS | 0.039x | 2.09x | 7.93x | 0.0045x | 0.0046x |
 | [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | ~ 194.25 μs | ~ 2199.81 μs | ~ 3135.15 μs | ~ 2.26 μs | ~ 2.26 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 173236.79x | 1961867.08x | 2796035.37x | 2012.95x | 2012.31x |
 | ↳ /JS | 1.25x | 14.13x | 20.14x | 0.014x | 0.014x |
 | [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | ~ 179.83 μs | ~ 4998.00 μs | ~ 4026.20 μs | ~ 2.36 μs | ~ 2.36 μs |
-| ↳ /C | — | — | — | — | — |
+| ↳ /C | 158979.53x | 4418406.87x | 3559299.68x | 2088.43x | 2087.72x |
 | ↳ /JS | 0.85x | 23.59x | 19.01x | 0.011x | 0.011x |
 | **Total WIP** | <strong>~ 10.66 ms</strong> | <strong>77.87 ms</strong> |  | <strong>~ 90.41 ms</strong> | <strong>~ 11.41 ms</strong> |
-| ↳ /C | <strong>1.10x</strong> (n=14/37) | <strong>5.77x</strong> (n=14/37) |  | <strong>10.16x</strong> (n=14/37) | <strong>1.30x</strong> (n=14/37) |
-| ↳ μ/C | <strong>2.55x</strong> (n=14/37) | <strong>1184047.35x</strong> (n=14/37) |  | <strong>4074165.79x</strong> (n=14/37) | <strong>143928.52x</strong> (n=14/37) |
-| ↳ Q₂/C | <strong>3.24x</strong> (n=14/37) | <strong>468.76x</strong> (n=14/37) |  | <strong>518.14x</strong> (n=14/37) | <strong>17.01x</strong> (n=14/37) |
-| ↳ G/C | <strong>1.48x</strong> (n=14/37) | <strong>1307.77x</strong> (n=14/37) |  | <strong>789.82x</strong> (n=14/37) | <strong>55.24x</strong> (n=14/37) |
+| ↳ /C | <strong>1.21x</strong> | <strong>≈ 8.87x</strong> |  | <strong>10.30x</strong> | <strong>1.30x</strong> |
+| ↳ μ/C | <strong>9755.93x</strong> | <strong>≈ 678617.99x</strong> |  | <strong>1542604.93x</strong> | <strong>54814.82x</strong> |
+| ↳ Q₂/C | <strong>8.44x</strong> | <strong>≈ 2639.06x</strong> |  | <strong>180.53x</strong> | <strong>14.89x</strong> |
+| ↳ G/C | <strong>23.18x</strong> | <strong>≈ 2982.96x</strong> |  | <strong>341.32x</strong> | <strong>40.42x</strong> |
 | ↳ /JS | <strong>0.093x</strong> | <strong>0.68x</strong> |  | <strong>0.79x</strong> | <strong>0.099x</strong> |
 | ↳ μ/JS | <strong>0.34x</strong> | <strong>68.97x</strong> |  | <strong>10.12x</strong> | <strong>9.38x</strong> |
 | ↳ Q₂/JS | <strong>0.10x</strong> | <strong>2.92x</strong> |  | <strong>0.63x</strong> | <strong>0.054x</strong> |
@@ -288,10 +288,10 @@ Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://git
 | [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — | — | — |
 | [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — | — | — | — | — |
 | **Total** |  |  | <strong>~ 1497.51 ms</strong> (n=37/40) |  |  |
-| ↳ /C |  |  | <strong>167.23x</strong> (n=14/37) |  |  |
-| ↳ μ/C |  |  | <strong>36871628.77x</strong> (n=14/37) |  |  |
-| ↳ Q₂/C |  |  | <strong>6709.92x</strong> (n=14/37) |  |  |
-| ↳ G/C |  |  | <strong>12452.81x</strong> (n=14/37) |  |  |
+| ↳ /C |  |  | <strong>170.61x</strong> |  |  |
+| ↳ μ/C |  |  | <strong>14323206.63x</strong> |  |  |
+| ↳ Q₂/C |  |  | <strong>3109.50x</strong> |  |  |
+| ↳ G/C |  |  | <strong>7026.62x</strong> |  |  |
 | ↳ /JS |  |  | <strong>13.05x</strong> |  |  |
 | ↳ μ/JS |  |  | <strong>26.59x</strong> |  |  |
 | ↳ Q₂/JS |  |  | <strong>10.43x</strong> |  |  |
@@ -1151,6 +1151,8 @@ C++ Benchmark           | Hand-written PureScript<br>↓<br>[pscpp](https://gith
 
 #### C (reference)
 
+The 23 [library references](tmp/c-library) complement the existing core reference. [Measurements and validation](docs/benchmark-results/2026-11-26-c-library.md).
+
 C Benchmark             | [Hand-written imperative C](tmp/bench_native.c)<br>↓<br>clang -O3 |
 ----------------------- | -------------------- |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 0.096 μs |
@@ -1195,29 +1197,75 @@ C Benchmark             | [Hand-written imperative C](tmp/bench_native.c)<br>↓
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.0011 μs |
 | ↳ /C | — |
 | ↳ /JS | 0.032x |
-| [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — |
-| [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — |
-| [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — |
-| [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — |
-| [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — |
-| [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — |
-| [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — |
-| [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — |
-| [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — |
-| [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — |
-| [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — |
-| [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — |
-| [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — |
-| [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — |
-| [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — |
-| [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — |
-| [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — |
-| [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — |
-| [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — |
-| [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — |
-| [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — |
-| [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — |
-| [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — |
+| [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | ~ 0.43 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.0035x |
+| [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | ~ 4.55 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.036x |
+| [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | ~ 0.28 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.0040x |
+| [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | ~ 4.66 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.0083x |
+| [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | ~ 0.63 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.012x |
+| [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | ~ 0.084 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.0028x |
+| [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | ~ 0.042 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.00052x |
+| [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | ~ 0.0013 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.000020x |
+| [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | ~ 0.33 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.0048x |
+| [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | ~ 0.0011 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.11x |
+| [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | ~ 1.10 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.029x |
+| [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | ~ 1.08 μs |
+| ↳ /C | — |
+| ↳ /JS | 5.64x |
+| [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | ~ 1.24 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.019x |
+| [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | ~ 0.64 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.014x |
+| [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | ~ 2.47 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.017x |
+| [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | ~ 0.92 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.019x |
+| [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | ~ 0.0011 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.00046x |
+| [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | ~ 0.0011 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.00025x |
+| [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | ~ 0.0014 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.00019x |
+| [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | ~ 0.0011 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.0000024x |
+| [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | ~ 0.0011 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.0000022x |
+| [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | ~ 0.0011 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.0000072x |
+| [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | ~ 0.0011 μs |
+| ↳ /C | — |
+| ↳ /JS | 0.0000053x |
 | [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | ~ 6589.00 μs |
 | ↳ /C | — |
 | ↳ /JS | 0.26x |
@@ -1227,15 +1275,15 @@ C Benchmark             | [Hand-written imperative C](tmp/bench_native.c)<br>↓
 | [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | ~ 657.69 μs |
 | ↳ /C | — |
 | ↳ /JS | 0.071x |
-| **Total** | <strong>26.57 ms</strong> (n=17/40) |
+| **Total** | <strong>≈ 26.58 ms</strong> |
 | ↳ /C | — |
 | ↳ μ/C | — |
 | ↳ Q₂/C | — |
 | ↳ G/C | — |
-| ↳ /JS | <strong>0.12x</strong> |
-| ↳ μ/JS | <strong>0.099x</strong> |
-| ↳ Q₂/JS | <strong>0.044x</strong> |
-| ↳ G/JS | <strong>0.0026x</strong> |
+| ↳ /JS | <strong>≈ 0.12x</strong> |
+| ↳ μ/JS | <strong>≈ 0.19x</strong> |
+| ↳ Q₂/JS | <strong>≈ 0.0065x</strong> |
+| ↳ G/JS | <strong>≈ 0.0020x</strong> |
 
 
 ### Extended benchmark results (I/O, mutability, async)
