@@ -2086,13 +2086,23 @@ Benchmark               | Hand-written PureScript<br>↓<br>[official](https://g
 
 ### Application benchmark results (WIP)
 
-App scenario | JS | Go | Go / JS |
---- | ---: | ---: | ---: |
-[CST](https://github.com/natefaubion/purescript-language-cst-parser) (corpus parsing) | ~ 62.17 ms | ~ 128.79 ms | 2.07x |
-[CST](https://github.com/natefaubion/purescript-language-cst-parser) (fixture parsing) | ~ 8.94 ms | ~ 17.67 ms | 1.98x |
-[tidy](https://github.com/natefaubion/purescript-tidy) (parsing + formatting) | ~ 14.23 ms | ~ 23.65 ms | 1.66x |
-[tidy](https://github.com/natefaubion/purescript-tidy) (10 iterations) | ~ 316.12 ms | ~ 239.07 ms | 0.76x |
-[b8x](https://github.com/0x000000000000000000001/b8x.pub) (287 tests) | ~ 10.43 s | ~ 11.05 s | 1.06x |
+App scenario | JS | Go |
+--- | ---: | ---: |
+[CST](https://github.com/natefaubion/purescript-language-cst-parser) (corpus parsing) | ~ 62.17 ms | ~ 128.79 ms |
+↳ /JS | — | 2.07x |
+[CST](https://github.com/natefaubion/purescript-language-cst-parser) (fixture parsing) | ~ 8.94 ms | ~ 17.67 ms |
+↳ /JS | — | 1.98x |
+[tidy](https://github.com/natefaubion/purescript-tidy) (parsing + formatting) | ~ 14.23 ms | ~ 23.65 ms |
+↳ /JS | — | 1.66x |
+[tidy](https://github.com/natefaubion/purescript-tidy) (10 iterations) | ~ 316.12 ms | ~ 239.07 ms |
+↳ /JS | — | 0.76x |
+[b8x](https://github.com/0x000000000000000000001/b8x.pub) (287 tests) | ~ 10.43 s | ~ 11.05 s |
+↳ /JS | — | 1.06x |
+**Total** | <strong>~ 10.83 s</strong> | <strong>~ 11.46 s</strong> |
+↳ /JS | — | <strong>1.06x</strong> |
+↳ μ/JS | — | <strong>1.51x</strong> |
+↳ Q₂/JS | — | <strong>1.66x</strong> |
+↳ G/JS | — | <strong>1.40x</strong> |
 
 ### Compilation times...
 
@@ -2204,8 +2214,14 @@ Benchmark   | [gopurs](https://github.com/0x000000000000000000001/gopurs) JS bin
 ↳ /JS | — | 0.46x | 0.33x | 0.36x
 **Total gopurs-*** | <strong>~ 666.09 s</strong> | <strong>~ 254.68 s</strong> | <strong>~ 212.02 s</strong> | <strong>~ 203.99 s</strong>
 ↳ /JS | — | <strong>0.38x</strong> | <strong>0.32x</strong> | <strong>0.31x</strong>
+↳ μ/JS | — | <strong>0.37x</strong> | <strong>0.32x</strong> | <strong>0.29x</strong>
+↳ Q₂/JS | — | <strong>0.37x</strong> | <strong>0.31x</strong> | <strong>0.30x</strong>
+↳ G/JS | — | <strong>0.37x</strong> | <strong>0.32x</strong> | <strong>0.29x</strong>
 **Total** | <strong>~ 812.48 s</strong> | <strong>~ 332.71 s</strong> | <strong>~ 265.63 s</strong> | <strong>~ 256.92 s</strong>
 ↳ /JS | — | <strong>0.41x</strong> | <strong>0.33x</strong> | <strong>0.32x</strong>
+↳ μ/JS | — | <strong>0.38x</strong> | <strong>0.32x</strong> | <strong>0.30x</strong>
+↳ Q₂/JS | — | <strong>0.37x</strong> | <strong>0.31x</strong> | <strong>0.30x</strong>
+↳ G/JS | — | <strong>0.37x</strong> | <strong>0.32x</strong> | <strong>0.29x</strong>
 
 #### ... to Rust
 
@@ -2329,5 +2345,11 @@ Benchmark   | [purust](https://github.com/0x000000000000000000001/purust) JS bin
 ↳ /JS | — | 0.87x
 **Total purust-*** | <strong>~ 304.03 s</strong> | <strong>~ 120.12 s</strong>
 ↳ /JS | — | <strong>0.40x</strong>
+↳ μ/JS | — | <strong>0.36x</strong>
+↳ Q₂/JS | — | <strong>0.34x</strong>
+↳ G/JS | — | <strong>0.34x</strong>
 **Total** | <strong>~ 348.34 s</strong> | <strong>~ 140.73 s</strong>
 ↳ /JS | — | <strong>0.40x</strong>
+↳ μ/JS | — | <strong>0.36x</strong>
+↳ Q₂/JS | — | <strong>0.34x</strong>
+↳ G/JS | — | <strong>0.35x</strong>
