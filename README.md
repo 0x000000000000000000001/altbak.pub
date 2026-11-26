@@ -1,16 +1,16 @@
 # 🌈 PureScript universal multi-runtime benchmark
 
 ## Project goal
-This project is a proof of concept demonstrating the power of abstraction and portability offered by **PureScript**. The goal is to show how the exact same pure functional code (without any manual FFI) can be compiled and executed natively on radically different ecosystems. Backends consume either standard `CoreFn` or, for the local AOT backends, the typed `TAST/tcorefn` representation exported by a local PureScript fork (may be subject to an official PR soon).
+This project is a **proof of concept** demonstrating the power of abstraction and portability offered by **PureScript**. The goal is to show how the exact same pure functional code (without any manual FFI) can be compiled and executed natively on radically different ecosystems. Backends consume either standard `CoreFn` or, for the local AOT backends, the typed `TAST/tcorefn` representation exported by a local PureScript fork (may be subject to an official PR soon).
 
 ## Comprehensive benchmarks
-The benchmark suite runs a wide variety of computationally intensive tasks: AST evaluation, purely recursive Fibonacci, massive list processing, tail call optimization, deep record updates, Ackermann function, Church numerals, prime sieves, red black tree insertions, heavy polymorphism (type class dictionary lookups), State monad operations, deep lazy evaluation, heavy file I/O (10,000 synchronous writes and reads), and asynchronous `Aff` operations (via the native event loop). These tests apply massive pressure on the call stack, garbage collector, disk I/O, event loop, and runtime execution engine to measure the raw ability of the compiler and the underlying virtual machine. 
+The benchmark suite runs a **wide variety** of computationally intensive tasks: AST evaluation, massive list processing, tail call optimization, deep record updates... These tests apply massive **pressure** on the call stack, garbage collector, disk I/O, event loops, and runtime execution engines to measure the raw ability of the compiler and the underlying virtual machine. 
 
 > [!IMPORTANT]
 > **Worst-case scenario driven design**
 > The code in these benchmarks is deliberately designed to be as naive, inefficient, and stressful as possible. The goal is to obtain the maximum possible performance gap between the compiled code and its native FFI equivalent. By studying these artificially worsened gaps, we can continually improve the code generation of our AOT compilers.
 > 
-> In the context of a real-world project, the idea is to provide the best possible performance ratio even when a developer makes a catastrophic design error. This mitigates the impact of such errors and delays as long as possible the need to drop down to FFI or use mutable abstractions for the rare algorithmic *hot paths* of a project.
+> In the context of a real-world project, the idea is to provide the best possible performance ratio **even when** a developer makes a catastrophic design error. This mitigates the impact of such errors and delays as long as possible the need to drop down to FFI or use mutable abstractions for the rare algorithmic *hot paths* of a project. (Preferably, it would avoid that completely.)
 
 ### Core vs extended tests (`srx/`)
 
@@ -18,8 +18,6 @@ The suites reflect the features shared by the compilation targets:
 
 - **Core tests (`src/`)** cover features common to all tested targets (`./bin/run`).
 - **Extended tests (`srx/`)** cover features shared by a smaller subset of targets (`./bin/run --x`). For example, `Aff` is supported by the JavaScript, Rust and Go backends, but not the Scheme backend.
-
-### Core stresstest benchmark results (pure computational)
 
 > [!NOTE]
 > **Reading the benchmark tables**
@@ -30,9 +28,10 @@ The suites reflect the features shared by the compilation targets:
 > - **Summaries:** `μ` = arithmetic mean, `Q₂` = median, `G` = geometric mean of the case ratios. Each case has equal weight. Very small reference times can produce large ratios.
 > - **Missing data:** `—` means unavailable or not applicable. Bounds (`< …`) are excluded from summaries; partial coverage is identified. The 37-test total requires both Stable and Incl WIP.
 > - **Display precision, in every table:** values ≥ 1 use two decimal places (`12.000045 → 12.00`); positive values < 1 keep two significant digits after leading zeros (`0.000045`, `0.009492 → 0.0095`). Zero is `0.00`.
-> - **Sources:** [Go Release, 14 Stable + 23 Incl WIP cases](docs/benchmark-results/2026-11-25-go-church.md) uses the latest 25 November 2026 optimization campaign. [Imperative C / official JS](docs/benchmark-results/2026-11-25-go-c-imperative-opaque.md) and other columns retain their archived measurements. Excl WIP diagnostics retain their own references.
 > - **Opaque inputs, in every table:** inputs must remain unknown to the optimizer at runtime. Algebraic simplification is allowed; substituting the driver’s known input is not. See the [contract and audit](docs/benchmark-results/2026-11-25-go-c-imperative-opaque.md).
 > - **Calculations:** use archived timings before display rounding, including for threshold checks. `≈` marks a fallback to published precision. See the [timing archive](bin/benchmark/ratio-measurements.json) and [methodology](docs/benchmark-methodology.md).
+
+### Core stresstest benchmark results (pure computational)
 
 #### JavaScript
 
