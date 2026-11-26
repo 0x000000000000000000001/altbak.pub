@@ -9,6 +9,7 @@ For current figures, start with the [main tables](../../README.md).
 
 | Report | What to read it for |
 | --- | --- |
+| [Native effect callbacks — 26 November](2026-11-26-go-native-callbacks.md) | Typed native entries for cached integer effects, preserved generic callbacks, all four Go/C indicators and three-path opaque-input proofs. |
 | [FFI argument conversions — 26 November](2026-11-26-go-ffi-calls.md) | Cached immutable argument conversions, allocation proofs, all four Go/C indicators and 37-case regression checks. |
 | [State affine loop — 25 November](2026-11-25-go-state.md) | Paired Go optimization preserving strict global reads, all four Go/C indicators, opaque-input proofs and regression diagnostics. |
 | [Church native integer products — 25 November](2026-11-25-go-church.md) | Paired Go optimization, bounded native multiplication preserving JS rounding, all four Go/C indicators and regression checks. |
