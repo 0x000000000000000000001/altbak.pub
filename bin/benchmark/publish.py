@@ -314,6 +314,190 @@ def updated_ratio_catalogue(catalogue, measurements, origins):
     return updated
 
 
+def backend_status_layout(text):
+    """Recognize per-column statuses without assigning them to reference tables."""
+    return any(line.startswith('|') and table_cells(line)
+               and table_cells(line)[0] == ''
+               and any(re.match(r'\*\*(Stable|WIP|Backlog)\*\*', cell)
+                       for cell in table_cells(line)[1:])
+               for line in text.splitlines())
+
+
+def backend_status_rows(lines, columns):
+    header = next(line for line in lines if 'Benchmark' in line and '|' in line)
+    headers = [cell.strip() for cell in header.strip().strip('|').split('|')][1:]
+    if len(headers) != columns:
+        raise ValueError('Unexpected backend status column count')
+    controlled = [bool(re.search(r'\[(?:gopurs|purust|phpurs|sharpurs|javapurs)\]\(', cell))
+                  for cell in headers]
+    states = [None] * columns
+    rows = []
+    for index, line in enumerate(lines):
+        if not line.startswith('|'):
+            continue
+        cells = table_cells(line)
+        if len(cells) != columns + 1:
+            continue
+        if not cells[0]:
+            for column, cell in enumerate(cells[1:]):
+                status = re.match(r'\*\*(Stable|WIP|Backlog)\*\*', cell)
+                if status:
+                    if not controlled[column]:
+                        raise ValueError('A reference or external backend cannot have a status')
+                    states[column] = status[1]
+        elif cells[0].startswith('['):
+            rows.append((row_label(cells[0]), index, cells, list(states)))
+    return controlled, rows
+
+
+def validate_backend_status_rows(text, groups, labels):
+    for title in groups:
+        found = section_lines(text, title)
+        if found is None:
+            raise ValueError('Missing section: ' + title)
+        for label in labels:
+            find_benchmark_row(found[1], label)
+
+
+def backend_status_times(text, measurements, catalogue):
+    sections, times = {}, {}
+    for title in NEW_LAYOUT_GROUPS:
+        found = section_lines(text, title)
+        if found is None:
+            continue
+        _, lines = found
+        keys = GROUPS[title]
+        controlled, rows = backend_status_rows(lines, len(keys))
+        sections[title] = (controlled, rows)
+        for column, key in enumerate(keys):
+            times[key] = {}
+            for label, _, cells, states in rows:
+                times[key][label] = (('missing', None, False) if states[column] == 'Backlog'
+                                    else timing_measurement(cells[column + 1], key, label,
+                                                            measurements, catalogue))
+    return sections, times
+
+
+def matched_status_summary(candidate, reference):
+    """Use only matching measured cases; expose incomplete reference coverage."""
+    pairs = [(value, reference[label]) for label, value in candidate.items()
+             if reference.get(label, ('missing', None, False))[0] == 'measured']
+    if not pairs:
+        return None
+    ratios = [value[1] / ref[1] for value, ref in pairs]
+    return {'/': sum(value[1] for value, _ in pairs) / sum(ref[1] for _, ref in pairs),
+            'μ': statistics.fmean(ratios), 'Q₂': statistics.median(ratios),
+            'G': math.exp(statistics.fmean(math.log(value) for value in ratios)),
+            'count': len(pairs), 'population': len(candidate),
+            'approximate': any(value[2] or ref[2] for value, ref in pairs)}
+
+
+def refresh_backend_status_totals(text, measurements=None, catalogue=None):
+    measurements = {} if measurements is None else measurements
+    catalogue = {} if catalogue is None else catalogue
+    sections, times = backend_status_times(text, measurements, catalogue)
+    for title, (controlled, rows) in sections.items():
+        match, lines = section_lines(text, title)
+        keys = GROUPS[title]
+        for index in range(len(lines) - 1, -1, -1):
+            cells = table_cells(lines[index]) if lines[index].startswith('|') else []
+            if not cells or cells[0] not in ['**Total Stable**', '**Total WIP**', '**Total**']:
+                continue
+            total_label = cells[0]
+            status = {'**Total Stable**': 'Stable', '**Total WIP**': 'WIP'}.get(total_label)
+            values, summaries = [], {'C': [], 'JS': []}
+            for column, key in enumerate(keys):
+                active = controlled[column] if status else not controlled[column]
+                if not active:
+                    values.append('')
+                    for reference in summaries:
+                        summaries[reference].append('')
+                    continue
+                candidate = {label: times[key][label] for label, _, _, states in rows
+                             if (status is None or states[column] == status)
+                             and times[key][label][0] == 'measured'}
+                time_ms = sum(value[1] for value in candidate.values()) / 1000
+                time = ('≈ ' + format_number(time_ms) + ' ms' if any(value[2] for value in candidate.values())
+                        else format_time(time_ms, 'ms'))
+                total = '<strong>' + time + '</strong>' if candidate or status else '—'
+                if status is None and candidate and len(candidate) != len(rows):
+                    total += ' (n=' + str(len(candidate)) + '/' + str(len(rows)) + ')'
+                values.append(total)
+                for reference, reference_key in [('C', 'c'), ('JS', 'js-pure')]:
+                    summary = (None if reference == 'JS' and reference_key == key else
+                               matched_status_summary(candidate, times.get(reference_key, {})))
+                    if summary is not None and reference_key == key:
+                        summary['approximate'] = False  # A reference compared with itself is exactly one.
+                    summaries[reference].append(summary)
+            end = index + 1
+            while end < len(lines) and lines[end].startswith('| ↳ '):
+                end += 1
+            metrics = []
+            for reference in ['C', 'JS']:
+                for statistic in ['/', 'μ', 'Q₂', 'G']:
+                    label = '↳ ' + ('' if statistic == '/' else statistic) + '/' + reference
+                    metrics.append('| ' + label + ' | ' + ' | '.join(
+                        '' if summary == '' else statistics_cell(summary, statistic)
+                        for summary in summaries[reference]) + ' |')
+            lines[index:end] = ['| ' + total_label + ' | ' + ' | '.join(values) + ' |'] + metrics
+        text = text[:match.start(2)] + '\n'.join(lines) + '\n' + text[match.end(2):]
+    return text
+
+
+def render_backend_status(original, measurements):
+    """Update measured cells without publishing or reclassifying Backlog cases."""
+    text = original
+    references = {}
+    for title, reference in [('JavaScript', 'JS'), ('C (reference)', 'C')]:
+        found = section_lines(text, title)
+        if found is None:
+            references[reference] = {}
+            continue
+        _, lines = found
+        key = GROUPS[title][0]
+        _, rows = backend_status_rows(lines, len(GROUPS[title]))
+        references[reference] = {}
+        for label, _, cells, _ in rows:
+            cell = format_time(measurements[key][label]) if label in measurements.get(key, {}) else cells[1]
+            references[reference][label] = timing_measurement(cell, key, label, measurements, {})
+    for title in NEW_LAYOUT_GROUPS:
+        found = section_lines(text, title)
+        if found is None:
+            continue
+        match, lines = found
+        keys = GROUPS[title]
+        _, rows = backend_status_rows(lines, len(keys))
+        for label, index, cells, states in reversed(rows):
+            end = index + 1
+            while end < len(lines) and lines[end].startswith('| ↳ '):
+                end += 1
+            old_metrics = {table_cells(line)[0]: table_cells(line)[1:]
+                           for line in lines[index + 1:end]}
+            changed = any(label in values for values in measurements.values())
+            for column, key in enumerate(keys):
+                if states[column] == 'Backlog':
+                    cells[column + 1] = '—'
+                elif label in measurements.get(key, {}):
+                    cells[column + 1] = format_time(measurements[key][label])
+            replacement = ['| ' + ' | '.join(cells) + ' |']
+            if any(cell_us(cell) is not None for cell in cells[1:]):
+                for reference in ['C', 'JS']:
+                    metric = '↳ /' + reference
+                    values = list(old_metrics.get(metric, ['—'] * len(keys)))
+                    for column, key in enumerate(keys):
+                        if states[column] == 'Backlog' or (reference == 'JS' and key == 'js-pure'):
+                            values[column] = '—'
+                        elif changed:
+                            value = timing_measurement(cells[column + 1], key, label, measurements, {})
+                            ref = references[reference].get(label, ('missing', None, False))
+                            values[column] = (('≈ ' if value[2] or ref[2] else '') + format_number(value[1] / ref[1]) + 'x'
+                                              if value[0] == ref[0] == 'measured' else '—')
+                    replacement.append('| ' + metric + ' | ' + ' | '.join(values) + ' |')
+            lines[index:end] = replacement
+        text = text[:match.start(2)] + '\n'.join(lines) + '\n' + text[match.end(2):]
+    return refresh_backend_status_totals(text, measurements)
+
+
 def refresh_extended_statistics(text, measurements, catalogue):
     """Use the extended table's own JS reference and preserve its ratio rows."""
     found = section_lines(text, 'Extended Results')
@@ -366,6 +550,9 @@ def refresh_ratio_statistics(text, measurements=None, catalogue=None):
     if catalogue is None:
         source = ROOT / 'bin/benchmark/ratio-measurements.json'
         catalogue = json.loads(source.read_text()) if source.exists() else {}
+    if backend_status_layout(text):
+        return refresh_extended_statistics(
+            refresh_backend_status_totals(text, measurements, catalogue), measurements, catalogue)
     sections = {}
     for title in NEW_LAYOUT_GROUPS:
         found = section_lines(text, title)
@@ -430,6 +617,8 @@ def refresh_ratio_statistics(text, measurements=None, catalogue=None):
 
 def refresh_new_totals(text, measurements=None, catalogue=None):
     """Recompute the Stable/Incl WIP aggregate rows from displayed cells."""
+    if backend_status_layout(text):
+        return refresh_ratio_statistics(text, measurements, catalogue)
     js_match, js_lines = section_lines(text, 'JavaScript')
     if js_match is None or not new_layout(js_lines):
         return text
@@ -511,10 +700,15 @@ def refresh_new_totals(text, measurements=None, catalogue=None):
 
 
 def render(original, results):
-    text = original
+    per_backend = backend_status_layout(original)
+    if per_backend:
+        validate_backend_status_rows(original, NEW_LAYOUT_GROUPS, ROWS)
+    text = render_backend_status(original, campaign_times(results)) if per_backend else original
     c_reference = dict(zip(ROWS, results['c']['times_us']))
     js_reference = dict(zip(ROWS, results['js-pure']['times_us']))
     for title, keys in GROUPS.items():
+        if per_backend and title in NEW_LAYOUT_GROUPS:
+            continue
         pattern = r'(#### ' + re.escape(title) + r'\n)(.*?)(?=\n#### |\n### |\n## |\Z)'
         matches = list(re.finditer(pattern, text, re.S))
         if len(matches) != 1:
@@ -591,11 +785,17 @@ def render(original, results):
             if seen != expected_rows + ['**Total Execution Time**']:
                 raise ValueError('Unexpected table row order: ' + title)
         text = text[:match.start(2)] + '\n'.join(lines) + '\n' + text[match.end(2):]
+    if per_backend:
+        return bold_totals(refresh_extended_statistics(text, campaign_times(results), {}))
     return refresh_new_totals(text, campaign_times(results))
 
 
 def render_wip(original, results):
     """Update the 23 WIP rows in the nine JS/Go columns and their totals."""
+    if backend_status_layout(original):
+        validate_backend_status_rows(original, WIP_GROUPS,
+                                     [case['label'] for case in expected_cases('wip')])
+        return render_backend_status(original, campaign_times(results, wip=True))
     text = original
     labels = [case['label'] for case in expected_cases('wip')]
     js_reference = dict(zip(results['js-pure']['library']['labels'],
@@ -672,7 +872,7 @@ def main():
     updated = format_table_numbers(updated)
     catalogue_path = ROOT / 'bin/benchmark/ratio-measurements.json'
     catalogue_text = None
-    if args.readme.resolve() == (ROOT / 'README.md').resolve():
+    if args.readme.resolve() == (ROOT / 'README.md').resolve() and catalogue_path.exists():
         catalogue_original = catalogue_path.read_text() if catalogue_path.exists() else None
         catalogue = json.loads(catalogue_original) if catalogue_original is not None else {}
         catalogue_text = json.dumps(updated_ratio_catalogue(

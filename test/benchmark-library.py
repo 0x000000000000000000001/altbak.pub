@@ -110,10 +110,10 @@ class LibraryPublication(unittest.TestCase):
         original = publish.refresh_ratio_statistics((ROOT / "README.md").read_text())
         results = campaign_results()
         catalogue = ROOT / "bin/benchmark/ratio-measurements.json"
-        catalogue_before = catalogue.read_bytes()
+        catalogue_before = catalogue.read_bytes() if catalogue.exists() else None
         with tempfile.TemporaryDirectory() as temporary:
             rendered = self.publish_fixture(Path(temporary), results, original)
-        self.assertEqual(catalogue.read_bytes(), catalogue_before)
+        self.assertEqual(catalogue.read_bytes() if catalogue.exists() else None, catalogue_before)
         labels = [case["label"] for case in validate.expected_cases("wip")]
         original_lines = original.splitlines()
         rendered_lines = rendered.splitlines()
@@ -150,7 +150,8 @@ class LibraryPublication(unittest.TestCase):
                     [cell.strip() for cell in rendered_lines[full(local + 2)].split("|")[2:-1]],
                     expected_js)
                 changed.update({full(local), full(local + 1), full(local + 2)})
-            for total in ("**Total Incl WIP**", "**Total Stable + Incl WIP**"):
+            totals = (["**Total**"] if title == "JavaScript" else ["**Total WIP**", "**Total**"])
+            for total in totals:
                 local = next(i for i, line in enumerate(body)
                              if line.startswith("| " + total + " |"))
                 changed.add(full(local))

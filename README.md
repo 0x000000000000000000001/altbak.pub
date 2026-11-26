@@ -9,11 +9,11 @@ The benchmark suite runs a **wide variety** of computationally intensive tasks: 
 > [!NOTE]
 > **Reading the benchmark tables**
 >
-> - **Groups:** Stable = 14 core tests; Incl WIP = 23 shared micro-benchmarks. Together they make 37 tests. Excl WIP contains three diagnostics, excluded from all totals.
+> - **Status, only for gopurs, purust, phpurs, sharpurs and javapurs:** **Stable** = measured and considered fully optimized; **WIP** = measured, with optimization work remaining; **Backlog** = planned work without a published measurement or ratio. Status labels belong only to the relevant backend columns. References and external backends have no status. Stable is currently empty, including for Go: the available analyses still identify optimization opportunities.
 > - **Ratios:** `/C` uses the optimized imperative C reference; `/JS` uses the first JavaScript column. **Below 1× is faster; above 1× is slower.** Extended Results uses its own JS reference and has no C reference.
-> - **Totals:** sums of per-test median times. Total ratios compare these sums; they do not represent an application benchmark.
-> - **Summaries:** `μ` = arithmetic mean, `Q₂` = median, `G` = geometric mean of the case ratios. Each case has equal weight. Very small reference times can produce large ratios.
-> - **Missing data:** `—` means unavailable or not applicable. Bounds (`< …`) are excluded from summaries; partial coverage is identified. The 37-test total requires both Stable and Incl WIP.
+> - **Totals:** sums of the available per-test medians: **Total WIP** for the controlled backends, **Total** for references and external backends. Backlog never contributes. Empty Stable groups sum to `0.00 ms` and have no defined ratio or mean. These totals do not represent an application benchmark.
+> - **Summaries:** `μ` = arithmetic mean, `Q₂` = median, `G` = geometric mean of the case ratios. Each case has equal weight. All four ratios use exactly the same measured cases on both sides: for example, Go/C covers 14 of the 37 measured Go cases, while Go/JS covers all 37. The full total of a reference table is not used as a denominator for a different set of cases. Very small reference times can produce large ratios.
+> - **Missing data:** `—` means unavailable or not applicable, never zero. Bounds (`< …`) are excluded from summaries. `n=a/b` indicates coverage: measured cases out of listed cases for a time total, or matched references out of measured cases for a ratio. Historical diagnostic measurements remain in the reference tables; their controlled-backend counterparts belong to unmeasured Backlog.
 > - **Display precision, in every table:** values ≥ 1 use two decimal places (`12.000045 → 12.00`); positive values < 1 keep two significant digits after leading zeros (`0.000045`, `0.009492 → 0.0095`). Zero is `0.00`.
 > - **Opaque inputs, in every table:** inputs must remain unknown to the optimizer at runtime. Algebraic simplification is allowed; substituting the driver’s known input is not.
 > - **Calculations:** use archived timings before display rounding, including for threshold checks. `≈` marks a fallback to published precision.
@@ -24,9 +24,8 @@ The benchmark suite runs a **wide variety** of computationally intensive tasks: 
 
 #### JavaScript
 
-JS Benchmark            | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[Arista](https://github.com/aristanetworks/purescript-backend-optimizer)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written FP-style JS FFI<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT<br><br>(WIP) | Hand-written imperative JS FFI<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT<br><br>(WIP) |
+JS Benchmark            | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[Arista](https://github.com/aristanetworks/purescript-backend-optimizer)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written FP-style JS FFI<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written imperative JS FFI<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT |
 ----------------------- | ---------------------- | ------------------ | ---------------------- | ---------------------------- |
-| **Stable** | | | | |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 0.26 μs | ~ 0.19 μs | ~ 0.20 μs | ~ 0.22 μs |
 | ↳ /C | 2.68x | 1.96x | 2.04x | 2.28x |
 | ↳ /JS | — | 0.73x | 0.76x | 0.85x |
@@ -69,16 +68,6 @@ JS Benchmark            | Hand-written PureScript<br>↓<br>[official](https://g
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.035 μs | ~ 0.017 μs | ~ 0.060 μs | ~ 0.020 μs |
 | ↳ /C | 31.67x | 15.32x | 53.58x | 18.28x |
 | ↳ /JS | — | 0.48x | 1.69x | 0.58x |
-| **Total Stable** | <strong>~ 111.88 ms</strong> | <strong>~ 66.89 ms</strong> | <strong>~ 48.48 ms</strong> | <strong>~ 30.54 ms</strong> |
-| ↳ /C | <strong>12.77x</strong> | <strong>7.64x</strong> | <strong>5.54x</strong> | <strong>3.49x</strong> |
-| ↳ μ/C | <strong>1731625.93x</strong> | <strong>1223665.79x</strong> | <strong>1512698.34x</strong> | <strong>201717.81x</strong> |
-| ↳ Q₂/C | <strong>269.98x</strong> | <strong>138.74x</strong> | <strong>404.99x</strong> | <strong>11.99x</strong> |
-| ↳ G/C | <strong>894.42x</strong> | <strong>606.91x</strong> | <strong>702.62x</strong> | <strong>115.47x</strong> |
-| ↳ /JS | — | <strong>0.60x</strong> | <strong>0.43x</strong> | <strong>0.27x</strong> |
-| ↳ μ/JS | — | <strong>0.75x</strong> | <strong>0.94x</strong> | <strong>0.32x</strong> |
-| ↳ Q₂/JS | — | <strong>0.68x</strong> | <strong>0.87x</strong> | <strong>0.17x</strong> |
-| ↳ G/JS | — | <strong>0.68x</strong> | <strong>0.79x</strong> | <strong>0.13x</strong> |
-| **Incl WIP** | | | | |
 | [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | ~ 121.94 μs | ~ 144.60 μs | ~ 92.20 μs | ~ 12.93 μs |
 | ↳ /C | — | — | — | — |
 | ↳ /JS | — | 1.19x | 0.76x | 0.11x |
@@ -148,25 +137,6 @@ JS Benchmark            | Hand-written PureScript<br>↓<br>[official](https://g
 | [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | ~ 211.84 μs | ~ 113.53 μs | ~ 31.14 μs | ~ 3.52 μs |
 | ↳ /C | — | — | — | — |
 | ↳ /JS | — | 0.54x | 0.15x | 0.017x |
-| **Total Incl WIP** | <strong>~ 2.88 ms</strong> | <strong>~ 1.95 ms</strong> | <strong>~ 0.92 ms</strong> | <strong>~ 0.27 ms</strong> |
-| ↳ /C | — | — | — | — |
-| ↳ μ/C | — | — | — | — |
-| ↳ Q₂/C | — | — | — | — |
-| ↳ G/C | — | — | — | — |
-| ↳ /JS | — | <strong>0.68x</strong> | <strong>0.32x</strong> | <strong>0.093x</strong> |
-| ↳ μ/JS | — | <strong>1.02x</strong> | <strong>0.81x</strong> | <strong>0.27x</strong> |
-| ↳ Q₂/JS | — | <strong>0.99x</strong> | <strong>0.76x</strong> | <strong>0.11x</strong> |
-| ↳ G/JS | — | <strong>0.91x</strong> | <strong>0.44x</strong> | <strong>0.092x</strong> |
-| **Total Stable + Incl WIP** | <strong>~ 114.76 ms</strong> | <strong>~ 68.84 ms</strong> | <strong>~ 49.41 ms</strong> | <strong>~ 30.81 ms</strong> |
-| ↳ /C | — | — | — | — |
-| ↳ μ/C | — | — | — | — |
-| ↳ Q₂/C | — | — | — | — |
-| ↳ G/C | — | — | — | — |
-| ↳ /JS | — | <strong>0.60x</strong> | <strong>0.43x</strong> | <strong>0.27x</strong> |
-| ↳ μ/JS | — | <strong>0.92x</strong> | <strong>0.86x</strong> | <strong>0.29x</strong> |
-| ↳ Q₂/JS | — | <strong>0.96x</strong> | <strong>0.76x</strong> | <strong>0.11x</strong> |
-| ↳ G/JS | — | <strong>0.81x</strong> | <strong>0.55x</strong> | <strong>0.10x</strong> |
-| **Excl WIP** | | | | |
 | [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | ~ 25303.33 μs | — | — | — |
 | ↳ /C | 3.84x | — | — | — |
 | ↳ /JS | — | — | — | — |
@@ -176,12 +146,23 @@ JS Benchmark            | Hand-written PureScript<br>↓<br>[official](https://g
 | [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | ~ 9283.94 μs | — | — | — |
 | ↳ /C | 14.12x | — | — | — |
 | ↳ /JS | — | — | — | — |
+| **Total** | <strong>≈ 229.99 ms</strong> | <strong>~ 68.84 ms</strong> (n=37/40) | <strong>~ 49.41 ms</strong> (n=37/40) | <strong>~ 30.81 ms</strong> (n=37/40) |
+| ↳ /C | <strong>≈ 8.55x</strong> (n=17/40) | <strong>7.64x</strong> (n=14/37) | <strong>5.54x</strong> (n=14/37) | <strong>3.49x</strong> (n=14/37) |
+| ↳ μ/C | <strong>≈ 1426046.39x</strong> (n=17/40) | <strong>1223665.79x</strong> (n=14/37) | <strong>1512698.34x</strong> (n=14/37) | <strong>201717.81x</strong> (n=14/37) |
+| ↳ Q₂/C | <strong>≈ 22.73x</strong> (n=17/40) | <strong>138.74x</strong> (n=14/37) | <strong>404.99x</strong> (n=14/37) | <strong>11.99x</strong> (n=14/37) |
+| ↳ G/C | <strong>≈ 384.26x</strong> (n=17/40) | <strong>606.91x</strong> (n=14/37) | <strong>702.62x</strong> (n=14/37) | <strong>115.47x</strong> (n=14/37) |
+| ↳ /JS | — | <strong>0.60x</strong> | <strong>0.43x</strong> | <strong>0.27x</strong> |
+| ↳ μ/JS | — | <strong>0.92x</strong> | <strong>0.86x</strong> | <strong>0.29x</strong> |
+| ↳ Q₂/JS | — | <strong>0.96x</strong> | <strong>0.76x</strong> | <strong>0.11x</strong> |
+| ↳ G/JS | — | <strong>0.81x</strong> | <strong>0.55x</strong> | <strong>0.10x</strong> |
+
 
 #### Go
 
-Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs) <br>`--dev`<br>↓<br>Go<br>↓<br>go-build<br>`-N -l`<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[psgo](https://github.com/i-am-the-slime/purescript-native)<br>↓<br>Go<br>↓<br>go-build | Hand-written FP-style Go FFI<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(WIP) | Hand-written imperative Go FFI<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(WIP) |
+Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs) <br>`--dev`<br>↓<br>Go<br>↓<br>go-build<br>`-N -l` | Hand-written PureScript<br>↓<br>[psgo](https://github.com/i-am-the-slime/purescript-native)<br>↓<br>Go<br>↓<br>go-build | Hand-written FP-style Go FFI<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build | Hand-written imperative Go FFI<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build |
 ----------------------- | -------------------------------- | -------------------------------- | ------------------------------------- | ---------------------- | ---------------------------- |
-| **Stable** | | | | | |
+|  | **Stable**<br>0.00 ms | **Stable**<br>0.00 ms |  | **Stable**<br>0.00 ms | **Stable**<br>0.00 ms |
+|  | **WIP** | **WIP** |  | **WIP** | **WIP** |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 0.040 μs | ~ 0.52 μs | ~ 4.17 μs | ~ 0.32 μs | ~ 0.32 μs |
 | ↳ /C | 0.42x | 5.42x | 43.53x | 3.38x | 3.32x |
 | ↳ /JS | 0.16x | 2.02x | 16.22x | 1.26x | 1.24x |
@@ -224,16 +205,6 @@ Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://git
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.012 μs | ~ 0.30 μs | ~ 0.50 μs | ~ 0.073 μs | ~ 0.032 μs |
 | ↳ /C | 11.02x | 268.01x | 450.32x | 64.80x | 28.55x |
 | ↳ /JS | 0.35x | 8.46x | 14.22x | 2.05x | 0.90x |
-| **Total Stable** | <strong>~ 9.79 ms</strong> | <strong>~ 50.55 ms</strong> | <strong>~ 1464.74 ms</strong> | <strong>~ 88.99 ms</strong> | <strong>~ 11.34 ms</strong> |
-| ↳ /C | <strong>1.12x</strong> | <strong>5.77x</strong> | <strong>167.23x</strong> | <strong>10.16x</strong> | <strong>1.30x</strong> |
-| ↳ μ/C | <strong>6.40x</strong> | <strong>1184047.35x</strong> | <strong>36871628.77x</strong> | <strong>4074165.79x</strong> | <strong>143928.52x</strong> |
-| ↳ Q₂/C | <strong>7.19x</strong> | <strong>468.76x</strong> | <strong>6709.92x</strong> | <strong>518.14x</strong> | <strong>17.01x</strong> |
-| ↳ G/C | <strong>2.78x</strong> | <strong>1307.77x</strong> | <strong>12452.81x</strong> | <strong>789.82x</strong> | <strong>55.24x</strong> |
-| ↳ /JS | <strong>0.087x</strong> | <strong>0.45x</strong> | <strong>13.09x</strong> | <strong>0.80x</strong> | <strong>0.10x</strong> |
-| ↳ μ/JS | <strong>0.12x</strong> | <strong>2.26x</strong> | <strong>20.39x</strong> | <strong>1.26x</strong> | <strong>0.27x</strong> |
-| ↳ Q₂/JS | <strong>0.0057x</strong> | <strong>1.84x</strong> | <strong>15.22x</strong> | <strong>0.90x</strong> | <strong>0.15x</strong> |
-| ↳ G/JS | <strong>0.0031x</strong> | <strong>1.46x</strong> | <strong>13.92x</strong> | <strong>0.88x</strong> | <strong>0.062x</strong> |
-| **Incl WIP** | | | | | |
 | [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | ~ 129.90 μs | ~ 1452.41 μs | ~ 2146.41 μs | ~ 77.41 μs | ~ 6.61 μs |
 | ↳ /C | — | — | — | — | — |
 | ↳ /JS | 1.07x | 11.91x | 17.60x | 0.63x | 0.054x |
@@ -303,40 +274,34 @@ Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://git
 | [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | ~ 178.20 μs | ~ 4998.00 μs | ~ 4026.20 μs | ~ 2.36 μs | ~ 2.36 μs |
 | ↳ /C | — | — | — | — | — |
 | ↳ /JS | 0.84x | 23.59x | 19.01x | 0.011x | 0.011x |
-| **Total Incl WIP** | <strong>~ 1.04 ms</strong> | <strong>~ 27.32 ms</strong> | <strong>~ 32.77 ms</strong> | <strong>~ 1.42 ms</strong> | <strong>~ 0.070 ms</strong> |
-| ↳ /C | — | — | — | — | — |
-| ↳ μ/C | — | — | — | — | — |
-| ↳ Q₂/C | — | — | — | — | — |
-| ↳ G/C | — | — | — | — | — |
-| ↳ /JS | <strong>0.36x</strong> | <strong>9.49x</strong> | <strong>11.38x</strong> | <strong>0.49x</strong> | <strong>0.024x</strong> |
-| ↳ μ/JS | <strong>0.49x</strong> | <strong>109.58x</strong> | <strong>30.37x</strong> | <strong>15.51x</strong> | <strong>14.93x</strong> |
-| ↳ Q₂/JS | <strong>0.20x</strong> | <strong>4.37x</strong> | <strong>7.93x</strong> | <strong>0.46x</strong> | <strong>0.049x</strong> |
-| ↳ G/JS | <strong>0.20x</strong> | <strong>7.90x</strong> | <strong>7.95x</strong> | <strong>0.33x</strong> | <strong>0.054x</strong> |
-| **Total Stable + Incl WIP** | <strong>~ 10.83 ms</strong> | <strong>~ 77.87 ms</strong> | <strong>~ 1497.51 ms</strong> | <strong>~ 90.41 ms</strong> | <strong>~ 11.41 ms</strong> |
-| ↳ /C | — | — | — | — | — |
-| ↳ μ/C | — | — | — | — | — |
-| ↳ Q₂/C | — | — | — | — | — |
-| ↳ G/C | — | — | — | — | — |
-| ↳ /JS | <strong>0.094x</strong> | <strong>0.68x</strong> | <strong>13.05x</strong> | <strong>0.79x</strong> | <strong>0.099x</strong> |
-| ↳ μ/JS | <strong>0.35x</strong> | <strong>68.97x</strong> | <strong>26.59x</strong> | <strong>10.12x</strong> | <strong>9.38x</strong> |
-| ↳ Q₂/JS | <strong>0.12x</strong> | <strong>2.92x</strong> | <strong>10.43x</strong> | <strong>0.63x</strong> | <strong>0.054x</strong> |
-| ↳ G/JS | <strong>0.041x</strong> | <strong>4.17x</strong> | <strong>9.83x</strong> | <strong>0.48x</strong> | <strong>0.057x</strong> |
-| **Excl WIP** | | | | | |
-| [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | ~ 4616.79 μs | — | — | — | — |
-| ↳ /C | 0.70x | — | — | — | — |
-| ↳ /JS | 0.18x | — | — | — | — |
-| [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | ~ 20801.17 μs | — | — | — | — |
-| ↳ /C | 1.97x | — | — | — | — |
-| ↳ /JS | 0.26x | — | — | — | — |
-| [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | ~ 1403.38 μs | — | — | — | — |
-| ↳ /C | 2.13x | — | — | — | — |
-| ↳ /JS | 0.15x | — | — | — | — |
+| **Total WIP** | <strong>~ 10.83 ms</strong> | <strong>≈ 77.87 ms</strong> |  | <strong>~ 90.41 ms</strong> | <strong>~ 11.41 ms</strong> |
+| ↳ /C | <strong>1.12x</strong> (n=14/37) | <strong>≈ 5.77x</strong> (n=14/37) |  | <strong>10.16x</strong> (n=14/37) | <strong>1.30x</strong> (n=14/37) |
+| ↳ μ/C | <strong>6.40x</strong> (n=14/37) | <strong>≈ 1184047.35x</strong> (n=14/37) |  | <strong>4074165.79x</strong> (n=14/37) | <strong>143928.52x</strong> (n=14/37) |
+| ↳ Q₂/C | <strong>7.19x</strong> (n=14/37) | <strong>≈ 468.76x</strong> (n=14/37) |  | <strong>518.14x</strong> (n=14/37) | <strong>17.01x</strong> (n=14/37) |
+| ↳ G/C | <strong>2.78x</strong> (n=14/37) | <strong>≈ 1307.77x</strong> (n=14/37) |  | <strong>789.82x</strong> (n=14/37) | <strong>55.24x</strong> (n=14/37) |
+| ↳ /JS | <strong>0.094x</strong> | <strong>≈ 0.68x</strong> |  | <strong>0.79x</strong> | <strong>0.099x</strong> |
+| ↳ μ/JS | <strong>0.35x</strong> | <strong>≈ 68.97x</strong> |  | <strong>10.12x</strong> | <strong>9.38x</strong> |
+| ↳ Q₂/JS | <strong>0.12x</strong> | <strong>≈ 2.92x</strong> |  | <strong>0.63x</strong> | <strong>0.054x</strong> |
+| ↳ G/JS | <strong>0.041x</strong> | <strong>≈ 4.17x</strong> |  | <strong>0.48x</strong> | <strong>0.057x</strong> |
+|  | **Backlog** | **Backlog** |  | **Backlog** | **Backlog** |
+| [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — | — | — | — | — |
+| [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — | — | — |
+| [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — | — | — | — | — |
+| **Total** |  |  | <strong>~ 1497.51 ms</strong> (n=37/40) |  |  |
+| ↳ /C |  |  | <strong>167.23x</strong> (n=14/37) |  |  |
+| ↳ μ/C |  |  | <strong>36871628.77x</strong> (n=14/37) |  |  |
+| ↳ Q₂/C |  |  | <strong>6709.92x</strong> (n=14/37) |  |  |
+| ↳ G/C |  |  | <strong>12452.81x</strong> (n=14/37) |  |  |
+| ↳ /JS |  |  | <strong>13.05x</strong> |  |  |
+| ↳ μ/JS |  |  | <strong>26.59x</strong> |  |  |
+| ↳ Q₂/JS |  |  | <strong>10.43x</strong> |  |  |
+| ↳ G/JS |  |  | <strong>9.83x</strong> |  |  |
+
 
 #### Scheme
 
-Scheme Benchmark        | Hand-written PureScript<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3 | Hand-written FP-style Scheme FFI<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3<br><br>(WIP) | Hand-written Scheme FFI<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3<br><br>(WIP) |
+Scheme Benchmark        | Hand-written PureScript<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3 | Hand-written FP-style Scheme FFI<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3 | Hand-written Scheme FFI<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3 |
 ----------------------- | ----------------| -------------------------- | -------------------------------- |
-| **Stable** | | | |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 0.074 μs | ~ 0.076 μs | ~ 0.069 μs |
 | ↳ /C | 0.77x | 0.79x | 0.72x |
 | ↳ /JS | 0.29x | 0.29x | 0.27x |
@@ -379,7 +344,33 @@ Scheme Benchmark        | Hand-written PureScript<br>↓<br>[pscm](https://githu
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.0010 μs | ~ 0.015 μs | ~ 0.0010 μs |
 | ↳ /C | 0.89x | 13.02x | 0.89x |
 | ↳ /JS | 0.028x | 0.41x | 0.028x |
-| **Total Stable** | <strong>~ 44.17 ms</strong> | <strong>~ 45.41 ms</strong> | <strong>~ 19.15 ms</strong> |
+| [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — |
+| [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — |
+| [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — | — | — |
+| [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — | — | — |
+| [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — | — | — |
+| [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — | — | — |
+| [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — | — | — |
+| [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — | — | — |
+| [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — | — | — |
+| [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — | — | — |
+| [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — | — | — |
+| [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — | — | — |
+| [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — | — | — |
+| [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — | — | — |
+| [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — | — | — |
+| [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — | — | — |
+| [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — | — | — |
+| [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — | — | — |
+| [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — | — | — |
+| [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — | — | — |
+| [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — | — | — |
+| [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — | — | — |
+| [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — | — | — |
+| [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — | — | — |
+| [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — |
+| [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — | — | — |
+| **Total** | <strong>~ 44.17 ms</strong> (n=14/40) | <strong>~ 45.41 ms</strong> (n=14/40) | <strong>~ 19.15 ms</strong> (n=14/40) |
 | ↳ /C | <strong>5.04x</strong> | <strong>5.18x</strong> | <strong>2.19x</strong> |
 | ↳ μ/C | <strong>1336575.45x</strong> | <strong>1877501.71x</strong> | <strong>431408.52x</strong> |
 | ↳ Q₂/C | <strong>199.19x</strong> | <strong>106.71x</strong> | <strong>11.79x</strong> |
@@ -388,110 +379,12 @@ Scheme Benchmark        | Hand-written PureScript<br>↓<br>[pscm](https://githu
 | ↳ μ/JS | <strong>0.73x</strong> | <strong>0.58x</strong> | <strong>0.34x</strong> |
 | ↳ Q₂/JS | <strong>0.39x</strong> | <strong>0.40x</strong> | <strong>0.20x</strong> |
 | ↳ G/JS | <strong>0.38x</strong> | <strong>0.36x</strong> | <strong>0.091x</strong> |
-| **Incl WIP** | | | |
-| [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| **Total Incl WIP** | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ μ/C | — | — | — |
-| ↳ Q₂/C | — | — | — |
-| ↳ G/C | — | — | — |
-| ↳ /JS | — | — | — |
-| ↳ μ/JS | — | — | — |
-| ↳ Q₂/JS | — | — | — |
-| ↳ G/JS | — | — | — |
-| **Total Stable + Incl WIP** | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ μ/C | — | — | — |
-| ↳ Q₂/C | — | — | — |
-| ↳ G/C | — | — | — |
-| ↳ /JS | — | — | — |
-| ↳ μ/JS | — | — | — |
-| ↳ Q₂/JS | — | — | — |
-| ↳ G/JS | — | — | — |
-| **Excl WIP** | | | |
-| [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
+
 
 #### Erlang
 
-Erlang Benchmark        | Hand-written PureScript<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>↓<br>Erlang<br>↓<br>BEAM JIT | Hand-written FP-style Erlang FFI<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>↓<br>Erlang<br>↓<br>BEAM JIT<br><br>(WIP) | Hand-written imperative Erlang FFI<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>↓<br>Erlang<br>↓<br>BEAM JIT<br><br>(WIP) |
+Erlang Benchmark        | Hand-written PureScript<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>↓<br>Erlang<br>↓<br>BEAM JIT | Hand-written FP-style Erlang FFI<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>↓<br>Erlang<br>↓<br>BEAM JIT | Hand-written imperative Erlang FFI<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>↓<br>Erlang<br>↓<br>BEAM JIT |
 ----------------------- | ----------------| -------------------------- | -------------------------------- |
-| **Stable** | | | |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 0.11 μs | ~ 0.11 μs | ~ 0.10 μs |
 | ↳ /C | 1.15x | 1.19x | 1.05x |
 | ↳ /JS | 0.43x | 0.44x | 0.39x |
@@ -534,7 +427,33 @@ Erlang Benchmark        | Hand-written PureScript<br>↓<br>[purerl](https://git
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.040 μs | ~ 0.044 μs | ~ 0.0095 μs |
 | ↳ /C | 35.56x | 39.35x | 8.51x |
 | ↳ /JS | 1.12x | 1.24x | 0.27x |
-| **Total Stable** | <strong>~ 94.84 ms</strong> | <strong>~ 75.42 ms</strong> | <strong>~ 14.61 ms</strong> |
+| [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — |
+| [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — |
+| [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — | — | — |
+| [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — | — | — |
+| [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — | — | — |
+| [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — | — | — |
+| [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — | — | — |
+| [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — | — | — |
+| [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — | — | — |
+| [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — | — | — |
+| [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — | — | — |
+| [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — | — | — |
+| [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — | — | — |
+| [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — | — | — |
+| [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — | — | — |
+| [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — | — | — |
+| [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — | — | — |
+| [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — | — | — |
+| [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — | — | — |
+| [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — | — | — |
+| [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — | — | — |
+| [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — | — | — |
+| [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — | — | — |
+| [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — | — | — |
+| [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — |
+| [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — | — | — |
+| **Total** | <strong>~ 94.84 ms</strong> (n=14/40) | <strong>~ 75.42 ms</strong> (n=14/40) | <strong>~ 14.61 ms</strong> (n=14/40) |
 | ↳ /C | <strong>10.83x</strong> | <strong>8.61x</strong> | <strong>1.67x</strong> |
 | ↳ μ/C | <strong>4824663.71x</strong> | <strong>3790086.89x</strong> | <strong>615.64x</strong> |
 | ↳ Q₂/C | <strong>710.43x</strong> | <strong>330.74x</strong> | <strong>8.57x</strong> |
@@ -543,110 +462,14 @@ Erlang Benchmark        | Hand-written PureScript<br>↓<br>[purerl](https://git
 | ↳ μ/JS | <strong>2.37x</strong> | <strong>2.11x</strong> | <strong>0.27x</strong> |
 | ↳ Q₂/JS | <strong>0.91x</strong> | <strong>0.54x</strong> | <strong>0.19x</strong> |
 | ↳ G/JS | <strong>1.24x</strong> | <strong>0.78x</strong> | <strong>0.021x</strong> |
-| **Incl WIP** | | | |
-| [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| **Total Incl WIP** | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ μ/C | — | — | — |
-| ↳ Q₂/C | — | — | — |
-| ↳ G/C | — | — | — |
-| ↳ /JS | — | — | — |
-| ↳ μ/JS | — | — | — |
-| ↳ Q₂/JS | — | — | — |
-| ↳ G/JS | — | — | — |
-| **Total Stable + Incl WIP** | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ μ/C | — | — | — |
-| ↳ Q₂/C | — | — | — |
-| ↳ G/C | — | — | — |
-| ↳ /JS | — | — | — |
-| ↳ μ/JS | — | — | — |
-| ↳ Q₂/JS | — | — | — |
-| ↳ G/JS | — | — | — |
-| **Excl WIP** | | | |
-| [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
+
 
 #### PHP
 
-PHP Benchmark           | Hand-written PureScript<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) | Hand-written FP-style PHP FFI<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) | Hand-written imperative PHP FFI<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT<br><br>(WIP) |
+PHP Benchmark           | Hand-written PureScript<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT | Hand-written FP-style PHP FFI<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT | Hand-written imperative PHP FFI<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT |
 ----------------------- | ------------------------- | ----------------------- | ----------------------------- |
-| **Stable** | | | |
+|  | **Stable**<br>0.00 ms | **Stable**<br>0.00 ms | **Stable**<br>0.00 ms |
+|  | **WIP** | **WIP** | **WIP** |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 2.13 μs | ~ 3.19 μs | ~ 2.11 μs |
 | ↳ /C | 22.21x | 33.26x | 22.00x |
 | ↳ /JS | 8.27x | 12.39x | 8.20x |
@@ -689,119 +512,50 @@ PHP Benchmark           | Hand-written PureScript<br>↓<br>[phpurs](https://git
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.84 μs | ~ 0.85 μs | ~ 0.080 μs |
 | ↳ /C | 750.42x | 759.35x | 71.47x |
 | ↳ /JS | 23.69x | 23.98x | 2.26x |
-| **Total Stable** | <strong>~ 65.78 ms</strong> | <strong>~ 1064.43 ms</strong> | <strong>~ 202.55 ms</strong> |
-| ↳ /C | <strong>7.51x</strong> | <strong>121.53x</strong> | <strong>23.13x</strong> |
-| ↳ μ/C | <strong>613250.87x</strong> | <strong>35036854.22x</strong> | <strong>5591164.76x</strong> |
-| ↳ Q₂/C | <strong>3433.88x</strong> | <strong>4858.77x</strong> | <strong>110.91x</strong> |
-| ↳ G/C | <strong>2558.31x</strong> | <strong>6964.40x</strong> | <strong>347.31x</strong> |
-| ↳ /JS | <strong>0.59x</strong> | <strong>9.51x</strong> | <strong>1.81x</strong> |
-| ↳ μ/JS | <strong>7.78x</strong> | <strong>12.68x</strong> | <strong>2.24x</strong> |
-| ↳ Q₂/JS | <strong>5.92x</strong> | <strong>9.87x</strong> | <strong>0.53x</strong> |
-| ↳ G/JS | <strong>2.86x</strong> | <strong>7.79x</strong> | <strong>0.39x</strong> |
-| **Incl WIP** | | | |
+| **Total WIP** | <strong>≈ 65.78 ms</strong> | <strong>≈ 1064.43 ms</strong> | <strong>≈ 202.55 ms</strong> |
+| ↳ /C | <strong>≈ 7.51x</strong> | <strong>≈ 121.53x</strong> | <strong>≈ 23.13x</strong> |
+| ↳ μ/C | <strong>≈ 613250.87x</strong> | <strong>≈ 35036854.22x</strong> | <strong>≈ 5591164.76x</strong> |
+| ↳ Q₂/C | <strong>≈ 3433.88x</strong> | <strong>≈ 4858.77x</strong> | <strong>≈ 110.91x</strong> |
+| ↳ G/C | <strong>≈ 2558.31x</strong> | <strong>≈ 6964.40x</strong> | <strong>≈ 347.31x</strong> |
+| ↳ /JS | <strong>≈ 0.59x</strong> | <strong>≈ 9.51x</strong> | <strong>≈ 1.81x</strong> |
+| ↳ μ/JS | <strong>≈ 7.78x</strong> | <strong>≈ 12.68x</strong> | <strong>≈ 2.24x</strong> |
+| ↳ Q₂/JS | <strong>≈ 5.92x</strong> | <strong>≈ 9.87x</strong> | <strong>≈ 0.53x</strong> |
+| ↳ G/JS | <strong>≈ 2.86x</strong> | <strong>≈ 7.79x</strong> | <strong>≈ 0.39x</strong> |
+|  | **Backlog** | **Backlog** | **Backlog** |
 | [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| **Total Incl WIP** | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ μ/C | — | — | — |
-| ↳ Q₂/C | — | — | — |
-| ↳ G/C | — | — | — |
-| ↳ /JS | — | — | — |
-| ↳ μ/JS | — | — | — |
-| ↳ Q₂/JS | — | — | — |
-| ↳ G/JS | — | — | — |
-| **Total Stable + Incl WIP** | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ μ/C | — | — | — |
-| ↳ Q₂/C | — | — | — |
-| ↳ G/C | — | — | — |
-| ↳ /JS | — | — | — |
-| ↳ μ/JS | — | — | — |
-| ↳ Q₂/JS | — | — | — |
-| ↳ G/JS | — | — | — |
-| **Excl WIP** | | | |
 | [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
+
 
 #### Rust
 
-Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) | Hand-written PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F# (adapted)<br>↓<br>[Fable (patched)](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) | Hand-written F#<br>↓<br>[Fable](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO | Hand-written FP-style Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) | Hand-written imperative Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP) |
+Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO | Hand-written PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F# (adapted)<br>↓<br>[Fable (patched)](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO | Hand-written F#<br>↓<br>[Fable](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO | Hand-written FP-style Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO | Hand-written imperative Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO |
 ----------------------- | ------------------------- | -------------------------- | ------------------------------ | ------------------------ | ------------------------------ |
-| **Stable** | | | | | |
+|  | **Stable**<br>0.00 ms | **Stable**<br>0.00 ms |  | **Stable**<br>0.00 ms | **Stable**<br>0.00 ms |
+|  | **WIP** | **WIP** |  | **WIP** | **WIP** |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 0.24 μs | ~ 3.68 μs | ~ 0.23 μs | ~ 0.22 μs | ~ 0.23 μs |
 | ↳ /C | 2.50x | 38.37x | 2.40x | 2.29x | 2.40x |
 | ↳ /JS | 0.93x | 14.30x | 0.89x | 0.85x | 0.89x |
@@ -844,119 +598,57 @@ Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://git
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.070 μs | ~ 0.95 μs | ~ 0.10 μs | ~ 0.020 μs | ~ 0.010 μs |
 | ↳ /C | 62.53x | 848.69x | 89.34x | 17.87x | 8.93x |
 | ↳ /JS | 1.97x | 26.80x | 2.82x | 0.56x | 0.28x |
-| **Total Stable** | <strong>~ 8.54 ms</strong> | <strong>~ 2455.35 ms</strong> | <strong>~ 99.28 ms</strong> | <strong>~ 53.73 ms</strong> | <strong>~ 28.31 ms</strong> |
-| ↳ /C | <strong>0.97x</strong> | <strong>280.33x</strong> | <strong>11.33x</strong> | <strong>6.13x</strong> | <strong>3.23x</strong> |
-| ↳ μ/C | <strong>13150.43x</strong> | <strong>111772664.18x</strong> | <strong>3066202.80x</strong> | <strong>1576716.34x</strong> | <strong>46.97x</strong> |
-| ↳ Q₂/C | <strong>15.07x</strong> | <strong>10950.71x</strong> | <strong>572.28x</strong> | <strong>25.44x</strong> | <strong>7.86x</strong> |
-| ↳ G/C | <strong>30.20x</strong> | <strong>26167.52x</strong> | <strong>750.25x</strong> | <strong>192.74x</strong> | <strong>6.73x</strong> |
-| ↳ /JS | <strong>0.076x</strong> | <strong>21.95x</strong> | <strong>0.89x</strong> | <strong>0.48x</strong> | <strong>0.25x</strong> |
-| ↳ μ/JS | <strong>0.52x</strong> | <strong>46.13x</strong> | <strong>1.26x</strong> | <strong>0.70x</strong> | <strong>0.18x</strong> |
-| ↳ Q₂/JS | <strong>0.14x</strong> | <strong>32.32x</strong> | <strong>1.22x</strong> | <strong>0.57x</strong> | <strong>0.053x</strong> |
-| ↳ G/JS | <strong>0.034x</strong> | <strong>29.26x</strong> | <strong>0.84x</strong> | <strong>0.22x</strong> | <strong>0.0075x</strong> |
-| **Incl WIP** | | | | | |
+| **Total WIP** | <strong>≈ 8.54 ms</strong> | <strong>≈ 2455.35 ms</strong> |  | <strong>≈ 53.73 ms</strong> | <strong>≈ 28.31 ms</strong> |
+| ↳ /C | <strong>≈ 0.97x</strong> | <strong>≈ 280.33x</strong> |  | <strong>≈ 6.13x</strong> | <strong>≈ 3.23x</strong> |
+| ↳ μ/C | <strong>≈ 13150.43x</strong> | <strong>≈ 111772664.18x</strong> |  | <strong>≈ 1576716.34x</strong> | <strong>≈ 46.97x</strong> |
+| ↳ Q₂/C | <strong>≈ 15.07x</strong> | <strong>≈ 10950.71x</strong> |  | <strong>≈ 25.44x</strong> | <strong>≈ 7.86x</strong> |
+| ↳ G/C | <strong>≈ 30.20x</strong> | <strong>≈ 26167.52x</strong> |  | <strong>≈ 192.74x</strong> | <strong>≈ 6.73x</strong> |
+| ↳ /JS | <strong>≈ 0.076x</strong> | <strong>≈ 21.95x</strong> |  | <strong>≈ 0.48x</strong> | <strong>≈ 0.25x</strong> |
+| ↳ μ/JS | <strong>≈ 0.52x</strong> | <strong>≈ 46.13x</strong> |  | <strong>≈ 0.70x</strong> | <strong>≈ 0.18x</strong> |
+| ↳ Q₂/JS | <strong>≈ 0.14x</strong> | <strong>≈ 32.32x</strong> |  | <strong>≈ 0.57x</strong> | <strong>≈ 0.053x</strong> |
+| ↳ G/JS | <strong>≈ 0.034x</strong> | <strong>≈ 29.26x</strong> |  | <strong>≈ 0.22x</strong> | <strong>≈ 0.0075x</strong> |
+|  | **Backlog** | **Backlog** |  | **Backlog** | **Backlog** |
 | [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
 | [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
-| **Total Incl WIP** | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ μ/C | — | — | — | — | — |
-| ↳ Q₂/C | — | — | — | — | — |
-| ↳ G/C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
-| ↳ μ/JS | — | — | — | — | — |
-| ↳ Q₂/JS | — | — | — | — | — |
-| ↳ G/JS | — | — | — | — | — |
-| **Total Stable + Incl WIP** | — | — | — | — | — |
-| ↳ /C | — | — | — | — | — |
-| ↳ μ/C | — | — | — | — | — |
-| ↳ Q₂/C | — | — | — | — | — |
-| ↳ G/C | — | — | — | — | — |
-| ↳ /JS | — | — | — | — | — |
-| ↳ μ/JS | — | — | — | — | — |
-| ↳ Q₂/JS | — | — | — | — | — |
-| ↳ G/JS | — | — | — | — | — |
-| **Excl WIP** | | | | | |
-| [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | ~ 6387.79 μs | — | — | — | — |
-| ↳ /C | 0.97x | — | — | — | — |
-| ↳ /JS | 0.25x | — | — | — | — |
-| [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | ~ 35351.17 μs | — | — | — | — |
-| ↳ /C | 3.35x | — | — | — | — |
-| ↳ /JS | 0.44x | — | — | — | — |
-| [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | ~ 1130.69 μs | — | — | — | — |
-| ↳ /C | 1.72x | — | — | — | — |
-| ↳ /JS | 0.12x | — | — | — | — |
+| [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — | — | — | — | — |
+| [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — | — | — |
+| [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — | — | — | — | — |
+| **Total** |  |  | <strong>≈ 99.28 ms</strong> (n=14/40) |  |  |
+| ↳ /C |  |  | <strong>≈ 11.33x</strong> |  |  |
+| ↳ μ/C |  |  | <strong>≈ 3066202.80x</strong> |  |  |
+| ↳ Q₂/C |  |  | <strong>≈ 572.28x</strong> |  |  |
+| ↳ G/C |  |  | <strong>≈ 750.25x</strong> |  |  |
+| ↳ /JS |  |  | <strong>≈ 0.89x</strong> |  |  |
+| ↳ μ/JS |  |  | <strong>≈ 1.26x</strong> |  |  |
+| ↳ Q₂/JS |  |  | <strong>≈ 1.22x</strong> |  |  |
+| ↳ G/JS |  |  | <strong>≈ 0.84x</strong> |  |  |
+
 
 #### C++
 
-C++ Benchmark           | Hand-written PureScript<br>↓<br>[pscpp](https://github.com/purescript-native/purescript)<br>↓<br>C++<br>↓<br>clang++ -O3<br><br>(WIP) | Hand-written FP-style C++ FFI<br>↓<br>[pscpp](https://github.com/purescript-native/purescript)<br>↓<br>C++<br>↓<br>clang++ -O3<br><br>(WIP) | Hand-written imperative C++ FFI<br>↓<br>[pscpp](https://github.com/purescript-native/purescript)<br>↓<br>C++<br>↓<br>clang++ -O3<br><br>(WIP) |
+C++ Benchmark           | Hand-written PureScript<br>↓<br>[pscpp](https://github.com/purescript-native/purescript)<br>↓<br>C++<br>↓<br>clang++ -O3 | Hand-written FP-style C++ FFI<br>↓<br>[pscpp](https://github.com/purescript-native/purescript)<br>↓<br>C++<br>↓<br>clang++ -O3 | Hand-written imperative C++ FFI<br>↓<br>[pscpp](https://github.com/purescript-native/purescript)<br>↓<br>C++<br>↓<br>clang++ -O3 |
 ----------------------- | ------------------------- | ------------------------- | ------------------------------- |
-| **Stable** | | | |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 2.71 μs | ~ 0.94 μs | ~ 0.85 μs |
 | ↳ /C | 28.27x | 9.79x | 8.89x |
 | ↳ /JS | 10.53x | 3.65x | 3.31x |
@@ -999,7 +691,33 @@ C++ Benchmark           | Hand-written PureScript<br>↓<br>[pscpp](https://gith
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.48 μs | ~ 0.30 μs | ~ 0.022 μs |
 | ↳ /C | 430.91x | 264.96x | 20.00x |
 | ↳ /JS | 13.61x | 8.37x | 0.63x |
-| **Total Stable** | <strong>~ 923.88 ms</strong> | <strong>~ 130.23 ms</strong> | <strong>~ 22.06 ms</strong> |
+| [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — |
+| [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — |
+| [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — | — | — |
+| [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — | — | — |
+| [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — | — | — |
+| [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — | — | — |
+| [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — | — | — |
+| [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — | — | — |
+| [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — | — | — |
+| [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — | — | — |
+| [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — | — | — |
+| [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — | — | — |
+| [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — | — | — |
+| [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — | — | — |
+| [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — | — | — |
+| [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — | — | — |
+| [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — | — | — |
+| [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — | — | — |
+| [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — | — | — |
+| [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — | — | — |
+| [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — | — | — |
+| [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — | — | — |
+| [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — | — | — |
+| [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — | — | — |
+| [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — |
+| [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — | — | — |
+| **Total** | <strong>~ 923.88 ms</strong> (n=14/40) | <strong>~ 130.23 ms</strong> (n=14/40) | <strong>~ 22.06 ms</strong> (n=14/40) |
 | ↳ /C | <strong>105.48x</strong> | <strong>14.87x</strong> | <strong>2.52x</strong> |
 | ↳ μ/C | <strong>19360725.64x</strong> | <strong>4026072.09x</strong> | <strong>67.11x</strong> |
 | ↳ Q₂/C | <strong>4491.28x</strong> | <strong>519.81x</strong> | <strong>14.49x</strong> |
@@ -1008,110 +726,14 @@ C++ Benchmark           | Hand-written PureScript<br>↓<br>[pscpp](https://gith
 | ↳ μ/JS | <strong>10.27x</strong> | <strong>2.98x</strong> | <strong>0.35x</strong> |
 | ↳ Q₂/JS | <strong>8.91x</strong> | <strong>2.83x</strong> | <strong>0.063x</strong> |
 | ↳ G/JS | <strong>7.31x</strong> | <strong>1.58x</strong> | <strong>0.010x</strong> |
-| **Incl WIP** | | | |
-| [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| **Total Incl WIP** | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ μ/C | — | — | — |
-| ↳ Q₂/C | — | — | — |
-| ↳ G/C | — | — | — |
-| ↳ /JS | — | — | — |
-| ↳ μ/JS | — | — | — |
-| ↳ Q₂/JS | — | — | — |
-| ↳ G/JS | — | — | — |
-| **Total Stable + Incl WIP** | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ μ/C | — | — | — |
-| ↳ Q₂/C | — | — | — |
-| ↳ G/C | — | — | — |
-| ↳ /JS | — | — | — |
-| ↳ μ/JS | — | — | — |
-| ↳ Q₂/JS | — | — | — |
-| ↳ G/JS | — | — | — |
-| **Excl WIP** | | | |
-| [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
+
 
 #### F#/C#
 
-F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) | Hand-written FP-style F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) | Hand-written F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release<br><br>(WIP) |
+F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release | Hand-written FP-style F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release | Hand-written F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release |
 ----------------------- | ------------------------- | ------------------------- | ------------------------------- |
-| **Stable** | | | |
+|  | **Stable**<br>0.00 ms | **Stable**<br>0.00 ms | **Stable**<br>0.00 ms |
+|  | **WIP** | **WIP** | **WIP** |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 1.12 μs | ~ 0.50 μs | ~ 0.50 μs |
 | ↳ /C | 11.68x | 5.21x | 5.21x |
 | ↳ /JS | 4.35x | 1.94x | 1.94x |
@@ -1154,119 +776,50 @@ F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://g
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.24 μs | ~ 0.060 μs | ~ 0.020 μs |
 | ↳ /C | 214.41x | 53.60x | 17.87x |
 | ↳ /JS | 6.77x | 1.69x | 0.56x |
-| **Total Stable** | <strong>~ 33.79 ms</strong> | <strong>~ 70.21 ms</strong> | <strong>~ 12.10 ms</strong> |
-| ↳ /C | <strong>3.86x</strong> | <strong>8.02x</strong> | <strong>1.38x</strong> |
-| ↳ μ/C | <strong>733660.72x</strong> | <strong>2119689.97x</strong> | <strong>160804.75x</strong> |
-| ↳ Q₂/C | <strong>2691.58x</strong> | <strong>225.09x</strong> | <strong>16.82x</strong> |
-| ↳ G/C | <strong>1925.83x</strong> | <strong>728.13x</strong> | <strong>149.83x</strong> |
-| ↳ /JS | <strong>0.30x</strong> | <strong>0.63x</strong> | <strong>0.11x</strong> |
-| ↳ μ/JS | <strong>9.69x</strong> | <strong>1.24x</strong> | <strong>0.45x</strong> |
-| ↳ Q₂/JS | <strong>2.45x</strong> | <strong>0.98x</strong> | <strong>0.15x</strong> |
-| ↳ G/JS | <strong>2.15x</strong> | <strong>0.81x</strong> | <strong>0.17x</strong> |
-| **Incl WIP** | | | |
+| **Total WIP** | <strong>≈ 33.79 ms</strong> | <strong>≈ 70.21 ms</strong> | <strong>≈ 12.10 ms</strong> |
+| ↳ /C | <strong>≈ 3.86x</strong> | <strong>≈ 8.02x</strong> | <strong>≈ 1.38x</strong> |
+| ↳ μ/C | <strong>≈ 733660.72x</strong> | <strong>≈ 2119689.97x</strong> | <strong>≈ 160804.75x</strong> |
+| ↳ Q₂/C | <strong>≈ 2691.58x</strong> | <strong>≈ 225.09x</strong> | <strong>≈ 16.82x</strong> |
+| ↳ G/C | <strong>≈ 1925.83x</strong> | <strong>≈ 728.13x</strong> | <strong>≈ 149.83x</strong> |
+| ↳ /JS | <strong>≈ 0.30x</strong> | <strong>≈ 0.63x</strong> | <strong>≈ 0.11x</strong> |
+| ↳ μ/JS | <strong>≈ 9.69x</strong> | <strong>≈ 1.24x</strong> | <strong>≈ 0.45x</strong> |
+| ↳ Q₂/JS | <strong>≈ 2.45x</strong> | <strong>≈ 0.98x</strong> | <strong>≈ 0.15x</strong> |
+| ↳ G/JS | <strong>≈ 2.15x</strong> | <strong>≈ 0.81x</strong> | <strong>≈ 0.17x</strong> |
+|  | **Backlog** | **Backlog** | **Backlog** |
 | [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| **Total Incl WIP** | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ μ/C | — | — | — |
-| ↳ Q₂/C | — | — | — |
-| ↳ G/C | — | — | — |
-| ↳ /JS | — | — | — |
-| ↳ μ/JS | — | — | — |
-| ↳ Q₂/JS | — | — | — |
-| ↳ G/JS | — | — | — |
-| **Total Stable + Incl WIP** | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ μ/C | — | — | — |
-| ↳ Q₂/C | — | — | — |
-| ↳ G/C | — | — | — |
-| ↳ /JS | — | — | — |
-| ↳ μ/JS | — | — | — |
-| ↳ Q₂/JS | — | — | — |
-| ↳ G/JS | — | — | — |
-| **Excl WIP** | | | |
 | [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
+
 
 #### Java
 
-Java Benchmark          | Hand-written PureScript<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>↓<br>Java<br>↓<br>HotSpot JIT<br><br>(WIP) | Hand-written FP-style Java FFI<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>↓<br>Java<br>↓<br>HotSpot JIT<br><br>(WIP) | Hand-written imperative Java FFI<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>↓<br>Java<br>↓<br>HotSpot JIT<br><br>(WIP) |
+Java Benchmark          | Hand-written PureScript<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>↓<br>Java<br>↓<br>HotSpot JIT | Hand-written FP-style Java FFI<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>↓<br>Java<br>↓<br>HotSpot JIT | Hand-written imperative Java FFI<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>↓<br>Java<br>↓<br>HotSpot JIT |
 ----------------------- | ------------------------- | ------------------------ | ------------------------------ |
-| **Stable** | | | |
+|  | **Stable**<br>0.00 ms | **Stable**<br>0.00 ms | **Stable**<br>0.00 ms |
+|  | **WIP** | **WIP** | **WIP** |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 0.14 μs | ~ 0.11 μs | ~ 0.10 μs |
 | ↳ /C | 1.50x | 1.11x | 1.06x |
 | ↳ /JS | 0.56x | 0.41x | 0.39x |
@@ -1309,7 +862,7 @@ Java Benchmark          | Hand-written PureScript<br>↓<br>[javapurs](https://g
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.013 μs | ~ 0.0062 μs | ~ 0.0023 μs |
 | ↳ /C | 11.36x | 5.50x | 2.08x |
 | ↳ /JS | 0.36x | 0.17x | 0.066x |
-| **Total Stable** | <strong>~ 17.28 ms</strong> | <strong>~ 35.21 ms</strong> | <strong>~ 11.88 ms</strong> |
+| **Total WIP** | <strong>~ 17.28 ms</strong> | <strong>~ 35.21 ms</strong> | <strong>~ 11.88 ms</strong> |
 | ↳ /C | <strong>1.97x</strong> | <strong>4.02x</strong> | <strong>1.36x</strong> |
 | ↳ μ/C | <strong>21050.76x</strong> | <strong>1464324.28x</strong> | <strong>62.32x</strong> |
 | ↳ Q₂/C | <strong>16.88x</strong> | <strong>86.54x</strong> | <strong>2.44x</strong> |
@@ -1318,110 +871,39 @@ Java Benchmark          | Hand-written PureScript<br>↓<br>[javapurs](https://g
 | ↳ μ/JS | <strong>0.37x</strong> | <strong>0.40x</strong> | <strong>0.097x</strong> |
 | ↳ Q₂/JS | <strong>0.32x</strong> | <strong>0.34x</strong> | <strong>0.066x</strong> |
 | ↳ G/JS | <strong>0.085x</strong> | <strong>0.33x</strong> | <strong>0.0049x</strong> |
-| **Incl WIP** | | | |
+|  | **Backlog** | **Backlog** | **Backlog** |
 | [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
-| **Total Incl WIP** | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ μ/C | — | — | — |
-| ↳ Q₂/C | — | — | — |
-| ↳ G/C | — | — | — |
-| ↳ /JS | — | — | — |
-| ↳ μ/JS | — | — | — |
-| ↳ Q₂/JS | — | — | — |
-| ↳ G/JS | — | — | — |
-| **Total Stable + Incl WIP** | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ μ/C | — | — | — |
-| ↳ Q₂/C | — | — | — |
-| ↳ G/C | — | — | — |
-| ↳ /JS | — | — | — |
-| ↳ μ/JS | — | — | — |
-| ↳ Q₂/JS | — | — | — |
-| ↳ G/JS | — | — | — |
-| **Excl WIP** | | | |
 | [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
 | [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — | — | — |
-| ↳ /C | — | — | — |
-| ↳ /JS | — | — | — |
+
 
 #### Koka
 
-Koka Benchmark          | Hand-written Koka<br>↓<br>koka -O3<br><br>(WIP) |
+Koka Benchmark          | Hand-written Koka<br>↓<br>koka -O3 |
 ----------------------- | ----- |
-| **Stable** | |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 0.22 μs |
 | ↳ /C | 2.28x |
 | ↳ /JS | 0.85x |
@@ -1464,7 +946,33 @@ Koka Benchmark          | Hand-written Koka<br>↓<br>koka -O3<br><br>(WIP) |
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.0010 μs |
 | ↳ /C | 0.92x |
 | ↳ /JS | 0.029x |
-| **Total Stable** | <strong>~ 54.46 ms</strong> |
+| [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — |
+| [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — |
+| [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — |
+| [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — |
+| [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — |
+| [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — |
+| [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — |
+| [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — |
+| [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — |
+| [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — |
+| [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — |
+| [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — |
+| [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — |
+| [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — |
+| [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — |
+| [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — |
+| [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — |
+| [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — |
+| [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — |
+| [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — |
+| [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — |
+| [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — |
+| [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — |
+| [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — |
+| [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — |
+| [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — |
+| **Total** | <strong>~ 54.46 ms</strong> (n=14/40) |
 | ↳ /C | <strong>6.22x</strong> |
 | ↳ μ/C | <strong>2885794.36x</strong> |
 | ↳ Q₂/C | <strong>77.61x</strong> |
@@ -1473,110 +981,12 @@ Koka Benchmark          | Hand-written Koka<br>↓<br>koka -O3<br><br>(WIP) |
 | ↳ μ/JS | <strong>0.73x</strong> |
 | ↳ Q₂/JS | <strong>0.46x</strong> |
 | ↳ G/JS | <strong>0.41x</strong> |
-| **Incl WIP** | |
-| [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| **Total Incl WIP** | — |
-| ↳ /C | — |
-| ↳ μ/C | — |
-| ↳ Q₂/C | — |
-| ↳ G/C | — |
-| ↳ /JS | — |
-| ↳ μ/JS | — |
-| ↳ Q₂/JS | — |
-| ↳ G/JS | — |
-| **Total Stable + Incl WIP** | — |
-| ↳ /C | — |
-| ↳ μ/C | — |
-| ↳ Q₂/C | — |
-| ↳ G/C | — |
-| ↳ /JS | — |
-| ↳ μ/JS | — |
-| ↳ Q₂/JS | — |
-| ↳ G/JS | — |
-| **Excl WIP** | |
-| [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
+
 
 #### Haskell
 
-Haskell Benchmark       | Hand-written Haskell<br>↓<br>GHC -O2<br><br>(WIP) |
+Haskell Benchmark       | Hand-written Haskell<br>↓<br>GHC -O2 |
 ----------------------- | ------------------------ |
-| **Stable** | |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 0.056 μs |
 | ↳ /C | 0.58x |
 | ↳ /JS | 0.22x |
@@ -1619,7 +1029,33 @@ Haskell Benchmark       | Hand-written Haskell<br>↓<br>GHC -O2<br><br>(WIP) |
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.0041 μs |
 | ↳ /C | 3.64x |
 | ↳ /JS | 0.11x |
-| **Total Stable** | <strong>~ 16.69 ms</strong> |
+| [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — |
+| [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — |
+| [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — |
+| [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — |
+| [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — |
+| [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — |
+| [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — |
+| [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — |
+| [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — |
+| [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — |
+| [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — |
+| [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — |
+| [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — |
+| [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — |
+| [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — |
+| [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — |
+| [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — |
+| [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — |
+| [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — |
+| [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — |
+| [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — |
+| [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — |
+| [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — |
+| [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — |
+| [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — |
+| [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — |
+| **Total** | <strong>~ 16.69 ms</strong> (n=14/40) |
 | ↳ /C | <strong>1.91x</strong> |
 | ↳ μ/C | <strong>319482.89x</strong> |
 | ↳ Q₂/C | <strong>8.80x</strong> |
@@ -1628,110 +1064,12 @@ Haskell Benchmark       | Hand-written Haskell<br>↓<br>GHC -O2<br><br>(WIP) |
 | ↳ μ/JS | <strong>0.26x</strong> |
 | ↳ Q₂/JS | <strong>0.18x</strong> |
 | ↳ G/JS | <strong>0.079x</strong> |
-| **Incl WIP** | |
-| [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| **Total Incl WIP** | — |
-| ↳ /C | — |
-| ↳ μ/C | — |
-| ↳ Q₂/C | — |
-| ↳ G/C | — |
-| ↳ /JS | — |
-| ↳ μ/JS | — |
-| ↳ Q₂/JS | — |
-| ↳ G/JS | — |
-| **Total Stable + Incl WIP** | — |
-| ↳ /C | — |
-| ↳ μ/C | — |
-| ↳ Q₂/C | — |
-| ↳ G/C | — |
-| ↳ /JS | — |
-| ↳ μ/JS | — |
-| ↳ Q₂/JS | — |
-| ↳ G/JS | — |
-| **Excl WIP** | |
-| [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
+
 
 #### OCaml
 
-OCaml Benchmark         | Hand-written OCaml<br>↓<br>ocamlopt -O3<br><br>(WIP) |
+OCaml Benchmark         | Hand-written OCaml<br>↓<br>ocamlopt -O3 |
 ----------------------- | --------------------------- |
-| **Stable** | |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 0.049 μs |
 | ↳ /C | 0.52x |
 | ↳ /JS | 0.19x |
@@ -1774,7 +1112,33 @@ OCaml Benchmark         | Hand-written OCaml<br>↓<br>ocamlopt -O3<br><br>(WIP)
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.0047 μs |
 | ↳ /C | 4.18x |
 | ↳ /JS | 0.13x |
-| **Total Stable** | <strong>~ 29.18 ms</strong> |
+| [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — |
+| [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — |
+| [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — |
+| [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — |
+| [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — |
+| [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — |
+| [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — |
+| [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — |
+| [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — |
+| [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — |
+| [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — |
+| [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — |
+| [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — |
+| [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — |
+| [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — |
+| [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — |
+| [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — |
+| [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — |
+| [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — |
+| [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — |
+| [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — |
+| [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — |
+| [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — |
+| [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — |
+| [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — |
+| [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — |
+| **Total** | <strong>~ 29.18 ms</strong> (n=14/40) |
 | ↳ /C | <strong>3.33x</strong> |
 | ↳ μ/C | <strong>1162269.24x</strong> |
 | ↳ Q₂/C | <strong>81.01x</strong> |
@@ -1783,110 +1147,12 @@ OCaml Benchmark         | Hand-written OCaml<br>↓<br>ocamlopt -O3<br><br>(WIP)
 | ↳ μ/JS | <strong>0.34x</strong> |
 | ↳ Q₂/JS | <strong>0.23x</strong> |
 | ↳ G/JS | <strong>0.27x</strong> |
-| **Incl WIP** | |
-| [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| **Total Incl WIP** | — |
-| ↳ /C | — |
-| ↳ μ/C | — |
-| ↳ Q₂/C | — |
-| ↳ G/C | — |
-| ↳ /JS | — |
-| ↳ μ/JS | — |
-| ↳ Q₂/JS | — |
-| ↳ G/JS | — |
-| **Total Stable + Incl WIP** | — |
-| ↳ /C | — |
-| ↳ μ/C | — |
-| ↳ Q₂/C | — |
-| ↳ G/C | — |
-| ↳ /JS | — |
-| ↳ μ/JS | — |
-| ↳ Q₂/JS | — |
-| ↳ G/JS | — |
-| **Excl WIP** | |
-| [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
+
 
 #### C (reference)
 
-C Benchmark             | [Hand-written imperative C](tmp/bench_native.c)<br>↓<br>clang -O3<br><br>(WIP) |
+C Benchmark             | [Hand-written imperative C](tmp/bench_native.c)<br>↓<br>clang -O3 |
 ----------------------- | -------------------- |
-| **Stable** | |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 0.096 μs |
 | ↳ /C | 1.00x |
 | ↳ /JS | 0.37x |
@@ -1929,104 +1195,29 @@ C Benchmark             | [Hand-written imperative C](tmp/bench_native.c)<br>↓
 | [RowToList](src/Test/RowToList/RowToList.purs) | ~ 0.0011 μs |
 | ↳ /C | 1.00x |
 | ↳ /JS | 0.032x |
-| **Total Stable** | <strong>~ 8.76 ms</strong> |
-| ↳ /C | <strong>1.00x</strong> |
-| ↳ μ/C | <strong>1.00x</strong> |
-| ↳ Q₂/C | <strong>1.00x</strong> |
-| ↳ G/C | <strong>1.00x</strong> |
-| ↳ /JS | <strong>0.078x</strong> |
-| ↳ μ/JS | <strong>0.087x</strong> |
-| ↳ Q₂/JS | <strong>0.017x</strong> |
-| ↳ G/JS | <strong>0.0011x</strong> |
-| **Incl WIP** | |
 | [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [array/sort-descending-10000](src/Test/ArraySortDescending10000/ArraySortDescending10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [array/eq-neq-last-10000](src/Test/ArrayEqNeqLast10000/ArrayEqNeqLast10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [array/append-1000](src/Test/ArrayAppend1000/ArrayAppend1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [foldable/traverse-maybe-1000](src/Test/TraverseMaybe1000/TraverseMaybe1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [foldable/traverse-maybe-fail-first-1000](src/Test/TraverseMaybeFailFirst1000/TraverseMaybeFailFirst1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [foldable/traverse-maybe-fail-last-1000](src/Test/TraverseMaybeFailLast1000/TraverseMaybeFailLast1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [string/cu-length-unicode-1000](src/Test/StringCodeUnitsLengthUnicode1000/StringCodeUnitsLengthUnicode1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [string/cp-length-unicode-1000](src/Test/StringCodePointsLengthUnicode1000/StringCodePointsLengthUnicode1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [string/indexOf-hit-10000](src/Test/StringIndexOfHit10000/StringIndexOfHit10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [string/indexOf-miss-10000](src/Test/StringIndexOfMiss10000/StringIndexOfMiss10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [string/cp-take-unicode-1500](src/Test/StringTakeCodePointsUnicode1500/StringTakeCodePointsUnicode1500.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [string/split-1000](src/Test/StringSplit1000/StringSplit1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [string/concat-1000](src/Test/StringConcat1000/StringConcat1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [record/set-small-1000](src/Test/RecordSetSmall1000/RecordSetSmall1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [record/set-medium-1000](src/Test/RecordSetMedium1000/RecordSetMedium1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [record/set-large-1000](src/Test/RecordSetLarge1000/RecordSetLarge1000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [st/ref-write-10000](src/Test/STRefWrite10000/STRefWrite10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [st/ref-modify-10000](src/Test/STRefModify10000/STRefModify10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [effect/ref-write-10000](src/Test/EffectRefWrite10000/EffectRefWrite10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
 | [effect/ref-modify-10000](src/Test/EffectRefModify10000/EffectRefModify10000.purs) | — |
-| ↳ /C | — |
-| ↳ /JS | — |
-| **Total Incl WIP** | — |
-| ↳ /C | — |
-| ↳ μ/C | — |
-| ↳ Q₂/C | — |
-| ↳ G/C | — |
-| ↳ /JS | — |
-| ↳ μ/JS | — |
-| ↳ Q₂/JS | — |
-| ↳ G/JS | — |
-| **Total Stable + Incl WIP** | — |
-| ↳ /C | — |
-| ↳ μ/C | — |
-| ↳ Q₂/C | — |
-| ↳ G/C | — |
-| ↳ /JS | — |
-| ↳ μ/JS | — |
-| ↳ Q₂/JS | — |
-| ↳ G/JS | — |
-| **Excl WIP** | |
 | [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | ~ 6589.00 μs |
 | ↳ /C | 1.00x |
 | ↳ /JS | 0.26x |
@@ -2036,6 +1227,16 @@ C Benchmark             | [Hand-written imperative C](tmp/bench_native.c)<br>↓
 | [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | ~ 657.69 μs |
 | ↳ /C | 1.00x |
 | ↳ /JS | 0.071x |
+| **Total** | <strong>≈ 26.57 ms</strong> (n=17/40) |
+| ↳ /C | <strong>1.00x</strong> |
+| ↳ μ/C | <strong>1.00x</strong> |
+| ↳ Q₂/C | <strong>1.00x</strong> |
+| ↳ G/C | <strong>1.00x</strong> |
+| ↳ /JS | <strong>≈ 0.12x</strong> |
+| ↳ μ/JS | <strong>≈ 0.099x</strong> |
+| ↳ Q₂/JS | <strong>≈ 0.044x</strong> |
+| ↳ G/JS | <strong>≈ 0.0026x</strong> |
+
 
 ### Extended benchmark results (I/O, mutability, async)
 
@@ -2043,8 +1244,10 @@ C Benchmark             | [Hand-written imperative C](tmp/bench_native.c)<br>↓
 
 #### Extended Results
 
-Benchmark               | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[Arista](https://github.com/aristanetworks/purescript-backend-optimizer)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(mature WIP) | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO<br><br>(WIP)
+Benchmark               | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[Arista](https://github.com/aristanetworks/purescript-backend-optimizer)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO
 ----------------------- | ------------- | -------------- | --------------- | ---------------
+| | | | **Stable**<br>0.00 ms | **Stable**<br>0.00 ms |
+| | | | **WIP** | **WIP** |
 [File I/O](srx/Test/FileOps/FileOps.purs) | ~ 466899.83 μs | ~ 477117.79 μs | ~ 475960.00 μs | ~ 542377.75 μs |
 ↳ /C | — | — | — | — |
 ↳ /JS | — | 1.02x | 1.02x | 1.16x |
@@ -2074,10 +1277,12 @@ Benchmark               | Hand-written PureScript<br>↓<br>[official](https://g
 > **Hardware Context**
 > Measurements ran on an **Apple M4 Pro with 10 performance cores and 4 efficiency cores**, without explicit CPU affinity. The extended *Parallelism* row compares JavaScript's single-thread scheduler with the Go/Rust multicore runtimes.
 
-### Application benchmark results (WIP)
+### Application benchmark results
 
-App scenario | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build<br><br>(mature WIP)
+App scenario | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build
 --- | --- | --- |
+| | | **Stable**<br>0.00 ms |
+| | | **WIP** |
 [CST](https://github.com/natefaubion/purescript-language-cst-parser) (corpus parsing) | ~ 62.17 ms | ~ 128.79 ms |
 ↳ /JS | — | 2.07x |
 [CST](https://github.com/natefaubion/purescript-language-cst-parser) (fixture parsing) | ~ 8.94 ms | ~ 17.67 ms |
