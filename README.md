@@ -298,6 +298,10 @@ Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://git
 | ↳ G/JS |  |  | <strong>9.83x</strong> |  |  |
 
 
+**Go101 follow-up (2026-11-27).** The Go string FFI now reads the first code point, indexes code points and counts matching prefixes without constructing a complete `[]rune`. Native object-copy/map functions and generated FFI record conversions preallocate maps from the source length or the known field count. The refreshed FFI validation passes all 11 tests, including generated Go execution.
+
+Isolated probes on Go 1.27, darwin/arm64, Apple M4 Pro ([raw results](docs/benchmark-results/2026-11-27-go101-probes.txt)) report these medians over three repetitions: first code point of 4,096 ASCII characters, 9,585 → 1.256 ns/op and 11 → 0 allocs/op; first code point of 1,024 emoji, 3,751 → 2.915 ns/op and 8 → 0 allocs/op; copying 1,000 map entries, 49.466 → 20.061 μs/op and 22 → 6 allocs/op. Copying eight entries was slightly slower, 117.6 → 122.6 ns/op, with 2 → 2 allocs/op. These probes cover first-code-point extraction and map copying; they do not measure every changed helper. The official cases above have no direct equivalent for these two operations. No full benchmark campaign was rerun, so the published baselines, totals and ratios remain unchanged; these local results establish no overall gopurs speedup.
+
 #### Scheme
 
 Scheme Benchmark        | Hand-written PureScript<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3 | Hand-written FP-style Scheme FFI<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3 | Hand-written Scheme FFI<br>↓<br>[pscm](https://github.com/purescm/purescm)<br>↓<br>Scheme<br>↓<br>Chez-O3 |

@@ -1,0 +1,55 @@
+=== RUN   TestFirstEquivalent
+    probe_test.go:58: 2056 inputs matched
+--- PASS: TestFirstEquivalent (0.00s)
+=== RUN   TestCopyEquivalent
+--- PASS: TestCopyEquivalent (0.00s)
+=== RUN   TestFirstEquivalent
+    probe_test.go:58: 2056 inputs matched
+--- PASS: TestFirstEquivalent (0.00s)
+=== RUN   TestCopyEquivalent
+--- PASS: TestCopyEquivalent (0.00s)
+=== RUN   TestFirstEquivalent
+    probe_test.go:58: 2056 inputs matched
+--- PASS: TestFirstEquivalent (0.00s)
+=== RUN   TestCopyEquivalent
+--- PASS: TestCopyEquivalent (0.00s)
+goos: darwin
+goarch: arm64
+pkg: go101probe
+cpu: Apple M4 Pro
+BenchmarkFirst
+BenchmarkFirst/ASCII4096/Before
+BenchmarkFirst/ASCII4096/Before-14         	   10000	     10440 ns/op	   49728 B/op	      11 allocs/op
+BenchmarkFirst/ASCII4096/Before-14         	   12674	      9585 ns/op	   49728 B/op	      11 allocs/op
+BenchmarkFirst/ASCII4096/Before-14         	   12206	      9563 ns/op	   49728 B/op	      11 allocs/op
+BenchmarkFirst/ASCII4096/After
+BenchmarkFirst/ASCII4096/After-14          	87368037	         1.263 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFirst/ASCII4096/After-14          	100000000	         1.256 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFirst/ASCII4096/After-14          	100000000	         1.222 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFirst/Unicode1024/Before
+BenchmarkFirst/Unicode1024/Before-14       	   32248	      4042 ns/op	   12864 B/op	       8 allocs/op
+BenchmarkFirst/Unicode1024/Before-14       	   31705	      3739 ns/op	   12864 B/op	       8 allocs/op
+BenchmarkFirst/Unicode1024/Before-14       	   32126	      3751 ns/op	   12864 B/op	       8 allocs/op
+BenchmarkFirst/Unicode1024/After
+BenchmarkFirst/Unicode1024/After-14        	42217591	         3.015 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFirst/Unicode1024/After-14        	40331619	         2.915 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFirst/Unicode1024/After-14        	42202743	         2.884 ns/op	       0 B/op	       0 allocs/op
+BenchmarkCopy
+BenchmarkCopy/8/Before
+BenchmarkCopy/8/Before-14                  	 1000000	       117.4 ns/op	     336 B/op	       2 allocs/op
+BenchmarkCopy/8/Before-14                  	 1000000	       117.6 ns/op	     336 B/op	       2 allocs/op
+BenchmarkCopy/8/Before-14                  	 1000000	       122.3 ns/op	     336 B/op	       2 allocs/op
+BenchmarkCopy/8/After
+BenchmarkCopy/8/After-14                   	  895466	       122.6 ns/op	     336 B/op	       2 allocs/op
+BenchmarkCopy/8/After-14                   	 1000000	       120.4 ns/op	     336 B/op	       2 allocs/op
+BenchmarkCopy/8/After-14                   	  990302	       128.0 ns/op	     336 B/op	       2 allocs/op
+BenchmarkCopy/1000/Before
+BenchmarkCopy/1000/Before-14               	    2406	     49493 ns/op	  160328 B/op	      22 allocs/op
+BenchmarkCopy/1000/Before-14               	    2564	     49466 ns/op	  160328 B/op	      22 allocs/op
+BenchmarkCopy/1000/Before-14               	    2476	     49419 ns/op	  160330 B/op	      22 allocs/op
+BenchmarkCopy/1000/After
+BenchmarkCopy/1000/After-14                	    5692	     20089 ns/op	   82048 B/op	       6 allocs/op
+BenchmarkCopy/1000/After-14                	    6280	     19337 ns/op	   82048 B/op	       6 allocs/op
+BenchmarkCopy/1000/After-14                	    6553	     20061 ns/op	   82048 B/op	       6 allocs/op
+PASS
+ok  	go101probe	3.544s
