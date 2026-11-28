@@ -1391,9 +1391,9 @@ Tool | Hand-written PHP<br>↓<br>Zend / FrankenPHP | Hand-written PureScript<br
 --- | --- | --- |
 | | | <div align="center">**Stable**<br>↓<br>Coming soon...</div> |
 | | | <div align="center">**WIP**<br>↓</div> |
-[symfony/expression-language](https://github.com/symfony/expression-language) → [sfpurs](bin/benchmark/sfpurs-expression-language/README.md) (8 ops, JIT OFF) | ~ 237.71 μs | ~ 68.97 μs |
+[symfony/expression-language](https://github.com/symfony/expression-language) → [sfpurs](https://github.com/0x000000000000000000001/sfpurs-expression-language): 8 ops, JIT OFF | ~ 237.71 μs | ~ 68.97 μs |
 ↳ /PHP | — | 0.29x |
-[symfony/expression-language](https://github.com/symfony/expression-language) → [sfpurs](bin/benchmark/sfpurs-expression-language/README.md) (8 ops, JIT ON) | ~ 164.85 μs | ~ 63.57 μs |
+[symfony/expression-language](https://github.com/symfony/expression-language) → [sfpurs](https://github.com/0x000000000000000000001/sfpurs-expression-language): 8 ops, JIT ON | ~ 164.85 μs | ~ 63.57 μs |
 ↳ /PHP | — | 0.39x |
 **Total** | <strong>~ 0.40 ms</strong> | <strong>~ 0.13 ms</strong> |
 ↳ /PHP | — | <strong>0.33x</strong> |
