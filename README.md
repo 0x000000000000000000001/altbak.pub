@@ -162,8 +162,7 @@ JS Benchmark            | Hand-written PureScript<br>↓<br>[official](https://g
 
 Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs) <br>`--dev`<br>↓<br>Go<br>↓<br>go-build<br>`-N -l` | Hand-written PureScript<br>↓<br>[psgo](https://github.com/i-am-the-slime/purescript-native)<br>↓<br>Go<br>↓<br>go-build | Hand-written FP-style Go FFI<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build | Hand-written imperative Go FFI<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build |
 ----------------------- | -------------------------------- | -------------------------------- | ------------------------------------- | ---------------------- | ---------------------------- |
-|  | <div align="center">**Stable**<br>↓</div> | <div align="center">**Stable**<br>↓<br>Coming soon...</div> |  | <div align="center">**Stable**<br>↓<br>Coming soon...</div> | <div align="center">**Stable**<br>↓<br>Coming soon...</div> |
-|  |  | <div align="center">**WIP**<br>↓</div> |  | <div align="center">**WIP**<br>↓</div> | <div align="center">**WIP**<br>↓</div> |
+|  | <div align="center">**Stable**<br>↓</div> |  |  |  |  |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 0.011 μs | ~ 0.044 μs | ~ 4.17 μs | ~ 0.28 μs | ~ 0.28 μs |
 | ↳ /C | 0.11x | 0.46x | 43.34x | 2.95x | 2.91x |
 | ↳ /JS | 0.042x | 0.17x | 16.22x | 1.11x | 1.09x |
@@ -491,8 +490,8 @@ Erlang Benchmark        | Hand-written PureScript<br>↓<br>[purerl](https://git
 
 PHP Benchmark           | Hand-written PureScript<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT | Hand-written FP-style PHP FFI<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT | Hand-written imperative PHP FFI<br>↓<br>[phpurs](https://github.com/0x000000000000000000001/phpurs)<br>↓<br>PHP<br>↓<br>Zend JIT |
 ----------------------- | ------------------------- | ----------------------- | ----------------------------- |
-|  | <div align="center">**Stable**<br>↓<br>Coming soon...</div> | <div align="center">**Stable**<br>↓<br>Coming soon...</div> | <div align="center">**Stable**<br>↓<br>Coming soon...</div> |
-|  | <div align="center">**WIP**<br>↓</div> | <div align="center">**WIP**<br>↓</div> | <div align="center">**WIP**<br>↓</div> |
+|  | <div align="center">**Stable**<br>↓<br>Coming soon...</div> |  |  |
+|  | <div align="center">**WIP**<br>↓</div> |  |  |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 2.13 μs | ~ 3.19 μs | ~ 2.11 μs |
 | ↳ /C | 22.11x | 33.12x | 21.90x |
 | ↳ /JS | 8.27x | 12.39x | 8.20x |
@@ -546,7 +545,7 @@ PHP Benchmark           | Hand-written PureScript<br>↓<br>[phpurs](https://git
 | ↳ Q₂/JS | <strong>5.92x</strong> | <strong>9.87x</strong> | <strong>0.53x</strong> |
 | ↳ Q₄/JS | <strong>23.69x</strong> | <strong>36.58x</strong> | <strong>8.20x</strong> |
 | ↳ G/JS | <strong>2.86x</strong> | <strong>7.79x</strong> | <strong>0.39x</strong> |
-|  | <div align="center">**Backlog**<br>↓</div> | <div align="center">**Backlog**<br>↓</div> | <div align="center">**Backlog**<br>↓</div> |
+|  | <div align="center">**Backlog**<br>↓</div> |  |  |
 | [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — |
 | [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — |
 | [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — | — | — |
@@ -578,8 +577,8 @@ PHP Benchmark           | Hand-written PureScript<br>↓<br>[phpurs](https://git
 
 Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO | Hand-written PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F# (adapted)<br>↓<br>[Fable (patched)](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO | Hand-written F#<br>↓<br>[Fable](https://github.com/fable-compiler/fable)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO | Hand-written FP-style Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO | Hand-written imperative Rust FFI<br>↓<br>[purust](https://github.com/0x000000000000000000001/purust)<br>↓<br>Rust<br>↓<br>rustc -O3<br>+ thin LTO |
 ----------------------- | ------------------------- | -------------------------- | ------------------------------ | ------------------------ | ------------------------------ |
-|  | <div align="center">**Stable**<br>↓<br>Coming soon...</div> | <div align="center">**Stable**<br>↓<br>Coming soon...</div> |  | <div align="center">**Stable**<br>↓<br>Coming soon...</div> | <div align="center">**Stable**<br>↓<br>Coming soon...</div> |
-|  | <div align="center">**WIP**<br>↓</div> | <div align="center">**WIP**<br>↓</div> |  | <div align="center">**WIP**<br>↓</div> | <div align="center">**WIP**<br>↓</div> |
+|  | <div align="center">**Stable**<br>↓<br>Coming soon...</div> | <div align="center">**Stable**<br>↓<br>Coming soon...</div> |  |  |  |
+|  | <div align="center">**WIP**<br>↓</div> | <div align="center">**WIP**<br>↓</div> |  |  |  |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 0.24 μs | ~ 3.68 μs | ~ 0.23 μs | ~ 0.22 μs | ~ 0.23 μs |
 | ↳ /C | 2.49x | 38.20x | 2.39x | 2.28x | 2.39x |
 | ↳ /JS | 0.93x | 14.30x | 0.89x | 0.85x | 0.89x |
@@ -633,7 +632,7 @@ Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://git
 | ↳ Q₂/JS | <strong>0.14x</strong> | <strong>32.32x</strong> |  | <strong>0.57x</strong> | <strong>0.053x</strong> |
 | ↳ Q₄/JS | <strong>2.48x</strong> | <strong>134.21x</strong> |  | <strong>1.68x</strong> | <strong>0.89x</strong> |
 | ↳ G/JS | <strong>0.034x</strong> | <strong>29.26x</strong> |  | <strong>0.22x</strong> | <strong>0.0075x</strong> |
-|  | <div align="center">**Backlog**<br>↓</div> | <div align="center">**Backlog**<br>↓</div> |  | <div align="center">**Backlog**<br>↓</div> | <div align="center">**Backlog**<br>↓</div> |
+|  | <div align="center">**Backlog**<br>↓</div> | <div align="center">**Backlog**<br>↓</div> |  |  |  |
 | [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — | — | — |
 | [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — | — | — |
 | [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — | — | — | — | — |
@@ -676,8 +675,8 @@ Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://git
 
 F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release | Hand-written FP-style F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release | Hand-written F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release |
 ----------------------- | ------------------------- | ------------------------- | ------------------------------- |
-|  | <div align="center">**Stable**<br>↓<br>Coming soon...</div> | <div align="center">**Stable**<br>↓<br>Coming soon...</div> | <div align="center">**Stable**<br>↓<br>Coming soon...</div> |
-|  | <div align="center">**WIP**<br>↓</div> | <div align="center">**WIP**<br>↓</div> | <div align="center">**WIP**<br>↓</div> |
+|  | <div align="center">**Stable**<br>↓<br>Coming soon...</div> |  |  |
+|  | <div align="center">**WIP**<br>↓</div> |  |  |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 1.12 μs | ~ 0.50 μs | ~ 0.50 μs |
 | ↳ /C | 11.63x | 5.19x | 5.19x |
 | ↳ /JS | 4.35x | 1.94x | 1.94x |
@@ -731,7 +730,7 @@ F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://g
 | ↳ Q₂/JS | <strong>2.45x</strong> | <strong>0.98x</strong> | <strong>0.15x</strong> |
 | ↳ Q₄/JS | <strong>64.90x</strong> | <strong>4.18x</strong> | <strong>2.21x</strong> |
 | ↳ G/JS | <strong>2.15x</strong> | <strong>0.81x</strong> | <strong>0.17x</strong> |
-|  | <div align="center">**Backlog**<br>↓</div> | <div align="center">**Backlog**<br>↓</div> | <div align="center">**Backlog**<br>↓</div> |
+|  | <div align="center">**Backlog**<br>↓</div> |  |  |
 | [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — |
 | [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — |
 | [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — | — | — |
@@ -763,8 +762,8 @@ F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://g
 
 Java Benchmark          | Hand-written PureScript<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>↓<br>Java<br>↓<br>HotSpot JIT | Hand-written FP-style Java FFI<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>↓<br>Java<br>↓<br>HotSpot JIT | Hand-written imperative Java FFI<br>↓<br>[javapurs](https://github.com/0x000000000000000000001/javapurs)<br>↓<br>Java<br>↓<br>HotSpot JIT |
 ----------------------- | ------------------------- | ------------------------ | ------------------------------ |
-|  | <div align="center">**Stable**<br>↓<br>Coming soon...</div> | <div align="center">**Stable**<br>↓<br>Coming soon...</div> | <div align="center">**Stable**<br>↓<br>Coming soon...</div> |
-|  | <div align="center">**WIP**<br>↓</div> | <div align="center">**WIP**<br>↓</div> | <div align="center">**WIP**<br>↓</div> |
+|  | <div align="center">**Stable**<br>↓<br>Coming soon...</div> |  |  |
+|  | <div align="center">**WIP**<br>↓</div> |  |  |
 | [AST Evaluation](src/Test/AstTree/AstTree.purs) | ~ 0.14 μs | ~ 0.11 μs | ~ 0.10 μs |
 | ↳ /C | 1.49x | 1.10x | 1.05x |
 | ↳ /JS | 0.56x | 0.41x | 0.39x |
@@ -818,7 +817,7 @@ Java Benchmark          | Hand-written PureScript<br>↓<br>[javapurs](https://g
 | ↳ Q₂/JS | <strong>0.32x</strong> | <strong>0.34x</strong> | <strong>0.066x</strong> |
 | ↳ Q₄/JS | <strong>0.99x</strong> | <strong>1.23x</strong> | <strong>0.39x</strong> |
 | ↳ G/JS | <strong>0.085x</strong> | <strong>0.33x</strong> | <strong>0.0049x</strong> |
-|  | <div align="center">**Backlog**<br>↓</div> | <div align="center">**Backlog**<br>↓</div> | <div align="center">**Backlog**<br>↓</div> |
+|  | <div align="center">**Backlog**<br>↓</div> |  |  |
 | [array/map-10000](src/Test/ArrayMap10000/ArrayMap10000.purs) | — | — | — |
 | [array/filter-10000](src/Test/ArrayFilter10000/ArrayFilter10000.purs) | — | — | — |
 | [array/foldl-sum-10000](src/Test/ArrayFoldlSum10000/ArrayFoldlSum10000.purs) | — | — | — |
