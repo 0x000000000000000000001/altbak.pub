@@ -140,27 +140,32 @@ static Int runChurch(Int limit) {
     return result;
 }
 
-/* Imperative Eratosthenes sieve; its scratch space belongs to this call. */
+/* Imperative odd-only Eratosthenes sieve; its scratch space belongs to this call. */
 static Int runPrimes(Int limit) {
     if (limit < 2) return 0;
+    if (limit == 2) return 2;
+    size_t odd_count = (size_t)(limit - 1) / 2; /* index i represents 2*i + 3 */
     unsigned char local[4096];
-    size_t count = (size_t)limit + 1;
-    unsigned char *composite = count <= sizeof local ? local : allocate_array(count, 1);
-    memset(composite, 0, count);
-    for (int64_t prime = 2; prime * prime <= limit; ++prime) {
-        if (!composite[prime])
-            for (int64_t multiple = prime * prime; multiple <= limit; multiple += prime)
+    unsigned char *composite = odd_count <= sizeof local ? local : allocate_array(odd_count, 1);
+    memset(composite, 0, odd_count);
+    for (size_t i = 0; ; ++i) {
+        int64_t prime = (int64_t)2 * (int64_t)i + 3;
+        if (prime * prime > limit) break;
+        if (!composite[i]) {
+            for (size_t multiple = (size_t)((prime * prime - 3) / 2); multiple < odd_count; multiple += (size_t)prime)
                 composite[multiple] = 1;
+        }
     }
-    Int sum = 0;
-    for (Int candidate = 2; candidate <= limit; ++candidate)
-        if (!composite[candidate]) sum = add_int(sum, candidate);
+    Int sum = 2;
+    for (size_t i = 0; i < odd_count; ++i)
+        if (!composite[i]) sum = add_int(sum, (Int)(2 * i + 3));
     if (composite != local) free(composite);
     return sum;
 }
 
-/* The four Okasaki rotations in mutable form. Only new keys allocate nodes;
- * balancing and root recoloring reuse nodes, preserving the same tree shape. */
+/* The four Okasaki rotations in iterative mutable form with Black-parent early
+ * exit. Only new keys allocate nodes; balancing and root recoloring reuse nodes,
+ * preserving the same tree shape as recursive Okasaki insertion. */
 typedef enum { RED, BLACK } Color;
 typedef struct Tree Tree;
 struct Tree { Tree *left, *right; Int value; Color color; };
@@ -214,14 +219,90 @@ static Tree *balance(Tree *root) {
     }
     return root;
 }
-static Tree *insert_inner(Int value, Tree *root, TreeArena *arena) {
+static Tree *insert_inner_slow(Int value, Tree *root, TreeArena *arena) {
     if (!root) return new_tree(arena, value);
-    if (value < root->value) root->left = insert_inner(value, root->left, arena);
-    else if (value > root->value) root->right = insert_inner(value, root->right, arena);
+    if (value < root->value) root->left = insert_inner_slow(value, root->left, arena);
+    else if (value > root->value) root->right = insert_inner_slow(value, root->right, arena);
     return balance(root);
 }
 static Tree *insert_tree(Int value, Tree *root, TreeArena *arena) {
-    root = insert_inner(value, root, arena);
+    if (!root) {
+        Tree *node = new_tree(arena, value);
+        node->color = BLACK;
+        return node;
+    }
+    Tree *path[64];
+    unsigned char dirs[64];
+    int depth = 0;
+    Tree *cur = root;
+    while (cur) {
+        if (value == cur->value) return root;
+        if (depth == 64) {
+            root = insert_inner_slow(value, root, arena);
+            root->color = BLACK;
+            return root;
+        }
+        path[depth] = cur;
+        if (value < cur->value) {
+            dirs[depth++] = 0;
+            cur = cur->left;
+        } else {
+            dirs[depth++] = 1;
+            cur = cur->right;
+        }
+    }
+    Tree *child = new_tree(arena, value);
+    Tree *parent = path[depth - 1];
+    if (dirs[depth - 1] == 0) parent->left = child;
+    else parent->right = child;
+    /* A BLACK parent absorbs the new RED leaf with no red-red violation. */
+    if (parent->color == BLACK) return root;
+    while (depth >= 2 && path[depth - 1]->color == RED) {
+        Tree *p = path[depth - 1];
+        Tree *g = path[depth - 2];
+        unsigned char dir_p = dirs[depth - 1];
+        unsigned char dir_g = dirs[depth - 2];
+        Tree *middle;
+        if (dir_g == 0) {
+            if (dir_p == 0) {
+                middle = p;
+                g->left = p->right;
+                p->right = g;
+                child->color = g->color = BLACK;
+            } else {
+                middle = child;
+                p->right = child->left;
+                g->left = child->right;
+                child->left = p;
+                child->right = g;
+                p->color = g->color = BLACK;
+            }
+        } else {
+            if (dir_p == 0) {
+                middle = child;
+                g->right = child->left;
+                p->left = child->right;
+                child->left = g;
+                child->right = p;
+                g->color = p->color = BLACK;
+            } else {
+                middle = p;
+                g->right = p->left;
+                p->left = g;
+                g->color = child->color = BLACK;
+            }
+        }
+        middle->color = RED;
+        depth -= 2;
+        if (depth == 0) {
+            root = middle;
+            break;
+        }
+        Tree *gg = path[depth - 1];
+        if (dirs[depth - 1] == 0) gg->left = middle;
+        else gg->right = middle;
+        child = middle;
+    }
     root->color = BLACK;
     return root;
 }

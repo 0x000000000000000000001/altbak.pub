@@ -61,10 +61,26 @@ static size_t ordered_run(Int *values, size_t start, size_t length) {
 }
 
 Int array_sort(const LibraryInput *input) {
+    const Int *data = input->left.data;
     size_t length = input->left.length;
-    if (length < 2) return weighted_checksum(input->left.data, length);
+    if (length < 2) return weighted_checksum(data, length);
+    /* Consume a single already-ordered ascending or descending run directly
+     * without copying before falling back to natural merge sort. */
+    size_t run_end = 1;
+    if (data[0] > data[1]) {
+        while (++run_end < length && data[run_end - 1] >= data[run_end]) {}
+        if (run_end == length) {
+            Int result = 0;
+            for (size_t i = 0; i < length; ++i)
+                result = add_int(result, mul_int(data[length - 1 - i], (Int)(1 + (i & 1))));
+            return result;
+        }
+    } else {
+        while (++run_end < length && data[run_end - 1] <= data[run_end]) {}
+        if (run_end == length) return weighted_checksum(data, length);
+    }
     Int *values = allocate_array(length, sizeof *values);
-    memcpy(values, input->left.data, length * sizeof *values);
+    memcpy(values, data, length * sizeof *values);
     size_t first_end = ordered_run(values, 0, length);
     Int *scratch = NULL;
     if (first_end != length) scratch = allocate_array(length, sizeof *scratch);

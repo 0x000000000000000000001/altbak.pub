@@ -12,7 +12,7 @@ The benchmark suite runs a **wide variety** of computationally intensive tasks: 
 > - **Status, only for gopurs, purust, phpurs, sharpurs and javapurs:** **Stable** = measured and considered fully optimized; **WIP** = measured, with optimization work remaining; **Backlog** = planned work without a published measurement or ratio. Status labels belong only to the relevant backend columns. References and external backends have no status. For Go Release (`gopurs`), 34 cases have graduated to **Stable** and 3 cases remain in **WIP**; Stable is currently empty for the other controlled backends.
 > - **Ratios:** `/C` uses the optimized imperative C reference; `/JS` uses the first JavaScript column; `/Go` uses the first Go column. **Below 1× is faster; above 1× is slower.** Extended Results uses its own JS reference and has no C reference.
 > - **Totals:** sums of the available per-test medians: **Total Stable** and **Total WIP** for the controlled backends, **Total** for references and external backends. Backlog never contributes. Empty Stable groups are shown as *Coming soon...* and have no defined total, ratio or mean. These totals do not represent an application benchmark.
-> - **Summaries:** `μ` = arithmetic mean, `Q₂` = median, `G` = geometric mean of the case ratios, and `Q₄` = maximum case ratio (worst case). Each case has equal weight. All ratio statistics use exactly the same measured cases on both sides: for Go Release, **Total Stable** matches its 34 Stable cases and **Total WIP** matches its 3 WIP cases (all 37 measured Go cases in total). `Q₄/C` and `Q₄/JS` appear wherever `Q₂/C` and `Q₂/JS` appear; `Q₄/Go` is published for the JavaScript and Go tables. They use the same C, JavaScript and Go references as the other ratios. The full total of a reference table is not used as a denominator for a different set of cases. Very small reference times can produce large ratios.
+> - **Summaries:** `μ` = arithmetic mean, `Q₂` = median, `G` = geometric mean of the case ratios, and `Q₄` = maximum case ratio (worst case). Each case has equal weight. All ratio statistics use exactly the same measured cases on both sides: for Go Release, **Total Stable** matches its 34 Stable cases and **Total WIP** matches its 3 WIP cases (all 37 measured Go cases in total). `Q₄/C` and `Q₄/JS` appear wherever `Q₂/C` and `Q₂/JS` appear. They use the same C, JavaScript and Go references as the other ratios. The full total of a reference table is not used as a denominator for a different set of cases. Very small reference times can produce large ratios.
 > - **Missing data:** `—` means unavailable or not applicable, never zero. Bounds (`< …`) are excluded from summaries. `n=a/b` indicates coverage: measured cases out of listed cases for a time total, or matched references out of measured cases for a ratio. Historical diagnostic measurements remain in the reference tables; their controlled-backend counterparts belong to unmeasured Backlog.
 > - **Display precision, in every table:** values ≥ 1 use two decimal places (`12.000045 → 12.00`); positive values < 1 keep two significant digits after leading zeros (`0.000045`, `0.009492 → 0.0095`). Zero is `0.00`.
 > - **Opaque inputs, in every table:** inputs must remain unknown to the optimizer at runtime. Algebraic simplification is allowed; substituting the driver’s known input is not.
@@ -157,8 +157,6 @@ JS Benchmark            | Hand-written PureScript<br>↓<br>[official](https://g
 | ↳ Q₂/JS | — | <strong>0.96x</strong> | <strong>0.76x</strong> | <strong>0.11x</strong> |
 | ↳ Q₄/JS | — | <strong>2.10x</strong> | <strong>2.21x</strong> | <strong>1.94x</strong> |
 | ↳ G/JS | — | <strong>0.81x</strong> | <strong>0.55x</strong> | <strong>0.10x</strong> |
-| ↳ Q₄/Go | <strong>9466723.23x</strong> (n=37/40) | <strong>≈ 7141333.33x</strong> | <strong>≈ 11793346.80x</strong> | <strong>≈ 1899289.10x</strong> |
-
 
 #### Go
 
@@ -279,7 +277,6 @@ Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://git
 | ↳ Q₂/JS | <strong>0.00086x</strong> | — |  | — | — |
 | ↳ Q₄/JS | <strong>0.87x</strong> | — |  | — | — |
 | ↳ G/JS | <strong>0.00041x</strong> | — |  | — | — |
-| ↳ Q₄/Go | — | — |  | — | — |
 |  | **WIP** |  |  |  |  |
 | [Red-Black Tree](src/Test/RBTree/RBTree.purs) | ~ 1612.49 μs | ~ 31239.75 μs | ~ 870404.62 μs | ~ 24630.67 μs | ~ 9004.48 μs |
 | ↳ /C | 0.19x | 3.59x | 99.95x | 2.83x | 1.03x |
@@ -301,7 +298,6 @@ Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://git
 | ↳ Q₂/JS | <strong>0.011x</strong> | <strong>2.92x</strong> |  | <strong>0.63x</strong> | <strong>0.054x</strong> |
 | ↳ Q₄/JS | <strong>0.019x</strong> | <strong>1687.77x</strong> |  | <strong>341.43x</strong> | <strong>341.50x</strong> |
 | ↳ G/JS | <strong>0.013x</strong> | <strong>4.17x</strong> |  | <strong>0.48x</strong> | <strong>0.057x</strong> |
-| ↳ Q₄/Go | — | <strong>≈ 10573825.32x</strong> |  | <strong>≈ 33284306.03x</strong> | <strong>≈ 1519600.54x</strong> |
 |  | **Backlog** | **Backlog** |  | **Backlog** | **Backlog** |
 | [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — | — | — | — | — |
 | [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — | — | — |
@@ -317,7 +313,6 @@ Go Benchmark            | Hand-written PureScript<br>↓<br>[gopurs](https://git
 | ↳ Q₂/JS |  |  | <strong>10.43x</strong> |  |  |
 | ↳ Q₄/JS |  |  | <strong>343.62x</strong> |  |  |
 | ↳ G/JS |  |  | <strong>9.83x</strong> |  |  |
-| ↳ Q₄/Go |  |  | <strong>≈ 341955991.88x</strong> |  |  |
 
 #### Scheme
 
@@ -403,7 +398,6 @@ Scheme Benchmark        | Hand-written PureScript<br>↓<br>[pscm](https://githu
 | ↳ Q₄/JS | <strong>3.07x</strong> | <strong>2.31x</strong> | <strong>1.76x</strong> |
 | ↳ G/JS | <strong>0.38x</strong> | <strong>0.36x</strong> | <strong>0.091x</strong> |
 
-
 #### Erlang
 
 Erlang Benchmark        | Hand-written PureScript<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>↓<br>Erlang<br>↓<br>BEAM JIT | Hand-written FP-style Erlang FFI<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>↓<br>Erlang<br>↓<br>BEAM JIT | Hand-written imperative Erlang FFI<br>↓<br>[purerl](https://github.com/purerl/purerl)<br>↓<br>Erlang<br>↓<br>BEAM JIT |
@@ -487,7 +481,6 @@ Erlang Benchmark        | Hand-written PureScript<br>↓<br>[purerl](https://git
 | ↳ Q₂/JS | <strong>0.91x</strong> | <strong>0.54x</strong> | <strong>0.19x</strong> |
 | ↳ Q₄/JS | <strong>7.17x</strong> | <strong>17.17x</strong> | <strong>0.80x</strong> |
 | ↳ G/JS | <strong>1.24x</strong> | <strong>0.78x</strong> | <strong>0.021x</strong> |
-
 
 #### PHP
 
@@ -575,7 +568,6 @@ PHP Benchmark           | Hand-written PureScript<br>↓<br>[phpurs](https://git
 | [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — | — | — |
 | [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — |
 | [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — | — | — |
-
 
 #### Rust
 
@@ -675,7 +667,6 @@ Rust Benchmark          | Hand-written PureScript<br>↓<br>[purust](https://git
 | ↳ Q₄/JS |  |  | <strong>2.82x</strong> |  |  |
 | ↳ G/JS |  |  | <strong>0.84x</strong> |  |  |
 
-
 #### F#/C#
 
 F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release | Hand-written FP-style F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release | Hand-written F#/C# FFI<br>↓<br>[sharpurs](https://github.com/0x000000000000000000001/sharpurs)<br>↓<br>F#/C#<br>↓<br>dotnet -Release |
@@ -762,7 +753,6 @@ F#/C# Benchmark         | Hand-written PureScript<br>↓<br>[sharpurs](https://g
 | [Array Indexing](src/Test/ArrayIndexing/ArrayIndexing.purs) | — | — | — |
 | [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — |
 | [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — | — | — |
-
 
 #### Java
 
@@ -851,7 +841,6 @@ Java Benchmark          | Hand-written PureScript<br>↓<br>[javapurs](https://g
 | [JSON to Typed AST](src/Test/JsonTypedAst/JsonTypedAst.purs) | — | — | — |
 | [JSON Decoding](src/Test/JsonDecoding/JsonDecoding.purs) | — | — | — |
 
-
 #### Koka
 
 Koka Benchmark          | Hand-written Koka<br>↓<br>koka -O3 |
@@ -935,7 +924,6 @@ Koka Benchmark          | Hand-written Koka<br>↓<br>koka -O3 |
 | ↳ Q₂/JS | <strong>0.46x</strong> |
 | ↳ Q₄/JS | <strong>3.01x</strong> |
 | ↳ G/JS | <strong>0.41x</strong> |
-
 
 #### Haskell
 
@@ -1021,7 +1009,6 @@ Haskell Benchmark       | Hand-written Haskell<br>↓<br>GHC -O2 |
 | ↳ Q₄/JS | <strong>0.64x</strong> |
 | ↳ G/JS | <strong>0.079x</strong> |
 
-
 #### OCaml
 
 OCaml Benchmark         | Hand-written OCaml<br>↓<br>ocamlopt -O3 |
@@ -1105,7 +1092,6 @@ OCaml Benchmark         | Hand-written OCaml<br>↓<br>ocamlopt -O3 |
 | ↳ Q₂/JS | <strong>0.23x</strong> |
 | ↳ Q₄/JS | <strong>1.05x</strong> |
 | ↳ G/JS | <strong>0.27x</strong> |
-
 
 #### C++
 
@@ -1191,10 +1177,7 @@ C++ Benchmark           | Hand-written PureScript<br>↓<br>[pscpp](https://gith
 | ↳ Q₄/JS | <strong>22.41x</strong> |
 | ↳ G/JS | <strong>7.31x</strong> |
 
-
 #### C (reference)
-
-The 23 [library references](tmp/c-library) complement the existing core reference. [Measurements and validation](docs/benchmark-results/2026-11-26-c-library.md).
 
 C Benchmark             | [Hand-written imperative C](tmp/bench_native.c)<br>↓<br>clang -O3 |
 ----------------------- | -------------------- |
@@ -1329,7 +1312,6 @@ C Benchmark             | [Hand-written imperative C](tmp/bench_native.c)<br>↓
 | ↳ Q₂/JS | <strong>0.0065x</strong> |
 | ↳ Q₄/JS | <strong>5.64x</strong> |
 | ↳ G/JS | <strong>0.0020x</strong> |
-
 
 ### Extended benchmark results (I/O, mutability, async)
 
