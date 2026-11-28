@@ -1360,6 +1360,8 @@ Benchmark               | Hand-written PureScript<br>↓<br>[official](https://g
 
 ### Application benchmark results
 
+#### ... to Go (instead of JS)
+
 App scenario | Hand-written PureScript<br>↓<br>[official](https://github.com/purescript/purescript)<br>↓<br>JS<br>↓<br>V8 JIT | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go<br>↓<br>go-build
 --- | --- | --- |
 | | | <div align="center">**Stable**<br>↓<br>Coming soon...</div> |
@@ -1374,14 +1376,31 @@ App scenario | Hand-written PureScript<br>↓<br>[official](https://github.com/p
 ↳ /JS | — | 0.76x |
 [b8x](https://github.com/0x000000000000000000001/b8x.pub) (287 tests) | ~ 10.43 s | ~ 11.05 s |
 ↳ /JS | — | 1.06x |
-[symfony/expression-language](https://github.com/symfony/expression-language) (48k compile/lint/dump) | ~ 526.24 ms | ~ 165.54 ms |
-↳ /JS | — | 0.31x |
-**Total** | <strong>~ 11.36 s</strong> | <strong>~ 11.62 s</strong> |
-↳ /JS | — | <strong>1.02x</strong> |
-↳ μ/JS | — | <strong>1.31x</strong> |
-↳ Q₂/JS | — | <strong>1.36x</strong> |
+**Total** | <strong>~ 10.83 s</strong> | <strong>~ 11.46 s</strong> |
+↳ /JS | — | <strong>1.06x</strong> |
+↳ μ/JS | — | <strong>1.51x</strong> |
+↳ Q₂/JS | — | <strong>1.66x</strong> |
 ↳ Q₄/JS | — | <strong>2.07x</strong> |
-↳ G/JS | — | <strong>1.09x</strong> |
+↳ G/JS | — | <strong>1.40x</strong> |
+
+### Rewrite benchmark results
+
+#### From PHP
+
+Tool | Hand-written PHP<br>↓<br>Zend / FrankenPHP | Hand-written PureScript<br>↓<br>[gopurs](https://github.com/0x000000000000000000001/gopurs)<br>↓<br>Go (FrankenPHP ext)<br>↓<br>go-build
+--- | --- | --- |
+| | | <div align="center">**Stable**<br>↓<br>Coming soon...</div> |
+| | | <div align="center">**WIP**<br>↓</div> |
+[symfony/expression-language](https://github.com/symfony/expression-language) → [sfpurs](bin/benchmark/sfpurs-expression-language/README.md) (8 ops, JIT OFF) | ~ 237.71 μs | ~ 68.97 μs |
+↳ /PHP | — | 0.29x |
+[symfony/expression-language](https://github.com/symfony/expression-language) → [sfpurs](bin/benchmark/sfpurs-expression-language/README.md) (8 ops, JIT ON) | ~ 164.85 μs | ~ 63.57 μs |
+↳ /PHP | — | 0.39x |
+**Total** | <strong>~ 0.40 ms</strong> | <strong>~ 0.13 ms</strong> |
+↳ /PHP | — | <strong>0.33x</strong> |
+↳ μ/PHP | — | <strong>0.34x</strong> |
+↳ Q₂/PHP | — | <strong>0.34x</strong> |
+↳ Q₄/PHP | — | <strong>0.39x</strong> |
+↳ G/PHP | — | <strong>0.33x</strong> |
 
 ### Compilation times...
 
