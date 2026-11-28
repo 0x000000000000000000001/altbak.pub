@@ -107,15 +107,16 @@ def audit_generated(path):
     boxed = text.split('func Call_Test_ArrayIndexing_boxedReads(', 1)[1].split('\nfunc ', 1)[0]
     if '[]int64' not in native or 'arrayUnsafe_source_' not in native:
         raise ValueError('Native indexing no longer has the audited representation')
-    if 'gopurs_runtime.Value' not in boxed or '(*[]gopurs_runtime.Value)' not in boxed:
+    boxed_direct = '(*[]gopurs_runtime.Value)' in boxed and bool(re.search(r'\[arrayUnsafe_index_\d+\]\.IntVal', boxed))
+    boxed_access = 'gopurs_runtime.ArrayAccess(' in boxed and bool(re.search(r'ArrayAccess\(arrayUnsafe_value_\d+,\s*int\(arrayUnsafe_index_\d+\)\)\.IntVal', boxed))
+    if 'gopurs_runtime.Value' not in boxed or not (boxed_direct or boxed_access):
         raise ValueError('Boxed indexing no longer has the audited representation')
     for name, body in [('native', native), ('boxed', boxed)]:
         if 'make(' in body or 'CoerceTo' in body or 'arrayUnsafe_index_' not in body or 'for {' not in body:
             raise ValueError(f'{name} generated loop needs review: conversion/copy or indexing changed')
-    if not re.search(r'\[arrayUnsafe_index_\d+\]\.IntVal', boxed):
-        raise ValueError('Boxed source must extract the selected Int after indexing')
     return {'native': '[]int64 indexed inside generated loop',
-            'boxed': 'Value -> *[]Value -> selected element.IntVal inside generated loop',
+            'boxed': ('Value -> *[]Value -> selected element.IntVal inside generated loop' if boxed_direct
+                      else 'Value -> O(1) ArrayAccess -> selected element.IntVal inside generated loop'),
             'whole_array_copy_in_kernel': False, 'sha256': digest(path)}
 
 

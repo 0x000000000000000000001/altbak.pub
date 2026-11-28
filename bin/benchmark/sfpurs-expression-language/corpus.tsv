@@ -1,0 +1,16 @@
+is_granted("ROLE_ADMIN") or (user.isActive() and user.getOrganization().id === resource.ownerId and not resource.isArchived)	user,resource	is_granted=is_granted
+request.headers.get("X-Api-Version") in ["v2", "v3"] and request.getPathInfo() matches "#^/api/v[23]/[a-z0-9-]+$#" and (request.isSecure() or env == "dev")	request,env	-
+(cart.total >= 100 and user?.tier in ["gold", "platinum"]) ? (cart.total * 0.85 - (coupon?.discount ?? 0)) : (cart.total + (shipping?.fee ?? 9.99))	cart,user,coupon,shipping	-
+{sum: (a + b) * (c - d) + 2 ** 3 ** 2, items: [1, 2, 3, 4, 5], ok: (x ?? y ?? "fallback") starts with "fa" and not (z in [10, 20, 30])}	a,b,c,d,x,y,z	-
+user.getRoles() contains "ROLE_EDITOR" and (article.status in ["draft", "review"] or article.author?.id === user.id)	user,article	-
+request.getMethod() in ["POST", "PUT", "PATCH"] and request.headers.get("Content-Type") starts with "application/json" and not (request.getClientIp() in blocked_ips)	request,blocked_ips	-
+(order.itemsCount > 0 and order.currency in ["EUR", "USD"]) ? min(order.subtotal * 0.1, 50) : 0	order	min=min
+product.sku ends with "-PRO" and product.price >= 19.99 and product.price <= 999.99 and product.stock > 0	product	-
+(user?.profile?.country ?? request.getLocale() ?? "en") in ["fr", "be", "ch", "ca"]	user,request	-
+count(order.lines) >= 3 and max(order.discount, promo?.amount ?? 0) <= order.subtotal * 0.5	order,promo	count=count,max=max
+foo.bar().baz[0]?.qux ?? (fallback ?: "default")	foo,fallback	-
+/* multi-line security check */ (token.scopes contains "write:billing" and not token.isExpired()) or is_granted("ROLE_SUPER_ADMIN")	token	is_granted=is_granted
+(a - (b - a) * -(a ** b ** 2)) + (188_165.1_178 - .1234)	a,b	-
+{(m ~ "k"): [a, -b], "x": obj.foo}["vk"][1] ?? (n ?? 0)	m,a,b,obj,n	-
+foo.not in [bar, baz] and not foo.disabled xor (flags & 3) == 1	foo,bar,baz,flags	-
+user.score in 1..100 and (user.badge ?: "none") != "banned" and env !== "test"	user,env	-
